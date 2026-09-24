@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-scheduled-chat-30-2511-19480-20260925T0438-02",
+  "kind": "research",
+  "attempt_id": "attempt-preload-0eb96878e292ba8c65359cba",
+  "job_id": "job-research-372c7ba23950bd0c",
+  "record_bank": "u",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.19480-unauthorized-moe-compression-expert-attribution.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260925T043159JST-04",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T19:31:59+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:831487e440d3a1899d25daf8e6ecf42ba5c9d264e1f01b773ca4788666061558",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-u/metadata.json",
+      "blob_sha": "56c7cf67f2110f2d7423d083cc25634eb6206603"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-u/problem_method.json",
+      "blob_sha": "ad3f574286263b2cd45319da888e3e2ea29d6879"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-u/evaluation.json",
+      "blob_sha": "71a7c3c8cba9656b3881783108a941ed7828f08e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-u/results.json",
+      "blob_sha": "04e76ff97c4a27d0398751a3de0e90b88b0f3733"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-u/positioning.json",
+      "blob_sha": "250b44da4235ae18e1bcc4fdfa31ddcba6865412"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_checked_at is required",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "evaluation requires hardware/software/methodology evidence"
+  ],
+  "checked_at": "2026-09-24T19:33:40+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
