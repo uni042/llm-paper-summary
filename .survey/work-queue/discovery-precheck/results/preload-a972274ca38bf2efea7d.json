@@ -1,0 +1,840 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-a972274ca38bf2efea7d",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-a972274ca38bf2efea7d",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "180",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8dafd9584cd10b64a04fb9e83720658f26c27567",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 15,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T17:20:28.357220+00:00",
+  "preload_id": "preload-a972274ca38bf2efea7d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training",
+      "source_url": "https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "It is well established that the reasoning capabilities of large language models (LLMs) can be improved by applying reinforcement learning (RL) in a post-training stage. In a standard RL iteration, the current model (the policy) generates experience through rollouts, and the resulting data is then used to update the policy during training. High-performance RL frameworks such as StreamRL and AReaL employ a disaggregated architecture and asynchronous rollouts to better exploit both rollout and training resources, thereby increasing overall system throughput. Nonetheless, across varying RL setups (e.g., hardware configurations, model scales, staleness levels, and hyperparameters) and under changing workloads, it remains common for both rollout and training resources to experience idle periods. In this paper, we present BiDiRL, a hybrid time-space multiplexing architecture for asynchronous, disaggregated RL designed to reduce resource idleness. First, we develop a hot-switch runtime that enables rapid switching between rollout and training resources with negligible overhead. Second, we propose a static, scheduling-aware planner based on time-performance modeling that chooses a hot-switch-friendly resource partition, so that rollout and training durations are roughly balanced at a coarse level. Third, at execution time, we introduce a bidirectional scheduler that further exploits runtime bubbles through fine-grained resource switching, allowing the bottleneck stage to temporarily borrow idle resources from the other pool. Across a wide range of workloads, datasets, and models on two 32-GPU testbeds, BiDiRL increases RL training throughput by up to 1.94x compared with RL systems including veRL, AReaL, and ROLL, without affecting convergence behavior.",
+      "canonical_id": "arXiv:2607.09207",
+      "arxiv_id": "2607.09207",
+      "authors": [
+        "Zhi-Qiang Tan",
+        "Mao-Xin Wang",
+        "Si-Jie Wang",
+        "Yi-Ming Yin",
+        "Qiang Wang",
+        "Xiaowen Chu",
+        "Shao-Huai Shi"
+      ]
+    },
+    {
+      "title": "Mach-Mind-4-Flash Technical Report",
+      "source_url": "https://www.semanticscholar.org/paper/3ef0749af5eac72d75ecb34cb26793d93340451d",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "We present Mach-Mind-4-Flash, a 35B-parameter Mixture-of-Experts (MoE) agentic model with 3B activated parameters. Through post-training optimization alone without scaling pre-training compute, the model achieves performance on par with or surpassing that of 100B-parameter-class models. By introducing scalable agentic interaction environments for large-scale reinforcement learning, the model attains significant performance gains on real-world application tasks. Our pipeline comprises three stages: (1) a unified RL/OPD training infrastructure with dynamic multi-teacher scheduling and operator-level acceleration, delivering 17\\% end-to-end training speedup; (2) multiple domain-specific RL experts trained in parallel across Reasoning, General, and Agent tracks, then fused into a single generalist via Multi-Teacher On-Policy Distillation (MOPD) -- a routed reverse-KL objective that eliminates the see-saw degradation of mixed-reward RL; (3) Hybrid Median-length Policy Optimization (HMPO), a single-stage token-efficiency method that compresses reasoning chains by 19--46\\% with $\\le$0.7 percentage-point accuracy loss. Mach-Mind-4-Flash scores 92.70 on AIME'26, 82.82 on IFBench, 80.74 on Behavioral-SafetyBench, 75.80 on BFCL-v4, 72.31 on BrowseComp-zh, and 84.20 on ClawBench -- leading or matching models with 10--30$\\times$ its activated size at a fraction of the inference cost.",
+      "canonical_id": "arXiv:2607.09375",
+      "arxiv_id": "2607.09375",
+      "authors": [
+        "Foundation Model Team"
+      ]
+    },
+    {
+      "title": "The Economics of AI Decoding Chips: Rebalancing Compute, Capacity, and Bandwidth for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "Every mainstream GPU is built compute-heavy and capacity-light: it pairs enormous arithmetic throughput with too little memory to hold a modern model. In contrast, large language model decoding requires little compute and a large amount of memory: a GPU's floating-point units run at single-digit-percent utilization during decoding, and the memory the workload does need is sold only bundled with yet more compute. The compute is recovered only at hyperscale, where Mixture-of-Experts (MoE) models are spread across 96--320-GPU expert-parallel clusters serving thousands of concurrent users, a scale available to a handful of operators. We formalize the inefficiency with two fixed per-chip constants. F/B, the roofline ridge point, determines whether the compute can be utilized; F/S, the compute bundled with each GB of memory, determines how much compute must be bought. We then argue for a rebalanced decode accelerator: less compute, far more commodity memory, and a deliberately lower and cheaper bandwidth. The Skymizer HTX-301, a purpose-built 28nm PCIe accelerator using commodity DDR5, occupies that design point. Its entry cost is low. A single eight-chip card holds DeepSeek-R1 671B for about \\$19,000, and a 4U server of four four-chip cards serves two users at a deterministic 20.3 tokens per second each for about \\$28,000. Either costs less than a single H100, while the minimum GPU deployment for the model is an eight-GPU node near \\$350,000. Concurrency then scales out by adding hardware: eight 4U servers carry sixteen users for about \\$224,000, two-thirds of the node's price, with the cost per token unchanged at about \\$12 per million against the node's \\$21. The HTX-301's decisive advantage is a supply chain free of every rationed input: it uses no high-bandwidth memory, no CoWoS, and no leading-edge logic.",
+      "canonical_id": "arXiv:2607.13068",
+      "arxiv_id": "2607.13068",
+      "authors": [
+        "M. J. Yuan",
+        "Ju Long"
+      ]
+    },
+    {
+      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
+      "source_url": "https://www.semanticscholar.org/paper/e1731429013d0906a63a4527cef1fbd1511ab600",
+      "year": 2026,
+      "published": "2026-07-08",
+      "abstract": "The evolution of compute infrastructure has transformed multi-GPU systems into tightly integrated shared-memory structures. However, current software still mostly treats these coherent interconnects simply as high-speed networks. Simultaneously, the demand for serving Large Language Models under latency constraints has shifted GPU workload optimization from being throughput-driven to latency-bound, necessitating latency-oriented scaling methods beyond Tensor Parallelism (TP). Thus, we introduce CTA-pipelining, an execution paradigm designed to exploit shared-memory multi-GPU systems. As a latency-oriented spatial scaling technique, CTA-pipelining leverages dependencies at the Cooperative Thread Array level, enabling concurrent execution of dependent kernels across GPUs. We demonstrate its capability using CUTLASS, cuBLAS, and NCCL libraries on 8-GPU H200 and B200 systems. Results show on 2-layer GEMM, representing the MLP operation, CTA-pipelining reduces latency by up to 31.8% compared to micro-batching, and 29.6% compared to TP. It can also be combined with TP as an orthogonal scaling dimension to further push the latency boundary.",
+      "canonical_id": "arXiv:2607.07862",
+      "arxiv_id": "2607.07862",
+      "authors": [
+        "Ting-Kai Liu",
+        "Muralidhar Andoorveedu",
+        "Sanjoy Das",
+        "Sanjay J. Patel",
+        "Volodymyr V. Kindratenko"
+      ]
+    },
+    {
+      "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156",
+      "year": 2026,
+      "published": "2026-07-07",
+      "abstract": "LLM serving optimization typically benchmarks many configurations and reaches for heavy profilers when latency targets are missed. We argue for the reverse discipline: estimation is the analytical layer of profiling -- without it, optimization degenerates to grid search. Floor First is a residual-driven triage workflow. Each decode step is modeled as a five-dimensional resource vector (HBM bytes, FLOPs, network bytes, network messages, KV capacity); summing within a resource and maximizing across resources gives an optimistic floor, the plain sum a pessimistic one. Where a measurement lands inside this [max, sum] interval reads out overlap quality before any profiler is opened, and profilers escalate only on residuals above a stated threshold. Deployment alternatives are compared by wall ordering -- which resource wall binds first as load grows -- rather than by point benchmarks. The account is compositional: new attention or state-space variants enter by declaring one module, and the workflow ships as a zero-dependency calculator plus an agent skill that enforces the discipline in agentic optimization loops. As a case study we analyze a DeepSeek-V3.2-style 671B MoE/MLA model on 16 NVIDIA H20 GPUs, whose ridge point of ~74 FLOP/byte (vs ~590 for H100) makes it an extreme decode-oriented part. The floors show TP16 decoding is KV-capacity-limited to ~70 concurrent 8K requests; sparse attention removes the KV-bandwidth term but not the capacity wall; an EP16+DP-attention layout accepts slightly worse same-batch weight traffic for an order-of-magnitude higher capacity wall (~644) -- while single-stream latency favors TP by 2.4x. The layout judgment is thus a computable function of the operating point, explaining why production deployments on identical hardware have shipped opposite attention layouts.",
+      "canonical_id": "arXiv:2607.05876",
+      "arxiv_id": "2607.05876",
+      "authors": [
+        "Yihua Liu"
+      ]
+    },
+    {
+      "title": "CoCoScale: Leveraging Layer-wise Scaling to Unlock the Potential of Online LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/682229c0455fe52d850d6c685a04159ab500b498",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Online large language model (LLM) serving has become the backbone of modern AI applications, powering diverse downstream services through shared hardware clusters. However, modern serving systems frequently encounter highly dynamic workloads characterized by severe workload skewness, where a small fraction of model instances receives the vast majority of traffic. Existing instance-level scaling mechanisms are limited by coarse-grained resource adjustment: scaling up requires the cold-start of full-model replicas, incurring substantial latency, while scaling down leaves the system vulnerable to performance degradation during sudden traffic surges. The key insight of this work is that LLM serving offers a unique opportunity for fine-grained scaling. In this paper, we propose CoCoScale, a layer-wise dynamic scaling mechanism that selectively expands the parallelism of hot layers onto idle resources reclaimed from underutilized devices, enabling elastic data parallelism without altering model architectures or adding hardware overhead. Evaluations demonstrate that CoCoScale significantly reduces cold start latency by 97.9%-99.3% compared to traditional scale up. Under production traces, CoCoScale reduces average latency by 20.7\\%--28.1\\% and achieves full Service Level Objective (SLO) attainment, demonstrating superior dynamic adaptability and resource efficiency.",
+      "canonical_id": "arXiv:2607.04181",
+      "arxiv_id": "2607.04181",
+      "authors": [
+        "Jing-Feng Wu",
+        "Yi-Yuan He",
+        "Minxian Xu",
+        "Xitong Gao",
+        "Chong Ma",
+        "Le Chen",
+        "Min Shen",
+        "Lin Qu",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ]
+    },
+    {
+      "title": "Phase-aware Peak Power Reduction for Minimizing the Capital Expense of LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/f83de1d2ce0b5b370b3c96b3d4f4d60282b295a3",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "The rapid growth of large language model (LLM) inference services has been driving data centers to quickly increase their hosted GPUs and servers, causing data centers to approach their peak power capacities. This is a serious challenge because 1) expensive upgrades of power facilities must be done to existing data centers or 2) new data centers must be constructed, both of which require a significant increase of capital expense (CapEx). Existing solutions for peak power reduction include frequency throttling and power capping, which both rely on GPU frequency throttling. Hence, when applied directly to LLM inference, they can degrade performance and increase latency. While energy storage can be exploited to reduce peak power draws without hurting performance, prior solutions are not designed for LLM inference, which has a unique and recurring two-phase power profile with short-duration, high-power prefill phases followed by longer, low-power decode phases. In this paper, we propose PPPR, a Phase-aware Peak Power Reduction framework for minimizing the CapEx of LLM inference. PPPR features two novel LLM-specific designs. First, in contrast to prior work that usually relies on preset thresholds to decide when storage should discharge or recharge, PPPR leverages LLM phase information to make better decisions. This phase-aware timing shaves more peak power and leads to lower CapEx. Second, based on real-world LLM traces, a hybrid storage architecture is designed with server-level supercapacitors to handle short prefill spikes and rack-level batteries to smooth longer, aggregated power changes. This novel placement and sizing strategy can lead to more CapEx savings for LLM inference. Our hardware evaluation with representative LLM workloads shows that PPPR achieves 1.29 × more peak reduction, on average, than three state-of-the-art baselines. Extensive trace-driven simulations also show that PPPR achieves up to 3.53 × higher CapEx savings and up to 1.52 × longer UPS lifetime than the baselines.",
+      "canonical_id": "DOI:10.1145/3797905.3815788",
+      "doi": "10.1145/3797905.3815788",
+      "authors": [
+        "Simon Wu",
+        "Yuan Ma",
+        "Xiaorui Wang"
+      ]
+    },
+    {
+      "title": "Aurora: A Disaggregated GPU-PNM-PIM System for High-Throughput Mixed-Length LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/c05759b54becb02e91f045e805f55db8b5efd59c",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Modern large language model (LLM) inference is increasingly dominated by memory-bound operations, making processing-near-memory with processing-in-memory (PNM-PIM) an attractive approach for accelerating the decode phase. However, recent long-context LLMs adopt interleaved local and global attention (ILGA), which introduces heterogeneous execution characteristics across transformer blocks. In realistic serving environments, this heterogeneity is further amplified by mixed-length requests, where inputs with widely different context lengths are processed concurrently. These trends break a key assumption underlying existing PNM-PIM systems that transformer blocks exhibit similar latency and resource demands and can be efficiently mapped to a uniform pipeline. Under ILGA and mixed-length workloads, this assumption no longer holds, leading to severe pipeline imbalance and low utilization in prior PNM-PIM designs. Moreover, PNM-PIM–only systems struggle to efficiently support long-context prefill, which remains compute-intensive and is better suited for GPU execution. In this paper, we propose Aurora, a GPU–PNM–PIM disaggregated system designed to efficiently serve mixed-length LLM inference under ILGA. Aurora introduces an ILGA-aware multi-path PNM-PIM pipeline that explicitly accounts for block-level heterogeneity and request-length diversity, improving pipeline utilization without overprovisioning tensor parallelism. Also, Aurora further adopts a stream-oriented Softmax design to reduce stage-level latency imbalance during decoding. To enable end-to-end inference under disaggregation, Aurora treats KV cache transfer as a pipeline operation and coordinates request issuance and scheduling to avoid transfer-induced stalls. Our experimental results show that Aurora achieves up to 8.5 × and 2.2 × higher throughput than the GPU-only baseline and prior PNM-PIM systems, respectively, in end-to-end Llama4-Scout inference, while requiring a comparable or smaller number of devices.",
+      "canonical_id": "DOI:10.1145/3797905.3800536",
+      "doi": "10.1145/3797905.3800536",
+      "authors": [
+        "Hyeonu Kim",
+        "Seunghyuk Yu",
+        "Minjeoung Kim",
+        "Jungsul Lee",
+        "Hyojin Sung",
+        "Eojin Lee"
+      ]
+    },
+    {
+      "title": "Latency-SLO-Aware Memory Offloading for Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/d940b8adae0403746defa668529349571c16bb92",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Offloading large language models (LLMs) states to host memory during inference promises to reduce operational costs by supporting larger models, longer prompts, and larger batch sizes. However, the design of existing memory offloading mechanisms does not take latency service-level objectives (SLOs) into consideration. As a result, they either lead to frequent SLO violations or underutilize host memory, thereby incurring economic loss and thus defeating the purpose of memory offloading. This paper presents NovaServe, a latency-SLO-aware memory offloading system for LLM serving. A key challenge in designing NovaServe is to reconcile the tension between meeting SLOs and maximizing host memory usage. To address this, NovaServe introduces a dual-dimensional offloading strategy that jointly controls the weight offloading ratio and attention computation placement to capture the precise tradeoff between SLOs and host memory usage. With that, NovaServe proposes a two-stage approach to automatically pick the strategy. The first stage is offline which generates the optimal offloading ratios for certain SLOs, while the second stage adjusts the strategy at the granularity of inference iteration based on runtime hardware status. Our evaluation shows that NovaServe consistently meets SLOs and improves the serving throughput over existing mechanisms by 2.3 × through efficiently utilizing host memory.",
+      "canonical_id": "DOI:10.1145/3797905.3807874",
+      "doi": "10.1145/3797905.3807874",
+      "authors": [
+        "Chenxiang Ma",
+        "Hanyu Zhao",
+        "Zhi-Sheng Ye",
+        "Ze-Hua Yang",
+        "Tianhao Fu",
+        "Jiaxun Han",
+        "Jie Zhang",
+        "Yingwei Luo",
+        "Xiao-Lin Wang",
+        "Zhen-Lin Wang",
+        "Yong Li",
+        "Di-Yu Zhou"
+      ]
+    },
+    {
+      "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+      "canonical_id": "arXiv:2607.02584",
+      "arxiv_id": "2607.02584",
+      "authors": [
+        "Yaofu Liu",
+        "W. Lan",
+        "Jinxi Li",
+        "Binhang Yuan",
+        "Harry Yang"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "doi": "10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wentao Zhou",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ]
+    },
+    {
+      "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+      "canonical_id": "arXiv:2607.21985",
+      "arxiv_id": "2607.21985",
+      "authors": [
+        "Jin-hong Kim",
+        "Yejoo Lee",
+        "Jaeyoung Do"
+      ]
+    },
+    {
+      "title": "Congestion-Aware Scheduling for Heterogeneous LLM-Agent Teams",
+      "source_url": "https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Coordinating heterogeneous LLM agents under congested online settings is difficult because bursty task arrivals and limited per-agent capacity may induce hotspot overload and severe tail waiting time. This paper proposes an online scheduling method based on candidate-set contraction before assignment. Specifically, tasks are first routed through subscription matching to identify a task-relevant candidate pool, after which layered gating is applied to enforce capability feasibility, historical quality, and real-time load constraints. The remaining candidates are then ranked using a composite score that balances competence and load, with stable tie-breaking introduced to reduce assignment fluctuations under contention. We evaluate the method under a reproducible protocol with both regular and congested regimes. Across benchmarks covering code generation, arithmetic reasoning, and preference-based evaluation, the proposed approach preserves competitive task performance while reducing both mean and 95th-percentile waiting time in congested settings relative to representative linear, flat, and hierarchical baselines. The findings suggest that candidate contraction is a useful strategy for achieving more stable coordination in heterogeneous LLM-agent systems.",
+      "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00432",
+      "doi": "10.1109/COMPSAC69091.2026.00432",
+      "authors": [
+        "Wei-Qi Xie",
+        "Yuyao Li"
+      ]
+    },
+    {
+      "title": "ParaCascade: A Parallel Cascading Framework Supporting Early Routing",
+      "source_url": "https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Real-world inference tasks for large language models exhibit diverse difficulty levels. Existing LLM serving systems integrate models of different sizes and attempt to route tasks of appropriate difficulty to the most suitable model, aiming to reduce resource waste while guaranteeing service quality. Such systems usually adopt a cascading architecture, which performs inference sequentially from lightweight models to heavyweight models and validates outputs until a model that meets the task requirements is identified. However, when handling complex tasks, the cascading architecture inevitably processes unnecessary small models first, leading to cumulative latency and redundant resource consumption. This paper proposes ParaCascade, a parallel cascading framework that supports early routing. The core idea of ParaCascade is to bypass lightweight models and directly route difficult instances to heavyweight model tiers by pre-estimating task complexity, thus avoiding ineffective computation on lightweight models. In addition, ParaCascade adopts parallel prediction and model parallel inference strategies. At the cost of a slight increase in energy consumption, it significantly reduces the systemic latency caused by sequential processing, thereby improving the overall QoS. Extensive evaluations across diverse workloads on the MMLU-pro and MATH benchmarks show that ParaCascade significantly outperforms both single-model deployments and serial inference serving baselines. While maintaining answer quality, it achieves an inference speedup of 1.16× to 1.51×, demonstrating its superiority in efficient LLM serving systems.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00031",
+      "doi": "10.1109/JCC72984.2026.00031",
+      "authors": [
+        "Hao Wei",
+        "Lu-Jia Yin",
+        "Chen Chen",
+        "Jia-Nan Sun",
+        "Miao Zhang",
+        "Yong Peng"
+      ]
+    },
+    {
+      "title": "Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching",
+      "source_url": "https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Modern large language model (LLM) inference suffers from severe Time-To-First-Token (TTFT) bottlenecks. Existing prefix KV caching mechanisms are inherently stateless, forcing a trade-off between cross-chunk attention accuracy and online recomputation overhead. To address this issue, we propose Pegasus, a novel stateful prefix KV caching system that aims to achieve full-context attention accuracy while avoiding costly recomputation. To handle the exponential growth of context states under limited memory capacity, Pegasus employs a Recursive Path-Pruning Caching (RPPC) algorithm to selectively cache high-value states based on access frequency, memory footprint, and asymmetric latency benefit. In addition, Pegasus introduces a transition-based KV management mechanism to mitigate cache-miss overhead. By exploiting the sparsity of state-dependent KV variations, it replaces expensive attention recomputation and I/O-intensive tensor reloading with lightweight sparse state transitions. Extensive experiments show that Pegasus improves end-to-end serving throughput by 45.9% on average, reduces TTFT by up to 78.5%, and lowers cache-miss recovery overhead by more than 72%.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00017",
+      "doi": "10.1109/JCC72984.2026.00017",
+      "authors": [
+        "Fahao Chen",
+        "Peng Li",
+        "Dongxiao Yu",
+        "Song Guo"
+      ]
+    },
+    {
+      "title": "GreenAlign: Aligning Mixed LLM Workloads with Intermittent Renewable Supply",
+      "source_url": "https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The increasing use of renewable energy in data centers creates an opportunity to reduce the carbon footprint of energy-intensive LLM inference workloads. Unlike traditional stable power supply, renewable generation fluctuates over time, making it difficult to match computation demand with available energy. However, existing LLM serving systems primarily optimize latency and throughput without considering energy supply dynamics, leading to underutilization of renewable energy and unnecessary reliance on thermal power, and consequently, higher carbon emissions. We present GreenAlign, a renewable-aware scheduling framework that addresses this mismatch by treating best-effort (BE) requests as temporally shiftable load. GreenAlign enforces a power-constrained policy that executes BE requests using only residual renewable energy under normal conditions, and introduces a backlog risk metric to selectively relax this constraint when deadline violations are imminent. To ensure responsiveness, it maintains standby capacity to absorb unpredictable latencycritical (LC) bursts and uses lightweight length estimation to handle request uncertainty. Simulation results show that GreenAlign significantly reduces thermal energy usage while preserving LC latency and BE deadline satisfaction.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00021",
+      "doi": "10.1109/JCC72984.2026.00021",
+      "authors": [
+        "Chang Liu",
+        "Jiacheng Liu",
+        "Xiaofeng Hou",
+        "Chao Li",
+        "Minyi Guo"
+      ]
+    },
+    {
+      "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large Language Model (LLM) serving systems face a KV-cache (KVC) bottleneck. In this paper, our experimental study shows that block-based allocation increases Time-Between-Tokens (TBT) due to preemptions, while prediction-based allocation increases Time-to-First-Token (TTFT) and TBT due to allocated but unused KVC and inaccurate predictions. To address the problems to satisfy users' TTFT and TBT SLOs, we propose a system for Managing KV Cache for Coordinated TTFT and TBT (MC2). First, instead of using a constant padding in output length estimation, MC2 dynamically determines padding to bound prediction deviations with high probability and adjusts it based on request arrival rates to balance TTFT and TBT. Second, it allocates a block to requests requiring execution in the next iteration to meet their TTFT and TBT SLOs, and then distributes the remaining KVC to batched requests based on their SLOs and remaining iterations. Third, it proactively allocates KVC before depletion and reserves KVC globally to prevent preemptions. Experiments show that MC2 achieves up to 3.29× and 2.83× lower tail TBT and tail TTFT, 47% and 53% higher TTFT and TBT SLO attainments, and supports up to 1.58× higher request arrival rate than the state-of-the-art.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662646",
+      "doi": "10.1109/ICCCN69946.2026.11662646",
+      "authors": [
+        "Hai-Ying Shen",
+        "Tanmoy Sen",
+        "Masahiro Tanaka"
+      ]
+    },
+    {
+      "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Multi-agent applications increasingly rely on shared large language model backends in the public cloud, where bursty workloads cause requests from different agents to contend for the same LLM instances, leading to long queues, memory imbalance, and severe tail-latency inflation. Existing approaches typically prioritize requests using coarse workflow positions or static execution heuristics, which fail to adapt to short-term overload dynamics. We present FlowGuard, a workflow-aware overload controller for multi-agent LLM serving. Its key insight is that under sustained overload, GPU cycles spent on requests whose execution service-level-objectives (SLOs) are already violated are wasted. FlowGuard continuously recomputes per-request slack and prioritizes requests with the greatest remaining time before their deadlines, thereby maximizing on-time completions. In addition, a resource-aware dispatcher jointly accounts for KV-cache memory pressure and in-flight queue depth to reduce preemption across shared instances. Evaluated on a deliberately over-subscribed two-GPU backend, where all policies exhibit high absolute miss rates (i.e., the percentage of workflows that miss their deadlines), FlowGuard reduces the miss rate by 14–28% points over workflow-oblivious and static-priority baselines under BurstGPT-driven load, and by 34–38% points under co-located mixed-agent workloads.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662939",
+      "doi": "10.1109/ICCCN69946.2026.11662939",
+      "authors": [
+        "Ali Zafar Sadiq",
+        "Hai-Ying Shen"
+      ]
+    },
+    {
+      "title": "UTARI: An On-Prem GPU-Accelerated LLM Platform for Higher-Education Services",
+      "source_url": "https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Higher-education institutions increasingly require generative AI services that are responsive, governable, privacy-aware, and deployable within institutional infrastructure. This paper presents UTARI (UT Artificial Intelligence), an on-premises GPU-accelerated large language model (LLM) platform designed to support higher-education services, including academic assistance, institutional knowledge access, and internal conversational AI. UTARI combines local LLM serving with optional retrieval-augmented generation (RAG) to provide grounded responses over curated knowledge sources while preserving institutional control over data and infrastructure. The platform is evaluated through matched A/B experiments comparing a baseline non-RAG path (S0) and a RAG-enabled path (S1) under two output-length regimes. In the 256-token setting, both configurations achieve a median latency of approximately 6.3 s, with throughputs of 3.93 req/s and 3.91 req/s, respectively, and a 0% failure rate. In the 64-token setting, both configurations achieve a median latency of 1.5 s, with throughputs of 10.67 req/s and 10.64 req/s, respectively, again with 0% failures. The main difference appears in tail behavior: p99 latency increases from 6.3 s to 6.4 s in the 256-token regime and from 1.6 s to 1.9 s in the 64-token regime, while p99.9 reaches 6.8 s and 2.1 s in the RAG-enabled scenarios. These results show that RAG can be integrated into an on-premises campus LLM platform with negligible impact on median latency and throughput, while introducing a modest increase in upper-tail latency, particularly in short-response scenarios.",
+      "canonical_id": "DOI:10.1109/ICoICT71118.2026.11664754",
+      "doi": "10.1109/ICoICT71118.2026.11664754",
+      "authors": [
+        "Muhammad Rif'an",
+        "Fitria Amastini",
+        "D. Aprizal",
+        "Agung Wicaksono",
+        "Sonasa Rinusantoro",
+        "Abdul Rizal Adompo"
+      ]
+    },
+    {
+      "title": "WaSMa: Workflow-Aware Scheduling for Multi-Agent LLM Systems",
+      "source_url": "https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Public LLM services serve diverse multi-agent applications with varying workflow dependencies and performance requirements. Requests generated by these applications often exhibit commonality and interdependence, yet current systems largely ignore such application-level structure. As a result, at the LLM engine cluster level, assigning requests to engines with the shortest queue can cause inefficient KV-cache transfers across GPUs. Using three representative multi-agent applications, we show that current scheduling methods miss opportunities to (a) improve performance through KV-cache reuse and reduced data transfer, and (b) increase goodput via batch management informed by workflow dependencies. Motivated by these observations, we propose a Workflow-Aware Scheduling system for Multi-Agent LLM systems (WaSMa) that incorporates cluster-and engine-level scheduling to optimize LLM request execution across GPU resources. Experimental results show that WaSMa reduces the P95 tail latency by up to 48% and improves goodput by up to 107% compared to existing methods.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662938",
+      "doi": "10.1109/ICCCN69946.2026.11662938",
+      "authors": [
+        "Uttam Rao",
+        "Ali Zafar Sadiq",
+        "Hai-Ying Shen",
+        "Yuqing Yang",
+        "Elijah-Amir Randall Hodges",
+        "Marcus Muntean"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.09207",
+      "identity_tokens": [
+        "id:arXiv:2607.09207",
+        "title:bidirectional resource scheduling for disaggregated and asynchronous rl posttraining",
+        "url:https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167"
+      ],
+      "record": {
+        "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training",
+        "source_url": "https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "It is well established that the reasoning capabilities of large language models (LLMs) can be improved by applying reinforcement learning (RL) in a post-training stage. In a standard RL iteration, the current model (the policy) generates experience through rollouts, and the resulting data is then used to update the policy during training. High-performance RL frameworks such as StreamRL and AReaL employ a disaggregated architecture and asynchronous rollouts to better exploit both rollout and training resources, thereby increasing overall system throughput. Nonetheless, across varying RL setups (e.g., hardware configurations, model scales, staleness levels, and hyperparameters) and under changing workloads, it remains common for both rollout and training resources to experience idle periods. In this paper, we present BiDiRL, a hybrid time-space multiplexing architecture for asynchronous, disaggregated RL designed to reduce resource idleness. First, we develop a hot-switch runtime that enables rapid switching between rollout and training resources with negligible overhead. Second, we propose a static, scheduling-aware planner based on time-performance modeling that chooses a hot-switch-friendly resource partition, so that rollout and training durations are roughly balanced at a coarse level. Third, at execution time, we introduce a bidirectional scheduler that further exploits runtime bubbles through fine-grained resource switching, allowing the bottleneck stage to temporarily borrow idle resources from the other pool. Across a wide range of workloads, datasets, and models on two 32-GPU testbeds, BiDiRL increases RL training throughput by up to 1.94x compared with RL systems including veRL, AReaL, and ROLL, without affecting convergence behavior.",
+        "canonical_id": "arXiv:2607.09207",
+        "arxiv_id": "2607.09207",
+        "authors": [
+          "Zhi-Qiang Tan",
+          "Mao-Xin Wang",
+          "Si-Jie Wang",
+          "Yi-Ming Yin",
+          "Qiang Wang",
+          "Xiaowen Chu",
+          "Shao-Huai Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09375",
+      "identity_tokens": [
+        "id:arXiv:2607.09375",
+        "title:machmind4flash technical report",
+        "url:https://www.semanticscholar.org/paper/3ef0749af5eac72d75ecb34cb26793d93340451d"
+      ],
+      "record": {
+        "title": "Mach-Mind-4-Flash Technical Report",
+        "source_url": "https://www.semanticscholar.org/paper/3ef0749af5eac72d75ecb34cb26793d93340451d",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "We present Mach-Mind-4-Flash, a 35B-parameter Mixture-of-Experts (MoE) agentic model with 3B activated parameters. Through post-training optimization alone without scaling pre-training compute, the model achieves performance on par with or surpassing that of 100B-parameter-class models. By introducing scalable agentic interaction environments for large-scale reinforcement learning, the model attains significant performance gains on real-world application tasks. Our pipeline comprises three stages: (1) a unified RL/OPD training infrastructure with dynamic multi-teacher scheduling and operator-level acceleration, delivering 17\\% end-to-end training speedup; (2) multiple domain-specific RL experts trained in parallel across Reasoning, General, and Agent tracks, then fused into a single generalist via Multi-Teacher On-Policy Distillation (MOPD) -- a routed reverse-KL objective that eliminates the see-saw degradation of mixed-reward RL; (3) Hybrid Median-length Policy Optimization (HMPO), a single-stage token-efficiency method that compresses reasoning chains by 19--46\\% with $\\le$0.7 percentage-point accuracy loss. Mach-Mind-4-Flash scores 92.70 on AIME'26, 82.82 on IFBench, 80.74 on Behavioral-SafetyBench, 75.80 on BFCL-v4, 72.31 on BrowseComp-zh, and 84.20 on ClawBench -- leading or matching models with 10--30$\\times$ its activated size at a fraction of the inference cost.",
+        "canonical_id": "arXiv:2607.09375",
+        "arxiv_id": "2607.09375",
+        "authors": [
+          "Foundation Model Team"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13068",
+      "identity_tokens": [
+        "id:arXiv:2607.13068",
+        "title:the economics of ai decoding chips rebalancing compute capacity and bandwidth for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da"
+      ],
+      "record": {
+        "title": "The Economics of AI Decoding Chips: Rebalancing Compute, Capacity, and Bandwidth for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "Every mainstream GPU is built compute-heavy and capacity-light: it pairs enormous arithmetic throughput with too little memory to hold a modern model. In contrast, large language model decoding requires little compute and a large amount of memory: a GPU's floating-point units run at single-digit-percent utilization during decoding, and the memory the workload does need is sold only bundled with yet more compute. The compute is recovered only at hyperscale, where Mixture-of-Experts (MoE) models are spread across 96--320-GPU expert-parallel clusters serving thousands of concurrent users, a scale available to a handful of operators. We formalize the inefficiency with two fixed per-chip constants. F/B, the roofline ridge point, determines whether the compute can be utilized; F/S, the compute bundled with each GB of memory, determines how much compute must be bought. We then argue for a rebalanced decode accelerator: less compute, far more commodity memory, and a deliberately lower and cheaper bandwidth. The Skymizer HTX-301, a purpose-built 28nm PCIe accelerator using commodity DDR5, occupies that design point. Its entry cost is low. A single eight-chip card holds DeepSeek-R1 671B for about \\$19,000, and a 4U server of four four-chip cards serves two users at a deterministic 20.3 tokens per second each for about \\$28,000. Either costs less than a single H100, while the minimum GPU deployment for the model is an eight-GPU node near \\$350,000. Concurrency then scales out by adding hardware: eight 4U servers carry sixteen users for about \\$224,000, two-thirds of the node's price, with the cost per token unchanged at about \\$12 per million against the node's \\$21. The HTX-301's decisive advantage is a supply chain free of every rationed input: it uses no high-bandwidth memory, no CoWoS, and no leading-edge logic.",
+        "canonical_id": "arXiv:2607.13068",
+        "arxiv_id": "2607.13068",
+        "authors": [
+          "M. J. Yuan",
+          "Ju Long"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07862",
+      "identity_tokens": [
+        "id:arXiv:2607.07862",
+        "title:ctapipelining a latencyoriented spatial scaling method for multigpu systems",
+        "url:https://www.semanticscholar.org/paper/e1731429013d0906a63a4527cef1fbd1511ab600"
+      ],
+      "record": {
+        "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
+        "source_url": "https://www.semanticscholar.org/paper/e1731429013d0906a63a4527cef1fbd1511ab600",
+        "year": 2026,
+        "published": "2026-07-08",
+        "abstract": "The evolution of compute infrastructure has transformed multi-GPU systems into tightly integrated shared-memory structures. However, current software still mostly treats these coherent interconnects simply as high-speed networks. Simultaneously, the demand for serving Large Language Models under latency constraints has shifted GPU workload optimization from being throughput-driven to latency-bound, necessitating latency-oriented scaling methods beyond Tensor Parallelism (TP). Thus, we introduce CTA-pipelining, an execution paradigm designed to exploit shared-memory multi-GPU systems. As a latency-oriented spatial scaling technique, CTA-pipelining leverages dependencies at the Cooperative Thread Array level, enabling concurrent execution of dependent kernels across GPUs. We demonstrate its capability using CUTLASS, cuBLAS, and NCCL libraries on 8-GPU H200 and B200 systems. Results show on 2-layer GEMM, representing the MLP operation, CTA-pipelining reduces latency by up to 31.8% compared to micro-batching, and 29.6% compared to TP. It can also be combined with TP as an orthogonal scaling dimension to further push the latency boundary.",
+        "canonical_id": "arXiv:2607.07862",
+        "arxiv_id": "2607.07862",
+        "authors": [
+          "Ting-Kai Liu",
+          "Muralidhar Andoorveedu",
+          "Sanjoy Das",
+          "Sanjay J. Patel",
+          "Volodymyr V. Kindratenko"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05876",
+      "identity_tokens": [
+        "id:arXiv:2607.05876",
+        "title:think before you gridsearch floorfirst triage for llm serving",
+        "url:https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156"
+      ],
+      "record": {
+        "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156",
+        "year": 2026,
+        "published": "2026-07-07",
+        "abstract": "LLM serving optimization typically benchmarks many configurations and reaches for heavy profilers when latency targets are missed. We argue for the reverse discipline: estimation is the analytical layer of profiling -- without it, optimization degenerates to grid search. Floor First is a residual-driven triage workflow. Each decode step is modeled as a five-dimensional resource vector (HBM bytes, FLOPs, network bytes, network messages, KV capacity); summing within a resource and maximizing across resources gives an optimistic floor, the plain sum a pessimistic one. Where a measurement lands inside this [max, sum] interval reads out overlap quality before any profiler is opened, and profilers escalate only on residuals above a stated threshold. Deployment alternatives are compared by wall ordering -- which resource wall binds first as load grows -- rather than by point benchmarks. The account is compositional: new attention or state-space variants enter by declaring one module, and the workflow ships as a zero-dependency calculator plus an agent skill that enforces the discipline in agentic optimization loops. As a case study we analyze a DeepSeek-V3.2-style 671B MoE/MLA model on 16 NVIDIA H20 GPUs, whose ridge point of ~74 FLOP/byte (vs ~590 for H100) makes it an extreme decode-oriented part. The floors show TP16 decoding is KV-capacity-limited to ~70 concurrent 8K requests; sparse attention removes the KV-bandwidth term but not the capacity wall; an EP16+DP-attention layout accepts slightly worse same-batch weight traffic for an order-of-magnitude higher capacity wall (~644) -- while single-stream latency favors TP by 2.4x. The layout judgment is thus a computable function of the operating point, explaining why production deployments on identical hardware have shipped opposite attention layouts.",
+        "canonical_id": "arXiv:2607.05876",
+        "arxiv_id": "2607.05876",
+        "authors": [
+          "Yihua Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04181",
+      "identity_tokens": [
+        "id:arXiv:2607.04181",
+        "title:cocoscale leveraging layerwise scaling to unlock the potential of online llm serving",
+        "url:https://www.semanticscholar.org/paper/682229c0455fe52d850d6c685a04159ab500b498"
+      ],
+      "record": {
+        "title": "CoCoScale: Leveraging Layer-wise Scaling to Unlock the Potential of Online LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/682229c0455fe52d850d6c685a04159ab500b498",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Online large language model (LLM) serving has become the backbone of modern AI applications, powering diverse downstream services through shared hardware clusters. However, modern serving systems frequently encounter highly dynamic workloads characterized by severe workload skewness, where a small fraction of model instances receives the vast majority of traffic. Existing instance-level scaling mechanisms are limited by coarse-grained resource adjustment: scaling up requires the cold-start of full-model replicas, incurring substantial latency, while scaling down leaves the system vulnerable to performance degradation during sudden traffic surges. The key insight of this work is that LLM serving offers a unique opportunity for fine-grained scaling. In this paper, we propose CoCoScale, a layer-wise dynamic scaling mechanism that selectively expands the parallelism of hot layers onto idle resources reclaimed from underutilized devices, enabling elastic data parallelism without altering model architectures or adding hardware overhead. Evaluations demonstrate that CoCoScale significantly reduces cold start latency by 97.9%-99.3% compared to traditional scale up. Under production traces, CoCoScale reduces average latency by 20.7\\%--28.1\\% and achieves full Service Level Objective (SLO) attainment, demonstrating superior dynamic adaptability and resource efficiency.",
+        "canonical_id": "arXiv:2607.04181",
+        "arxiv_id": "2607.04181",
+        "authors": [
+          "Jing-Feng Wu",
+          "Yi-Yuan He",
+          "Minxian Xu",
+          "Xitong Gao",
+          "Chong Ma",
+          "Le Chen",
+          "Min Shen",
+          "Lin Qu",
+          "Ke-Jiang Ye",
+          "Cheng-Zhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3815788",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3815788",
+        "title:phaseaware peak power reduction for minimizing the capital expense of llm inference",
+        "url:https://www.semanticscholar.org/paper/f83de1d2ce0b5b370b3c96b3d4f4d60282b295a3"
+      ],
+      "record": {
+        "title": "Phase-aware Peak Power Reduction for Minimizing the Capital Expense of LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/f83de1d2ce0b5b370b3c96b3d4f4d60282b295a3",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "The rapid growth of large language model (LLM) inference services has been driving data centers to quickly increase their hosted GPUs and servers, causing data centers to approach their peak power capacities. This is a serious challenge because 1) expensive upgrades of power facilities must be done to existing data centers or 2) new data centers must be constructed, both of which require a significant increase of capital expense (CapEx). Existing solutions for peak power reduction include frequency throttling and power capping, which both rely on GPU frequency throttling. Hence, when applied directly to LLM inference, they can degrade performance and increase latency. While energy storage can be exploited to reduce peak power draws without hurting performance, prior solutions are not designed for LLM inference, which has a unique and recurring two-phase power profile with short-duration, high-power prefill phases followed by longer, low-power decode phases. In this paper, we propose PPPR, a Phase-aware Peak Power Reduction framework for minimizing the CapEx of LLM inference. PPPR features two novel LLM-specific designs. First, in contrast to prior work that usually relies on preset thresholds to decide when storage should discharge or recharge, PPPR leverages LLM phase information to make better decisions. This phase-aware timing shaves more peak power and leads to lower CapEx. Second, based on real-world LLM traces, a hybrid storage architecture is designed with server-level supercapacitors to handle short prefill spikes and rack-level batteries to smooth longer, aggregated power changes. This novel placement and sizing strategy can lead to more CapEx savings for LLM inference. Our hardware evaluation with representative LLM workloads shows that PPPR achieves 1.29 × more peak reduction, on average, than three state-of-the-art baselines. Extensive trace-driven simulations also show that PPPR achieves up to 3.53 × higher CapEx savings and up to 1.52 × longer UPS lifetime than the baselines.",
+        "canonical_id": "DOI:10.1145/3797905.3815788",
+        "doi": "10.1145/3797905.3815788",
+        "authors": [
+          "Simon Wu",
+          "Yuan Ma",
+          "Xiaorui Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3800536",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800536",
+        "title:aurora a disaggregated gpupnmpim system for highthroughput mixedlength llm inference",
+        "url:https://www.semanticscholar.org/paper/c05759b54becb02e91f045e805f55db8b5efd59c"
+      ],
+      "record": {
+        "title": "Aurora: A Disaggregated GPU-PNM-PIM System for High-Throughput Mixed-Length LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/c05759b54becb02e91f045e805f55db8b5efd59c",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Modern large language model (LLM) inference is increasingly dominated by memory-bound operations, making processing-near-memory with processing-in-memory (PNM-PIM) an attractive approach for accelerating the decode phase. However, recent long-context LLMs adopt interleaved local and global attention (ILGA), which introduces heterogeneous execution characteristics across transformer blocks. In realistic serving environments, this heterogeneity is further amplified by mixed-length requests, where inputs with widely different context lengths are processed concurrently. These trends break a key assumption underlying existing PNM-PIM systems that transformer blocks exhibit similar latency and resource demands and can be efficiently mapped to a uniform pipeline. Under ILGA and mixed-length workloads, this assumption no longer holds, leading to severe pipeline imbalance and low utilization in prior PNM-PIM designs. Moreover, PNM-PIM–only systems struggle to efficiently support long-context prefill, which remains compute-intensive and is better suited for GPU execution. In this paper, we propose Aurora, a GPU–PNM–PIM disaggregated system designed to efficiently serve mixed-length LLM inference under ILGA. Aurora introduces an ILGA-aware multi-path PNM-PIM pipeline that explicitly accounts for block-level heterogeneity and request-length diversity, improving pipeline utilization without overprovisioning tensor parallelism. Also, Aurora further adopts a stream-oriented Softmax design to reduce stage-level latency imbalance during decoding. To enable end-to-end inference under disaggregation, Aurora treats KV cache transfer as a pipeline operation and coordinates request issuance and scheduling to avoid transfer-induced stalls. Our experimental results show that Aurora achieves up to 8.5 × and 2.2 × higher throughput than the GPU-only baseline and prior PNM-PIM systems, respectively, in end-to-end Llama4-Scout inference, while requiring a comparable or smaller number of devices.",
+        "canonical_id": "DOI:10.1145/3797905.3800536",
+        "doi": "10.1145/3797905.3800536",
+        "authors": [
+          "Hyeonu Kim",
+          "Seunghyuk Yu",
+          "Minjeoung Kim",
+          "Jungsul Lee",
+          "Hyojin Sung",
+          "Eojin Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3807874",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3807874",
+        "title:latencysloaware memory offloading for large language model inference",
+        "url:https://www.semanticscholar.org/paper/d940b8adae0403746defa668529349571c16bb92"
+      ],
+      "record": {
+        "title": "Latency-SLO-Aware Memory Offloading for Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/d940b8adae0403746defa668529349571c16bb92",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Offloading large language models (LLMs) states to host memory during inference promises to reduce operational costs by supporting larger models, longer prompts, and larger batch sizes. However, the design of existing memory offloading mechanisms does not take latency service-level objectives (SLOs) into consideration. As a result, they either lead to frequent SLO violations or underutilize host memory, thereby incurring economic loss and thus defeating the purpose of memory offloading. This paper presents NovaServe, a latency-SLO-aware memory offloading system for LLM serving. A key challenge in designing NovaServe is to reconcile the tension between meeting SLOs and maximizing host memory usage. To address this, NovaServe introduces a dual-dimensional offloading strategy that jointly controls the weight offloading ratio and attention computation placement to capture the precise tradeoff between SLOs and host memory usage. With that, NovaServe proposes a two-stage approach to automatically pick the strategy. The first stage is offline which generates the optimal offloading ratios for certain SLOs, while the second stage adjusts the strategy at the granularity of inference iteration based on runtime hardware status. Our evaluation shows that NovaServe consistently meets SLOs and improves the serving throughput over existing mechanisms by 2.3 × through efficiently utilizing host memory.",
+        "canonical_id": "DOI:10.1145/3797905.3807874",
+        "doi": "10.1145/3797905.3807874",
+        "authors": [
+          "Chenxiang Ma",
+          "Hanyu Zhao",
+          "Zhi-Sheng Ye",
+          "Ze-Hua Yang",
+          "Tianhao Fu",
+          "Jiaxun Han",
+          "Jie Zhang",
+          "Yingwei Luo",
+          "Xiao-Lin Wang",
+          "Zhen-Lin Wang",
+          "Yong Li",
+          "Di-Yu Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02584",
+      "identity_tokens": [
+        "id:arXiv:2607.02584",
+        "title:rotateattention ropeaware rotation and range rectification for int4 quantized attention in video generation",
+        "url:https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708"
+      ],
+      "record": {
+        "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+        "canonical_id": "arXiv:2607.02584",
+        "arxiv_id": "2607.02584",
+        "authors": [
+          "Yaofu Liu",
+          "W. Lan",
+          "Jinxi Li",
+          "Binhang Yuan",
+          "Harry Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "doi": "10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wentao Zhou",
+          "Bin Guo",
+          "Zhiwen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21985",
+      "identity_tokens": [
+        "id:arXiv:2607.21985",
+        "title:unified staticdynamic pruning for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486"
+      ],
+      "record": {
+        "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+        "canonical_id": "arXiv:2607.21985",
+        "arxiv_id": "2607.21985",
+        "authors": [
+          "Jin-hong Kim",
+          "Yejoo Lee",
+          "Jaeyoung Do"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/compsac69091.2026.00432",
+      "identity_tokens": [
+        "id:DOI:10.1109/compsac69091.2026.00432",
+        "title:congestionaware scheduling for heterogeneous llmagent teams",
+        "url:https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e"
+      ],
+      "record": {
+        "title": "Congestion-Aware Scheduling for Heterogeneous LLM-Agent Teams",
+        "source_url": "https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Coordinating heterogeneous LLM agents under congested online settings is difficult because bursty task arrivals and limited per-agent capacity may induce hotspot overload and severe tail waiting time. This paper proposes an online scheduling method based on candidate-set contraction before assignment. Specifically, tasks are first routed through subscription matching to identify a task-relevant candidate pool, after which layered gating is applied to enforce capability feasibility, historical quality, and real-time load constraints. The remaining candidates are then ranked using a composite score that balances competence and load, with stable tie-breaking introduced to reduce assignment fluctuations under contention. We evaluate the method under a reproducible protocol with both regular and congested regimes. Across benchmarks covering code generation, arithmetic reasoning, and preference-based evaluation, the proposed approach preserves competitive task performance while reducing both mean and 95th-percentile waiting time in congested settings relative to representative linear, flat, and hierarchical baselines. The findings suggest that candidate contraction is a useful strategy for achieving more stable coordination in heterogeneous LLM-agent systems.",
+        "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00432",
+        "doi": "10.1109/COMPSAC69091.2026.00432",
+        "authors": [
+          "Wei-Qi Xie",
+          "Yuyao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00031",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00031",
+        "title:paracascade a parallel cascading framework supporting early routing",
+        "url:https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488"
+      ],
+      "record": {
+        "title": "ParaCascade: A Parallel Cascading Framework Supporting Early Routing",
+        "source_url": "https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Real-world inference tasks for large language models exhibit diverse difficulty levels. Existing LLM serving systems integrate models of different sizes and attempt to route tasks of appropriate difficulty to the most suitable model, aiming to reduce resource waste while guaranteeing service quality. Such systems usually adopt a cascading architecture, which performs inference sequentially from lightweight models to heavyweight models and validates outputs until a model that meets the task requirements is identified. However, when handling complex tasks, the cascading architecture inevitably processes unnecessary small models first, leading to cumulative latency and redundant resource consumption. This paper proposes ParaCascade, a parallel cascading framework that supports early routing. The core idea of ParaCascade is to bypass lightweight models and directly route difficult instances to heavyweight model tiers by pre-estimating task complexity, thus avoiding ineffective computation on lightweight models. In addition, ParaCascade adopts parallel prediction and model parallel inference strategies. At the cost of a slight increase in energy consumption, it significantly reduces the systemic latency caused by sequential processing, thereby improving the overall QoS. Extensive evaluations across diverse workloads on the MMLU-pro and MATH benchmarks show that ParaCascade significantly outperforms both single-model deployments and serial inference serving baselines. While maintaining answer quality, it achieves an inference speedup of 1.16× to 1.51×, demonstrating its superiority in efficient LLM serving systems.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00031",
+        "doi": "10.1109/JCC72984.2026.00031",
+        "authors": [
+          "Hao Wei",
+          "Lu-Jia Yin",
+          "Chen Chen",
+          "Jia-Nan Sun",
+          "Miao Zhang",
+          "Yong Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00017",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00017",
+        "title:pegasus accelerating large language model inference with stateful prefix caching",
+        "url:https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc"
+      ],
+      "record": {
+        "title": "Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching",
+        "source_url": "https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Modern large language model (LLM) inference suffers from severe Time-To-First-Token (TTFT) bottlenecks. Existing prefix KV caching mechanisms are inherently stateless, forcing a trade-off between cross-chunk attention accuracy and online recomputation overhead. To address this issue, we propose Pegasus, a novel stateful prefix KV caching system that aims to achieve full-context attention accuracy while avoiding costly recomputation. To handle the exponential growth of context states under limited memory capacity, Pegasus employs a Recursive Path-Pruning Caching (RPPC) algorithm to selectively cache high-value states based on access frequency, memory footprint, and asymmetric latency benefit. In addition, Pegasus introduces a transition-based KV management mechanism to mitigate cache-miss overhead. By exploiting the sparsity of state-dependent KV variations, it replaces expensive attention recomputation and I/O-intensive tensor reloading with lightweight sparse state transitions. Extensive experiments show that Pegasus improves end-to-end serving throughput by 45.9% on average, reduces TTFT by up to 78.5%, and lowers cache-miss recovery overhead by more than 72%.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00017",
+        "doi": "10.1109/JCC72984.2026.00017",
+        "authors": [
+          "Fahao Chen",
+          "Peng Li",
+          "Dongxiao Yu",
+          "Song Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00021",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00021",
+        "title:greenalign aligning mixed llm workloads with intermittent renewable supply",
+        "url:https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c"
+      ],
+      "record": {
+        "title": "GreenAlign: Aligning Mixed LLM Workloads with Intermittent Renewable Supply",
+        "source_url": "https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The increasing use of renewable energy in data centers creates an opportunity to reduce the carbon footprint of energy-intensive LLM inference workloads. Unlike traditional stable power supply, renewable generation fluctuates over time, making it difficult to match computation demand with available energy. However, existing LLM serving systems primarily optimize latency and throughput without considering energy supply dynamics, leading to underutilization of renewable energy and unnecessary reliance on thermal power, and consequently, higher carbon emissions. We present GreenAlign, a renewable-aware scheduling framework that addresses this mismatch by treating best-effort (BE) requests as temporally shiftable load. GreenAlign enforces a power-constrained policy that executes BE requests using only residual renewable energy under normal conditions, and introduces a backlog risk metric to selectively relax this constraint when deadline violations are imminent. To ensure responsiveness, it maintains standby capacity to absorb unpredictable latencycritical (LC) bursts and uses lightweight length estimation to handle request uncertainty. Simulation results show that GreenAlign significantly reduces thermal energy usage while preserving LC latency and BE deadline satisfaction.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00021",
+        "doi": "10.1109/JCC72984.2026.00021",
+        "authors": [
+          "Chang Liu",
+          "Jiacheng Liu",
+          "Xiaofeng Hou",
+          "Chao Li",
+          "Minyi Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662646",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662646",
+        "title:managing kv cache for coordinated waiting and execution time in llm serving",
+        "url:https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0"
+      ],
+      "record": {
+        "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large Language Model (LLM) serving systems face a KV-cache (KVC) bottleneck. In this paper, our experimental study shows that block-based allocation increases Time-Between-Tokens (TBT) due to preemptions, while prediction-based allocation increases Time-to-First-Token (TTFT) and TBT due to allocated but unused KVC and inaccurate predictions. To address the problems to satisfy users' TTFT and TBT SLOs, we propose a system for Managing KV Cache for Coordinated TTFT and TBT (MC2). First, instead of using a constant padding in output length estimation, MC2 dynamically determines padding to bound prediction deviations with high probability and adjusts it based on request arrival rates to balance TTFT and TBT. Second, it allocates a block to requests requiring execution in the next iteration to meet their TTFT and TBT SLOs, and then distributes the remaining KVC to batched requests based on their SLOs and remaining iterations. Third, it proactively allocates KVC before depletion and reserves KVC globally to prevent preemptions. Experiments show that MC2 achieves up to 3.29× and 2.83× lower tail TBT and tail TTFT, 47% and 53% higher TTFT and TBT SLO attainments, and supports up to 1.58× higher request arrival rate than the state-of-the-art.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662646",
+        "doi": "10.1109/ICCCN69946.2026.11662646",
+        "authors": [
+          "Hai-Ying Shen",
+          "Tanmoy Sen",
+          "Masahiro Tanaka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662939",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662939",
+        "title:flowguard slackaware overload control for multiagent llm serving",
+        "url:https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9"
+      ],
+      "record": {
+        "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Multi-agent applications increasingly rely on shared large language model backends in the public cloud, where bursty workloads cause requests from different agents to contend for the same LLM instances, leading to long queues, memory imbalance, and severe tail-latency inflation. Existing approaches typically prioritize requests using coarse workflow positions or static execution heuristics, which fail to adapt to short-term overload dynamics. We present FlowGuard, a workflow-aware overload controller for multi-agent LLM serving. Its key insight is that under sustained overload, GPU cycles spent on requests whose execution service-level-objectives (SLOs) are already violated are wasted. FlowGuard continuously recomputes per-request slack and prioritizes requests with the greatest remaining time before their deadlines, thereby maximizing on-time completions. In addition, a resource-aware dispatcher jointly accounts for KV-cache memory pressure and in-flight queue depth to reduce preemption across shared instances. Evaluated on a deliberately over-subscribed two-GPU backend, where all policies exhibit high absolute miss rates (i.e., the percentage of workflows that miss their deadlines), FlowGuard reduces the miss rate by 14–28% points over workflow-oblivious and static-priority baselines under BurstGPT-driven load, and by 34–38% points under co-located mixed-agent workloads.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662939",
+        "doi": "10.1109/ICCCN69946.2026.11662939",
+        "authors": [
+          "Ali Zafar Sadiq",
+          "Hai-Ying Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icoict71118.2026.11664754",
+      "identity_tokens": [
+        "id:DOI:10.1109/icoict71118.2026.11664754",
+        "title:utari an onprem gpuaccelerated llm platform for highereducation services",
+        "url:https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c"
+      ],
+      "record": {
+        "title": "UTARI: An On-Prem GPU-Accelerated LLM Platform for Higher-Education Services",
+        "source_url": "https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Higher-education institutions increasingly require generative AI services that are responsive, governable, privacy-aware, and deployable within institutional infrastructure. This paper presents UTARI (UT Artificial Intelligence), an on-premises GPU-accelerated large language model (LLM) platform designed to support higher-education services, including academic assistance, institutional knowledge access, and internal conversational AI. UTARI combines local LLM serving with optional retrieval-augmented generation (RAG) to provide grounded responses over curated knowledge sources while preserving institutional control over data and infrastructure. The platform is evaluated through matched A/B experiments comparing a baseline non-RAG path (S0) and a RAG-enabled path (S1) under two output-length regimes. In the 256-token setting, both configurations achieve a median latency of approximately 6.3 s, with throughputs of 3.93 req/s and 3.91 req/s, respectively, and a 0% failure rate. In the 64-token setting, both configurations achieve a median latency of 1.5 s, with throughputs of 10.67 req/s and 10.64 req/s, respectively, again with 0% failures. The main difference appears in tail behavior: p99 latency increases from 6.3 s to 6.4 s in the 256-token regime and from 1.6 s to 1.9 s in the 64-token regime, while p99.9 reaches 6.8 s and 2.1 s in the RAG-enabled scenarios. These results show that RAG can be integrated into an on-premises campus LLM platform with negligible impact on median latency and throughput, while introducing a modest increase in upper-tail latency, particularly in short-response scenarios.",
+        "canonical_id": "DOI:10.1109/ICoICT71118.2026.11664754",
+        "doi": "10.1109/ICoICT71118.2026.11664754",
+        "authors": [
+          "Muhammad Rif'an",
+          "Fitria Amastini",
+          "D. Aprizal",
+          "Agung Wicaksono",
+          "Sonasa Rinusantoro",
+          "Abdul Rizal Adompo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662938",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662938",
+        "title:wasma workflowaware scheduling for multiagent llm systems",
+        "url:https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150"
+      ],
+      "record": {
+        "title": "WaSMa: Workflow-Aware Scheduling for Multi-Agent LLM Systems",
+        "source_url": "https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Public LLM services serve diverse multi-agent applications with varying workflow dependencies and performance requirements. Requests generated by these applications often exhibit commonality and interdependence, yet current systems largely ignore such application-level structure. As a result, at the LLM engine cluster level, assigning requests to engines with the shortest queue can cause inefficient KV-cache transfers across GPUs. Using three representative multi-agent applications, we show that current scheduling methods miss opportunities to (a) improve performance through KV-cache reuse and reduced data transfer, and (b) increase goodput via batch management informed by workflow dependencies. Motivated by these observations, we propose a Workflow-Aware Scheduling system for Multi-Agent LLM systems (WaSMa) that incorporates cluster-and engine-level scheduling to optimize LLM request execution across GPU resources. Experimental results show that WaSMa reduces the P95 tail latency by up to 48% and improves goodput by up to 107% compared to existing methods.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662938",
+        "doi": "10.1109/ICCCN69946.2026.11662938",
+        "authors": [
+          "Uttam Rao",
+          "Ali Zafar Sadiq",
+          "Hai-Ying Shen",
+          "Yuqing Yang",
+          "Elijah-Amir Randall Hodges",
+          "Marcus Muntean"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6d642bfcc1915af7f34f727ce99139f922c584d0f978dd09ca9ac1ff68dca8f9",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
