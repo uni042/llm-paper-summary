@@ -1,4 +1,4 @@
-# Worker router — workflow v10.12
+# Worker router — workflow v10.13
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
