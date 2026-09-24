@@ -382,6 +382,122 @@ class HotDispatchTests(unittest.TestCase):
             self.assertTrue(direct["work_start_allowed"])
             self.assertFalse(direct["submission_allowed"])
 
+    def test_direct_discovery_take_pre_reserves_bounded_work_frontier(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            primary_id = "preload-frontier-primary"
+            primary_request_id = "frontier-primary-request"
+            write_json(
+                root / hot_dispatch.DISCOVERY_ENTRIES / f"{primary_id}.json",
+                {
+                    "preload_id": primary_id,
+                    "axis": "primary-backward",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                    "citation_direction": "backward",
+                    "target_unseen": 20,
+                    "page_size": 20,
+                    "max_pages": 25,
+                    "initial_cursor": None,
+                },
+            )
+            write_json(
+                root / hot_dispatch.DISCOVERY_CLAIMS / f"{primary_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "direct_take_discovery",
+                    "direct_take": True,
+                    "preload_id": primary_id,
+                    "worker_id": "worker-78",
+                    "run_key": "run-frontier",
+                    "request_id": primary_request_id,
+                    "requested_at": current.isoformat(),
+                    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-primary.json",
+                    "discovery_bank": "a",
+                    "discovery_slot_path": discovery_slot_path("a"),
+                    "scheduled_slot": "adhoc",
+                    "actual_invocation_start": current.isoformat(),
+                    "candidate_inventory_at_start": 100,
+                    "work_mode_at_start": "discovery",
+                    "research_discovery_threshold": claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD,
+                    "hot_dispatch_generated_at": current.isoformat(),
+                },
+            )
+
+            packets = []
+            for index, bank in enumerate(("b", "c"), start=1):
+                preload_id = f"preload-frontier-{index}"
+                entry = {
+                    "preload_id": preload_id,
+                    "axis": f"frontier-forward-{index}",
+                    "provider": "semantic_scholar",
+                    "source_url": f"https://example.invalid/citations/{index}",
+                    "citation_direction": "forward",
+                    "target_unseen": 20,
+                    "page_size": 20,
+                    "max_pages": 25,
+                    "initial_cursor": None,
+                }
+                write_json(
+                    root / hot_dispatch.DISCOVERY_ENTRIES / f"{preload_id}.json",
+                    entry,
+                )
+                packets.append(
+                    {
+                        **entry,
+                        "discovery_bank": bank,
+                        "discovery_slot_path": discovery_slot_path(bank),
+                        "preload_result_path": (
+                            f".survey/work-queue/discovery-precheck/results/{preload_id}.json"
+                        ),
+                        "preload_unseen_result_count": 20,
+                        "created_at": current.isoformat(),
+                    }
+                )
+
+            def available(_root, *, direction=None, limit=32):
+                if direction == "forward":
+                    return packets[:limit]
+                return []
+
+            with mock.patch.object(
+                hot_dispatch.discovery_preload_queue,
+                "available_preloads",
+                side_effect=available,
+            ):
+                result = hot_dispatch.materialize_discovery_prechecks(root)
+
+            self.assertEqual(result["frontier_target"], 3)
+            self.assertEqual(result["frontier_reserved"], 2)
+            self.assertEqual(result["created"], 3)
+
+            for packet in packets:
+                preload_id = packet["preload_id"]
+                claim = json.loads(
+                    (root / hot_dispatch.DISCOVERY_CLAIMS / f"{preload_id}.json")
+                    .read_text(encoding="utf-8")
+                )
+                self.assertTrue(claim["auto_frontier"])
+                self.assertEqual(claim["frontier_parent_preload_id"], primary_id)
+                self.assertEqual(claim["run_key"], "run-frontier")
+                self.assertTrue(
+                    (root / hot_dispatch.PRECHECK_REQUESTS / f"{claim['request_id']}.json")
+                    .is_file()
+                )
+
+            primary_direct = json.loads(
+                (root / hot_dispatch.DIRECT_DISCOVERY_RESULTS / f"{primary_id}.json")
+                .read_text(encoding="utf-8")
+            )
+            self.assertTrue(primary_direct["frontier_work_available"])
+            self.assertEqual(primary_direct["frontier_target"], 3)
+            self.assertEqual(
+                {row["preload_id"] for row in primary_direct["reserved_frontier"]},
+                {packet["preload_id"] for packet in packets},
+            )
+
+
     def test_run_state_accepts_direct_route_without_waiting_for_current_inventory(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
