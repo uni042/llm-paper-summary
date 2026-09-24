@@ -239,6 +239,55 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertNotIn("three-success", result["rule"])
         self.assertNotIn("four-round", result["rule"])
 
+    def test_refill_standby_action_cannot_emit_finalization_message(self):
+        result = mod.decide(make_args(
+            continuation_required_action="CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+            active_assignment=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="research",
+            research_audit_completed_this_invocation=2,
+            research_minimum_completions=5,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertEqual(result["next_action"], "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY")
+        self.assertIn("standby", result["next_action_message"])
+        self.assertNotIn("最終化許可が成立", result["next_action_message"])
+
+    def test_unknown_future_action_fails_closed_to_continue_message(self):
+        message = mod._message_for_action(
+            next_action="FUTURE_CONTINUE_ACTION",
+            permit=False,
+            decision="MUST_CONTINUE",
+            pending={
+                "claim_result": False,
+                "submission_result": False,
+                "ack_result": False,
+                "discovery_precheck_result": False,
+                "discovery_submission_result": False,
+            },
+        )
+        self.assertIn("最終化許可は発行されていません", message)
+        self.assertIn("作業を継続", message)
+        self.assertNotIn("最終化許可が成立", message)
+
+    def test_finalization_action_requires_issued_permit(self):
+        with self.assertRaises(RuntimeError):
+            mod._assert_finalization_invariants(
+                permit=False,
+                decision="MUST_CONTINUE",
+                next_action="FINALIZE",
+            )
+
+    def test_issued_permit_requires_finalization_action(self):
+        with self.assertRaises(RuntimeError):
+            mod._assert_finalization_invariants(
+                permit=True,
+                decision="MAY_FINALIZE",
+                next_action="CONTINUE_WORK",
+            )
+
     def test_clean_stop_run_issues_permit(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",

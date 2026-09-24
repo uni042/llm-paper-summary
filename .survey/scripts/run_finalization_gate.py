@@ -30,6 +30,110 @@ WAIT_MICROTASKS = (
     "organize_current_paper_evidence",
 )
 
+FINALIZATION_ACTIONS = frozenset({"FINALIZE", "FINALIZE_AFTER_SAFE_HANDOFF"})
+
+
+def _assert_finalization_invariants(*, permit: bool, decision: str, next_action: str) -> None:
+    """Keep the machine decision, permit, and action mutually consistent.
+
+    Finalization is fail-closed: only an issued permit may produce a finalization
+    action. Any future continuation action is therefore non-finalizing by
+    default, even before a dedicated human-readable message is added for it.
+    """
+    if permit:
+        if decision != "MAY_FINALIZE":
+            raise RuntimeError(
+                "finalization invariant violated: issued permit requires MAY_FINALIZE"
+            )
+        if next_action not in FINALIZATION_ACTIONS:
+            raise RuntimeError(
+                "finalization invariant violated: issued permit requires a finalization action"
+            )
+        return
+
+    if decision != "MUST_CONTINUE":
+        raise RuntimeError(
+            "finalization invariant violated: missing permit requires MUST_CONTINUE"
+        )
+    if next_action in FINALIZATION_ACTIONS:
+        raise RuntimeError(
+            "finalization invariant violated: finalization action requires an issued permit"
+        )
+
+
+def _message_for_action(
+    *,
+    next_action: str,
+    permit: bool,
+    decision: str,
+    pending: dict[str, bool],
+) -> str:
+    """Render guidance without ever inferring permission from an unknown action."""
+    _assert_finalization_invariants(
+        permit=permit,
+        decision=decision,
+        next_action=next_action,
+    )
+
+    if permit:
+        if next_action == "FINALIZE_AFTER_SAFE_HANDOFF":
+            return "安全なhandoffを確認済みのhard stopとして最終化します。"
+        return "最終化許可が成立したため通常の最終通知へ進みます。"
+
+    if next_action == "CHECK_CLAIM_STATE":
+        return "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
+    if next_action == "CHECK_SUBMISSION_STATE":
+        return "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
+    if next_action == "RUN_WAIT_MICROTASK_AND_RECHECK":
+        if pending["claim_result"]:
+            return (
+                "claim resultが処理中です。sleepや固定間隔pollingは行わず、同じrequestを起動したSurvey claim fast laneの"
+                "Actions状態、job/step、同一workerのtransport healthを確認し、待機ミクロタスクを1件処理してから同じrequest_idを再確認します。"
+            )
+        return (
+            "必要な非同期結果が処理中です。runを終了せず、短い待機ミクロタスクを1件処理してから"
+            "同じ耐久targetを再確認します。結果がterminalになるまでこの作業サイクルを繰り返します。"
+        )
+    if next_action == "CONTINUE_ASSIGNED_WORK":
+        return "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
+    if next_action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
+        return (
+            "foregroundのResearch/Auditを継続しながらstandbyを補充します。"
+            "補充結果はforeground作業の同期障壁にせず、現在のassignmentを止めません。"
+        )
+    if next_action == "RECOVER_DISCOVERY_SUBMISSION":
+        return "開始済みDiscovery roundの失敗を正規recovery_stepsで回収し、最終化せず同じroundを完了させます。"
+    if next_action == "CONTINUE_DISCOVERY_PIPELINE":
+        return (
+            "非同期Discovery resultだけを待たず、事前装填済みlookahead roundのcached候補を軽量評価します。"
+            "正式precheckが完了するまでsubmissionは行いません。"
+        )
+    if next_action == "CONTINUE_DISCOVERY_ROUND":
+        return "成功済みDiscovery precheckの評価・submissionを完了し、開始済みroundを終端まで進めます。"
+    if next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        return (
+            "Research/Auditの最低成功完了数に未達です。最終化せず、最新queue/claim stateから"
+            "既確保standbyをforegroundへ昇格し、必要ならclaim windowを補充してResearch/Auditを継続します。本文処理はforeground 1件だけです。"
+        )
+    if next_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
+        return (
+            "claim可能なResearch/Auditの再出現を待ちながら待機ミクロタスクを実行し、"
+            "最新queueを再確認します。これ自体をrun終了理由にはしません。"
+        )
+    if next_action == "DISCOVER_AGAIN":
+        return "Discoveryの最低ラウンド数に未達です。最終化せず、次の正規Discovery roundへ進みます。"
+    if next_action == "RUN_0830_MAINTENANCE":
+        return "08:30 maintenanceの未完了作業を続行し、正規の完了条件まで進めます。"
+    if next_action == "COMPLETE_SAFE_HANDOFF_THEN_RECHECK":
+        return "hard stopの安全なhandoffを完了し、最終化条件を再確認します。"
+    if next_action in {"CONTINUE_WORK", "REFRESH_AND_CONTINUE"}:
+        return "最終化せず、最新canonical stateから次の独立作業を実行します。"
+
+    return (
+        f"最終化許可は発行されていません（next_action={next_action}）。"
+        "未知または新規の継続アクションとして安全側に倒し、最新canonical stateに従って作業を継続します。"
+    )
+
 
 def yn(value: str) -> bool:
     value = value.strip().lower()
@@ -181,47 +285,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             next_action = "CONTINUE_WORK"
             wait_seconds = 0
 
-    if next_action == "CHECK_CLAIM_STATE":
-        next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
-    elif next_action == "CHECK_SUBMISSION_STATE":
-        next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
-    elif next_action == "RUN_WAIT_MICROTASK_AND_RECHECK":
-        if pending["claim_result"]:
-            next_action_message = (
-                "claim resultが処理中です。sleepや固定間隔pollingは行わず、同じrequestを起動したSurvey claim fast laneの"
-                "Actions状態、job/step、同一workerのtransport healthを確認し、待機ミクロタスクを1件処理してから同じrequest_idを再確認します。"
-            )
-        else:
-            next_action_message = (
-                "必要な非同期結果が処理中です。runを終了せず、短い待機ミクロタスクを1件処理してから"
-                "同じ耐久targetを再確認します。結果がterminalになるまでこの作業サイクルを繰り返します。"
-            )
-    elif next_action == "CONTINUE_ASSIGNED_WORK":
-        next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
-    elif next_action == "RECOVER_DISCOVERY_SUBMISSION":
-        next_action_message = "開始済みDiscovery roundの失敗を正規recovery_stepsで回収し、最終化せず同じroundを完了させます。"
-    elif next_action == "CONTINUE_DISCOVERY_PIPELINE":
-        next_action_message = (
-            "非同期Discovery resultだけを待たず、事前装填済みlookahead roundのcached候補を軽量評価します。"
-            "正式precheckが完了するまでsubmissionは行いません。"
-        )
-    elif next_action == "CONTINUE_DISCOVERY_ROUND":
-        next_action_message = "成功済みDiscovery precheckの評価・submissionを完了し、開始済みroundを終端まで進めます。"
-    elif next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        next_action_message = (
-            "Research/Auditの最低成功完了数に未達です。最終化せず、最新queue/claim stateから"
-            "既確保standbyをforegroundへ昇格し、必要ならclaim windowを補充してResearch/Auditを継続します。本文処理はforeground 1件だけです。"
-        )
-    elif next_action == "DISCOVER_AGAIN":
-        next_action_message = "Discoveryの最低ラウンド数に未達です。最終化せず、次の正規Discovery roundへ進みます。"
-    elif next_action == "COMPLETE_SAFE_HANDOFF_THEN_RECHECK":
-        next_action_message = "hard stopの安全なhandoffを完了し、最終化条件を再確認します。"
-    elif next_action == "CONTINUE_WORK":
-        next_action_message = "最終化せず、最新canonical stateから次の独立作業を実行します。"
-    elif next_action == "FINALIZE_AFTER_SAFE_HANDOFF":
-        next_action_message = "安全なhandoffを確認済みのhard stopとして最終化します。"
-    else:
-        next_action_message = "最終化許可が成立したため通常の最終通知へ進みます。"
+    next_action_message = _message_for_action(
+        next_action=next_action,
+        permit=permit,
+        decision=decision,
+        pending=pending,
+    )
 
     progress_notice = next_action_message if next_action == "RUN_WAIT_MICROTASK_AND_RECHECK" else ""
     productive_wait_required = bool(next_action == "RUN_WAIT_MICROTASK_AND_RECHECK")
