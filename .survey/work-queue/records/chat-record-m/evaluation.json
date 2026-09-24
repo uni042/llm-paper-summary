@@ -4,7 +4,22 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-e6d3f0c74155be3ba893092d",
   "job_id": "job-research-6884e3d688f660cb",
-  "data": {},
+  "data": {
+    "hardware": "4基のNVIDIA A100 GPUを完全結合した構成をモデル化し、高帯域のNVLinkと低帯域のPCIeの2種類の相互接続を比較する。",
+    "software": "Mixtral 8x7Bを主対象とし、付録ではLlama-MoEとSwitch Transformerでも同様の予測戦略トレードオフを確認する。",
+    "methodology": "Mixtral 8x7Bの単一MoE層のprefill遅延を、バッチサイズ1・系列長512でシミュレーションする。MMLU、Alpaca Eval、SST2から得られる専門家活性化分布と人工的なskewness条件を用い、予測なし、分布のみの予測、複数精度・オーバーヘッド点を持つトークン単位予測を比較する。総遅延を注意機構計算、フィードフォワードネットワーク計算、通信、予測器オーバーヘッドへ分解し、各条件で最小のトークン単位予測点と分布のみ方式を比較する。",
+    "scope": "評価は主に4基A100上のMixtral 8x7B単層prefillをモデル化したシミュレーションであり、実機上の完全な多層生成スループット測定ではない。相互接続をNVLinkとPCIeへ振って通信律速性を調べ、付録の別MoEアーキテクチャで傾向の一般性を確認するが、より大規模なGPUトポロジやハイブリッド並列では絶対値が変わり得る。",
+    "datasets": [
+      "MMLU",
+      "Alpaca Eval",
+      "SST2"
+    ],
+    "baselines": [
+      "予測なしの基準実行",
+      "トークン単位専門家予測の各予測器・精度点"
+    ],
+    "workload": "バッチサイズ1、系列長512のprefill。専門家需要の偏りを変化させる。"
+  },
   "reservation": {
     "claim_id": "claim-preload-e6d3f0c74155be3ba893092d",
     "worker_id": "scheduled-chat-00",
