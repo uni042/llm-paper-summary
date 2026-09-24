@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-adcf408437d27a8a65fe0220","job_id":"job-research-20dfb7993995c1a7","data":{"canonical_id":"arXiv:2511.06174","arxiv_id":"2511.06174","doi":"10.48550/arXiv.2511.06174","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":["cs.AI"]},"title":"LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs","summary":"LUT-LLMは、FPGAがGPUより演算資源で劣る一方、分散オンチップメモリを豊富に持つ点を利用し、LLMの線形層を算術中心からルックアップ表中心へ変換するFPGA推論アクセラレータである。活性値と重みを同時にベクトル量子化して2次元表へ事前計算し、帯域幅連動の並列セントロイド探索、2次元表部分和エンジン、空間・時間ハイブリッド実行を組み合わせる。Qwen3 1.7BをAMD Alveo V80へ実装し、AMD MI210/NVIDIA A100に対して1.10〜3.29倍の速度と3.05〜6.60倍のエネルギー効率を報告する。FPGAで1B超LLMをメモリベース計算へ展開するための量子化・性能モデル・回路設計を一体化した研究である。","list_summary":"活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。","authors":["Zifan He","Shengyu Ye","Rui Ma","Yang Wang","Jason Cong"],"authors_affiliations":"University of California, Los Angeles; Microsoft Research","published":"2025-11-09","publication":"FCCM 2026 / arXiv","publication_type":"査読会議論文（拡張版プレプリント）","publication_status":"arXiv v2, extended 11 pages, FCCM 2026","lineage":"FPGA LLM acceleration / vector quantization / memory-based computation / heterogeneous inference","topics":["FPGA","ルックアップ表","ベクトル量子化","Qwen3","メモリベース計算"],"importance":"GPUの低ビット算術に対し、FPGAのオンチップメモリを演算資源として使う別の推論設計点を1B超LLM実機で示し、非GPU推論基盤の比較に直接使える。","implementation":"AMD Alveo V80実機、Vitis HLS 2024.2、TAPA、RapidStream、Vivado 2024.2で実装。公式コードはLUT-FPGA/LUT-LLM。","hardware_evaluation":"V80 250MHz、32 HBM読出しチャネル＋入出力/KV用各4チャネル。比較はAMD MI210、NVIDIA A100、Allo、InTAR、FlightLLM。","quality_effect":"GLUE、SQuAD v2、MMLU-Proで量子化品質を測定し、SpinQuant比geomean低下1.8%、FP16比でも各タスクの劣化を限定しながら実機速度を得る。","source":"https://arxiv.org/abs/2511.06174","sources":["https://arxiv.org/abs/2511.06174","https://arxiv.org/html/2511.06174"],"code":"https://github.com/LUT-FPGA/LUT-LLM","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-adcf408437d27a8a65fe0220","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-f151a18e22842a355a31eb94",
+  "job_id": "job-research-fc413cbcbab0d455",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-f151a18e22842a355a31eb94",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

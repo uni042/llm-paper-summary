@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-adcf408437d27a8a65fe0220","job_id":"job-research-20dfb7993995c1a7","data":{"overview":"LUT-LLMはAMD V80上でQwen3 1.7Bを実装し、共同ベクトル量子化と表引き回路によりGPUより少ない帯域・演算資源でも高い単一バッチ推論効率を示す。MI210 INT8比でgeomean latencyを3.29倍短縮し、A100に対してFP16比1.46倍、INT8比1.21倍、INT4 decode比でも1.10倍を報告する。エネルギー効率はMI210比6.6倍、A100比3.05〜5.94倍。既存FPGA方式比ではAllo 5.6倍、InTAR 1.9倍、FlightLLM 1.6倍高速である。","key_results":[{"metric":"GPU比end-to-end/decode速度","value":"1.10〜3.29×","baseline":"AMD MI210 / NVIDIA A100","condition":"Qwen3 1.7B、V80、GPU BF16/INT8/INT4、vLLM/GPTQ/Marlin","interpretation":"MI210 INT8に対し3.29× geomean latency短縮、A100 INT8に1.21×、A100 INT4 decodeにも1.10×。"},{"metric":"エネルギー効率","value":"MI210比6.6×、A100比3.05〜5.94×","baseline":"GPU tokens/J","condition":"Qwen3 1.7B generation","interpretation":"FPGAオンチップメモリ読出しを演算へ使う設計が速度以上に電力効率へ寄与する。"},{"metric":"既存FPGA比速度","value":"Allo 5.6×、InTAR 1.9×、FlightLLM 1.6×","baseline":"arithmetic-based FPGA accelerators","condition":"V80向けsimulation、原データとの差2%未満","interpretation":"prefillのmemory-based peak throughputとdecodeの帯域飽和の双方が改善要因。"},{"metric":"量子化品質","value":"SpinQuant比geomean低下1.8%","baseline":"FP16、RTN INT8、SmoothQuant、SpinQuant","condition":"GLUE、SQuAD v2、MMLU-Pro","interpretation":"表引き用共同量子化による品質劣化を低く抑え、RTN INT8より一貫して高品質。"},{"metric":"V80実装効率","value":"250MHz、lookup用実効250GB/s、decode帯域利用約92%","baseline":"V80 hardware limit","condition":"32 HBM read channels for tables/indices","interpretation":"計算不足だったFPGAをmemory-boundな設計へ移し、利用可能帯域近くまで使う。"}],"negative_results":"A100 INT4との優位は1.7B小型モデルでGPUの帯域利用率がINT8時の約0.6倍へ落ちる条件に依存する。著者の32B外挿ではLUT-LLMはA100 INT8に1.2倍だがA100 INT4には0.8倍となり逆転する。また既存FPGA比較の一部は実機再実装ではなくsimulatorで、context windowにも訓練・システム上の制約がある。","interpretation":"本研究の価値はFPGAでGPUの算術性能を追うのではなく、分散オンチップメモリをdot-product結果の表として演算資源化し、量子化形式・検索回路・実行順序をその前提で共同設計した点にある。性能モデルで共同量子化がprefill/decode双方に有利と示し、そのボトルネックを回路へ反映している。","quality_impact":"最終共同量子化ではFP16からGLUE/SQuAD/MMLU-Pro各指標が低下するが、単純RTN INT8より大幅に良く、SpinQuantに対するgeomean差は1.8%に留まる。速度・電力利得は無損失ではないため、実運用では品質許容幅との交換条件になる。"},"reservation":{"claim_id":"claim-preload-adcf408437d27a8a65fe0220","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-f151a18e22842a355a31eb94",
+  "job_id": "job-research-fc413cbcbab0d455",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-f151a18e22842a355a31eb94",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
