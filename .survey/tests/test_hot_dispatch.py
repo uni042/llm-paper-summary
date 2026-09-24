@@ -560,6 +560,74 @@ class HotDispatchTests(unittest.TestCase):
             self.assertFalse(direct["submission_allowed"])
             self.assertEqual(direct["request_id"], request_id)
 
+    def test_early_discovery_ack_does_not_materialize_precheck_request(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            preload_id = "preload-early-ack"
+            request_id = "early-ack-request"
+            write_json(
+                root / hot_dispatch.DISCOVERY_ENTRIES / f"{preload_id}.json",
+                {
+                    "preload_id": preload_id,
+                    "axis": "early-backward",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                    "citation_direction": "backward",
+                    "target_unseen": 20,
+                    "page_size": 20,
+                    "max_pages": 25,
+                    "initial_cursor": None,
+                },
+            )
+            write_json(
+                root / hot_dispatch.DISCOVERY_CLAIMS / f"{preload_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "direct_take_discovery",
+                    "direct_take": True,
+                    "preload_id": preload_id,
+                    "worker_id": "worker-78",
+                    "run_key": "run-early-ack",
+                    "request_id": request_id,
+                    "claimed_at": current.isoformat(),
+                    "lease_expires_at": (current + dt.timedelta(minutes=30)).isoformat(),
+                    "preload_result_path": (
+                        ".survey/work-queue/discovery-precheck/results/preload-early-ack.json"
+                    ),
+                    "discovery_bank": "a",
+                    "discovery_slot_path": discovery_slot_path("a"),
+                    "scheduled_slot": "adhoc",
+                    "actual_invocation_start": current.isoformat(),
+                    "candidate_inventory_at_start": 100,
+                    "work_mode_at_start": "discovery",
+                    "research_discovery_threshold": (
+                        claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
+                    ),
+                    "hot_dispatch_generated_at": current.isoformat(),
+                },
+            )
+
+            result = hot_dispatch.acknowledge_discovery_takes(root)
+
+            self.assertEqual(result["created"], 1)
+            self.assertFalse(
+                (root / hot_dispatch.PRECHECK_REQUESTS / f"{request_id}.json").exists()
+            )
+            direct = json.loads(
+                (
+                    root
+                    / hot_dispatch.DIRECT_DISCOVERY_RESULTS
+                    / f"{preload_id}.json"
+                ).read_text(encoding="utf-8")
+            )
+            self.assertTrue(direct["ok"])
+            self.assertTrue(direct["early_ack"])
+            self.assertEqual(direct["status"], "precheck_pending")
+            self.assertTrue(direct["work_start_allowed"])
+            self.assertFalse(direct["submission_allowed"])
+            self.assertEqual(direct["reserved_frontier"], [])
+
     def test_accounted_discovery_round_no_longer_consumes_frontier_capacity(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
