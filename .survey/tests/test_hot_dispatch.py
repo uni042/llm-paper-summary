@@ -102,6 +102,49 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(index["discovery"]["backward"][0]["preload_id"], "preload-hot")
             self.assertTrue((root / hot_dispatch.INDEX).is_file())
 
+    def test_index_exposes_same_worker_active_claim_for_zero_wait_resume(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            job_id = "job-carryover-resume"
+            write_json(
+                root / ".survey/work-queue/jobs" / f"{job_id}.json",
+                {
+                    "job_id": job_id,
+                    "type": "research",
+                    "status": "ready",
+                    "title": "Carry-over paper",
+                    "depends_on_job_ids": [job_id],
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/claims" / f"{job_id}.json",
+                {
+                    "schema_version": 1,
+                    "claim_id": "claim-carryover",
+                    "job_id": job_id,
+                    "worker_id": "scheduled-chat-30",
+                    "worker_kind": "scheduled_chat",
+                    "attempt_id": "attempt-carryover",
+                    "claimed_at": current.isoformat(),
+                    "expires_at": (current + dt.timedelta(hours=2)).isoformat(),
+                    "kind": "research",
+                    "pipeline_order": 0,
+                    "run_key": "old-run",
+                    "scheduled_slot": "30",
+                    "actual_invocation_start": current.isoformat(),
+                },
+            )
+
+            index = hot_dispatch.build_index(root)
+            packets = index["research_resume"]["scheduled-chat-30"]
+            self.assertEqual(len(packets), 1)
+            self.assertEqual(packets[0]["job_id"], job_id)
+            self.assertEqual(packets[0]["pipeline_role"], "foreground")
+            self.assertTrue(packets[0]["resume_without_new_claim"])
+            self.assertTrue(packets[0]["work_start_allowed"])
+            self.assertFalse(packets[0]["record_write_allowed"])
+
     def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -227,6 +270,13 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(direct["status"], "canonicalizing")
             self.assertTrue(direct["work_start_allowed"])
             self.assertFalse(direct["record_write_allowed"])
+
+            refill_request = root / hot_dispatch.CLAIM_REQUESTS / Path(direct["canonical_claim_result_path"]).name
+            self.assertTrue(refill_request.is_file())
+            refill_request.unlink()
+            recovered = hot_dispatch.process_research_takes(root)
+            self.assertEqual(len(recovered["created_refill_requests"]), 1)
+            self.assertTrue(refill_request.is_file())
 
             refill = root / direct["canonical_claim_result_path"]
             write_json(
