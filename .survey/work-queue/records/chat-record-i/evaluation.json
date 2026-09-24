@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-3c754529c6f791ee0cbc78c5",
-  "job_id": "job-research-374463a300b97ed5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-3c754529c6f791ee0cbc78c5",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-3c754529c6f791ee0cbc78c5","job_id":"job-research-374463a300b97ed5","data":{"hardware":"主測定はNVIDIA GeForce RTX 5090（33.7GB、sm_120）とCUDA 13で実施し、Jetson AGX Thor（sm_110）およびDGX Spark（GB10、sm_121）でもLLMとロボット方策の機構試験を再現する。全比較は単一ストリーム、同一モデル・精度・ハードウェア条件を重視する。","software":"FlashRTのNVIDIA CUDAバックエンドを評価し、比較対象vLLMは0.22.0、torch 2.11/CUDA 13、NVFP4、完全CUDAグラフ、automatic prefix caching有効、max_num_seqs=1で構成する。SGLangは管理対象の構造比較とHiggs TTSの実行確認に用い、同一ハイブリッドモデルの速度比較はNVFP4未対応の公平性問題から行わない。","methodology":"評価は三層に分ける。第一に再利用なしのFlashRT冷間経路で初回トークン時間の中央値・90/99百分位とピークメモリを測り、実行基盤自体の低遅延性を確認する。第二に同じFlashRT内で冷間事前充填とカプセル復元を比較し、2k、4k、8k、16k接頭辞で保存、復元、接尾辞追加、初回トークン時間を分解する。第三に同一モデル・GPUのvLLM自動接頭辞キャッシュと絶対初回トークン時間を比較する。正確性は9試験で、状態を別プロンプトで完全に汚した後の復元、復元＋追加、分岐、チャンク整合境界、未対応経路の失敗閉鎖まで確認する。","scope":"対象は低並列・単一または少数ストリーム、オンデバイスの応答性であり、高並列スループット、分散サービング、任意動的バッチ、クロスノードKV再利用、定常復号速度は主張しない。ロボット評価はオフラインの実行機構試験で、実機タスク成功率や安全性評価ではない。ホスト・ディスク階層からの初回昇格はGPU常駐のミリ秒未満復元より遅く、同一配備、形状バケット、チャンク整合などの成立条件がある。"},"reservation":{"claim_id":"claim-preload-3c754529c6f791ee0cbc78c5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
