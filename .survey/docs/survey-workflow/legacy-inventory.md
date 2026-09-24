@@ -24,7 +24,7 @@
 
 |経路|確認できた実装|暫定分類|次のゲート|
 |---|---|---|---|
-|`.survey/scripts/list_summary.py`|旧 `## 一文要約` と `fallback_summary` を読む処理、`_compact_legacy` がある。|旧論文救済reader候補（E）。ただし旧論文データが残る限り削除不可。|全公開論文の明示 `list_summary` と品質監査PASSを確認。|
+|`.survey/scripts/list_summary.py`|明示 `list_summary` の品質監査のみ。本文・`summary` からの生成関数は除去済み。|品質監査は現行reader（A）。旧生成互換は撤去済み。|明示値の欠落は構造検査と監査で拒否。本文品質のPASSはreader撤去条件と分離。|
 |`.survey/scripts/replay_record_fallback.py`|5スロットResearch/Audit fallbackを現行不変提出へ変換する。旧 `chat-inbox.json` payloadを読む分岐もある。|現行Library退避・再生は保持対象（A）。chat-inbox読取だけ旧互換（E）。|fallback-inbox/archive/failedの全件分類と再生・終端確定後、旧分岐のみ除去。|
 |`.survey/scripts/dispatch_fallback_inbox.py`|現行fallback dispatchのほか、旧chat-inbox bundleと `writes` wrapperなしDiscovery payloadを扱う分岐がある。|現行dispatchは保持（A）。旧envelope救済はE候補。|全inbox実データをreader単位で照合し、正常変換/終端/記録付き破棄を確定。|
 |`.survey/scripts/record_bank_config.py`|現行bank設定に加え、旧bank root alias `a` と旧slot path受入れ関数がある。|新規writerが旧pathを出さないことを確認したうえでreader部分はE候補。|全records/claims/descriptor参照先を棚卸しし、旧path参照0を確認。|
@@ -95,3 +95,7 @@ As of `12cc4e657bdcd1badc924858dec27f9dadc77af0`, `.survey/tests/test_legacy_sch
 3. claims、record banks、fallback、precheck、submission/result間の実参照を解決し、A〜Eの全件JSON台帳を生成する。
 4. 現行producer側の旧形式生成能力を別途検索し、この静的確認に含まれていないpath/field/worker aliasを追加する。
 5. 台帳に未分類・未決・active itemが残る間は移行・削除へ進まない。
+
+## 進捗追記 — 2026-09-24
+
+一覧用説明の旧生成readerを削除した。`survey.py` はfrontmatterの `list_summary` だけを公開一覧に使い、欠落・空値は例外とする。`check_repository.py` でも必須項目として検査する。`audit_list_summary_quality.py` は明示値を監査し、旧要約生成関数を呼ばない。論文本文の品質監査FAILは残存し得るが、旧本文形式readerを維持する理由にはしない。

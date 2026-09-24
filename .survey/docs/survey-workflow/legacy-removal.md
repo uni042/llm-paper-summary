@@ -93,8 +93,8 @@
 
 ### 2 — 論文1,024件
 まず全論文を実件数で再計数する。nullable項目、明示情報から確定できるメタデータ、正規化可能なfrontmatterは既存normalizerを確認して移行する。著者・出版情報は本文/一次資料に根拠がある場合だけ復元する。
-`list_summary`、代表結果、手法、評価条件、限界、既存研究との差、一次資料に基づく実装状態は機械生成しない。内容が不足する論文は通常Research相当の読解・監査を経て更新する。
-全論文に対して `check_repository.py`、`audit_paper_quality.py`、`audit_list_summary_quality.py`、`audit_overview_results.py` を実行し、FAIL 0件を確認する。その後に限り `list_summary.py` の旧fallbackを削除する。
+`list_summary`、代表結果、手法、評価条件、限界、既存研究との差、一次資料に基づく実装状態は機械生成しない。内容が不足する論文の品質改善は、レガシーreader撤去とは分離して扱う。
+基準commitでは全1,026件に明示 `list_summary` があり、現行一覧生成・一覧監査はfrontmatterの値を直接読み、欠落時は失敗する。`list_summary.py` から本文・summary由来の自動生成を削除済み。したがって一覧説明の形式移行ゲートに本文品質FAIL 0件は含めない。`audit_paper_quality.py`、`audit_list_summary_quality.py`、`audit_overview_results.py` は内容品質の監査として継続し、結果を別途記録する。
 
 ### 3 — ライブ状態
 jobs、claims、claim requests/results、records、research-preflight、submissions/results、run-state、Discovery preloadを種別別の現行writer契約へ揃える。旧claim alias、lease、route/transport field等を明示的に分類する。自動修復で旧値を隠さず、不正な旧ライブ入力は拒否する。各移行後に参照整合・重複ID・未完了状態を検査する。

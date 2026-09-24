@@ -18,7 +18,6 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from list_summary import compact_list_summary
 from paper_taxonomy import canonical_lineage
 
 # ROOT is the .survey working root in production. Tests may point it at a
