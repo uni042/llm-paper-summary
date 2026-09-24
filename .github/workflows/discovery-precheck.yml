@@ -42,11 +42,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
 
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
-      - name: Validate Discovery preload helpers
+      - name: Compile Discovery hot-path helpers
         run: |
           python -m py_compile \
             .survey/scripts/discovery_preload_queue.py \
@@ -56,6 +58,10 @@ jobs:
             .survey/scripts/ensure_discovery_run_state.py \
             .survey/scripts/derive_worker_run_state.py \
             .survey/scripts/queue_worker.py
+
+      - name: Run Discovery regression tests off the foreground hot path
+        if: github.event_name != 'push'
+        run: |
           python -m unittest discover \
             -s .survey/tests \
             -p 'test_discovery_preload_queue.py'
@@ -92,10 +98,12 @@ jobs:
 
             # Keep a background stock of pre-run Discovery windows. New worker
             # requests are still processed before these preload requests below.
-            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
+            if [ "$GITHUB_EVENT_NAME" != "push" ] && { [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; }; then
               python .survey/scripts/discovery_preload_queue.py \
                 --repo-root . top-up --target 32 --max-new 8 \
                 | tee /tmp/discovery-preload-topup.json
+            else
+              echo 'Skip preload top-up before foreground push processing; publish worker result first.'
             fi
             python .survey/scripts/build_discovery_identity_snapshot.py \
               --root .survey \
@@ -148,6 +156,15 @@ jobs:
             processed=0
             foreground_failures=0
             preload_failures=0
+
+            # A real worker request owns the latency budget. Never make its durable
+            # result wait behind speculative preload provider calls in the same run.
+            # The post-publication top-up below creates/refills preload requests and
+            # their resulting push starts a separate background-only invocation.
+            if [ -s /tmp/discovery-foreground-requests.txt ]; then
+              : > /tmp/discovery-preload-requests.txt
+              echo 'Foreground Discovery present; defer background preload processing until after foreground publication.'
+            fi
 
             # Foreground worker prechecks are independent after the shared identity
             # snapshot is built. Run up to four concurrently; the batch processor
