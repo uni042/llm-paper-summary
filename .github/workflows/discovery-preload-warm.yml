@@ -85,11 +85,15 @@ jobs:
             : > /tmp/preload-local.txt
             : > /tmp/preload-remote.txt
             : > /tmp/preload-semantic-scholar.txt
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . ready --limit 32 \
+              > /tmp/discovery-preload-ready.json
+            python -c 'import json; d=json.load(open("/tmp/discovery-preload-ready.json", encoding="utf-8")); [print(row["request_path"]) for row in d.get("items", [])]' \
+              > /tmp/discovery-preload-ready.txt
 
             while IFS= read -r request; do
               [ -n "$request" ] || continue
               name="$(basename "$request")"
-              case "$name" in preload-*.json) ;; *) continue ;; esac
               result=".survey/work-queue/discovery-precheck/results/$name"
               [ ! -f "$result" ] || continue
 
@@ -107,9 +111,7 @@ jobs:
                   printf '%s\n' "$request" >> /tmp/preload-remote.txt
                   ;;
               esac
-            done < <(
-              find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name 'preload-*.json' 2>/dev/null | sort
-            )
+            done < /tmp/discovery-preload-ready.txt
 
             process_batch () {
               local file="$1"
@@ -160,8 +162,10 @@ jobs:
             python .survey/scripts/discovery_preload_queue.py \
               --repo-root . top-up --target 32 --max-new 32 \
               | tee /tmp/discovery-preload-retopup.json
-            python .survey/scripts/hot_dispatch.py --repo-root . refresh \
-              > /tmp/hot-dispatch.json
+            if ! python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+              > /tmp/hot-dispatch.json; then
+              echo 'Hot-dispatch refresh failed after preload processing; preserve preload results and repair the derived index on the next run.' >&2
+            fi
 
             git add \
               .survey/work-queue/discovery-precheck/requests \
