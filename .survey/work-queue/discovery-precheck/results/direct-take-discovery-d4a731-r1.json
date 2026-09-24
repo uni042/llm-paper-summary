@@ -1,0 +1,833 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "direct-take-discovery-d4a731-r1",
+  "collector_id": "direct-direct-take-discovery-d4a731-r1",
+  "run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg2MDYwODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjAyMjMxMjk0J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "12d5ec67538c5e3a9343fe5e57aab16a99f05b1c",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T05:30:42.419965+00:00",
+  "preload_id": "preload-18fb011e305f55f98c88",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-18fb011e305f55f98c88",
+  "results": [
+    {
+      "title": "Calibration-free compression brings Evo 2 to its full million-token context on a single GPU",
+      "source_url": "https://doi.org/10.64898/2026.08.28.747902",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "DOI:10.64898/2026.08.28.747902",
+      "doi": "10.64898/2026.08.28.747902",
+      "authors": [
+        "Michail Patsakis",
+        "Alexandros Tzanakakis",
+        "Ilias Georgakopoulos‐Soares"
+      ]
+    },
+    {
+      "title": "Parser States Already Know: Structure-Conditioned KV Persistence for Structured Generation",
+      "source_url": "https://arxiv.org/abs/2608.28276",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28276",
+      "arxiv_id": "2608.28276",
+      "authors": [
+        "Linze Wu",
+        "Xinrui Chen"
+      ]
+    },
+    {
+      "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
+      "source_url": "https://arxiv.org/abs/2608.28003",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28003",
+      "arxiv_id": "2608.28003",
+      "authors": [
+        "Artem Safronov"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "DAMP: Decay-Aware Mixed-Precision Recurrent-State Quantization",
+      "source_url": "https://arxiv.org/abs/2608.27513",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27513",
+      "arxiv_id": "2608.27513",
+      "authors": [
+        "Tao Zhang",
+        "Jianchao Tan",
+        "Pingwei Sun",
+        "Yanqi Yu",
+        "Zixu Jiang",
+        "Yuchen Xie",
+        "Xunliang Cai",
+        "Ziqian Zeng"
+      ]
+    },
+    {
+      "title": "Prefix Sliding for efficient test-time scaling",
+      "source_url": "https://arxiv.org/abs/2608.26070",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.26070",
+      "arxiv_id": "2608.26070",
+      "authors": [
+        "Niklas Muennighoff",
+        "Zhengyang Wang",
+        "Zeyi Chen",
+        "Weijia Shi",
+        "Binyuan Hui",
+        "John Yang",
+        "Dapeng Jiang",
+        "Mika Senghaas",
+        "Fares Obeid",
+        "Johannes Hagemann",
+        "Sami Jaghouar",
+        "Ludwig Schmidt",
+        "Percy Liang",
+        "Jason Wei",
+        "Andrew Ng",
+        "Luke Zettlemoyer",
+        "Yejin Choi",
+        "Mike Lewis"
+      ]
+    },
+    {
+      "title": "TransRetrieval: Scaling Up Transformer-Based Retrieval for Industrial Recommendation",
+      "source_url": "https://arxiv.org/abs/2608.25528",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25528",
+      "arxiv_id": "2608.25528",
+      "authors": [
+        "Zhifei Zheng",
+        "Yunfei Liu",
+        "Bin Liu",
+        "Qiren Zhu",
+        "Hanbing Liu",
+        "Ziru Xu",
+        "Han Zhu",
+        "Jian Xu",
+        "Qi Qi",
+        "Bo Zheng"
+      ]
+    },
+    {
+      "title": "An Event is Worth One Token: Event Tokenization for Industrial-scale LLM Recommendation",
+      "source_url": "https://arxiv.org/abs/2608.25546",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25546",
+      "arxiv_id": "2608.25546",
+      "authors": [
+        "Fan Xia",
+        "Zhaoheng Zheng",
+        "Iman Setayesh",
+        "Ruogu Lin",
+        "Yiqin Pan",
+        "Samarth Mittal",
+        "Wentao Bao",
+        "Vinti Pandey",
+        "Sachin Patil",
+        "Jianpeng Cheng",
+        "Jun Xiao",
+        "Zhuang Wang",
+        "Xiangjun Fan",
+        "Sri Reddy",
+        "Minghai Chen"
+      ]
+    },
+    {
+      "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+      "source_url": "https://arxiv.org/abs/2608.26389",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.26389",
+      "arxiv_id": "2608.26389",
+      "authors": [
+        "Zishan Shao",
+        "Lixun Zhang",
+        "Kangning Cui",
+        "Wenhao Wu",
+        "Jinhee Kim",
+        "Yixiao Wang",
+        "Ting Jiang",
+        "Hancheng Ye",
+        "Qinsi Wang",
+        "Fan Yang",
+        "Danyang Zhuo",
+        "Yiran Chen",
+        "Hai Li"
+      ]
+    },
+    {
+      "title": "Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs",
+      "source_url": "https://doi.org/10.1007/s11633-025-1624-x",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2508.14896",
+      "arxiv_id": "2508.14896",
+      "authors": [
+        "Haokun Lin",
+        "Haobo Xu",
+        "Yichen Wu",
+        "Ziyu Guo",
+        "Renrui Zhang",
+        "Zhichao Lu",
+        "Ying Wei",
+        "Qingfu Zhang",
+        "Zhenan Sun"
+      ]
+    },
+    {
+      "title": "Compression Trinity: Exploring Sparsity, Quantization, and Low-Rank Approximations for LLM Compression",
+      "source_url": "https://arxiv.org/abs/2608.24070",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24070",
+      "arxiv_id": "2608.24070",
+      "authors": [
+        "Mohammad Mozaffari"
+      ]
+    },
+    {
+      "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
+      "source_url": "https://arxiv.org/abs/2608.24188",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24188",
+      "arxiv_id": "2608.24188",
+      "authors": [
+        "Jiayu Shi",
+        "Luzhuo Chen"
+      ]
+    },
+    {
+      "title": "HCC+: Hyperbolic Guarding for Certified Attention Retrieval",
+      "source_url": "https://arxiv.org/abs/2608.24971",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24971",
+      "arxiv_id": "2608.24971",
+      "authors": [
+        "Liangchen Ge"
+      ]
+    },
+    {
+      "title": "Transforms for LLM Quantization: The Great Inversion and Format Co-Design",
+      "source_url": "https://arxiv.org/abs/2608.25188",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.25188",
+      "arxiv_id": "2608.25188",
+      "authors": [
+        "Ehsan Jokar"
+      ]
+    },
+    {
+      "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+      "source_url": "https://arxiv.org/abs/2608.24115",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24115",
+      "arxiv_id": "2608.24115",
+      "authors": [
+        "Suhwan Choi",
+        "J. E. Jung",
+        "Sungkyung Kim",
+        "Yunsung Lee",
+        "Youngjae Yu"
+      ]
+    },
+    {
+      "title": "ProxyFormer: A Dual-Stream Proxy Architecture for Ultra-Long Context and High-Resolution Generation",
+      "source_url": "https://arxiv.org/abs/2608.23463",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.23463",
+      "arxiv_id": "2608.23463",
+      "authors": [
+        "Zhongpan Tang"
+      ]
+    },
+    {
+      "title": "Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B",
+      "source_url": "https://arxiv.org/abs/2608.22975",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.22975",
+      "arxiv_id": "2608.22975",
+      "authors": [
+        "Defu Lin",
+        "Wenhui Chen",
+        "Ziyao Lin",
+        "Jianlin Chen",
+        "Peiji Long",
+        "Chi Man Vong"
+      ]
+    },
+    {
+      "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+      "source_url": "https://arxiv.org/abs/2608.22704",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.22704",
+      "arxiv_id": "2608.22704",
+      "authors": [
+        "Yiming Yao",
+        "Chenyang Lyu",
+        "Xuanfan Ni",
+        "Longyue Wang",
+        "Weihua Luo",
+        "Yazheng Yang",
+        "Jinsong Su"
+      ]
+    },
+    {
+      "title": "GreenBench: Benchmarking Energy Efficiency and Carbon Footprint of Open-Source LLM Inference on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2608.28667",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.28667",
+      "arxiv_id": "2608.28667",
+      "authors": [
+        "Rajeswari Kannan",
+        "Raj Firke",
+        "Shreya Bengle",
+        "Srushti Deshmukh"
+      ]
+    },
+    {
+      "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents",
+      "source_url": "https://arxiv.org/abs/2608.22577",
+      "year": 2026,
+      "published": "2026-08-23",
+      "canonical_id": "arXiv:2608.22577",
+      "arxiv_id": "2608.22577",
+      "authors": [
+        "J. Luo",
+        "Zhanfeng Liao",
+        "Jiayao Teng",
+        "Yuan Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.64898/2026.08.28.747902",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.08.28.747902",
+        "title:calibrationfree compression brings evo 2 to its full milliontoken context on a single gpu",
+        "url:https://doi.org/10.64898/2026.08.28.747902"
+      ],
+      "record": {
+        "title": "Calibration-free compression brings Evo 2 to its full million-token context on a single GPU",
+        "source_url": "https://doi.org/10.64898/2026.08.28.747902",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "DOI:10.64898/2026.08.28.747902",
+        "doi": "10.64898/2026.08.28.747902",
+        "authors": [
+          "Michail Patsakis",
+          "Alexandros Tzanakakis",
+          "Ilias Georgakopoulos‐Soares"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28276",
+      "identity_tokens": [
+        "id:arXiv:2608.28276",
+        "title:parser states already know structureconditioned kv persistence for structured generation",
+        "url:https://arxiv.org/abs/2608.28276"
+      ],
+      "record": {
+        "title": "Parser States Already Know: Structure-Conditioned KV Persistence for Structured Generation",
+        "source_url": "https://arxiv.org/abs/2608.28276",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28276",
+        "arxiv_id": "2608.28276",
+        "authors": [
+          "Linze Wu",
+          "Xinrui Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28003",
+      "identity_tokens": [
+        "id:arXiv:2608.28003",
+        "title:a method for layer bitwidth allocation in llm quantization via performance maximization under a qualitydegradation constraint",
+        "url:https://arxiv.org/abs/2608.28003"
+      ],
+      "record": {
+        "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
+        "source_url": "https://arxiv.org/abs/2608.28003",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28003",
+        "arxiv_id": "2608.28003",
+        "authors": [
+          "Artem Safronov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27513",
+      "identity_tokens": [
+        "id:arXiv:2608.27513",
+        "title:damp decayaware mixedprecision recurrentstate quantization",
+        "url:https://arxiv.org/abs/2608.27513"
+      ],
+      "record": {
+        "title": "DAMP: Decay-Aware Mixed-Precision Recurrent-State Quantization",
+        "source_url": "https://arxiv.org/abs/2608.27513",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27513",
+        "arxiv_id": "2608.27513",
+        "authors": [
+          "Tao Zhang",
+          "Jianchao Tan",
+          "Pingwei Sun",
+          "Yanqi Yu",
+          "Zixu Jiang",
+          "Yuchen Xie",
+          "Xunliang Cai",
+          "Ziqian Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26070",
+      "identity_tokens": [
+        "id:arXiv:2608.26070",
+        "title:prefix sliding for efficient testtime scaling",
+        "url:https://arxiv.org/abs/2608.26070"
+      ],
+      "record": {
+        "title": "Prefix Sliding for efficient test-time scaling",
+        "source_url": "https://arxiv.org/abs/2608.26070",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.26070",
+        "arxiv_id": "2608.26070",
+        "authors": [
+          "Niklas Muennighoff",
+          "Zhengyang Wang",
+          "Zeyi Chen",
+          "Weijia Shi",
+          "Binyuan Hui",
+          "John Yang",
+          "Dapeng Jiang",
+          "Mika Senghaas",
+          "Fares Obeid",
+          "Johannes Hagemann",
+          "Sami Jaghouar",
+          "Ludwig Schmidt",
+          "Percy Liang",
+          "Jason Wei",
+          "Andrew Ng",
+          "Luke Zettlemoyer",
+          "Yejin Choi",
+          "Mike Lewis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25528",
+      "identity_tokens": [
+        "id:arXiv:2608.25528",
+        "title:transretrieval scaling up transformerbased retrieval for industrial recommendation",
+        "url:https://arxiv.org/abs/2608.25528"
+      ],
+      "record": {
+        "title": "TransRetrieval: Scaling Up Transformer-Based Retrieval for Industrial Recommendation",
+        "source_url": "https://arxiv.org/abs/2608.25528",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25528",
+        "arxiv_id": "2608.25528",
+        "authors": [
+          "Zhifei Zheng",
+          "Yunfei Liu",
+          "Bin Liu",
+          "Qiren Zhu",
+          "Hanbing Liu",
+          "Ziru Xu",
+          "Han Zhu",
+          "Jian Xu",
+          "Qi Qi",
+          "Bo Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25546",
+      "identity_tokens": [
+        "id:arXiv:2608.25546",
+        "title:an event is worth one token event tokenization for industrialscale llm recommendation",
+        "url:https://arxiv.org/abs/2608.25546"
+      ],
+      "record": {
+        "title": "An Event is Worth One Token: Event Tokenization for Industrial-scale LLM Recommendation",
+        "source_url": "https://arxiv.org/abs/2608.25546",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25546",
+        "arxiv_id": "2608.25546",
+        "authors": [
+          "Fan Xia",
+          "Zhaoheng Zheng",
+          "Iman Setayesh",
+          "Ruogu Lin",
+          "Yiqin Pan",
+          "Samarth Mittal",
+          "Wentao Bao",
+          "Vinti Pandey",
+          "Sachin Patil",
+          "Jianpeng Cheng",
+          "Jun Xiao",
+          "Zhuang Wang",
+          "Xiangjun Fan",
+          "Sri Reddy",
+          "Minghai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26389",
+      "identity_tokens": [
+        "id:arXiv:2608.26389",
+        "title:lowrankarena a standardized evaluation platform for svdbased llm compression",
+        "url:https://arxiv.org/abs/2608.26389"
+      ],
+      "record": {
+        "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+        "source_url": "https://arxiv.org/abs/2608.26389",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.26389",
+        "arxiv_id": "2608.26389",
+        "authors": [
+          "Zishan Shao",
+          "Lixun Zhang",
+          "Kangning Cui",
+          "Wenhao Wu",
+          "Jinhee Kim",
+          "Yixiao Wang",
+          "Ting Jiang",
+          "Hancheng Ye",
+          "Qinsi Wang",
+          "Fan Yang",
+          "Danyang Zhuo",
+          "Yiran Chen",
+          "Hai Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.14896",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11633-025-1624-x",
+        "id:arXiv:2508.14896",
+        "title:quantization meets dllms a systematic study of posttraining quantization for diffusion llms",
+        "url:https://doi.org/10.1007/s11633-025-1624-x"
+      ],
+      "record": {
+        "title": "Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs",
+        "source_url": "https://doi.org/10.1007/s11633-025-1624-x",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2508.14896",
+        "arxiv_id": "2508.14896",
+        "authors": [
+          "Haokun Lin",
+          "Haobo Xu",
+          "Yichen Wu",
+          "Ziyu Guo",
+          "Renrui Zhang",
+          "Zhichao Lu",
+          "Ying Wei",
+          "Qingfu Zhang",
+          "Zhenan Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24070",
+      "identity_tokens": [
+        "id:arXiv:2608.24070",
+        "title:compression trinity exploring sparsity quantization and lowrank approximations for llm compression",
+        "url:https://arxiv.org/abs/2608.24070"
+      ],
+      "record": {
+        "title": "Compression Trinity: Exploring Sparsity, Quantization, and Low-Rank Approximations for LLM Compression",
+        "source_url": "https://arxiv.org/abs/2608.24070",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24070",
+        "arxiv_id": "2608.24070",
+        "authors": [
+          "Mohammad Mozaffari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24188",
+      "identity_tokens": [
+        "id:arXiv:2608.24188",
+        "title:paritok4b intentconditioned context compression for coding agents",
+        "url:https://arxiv.org/abs/2608.24188"
+      ],
+      "record": {
+        "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
+        "source_url": "https://arxiv.org/abs/2608.24188",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24188",
+        "arxiv_id": "2608.24188",
+        "authors": [
+          "Jiayu Shi",
+          "Luzhuo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24971",
+      "identity_tokens": [
+        "id:arXiv:2608.24971",
+        "title:hcc hyperbolic guarding for certified attention retrieval",
+        "url:https://arxiv.org/abs/2608.24971"
+      ],
+      "record": {
+        "title": "HCC+: Hyperbolic Guarding for Certified Attention Retrieval",
+        "source_url": "https://arxiv.org/abs/2608.24971",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24971",
+        "arxiv_id": "2608.24971",
+        "authors": [
+          "Liangchen Ge"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25188",
+      "identity_tokens": [
+        "id:arXiv:2608.25188",
+        "title:transforms for llm quantization the great inversion and format codesign",
+        "url:https://arxiv.org/abs/2608.25188"
+      ],
+      "record": {
+        "title": "Transforms for LLM Quantization: The Great Inversion and Format Co-Design",
+        "source_url": "https://arxiv.org/abs/2608.25188",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.25188",
+        "arxiv_id": "2608.25188",
+        "authors": [
+          "Ehsan Jokar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24115",
+      "identity_tokens": [
+        "id:arXiv:2608.24115",
+        "title:ponderpounce a pretrained mllm as an episode context engine for robot control",
+        "url:https://arxiv.org/abs/2608.24115"
+      ],
+      "record": {
+        "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+        "source_url": "https://arxiv.org/abs/2608.24115",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24115",
+        "arxiv_id": "2608.24115",
+        "authors": [
+          "Suhwan Choi",
+          "J. E. Jung",
+          "Sungkyung Kim",
+          "Yunsung Lee",
+          "Youngjae Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23463",
+      "identity_tokens": [
+        "id:arXiv:2608.23463",
+        "title:proxyformer a dualstream proxy architecture for ultralong context and highresolution generation",
+        "url:https://arxiv.org/abs/2608.23463"
+      ],
+      "record": {
+        "title": "ProxyFormer: A Dual-Stream Proxy Architecture for Ultra-Long Context and High-Resolution Generation",
+        "source_url": "https://arxiv.org/abs/2608.23463",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.23463",
+        "arxiv_id": "2608.23463",
+        "authors": [
+          "Zhongpan Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22975",
+      "identity_tokens": [
+        "id:arXiv:2608.22975",
+        "title:budgetconstrained embodied perception four resource walls and a preregistered evaluation of accessstructured perception on open models at less than 31b",
+        "url:https://arxiv.org/abs/2608.22975"
+      ],
+      "record": {
+        "title": "Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B",
+        "source_url": "https://arxiv.org/abs/2608.22975",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.22975",
+        "arxiv_id": "2608.22975",
+        "authors": [
+          "Defu Lin",
+          "Wenhui Chen",
+          "Ziyao Lin",
+          "Jianlin Chen",
+          "Peiji Long",
+          "Chi Man Vong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22704",
+      "identity_tokens": [
+        "id:arXiv:2608.22704",
+        "title:wnw waxingandwaning kv cache for longform speech llms",
+        "url:https://arxiv.org/abs/2608.22704"
+      ],
+      "record": {
+        "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+        "source_url": "https://arxiv.org/abs/2608.22704",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.22704",
+        "arxiv_id": "2608.22704",
+        "authors": [
+          "Yiming Yao",
+          "Chenyang Lyu",
+          "Xuanfan Ni",
+          "Longyue Wang",
+          "Weihua Luo",
+          "Yazheng Yang",
+          "Jinsong Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28667",
+      "identity_tokens": [
+        "id:arXiv:2608.28667",
+        "title:greenbench benchmarking energy efficiency and carbon footprint of opensource llm inference on apple silicon",
+        "url:https://arxiv.org/abs/2608.28667"
+      ],
+      "record": {
+        "title": "GreenBench: Benchmarking Energy Efficiency and Carbon Footprint of Open-Source LLM Inference on Apple Silicon",
+        "source_url": "https://arxiv.org/abs/2608.28667",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.28667",
+        "arxiv_id": "2608.28667",
+        "authors": [
+          "Rajeswari Kannan",
+          "Raj Firke",
+          "Shreya Bengle",
+          "Srushti Deshmukh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22577",
+      "identity_tokens": [
+        "id:arXiv:2608.22577",
+        "title:causalcache conditional highfidelity restoration for longhorizon gui agents",
+        "url:https://arxiv.org/abs/2608.22577"
+      ],
+      "record": {
+        "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents",
+        "source_url": "https://arxiv.org/abs/2608.22577",
+        "year": 2026,
+        "published": "2026-08-23",
+        "canonical_id": "arXiv:2608.22577",
+        "arxiv_id": "2608.22577",
+        "authors": [
+          "J. Luo",
+          "Zhanfeng Liao",
+          "Jiayao Teng",
+          "Yuan Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:9304bf3ce88a33dfe05101592d7484beb287a9baaea0ae23b408a6de5138232b",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
