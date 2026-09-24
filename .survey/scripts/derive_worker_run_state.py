@@ -22,6 +22,7 @@ from typing import Any
 import claim_state
 import claim_window_policy
 import continuation_gate
+import run_finalization_gate
 import worker_quota_policy
 import discovery_preload_queue
 import select_discovery_direction
@@ -96,6 +97,15 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     direct_mode = str(value.get("work_mode_at_start") or "").strip()
     direct_threshold = value.get("research_discovery_threshold")
     direct_generated_at = str(value.get("hot_dispatch_generated_at") or "").strip()
+    route_recovery_source = str(value.get("route_recovery_source") or "").strip()
+    recovered_work_mode = str(value.get("recovered_work_mode_at_start") or "").strip()
+    if route_recovery_source:
+        if route_recovery_source != "discovery_precheck_identity":
+            raise ValueError("unsupported route_recovery_source")
+        if recovered_work_mode != "discovery":
+            raise ValueError("Discovery run-state recovery must preserve discovery mode")
+        if scheduled_slot == "0830":
+            raise ValueError("08:30 maintenance cannot use Discovery route recovery")
     direct_present = any(
         item not in (None, "")
         for item in (direct_inventory, direct_mode, direct_threshold, direct_generated_at)
@@ -144,6 +154,8 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_attempts": max(runtime_condition_attempts, 0),
         "runtime_condition_detail": runtime_condition_detail,
         "runtime_condition_event": runtime_condition_event,
+        "route_recovery_source": route_recovery_source,
+        "recovered_work_mode_at_start": recovered_work_mode,
         **direct_route,
     }
 
@@ -873,6 +885,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         frozen = _frozen_route(root, request["run_key"])
         direct_inventory = request.get("candidate_inventory_at_start")
         direct_mode = request.get("work_mode_at_start")
+        recovered_mode = request.get("recovered_work_mode_at_start")
+        recovery_source = request.get("route_recovery_source")
         if request["scheduled_slot"] == "0830":
             inventory = _candidate_inventory(root) if frozen is None else frozen[0]
             work_mode = "maintenance"
@@ -888,6 +902,14 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             inventory = int(direct_inventory)
             work_mode = str(direct_mode)
             route_source = "hot_dispatch_direct_start"
+        elif recovery_source == "discovery_precheck_identity" and recovered_mode == "discovery":
+            # A durable Discovery precheck proves that this invocation had already
+            # entered Discovery even if the worker omitted its initial run-state
+            # request. Preserve that mode rather than re-routing from a later queue
+            # inventory snapshot, which may have crossed the threshold meanwhile.
+            inventory = _candidate_inventory(root)
+            work_mode = "discovery"
+            route_source = "discovery_precheck_recovery"
         else:
             inventory = _candidate_inventory(root)
             work_mode = "research" if inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
@@ -1038,6 +1060,41 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     else:
         gate = continuation_gate.decide(args)
 
+    finalization_gate = run_finalization_gate.decide(
+        argparse.Namespace(
+            continuation_decision=str(gate.get("decision") or "CONTINUE"),
+            continuation_finalization_allowed=gate.get("finalization_allowed") is True,
+            active_assignment=bool(claims.get("active_assignment")),
+            active_assignment_handoff_safe=False,
+            claim_state_checked=bool(claims.get("claim_state_checked")),
+            claim_result_pending=bool(claims.get("claim_result_pending")),
+            submission_state_checked=bool(submission.get("submission_state_checked")),
+            submission_result_pending=bool(submission.get("submission_result_pending")),
+            ack_result_pending=False,
+            discovery_precheck_result_pending=bool(
+                discovery_async.get("discovery_precheck_result_pending")
+            ),
+            discovery_submission_result_pending=bool(
+                discovery_async.get("discovery_submission_result_pending")
+            ),
+            discovery_evaluation_pending=bool(
+                discovery_async.get("discovery_evaluation_pending")
+            ),
+            discovery_recovery_required=bool(
+                discovery_async.get("discovery_recovery_required")
+            ),
+            hard_stop=bool(gate.get("hard_stop")),
+            handoff_safe=False,
+            work_mode=work_mode,
+            research_audit_completed_this_invocation=int(
+                submission.get("research_audit_completed_this_invocation") or 0
+            ),
+            research_minimum_completions=worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS,
+            discovery_rounds_completed=discovery_rounds,
+            discovery_min_rounds=worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS,
+        )
+    )
+
     public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
     derive_ms = round((time.perf_counter() - perf_started) * 1000.0, 3)
     files_read = max(READ_COUNT - read_started, 0)
@@ -1055,6 +1112,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "candidate_inventory": inventory,
         "work_mode": work_mode,
         "route_source": route_source,
+        "route_recovery_source": request.get("route_recovery_source") or None,
+        "candidate_inventory_at_start_exact": not bool(request.get("route_recovery_source")),
         "runtime_condition_requested": requested_runtime,
         "runtime_condition": runtime,
         "runtime_condition_confirmed": request.get("runtime_condition_confirmed", False),
@@ -1075,6 +1134,10 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "discovery_preload": discovery_preload,
         "independent_work": independent_work,
         "gate": gate,
+        "finalization_gate": finalization_gate,
+        "finalization_permit_issued": bool(
+            (finalization_gate.get("finalization_permit") or {}).get("issued")
+        ),
         "next_action": gate.get("required_action"),
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
@@ -1096,7 +1159,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
             "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
-            "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts."
+            "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
+            "Every durable run-state snapshot embeds the finalization gate result; a normal final response requires finalization_permit_issued=true."
         ),
     }
 
