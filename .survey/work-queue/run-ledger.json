@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T00:36:00.003060+00:00",
+  "updated_at": "2026-09-24T00:40:14.721017+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -44166,6 +44166,64 @@
           "type": "research",
           "canonical_id": "arXiv:2404.08509",
           "title": "Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1002,
+      "paper_active_count_after": 1002,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35939114731",
+      "first_recorded_at": "2026-09-24T00:40:14.721017+00:00",
+      "last_recorded_at": "2026-09-24T00:40:14.721017+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 2,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35939114731:1",
+          "recorded_at": "2026-09-24T00:40:14.721017+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35939114731",
+            "run_attempt": "1",
+            "source_sha": "eae47aee59d5e7e3b991543622b5a456afe349a1"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-77f5ab6e591a0176",
+          "type": "research",
+          "canonical_id": "arXiv:2310.01801",
+          "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-86d74401d2a482f5",
+          "type": "research",
+          "canonical_id": "arXiv:2406.02069",
+          "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
           "from": "ready",
           "to": "completed"
         }
