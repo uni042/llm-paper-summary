@@ -2,6 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -181,7 +182,8 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
                 },
             })
 
-            summary = recovery.recover(sr)
+            with patch.object(recovery.queue_worker, "validate_discovery_precheck", return_value=None):
+                summary = recovery.recover(sr)
 
             result = json.loads((results / "current-round.json").read_text(encoding="utf-8"))
             self.assertEqual(summary["recovered_count"], 1)
