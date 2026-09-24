@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-preload-7c93b83402e32e5d2b5890a8",
   "job_id": "job-research-042e5712bf1b426e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7c93b83402e32e5d2b5890a8",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "BROSはRT/BE混載時にRTを単純に最優先してBEを止めるのではなく、TTFT/TPOTの残余余裕を使ってBEを挿入することで両者のトレードオフを改善する。論文はvLLM等に対しRT正規化遅延を最大74.20%削減し、細粒度SLO達成率ではTTFT最大36.38倍、TPOT最大1.73倍を報告する。双方向KV管理だけのアブレーションでもTTFT SLO達成率1.23倍、TPOT 1.63倍の改善があり、BEスループットへの影響を限定しつつRTのメモリ待ちを減らす。",
+    "key_results": [
+      {"metric": "RT正規化遅延", "value": "最大74.20%削減", "baseline": "vLLM", "condition": "RT/BE混合負荷", "interpretation": "反復単位のSLO優先スケジューリングが長いBEによるhead-of-line blockingを大きく緩和する。"},
+      {"metric": "TTFT SLO達成率", "value": "最大36.38×改善", "baseline": "vLLM", "condition": "SharedGPT由来混合負荷", "interpretation": "RTの初回応答期限を優先度計算へ直接入れる効果が大きい。"},
+      {"metric": "TPOT SLO達成率", "value": "最大1.73×改善", "baseline": "vLLM", "condition": "SharedGPT由来混合負荷", "interpretation": "prefillだけを優先してdecodeを飢餓させる方式より、継続トークンのSLOも同時に守りやすい。"},
+      {"metric": "双方向KV管理アブレーション", "value": "TTFT SLO 1.23×、TPOT SLO 1.63×", "baseline": "双方向KV共有なし", "condition": "同一BROSスケジューラ", "interpretation": "メモリ競合の削減自体がスケジューラのRT選択自由度を増やす。"},
+      {"metric": "BEスループット", "value": "代表条件でvLLM比11.29%低下に抑制", "baseline": "vLLM", "condition": "RTを強く保護する混合負荷", "interpretation": "RT遅延の大幅改善と引き換えにBEを完全停止せず、比較的小さいスループット損失へ抑える。"},
+      {"metric": "スケジューリングオーバーヘッド", "value": "反復時間の約7.56–9.52%", "baseline": "BROS全体", "condition": "評価構成", "interpretation": "動的パッキングとSLO予測には無視できないCPU側コストがあるが、主要SLO改善より小さい。"}
+    ],
+    "negative_results": "BROSはBEスループットを完全には維持せず、RT保護が強い条件ではvLLMより低下する。SLO予測はオフラインprofilingで得た線形コストモデルに依存するため、モデル・GPU・負荷形状が変わると再校正が必要になる。評価は主に同種GPU上のRT/BE混載で、異種GPU、分離P/D、複数モデル同居、極端なネットワークボトルネックは主対象外である。生成品質の数値比較も行わない。",
+    "interpretation": "BROSの中心的な示唆は、GPUメモリ管理をスケジューラの後処理ではなくSLO制約の一部として扱うことにある。RTの優先度が高くてもKV容量がなければ実行できないため、BEが確保済みのブロック内空隙をRTへ即座に貸し、必要になったBE KVだけを遅延退避することで『実行可能なRT候補』そのものを増やす。計算時間予測・バッチ選択・KV配置が連動して初めてRT/BE混載の利点が出る。",
+    "quality_impact": "近似推論やKV圧縮ではないためアルゴリズム上は同一モデル出力を保つ設計だが、論文は品質一致率を主要評価していない。"
+  },
+  "reservation": {"claim_id": "claim-preload-7c93b83402e32e5d2b5890a8", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
