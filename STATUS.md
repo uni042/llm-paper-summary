@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 18:13:03 JST**
+> 自動生成: **2026-09-24 18:15:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **286** |
+| 収録候補論文 | **285** |
 | 未claim Research job | **143** |
-| 直近24hの検証済みResearch収録 | **26** |
-| 最終検証済みResearch収録 | **09-24 18:12:55 JST** |
+| 直近24hの検証済みResearch収録 | **27** |
+| 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
 | 整合性異常 | **22** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **286** |
+| canonical_id確認済みの一意な候補論文 | **285** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **286** |
+| 非終端Research job合計 | **285** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（9時間37分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（9時間39分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **3** | **3** | **0** | **143** | **12** | — |
+| Research | **14** | **3** | **3** | **0** | **142** | **12** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
-| 合計 | **21** | **8** | **8** | **0** | **143** | **12** | **10** |
+| 合計 | **22** | **8** | **8** | **0** | **142** | **12** | **10** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 18:15:31 JST** [research] `arXiv:2609.26796` — Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs
+  - job: `.survey/work-queue/jobs/job-research-41d37332b16e3d57.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-3ee424a7b2b36c6924101628.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-3ee424a7b2b36c6924101628.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md`
 - **09-24 18:12:55 JST** [research] `arXiv:2609.26300` — CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference
   - job: `.survey/work-queue/jobs/job-research-7ecc4d7949c81534.json`
   - result: `.survey/work-queue/results/research/attempt-preload-7567c60b834735ea01f92a82.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-adcf408437d27a8a65fe0220.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-adcf408437d27a8a65fe0220.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md`
-- **09-24 15:37:58 JST** [research] `arXiv:2312.00752` — Mamba: Linear-Time Sequence Modeling with Selective State Spaces
-  - job: `.survey/work-queue/jobs/job-research-7526ab28b3c65fc4.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-270cf0686ddf08989a01feb5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-270cf0686ddf08989a01feb5.json`
-  - paper: `papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md`
 
 ### Audit
 
@@ -230,7 +230,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **12件**
+- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **12件**
 - `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `shared-preload-pool`
   - claim: **09-24 18:11:31 JST** / heartbeat: **—** / lease expiry: **09-25 06:11:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
@@ -280,7 +280,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **286** |
+| ready | **285** |
 
 ### 候補の重複・識別情報欠損
 
@@ -300,7 +300,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1022** |
+| inference/training/survey配下の論文Markdown実体 | **1023** |
 
 ### immutable submissionの未照合
 
