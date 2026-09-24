@@ -42,11 +42,11 @@ def make_args(**overrides):
         scheduled_handoff_guard_seconds=600,
         candidate_inventory=300,
         research_audit_completed_this_invocation=0,
-        research_minimum_completions=3,
+        research_minimum_completions=5,
         last_terminal_job_status="none",
         discovery_rounds_completed=0,
         discovery_rounds_since_last_novel=None,
-        discovery_min_rounds=4,
+        discovery_min_rounds=8,
         discovery_exhausted=False,
         next_axis_available=False,
     )
@@ -199,7 +199,7 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             claim_state_checked=True,
             claim_result_pending=False,
             submission_state_checked=True,
-            research_audit_completed_this_invocation=3,
+            research_audit_completed_this_invocation=5,
             last_terminal_job_status="blocked",
         ))
         self.assertEqual(result["decision"], "CONTINUE")
@@ -212,7 +212,7 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             claim_state_checked=True,
             claim_result_pending=False,
             submission_state_checked=True,
-            research_audit_completed_this_invocation=3,
+            research_audit_completed_this_invocation=5,
             last_terminal_job_status="completed",
         ))
         self.assertEqual(result["decision"], "CONTINUE")
