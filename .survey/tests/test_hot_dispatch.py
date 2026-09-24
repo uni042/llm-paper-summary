@@ -414,6 +414,55 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(result["route_source"], "hot_dispatch_direct_start")
 
 
+
+    def test_cold_backward_fallback_exposes_productive_forward_start_lookahead(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+
+            def available(_root, *, direction=None, limit=32):
+                if direction != "forward":
+                    return []
+                return [{
+                    "preload_id": "preload-forward-lookahead",
+                    "discovery_bank": "b",
+                    "discovery_slot_path": discovery_slot_path("b"),
+                    "citation_direction": "forward",
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations",
+                    "axis": "preload-forward",
+                    "initial_cursor": None,
+                    "target_unseen": 20,
+                    "page_size": 20,
+                    "max_pages": 25,
+                    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-forward-lookahead.json",
+                    "preload_unseen_result_count": 20,
+                    "created_at": current.isoformat(),
+                }][:limit]
+
+            with mock.patch.object(
+                hot_dispatch.discovery_preload_queue,
+                "available_preloads",
+                side_effect=available,
+            ):
+                index = hot_dispatch.refresh(root)
+
+            self.assertEqual(index["suggested_work_mode"], "discovery")
+            self.assertEqual(index["discovery_primary_direction"], "backward")
+            self.assertFalse(index["direct_start_allowed"])
+            self.assertTrue(index["fallback_start_allowed"])
+            self.assertTrue(index["zero_wait_start_allowed"])
+            self.assertTrue(index["zero_wait_content_start_allowed"])
+            self.assertEqual(
+                index["discovery_start_lookahead"]["preload_id"],
+                "preload-forward-lookahead",
+            )
+            self.assertIn(
+                ".survey/work-queue/discovery-preload/claims/",
+                index["discovery_start_lookahead"]["take_path"],
+            )
+
+
     def test_discovery_cold_start_exposes_zero_wait_fixed_source_fallback(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -428,6 +477,8 @@ class HotDispatchTests(unittest.TestCase):
             self.assertFalse(index["direct_start_allowed"])
             self.assertTrue(index["fallback_start_allowed"])
             self.assertTrue(index["zero_wait_start_allowed"])
+            self.assertFalse(index["zero_wait_content_start_allowed"])
+            self.assertIsNone(index["discovery_start_lookahead"])
             self.assertTrue(index["idle_gap_guard"]["passive_wait_forbidden"])
             self.assertEqual(
                 index["discovery_fallback"]["source_url"],
