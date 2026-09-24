@@ -843,7 +843,7 @@ def ready_preloads(
         bank = bindings.get(preload_id)
         if not bank or _status(root, entry, now) != "READY":
             continue
-        request_path = _request_path(entry)
+        request_path = PRECHECK_REQUESTS / f"{entry['precheck_request_id']}.json"
         if not (root / request_path).is_file():
             continue
         rows.append(
