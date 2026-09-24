@@ -124,7 +124,7 @@ references:
 - canonical_id: arXiv:2401.09670
 - canonical_id: arXiv:2408.12757
   arxiv_id: '2408.12757'
-references_checked_at: '2026-09-20'
+references_checked_at: '2026-09-24'
 references_source: arxiv-html-reference-section
 references_total: 66
 source: https://arxiv.org/abs/2410.18038
