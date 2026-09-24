@@ -102,6 +102,12 @@ jobs:
               exit "$batch_rc"
             fi
 
+            # Status-only blocked Research/Audit descriptors are per-paper
+            # quarantines, not permanent exclusions. Record the retry event in
+            # the same publication transaction so the seven-day retry deadline
+            # is durable before the worker advances to the next standby.
+            python .survey/scripts/blocked_retry.py --root .survey
+
             set +e
             python .survey/scripts/derive_worker_run_state.py \
               --repo-root . \

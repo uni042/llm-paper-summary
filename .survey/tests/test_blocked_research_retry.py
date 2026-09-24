@@ -249,6 +249,17 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
         self.assertIn("次のstandbyへ進む", text)
         self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
 
+    def test_submission_fast_lane_records_blocked_retry_before_advancing(self) -> None:
+        workflow = (
+            ROOT / ".github/workflows/survey-submission-fast.yml"
+        ).read_text(encoding="utf-8")
+        retry = "python .survey/scripts/blocked_retry.py --root .survey"
+        derive = "python .survey/scripts/derive_worker_run_state.py"
+        hot = "python .survey/scripts/hot_dispatch.py --repo-root . refresh"
+        self.assertIn(retry, workflow)
+        self.assertLess(workflow.index(retry), workflow.index(derive))
+        self.assertLess(workflow.index(retry), workflow.index(hot))
+
 
 if __name__ == "__main__":
     unittest.main()
