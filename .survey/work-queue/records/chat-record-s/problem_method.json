@@ -1,13 +1,36 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "problem_method",
   "attempt_id": "attempt-preload-e67ec48caa52d77d1c7b992a",
   "job_id": "job-research-0a4a1c707b0687af",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "problem_method",
+  "data": {
+    "problem": "プリフィルとデコードを別GPU群へ分ける分離推論では、単一の中央最適化問題に見える資源管理が、実際には異なる時間尺度と目的を持つ複数の相互作用へ分解される。プリフィル群は初回トークン時間を、デコード群はトークン間遅延を改善したい一方、両者は固定GPU予算を共有する。さらに要求ルータはキャッシュが温まったworkerを選ぶほど再計算を減らせるが、そのworkerへ要求を集中させると混雑を悪化させる。低負荷ではこの競合が目立たなくても、GPU飽和点付近では待ち行列の非線形増加により小さなルーティング差が大きな末尾遅延へ増幅される。静的なルータ重みだけでは、この負荷状態の変化を横断して一つの運用点を保てない。",
+    "novelty": "Dynamoの分離推論を、①プリフィル/デコードGPU配分の共有制約ゲーム、②HBM・DRAM・SSD・ネットワークを含む自己利益的キャッシュ配置ゲーム、③KV重複という正の外部性を持つ要求混雑ゲーム、の3層へ対応付ける。さらに理論上の均衡をオンラインで直接解くのではなく、飽和前・飽和・飽和後という運用レジームを観測量から判別し、各レジームに事前選定したルータ温度τとキャッシュ重みωを切り替える。PoA推定値を絶対的な最適性保証ではなく状態変化と相対比較の指標として限定して使う点も特徴である。",
+    "method_overview": "入力はDynamoが観測する要求負荷、workerの活動ブロック数、KV重複度、初回トークン時間（time to first token; TTFT）などの実行時指標である。解析側では、プリフィル/デコードGPU配分を共有GPU予算の一般化Nash問題として置き、限界SLO改善が等しくなる変分均衡と、プリフィルがデコードへ与える正の外部性まで考える社会最適との差を導く。KV配置は複数メモリ階層のアクセス費用と再計算費用を持つ自己利益的キャッシュゲーム、要求割当はworker混雑費用からKV重複利益を引いた要求コストを持つ混雑ゲームとして定式化する。\n\n実装側では一般Nash均衡を要求ごとに解かず、GPU飽和で待ち時間曲線の曲率が急増するという解析から3状態の飽和検出器を構成する。Prometheusを5秒周期で読み、指数移動平均（exponentially weighted moving average; EWMA）とヒステリシスで状態を安定化する。状態ごとに事前に選んだτとωをDynamoのrouter_config_overrideへ渡し、キャッシュ親和性重視から確率的な負荷分散重視へ切り替える。実験では再起動コストを避けるため2つのfrontendを同時起動し、状態遷移時に送信先portを切り替える。\n\n評価用PoA指標は観測窓の実遅延総和を、同じ要求をworkerへ再割当したと仮定するHungarian法の事後最小費用で割る。費用モデルは混雑項とKV重複利益を含むが実測へfitしていないため、著者は値そのものを「何倍非効率」と解釈せず、飽和での上昇や静的/適応ルータ間の相対差を見るレジーム指標として使用する。これにより、要求ごとの重い均衡計算を行わず、運用中に観測できる負荷信号だけでルーティング方針を切り替える。",
+    "components": [
+      {
+        "name": "プリフィル/デコード資源ゲーム",
+        "description": "総GPU数をプリフィル群G_Pとデコード群G_Dへ分ける共有制約付き二者ゲームとして表す。プリフィル側はTTFTのSLO違反率、デコード側はITLのSLO違反率をそれぞれ最小化し、両者の限界改善が一致する点が変分均衡になる。厳密凸性と逓減効果の仮定下で均衡の一意性を示し、Dynamo Plannerの30秒ごとの±1 worker調整を慣性付きbest responseに対応付ける。\n\n社会最適はデコード性能がプリフィルGPU数にも依存する正の外部性を考慮するため、単純な変分均衡よりプリフィル側へGPUを多く割り当て得る。低負荷ではプリフィル処理量に余裕があり差が小さいが、飽和するとその差が拡大するという位置づけである。ただし実験ではP/D分割自体を固定しており、このGame 1の収束や配分改善は実機で検証していない。したがって本要素は後段のレジーム解釈を与える解析モデルとして扱われる。"
+      },
+      {
+        "name": "階層KVキャッシュ配置ゲーム",
+        "description": "DynamoのKV Block Managerが扱うGPU HBM、CPU DRAM、ローカルSSD、他worker/ネットワーク等の階層を、workerが各KV blockの配置先を選ぶ自己利益的キャッシュゲームとして表す。各選択には階層ごとのアクセス遅延、遠隔転送、未保持時の再計算費用が対応し、限られた局所容量をどのprefixへ使うかによって他要求の将来費用も変化する。キャッシュ容量追加が常に社会全体を改善するとは限らない既存のcache paradoxも理論背景に含める。\n\n実装ではこのゲームを独立した新しいcache managerで解くのではなく、Dynamo Smart Routerのoverlap weight ωを通じてaggregateな影響を観測する。ωを大きくするとcache-warm workerを好んでprefill再計算を減らせる一方、同じworkerへ要求を集中させ混雑を増やし得る。実験の短い128-token promptと192GB HBMではtier spilloverが起きず、全blockがHBMに留まるため、4階層全体の配置ゲームは十分励起されない。この点は著者自身が一般化上の制約として明記している。"
+      },
+      {
+        "name": "正の外部性を持つ要求混雑ゲーム",
+        "description": "各同時要求をplayer、decode workerをresourceとし、要求q_iがworker w_jを選ぶ費用を、そのworkerの負荷に依存する遅延f_j(n_j)からKV overlap利益ω·o_ijを引いた量として定義する。標準的な混雑ゲームでは同じresourceを使うplayerが増えるほど費用が上がるが、ここではprefixが共有されるとcache warmthが後続要求にも利益を与えるため、正の外部性が加わる。Dynamoのgreedy worker選択を、この個別費用をその時点で最小化するbest-response動力学として解釈する。\n\n飽和前はworker間負荷がほぼ均衡し、τやωを変えても推定PoAがほぼ不変である。一方、workerのサービス曲線が飽和点へ近づくと遅延関数の2階微分が発散的に増え、小さな偏りでもキュー遅延が大きく増幅される。そこでキャッシュ局所性の利点より混雑回避を優先すべきレジームが現れる。論文はこの切替点を固定モデルの絶対PoAではなく、PoA指標の変化率とTTFTの急変を合わせて捉える。"
+      },
+      {
+        "name": "飽和検出と適応ルータ",
+        "description": "制御器は一般均衡をオンライン計算せず、「どのレジームにいるか」を分類する。Prometheusから5秒ごとにTTFTなどを取り込み、理論上は遅延曲線の曲率を動機としつつ、実装ではノイズへ強い有限差分と指数移動平均を用いてBelow、At、Aboveの状態へ分類する。ヒステリシスを加えることで境界付近の往復切替を防ぎ、各状態に紐づくrouter temperature τとoverlap weight ωを選ぶ。通常領域ではキャッシュ親和性を活かし、飽和ではstochastic load balancingを強める。\n\nDynamoのPython KvPushRouterがbest_worker()呼出しでrouter_config_overrideを受け取れることを利用し、Rust coreは変更しない。実験用のゼロ停止構成ではdefault frontendと最適化frontendをport 8000/8001で常時起動し、検出後にworkload generatorの送信先を切り替える。制御器自体は約270行のPython wrapperで、状態、PoA指標、現在τ、routing costをPrometheusへ出す。これにより新しいスケジューラを全面実装せず、既存ルータの制御面だけで状態依存方針を実現する。"
+      }
+    ],
+    "system_design": "要求はfrontendからプリフィルworkerへ入り、生成したKV状態をデコードworkerが利用するDynamoの分離推論経路を通る。KVBMがKVの階層配置を管理し、Smart Routerが各要求についてworker負荷とprefix overlapを比較して割当先を選ぶ。本方式はこの経路の外側でPrometheus観測を集約し、飽和検出器とPoA trackerを更新する。解析で得た「飽和前はパラメータ差が小さいが、飽和後は混雑項が急増する」という構造を、実行時のregime parameter tableへ変換する。\n\n実験では静的frontendと適応frontendをあらかじめ起動し、C=32→128→32の負荷変化に対し検出器が状態を更新する。遷移が確定すると次の要求から別設定のfrontendへ流し、既存worker群とモデルはそのまま使う。要求処理と同時に実遅延、TTFT、ITL、throughput、推定PoAを記録し、後から同じ窓に対するHungarian assignmentを比較基準として相対効率を計算する。提出された実験結果はこの制御経路の効果を示す一方、P/D GPU数の動的再配分と多階層KV spilloverは実運用評価の対象外である。"
   }
 }
