@@ -9,7 +9,6 @@ on:
       - '.survey/docs/survey-workflow/legacy-removal.md'
       - '.survey/docs/survey-workflow/legacy-inventory.md'
       - '.github/workflows/legacy-inventory.yml'
-      - '! .survey/reports/legacy-inventory.json'
   workflow_dispatch:
     inputs:
       source_commit:
