@@ -12,10 +12,10 @@
       "kind": "research",
       "pool_order": 111,
       "preloaded_at": "2026-09-23T14:59:50+00:00",
-      "worker_id": "shared-preload-pool",
-      "worker_kind": "work",
-      "preload_pool": true,
-      "pipeline_order": null
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "preload_pool": false,
+      "pipeline_order": 5
     },
     {
       "job_id": "job-research-e37f81d7634eb52b",
@@ -48,6 +48,18 @@
       "kind": "research",
       "pool_order": 207,
       "preloaded_at": "2026-09-24T02:38:37+00:00",
+      "worker_id": "shared-preload-pool",
+      "worker_kind": "work",
+      "preload_pool": true,
+      "pipeline_order": null
+    },
+    {
+      "job_id": "job-research-72e08ad8753db376",
+      "claim_id": "claim-preload-ba58fcfa56fa7b594eaaa4a2",
+      "attempt_id": "attempt-preload-ba58fcfa56fa7b594eaaa4a2",
+      "kind": "research",
+      "pool_order": 239,
+      "preloaded_at": "2026-09-24T06:33:22+00:00",
       "worker_id": "shared-preload-pool",
       "worker_kind": "work",
       "preload_pool": true,
