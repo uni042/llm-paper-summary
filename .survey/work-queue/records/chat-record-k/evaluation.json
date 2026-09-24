@@ -1,13 +1,34 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "evaluation",
   "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
   "job_id": "job-research-b22af651ef4f551f",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
     "worker_id": "worker-925000",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "evaluation",
+  "data": {
+    "hardware": "活性化トレース収集と予測器学習にNVIDIA A100を使用。予測器学習は約2日、約48 A100 GPU時間。キャッシュ性能は端末GPUを模したトレース駆動シミュレーションで評価。",
+    "software": "PyTorchベースの予測器。自動混合精度、GradScaler、AdamWを使用。公開実装は https://github.com/ngavhane/moe-beyond 。",
+    "model": "DeepSeek-V2-Lite。15.7B総パラメータ、各forwardで2.4B active parameters、27層、各MoE層に2 shared expertsと64 routed experts、各トークンで6 routed expertsを活性化。",
+    "datasets": [
+      "学習: Puﬃnから6994プロンプトを処理し約6600万活性化サンプル",
+      "テスト: WebGLM-QAから未見100プロンプト",
+      "活性化偏りの再現確認: Puﬃn 122プロンプト"
+    ],
+    "baselines": [
+      "MoE-Infinityの要求単位Expert Activation Matrixとcosine similarityによる予測",
+      "GPUエキスパート常駐容量を変えたLRU系キャッシュ挙動"
+    ],
+    "correctness": "予測器の位置単位精度と64エキスパートのmacro F1を測定する。システム側では記録済みground-truth expert IDsを使ってprediction hitとcache hitを判定するため、モデル出力品質ではなく予測・キャッシュの正しさを評価する。",
+    "settings": [
+      "4層Transformer encoder、8 attention heads、feed-forward 2048、hidden 512、最大系列長512、dropout 0.1。",
+      "batch size 4、最大10 epoch、validation lossが3 epoch改善しなければearly stopping。",
+      "AdamW: β1=0.9、β2=0.98、weight decay 0.01、gradient clipping 1.0。"
+    ],
+    "methodology": "予測器はPuﬃn由来トレースで学習し、別データセットWebGLM-QA 100プロンプトで位置単位精度とmacro F1を測る。キャッシュ評価では記録済みDeepSeek-V2-Liteトレースをtoken-by-tokenで再生し、初期トークンでキャッシュを暖機後、MoE-Infinityまたは学習予測器の先読み結果を反映する。実際に活性化したexpert IDsをground truthとして、GPUに置けるexpert割合を掃引しながらcache hit rateを集計する。",
+    "scope": "エキスパート活性化予測器の精度は実データ由来トレースで測るが、GPUキャッシュ改善はトレース駆動シミュレーションであり、端末上の実測エンドツーエンド遅延・消費電力・PCIe重畳率は示していない。batch size 1の単一要求を主対象にし、DeepSeek-V2-Lite固有特徴で学習している。"
   }
 }
