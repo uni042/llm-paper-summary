@@ -1,42 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T07:02:32+00:00",
+  "updated_at": "2026-09-24T07:05:19+00:00",
   "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-  "last_round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+  "last_round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T14:00:00+09:00",
-      "round": "unrepresented-memory-systems-1",
-      "axis": "fresh-and-adjacent-memory-offload-kv-systems",
-      "query_summary": "Fresh September 2026 and adjacent inference-system search across offloading-aware early exit, CPU/GPU KV-cache placement, context-intensive KV offload, and compression-aware memory controllers, filtered against canonical monthly identity snapshots before submission.",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.16892",
-        "arXiv:2604.25080",
-        "arXiv:2601.10729",
-        "arXiv:2604.26074",
-        "arXiv:2605.02189",
-        "arXiv:2605.08151",
-        "arXiv:2312.11514",
-        "arXiv:2608.03036"
-      ],
-      "next_axis_hint": "adjacent-hpc-storage-runtime-and-kv-transfer",
-      "source_submission": "work-queue/submissions/20260917T1459JST-discovery-unrepresented-memory-systems-1.json"
-    },
     {
       "run_key": "2026-09-17T14:00:00+09:00",
       "round": "speculative-decoding-gaps-2",
@@ -8980,6 +8953,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T070300Z-scheduled-chat-00-a3f91c-r2",
+      "precheck_request_id": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "FlexGenの前方引用を正規schema v3で200件までページ送りし、未収録20件を軽量評価。直近のLLM systemsとしてweight-transfer bottleneckを実装評価した強候補を採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [
+        "arXiv:2609.25442"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16766,15 +16775,15 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "s30-20260924t073303-6a2f1c",
-      "rounds": 9,
-      "candidate_count": 165,
-      "duplicate_filtered_count": 29,
+      "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "rounds": 10,
+      "candidate_count": 185,
+      "duplicate_filtered_count": 49,
       "novel_candidate_count": 136,
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 136,
       "accepted_count": 54,
-      "duplicate_ratio": 0.17575757575757575,
+      "duplicate_ratio": 0.2648648648648649,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -18364,6 +18373,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
       "last_round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1"
+    },
+    "window-e575798307b794892771": {
+      "topic": "flexgen",
+      "source": "semantic_scholar",
+      "date_range": "forward-citations",
+      "category": "inference-systems",
+      "citation_direction": "forward",
+      "query_family": "citation-first",
+      "search_window_key": "window-e575798307b794892771",
+      "scan_count": 1,
+      "raw_result_count": 200,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 132,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "last_position": null,
+      "unseen_rate": 0.1,
+      "duplicate_rate": 0.66,
+      "candidate_acceptance_rate": 0.05,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "last_round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2"
     }
   },
   "recent_search_windows": [
@@ -19856,6 +19888,27 @@
       "unseen_rate": 1.0,
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.1,
+      "last_position": null
+    },
+    {
+      "topic": "flexgen",
+      "source": "semantic_scholar",
+      "date_range": "forward-citations",
+      "category": "inference-systems",
+      "citation_direction": "forward",
+      "query_family": "citation-first",
+      "search_window_key": "window-e575798307b794892771",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
+      "raw_result_count": 200,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 132,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "unseen_rate": 0.1,
+      "duplicate_rate": 0.66,
+      "candidate_acceptance_rate": 0.05,
       "last_position": null
     }
   ],
