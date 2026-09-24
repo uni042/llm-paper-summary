@@ -20,7 +20,7 @@ def blob_sha(data: bytes) -> str:
 
 
 class RepositoryMetadataPolicyTests(unittest.TestCase):
-    def test_month_precision_publication_date_is_valid(self) -> None:
+    def test_month_precision_publication_date_is_valid_and_list_summary_is_required(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             frozen = root / ".survey/survey-state/frozen-training.json"

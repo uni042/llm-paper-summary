@@ -29,7 +29,7 @@ REQUIRED_V10_PATHS = (
 )
 
 REQUIRED_PAPER_METADATA = (
-    "canonical_id", "title", "summary", "authors", "published", "publication",
+    "canonical_id", "title", "summary", "list_summary", "authors", "published", "publication",
     "publication_type", "publication_status", "source", "sources", "implementation",
     "code", "last_checked", "last_audited", "audit_version",
 )

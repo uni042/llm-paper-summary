@@ -232,6 +232,13 @@ def _view_identifiers(meta, path):
     return ids
 
 
+def _explicit_list_summary(meta, path: str) -> str:
+    value = meta.get("list_summary")
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("Missing explicit list_summary: " + path)
+    return value.strip()
+
+
 def paper_views():
     """Return render-only records for inference, training, and survey papers."""
     repo = repository_root()
@@ -254,7 +261,7 @@ def paper_views():
                 "path": rel,
                 "file": p,
                 "title": meta["title"],
-                "summary": compact_list_summary(body, meta["summary"]),
+                "summary": _explicit_list_summary(meta, rel),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),
