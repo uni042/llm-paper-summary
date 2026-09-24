@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Dispatch eligible fallback envelopes through the current workflow-v10 transport.
 
-Research/Audit record bundles are converted directly into attempt-specific immutable
-descriptors by ``replay_record_fallback``. The CLI drains multiple record bundles per
+Research/Audit record bundles are replayed by ``replay_record_fallback``. Current
+connector-safe bundles materialize the five slots and re-enter the normal quality
+preflight pipeline; historical bundles retain direct-descriptor read compatibility.
+The CLI drains multiple record bundles per
 invocation so a temporary Library/GitHub transport outage does not take hours to recover.
 The Python ``dispatch()`` API remains single-item by default for backwards compatibility.
 Historical bundles containing the retired reusable ``chat-inbox.json`` remain readable,
@@ -182,7 +184,7 @@ def _batch_result(
         "envelope_id": first.get("envelope_id"),
         "archived": first.get("archived"),
     }
-    for key in ("job_id", "descriptor", "record_bank"):
+    for key in ("job_id", "descriptor", "preflight_request", "record_bank"):
         if first.get(key) is not None:
             result[key] = first[key]
     return result
@@ -232,7 +234,10 @@ def dispatch(repo_root: Path, *, max_items: int = DEFAULT_DISPATCH_MAX_ITEMS) ->
                     "changed_paths": replay.get("changed_paths") or [],
                 }
                 if public_action == "dispatched":
-                    row["descriptor"] = replay.get("descriptor")
+                    if replay.get("descriptor") is not None:
+                        row["descriptor"] = replay.get("descriptor")
+                    if replay.get("preflight_request") is not None:
+                        row["preflight_request"] = replay.get("preflight_request")
                     row["record_bank"] = replay.get("record_bank")
                 processed.append(row)
                 _append_changed(changed_paths, changed_seen, row["changed_paths"])
