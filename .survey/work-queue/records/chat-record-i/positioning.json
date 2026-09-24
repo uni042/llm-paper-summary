@@ -1,28 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
-  "job_id": "job-research-5cbec5c2c470e865",
-  "reservation": {
-    "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
-    "worker_id": "worker-925000",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "positioning",
-  "data": {
-    "limitations": [
-      "評価モデルはLlama-3.1-8B-Instructの1種類で、GPUもA100 40GBの単一構成に限られる。",
-      "CMM-MPとCMM-Hには概念実証ハードウェアを含み、製品世代やCXL世代が変わると帯域・遅延の関係も変わり得る。",
-      "負荷はvLLMのランダム入力ベンチマークであり、実運用トレースの局所性やマルチテナント干渉を直接評価していない。",
-      "RDMA型の遠隔KV退避とは同一実機条件で直接比較しておらず、論文自身が今後の比較課題に挙げる。",
-      "評価用のLMCache取得経路には複数OSスレッド化の変更があるが、その変更を含む公開コードURLは確認できない。"
-    ],
-    "differences": [
-      "LMCacheはGPUとホスト側階層のKV管理機構を提供するのに対し、本論文はその上でCXLメモリの物理構成を変えたときの性能差を測る。",
-      "StrataなどのSSD階層化研究がソフトウェア側の階層管理を主題にするのに対し、本論文は同じLMCache経路でDRAM型CXL、スイッチ型プール、ネットワーク透過型プール、DRAM-NANDハイブリッドを並べる。",
-      "既存のCXL KV研究が主にDRAM型メモリ拡張へ集中していたのに対し、CMM-BとCMM-MPによるプール化、およびCMM-Hによるハイブリッド容量階層まで含めて、性能・容量・分離性の設計空間を広げる。"
-    ],
-    "implementation_status": "vLLM 0.19.0+cu128とLMCache 0.4.2へ複数種類のCXLデバイスをNUMAメモリとして接続した実機試作である。LMCache本体のCXL専用変更は不要だが、単一ソケット向け非同期取得処理を複数OSスレッド化している。論文本文から再現用公開コードURLは確認できない。",
-    "research_positioning": "KVキャッシュの新しい管理アルゴリズムを提案する研究というより、CXLを階層メモリ・分離メモリの退避先として採用する際のシステム設計点を実測で比較する研究に位置づく。とくに、直接接続DRAMだけでなくメモリプールとNAND背後型まで同じ推論基盤で比較するため、将来のKVキャッシュ配置器が容量・帯域・コストに応じて階層を選ぶ際の基礎データになる。"
+  "attempt_id": "attempt-preload-821e790306b6b1c983fb57dc",
+  "job_id": "job-research-98fce5e6481e51fa",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-821e790306b6b1c983fb57dc",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
   }
 }

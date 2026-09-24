@@ -1,52 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
-  "job_id": "job-research-5cbec5c2c470e865",
-  "reservation": {
-    "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
-    "worker_id": "worker-925000",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "results",
-  "data": {
-    "overview": "KVキャッシュがGPU HBMに収まる短い条件ではGPU計算が支配的だが、入力が長くなり外部KV容量が効く領域ではDRAM型CXLの利点が大きくなる。122Kトークン入力ではCMM-D、CMM-B、CMM-MPがGPU VRAMのみの基準に対して要求スループットを約9倍へ高め、初回トークン時間を最大16分の1に短縮した。これらはシステムDRAMに近い性能を示し、CXLスイッチやCMM-MPの遠隔プール化がKVワークロードで大きな追加低下を生まない。一方、NANDを背後に持つCMM-Hは容量優先の設計で、改善幅は小さくなる。",
-    "key_results": [
-      {
-        "metric": "要求スループット",
-        "value": "約9倍",
-        "baseline": "GPU VRAMのみ",
-        "condition": "122Kトークン入力でCMM-D、CMM-B、CMM-MPを使用",
-        "interpretation": "HBM不足時に長いKVを再計算するよりDRAM級CXLから再取得する方が速く、長文脈ほど退避の効果が大きくなる。"
-      },
-      {
-        "metric": "要求スループット",
-        "value": "約3倍",
-        "baseline": "GPU VRAMのみ",
-        "condition": "8Kトークン入力でCXL退避を使用",
-        "interpretation": "中程度の入力長でもキャッシュ再利用が効くが、同時実行数16を超えるとスループットは飽和し、別の計算・実行資源が支配的になる。"
-      },
-      {
-        "metric": "初回トークン時間（TTFT）",
-        "value": "最大16分の1",
-        "baseline": "GPU VRAMのみ",
-        "condition": "122Kトークン入力でCMM-D、CMM-B、CMM-MPを使用",
-        "interpretation": "長い入力のKVを保持できることで再プリフィルを避け、CXL取得遅延より省ける計算時間が大きくなる。"
-      },
-      {
-        "metric": "要求スループット",
-        "value": "約2倍",
-        "baseline": "GPU VRAMのみ",
-        "condition": "122Kトークン入力でCMM-Hを使用",
-        "interpretation": "NAND背後の大容量化でも再計算回避の効果は得られるが、DRAM型CXLより低い媒体帯域が改善幅を制限する。"
-      }
-    ],
-    "negative_results": [
-      "CMM-HはDRAM型CXLより取得が遅く、122K入力の要求スループット改善は約2倍に留まり、CMM-D・CMM-B・CMM-MPの約9倍を大きく下回る。",
-      "CMM-Hは短い入力側で初回トークン時間が約50%高くなる条件があり、NAND背後の大容量化は低遅延を常に改善するわけではない。",
-      "8K入力では同時実行数16を超えて要求スループットが飽和し、退避先だけを高速化しても無制限には伸びない。"
-    ],
-    "interpretation": "改善幅は、外部階層からKVを読む時間と、KVを保持できないためにプリフィルを再計算する時間の差で決まる。CMM-D、CMM-B、CMM-MPはDRAMを主体とするため取得時間が小さく、64K入力の暖機済み条件でも取得は総遅延の小さな部分に留まり、システムDRAMに近づく。入力が長いほど再計算回避の価値が増えるためGPU VRAMのみとの差が広がる。CMM-HではNAND帯域が取得とプリフィル待ちに現れ、同じ容量拡張でも性能側の交換条件が強い。",
-    "quality_impact": "KVキャッシュの値を量子化・枝刈り・予測で変更せず、保存場所と取得経路だけを変えるため、方式は原理上無損失である。論文は精度や生成品質の改善を主張せず、品質指標を別途比較していない。"
+  "attempt_id": "attempt-preload-821e790306b6b1c983fb57dc",
+  "job_id": "job-research-98fce5e6481e51fa",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-821e790306b6b1c983fb57dc",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
   }
 }
