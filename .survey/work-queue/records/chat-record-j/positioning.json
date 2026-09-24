@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-74bb4af6ce3df82b5f4f239a","job_id":"job-research-60b244663bfce823","data":{"limitations":"通信隠蔽にはブロック長が演算性能/帯域比以上という条件があり、低帯域ネットワークや短系列では待ち時間が露出する。評価は静的な系列分割を中心とし、オンライン推論での可変長要求、連続バッチング、KVページ再利用、要求間共有、障害時再配置など現代的サービング問題は扱わない。最大文脈長の大幅な倍率はFSDP下で同一総トークンバッチを保つ比較であり、必ずしも同じ実アプリケーションの単一要求レイテンシ倍率を意味しない。","differences":"FlashAttentionやBlockwise Parallel Transformerは単一デバイス内で注意・FFNの中間活性化を減らすが、層出力系列の保持は残る。従来の系列並列や既存リング注意は通信が計算から露出しやすい。Ring Attentionはブロック注意の順序不変性を使ってKV循環と注意計算を重畳し、各デバイスが系列全体のKVを保持しない点が差分である。後続の分散長文脈推論では、このリング型KV移送をprefill/decode分離やKVキャッシュ管理と組み合わせる設計の基礎になる。","implementation_status":"著者はJAX実装を公開しており、jax.lax.ppermuteによる隣接KV通信とブロック注意を組み合わせる。論文はA100および複数世代TPUで大規模実験を行っており、概念提案に留まらない。一方、実装は2023年時点の学習中心スタックで、vLLM/SGLang型のオンラインサービング統合や最新CUDA推論カーネルを直接対象にはしていない。","research_positioning":"本サーベイでは分散長文脈推論とKV移送の基礎系統に置く。オフロード研究がKVをGPU外のCPU/SSDへ移すのに対し、Ring AttentionはKVを同格アクセラレータ間で循環させ、通信を計算へ重ねる。したがって階層メモリの『どこへ置くか』とは別に、『いつ転送すれば待ちを隠せるか』というスケジューリング原理を与える。特に長文脈prefillの算術強度を通信隠蔽へ利用する点は、KV offload、disaggregated serving、sequence parallelismの比較軸として有用である。"},"reservation":{"claim_id":"claim-preload-74bb4af6ce3df82b5f4f239a","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-d0b404e285d49a0ce5994e57",
+  "job_id": "job-research-ed39f178b202751f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-d0b404e285d49a0ce5994e57",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

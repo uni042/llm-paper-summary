@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-74bb4af6ce3df82b5f4f239a","job_id":"job-research-60b244663bfce823","data":{"hardware":"8台A100 NVLink、32台A100 InfiniBand、TPUv3-512、TPUv4-1024、TPUv5e-256を用いる。通信隠蔽の理論表ではA100 NVLink/InfiniBandとTPUv3/v4/v5eについて演算性能、HBM、隣接帯域から必要ブロック長と最小系列長を算出する。","software":"JAXのSPMD実装を使用し、リング通信にjax.lax.ppermuteを用いる。ベースとなるブロック単位注意・FFNはBlockwise Parallel Transformer系実装で、比較対象には通常Transformer、メモリ効率注意、メモリ効率注意＋FFNを置く。全方式で注意・FFNへの完全勾配チェックポイントを適用する。","methodology":"最大文脈長評価ではFSDPを用い、ベースラインとRing Attentionで総トークンバッチを同じに保つ。n台でベースラインが長さlの系列を複数処理する条件に対し、Ring Attentionは系列次元を分散して最大nlまで伸ばす。3B、7B、13B、30Bを中心に複数アクセラレータ構成でOOM境界を比較する。効率評価では8/32台A100で2Mトークン、TPUv4-256で4Mトークンのバッチを使い、同じBPT実装を基準にモデルFLOP利用率とスループットを比較する。さらにExoRLの6タスクで長い試行履歴を文脈に含めた強化学習性能を評価する。","scope":"主張は長文脈の学習と推論双方に使える厳密注意の分散実行だが、定量性能評価の中心は学習時最大文脈長とMFUである。通信隠蔽はc ≥ F/Bを満たす十分長いブロックが前提で、低帯域ネットワークや短系列では追加通信が露出し得る。モデルは主にLLaMA系で、今日の大規模推論サーバにおける動的バッチ、KVページ管理、障害耐性、異種GPU環境は評価していない。"},"reservation":{"claim_id":"claim-preload-74bb4af6ce3df82b5f4f239a","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-d0b404e285d49a0ce5994e57",
+  "job_id": "job-research-ed39f178b202751f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-d0b404e285d49a0ce5994e57",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

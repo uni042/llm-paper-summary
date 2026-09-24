@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-54d2a2c5f4eca8e69e54d846","job_id":"job-research-105b69444b4fa0ad","data":{"hardware":"特定GPUカーネルのベンチマークではなく、Claude CodeをAnthropic APIへ接続する実運用エージェント環境を測定する。ローカルWSL環境とUbuntu VM上の約4か月分のセッションを対象とする。","software":"Pichayは透明HTTP proxy、セッションJSONLを解析するprobe.py、baseline/trimmed/compact+trimを比較する実験runnerからなる。対象クライアントはClaude Code、比較実験では同一Claude Opus、同一temperature、同一タスクpromptを使う。","methodology":"Phase 1は857セッション、54,170 API呼出し、44.5億有効入力トークンを固定コホートとして会話レベルのツール出力比率、増幅率、token accountingを測る。Phase 2はproxyで完全要求を捕捉できた5セッション99 API呼出し、24.4MBを用い、dead tool output、unused tool schemas、static resend、skill duplicationへ分解する。安全性は29セッションをオフライン再生し139.3万件の追い出しと354フォルトを数える。標準タスクではbaseline、trimmed、compact+trimを同一モデル条件で比較し、さらに二つの本番セッションで定常時と極端圧力時の挙動を観測する。","scope":"データは一人のpower userによる15ソフトウェアプロジェクトのClaude Code利用で、一般ユーザーや他エージェント製品への外的妥当性は未検証。L1追い出しとL2固定は評価済みだがL3会話圧縮は大規模評価前、L4クロスセッション記憶は設計段階である。オフライン低フォルト率と681ターン本番の97%フォルト率が大きく異なるため、作業集合がresident setを超える極端条件では単純FIFOが破綻する。"},"reservation":{"claim_id":"claim-preload-54d2a2c5f4eca8e69e54d846","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-88865dce95348e7f779dacec",
+  "job_id": "job-research-3d37c9d48dc78998",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-88865dce95348e7f779dacec",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

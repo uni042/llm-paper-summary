@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-74bb4af6ce3df82b5f4f239a","job_id":"job-research-60b244663bfce823","data":{"overview":"最大文脈長はデバイス数に応じて大幅に伸びた。8台A100では3B/7B/13Bで512K/256K/128Kとなり、従来最良のブロック注意＋FFN比で各8倍。32台A100では7Bが4096K、13Bが2048Kで各32倍。TPUv4-1024では3B/7B/13B/30Bが16384K/8192K/4096K/2048Kとなり、従来最良比512倍/512倍/256倍/256倍を示す。長文脈化によって注意FLOP比率が上がるにもかかわらず、同じBPT実装に対してMFUの追加低下は小さいと報告する。","key_results":[{"metric":"最大文脈長","value":"4096Kトークン","baseline":"128Kトークンのメモリ効率注意＋FFN","condition":"32×A100 InfiniBand、7B、FSDP","interpretation":"系列分割により従来最良比32倍、デバイス数に対応する伸びを得た。"},{"metric":"最大文脈長","value":"16384Kトークン","baseline":"32Kトークンのメモリ効率注意＋FFN","condition":"TPUv4-1024、3B","interpretation":"従来最良比512倍で、数千万トークン級の訓練を可能にした。"},{"metric":"活性化メモリ","value":"6bch bytes/layer","baseline":"2bsh bytes/layerのブロック注意＋FFN","condition":"b=バッチ、c=ブロック長、h=隠れ次元、s=系列長","interpretation":"最大活性化が系列長sから独立し、ブロック長cで決まる。"},{"metric":"通信隠蔽条件","value":"c ≥ F/B","baseline":"通信と計算を逐次実行する系列並列","condition":"ブロック注意4dc² FLOP、KV転送4cd bytesのモデル","interpretation":"十分なブロック算術強度があれば隣接KV転送を注意計算の裏へ隠せる。"}],"negative_results":"InfiniBand接続A100では帯域が低いため理論上必要なブロック長が約24.5K、最小系列長が約149.5Kとなり、NVLinkやTPU ICIの約1Kブロック・6K級系列より厳しい。したがって短文脈や低帯域環境ではゼロオーバーヘッド条件が成立しない。長文脈化すると注意計算比率が上がり、注意カーネルのMFUがFFNより低いため、絶対MFUがモデル構成によって下がることも理論上認めている。","interpretation":"Ring Attentionの価値は通信量をゼロにすることではなく、長文脈で増える注意計算を通信隠蔽の時間窓として利用し、KVを全保持せず循環させることにある。デバイス数に比例した最大文脈長の伸びは、この設計が単一デバイスHBM制約を系列分割で外していることを示す。","quality_impact":"注意は近似せず、ブロックsoftmax統計を正しく統合して通常の全注意と等価な計算を行う。品質面の主な効果は長い文脈そのものを利用可能にする点で、ExoRLではより長い試行履歴を用いることで複数タスクの累積報酬改善を示す。"},"reservation":{"claim_id":"claim-preload-74bb4af6ce3df82b5f4f239a","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-d0b404e285d49a0ce5994e57",
+  "job_id": "job-research-ed39f178b202751f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-d0b404e285d49a0ce5994e57",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
