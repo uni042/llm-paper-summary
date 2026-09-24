@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 21:16:19 JST**
+> 自動生成: **2026-09-24 22:11:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,9 @@
 |---|---:|
 | 収録候補論文 | **284** |
 | 未claim Research job | **152** |
-| 直近24hの検証済みResearch収録 | **19** |
+| 直近24hの検証済みResearch収録 | **16** |
 | 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
+| 最終検証済みDiscovery探索 | **09-24 19:55:28 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（12時間40分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（13時間35分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **3** | **3** | **0** | **132** | **0** | — |
+| Research | **9** | **3** | **2** | **0** | **132** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **8** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **19** | **4** | **4** | **0** | **132** | **0** | **0** |
+| Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **12** | **4** | **3** | **0** | **132** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,11 +128,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-3c754529c6f791ee0cbc78c5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-3c754529c6f791ee0cbc78c5.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md`
-- **09-24 15:48:57 JST** [research] `arXiv:2511.06174` — LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs
-  - job: `.survey/work-queue/jobs/job-research-20dfb7993995c1a7.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-adcf408437d27a8a65fe0220.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-adcf408437d27a8a65fe0220.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md`
 
 ### Audit
 
@@ -151,52 +147,29 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json`
   - 探索軸: forward citations of arXiv:2306.00978
-- **09-24 16:02:32 JST** job `job-589818bf1fa4284e` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-- **09-24 16:05:19 JST** job `job-3529923241c3e6b2` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json`
-  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-- **09-24 16:07:05 JST** job `job-c1d55ae9db6fc359` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-- **09-24 16:08:42 JST** job `job-e6b42b393dcebba1` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-- **09-24 16:10:52 JST** job `job-aa8fdeb4b9b6ac4b` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
 
 ### 直近タスク
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 02:55 JST** / worker `scheduled-chat-30`
-- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
-- **成功** `arXiv:2508.15487` — Dream 7B: Diffusion Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-1ba7917ba260cdda.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-3a8d1487d30c19a489a3f0c1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-3a8d1487d30c19a489a3f0c1.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md`
-- **成功** `arXiv:2509.12211` — TinyServe: Query-Aware Cache Selection for Efficient LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-3d37c9d48dc78998.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-88865dce95348e7f779dacec.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-88865dce95348e7f779dacec.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md`
-- **成功** `arXiv:2606.24033` — RoPE-Aware Bit Allocation for KV-Cache Quantization
-  - job: `.survey/work-queue/jobs/job-research-ed39f178b202751f.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-d0b404e285d49a0ce5994e57.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-d0b404e285d49a0ce5994e57.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.24033-rope-aware-bit-allocation-for-kv-cache-quantization.md`
+- 最新観測run: **2026-09-24 17:55 JST** / worker `scheduled-chat-30`
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **成功** `arXiv:2609.26796` — Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs
+  - job: `.survey/work-queue/jobs/job-research-41d37332b16e3d57.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-3ee424a7b2b36c6924101628.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-3ee424a7b2b36c6924101628.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md`
+- **成功** `arXiv:2609.26300` — CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-7ecc4d7949c81534.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-7567c60b834735ea01f92a82.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-7567c60b834735ea01f92a82.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-f151a18e22842a355a31eb94.json` (job `job-research-fc413cbcbab0d455`, failure_class `post_validation_processing_failure`)
+  - result: `.survey/work-queue/results/research/attempt-preload-f151a18e22842a355a31eb94.json` (`ok=false`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 02:55 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-24 17:55 JST** / worker `scheduled-chat-30`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -292,11 +265,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **304** |
+| 成功result未照合のimmutable submission | **306** |
 | └ Research | **172** |
 | └ Audit | **2** |
 | └ Discovery | **71** |
-| └ Other/Unknown | **59** |
+| └ Other/Unknown | **61** |
 
 ### 厳格検証が未成立のcompleted job
 
