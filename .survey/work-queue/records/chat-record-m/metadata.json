@@ -4,7 +4,49 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-e6d3f0c74155be3ba893092d",
   "job_id": "job-research-6884e3d688f660cb",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2506.07366",
+    "arxiv_id": "2506.07366",
+    "doi": "10.48550/arXiv.2506.07366",
+    "title": "MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing",
+    "summary": "複数GPU上の混合専門家モデル（Mixture-of-Experts; MoE）推論では、ルータが選ぶ専門家の偏りによってGPU間のフィードフォワードネットワーク計算量が不均衡になる。MoE-GPSは、動的な専門家複製に必要な予測を、各トークンの行先まで当てる方式と、各専門家へ流れるトークン比率だけを推定する方式に分解し、予測精度・予測器オーバーヘッド・通信帯域・負荷偏りをエンドツーエンド遅延へ写像して選択するシミュレーション枠組みである。Mixtral 8x7Bでは、通信が支配的でない条件では分布のみの予測が低い予測コストで計算負荷を均すため有利で、MMLU相当の偏りでは最良のトークン単位予測より23%以上高速だった。一方、PCIeのように通信が支配的で偏りが大きい条件では、通信削減まで可能なトークン単位予測が有利になり得る。",
+    "source": "https://arxiv.org/abs/2506.07366",
+    "sources": [
+      "https://arxiv.org/abs/2506.07366",
+      "https://www.researchgate.net/publication/392530032_MoE-GPS_Guidlines_for_Prediction_Strategy_for_Dynamic_Expert_Duplication_in_MoE_Load_Balancing"
+    ],
+    "authors": [
+      "Haiyue Ma",
+      "Zhixu Du",
+      "Yiran Chen"
+    ],
+    "publication": "arXiv",
+    "publication_type": "preprint",
+    "published": "2025-06-09",
+    "publication_status": "preprint; ML for Systems Workshop at NeurIPS 2025 listed by the first author",
+    "topics": [
+      "MoE推論",
+      "専門家複製",
+      "負荷分散",
+      "予測戦略",
+      "複数GPU推論"
+    ],
+    "implementation": "論文はMoE-GPSのシステム性能シミュレータを用いてMixtral 8x7Bの単層prefillを評価する。公開コード実装は確認できなかった。",
+    "code": null,
+    "last_checked": "2026-09-25",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AR"
+      ]
+    },
+    "hardware_evaluation": "4基のA100 GPUを完全結合し、NVLinkまたはPCIe相当の相互接続をモデル化したシミュレーション。",
+    "quality_effect": "予測戦略は同一MoEモデルのルーティング先配置・通信・計算負荷を変えるシステム最適化であり、モデル出力品質を近似して高速化する手法ではない。トークン単位予測の誤りは負荷分散効率へ反映される。",
+    "references": [],
+    "references_checked_at": "2026-09-25",
+    "references_source": "一次論文の本文・参考文献節を確認したが、この記録では正規化識別子を抽出していない。",
+    "references_total": 0
+  },
   "reservation": {
     "claim_id": "claim-preload-e6d3f0c74155be3ba893092d",
     "worker_id": "scheduled-chat-00",
