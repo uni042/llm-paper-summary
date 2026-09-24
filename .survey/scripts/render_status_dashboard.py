@@ -28,7 +28,7 @@ import paper_taxonomy
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30"}
 _CURRENT_RUN_KEY_RE = re.compile(
-    r"^scheduled-chat-(?:00|30)-(?P<stamp>\\d{8}T\\d{6})(?P<zone>Z|[+-]\\d{4})(?:-[A-Za-z0-9._-]+)?$"
+    r"(?P<stamp>\\d{8}T\\d{6})(?P<zone>Z|[+-]\\d{4})(?:-|$)"
 )
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
@@ -82,7 +82,7 @@ def _discovery_run_time_from_key(value: Any):
     parsed = _core.evidence._parse_dt(value)
     if parsed is not None:
         return parsed
-    match = _CURRENT_RUN_KEY_RE.match(str(value or "").strip())
+    match = _CURRENT_RUN_KEY_RE.search(str(value or "").strip())
     if match is None:
         return None
     try:
