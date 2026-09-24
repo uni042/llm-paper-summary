@@ -7,7 +7,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "audit_paper_quality.py"
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+SCRIPT = SCRIPTS / "audit_paper_quality.py"
 SPEC = importlib.util.spec_from_file_location("audit_paper_quality", SCRIPT)
 assert SPEC and SPEC.loader
 AUDIT = importlib.util.module_from_spec(SPEC)
