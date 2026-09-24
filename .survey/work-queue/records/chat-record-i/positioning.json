@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-3a8d1487d30c19a489a3f0c1",
-  "job_id": "job-research-1ba7917ba260cdda",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-3a8d1487d30c19a489a3f0c1",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-3a8d1487d30c19a489a3f0c1","job_id":"job-research-1ba7917ba260cdda","data":{"relation_to_prior":"Dream 7BはLLaDA 8Bなどゼロから学習する大規模離散拡散言語モデルの系譜に対し、強い自己回帰モデルQwen2.5-7Bの既存重みを拡散学習へ転用する経路を示す。単に因果注意を双方向化するのではなく、自己回帰事前学習で形成された次位置予測の位置ずれを維持し、文脈適応型トークン雑音再配分を加えることで、約0.6兆トークンの追加拡散学習でLLaDA 8Bの2.3兆トークンより少ない学習量ながら多くの評価で上回る。","repository_position":"リポジトリ内では、自己回帰復号を高速化する投機的復号やKVキャッシュ最適化とは異なり、生成依存関係そのものを左から右の逐次生成から反復並列復元へ変える基盤方式として位置付ける。後続の拡散LLM推論・並列復号・反復スケジューリングを評価する際のモデル側基準になり、サービング系では反復回数を品質・遅延制御ノブとして扱う設計につながる。","differences":"LLaDA 8Bとの差は自己回帰重み初期化と文脈適応型再配分による学習効率、Qwen2.5-7Bとの差は双方向の反復復元・任意順生成・穴埋め能力にある。一方、一般能力でQwen2.5-7Bを一貫して上回るわけではなく、Dream-Instructも教師あり調整のみなので強化学習済み自己回帰指示モデルとの比較には後学習条件差が残る。","followups":"推論システム観点では、反復数と品質・遅延の曲線、複数トークン同時確定を実GPU上でどこまでスループットへ変換できるか、KVキャッシュやバッチ処理を自己回帰サービングとどう異なる形で管理するかが後続調査点となる。"},"reservation":{"claim_id":"claim-preload-3a8d1487d30c19a489a3f0c1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
