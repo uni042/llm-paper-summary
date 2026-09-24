@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-preload-9578aadc947ff8ab74585005",
+  "attempt_id": "attempt-preload-7b508da4f5b23e0f0512f37f",
   "job_id": "job-research-14b72fcf4a8168cf",
   "data": {
     "differences": [
@@ -23,5 +23,9 @@
     "research_positioning": "階層メモリ・offload系サーベイでは、ZipNNは『何をどこへ置くか』ではなく『ストレージ/ネットワークを流れるモデルbyteをどれだけ減らせるか』を担当するI/O圧縮層として位置付けられる。特にBF16モデルで約1/3の転送量を可逆に削減できるため、NVMe model loading、cold start、checkpoint spill、model hub配布の帯域ボトルネックに直接関係する。一方、推論中のKV cacheやexpert working setには論文の主評価がなく、MoE expert cacheへ応用する場合もロード頻度とCPU復号throughputを含めた追加評価が必要である。",
     "audit_notes": "arXiv:2411.05239v2の全文をIntroduction、Background、regular/clean model compression、byte grouping、delta checkpoint、evaluation、limitationsまで確認し、IEEE CLOUD 2025の公開書誌と公式ZipNN実装も照合。指数256値中約40値、上位12値約99.9%、BF16約66%、FP32約83%、clean model 33〜48%、Zstd比較、並列80GB/s復号/13GB/s圧縮を区別して記録した。arXiv primary categoryはcs.LG、cross-listはcs.IT。"
   },
-  "reservation": {"claim_id": "claim-preload-9578aadc947ff8ab74585005", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-preload-7b508da4f5b23e0f0512f37f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

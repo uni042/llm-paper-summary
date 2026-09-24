@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-0eb96878e292ba8c65359cba",
+  "attempt_id": "attempt-preload-5d9ea29857482ff49deb8078",
   "job_id": "job-research-372c7ba23950bd0c",
   "data": {
     "overview": "主要結果は、専門家数を大きく減らしても複数タスクで相当量の品質が残ること、さらに教師データの選び方によって少ないラベル数でも品質を回復できることである。Mixtral-8x7BのGLUEでは元の86.1%に対し、上位2専門家の条件で78.9%となった。6千例を用いる条件では83.9%まで改善し、1万例を無作為に用いる条件の82.1%を上回った。WikiText-103とXSumでも同方向の結果が得られ、防御訓練の予備実験では専門家数を減らした際の品質低下が大きくなった。",
@@ -49,7 +49,7 @@
     "quality_impact": "本手法は品質を完全に無損失で維持するものではない。専門家削減は近似的な容量削減であり、保持専門家数を減らすほど品質損失が増えるが、少量再調整でその一部を回復できる。"
   },
   "reservation": {
-    "claim_id": "claim-preload-0eb96878e292ba8c65359cba",
+    "claim_id": "claim-preload-5d9ea29857482ff49deb8078",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

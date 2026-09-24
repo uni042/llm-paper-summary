@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-preload-0eb96878e292ba8c65359cba",
+  "attempt_id": "attempt-preload-5d9ea29857482ff49deb8078",
   "job_id": "job-research-372c7ba23950bd0c",
   "data": {
     "setup": "主評価はMixtral-8x7BとMixtral-8x22Bを用い、8専門家から上位4・2・1専門家を残す帰属ベース削減を比較する。補助的にSwitch Transformer系の小型MoEでも方法の適用可能性を確認する。データはGLUEのMNLI・SST-2・QNLI、WikiText-103、XSumで、分類、言語モデル、要約という異なるタスクで削減と再調整の挙動を測る。",
@@ -33,7 +33,7 @@
     "methodology": "ルータ確率から専門家帰属を算出し、残存専門家数を変えた削減条件について、再調整なし、無作為抽出再調整、能動学習再調整を同じタスク指標で比較する。防御条件では同じ削減・再調整手順を用いて性能曲線を比較する。"
   },
   "reservation": {
-    "claim_id": "claim-preload-0eb96878e292ba8c65359cba",
+    "claim_id": "claim-preload-5d9ea29857482ff49deb8078",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

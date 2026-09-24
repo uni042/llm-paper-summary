@@ -3,20 +3,50 @@
   "workflow_version": 10,
   "claim_id": "claim-preload-7b508da4f5b23e0f0512f37f",
   "job_id": "job-research-14b72fcf4a8168cf",
-  "worker_id": "shared-preload-pool",
-  "worker_kind": "work",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
   "attempt_id": "attempt-preload-7b508da4f5b23e0f0512f37f",
-  "claimed_at": "2026-09-24T18:48:37+00:00",
+  "claimed_at": "2026-09-24T21:29:26+00:00",
   "preloaded_at": "2026-09-24T18:48:37+00:00",
-  "expires_at": "2026-09-25T06:48:37+00:00",
+  "expires_at": "2026-09-24T22:59:26+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-14b72fcf4a8168cf"
   ],
-  "preload_pool": true,
+  "preload_pool": false,
   "pool_order": 357,
   "stock_bank": "f",
   "stock_lane": "research",
   "claim_source": "shared_preload_pool",
-  "previous_claim_id": "claim-preload-8d1e3cd5e202a7adfbf70640"
+  "previous_claim_id": "claim-preload-8d1e3cd5e202a7adfbf70640",
+  "released": false,
+  "invalidated": false,
+  "preload_pool_adopted_at": "2026-09-24T21:29:26+00:00",
+  "preload_pool_worker_id": "shared-preload-pool",
+  "request_id": "direct-refill-6779a99ba915a346a8b086d3",
+  "heartbeat_at": "2026-09-24T21:29:26+00:00",
+  "pipeline_order": 1,
+  "resume_recovery_source": {
+    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-preload-9578aadc947ff8ab74585005",
+    "attempt_id": "attempt-preload-9578aadc947ff8ab74585005",
+    "record_bank": "q",
+    "nonempty_slot_count": 5
+  },
+  "run_key": "scheduled-chat-30-20260925T062750-6f27",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T21:27:50+00:00",
+  "record_bank": "q",
+  "record_bank_root": ".survey/work-queue/records/chat-record-q",
+  "record_slot_paths": {
+    "metadata": ".survey/work-queue/records/chat-record-q/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-q/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-q/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-q/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-q/positioning.json"
+  },
+  "record_bank_recovery": "expired-same-job",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-preload-9578aadc947ff8ab74585005"
+  ]
 }

@@ -3,17 +3,17 @@
   "workflow_version": 10,
   "claim_id": "claim-preload-644ad2903221a879bcc71c1a",
   "job_id": "job-research-bfeff3910941fa95",
-  "worker_id": "shared-preload-pool",
-  "worker_kind": "work",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
   "attempt_id": "attempt-preload-644ad2903221a879bcc71c1a",
-  "claimed_at": "2026-09-24T09:11:31+00:00",
+  "claimed_at": "2026-09-24T21:29:26+00:00",
   "preloaded_at": "2026-09-24T09:11:31+00:00",
-  "expires_at": "2026-09-25T09:28:37+00:00",
+  "expires_at": "2026-09-24T22:59:26+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-bfeff3910941fa95"
   ],
-  "preload_pool": true,
+  "preload_pool": false,
   "pool_order": 267,
   "stock_bank": "l",
   "stock_lane": "research",
@@ -21,5 +21,21 @@
   "previous_claim_id": "claim-preload-cf4d00e145e5ba8f22f81ab2",
   "released": false,
   "invalidated": false,
-  "heartbeat_at": "2026-09-24T21:28:37+00:00"
+  "heartbeat_at": "2026-09-24T21:29:26+00:00",
+  "preload_pool_adopted_at": "2026-09-24T21:29:26+00:00",
+  "preload_pool_worker_id": "shared-preload-pool",
+  "request_id": "direct-refill-6779a99ba915a346a8b086d3",
+  "pipeline_order": 3,
+  "run_key": "scheduled-chat-30-20260925T062750-6f27",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T21:27:50+00:00",
+  "record_bank": "r",
+  "record_bank_root": ".survey/work-queue/records/chat-record-r",
+  "record_slot_paths": {
+    "metadata": ".survey/work-queue/records/chat-record-r/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-r/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-r/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-r/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-r/positioning.json"
+  }
 }
