@@ -1,34 +1,14 @@
 {
   "candidate_inventory": 285,
-  "direct_start_allowed": true,
+  "direct_start_allowed": false,
   "discovery": {
-    "backward": [
-      {
-        "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
-        "citation_direction": "backward",
-        "created_at": "2026-09-24T01:27:35.239889+00:00",
-        "discovery_bank": "k",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-k/discovery-preload.json",
-        "initial_cursor": null,
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-711f4ea295ec7a7fdcd5",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-711f4ea295ec7a7fdcd5.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-711f4ea295ec7a7fdcd5.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-711f4ea295ec7a7fdcd5.json",
-        "target_unseen": 20
-      }
-    ],
+    "backward": [],
     "forward": [],
     "normal": []
   },
-  "generated_at": "2026-09-24T06:52:54+00:00",
+  "generated_at": "2026-09-24T07:01:27+00:00",
   "lane_available": {
-    "discovery": true,
+    "discovery": false,
     "research": true
   },
   "research": [
