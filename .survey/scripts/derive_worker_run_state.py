@@ -99,6 +99,9 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     runtime_condition_detail = str(value.get("runtime_condition_detail") or "").strip()
     runtime_condition_event = str(value.get("runtime_condition_event") or "").strip()
     runtime_condition_scope = str(value.get("runtime_condition_scope") or "").strip()
+    runtime_condition_fallback_exhausted = (
+        value.get("runtime_condition_fallback_exhausted") is True
+    )
 
     direct_inventory = value.get("candidate_inventory_at_start")
     direct_mode = str(value.get("work_mode_at_start") or "").strip()
@@ -173,6 +176,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_detail": runtime_condition_detail,
         "runtime_condition_event": runtime_condition_event,
         "runtime_condition_scope": runtime_condition_scope,
+        "runtime_condition_fallback_exhausted": runtime_condition_fallback_exhausted,
         "route_recovery_source": route_recovery_source,
         "recovered_work_mode_at_start": recovered_work_mode,
         **direct_route,
@@ -1693,12 +1697,13 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             and int(request.get("runtime_condition_attempts") or 0) >= 1
             and request.get("runtime_condition_event") == PLATFORM_CONTEXT_LIMIT_EVENT
             and request.get("runtime_condition_scope") == PLATFORM_CONTEXT_LIMIT_SCOPE
+            and request.get("runtime_condition_fallback_exhausted") is True
             and str(request.get("runtime_condition_detail") or "").strip()
         )
         if not explicit_platform_rejection:
             runtime = "none"
             runtime_condition_ignored_reason = (
-                "platform_limit_requires_run_wide_tool_rejection_after_fallback"
+                "platform_limit_requires_run_wide_tool_rejection_and_exhausted_status_only_fallback"
             )
 
     # 600s is only a no-new-independent-work window. The final 180s is the
@@ -1905,6 +1910,9 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_detail": request.get("runtime_condition_detail", ""),
         "runtime_condition_event": request.get("runtime_condition_event", ""),
         "runtime_condition_scope": request.get("runtime_condition_scope", ""),
+        "runtime_condition_fallback_exhausted": request.get(
+            "runtime_condition_fallback_exhausted", False
+        ),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
@@ -1965,7 +1973,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
-            "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
+            "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected, runtime_condition_scope=run_wide, runtime_condition_fallback_exhausted=true, and a concrete observed-error detail; a single paper/source/content-write failure is never platform-context evidence. "
             "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to that packet instead of monitoring the claim as foreground work. Same-worker expired-claim record recovery packets are selected before unrelated fresh pool packets, while an already-active owned foreground remains authoritative. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "

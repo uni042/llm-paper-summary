@@ -196,11 +196,57 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
             self.assertEqual(job["status"], "blocked")
             self.assertTrue(job["blocked_retry_dormant"])
 
+    def test_blocked_audit_is_requeued_by_same_retry_policy(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            path = self._seed_blocked(
+                jobs_dir,
+                job_id="job-audit-test",
+                type="audit",
+                blocker="platform_content_write_rejected_after_bundle_fallback",
+            )
+
+            first = blocked_retry.process_blocked_jobs(root, AT)
+            job = self._read_job(path)
+            self.assertEqual(first["new_block_events"], 1)
+            self.assertEqual(job["status"], "blocked")
+            self.assertEqual(
+                blocked_retry.parse_time(job["retry_not_before"]),
+                AT + timedelta(days=7),
+            )
+
+            second = blocked_retry.process_blocked_jobs(root, AT + timedelta(days=7))
+            job = self._read_job(path)
+            self.assertEqual(second["requeued"], 1)
+            self.assertEqual(job["status"], "ready")
+
+    def test_platform_content_write_block_is_retryable_not_permanent(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            path = self._seed_blocked(
+                jobs_dir,
+                blocker="platform_content_write_rejected_after_bundle_fallback",
+            )
+            blocked_retry.process_blocked_jobs(root, AT)
+            job = self._read_job(path)
+            self.assertEqual(job["status"], "blocked")
+            self.assertFalse(job.get("blocked_retry_dormant", False))
+            self.assertEqual(
+                blocked_retry.parse_time(job["retry_not_before"]),
+                AT + timedelta(days=7),
+            )
+
     def test_router_keeps_flexible_primary_source_retrieval_policy(self) -> None:
         text = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
         self.assertIn("固定された4経路を各1回だけ試して打ち切る方式は使わない", text)
         self.assertIn("blocked Researchは原則7日後に再確認", text)
         self.assertIn("取得失敗だけを永久除外理由にしない", text)
+        self.assertIn("platform_content_write_rejected_after_bundle_fallback", text)
+        self.assertIn("次のstandbyへ進む", text)
         self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
 
 

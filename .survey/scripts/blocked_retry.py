@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Retry policy for temporarily blocked research jobs.
+"""Retry policy for temporarily blocked Research/Audit jobs.
 
-GitHub Actions is the queue/state writer. This helper observes research jobs that
-queue_worker marked as blocked, counts each distinct blocked event once, and
-requeues retrieval failures after a seven-day cooldown.
+GitHub Actions is the queue/state writer. This helper observes Research/Audit jobs
+that queue_worker marked as blocked, counts each distinct blocked event once, and
+requeues temporary failures after a seven-day cooldown.
 
-Primary-source retrieval failure is not a terminal-exclusion signal. After five
-distinct blocked events spanning at least 28 days, automatic periodic retries are
-suspended by keeping the job blocked with a durable dormant marker.
+Primary-source retrieval failure and target-specific platform content-write refusal
+are temporary per-paper states, not terminal-exclusion signals. After five distinct
+blocked events spanning at least 28 days, automatic periodic retries are suspended
+by keeping the job blocked with a durable dormant marker.
 """
 from __future__ import annotations
 
@@ -153,7 +154,7 @@ def maybe_requeue(job: dict, reference_time: datetime) -> bool:
     return True
 
 
-def process_blocked_research_jobs(root: Path, reference_time: datetime | None = None) -> dict:
+def process_blocked_jobs(root: Path, reference_time: datetime | None = None) -> dict:
     reference_time = (reference_time or utc_now()).astimezone(timezone.utc)
     jobs_dir = root / "work-queue" / "jobs"
     jobs_dir.mkdir(parents=True, exist_ok=True)
@@ -168,7 +169,7 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
 
     for path in sorted(jobs_dir.glob("*.json")):
         job = read_json(path)
-        if job.get("type") != "research":
+        if job.get("type") not in {"research", "audit"}:
             continue
 
         if job.get("status") != "blocked":
@@ -201,11 +202,16 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
     return result
 
 
+def process_blocked_research_jobs(root: Path, reference_time: datetime | None = None) -> dict:
+    """Compatibility wrapper; retry policy now covers both Research and Audit."""
+    return process_blocked_jobs(root, reference_time)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(".survey"))
     args = parser.parse_args()
-    result = process_blocked_research_jobs(args.root.resolve())
+    result = process_blocked_jobs(args.root.resolve())
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

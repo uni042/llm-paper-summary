@@ -1,4 +1,4 @@
-# Worker router — workflow v10.15
+# Worker router — workflow v10.16
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -92,6 +92,8 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 **GitHubのファイル作成・更新API/connectorを利用できる場合、それ自体をGitHub write可能と判定する。** ローカルshell、Python実行、`git push`、Actionsのmanual dispatch専用toolが無いことを、claim / run-state / preflight / submissionのwrite不能理由にしてはならない。新規request・direct-take・immutable descriptor等は、正規pathへGitHubのcreate-file相当操作でJSONを作成することで耐久化でき、そのcommitに反応するActions fast laneへ後段処理を委譲する。既存ファイルの更新が必要な段階では、直前に最新HEADと対象blob SHAを再取得してupdate-file相当操作を使う。
 
 **Research / Auditの5スロット更新だけは、connector側で既存ファイルupdateがplatformから拒否された場合に低レベルGit ref更新へエスカレートしない。** 5スロット内容が完成しセルフレビュー済みなら、`.survey/work-queue/fallback-inbox/<unique-id>.json` へ **`record_bundle_mode: "quality_preflight_v1"`** のcreate-only record bundleを1個作る。bundleはrootに `origin: "claimed_worker"`, `kind`, `job_id`, `claim_id`, `worker_id`, `attempt_id`, `depends_on_job_ids`, `paper_path`, 完全なrun identity、`self_review`、必要なら `expected_blob_sha` を持ち、`writes` には同一bank由来の5スロットJSONをすべて含める。このpushでSurvey helperがbundleを安全なrecord bankへ展開し、同じcommitで通常の `research_quality_preflight` requestを生成する。以後は既存のpreflight PASS→自動descriptor→submission fast laneへ戻る。**create-only bundleが成功した時点で対象固有のupdate拒否は回復済みであり、`platform_context_limit` を申告してrunを終了してはならない。**
+
+**内容を含むslot updateと `quality_preflight_v1` bundle createの両方がplatform安全検査で拒否された場合も、run-wide障害へ昇格する前にその1論文だけを退避する。** 最新mainでjobが同じ `job_id/kind` の非終端、claimが同じ `claim_id/attempt_id/worker_id` であることを再確認し、`.survey/work-queue/submissions/<kind>/<attempt_id>.json` に **内容を含まない最小status-only `blocked` descriptor** をcreate-onlyで保存する。descriptorは `schema_version:1`, `transport_version:10`, `kind`, `attempt_id`, `job_id`, `claim_id`, `worker_id`, `status:"blocked"`, `reason:"platform_content_write_rejected_after_bundle_fallback"` だけを基本とし、record slot本文・`paper_path`・`record_bank`・`record_slots`・`expected_blob_sha` を入れない。create成功をその論文の耐久退避完了とみなし、submission fast laneのresultを同期障壁にせず次のstandbyへ進む。Research/Auditともblocked retry対象とし、既存の7日cooldown後に再試行する。**このstatus-only descriptorが保存できた場合は `platform_context_limit` / run-wide write障害を申告してはならない。**
 
 `transport_unrecoverable` / `durable_transports_unavailable` を申告してhandoffする前に、**今回必要な正規pathへの実writeを少なくとも1回は実際に試す。** write操作を一度も試していない、または「直接スクリプトを実行できない」ことしか確認していない状態はtransport障害ではない。create-only pathで既存ファイル競合が返った場合もwrite不能ではなく排他取得競合なので、routerが定める次packet/同一identity確認へ進む。
 
@@ -410,12 +412,13 @@ GitHub write失敗時:
 
 1. 対象の最新blob SHA / repo状態を取り直し、その対象だけ1回再試行。
 2. **Research / Auditの5スロット既存ファイルupdateが再び拒否された場合**は、低レベルtree/ref更新を試さず、完全5スロット＋セルフレビューを1つの `quality_preflight_v1` record bundleとして `.survey/work-queue/fallback-inbox/<unique-id>.json` へcreate-onlyで保存する。これが成功すれば対象固有障害は回復済みで、Actions側の展開→通常preflight→submissionを監視しつつrunを継続する。
-3. 2以外、またはrecord bundleのcreate-only自体も失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新。
-4. probe成功 → 対象固有障害。影響payloadだけLibraryへcheckpointし、他のGitHub writeは継続。Research / Auditで完全5スロットbundleをLibraryへ置いた場合、GitHub create-onlyが再び利用可能になった時点で同じ `quality_preflight_v1` envelopeをfallback-inboxへ搬送する。
-5. probe失敗 → run-wide障害。そのrunではGitHub writeを繰り返さない。Research / Audit中なら現在の1論文だけをLibraryへcheckpointし、GitHub上の成功resultと最新main反映を確認できないため**次の論文へ進まない**。Discovery中も正規precheck/result要件を飛ばして新ラウンドを捏造せず、既に得た成果だけをLibraryへ耐久保存する。
-6. GitHub direct writeとLibrary保存の両方が不能な場合だけ、未保存成果を増やす前に停止。
+3. **slot updateとrecord bundle createの両方がplatform安全検査で拒否された場合**は、上記の最小status-only `blocked` descriptorをcreate-onlyで保存する。保存成功ならその論文だけを7日cooldownへ退避し、submission resultを待たず最古standbyをforegroundへ昇格する。health probeやrun-wide `platform_context_limit` へ進まない。
+4. 2/3で対象固有回復できない場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新。
+5. probe成功 → run-wide障害ではない。内容payloadはLibraryへcheckpointできるなら保存し、**status-only descriptorまたは他の内容を含まない正規control writeが可能なら現在論文を退避して次のstandbyへ進む。** Research / Auditで完全5スロットbundleをLibraryへ置いた場合、GitHub create-onlyが再び利用可能になった時点で同じ `quality_preflight_v1` envelopeをfallback-inboxへ搬送する。
+6. probe失敗、かつstatus-only/control write・Libraryを含む正規fallbackを尽くしても現在runの必須操作を耐久化できない → run-wide障害。そのrunではGitHub writeを繰り返さない。
+7. GitHub direct writeとLibrary保存の両方が不能な場合だけ、未保存成果を増やす前に停止。
 
-**`platform_context_limit` はrun-wideのplatform拒否に限定する。** 対象固有のslot updateや低レベルref更新だけが拒否された一方で、create-only request/bundle、GitHub read、またはLibrary保存が利用できる状態はrun-wide limitではない。run-stateへ `platform_context_limit` を申告する場合は、通常の証拠に加えて `runtime_condition_scope: "run_wide"` を必須とし、上記fallbackまで実際に試した後でも現在runの必須tool callを継続できない場合だけ使う。
+**`platform_context_limit` はrun-wideのplatform拒否に限定する。** 対象固有のslot updateやrecord bundleだけが拒否された一方で、status-only descriptor、create-only control request、GitHub read、またはLibrary保存が利用できる状態はrun-wide limitではない。run-stateへ `platform_context_limit` を申告する場合は、通常の証拠に加えて `runtime_condition_scope: "run_wide"` と **`runtime_condition_fallback_exhausted: true`** を必須とする。このflagは、対象固有status-only退避とhealth probeを含む上記fallbackを実際に試しても現在runの必須tool callを耐久化できなかった場合だけtrueにする。
 
 **Scheduled Task自体を一時停止・無効化してはならない。** GitHub/API/Actions/Library障害、今回runのhard stop、ノルマ未達、その他の一時障害があっても、Scheduled Chat / automationのenabled状態は維持する。停止とは今回runの安全終了だけを意味し、将来runのスケジュール停止を意味しない。
 
@@ -494,9 +497,10 @@ runtime_condition: none
 # platform_context_limit の場合だけ必須:
 # runtime_condition_event: platform_tool_call_rejected
 # runtime_condition_scope: run_wide
+# runtime_condition_fallback_exhausted: true
 ```
 
-hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformから**run-wideに必要なtool callまたはoutputを拒否された事実**がある場合に限り、`runtime_condition_confirmed=true`、`runtime_condition_attempts>=1`、非空の `runtime_condition_detail` に加えて **`runtime_condition_event=platform_tool_call_rejected` と `runtime_condition_scope=run_wide`** を持つ場合だけ有効とする。対象固有のupdate拒否は前節のcreate-only record bundle等の正規fallbackを先に試す。この構造化証拠が無い `platform_context_limit` はrun-state側で `none` に降格する。単一論文のPDF/HTML/DOI/provider取得失敗はこのeventではなくstatus-only終端対象である。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
+hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformから**run-wideに必要なtool callまたはoutputを拒否された事実**がある場合に限り、`runtime_condition_confirmed=true`、`runtime_condition_attempts>=1`、非空の `runtime_condition_detail` に加えて **`runtime_condition_event=platform_tool_call_rejected`、`runtime_condition_scope=run_wide`、`runtime_condition_fallback_exhausted=true`** を持つ場合だけ有効とする。対象固有のupdate拒否は前節のrecord bundle→status-only blocked退避→health probeの順に正規fallbackを先に試す。この構造化証拠が無い `platform_context_limit` はrun-state側で `none` に降格する。単一論文のPDF/HTML/DOI/provider取得失敗はこのeventではなくstatus-only終端対象である。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
 
 同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、`gate.decision` / `gate.required_action` を継続判断の正本とする。 **ただしワーカーが次に実行する操作はトップレベルの `next_action` を正本とする。これは `run_finalization_gate.py` の `next_action` から導出し、前段の継続判定は `continuation_next_action` として診断用に残す。** `run_termination_allowed=false` の間はrunを終了・通常handoff扱いにせず、`next_work_packet` が非nullならそこに示された具体的なjob / claim / precheck result / preload / recovery targetを**次の操作として直ちに処理する**。進捗報告はしてよいが、それをrun終了の代替にしない。
 

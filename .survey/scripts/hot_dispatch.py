@@ -251,6 +251,26 @@ def _research_resume_packets(
                 "claim_id": claim_id,
                 "worker_id": worker_id,
             },
+            "platform_content_write_recovery": {
+                "trigger": "record_slot_update_and_quality_preflight_bundle_rejected",
+                "create_only": True,
+                "submission_path": (
+                    Path(".survey/work-queue/submissions") / kind / f"{attempt_id}.json"
+                ).as_posix(),
+                "descriptor": {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "kind": kind,
+                    "attempt_id": attempt_id,
+                    "job_id": job_id,
+                    "claim_id": claim_id,
+                    "worker_id": worker_id,
+                    "status": "blocked",
+                    "reason": "platform_content_write_rejected_after_bundle_fallback",
+                },
+                "continue_after_durable_create": True,
+                "retry_policy": "blocked_retry_7d",
+            },
             "source_unavailable_next_action": (
                 "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY"
             ),

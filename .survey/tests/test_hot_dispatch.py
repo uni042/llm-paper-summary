@@ -210,6 +210,22 @@ class HotDispatchTests(unittest.TestCase):
                 },
             )
 
+            recovery = packets[0]["platform_content_write_recovery"]
+            self.assertTrue(recovery["create_only"])
+            self.assertTrue(recovery["continue_after_durable_create"])
+            self.assertEqual(recovery["retry_policy"], "blocked_retry_7d")
+            self.assertEqual(
+                recovery["submission_path"],
+                ".survey/work-queue/submissions/research/attempt-carryover.json",
+            )
+            self.assertEqual(recovery["descriptor"]["status"], "blocked")
+            self.assertEqual(
+                recovery["descriptor"]["reason"],
+                "platform_content_write_rejected_after_bundle_fallback",
+            )
+            self.assertNotIn("record_bank", recovery["descriptor"])
+            self.assertNotIn("record_slots", recovery["descriptor"])
+
     def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
