@@ -58,6 +58,7 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
     def test_discovery_recovery_auto_advances_prepared_bank_with_push_race_recompute(self):
         text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
         self.assertIn("for attempt in $(seq 1 12)", text)
+        self.assertIn(".survey/work-queue/submissions/discovery/*.json", text)
         self.assertIn("git reset --hard origin/main", text)
         self.assertIn("auto_advance_discovery.py", text)
         self.assertIn("--recovery-report /tmp/discovery-recovery.json", text)
