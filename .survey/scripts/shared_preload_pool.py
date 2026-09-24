@@ -26,6 +26,7 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+import worker_quota_policy
 from record_bank_config import (
     BANK_IDS,
     BANK_ROOTS,
@@ -232,9 +233,34 @@ def adopt(
             continue
         candidates.append(current)
 
+    block_size = worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE
+    block_start = next_pipeline_order - (next_pipeline_order % block_size)
+    prior_rows = sorted(
+        (
+            current
+            for current in claims.values()
+            if current.get("active")
+            and current.get("worker_id") == request["worker_id"]
+            and current.get("worker_kind") == request["worker_kind"]
+            and isinstance(current.get("pipeline_order"), int)
+            and not isinstance(current.get("pipeline_order"), bool)
+            and block_start <= int(current["pipeline_order"]) < next_pipeline_order
+        ),
+        key=lambda current: int(current["pipeline_order"]),
+    )
+    prior_kinds = [str(current.get("kind") or "") for current in prior_rows]
+    candidates = worker_quota_policy.order_with_audit_fairness(
+        candidates,
+        starting_position=next_pipeline_order,
+        prior_kinds=prior_kinds,
+        kind_field="kind",
+        limit=needed,
+        reserve_missing_audit_slot=True,
+    )
+
     adopted: list[dict[str, Any]] = []
     new_expiry = _iso(now + dt.timedelta(seconds=int(request["lease_seconds"])))
-    for offset, current in enumerate(candidates[:needed]):
+    for offset, current in enumerate(candidates):
         job_id = str(current["job_id"])
         claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
         claim["preloaded_at"] = claim.get("preloaded_at") or claim.get("claimed_at") or _iso(now)
