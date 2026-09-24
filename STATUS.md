@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 22:47:52 JST**
+> 自動生成: **2026-09-24 22:58:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（14時間11分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（14時間22分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **3** | **0** | **0** | **141** | **25** | — |
+| Research | **10** | **3** | **0** | **0** | **141** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **25** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **35** | **4** | **1** | **0** | **141** | **25** | **0** |
+| 合計 | **35** | **4** | **1** | **0** | **141** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -214,7 +214,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **141件** / 直近15分heartbeat: **25件**
+- 未失効かつ非terminal jobのclaim: **141件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.15508` — STS: Efficient Sparse Attention with Speculative Token Sparsity / worker `shared-preload-pool`
   - claim: **09-24 22:35:28 JST** / heartbeat: **—** / lease expiry: **09-25 10:35:28 JST**
   - evidence: `.survey/work-queue/claims/job-research-c97d88c20de27e1f.json`
