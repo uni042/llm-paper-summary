@@ -479,7 +479,7 @@ def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
     if last is None:
         last_text = "—"
     else:
-        last_text = f"{evidence._fmt_time(last)}（{evidence._fmt_age(now, last)}）"
+        last_text = evidence._fmt_time(last)
     return [
         "## 重要指標",
         "",
