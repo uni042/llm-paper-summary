@@ -728,6 +728,32 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertFalse(repaired_claims["active_assignment"])
             self.assertEqual(repaired_claims["active_job_ids"], [])
 
+
+    def test_research_preflight_recovery_preserves_research_mode_below_threshold(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 10, "claimable": 10}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            value = request()
+            value["route_recovery_source"] = "research_preflight_identity"
+            value["recovered_work_mode_at_start"] = "research"
+            result = mod.derive(root, value)
+            self.assertEqual(result["candidate_inventory"], 10)
+            self.assertEqual(result["work_mode"], "research")
+            self.assertEqual(result["route_source"], "research_preflight_recovery")
+            self.assertFalse(result["candidate_inventory_at_start_exact"])
+            self.assertFalse(result["finalization_permit_issued"])
+            self.assertNotEqual(result["gate"]["required_action"], "DISCOVER_AGAIN")
+
+
     def test_discovery_precheck_recovery_preserves_mode_even_after_inventory_crosses_threshold(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
