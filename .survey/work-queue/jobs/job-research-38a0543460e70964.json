@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-38a0543460e70964",
+  "type": "research",
+  "parent_job_id": "job-502b7e14ff53de24",
+  "priority": 90,
+  "canonical_id": "arXiv:2609.23321",
+  "arxiv_id": "2609.23321",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Co-occurrence Patterns of LoRA Adapters in Production Diffusion Model Inference Services",
+  "source_url": "https://www.semanticscholar.org/paper/5c66622bd45cec15b6cf6bb85c61fcb51d334b76",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.23321-co-occurrence-patterns-of-lora-adapters-in-production-diffusion-model-inference-services.md",
+  "lineage": null,
+  "selection_reason": "本番推論traceでadapter共起・GPUメモリ競合・preloadを定量化し、top-k共起preloadが81.0%をカバー。LoRA serving、cache preloading、GPU memory managementの実運用データとして価値が高い。",
+  "priority_breakdown": {
+    "base": 45,
+    "lineage": 25,
+    "recency": 20,
+    "venue": 0,
+    "total": 90
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T16:02:46+00:00"
+}

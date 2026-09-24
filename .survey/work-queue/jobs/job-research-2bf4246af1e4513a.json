@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-2bf4246af1e4513a",
+  "type": "research",
+  "parent_job_id": "job-9d4d1882093158af",
+  "priority": 95,
+  "canonical_id": "DOI:10.1145/3832810.3832811",
+  "arxiv_id": null,
+  "doi": "10.1145/3832810.3832811",
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference",
+  "source_url": "https://www.semanticscholar.org/paper/4310ab210922d45d4073a99eec23c66e8b21f8d2",
+  "paper_path": "papers/inference/99-other-inference-systems/0000-3a2365c53c29-migmoe-task-aware-expert-migration-for-faster-and-more-balanced-expert-parallel-moe-inference.md",
+  "lineage": null,
+  "selection_reason": "マルチタスクMoE推論でタスク別ルーティング特性に応じてexpert配置を動的移行し、EPLB/HarMoEny比で最大56.4%/68.4%のthroughput改善を報告。expert配置・負荷分散・分散MoE推論の重点系統に直接該当する。",
+  "priority_breakdown": {
+    "base": 45,
+    "lineage": 30,
+    "recency": 15,
+    "venue": 5,
+    "total": 95
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T16:02:36+00:00"
+}
