@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 17:39:18 JST**
+> 自動生成: **2026-09-24 17:43:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **294** |
+| 収録候補論文 | **293** |
 | 未claim Research job | **150** |
-| 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-24 17:39:11 JST** |
+| 直近24hの検証済みResearch収録 | **21** |
+| 最終検証済みResearch収録 | **09-24 17:42:58 JST** |
 | 整合性異常 | **22** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **294** |
+| canonical_id確認済みの一意な候補論文 | **293** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **294** |
+| 非終端Research job合計 | **293** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6751** |
-| 処理済み | **659** |
-| 未処理 | **6092** |
-| 収録済みとして除外 | **551** |
+| 処理済み | **660** |
+| 未処理 | **6091** |
+| 収録済みとして除外 | **552** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（9時間3分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（9時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **2** | **2** | **0** | **144** | **12** | — |
+| Research | **7** | **1** | **1** | **0** | **143** | **11** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
-| 合計 | **14** | **7** | **7** | **0** | **144** | **12** | **10** |
+| 合計 | **15** | **6** | **6** | **0** | **143** | **11** | **10** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 17:42:58 JST** [research] `arXiv:2310.01889` — Ring Attention with Blockwise Transformers for Near-Infinite Context
+  - job: `.survey/work-queue/jobs/job-research-60b244663bfce823.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json`
+  - paper: `papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md`
 - **09-24 17:39:11 JST** [research] `arXiv:2606.20537` — Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving
   - job: `.survey/work-queue/jobs/job-research-374463a300b97ed5.json`
   - result: `.survey/work-queue/results/research/attempt-preload-3c754529c6f791ee0cbc78c5.json` (`ok=true`)
@@ -156,22 +161,17 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-24 15:32 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
-- **成功** `arXiv:2312.00752` — Mamba: Linear-Time Sequence Modeling with Selective State Spaces
-  - job: `.survey/work-queue/jobs/job-research-7526ab28b3c65fc4.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-270cf0686ddf08989a01feb5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-270cf0686ddf08989a01feb5.json`
-  - paper: `papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md`
-- **成功** `arXiv:2511.06174` — LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs
-  - job: `.survey/work-queue/jobs/job-research-20dfb7993995c1a7.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-adcf408437d27a8a65fe0220.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-adcf408437d27a8a65fe0220.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md`
+- 最新観測run: **2026-09-24 17:28 JST** / worker `scheduled-chat-30`
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2310.01889` — Ring Attention with Blockwise Transformers for Near-Infinite Context
+  - job: `.survey/work-queue/jobs/job-research-60b244663bfce823.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json`
+  - paper: `papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md`
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-24 15:32 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-24 17:28 JST** / worker `scheduled-chat-30`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -205,7 +205,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **12件**
+- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **11件**
 - `arXiv:2603.09023` — The Missing Memory Hierarchy: Demand Paging for LLM Context Windows / worker `scheduled-chat-30`
   - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-105b69444b4fa0ad.json`
@@ -221,9 +221,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `DOI:10.1145/3806645.3807596` — Scaling Attention Beyond GPUs for LLM Inference / worker `scheduled-chat-30`
   - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-5bd282d7c260721a.json`
-- `arXiv:2310.01889` — Ring Attention with Blockwise Transformers for Near-Infinite Context / worker `scheduled-chat-30`
-  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-60b244663bfce823.json`
 - `arXiv:2609.26300` — CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference / worker `scheduled-chat-30`
   - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-7ecc4d7949c81534.json`
@@ -236,6 +233,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2606.24033` — RoPE-Aware Bit Allocation for KV-Cache Quantization / worker `scheduled-chat-30`
   - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-ed39f178b202751f.json`
+- `arXiv:2609.24298` — KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f2e1ac26e49a97fd.json`
 
 #### Audit
 
@@ -255,7 +255,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **294** |
+| ready | **293** |
 
 ### 候補の重複・識別情報欠損
 
@@ -275,7 +275,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1015** |
+| inference/training/survey配下の論文Markdown実体 | **1016** |
 
 ### immutable submissionの未照合
 

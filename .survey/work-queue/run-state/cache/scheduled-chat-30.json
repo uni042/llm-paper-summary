@@ -1,6 +1,6 @@
 {
-  "fact_generation": 64,
-  "generation": 110,
+  "fact_generation": 65,
+  "generation": 111,
   "runs": {
     "scheduled-chat-30-20260923T202811JST-b74a2c": {
       "actual_invocation_start": "2026-09-23T11:28:11+00:00",
@@ -958,10 +958,13 @@
         "attempt-preload-74bb4af6ce3df82b5f4f239a": {
           "attempt_id": "attempt-preload-74bb4af6ce3df82b5f4f239a",
           "claimed_at": "2026-09-24T08:29:26+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json",
           "job_id": "job-research-60b244663bfce823",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-24T08:42:58+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "scheduled-chat-30-20260924T081700Z-7f2c91",
@@ -1084,21 +1087,21 @@
         ]
       },
       "first_cached_at": "2026-09-24T08:29:29.239722+00:00",
-      "generation": 110,
+      "generation": 111,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-30-20260924T081700Z-7f2c91",
       "scheduled_slot": "30",
       "submission": {
-        "completed_attempt_ids": [],
-        "last_terminal_job_status": "none",
-        "pending_attempt_ids": [
+        "completed_attempt_ids": [
           "attempt-preload-74bb4af6ce3df82b5f4f239a"
         ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 0,
+        "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-preload-74bb4af6ce3df82b5f4f239a"
@@ -1109,6 +1112,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T08:42:15.427990+00:00",
+  "updated_at": "2026-09-24T08:42:58.850017+00:00",
   "worker_id": "scheduled-chat-30"
 }
