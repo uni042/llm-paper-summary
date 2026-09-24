@@ -176,6 +176,26 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
         self.assertFalse(permit["issued"])
         self.assertEqual(permit["denied_reason"], "no_router_approved_stop_reason")
 
+    def test_finalization_action_is_rewritten_when_stop_permit_is_missing(self):
+        packet = mod._next_work_packet(
+            Path("."),
+            worker_id="scheduled-chat-00",
+            gate={"required_action": "FINALIZE"},
+            finalization_gate={
+                "finalization_permit": {"issued": True},
+                "next_action": "FINALIZE",
+            },
+            claims={},
+            discovery_async={},
+            discovery_preload=None,
+            discovery_fallback_source=None,
+            discovery_pipeline_preload=None,
+            run_termination_allowed=False,
+        )
+        self.assertEqual(packet["kind"], "canonical_action")
+        self.assertEqual(packet["action"], "REFRESH_AND_CONTINUE")
+
+
     def test_safe_time_window_issues_explicit_stop_permit(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
