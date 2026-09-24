@@ -318,7 +318,7 @@ Discoveryは、run開始後に外部APIの取得を始める待ち時間を減�
 
 ### 4.2 探索ノルマ
 
-探索モードでは、hard stopまたはhandoff guardがない限り、**今回のrunで成功した正規schema v3 precheckを合計4回**完了させ、それぞれをDiscovery submission/resultまで耐久反映する。ラウンドIDはprecheckの `request_id` とし、カウントはrun開始時に0から始める。1 precheckから強候補が6件以上出て `5 + 残り` の複数submissionに分割しても**1ラウンド**である。別precheckが成功すれば、同じprovider・同じ固定ソースでも別ラウンドとして数える。候補0件でも成功precheckと0件submission/resultまで完了すれば1ラウンドである。失敗・pendingのprecheckは数えない。4ラウンドは停止上限ではない。**残り600秒の開始禁止窓に入るまでは、selectorが返す次方向・次windowで探索を続ける。探索枯渇という通常終了条件は設けない。** 単一provider・単一seed・単一検索軸、あるいは前方/後方引用の一時的0件は終了理由にせず、selectorの次手へ進む。残り600秒以下では新しいDiscovery roundを開始せず、開始済みroundだけを完了・耐久保存してhandoffする。
+探索モードでは、hard stopまたはhandoff guardがない限り、**今回のrunで成功した正規schema v3 precheckを合計8回**完了させ、それぞれをDiscovery submission/resultまで耐久反映する。ラウンドIDはprecheckの `request_id` とし、カウントはrun開始時に0から始める。1 precheckから強候補が6件以上出て `5 + 残り` の複数submissionに分割しても**1ラウンド**である。別precheckが成功すれば、同じprovider・同じ固定ソースでも別ラウンドとして数える。候補0件でも成功precheckと0件submission/resultまで完了すれば1ラウンドである。失敗・pendingのprecheckは数えない。8ラウンドは停止上限ではない。**残り600秒の開始禁止窓に入るまでは、selectorが返す次方向・次windowで探索を続ける。探索枯渇という通常終了条件は設けない。** 単一provider・単一seed・単一検索軸、あるいは前方/後方引用の一時的0件は終了理由にせず、selectorの次手へ進む。残り600秒以下では新しいDiscovery roundを開始せず、開始済みroundだけを完了・耐久保存してhandoffする。
 
 ### 4.3 Candidate投入
 
