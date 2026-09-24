@@ -220,6 +220,22 @@ def _research_resume_packets(
             "resume_without_new_claim": True,
             "work_start_allowed": True,
             "record_write_allowed": route_ready,
+            "status_only_submission_path": (
+                Path(".survey/work-queue/submissions") / kind / f"{attempt_id}.json"
+            ).as_posix(),
+            "status_only_allowed_statuses": ["blocked", "deferred", "rejected"],
+            "status_only_descriptor_base": {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": kind,
+                "attempt_id": attempt_id,
+                "job_id": job_id,
+                "claim_id": claim_id,
+                "worker_id": worker_id,
+            },
+            "source_unavailable_next_action": (
+                "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY"
+            ),
         }
         for key in (
             "record_bank",
@@ -308,6 +324,8 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "immediately, while canonical run-state/precheck/claim publication continues asynchronously. "
             "same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence "
             "over creating a new take, so content work can resume immediately while canonical route repair proceeds; "
+            "resume packets also expose the canonical status-only submission path/template so a single unreadable paper "
+            "can be durably terminalized and the next standby can start without ending the run; "
             "direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; "
             "if that lane has no packet, fall back to the normal synchronous run-state route."
         ),
