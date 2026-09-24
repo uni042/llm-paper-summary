@@ -32,7 +32,7 @@ class PaperTaxonomyTests(unittest.TestCase):
         )
         self.assertEqual(
             canonical_lineage("inference", "04-moe-parallelism-communication"),
-            DEFAULT_INFERENCE_LINEAGE,
+            "12-moe-parallelism-communication",
         )
         self.assertEqual(
             canonical_lineage("inference", "08-quantization-kernels"),
