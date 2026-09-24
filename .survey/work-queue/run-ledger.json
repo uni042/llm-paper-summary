@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T09:16:17.082066+00:00",
+  "updated_at": "2026-09-24T10:23:18.661590+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45247,6 +45247,59 @@
       "paper_active_count_before": 1012,
       "paper_active_count_after": 1012,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35986545460",
+      "first_recorded_at": "2026-09-24T10:23:18.661590+00:00",
+      "last_recorded_at": "2026-09-24T10:23:18.661590+00:00",
+      "signals": [
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 11,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35986545460:1",
+          "recorded_at": "2026-09-24T10:23:18.661590+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "35986545460",
+            "run_attempt": "1",
+            "source_sha": "93db135cf3138ba87b0ff5ab0d087d3d5f311001"
+          },
+          "signals": [
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "arXiv:2310.01889",
+        "arXiv:2312.00752",
+        "arXiv:2505.16502",
+        "arXiv:2508.15487",
+        "arXiv:2509.12211",
+        "arXiv:2511.06174",
+        "arXiv:2603.09023",
+        "arXiv:2606.20537",
+        "arXiv:2606.24033",
+        "arXiv:2609.26300",
+        "arXiv:2609.26796"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1012,
+      "paper_active_count_after": 1023,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

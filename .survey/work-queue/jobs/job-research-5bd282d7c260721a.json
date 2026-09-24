@@ -28,5 +28,17 @@
   "created_at": "2026-09-23T16:04:25+00:00",
   "completed_at": "2026-09-24T09:16:10+00:00",
   "blocker": "一次資料全文を正規取得経路で確保できなかったため。DOIのACM本文ページとPDFはこの実行環境から403/取得不能で、著者公開ページの論文PDFリンクも同じACM DOIを指していた。Semantic Scholar由来のjob sourceと公開書誌ページからは抄録・書誌のみ確認できたが、5スロットを一次資料全文から作成するのに必要な手法・評価表・限界の全文証拠を取得できないため推測でResearchを完成させない。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-preload-a3030e74bc5e746f460874ab.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-preload-a3030e74bc5e746f460874ab.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-24T09:16:10+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-24T09:16:10+00:00",
+      "reason": "一次資料全文を正規取得経路で確保できなかったため。DOIのACM本文ページとPDFはこの実行環境から403/取得不能で、著者公開ページの論文PDFリンクも同じACM DOIを指していた。Semantic Scholar由来のjob sourceと公開書誌ページからは抄録・書誌のみ確認できたが、5スロットを一次資料全文から作成するのに必要な手法・評価表・限界の全文証拠を取得できないため推測でResearchを完成させない。"
+    }
+  ],
+  "first_blocked_at": "2026-09-24T09:16:10+00:00",
+  "last_blocked_at": "2026-09-24T09:16:10+00:00",
+  "retry_not_before": "2026-10-01T10:21:21+00:00"
 }
