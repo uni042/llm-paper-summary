@@ -25,6 +25,8 @@ def make_args(**overrides):
         discovery_submission_result_pending=False,
         discovery_evaluation_pending=False,
         discovery_recovery_required=False,
+        discovery_pipeline_work_available=False,
+        continuation_required_action="",
         hard_stop=False,
         handoff_safe=False,
         work_mode="unknown",
@@ -106,6 +108,22 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertEqual(result["wait_seconds"], 0)
         self.assertTrue(result["productive_wait_required"])
         self.assertIn("discovery_precheck_result", result["wait_targets"])
+
+
+    def test_pending_discovery_preserves_productive_pipeline_action(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="discovery",
+            discovery_precheck_result_pending=True,
+            discovery_pipeline_work_available=True,
+            continuation_required_action="CONTINUE_DISCOVERY_PIPELINE",
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertEqual(result["next_action"], "CONTINUE_DISCOVERY_PIPELINE")
+        self.assertFalse(result["productive_wait_required"])
+        self.assertFalse(result["finalization_permit"]["issued"])
+
 
     def test_stop_run_without_finalization_allowed_still_cannot_finalize(self):
         result = mod.decide(make_args(
