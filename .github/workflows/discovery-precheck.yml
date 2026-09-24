@@ -52,6 +52,7 @@ jobs:
             .survey/scripts/discovery_preload_queue.py \
             .survey/scripts/process_discovery_precheck.py \
             .survey/scripts/process_discovery_precheck_batch.py \
+            .survey/scripts/ensure_discovery_run_state.py \
             .survey/scripts/derive_worker_run_state.py \
             .survey/scripts/queue_worker.py
           python -m unittest discover \
@@ -187,6 +188,20 @@ jobs:
               processed=$((processed + batch_count))
             fi
 
+            # A foreground Discovery precheck is already durable proof of the
+            # invocation identity and selected Discovery mode. Repair a missing
+            # run-state request before publication, then derive the canonical state
+            # against the just-produced precheck result. This prevents a worker-side
+            # omission from creating a finalization/control gap.
+            if [ -s /tmp/discovery-foreground-requests.txt ]; then
+              python .survey/scripts/ensure_discovery_run_state.py \
+                --repo-root . \
+                --requests-file /tmp/discovery-foreground-requests.txt \
+                | tee /tmp/discovery-run-state-recovery.json
+              python .survey/scripts/derive_worker_run_state.py --repo-root . \
+                | tee /tmp/discovery-run-state-derive.json
+            fi
+
             # Speculative preload refreshes remain on their separate background lane
             # and are intentionally paced/serialized to avoid provider bursts.
             while IFS= read -r request; do
@@ -240,6 +255,7 @@ jobs:
               .survey/work-queue/discovery-precheck/results \
               .survey/work-queue/discovery-preload \
               .survey/work-queue/direct-take-results \
+              .survey/work-queue/run-state \
               .survey/work-queue/hot-dispatch.json
             while IFS= read -r -d '' preload_slot; do
               git add -- "$preload_slot"
