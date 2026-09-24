@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "discovery-scheduled-chat-30-20260924T212843JST-8f31c2-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/discovery-scheduled-chat-30-20260924T212843JST-8f31c2-r1.json",
+    "receipt": "sha256:cff0a10d17c7fd57656cca532a11eb43ea6bc39bfd78f39a25d485015a20edf7"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260924T212843JST-8f31c2",
+    "round": "discovery-scheduled-chat-30-20260924T212843JST-8f31c2-r1",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "構造化referencesの後方引用を正規schema v3で20件まで再フィルタした。今回のallowed recordsは既存系統との引用接続だけでは新規Research候補として十分な直接性を確認できなかったため、件数合わせをせず0件採用とした。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 20,
+    "accepted_canonical_ids": [],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [
+      {
+        "topic": "structured repository references",
+        "source": "repository_references",
+        "date_range": "all",
+        "category": "citation-curation",
+        "citation_direction": "backward",
+        "query_family": "citation-curation",
+        "raw_result_count": 60,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 20,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 0,
+        "position": "cursor-0-to-60"
+      }
+    ]
+  }
+}
