@@ -1,28 +1,9 @@
 {
   "candidate_inventory": 284,
-  "direct_start_allowed": true,
+  "direct_start_allowed": false,
   "discovery": {
     "backward": [],
     "forward": [
-      {
-        "axis": "forward citations of LMCache enterprise-scale KV cache layer",
-        "citation_direction": "forward",
-        "created_at": "2026-09-24T11:00:19.398256+00:00",
-        "discovery_bank": "f",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-f/discovery-preload.json",
-        "initial_cursor": null,
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-1fb6cc39b0801d74bc2c",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-1fb6cc39b0801d74bc2c.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": "arXiv:2510.09665",
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-1fb6cc39b0801d74bc2c.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-1fb6cc39b0801d74bc2c.json",
-        "target_unseen": 20
-      },
       {
         "axis": "forward citations of KVLink efficient KV cache reuse",
         "citation_direction": "forward",
@@ -363,14 +344,34 @@
     "source_url": "repository://structured-references",
     "target_unseen": 20
   },
+  "discovery_primary_direction": "backward",
+  "discovery_start_lookahead": {
+    "axis": "forward citations of KVLink efficient KV cache reuse",
+    "citation_direction": "forward",
+    "created_at": "2026-09-24T11:00:19.398256+00:00",
+    "discovery_bank": "e",
+    "discovery_slot_path": ".survey/work-queue/records/chat-record-e/discovery-preload.json",
+    "initial_cursor": null,
+    "max_pages": 25,
+    "page_size": 20,
+    "preload_id": "preload-3d786f9437572f1d6f51",
+    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3d786f9437572f1d6f51.json",
+    "preload_unseen_result_count": 20,
+    "provider": "semantic_scholar",
+    "seed_canonical_id": "arXiv:2502.16002",
+    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+    "take_path": ".survey/work-queue/discovery-preload/claims/preload-3d786f9437572f1d6f51.json",
+    "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3d786f9437572f1d6f51.json",
+    "target_unseen": 20
+  },
   "fallback_start_allowed": true,
-  "generated_at": "2026-09-24T12:31:07+00:00",
+  "generated_at": "2026-09-24T12:36:35+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
-    "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if none exists, start the published fixed-source schema-v3 fallback immediately while run-state recovery proceeds asynchronously."
+    "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, start the prepared forward lookahead candidate evaluation immediately while canonical precheck/run-state results proceed asynchronously."
   },
   "lane_available": {
-    "discovery": true,
+    "discovery": false,
     "research": true
   },
   "research": [
@@ -2794,8 +2795,9 @@
   "research_discovery_threshold": 288,
   "research_resume": {},
   "route_guard_band": 0,
-  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. When Discovery stock is absent, use discovery_fallback to issue the run-specific schema-v3 precheck immediately instead of waiting for run-state; the precheck lane repairs/refreshes canonical run-state asynchronously.",
+  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. When the backward packet is absent, issue discovery_fallback immediately and, if discovery_start_lookahead is present, reserve its forward PRECHECKED packet and evaluate cached candidates without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt.",
   "schema_version": 1,
   "suggested_work_mode": "discovery",
+  "zero_wait_content_start_allowed": true,
   "zero_wait_start_allowed": true
 }
