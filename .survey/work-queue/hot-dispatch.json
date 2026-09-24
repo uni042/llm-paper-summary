@@ -63,20 +63,20 @@
       {
         "axis": "preload-backward-structured-references",
         "citation_direction": "backward",
-        "created_at": "2026-09-24T13:02:44.911253+00:00",
-        "discovery_bank": "f",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-f/discovery-preload.json",
-        "initial_cursor": "60",
+        "created_at": "2026-09-24T13:06:47.217614+00:00",
+        "discovery_bank": "a",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record/discovery-preload.json",
+        "initial_cursor": "100",
         "max_pages": 25,
         "page_size": 20,
-        "preload_id": "preload-b2a43c661eb5087a88fe",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-b2a43c661eb5087a88fe.json",
+        "preload_id": "preload-d3a928741ac8d4a6effa",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-d3a928741ac8d4a6effa.json",
         "preload_unseen_result_count": 20,
         "provider": "repository_references",
         "seed_canonical_id": null,
         "source_url": "repository://structured-references",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-b2a43c661eb5087a88fe.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-b2a43c661eb5087a88fe.json",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-d3a928741ac8d4a6effa.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-d3a928741ac8d4a6effa.json",
         "target_unseen": 20
       }
     ],
@@ -556,7 +556,7 @@
     "target_unseen": 20
   },
   "fallback_start_allowed": true,
-  "generated_at": "2026-09-24T13:06:47+00:00",
+  "generated_at": "2026-09-24T13:07:15+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
     "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, start the prepared forward lookahead candidate evaluation immediately while canonical precheck/run-state results proceed asynchronously."
