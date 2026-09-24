@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-preload-886ad02757673f91debfda1d",
-  "job_id": "job-research-df8b6eaefcbe8aad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-886ad02757673f91debfda1d",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-886ad02757673f91debfda1d","job_id":"job-research-df8b6eaefcbe8aad","data":{"canonical_id":"arXiv:2505.16502","arxiv_id":"2505.16502","doi":"10.48550/arXiv.2505.16502","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.NI"]},"title":"Recursive Offloading for LLM Serving in Multi-tier Networks","summary":"RecServeは端末・エッジ・クラウドへ能力の異なるモデルを段階配置し、各層でまず推論して出力信頼度が十分ならその場で返し、不十分な要求だけ上位層へ再帰的にオフロードするLLMサービング方式である。分類では最大softmax確率、生成では正規化perplexityを信頼度に使い、直近信頼度のFIFO履歴から分位点補間で閾値を自動更新する。8データセットで固定閾値cascadeのCasServeより多くの設定で精度と通信量を同時改善し、β=0.3ではCloudServe比で通信量を50%以上削減しながら端末単独より高い精度・BLEUを維持する。","list_summary":"端末→エッジ→クラウドを信頼度で再帰的に上げ、履歴分位点から閾値を自動適応してCloudServe比50%以上の通信削減を狙う多層LLMサービング。","authors":["Zhiyuan Wu","Sheng Sun","Yuwei Wang","Min Liu","Bo Gao","Jinda Lu","Zheming Yang","Tian Wen"],"authors_affiliations":"Chinese Academy of Sciences; University of Chinese Academy of Sciences; Zhongguancun Laboratory; Beijing Jiaotong University; University of Science and Technology of China","published":"2025-05-22","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v2 (2025-05-24)","lineage":"multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration","topics":["再帰オフロード","端末エッジクラウド","動的閾値","信頼度ルーティング","通信効率"],"importance":"GPU内オフロードではなく、要求そのものを異種計算層へ振り分ける上位サービング設計である。ネットワーク帯域とモデル能力を階層資源として扱い、静的cascadeを履歴適応型routingへ拡張するため、分散推論・edge serving系統の比較点になる。","implementation":"公開RecServe実装があり、各tierのmodel inference、task-specific confidence、historical confidence queue、quantile threshold、recursive routingを実装する。","hardware_evaluation":"device/edge/cloudを三層としてモデル能力を段階配置するシミュレーション型評価。分類はDistilRoBERTa/RoBERTa-base/RoBERTa-large、生成はT5-small/opus-mt/fairseq WMT19 transformerを各層へ割り当てる。","quality_effect":"βを上げるほど上位tierへのoffloadが増え精度・BLEUは上がるが通信量も増える。RecServeは同程度通信量のColServe/CasServeより高精度となる設定を多数示す。","source":"https://arxiv.org/abs/2505.16502","sources":["https://arxiv.org/abs/2505.16502","https://arxiv.org/html/2505.16502v2","https://github.com/wuzhiyuan2000/RecServe"],"code":"https://github.com/wuzhiyuan2000/RecServe","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-886ad02757673f91debfda1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
