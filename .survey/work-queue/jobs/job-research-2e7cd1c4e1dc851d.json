@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2608.06989",
   "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
   "source_url": "https://arxiv.org/abs/2608.06989",
-  "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md",
+  "paper_path": "papers/inference/17-pim-near-data-acceleration/2026-2608.06989-dual-view-memory-npu-pim.md",
   "selection_reason": "prefill/decodeやMoE routingで実行deviceが変化する問題に対し、物理layoutとNPU/PIM向けlogical viewを分離するdual-view memoryとruntime schedulingを提案。LLMで最大2.32x throughput改善を報告する階層memory研究。",
   "status": "completed",
   "workflow_version": 10,
