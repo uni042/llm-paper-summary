@@ -1138,6 +1138,14 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "finalization_permit_issued": bool(
             (finalization_gate.get("finalization_permit") or {}).get("issued")
         ),
+        "final_response_allowed": bool(
+            (finalization_gate.get("finalization_permit") or {}).get("issued")
+        ),
+        "worker_execution_directive": (
+            "FINAL_RESPONSE_ALLOWED"
+            if bool((finalization_gate.get("finalization_permit") or {}).get("issued"))
+            else "MUST_CONTINUE_NO_FINAL_RESPONSE"
+        ),
         "next_action": gate.get("required_action"),
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
@@ -1160,7 +1168,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
             "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
-            "Every durable run-state snapshot embeds the finalization gate result; a normal final response requires finalization_permit_issued=true."
+            "Every durable run-state snapshot embeds the finalization gate result; a normal final response requires finalization_permit_issued=true. "
+            "worker_execution_directive=MUST_CONTINUE_NO_FINAL_RESPONSE is an explicit prohibition on emitting a normal final response; follow next_action instead."
         ),
     }
 
