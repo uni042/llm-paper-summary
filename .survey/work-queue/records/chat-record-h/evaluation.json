@@ -4,7 +4,42 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-06a7382e6e4dd1f8011ebfe2",
   "job_id": "job-research-a7f8650f63d4e4e7",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA V100 32GB。単一GPUの1.2B基準から、DGX-2Hをまたいだ最大512 GPUまで実機評価した。",
+    "software": "PyTorch上へモデル並列を実装し、GPU間集合通信にはNCCLをPython呼び出しで使用。混合精度学習を使用した。",
+    "model": [
+      "GPT-2類似の1.2B、2.5B、4.2B、8.3B構成",
+      "BERT類似の336M、1.3B、3.9B構成"
+    ],
+    "datasets": [
+      "Wikipedia",
+      "CC-Stories",
+      "RealNews",
+      "OpenWebText",
+      "BooksCorpus（BERT系）",
+      "WikiText103",
+      "LAMBADA",
+      "MNLI",
+      "QQP",
+      "SQuAD 1.1",
+      "SQuAD 2.0",
+      "RACE"
+    ],
+    "baselines": [
+      "単一NVIDIA V100上の1.2Bモデルで39 TFLOPSを持続する基準",
+      "既報のWikiText103パープレキシティ15.79",
+      "既報のLAMBADA正解率63.24%",
+      "既報のRACE正解率89.4%"
+    ],
+    "correctness": "並列化は演算を近似しない。大規模化による言語モデル品質を別途GPT系とBERT系の下流課題で測定し、BERT系では層正規化と残差接続の配置変更の有無も比較した。",
+    "settings": [
+      "GPT系8.3Bは72層、隠れ幅3072、24注意ヘッドで、8方向モデル並列と64方向データ並列を組み合わせて512 GPUを使用した。",
+      "GPT系の学習データは重複除去後174GB。短い文書を除外し、局所性鋭敏ハッシュでJaccard類似度0.7超の重複を除去した。",
+      "BERT系336Mと1.3Bは200万反復、3.9Bは150万反復時点で評価されており、後者は論文執筆時点で学習継続中だった。"
+    ],
+    "methodology": "スケーリング評価では、約10億パラメータをGPUあたりに保つ弱スケーリングとして1.2B/1 GPU、2.5B/2 GPU、4.2B/4 GPU、8.3B/8 GPUを比較する。さらに各モデル並列構成へデータ並列を組み合わせ、最大512 GPUでアプリケーション全体の持続演算性能を測る。品質評価ではGPT系をゼロショットでWikiText103とLAMBADAへ適用し、BERT系は複数下流課題へ微調整する。BERT系の下流値は学習率とバッチサイズを調整後、初期化乱数5種の中央値を用いる。",
+    "scope": "主なシステム結果はNVIDIA V100世代の実機測定であり、単一サーバ内の高速GPU相互接続を前提とした8方向モデル並列を中心に検証する。512 GPU構成ではモデル並列群とデータ並列群を組み合わせるが、16 GPUを超える単一モデルの層内分割や、現代の異種ネットワーク・別世代GPUへの一般化は直接評価していない。したがって76%という効率はこの構成と比較基準に対する値として読む必要がある。"
+  },
   "reservation": {
     "claim_id": "claim-preload-06a7382e6e4dd1f8011ebfe2",
     "worker_id": "worker-924920",
