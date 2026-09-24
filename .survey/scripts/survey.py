@@ -378,17 +378,6 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
     return "\n".join(lines)
 
 
-def _migrate_legacy_training_list(path):
-    """Remove the old hand-written training paper list before adding auto markers."""
-    if not path.exists():
-        return
-    content = path.read_text(encoding="utf-8")
-    if "<!-- survey:auto:start -->" in content:
-        return
-    stripped = re.sub(r"\n## 収録論文\s*\n.*\Z", "\n", content, flags=re.S)
-    if stripped != content:
-        path.write_text(stripped.rstrip() + "\n", encoding="utf-8")
-
 
 def _lineage_sort_key(item):
     name = item[0]
@@ -433,8 +422,6 @@ def render_indexes(records, now=None):
 
     for (family, lineage), rows in sorted(by_taxonomy.items()):
         readme = repo / "papers" / family / lineage / "README.md"
-        if family == "training":
-            _migrate_legacy_training_list(readme)
         base_dir = Path("papers") / family / lineage
         block(f"papers/{family}/{lineage}/README.md", _render_taxonomy_list(rows, citations, base_dir, now=now))
 

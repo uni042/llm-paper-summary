@@ -116,6 +116,11 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             with self.subTest(path=rel):
                 self.assertFalse((ROOT / rel).exists(), rel)
 
+    def test_survey_build_has_no_training_list_migration(self):
+        survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
+        self.assertNotIn("_migrate_legacy_training_list", survey)
+        self.assertNotIn("old hand-written training paper list", survey)
+
     def test_repository_checker_requires_only_current_worker_docs(self):
         checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
         self.assertIn(".survey/docs/survey-workflow/worker-router.md", checker)
