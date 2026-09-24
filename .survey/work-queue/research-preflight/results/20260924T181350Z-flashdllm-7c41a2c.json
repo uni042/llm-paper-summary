@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T181350Z-flashdllm-7c41a2c",
+  "kind": "research",
+  "attempt_id": "attempt-preload-3ee424a7b2b36c6924101628",
+  "job_id": "job-research-41d37332b16e3d57",
+  "record_bank": "i",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T085541Z-7c41a2c",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T08:55:41+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:0a530bb67026b60b91466239bec315cb7026cdcd2a979574f63db425111d2767",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-i/metadata.json",
+      "blob_sha": "6acb8db7d3603587318f3e40dc00f5c4c546d384"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-i/problem_method.json",
+      "blob_sha": "27738c9269a6e7380d29d9d20df7d9615a79a8ea"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-i/evaluation.json",
+      "blob_sha": "2d72f22b1d824eb0fe3668c84f183e5e145dc843"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-i/results.json",
+      "blob_sha": "cc51ddb4958e31620456b4c9f58d2eea0f78fa00"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-i/positioning.json",
+      "blob_sha": "c46efdef3bd746b5d2ee09e98b16eedeae1872c2"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short"
+  ],
+  "checked_at": "2026-09-24T09:14:15+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
