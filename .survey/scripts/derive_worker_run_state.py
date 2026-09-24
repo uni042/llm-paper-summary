@@ -34,6 +34,7 @@ RESULTS = Path(".survey/work-queue/run-state/results")
 READ_COUNT = 0
 SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
 DISCOVERY_PIPELINE_WINDOW = 3
+RESEARCH_PREFLIGHT_PIPELINE_WINDOW = 2
 
 RUNTIME_CONDITIONS = {
     "none",
@@ -433,6 +434,78 @@ def _run_submission_state(
         "attempt_facts": facts,
     }
 
+
+def _research_preflight_overlap_states(root: Path) -> dict[str, dict[str, Any]]:
+    """Classify the newest quality-preflight request for each Research/Audit attempt.
+
+    A pending or passing exact-blob preflight means the paper content is frozen:
+    there is no useful content work on that paper until Actions returns or the
+    descriptor materializes. Such attempts may be parked temporarily so a standby
+    paper can become the sole content foreground. A failed latest preflight is never
+    parked; it must return to foreground repair.
+    """
+    request_root = root / ".survey/work-queue/research-preflight/requests"
+    result_root = root / ".survey/work-queue/research-preflight/results"
+    if not request_root.is_dir():
+        return {}
+
+    candidates: dict[str, list[dict[str, Any]]] = {}
+    relative_paths: list[str] = []
+    for path in request_root.glob("*.json"):
+        request = _read(path, {})
+        if not isinstance(request, dict):
+            continue
+        attempt_id = str(request.get("attempt_id") or "").strip()
+        job_id = str(request.get("job_id") or "").strip()
+        if not attempt_id or not job_id:
+            continue
+        relative = path.relative_to(root).as_posix()
+        relative_paths.append(relative)
+        result = _read(result_root / path.name, {})
+        if not isinstance(result, dict) or result.get("request_id") != path.stem:
+            state = "pending"
+        elif result.get("ok") is True and result.get("preflight_passed") is True:
+            state = "passed_waiting_descriptor"
+        else:
+            state = "repair_required"
+
+        requested = _time(request.get("requested_at"))
+        if requested is None:
+            requested = _time(request.get("actual_invocation_start"))
+        stem = path.stem
+        revision = -1
+        tail = stem.rsplit("-r", 1)
+        if len(tail) == 2 and tail[1].isdigit():
+            revision = int(tail[1])
+        candidates.setdefault(attempt_id, []).append(
+            {
+                "attempt_id": attempt_id,
+                "job_id": job_id,
+                "request_id": stem,
+                "request_path": relative,
+                "requested_at": requested,
+                "revision": revision,
+                "state": state,
+            }
+        )
+
+    introduction = _git_introduction_order(root, relative_paths)
+    selected: dict[str, dict[str, Any]] = {}
+    epoch = dt.datetime.min.replace(tzinfo=dt.timezone.utc)
+    for attempt_id, rows in candidates.items():
+        rows.sort(
+            key=lambda row: (
+                row.get("requested_at") or epoch,
+                int(introduction.get(str(row.get("request_path") or ""), -1)),
+                int(row.get("revision") or -1),
+                str(row.get("request_id") or ""),
+            )
+        )
+        selected[attempt_id] = rows[-1]
+    return selected
+
+
+
 def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, Any]:
     pending_requests: list[tuple[dt.datetime, str]] = []
     request_root = root / ".survey/work-queue/claim-requests"
@@ -461,7 +534,10 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
     oldest_pending_age = max(pending_request_ages.values(), default=0)
 
     claims = claim_state.current_claims(root, now)
+    preflight_states = _research_preflight_overlap_states(root)
+    owned: list[tuple[int, str, str]] = []
     active: list[tuple[int, str, str]] = []
+    parked: list[tuple[int, str, str, str, str]] = []
     for job_id, current in claims.items():
         if not current.get("active") or current.get("worker_id") != worker_id:
             continue
@@ -481,10 +557,35 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
             if isinstance(order, int) and not isinstance(order, bool) and int(order) >= 0
             else 1_000_000_000
         )
-        active.append((normalized_order, str(current.get("claimed_at") or ""), job_id))
+        claimed_at = str(current.get("claimed_at") or "")
+        owned.append((normalized_order, claimed_at, job_id))
+
+        preflight = (
+            preflight_states.get(str(attempt_id))
+            if isinstance(attempt_id, str) and attempt_id
+            else None
+        )
+        park_state = str((preflight or {}).get("state") or "")
+        if (
+            park_state in {"pending", "passed_waiting_descriptor"}
+            and len(parked) < RESEARCH_PREFLIGHT_PIPELINE_WINDOW
+        ):
+            parked.append(
+                (
+                    normalized_order,
+                    claimed_at,
+                    job_id,
+                    str(attempt_id),
+                    park_state,
+                )
+            )
+            continue
+        active.append((normalized_order, claimed_at, job_id))
+    owned.sort()
     active.sort()
+    parked.sort()
     active_job_ids = [job_id for _, _, job_id in active]
-    active_claim_count = len(active_job_ids)
+    active_claim_count = len(owned)
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
@@ -501,6 +602,12 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "claim_window_remaining": max(SCHEDULED_CHAT_CLAIM_WINDOW - active_claim_count, 0),
         "foreground_job_id": active_job_ids[0] if active_job_ids else None,
         "standby_job_ids": active_job_ids[1:],
+        "preflight_parked_job_ids": [job_id for _, _, job_id, _, _ in parked],
+        "preflight_parked_attempt_ids": [attempt_id for _, _, _, attempt_id, _ in parked],
+        "preflight_parked_states": {
+            job_id: state for _, _, job_id, _, state in parked
+        },
+        "preflight_pipeline_window": RESEARCH_PREFLIGHT_PIPELINE_WINDOW,
     }
 
 
@@ -932,7 +1039,15 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         inventory = int(cached["candidate_inventory"])
         work_mode = str(cached["work_mode"])
         submission = dict(cached["submission"])
-        claims = cached_claims or {}
+        # Research preflight parking depends on durable request/result facts that
+        # are intentionally outside the incremental cache. Re-derive only claim
+        # state here so a newly pending/failed preflight can immediately park or
+        # restore the correct content foreground without a full canonical rebuild.
+        claims = (
+            _claim_state(root, request["worker_id"], started_at)
+            if work_mode == "research"
+            else (cached_claims or {})
+        )
         if claims != cached.get("claims"):
             # Persist cheap canonical reconciliation so a missed descriptor delta
             # cannot leave the durable performance cache advertising a terminal job
