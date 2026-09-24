@@ -4,7 +4,40 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-b1e41ea993ce770bb187a178",
   "job_id": "job-research-77f5ab6e591a0176",
-  "data": {},
+  "data": {
+    "hardware": "品質・メモリ評価は8×NVIDIA A100 80GB。エンドツーエンド遅延比較はNVIDIA V100上で実施。",
+    "software": "FastGen公式実装。エンドツーエンド比較ではHugging Face AccelerateとDeepSpeedを完全キャッシュ基準にし、FastGenはDeepSpeed由来カーネルへKV疎性処理を追加。",
+    "model": [
+      "Llama 1 7B / 13B / 30B / 65B",
+      "Llama 1をLIMAとOpenAssistantで命令微調整した変種"
+    ],
+    "datasets": [
+      "GSM8K",
+      "HumanEval",
+      "Natural Questions",
+      "TQA",
+      "AlpacaEval",
+      "LIMA",
+      "OpenAssistant"
+    ],
+    "baselines": [
+      "完全KVキャッシュ",
+      "全ヘッドへ局所方針を固定",
+      "全ヘッドへ頻出方針を固定",
+      "局所+頻出固定（H2O/Scissorhands相当）",
+      "Hugging Face Accelerate",
+      "DeepSpeed"
+    ],
+    "correctness": "GSM8K、NQ、TQAはF1、HumanEvalはPass@1で評価。命令微調整モデルは完全キャッシュ生成とFastGen生成をGPT-4に対比較させ、完全同等なら約50%になる勝率を品質指標にした。",
+    "settings": [
+      "品質評価の生成は核サンプリング、温度0.6、p=0.9。",
+      "主要FastGen設定は局所比率rl=0.3、頻出比率rf=0.3とし、目標回復率Tを変えて圧縮率を制御した。",
+      "メモリ表はバッチ16、系列長512、重みfp16で7B〜65Bを比較した。",
+      "遅延表はLlama 1-7Bでバッチ1、2、8、16と複数のプロンプト長・生成長を評価した。"
+    ],
+    "methodology": "まず注意ヘッド構造の多様性を同一層内で、安定性をデコード第1、10、20、30段で可視化する。その後、KV予算30〜100%を変えながらFastGenと固定局所・頻出・両者併用を比較し、各生成ベンチマークの品質とAlpacaEval対比較勝率を測る。メモリ削減は同一バッチ・系列長条件でKV容量を直接比較する。さらに完全キャッシュのHugging Face Accelerate、DeepSpeedとカスタム疎性カーネルのFastGenについて、プロンプト符号化開始から生成終了までの実時間を測る。最後に65Bで方針探索時間と累積注意量の追加メモリを計測する。",
+    "scope": "主な評価は標準的な多頭注意を持つLlama 1で、7B〜65Bまで実機検証している。Llama 2-chatのグループ化問い合わせ注意は対象外として将来課題にしており、現代のGQA/MQA系モデルへの直接一般化は示していない。品質の一部はGPT-4による対比較であり、評価器依存性がある。V100遅延結果は7B中心で、65Bのエンドツーエンド高速化を直接測った表ではない。"
+  },
   "reservation": {
     "claim_id": "claim-preload-b1e41ea993ce770bb187a178",
     "worker_id": "worker-924920",
