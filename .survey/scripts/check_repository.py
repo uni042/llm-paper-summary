@@ -29,7 +29,7 @@ REQUIRED_V10_PATHS = (
 )
 
 REQUIRED_PAPER_METADATA = (
-    "canonical_id", "title", "summary", "authors", "published", "publication",
+    "canonical_id", "title", "summary", "list_summary", "authors", "published", "publication",
     "publication_type", "publication_status", "source", "sources", "implementation",
     "code", "last_checked", "last_audited", "audit_version",
 )
@@ -154,6 +154,9 @@ def check(root, inventory):
             for key in REQUIRED_PAPER_METADATA:
                 if key not in meta:
                     issue("paper_missing_metadata", name, key)
+            list_summary = meta.get("list_summary")
+            if not isinstance(list_summary, str) or not list_summary.strip():
+                issue("paper_invalid_metadata", name, "list_summary must be a non-empty string")
             authors = meta.get("authors")
             if "authors" in meta and (not isinstance(authors, list) or not authors):
                 issue("paper_invalid_metadata", name, "authors must be a non-empty list")

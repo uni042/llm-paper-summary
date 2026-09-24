@@ -7,6 +7,8 @@ on:
       - ".survey/scripts/audit_list_summary_quality.py"
       - ".survey/scripts/audit_overview_results.py"
       - ".survey/scripts/paper_audit_scope.py"
+      - ".survey/scripts/audit_metadata_coverage.py"
+      - ".survey/scripts/check_repository.py"
       - ".survey/tests/test_paper_audit_scope.py"
       - ".survey/tests/test_survey_index_grouping.py"
       - ".survey/tests/test_repository_metadata_policy.py"
@@ -69,6 +71,9 @@ jobs:
 
       - name: Run renderer regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
+
+      - name: Check full paper metadata contract
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out audit-output/paper-metadata-coverage.json --strict
 
       - name: Run repository audit
         run: |

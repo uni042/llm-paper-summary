@@ -18,7 +18,6 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from list_summary import compact_list_summary
 from paper_taxonomy import canonical_lineage
 
 # ROOT is the .survey working root in production. Tests may point it at a
@@ -201,6 +200,13 @@ def _recent_window(now=None):
     return start, end
 
 
+def _explicit_list_summary(meta, path: str) -> str:
+    value = meta.get("list_summary")
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("Missing explicit list_summary: " + path)
+    return value.strip()
+
+
 def _explicit_implementation(meta, body=""):
     for key in ("code", "code_url", "implementation", "implementation_url", "repository", "repo"):
         value = meta.get(key)
@@ -254,7 +260,7 @@ def paper_views():
                 "path": rel,
                 "file": p,
                 "title": meta["title"],
-                "summary": compact_list_summary(body, meta["summary"]),
+                "summary": _explicit_list_summary(meta, rel),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),

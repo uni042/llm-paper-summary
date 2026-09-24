@@ -11,7 +11,7 @@ import yaml
 
 
 REQUIRED = (
-    "canonical_id", "title", "summary", "authors", "published", "publication",
+    "canonical_id", "title", "summary", "list_summary", "authors", "published", "publication",
     "publication_type", "publication_status", "source", "sources", "implementation",
     "code", "last_checked",
 )
