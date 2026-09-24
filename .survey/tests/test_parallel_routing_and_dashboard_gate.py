@@ -104,6 +104,15 @@ class StatusPublishGateTests(unittest.TestCase):
         self.assertNotIn("append_research_throughput_status.py", text)
         self.assertNotIn("refine_status_observability.py", text)
 
+    def test_status_workflow_refreshes_paper_only_pushes_without_double_publish(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("push:", text)
+        self.assertIn("- 'papers/**/*.md'", text)
+        self.assertIn("github.event_name == 'push'", text)
+        self.assertIn("git diff --name-only", text)
+        self.assertIn("grep -Fxq 'STATUS.md'", text)
+        self.assertIn("Triggering paper push already included STATUS.md", text)
+
     def test_claim_fast_lane_defers_dashboard_rendering_to_status_lane(self):
         text = CLAIM_WORKFLOW.read_text(encoding="utf-8")
         self.assertNotIn(CANONICAL_RENDER, text)
