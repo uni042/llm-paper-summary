@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2311.01282",
+      "arxiv_id": "2311.01282",
+      "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs",
+      "source_url": "https://arxiv.org/abs/2311.01282",
+      "priority": 75,
+      "priority_breakdown": {"base": 55, "lineage": 20, "recency": 0, "venue": 0, "total": 75},
+      "reason": "LLM decodeのpartial-softmax同期、flat GEMM低利用率、静的dataflowを対象にGPU推論エンジンとして非同期softmax・double buffering・hardware-aware dataflowを統合し、NVIDIA/AMD上の推論高速化を評価している。推論カーネル／serving runtime系統の基礎比較として直接関連する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "direct-take-discovery-d4a731-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/direct-take-discovery-d4a731-r2.json",
+    "receipt": "sha256:b216764388c69ebcedaf3fd6960f64f963c3df0743f527f4d612c440cdd775cc"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+    "round": "direct-take-discovery-d4a731-r2",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "収録済み論文の構造化後方参照を正規schema v3で再検査し、20件の未収録候補から推論システムへ直接寄与する候補を選別。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["arXiv:2311.01282"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"structured repository references","source":"repository_references","date_range":"all","category":"inference-systems","citation_direction":"backward","query_family":"citation-curation","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":1,"position":"cursor-0"}]
+  }
+}
