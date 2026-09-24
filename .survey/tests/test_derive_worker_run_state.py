@@ -61,6 +61,11 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertIn("finalization_gate", result)
             self.assertFalse(result["finalization_permit_issued"])
             self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
+            self.assertFalse(result["final_response_allowed"])
+            self.assertEqual(
+                result["worker_execution_directive"],
+                "MUST_CONTINUE_NO_FINAL_RESPONSE",
+            )
 
     def test_0830_slot_forces_maintenance_route(self):
         with tempfile.TemporaryDirectory() as td:
