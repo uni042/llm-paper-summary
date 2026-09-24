@@ -4,6 +4,11 @@ on:
   push:
     paths:
       - ".survey/scripts/audit_paper_quality.py"
+      - ".survey/scripts/paper_audit_scope.py"
+      - ".survey/scripts/audit_metadata_coverage.py"
+      - ".survey/tests/test_paper_audit_scope.py"
+      - ".survey/tests/test_repository_metadata_policy.py"
+      - ".survey/tests/test_survey_index_grouping.py"
       - ".survey/scripts/audit_list_summary_quality.py"
       - ".survey/scripts/audit_overview_results.py"
       - ".survey/scripts/list_summary.py"
@@ -40,6 +45,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,11 +56,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
+      - name: Run paper audit scope regression test
+        run: python -m unittest discover -s .survey/tests -p 'test_paper_audit_scope.py'
+
       - name: Run quality regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*quality.py'
 
       - name: Run renderer regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
+
+      - name: Check full paper metadata contract
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out audit-output/paper-metadata-coverage.json --strict
 
       - name: Run repository audit
         run: |
