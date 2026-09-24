@@ -483,6 +483,83 @@ class HotDispatchTests(unittest.TestCase):
             self.assertTrue(direct["work_start_allowed"])
             self.assertFalse(direct["submission_allowed"])
 
+    def test_existing_precheck_request_still_gets_direct_take_result(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            preload_id = "preload-existing-request"
+            request_id = "existing-request"
+            write_json(
+                root / hot_dispatch.DISCOVERY_ENTRIES / f"{preload_id}.json",
+                {
+                    "preload_id": preload_id,
+                    "axis": "existing-backward",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                    "citation_direction": "backward",
+                    "target_unseen": 20,
+                    "page_size": 20,
+                    "max_pages": 25,
+                    "initial_cursor": None,
+                },
+            )
+            write_json(
+                root / hot_dispatch.DISCOVERY_CLAIMS / f"{preload_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "direct_take_discovery",
+                    "direct_take": True,
+                    "preload_id": preload_id,
+                    "worker_id": "worker-78",
+                    "run_key": "run-existing-request",
+                    "request_id": request_id,
+                    "claimed_at": current.isoformat(),
+                    "lease_expires_at": (current + dt.timedelta(minutes=30)).isoformat(),
+                    "preload_result_path": (
+                        ".survey/work-queue/discovery-precheck/results/"
+                        "preload-existing-request.json"
+                    ),
+                    "discovery_bank": "a",
+                    "discovery_slot_path": discovery_slot_path("a"),
+                    "scheduled_slot": "adhoc",
+                    "actual_invocation_start": current.isoformat(),
+                    "candidate_inventory_at_start": 100,
+                    "work_mode_at_start": "discovery",
+                    "research_discovery_threshold": (
+                        claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
+                    ),
+                    "hot_dispatch_generated_at": current.isoformat(),
+                },
+            )
+            write_json(
+                root / hot_dispatch.PRECHECK_REQUESTS / f"{request_id}.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": request_id,
+                    "run_key": "run-existing-request",
+                    "preload_id": preload_id,
+                    "worker_id": "worker-78",
+                    "discovery_bank": "a",
+                    "discovery_slot_path": discovery_slot_path("a"),
+                    "direct_take": True,
+                },
+            )
+
+            result = hot_dispatch.materialize_discovery_prechecks(root)
+
+            self.assertEqual(result["reused"], 1)
+            direct_path = (
+                root / hot_dispatch.DIRECT_DISCOVERY_RESULTS / f"{preload_id}.json"
+            )
+            self.assertTrue(direct_path.is_file())
+            direct = json.loads(direct_path.read_text(encoding="utf-8"))
+            self.assertTrue(direct["ok"])
+            self.assertEqual(direct["status"], "precheck_pending")
+            self.assertTrue(direct["work_start_allowed"])
+            self.assertFalse(direct["submission_allowed"])
+            self.assertEqual(direct["request_id"], request_id)
+
     def test_accounted_discovery_round_no_longer_consumes_frontier_capacity(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
