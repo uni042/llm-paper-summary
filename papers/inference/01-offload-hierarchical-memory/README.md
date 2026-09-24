@@ -263,7 +263,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 2年前（2024-10〜2025-09）
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
+  実装：✓ ・ リポジトリ内被引用：32  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
@@ -275,16 +275,16 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Klotskiは複数バッチで共通する専門家を先に計算し、その間にCPU RAMやSSDから次の専門家を読み込んで巨大MoEのI/O待ちを隠す。
 
 - **2025-04 · [HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference](2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/HybriMoE) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/PKU-SEC-Lab/HybriMoE) ・ リポジトリ内被引用：15  
   MoEの実負荷に応じCPU・GPU・PCIeを動的配分し、影響度駆動プリフェッチとスコア認識キャッシュを統合してkTransformers比プリフィル1.33倍、デコード1.70倍を達成する。
+
+- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
+  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：10  
+  CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
 
 - **2024-11 · [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)**  
   実装：[✓](https://github.com/caoshiyi/artifacts/tree/asplos25) ・ リポジトリ内被引用：9  
   MoE-Lightningは専門家重みとKVをCPU DRAMへ置き、マイクロバッチ間で次の重み転送・CPU注意・GPU計算を重ねて低VRAMのI/O待ちを減らす。
-
-- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
-  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：8  
-  CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
 
 - **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](2025-2503.06823-emoe.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -397,7 +397,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：20  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
@@ -413,7 +413,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   TwinPilotsはTransformer処理ごとにCPU計算とGPU転送・計算の速さを比較し、CPU計算とPCIe転送を並行させてGPUオフロードの生成待ちを減らす。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-05 · [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  

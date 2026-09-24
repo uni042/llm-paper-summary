@@ -277,7 +277,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
 
 - **2025-06 · [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](2025-2506.23266-sub-moe-subspace-expert-merging.md)**  
-  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：11  
   機能類似度クラスタリングと共有部分空間SVDでMoE専門家を整列し、活性頻度重み付きV統合でパラメータ衝突を抑える学習不要の専門家統合。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  
@@ -399,11 +399,11 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   下流タスク微調整中のゲート寄与から専門家を段階的に1つまで削り、混合専門家事前学習の利得をほぼ保った密モデルへ変換する方式。
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：29  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。
 
 - **2022-05 · [MoEfication: Transformer Feed-forward Layers are Mixtures of Experts](2021-2110.01786-moefication.md)**  
