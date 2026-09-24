@@ -1,14 +1,110 @@
 {
   "candidate_inventory": 284,
-  "direct_start_allowed": false,
+  "direct_start_allowed": true,
   "discovery": {
-    "backward": [],
-    "forward": [],
+    "backward": [
+      {
+        "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+        "citation_direction": "backward",
+        "created_at": "2026-09-24T07:01:16.305807+00:00",
+        "discovery_bank": "k",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-k/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-353566d67dc903709143",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-353566d67dc903709143.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-353566d67dc903709143.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-353566d67dc903709143.json",
+        "target_unseen": 20
+      }
+    ],
+    "forward": [
+      {
+        "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:00:19.398256+00:00",
+        "discovery_bank": "f",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-f/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-1fb6cc39b0801d74bc2c",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-1fb6cc39b0801d74bc2c.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": "arXiv:2510.09665",
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-1fb6cc39b0801d74bc2c.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-1fb6cc39b0801d74bc2c.json",
+        "target_unseen": 20
+      },
+      {
+        "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:00:43.159999+00:00",
+        "discovery_bank": "o",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-o/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-23494db523ee1a210583",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-23494db523ee1a210583.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/citations",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-23494db523ee1a210583.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-23494db523ee1a210583.json",
+        "target_unseen": 20
+      },
+      {
+        "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:00:43.159999+00:00",
+        "discovery_bank": "z",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-z/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-35f79ff9fbb933aa98ef",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-35f79ff9fbb933aa98ef.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2202.09368/citations",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-35f79ff9fbb933aa98ef.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-35f79ff9fbb933aa98ef.json",
+        "target_unseen": 20
+      }
+    ],
     "normal": []
   },
-  "generated_at": "2026-09-24T11:05:03+00:00",
+  "discovery_fallback": {
+    "axis": "preload-backward-structured-references",
+    "citation_direction": "backward",
+    "initial_cursor": null,
+    "max_pages": 25,
+    "page_size": 20,
+    "provider": "repository_references",
+    "seed_canonical_id": null,
+    "source_key": "00f3af0375a575549572",
+    "source_kind": "fixed_source_fallback",
+    "source_url": "repository://structured-references",
+    "target_unseen": 20
+  },
+  "fallback_start_allowed": true,
+  "generated_at": "2026-09-24T11:21:26+00:00",
+  "idle_gap_guard": {
+    "passive_wait_forbidden": true,
+    "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if none exists, start the published fixed-source schema-v3 fallback immediately while run-state recovery proceeds asynchronously."
+  },
   "lane_available": {
-    "discovery": false,
+    "discovery": true,
     "research": true
   },
   "research": [
@@ -2432,7 +2528,8 @@
   "research_discovery_threshold": 288,
   "research_resume": {},
   "route_guard_band": 0,
-  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; if that lane has no packet, fall back to the normal synchronous run-state route.",
+  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. When Discovery stock is absent, use discovery_fallback to issue the run-specific schema-v3 precheck immediately instead of waiting for run-state; the precheck lane repairs/refreshes canonical run-state asynchronously.",
   "schema_version": 1,
-  "suggested_work_mode": "discovery"
+  "suggested_work_mode": "discovery",
+  "zero_wait_start_allowed": true
 }
