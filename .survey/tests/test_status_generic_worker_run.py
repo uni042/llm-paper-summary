@@ -172,6 +172,37 @@ class GenericSurveyWorkerRunTests(unittest.TestCase):
             self.assertNotIn("最新観測run: **2026-09-17 16:30 JST**", text)
 
 
+    def test_current_discovery_run_key_with_numeric_offset_is_recognized(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            scripts = repo / ".survey/scripts"
+            scripts.mkdir(parents=True)
+            for name in ("build_status_dashboard.py", "render_status_dashboard_core.py", "render_status_dashboard.py"):
+                source = SCRIPT.parent / name
+                (scripts / name).write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
+            _write_json(repo / ".survey/work-queue/submissions/discovery/round-offset.json", {
+                "kind": "discovery",
+                "operation": "submit_discovery_round",
+                "candidates": [],
+                "discovery_stats": {
+                    "run_key": "scheduled-chat-00-20260924T220032+0900-6e21c4",
+                    "round": "round-offset",
+                    "axis": "offset-aware discovery",
+                    "candidate_count": 0,
+                },
+            })
+
+            spec = importlib.util.spec_from_file_location("status_offset_discovery", scripts / "render_status_dashboard.py")
+            module = importlib.util.module_from_spec(spec)
+            assert spec.loader is not None
+            spec.loader.exec_module(module)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 24, 13, 15, tzinfo=timezone.utc))
+
+            self.assertIn("最新観測run: **2026-09-24 22:00 JST**", text)
+            self.assertIn("耐久探索round: **1件**", text)
+
+
     def test_current_discovery_run_key_timestamp_is_recognized(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
