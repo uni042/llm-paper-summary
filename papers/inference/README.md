@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **968本**。
+収録論文: **970本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**968本**。
+推論論文：**970本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -68,7 +68,7 @@
 | [06-moe-inference-expert-offloading](06-moe-inference-expert-offloading/README.md) | 3 |
 | [06-moe-inference-expert-placement-caching](06-moe-inference-expert-placement-caching/README.md) | 3 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
-| [06-serving-scheduling](06-serving-scheduling/README.md) | 17 |
+| [06-serving-scheduling](06-serving-scheduling/README.md) | 18 |
 | [06-speculative-decoding](06-speculative-decoding/README.md) | 14 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 51 |
@@ -79,7 +79,7 @@
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 5 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 19 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 82 |
-| [10-sparse-attention](10-sparse-attention/README.md) | 5 |
+| [10-sparse-attention](10-sparse-attention/README.md) | 6 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 233 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 4 |
 | [kv-cache](kv-cache/README.md) | 1 |
