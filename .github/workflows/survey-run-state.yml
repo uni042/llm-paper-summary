@@ -16,9 +16,12 @@ permissions:
   contents: write
 
 # Initial Research/Audit claims and the initial Discovery preload adoption are handled
-# in this workflow. Push-race recomputation keeps both allocations atomic on main.
+# in this workflow. Keep run-state derivation on its own Actions queue so a foreground
+# direct Research take is never blocked behind state derivation. Both workflows still
+# use non-force pushes plus latest-main recomputation after races, so concurrent writers
+# converge through the same canonical claim/run-state facts.
 concurrency:
-  group: survey-claim-main
+  group: survey-run-state-main
   cancel-in-progress: false
 
 jobs:
