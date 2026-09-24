@@ -249,13 +249,40 @@ def adopt(
         key=lambda current: int(current["pipeline_order"]),
     )
     prior_kinds = [str(current.get("kind") or "") for current in prior_rows]
+    candidate_job_ids = {str(current.get("job_id") or "") for current in candidates}
+    active_job_ids = {
+        str(job_id)
+        for job_id, current in claims.items()
+        if current.get("active")
+    }
+    outside_ready_audit = False
+    if "audit" in request["job_types"]:
+        for job_id, job in jobs_by_id.items():
+            if (
+                not isinstance(job, dict)
+                or job_id in candidate_job_ids
+                or job_id in active_job_ids
+                or job_id in checkpointed_ids
+                or job.get("status") != "ready"
+                or job.get("type") != "audit"
+                or (requested_job_ids is not None and job_id not in requested_job_ids)
+            ):
+                continue
+            dependencies = claim_state.normalize_dependencies(
+                job_id,
+                job["depends_on_job_ids"] if "depends_on_job_ids" in job else job.get("dependencies"),
+            )
+            if dependencies is not None:
+                outside_ready_audit = True
+                break
+
     candidates = worker_quota_policy.order_with_audit_fairness(
         candidates,
         starting_position=next_pipeline_order,
         prior_kinds=prior_kinds,
         kind_field="kind",
         limit=needed,
-        reserve_missing_audit_slot=True,
+        reserve_missing_audit_slot=outside_ready_audit,
     )
 
     adopted: list[dict[str, Any]] = []
