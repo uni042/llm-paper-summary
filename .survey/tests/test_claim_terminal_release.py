@@ -22,7 +22,7 @@ def write_json(path: Path, value):
 
 
 class ClaimTerminalReleaseTests(unittest.TestCase):
-    def test_completed_legacy_job_does_not_block_same_worker_next_claim(self):
+    def test_completed_terminal_job_does_not_block_same_worker_next_claim(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             queue = root / ".survey/work-queue"
@@ -35,7 +35,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
                 "status": "completed",
                 "priority": 90,
                 "created_at": "2026-09-13T18:00:00+00:00",
-                "artifact_submission": "work-queue/submissions/chat-inbox.json",
+                "artifact_submission": "work-queue/submissions/research/attempt-done.json",
                 "depends_on_job_ids": ["job-done"],
             })
             write_json(queue / "claims/job-done.json", {
@@ -43,7 +43,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
                 "workflow_version": 10,
                 "claim_id": "claim-done",
                 "job_id": "job-done",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-00",
                 "worker_kind": "scheduled_chat",
                 "attempt_id": "attempt-done",
                 "request_id": "req-old",
@@ -67,7 +67,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
             write_json(queue / "claim-requests/req-next.json", {
                 "schema_version": 1,
                 "request_id": "req-next",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-00",
                 "worker_kind": "scheduled_chat",
                 "requested_at": AT.replace(microsecond=0).isoformat(),
                 "max_jobs": 1,
@@ -102,7 +102,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
             write_json(queue / "claim-requests/req-r1.json", {
                 "schema_version": 1,
                 "request_id": "req-r1",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-00",
                 "worker_kind": "scheduled_chat",
                 "requested_at": AT.replace(microsecond=0).isoformat(),
                 "max_jobs": 1,
