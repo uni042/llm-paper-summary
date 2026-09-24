@@ -489,7 +489,7 @@ hot-dispatch direct startではrun-state requestを**内容作業開始前に耐
 - `WAIT_FOR_DISCOVERY_PRECHECK_RESULT` / `WAIT_FOR_DISCOVERY_SUBMISSION_RESULT`: 開始済みDiscovery roundとして、第7.0節の待機ミクロタスクを1件処理するたびに同一identityを再確認する。600秒開始禁止窓に入っても最終180秒まではこの作業サイクルを継続する。
 - `CONTINUE_DISCOVERY_ROUND`: 成功済みprecheckの評価・submissionなど、すでに開始済みのroundを完了する。
 - `RECOVER_DISCOVERY_SUBMISSION`: precheck/submissionの失敗を正規recovery_stepsで回収し、同じroundを終端まで進める。
-- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。run-stateの `discovery_selector.next_direction` を正本とする。**今回runの初回roundでは、run-state fast laneが同方向PRECHECKED preloadを自動adoptしてrun固有precheckまで同一commitで完了していれば、返された `auto_initial_discovery` / 正式precheck resultを使って直ちに評価へ進み、同じprecheck requestを作り直さない。** 自動高速化されていない場合だけ、同方向の `discovery_preload` が返っていれば従来どおりその事前装填窓をrun固有schema v3 requestとしてadoptする。利用可能preloadが無ければ固定ソースprecheckへ即時フォールバックし、preload待ちで停止しない。
+- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。run-stateの `discovery_selector.next_direction` を正本とする。**今回runの初回roundでは、run-state fast laneが同方向PRECHECKED preloadを自動adoptしてrun固有precheckまで同一commitで完了していれば、返された `auto_initial_discovery` / 正式precheck resultを使って直ちに評価へ進み、同じprecheck requestを作り直さない。第2round以降も、直前roundのsubmission recovery fast laneが次のPRECHECKED preloadを確保した場合は、同じrecovery transaction内でrun固有schema v3 precheckまで完了させ、周期precheck回収を待たず正式resultから評価へ進む。** 自動高速化されていない場合だけ、同方向の `discovery_preload` が返っていれば従来どおりその事前装填窓をrun固有schema v3 requestとしてadoptする。利用可能preloadが無ければ固定ソースprecheckへ即時フォールバックし、preload待ちで停止しない。
 - `RUN_0830_MAINTENANCE`: 08:30専用runの非論文更新→maintenanceを続行する。通常論文処理へ入らない。
 - `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
 
