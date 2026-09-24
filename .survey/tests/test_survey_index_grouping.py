@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +11,7 @@ from zoneinfo import ZoneInfo
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import survey  # noqa: E402
 from survey import _render_paper_list, _render_taxonomy_list  # noqa: E402
 
 
@@ -87,6 +89,57 @@ class SurveyIndexGroupingTest(unittest.TestCase):
         )
 
         self.assertIn("../03-kv-cache/legacy-paper.md", "\n".join(rendered))
+
+    def test_paper_views_use_explicit_frontmatter_list_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = repo / "papers" / "inference" / "example" / "paper.md"
+            paper.parent.mkdir(parents=True)
+            explicit = "明示した一覧文だけを使い、本文からの自動生成を行わない方式を採用する。"
+            paper.write_text(
+                "---\n"
+                "title: Example\n"
+                "summary: 本文由来の値へ戻る旧fallbackは禁止する。\n"
+                f"list_summary: {explicit}\n"
+                "published: 2026-09\n"
+                "implementation: null\n"
+                "code: null\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文の別の一文は一覧表示に使わない。\n",
+                encoding="utf-8",
+            )
+            original_root = survey.ROOT
+            survey.ROOT = repo
+            try:
+                rows = survey.paper_views()
+            finally:
+                survey.ROOT = original_root
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["summary"], explicit)
+
+    def test_paper_views_reject_missing_explicit_list_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = repo / "papers" / "inference" / "example" / "paper.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                "---\n"
+                "title: Example\n"
+                "summary: 本文から一覧文を補完しない。\n"
+                "published: 2026-09\n"
+                "---\n"
+                "# Example\n",
+                encoding="utf-8",
+            )
+            original_root = survey.ROOT
+            survey.ROOT = repo
+            try:
+                with self.assertRaisesRegex(ValueError, "list_summary"):
+                    survey.paper_views()
+            finally:
+                survey.ROOT = original_root
 
     def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
         row = self._record("mobile-paper", 2026, 9)
