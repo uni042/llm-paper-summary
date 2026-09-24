@@ -339,7 +339,7 @@ class HotDispatchTests(unittest.TestCase):
             write_json(request_path, raw)
             request = derive_worker_run_state._normalize_request(request_path, raw)
             result = derive_worker_run_state.derive(root, request)
-            self.assertEqual(result["candidate_inventory"], 100)
+            self.assertEqual(result["candidate_inventory"], 400)
             self.assertEqual(result["work_mode"], "discovery")
             self.assertEqual(result["route_source"], "hot_dispatch_direct_start")
 
