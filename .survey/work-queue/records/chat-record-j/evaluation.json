@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-d0b404e285d49a0ce5994e57","job_id":"job-research-ed39f178b202751f","data":{"hardware":"attention fidelityとdownstreamはLlama-3.1-8B-Instruct、Qwen2.5-7B-Instruct、DeepSeek-R1-Distill-Qwen-7B等を含む複数backboneで評価する。deploymentはQwen2.5-3B-Instructを単一NVIDIA H800 80GB GPUで実行する。","software":"Block-GTQはTurboQuant-MSEをlocal quantizerとして利用し、packed K/Vを直接処理するcustom fused attentionを実装する。fp16 baselineはFlashAttention-2。公開コードはJIA-Lab-research/blockgtq。","methodology":"10モデル・367 layerのdiagnostic panelでK-only 2/3 bit-per-dimにおけるRoPE query-key logit MAEをuniform TQ-MSEと比較する。downstreamはLlama-3.1-8B-InstructとQwen2.5-7B-InstructのNIAH、LongBench-EN、DeepSeek-R1 distilled modelのAIME 2024/2025を評価する。recent fp16 buffer有無を分け、K2V2/K3V2/K3V3などmatched budgetで比較する。deploymentではWikiText-2先頭64 tokenをcalibrationし、128K〜512K contextで20 timed autoregressive stepのmedian decode latency、peak GPU memory、PPLをfp16 FA2およびuniform TQ-MSEと比較する。","scope":"bit allocationはKey側のみでValueはuniform TQ-MSEのまま。deployment kernelは初期のsingle-GPU実装で、multi-GPUおよびbatched servingは未評価。短文脈ではin-kernel unpack overheadのためfp16 FA2より遅く、128K程度から帯域削減が優位になる。backboneによってValue誤差感度が異なり、DeepSeek-R1-Distill-Llama-8Bのno-buffer条件ではK-only allocationの弱点が出る。"},"reservation":{"claim_id":"claim-preload-d0b404e285d49a0ce5994e57","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-f234ef828a71ef4bb3d542c4",
+  "job_id": "job-research-e6152c2a3998faa6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-f234ef828a71ef4bb3d542c4",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

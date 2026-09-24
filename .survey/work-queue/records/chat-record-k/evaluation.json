@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-7567c60b834735ea01f92a82","job_id":"job-research-7ecc4d7949c81534","data":{"hardware":"精度評価はLlama-3.1-8B-Instruct、Qwen3-8B、Qwen3-32Bを用いる。効率評価はNVIDIA H100画像処理装置上で、中央処理装置へ鍵・値を退避する単一層処理経路を測定する。完全な脳浮動小数点形式の鍵・値は固定ページ化した主記憶に保持する。","software":"選択した鍵・値の厳密注意にはFlashInferを用いる。画像処理装置側の融合カーネルでブロック統計の更新と格納、残差得点計算、上位選択を行い、中央処理装置での鍵値収集、ホスト・デバイス転送、補助実行流での平均補償を非同期に重ねる。","methodology":"精度はRULERとLongBench-Proで完全注意、Quest、InfLLM、Quest+RESAなどと比較し、三モデルの複数鍵値予算で平均得点を測る。効率は32K、64K、128K文脈と512、1024、2048トークンの厳密読出し予算を組み合わせた九条件で、一復号段あたりの平均遅延を比較する。切除実験では注意質量だけ、分散だけ、両者を使う残差得点、分散統計の座標群粒度を比較し、選択と補償を結合する効果を確認する。","scope":"効率評価は単一層の中央処理装置退避経路であり、モデル全体の端から端までの生成スループットそのものではない。理論導出は平均補償を解析対象とし、小分散を仮定した二次近似を実用的な順位得点へ用いる。ブロックごとに平均鍵、平均値、トークン数、座標群別分散を追加保持するため、分散群の粒度とブロック長によって管理情報量と推定精度が変化する。"},"reservation":{"claim_id":"claim-preload-7567c60b834735ea01f92a82","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
+  "job_id": "job-research-b22af651ef4f551f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

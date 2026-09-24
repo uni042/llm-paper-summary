@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-d0b404e285d49a0ce5994e57","job_id":"job-research-ed39f178b202751f","data":{"limitations":"Key側RoPE blockだけにbitを非一様配分し、Valueはuniform TQ-MSEのままであるため、V誤差に敏感なbackboneでは品質差が残る。packed decodeは短文脈ではunpack overheadでfp16より遅い。deploymentはsingle H800・single-request中心の初期実装で、multi-GPUとbatched servingは未評価。mixed-rate metadataのためuniform TQ-MSEよりfootprint圧縮率もやや低い。","implementation_status":"公開コードあり。mixed-rate K / uniform-rate Vのpacked persistent cache、Triton prefill quantization、tile内dequantizationとtensor-core QK/PVを行う融合decode attention、CUDA graph cache updateを実装する。128K〜512K contextをsingle H800で実測している。","research_positioning":"KIVI、KVQuant、ZipCacheなどがchannel/token/group単位の再構成やoutlier処理を中心にするのに対し、Block-GTQはRoPE attention logitの2次元周波数block構造をbit allocation単位へ直接使う。EliteKVやRAPなどRoPE-aware手法とも異なりblockをdropせずprecisionだけを再配分し、packed servingまで一体で評価する。","relation_to_prior":"local quantizerはTurboQuant-MSEを再利用するが、一様bit幅を各headへ適用する代わりにlayer/head内のRoPE block energyでbit幅を変える。PM-KVQのlayer単位、MixKVQ/Kittyのchannel単位など既存non-uniform precisionより細かく、attention logit誤差上界からscoreを導く点が異なる。","repository_position":"KV-cache量子化・圧縮系統の中でも、RoPE構造とhardware servingを橋渡しする研究として配置する。量子化方式の品質比較だけでなく、packed cacheをHBM上の正本にして復号kernelが直接消費するため、長文脈KV帯域最適化やoffloadと組み合わせる際の基準になる。","differences":"全block保持・mixed bit allocation・label-free calibration・greedy optimal allocation・packed direct servingの組合せが差分である。特にfp16 cacheを一度復元して保存する方式と違い、圧縮codeをpersistent stateとして維持することで容量削減を毎stepのHBM traffic削減へ変える。","followups":"V-side allocatorとjoint K/V optimization、より密なpacking、multi-GPU/batched serving、PagedAttentionとの統合、CPU/NVMe階層へのpacked page移送を調べると、長文脈serving全体での実用性を評価できる。"},"reservation":{"claim_id":"claim-preload-d0b404e285d49a0ce5994e57","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-f234ef828a71ef4bb3d542c4",
+  "job_id": "job-research-e6152c2a3998faa6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-f234ef828a71ef4bb3d542c4",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

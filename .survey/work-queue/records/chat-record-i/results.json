@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-3ee424a7b2b36c6924101628","job_id":"job-research-41d37332b16e3d57","data":{"overview":"Flash-dLLMは融合キャッシュだけでも無キャッシュ貪欲復号に対し8.0〜58.5倍、確信度並列復号との併用では17.0〜102.2倍の高速化を示す。Flash-Verifyまで組み合わせると全八設定で最高スループットとなり、148.0〜210.6トークン毎秒、無キャッシュ貪欲復号比22.3〜148.2倍に達する。最強比較対象Elastic-Cacheに対してGSM8Kで5.1倍、HumanEvalで11.0倍の高速化を報告し、バッチ32までスループットをほぼ線形に伸ばしながら比較対象より小さいピークメモリを維持する。","key_results":[{"metric":"GSM8K 512生成スループット","value":"210.6 token/s、81.0倍","baseline":"無キャッシュ貪欲2.6 token/s、Elastic-Cache 41.7 token/s","condition":"LLaDA-1.5、5-shot、Flash-Cache+Flash-Verify、A100 80GB","interpretation":"鍵値入出力削減と複数トークン検証を組み合わせることで最強比較対象比約5.1倍となる。"},{"metric":"HumanEval 512生成スループット","value":"185.6 token/s、58.0倍","baseline":"無キャッシュ貪欲3.2 token/s、Elastic-Cache 16.8 token/s","condition":"0-shot pass@1、A100 80GB","interpretation":"コード生成でもElastic-Cache比約11倍の速度差を示す。"},{"metric":"MBPP 512生成スループット","value":"148.2 token/s、148.2倍","baseline":"無キャッシュ貪欲1.0 token/s","condition":"3-shot pass@1","interpretation":"長い生成で反復回数と鍵値入出力の削減効果が積み重なる。"},{"metric":"GSM8K 512正解率","value":"83.02%","baseline":"無キャッシュ貪欲81.35%、Elastic-Cache 82.79%","condition":"Flash-Cache+Flash-Verify","interpretation":"大幅な高速化と同時に比較対象と同程度以上の課題精度を維持する。"}],"negative_results":"速度向上は課題や生成長に依存し、短い生成では長い生成ほど倍率が大きくない。HumanEval 256ではFlash-Verify構成39.63%に対し無キャッシュ貪欲43.29%で、並列確定が常に精度を改善するわけではない。論文自身も開放生成と連続空間拡散モデルを未評価とし、固定検証しきい値と窓長の適応化を今後の課題とする。","interpretation":"キャッシュで演算を減らした後に残るメモリ入出力を融合カーネルで削り、その高速なキャッシュ機構を同一モデル検証型並列復号の基盤として再利用する二段構成が重要である。どちらか一方だけでは得られない高速化を、同じ実行経路で重ねている。","quality_impact":"検証表示の確信度しきい値を高くすると採用トークン数は減るが、逐次条件付き分布からの偏差上界は小さくなる。論文は採用一位置の全変動距離を1−γ以下、長さmの採用接頭部を1−γ^m以下と評価し、速度・品質折衷を明示する。"},"reservation":{"claim_id":"claim-preload-3ee424a7b2b36c6924101628","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
+  "job_id": "job-research-5cbec5c2c470e865",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

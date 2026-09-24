@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-3ee424a7b2b36c6924101628","job_id":"job-research-41d37332b16e3d57","data":{"canonical_id":"arXiv:2609.26796","arxiv_id":"2609.26796","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs","summary":"Flash-dLLMは拡散型大規模言語モデルの鍵・値キャッシュで、再計算量を減らしてもキャッシュ読書きが高帯域メモリ入出力を支配して高速化を阻む点を分析し、キャッシュ更新と注意計算を融合したFlash-Cacheと、同じ拡散モデル自身を下書き役・検証役にするFlash-Verifyを組み合わせる。追跡トークンと現在のマスク窓だけを問い合わせとして再計算し、Triton融合カーネル内でキャッシュを更新しながら注意を行う。低確信度候補は下書き表示とマスク表示を同一検証通過で比較し、一致かつ確信度しきい値を満たす接頭部だけをまとめて確定する。LLaDA-1.5を単一A100 80GBで評価し、最強比較対象Elastic-Cacheに対してGSM8Kで5.1倍、HumanEvalで11.0倍の高速化を報告する。","list_summary":"拡散言語モデルの鍵・値キャッシュ更新を融合注意へ統合し、同じモデルによる下書き・検証型並列復号を重ねることで、メモリ入出力と反復回数を同時に削減する。","authors":["Quan Nguyen-Tri","Mukul Ranjan","Zhiqiang Shen"],"authors_affiliations":"VILA Lab, Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi, UAE","published":"2026-09-22","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"diffusion LLM inference / KV caching / fused attention / parallel decoding","topics":["拡散言語モデル","鍵・値キャッシュ","融合注意","並列復号","推論高速化"],"importance":"拡散言語モデル特有の反復更新で生じる鍵・値キャッシュの入出力冗長性と並列復号を別々に最適化せず、同じキャッシュ機構を土台に融合しているため、非自己回帰モデル向け推論基盤として直接重要である。","implementation":"Triton 2.0で融合鍵・値キャッシュ注意カーネルを実装し、Flash-Verifyの二表示検証と事前確保キャッシュを同じ実行経路で利用する。公開コードあり。","hardware_evaluation":"全実験は単一NVIDIA A100 80GB。LLaDA-1.5、GSM8K、MATH、HumanEval、MBPPを生成長256/512、既定バッチ32で評価。","quality_effect":"GSM8K 512でFlash-Verify+Flash-Cacheは83.02%・210.6 token/s、無キャッシュ貪欲復号は81.35%・2.6 token/s。MATH 512は35.98%・210.1 token/sで、無キャッシュ貪欲35.63%・5.0 token/s。","source":"https://arxiv.org/abs/2609.26796","sources":["https://arxiv.org/abs/2609.26796","https://arxiv.org/html/2609.26796","https://github.com/VILA-Lab/Flash-dLLM"],"code":"https://github.com/VILA-Lab/Flash-dLLM","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-3ee424a7b2b36c6924101628","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
+  "job_id": "job-research-5cbec5c2c470e865",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

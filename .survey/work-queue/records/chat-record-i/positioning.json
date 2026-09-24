@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-3ee424a7b2b36c6924101628","job_id":"job-research-41d37332b16e3d57","data":{"limitations":"評価は主にLLaDA-1.5と数学・コード課題で、連続空間拡散言語モデルや一般的な長文対話・創作は未検証である。検証確信度とマスク窓長を生成中固定しており、確信度分布が変化する課題では適応調整の余地がある。Flash-Verifyは検証側確信度に応じた有界な分布偏差を許すため、逐次復号と完全同一の確率分布を保証する方式ではない。","implementation_status":"Triton 2.0による融合鍵・値キャッシュ注意と、同一モデルの二表示下書き・検証を実装し、公開コードを提供する。単一A100 80GBでバッチ32までの拡張、ピークメモリ、四課題の精度・スループットを実測している。","research_positioning":"Fast-dLLMやElastic-Cacheなど拡散言語モデル向け鍵・値再利用研究に対し、キャッシュ再利用後に顕在化する高帯域メモリ入出力を融合カーネルで直接扱い、そのキャッシュ状態を下書き・検証型並列復号へ再利用する。自己回帰モデルの投機的復号に似た考えを、外部下書きモデルなしで拡散モデル内部へ持ち込む。","relation_to_prior":"Fast-dLLMは接頭部キャッシュと確信度並列復号、Elastic-Cacheは注意パターンに応じた適応キャッシュ再利用を行う。Flash-dLLMはキャッシュ更新と注意を融合してメモリ往復を減らし、さらに低確信度候補を同一モデルの二表示で検証して一段あたりの確定数を増やす点が異なる。","repository_position":"拡散言語モデル推論、鍵・値キャッシュ、融合注意カーネル、並列復号の交差に置く。従来の自己回帰向け鍵値キャッシュ最適化とは更新パターンが異なるため、非自己回帰生成でメモリ階層と復号アルゴリズムを共同設計する代表例になる。","differences":"演算削減だけでなくキャッシュ入出力を第一級ボトルネックとして扱い、融合カーネルと並列検証を同じ事前確保キャッシュ上で動かす。検証器は別モデルではなく同じ拡散モデルで、注意マスクにより下書き表示とマスク表示を一回の通過へまとめる。","followups":"連続空間拡散モデル、開放長文生成、適応しきい値・窓長、複数画像処理装置、鍵値量子化や中央処理装置退避との組合せを調べると、拡散型生成の実サービング基盤としての適用範囲を評価できる。"},"reservation":{"claim_id":"claim-preload-3ee424a7b2b36c6924101628","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
+  "job_id": "job-research-5cbec5c2c470e865",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}
