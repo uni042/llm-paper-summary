@@ -1,33 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T07:10:52+00:00",
-  "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-  "last_round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5",
+  "updated_at": "2026-09-24T09:30:59+00:00",
+  "last_run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+  "last_round": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T21:00:00+09:00",
-      "round": "storage-moe-1",
-      "axis": "SSD-backed KV cache・MoE expert prefetch/offload・near-memory execution",
-      "query_summary": "2026年のSSD/NVMe KV cache、MoE expert offload/prefetch、分離型FFN near-memory、異種KV cache共有を独立検索し、canonical arXiv IDでdefault branchを事前照合した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "KV cache reservation uncertainty・GPU L2 prefetch・multi-GPU migrationと隣接memory schedulingを探索する",
-      "source_submission": "work-queue/submissions/20260917T2100JST-discovery-storage-moe-1.json"
-    },
     {
       "run_key": "2026-09-17T21:00:00+09:00",
       "round": "kv-scheduling-2",
@@ -9030,6 +9012,40 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+      "precheck_request_id": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+      "run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+      "round": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+      "axis": "backward references of arXiv:2401.09670",
+      "query_summary": "arXiv:2401.09670 の後方引用を正規schema v3で検査し、未収録20件を軽量評価したが、LLM推論・学習システムの既存系統を直接更新するpriority>=40の強候補はなかった。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T093030Z-scheduled-chat-30-4b7e2a-r1.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T093030Z-scheduled-chat-30-4b7e2a-r1.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -17100,6 +17116,19 @@
       "duplicate_ratio": 0.95,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "backward references of arXiv:2401.09670": {
+      "last_run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -18460,6 +18489,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
       "last_round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5"
+    },
+    "window-ff52826db67b0dab7457": {
+      "topic": "arxiv:2401.09670 backward references",
+      "source": "semantic_scholar",
+      "date_range": "all",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-ff52826db67b0dab7457",
+      "scan_count": 1,
+      "raw_result_count": 48,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 24,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 0,
+      "last_position": "cursor-0",
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.5,
+      "candidate_acceptance_rate": 0.0,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+      "last_round": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1"
     }
   },
   "recent_search_windows": [
@@ -20037,6 +20089,27 @@
       "duplicate_rate": 0.4375,
       "candidate_acceptance_rate": 0.15,
       "last_position": null
+    },
+    {
+      "topic": "arxiv:2401.09670 backward references",
+      "source": "semantic_scholar",
+      "date_range": "all",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-ff52826db67b0dab7457",
+      "run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+      "round": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+      "raw_result_count": 48,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 24,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.5,
+      "candidate_acceptance_rate": 0.0,
+      "last_position": "cursor-0"
     }
   ],
   "search_window_history_limit": 96,
