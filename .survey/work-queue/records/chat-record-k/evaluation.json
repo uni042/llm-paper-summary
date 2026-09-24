@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-270cf0686ddf08989a01feb5",
-  "job_id": "job-research-7526ab28b3c65fc4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-270cf0686ddf08989a01feb5",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-270cf0686ddf08989a01feb5","job_id":"job-research-7526ab28b3c65fc4","data":{"hardware":"効率評価はNVIDIA A100 GPUを中心に行い、状態次元N=16の選択走査と自己回帰生成スループット、メモリ消費を測定する。論文は選択走査が系列長2Kを超えるとFlashAttention-2より高速になり、標準PyTorch走査より20〜40倍高速と報告する。","software":"公式Mamba実装の選択走査カーネルを用い、比較対象としてTransformer、強化学習レシピを用いたTransformer++、H3、Hyena、RetNet、RWKV、S4系を評価する。言語モデルはGPT-3相当の幅・深さを基準とし、Pile、GPT-NeoX tokenizer、AdamW、RMSNormやSwiGLU等を含む改善レシピも揃えて比較する。","methodology":"評価は合成選択コピー・誘導ヘッド、Pile上の自己回帰言語モデリングとゼロショット下流課題、DNA系列、音声波形、速度・メモリベンチマーク、構成要素アブレーションから成る。言語スケーリングは約125M〜1.3BをChinchilla相当トークン量で比較し、公開2.8BモデルではPythia/RWKV等と同じ300Bトークン条件を重視する。誘導ヘッドは長さ256で学習し64〜1,048,576へ外挿する。効率では状態次元16の走査とモデル全体の生成スループットを測る。","scope":"主張は注意機構なしの一般系列バックボーンとして言語・DNA・音声まで広く検証されるが、著者自身が主要な学習済み言語モデル評価は約3B以下であり、7B以上での品質優位性は未検証と認める。推論速度の大きな利点はKVキャッシュ不要による高バッチ利用を含むため、低バッチ・短文脈や異なるGPU世代で同じ倍率が保証されるわけではない。"},"reservation":{"claim_id":"claim-preload-270cf0686ddf08989a01feb5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
