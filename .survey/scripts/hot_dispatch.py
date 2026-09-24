@@ -305,11 +305,38 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     research_packets = _research_packets(root, jobs=jobs, claims=claims)
     research_resume = _research_resume_packets(root, jobs=jobs, claims=claims)
     discovery_packets = _discovery_packets(root)
-    discovery_fallback = discovery_preload_queue.fallback_source(root, direction="backward")
+    discovery_primary_direction = "backward"
+    discovery_primary_packets = discovery_packets.get(discovery_primary_direction) or []
+    discovery_fallback = discovery_preload_queue.fallback_source(
+        root,
+        direction=discovery_primary_direction,
+    )
+    discovery_start_lookahead = next(
+        (
+            packet
+            for packet in (discovery_packets.get("forward") or [])
+            if int(packet.get("preload_unseen_result_count") or 0) > 0
+        ),
+        None,
+    )
     lane_available = {
         "research": bool(research_packets),
-        "discovery": any(bool(rows) for rows in discovery_packets.values()),
+        # A fresh Discovery invocation always starts by attempting backward
+        # references. Forward/normal stock is still exposed below, but must not
+        # falsely advertise direct-start readiness for the primary round.
+        "discovery": bool(discovery_primary_packets),
     }
+    zero_wait_content_start_allowed = bool(
+        research_packets
+        if suggested == "research"
+        else (
+            any(
+                int(packet.get("preload_unseen_result_count") or 0) > 0
+                for packet in discovery_primary_packets
+            )
+            or discovery_start_lookahead is not None
+        )
+    )
     return {
         "schema_version": 1,
         "generated_at": _iso(now),
@@ -324,13 +351,22 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         "fallback_start_allowed": bool(
             suggested == "discovery" and discovery_fallback is not None
         ),
+        "zero_wait_content_start_allowed": zero_wait_content_start_allowed,
+        "discovery_primary_direction": (
+            discovery_primary_direction if suggested == "discovery" else None
+        ),
+        "discovery_start_lookahead": (
+            discovery_start_lookahead if suggested == "discovery" else None
+        ),
         "discovery_fallback": discovery_fallback if suggested == "discovery" else None,
         "idle_gap_guard": {
             "passive_wait_forbidden": True,
             "rule": (
                 "An asynchronous request must never be the worker's only remaining activity. "
-                "Prefer PRECHECKED Discovery stock; if none exists, start the published fixed-source "
-                "schema-v3 fallback immediately while run-state recovery proceeds asynchronously."
+                "Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the "
+                "published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, "
+                "start the prepared forward lookahead candidate evaluation immediately while canonical "
+                "precheck/run-state results proceed asynchronously."
             ),
         },
         "route_guard_band": DIRECT_ROUTE_GUARD_BAND,
@@ -343,10 +379,12 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "over creating a new take, so content work can resume immediately while canonical route repair proceeds; "
             "resume packets also expose the canonical status-only submission path/template so a single unreadable paper "
             "can be durably terminalized and the next standby can start without ending the run; "
-            "direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; "
-            "zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. When Discovery "
-            "stock is absent, use discovery_fallback to issue the run-specific schema-v3 precheck immediately instead "
-            "of waiting for run-state; the precheck lane repairs/refreshes canonical run-state asynchronously."
+            "direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), "
+            "rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. "
+            "zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. "
+            "When the backward packet is absent, issue discovery_fallback immediately and, if discovery_start_lookahead is present, reserve its "
+            "forward PRECHECKED packet and evaluate cached candidates without waiting for run-state; formal submission remains gated by each "
+            "run-specific schema-v3 precheck/receipt."
         ),
         "research": research_packets,
         "research_resume": research_resume,
