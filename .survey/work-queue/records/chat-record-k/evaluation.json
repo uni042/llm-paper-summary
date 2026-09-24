@@ -4,7 +4,37 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-f423df36c64b70da5c1fa947",
   "job_id": "job-research-12d29ccbbefd4d02",
-  "data": {},
+  "data": {
+    "hardware": "主評価は品質・検索精度で、GPU機種やエンドツーエンドのシステム性能測定は中心ではない。",
+    "software": "著者実装 l2compress。注意スコア非依存のためFlashAttentionと併用可能。",
+    "model": [
+      "Llama-2-7B",
+      "Llama-2-7B-80K",
+      "Llama-3系",
+      "Gemma系",
+      "LongLoRA長文脈モデル"
+    ],
+    "datasets": [
+      "Wikipedia言語モデル評価",
+      "Needle-in-a-Haystack",
+      "Passkey Retrieval",
+      "LongBench"
+    ],
+    "baselines": [
+      "無圧縮KVキャッシュ",
+      "ランダム削除",
+      "高L2ノルム保持",
+      "注意重み系KV圧縮法"
+    ],
+    "correctness": "困惑度と長文検索の正解率を無圧縮および代替削除規則と比較し、圧縮率を上げた際の品質維持を検証する。",
+    "settings": [
+      "L2ノルムが低いKVを保持し、高いKVを削除する。",
+      "相関が弱い最初の2層は既定で圧縮しない。",
+      "言語モデル・needleでは最大50%程度、passkeyでは最大90%の削減域を重点評価。"
+    ],
+    "methodology": "注意分布とキーL2ノルムの関係を層・ヘッド別に分析した後、同じモデルへ学習不要の追い出し規則を適用し、言語モデル品質と合成長文検索、LongBenchで圧縮率ごとの性能を比較する。",
+    "scope": "実験はKV削減時のモデル品質を主に示し、実運用のスループット、TTFT、デコードレイテンシ、GPUメモリ実測の包括的ベンチマークは限定的である。"
+  },
   "reservation": {
     "claim_id": "claim-preload-f423df36c64b70da5c1fa947",
     "worker_id": "scheduled-chat-00",
