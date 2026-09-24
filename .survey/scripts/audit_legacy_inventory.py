@@ -20,14 +20,14 @@ LEGACY_MARKERS = {
     "legacy_lease_original": re.compile(r"legacy_lease_original_expires_at", re.IGNORECASE),
     "legacy_lease_normalized": re.compile(r"legacy_lease_normalized_at", re.IGNORECASE),
     "scheduled_chat_alias": re.compile(r"scheduled-chat-llm-survey", re.IGNORECASE),
-    "old_record_bank_root": re.compile(r"chat-record-a(?:/|\\b)", re.IGNORECASE),
-    "old_summary_heading": re.compile(r"^##\\s+一文要約\\s*$", re.MULTILINE),
-    "transport_v9": re.compile(r"""["']transport_version["']\\s*:\\s*9\\b""", re.IGNORECASE),
+    "old_record_bank_root": re.compile(r"chat-record-a(?:/|\b)", re.IGNORECASE),
+    "old_summary_heading": re.compile(r"^##\s+一文要約\s*$", re.MULTILINE),
+    "transport_v9": re.compile(r"""["']transport_version["']\s*:\s*9\b""", re.IGNORECASE),
 }
 
 
 def _git_blob_sha(data: bytes) -> str:
-    header = b"blob " + str(len(data)).encode("ascii") + b"\\0"
+    header = b"blob " + str(len(data)).encode("ascii") + b"\0"
     return hashlib.sha1(header + data).hexdigest()
 
 
@@ -89,7 +89,7 @@ def _legacy_markers(data: bytes) -> tuple[list[str], str]:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
         return [], "unscannable_binary"
-    if "\\0" in text:
+    if "\0" in text:
         return [], "unscannable_binary"
     hits = [name for name, pattern in LEGACY_MARKERS.items() if pattern.search(text)]
     return hits, "scanned"
@@ -197,7 +197,7 @@ def main() -> int:
         exclude_paths=[output_relative] if output_relative else (),
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
         "status": report["status"],
         "source_commit": report["source_commit"],
