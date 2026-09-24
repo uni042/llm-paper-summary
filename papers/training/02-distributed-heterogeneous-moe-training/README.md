@@ -49,7 +49,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 3年前（2023-10〜2024-09）
 
 - **2024-04 · [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](2024-2404.19429-lancet.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   MoE学習の全対全通信をエキスパートだけでなく非MoE計算と重み勾配計算まで学習グラフ全体で重ね、最大1.3倍高速化する。
 
 ### 4年前（2022-10〜2023-09）
@@ -67,6 +67,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-10〜2020-09）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：101  
+  実装：✓ ・ リポジトリ内被引用：105  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

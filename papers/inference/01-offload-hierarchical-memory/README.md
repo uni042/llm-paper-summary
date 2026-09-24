@@ -310,6 +310,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/scale-snu/SSD-offloading) ・ リポジトリ内被引用：4  
   MoE専門家重みをHBM・CPUメモリ・SSDに置いたときのデコードエネルギーを比較し、SSD退避では1トークン当たりMixtralが3.8〜12.5倍、DeepSeek-R1が4.7〜9.8倍増えると示す。
 
+- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
+  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：4  
+  専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
+
 - **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
   実装：[✓](https://github.com/sacs-epfl/HarMoEny) ・ リポジトリ内被引用：3  
   MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。
@@ -325,10 +329,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
   実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：3  
   20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
-
-- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
-  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：3  
-  専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
 
 - **2025-04 · [MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints](2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -347,7 +347,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   重み読出しを計算と非同期化し、各層へ固定メモリを均等配分し、容量に応じて保持テンソルを切り替えることで、端末向けCPU推論をmmap比最大12.5倍高速化する。
 
 - **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](2025-2503.08467-moe-expert-sharding.md)**  
-  実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：2  
   全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
 
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
@@ -393,11 +393,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Fiddlerはキャッシュミスした専門家をGPUへ転送するか、活性値だけCPUへ送りCPUで計算するかを実行時に選び、MoEの重み転送待ちを減らす。
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：50  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：18  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
