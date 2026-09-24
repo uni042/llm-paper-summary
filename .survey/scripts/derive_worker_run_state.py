@@ -22,6 +22,7 @@ from typing import Any
 import claim_state
 import claim_window_policy
 import continuation_gate
+import worker_quota_policy
 import discovery_preload_queue
 import select_discovery_direction
 import worker_identity
@@ -998,10 +999,10 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         candidate_inventory=inventory,
         work_mode=work_mode if work_mode in {"research", "discovery"} else "research",
         research_audit_completed_this_invocation=submission["research_audit_completed_this_invocation"],
-        research_minimum_completions=5,
+        research_minimum_completions=worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS,
         last_terminal_job_status=submission["last_terminal_job_status"],
         discovery_rounds_completed=discovery_rounds,
-        discovery_min_rounds=8,
+        discovery_min_rounds=worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS,
         discovery_exhausted=False,
         next_axis_available=bool(selector.get("next_direction")),
         discovery_precheck_result_pending=discovery_async["discovery_precheck_result_pending"],
