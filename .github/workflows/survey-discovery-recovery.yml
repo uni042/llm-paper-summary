@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
     paths:
+      # Current Discovery descriptors live one level below submissions/.
+      # Keep the legacy root glob for read-compatibility, but trigger immediately
+      # for the canonical nested Discovery path so workers do not wait for the
+      # 10-minute scheduled recovery after every submission.
+      - '.survey/work-queue/submissions/discovery/*.json'
       - '.survey/work-queue/submissions/*.json'
   workflow_dispatch:
   schedule:
