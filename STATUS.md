@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 07:09:00 JST**
+> 自動生成: **2026-09-25 07:13:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **309** |
-| 未claim Research job | **165** |
+| 収録候補論文 | **313** |
+| 未claim Research job | **169** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
-| 最終検証済みDiscovery探索 | **09-25 07:08:24 JST** |
+| 最終検証済みDiscovery探索 | **09-25 07:13:29 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **309** |
+| canonical_id確認済みの一意な候補論文 | **313** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **309** |
+| 非終端Research job合計 | **313** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（22時間33分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（22時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,10 +72,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **3** | **3** | **3** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **3** | **3** | **0** | **0** | **0** | **10** |
-| 合計 | **8** | **6** | **6** | **0** | **144** | **0** | **10** |
+| Discovery | **6** | **6** | **6** | **0** | **0** | **0** | **14** |
+| 合計 | **9** | **9** | **9** | **0** | **144** | **0** | **14** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -109,22 +109,26 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json`
   - 探索軸: preload-backward-structured-references
+- **09-25 07:13:01 JST** job `job-02861186fcba6975` / 候補 **4件**
+  - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r4.json`
+  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
 - **09-25 07:08:10 JST** job `job-0e961606c722e52e` / 候補 **5件**
   - result: `.survey/work-queue/results/frontier-6efa32166cb2805d1fbfd105.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/frontier-6efa32166cb2805d1fbfd105.json`
   - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
+- **09-25 07:13:15 JST** job `job-365d14942c39eb43` / 候補 **0件**
+  - result: `.survey/work-queue/results/frontier-76ea4b32625200e39e952dee.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/frontier-76ea4b32625200e39e952dee.json`
+  - 探索軸: preload-backward-structured-references
+- **09-25 07:13:29 JST** job `job-aa21c3d5e679167b` / 候補 **0件**
+  - result: `.survey/work-queue/results/frontier-86b42adcc7dcc2245fd56aee.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/frontier-86b42adcc7dcc2245fd56aee.json`
+  - 探索軸: preload-backward-structured-references
 - **09-25 07:08:24 JST** job `job-70906a9d9e4b2c8a` / 候補 **5件**
   - result: `.survey/work-queue/results/frontier-b6fd264914da3919b6f130d0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/frontier-b6fd264914da3919b6f130d0.json`
   - 探索軸: forward citations of AWQ weight quantization and inference kernels retry
-- **09-25 01:09:16 JST** job `job-ea07283bf946a538` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260924T160720Z-scheduled-chat-00-7f3c9a-d07.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T160720Z-scheduled-chat-00-7f3c9a-d07.json`
-  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
-- **09-25 01:09:26 JST** job `job-a5b5e5128745633f` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260924T160745Z-scheduled-chat-00-7f3c9a-d08.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T160745Z-scheduled-chat-00-7f3c9a-d08.json`
-  - 探索軸: preload-backward-structured-references
 
 ### 直近タスク
 
@@ -157,16 +161,28 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-25 07:02 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **10件**
-- 探索軸: preload-backward-structured-references / forward citations of FlexGen offload and hierarchical-memory LLM inference / forward citations of AWQ weight quantization and inference kernels retry
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **6件** / 個別result照合: **6件** / 個別result未照合: **0件** / 候補: **14件**
+- 探索軸: preload-backward-structured-references / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference / forward citations of AWQ weight quantization and inference kernels retry
 - round `disc-take-scheduled-chat-00-20260925T070210-run1-r1` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json`
   - 探索軸: preload-backward-structured-references
   - 個別result照合: あり / `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json` (`ok=true`)
+- round `disc-take-scheduled-chat-00-20260925T070210-run1-r4` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r4.json`
+  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
+  - 個別result照合: あり / `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r4.json` (`ok=true`)
 - round `frontier-6efa32166cb2805d1fbfd105` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/discovery/frontier-6efa32166cb2805d1fbfd105.json`
   - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
   - 個別result照合: あり / `.survey/work-queue/results/frontier-6efa32166cb2805d1fbfd105.json` (`ok=true`)
+- round `frontier-76ea4b32625200e39e952dee` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/frontier-76ea4b32625200e39e952dee.json`
+  - 探索軸: preload-backward-structured-references
+  - 個別result照合: あり / `.survey/work-queue/results/frontier-76ea4b32625200e39e952dee.json` (`ok=true`)
+- round `frontier-86b42adcc7dcc2245fd56aee` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/frontier-86b42adcc7dcc2245fd56aee.json`
+  - 探索軸: preload-backward-structured-references
+  - 個別result照合: あり / `.survey/work-queue/results/frontier-86b42adcc7dcc2245fd56aee.json` (`ok=true`)
 - round `frontier-b6fd264914da3919b6f130d0` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/discovery/frontier-b6fd264914da3919b6f130d0.json`
   - 探索軸: forward citations of AWQ weight quantization and inference kernels retry
@@ -226,7 +242,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **309** |
+| ready | **313** |
 
 ### 候補の重複・識別情報欠損
 
