@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.26828",
+      "arxiv_id": "2609.26828",
+      "title": "Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2609.26828",
+      "priority": 88,
+      "priority_breakdown": {"base": 50, "lineage": 20, "recency": 18, "venue": 0, "total": 88},
+      "reason": "CXL-SSDをLLM prefix/KV cache向けに協調設計し、chunk-aware配置、GPU可視device DRAM、windowed/layerwise prefetchでNAND遅延を隠蔽。stock CXL-SSD比TTFT最大4.03倍改善を報告し、階層メモリ・SSDオフロード重点系統に直接該当する。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00058",
+      "doi": "10.1109/JCC72984.2026.00058",
+      "title": "UNAS: Urgency- and Fairness-Aware Scheduling for SLO-Oriented LLM Serving",
+      "source_url": "https://doi.org/10.1109/JCC72984.2026.00058",
+      "priority": 83,
+      "priority_breakdown": {"base": 48, "lineage": 15, "recency": 12, "venue": 8, "total": 83},
+      "reason": "LLM servingのSLO違反を対象にcluster/instance二層schedulerを設計し、least-slack-firstを含む実装評価でSLO達成率最大11.1%改善、平均遅延最大1.47倍削減。serving/scheduling系統の直接的なsystems候補。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16352",
+      "arxiv_id": "2606.16352",
+      "title": "Communication-Efficient Verifiable Attention for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.16352",
+      "priority": 78,
+      "priority_breakdown": {"base": 48, "lineage": 15, "recency": 15, "venue": 0, "total": 78},
+      "reason": "TEE-GPU間の検証可能LLM推論でattentionをGPUへオフロードし、prefill二段pipelineとKV cache超過時のTEE/GPU分割attentionを提案。Intel TDX上でprefill 2.60–3.38倍、decode 3.86–5.42倍の高速化を報告する推論systems候補。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-11ef2f8c76f0b7f92bdb1281",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-11ef2f8c76f0b7f92bdb1281.json",
+    "receipt": "sha256:1b0e8b0df22d033204d1326999b91ee8ac6ed0743c2ec3af43a43258875a3a39"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T235956JST-7e4c91",
+    "round": "frontier-11ef2f8c76f0b7f92bdb1281",
+    "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+    "query_summary": "LMCacheの前方引用20件を正規schema v3で評価し、CXL-SSD KV cache管理、SLO指向serving scheduler、TEE-GPU検証可能attentionの3件を強いsystems候補として採用。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["arXiv:2609.26828", "DOI:10.1109/JCC72984.2026.00058", "arXiv:2606.16352"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "seed_canonical_id": "arXiv:2510.09665",
+    "search_windows": [
+      {
+        "topic": "LMCache enterprise-scale KV cache layer",
+        "source": "semantic_scholar",
+        "date_range": "forward-citations",
+        "category": "inference-systems",
+        "citation_direction": "forward",
+        "query_family": "citation-first",
+        "raw_result_count": 20,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 0,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 3,
+        "seed_canonical_id": "arXiv:2510.09665"
+      }
+    ]
+  }
+}
