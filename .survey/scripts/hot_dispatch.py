@@ -340,6 +340,63 @@ def build_index(repo_root: Path) -> dict[str, Any]:
                 break
         if len(discovery_start_frontier) >= DISCOVERY_FRONTIER_TARGET - 1:
             break
+    generated_at = _iso(now)
+    for packet in research_packets:
+        packet["direct_take_contract"] = {
+            "create_only": True,
+            "path": packet["take_path"],
+            "lease_seconds": claim_worker.DEFAULT_LEASE_SECONDS,
+            "payload_base": {
+                "schema_version": 1,
+                "operation": "direct_take_research",
+                "claim_id": packet["claim_id"],
+                "job_id": packet["job_id"],
+                "attempt_id": packet["attempt_id"],
+                "claim_window": claim_window_policy.DEFAULT_CLAIM_WINDOW,
+                "candidate_inventory_at_start": inventory,
+                "work_mode_at_start": "research",
+                "research_discovery_threshold": threshold,
+                "hot_dispatch_generated_at": generated_at,
+            },
+            "required_runtime_fields": [
+                "request_id",
+                "worker_id",
+                "scheduled_slot",
+                "run_key",
+                "actual_invocation_start",
+                "requested_at",
+            ],
+        }
+    for direction_packets in discovery_packets.values():
+        for packet in direction_packets:
+            packet["direct_take_contract"] = {
+                "create_only": True,
+                "path": packet["take_path"],
+                "lease_seconds": discovery_preload_queue.CLAIM_LEASE_SECONDS,
+                "payload_base": {
+                    "schema_version": 1,
+                    "operation": "direct_take_discovery",
+                    "direct_take": True,
+                    "preload_id": packet["preload_id"],
+                    "discovery_bank": packet["discovery_bank"],
+                    "discovery_slot_path": packet["discovery_slot_path"],
+                    "preload_result_path": packet["preload_result_path"],
+                    "candidate_inventory_at_start": inventory,
+                    "work_mode_at_start": "discovery",
+                    "research_discovery_threshold": threshold,
+                    "hot_dispatch_generated_at": generated_at,
+                },
+                "required_runtime_fields": [
+                    "request_id",
+                    "worker_id",
+                    "scheduled_slot",
+                    "run_key",
+                    "actual_invocation_start",
+                    "claimed_at",
+                    "lease_expires_at",
+                ],
+            }
+
     lane_available = {
         "research": bool(research_packets),
         # A fresh Discovery invocation always starts by attempting backward
@@ -360,7 +417,7 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     )
     return {
         "schema_version": 1,
-        "generated_at": _iso(now),
+        "generated_at": generated_at,
         "candidate_inventory": inventory,
         "research_discovery_threshold": threshold,
         "suggested_work_mode": suggested,
@@ -411,6 +468,8 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. "
             "discovery_start_frontier publishes up to two additional productive packets beside the primary packet; the first direct take causes the "
             "Discovery precheck lane to reserve enough same-run packets to keep a bounded three-round frontier populated before formal results settle. "
+            "Each prepared Research/Discovery packet embeds direct_take_contract with the canonical create-only path, schema payload_base, "
+            "lease duration and the exact runtime fields still required from the worker, so workers never reconstruct a direct-take schema from prose. "
             "When the backward packet is absent, issue discovery_fallback immediately and use discovery_start_frontier for cached candidate evaluation "
             "without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt."
         ),
