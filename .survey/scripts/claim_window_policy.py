@@ -34,6 +34,52 @@ RESEARCH_DISCOVERY_THRESHOLD = (
     DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS * 4
 )
 
+# Do not let a continuously healthy Research backlog starve Discovery forever.
+# Once a verified Discovery round is this old, one new invocation may route to
+# Discovery while Research stock remains within one extra six-worker window above
+# the ordinary threshold. A very large Research backlog still wins.
+DISCOVERY_REFRESH_INTERVAL_SECONDS = 2 * 60 * 60
+DISCOVERY_REFRESH_MAX_INVENTORY = (
+    RESEARCH_DISCOVERY_THRESHOLD
+    + DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS
+)
+
+
+def discovery_refresh_due(
+    candidate_inventory: int,
+    *,
+    discovery_age_seconds: int | float | None,
+) -> bool:
+    if isinstance(candidate_inventory, bool) or not isinstance(candidate_inventory, int):
+        raise ValueError("candidate inventory must be an integer")
+    inventory = max(candidate_inventory, 0)
+    if discovery_age_seconds is None:
+        return False
+    age = max(float(discovery_age_seconds), 0.0)
+    return (
+        age >= DISCOVERY_REFRESH_INTERVAL_SECONDS
+        and inventory <= DISCOVERY_REFRESH_MAX_INVENTORY
+    )
+
+
+def select_work_mode(
+    candidate_inventory: int,
+    *,
+    discovery_age_seconds: int | float | None = None,
+) -> str:
+    """Choose Research or Discovery with a bounded Discovery freshness override."""
+    if isinstance(candidate_inventory, bool) or not isinstance(candidate_inventory, int):
+        raise ValueError("candidate inventory must be an integer")
+    inventory = max(candidate_inventory, 0)
+    if inventory < RESEARCH_DISCOVERY_THRESHOLD:
+        return "discovery"
+    if discovery_refresh_due(
+        inventory,
+        discovery_age_seconds=discovery_age_seconds,
+    ):
+        return "discovery"
+    return "research"
+
 
 def normalize_window(value: int) -> int:
     if isinstance(value, bool) or not isinstance(value, int):
