@@ -1,13 +1,55 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "evaluation",
   "attempt_id": "attempt-preload-e67ec48caa52d77d1c7b992a",
   "job_id": "job-research-0a4a1c707b0687af",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "evaluation",
+  "data": {
+    "hardware": "3×HGX B200。各ノード8×NVIDIA B200 SXM、各GPU 192GB HBM3e。70BはTP=4、340BはTP=8。ノード内はNVLink 5/NVSwitch、ノード間はInfiniBandを利用。",
+    "software": "NVIDIA Dynamoの分離推論構成。適応制御はPythonでKvPushRouterをwrapperし、Prometheusを5秒周期で監視。Dynamo Rust coreは未変更。",
+    "model": [
+      "Llama-3.1-70B (TP=4)",
+      "Nemotron-4-340B FP8 (TP=8)"
+    ],
+    "datasets": [
+      "5種類のprompt templateからなる制御workload",
+      "各requestは128 input tokens、最大256 output tokens、temperature 0.0"
+    ],
+    "baselines": [
+      "Dynamo default static routing (τ=0, ω=1)",
+      "adaptive regime-gated routing",
+      "Pareto sweep 4×4 grid over τ∈{0,0.3,0.7,1.0}, ω∈{0,0.3,0.7,1.0}",
+      "static counterfactual: round-robin, random uniform, power-of-two choices, Hungarian hindsight optimum"
+    ],
+    "correctness": "適応/静的比較は同一model・topologyでC=32→128→32の同一負荷相を使い、各strategyを3反復。報告値は各反復P99の平均で、全requestをpoolしたP99ではない。PoA-hatは絶対効率比ではなく、未fit費用モデルによるrelative regime indicatorとして解釈する。",
+    "settings": [
+      {
+        "name": "topology",
+        "description": "70Bで1P/2Dと1P/5D、340Bで1P/2D。active GPUはそれぞれ12、24、24。"
+      },
+      {
+        "name": "concurrency sweep",
+        "description": "C=1,2,4,8,16,32,48,64,96,128,192,256,384,512の14点を各120秒保持し、飽和レジームを同定。"
+      },
+      {
+        "name": "parameter sweep",
+        "description": "C=64とC=128でτ×ωの4×4=16構成を評価し、各構成はhealth check/ramp後180秒保持。"
+      },
+      {
+        "name": "adaptive load spike",
+        "description": "C=32を120秒、C=128を180秒、C=32を120秒。static/adaptiveそれぞれ3反復。"
+      },
+      {
+        "name": "controller polling",
+        "description": "TTFT P99等をPrometheusから5秒周期で読み、EWMAとhysteresisでregime transitionを判定。"
+      }
+    ],
+    "methodology": "Experiment 1でconcurrency sweepから低負荷・飽和・過飽和の構造を測り、Experiment 2で検出器の遷移を検証する。Experiment 4a/4bで飽和前後のrouter parameter sensitivityを調べ、その設定をExperiment 3のadaptive controllerへ移す。性能指標はTTFT P99、ITL P99、requests/s、PoA-hat。PoA-hatの分母は観測窓の要求をworkerへ再配置するHungarian algorithmで求めるが、cost matrixは固定パラメータの近似であり真の社会最適の厳密下界ではない。",
+    "scope": "2つのdense model、3つのP/D topology、3-node B200 cluster、均質な短prompt workloadに限定される。Game 2はHBMからのtier spilloverが発生せず、Game 1のP/D動的GPU再配分も実験しない。したがって実機検証の中心はrequest routingとcache-affinity/congestion trade-offであり、MoE、大規模worker数、可変長・multi-turn・production traceへの一般化は未検証。"
   }
 }
