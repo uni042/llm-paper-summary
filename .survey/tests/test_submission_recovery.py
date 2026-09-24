@@ -163,5 +163,36 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
             self.assertEqual(research["status"], "completed")
 
 
+    def test_current_nested_discovery_submission_is_recovered(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            sr = survey_root(root)
+            submissions = sr / "work-queue/submissions"
+            results = sr / "work-queue/results"
+            write_json(submissions / "discovery/current-round.json", {
+                "operation": "submit_discovery_round",
+                "candidates": [],
+                "discovery_stats": {
+                    "run_key": "run-current",
+                    "round": "round-current",
+                    "axis": "backward",
+                    "round_submission_index": 1,
+                    "round_submission_count": 1,
+                },
+            })
+
+            summary = recovery.recover(sr)
+
+            result = json.loads((results / "current-round.json").read_text(encoding="utf-8"))
+            self.assertEqual(summary["recovered_count"], 1)
+            self.assertTrue(result["ok"])
+            self.assertTrue(result["ingested"])
+            self.assertEqual(
+                result["submission"],
+                "work-queue/submissions/discovery/current-round.json",
+            )
+
+
+
 if __name__ == "__main__":
     unittest.main()
