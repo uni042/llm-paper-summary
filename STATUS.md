@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 17:48:22 JST**
+> 自動生成: **2026-09-24 17:51:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **292** |
+| 収録候補論文 | **291** |
 | 未claim Research job | **148** |
-| 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-24 17:48:14 JST** |
+| 直近24hの検証済みResearch収録 | **23** |
+| 最終検証済みResearch収録 | **09-24 17:51:11 JST** |
 | 整合性異常 | **22** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **292** |
+| canonical_id確認済みの一意な候補論文 | **291** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **292** |
+| 非終端Research job合計 | **291** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（9時間12分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（9時間15分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **2** | **2** | **0** | **144** | **39** | — |
+| Research | **9** | **3** | **3** | **0** | **143** | **38** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
-| 合計 | **16** | **7** | **7** | **0** | **144** | **39** | **10** |
+| 合計 | **17** | **8** | **8** | **0** | **143** | **38** | **10** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 17:51:11 JST** [research] `arXiv:2505.16502` — Recursive Offloading for LLM Serving in Multi-tier Networks
+  - job: `.survey/work-queue/jobs/job-research-df8b6eaefcbe8aad.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-886ad02757673f91debfda1d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-886ad02757673f91debfda1d.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md`
 - **09-24 17:48:14 JST** [research] `arXiv:2603.09023` — The Missing Memory Hierarchy: Demand Paging for LLM Context Windows
   - job: `.survey/work-queue/jobs/job-research-105b69444b4fa0ad.json`
   - result: `.survey/work-queue/results/research/attempt-preload-54d2a2c5f4eca8e69e54d846.json` (`ok=true`)
@@ -167,7 +172,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-24 17:28 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2603.09023` — The Missing Memory Hierarchy: Demand Paging for LLM Context Windows
   - job: `.survey/work-queue/jobs/job-research-105b69444b4fa0ad.json`
   - result: `.survey/work-queue/results/research/attempt-preload-54d2a2c5f4eca8e69e54d846.json` (`ok=true`)
@@ -178,6 +183,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-74bb4af6ce3df82b5f4f239a.json`
   - paper: `papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md`
+- **成功** `arXiv:2505.16502` — Recursive Offloading for LLM Serving in Multi-tier Networks
+  - job: `.survey/work-queue/jobs/job-research-df8b6eaefcbe8aad.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-886ad02757673f91debfda1d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-886ad02757673f91debfda1d.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md`
 
 #### Audit（最新Research/Audit run）
 
@@ -215,7 +225,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **39件**
+- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **38件**
 - `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
   - claim: **09-24 11:38:37 JST** / heartbeat: **09-24 17:46:52 JST** / lease expiry: **09-25 05:46:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
@@ -265,7 +275,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **292** |
+| ready | **291** |
 
 ### 候補の重複・識別情報欠損
 
@@ -285,7 +295,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1017** |
+| inference/training/survey配下の論文Markdown実体 | **1018** |
 
 ### immutable submissionの未照合
 
