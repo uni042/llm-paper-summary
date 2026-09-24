@@ -1,8 +1,28 @@
 {
   "candidate_inventory": 284,
-  "direct_start_allowed": false,
+  "direct_start_allowed": true,
   "discovery": {
-    "backward": [],
+    "backward": [
+      {
+        "axis": "preload-backward-structured-references",
+        "citation_direction": "backward",
+        "created_at": "2026-09-24T12:52:49.035676+00:00",
+        "discovery_bank": "f",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-f/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-ffd4c5e00b2298a0c3ad",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-ffd4c5e00b2298a0c3ad.json",
+        "preload_unseen_result_count": 20,
+        "provider": "repository_references",
+        "seed_canonical_id": null,
+        "source_url": "repository://structured-references",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-ffd4c5e00b2298a0c3ad.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-ffd4c5e00b2298a0c3ad.json",
+        "target_unseen": 20
+      }
+    ],
     "forward": [
       {
         "axis": "forward citations of KVLink efficient KV cache reuse",
@@ -365,13 +385,13 @@
     "target_unseen": 20
   },
   "fallback_start_allowed": true,
-  "generated_at": "2026-09-24T12:36:54+00:00",
+  "generated_at": "2026-09-24T12:52:55+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
     "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, start the prepared forward lookahead candidate evaluation immediately while canonical precheck/run-state results proceed asynchronously."
   },
   "lane_available": {
-    "discovery": false,
+    "discovery": true,
     "research": true
   },
   "research": [
