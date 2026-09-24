@@ -6,7 +6,9 @@
 
 ## 現行の実装境界
 
-- runノルマ（Research/Audit成功5件・Discovery成功8ラウンド）とAudit配分ブロックの正規値: `.survey/scripts/worker_quota_policy.py`\n- ルーティング・継続判定: `.survey/scripts/continuation_gate.py`\n- 最終化判定: `.survey/scripts/run_finalization_gate.py`
+- runノルマ（Research/Audit成功5件・Discovery成功8ラウンド）とAudit配分ブロックの正規値: `.survey/scripts/worker_quota_policy.py`
+- ルーティング・継続判定: `.survey/scripts/continuation_gate.py`
+- 最終化判定: `.survey/scripts/run_finalization_gate.py`
 - Research / Audit の担当確保（ワーカー実行入口）: `.survey/scripts/claim_worker_with_banks.py`
 - Discovery の固定ソース事前検査: `.survey/scripts/process_discovery_precheck.py`
 - 固定ソースのページ送り・重複排除: `.survey/scripts/discovery_search_filter.py`
@@ -15,6 +17,8 @@
 - 現行Library退避（Library fallback）の復旧: `.survey/scripts/replay_record_fallback.py`
 - ワーカー向け案内: `.survey/scripts/worker_guidance.py`
 - 日次 maintenance: `.github/workflows/maintenance.yml`
+- STATUS証拠収集: `.survey/scripts/build_status_dashboard.py`
+- STATUS表示生成: `.survey/scripts/render_status_dashboard.py`
 
 ## 実行入口と内部モジュール
 
@@ -27,6 +31,8 @@
 ワーカー行動は `worker-router.md` と上記正規スクリプトが返す `[WORKER-GUIDE]` / `next_action` / `recovery_steps` に従う。実装契約は対応するテストで固定する。
 
 過去のschema、固定 `chat-inbox.json`、旧形式fallback、旧claim/record-bank形式などのコードが残る場合は**既存履歴の読取・救済専用**である。新規生成、新規分岐、エラー回避経路として使わない。
+
+`STATUS.md` は `render_status_dashboard.py` だけが表示生成を担当する。旧STATUS後処理スクリプトは廃止済みであり、互換目的でも新規に復活させない。
 
 ## 変更時の原則
 

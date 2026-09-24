@@ -85,6 +85,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/scripts/normalize_v10_jobs.py",
             ".survey/scripts/reusable_transport_baseline.py",
             ".survey/scripts/preflight_chat_record.py",
+            ".survey/scripts/append_research_throughput_status.py",
+            ".survey/scripts/refine_status_observability.py",
             ".survey/tests/test_reusable_transport_baseline.py",
             ".github/workflows/repair-corrupted-lineages.yml",
             ".survey/scripts/repair_corrupted_lineages.py",

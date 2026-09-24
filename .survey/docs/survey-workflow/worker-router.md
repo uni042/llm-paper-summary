@@ -112,7 +112,7 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 
 Research / Auditのclaimは次の順で行う。
 
-### 3.x 可変claim window（foreground 1 + standby N）
+### 2.4 Research / Auditの可変claim window（foreground 1 + standby N）
 
 #### 二重用途バンク（dual-purpose bank）上の共有paper preload FIFO
 
@@ -204,7 +204,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
-2. 担当確保は第3.x節の可変claim windowに従い、同一workerが**foreground 1件 + standby N件**を先行確保してよい。`max_jobs=1` は担当確保数ではなく、**同時に本文を精読するforeground並列度が1**という意味である。通常priority順を維持しつつ、**Audit starvation防止をpriorityより優先**する。`.survey/scripts/worker_quota_policy.py` の `AUDIT_STARVATION_BLOCK_SIZE=3` に従い、foreground開始順を3件ずつのブロックとして扱い、claim windowの初回確保・pool adopt・補充の各段階で、利用可能なAuditがあるなら各3件ブロックに少なくとも1件Auditが入るようallocatorが順序を調整する。Auditがその時点で他workerに取得済み等で利用不能なら待たず、残りは通常priority順で埋める。この「3」は配分規則であり、runの成功完了ノルマ5件とは別である。
+2. 担当確保は第2.4節の可変claim windowに従い、同一workerが**foreground 1件 + standby N件**を先行確保してよい。`max_jobs=1` は担当確保数ではなく、**同時に本文を精読するforeground並列度が1**という意味である。通常priority順を維持しつつ、**Audit starvation防止をpriorityより優先**する。`.survey/scripts/worker_quota_policy.py` の `AUDIT_STARVATION_BLOCK_SIZE=3` に従い、foreground開始順を3件ずつのブロックとして扱い、claim windowの初回確保・pool adopt・補充の各段階で、利用可能なAuditがあるなら各3件ブロックに少なくとも1件Auditが入るようallocatorが順序を調整する。Auditがその時点で他workerに取得済み等で利用不能なら待たず、残りは通常priority順で埋める。この「3」は配分規則であり、runの成功完了ノルマ5件とは別である。
 3. 通常claim request経路でclaim result待ちなら同じ `request_id` を保持する。別requestを発行して回避しない。**第2.0.1節のdirect takeで担当確保済みならcanonical claim resultを待たず本文読解を続け、5スロット書込開始前にだけrecord route確定を確認する。** 通常requestでageが60秒未満ならActions run/job/stepと同一worker transport状態を確認し、第7.0節の待機ミクロタスクを1件処理してから同じ対象を再確認する。 60秒以降も受動的に終了せず、Actions状態と正規回復可否を確認しながら同一requestを追跡する。
 4. claim resultの `record_bank` / `record_bank_fallback` をそのまま使う。ワーカーが別bankを選び直さない。
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
