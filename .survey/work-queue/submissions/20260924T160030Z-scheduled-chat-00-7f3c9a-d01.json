@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2312.15234",
+      "arxiv_id": "2312.15234",
+      "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+      "source_url": "https://arxiv.org/abs/2312.15234",
+      "priority": 75,
+      "priority_breakdown": {"base": 45, "lineage": 30, "recency": 0, "venue": 0, "total": 75},
+      "reason": "LLM servingをアルゴリズムからシステムまで横断するサーベイで、13件の既存論文・複数系統から直接参照される。推論基盤、KVキャッシュ、スケジューリング、投機的デコーディング、オフロードを横断して既存サーベイを補完する強い候補。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66.json",
+    "receipt": "sha256:cef3723ab75d150b930f6f9250bd742aaeb9320e22975c651d126f84a6c54108"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T005925+0900-7f3c9a",
+    "round": "disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "正規schema v3の共有preload 20件を評価し、既存系統への直接接続が強くサーベイ対象として明確な候補のみ採用。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["arXiv:2312.15234"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"structured-references","source":"repository_references","date_range":"repository-wide","category":"inference-systems","citation_direction":"backward","query_family":"structured-reference-curation","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":1,"position":"preload-b2a43c661eb5087a88fe"}]
+  }
+}
