@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 474,
+      "completed": 482,
       "processing": 7,
       "ready": 1
     },
@@ -11,18 +11,32 @@
     "research": {
       "completed": 397,
       "blocked": 114,
-      "ready": 351,
+      "ready": 376,
       "superseded": 13,
       "deferred": 8,
       "rejected": 5
     }
   },
   "claiming": {
-    "ready_research_audit": 351,
+    "ready_research_audit": 376,
     "actively_claimed": 144,
-    "claimable": 207
+    "claimable": 232
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-f844bb180f4f9fac",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2609.21172",
+      "title": "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+      "source_url": "https://arxiv.org/abs/2609.21172",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.21172-tierkv-long-context-on-device-llms-via-predictive-multi-tier-kv-caching.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
     {
       "job_id": "job-research-f32c4d7018f358c2",
       "type": "research",
@@ -122,20 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-96b3d1e9f6fc49b7",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2608.07458",
-      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
-      "source_url": "https://www.semanticscholar.org/paper/6b1afffee709753c80d1959fb99cbf558b9b32cd",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07458-coinrag-contextualized-information-nugget-kv-cache-reuse-for-long-context-rag.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-25T17:40:57+00:00"
+  "generated_at": "2026-09-25T19:45:48+00:00"
 }
