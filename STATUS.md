@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 11:27:34 JST**
+> 自動生成: **2026-09-25 11:29:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **338** |
-| 未claim Research job | **196** |
+| 未claim Research job | **194** |
 | 直近24hの検証済みResearch収録 | **18** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-25 10:26:34 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（26時間51分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（26時間53分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **10** | **0** | **0** | **142** | **0** | — |
+| Research | **1** | **1** | **0** | **0** | **144** | **13** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **29** | **15** | **14** | **0** | **0** | **0** | **19** |
-| 合計 | **30** | **25** | **14** | **0** | **142** | **0** | **19** |
+| 合計 | **30** | **16** | **14** | **0** | **144** | **13** | **19** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -140,32 +140,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
-- immutable submission: **10件** / 検証済み成功: **0件** / result照合済み非成功: **10件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-13b2710cd58d1521bf8b8e29.json` (job `job-research-058d69df18b4e613`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-13b2710cd58d1521bf8b8e29.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-1d17d0afddf2c45d9cfc2443.json` (job `job-research-79a7b06357194cd1`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-1d17d0afddf2c45d9cfc2443.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-60392f6ae28160ede948e3b0.json` (job `job-research-6be480b73a6003b5`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-60392f6ae28160ede948e3b0.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (job `job-research-0dc5dd60b4569a06`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (job `job-research-ac58200c186f3e5a`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-a20114da784952a527840be6.json` (job `job-research-d13140588fd6d656`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-a20114da784952a527840be6.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-cec830eff891d08a2b883aa0.json` (job `job-research-d70a9b73142dca6a`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-cec830eff891d08a2b883aa0.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-d2a8c1e4593b098380bd5bc9.json` (job `job-research-c97d88c20de27e1f`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-d2a8c1e4593b098380bd5bc9.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (job `job-research-b374f59330145700`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-f2119e1959e44428b62cf540.json` (job `job-research-319ee9e5d994faaf`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-preload-f2119e1959e44428b62cf540.json` (`ok=true`)
+- 最新観測run: **2026-09-25 11:27 JST** / worker `scheduled-chat-30`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-8fa24d135cc0417a00493d88.json` (job `job-research-14b72fcf4a8168cf`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-preload-8fa24d135cc0417a00493d88.json` (`ok=false`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
+- 最新観測run: **2026-09-25 11:27 JST** / worker `scheduled-chat-30`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -219,37 +201,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/CVIDL70130.2026.11637503` — FlashSandwich: A Hardware-Aware Hybrid SSM-Transformer Architecture with Optimized KV Cache Management for Efficient LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a310d33173ecd821.json`
-- `DOI:10.1109/TCAD.2025.3624135` — AsyncGrid: An Intralayer and Interlayer Asynchronous Hybrid Parallelism System for Responsive Edge LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a36787e70fb2243e.json`
-- `DOI:10.24963/ijcai.2026/475` — Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-af0c2125c07b340e.json`
-- `arXiv:2607.22578` — HeraSys: Collaborative Serving of Multiple LLM Workflows via Fine-Grained End-to-End Optimization / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b1f6c436e803c529.json`
-- `DOI:10.1109/TCASAI.2026.3670075` — Asymmetric KV Cache Compression Using State-Aware Sparsity and Quantization / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f57aeaf97369752d.json`
-- `arXiv:2609.23130` — From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving / worker `shared-preload-pool`
-  - claim: **09-25 11:20:20 JST** / heartbeat: **—** / lease expiry: **09-25 23:20:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-82608cb811f87a8c.json`
-- `arXiv:2506.07366` — MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing / worker `shared-preload-pool`
-  - claim: **09-25 11:18:59 JST** / heartbeat: **—** / lease expiry: **09-25 23:18:59 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6884e3d688f660cb.json`
-- `DOI:10.1145/3820441.3820479` — Towards Efficient Serving of Network-intensive LLM Inferences / worker `shared-preload-pool`
-  - claim: **09-25 11:17:45 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-dfcde3edcf70d50d.json`
-- `arXiv:2606.05875` — QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving / worker `shared-preload-pool`
-  - claim: **09-25 11:17:01 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cb7b62ec78d71f70.json`
-- `DOI:10.18653/v1/2026.acl-long.859` — SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving / worker `shared-preload-pool`
-  - claim: **09-25 11:17:01 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-db4aebb091dc7735.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **13件**
+- `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
+  - claim: **09-25 11:29:37 JST** / heartbeat: **—** / lease expiry: **09-25 23:29:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
+- `arXiv:2606.17081` — The Price of Anarchy in Disaggregated Inference / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0a4a1c707b0687af.json`
+- `DOI:10.1109/ICC59461.2026.11587970` — InKubeator: Pre-warming In-Memory KV Caches from Disk for Elastic LLM Serving / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2177bbc3f309a697.json`
+- `arXiv:2608.10545` — ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2db1a9d83c60d21c.json`
+- `arXiv:2602.11688` — GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-352411c0dfdab5c8.json`
+- `arXiv:2609.21137` — A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5b8f1951128d6fe2.json`
+- `arXiv:2609.26828` — Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-691c358850b25ecc.json`
+- `arXiv:2609.24639` — Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6e051e433e00a10f.json`
+- `arXiv:2608.14191` — KV Cache Compression Through the Lens of Transform Coding / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7b20b235b85d5367.json`
+- `arXiv:2605.22106` — ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning / worker `scheduled-chat-30`
+  - claim: **09-25 11:29:35 JST** / heartbeat: **09-25 11:29:35 JST** / lease expiry: **09-25 12:59:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-aa4e90a77166918d.json`
 
 #### Audit
 
@@ -297,8 +279,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **271** |
-| └ Research | **190** |
+| 成功result未照合のimmutable submission | **272** |
+| └ Research | **191** |
 | └ Audit | **2** |
 | └ Discovery | **52** |
 | └ Other/Unknown | **27** |
