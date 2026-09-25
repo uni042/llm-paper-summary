@@ -164,22 +164,21 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
                 self.assertEqual(result["submission_wait_seconds"], 0)
                 self.assertIn("同期障壁にしません", result["next_action_message"])
 
-    def test_pending_submission_in_600_second_window_monitors_results_without_new_claim(self):
+    def test_pending_submission_keeps_claiming_even_when_legacy_time_is_zero(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
             submission_result_pending=True,
             pipeline_ahead_count=99,
             independent_work=True,
-            seconds_to_run_deadline=600,
+            seconds_to_run_deadline=0,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "MONITOR_SUBMISSION_RESULTS")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
         self.assertEqual(result["submission_wait_seconds"], 0)
-        self.assertTrue(result["productive_wait_required"])
-        self.assertFalse(result["productive_wait_polling"])
-        self.assertIn("run_one_wait_microtask", result["submission_wait_action"])
-        self.assertIn("do_not_start_new_paper_in_handoff_window", result["submission_wait_action"])
+        self.assertFalse(result["productive_wait_required"])
+        self.assertEqual(result["submission_wait_action"], "none")
+        self.assertFalse(result["handoff_window_active"])
 
     def test_active_assignment_stays_serial_even_with_pending_submissions(self):
         result = mod.decide(make_args(
