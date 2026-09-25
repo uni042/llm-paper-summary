@@ -1,4 +1,4 @@
-# Worker router — workflow v10.17
+# Worker router — workflow v10.18
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -107,9 +107,9 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 `volatile pending durability` に入れる条件は、(1) 一次資料全文の読解と5スロット相当の完成、(2) セルフレビュー完了、(3) 通常slot/bundle/status-only/worker-control/health-probeの正規回復を各1回まで実試行してplatform safety拒否を観測、(4) GitHub readまたは同runの制御系write成功実績があること、の全てである。これはResearch/Auditの**内容完成（content completion）**を表すだけで、成功件数・preflight PASS・immutable submission・耐久完了（durable completion）には数えない。
 
-この状態ではcanonical foregroundを成功扱い・release済み扱いに捏造しない。一方、**既に同一workerへ正規claim済みのstandbyがあるなら、最古standbyをread-ahead対象として一次資料取得・全文読解・5スロット相当の作成・セルフレビューまで進めてよい。** foreground昇格やrecord route確定を要するGitHub書込み、preflight、submissionは行わず、内容完成だけを先行する。これにより1本のcontent-write拒否でrunの残り時間を捨てない。既確保standbyが無い場合は、制御系writeが生きていることを実測できるときだけ通常のclaim/direct-take経路でstandbyを補充してよい。制御系writeまで拒否された場合は新規claimを増やさず、既確保分のread-aheadに限定する。
+この状態ではcanonical foregroundを成功扱い・release済み扱いに捏造しない。**また、`volatile pending durability` を次回Scheduled Taskの再反映対象にしない。次回runは前runのcontent-write再試行に時間を使わず、新しいResearch / Audit作業を優先する。未反映の完成内容は最終報告のattempt別handoffとして残し、ユーザーが後から通常チャットでまとめてGitHub反映を指示する運用とする。通常チャットで反映済みになっていた場合はcanonical stateを確認してhandoffを解消し、再送しない。** 一方、**既に同一workerへ正規claim済みのstandbyがあるなら、最古standbyをread-ahead対象として一次資料取得・全文読解・5スロット相当の作成・セルフレビューまで進めてよい。** foreground昇格やrecord route確定を要するGitHub書込み、preflight、submissionは行わず、内容完成だけを先行する。これにより1本のcontent-write拒否でrunの残り時間を捨てない。既確保standbyが無い場合は、制御系writeが生きていることを実測できるときだけ通常のclaim/direct-take経路でstandbyを補充してよい。制御系writeまで拒否された場合は新規claimを増やさず、既確保分のread-aheadに限定する。
 
-`volatile pending durability` の成果は、run終了時のScheduled Chat最終報告に機械可読なhandoffとして残す。各attemptについて最低限 `kind/job_id/claim_id/attempt_id/worker_id/run_key/source identity/5スロット完成内容/self_review/failed_operation/last_successful_operation/recovery_attempts/observed_error/next_action` を保持する。**次回同じScheduled Chatは、同一attemptがcanonical上まだ再開可能なら一次資料を再読する前にこのhandoffを再利用し、通常のslot/bundle経路を1回だけ再試行する。** canonical identityが変わっていれば古いhandoffを別attemptへ流用しない。
+`volatile pending durability` の成果は、run終了時のScheduled Chat最終報告に機械可読なhandoffとして残す。各attemptについて最低限 `kind/job_id/claim_id/attempt_id/worker_id/run_key/source identity/5スロット完成内容/self_review/failed_operation/last_successful_operation/recovery_attempts/observed_error/next_action` を保持する。**次回同じScheduled Chatは、このhandoffの内容writeを自動再試行しない。** canonical identityとGitHub側の反映有無だけを確認し、通常チャット等ですでに反映済みならhandoffを解消する。未反映ならhandoffを維持したまま新しい作業へ進み、同じattemptの再読・slot/bundle再送にrun時間を使わない。ユーザーが通常チャットで一括反映を指示した場合にのみ、その時点の最新main・claim/attempt identity・record routeを確認して耐久反映する。canonical identityが変わっていれば古いhandoffを別attemptへ流用しない。
 
 Libraryは一次PDFキャッシュや、Libraryへ直接保存できる正規経路が実際に利用可能な場合だけ補助耐久先として使う。**作業コンテナに生成したファイルをLibraryへmaterialize/uploadできない環境では、それ自体を追加fallbackとして要求しない。** Library境界の不一致だけを理由にrunを終了せず、上記volatile handoffとread-aheadへ進む。
 
