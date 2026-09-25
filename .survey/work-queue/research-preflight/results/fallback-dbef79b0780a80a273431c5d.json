@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "fallback-dbef79b0780a80a273431c5d",
+  "kind": "research",
+  "attempt_id": "attempt-preload-ba06b04eb9857b4408e2252b",
+  "job_id": "job-research-fd194814c677a98c",
+  "record_bank": "r",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.27040-ema-elastic-and-performance-transparent-memory-across-gpus.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260925T132910JST-ema",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T04:29:10+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:1154298350500a11725a98c79e28bfbc406b04ad5cb8d99827c5025f0ba574cd",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-r/metadata.json",
+      "blob_sha": "e34d11706c225f7018cbacafca7084d5bcc6e5d7"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-r/problem_method.json",
+      "blob_sha": "6d096a23da4e1c9a5a8e3542463f2f96bad091a6"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-r/evaluation.json",
+      "blob_sha": "f064a2e76497f52ba017c416ef8ffe2fb8610c1e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-r/results.json",
+      "blob_sha": "0317e3f483ba747ca125001335fb9d4f9fccd76a"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-r/positioning.json",
+      "blob_sha": "17c8b3cd35ad5d5b5ce5ccfba023ba482ab2fd42"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short"
+  ],
+  "checked_at": "2026-09-25T05:17:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
