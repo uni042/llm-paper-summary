@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "record_bundle_mode": "quality_preflight_v1",
+  "origin": "claimed_worker",
+  "kind": "research",
+  "job_id": "job-research-1e9597cecaf6ec3b",
+  "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+  "worker_id": "scheduled-chat-30",
+  "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+  "depends_on_job_ids": [
+    "job-research-1e9597cecaf6ec3b"
+  ],
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2603.10087-pooling-engram-conditional-memory-in-large-language-models-using-cxl.md",
+  "run_key": "run-scheduled-chat-30-20260925T183229JST-a1",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T18:32:29+09:00",
+  "self_review": {
+    "primary_source_read_to_end": true,
+    "no_unverified_inference": true,
+    "summary_and_list_summary_specific": true,
+    "headline_result_grounded": true,
+    "method_end_to_end_explained": true,
+    "evaluation_conditions_and_baselines_explicit": true,
+    "results_conditions_and_interpretation_explicit": true,
+    "limitations_and_positioning_specific": true
+  },
+  "writes": [
+    {
+      "path": ".survey/work-queue/records/chat-record-j/metadata.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "metadata",
+        "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+        "job_id": "job-research-1e9597cecaf6ec3b",
+        "data": {
+          "canonical_id": "arXiv:2603.10087",
+          "arxiv_id": "2603.10087",
+          "doi": null,
+          "openreview_id": null,
+          "arxiv_categories": {
+            "primary": "cs.AR",
+            "cross_list": [
+              "cs.DC"
+            ]
+          },
+          "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+          "summary": "Engramは静的なNグラム知識を巨大な埋め込み表へ分離するため、計算量は小さい一方で数百GB級へ伸び得る記憶容量を必要とする。本研究は、その表を各推論ノードのDRAMへ複製せず、CXLスイッチ配下の共有メモリへ置く実機システムを提案する。1トークン・1層あたり約5KBという細粒度かつ離散的な読出しを、CPUではDAXマップと並列コピー、GPUではCPUを介さない専用CUDAカーネルで多数同時発行し、Engram層へ到達する前に非同期先読みする。2台の実機でSGLangへ統合した評価では、Qwen3-8B相当の模擬EngramでDRAM配置3909.7トークン/秒に対しCXL配置3895.0トークン/秒とほぼ同等で、共有化による追加低下を小さく抑えた。",
+          "list_summary": "巨大なEngram埋め込み表をCXL共有メモリへ退避し、細粒度読出しを並列化・非同期先読みすることで、各ノードへのDRAM複製を避けつつSGLangでDRAM配置に近い推論性能を実証した。",
+          "authors": [
+            "Ruiyang Ma",
+            "Teng Ma",
+            "Zhiyuan Su",
+            "Hantian Zha",
+            "Xinpeng Zhao",
+            "Xuchun Shang",
+            "Xingrui Yi",
+            "Zheng Liu",
+            "Zhu Cao",
+            "An Wu",
+            "Zhichong Dou",
+            "Ziqian Liu",
+            "Daikang Kuang",
+            "Guojie Luo"
+          ],
+          "authors_affiliations": "Peking University; Alibaba Cloud; Shandong Yingxin Computer Technology Co., Ltd; Renmin University of China; The University of Hong Kong",
+          "published": "2026-03-10",
+          "publication": "arXiv; submitted to EuroMLSys'26",
+          "publication_type": "Workshop submission / preprint",
+          "publication_status": "Preprint",
+          "lineage": "CXL memory pooling / conditional-memory offload",
+          "topics": [
+            "CXL",
+            "Engram",
+            "memory pooling",
+            "LLM inference",
+            "SGLang",
+            "hierarchical memory"
+          ],
+          "importance": "Engramのような計算疎・記憶密な新しいLLM構成要素に対し、帯域より細粒度アクセス遅延が支配的であることを示し、CXL共有メモリを実機で成立させた点が重要。",
+          "hardware_evaluation": "実機。2サーバ、各dual Intel Xeon 6766E、2×NVIDIA L20、1TiB DRAM。XConn XC50256 CXLスイッチと256GB CXLメモリカードを使用。要件分析では4×NVIDIA H200上のQwen3-32Bも測定。",
+          "quality_effect": "公開Engram重みがないためQwen3-4B/8BでEngram計算と取得を模擬し、取得埋め込みを隠れ状態へ加算していない。したがってモデル品質の同等性は評価対象外で、システム性能のみを測る。",
+          "source": "https://arxiv.org/abs/2603.10087",
+          "sources": [
+            "https://arxiv.org/abs/2603.10087",
+            "https://arxiv.org/html/2603.10087v1"
+          ],
+          "code": null,
+          "implementation": "SGLangへ試作統合。CXL→CPUはDAX上のOpenMP並列コピー、CXL→GPUは登録済みCXL領域を直接読む専用CUDAカーネルを実装。論文から公式公開コードは確認できない。",
+          "last_checked": "2026-09-25",
+          "references": [
+            {
+              "canonical_id": "arXiv:2501.14743",
+              "arxiv_id": "2501.14743"
+            },
+            {
+              "canonical_id": "arXiv:2601.07372",
+              "arxiv_id": "2601.07372"
+            },
+            {
+              "canonical_id": "arXiv:2412.19437",
+              "arxiv_id": "2412.19437"
+            },
+            {
+              "canonical_id": "arXiv:2512.02556",
+              "arxiv_id": "2512.02556"
+            },
+            {
+              "canonical_id": "arXiv:2505.09388",
+              "arxiv_id": "2505.09388"
+            },
+            {
+              "canonical_id": "arXiv:2511.20172",
+              "arxiv_id": "2511.20172"
+            },
+            {
+              "canonical_id": "arXiv:2512.18194",
+              "arxiv_id": "2512.18194"
+            }
+          ],
+          "references_checked_at": "2026-09-25",
+          "references_source": "primary-reference-section",
+          "references_total": 22
+        },
+        "reservation": {
+          "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-j/problem_method.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "problem_method",
+        "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+        "job_id": "job-research-1e9597cecaf6ec3b",
+        "data": {
+          "problem": "Engramは、推論中に変化しないNグラム知識を巨大な埋め込み表へ置き、必要な項目だけを参照する条件付きメモリである。将来は表が数百GB級へ成長し得るため、各推論ノードのDRAMへ同じ表を複製すると容量費用が支配的になる。一方、1トークン・1層あたりの取得量は約5KBで、16個の小さな埋め込みへ散在する。平均帯域はQwen3-32B相当の分析で約0.7GB/sにすぎないが、早いEngram層では先読み完了まで約56マイクロ秒しかない。したがって問題は大帯域転送ではなく、細粒度・離散アクセスを極短時間で終える遅延である。RDMAの一般的なメッセージ型経路は小パケット効率と管理処理が不利で、このアクセス形状には合いにくい。",
+          "novelty": "提案の中心は、Engram表をCXLスイッチ配下の共有メモリへ一度だけ置き、複数推論サーバからロード／ストア型で直接参照することである。KVキャッシュのようなMB〜GB級の一括転送ではなく、数百バイト単位の散在読出しを大量に同時発行する点に合わせ、CPUとGPUで別の専用取得経路を設計する。さらに、Nグラム索引が中間隠れ状態に依存しない性質を使い、生成ステップの早い段階から先読みしてCXL遅延をTransformer層の計算へ重ねる。",
+          "method_overview": "初期化時にCXLメモリカードをDAXとして利用者空間へマップし、クラスタ全体で一つのEngram表を共有する。SGLangでは各ノードの最小ランクがローカルCXL領域を設定し、クラスタ全体では一つのランクだけが表を共有メモリへロードする。各プリフィルまたはデコードのバッチが到着すると、入力トークンIDからNグラムとハッシュ索引を計算できるため、対象Engram層の隠れ状態を待たずに必要埋め込みの取得を開始する。CPU経路ではDAX上のアドレスを通常メモリのように扱い、OpenMPで多数のコピーを並列化する。GPU経路ではCXL領域をCUDAのホストメモリとして登録し、個々の小転送ごとにコピーAPIを呼ばず、広いグリッドの単一CUDAカーネルからCXLアドレスを直接読んでGPUメモリへ集約する。これによりCPU中継と多数の起動オーバーヘッドを避ける。取得は非同期に進み、Engram層へ到達した時点で埋め込みを利用する。各データ並列・テンソル並列・パイプライン並列のランクは必要な埋め込みを共有プールから直接取得するため、各サーバに巨大表を複製しなくてよい。帯域要求が小さいため共有化しやすいが、早い層の短い先読み窓を超えると計算が待たされる。",
+          "components": [
+            {
+              "name": "CXL共有Engramプール",
+              "description": "XConn XC50256スイッチの背後へCXLメモリを置き、複数サーバから同じEngram表を共有する。試作では256GBカードへ表を連続配置し、DAXでアドレス空間へ直接マップする。Engramは推論中に読取り専用なので、ノード間で更新整合性を維持する費用を避けられる。各ノードへ表全体を複製する方式と違い、ノード数が増えてもEngram容量を同じ比率で増やす必要がなく、共有設備の固定費を多数ノードで償却できる。反面、CXLスイッチとアダプタが必須で、小規模構成では固定費がDRAM複製より高い。"
+            },
+            {
+              "name": "細粒度並列取得経路",
+              "description": "1トークンあたり8個のハッシュ先から各320バイトなど、離散した小領域を多数読むため、単純な逐次コピーではPCIe帯域を使い切れない。CPU側はOpenMPの静的分割で64スレッドから並列コピーし、GPU側はCXL領域を登録したうえで多数の小さなコピー呼出しを一つのCUDAカーネルへ融合する。各ブロックが別埋め込みを読み、GPUスケジューラが多数の要求を重ねることで、細粒度アクセスの起動・ソフトウェア処理費を抑える。GPU直接経路はCPUを中継しないが、CXL→CPUより遅延は高く、先読み窓内に収まることが必要である。"
+            },
+            {
+              "name": "トークンID先行の非同期先読み",
+              "description": "Engramの参照先は現在の隠れ状態ではなくNグラムのトークンIDから決まるため、対象Engram層へ到達する前にアドレスを確定できる。SGLangのForwardBatch受領時に取得を非同期起動し、前段Transformer層の計算とCXL読出しを重ねる。例えば分析対象では層2のEngramまで約56マイクロ秒しかなく、この窓が実質的な遅延上限になる。取得が窓を超えればGPU計算が待つため、方式の成立性は平均帯域ではなく小要求の尾部遅延と同時発行性能に依存する。"
+            }
+          ],
+          "system_design": "共有プールは容量の集約、専用取得経路は細粒度転送の並列化、非同期先読みは残るCXL遅延の隠蔽を担当する。1生成ステップでは、まず入力トークンIDから将来必要なEngram索引を計算し、CXLからGPUへの取得を開始する。同時に通常のTransformer前段を実行し、Engram層へ到達した時点で取得済み埋め込みを利用する。共有表が読取り専用なので各ランクは独立に同じプールへアクセスできる。プール混雑や早い層で先読みが間に合わない場合は待ち時間が表面化し、論文はKVキャッシュとの共有時の資源競合を未解決課題として残している。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-j/evaluation.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "evaluation",
+        "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+        "job_id": "job-research-1e9597cecaf6ec3b",
+        "data": {
+          "hardware": "主実験は2台のサーバ。各サーバはdual Intel Xeon 6766E、合計288コア・1.9GHz、216MiB L3、2×NVIDIA L20、1TiBローカルメモリ、Ubuntu 22.04.5。XConn XC50256 CXLスイッチとMontage M88MX5851制御器を備える256GB CXLメモリカードを接続。要件分析では4×NVIDIA H200上のQwen3-32Bも用いた。",
+          "software": "SGLangへCXL Engram取得を試作統合。CPU取得はDAX mmapとOpenMP、GPU取得はcudaHostRegisterしたCXL領域を読む専用CUDAカーネル。RDMA比較はMooncake Store。",
+          "methodology": "Engram-27BとEngram-40B相当の表で取得遅延を測り、RDMA・ローカルDRAM・CXLを比較する。エンドツーエンドでは公開EngramモデルがないためQwen3-4B/8BへEngram計算と取得を挿入し、バッチ256、入出力各512トークン、単一L20でスループットを測定する。さらにデータ並列度とノード数を増やし共有プールへの同時アクセスを評価し、100B/400B相当Engramについてハードウェア費用を試算する。",
+          "scope": "CXL 2.0級実機上のシステム評価でありシミュレーションではない。ただし実モデルのEngram重みは非公開のため、Qwen3上では取得埋め込みを隠れ状態へ加えず性能負荷だけを模擬している。したがってモデル品質や実Engramのアクセス分布、より大規模な8サーバ級共有時の競合は直接検証していない。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-j/results.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "results",
+        "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+        "job_id": "job-research-1e9597cecaf6ec3b",
+        "data": {
+          "overview": "エンドツーエンドではCXL共有化の追加費用はローカルDRAM上のEngramに対して小さい。Qwen3-4BではDRAM 5683.7トークン/秒に対しCXL 5614.4、Qwen3-8Bでは3909.7に対し3895.0で、CXL化による差はそれぞれ約1.2%と0.4%にとどまる。2ノード化でもQwen3-8BのDP=2で5661.5から5629.7トークン/秒への低下に収まり、細粒度アクセスを共有プールへ集約しても試作規模では大きな競合が出ていない。一方、Engram自体を追加するとベースラインよりスループットは低下するため、論文の主張はEngramが無料という意味ではなく、Engramを置く場所をDRAMからCXLへ変える追加損失が小さいという点にある。",
+          "key_results": [
+            {
+              "metric": "Qwen3-8B エンドツーエンドスループット",
+              "value": "3895.0 tokens/s",
+              "baseline": "EngramをローカルDRAMへ置いた3909.7 tokens/s",
+              "condition": "単一NVIDIA L20、DP=1、バッチ256、入力512・出力512トークン",
+              "interpretation": "CXL共有化による追加低下は約0.4%で、先読みと直接取得がCXL遅延の大半を隠せている。"
+            },
+            {
+              "metric": "Qwen3-4B エンドツーエンドスループット",
+              "value": "5614.4 tokens/s",
+              "baseline": "EngramをローカルDRAMへ置いた5683.7 tokens/s",
+              "condition": "単一NVIDIA L20、DP=1、バッチ256、入力512・出力512トークン",
+              "interpretation": "CXL化の追加低下は約1.2%。ベースライン6183.9 tokens/sとの差はEngram計算自体も含むため、CXLだけの費用と分けて読む必要がある。"
+            },
+            {
+              "metric": "2ノード共有時のQwen3-8B DP=2",
+              "value": "5629.7 tokens/s",
+              "baseline": "1ノードでDP=2の5661.5 tokens/s",
+              "condition": "CXL Engram、DP=2、nnode=2",
+              "interpretation": "2台から同じ共有プールへアクセスしても低下は約0.6%で、試作規模では共有CXLがボトルネック化していない。"
+            },
+            {
+              "metric": "100B Engram・16ノードの試算費用",
+              "value": "CXL pool $16,960",
+              "baseline": "各ノードにローカルDRAMを複製する$48,000",
+              "condition": "論文の部品単価仮定に基づく資本費用試算",
+              "interpretation": "固定スイッチ費用を多数ノードで償却できるため大規模ほど共有化が有利になる。一方2ノード100BではCXLの方が$3,820高い。"
+            }
+          ],
+          "negative_results": "一般的なMooncake Storeを用いたRDMA経路は、中央管理と離散小パケットのget_batch処理がボトルネックとなり、ローカルDRAMより桁違いに高い取得遅延を示した。CXL→GPUの直接読出しもCXL→CPUより遅い。また100B Engramを2ノードだけで使う費用試算では、ローカルDRAM $6,000に対しCXLプール $9,820で小規模構成は不利である。",
+          "interpretation": "Engramは平均帯域要求が約0.7GB/sと低い一方、層2までの先読み窓が約56マイクロ秒と短いため、性能は帯域容量より細粒度要求の処理遅延に支配される。CXLはロード／ストア型で小要求を扱え、専用並列取得と先読みを組み合わせることでDRAMとの差を隠しやすい。RDMAも小要求の集約や直接P2P転送、ホット埋め込みのDRAMキャッシュを設計すれば改善余地があると著者らは述べる。",
+          "quality_impact": "近似・量子化・枝刈りを使う方式ではないため、CXL配置そのものは理論上モデル出力を変えない。ただし評価では公開Engram重みがなく、取得した埋め込みを隠れ状態へ実際には加えていないため、品質無損失性を実モデルで検証したわけではない。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-j/positioning.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "positioning",
+        "attempt_id": "attempt-preload-81984cfdaed69bbd424098a4",
+        "job_id": "job-research-1e9597cecaf6ec3b",
+        "data": {
+          "limitations": "公開Engramモデルと重みがないため、Qwen3-4B/8Bへ負荷を模擬した評価であり、実際のEngram品質とアクセス分布を再現していない。試作は2サーバ・256GB CXLカード規模で、スイッチ仕様上の最大8サーバ・4TB構成は実測していない。CXLハードウェアへの依存が強く、小規模では固定設備費がローカルDRAMより高い。KVキャッシュとEngramを同じプールへ置いた場合の容量配分とアクセス競合は未解決。RDMA比較も汎用Mooncake Storeであり、Engram向けに小要求集約や直接P2Pを最適化したRDMAとの公平な最終比較ではない。",
+          "differences": "MooncakeやLMCacheなど従来の遠隔メモリ活用は主にKVキャッシュをMB〜GB単位で移動し、RDMAのメッセージ転送を前提とする。本研究は推論中に不変なEngram埋め込み表を対象とし、1トークン・1層あたり約5KBを多数の小領域から読むため、CXLのキャッシュライン粒度ロード／ストアと高並列取得を選ぶ。BelugaやTraCTもCXLをLLMへ用いるが対象はKVキャッシュであり、本研究は条件付きメモリという別の記憶階層を共有化する。重み全体を層単位で退避する一般的なオフロードとも異なり、毎ステップで表のごく一部だけを索引参照する。",
+          "implementation_status": "SGLangへ統合した研究試作。DAXマッピング、OpenMP CPU読出し、CXL領域を直接読むCUDAカーネル、ForwardBatch受領時の非同期先読みを実装して実機測定している。論文本文とarXivページから公式コード公開先は確認できないため、上流SGLangへ正式統合済みとは扱わない。",
+          "research_positioning": "階層メモリ研究としては、容量の大きいがアクセス量の少ない状態を共有CXLへ置き、計算に先行して必要部分だけを取得する設計例である。特に『必要帯域は小さいのに短い先読み期限が支配する』という分析は、KVキャッシュやMoE重みとは異なるオフロード対象を選ぶ際の判断軸になる。今後はEngramとKVキャッシュを同じCXLプールへ置いたときの優先制御、ホット項目のDRAMキャッシュ、RDMAとの適応的使い分けが隣接課題になる。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-81984cfdaed69bbd424098a4",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    }
+  ]
+}
