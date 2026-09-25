@@ -192,6 +192,12 @@ def _descriptor_path(repo: Path, payload: dict[str, Any]) -> Path:
 
 
 def _write_descriptor(repo: Path, payload: dict[str, Any], descriptor: dict[str, Any]) -> bool:
+    if descriptor.get("status", "completed") == "completed":
+        expected_preflight = payload.get("preflight_result")
+        if descriptor.get("preflight_result") != expected_preflight:
+            raise ValueError(
+                "completed descriptor must carry the exact passing preflight_result provenance"
+            )
     path = _descriptor_path(repo, payload)
     if path.exists():
         current = _read_object(path)
