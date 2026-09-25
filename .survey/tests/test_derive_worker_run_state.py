@@ -271,6 +271,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 "claim_id": "claim-write-blocked",
                 "attempt_id": "attempt-write-blocked",
                 "reason": mod.WRITE_BLOCKED_REASON,
+                "source_reason": "primary_full_text_unavailable",
                 "observed_error": "platform safety rejected record and status-only writes",
             }
             write_json(
@@ -316,7 +317,9 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             job = json.loads((root / ".survey/work-queue/jobs/job-write-blocked.json").read_text())
             claim = json.loads((root / ".survey/work-queue/claims/job-write-blocked.json").read_text())
             self.assertEqual(job["status"], "blocked")
-            self.assertEqual(job["blocker"], mod.WRITE_BLOCKED_REASON)
+            self.assertEqual(job["blocker"], "primary_full_text_unavailable")
+            self.assertEqual(job["write_blocked_source_reason"], "primary_full_text_unavailable")
+            self.assertEqual(job["write_blocked_transport_reason"], mod.WRITE_BLOCKED_REASON)
             self.assertIn("retry_not_before", job)
             self.assertIn("released_at", claim)
             self.assertEqual(claim["release_reason"], mod.WRITE_BLOCKED_REASON)
@@ -326,6 +329,76 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["gate"]["decision"], "CONTINUE")
             self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
             self.assertFalse(result["run_termination_allowed"])
+
+    def test_transport_stop_requires_failed_health_probe(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "transport_unrecoverable"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_detail"] = "run-state control write was rejected twice"
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(
+                result["runtime_condition_ignored_reason"],
+                "transport_stop_requires_failed_health_probe",
+            )
+            self.assertFalse(result["run_termination_allowed"])
+
+    def test_successful_health_probe_disproves_transport_stop(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "durable_transports_unavailable"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_detail"] = "target-specific writes failed"
+            value["transport_health_probe_attempted"] = True
+            value["transport_health_probe_succeeded"] = True
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(
+                result["runtime_condition_ignored_reason"],
+                "transport_health_probe_succeeded",
+            )
+            self.assertFalse(result["run_termination_allowed"])
+
+    def test_failed_health_probe_allows_confirmed_transport_stop(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "transport_unrecoverable"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_detail"] = "health probe and required control writes were rejected"
+            value["transport_health_probe_attempted"] = True
+            value["transport_health_probe_succeeded"] = False
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "transport_unrecoverable")
+            self.assertTrue(result["transport_health_probe_attempted"])
+            self.assertFalse(result["transport_health_probe_succeeded"])
+            self.assertEqual(result["gate"]["decision"], "STOP_RUN")
+            self.assertTrue(result["stop_permit"]["issued"])
+            self.assertTrue(result["run_termination_allowed"])
 
     def test_bare_finalization_permit_without_approved_stop_reason_is_not_enough(self):
         permit = mod._build_stop_permit(
