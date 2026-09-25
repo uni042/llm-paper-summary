@@ -11,9 +11,8 @@ Transport backlogs, claim-result propagation delay, and job-local failures are n
 stop conditions when repository state remains readable and no explicit hard
 condition holds.
 
-Hourly Scheduled Chat workers use a one-hour run window measured from the actual
-invocation start. The nominal :00/:30 schedule boundary is retained only as a
-compatibility fallback when a caller cannot provide the actual-start deadline.
+Legacy deadline/schedule fields are accepted for read compatibility and telemetry only.
+They never suppress work, create a handoff window, or authorize run finalization.
 """
 from __future__ import annotations
 
@@ -210,7 +209,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             finalization_allowed = False
         elif (
             discovery_pipeline_work_available
-            and not handoff_window_active
             and (discovery_precheck_result_pending or discovery_submission_result_pending)
         ):
             decision = "CONTINUE"
@@ -244,8 +242,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             elif not submission_state_checked:
                 required_action = "CHECK_SUBMISSION_STATE"
             elif (
-                not handoff_window_active
-                and independent_work
+                independent_work
                 and claim_window_remaining > 0
                 and claim_refill_needed
             ):
@@ -256,7 +253,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif (
             transient_claim_wait
             and prepared_research_packet_available
-            and not handoff_window_active
         ):
             # A pending normal claim request must not become the only foreground
             # activity when the shared preload FIFO still exposes a create-only
@@ -280,9 +276,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             finalization_allowed = False
         elif transient_submission_wait:
             decision = "CONTINUE"
-            if handoff_window_active:
-                required_action = "MONITOR_SUBMISSION_RESULTS"
-            elif independent_work:
+            if independent_work:
                 required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             else:
                 required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
@@ -354,9 +348,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if required_action == "MONITOR_SUBMISSION_RESULTS":
         submission_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         submission_wait_action = (
-            "do_not_start_new_paper_in_handoff_window; keep_all_pending_submission_identities; "
-            "run_one_wait_microtask; refresh_latest_head_and_pending_submission_results; "
-            "follow_each_result_next_action_or_recovery_steps; repeat_until_result_or_final_180_second_handoff"
+            "keep_all_pending_submission_identities; run_one_wait_microtask; "
+            "refresh_latest_head_and_pending_submission_results; "
+            "follow_each_result_next_action_or_recovery_steps; repeat_until_result_or_terminal_hard_stop"
         )
 
     discovery_wait_action = "none"
@@ -366,14 +360,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         discovery_wait_action = (
             "keep_same_discovery_precheck_request; run_one_wait_microtask; refresh_latest_head_and_matching_precheck_result; "
             "periodic_discovery_precheck_recovery_will_reprocess_orphaned_requests; "
-            "repeat_until_result_or_final_180_second_handoff"
+            "repeat_until_result_or_terminal_hard_stop"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
         discovery_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         discovery_wait_action = (
             "keep_same_discovery_submission; run_one_wait_microtask; refresh_latest_head_and_matching_discovery_result; "
             "periodic_discovery_submission_recovery_will_reprocess_orphaned_submissions; "
-            "repeat_until_result_or_final_180_second_handoff"
+            "repeat_until_result_or_terminal_hard_stop"
         )
     elif required_action == "CONTINUE_DISCOVERY_PIPELINE":
         discovery_wait_action = (
@@ -396,18 +390,18 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
     elif required_action == "MONITOR_SUBMISSION_RESULTS":
         progress_notice = (
-            "残り600秒以下の開始禁止窓に入っているため新しい論文は開始しません。"
-            "既存の未確定submission result待ちでは短い待機ミクロタスクを1件処理してから結果を再確認し、返されたnext_action / recovery_stepsに従います。"
+            "claimableな独立Research/Auditが無いため、未確定submission resultを追跡します。"
+            "短い待機ミクロタスクを1件処理してから結果を再確認し、返されたnext_action / recovery_stepsに従います。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
         progress_notice = (
-            "開始済みDiscovery precheckのresultを待っています。残り600秒の開始禁止窓に入っても"
-            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じrequestを再確認します。"
+            "開始済みDiscovery precheckのresultを待っています。"
+            "短い待機ミクロタスクを1件処理するたびに同じrequestを再確認し、時間を理由にroundを終了しません。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
         progress_notice = (
-            "開始済みDiscovery submissionのresultを待っています。残り600秒の開始禁止窓に入っても"
-            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じsubmissionを再確認します。"
+            "開始済みDiscovery submissionのresultを待っています。"
+            "短い待機ミクロタスクを1件処理するたびに同じsubmissionを再確認し、時間を理由にroundを終了しません。"
         )
     elif required_action == "CONTINUE_DISCOVERY_PIPELINE":
         progress_notice = (
@@ -433,7 +427,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
         next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        if transient_claim_wait and prepared_research_packet_available and not handoff_window_active:
+        if transient_claim_wait and prepared_research_packet_available:
             next_action_message = (
                 "既存の通常claim requestは同じrequest_idのまま追跡しますが、そのresult待ちを前景作業にはしません。"
                 "hot-dispatchの準備済みResearch/Audit packetをcreate-only direct takeで確保し、成功直後から一次資料取得・全文読解を開始します。"
@@ -520,7 +514,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action == "CLAIM_NEXT_RESEARCH_AUDIT"
             and transient_claim_wait
             and prepared_research_packet_available
-            and not handoff_window_active
         ),
         "claim_wait_action": claim_wait_action,
         "claim_wait_seconds": claim_wait_seconds,
