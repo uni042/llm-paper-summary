@@ -3,17 +3,17 @@
   "workflow_version": 10,
   "claim_id": "claim-preload-f948c666c29083971ca348dd",
   "job_id": "job-research-0a4a1c707b0687af",
-  "worker_id": "shared-preload-pool",
-  "worker_kind": "work",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
   "attempt_id": "attempt-preload-f948c666c29083971ca348dd",
-  "claimed_at": "2026-09-24T15:26:58+00:00",
+  "claimed_at": "2026-09-25T02:29:35+00:00",
   "preloaded_at": "2026-09-24T15:26:58+00:00",
-  "expires_at": "2026-09-25T09:28:37+00:00",
+  "expires_at": "2026-09-25T03:59:35+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-0a4a1c707b0687af"
   ],
-  "preload_pool": true,
+  "preload_pool": false,
   "pool_order": 301,
   "stock_bank": "n",
   "stock_lane": "research",
@@ -21,5 +21,12 @@
   "previous_claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
   "released": false,
   "invalidated": false,
-  "heartbeat_at": "2026-09-24T21:28:37+00:00"
+  "heartbeat_at": "2026-09-25T02:29:35+00:00",
+  "preload_pool_adopted_at": "2026-09-25T02:29:35+00:00",
+  "preload_pool_worker_id": "shared-preload-pool",
+  "request_id": "direct-refill-e5dc3793861b5f61069b36af",
+  "pipeline_order": 10,
+  "run_key": "scheduled-chat-30-20260925T112751JST-a41c7e",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T02:27:51+00:00"
 }

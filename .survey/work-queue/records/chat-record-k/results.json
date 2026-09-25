@@ -2,44 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
-  "job_id": "job-research-12d29ccbbefd4d02",
-  "data": {
-    "overview": "L2 normが低いkeyを保持する単純な規則でも、長文検索とlanguage modelingの双方で中程度から強いKV削減に耐えた。Llama-2-7B-80Kのneedle-in-a-haystackではKVを50%削減して99% accuracyを維持し、passkey retrievalでは90%削減でも100% accuracyだった。一般のlanguage-model評価でも最大およそ50%圧縮まではperplexityへの影響が小さい。これはattention scoreを取得しない軽量proxyでも、FlashAttention互換性を保ちながら実用的なKV memory削減余地があることを示す。ただし90%無損失はpasskeyという限定タスクであり、強圧縮を一般品質へそのまま外挿できない。",
-    "key_results": [
-      {
-        "metric": "Needle-in-a-Haystack accuracy",
-        "value": "99%",
-        "baseline": "無圧縮はほぼ100%",
-        "condition": "Llama-2-7B-80K、KVを50%削減",
-        "interpretation": "半分のKVを除去しても検索能力をほぼ維持した。"
-      },
-      {
-        "metric": "Passkey Retrieval accuracy",
-        "value": "100%",
-        "baseline": "無圧縮100%",
-        "condition": "KVを90%削減",
-        "interpretation": "高い圧縮率でも検索精度を維持した。"
-      },
-      {
-        "metric": "言語モデル品質",
-        "value": "最大約50%圧縮まで困惑度をほぼ維持",
-        "baseline": "無圧縮KV",
-        "condition": "言語モデル評価",
-        "interpretation": "一般的な次トークン予測でも有効な重要度代理になった。"
-      }
-    ],
-    "negative_results": [
-      "初期層などではL2ノルムと注意重みの相関が弱い。",
-      "過度な圧縮では品質が劣化し得る。",
-      "エンドツーエンド速度の包括的実測は限定的である。"
-    ],
-    "interpretation": "key生成時点の幾何量で重要度を推定するため、注意行列を明示しない高速カーネルと両立しやすい。",
-    "quality_impact": "中程度の圧縮では品質低下が小さいが、90%無損失はpasskey retrievalの条件であり一般化には注意が必要である。"
-  },
+  "attempt_id": "attempt-preload-206fb235c690594ced0b9e7b",
+  "job_id": "job-research-dc4a4c510a11a85f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-6b239632cba886a9b742dc0e",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-preload-206fb235c690594ced0b9e7b",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
