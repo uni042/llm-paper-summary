@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 10:22:07 JST**
+> 自動生成: **2026-09-25 10:24:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **351** |
-| 未claim Research job | **207** |
+| 収録候補論文 | **352** |
+| 未claim Research job | **208** |
 | 直近24hの検証済みResearch収録 | **17** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
-| 最終検証済みDiscovery探索 | **09-25 10:21:04 JST** |
+| 最終検証済みDiscovery探索 | **09-25 10:24:30 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **351** |
+| canonical_id確認済みの一意な候補論文 | **352** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **351** |
+| 非終端Research job合計 | **352** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（25時間46分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（25時間48分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,10 +72,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **27** | **12** | **12** | **0** | **0** | **0** | **17** |
-| 合計 | **27** | **13** | **12** | **0** | **144** | **0** | **17** |
+| Discovery | **28** | **13** | **13** | **0** | **0** | **0** | **18** |
+| 合計 | **28** | **14** | **13** | **0** | **144** | **0** | **18** |
 
-- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -107,6 +107,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-a7d3c1-r10.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r10.json`
   - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
+- **09-25 10:24:30 JST** job `job-2e6202ada7be9311` / 候補 **1件**
+  - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-a7d3c1-r13.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r13.json`
+  - 探索軸: preload-backward-structured-references
 - **09-25 10:11:27 JST** job `job-fe1bbc1571772ef9` / 候補 **3件**
   - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-a7d3c1-r4.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r4.json`
@@ -127,10 +131,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/frontier-4894a37f20e344e51ca3a409-s1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json`
   - 探索軸: preload-backward-structured-references
-- **09-25 10:11:52 JST** job `job-8a4a83bdaed432d9` / 候補 **1件**
-  - result: `.survey/work-queue/results/frontier-8430fe0ed7339d72ee413a87.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/frontier-8430fe0ed7339d72ee413a87.json`
-  - 探索軸: preload-backward-structured-references
 
 ### 直近タスク
 
@@ -150,7 +150,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-25 10:00 JST**
-- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **0件** / 候補: **17件**
+- 耐久探索round: **13件** / immutable submission: **13件** / 検証済み成功result: **13件** / 個別result照合: **13件** / 個別result未照合: **0件** / 候補: **18件**
 - 探索軸: preload-backward-structured-references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of LMCache enterprise-scale KV cache layer / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
 - round `frontier-6e420014d069bd1f908e6df1` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/closure-a7d3c1-r10b.json`
@@ -168,6 +168,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r10.json`
   - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
   - 個別result照合: あり / `.survey/work-queue/results/disc-take-scheduled-chat-00-a7d3c1-r10.json` (`ok=true`)
+- round `disc-take-scheduled-chat-00-a7d3c1-r13` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r13.json`
+  - 探索軸: preload-backward-structured-references
+  - 個別result照合: あり / `.survey/work-queue/results/disc-take-scheduled-chat-00-a7d3c1-r13.json` (`ok=true`)
 - round `disc-take-scheduled-chat-00-a7d3c1-r4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-a7d3c1-r4.json`
   - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
@@ -188,10 +192,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - submission: `.survey/work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json`
   - 探索軸: preload-backward-structured-references
   - 個別result照合: あり / `.survey/work-queue/results/frontier-4894a37f20e344e51ca3a409-s1.json` (`ok=true`)
-- round `frontier-8430fe0ed7339d72ee413a87` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery/frontier-8430fe0ed7339d72ee413a87.json`
-  - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/frontier-8430fe0ed7339d72ee413a87.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -247,7 +247,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **351** |
+| ready | **352** |
 
 ### 候補の重複・識別情報欠損
 
