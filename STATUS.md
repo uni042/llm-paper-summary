@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 10:24:35 JST**
+> 自動生成: **2026-09-25 10:26:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **352** |
-| 未claim Research job | **208** |
+| 収録候補論文 | **353** |
+| 未claim Research job | **209** |
 | 直近24hの検証済みResearch収録 | **17** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
-| 最終検証済みDiscovery探索 | **09-25 10:24:30 JST** |
+| 最終検証済みDiscovery探索 | **09-25 10:26:34 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **352** |
+| canonical_id確認済みの一意な候補論文 | **353** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **352** |
+| 非終端Research job合計 | **353** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（25時間48分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（25時間50分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,10 +72,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **28** | **13** | **13** | **0** | **0** | **0** | **18** |
-| 合計 | **28** | **14** | **13** | **0** | **144** | **0** | **18** |
+| Discovery | **29** | **15** | **14** | **0** | **0** | **0** | **19** |
+| 合計 | **29** | **16** | **14** | **0** | **144** | **0** | **19** |
 
-- 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -91,6 +91,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
+- **09-25 10:26:34 JST** job `job-9a8b589124b7b33a` / 候補 **1件**
+  - result: `.survey/work-queue/results/a7d3c1-13b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/a7d3c1-13b.json`
+  - 探索軸: forward citations of KVLink efficient KV cache reuse
 - **09-25 10:20:58 JST** job `job-ef360b3ddacb49ca` / 候補 **0件**
   - result: `.survey/work-queue/results/closure-a7d3c1-r10b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/closure-a7d3c1-r10b.json`
@@ -127,10 +131,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/frontier-2dc3d20552047e7e7b31b1a7-s1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/frontier-2dc3d20552047e7e7b31b1a7-s1.json`
   - 探索軸: preload-backward-structured-references
-- **09-25 10:16:37 JST** job `job-dbdc16adf7e60d2c` / 候補 **1件**
-  - result: `.survey/work-queue/results/frontier-4894a37f20e344e51ca3a409-s1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json`
-  - 探索軸: preload-backward-structured-references
 
 ### 直近タスク
 
@@ -150,8 +150,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-25 10:00 JST**
-- 耐久探索round: **13件** / immutable submission: **13件** / 検証済み成功result: **13件** / 個別result照合: **13件** / 個別result未照合: **0件** / 候補: **18件**
-- 探索軸: preload-backward-structured-references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of LMCache enterprise-scale KV cache layer / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
+- 耐久探索round: **15件** / immutable submission: **15件** / 検証済み成功result: **14件** / 個別result照合: **14件** / 個別result未照合: **1件** / 候補: **19件**
+- 探索軸: forward / forward citations of KVLink efficient KV cache reuse / preload-backward-structured-references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of LMCache enterprise-scale KV cache layer / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
+- round `frontier-0a81cf7d3cc4fc75ac4c1605` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/a7d3c1-13a.json`
+  - 探索軸: forward
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `frontier-2eb0f8e747ce792c0837f431` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/discovery/a7d3c1-13b.json`
+  - 探索軸: forward citations of KVLink efficient KV cache reuse
+  - 個別result照合: あり / `.survey/work-queue/results/a7d3c1-13b.json` (`ok=true`)
 - round `frontier-6e420014d069bd1f908e6df1` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/closure-a7d3c1-r10b.json`
   - 探索軸: preload-backward-structured-references
@@ -184,14 +192,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - submission: `.survey/work-queue/submissions/discovery/frontier-1f4d6cb839c6536c9c6be0c9-s1.json`
   - 探索軸: preload-backward-structured-references
   - 個別result照合: あり / `.survey/work-queue/results/frontier-1f4d6cb839c6536c9c6be0c9-s1.json` (`ok=true`)
-- round `frontier-2dc3d20552047e7e7b31b1a7` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery/frontier-2dc3d20552047e7e7b31b1a7-s1.json`
-  - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/frontier-2dc3d20552047e7e7b31b1a7-s1.json` (`ok=true`)
-- round `frontier-4894a37f20e344e51ca3a409` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json`
-  - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/frontier-4894a37f20e344e51ca3a409-s1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -247,7 +247,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **352** |
+| ready | **353** |
 
 ### 候補の重複・識別情報欠損
 
@@ -275,10 +275,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **259** |
+| 成功result未照合のimmutable submission | **260** |
 | └ Research | **179** |
 | └ Audit | **2** |
-| └ Discovery | **51** |
+| └ Discovery | **52** |
 | └ Other/Unknown | **27** |
 
 ### 厳格検証が未成立のcompleted job

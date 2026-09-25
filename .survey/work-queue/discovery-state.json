@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-25T01:24:30+00:00",
+  "updated_at": "2026-09-25T01:26:34+00:00",
   "last_run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
-  "last_round": "disc-take-scheduled-chat-00-a7d3c1-r13",
+  "last_round": "frontier-2eb0f8e747ce792c0837f431",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,37 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-18T20:00:00+09:00",
-      "round": "specialist-memory-specdecode-1",
-      "axis": "UVM oversubscription・投機的復号state reuse・stale KV repair",
-      "query_summary": "2026年9月新着をmemory/runtime/speculative decoding軸で複数検索窓から収集。最新HEADのarXiv-2609 identity shardで既知候補を先に除外し、未収録のAutoUVM、DFlow、Carryover Drafting、LoopSpec、stale-KV repairを一次arXiv identityへ正規化して採用した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.23658",
-        "arXiv:2605.03375",
-        "arXiv:2607.16892",
-        "arXiv:2606.16135",
-        "arXiv:2609.17943",
-        "arXiv:2609.00355",
-        "arXiv:2609.07966",
-        "arXiv:2609.10266",
-        "arXiv:2609.11133",
-        "arXiv:2609.16161",
-        "arXiv:2609.14237",
-        "arXiv:2609.15359"
-      ],
-      "next_axis_hint": "新着のserving measurement/replicated KV correctnessを確認後、MoE routing predictionとforward/backward citationへ移る",
-      "source_submission": "work-queue/submissions/20260918T2001JST-discovery-specialist-memory-specdecode-1.json"
-    },
     {
       "run_key": "2026-09-18T20:00:00+09:00",
       "round": "specialist-serving-measurement-2",
@@ -10035,6 +10004,40 @@
       "duplicate_ratio": 0.95,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:frontier-2eb0f8e747ce792c0837f431",
+      "precheck_request_id": "frontier-2eb0f8e747ce792c0837f431",
+      "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+      "round": "frontier-2eb0f8e747ce792c0837f431",
+      "axis": "forward citations of KVLink efficient KV cache reuse",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-3ff437682c7ba1e6b3d3",
+      "candidate_count": 13,
+      "duplicate_filtered_count": 12,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/discovery/a7d3c1-13b.json",
+      "source_submissions": [
+        "work-queue/submissions/discovery/a7d3c1-13b.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.9230769230769231,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -17717,15 +17720,15 @@
       "next_axis_hint": null
     },
     "forward citations of KVLink efficient KV cache reuse": {
-      "last_run_key": "scheduled-chat-00-20260925T070210+0900-run1",
-      "rounds": 4,
-      "candidate_count": 65,
-      "duplicate_filtered_count": 15,
-      "novel_candidate_count": 50,
+      "last_run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+      "rounds": 5,
+      "candidate_count": 78,
+      "duplicate_filtered_count": 27,
+      "novel_candidate_count": 51,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 50,
-      "accepted_count": 20,
-      "duplicate_ratio": 0.23076923076923078,
+      "post_final_dedupe_count": 51,
+      "accepted_count": 21,
+      "duplicate_ratio": 0.34615384615384615,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
