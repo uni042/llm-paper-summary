@@ -95,6 +95,16 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 **内容を含むslot updateと `quality_preflight_v1` bundle createの両方がplatform安全検査で拒否された場合も、run-wide障害へ昇格する前にその1論文だけを退避する。** 最新mainでjobが同じ `job_id/kind` の非終端、claimが同じ `claim_id/attempt_id/worker_id` であることを再確認し、`.survey/work-queue/submissions/<kind>/<attempt_id>.json` に **内容を含まない最小status-only `blocked` descriptor** をcreate-onlyで保存する。descriptorは `schema_version:1`, `transport_version:10`, `kind`, `attempt_id`, `job_id`, `claim_id`, `worker_id`, `status:"blocked"`, `reason:"platform_content_write_rejected_after_bundle_fallback"` だけを基本とし、record slot本文・`paper_path`・`record_bank`・`record_slots`・`expected_blob_sha` を入れない。create成功をその論文の耐久退避完了とみなし、submission fast laneのresultを同期障壁にせず次のstandbyへ進む。Research/Auditともblocked retry対象とし、既存の7日cooldown後に再試行する。**このstatus-only descriptorが保存できた場合は `platform_context_limit` / run-wide write障害を申告してはならない。**
 
+### 2.1.1 Scheduled Task / Scheduled Chat の platform safety 拒否
+
+Scheduled Task / Scheduled Chat では、GitHub connector の write action が**引数内容に依存せず platform safety 層で tool call 自体を拒否**する場合がある。この拒否は repository 権限、GitHub API、schema、blob SHA、Actions の失敗ではなく、同じpayloadを `create_file` から低レベルGit object操作へ言い換えて再試行しても回復しない。**platform safety 拒否を低レベルGit操作で迂回してはならない。**
+
+run-state request、claim request、direct take、preflight、submission等の正規writeがこの理由で拒否された場合は、(1) 同じ正規pathへの通常connector writeを1回だけ試してplatform safety / safety checksによるtool-call rejectionを確認し、(2) 同じwriteや低レベルGit object writeを反復せず、(3) そのwriteを同期障壁として必要としない既存耐久状態だけで進められる内容作業があれば時間窓内で先に進め、(4) 正規writeが必須になった時点で `platform_safety_write_rejected` としてhandoffする。新規claimの排他確保、record書込、submission等、拒否された耐久境界を越えたことにしてはならない。最終報告には拒否された正規path、最後に成功したread、未完了identityを残し、Scheduled Task自体の無効化・削除・schedule変更は行わない。
+
+**run-state requestがplatform safetyで拒否された場合でも、hot-dispatchに同一workerの `research_resume.<worker_id>` があり `work_start_allowed=true` なら、その既存claimの読解再開までを止めない。** 一方、`research_recovery_resume` のようにrun-state workflowによるauto-recovery claimが必須のケースでは、run-state write拒否後に旧record bankを直接retag/updateしたり、recovery direct takeを自作したりしない。そのケースはhandoff対象である。
+
+この分類はGitHub write全般が恒久的に不可能という意味ではない。後続runで同じ正規writeが通る可能性があるため、Scheduled Taskの恒久停止理由にも、repository側transportを別方式へ作り直す理由にも使わない。
+
 `transport_unrecoverable` / `durable_transports_unavailable` を申告してhandoffする前に、**今回必要な正規pathへの実writeを少なくとも1回は実際に試す。** write操作を一度も試していない、または「直接スクリプトを実行できない」ことしか確認していない状態はtransport障害ではない。create-only pathで既存ファイル競合が返った場合もwrite不能ではなく排他取得競合なので、routerが定める次packet/同一identity確認へ進む。
 
 ### 2.2 main writeのcommit集約
