@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/run-state/requests/*.json'
+      - '.survey/work-queue/transport/health-probe.json'
+      - '.survey/scripts/apply_transport_health_probe.py'
       - '.survey/scripts/derive_worker_run_state.py'
       - '.survey/scripts/worker_run_state_cache.py'
       - '.survey/scripts/auto_discovery_from_run_state.py'
@@ -56,6 +58,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            python .survey/scripts/apply_transport_health_probe.py --repo-root . \
+              | tee /tmp/transport-health-probe-result.json
             python .survey/scripts/derive_worker_run_state.py --repo-root .
 
             {
@@ -88,6 +92,7 @@ jobs:
 
             git add -A \
               .survey/work-queue/run-state \
+              .survey/work-queue/transport \
               .survey/work-queue/archive \
               .survey/work-queue/claim-requests \
               .survey/work-queue/claim-results \
