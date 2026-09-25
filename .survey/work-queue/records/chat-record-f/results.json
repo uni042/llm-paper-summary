@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-a847c8ad5a2c39900cee895a",
-  "job_id": "job-research-c312adffcbd5fa76",
-  "data": {
-    "overview": "主レイアウトPlanes14はVRAM上4.80 bit/weightで、L40Sのbatch-1 GEMVではFP16基準の2.15倍。QTIPとの比較では読出し量の比2.40に対して実行時間の比2.27が対応し、展開表現の帯域費用が支配的である。",
-    "key_results": [
-      {
-        "metric": "Planes14 VRAM rate",
-        "value": "4.80 bit/weight",
-        "baseline": "on-disk 2.00 bit/weight",
-        "condition": "served GPU layout",
-        "interpretation": "ファイルrateとGPU実行時rateは一致しない。"
-      },
-      {
-        "metric": "L40S GEMV",
-        "value": "FP16基準 2.15倍",
-        "baseline": "FP16",
-        "condition": "batch 1 decode",
-        "interpretation": "帯域律速条件では展開後でも利得がある。"
-      },
-      {
-        "metric": "QTIP comparison",
-        "value": "traffic比 2.40、time比 2.27",
-        "baseline": "Planes14",
-        "condition": "same process",
-        "interpretation": "時間差は主に読出し量で説明される。"
-      },
-      {
-        "metric": "same-head end-to-end",
-        "value": "4B 1.11倍、8B 1.29倍、14B 1.41倍",
-        "baseline": "dense path",
-        "condition": "identical output head",
-        "interpretation": "規模とともにweight pathの寄与が増える。"
-      }
-    ],
-    "negative_results": "A100ではlattice系レイアウトがFP16基準を下回る。低いVRAM rateでは復号が不規則化する。",
-    "interpretation": "量子化方式は圧縮rateだけでなく、VRAM上の読出し量、復号規則性、対象GPUのmemory hierarchyを合わせて評価する必要がある。",
-    "quality_impact": "4Bではperplexity比1.38、MMLU差14.7 pointsの品質低下を報告し、8B/14Bでは差が縮小する。"
-  },
+  "attempt_id": "attempt-preload-da156dd6a5b5908d24ee393b",
+  "job_id": "job-research-b374f59330145700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-a847c8ad5a2c39900cee895a",
+    "claim_id": "claim-preload-da156dd6a5b5908d24ee393b",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

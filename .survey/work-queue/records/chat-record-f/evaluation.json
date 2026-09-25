@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-preload-a847c8ad5a2c39900cee895a",
-  "job_id": "job-research-c312adffcbd5fa76",
-  "data": {
-    "hardware": "NVIDIA L40S and NVIDIA A100.",
-    "software": "CUDA GEMV with FP16, AWQ, and QTIP baselines.",
-    "methodology": "Batch-1 decode GEMV latency, bytes, bandwidth, correctness checks, and end-to-end Qwen3 serving are evaluated.",
-    "scope": "Qwen3 4B, 8B, and 14B; decode serving focus."
-  },
+  "attempt_id": "attempt-preload-da156dd6a5b5908d24ee393b",
+  "job_id": "job-research-b374f59330145700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-a847c8ad5a2c39900cee895a",
+    "claim_id": "claim-preload-da156dd6a5b5908d24ee393b",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

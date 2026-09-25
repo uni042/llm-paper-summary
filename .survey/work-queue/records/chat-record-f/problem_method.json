@@ -2,34 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-a847c8ad5a2c39900cee895a",
-  "job_id": "job-research-c312adffcbd5fa76",
-  "data": {
-    "problem": "Leech-lattice vector quantizationは2 bit/weight級で高い品質を報告するが、元のserving kernelは単一shellしか復号せず、2.000 b/wのrateに必要な全301 classのmulti-shell codebookを実際にGPUで復号する経路が欠けていた。さらに圧縮ファイルのbit rateが小さくても、巨大codebookをGPUで分岐なく復号するにはindexを展開したVRAM表現が必要となり、実際のmemory trafficと速度はon-disk rateから予測できない。",
-    "novelty": "全301-class Λ24(12) codebookに対するoffline transcodingとwarp-divergence-freeな融合dequantize+GEMVを実装し、同一bit-exact意味を持つ複数GPU layoutを比較してin-VRAM rateを独立設計軸として定式化した。47-bit combinatorial indexをclass/gain/sign/magnitude bit planesへロード時展開し、固定strideでGPUがshift/mask/predicated selectionだけで復号できるようにする。さらにAWQとQTIPの実配備kernelを同一processで比較し、速度差をbyte traffic差へ帰属させる。",
-    "method_overview": "本方式は、圧縮ファイルに保存された24次元Leech格子ブロックを、そのままGPUで複雑な組合せ復号するのではなく、モデル読込み時に実行向けの固定長表現へ変換する。まず47 bitの方向indexからclass、gain、sign、magnitudeに必要な情報を展開し、実用構成Planes14では1ブロック112 bit、14 byte strideの連続recordとしてVRAMへ配置する。推論時の融合カーネルは各ブロックについて4個の32-bit wordと小さなclass tableを読み、shift/maskとpredicated selectionだけで各coordinateの大きさと符号を復元する。復元値を別tensorへ書き戻さず、activationとの積和へ直結させることでdequantizationとGEMVを融合する。classごとの分岐をwarp内に持ち込まないため、全301 classを扱ってもwarp divergenceを抑えられる。さらに複数のVRAM layoutを同じbit-exact復号結果になることを照合した上で、no-weights control、FP16、AWQ、QTIPと同一processで比較し、カーネル時間を演算量だけでなく実際の読出しbyte量と対応付ける。したがって処理の流れは、圧縮indexの保存→load-time transcoding→固定stride VRAM配置→分岐を避けた復号→GEMVへの直接融合→出力、という一方向の経路になり、ディスク上の2.00 bit/weightとサービング時の4.80 bit/weightを意図的に別指標として扱う。",
-    "components": [
-      {
-        "name": "全301-classのオフライン変換",
-        "description": "圧縮ファイル中の47-bit方向indexを、推論のたびに組合せ的に解くのではなく、モデル読込み時にclass、gain、sign、magnitude情報へ展開する。これにより301種類すべてのshell/classを扱う復号能力を維持しながら、GPU側から可変長処理や複雑なindex計算を追い出す。変換後の表現は元の圧縮率より大きくなるが、その増分をVRAM上の実効rateとして明示的に測ることで、圧縮品質と実行時コストを分離する。"
-      },
-      {
-        "name": "Planes14固定長VRAMレイアウト",
-        "description": "実用構成Planes14では1つの24次元blockを112 bit、すなわち14 byteの固定stride recordとして並べ、class/gain/signと3枚のmagnitude bit planeを格納する。この配置は4.80 bit/weight相当で、ディスク上の2.00 bit/weightより大きい一方、GPUが連続的に読みやすく、復号規則を単純化できる。複数layoutをbit-exactに照合し、単に容量が小さいlayoutではなく、読出しbyte数と復号の規則性の両方を比較対象にする。"
-      },
-      {
-        "name": "融合復号＋GEMVカーネル",
-        "description": "推論カーネルは固定stride recordから4個の32-bit wordと小さなclass tableを読み、shift/maskとpredicated selectionで各coordinateを復元する。classごとにwarpを分岐させる実装を避け、復元した重みを中間tensorとしてVRAMへ書き戻さず、その場でactivationとの積和へ投入する。dequantizationとGEMVを一つのデータ経路へ融合するため、decode時のbatch=1というmemory-boundな条件で、追加の復号処理とmemory trafficの双方を抑える設計になっている。"
-      },
-      {
-        "name": "実効byte量に基づく性能切り分け",
-        "description": "速度比較ではFP16やAWQだけでなく、より小さい読出し量を持つQTIP、さらに重み読出しを除いたcontrolを同一processで測り、実行時間とmemory trafficを対応付ける。Planes14とQTIPの読出し量の比2.40に対し時間比2.27となることを用いて、巨大codebookを固定長へ展開する代償が主として帯域に現れることを検証する。L40SだけでなくA100でも確認し、GPUのmemory hierarchyやlaunch geometryによって利得が反転し得る境界も評価対象に含める。"
-      }
-    ],
-    "system_design": "全体設計は、圧縮率を最小にする保存形式と、GPUが高速に消費できる実行形式を同一視しない。保存側では2 bit/weight級のLeech格子表現を維持し、load-time transcoderで複雑さを一度だけ支払って規則的なVRAM recordへ変換する。推論側では固定stride読出し、table参照、predicated復号、積和を一つの融合経路にまとめる。このため設計上の主要なトレードオフは、ファイル容量、VRAM bytes/weight、復号規則性、対象GPUで得られる実効帯域の4点となる。"
-  },
+  "attempt_id": "attempt-preload-da156dd6a5b5908d24ee393b",
+  "job_id": "job-research-b374f59330145700",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-a847c8ad5a2c39900cee895a",
+    "claim_id": "claim-preload-da156dd6a5b5908d24ee393b",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

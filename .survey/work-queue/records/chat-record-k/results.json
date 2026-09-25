@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-f423df36c64b70da5c1fa947",
+  "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
   "job_id": "job-research-12d29ccbbefd4d02",
   "data": {
     "overview": "L2ノルムが低いkeyを保持するだけでKV容量を削減しつつ品質を維持した。Llama-2-7B-80Kのneedle-in-a-haystackでは50%圧縮で99%正解率、passkey retrievalでは90%圧縮でも100%正解率を報告する。",
@@ -38,7 +38,7 @@
     "quality_impact": "中程度の圧縮では品質低下が小さいが、90%無損失はpasskey retrievalの条件であり一般化には注意が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-preload-f423df36c64b70da5c1fa947",
+    "claim_id": "claim-preload-6b239632cba886a9b742dc0e",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
