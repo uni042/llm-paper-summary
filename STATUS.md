@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 11:14:22 JST**
+> 自動生成: **2026-09-25 11:19:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **349** |
-| 未claim Research job | **206** |
+| 収録候補論文 | **345** |
+| 未claim Research job | **202** |
 | 直近24hの検証済みResearch収録 | **18** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-25 10:26:34 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **349** |
+| canonical_id確認済みの一意な候補論文 | **345** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **349** |
+| 非終端Research job合計 | **345** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（26時間38分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（26時間43分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **3** | **0** | **0** | **143** | **11** | — |
+| Research | **1** | **4** | **0** | **0** | **143** | **7** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **29** | **15** | **14** | **0** | **0** | **0** | **19** |
-| 合計 | **30** | **18** | **14** | **0** | **143** | **11** | **19** |
+| 合計 | **30** | **19** | **14** | **0** | **143** | **7** | **19** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -141,11 +141,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
-- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
+- immutable submission: **4件** / 検証済み成功: **0件** / result照合済み非成功: **4件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-60392f6ae28160ede948e3b0.json` (job `job-research-6be480b73a6003b5`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-60392f6ae28160ede948e3b0.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (job `job-research-0dc5dd60b4569a06`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (job `job-research-ac58200c186f3e5a`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (job `job-research-b374f59330145700`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (`ok=true`)
 
@@ -205,28 +207,28 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **11件**
+- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **7件**
+- `arXiv:2506.07366` — MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing / worker `shared-preload-pool`
+  - claim: **09-25 11:18:59 JST** / heartbeat: **—** / lease expiry: **09-25 23:18:59 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6884e3d688f660cb.json`
+- `DOI:10.1145/3820441.3820479` — Towards Efficient Serving of Network-intensive LLM Inferences / worker `shared-preload-pool`
+  - claim: **09-25 11:17:45 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:45 JST**
+  - evidence: `.survey/work-queue/claims/job-research-dfcde3edcf70d50d.json`
+- `arXiv:2606.05875` — QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving / worker `shared-preload-pool`
+  - claim: **09-25 11:17:01 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-cb7b62ec78d71f70.json`
+- `DOI:10.18653/v1/2026.acl-long.859` — SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving / worker `shared-preload-pool`
+  - claim: **09-25 11:17:01 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-db4aebb091dc7735.json`
 - `DOI:10.1109/INFOCOM59046.2026.11571388` — CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference / worker `scheduled-chat-00`
   - claim: **09-25 11:08:08 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-058d69df18b4e613.json`
-- `arXiv:2605.25550` — DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-08564236a7f9f91a.json`
-- `arXiv:2609.06940` — Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-26539a1cc6234f61.json`
 - `DOI:10.1109/INFOCOM59046.2026.11571450` — Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach / worker `scheduled-chat-00`
   - claim: **09-25 11:08:08 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-319ee9e5d994faaf.json`
-- `DOI:10.1016/j.parco.2026.103216` — SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3ef5cc2d28abc041.json`
 - `arXiv:2607.07144` — Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference / worker `scheduled-chat-00`
   - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-79a7b06357194cd1.json`
-- `arXiv:2607.27269` — Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ac58200c186f3e5a.json`
 - `arXiv:2605.15508` — STS: Efficient Sparse Attention with Speculative Token Sparsity / worker `scheduled-chat-00`
   - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:08:08 JST** / lease expiry: **09-25 12:38:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-c97d88c20de27e1f.json`
@@ -255,7 +257,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **349** |
+| ready | **345** |
 
 ### 候補の重複・識別情報欠損
 
@@ -283,8 +285,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **264** |
-| └ Research | **183** |
+| 成功result未照合のimmutable submission | **265** |
+| └ Research | **184** |
 | └ Audit | **2** |
 | └ Discovery | **52** |
 | └ Other/Unknown | **27** |
