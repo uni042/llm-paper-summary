@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "runstate-quarantine-smartbatch-20260925T1115JST-2f71c9",
+  "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T10:58:09+09:00",
+  "runtime_condition": "none",
+  "write_blocked_job": {
+    "job_id": "job-research-3ef5cc2d28abc041",
+    "claim_id": "claim-preload-3f9e86683639454b51f76cec",
+    "attempt_id": "attempt-preload-3f9e86683639454b51f76cec",
+    "reason": "platform_content_write_rejected_after_bundle_fallback",
+    "observed_error": "Canonical status-only submission descriptor create was repeatedly rejected by platform safety checks after primary full-text acquisition was unavailable."
+  }
+}
