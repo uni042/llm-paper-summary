@@ -98,7 +98,6 @@ def _eligible(result: dict[str, Any]) -> bool:
         and result.get("claim_result_pending") is False
         and int(result.get("research_audit_completed_this_invocation") or 0) == 0
         and not (result.get("submitted_attempt_ids") or [])
-        and int(result.get("seconds_to_run_deadline") or 0) > 600
     )
 
 
@@ -136,7 +135,6 @@ def _recovery_packet(root: Path, result: dict[str, Any]) -> dict[str, Any] | Non
         and result.get("active_assignment") is False
         and result.get("claim_result_pending") is False
         and gate.get("required_action") == "CLAIM_NEXT_RESEARCH_AUDIT"
-        and int(result.get("seconds_to_run_deadline") or 0) > 600
     ):
         return None
 
