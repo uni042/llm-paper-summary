@@ -37,7 +37,11 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
             text,
         )
         self.assertIn(
-            "shell、Python、manual Actions dispatch、低レベルGit ref操作を要求しない",
+            "既存GitHub file updateだけ",
+            text,
+        )
+        self.assertIn(
+            "新しいrun-state requestのcreateを要求しない",
             text,
         )
 
