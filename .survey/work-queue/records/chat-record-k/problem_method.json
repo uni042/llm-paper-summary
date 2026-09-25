@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
+  "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
   "job_id": "job-research-98fce5e6481e51fa",
   "data": {
     "problem": "MoEは少数エキスパートだけを計算しても全重みを保持するため、活性量よりメモリ量が大きい。Mixtral-8×7Bは47Bを保持して14Bだけを使い約3.4倍、DeepSeek-MoE-16Bは約5.7倍、DeepSeek-V3は約18倍の差がある。均一2:4構造化枝刈りはGPUで高速だが、頻繁に使うエキスパートと低頻度エキスパートへ同じ圧縮率を課すため、重要側の精度を守ると低頻度側の圧縮余地が残る。",
@@ -25,7 +25,7 @@
     "system_design": "オフラインでルータ統計、分類、異なる枝刈り、短い微調整を行い、オンラインでは通常ルータの選択後に保存形式だけを分岐する。低頻度側の圧縮率を高めても演算形式は2:4へ戻すため新しい演算器を要求しない。利得はルーティング偏りが強いほど大きく、精度はαと分布ずれに依存する。"
   },
   "reservation": {
-    "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
+    "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

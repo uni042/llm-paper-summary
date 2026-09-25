@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
+  "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
   "job_id": "job-research-98fce5e6481e51fa",
   "data": {
     "hardware": "NVIDIA L40S GPU、48GB GDDR6、864GB/s。CUDA 12.1、PyTorch 2.1.2。精度評価は4×L40S。",
@@ -11,7 +11,7 @@
     "scope": "実GPU評価だが主な速度値はMoE層単位で、サービス全体のエンドツーエンド遅延ではない。分類はオフライン校正分布に依存し、長期運用での分布ずれへの再分類費用は評価していない。"
   },
   "reservation": {
-    "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
+    "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

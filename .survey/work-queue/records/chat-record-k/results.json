@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
+  "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
   "job_id": "job-research-98fce5e6481e51fa",
   "data": {
     "overview": "Qwen1.5-MoEはα=0.7で密モデル比2.4倍、DeepSeek-MoEは2.2倍へ圧縮され、均一2:4の約1.8倍を上回る。Mixtral-8×7BのMoE層では密行列積比1.32倍で、Samoyedsの1.20倍より高い。バッチ1〜16では2.35〜2.49Kトークン/秒でSamoyedsより最大15.3%、密行列積より最大45.7%高い。一方、強い圧縮は精度を下げ、Qwen平均精度は密55.0、均一2:4 52.8、α=0.7 52.0、α=0.9 53.6となるため、容量利得は無損失ではない。",
@@ -41,7 +41,7 @@
     "quality_impact": "近似あり。枝刈り後の短い微調整で回復するが、特にDeepSeekのα=0.7では精度低下が大きい。α=0.9ではQwen平均53.6で均一2:4の52.8を上回るなど、重要エキスパートを広く保護すると品質が改善する。"
   },
   "reservation": {
-    "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
+    "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
