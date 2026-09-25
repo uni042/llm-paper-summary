@@ -1,0 +1,858 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "take-scheduled-chat-00-20260925T090214Z-3-r1",
+  "collector_id": "direct-take-scheduled-chat-00-20260925T090214Z-3-r1",
+  "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+  "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "440",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "136ebae25cf4180efb6ce018a37ccc446e9fdf24",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T09:04:59.046144+00:00",
+  "preload_id": "preload-314e2ad66793530de0eb",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-314e2ad66793530de0eb",
+  "results": [
+    {
+      "title": "EvolKV: Evolutionary KV Cache Compression for LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a3e16a32fda18fb2cc10a4073c44339be013e9f9",
+      "year": 2025,
+      "published": "2025-09-10",
+      "abstract": "Existing key-value (KV) cache compression methods typically rely on heuristics, such as uniform cache allocation across layers or static eviction policies, however, they ignore the critical interplays among layer-specific feature patterns and task performance, which can lead to degraded generalization. In this paper, we propose EvolKV, an adaptive framework for layer-wise, task-driven KV cache compression that jointly optimizes the memory efficiency and task performance. By reformulating cache allocation as a multi-objective optimization problem, EvolKV leverages evolutionary search to dynamically configure layer budgets while directly maximizing downstream performance. Extensive experiments on 11 tasks demonstrate that our approach outperforms all baseline methods across a wide range of KV cache budgets on long-context tasks and surpasses heuristic baselines by up to 7 percentage points on GSM8K. Notably, EvolKV achieves superior performance over the full KV cache setting on code completion while utilizing only 1.5% of the original budget, suggesting the untapped potential in learned compression strategies for KV cache budget allocation.",
+      "canonical_id": "arXiv:2509.08315",
+      "arxiv_id": "2509.08315",
+      "authors": [
+        "Bohan Yu",
+        "Yekun Chai"
+      ]
+    },
+    {
+      "title": "VoltanaLLM: Energy-Efficient and SLO-Aware Disaggregated LLM Serving via Adaptive Frequency Control Íand State-Space Routing",
+      "source_url": "https://www.semanticscholar.org/paper/ed1489b41b96514bd30d59df0a0221a899573288",
+      "year": 2025,
+      "published": "2025-09-05",
+      "abstract": "The energy cost of Large Language Model (LLM) inference is rapidly becoming a barrier to sustainable and scalable deployment. Although modern serving architectures expose distinct prefill and decode behaviors, existing systems fail to exploit these phase differences for energy-efficient serving under strict latency SLOs. This paper introduces VoltanaLLM, the first system that explicitly targets and reduces the energy bloat in modern prefill-decode (P/D) disaggregated LLM serving. Guided by a control-theory perspective, VoltanaLLM separates two levers: per-instance operating-point selection (GPU frequency per iteration) and system-level state-space routing of requests. We empirically observe that LLM inference exhibits a U-shaped energy-frequency curve creating\"sweet spots\"that depend on phase behavior and load. VoltanaLLM exploits this by combining phase-specific, iteration-level frequency selection driven by a lightweight, online-adaptive latency predictor, with a decode state-space guided router that avoids architectural granularity-induced inefficiencies, all while meeting desired SLOs. We implement VoltanaLLM using SGLang and evaluate it across multiple models and real-world workloads. Our results show VoltanaLLM reduces end-to-end energy by up to 36.3% versus a static max-frequency baseline while maintaining high SLO attainment, and generalizes to newer GPUs. These results point to sustainable LLM serving via phase-aware, iteration-level frequency selection coupled with architecture-aware routing. Source code is available in https://github.com/Supercomputing-System-AI-Lab/VoltanaLLM.",
+      "canonical_id": "arXiv:2509.04827",
+      "arxiv_id": "2509.04827",
+      "authors": [
+        "Jiahuan Yu",
+        "Aryan Taneja",
+        "Junfeng Lin",
+        "Minjia Zhang"
+      ]
+    },
+    {
+      "title": "Advances in Pre-trained Language Models for Domain-Specific Text Classification: A Systematic Review",
+      "source_url": "https://www.semanticscholar.org/paper/9ce48f0513e113513d9a922e60529f0fb515fc67",
+      "year": 2025,
+      "published": "2025-09-05",
+      "abstract": "The exponential increase in scientific literature and online information necessitates efficient methods for extracting knowledge from textual data. Natural language processing (NLP) plays a crucial role in addressing this challenge, particularly in text classification tasks. While large language models (LLMs) have achieved remarkable success in NLP, their accuracy can suffer in domain-specific contexts due to specialized vocabulary, unique grammatical structures, and imbalanced data distributions. In this systematic literature review (SLR), we investigate the utilization of pre-trained language models (PLMs) for domain-specific text classification. We systematically review 41 articles published between 2018 and January 2024, adhering to the PRISMA statement (preferred reporting items for systematic reviews and meta-analyses). This review methodology involved rigorous inclusion criteria and a multi-step selection process employing AI-powered tools. We delve into the evolution of text classification techniques and differentiate between traditional and modern approaches. We emphasize transformer-based models and explore the challenges and considerations associated with using LLMs for domain-specific text classification. Furthermore, we categorize existing research based on various PLMs and propose a taxonomy of techniques used in the field. To validate our findings, we conducted a comparative experiment involving BERT, SciBERT, and BioBERT in biomedical sentence classification. Finally, we present a comparative study on the performance of LLMs in text classification tasks across different domains. In addition, we examine recent advancements in PLMs for domain-specific text classification and offer insights into future directions and limitations in this rapidly evolving domain.",
+      "canonical_id": "arXiv:2510.17892",
+      "arxiv_id": "2510.17892",
+      "authors": [
+        "Zhyar Rzgar K. Rostam",
+        "Gábor Kertész"
+      ]
+    },
+    {
+      "title": "SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/5701cb053d8f43ba3927dacc8d1660b6be989d74",
+      "year": 2025,
+      "published": "2025-09-02",
+      "abstract": "Modern large language models (LLMs) serving systems address distributed deployment challenges through two key techniques: distributed model partitioning for parallel computation across accelerators and quantization for reducing parameter size. While existing systems assume homogeneous GPU environments, we reveal significant untapped potential in heterogeneous systems with mixed-capacity accelerators where two critical limitations persist: (1) uniform partitioning and quantization strategies fail to adapt to hardware heterogeneity, exacerbating resource imbalance, and (2) decoupled optimization of partitioning and quantization overlooks critical performance synergies between these techniques. We present SplitQuant, a phase-aware distributed serving system that co-optimizes mixedprecision quantization, phase-aware model partitioning, and micro-batch sizing for heterogeneous environments. Our approach combines analytical modeling of quality-runtime tradeoffs with a lightweight planning algorithm to maximize throughput while preserving user-specified model quality targets. Evaluations across 10 production clusters show SplitQuant achieves up to $2.34 \\times(1.61 \\times$ mean) higher throughput than state-of-theart approaches without violating accuracy targets. Our results underscore the value of co-designing quantization and model partitioning strategies for heterogeneous environments.",
+      "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186491",
+      "doi": "10.1109/CLUSTER59342.2025.11186491",
+      "authors": [
+        "Juntao Zhao",
+        "Borui Wan",
+        "Yanghua Peng",
+        "Haibin Lin",
+        "Chuan Wu"
+      ]
+    },
+    {
+      "title": "Optimal Parallel Scheduling under Concave Speedup Functions",
+      "source_url": "https://www.semanticscholar.org/paper/1ab2e596748e536e31e4676080d59de2c6f40a51",
+      "year": 2025,
+      "published": "2025-09-01",
+      "abstract": "Efficient scheduling of parallel computation resources across multiple jobs is a fundamental problem in modern cloud/edge computing systems for many AI-based applications. Allocating more resources to a job accelerates its completion, but with diminishing returns. Prior work (heSRPT) solved this problem only for some specific speedup functions with an exponential form, providing a closed-form solution. However, the general case with arbitrary concave speedup functions -- which more accurately capture real-world workloads -- has remained open. In this paper, we solve this open problem by developing optimal scheduling algorithms for parallel jobs under general concave speedup functions. We first discover a fundamental and broadly-applicable rule for optimal parallel scheduling, namely the Consistent Derivative Ratio (CDR) Rule, which states that the ratio of the derivatives of the speedup functions across active jobs remains constant over time. To efficiently compute the optimal allocations that satisfy the CDR Rule, we propose the General Water-Filling (GWF) method, a more general version of classical water-filling in wireless communications. Combining these insights, we design the SmartFill Algorithm to solve the general scheduling problem. Unlike heSRPT, which always allocates resources to all active jobs, SmartFill selectively determines which jobs should receive resources and how much they should be allocated. For a broad class of so-called \\emph{regular} speedup functions, SmartFill yields closed-form optimal solutions, while for non-regular functions it efficiently computes the optimum with low complexity. Numerical evaluations show that SmartFill can substantially outperform heSRPT across a wide range of concave speedup functions.",
+      "canonical_id": "arXiv:2509.01811",
+      "arxiv_id": "2509.01811",
+      "authors": [
+        "Chengzhang Li",
+        "Pei-Zhong Ju",
+        "Atilla Eryilmaz",
+        "N. Shroff"
+      ]
+    },
+    {
+      "title": "KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache",
+      "source_url": "https://www.semanticscholar.org/paper/3901ed44294e31f906a94c2a107d2cc28c155768",
+      "year": 2025,
+      "published": "2025-08-30",
+      "abstract": "Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\\% and up to 83\\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement.",
+      "canonical_id": "arXiv:2509.00579",
+      "arxiv_id": "2509.00579",
+      "authors": [
+        "Bo Jiang",
+        "Taolue Yang",
+        "You-Yuan Liu",
+        "Chengming Zhang",
+        "Xubin He",
+        "Sian Jin"
+      ]
+    },
+    {
+      "title": "A Cost-Benefit Analysis of On-Premise Large Language Model Deployment: Breaking Even with Commercial LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/99ec1e1573b6e673184b7ce15b565c7baf25464e",
+      "year": 2025,
+      "published": "2025-08-30",
+      "abstract": "Large language models (LLMs) are becoming increasingly widespread. Organizations that want to use AI for productivity now face an important decision. They can subscribe to commercial LLM services or deploy models on their own infrastructure. Cloud services from providers such as OpenAI, Anthropic, and Google are attractive because they provide easy access to state-of-the-art models and are easy to scale. However, concerns about data privacy, the difficulty of switching service providers, and long-term operating costs have driven interest in local deployment of open-source models. This paper presents a cost-benefit analysis framework to help organizations determine when on-premise LLM deployment becomes economically viable compared to commercial subscription services. We consider the hardware requirements, operational expenses, and performance benchmarks of the latest open-source models, including Qwen, Llama, Magistral, and etc. Then we compare the total cost of deploying these models locally with the major cloud providers subscription fee. Our findings provide an estimated breakeven point based on usage levels and performance needs. These results give organizations a practical framework for planning their LLM strategies.",
+      "canonical_id": "arXiv:2509.18101",
+      "arxiv_id": "2509.18101",
+      "authors": [
+        "Guan-Zhong Pan",
+        "Vishal Chodnekar",
+        "Abinas Roy",
+        "Haibo Wang"
+      ]
+    },
+    {
+      "title": "Q-Infer: Towards Efficient GPU-CPU Collaborative LLM Inference via Sparsity-Aware Dynamic Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/6d2fee68aef566c75bf4678c2f7ae176d5314a44",
+      "year": 2025,
+      "published": "2025-08-28",
+      "abstract": "Large Language Models (LLMs) have sparked a new wave of exciting AI applications, yet their large model size imposes significant computational and storage costs during inference. Offloading parameters to the CPU and conducting GPU-CPU collaborative inference is a highly cost-effective strategy to alleviate GPU memory constraints. However, current solutions struggle to balance latency and throughput, and suffer from accuracy loss and performance fluctuations under various workloads and configurations. In this article, we propose Q-Infer, an efficient GPU-CPU collaborative inference system that significantly improves the performance and quality of LLM inference through several optimizations: (1) Q-Infer designs a dynamic caching strategy for important parameters by exploiting model sparsity and locality. (2) Q-Infer proposes a multi-window-based approach for selecting important tokens, which reduces the KV cache while maintaining high accuracy. (3) Q-Infer develops a novel GPU-CPU collaborative inference and dynamic scheduling strategy to enhance performance across different environments. We evaluate Q-Infer using various models and workloads across different hardware configurations. The results demonstrate Q-Infer’s superior inference performance while retaining model accuracy compared with state-of-the-art GPU-CPU systems.",
+      "canonical_id": "DOI:10.1145/3764589",
+      "doi": "10.1145/3764589",
+      "authors": [
+        "Kai Lu",
+        "Qiang Wei",
+        "Yier Lin",
+        "Pengyu Liu",
+        "Hai-Peng Wang",
+        "Ji-Guang Wan",
+        "Ting Yao",
+        "Huatao Wu",
+        "Dao-Hui Wang"
+      ]
+    },
+    {
+      "title": "Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics",
+      "source_url": "https://www.semanticscholar.org/paper/add0859701c539526a6b1f747861ac6e11cdb45f",
+      "year": 2025,
+      "published": "2025-08-26",
+      "abstract": "Serving Large Language Models (LLMs) at scale requires meeting strict Service Level Objectives (SLOs) under severe computational and memory constraints. Nevertheless, traditional caching strategies fall short: exact-matching and prefix caches neglect query semantics, while state-of-the-art semantic caches remain confined to traditional intuitions, offering little conceptual departure. Building on this, we present SISO, a semantic caching system that redefines efficiency for LLM serving. SISO introduces centroid-based caching to maximize coverage with minimal memory, locality-aware replacement to preserve high-value entries, and dynamic thresholding to balance accuracy and latency under varying workloads. Across diverse datasets, SISO delivers up to 1.71$\\times$ higher hit ratios and consistently stronger SLO attainment compared to state-of-the-art systems.",
+      "canonical_id": "arXiv:2508.18736",
+      "arxiv_id": "2508.18736",
+      "authors": [
+        "Jungwoo Kim",
+        "Minsang Kim",
+        "Jaeheon Lee",
+        "Chanwoo Moon",
+        "Heejin Kim",
+        "Taeho Hwang",
+        "Woosuk Chung",
+        "Yeseong Kim",
+        "Sung-Jin Lee"
+      ]
+    },
+    {
+      "title": "Systematic Characterization of LLM Quantization: A Performance, Energy, and Quality Perspective",
+      "source_url": "https://www.semanticscholar.org/paper/ac8a57bf38b4611b11111913640caf3805236438",
+      "year": 2025,
+      "published": "2025-08-22",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse domains, but their heavy resource demands make quantization-reducing precision to lower-bit formats-critical for efficient serving. While many quantization methods exist, a systematic understanding of their performance, energy, and quality tradeoffs in realistic serving conditions remains a gap. In this work, we first develop a fully automated online characterization framework qMeter, and then conduct an in-depth characterization of 11 post-training LLM quantization methods across 4 model sizes (7B-70B) and two GPU architectures (A100, H100). We evaluate quantization at the application, workload, parallelism, and hardware levels under online serving conditions. Our study reveals highly task- and method-dependent tradeoffs, strong sensitivity to workload characteristics, and complex interactions with parallelism and GPU architecture. We further present three optimization case studies illustrating deployment challenges in capacity planning, energy-efficient scheduling, and multi-objective tuning. To the best of our knowledge, this is one of the first comprehensive application-, system-, and hardware-level characterization of LLM quantization from a joint performance, energy, and quality perspective.",
+      "canonical_id": "arXiv:2508.16712",
+      "arxiv_id": "2508.16712",
+      "authors": [
+        "Tianyao Shi",
+        "Yi Ding"
+      ]
+    },
+    {
+      "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
+      "source_url": "https://www.semanticscholar.org/paper/03ce27c85afa5ba48c9590821ce18ddaa1368091",
+      "year": 2025,
+      "published": "2025-08-21",
+      "abstract": "Large language model (LLM) serving faces the dual challenge of meeting strict user-specific service-level objectives (SLOs) while minimizing computational cost under dynamic, multi-task workloads. Existing approaches either rely on static scheduling policies or focus on single-task settings, limiting their applicability in real-world deployments with heterogeneous requests, variable prompt lengths, and elastic scaling requirements. We present HFX, a production LLM serving system that jointly optimizes request scheduling and elastic scaling across model replicas to satisfy diverse SLOs. HFX introduces a \\textbf{scheduler} that performs proactive budget estimation and prioritization to ensure SLO compliance for both new and in-flight requests. HFX also integrates a \\textbf{scaler} that supports fast device-to-device (D2D) weight transfer, reducing cold-start latency. Additionally, the system supports both colocated and disaggregated prefill/decode deployments, enabling adaptation to diverse workload patterns and cloud environments. Through extensive experiments on multi-task workloads, we demonstrate consistently higher SLO attainment, lower end-to-end latency, and lower NPU usage cost by up to 4.44$\\times$, 65.82\\%, and 49.81\\%, respectively, compared to state-of-the-art systems. Our results highlight the effectiveness of SLO-aware scheduling and scaling in practical LLM serving, providing a robust framework for cost-efficient and SLO-compliant deployments.",
+      "canonical_id": "arXiv:2508.15919",
+      "arxiv_id": "2508.15919",
+      "authors": [
+        "Zahra Yousefijamarani",
+        "Xinglu Wang",
+        "Qian Wang",
+        "Morgan Lindsay Heisler",
+        "Taha Shabani",
+        "N. Gholipour",
+        "Parham Yassini",
+        "Hong Chang",
+        "Kang Chen",
+        "Qiantao Zhang",
+        "Xiao-Long Bai",
+        "Jian-Nan Wang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ]
+    },
+    {
+      "title": "Adaptoserve: An Efficient System for Supporting Adaptive Chunked-Prefills in LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1cbd3b432b653044f7e53de3584aa259ce72b852",
+      "year": 2025,
+      "published": "2025-08-13",
+      "abstract": "With the widespread deployment of large language models (LLMs) across diverse applications, optimizing their inference processes to achieve high throughput and low latency has become increasingly critical. While vLLM emerges as a high-performance inference engine that significantly accelerates processing speed, it continues to face challenges with elevated tail latency in high-concurrency scenarios. Sarathi-Serve addresses this through chunked-prefills and stall-free scheduling, achieving a balance between throughput and latency. However, our analysis reveals fundamental limitations in its static chunking strategy. This paper presents AdaptoServe, a system employing a dynamic adaptive chunk-based prefetching strategy to overcome the resource management and latency optimization limitations inherent in static chunking approaches. Our solution features intelligent chunk size adaptation through real-time monitoring of GPU utilization and work-load characteristics, ensuring optimal performance across varying resource conditions. Experimental evaluations demonstrate that AdaptoServe delivers substantial performance gains in diverse hardware configurations and work-load scenarios, effectively balancing throughput-latency tradeoffs. Compared to vLLM, AdaptoServe achieves up to 59.4 % higher request throughput, while outperforming Sarathi-Serve by $\\mathbf{2 4. 4 \\%}$ through its dynamic chunking mechanism and enhanced multilevel feedback queue scheduling algorithm. We further investigate the strategy's applicability across different application scenarios, revealing significant optimization potential for next-generation LLM serving systems.",
+      "canonical_id": "DOI:10.1109/HPCC67675.2025.00051",
+      "doi": "10.1109/HPCC67675.2025.00051",
+      "authors": [
+        "Yu Ding",
+        "Jing-Xuan Zhao",
+        "Zhen-Gong Cai",
+        "Kai Shi",
+        "Fansong Zeng",
+        "Bo-Wei Yang"
+      ]
+    },
+    {
+      "title": "Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective",
+      "source_url": "https://www.semanticscholar.org/paper/70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+      "year": 2025,
+      "published": "2025-08-12",
+      "abstract": "A systematic understanding of Apple Silicon is lacking in the current landscape of hardware efficiency; research focus is largely centered on accelerating GPUs for large-scale training or inference on CUDA devices. This paper investigates Apple Silicon's unique memory architecture that offers a unified memory integrating CPU and GPU memory and its implications for on-device LLM inference. We decipher myths about whether Apple Silicon is efficient for on-device inference compared to competitors such as NVIDIA GPUs by directly conducting latency and throughput comparison benchmarks. We explain the performance gap between them through profiling low level hardware metrics - ALU utilization, memory bandwidth, buffer usage, cache residency etc. at runtime. We draw several insights regarding performance bottlenecks such as dequantization overhead, compute throughput and memory bandwidth. We debunk existing false claims regarding large language model inference such as compressing models to lower bit precision is a defacto promise for faster inference across all hardware platforms. We find that the large unified memory enables Apple Silicon to be both cost effective and efficient against NVIDIA GPUs for ultra large language models. Our large scale evaluation on 5 hardware testbeds incorporating three Apple M-series devices: M2 Ultra, M2 Max and M4 Pro and two NVIDIA GPUs: NVIDIA RTX A6000, a multi GPU setup with 2xNVIDIA RTX A6000, 5 model scales ranging from 8B to 405B parameters and 14 quantization schemes gives an understanding of how Apple Silicon fits within the paradigm of on-device LLM inference. Our analysis reveals multiple resource interdependencies and unexpected findings, while also quantifying established insights. To the best of our knowledge, this study makes the first attempt to present a thorough characterization and analysis of Apple Silicon for on-device inference.",
+      "canonical_id": "arXiv:2508.08531",
+      "arxiv_id": "2508.08531",
+      "authors": [
+        "A. Benazir",
+        "F. Lin"
+      ]
+    },
+    {
+      "title": "Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+      "source_url": "https://www.semanticscholar.org/paper/d40f43fcc2db511b722633927c31b66b19207e13",
+      "year": 2025,
+      "published": "2025-08-11",
+      "abstract": "Large Language Models (LLMs) are revolutionizing how users interact with information systems, yet their high inference cost poses serious scalability and sustainability challenges. Caching inference responses, allowing them to be retrieved without another forward pass through the LLM, has emerged as one possible solution. Traditional exact-match caching, however, overlooks the semantic similarity between queries, leading to unnecessary recomputation. Semantic caching addresses this by retrieving responses based on semantic similarity, but introduces a fundamentally different cache eviction problem: one must account for mismatch costs between incoming queries and cached responses. Moreover, key system parameters, such as query arrival probabilities and serving costs, are often unknown and must be learned over time. Existing semantic caching methods are largely ad-hoc, lacking theoretical foundations and unable to adapt to real-world uncertainty. In this paper, we present a principled, learning-based framework for semantic cache eviction under unknown query and cost distributions. We formulate both offline optimization and online learning variants of the problem based on the combinatorial multi-armed bandit framework, and develop provably efficient algorithms with state-of-the-art guarantees. We also evaluate our framework on a synthetic dataset, showing that our proposed algorithms perform matching or superior performance compared with baselines.",
+      "canonical_id": "arXiv:2508.07675",
+      "arxiv_id": "2508.07675",
+      "authors": [
+        "Xutong Liu",
+        "Baran Atalar",
+        "Xiangxiang Dai",
+        "Jinhang Zuo",
+        "Si-Wei Wang",
+        "John C. S. Lui",
+        "Wei Chen",
+        "Carlee Joe-Wong"
+      ]
+    },
+    {
+      "title": "OverFill: Two-Stage Models for Efficient Language Model Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/c550e89d41d8c926607c54c9c40ba8a3f497b942",
+      "year": 2025,
+      "published": "2025-08-11",
+      "abstract": "Large language models (LLMs) excel across diverse tasks but face significant deployment challenges due to high inference costs. LLM inference comprises prefill (compute-bound) and decode (memory-bound) stages, with decode dominating latency particularly for long sequences. Current decoder-only models handle both stages uniformly, despite their distinct computational profiles. We propose OverFill, which decouples these stages to optimize accuracy-efficiency tradeoffs. OverFill begins with a full model for prefill, processing system and user inputs in parallel. It then switches to a dense pruned model, while generating tokens sequentially. Leveraging more compute during prefill, OverFill improves generation quality with minimal latency overhead. Our 3B-to-1B OverFill configuration outperforms 1B pruned models by 83.2%, while the 8B-to-3B configuration improves over 3B pruned models by 79.2% on average across standard benchmarks. OverFill matches the performance of same-sized models trained from scratch, while using significantly less training data. Our code is available at https://github.com/friendshipkim/overfill.",
+      "canonical_id": "arXiv:2508.08446",
+      "arxiv_id": "2508.08446",
+      "authors": [
+        "Woojeong Kim",
+        "Junxiong Wang",
+        "J. Yan",
+        "Mohamed Abdelfattah",
+        "Alexander M. Rush"
+      ]
+    },
+    {
+      "title": "Joint Semantic Communication and Output Length Prediction for Efficient Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/dd83c97c2b81ed47a14948f9b95279aec0fc7e45",
+      "year": 2025,
+      "published": "2025-08-10",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/ICCCWorkshops67136.2025.11148149",
+      "doi": "10.1109/ICCCWorkshops67136.2025.11148149",
+      "authors": [
+        "Yan-Liang Jin",
+        "Juncheng She",
+        "Sheng-Li Liu",
+        "Yuan Gao"
+      ]
+    },
+    {
+      "title": "FlexSpark: Robust and Efficient Multi-Device Collaborative Inference over Wireless Network",
+      "source_url": "https://www.semanticscholar.org/paper/2d85889e77e0e462223af63ed78198da8d19148b",
+      "year": 2025,
+      "published": "2025-08-07",
+      "abstract": "The local deployment of large language models (LLMs) on mobile devices has garnered increasing attention due to its advantages in enhancing user privacy and enabling offline operation. However, given the limited computational resources of a single mobile device, only small language models (SLMs) with restricted capabilities can currently be supported. In this paper, we explore the potential of leveraging the collective computing power of multiple mobile devices to collaboratively support more efficient local LLM inference. We evaluate the feasibility and efficiency of existing parallelism techniques under the constraints of mobile devices and wireless network, identifying that chunked pipeline parallelism holds promise for realizing this vision. Building on this insight, we propose FlexSpark, a novel solution designed to achieve efficient and robust multi-device collaborative inference. FlexSpark incorporates priority scheduling, ordered communication, and elastic compression to maximize wireless bandwidth utilization, and thus accelerates distributed inference. Preliminary experimental results demonstrate that FlexSpark achieves up to a 2 × speedup compared to state-of-the-art frameworks, significantly enhancing the practicality and scalability of LLM deployment on mobile devices.",
+      "canonical_id": "DOI:10.1145/3735358.3735368",
+      "doi": "10.1145/3735358.3735368",
+      "authors": [
+        "Yiyang Shao",
+        "Hongyi Li",
+        "Shuihai Hu",
+        "Xin-Le Du",
+        "Hao Wu",
+        "Jingbin Zhou",
+        "Kun Tan"
+      ]
+    },
+    {
+      "title": "The ASPLOS 2025 / EuroSys 2025 Contest on Intra-Operator Parallelism for Distributed Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/000b304b6a915981248880b336a6c42843b0f6dc",
+      "year": 2025,
+      "published": "2025-08-06",
+      "abstract": "A chief enabler of large-scale deep learning is the distribution of computation across multiple interconnected hardware accelerators. In order to unlock the maximum possible performance, a compiler must first select a reasonable strategy to parallelize a model's operations. Since neural network architectures admit multiple flavors of parallelism, determining the proper strategy for each instruction is a critical (albeit non-trivial) task. To solicit new ideas toward solving this challenging combinatorial optimization problem, we organized the ASPLOS 2025 / EuroSys 2025 Contest on Intra-Operator Parallelism for Distributed Deep Learning, a multi-month competition focused on advancing the state-of-the-art for model partitioning algorithms. In this paper, we offer a retrospective of this event, including the basic problem formulation, key challenges & opportunities, our new benchmark suite, and the quality of submissions received.",
+      "canonical_id": "DOI:10.1145/3676642.3736399",
+      "doi": "10.1145/3676642.3736399",
+      "authors": [
+        "Michael D. Moffitt",
+        "Pratik Fegade"
+      ]
+    },
+    {
+      "title": "Revisiting the Straggling Problem in GPU-based Distributed Deep Learning Training",
+      "source_url": "https://www.semanticscholar.org/paper/4863db4ec81494c8f5e6130d065affb96f808b43",
+      "year": 2025,
+      "published": "2025-08-04",
+      "abstract": "The straggler problem has been extensively studied in CPU-based distributed deep learning (DL) training but has not received significant attention in homogeneous GPU-based distributed training, possibly because GPUs do not typically become bottlenecks in this scenario. In this paper, we conduct experiment measurements and find that the straggler problems persist in this scenario, primarily stemming from communication hurdles, compounded by computation delays, and stragglers substantially inflate resource consumption and training time by ∼50%. Existing straggler mitigation methods do not directly address the communication stragglers in this scenario, and they suffer from drawbacks such as prolonged latency in straggler removal, high resource consumption, or compromised training accuracy. To tackle these limitations, based on the insights derived from thorough measurements, we propose a Straggler-aware Time and Resource Efficient distributed DL Training system (STRET). STRET is tailored for both homogeneous and heterogeneous GPU-based distributed training, encompassing both the parameter server (PS) and all-reduce architectures. It creates a hybrid architecture that connects a straggler to a non-straggler possessing high communication bandwidth with it to reduce communication delay. If this method fails to eliminate stragglers, it runs two complementary methods in sequence to remove the stragglers. First, it further reduces communication overhead by withholding reporting gradients when the accuracy increment is marginal. Second, it conducts one-time batch size tuning to reduce iteration time. Real experimental results on TensorFlow show that STRET can reduce up to 56% and 41% training time and save up to 94% and 96% resources in the heterogeneous and homogeneous scenarios, respectively, compared to state-of-the-art approaches while preserving accuracy.",
+      "canonical_id": "DOI:10.1109/ICCCN65249.2025.11133842",
+      "doi": "10.1109/ICCCN65249.2025.11133842",
+      "authors": [
+        "Suraiya Tairin",
+        "Zeyu Zhang",
+        "Haiying Shen"
+      ]
+    },
+    {
+      "title": "SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/bb36f730698710cb98ba8abff7ac5e120ebf27f9",
+      "year": 2025,
+      "published": "2025-08-03",
+      "abstract": "KV cache eviction has emerged as an effective solution to alleviate resource constraints faced by LLMs in long-context scenarios. However, existing token-level eviction methods often overlook two critical aspects: (1) their irreversible eviction strategy fails to adapt to dynamic attention patterns during decoding (the saliency shift problem), and (2) they treat both marginally important tokens and truly unimportant tokens equally, despite the collective significance of marginal tokens to model performance (the marginal information over-compression problem). To address these issues, we design two compensation mechanisms based on the high similarity of attention matrices between LLMs of different scales. We propose SmallKV, a small model assisted compensation method for KV cache compression. SmallKV can maintain attention matching between different-scale LLMs to: 1) assist the larger model in perceiving globally important information of attention; and 2) use the smaller model's attention scores to approximate those of marginal tokens in the larger model. Extensive experiments on benchmarks including GSM8K, BBH, MT-Bench, and LongBench demonstrate the effectiveness of SmallKV. Moreover, efficiency evaluations show that SmallKV achieves 1.75 - 2.56 times higher throughput than baseline methods, highlighting its potential for efficient and performant LLM inference in resource constrained environments.",
+      "canonical_id": "arXiv:2508.02751",
+      "arxiv_id": "2508.02751",
+      "authors": [
+        "Yi Zhao",
+        "Yajuan Peng",
+        "Cam-Tu Nguyen",
+        "Z. Li",
+        "Xiaoliang Wang",
+        "Hai Zhao",
+        "Xiao-Ming Fu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2509.08315",
+      "identity_tokens": [
+        "id:arXiv:2509.08315",
+        "title:evolkv evolutionary kv cache compression for llm inference",
+        "url:https://www.semanticscholar.org/paper/a3e16a32fda18fb2cc10a4073c44339be013e9f9"
+      ],
+      "record": {
+        "title": "EvolKV: Evolutionary KV Cache Compression for LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a3e16a32fda18fb2cc10a4073c44339be013e9f9",
+        "year": 2025,
+        "published": "2025-09-10",
+        "abstract": "Existing key-value (KV) cache compression methods typically rely on heuristics, such as uniform cache allocation across layers or static eviction policies, however, they ignore the critical interplays among layer-specific feature patterns and task performance, which can lead to degraded generalization. In this paper, we propose EvolKV, an adaptive framework for layer-wise, task-driven KV cache compression that jointly optimizes the memory efficiency and task performance. By reformulating cache allocation as a multi-objective optimization problem, EvolKV leverages evolutionary search to dynamically configure layer budgets while directly maximizing downstream performance. Extensive experiments on 11 tasks demonstrate that our approach outperforms all baseline methods across a wide range of KV cache budgets on long-context tasks and surpasses heuristic baselines by up to 7 percentage points on GSM8K. Notably, EvolKV achieves superior performance over the full KV cache setting on code completion while utilizing only 1.5% of the original budget, suggesting the untapped potential in learned compression strategies for KV cache budget allocation.",
+        "canonical_id": "arXiv:2509.08315",
+        "arxiv_id": "2509.08315",
+        "authors": [
+          "Bohan Yu",
+          "Yekun Chai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.04827",
+      "identity_tokens": [
+        "id:arXiv:2509.04827",
+        "title:voltanallm energyefficient and sloaware disaggregated llm serving via adaptive frequency control íand statespace routing",
+        "url:https://www.semanticscholar.org/paper/ed1489b41b96514bd30d59df0a0221a899573288"
+      ],
+      "record": {
+        "title": "VoltanaLLM: Energy-Efficient and SLO-Aware Disaggregated LLM Serving via Adaptive Frequency Control Íand State-Space Routing",
+        "source_url": "https://www.semanticscholar.org/paper/ed1489b41b96514bd30d59df0a0221a899573288",
+        "year": 2025,
+        "published": "2025-09-05",
+        "abstract": "The energy cost of Large Language Model (LLM) inference is rapidly becoming a barrier to sustainable and scalable deployment. Although modern serving architectures expose distinct prefill and decode behaviors, existing systems fail to exploit these phase differences for energy-efficient serving under strict latency SLOs. This paper introduces VoltanaLLM, the first system that explicitly targets and reduces the energy bloat in modern prefill-decode (P/D) disaggregated LLM serving. Guided by a control-theory perspective, VoltanaLLM separates two levers: per-instance operating-point selection (GPU frequency per iteration) and system-level state-space routing of requests. We empirically observe that LLM inference exhibits a U-shaped energy-frequency curve creating\"sweet spots\"that depend on phase behavior and load. VoltanaLLM exploits this by combining phase-specific, iteration-level frequency selection driven by a lightweight, online-adaptive latency predictor, with a decode state-space guided router that avoids architectural granularity-induced inefficiencies, all while meeting desired SLOs. We implement VoltanaLLM using SGLang and evaluate it across multiple models and real-world workloads. Our results show VoltanaLLM reduces end-to-end energy by up to 36.3% versus a static max-frequency baseline while maintaining high SLO attainment, and generalizes to newer GPUs. These results point to sustainable LLM serving via phase-aware, iteration-level frequency selection coupled with architecture-aware routing. Source code is available in https://github.com/Supercomputing-System-AI-Lab/VoltanaLLM.",
+        "canonical_id": "arXiv:2509.04827",
+        "arxiv_id": "2509.04827",
+        "authors": [
+          "Jiahuan Yu",
+          "Aryan Taneja",
+          "Junfeng Lin",
+          "Minjia Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.17892",
+      "identity_tokens": [
+        "id:arXiv:2510.17892",
+        "title:advances in pretrained language models for domainspecific text classification a systematic review",
+        "url:https://www.semanticscholar.org/paper/9ce48f0513e113513d9a922e60529f0fb515fc67"
+      ],
+      "record": {
+        "title": "Advances in Pre-trained Language Models for Domain-Specific Text Classification: A Systematic Review",
+        "source_url": "https://www.semanticscholar.org/paper/9ce48f0513e113513d9a922e60529f0fb515fc67",
+        "year": 2025,
+        "published": "2025-09-05",
+        "abstract": "The exponential increase in scientific literature and online information necessitates efficient methods for extracting knowledge from textual data. Natural language processing (NLP) plays a crucial role in addressing this challenge, particularly in text classification tasks. While large language models (LLMs) have achieved remarkable success in NLP, their accuracy can suffer in domain-specific contexts due to specialized vocabulary, unique grammatical structures, and imbalanced data distributions. In this systematic literature review (SLR), we investigate the utilization of pre-trained language models (PLMs) for domain-specific text classification. We systematically review 41 articles published between 2018 and January 2024, adhering to the PRISMA statement (preferred reporting items for systematic reviews and meta-analyses). This review methodology involved rigorous inclusion criteria and a multi-step selection process employing AI-powered tools. We delve into the evolution of text classification techniques and differentiate between traditional and modern approaches. We emphasize transformer-based models and explore the challenges and considerations associated with using LLMs for domain-specific text classification. Furthermore, we categorize existing research based on various PLMs and propose a taxonomy of techniques used in the field. To validate our findings, we conducted a comparative experiment involving BERT, SciBERT, and BioBERT in biomedical sentence classification. Finally, we present a comparative study on the performance of LLMs in text classification tasks across different domains. In addition, we examine recent advancements in PLMs for domain-specific text classification and offer insights into future directions and limitations in this rapidly evolving domain.",
+        "canonical_id": "arXiv:2510.17892",
+        "arxiv_id": "2510.17892",
+        "authors": [
+          "Zhyar Rzgar K. Rostam",
+          "Gábor Kertész"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cluster59342.2025.11186491",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster59342.2025.11186491",
+        "title:splitquant resourceefficient llm offline serving on heterogeneous gpus via phaseaware model partition and adaptive quantization",
+        "url:https://www.semanticscholar.org/paper/5701cb053d8f43ba3927dacc8d1660b6be989d74"
+      ],
+      "record": {
+        "title": "SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/5701cb053d8f43ba3927dacc8d1660b6be989d74",
+        "year": 2025,
+        "published": "2025-09-02",
+        "abstract": "Modern large language models (LLMs) serving systems address distributed deployment challenges through two key techniques: distributed model partitioning for parallel computation across accelerators and quantization for reducing parameter size. While existing systems assume homogeneous GPU environments, we reveal significant untapped potential in heterogeneous systems with mixed-capacity accelerators where two critical limitations persist: (1) uniform partitioning and quantization strategies fail to adapt to hardware heterogeneity, exacerbating resource imbalance, and (2) decoupled optimization of partitioning and quantization overlooks critical performance synergies between these techniques. We present SplitQuant, a phase-aware distributed serving system that co-optimizes mixedprecision quantization, phase-aware model partitioning, and micro-batch sizing for heterogeneous environments. Our approach combines analytical modeling of quality-runtime tradeoffs with a lightweight planning algorithm to maximize throughput while preserving user-specified model quality targets. Evaluations across 10 production clusters show SplitQuant achieves up to $2.34 \\times(1.61 \\times$ mean) higher throughput than state-of-theart approaches without violating accuracy targets. Our results underscore the value of co-designing quantization and model partitioning strategies for heterogeneous environments.",
+        "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186491",
+        "doi": "10.1109/CLUSTER59342.2025.11186491",
+        "authors": [
+          "Juntao Zhao",
+          "Borui Wan",
+          "Yanghua Peng",
+          "Haibin Lin",
+          "Chuan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.01811",
+      "identity_tokens": [
+        "id:arXiv:2509.01811",
+        "title:optimal parallel scheduling under concave speedup functions",
+        "url:https://www.semanticscholar.org/paper/1ab2e596748e536e31e4676080d59de2c6f40a51"
+      ],
+      "record": {
+        "title": "Optimal Parallel Scheduling under Concave Speedup Functions",
+        "source_url": "https://www.semanticscholar.org/paper/1ab2e596748e536e31e4676080d59de2c6f40a51",
+        "year": 2025,
+        "published": "2025-09-01",
+        "abstract": "Efficient scheduling of parallel computation resources across multiple jobs is a fundamental problem in modern cloud/edge computing systems for many AI-based applications. Allocating more resources to a job accelerates its completion, but with diminishing returns. Prior work (heSRPT) solved this problem only for some specific speedup functions with an exponential form, providing a closed-form solution. However, the general case with arbitrary concave speedup functions -- which more accurately capture real-world workloads -- has remained open. In this paper, we solve this open problem by developing optimal scheduling algorithms for parallel jobs under general concave speedup functions. We first discover a fundamental and broadly-applicable rule for optimal parallel scheduling, namely the Consistent Derivative Ratio (CDR) Rule, which states that the ratio of the derivatives of the speedup functions across active jobs remains constant over time. To efficiently compute the optimal allocations that satisfy the CDR Rule, we propose the General Water-Filling (GWF) method, a more general version of classical water-filling in wireless communications. Combining these insights, we design the SmartFill Algorithm to solve the general scheduling problem. Unlike heSRPT, which always allocates resources to all active jobs, SmartFill selectively determines which jobs should receive resources and how much they should be allocated. For a broad class of so-called \\emph{regular} speedup functions, SmartFill yields closed-form optimal solutions, while for non-regular functions it efficiently computes the optimum with low complexity. Numerical evaluations show that SmartFill can substantially outperform heSRPT across a wide range of concave speedup functions.",
+        "canonical_id": "arXiv:2509.01811",
+        "arxiv_id": "2509.01811",
+        "authors": [
+          "Chengzhang Li",
+          "Pei-Zhong Ju",
+          "Atilla Eryilmaz",
+          "N. Shroff"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.00579",
+      "identity_tokens": [
+        "id:arXiv:2509.00579",
+        "title:kvcomp a highperformance llmaware lossy compression framework for kv cache",
+        "url:https://www.semanticscholar.org/paper/3901ed44294e31f906a94c2a107d2cc28c155768"
+      ],
+      "record": {
+        "title": "KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache",
+        "source_url": "https://www.semanticscholar.org/paper/3901ed44294e31f906a94c2a107d2cc28c155768",
+        "year": 2025,
+        "published": "2025-08-30",
+        "abstract": "Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\\% and up to 83\\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement.",
+        "canonical_id": "arXiv:2509.00579",
+        "arxiv_id": "2509.00579",
+        "authors": [
+          "Bo Jiang",
+          "Taolue Yang",
+          "You-Yuan Liu",
+          "Chengming Zhang",
+          "Xubin He",
+          "Sian Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.18101",
+      "identity_tokens": [
+        "id:arXiv:2509.18101",
+        "title:a costbenefit analysis of onpremise large language model deployment breaking even with commercial llm services",
+        "url:https://www.semanticscholar.org/paper/99ec1e1573b6e673184b7ce15b565c7baf25464e"
+      ],
+      "record": {
+        "title": "A Cost-Benefit Analysis of On-Premise Large Language Model Deployment: Breaking Even with Commercial LLM Services",
+        "source_url": "https://www.semanticscholar.org/paper/99ec1e1573b6e673184b7ce15b565c7baf25464e",
+        "year": 2025,
+        "published": "2025-08-30",
+        "abstract": "Large language models (LLMs) are becoming increasingly widespread. Organizations that want to use AI for productivity now face an important decision. They can subscribe to commercial LLM services or deploy models on their own infrastructure. Cloud services from providers such as OpenAI, Anthropic, and Google are attractive because they provide easy access to state-of-the-art models and are easy to scale. However, concerns about data privacy, the difficulty of switching service providers, and long-term operating costs have driven interest in local deployment of open-source models. This paper presents a cost-benefit analysis framework to help organizations determine when on-premise LLM deployment becomes economically viable compared to commercial subscription services. We consider the hardware requirements, operational expenses, and performance benchmarks of the latest open-source models, including Qwen, Llama, Magistral, and etc. Then we compare the total cost of deploying these models locally with the major cloud providers subscription fee. Our findings provide an estimated breakeven point based on usage levels and performance needs. These results give organizations a practical framework for planning their LLM strategies.",
+        "canonical_id": "arXiv:2509.18101",
+        "arxiv_id": "2509.18101",
+        "authors": [
+          "Guan-Zhong Pan",
+          "Vishal Chodnekar",
+          "Abinas Roy",
+          "Haibo Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3764589",
+      "identity_tokens": [
+        "id:DOI:10.1145/3764589",
+        "title:qinfer towards efficient gpucpu collaborative llm inference via sparsityaware dynamic scheduling",
+        "url:https://www.semanticscholar.org/paper/6d2fee68aef566c75bf4678c2f7ae176d5314a44"
+      ],
+      "record": {
+        "title": "Q-Infer: Towards Efficient GPU-CPU Collaborative LLM Inference via Sparsity-Aware Dynamic Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/6d2fee68aef566c75bf4678c2f7ae176d5314a44",
+        "year": 2025,
+        "published": "2025-08-28",
+        "abstract": "Large Language Models (LLMs) have sparked a new wave of exciting AI applications, yet their large model size imposes significant computational and storage costs during inference. Offloading parameters to the CPU and conducting GPU-CPU collaborative inference is a highly cost-effective strategy to alleviate GPU memory constraints. However, current solutions struggle to balance latency and throughput, and suffer from accuracy loss and performance fluctuations under various workloads and configurations. In this article, we propose Q-Infer, an efficient GPU-CPU collaborative inference system that significantly improves the performance and quality of LLM inference through several optimizations: (1) Q-Infer designs a dynamic caching strategy for important parameters by exploiting model sparsity and locality. (2) Q-Infer proposes a multi-window-based approach for selecting important tokens, which reduces the KV cache while maintaining high accuracy. (3) Q-Infer develops a novel GPU-CPU collaborative inference and dynamic scheduling strategy to enhance performance across different environments. We evaluate Q-Infer using various models and workloads across different hardware configurations. The results demonstrate Q-Infer’s superior inference performance while retaining model accuracy compared with state-of-the-art GPU-CPU systems.",
+        "canonical_id": "DOI:10.1145/3764589",
+        "doi": "10.1145/3764589",
+        "authors": [
+          "Kai Lu",
+          "Qiang Wei",
+          "Yier Lin",
+          "Pengyu Liu",
+          "Hai-Peng Wang",
+          "Ji-Guang Wan",
+          "Ting Yao",
+          "Huatao Wu",
+          "Dao-Hui Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.18736",
+      "identity_tokens": [
+        "id:arXiv:2508.18736",
+        "title:rethinking caching for llm serving systems beyond traditional heuristics",
+        "url:https://www.semanticscholar.org/paper/add0859701c539526a6b1f747861ac6e11cdb45f"
+      ],
+      "record": {
+        "title": "Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics",
+        "source_url": "https://www.semanticscholar.org/paper/add0859701c539526a6b1f747861ac6e11cdb45f",
+        "year": 2025,
+        "published": "2025-08-26",
+        "abstract": "Serving Large Language Models (LLMs) at scale requires meeting strict Service Level Objectives (SLOs) under severe computational and memory constraints. Nevertheless, traditional caching strategies fall short: exact-matching and prefix caches neglect query semantics, while state-of-the-art semantic caches remain confined to traditional intuitions, offering little conceptual departure. Building on this, we present SISO, a semantic caching system that redefines efficiency for LLM serving. SISO introduces centroid-based caching to maximize coverage with minimal memory, locality-aware replacement to preserve high-value entries, and dynamic thresholding to balance accuracy and latency under varying workloads. Across diverse datasets, SISO delivers up to 1.71$\\times$ higher hit ratios and consistently stronger SLO attainment compared to state-of-the-art systems.",
+        "canonical_id": "arXiv:2508.18736",
+        "arxiv_id": "2508.18736",
+        "authors": [
+          "Jungwoo Kim",
+          "Minsang Kim",
+          "Jaeheon Lee",
+          "Chanwoo Moon",
+          "Heejin Kim",
+          "Taeho Hwang",
+          "Woosuk Chung",
+          "Yeseong Kim",
+          "Sung-Jin Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.16712",
+      "identity_tokens": [
+        "id:arXiv:2508.16712",
+        "title:systematic characterization of llm quantization a performance energy and quality perspective",
+        "url:https://www.semanticscholar.org/paper/ac8a57bf38b4611b11111913640caf3805236438"
+      ],
+      "record": {
+        "title": "Systematic Characterization of LLM Quantization: A Performance, Energy, and Quality Perspective",
+        "source_url": "https://www.semanticscholar.org/paper/ac8a57bf38b4611b11111913640caf3805236438",
+        "year": 2025,
+        "published": "2025-08-22",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse domains, but their heavy resource demands make quantization-reducing precision to lower-bit formats-critical for efficient serving. While many quantization methods exist, a systematic understanding of their performance, energy, and quality tradeoffs in realistic serving conditions remains a gap. In this work, we first develop a fully automated online characterization framework qMeter, and then conduct an in-depth characterization of 11 post-training LLM quantization methods across 4 model sizes (7B-70B) and two GPU architectures (A100, H100). We evaluate quantization at the application, workload, parallelism, and hardware levels under online serving conditions. Our study reveals highly task- and method-dependent tradeoffs, strong sensitivity to workload characteristics, and complex interactions with parallelism and GPU architecture. We further present three optimization case studies illustrating deployment challenges in capacity planning, energy-efficient scheduling, and multi-objective tuning. To the best of our knowledge, this is one of the first comprehensive application-, system-, and hardware-level characterization of LLM quantization from a joint performance, energy, and quality perspective.",
+        "canonical_id": "arXiv:2508.16712",
+        "arxiv_id": "2508.16712",
+        "authors": [
+          "Tianyao Shi",
+          "Yi Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.15919",
+      "identity_tokens": [
+        "id:arXiv:2508.15919",
+        "title:hfx joint design of algorithms and systems for multislo serving and fast scaling",
+        "url:https://www.semanticscholar.org/paper/03ce27c85afa5ba48c9590821ce18ddaa1368091"
+      ],
+      "record": {
+        "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
+        "source_url": "https://www.semanticscholar.org/paper/03ce27c85afa5ba48c9590821ce18ddaa1368091",
+        "year": 2025,
+        "published": "2025-08-21",
+        "abstract": "Large language model (LLM) serving faces the dual challenge of meeting strict user-specific service-level objectives (SLOs) while minimizing computational cost under dynamic, multi-task workloads. Existing approaches either rely on static scheduling policies or focus on single-task settings, limiting their applicability in real-world deployments with heterogeneous requests, variable prompt lengths, and elastic scaling requirements. We present HFX, a production LLM serving system that jointly optimizes request scheduling and elastic scaling across model replicas to satisfy diverse SLOs. HFX introduces a \\textbf{scheduler} that performs proactive budget estimation and prioritization to ensure SLO compliance for both new and in-flight requests. HFX also integrates a \\textbf{scaler} that supports fast device-to-device (D2D) weight transfer, reducing cold-start latency. Additionally, the system supports both colocated and disaggregated prefill/decode deployments, enabling adaptation to diverse workload patterns and cloud environments. Through extensive experiments on multi-task workloads, we demonstrate consistently higher SLO attainment, lower end-to-end latency, and lower NPU usage cost by up to 4.44$\\times$, 65.82\\%, and 49.81\\%, respectively, compared to state-of-the-art systems. Our results highlight the effectiveness of SLO-aware scheduling and scaling in practical LLM serving, providing a robust framework for cost-efficient and SLO-compliant deployments.",
+        "canonical_id": "arXiv:2508.15919",
+        "arxiv_id": "2508.15919",
+        "authors": [
+          "Zahra Yousefijamarani",
+          "Xinglu Wang",
+          "Qian Wang",
+          "Morgan Lindsay Heisler",
+          "Taha Shabani",
+          "N. Gholipour",
+          "Parham Yassini",
+          "Hong Chang",
+          "Kang Chen",
+          "Qiantao Zhang",
+          "Xiao-Long Bai",
+          "Jian-Nan Wang",
+          "Ying Xiong",
+          "Yong Zhang",
+          "Zhe-Nan Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/hpcc67675.2025.00051",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpcc67675.2025.00051",
+        "title:adaptoserve an efficient system for supporting adaptive chunkedprefills in llm inference",
+        "url:https://www.semanticscholar.org/paper/1cbd3b432b653044f7e53de3584aa259ce72b852"
+      ],
+      "record": {
+        "title": "Adaptoserve: An Efficient System for Supporting Adaptive Chunked-Prefills in LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1cbd3b432b653044f7e53de3584aa259ce72b852",
+        "year": 2025,
+        "published": "2025-08-13",
+        "abstract": "With the widespread deployment of large language models (LLMs) across diverse applications, optimizing their inference processes to achieve high throughput and low latency has become increasingly critical. While vLLM emerges as a high-performance inference engine that significantly accelerates processing speed, it continues to face challenges with elevated tail latency in high-concurrency scenarios. Sarathi-Serve addresses this through chunked-prefills and stall-free scheduling, achieving a balance between throughput and latency. However, our analysis reveals fundamental limitations in its static chunking strategy. This paper presents AdaptoServe, a system employing a dynamic adaptive chunk-based prefetching strategy to overcome the resource management and latency optimization limitations inherent in static chunking approaches. Our solution features intelligent chunk size adaptation through real-time monitoring of GPU utilization and work-load characteristics, ensuring optimal performance across varying resource conditions. Experimental evaluations demonstrate that AdaptoServe delivers substantial performance gains in diverse hardware configurations and work-load scenarios, effectively balancing throughput-latency tradeoffs. Compared to vLLM, AdaptoServe achieves up to 59.4 % higher request throughput, while outperforming Sarathi-Serve by $\\mathbf{2 4. 4 \\%}$ through its dynamic chunking mechanism and enhanced multilevel feedback queue scheduling algorithm. We further investigate the strategy's applicability across different application scenarios, revealing significant optimization potential for next-generation LLM serving systems.",
+        "canonical_id": "DOI:10.1109/HPCC67675.2025.00051",
+        "doi": "10.1109/HPCC67675.2025.00051",
+        "authors": [
+          "Yu Ding",
+          "Jing-Xuan Zhao",
+          "Zhen-Gong Cai",
+          "Kai Shi",
+          "Fansong Zeng",
+          "Bo-Wei Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.08531",
+      "identity_tokens": [
+        "id:arXiv:2508.08531",
+        "title:profiling large language model inference on apple silicon a quantization perspective",
+        "url:https://www.semanticscholar.org/paper/70662b4a4a5f239f17ec2414944bf2e46eb62dfc"
+      ],
+      "record": {
+        "title": "Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective",
+        "source_url": "https://www.semanticscholar.org/paper/70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+        "year": 2025,
+        "published": "2025-08-12",
+        "abstract": "A systematic understanding of Apple Silicon is lacking in the current landscape of hardware efficiency; research focus is largely centered on accelerating GPUs for large-scale training or inference on CUDA devices. This paper investigates Apple Silicon's unique memory architecture that offers a unified memory integrating CPU and GPU memory and its implications for on-device LLM inference. We decipher myths about whether Apple Silicon is efficient for on-device inference compared to competitors such as NVIDIA GPUs by directly conducting latency and throughput comparison benchmarks. We explain the performance gap between them through profiling low level hardware metrics - ALU utilization, memory bandwidth, buffer usage, cache residency etc. at runtime. We draw several insights regarding performance bottlenecks such as dequantization overhead, compute throughput and memory bandwidth. We debunk existing false claims regarding large language model inference such as compressing models to lower bit precision is a defacto promise for faster inference across all hardware platforms. We find that the large unified memory enables Apple Silicon to be both cost effective and efficient against NVIDIA GPUs for ultra large language models. Our large scale evaluation on 5 hardware testbeds incorporating three Apple M-series devices: M2 Ultra, M2 Max and M4 Pro and two NVIDIA GPUs: NVIDIA RTX A6000, a multi GPU setup with 2xNVIDIA RTX A6000, 5 model scales ranging from 8B to 405B parameters and 14 quantization schemes gives an understanding of how Apple Silicon fits within the paradigm of on-device LLM inference. Our analysis reveals multiple resource interdependencies and unexpected findings, while also quantifying established insights. To the best of our knowledge, this study makes the first attempt to present a thorough characterization and analysis of Apple Silicon for on-device inference.",
+        "canonical_id": "arXiv:2508.08531",
+        "arxiv_id": "2508.08531",
+        "authors": [
+          "A. Benazir",
+          "F. Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.07675",
+      "identity_tokens": [
+        "id:arXiv:2508.07675",
+        "title:semantic caching for lowcost llm serving from offline learning to online adaptation",
+        "url:https://www.semanticscholar.org/paper/d40f43fcc2db511b722633927c31b66b19207e13"
+      ],
+      "record": {
+        "title": "Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+        "source_url": "https://www.semanticscholar.org/paper/d40f43fcc2db511b722633927c31b66b19207e13",
+        "year": 2025,
+        "published": "2025-08-11",
+        "abstract": "Large Language Models (LLMs) are revolutionizing how users interact with information systems, yet their high inference cost poses serious scalability and sustainability challenges. Caching inference responses, allowing them to be retrieved without another forward pass through the LLM, has emerged as one possible solution. Traditional exact-match caching, however, overlooks the semantic similarity between queries, leading to unnecessary recomputation. Semantic caching addresses this by retrieving responses based on semantic similarity, but introduces a fundamentally different cache eviction problem: one must account for mismatch costs between incoming queries and cached responses. Moreover, key system parameters, such as query arrival probabilities and serving costs, are often unknown and must be learned over time. Existing semantic caching methods are largely ad-hoc, lacking theoretical foundations and unable to adapt to real-world uncertainty. In this paper, we present a principled, learning-based framework for semantic cache eviction under unknown query and cost distributions. We formulate both offline optimization and online learning variants of the problem based on the combinatorial multi-armed bandit framework, and develop provably efficient algorithms with state-of-the-art guarantees. We also evaluate our framework on a synthetic dataset, showing that our proposed algorithms perform matching or superior performance compared with baselines.",
+        "canonical_id": "arXiv:2508.07675",
+        "arxiv_id": "2508.07675",
+        "authors": [
+          "Xutong Liu",
+          "Baran Atalar",
+          "Xiangxiang Dai",
+          "Jinhang Zuo",
+          "Si-Wei Wang",
+          "John C. S. Lui",
+          "Wei Chen",
+          "Carlee Joe-Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.08446",
+      "identity_tokens": [
+        "id:arXiv:2508.08446",
+        "title:overfill twostage models for efficient language model decoding",
+        "url:https://www.semanticscholar.org/paper/c550e89d41d8c926607c54c9c40ba8a3f497b942"
+      ],
+      "record": {
+        "title": "OverFill: Two-Stage Models for Efficient Language Model Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/c550e89d41d8c926607c54c9c40ba8a3f497b942",
+        "year": 2025,
+        "published": "2025-08-11",
+        "abstract": "Large language models (LLMs) excel across diverse tasks but face significant deployment challenges due to high inference costs. LLM inference comprises prefill (compute-bound) and decode (memory-bound) stages, with decode dominating latency particularly for long sequences. Current decoder-only models handle both stages uniformly, despite their distinct computational profiles. We propose OverFill, which decouples these stages to optimize accuracy-efficiency tradeoffs. OverFill begins with a full model for prefill, processing system and user inputs in parallel. It then switches to a dense pruned model, while generating tokens sequentially. Leveraging more compute during prefill, OverFill improves generation quality with minimal latency overhead. Our 3B-to-1B OverFill configuration outperforms 1B pruned models by 83.2%, while the 8B-to-3B configuration improves over 3B pruned models by 79.2% on average across standard benchmarks. OverFill matches the performance of same-sized models trained from scratch, while using significantly less training data. Our code is available at https://github.com/friendshipkim/overfill.",
+        "canonical_id": "arXiv:2508.08446",
+        "arxiv_id": "2508.08446",
+        "authors": [
+          "Woojeong Kim",
+          "Junxiong Wang",
+          "J. Yan",
+          "Mohamed Abdelfattah",
+          "Alexander M. Rush"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccworkshops67136.2025.11148149",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccworkshops67136.2025.11148149",
+        "title:joint semantic communication and output length prediction for efficient large language model inference",
+        "url:https://www.semanticscholar.org/paper/dd83c97c2b81ed47a14948f9b95279aec0fc7e45"
+      ],
+      "record": {
+        "title": "Joint Semantic Communication and Output Length Prediction for Efficient Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/dd83c97c2b81ed47a14948f9b95279aec0fc7e45",
+        "year": 2025,
+        "published": "2025-08-10",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/ICCCWorkshops67136.2025.11148149",
+        "doi": "10.1109/ICCCWorkshops67136.2025.11148149",
+        "authors": [
+          "Yan-Liang Jin",
+          "Juncheng She",
+          "Sheng-Li Liu",
+          "Yuan Gao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3735358.3735368",
+      "identity_tokens": [
+        "id:DOI:10.1145/3735358.3735368",
+        "title:flexspark robust and efficient multidevice collaborative inference over wireless network",
+        "url:https://www.semanticscholar.org/paper/2d85889e77e0e462223af63ed78198da8d19148b"
+      ],
+      "record": {
+        "title": "FlexSpark: Robust and Efficient Multi-Device Collaborative Inference over Wireless Network",
+        "source_url": "https://www.semanticscholar.org/paper/2d85889e77e0e462223af63ed78198da8d19148b",
+        "year": 2025,
+        "published": "2025-08-07",
+        "abstract": "The local deployment of large language models (LLMs) on mobile devices has garnered increasing attention due to its advantages in enhancing user privacy and enabling offline operation. However, given the limited computational resources of a single mobile device, only small language models (SLMs) with restricted capabilities can currently be supported. In this paper, we explore the potential of leveraging the collective computing power of multiple mobile devices to collaboratively support more efficient local LLM inference. We evaluate the feasibility and efficiency of existing parallelism techniques under the constraints of mobile devices and wireless network, identifying that chunked pipeline parallelism holds promise for realizing this vision. Building on this insight, we propose FlexSpark, a novel solution designed to achieve efficient and robust multi-device collaborative inference. FlexSpark incorporates priority scheduling, ordered communication, and elastic compression to maximize wireless bandwidth utilization, and thus accelerates distributed inference. Preliminary experimental results demonstrate that FlexSpark achieves up to a 2 × speedup compared to state-of-the-art frameworks, significantly enhancing the practicality and scalability of LLM deployment on mobile devices.",
+        "canonical_id": "DOI:10.1145/3735358.3735368",
+        "doi": "10.1145/3735358.3735368",
+        "authors": [
+          "Yiyang Shao",
+          "Hongyi Li",
+          "Shuihai Hu",
+          "Xin-Le Du",
+          "Hao Wu",
+          "Jingbin Zhou",
+          "Kun Tan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3676642.3736399",
+      "identity_tokens": [
+        "id:DOI:10.1145/3676642.3736399",
+        "title:the asplos 2025 eurosys 2025 contest on intraoperator parallelism for distributed deep learning",
+        "url:https://www.semanticscholar.org/paper/000b304b6a915981248880b336a6c42843b0f6dc"
+      ],
+      "record": {
+        "title": "The ASPLOS 2025 / EuroSys 2025 Contest on Intra-Operator Parallelism for Distributed Deep Learning",
+        "source_url": "https://www.semanticscholar.org/paper/000b304b6a915981248880b336a6c42843b0f6dc",
+        "year": 2025,
+        "published": "2025-08-06",
+        "abstract": "A chief enabler of large-scale deep learning is the distribution of computation across multiple interconnected hardware accelerators. In order to unlock the maximum possible performance, a compiler must first select a reasonable strategy to parallelize a model's operations. Since neural network architectures admit multiple flavors of parallelism, determining the proper strategy for each instruction is a critical (albeit non-trivial) task. To solicit new ideas toward solving this challenging combinatorial optimization problem, we organized the ASPLOS 2025 / EuroSys 2025 Contest on Intra-Operator Parallelism for Distributed Deep Learning, a multi-month competition focused on advancing the state-of-the-art for model partitioning algorithms. In this paper, we offer a retrospective of this event, including the basic problem formulation, key challenges & opportunities, our new benchmark suite, and the quality of submissions received.",
+        "canonical_id": "DOI:10.1145/3676642.3736399",
+        "doi": "10.1145/3676642.3736399",
+        "authors": [
+          "Michael D. Moffitt",
+          "Pratik Fegade"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn65249.2025.11133842",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn65249.2025.11133842",
+        "title:revisiting the straggling problem in gpubased distributed deep learning training",
+        "url:https://www.semanticscholar.org/paper/4863db4ec81494c8f5e6130d065affb96f808b43"
+      ],
+      "record": {
+        "title": "Revisiting the Straggling Problem in GPU-based Distributed Deep Learning Training",
+        "source_url": "https://www.semanticscholar.org/paper/4863db4ec81494c8f5e6130d065affb96f808b43",
+        "year": 2025,
+        "published": "2025-08-04",
+        "abstract": "The straggler problem has been extensively studied in CPU-based distributed deep learning (DL) training but has not received significant attention in homogeneous GPU-based distributed training, possibly because GPUs do not typically become bottlenecks in this scenario. In this paper, we conduct experiment measurements and find that the straggler problems persist in this scenario, primarily stemming from communication hurdles, compounded by computation delays, and stragglers substantially inflate resource consumption and training time by ∼50%. Existing straggler mitigation methods do not directly address the communication stragglers in this scenario, and they suffer from drawbacks such as prolonged latency in straggler removal, high resource consumption, or compromised training accuracy. To tackle these limitations, based on the insights derived from thorough measurements, we propose a Straggler-aware Time and Resource Efficient distributed DL Training system (STRET). STRET is tailored for both homogeneous and heterogeneous GPU-based distributed training, encompassing both the parameter server (PS) and all-reduce architectures. It creates a hybrid architecture that connects a straggler to a non-straggler possessing high communication bandwidth with it to reduce communication delay. If this method fails to eliminate stragglers, it runs two complementary methods in sequence to remove the stragglers. First, it further reduces communication overhead by withholding reporting gradients when the accuracy increment is marginal. Second, it conducts one-time batch size tuning to reduce iteration time. Real experimental results on TensorFlow show that STRET can reduce up to 56% and 41% training time and save up to 94% and 96% resources in the heterogeneous and homogeneous scenarios, respectively, compared to state-of-the-art approaches while preserving accuracy.",
+        "canonical_id": "DOI:10.1109/ICCCN65249.2025.11133842",
+        "doi": "10.1109/ICCCN65249.2025.11133842",
+        "authors": [
+          "Suraiya Tairin",
+          "Zeyu Zhang",
+          "Haiying Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02751",
+      "identity_tokens": [
+        "id:arXiv:2508.02751",
+        "title:smallkv small model assisted compensation of kv cache compression for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/bb36f730698710cb98ba8abff7ac5e120ebf27f9"
+      ],
+      "record": {
+        "title": "SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/bb36f730698710cb98ba8abff7ac5e120ebf27f9",
+        "year": 2025,
+        "published": "2025-08-03",
+        "abstract": "KV cache eviction has emerged as an effective solution to alleviate resource constraints faced by LLMs in long-context scenarios. However, existing token-level eviction methods often overlook two critical aspects: (1) their irreversible eviction strategy fails to adapt to dynamic attention patterns during decoding (the saliency shift problem), and (2) they treat both marginally important tokens and truly unimportant tokens equally, despite the collective significance of marginal tokens to model performance (the marginal information over-compression problem). To address these issues, we design two compensation mechanisms based on the high similarity of attention matrices between LLMs of different scales. We propose SmallKV, a small model assisted compensation method for KV cache compression. SmallKV can maintain attention matching between different-scale LLMs to: 1) assist the larger model in perceiving globally important information of attention; and 2) use the smaller model's attention scores to approximate those of marginal tokens in the larger model. Extensive experiments on benchmarks including GSM8K, BBH, MT-Bench, and LongBench demonstrate the effectiveness of SmallKV. Moreover, efficiency evaluations show that SmallKV achieves 1.75 - 2.56 times higher throughput than baseline methods, highlighting its potential for efficient and performant LLM inference in resource constrained environments.",
+        "canonical_id": "arXiv:2508.02751",
+        "arxiv_id": "2508.02751",
+        "authors": [
+          "Yi Zhao",
+          "Yajuan Peng",
+          "Cam-Tu Nguyen",
+          "Z. Li",
+          "Xiaoliang Wang",
+          "Hai Zhao",
+          "Xiao-Ming Fu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6a77ff235f41af03eb183df2fbecb8f2b60d7d0e836123389cfee8f67d56e660",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

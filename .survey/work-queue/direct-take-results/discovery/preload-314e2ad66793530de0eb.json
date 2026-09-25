@@ -1,19 +1,34 @@
 {
   "early_ack": true,
+  "formal_precheck_ready_at": "2026-09-25T09:04:59.046144+00:00",
   "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-00-20260925T090214Z-3-r1.json",
   "frontier_target": 3,
-  "frontier_work_available": false,
+  "frontier_work_available": true,
   "ok": true,
   "operation": "direct_take_discovery",
   "preload_id": "preload-314e2ad66793530de0eb",
   "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-314e2ad66793530de0eb.json",
   "processed_at": "2026-09-25T09:04:14+00:00",
+  "receipt": "sha256:6a77ff235f41af03eb183df2fbecb8f2b60d7d0e836123389cfee8f67d56e660",
   "request_id": "take-scheduled-chat-00-20260925T090214Z-3-r1",
-  "reserved_frontier": [],
+  "reserved_frontier": [
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "e",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-e/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-da31f9d4237983eb861be17f.json",
+      "preload_id": "preload-0a690be8fefbdc51efb0",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-0a690be8fefbdc51efb0.json",
+      "request_id": "frontier-da31f9d4237983eb861be17f",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
   "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
   "schema_version": 1,
-  "status": "precheck_pending",
-  "submission_allowed": false,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
   "work_start_allowed": true,
   "worker_id": "scheduled-chat-00"
 }
