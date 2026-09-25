@@ -28,6 +28,7 @@ def _install_scripts(repo: Path):
     dst.mkdir(parents=True, exist_ok=True)
     for name in (
         "process_immutable_submission.py",
+        "prepare_completed_submission.py",
         "immutable_submission.py",
         "record_bank_config.py",
         "queue_worker.py",
@@ -73,9 +74,43 @@ def _make_descriptor(repo: Path, module, *, attempt="attempt-a", job="job-a", ba
     }
     if expected_blob_sha is not None:
         descriptor["expected_blob_sha"] = expected_blob_sha
+    preflight_rel = f".survey/work-queue/research-preflight/results/pf-{attempt}.json"
+    preflight_path = repo / preflight_rel
+    _write(preflight_path, {
+        "schema_version": 1,
+        "operation": "research_quality_preflight",
+        "ok": True,
+        "preflight_passed": True,
+        "kind": descriptor["kind"],
+        "attempt_id": attempt,
+        "job_id": job,
+        "record_bank": bank,
+        "paper_path": descriptor["paper_path"],
+        "expected_blob_sha": descriptor.get("expected_blob_sha"),
+        "worker_id": None,
+        "run_key": None,
+        "scheduled_slot": None,
+        "actual_invocation_start": None,
+        "record_slots": refs,
+        "descriptor_sha256": module.prepare_completed_submission.descriptor_fingerprint(descriptor),
+    })
+    descriptor["preflight_result"] = preflight_rel
     path = repo / f".survey/work-queue/submissions/research/{attempt}.json"
     _write(path, descriptor)
     return path
+
+
+def _refresh_preflight(repo: Path, module, descriptor_path: Path):
+    descriptor = json.loads(descriptor_path.read_text(encoding="utf-8"))
+    preflight_path = repo / descriptor["preflight_result"]
+    result = json.loads(preflight_path.read_text(encoding="utf-8"))
+    candidate = dict(descriptor)
+    candidate.pop("preflight_result", None)
+    result["paper_path"] = candidate["paper_path"]
+    result["expected_blob_sha"] = candidate.get("expected_blob_sha")
+    result["record_slots"] = candidate["record_slots"]
+    result["descriptor_sha256"] = module.prepare_completed_submission.descriptor_fingerprint(candidate)
+    _write(preflight_path, result)
 
 
 class ProcessImmutableSubmissionTests(unittest.TestCase):
@@ -118,6 +153,33 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
             self.assertEqual(json.loads((repo / ".survey/work-queue/jobs/job-b.json").read_text())["status"], "ready")
             self.assertFalse((repo / ".survey/work-queue/results/research/attempt-b.json").exists())
             self.assertTrue(second.exists())
+
+    def test_completed_descriptor_without_passing_preflight_provenance_is_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_scripts(repo)
+            module = _load(repo / ".survey/scripts/process_immutable_submission.py", "processor_no_preflight")
+            path = _make_descriptor(repo, module, attempt="attempt-no-preflight", job="job-no-preflight")
+            descriptor = json.loads(path.read_text(encoding="utf-8"))
+            descriptor.pop("preflight_result", None)
+            _write(path, descriptor)
+            _write(repo / ".survey/work-queue/jobs/job-no-preflight.json", {
+                "job_id": "job-no-preflight", "type": "research", "status": "ready", "priority": 80,
+            })
+            _write(repo / ".survey/work-queue/claims/job-no-preflight.json", {
+                "job_id": "job-no-preflight",
+                "attempt_id": "attempt-no-preflight",
+                "claim_id": "claim-no-preflight",
+                "worker_id": "worker-a",
+                "worker_kind": "scheduled_chat",
+                "expires_at": "2099-01-01T00:00:00+00:00",
+            })
+            with self.assertRaisesRegex(ValueError, "requires exact passing preflight provenance"):
+                module.process(repo, path)
+            self.assertEqual(
+                json.loads((repo / ".survey/work-queue/jobs/job-no-preflight.json").read_text())["status"],
+                "ready",
+            )
 
     def test_rejects_descriptor_when_current_claim_belongs_to_newer_attempt(self):
         self.assertTrue((SCRIPTS / "process_immutable_submission.py").exists(), "processor must exist")
@@ -172,6 +234,7 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
             descriptor = json.loads(path.read_text(encoding="utf-8"))
             descriptor["paper_path"] = "papers/training/test/job-training.md"
             _write(path, descriptor)
+            _refresh_preflight(repo, module, path)
             _write(repo / ".survey/work-queue/jobs/job-training.json", {
                 "job_id": "job-training", "type": "research", "status": "ready", "priority": 80,
             })
