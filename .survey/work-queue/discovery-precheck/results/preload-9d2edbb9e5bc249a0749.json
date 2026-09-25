@@ -1,0 +1,816 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-9d2edbb9e5bc249a0749",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-9d2edbb9e5bc249a0749",
+  "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "280",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "481280beb29c04e1671a3b1841c27550aee62589",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 26,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T01:23:53.911452+00:00",
+  "preload_id": "preload-9d2edbb9e5bc249a0749",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Continuous Semantic Caching for Low-Cost LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/9a8846c10c862783506646aef74c99f61922b9b6",
+      "year": 2026,
+      "published": "2026-04-21",
+      "abstract": "As Large Language Models (LLMs) become increasingly popular, caching responses so that they can be reused by users with semantically similar queries has become a vital strategy for reducing inference costs and latency. Existing caching frameworks have proposed to decide which query responses to cache by assuming a finite, known universe of discrete queries and learning their serving costs and arrival probabilities. As LLMs'pool of users and queries expands, however, such an assumption becomes increasingly untenable: real-world LLM queries reside in an infinite, continuous embedding space. In this paper, we establish the first rigorous theoretical framework for semantic LLM response caching in continuous query space under uncertainty. To bridge the gap between discrete optimization and continuous representation spaces, we introduce dynamic $\\epsilon$-net discretization coupled with Kernel Ridge Regression. This design enables the system to formally quantify estimation uncertainty and generalize partial feedback on LLM query costs across continuous semantic query neighborhoods. We develop both offline learning and online adaptive algorithms optimized to reduce switching costs incurred by changing the cached responses. We prove that our online algorithm achieves a sublinear regret bound against an optimal continuous oracle, which reduces to existing bounds for discrete query models. Extensive empirical evaluations demonstrate that our framework approximates the continuous optimal cache well while also reducing computational and switching overhead compared to existing methods.",
+      "canonical_id": "arXiv:2604.20021",
+      "arxiv_id": "2604.20021",
+      "authors": [
+        "Baran Atalar",
+        "Xutong Liu",
+        "Jinhang Zuo",
+        "Si-Wei Wang",
+        "Wei Chen",
+        "Carlee Joe-Wong"
+      ]
+    },
+    {
+      "title": "Predictive Self-Healing for Multi-Agent LLM Pipelines Using Model Predictive Control",
+      "source_url": "https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7",
+      "year": 2026,
+      "published": "2026-04-19",
+      "abstract": "Multi-agent Large Language Model (LLM) systems are increasingly deployed for complex reasoning tasks, yet their reliability under dynamic conditions remains inadequately addressed. Existing fault tolerance mechanisms are predominantly reactive, responding to failures only after cascading effects have begun. This paper presents a predictive self-healing framework that applies Model Predictive Control (MPC) to multi-agent LLM orchestration. Our approach models the agent pipeline as a dynamical system, employs a Kalman filter for state estimation, and computes optimal control actions-including replica scaling, load redistribution, and circuit breaker activation-to maintain system stability proactively. Experimental evaluation on a threestage LLM pipeline demonstrates that our MPC-based controller achieves 96.8 % success rate under stress conditions, reduces P99 latency by 68 % compared to reactive approaches, and recovers from failures 73 % faster than Kubernetes Horizontal Pod Autoscaler. Energy analysis shows a 22 % reduction in GPUhours consumed, yielding proportional carbon footprint savings at scale. These results indicate that control-theoretic methods are a promising direction for reliable and energy-efficient multi-agent LLM deployment.",
+      "canonical_id": "DOI:10.1109/SusTech67720.2026.11536606",
+      "doi": "10.1109/SusTech67720.2026.11536606",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Amit Kumar Padhy",
+        "Sandeep Shivam",
+        "Viswanathan Ranganathan",
+        "Arun Kumar Elengovan",
+        "Deepak Kole"
+      ]
+    },
+    {
+      "title": "Fast Warm-Start Techniques for Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/ff96b1a76205f90f9806ac408c1f1a6ae484e36b",
+      "year": 2026,
+      "published": "2026-04-15",
+      "abstract": "Large language model (LLM) inference servers experience significant latency during cold starts—the period from process initialization to serving the first request. We measure cold-start time-to-first-token (TTFT) exceeding 45 seconds for 7B-class models and 80 seconds for 13B-class models on commodity GPUs. This latency creates SLA violations during scaling events, deployments, and fault recovery. We present a system of engineering techniques that reduce cold-start overhead without modifying model weights or architecture: artifact pre-staging, CUDA context pre-initialization, memory allocator priming, and kernel warm-up. Our evaluation on Paperspace GPU instances shows TTFT reductions of 42–68% (7B models) and 31–54% (13B models) compared to naïve cold starts, while maintaining steady-state throughput within 3% of baseline. We characterize the breakdown of cold-start phases and demonstrate that systematic warm-start optimization is practical for production serving systems.",
+      "canonical_id": "DOI:10.1109/IMCET69180.2026.11503728",
+      "doi": "10.1109/IMCET69180.2026.11503728",
+      "authors": [
+        "Tejas Pravinbhai Patel"
+      ]
+    },
+    {
+      "title": "Technology solutions targeting the performance of gen-AI inference in resource constrained platforms",
+      "source_url": "https://www.semanticscholar.org/paper/c8d85afdb6e78e3b339aecc02d65bb28a296d3ab",
+      "year": 2026,
+      "published": "2026-04-13",
+      "abstract": "The rise of generative AI workloads, particularly language model inference, is intensifying on/off-chip memory pressure. Multimodal inputs such as video streams or images and downstream applications like Question Answering (QA) and analysis over large documents incur long context lengths, requiring caching of massive Key and Value states of the previous tokens. Even a low degree of concurrent inference serving on resource-constrained devices, like mobiles, can further add to memory capacity pressure and runtime memory management complexity. In this paper, we evaluate the performance implications of two emerging technology solutions to alleviate the memory pressure in terms of both capacity and bandwidth using a hierarchical roofline-based analytical performance model. For large models (e.g., 13B parameters) and context lengths, we investigate the performance implications of High Bandwidth Storage (HBS) and outline bandwidth/latency requirements to achieve an acceptable throughput for interactivity. For small models (e.g., 1B parameters), we evaluate the merit of a bonded global buffer memory chiplet and propose how to best utilize it.",
+      "canonical_id": "arXiv:2604.11128",
+      "arxiv_id": "2604.11128",
+      "authors": [
+        "Joyjit Kundu",
+        "J. Klein",
+        "Aakash Patel",
+        "D. Biswas"
+      ]
+    },
+    {
+      "title": "GreenTune: Energy-Efficient Low-Rank Tuning of LLMs with ThreeE Evaluation under 4-/8-bit Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/ff7c8b374302739582eddead7cf023fefc70a27f",
+      "year": 2026,
+      "published": "2026-04-13",
+      "abstract": null,
+      "canonical_id": "DOI:10.1145/3774904.3793014",
+      "doi": "10.1145/3774904.3793014",
+      "authors": [
+        "Xing Ma",
+        "Zongxi Li",
+        "Chengzu Dong",
+        "Kai Fang",
+        "Di Shao"
+      ]
+    },
+    {
+      "title": "Optimizing Attention for Large Language Model Inference on the MT-3000 Many-Core Processor",
+      "source_url": "https://www.semanticscholar.org/paper/017d201b15d97483a1c939e11f54fa5756b988ed",
+      "year": 2026,
+      "published": "2026-04-13",
+      "abstract": "Transformer-based large language models (LLM) are increasingly deployed in high-performance computing environments, where the attention mechanism often becomes a key bottleneck during inference. Although state-of-the-art attention algorithms (e.g., FlashAttention) achieve high efficiency on GPUs, they are ill-suited to emerging heterogeneous many-core processors. In this work, we focus on MT-3000, a representative architecture deployed in the new-generation Tianhe supercomputer, and identify three principal challenges in realizing high-performance attention: complex multi-tier memory requiring manual data movement, excessive reduction overhead caused by sub-tile softmax operations, and static execution pipelines that fail to adapt to inference phases and sequence lengths. To overcome these challenges, we propose DeferAttention, a high-performance attention implementation designed for the MT-3000 many-core processor. DeferAttention introduces a novel deferred-reduction attention strategy to decouple reduction from the fused compute pipeline, enabling more efficient aggregation over large tiles. Moreover, DeferAttention adopts a memory-centric operator design, including data tiling, multi-level software pipelining, and modular micro-kernels, to maximize data reuse and execution throughput. Finally, to support runtime-adaptive execution, DeferAttention integrates a lightweight kernel selection strategy guided by an analytical cost model. Experimental results show that DeferAttention achieves up to 98% of the theoretical peak at the micro-kernel level and 85% at the operator level, outperforming baseline implementations and significantly accelerating end-to-end inference.",
+      "canonical_id": "DOI:10.1145/3807449",
+      "doi": "10.1145/3807449",
+      "authors": [
+        "Xinxin Qi",
+        "Jian-Bin Fang",
+        "Peng Zhang",
+        "Yonggang Che"
+      ]
+    },
+    {
+      "title": "MASI: Memory-Adaptive Inference Framework for Spiking Neural Networks on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/48f56748efa5c2d93e1834e138a86dd3a366d971",
+      "year": 2026,
+      "published": "2026-04-12",
+      "abstract": "The rapid development of the Internet of Things (IoT) applications necessitates resource-efficient computing paradigms that can unify heterogeneous sensing modalities. Spiking Neural Networks (SNNs) meet this need with their event-driven and energy-efficient processing nature. However, deploying SNNs on mobile and embedded platforms is hindered by strict and fluctuating memory budgets. While prior work explores lightweight model design and system-level memory management, these methods either sacrifice accuracy or incur high runtime overhead due to timestep-dependent dynamics. To tackle these challenges, we propose a memory-adaptive framework MASI that enables efficient on-device SNN inference by combining (1) a fine-grained memory-adaptive layer slicing strategy, (2) a timestep-agnostic scheduler that maximizes memory utilization with minimal fragmentation, and (3) a timestep-aware early-exit mechanism that reduces redundant calculations. Evaluated on diverse workloads and edge devices, MASI can dynamically adapt to runtime memory availability, approximately reducing memory usage by 20.67% and inference latency by 58.53% on average with negligible accuracy loss compared to other feasible on-device implementations under memory constraints.",
+      "canonical_id": "DOI:10.1145/3774904.3792136",
+      "doi": "10.1145/3774904.3792136",
+      "authors": [
+        "Di Yu",
+        "Helin Zheng",
+        "Changze Lv",
+        "Xin Du",
+        "Linshan Jiang",
+        "Xiang Liu",
+        "Gang Pan",
+        "Shuiguang Deng"
+      ]
+    },
+    {
+      "title": "From LLM to Silicon: RL-Driven ASIC Architecture Exploration for On-Device AI Inference",
+      "source_url": "https://www.semanticscholar.org/paper/7e61d0483a88a7243b614302942ebad62e535c72",
+      "year": 2026,
+      "published": "2026-04-08",
+      "abstract": "We present an RL-driven compiler that jointly optimizes ASIC architecture, memory hierarchy, and workload partitioning for AI inference across 3nm to 28nm. The design space is formulated as a single Markov Decision Process with mixed discrete-continuous actions and a unified Power-Performance-Area (PPA) objective. Soft Actor-Critic (SAC) with Mixture-of-Experts gating explores the joint space of mesh topology, per-core microarchitecture, and operator placement. We validate on two workloads, Llama 3.1 8B FP16 (high-performance mode, 29809 tokens per second at 3nm) and SmolVLM (low-power mode, less than 13 mW at all nodes, 10 MHz). Across 7 process nodes, the RL automatically adapts mesh sizes and per-tile configurations, including heterogeneous FETCH, VLEN, and memory allocation without node-specific manual retuning.",
+      "canonical_id": "arXiv:2604.07526",
+      "arxiv_id": "2604.07526",
+      "authors": [
+        "Ravindra Ganti",
+        "Steve Xu"
+      ]
+    },
+    {
+      "title": "Residual-Mass Accounting for Partial-KV Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620",
+      "year": 2026,
+      "published": "2026-04-07",
+      "abstract": "We study a controlled partial-KV decoding setting in which exact unnormalized softmax contributions are computed for sink/tail anchors and a retrieved token set, while the remaining prefill tokens are represented by a residual estimate. We focus on the accounting rule after the query-dependent exact support has been selected, and use exhaustive Top-K only as an oracle selector, not as a deployable retrieval system. The proposed rule leaves the backbone language model and the exact-branch KV tensors unchanged. It builds fixed-size summary states $(S,u)$ from learned positive feature maps $\\phi$, subtracts retrieved-token feature contributions to keep the exact and residual sets non-overlapping, and merges the estimated residual numerator and denominator with the exact branch under one normalization. At a 1% exact-support budget, our residual-completion method improves over the selection-only Top-K baseline on RULER and BABILong across frozen 1B and 3B Llama-3.2-Instruct backbones at all reported context lengths. In the 0.5-4% exact-support budget sweeps, this trend largely persists. On LongBench, summarization results are mostly favorable, while multi-document QA is mixed. Attention-output diagnostics support retrieved-token subtraction as the partition-consistent accounting rule, while indicating that the main remaining error is imperfect learned-$\\phi$ approximation of the unretrieved residual mass.",
+      "canonical_id": "arXiv:2604.05438",
+      "arxiv_id": "2604.05438",
+      "authors": [
+        "Yasuto Hoshi",
+        "Daisuke Miyashita",
+        "Jun Deguchi"
+      ]
+    },
+    {
+      "title": "Memory-Efficient Speculative Decoding for Large Language Model Inference on Commodity GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/23175c2b3f228676384ddf5b0a7beef3bfc10aa0",
+      "year": 2026,
+      "published": "2026-04-07",
+      "abstract": "Large language model (LLM) inference remains computationally expensive due to the autoregressive nature of token generation. Speculative decoding has emerged as a promising technique to accelerate inference by using a small draft model to predict multiple tokens in parallel, which are then verified by the target model. However, existing speculative decoding approaches require loading both models simultaneously, often exceeding the memory capacity of commodity GPUs. We present a memory-efficient speculative decoding framework that enables practical deployment on resource-constrained hardware through model quantization and optimized memory management. Our approach achieves a 2.31 × speedup in token generation throughput on an NVIDIA RTX A4000 (16 GB) while maintaining output quality, using only 12.0 GB of GPU memory. We demonstrate that speculative decoding can be made practical for edge and on-premise deployment scenarios where hardware resources are limited. Experimental results on LLaMA-7B show an average acceptance rate of 76.3% and consistent latency reductions of 56.8% across diverse prompts.",
+      "canonical_id": "DOI:10.1109/CSNT69054.2026.11502509",
+      "doi": "10.1109/CSNT69054.2026.11502509",
+      "authors": [
+        "Tejas Pravinbhai Patel"
+      ]
+    },
+    {
+      "title": "Comparative Characterization of KV Cache Management Strategies for LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/3f7588d97cdeb9ad32c1427bfcfc287ea3811b2e",
+      "year": 2026,
+      "published": "2026-04-06",
+      "abstract": "Efficient inference with Large Language Models (LLMs) increasingly relies on Key-Value (KV) caches to store previously computed key and value vectors at each layer. These caches are essential to minimize redundant computation during autoregressive token generation, lowering computational complexity from quadratic to linear. However, the growth of KV caches has posed significant system-level challenges, particularly as model sizes increase, context lengths grow, and concurrent requests compete for limited memory resources. Even though several recent frameworks for KV cache management have emerged, their comparative trade-offs in memory consumption and inference performance have not been fully understood, especially under varying request sizes and model configurations. In this work, we conduct an empirical study of three state-of-the-art KV cache management frameworks: vLLM, InfiniGen, and H2O. These frameworks employ techniques such as tensor offloading, token eviction heuristics, and speculative scheduling to balance memory usage and performance. We evaluate their performance in terms of a range of metrics such as latency, throughput, and memory usage across a spectrum of key parameters including request rates, model sizes, and sparsity levels. Our results pinpoint the conditions for each framework to perform the best, revealing the most suitable selection and configuration of KV cache strategies under memory and performance constraints.",
+      "canonical_id": "arXiv:2604.05012",
+      "arxiv_id": "2604.05012",
+      "authors": [
+        "Oteo Mamo",
+        "Olga Kogiou",
+        "Hyunji Yi",
+        "Weikuan Yu"
+      ]
+    },
+    {
+      "title": "Fast Cross-Operator Optimization of Attention Dataflow",
+      "source_url": "https://www.semanticscholar.org/paper/16a229911213ffc75d021a7638bf042fb096be4a",
+      "year": 2026,
+      "published": "2026-04-03",
+      "abstract": "Attention is a fundamental computational kernel that accounts for the majority of the workload in transformer and LLM computing. Optimizing dataflow is crucial for enhancing both performance and energy efficiency in attention computation. This optimization involves a range of decisions, such as tiling, computation ordering and buffer management, and can be applied at both intra-operator and inter-operator levels, resulting in a highly complex decision space. We propose a new approach to cross-operator dataflow optimization. Its centerpiece is an analytical performance model that spans a large decision space and enables matrix-based encoding of multiple candidate solutions. Built on this foundation, a vast number of solutions can be evaluated rapidly, and with the aid of an effective pruning technique, the optimal solution can be identified through exhaustive enumeration. We refer to our method as MMEE (Matrix Multiplication Encoded Enumeration). The ability to efficiently enumerate a large design space allows MMEE to deliver higher-quality solutions at a substantially faster speed compared to prior approaches. The MMEE approach is evaluated across various test cases for different accelerator configurations. For energy-driven optimization, MMEE reduces energy consumption by 48%-50% and latency by 31%-69%, compared to state-of-the-art methods. For latency-driven optimization, MMEE achieves simultaneous reductions of 40%-50% in energy consumption and 40%-69% in latency, respectively. Additionally, MMEE is $64\\times$ to $343\\times$ faster than previous works.",
+      "canonical_id": "arXiv:2604.03446",
+      "arxiv_id": "2604.03446",
+      "authors": [
+        "Haodong Chang",
+        "Hailiang Hu",
+        "Zhenrui Wang",
+        "Yu Gong",
+        "Rongjian Liang",
+        "Zhexiang Tang",
+        "Bo Yuan",
+        "Jiang Hu"
+      ]
+    },
+    {
+      "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
+      "source_url": "https://www.semanticscholar.org/paper/ed0adb5ee36c604370d1181c711c9e8c217fc649",
+      "year": 2026,
+      "published": "2026-03-30",
+      "abstract": "Although Large Vision Language Models (LVLMs) have demonstrated impressive multimodal reasoning capabilities, their scalability and deployment are constrained by massive computational requirements. In particular, the massive amount of visual tokens from high-resolution input data aggravates the situation due to the quadratic complexity of attention mechanisms. To address these issues, the research community has developed several optimization frameworks. This paper presents a comprehensive survey of the current state-of-the-art techniques for accelerating LVLM inference. We introduce a systematic taxonomy that categorizes existing optimization frameworks into four primary dimensions: visual token compression, memory management and serving, efficient architectural design, and advanced decoding strategies. Furthermore, we critically examine the limitations of these current methodologies and identify critical open problems to inspire future research directions in efficient multimodal systems.",
+      "canonical_id": "arXiv:2603.27960",
+      "arxiv_id": "2603.27960",
+      "authors": [
+        "Surendra Pathak",
+        "Bohyung Han"
+      ]
+    },
+    {
+      "title": "Dynamic Routing for Constructing LLMs Using Geographically Distributed User Resources",
+      "source_url": "https://www.semanticscholar.org/paper/40bc7032f469accad774817b10fa29ba02a91b30",
+      "year": 2026,
+      "published": "2026-03-28",
+      "abstract": "In recent years, large language models (LLMs) such as GPT-4 and the LLaMA family have achieved near human-level performance, but their rapidly growing computational requirements and the dense deployment of GPUs in centralized data centers (DCs) have led to serious concerns about localized power demand and strain on power infrastructure. To reduce reliance on centralized DCs, we propose a new LLM inference platform that exploits user-owned compute resources distributed over wide-area networks. In this platform, model nodes host subsets of LLM layers, while strategy nodes continuously monitor node performance, latency, and bandwidth to dynamically select and reconfigure end-to-end inference paths in response to real-time WAN conditions and node churn. We present the design principles and routing strategy of this architecture and evaluate its effectiveness using token generation rate as the primary performance metric.",
+      "canonical_id": "DOI:10.1109/ICCT-Pacific69083.2026.11518659",
+      "doi": "10.1109/ICCT-Pacific69083.2026.11518659",
+      "authors": [
+        "Daiki Wada",
+        "Shinji Sugawara"
+      ]
+    },
+    {
+      "title": "Experimental Study on System-Level Performance Impact of Read Disturbance in Modern SSDs",
+      "source_url": "https://www.semanticscholar.org/paper/adffe161f6851cd4d26d85a71ef0f3dd1d2e3fc7",
+      "year": 2026,
+      "published": "2026-03-26",
+      "abstract": "This work investigates the system-level performance impact of read disturbance in modern NAND flash-based SSDs, aiming to provide new insights that can help develop better storage architectures and optimize system software. Continuous improvement in storage density over decades has led NAND flash memory to play a vital role in modern computing systems, but it also comes at a cost of significant reliability degradation. Among various error sources, read disturbance has gained growing attention as a major reliability concern due to its rapidly increasing impact, which can significantly affect system I/O performance by exacerbating SSD-internal reliability-management overheads. Although a large body of prior work has focused on device-level characterizations and optimizations, the system-level performance impact of read disturbance still remains largely uninvestigated. To address this gap, this work conducts a rigorous experimental study using 15 modern NVMe SSDs from 10 major vendors in two ways. First, we comprehensively analyze the system-level performance impact of read disturbance under diverse workloads and operating conditions. Second, to highlight the importance of efficient read-disturbance management, we showcase a new possible SSD-performance attack as a case study, demonstrating that an adversary can significantly degrade the I/O performance of other concurrently running processes by exploiting read disturbance alone in commodity SSDs. Based on our experimental study, we make 16 new observations and 7 takeaway lessons, which lead to 6 key directions for future improvements at the host-system and SSD-architecture levels to better cope with read disturbance.",
+      "canonical_id": "arXiv:2608.14073",
+      "arxiv_id": "2608.14073",
+      "authors": [
+        "Y. Park",
+        "Hyunuk Cho",
+        "Onur Mutlu",
+        "Sungjin Lee",
+        "Jisung Park"
+      ]
+    },
+    {
+      "title": "A Survey of Neural Network Variational Monte Carlo from a Computing Workload Characterization Perspective",
+      "source_url": "https://www.semanticscholar.org/paper/de384cc9e26b68cf707af8b7912174fbaf520efb",
+      "year": 2026,
+      "published": "2026-03-18",
+      "abstract": "Neural Network Variational Monte Carlo (NNVMC) has emerged as a promising paradigm for solving quantum many-body problems by combining variational Monte Carlo with expressive neural-network wave-function ans\\\"atze. Although NNVMC can achieve competitive accuracy with favorable asymptotic scaling, practical deployment remains limited by high runtime and memory cost on modern graphics processing units (GPUs). Compared with language and vision workloads, NNVMC execution is shaped by physics-specific stages, including Markov-Chain Monte Carlo sampling, wave-function construction, and derivative/Laplacian evaluation, which produce heterogeneous kernel behavior and nontrivial bottlenecks. This paper provides a workload-oriented survey and empirical GPU characterization of four representative ans\\\"atze: PauliNet, FermiNet, Psiformer, and Orbformer. Using a unified profiling protocol, we analyze model-level runtime and memory trends and kernel-level behavior through family breakdown, arithmetic intensity, roofline positioning, and hardware utilization counters. The results show that end-to-end performance is often constrained by low-intensity elementwise and data-movement kernels, while the compute/memory balance varies substantially across ans\\\"atze and stages. Based on these findings, we discuss algorithm--hardware co-design implications for scalable NNVMC systems, including phase-aware scheduling, memory-centric optimization, and heterogeneous acceleration.",
+      "canonical_id": "arXiv:2603.18126",
+      "arxiv_id": "2603.18126",
+      "authors": [
+        "Zhengze Xiao",
+        "Xuan Ding",
+        "Yuyang Lou",
+        "Lixue Cheng",
+        "Chaojian Li"
+      ]
+    },
+    {
+      "title": "Towards a foundational platform for generative agents in simulated city environment",
+      "source_url": "https://www.semanticscholar.org/paper/e4bdaf42ca6128590bddf8cd8b097a3882f8abe8",
+      "year": 2026,
+      "published": "2026-03-13",
+      "abstract": "Urban environments, characterized by their complex, multi-layered networks encompassing physical, social, economic, and environmental dimensions, present significant challenges for sustainable urbanization. These challenges, ranging from traffic congestion and pollution to social inequality, call for advanced technological interventions. The technology innovation in big data, artificial intelligence, urban computing, and digital twins have laid the groundwork for sophisticated city simulation. However, a gap persists between these technological capabilities and their practical implementation in addressing urban issues because they often fall short of capturing the complex and subtle human behaviour in urban space. The recent advance in large language model (LLM) agents shows emergent abilities of human-like behaviour simulation, presenting important opportunities for characterizing human behaviour in urban studies. This paper provides a comprehensive review on the recent literature about the technology development of urban computing, digital twins, LLM agents and beyond, as well as the interdisciplinary studies on complex urban system and agent-based modeling. Moreover, we conceptualize a novel Urban Generative Intelligence platform that grounded LLM agents in simulated urban environment. The UGI platform allows LLM agents to operate within a textual urban environment emulated by city simulator, interact through a natural language interface, offering an open platform for diverse intelligent and embodied urban tasks. Such platform unleashes the power of LLM agents for complex urban system simulation, providing a novel approach to understand and manage urban complexity.",
+      "canonical_id": "DOI:10.1371/journal.pcsy.0000093",
+      "doi": "10.1371/journal.pcsy.0000093",
+      "authors": [
+        "Fengli Xu",
+        "Jun Zhang",
+        "Chen Gao",
+        "Peijie Liu",
+        "Jie Feng",
+        "Yong Li"
+      ]
+    },
+    {
+      "title": "LLM-assisted Agentic Edge Intelligence Framework",
+      "source_url": "https://www.semanticscholar.org/paper/6c1c9a93154c82dae4c92b49aa74adac8469ba00",
+      "year": 2026,
+      "published": "2026-03-11",
+      "abstract": "Edge intelligence delivers low-latency inference, yet most edge analytics remain hard-coded and must be redeployed as conditions change. When data patterns shift or new questions arise, engineers often need to write new scripts and push updates to devices, which slows iteration and raises operating costs. This limited adaptability reduces scalability and autonomy in large, heterogeneous, and resource-constrained edge deployments, and it increases reliance on human oversight. Meanwhile, large language models (LLMs) can interpret instructions and generate code, but their compute and memory requirements typically prevent direct deployment on edge devices. We address this gap with the LLM-assisted Edge Intelligence (LEI) framework, which removes the need for manually specified business logic. In LEI, a cloud-hosted LLM coordinates the creation and update of device-side logic as requirements evolve. The system generates candidate lightweight programs, checks them against available data and constraints, and then deploys the selected version to each device. This lets each device receive a tailored program based on sample data, metadata, context, and current resource limits. We evaluate LEI on four heterogeneous datasets, including air quality, temperature \\&humidity, wind, and soil datasets using multiple LLM backends. The experimental results show that the framework maintains low average CPU and memory utilization during the execution. These results indicate that the framework adapts efficiently to changing conditions while maintaining resource efficiency.",
+      "canonical_id": "arXiv:2604.09607",
+      "arxiv_id": "2604.09607",
+      "authors": [
+        "C. Dehury",
+        "S. Kushwaha",
+        "Qiyang Zhang",
+        "Alaa Saleh",
+        "Praveen Kumar Donta"
+      ]
+    },
+    {
+      "title": "Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks",
+      "source_url": "https://www.semanticscholar.org/paper/1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
+      "year": 2026,
+      "published": "2026-03-05",
+      "abstract": "Breakthroughs in the generative AI domain have fueled an explosion of large language model (LLM)-powered applications, whose workloads fundamentally consist of sequences of inferences through transformer architectures. Within this rapidly expanding ecosystem, dense LLMs--those that activate all model parameters for each token generation--form the foundation for advanced expert-based variants. Dense models continue to dominate because of their strong generalization ability, scalability, ease of fine-tuning, and versatility across diverse tasks. In LLM inference systems, performance is mainly characterized by latency, response time, and throughput (i.e., tokens generated per unit of time). Latency and throughput are inherently coupled: optimizing for one often comes at the expense of the other. Moreover, batching strategies and parallelism configurations, which are essential when dense model parameters exceed device memory capacity, can significantly affect both latency and overall system throughput. This paper (i) investigates the workloads of two representative dense LLMs--Llama-3.1-70B and Llama-3.1-405B, focusing in particular on intra-node parallelization schemes, (ii) analyzes how input characteristics, batching, and parallelism strategies influence latency flexibility and the latency-throughput tradeoff, and (iii) identifies key performance bottlenecks that inform design choices for meeting service-level agreements (SLAs) and sustaining inference quality. Our empirical evaluations reveal that Tensor Parallelism (TP) improves the latency objectives while Pipeline Parallelism (PP) is better-suited for throughput-oriented applications. We highlight that their hybrid usage by controlling the TP and PP degrees provides control over the latency-throughput interplay.",
+      "canonical_id": "arXiv:2603.05692",
+      "arxiv_id": "2603.05692",
+      "authors": [
+        "Burak Topçu",
+        "Musa Cim",
+        "Poovaiah M. Palangappa",
+        "Meena Arunachalam",
+        "Mahmut T. Kandemir"
+      ]
+    },
+    {
+      "title": "A Hybrid Online and Offline Requests Inference Serving System for LLM in Private Computer Environment",
+      "source_url": "https://www.semanticscholar.org/paper/ef9af770c2ab36e31e57bd896abd0e8a005fb491",
+      "year": 2026,
+      "published": "2026-03-01",
+      "abstract": "While advancements in Large Language Models (LLMs) have broadened their applications, performing multitask LLM inference on a single GPU remains challenging due to insufficient GPU memory to load all model parameters. Existing methods that offload unneeded parameters to main memory and prefetch them back introduce high latency due to data transfer overhead. We propose FixGen, a single GPU LLM online-offline mixed inference serving system that supports multi-task inference. First, we develop FixPool to optimize memory management by centralizing storage in a fixed memory space and optimizing parameter storage procedures, thus reducing PCIe resource consumption and improving efficiency. Secondly, we use a router to select appropriate operators to compute requests in the prefill and decode stages within the same batch to reduce the response latency for sudden online requests. FixGen reduces the online request-response latency between 1.06 and 1.84 times compared to the conventional method while maintaining the throughput to offline requests on a single GPU from OPT-6.7b to OPT-30b.",
+      "canonical_id": "DOI:10.1109/TC.2025.3643296",
+      "doi": "10.1109/TC.2025.3643296",
+      "authors": [
+        "Yu-Chen Shen",
+        "Yuning Zhang",
+        "Dong Yuan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.20021",
+      "identity_tokens": [
+        "id:arXiv:2604.20021",
+        "title:continuous semantic caching for lowcost llm serving",
+        "url:https://www.semanticscholar.org/paper/9a8846c10c862783506646aef74c99f61922b9b6"
+      ],
+      "record": {
+        "title": "Continuous Semantic Caching for Low-Cost LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/9a8846c10c862783506646aef74c99f61922b9b6",
+        "year": 2026,
+        "published": "2026-04-21",
+        "abstract": "As Large Language Models (LLMs) become increasingly popular, caching responses so that they can be reused by users with semantically similar queries has become a vital strategy for reducing inference costs and latency. Existing caching frameworks have proposed to decide which query responses to cache by assuming a finite, known universe of discrete queries and learning their serving costs and arrival probabilities. As LLMs'pool of users and queries expands, however, such an assumption becomes increasingly untenable: real-world LLM queries reside in an infinite, continuous embedding space. In this paper, we establish the first rigorous theoretical framework for semantic LLM response caching in continuous query space under uncertainty. To bridge the gap between discrete optimization and continuous representation spaces, we introduce dynamic $\\epsilon$-net discretization coupled with Kernel Ridge Regression. This design enables the system to formally quantify estimation uncertainty and generalize partial feedback on LLM query costs across continuous semantic query neighborhoods. We develop both offline learning and online adaptive algorithms optimized to reduce switching costs incurred by changing the cached responses. We prove that our online algorithm achieves a sublinear regret bound against an optimal continuous oracle, which reduces to existing bounds for discrete query models. Extensive empirical evaluations demonstrate that our framework approximates the continuous optimal cache well while also reducing computational and switching overhead compared to existing methods.",
+        "canonical_id": "arXiv:2604.20021",
+        "arxiv_id": "2604.20021",
+        "authors": [
+          "Baran Atalar",
+          "Xutong Liu",
+          "Jinhang Zuo",
+          "Si-Wei Wang",
+          "Wei Chen",
+          "Carlee Joe-Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/sustech67720.2026.11536606",
+      "identity_tokens": [
+        "id:DOI:10.1109/sustech67720.2026.11536606",
+        "title:predictive selfhealing for multiagent llm pipelines using model predictive control",
+        "url:https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7"
+      ],
+      "record": {
+        "title": "Predictive Self-Healing for Multi-Agent LLM Pipelines Using Model Predictive Control",
+        "source_url": "https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7",
+        "year": 2026,
+        "published": "2026-04-19",
+        "abstract": "Multi-agent Large Language Model (LLM) systems are increasingly deployed for complex reasoning tasks, yet their reliability under dynamic conditions remains inadequately addressed. Existing fault tolerance mechanisms are predominantly reactive, responding to failures only after cascading effects have begun. This paper presents a predictive self-healing framework that applies Model Predictive Control (MPC) to multi-agent LLM orchestration. Our approach models the agent pipeline as a dynamical system, employs a Kalman filter for state estimation, and computes optimal control actions-including replica scaling, load redistribution, and circuit breaker activation-to maintain system stability proactively. Experimental evaluation on a threestage LLM pipeline demonstrates that our MPC-based controller achieves 96.8 % success rate under stress conditions, reduces P99 latency by 68 % compared to reactive approaches, and recovers from failures 73 % faster than Kubernetes Horizontal Pod Autoscaler. Energy analysis shows a 22 % reduction in GPUhours consumed, yielding proportional carbon footprint savings at scale. These results indicate that control-theoretic methods are a promising direction for reliable and energy-efficient multi-agent LLM deployment.",
+        "canonical_id": "DOI:10.1109/SusTech67720.2026.11536606",
+        "doi": "10.1109/SusTech67720.2026.11536606",
+        "authors": [
+          "Tejas Pravinbhai Patel",
+          "Amit Kumar Padhy",
+          "Sandeep Shivam",
+          "Viswanathan Ranganathan",
+          "Arun Kumar Elengovan",
+          "Deepak Kole"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/imcet69180.2026.11503728",
+      "identity_tokens": [
+        "id:DOI:10.1109/imcet69180.2026.11503728",
+        "title:fast warmstart techniques for large language model inference",
+        "url:https://www.semanticscholar.org/paper/ff96b1a76205f90f9806ac408c1f1a6ae484e36b"
+      ],
+      "record": {
+        "title": "Fast Warm-Start Techniques for Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/ff96b1a76205f90f9806ac408c1f1a6ae484e36b",
+        "year": 2026,
+        "published": "2026-04-15",
+        "abstract": "Large language model (LLM) inference servers experience significant latency during cold starts—the period from process initialization to serving the first request. We measure cold-start time-to-first-token (TTFT) exceeding 45 seconds for 7B-class models and 80 seconds for 13B-class models on commodity GPUs. This latency creates SLA violations during scaling events, deployments, and fault recovery. We present a system of engineering techniques that reduce cold-start overhead without modifying model weights or architecture: artifact pre-staging, CUDA context pre-initialization, memory allocator priming, and kernel warm-up. Our evaluation on Paperspace GPU instances shows TTFT reductions of 42–68% (7B models) and 31–54% (13B models) compared to naïve cold starts, while maintaining steady-state throughput within 3% of baseline. We characterize the breakdown of cold-start phases and demonstrate that systematic warm-start optimization is practical for production serving systems.",
+        "canonical_id": "DOI:10.1109/IMCET69180.2026.11503728",
+        "doi": "10.1109/IMCET69180.2026.11503728",
+        "authors": [
+          "Tejas Pravinbhai Patel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.11128",
+      "identity_tokens": [
+        "id:arXiv:2604.11128",
+        "title:technology solutions targeting the performance of genai inference in resource constrained platforms",
+        "url:https://www.semanticscholar.org/paper/c8d85afdb6e78e3b339aecc02d65bb28a296d3ab"
+      ],
+      "record": {
+        "title": "Technology solutions targeting the performance of gen-AI inference in resource constrained platforms",
+        "source_url": "https://www.semanticscholar.org/paper/c8d85afdb6e78e3b339aecc02d65bb28a296d3ab",
+        "year": 2026,
+        "published": "2026-04-13",
+        "abstract": "The rise of generative AI workloads, particularly language model inference, is intensifying on/off-chip memory pressure. Multimodal inputs such as video streams or images and downstream applications like Question Answering (QA) and analysis over large documents incur long context lengths, requiring caching of massive Key and Value states of the previous tokens. Even a low degree of concurrent inference serving on resource-constrained devices, like mobiles, can further add to memory capacity pressure and runtime memory management complexity. In this paper, we evaluate the performance implications of two emerging technology solutions to alleviate the memory pressure in terms of both capacity and bandwidth using a hierarchical roofline-based analytical performance model. For large models (e.g., 13B parameters) and context lengths, we investigate the performance implications of High Bandwidth Storage (HBS) and outline bandwidth/latency requirements to achieve an acceptable throughput for interactivity. For small models (e.g., 1B parameters), we evaluate the merit of a bonded global buffer memory chiplet and propose how to best utilize it.",
+        "canonical_id": "arXiv:2604.11128",
+        "arxiv_id": "2604.11128",
+        "authors": [
+          "Joyjit Kundu",
+          "J. Klein",
+          "Aakash Patel",
+          "D. Biswas"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3793014",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3793014",
+        "title:greentune energyefficient lowrank tuning of llms with threee evaluation under 48bit quantization",
+        "url:https://www.semanticscholar.org/paper/ff7c8b374302739582eddead7cf023fefc70a27f"
+      ],
+      "record": {
+        "title": "GreenTune: Energy-Efficient Low-Rank Tuning of LLMs with ThreeE Evaluation under 4-/8-bit Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/ff7c8b374302739582eddead7cf023fefc70a27f",
+        "year": 2026,
+        "published": "2026-04-13",
+        "abstract": null,
+        "canonical_id": "DOI:10.1145/3774904.3793014",
+        "doi": "10.1145/3774904.3793014",
+        "authors": [
+          "Xing Ma",
+          "Zongxi Li",
+          "Chengzu Dong",
+          "Kai Fang",
+          "Di Shao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3807449",
+      "identity_tokens": [
+        "id:DOI:10.1145/3807449",
+        "title:optimizing attention for large language model inference on the mt3000 manycore processor",
+        "url:https://www.semanticscholar.org/paper/017d201b15d97483a1c939e11f54fa5756b988ed"
+      ],
+      "record": {
+        "title": "Optimizing Attention for Large Language Model Inference on the MT-3000 Many-Core Processor",
+        "source_url": "https://www.semanticscholar.org/paper/017d201b15d97483a1c939e11f54fa5756b988ed",
+        "year": 2026,
+        "published": "2026-04-13",
+        "abstract": "Transformer-based large language models (LLM) are increasingly deployed in high-performance computing environments, where the attention mechanism often becomes a key bottleneck during inference. Although state-of-the-art attention algorithms (e.g., FlashAttention) achieve high efficiency on GPUs, they are ill-suited to emerging heterogeneous many-core processors. In this work, we focus on MT-3000, a representative architecture deployed in the new-generation Tianhe supercomputer, and identify three principal challenges in realizing high-performance attention: complex multi-tier memory requiring manual data movement, excessive reduction overhead caused by sub-tile softmax operations, and static execution pipelines that fail to adapt to inference phases and sequence lengths. To overcome these challenges, we propose DeferAttention, a high-performance attention implementation designed for the MT-3000 many-core processor. DeferAttention introduces a novel deferred-reduction attention strategy to decouple reduction from the fused compute pipeline, enabling more efficient aggregation over large tiles. Moreover, DeferAttention adopts a memory-centric operator design, including data tiling, multi-level software pipelining, and modular micro-kernels, to maximize data reuse and execution throughput. Finally, to support runtime-adaptive execution, DeferAttention integrates a lightweight kernel selection strategy guided by an analytical cost model. Experimental results show that DeferAttention achieves up to 98% of the theoretical peak at the micro-kernel level and 85% at the operator level, outperforming baseline implementations and significantly accelerating end-to-end inference.",
+        "canonical_id": "DOI:10.1145/3807449",
+        "doi": "10.1145/3807449",
+        "authors": [
+          "Xinxin Qi",
+          "Jian-Bin Fang",
+          "Peng Zhang",
+          "Yonggang Che"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792136",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792136",
+        "title:masi memoryadaptive inference framework for spiking neural networks on edge devices",
+        "url:https://www.semanticscholar.org/paper/48f56748efa5c2d93e1834e138a86dd3a366d971"
+      ],
+      "record": {
+        "title": "MASI: Memory-Adaptive Inference Framework for Spiking Neural Networks on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/48f56748efa5c2d93e1834e138a86dd3a366d971",
+        "year": 2026,
+        "published": "2026-04-12",
+        "abstract": "The rapid development of the Internet of Things (IoT) applications necessitates resource-efficient computing paradigms that can unify heterogeneous sensing modalities. Spiking Neural Networks (SNNs) meet this need with their event-driven and energy-efficient processing nature. However, deploying SNNs on mobile and embedded platforms is hindered by strict and fluctuating memory budgets. While prior work explores lightweight model design and system-level memory management, these methods either sacrifice accuracy or incur high runtime overhead due to timestep-dependent dynamics. To tackle these challenges, we propose a memory-adaptive framework MASI that enables efficient on-device SNN inference by combining (1) a fine-grained memory-adaptive layer slicing strategy, (2) a timestep-agnostic scheduler that maximizes memory utilization with minimal fragmentation, and (3) a timestep-aware early-exit mechanism that reduces redundant calculations. Evaluated on diverse workloads and edge devices, MASI can dynamically adapt to runtime memory availability, approximately reducing memory usage by 20.67% and inference latency by 58.53% on average with negligible accuracy loss compared to other feasible on-device implementations under memory constraints.",
+        "canonical_id": "DOI:10.1145/3774904.3792136",
+        "doi": "10.1145/3774904.3792136",
+        "authors": [
+          "Di Yu",
+          "Helin Zheng",
+          "Changze Lv",
+          "Xin Du",
+          "Linshan Jiang",
+          "Xiang Liu",
+          "Gang Pan",
+          "Shuiguang Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07526",
+      "identity_tokens": [
+        "id:arXiv:2604.07526",
+        "title:from llm to silicon rldriven asic architecture exploration for ondevice ai inference",
+        "url:https://www.semanticscholar.org/paper/7e61d0483a88a7243b614302942ebad62e535c72"
+      ],
+      "record": {
+        "title": "From LLM to Silicon: RL-Driven ASIC Architecture Exploration for On-Device AI Inference",
+        "source_url": "https://www.semanticscholar.org/paper/7e61d0483a88a7243b614302942ebad62e535c72",
+        "year": 2026,
+        "published": "2026-04-08",
+        "abstract": "We present an RL-driven compiler that jointly optimizes ASIC architecture, memory hierarchy, and workload partitioning for AI inference across 3nm to 28nm. The design space is formulated as a single Markov Decision Process with mixed discrete-continuous actions and a unified Power-Performance-Area (PPA) objective. Soft Actor-Critic (SAC) with Mixture-of-Experts gating explores the joint space of mesh topology, per-core microarchitecture, and operator placement. We validate on two workloads, Llama 3.1 8B FP16 (high-performance mode, 29809 tokens per second at 3nm) and SmolVLM (low-power mode, less than 13 mW at all nodes, 10 MHz). Across 7 process nodes, the RL automatically adapts mesh sizes and per-tile configurations, including heterogeneous FETCH, VLEN, and memory allocation without node-specific manual retuning.",
+        "canonical_id": "arXiv:2604.07526",
+        "arxiv_id": "2604.07526",
+        "authors": [
+          "Ravindra Ganti",
+          "Steve Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05438",
+      "identity_tokens": [
+        "id:arXiv:2604.05438",
+        "title:residualmass accounting for partialkv decoding",
+        "url:https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620"
+      ],
+      "record": {
+        "title": "Residual-Mass Accounting for Partial-KV Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620",
+        "year": 2026,
+        "published": "2026-04-07",
+        "abstract": "We study a controlled partial-KV decoding setting in which exact unnormalized softmax contributions are computed for sink/tail anchors and a retrieved token set, while the remaining prefill tokens are represented by a residual estimate. We focus on the accounting rule after the query-dependent exact support has been selected, and use exhaustive Top-K only as an oracle selector, not as a deployable retrieval system. The proposed rule leaves the backbone language model and the exact-branch KV tensors unchanged. It builds fixed-size summary states $(S,u)$ from learned positive feature maps $\\phi$, subtracts retrieved-token feature contributions to keep the exact and residual sets non-overlapping, and merges the estimated residual numerator and denominator with the exact branch under one normalization. At a 1% exact-support budget, our residual-completion method improves over the selection-only Top-K baseline on RULER and BABILong across frozen 1B and 3B Llama-3.2-Instruct backbones at all reported context lengths. In the 0.5-4% exact-support budget sweeps, this trend largely persists. On LongBench, summarization results are mostly favorable, while multi-document QA is mixed. Attention-output diagnostics support retrieved-token subtraction as the partition-consistent accounting rule, while indicating that the main remaining error is imperfect learned-$\\phi$ approximation of the unretrieved residual mass.",
+        "canonical_id": "arXiv:2604.05438",
+        "arxiv_id": "2604.05438",
+        "authors": [
+          "Yasuto Hoshi",
+          "Daisuke Miyashita",
+          "Jun Deguchi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/csnt69054.2026.11502509",
+      "identity_tokens": [
+        "id:DOI:10.1109/csnt69054.2026.11502509",
+        "title:memoryefficient speculative decoding for large language model inference on commodity gpus",
+        "url:https://www.semanticscholar.org/paper/23175c2b3f228676384ddf5b0a7beef3bfc10aa0"
+      ],
+      "record": {
+        "title": "Memory-Efficient Speculative Decoding for Large Language Model Inference on Commodity GPUs",
+        "source_url": "https://www.semanticscholar.org/paper/23175c2b3f228676384ddf5b0a7beef3bfc10aa0",
+        "year": 2026,
+        "published": "2026-04-07",
+        "abstract": "Large language model (LLM) inference remains computationally expensive due to the autoregressive nature of token generation. Speculative decoding has emerged as a promising technique to accelerate inference by using a small draft model to predict multiple tokens in parallel, which are then verified by the target model. However, existing speculative decoding approaches require loading both models simultaneously, often exceeding the memory capacity of commodity GPUs. We present a memory-efficient speculative decoding framework that enables practical deployment on resource-constrained hardware through model quantization and optimized memory management. Our approach achieves a 2.31 × speedup in token generation throughput on an NVIDIA RTX A4000 (16 GB) while maintaining output quality, using only 12.0 GB of GPU memory. We demonstrate that speculative decoding can be made practical for edge and on-premise deployment scenarios where hardware resources are limited. Experimental results on LLaMA-7B show an average acceptance rate of 76.3% and consistent latency reductions of 56.8% across diverse prompts.",
+        "canonical_id": "DOI:10.1109/CSNT69054.2026.11502509",
+        "doi": "10.1109/CSNT69054.2026.11502509",
+        "authors": [
+          "Tejas Pravinbhai Patel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05012",
+      "identity_tokens": [
+        "id:arXiv:2604.05012",
+        "title:comparative characterization of kv cache management strategies for llm inference",
+        "url:https://www.semanticscholar.org/paper/3f7588d97cdeb9ad32c1427bfcfc287ea3811b2e"
+      ],
+      "record": {
+        "title": "Comparative Characterization of KV Cache Management Strategies for LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/3f7588d97cdeb9ad32c1427bfcfc287ea3811b2e",
+        "year": 2026,
+        "published": "2026-04-06",
+        "abstract": "Efficient inference with Large Language Models (LLMs) increasingly relies on Key-Value (KV) caches to store previously computed key and value vectors at each layer. These caches are essential to minimize redundant computation during autoregressive token generation, lowering computational complexity from quadratic to linear. However, the growth of KV caches has posed significant system-level challenges, particularly as model sizes increase, context lengths grow, and concurrent requests compete for limited memory resources. Even though several recent frameworks for KV cache management have emerged, their comparative trade-offs in memory consumption and inference performance have not been fully understood, especially under varying request sizes and model configurations. In this work, we conduct an empirical study of three state-of-the-art KV cache management frameworks: vLLM, InfiniGen, and H2O. These frameworks employ techniques such as tensor offloading, token eviction heuristics, and speculative scheduling to balance memory usage and performance. We evaluate their performance in terms of a range of metrics such as latency, throughput, and memory usage across a spectrum of key parameters including request rates, model sizes, and sparsity levels. Our results pinpoint the conditions for each framework to perform the best, revealing the most suitable selection and configuration of KV cache strategies under memory and performance constraints.",
+        "canonical_id": "arXiv:2604.05012",
+        "arxiv_id": "2604.05012",
+        "authors": [
+          "Oteo Mamo",
+          "Olga Kogiou",
+          "Hyunji Yi",
+          "Weikuan Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.03446",
+      "identity_tokens": [
+        "id:arXiv:2604.03446",
+        "title:fast crossoperator optimization of attention dataflow",
+        "url:https://www.semanticscholar.org/paper/16a229911213ffc75d021a7638bf042fb096be4a"
+      ],
+      "record": {
+        "title": "Fast Cross-Operator Optimization of Attention Dataflow",
+        "source_url": "https://www.semanticscholar.org/paper/16a229911213ffc75d021a7638bf042fb096be4a",
+        "year": 2026,
+        "published": "2026-04-03",
+        "abstract": "Attention is a fundamental computational kernel that accounts for the majority of the workload in transformer and LLM computing. Optimizing dataflow is crucial for enhancing both performance and energy efficiency in attention computation. This optimization involves a range of decisions, such as tiling, computation ordering and buffer management, and can be applied at both intra-operator and inter-operator levels, resulting in a highly complex decision space. We propose a new approach to cross-operator dataflow optimization. Its centerpiece is an analytical performance model that spans a large decision space and enables matrix-based encoding of multiple candidate solutions. Built on this foundation, a vast number of solutions can be evaluated rapidly, and with the aid of an effective pruning technique, the optimal solution can be identified through exhaustive enumeration. We refer to our method as MMEE (Matrix Multiplication Encoded Enumeration). The ability to efficiently enumerate a large design space allows MMEE to deliver higher-quality solutions at a substantially faster speed compared to prior approaches. The MMEE approach is evaluated across various test cases for different accelerator configurations. For energy-driven optimization, MMEE reduces energy consumption by 48%-50% and latency by 31%-69%, compared to state-of-the-art methods. For latency-driven optimization, MMEE achieves simultaneous reductions of 40%-50% in energy consumption and 40%-69% in latency, respectively. Additionally, MMEE is $64\\times$ to $343\\times$ faster than previous works.",
+        "canonical_id": "arXiv:2604.03446",
+        "arxiv_id": "2604.03446",
+        "authors": [
+          "Haodong Chang",
+          "Hailiang Hu",
+          "Zhenrui Wang",
+          "Yu Gong",
+          "Rongjian Liang",
+          "Zhexiang Tang",
+          "Bo Yuan",
+          "Jiang Hu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.27960",
+      "identity_tokens": [
+        "id:arXiv:2603.27960",
+        "title:towards efficient large visionlanguage models a comprehensive survey on inference strategies",
+        "url:https://www.semanticscholar.org/paper/ed0adb5ee36c604370d1181c711c9e8c217fc649"
+      ],
+      "record": {
+        "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
+        "source_url": "https://www.semanticscholar.org/paper/ed0adb5ee36c604370d1181c711c9e8c217fc649",
+        "year": 2026,
+        "published": "2026-03-30",
+        "abstract": "Although Large Vision Language Models (LVLMs) have demonstrated impressive multimodal reasoning capabilities, their scalability and deployment are constrained by massive computational requirements. In particular, the massive amount of visual tokens from high-resolution input data aggravates the situation due to the quadratic complexity of attention mechanisms. To address these issues, the research community has developed several optimization frameworks. This paper presents a comprehensive survey of the current state-of-the-art techniques for accelerating LVLM inference. We introduce a systematic taxonomy that categorizes existing optimization frameworks into four primary dimensions: visual token compression, memory management and serving, efficient architectural design, and advanced decoding strategies. Furthermore, we critically examine the limitations of these current methodologies and identify critical open problems to inspire future research directions in efficient multimodal systems.",
+        "canonical_id": "arXiv:2603.27960",
+        "arxiv_id": "2603.27960",
+        "authors": [
+          "Surendra Pathak",
+          "Bohyung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icct-pacific69083.2026.11518659",
+      "identity_tokens": [
+        "id:DOI:10.1109/icct-pacific69083.2026.11518659",
+        "title:dynamic routing for constructing llms using geographically distributed user resources",
+        "url:https://www.semanticscholar.org/paper/40bc7032f469accad774817b10fa29ba02a91b30"
+      ],
+      "record": {
+        "title": "Dynamic Routing for Constructing LLMs Using Geographically Distributed User Resources",
+        "source_url": "https://www.semanticscholar.org/paper/40bc7032f469accad774817b10fa29ba02a91b30",
+        "year": 2026,
+        "published": "2026-03-28",
+        "abstract": "In recent years, large language models (LLMs) such as GPT-4 and the LLaMA family have achieved near human-level performance, but their rapidly growing computational requirements and the dense deployment of GPUs in centralized data centers (DCs) have led to serious concerns about localized power demand and strain on power infrastructure. To reduce reliance on centralized DCs, we propose a new LLM inference platform that exploits user-owned compute resources distributed over wide-area networks. In this platform, model nodes host subsets of LLM layers, while strategy nodes continuously monitor node performance, latency, and bandwidth to dynamically select and reconfigure end-to-end inference paths in response to real-time WAN conditions and node churn. We present the design principles and routing strategy of this architecture and evaluate its effectiveness using token generation rate as the primary performance metric.",
+        "canonical_id": "DOI:10.1109/ICCT-Pacific69083.2026.11518659",
+        "doi": "10.1109/ICCT-Pacific69083.2026.11518659",
+        "authors": [
+          "Daiki Wada",
+          "Shinji Sugawara"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14073",
+      "identity_tokens": [
+        "id:arXiv:2608.14073",
+        "title:experimental study on systemlevel performance impact of read disturbance in modern ssds",
+        "url:https://www.semanticscholar.org/paper/adffe161f6851cd4d26d85a71ef0f3dd1d2e3fc7"
+      ],
+      "record": {
+        "title": "Experimental Study on System-Level Performance Impact of Read Disturbance in Modern SSDs",
+        "source_url": "https://www.semanticscholar.org/paper/adffe161f6851cd4d26d85a71ef0f3dd1d2e3fc7",
+        "year": 2026,
+        "published": "2026-03-26",
+        "abstract": "This work investigates the system-level performance impact of read disturbance in modern NAND flash-based SSDs, aiming to provide new insights that can help develop better storage architectures and optimize system software. Continuous improvement in storage density over decades has led NAND flash memory to play a vital role in modern computing systems, but it also comes at a cost of significant reliability degradation. Among various error sources, read disturbance has gained growing attention as a major reliability concern due to its rapidly increasing impact, which can significantly affect system I/O performance by exacerbating SSD-internal reliability-management overheads. Although a large body of prior work has focused on device-level characterizations and optimizations, the system-level performance impact of read disturbance still remains largely uninvestigated. To address this gap, this work conducts a rigorous experimental study using 15 modern NVMe SSDs from 10 major vendors in two ways. First, we comprehensively analyze the system-level performance impact of read disturbance under diverse workloads and operating conditions. Second, to highlight the importance of efficient read-disturbance management, we showcase a new possible SSD-performance attack as a case study, demonstrating that an adversary can significantly degrade the I/O performance of other concurrently running processes by exploiting read disturbance alone in commodity SSDs. Based on our experimental study, we make 16 new observations and 7 takeaway lessons, which lead to 6 key directions for future improvements at the host-system and SSD-architecture levels to better cope with read disturbance.",
+        "canonical_id": "arXiv:2608.14073",
+        "arxiv_id": "2608.14073",
+        "authors": [
+          "Y. Park",
+          "Hyunuk Cho",
+          "Onur Mutlu",
+          "Sungjin Lee",
+          "Jisung Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.18126",
+      "identity_tokens": [
+        "id:arXiv:2603.18126",
+        "title:a survey of neural network variational monte carlo from a computing workload characterization perspective",
+        "url:https://www.semanticscholar.org/paper/de384cc9e26b68cf707af8b7912174fbaf520efb"
+      ],
+      "record": {
+        "title": "A Survey of Neural Network Variational Monte Carlo from a Computing Workload Characterization Perspective",
+        "source_url": "https://www.semanticscholar.org/paper/de384cc9e26b68cf707af8b7912174fbaf520efb",
+        "year": 2026,
+        "published": "2026-03-18",
+        "abstract": "Neural Network Variational Monte Carlo (NNVMC) has emerged as a promising paradigm for solving quantum many-body problems by combining variational Monte Carlo with expressive neural-network wave-function ans\\\"atze. Although NNVMC can achieve competitive accuracy with favorable asymptotic scaling, practical deployment remains limited by high runtime and memory cost on modern graphics processing units (GPUs). Compared with language and vision workloads, NNVMC execution is shaped by physics-specific stages, including Markov-Chain Monte Carlo sampling, wave-function construction, and derivative/Laplacian evaluation, which produce heterogeneous kernel behavior and nontrivial bottlenecks. This paper provides a workload-oriented survey and empirical GPU characterization of four representative ans\\\"atze: PauliNet, FermiNet, Psiformer, and Orbformer. Using a unified profiling protocol, we analyze model-level runtime and memory trends and kernel-level behavior through family breakdown, arithmetic intensity, roofline positioning, and hardware utilization counters. The results show that end-to-end performance is often constrained by low-intensity elementwise and data-movement kernels, while the compute/memory balance varies substantially across ans\\\"atze and stages. Based on these findings, we discuss algorithm--hardware co-design implications for scalable NNVMC systems, including phase-aware scheduling, memory-centric optimization, and heterogeneous acceleration.",
+        "canonical_id": "arXiv:2603.18126",
+        "arxiv_id": "2603.18126",
+        "authors": [
+          "Zhengze Xiao",
+          "Xuan Ding",
+          "Yuyang Lou",
+          "Lixue Cheng",
+          "Chaojian Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1371/journal.pcsy.0000093",
+      "identity_tokens": [
+        "id:DOI:10.1371/journal.pcsy.0000093",
+        "title:towards a foundational platform for generative agents in simulated city environment",
+        "url:https://www.semanticscholar.org/paper/e4bdaf42ca6128590bddf8cd8b097a3882f8abe8"
+      ],
+      "record": {
+        "title": "Towards a foundational platform for generative agents in simulated city environment",
+        "source_url": "https://www.semanticscholar.org/paper/e4bdaf42ca6128590bddf8cd8b097a3882f8abe8",
+        "year": 2026,
+        "published": "2026-03-13",
+        "abstract": "Urban environments, characterized by their complex, multi-layered networks encompassing physical, social, economic, and environmental dimensions, present significant challenges for sustainable urbanization. These challenges, ranging from traffic congestion and pollution to social inequality, call for advanced technological interventions. The technology innovation in big data, artificial intelligence, urban computing, and digital twins have laid the groundwork for sophisticated city simulation. However, a gap persists between these technological capabilities and their practical implementation in addressing urban issues because they often fall short of capturing the complex and subtle human behaviour in urban space. The recent advance in large language model (LLM) agents shows emergent abilities of human-like behaviour simulation, presenting important opportunities for characterizing human behaviour in urban studies. This paper provides a comprehensive review on the recent literature about the technology development of urban computing, digital twins, LLM agents and beyond, as well as the interdisciplinary studies on complex urban system and agent-based modeling. Moreover, we conceptualize a novel Urban Generative Intelligence platform that grounded LLM agents in simulated urban environment. The UGI platform allows LLM agents to operate within a textual urban environment emulated by city simulator, interact through a natural language interface, offering an open platform for diverse intelligent and embodied urban tasks. Such platform unleashes the power of LLM agents for complex urban system simulation, providing a novel approach to understand and manage urban complexity.",
+        "canonical_id": "DOI:10.1371/journal.pcsy.0000093",
+        "doi": "10.1371/journal.pcsy.0000093",
+        "authors": [
+          "Fengli Xu",
+          "Jun Zhang",
+          "Chen Gao",
+          "Peijie Liu",
+          "Jie Feng",
+          "Yong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.09607",
+      "identity_tokens": [
+        "id:arXiv:2604.09607",
+        "title:llmassisted agentic edge intelligence framework",
+        "url:https://www.semanticscholar.org/paper/6c1c9a93154c82dae4c92b49aa74adac8469ba00"
+      ],
+      "record": {
+        "title": "LLM-assisted Agentic Edge Intelligence Framework",
+        "source_url": "https://www.semanticscholar.org/paper/6c1c9a93154c82dae4c92b49aa74adac8469ba00",
+        "year": 2026,
+        "published": "2026-03-11",
+        "abstract": "Edge intelligence delivers low-latency inference, yet most edge analytics remain hard-coded and must be redeployed as conditions change. When data patterns shift or new questions arise, engineers often need to write new scripts and push updates to devices, which slows iteration and raises operating costs. This limited adaptability reduces scalability and autonomy in large, heterogeneous, and resource-constrained edge deployments, and it increases reliance on human oversight. Meanwhile, large language models (LLMs) can interpret instructions and generate code, but their compute and memory requirements typically prevent direct deployment on edge devices. We address this gap with the LLM-assisted Edge Intelligence (LEI) framework, which removes the need for manually specified business logic. In LEI, a cloud-hosted LLM coordinates the creation and update of device-side logic as requirements evolve. The system generates candidate lightweight programs, checks them against available data and constraints, and then deploys the selected version to each device. This lets each device receive a tailored program based on sample data, metadata, context, and current resource limits. We evaluate LEI on four heterogeneous datasets, including air quality, temperature \\&humidity, wind, and soil datasets using multiple LLM backends. The experimental results show that the framework maintains low average CPU and memory utilization during the execution. These results indicate that the framework adapts efficiently to changing conditions while maintaining resource efficiency.",
+        "canonical_id": "arXiv:2604.09607",
+        "arxiv_id": "2604.09607",
+        "authors": [
+          "C. Dehury",
+          "S. Kushwaha",
+          "Qiyang Zhang",
+          "Alaa Saleh",
+          "Praveen Kumar Donta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.05692",
+      "identity_tokens": [
+        "id:arXiv:2603.05692",
+        "title:parallelization strategies for dense llm deployment navigating through applicationspecific tradeoffs and bottlenecks",
+        "url:https://www.semanticscholar.org/paper/1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c"
+      ],
+      "record": {
+        "title": "Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks",
+        "source_url": "https://www.semanticscholar.org/paper/1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
+        "year": 2026,
+        "published": "2026-03-05",
+        "abstract": "Breakthroughs in the generative AI domain have fueled an explosion of large language model (LLM)-powered applications, whose workloads fundamentally consist of sequences of inferences through transformer architectures. Within this rapidly expanding ecosystem, dense LLMs--those that activate all model parameters for each token generation--form the foundation for advanced expert-based variants. Dense models continue to dominate because of their strong generalization ability, scalability, ease of fine-tuning, and versatility across diverse tasks. In LLM inference systems, performance is mainly characterized by latency, response time, and throughput (i.e., tokens generated per unit of time). Latency and throughput are inherently coupled: optimizing for one often comes at the expense of the other. Moreover, batching strategies and parallelism configurations, which are essential when dense model parameters exceed device memory capacity, can significantly affect both latency and overall system throughput. This paper (i) investigates the workloads of two representative dense LLMs--Llama-3.1-70B and Llama-3.1-405B, focusing in particular on intra-node parallelization schemes, (ii) analyzes how input characteristics, batching, and parallelism strategies influence latency flexibility and the latency-throughput tradeoff, and (iii) identifies key performance bottlenecks that inform design choices for meeting service-level agreements (SLAs) and sustaining inference quality. Our empirical evaluations reveal that Tensor Parallelism (TP) improves the latency objectives while Pipeline Parallelism (PP) is better-suited for throughput-oriented applications. We highlight that their hybrid usage by controlling the TP and PP degrees provides control over the latency-throughput interplay.",
+        "canonical_id": "arXiv:2603.05692",
+        "arxiv_id": "2603.05692",
+        "authors": [
+          "Burak Topçu",
+          "Musa Cim",
+          "Poovaiah M. Palangappa",
+          "Meena Arunachalam",
+          "Mahmut T. Kandemir"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2025.3643296",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2025.3643296",
+        "title:a hybrid online and offline requests inference serving system for llm in private computer environment",
+        "url:https://www.semanticscholar.org/paper/ef9af770c2ab36e31e57bd896abd0e8a005fb491"
+      ],
+      "record": {
+        "title": "A Hybrid Online and Offline Requests Inference Serving System for LLM in Private Computer Environment",
+        "source_url": "https://www.semanticscholar.org/paper/ef9af770c2ab36e31e57bd896abd0e8a005fb491",
+        "year": 2026,
+        "published": "2026-03-01",
+        "abstract": "While advancements in Large Language Models (LLMs) have broadened their applications, performing multitask LLM inference on a single GPU remains challenging due to insufficient GPU memory to load all model parameters. Existing methods that offload unneeded parameters to main memory and prefetch them back introduce high latency due to data transfer overhead. We propose FixGen, a single GPU LLM online-offline mixed inference serving system that supports multi-task inference. First, we develop FixPool to optimize memory management by centralizing storage in a fixed memory space and optimizing parameter storage procedures, thus reducing PCIe resource consumption and improving efficiency. Secondly, we use a router to select appropriate operators to compute requests in the prefill and decode stages within the same batch to reduce the response latency for sudden online requests. FixGen reduces the online request-response latency between 1.06 and 1.84 times compared to the conventional method while maintaining the throughput to offline requests on a single GPU from OPT-6.7b to OPT-30b.",
+        "canonical_id": "DOI:10.1109/TC.2025.3643296",
+        "doi": "10.1109/TC.2025.3643296",
+        "authors": [
+          "Yu-Chen Shen",
+          "Yuning Zhang",
+          "Dong Yuan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ccac4060702fa064571deb46fdc2a16afe81821445c280193313b08eac61cfac",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

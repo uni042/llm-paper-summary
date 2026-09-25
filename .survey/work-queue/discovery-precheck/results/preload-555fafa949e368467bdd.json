@@ -1,0 +1,934 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-555fafa949e368467bdd",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-555fafa949e368467bdd",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "140",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "481280beb29c04e1671a3b1841c27550aee62589",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 12,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T01:23:50.876102+00:00",
+  "preload_id": "preload-555fafa949e368467bdd",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
+      "source_url": "https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "Genomic Foundation Models (GFMs) are increasingly used for large-scale sequence analysis and generation. Compared with frontier language models, GFMs are typically smaller and frequently operate on long genomic sequences, with evaluation often requiring preservation of biologically meaningful structure and sequence-level relationships. Although low-precision post-training quantization (PTQ) has shown substantial memory and throughput benefits for general-purpose language models, it remains unclear whether these benefits transfer to GFMs given their distinct model scales, sequence characteristics, and evaluation requirements. We present an empirical case study of FP8 post-training quantization applied to GenomeOcean, a computationally efficient genomic foundation model with strong reported performance across diverse genomics tasks [Zhou et al., 2025]. Its range of model scales, from 100M to 4B parameters, provides a useful setting for examining how quantization effects vary with model size. We evaluate FP8 across two primary GFM inference regimes—embedding extraction and autoregressive generation—and assess its impact along two dimensions: biological fidelity relative to BF16 baselines and system-level efficiency in terms of throughput, memory usage, and energy efficiency. We find that FP8 largely preserves biological fidelity across the evaluated scales and inference regimes, while reducing GPU memory footprint at 4B scale and improving energy efficiency during autoregressive generation. However, realized throughput gains remain substantially below FP8’s theoretical 2× hardware ceiling, with a best-case improvement of 19.3% in autoregressive generation and benefits varying strongly by model scale and workload. Autoregressive generation shows the clearest gains, driven largely by KV-cache compression, whereas embedding extraction provides limited or negative throughput benefits at smaller model scales. We attribute this theory–practice gap to the interaction of model-scale effects, memory-system bottlenecks, and software-stack limitations. These findings highlight the need for workload-specific empirical evaluation before adopting low-precision inference in scientific foundation models. Code availability https://github.com/jgi-genomeocean/genomeocean_efficiency",
+      "canonical_id": "DOI:10.64898/2026.08.09.743676",
+      "doi": "10.64898/2026.08.09.743676",
+      "authors": [
+        "Mutian Yu",
+        "Robert Egan",
+        "Feng-Chen Liu",
+        "Zhong Wang",
+        "Li-Zhen Shi"
+      ]
+    },
+    {
+      "title": "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction",
+      "source_url": "https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "We benchmark six numerical precision configurations for ESM-2 protein language models across throughput, memory footprint and predictive accuracy, on two workloads with sharply different characteristics: bulk embedding extraction and deep mutational scanning (DMS) variant-effect scoring. Accuracy is evaluated on the complete ProteinGym substitution benchmark — 201 assays, 2.41M variants — at three model scales spanning 650M to 15B parameters, with a paired bootstrap clustered on protein. Three findings follow, and each contradicts a common practice. First, benchmark averages conceal the failure that decides deployability: no configuration shifts mean correlation by more than 0.007 at any scale, yet INT8 dynamic quantization — indistinguishable from fp32 on that mean at 3B (p = 0.34) — takes a single assay from ρ = 0.591 to 0.223. Selection must be made on worst-case, not mean, behaviour. Second, fidelity measured against fp32 bounds risk but cannot rank quality: over 3015 assay/configuration pairs it predicts the magnitude of ground-truth change (r = 0.56–0.81) but not its direction, and the INT4 effect differs significantly between 650M and 3B (+0.0101, p = 0.0007) with no monotone trend to extrapolate. Third, quantizing a large model is dominated by using a small one: of eighteen scale/configuration combinations only three are Pareto-optimal over accuracy, memory and speed, and all three are 650M. The one catastrophic failure we observe is a defect of default symmetric activation scaling, not of W8A8 itself: asymmetric activation quantization, a one-line change needing no calibration, removes every damaged assay. We also give a label-free screen for at-risk targets, and report four measurement artifacts encountered during this study, three of which inverted the result they were meant to measure.",
+      "canonical_id": "DOI:10.64898/2026.08.10.744024",
+      "doi": "10.64898/2026.08.10.744024",
+      "authors": [
+        "Qing Shao"
+      ]
+    },
+    {
+      "title": "Autonomous driving chips",
+      "source_url": "https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31",
+      "year": 2026,
+      "published": "2026-08-13",
+      "abstract": null,
+      "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+      "doi": "10.1038/s44287-026-00319-1",
+      "authors": [
+        "Qiujing Lu",
+        "Sihong Wu",
+        "Yifan Liu",
+        "Ziwei Huang",
+        "Yueyao Zhou",
+        "Boyi Dong",
+        "Tianyi Zhang",
+        "Linsen Li",
+        "Kaichen Zhu",
+        "Haowen Shu",
+        "Haikang Diao",
+        "Kaiteng Tan",
+        "Yu Liu",
+        "Xudong Zheng",
+        "Hongkai Ning",
+        "Y. Wan",
+        "Xuanhan Wang",
+        "Runze Yuan",
+        "Hong-Yan Sang",
+        "Xiaodong Yan",
+        "Ling Wang",
+        "Tong Dang",
+        "Aijia Yao",
+        "Zhien Wang",
+        "Aaron D. Franklin",
+        "Zhengshuai Wang",
+        "Jeffrey H. Lang",
+        "Jinchi Han",
+        "Xiyuan Tang",
+        "Kenan Zhang",
+        "Tilo H. Yang",
+        "Peng Wu",
+        "Jiangtao Wang",
+        "Qing-Cheng Huang",
+        "Jiajia Sun",
+        "Jiefu Chen",
+        "Xuqing Wu",
+        "Yuanji Zheng",
+        "Lin Xu",
+        "Yunyue Zhu",
+        "Jian Wang",
+        "Rui Chen",
+        "Meng‐Chi Chen",
+        "Xingjun Wang",
+        "Xiang Cheng",
+        "Biao Qin",
+        "Kaihui Liu",
+        "Hailin Peng",
+        "Mario Lanza",
+        "Saptarshi Das",
+        "Lain-Jong Li",
+        "Xiangfeng Duan",
+        "Vwani Roychowdhury",
+        "V. Bulović",
+        "Tomás Palacios",
+        "Jing Kong",
+        "Shuo Feng",
+        "Lian-Mao Peng",
+        "Jianfeng Jiang"
+      ]
+    },
+    {
+      "title": "AWARe: Mitigating Catastrophic Forgetting via Activation-Weighted Adaptive REtention",
+      "source_url": "https://www.semanticscholar.org/paper/61c794300f4889e973e53b4eae76f9381a02a5e4",
+      "year": 2026,
+      "published": "2026-08-12",
+      "abstract": "Multimodal Large Language Models (MLLMs) exhibit strong generalization and reasoning abilities due to large-scale multimodal pre-training. However, fine-tuning these models on downstream tasks often leads to catastrophic forgetting, where newly learned task-specific knowledge degrades previously acquired capabilities. This issue arises because gradient updates for new tasks overwrite parameters critical to prior knowledge, limiting the practical deployment of MLLMs. To address this challenge, we propose Activation-Weighted Adaptive REtention (AWARe), a fine-tuning method that mitigates catastrophic forgetting by dynamically controlling parameter updates based on activation patterns. AWARe assigns activation-based importance scores to parameters, selectively freezing those essential for preserving prior capabilities while allowing less important parameters to adapt to new tasks. Importantly, AWARe operates without modifying model architectures, ensuring compatibility with existing inference engines. Extensive experiments demonstrate that AWARe effectively preserves upstream capabilities while achieving superior downstream performance compared to existing methods. Code is available at https://github.com/kaln27/AWARe.",
+      "canonical_id": "arXiv:2608.11758",
+      "arxiv_id": "2608.11758",
+      "authors": [
+        "Jun-Yong Liao",
+        "Jinfan Lv",
+        "Guoming Wang",
+        "Jupeng Zheng",
+        "Ling Xiao",
+        "Siliang Tang"
+      ]
+    },
+    {
+      "title": "FactorDrive: Adaptive Multi-Step Reasoning Driven by Planning-Critical Factors for End-to-End Autonomous Driving",
+      "source_url": "https://www.semanticscholar.org/paper/ad036404cefef06b3ebace4cf9aa09fc43623081",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Vision-language models (VLMs) have advanced scene understanding and enabled explicit reasoning in end-to-end autonomous driving. However, existing methods insufficiently integrate spatial-physical evidence into planning reasoning, while reasoning adaptation remains coarse-grained and falls short of scene-specific planning demands. Furthermore, reasoning-path optimization for higher planning quality remains largely unexplored in autonomous-driving post-training. To address these limitations, we propose FactorDrive, an end-to-end autonomous driving framework for adaptive multi-step reasoning driven by planning-critical factors (PCFs). We first perform large-scale driving-domain instruction tuning to establish foundational driving knowledge. Building on this foundation, we construct PCF-CoT, a chain-of-thought (CoT) dataset that grounds planning reasoning in trajectory-relevant spatial-physical evidence and organizes reasoning around scene-specific PCFs, enabling the composition and depth of reasoning paths to adapt to different planning demands. We further introduce Quality Search-Guided Group Relative Policy Optimization (QS-GRPO), which guides Monte Carlo Tree Search (MCTS) with trajectory-level planning rewards to discover reasoning paths with higher planning quality and uses the resulting responses to optimize the policy through GRPO, thereby improving trajectory planning performance. Extensive experiments on both open-loop (nuScenes) and closed-loop-oriented (NAVSIM) benchmarks demonstrate that FactorDrive achieves state-of-the-art planning performance.",
+      "canonical_id": "arXiv:2608.09591",
+      "arxiv_id": "2608.09591",
+      "authors": [
+        "Guolei Huang",
+        "Tengfei She",
+        "Yuxuan Lu",
+        "Yao Huang",
+        "Yu-Qi Ye",
+        "Yongjun Shen"
+      ]
+    },
+    {
+      "title": "Repeated-Game Security for Restaking-Based Verifiable Inference",
+      "source_url": "https://www.semanticscholar.org/paper/e114c9e15d636c3d558e2f40f9fe012324d76cd8",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Restaking-based protocols enable verifiable LLM inference without the high proving cost of zkML or the hardware trust assumptions of TEEs. Their security is commonly justified by a one-round slashing condition: a rational provider should not cheat when the expected penalty exceeds the cost saving from dishonest inference. This paper shows that this condition can overstate security when inference is supplied repeatedly under the same stake. We model verifiable inference as a discounted repeated game and identify a repeated-game gap caused by proportional slashing: detected deviations reduce future penalty exposure, while cost savings are earned again across queries. We derive the gap in closed form, show that it persists under minimum-stake ejection, and extend it to memoryless bounded-slashing protocols covering deployed designs. We propose a deployable mechanism combining history-dependent challenges, reputation-weighted slashing, and stake vesting. The mechanism restores infinite-horizon subgame-perfect incentive compatibility against stationary mixed-strategy deviations above an explicit discount-factor threshold without per-query cryptographic verification. Evaluation across nine open-weight model pairs from 0.5B to 14B parameters shows that the audit signal has the required concave detectability response. A Stackelberg audit-budget analysis shows that improved signal responsiveness reduces the baseline audit rate by 2.6x at discount factor 0.95. Calibrated to deployed parameters, surveyed protocols pass one-round incentive compatibility but admit repeated-game deviations for discount factors between 0.92 and 0.98, with deviation-profit fractions of 1.5%--8%. Our mechanism reduces deviation profits by 31%--54% while maintaining low-latency economic verification.",
+      "canonical_id": "arXiv:2608.09055",
+      "arxiv_id": "2608.09055",
+      "authors": [
+        "Zhenhang Shang",
+        "Yingzhe Yu",
+        "Kani Chen"
+      ]
+    },
+    {
+      "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/43f11470f784c36df8c680c4eaf2cb534e14ea73",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Compressing large language models to two bits or fewer is increasingly feasible through block-wise post-training quantization; cross-block variants reconstruct neighboring Transformer blocks within a moving window. In the fixed two-block setting studied here, the matched sequential baseline moves this window through the network once, so errors introduced early in the sweep are not revisited. We propose Interleaved Cross-Block Quantization (ICBQ), a scheduling modification that revisits the boundary pair between consecutive chunks. Each seam pair is refined twice: first at the end of one chunk and again at the start of the next. The method retains the local two-block objective and reuses the calibration inputs of existing block-wise PTQ pipelines. Under stated local contraction and smoothness assumptions, we derive a depth-wise upper-bound comparison in which seam revisits multiply the propagated term while the residual remains bounded independently of depth. In the reported experiments, ICBQ reduces ternary-quantization perplexity relative to the matched Sequential CBQ baseline, yields finite perplexity in configurations where the baseline has severe degradation, and can also be used with 3-bit and 2-bit GPTQ.",
+      "canonical_id": "arXiv:2608.09595",
+      "arxiv_id": "2608.09595",
+      "authors": [
+        "Achille Jacquemond",
+        "Yuma Ichikawa",
+        "Akira Sakai"
+      ]
+    },
+    {
+      "title": "ELICITED: EHR-grounded Longitudinal Interactive Conversations for Information-seeking Triage Evaluation and Decision-making",
+      "source_url": "https://www.semanticscholar.org/paper/83a31afa343241c449949766489f2d04d726dd24",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Emergency-department (ED) triage requires clinicians to rapidly identify patients who need immediate attention, determine who can safely wait, and prioritize limited clinical resources. At presentation, however, information may be limited to a chief complaint and initial vital signs. Clinically important details, including symptom onset and progression, associated symptoms, medical history, and medication use, are often obtained through focused conversation. Effective triage therefore requires clinicians to identify information gaps, ask appropriate follow-up questions, and update their assessment as new evidence becomes available. Most existing ED benchmarks evaluate acuity prediction from a fixed clinical snapshot. Although this formulation measures predictive performance after patient information has been assembled, it does not capture the interactive process through which triage-relevant evidence is elicited and interpreted. Existing medical dialogue datasets support the study of clinical communication, but dialogue statements are not always linked to temporally ordered events in the electronic health record (EHR). We introduce EHR2Dial-Triage, an agentic conversation-generation framework and benchmark grounded in MIMIC-IV-ED. The framework constructs triage conversations under explicit role-based and temporal information boundaries. Each accepted patient disclosure is linked to its supporting EHR event and the first dialogue turn at which it becomes available. EHR2Dial-Triage enables controlled evaluation of information elicitation, evidence use, five-level Emergency Severity Index prediction, and patient-facing communication across models and patient personas. It provides a structured setting for studying conversational triage as a dynamic process of clinical information acquisition, reasoning, and communication.",
+      "canonical_id": "arXiv:2608.09024",
+      "arxiv_id": "2608.09024",
+      "authors": [
+        "Hao Zhu",
+        "Xiao-Lin Shi",
+        "Jiayue Zhou"
+      ]
+    },
+    {
+      "title": "Decodable But Not Detachable: Training Data Granularity Determines Parametric Modularity in Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/bc56a144b052b957cdfe9b8771aa3bd2a13f44fc",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Do large language models contain domain-specific parametric shells: concentrated, causally necessary neuron populations whose removal selectively degrades a target domain while sparing others? We apply a uniform causal methodology across two domain granularities, three model families (1.5B to 7B parameters), and eight domains. At the academic subject level, zero neurons exceed 60\\% domain selectivity across 939,008 combined FFN neurons and causal damage matrices are flat, despite domain identity being linearly decodable above 85\\% accuracy. At the language and modality level, 0.65--1.14\\% of neurons exceed 60\\% selectivity, damage matrices are near-perfectly diagonal (ratios up to 595:1), and shell neuron sets are essentially disjoint (IoU $<0.003$). Masking code-selective neurons reduces mathematical reasoning accuracy by 16--24 percentage points across all models; masking Spanish or Chinese neurons leaves it at or below random. Shell strength increases monotonically with scale and shells are spatially interleaved in a pattern that precludes group-level selective quantization. Parametric shells form where and only where training data was modular at the token level.",
+      "canonical_id": "arXiv:2608.10214",
+      "arxiv_id": "2608.10214",
+      "authors": [
+        "M. Armstrong",
+        "Navid Ayoobi",
+        "Arjun Mukherjee"
+      ]
+    },
+    {
+      "title": "New knowledge source pipelines for sociocultural representations in a cognitive architecture",
+      "source_url": "https://www.semanticscholar.org/paper/7f1a8c136b7ba1b9a02806ae5219124ef250fa30",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "Introduction With the increasing use of large language models (LLMs) and related scaled knowledge systems, it is important to achieve a better picture of the downstream impacts of the ubiquity of these systems. LLMs (as they currently are instantiated) largely output text using the skewed training data and patterns recognized through pretraining. The datasets of these systems are collected primarily from WEIRD (Western, Educated, Industrialized, Rich, Democratic) societies, and those data are often drawn from sources that represent marginalized, exploited communities (in WEIRD societies) problematically. This data process renders uneven representation, skewing potential cultural insights, and the complicated structure of LLMs can cloud the task of elucidating the full extent of problematic sociocultural structure representation within those models. Methods Using LLMs with process-based computational cognitive models and architectures (e.g., using ACT-R) provides a potential avenue for understanding the implications of these systems on human cognitive processes. We present two systems that combine the ACT-R architecture with more scalable, holographic (vector-symbolic) memory representations – one using an LLM and another using the ConceptNet semantic network – and compare the two systems using a cognitive model of the implicit association task (IAT). Results Though both systems are useful, we found that the ConceptNet based system more closely resembled human data from the IAT in its impact of sociocultural structure representation on behavior through memory. Nonetheless, both systems represent an opportunity to probe and evaluate those knowledge systems (i.e., ConceptNet and Llama3.2 in this case) using more cognitively relevant and plausible methods that are more generalizable to actual human behavior. Discussion Though we present a model of a relatively simple task here in the IAT, the results point to a unique and powerful opportunity to develop a deeper understanding of what the ubiquity of these (and related) systems means for the propagation and bootstrapping of existing sociocultural knowledge and structures – especially those structures that uphold problematic, racialized representations of the human.",
+      "canonical_id": "DOI:10.3389/fpsyg.2026.1874556",
+      "doi": "10.3389/fpsyg.2026.1874556",
+      "authors": [
+        "Swapnika Dulam",
+        "Julian R. Gay",
+        "Christopher L. Dancy"
+      ]
+    },
+    {
+      "title": "Hidden Language Consistency Phenomena in Reasoning LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/5a54ddeba4584f135eb04e3a8c525ca04620d784",
+      "year": 2026,
+      "published": "2026-08-09",
+      "abstract": "Multilingual reasoning models are commonly evaluated by whether they arrive at the correct answer, but not by whether they preserve the intended language while reasoning and responding. This omission conceals important multilingual behaviors that emerge as tasks become harder. In this paper, we study task difficulty, task accuracy, thinking-language consistency (TC), and answer-language consistency (AC) across reasoning models using PolyMath benchmark in eight languages and four difficulty levels. We uncover four findings: (1) language consistency exhibits four difficulty-dependent behaviors: output-language consistency remains aligned with input, remains misaligned, degrades gradually, or collapses abruptly. (2) We identify the language consistency breakdown effect, where increasing difficulty can cause a sudden drop in output-language consistency, especially in less strongly represented and non-Latin-script languages. (3) Due to this breakdown effect, accuracy can be preserved or even improved at a harder difficulty level as the model shifts to its internal dominant language. (4) Quantization can improve or degrade output-language consistency independently of its effect on accuracy, with GPTQ and AWQ often outperforming AutoRound under tolerance-based voting with {\\epsilon} = 1.0. These results show that multilingual capability cannot be characterized by accuracy alone; reliable evaluation should jointly consider task accuracy, language consistency, and task difficulty for multilingual benchmarks.",
+      "canonical_id": "arXiv:2608.08447",
+      "arxiv_id": "2608.08447",
+      "authors": [
+        "Muhammad Ali Shafique",
+        "Kelly Marchisio"
+      ]
+    },
+    {
+      "title": "Measuring and Reducing WebGPU Dispatch Overhead for LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1cb86b64174287180f203b7772a2ddf029b92829",
+      "year": 2026,
+      "published": "2026-08-09",
+      "abstract": "Large Language Models are deployed to multiple types of environments, from internet browsers to edge devices, and WebGPU serves as a modern cross-platform standard. The engines for browser-based LLM inference have proliferated, yet the overhead of WebGPU per-operation dispatch remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. We show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. Therefore, we conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+      "canonical_id": "arXiv:2608.08730",
+      "arxiv_id": "2608.08730",
+      "authors": [
+        "Jędrzej Maczan"
+      ]
+    },
+    {
+      "title": "Component Type, Not Reconstruction Error, Predicts Attention Quantization Sensitivity",
+      "source_url": "https://www.semanticscholar.org/paper/3c99efb77cfb625c6a60332ddb86378694566638",
+      "year": 2026,
+      "published": "2026-08-09",
+      "abstract": "Many post-training quantization (PTQ) methods use layer-wise reconstruction, second-order proxy objectives, or activation-aware transformations to reduce quantization-induced error. Whether that error signal predicts the downstream functional impact of quantizing an individual attention projection has not been directly characterized. We sweep nine open-weight language models (1.3B--8B parameters; OPT, GPT-J, LLaMA-1/2/3, Mistral, Qwen 2.5) and quantize one attention projection at a time under round-to-nearest (RTN) and, for seven models, GPTQ at 3 and 4 bits, recording reconstruction error, perplexity change, and per-projection activation-weighted quantization error for 3,808 distinct measurements. We find: (1) within a given component type (Q, K, V, or O), reconstruction error explains less than 10% of the variance in perplexity sensitivity in 27 of 36 cases under RTN, with median R^2 = 0.044; (2) both component type and layer identity explain more variance than reconstruction error in all 9 models, with layer identity the strongest predictor in 7 of 9 models and component type strongest in the remaining 2; (3) value (V) projections are the most commonly dominant component, accounting for 38--51% of total positive Delta PPL in seven of nine models; (4) the dominant component is broadly preserved between RTN and GPTQ (5 of 7 cases); and (5) activation-weighted quantization error is a moderately better within-component predictor than reconstruction error for V projections specifically (median R^2 of 0.20 vs. 0.06). These findings indicate that relative weight reconstruction error alone is insufficient for sensitivity-aware bit allocation, and that V projections merit dedicated consideration in mixed-precision schemes.",
+      "canonical_id": "arXiv:2609.26173",
+      "arxiv_id": "2609.26173",
+      "authors": [
+        "Kasun Dewage",
+        "Marianna Pensky",
+        "Suranadi De Silva"
+      ]
+    },
+    {
+      "title": "Quantization Degradation in Large Language Models: A Signal-Noise Perspective",
+      "source_url": "https://www.semanticscholar.org/paper/813d4be29198c89ee4721b560c03903af6898d31",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Post-training quantization reduces the deployment cost of large language models, yet how severely a quantized model degrades is not determined by bit-width alone. We systematically study weight-only post-training quantization across bit-widths, quantization methods, model scales and downstream tasks on multiple model families. We observe that such degradation varies substantially across these factors: 4-bit quantization usually preserves performance, 2-bit often causes broad degradation, and at 3-bit, degradation becomes apparent but varies markedly with task type, quantization method and model scale. To explain this variability, we use the signal-to-noise ratio (SNR) to measure how strongly quantization perturbs full-precision representations. We trace degradation back to two linked processes: how quantization errors arise within individual modules, and how they accumulate across layers. First, a source SNR decomposition shows that newly introduced errors depend on three factors: the magnitude of the weight error, the strength of the task-specific signal, and how strongly the quantization error aligns with task-specific activations. Different factors affect these components in distinct ways. Second, a cross-layer propagation analysis shows that these errors can be attenuated, preserved, or amplified as they pass across layers, and that larger models benefit from weaker error amplification. Together, these results establish that quantization degradation is governed by how errors are introduced at the source and how they accumulate across the network.",
+      "canonical_id": "arXiv:2608.08188",
+      "arxiv_id": "2608.08188",
+      "authors": [
+        "Chenxi Zhou",
+        "Pengfei Cao",
+        "Jin Ye",
+        "Bohan Yu",
+        "Haida Yu",
+        "Jianguo Li",
+        "Jun Zhao",
+        "Kang Liu"
+      ]
+    },
+    {
+      "title": "Designing A Scalable LLM Agent Framework for Large-scale Urban Segregation Simulation",
+      "source_url": "https://www.semanticscholar.org/paper/328f126e9232ef13bd72983c70becc2736a1da39",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Agent-based models (ABMs) have long been employed to explore how individual behaviors aggregate into complex societal phenomena in urban space. The rise of Large Language Models (LLMs) offers a new paradigm for ABM, enabling high-fidelity modeling of human behavior. However, urban dynamics often require extensive agent interactions to emerge, and scaling up LLM agent simulations is limited by high-latency remote LLM inference and high costs. To address this, we propose the OpenCity framework for large-scale LLM agent simulation. We design a novel \"Group-and-Distill\" strategy that significantly reduces costs without sacrificing behavioral diversity by aggregating agents with shared static characteristics while preserving their unique dynamic states. Moreover, a system-level request scheduler is designed to optimize I/O concurrency and communication bottlenecks. Experiments in six cities globally demonstrate that OpenCity achieves a 600x speedup and a 45% reduction in token usage compared to standard baseline models, while maintaining 96% behavioral consistency with independently invoked agent baselines. Based on OpenCity, we conduct first benchmark test on large-scale social segregation with LLM agents. The results show that OpenCity-accelerated generative agents are effective in reproducing socioeconomic segregation patterns. Furthermore, our scalability analysis demonstrates that the realism of emerging social phenomena increases as the agents scale up, quantitatively validating the necessity of large-scale simulations. Finally, we demonstrate the framework's capability as a policy sandbox through a counterfactual analysis of urban equity. Overall, OpenCity provides a robust and efficient framework that unlocks the potential of LLMs for large-scale, high-fidelity multi-agent systems analysis. Code repo is available at https://github.com/tsinghua-fib-lab/OpenCity.",
+      "canonical_id": "DOI:10.1145/3770855.3818944",
+      "doi": "10.1145/3770855.3818944",
+      "authors": [
+        "Qingbin Zeng",
+        "Yuwei Yan",
+        "Zhiheng Zheng",
+        "Jingzhe Yuan",
+        "Jun Zhang",
+        "Jie Feng",
+        "Fengli Xu",
+        "James A. Evans",
+        "Yong Li"
+      ]
+    },
+    {
+      "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/fd6eef075a9b696fb1efaf644ad21d389c8751f6",
+      "year": 2026,
+      "published": "2026-08-07",
+      "abstract": "Post-training quantization (PTQ) is widely used to reduce the memory and computational cost of large language models. Existing PTQ methods typically obtain an initial quantized model through heuristic rules or greedy optimization, and once quantization is completed the resulting integer assignments are usually treated as final. This observation motivates a complementary optimization stage within PTQ that keeps quantized weights improvable after an executable quantized model has been produced, while preserving the quantized format. We introduce ReQuant, a backpropagation-free fixed-grid refinement procedure for this stage. Agnostic to the PTQ initializer, ReQuant takes an existing quantized model as a feasible starting point and iteratively revisits its discrete weight assignments on the fixed quantization grid. Accepted updates strictly reduce the mean squared reconstruction error and remain on the original grid. In this way, ReQuant turns the initially fixed PTQ output into an iteratively optimizable discrete solution and serves as a plug-and-play post-processing stage for existing PTQ pipelines. Experiments across diverse model families, bit-widths, and downstream tasks show that ReQuant consistently improves quantized models from heterogeneous PTQ initializers, with especially large gains on simple initializers and lower bit-widths. Notably, ReQuant can refine a simple round-to-nearest initialization across multiple sweeps until it approaches or surpasses GPTAQ under the same quantization format. These results establish ReQuant as a practical complementary stage for further improving existing PTQ pipelines.",
+      "canonical_id": "arXiv:2608.07019",
+      "arxiv_id": "2608.07019",
+      "authors": [
+        "Yongge Ma",
+        "Guoan Wang",
+        "Feiyu Wang",
+        "Yao-Ming Li",
+        "Qian Zhang",
+        "Zihan Yan",
+        "Yi Han",
+        "Tong Yang"
+      ]
+    },
+    {
+      "title": "The Sparsity Whisperer",
+      "source_url": "https://www.semanticscholar.org/paper/0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+      "year": 2026,
+      "published": "2026-08-06",
+      "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+      "canonical_id": "arXiv:2608.06630",
+      "arxiv_id": "2608.06630",
+      "authors": [
+        "Linghao Kong",
+        "Inimai Subramanian",
+        "Micah Adler",
+        "Dan Alistarh",
+        "D. Gutfreund",
+        "N. Shavit"
+      ]
+    },
+    {
+      "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "One-bit post-training quantization represents each weight using only its sign, requiring all deployment contexts to share the same binary weight matrix even when their activation statistics favor different sign patterns. We study this shared-sign constraint and introduce Quantum Random Access Quantization (QRAQ). This framework encodes context-dependent signs in a quantum random-access code and retrieves them via context-matched Pauli measurements. Under an explicit fresh-copy logical readout model, QRAQ produces an unbiased, context-specific binary surrogate with a tractable shot-noise penalty. We prove a row-wise separation from shared-sign one-bit PTQ with signed per-row scales. When the optimal context-wise signs are incompatible, QRAQ achieves a strictly lower ideal reconstruction risk. We also derive finite-shot and calibrated-noise conditions under which this separation is retained. Fixed-readout quantum schemes are classically simulable, so the relevant resource in this model is measurement incompatibility rather than quantization alone. Finally, we characterize the role of scale granularity, provide finite-sample certificates, and evaluate the predicted ideal, finite-shot, noisy, and multi-context regimes in simulator experiments.",
+      "canonical_id": "arXiv:2608.05240",
+      "arxiv_id": "2608.05240",
+      "authors": [
+        "Yuma Ichikawa",
+        "Moeto Mishima"
+      ]
+    },
+    {
+      "title": "COSMOS: Designing Energy-Efficient Context-Aware Multimodal Cognitive Systems",
+      "source_url": "https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Multimodal AI (MMAI) systems are becoming integral to safety-critical edge applications, from autonomous driving and robotics to smart healthcare and surveillance, where real-time perception must operate under stringent energy and compute constraints. These systems comprise distinct sensing units, such as cameras, microphones, and inertial sensors, each forming a separate subsystem with unique capabilities and constraints. As environments evolve, modality relevance shifts and redundancy emerges, requiring dynamic adaptation to maintain quality of service while extending system lifetime. Existing methods optimize individual subsystems or static inference paths, lacking responsiveness to contextual changes; coordinating adaptation across these heterogeneous subsystems remains essential yet largely unexplored. We introduce COSMOS, a runtime framework for distributed multimodal edge nodes. Its central contribution is a closed-loop control structure that uses predicted semantic context and measured temporal stability to jointly govern modality activation, inference frequency, and subsystemlevel approximation. COSMOS instantiates this control loop through three mechanisms: Scene/State-aware Modality Selection (SMS), Temporal Locality-driven Decision and Regulation (TLDR), and modality-aware Design Space Exploration (DSE). The DSE heuristic coordinates compute, audio preprocessing, sensing, memory, and communication knobs under a unified energy-quality objective. Validated on an FPGA-MCU prototype (Intel Agilex-5 primary + ESP32 auxiliary) for Audio-Visual Event Localization, COSMOS extends system lifetime by 7.73× with <5% accuracy loss, achieving up to 1.77× primary and 3.01× auxiliary energy savings across six transformer backbones.",
+      "canonical_id": "DOI:10.1145/3816440.3818581",
+      "doi": "10.1145/3816440.3818581",
+      "authors": [
+        "Arghadip Das",
+        "Yatharth Agarwal",
+        "Soumendu Kumar Ghosh",
+        "Arnab Raha",
+        "Vijay Raghunathan"
+      ]
+    },
+    {
+      "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures",
+      "source_url": "https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+      "canonical_id": "DOI:10.1145/3816440.3818582",
+      "doi": "10.1145/3816440.3818582",
+      "authors": [
+        "I. Sanli",
+        "Michele Rossi",
+        "E. Ferro",
+        "Abhishek Jha",
+        "A. Burg",
+        "S. Singh",
+        "T. Boesch",
+        "I. Boybat"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.64898/2026.08.09.743676",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.08.09.743676",
+        "title:fp8 inference in genomic foundation models theoretical vs realized speedups on genomeocean",
+        "url:https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8"
+      ],
+      "record": {
+        "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
+        "source_url": "https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "Genomic Foundation Models (GFMs) are increasingly used for large-scale sequence analysis and generation. Compared with frontier language models, GFMs are typically smaller and frequently operate on long genomic sequences, with evaluation often requiring preservation of biologically meaningful structure and sequence-level relationships. Although low-precision post-training quantization (PTQ) has shown substantial memory and throughput benefits for general-purpose language models, it remains unclear whether these benefits transfer to GFMs given their distinct model scales, sequence characteristics, and evaluation requirements. We present an empirical case study of FP8 post-training quantization applied to GenomeOcean, a computationally efficient genomic foundation model with strong reported performance across diverse genomics tasks [Zhou et al., 2025]. Its range of model scales, from 100M to 4B parameters, provides a useful setting for examining how quantization effects vary with model size. We evaluate FP8 across two primary GFM inference regimes—embedding extraction and autoregressive generation—and assess its impact along two dimensions: biological fidelity relative to BF16 baselines and system-level efficiency in terms of throughput, memory usage, and energy efficiency. We find that FP8 largely preserves biological fidelity across the evaluated scales and inference regimes, while reducing GPU memory footprint at 4B scale and improving energy efficiency during autoregressive generation. However, realized throughput gains remain substantially below FP8’s theoretical 2× hardware ceiling, with a best-case improvement of 19.3% in autoregressive generation and benefits varying strongly by model scale and workload. Autoregressive generation shows the clearest gains, driven largely by KV-cache compression, whereas embedding extraction provides limited or negative throughput benefits at smaller model scales. We attribute this theory–practice gap to the interaction of model-scale effects, memory-system bottlenecks, and software-stack limitations. These findings highlight the need for workload-specific empirical evaluation before adopting low-precision inference in scientific foundation models. Code availability https://github.com/jgi-genomeocean/genomeocean_efficiency",
+        "canonical_id": "DOI:10.64898/2026.08.09.743676",
+        "doi": "10.64898/2026.08.09.743676",
+        "authors": [
+          "Mutian Yu",
+          "Robert Egan",
+          "Feng-Chen Liu",
+          "Zhong Wang",
+          "Li-Zhen Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.08.10.744024",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.08.10.744024",
+        "title:benchmark averages hide the failures that matter quantizing esm2 for protein varianteffect prediction",
+        "url:https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7"
+      ],
+      "record": {
+        "title": "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction",
+        "source_url": "https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "We benchmark six numerical precision configurations for ESM-2 protein language models across throughput, memory footprint and predictive accuracy, on two workloads with sharply different characteristics: bulk embedding extraction and deep mutational scanning (DMS) variant-effect scoring. Accuracy is evaluated on the complete ProteinGym substitution benchmark — 201 assays, 2.41M variants — at three model scales spanning 650M to 15B parameters, with a paired bootstrap clustered on protein. Three findings follow, and each contradicts a common practice. First, benchmark averages conceal the failure that decides deployability: no configuration shifts mean correlation by more than 0.007 at any scale, yet INT8 dynamic quantization — indistinguishable from fp32 on that mean at 3B (p = 0.34) — takes a single assay from ρ = 0.591 to 0.223. Selection must be made on worst-case, not mean, behaviour. Second, fidelity measured against fp32 bounds risk but cannot rank quality: over 3015 assay/configuration pairs it predicts the magnitude of ground-truth change (r = 0.56–0.81) but not its direction, and the INT4 effect differs significantly between 650M and 3B (+0.0101, p = 0.0007) with no monotone trend to extrapolate. Third, quantizing a large model is dominated by using a small one: of eighteen scale/configuration combinations only three are Pareto-optimal over accuracy, memory and speed, and all three are 650M. The one catastrophic failure we observe is a defect of default symmetric activation scaling, not of W8A8 itself: asymmetric activation quantization, a one-line change needing no calibration, removes every damaged assay. We also give a label-free screen for at-risk targets, and report four measurement artifacts encountered during this study, three of which inverted the result they were meant to measure.",
+        "canonical_id": "DOI:10.64898/2026.08.10.744024",
+        "doi": "10.64898/2026.08.10.744024",
+        "authors": [
+          "Qing Shao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s44287-026-00319-1",
+      "identity_tokens": [
+        "id:DOI:10.1038/s44287-026-00319-1",
+        "title:autonomous driving chips",
+        "url:https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31"
+      ],
+      "record": {
+        "title": "Autonomous driving chips",
+        "source_url": "https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31",
+        "year": 2026,
+        "published": "2026-08-13",
+        "abstract": null,
+        "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+        "doi": "10.1038/s44287-026-00319-1",
+        "authors": [
+          "Qiujing Lu",
+          "Sihong Wu",
+          "Yifan Liu",
+          "Ziwei Huang",
+          "Yueyao Zhou",
+          "Boyi Dong",
+          "Tianyi Zhang",
+          "Linsen Li",
+          "Kaichen Zhu",
+          "Haowen Shu",
+          "Haikang Diao",
+          "Kaiteng Tan",
+          "Yu Liu",
+          "Xudong Zheng",
+          "Hongkai Ning",
+          "Y. Wan",
+          "Xuanhan Wang",
+          "Runze Yuan",
+          "Hong-Yan Sang",
+          "Xiaodong Yan",
+          "Ling Wang",
+          "Tong Dang",
+          "Aijia Yao",
+          "Zhien Wang",
+          "Aaron D. Franklin",
+          "Zhengshuai Wang",
+          "Jeffrey H. Lang",
+          "Jinchi Han",
+          "Xiyuan Tang",
+          "Kenan Zhang",
+          "Tilo H. Yang",
+          "Peng Wu",
+          "Jiangtao Wang",
+          "Qing-Cheng Huang",
+          "Jiajia Sun",
+          "Jiefu Chen",
+          "Xuqing Wu",
+          "Yuanji Zheng",
+          "Lin Xu",
+          "Yunyue Zhu",
+          "Jian Wang",
+          "Rui Chen",
+          "Meng‐Chi Chen",
+          "Xingjun Wang",
+          "Xiang Cheng",
+          "Biao Qin",
+          "Kaihui Liu",
+          "Hailin Peng",
+          "Mario Lanza",
+          "Saptarshi Das",
+          "Lain-Jong Li",
+          "Xiangfeng Duan",
+          "Vwani Roychowdhury",
+          "V. Bulović",
+          "Tomás Palacios",
+          "Jing Kong",
+          "Shuo Feng",
+          "Lian-Mao Peng",
+          "Jianfeng Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.11758",
+      "identity_tokens": [
+        "id:arXiv:2608.11758",
+        "title:aware mitigating catastrophic forgetting via activationweighted adaptive retention",
+        "url:https://www.semanticscholar.org/paper/61c794300f4889e973e53b4eae76f9381a02a5e4"
+      ],
+      "record": {
+        "title": "AWARe: Mitigating Catastrophic Forgetting via Activation-Weighted Adaptive REtention",
+        "source_url": "https://www.semanticscholar.org/paper/61c794300f4889e973e53b4eae76f9381a02a5e4",
+        "year": 2026,
+        "published": "2026-08-12",
+        "abstract": "Multimodal Large Language Models (MLLMs) exhibit strong generalization and reasoning abilities due to large-scale multimodal pre-training. However, fine-tuning these models on downstream tasks often leads to catastrophic forgetting, where newly learned task-specific knowledge degrades previously acquired capabilities. This issue arises because gradient updates for new tasks overwrite parameters critical to prior knowledge, limiting the practical deployment of MLLMs. To address this challenge, we propose Activation-Weighted Adaptive REtention (AWARe), a fine-tuning method that mitigates catastrophic forgetting by dynamically controlling parameter updates based on activation patterns. AWARe assigns activation-based importance scores to parameters, selectively freezing those essential for preserving prior capabilities while allowing less important parameters to adapt to new tasks. Importantly, AWARe operates without modifying model architectures, ensuring compatibility with existing inference engines. Extensive experiments demonstrate that AWARe effectively preserves upstream capabilities while achieving superior downstream performance compared to existing methods. Code is available at https://github.com/kaln27/AWARe.",
+        "canonical_id": "arXiv:2608.11758",
+        "arxiv_id": "2608.11758",
+        "authors": [
+          "Jun-Yong Liao",
+          "Jinfan Lv",
+          "Guoming Wang",
+          "Jupeng Zheng",
+          "Ling Xiao",
+          "Siliang Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09591",
+      "identity_tokens": [
+        "id:arXiv:2608.09591",
+        "title:factordrive adaptive multistep reasoning driven by planningcritical factors for endtoend autonomous driving",
+        "url:https://www.semanticscholar.org/paper/ad036404cefef06b3ebace4cf9aa09fc43623081"
+      ],
+      "record": {
+        "title": "FactorDrive: Adaptive Multi-Step Reasoning Driven by Planning-Critical Factors for End-to-End Autonomous Driving",
+        "source_url": "https://www.semanticscholar.org/paper/ad036404cefef06b3ebace4cf9aa09fc43623081",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Vision-language models (VLMs) have advanced scene understanding and enabled explicit reasoning in end-to-end autonomous driving. However, existing methods insufficiently integrate spatial-physical evidence into planning reasoning, while reasoning adaptation remains coarse-grained and falls short of scene-specific planning demands. Furthermore, reasoning-path optimization for higher planning quality remains largely unexplored in autonomous-driving post-training. To address these limitations, we propose FactorDrive, an end-to-end autonomous driving framework for adaptive multi-step reasoning driven by planning-critical factors (PCFs). We first perform large-scale driving-domain instruction tuning to establish foundational driving knowledge. Building on this foundation, we construct PCF-CoT, a chain-of-thought (CoT) dataset that grounds planning reasoning in trajectory-relevant spatial-physical evidence and organizes reasoning around scene-specific PCFs, enabling the composition and depth of reasoning paths to adapt to different planning demands. We further introduce Quality Search-Guided Group Relative Policy Optimization (QS-GRPO), which guides Monte Carlo Tree Search (MCTS) with trajectory-level planning rewards to discover reasoning paths with higher planning quality and uses the resulting responses to optimize the policy through GRPO, thereby improving trajectory planning performance. Extensive experiments on both open-loop (nuScenes) and closed-loop-oriented (NAVSIM) benchmarks demonstrate that FactorDrive achieves state-of-the-art planning performance.",
+        "canonical_id": "arXiv:2608.09591",
+        "arxiv_id": "2608.09591",
+        "authors": [
+          "Guolei Huang",
+          "Tengfei She",
+          "Yuxuan Lu",
+          "Yao Huang",
+          "Yu-Qi Ye",
+          "Yongjun Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09055",
+      "identity_tokens": [
+        "id:arXiv:2608.09055",
+        "title:repeatedgame security for restakingbased verifiable inference",
+        "url:https://www.semanticscholar.org/paper/e114c9e15d636c3d558e2f40f9fe012324d76cd8"
+      ],
+      "record": {
+        "title": "Repeated-Game Security for Restaking-Based Verifiable Inference",
+        "source_url": "https://www.semanticscholar.org/paper/e114c9e15d636c3d558e2f40f9fe012324d76cd8",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Restaking-based protocols enable verifiable LLM inference without the high proving cost of zkML or the hardware trust assumptions of TEEs. Their security is commonly justified by a one-round slashing condition: a rational provider should not cheat when the expected penalty exceeds the cost saving from dishonest inference. This paper shows that this condition can overstate security when inference is supplied repeatedly under the same stake. We model verifiable inference as a discounted repeated game and identify a repeated-game gap caused by proportional slashing: detected deviations reduce future penalty exposure, while cost savings are earned again across queries. We derive the gap in closed form, show that it persists under minimum-stake ejection, and extend it to memoryless bounded-slashing protocols covering deployed designs. We propose a deployable mechanism combining history-dependent challenges, reputation-weighted slashing, and stake vesting. The mechanism restores infinite-horizon subgame-perfect incentive compatibility against stationary mixed-strategy deviations above an explicit discount-factor threshold without per-query cryptographic verification. Evaluation across nine open-weight model pairs from 0.5B to 14B parameters shows that the audit signal has the required concave detectability response. A Stackelberg audit-budget analysis shows that improved signal responsiveness reduces the baseline audit rate by 2.6x at discount factor 0.95. Calibrated to deployed parameters, surveyed protocols pass one-round incentive compatibility but admit repeated-game deviations for discount factors between 0.92 and 0.98, with deviation-profit fractions of 1.5%--8%. Our mechanism reduces deviation profits by 31%--54% while maintaining low-latency economic verification.",
+        "canonical_id": "arXiv:2608.09055",
+        "arxiv_id": "2608.09055",
+        "authors": [
+          "Zhenhang Shang",
+          "Yingzhe Yu",
+          "Kani Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09595",
+      "identity_tokens": [
+        "id:arXiv:2608.09595",
+        "title:from sweep to seam interleaved crossblock posttraining quantization",
+        "url:https://www.semanticscholar.org/paper/43f11470f784c36df8c680c4eaf2cb534e14ea73"
+      ],
+      "record": {
+        "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/43f11470f784c36df8c680c4eaf2cb534e14ea73",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Compressing large language models to two bits or fewer is increasingly feasible through block-wise post-training quantization; cross-block variants reconstruct neighboring Transformer blocks within a moving window. In the fixed two-block setting studied here, the matched sequential baseline moves this window through the network once, so errors introduced early in the sweep are not revisited. We propose Interleaved Cross-Block Quantization (ICBQ), a scheduling modification that revisits the boundary pair between consecutive chunks. Each seam pair is refined twice: first at the end of one chunk and again at the start of the next. The method retains the local two-block objective and reuses the calibration inputs of existing block-wise PTQ pipelines. Under stated local contraction and smoothness assumptions, we derive a depth-wise upper-bound comparison in which seam revisits multiply the propagated term while the residual remains bounded independently of depth. In the reported experiments, ICBQ reduces ternary-quantization perplexity relative to the matched Sequential CBQ baseline, yields finite perplexity in configurations where the baseline has severe degradation, and can also be used with 3-bit and 2-bit GPTQ.",
+        "canonical_id": "arXiv:2608.09595",
+        "arxiv_id": "2608.09595",
+        "authors": [
+          "Achille Jacquemond",
+          "Yuma Ichikawa",
+          "Akira Sakai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09024",
+      "identity_tokens": [
+        "id:arXiv:2608.09024",
+        "title:elicited ehrgrounded longitudinal interactive conversations for informationseeking triage evaluation and decisionmaking",
+        "url:https://www.semanticscholar.org/paper/83a31afa343241c449949766489f2d04d726dd24"
+      ],
+      "record": {
+        "title": "ELICITED: EHR-grounded Longitudinal Interactive Conversations for Information-seeking Triage Evaluation and Decision-making",
+        "source_url": "https://www.semanticscholar.org/paper/83a31afa343241c449949766489f2d04d726dd24",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Emergency-department (ED) triage requires clinicians to rapidly identify patients who need immediate attention, determine who can safely wait, and prioritize limited clinical resources. At presentation, however, information may be limited to a chief complaint and initial vital signs. Clinically important details, including symptom onset and progression, associated symptoms, medical history, and medication use, are often obtained through focused conversation. Effective triage therefore requires clinicians to identify information gaps, ask appropriate follow-up questions, and update their assessment as new evidence becomes available. Most existing ED benchmarks evaluate acuity prediction from a fixed clinical snapshot. Although this formulation measures predictive performance after patient information has been assembled, it does not capture the interactive process through which triage-relevant evidence is elicited and interpreted. Existing medical dialogue datasets support the study of clinical communication, but dialogue statements are not always linked to temporally ordered events in the electronic health record (EHR). We introduce EHR2Dial-Triage, an agentic conversation-generation framework and benchmark grounded in MIMIC-IV-ED. The framework constructs triage conversations under explicit role-based and temporal information boundaries. Each accepted patient disclosure is linked to its supporting EHR event and the first dialogue turn at which it becomes available. EHR2Dial-Triage enables controlled evaluation of information elicitation, evidence use, five-level Emergency Severity Index prediction, and patient-facing communication across models and patient personas. It provides a structured setting for studying conversational triage as a dynamic process of clinical information acquisition, reasoning, and communication.",
+        "canonical_id": "arXiv:2608.09024",
+        "arxiv_id": "2608.09024",
+        "authors": [
+          "Hao Zhu",
+          "Xiao-Lin Shi",
+          "Jiayue Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10214",
+      "identity_tokens": [
+        "id:arXiv:2608.10214",
+        "title:decodable but not detachable training data granularity determines parametric modularity in large language models",
+        "url:https://www.semanticscholar.org/paper/bc56a144b052b957cdfe9b8771aa3bd2a13f44fc"
+      ],
+      "record": {
+        "title": "Decodable But Not Detachable: Training Data Granularity Determines Parametric Modularity in Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/bc56a144b052b957cdfe9b8771aa3bd2a13f44fc",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Do large language models contain domain-specific parametric shells: concentrated, causally necessary neuron populations whose removal selectively degrades a target domain while sparing others? We apply a uniform causal methodology across two domain granularities, three model families (1.5B to 7B parameters), and eight domains. At the academic subject level, zero neurons exceed 60\\% domain selectivity across 939,008 combined FFN neurons and causal damage matrices are flat, despite domain identity being linearly decodable above 85\\% accuracy. At the language and modality level, 0.65--1.14\\% of neurons exceed 60\\% selectivity, damage matrices are near-perfectly diagonal (ratios up to 595:1), and shell neuron sets are essentially disjoint (IoU $<0.003$). Masking code-selective neurons reduces mathematical reasoning accuracy by 16--24 percentage points across all models; masking Spanish or Chinese neurons leaves it at or below random. Shell strength increases monotonically with scale and shells are spatially interleaved in a pattern that precludes group-level selective quantization. Parametric shells form where and only where training data was modular at the token level.",
+        "canonical_id": "arXiv:2608.10214",
+        "arxiv_id": "2608.10214",
+        "authors": [
+          "M. Armstrong",
+          "Navid Ayoobi",
+          "Arjun Mukherjee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3389/fpsyg.2026.1874556",
+      "identity_tokens": [
+        "id:DOI:10.3389/fpsyg.2026.1874556",
+        "title:new knowledge source pipelines for sociocultural representations in a cognitive architecture",
+        "url:https://www.semanticscholar.org/paper/7f1a8c136b7ba1b9a02806ae5219124ef250fa30"
+      ],
+      "record": {
+        "title": "New knowledge source pipelines for sociocultural representations in a cognitive architecture",
+        "source_url": "https://www.semanticscholar.org/paper/7f1a8c136b7ba1b9a02806ae5219124ef250fa30",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "Introduction With the increasing use of large language models (LLMs) and related scaled knowledge systems, it is important to achieve a better picture of the downstream impacts of the ubiquity of these systems. LLMs (as they currently are instantiated) largely output text using the skewed training data and patterns recognized through pretraining. The datasets of these systems are collected primarily from WEIRD (Western, Educated, Industrialized, Rich, Democratic) societies, and those data are often drawn from sources that represent marginalized, exploited communities (in WEIRD societies) problematically. This data process renders uneven representation, skewing potential cultural insights, and the complicated structure of LLMs can cloud the task of elucidating the full extent of problematic sociocultural structure representation within those models. Methods Using LLMs with process-based computational cognitive models and architectures (e.g., using ACT-R) provides a potential avenue for understanding the implications of these systems on human cognitive processes. We present two systems that combine the ACT-R architecture with more scalable, holographic (vector-symbolic) memory representations – one using an LLM and another using the ConceptNet semantic network – and compare the two systems using a cognitive model of the implicit association task (IAT). Results Though both systems are useful, we found that the ConceptNet based system more closely resembled human data from the IAT in its impact of sociocultural structure representation on behavior through memory. Nonetheless, both systems represent an opportunity to probe and evaluate those knowledge systems (i.e., ConceptNet and Llama3.2 in this case) using more cognitively relevant and plausible methods that are more generalizable to actual human behavior. Discussion Though we present a model of a relatively simple task here in the IAT, the results point to a unique and powerful opportunity to develop a deeper understanding of what the ubiquity of these (and related) systems means for the propagation and bootstrapping of existing sociocultural knowledge and structures – especially those structures that uphold problematic, racialized representations of the human.",
+        "canonical_id": "DOI:10.3389/fpsyg.2026.1874556",
+        "doi": "10.3389/fpsyg.2026.1874556",
+        "authors": [
+          "Swapnika Dulam",
+          "Julian R. Gay",
+          "Christopher L. Dancy"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08447",
+      "identity_tokens": [
+        "id:arXiv:2608.08447",
+        "title:hidden language consistency phenomena in reasoning llms",
+        "url:https://www.semanticscholar.org/paper/5a54ddeba4584f135eb04e3a8c525ca04620d784"
+      ],
+      "record": {
+        "title": "Hidden Language Consistency Phenomena in Reasoning LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/5a54ddeba4584f135eb04e3a8c525ca04620d784",
+        "year": 2026,
+        "published": "2026-08-09",
+        "abstract": "Multilingual reasoning models are commonly evaluated by whether they arrive at the correct answer, but not by whether they preserve the intended language while reasoning and responding. This omission conceals important multilingual behaviors that emerge as tasks become harder. In this paper, we study task difficulty, task accuracy, thinking-language consistency (TC), and answer-language consistency (AC) across reasoning models using PolyMath benchmark in eight languages and four difficulty levels. We uncover four findings: (1) language consistency exhibits four difficulty-dependent behaviors: output-language consistency remains aligned with input, remains misaligned, degrades gradually, or collapses abruptly. (2) We identify the language consistency breakdown effect, where increasing difficulty can cause a sudden drop in output-language consistency, especially in less strongly represented and non-Latin-script languages. (3) Due to this breakdown effect, accuracy can be preserved or even improved at a harder difficulty level as the model shifts to its internal dominant language. (4) Quantization can improve or degrade output-language consistency independently of its effect on accuracy, with GPTQ and AWQ often outperforming AutoRound under tolerance-based voting with {\\epsilon} = 1.0. These results show that multilingual capability cannot be characterized by accuracy alone; reliable evaluation should jointly consider task accuracy, language consistency, and task difficulty for multilingual benchmarks.",
+        "canonical_id": "arXiv:2608.08447",
+        "arxiv_id": "2608.08447",
+        "authors": [
+          "Muhammad Ali Shafique",
+          "Kelly Marchisio"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08730",
+      "identity_tokens": [
+        "id:arXiv:2608.08730",
+        "title:measuring and reducing webgpu dispatch overhead for llm inference",
+        "url:https://www.semanticscholar.org/paper/1cb86b64174287180f203b7772a2ddf029b92829"
+      ],
+      "record": {
+        "title": "Measuring and Reducing WebGPU Dispatch Overhead for LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1cb86b64174287180f203b7772a2ddf029b92829",
+        "year": 2026,
+        "published": "2026-08-09",
+        "abstract": "Large Language Models are deployed to multiple types of environments, from internet browsers to edge devices, and WebGPU serves as a modern cross-platform standard. The engines for browser-based LLM inference have proliferated, yet the overhead of WebGPU per-operation dispatch remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. We show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. Therefore, we conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+        "canonical_id": "arXiv:2608.08730",
+        "arxiv_id": "2608.08730",
+        "authors": [
+          "Jędrzej Maczan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26173",
+      "identity_tokens": [
+        "id:arXiv:2609.26173",
+        "title:component type not reconstruction error predicts attention quantization sensitivity",
+        "url:https://www.semanticscholar.org/paper/3c99efb77cfb625c6a60332ddb86378694566638"
+      ],
+      "record": {
+        "title": "Component Type, Not Reconstruction Error, Predicts Attention Quantization Sensitivity",
+        "source_url": "https://www.semanticscholar.org/paper/3c99efb77cfb625c6a60332ddb86378694566638",
+        "year": 2026,
+        "published": "2026-08-09",
+        "abstract": "Many post-training quantization (PTQ) methods use layer-wise reconstruction, second-order proxy objectives, or activation-aware transformations to reduce quantization-induced error. Whether that error signal predicts the downstream functional impact of quantizing an individual attention projection has not been directly characterized. We sweep nine open-weight language models (1.3B--8B parameters; OPT, GPT-J, LLaMA-1/2/3, Mistral, Qwen 2.5) and quantize one attention projection at a time under round-to-nearest (RTN) and, for seven models, GPTQ at 3 and 4 bits, recording reconstruction error, perplexity change, and per-projection activation-weighted quantization error for 3,808 distinct measurements. We find: (1) within a given component type (Q, K, V, or O), reconstruction error explains less than 10% of the variance in perplexity sensitivity in 27 of 36 cases under RTN, with median R^2 = 0.044; (2) both component type and layer identity explain more variance than reconstruction error in all 9 models, with layer identity the strongest predictor in 7 of 9 models and component type strongest in the remaining 2; (3) value (V) projections are the most commonly dominant component, accounting for 38--51% of total positive Delta PPL in seven of nine models; (4) the dominant component is broadly preserved between RTN and GPTQ (5 of 7 cases); and (5) activation-weighted quantization error is a moderately better within-component predictor than reconstruction error for V projections specifically (median R^2 of 0.20 vs. 0.06). These findings indicate that relative weight reconstruction error alone is insufficient for sensitivity-aware bit allocation, and that V projections merit dedicated consideration in mixed-precision schemes.",
+        "canonical_id": "arXiv:2609.26173",
+        "arxiv_id": "2609.26173",
+        "authors": [
+          "Kasun Dewage",
+          "Marianna Pensky",
+          "Suranadi De Silva"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08188",
+      "identity_tokens": [
+        "id:arXiv:2608.08188",
+        "title:quantization degradation in large language models a signalnoise perspective",
+        "url:https://www.semanticscholar.org/paper/813d4be29198c89ee4721b560c03903af6898d31"
+      ],
+      "record": {
+        "title": "Quantization Degradation in Large Language Models: A Signal-Noise Perspective",
+        "source_url": "https://www.semanticscholar.org/paper/813d4be29198c89ee4721b560c03903af6898d31",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Post-training quantization reduces the deployment cost of large language models, yet how severely a quantized model degrades is not determined by bit-width alone. We systematically study weight-only post-training quantization across bit-widths, quantization methods, model scales and downstream tasks on multiple model families. We observe that such degradation varies substantially across these factors: 4-bit quantization usually preserves performance, 2-bit often causes broad degradation, and at 3-bit, degradation becomes apparent but varies markedly with task type, quantization method and model scale. To explain this variability, we use the signal-to-noise ratio (SNR) to measure how strongly quantization perturbs full-precision representations. We trace degradation back to two linked processes: how quantization errors arise within individual modules, and how they accumulate across layers. First, a source SNR decomposition shows that newly introduced errors depend on three factors: the magnitude of the weight error, the strength of the task-specific signal, and how strongly the quantization error aligns with task-specific activations. Different factors affect these components in distinct ways. Second, a cross-layer propagation analysis shows that these errors can be attenuated, preserved, or amplified as they pass across layers, and that larger models benefit from weaker error amplification. Together, these results establish that quantization degradation is governed by how errors are introduced at the source and how they accumulate across the network.",
+        "canonical_id": "arXiv:2608.08188",
+        "arxiv_id": "2608.08188",
+        "authors": [
+          "Chenxi Zhou",
+          "Pengfei Cao",
+          "Jin Ye",
+          "Bohan Yu",
+          "Haida Yu",
+          "Jianguo Li",
+          "Jun Zhao",
+          "Kang Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770855.3818944",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3818944",
+        "title:designing a scalable llm agent framework for largescale urban segregation simulation",
+        "url:https://www.semanticscholar.org/paper/328f126e9232ef13bd72983c70becc2736a1da39"
+      ],
+      "record": {
+        "title": "Designing A Scalable LLM Agent Framework for Large-scale Urban Segregation Simulation",
+        "source_url": "https://www.semanticscholar.org/paper/328f126e9232ef13bd72983c70becc2736a1da39",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Agent-based models (ABMs) have long been employed to explore how individual behaviors aggregate into complex societal phenomena in urban space. The rise of Large Language Models (LLMs) offers a new paradigm for ABM, enabling high-fidelity modeling of human behavior. However, urban dynamics often require extensive agent interactions to emerge, and scaling up LLM agent simulations is limited by high-latency remote LLM inference and high costs. To address this, we propose the OpenCity framework for large-scale LLM agent simulation. We design a novel \"Group-and-Distill\" strategy that significantly reduces costs without sacrificing behavioral diversity by aggregating agents with shared static characteristics while preserving their unique dynamic states. Moreover, a system-level request scheduler is designed to optimize I/O concurrency and communication bottlenecks. Experiments in six cities globally demonstrate that OpenCity achieves a 600x speedup and a 45% reduction in token usage compared to standard baseline models, while maintaining 96% behavioral consistency with independently invoked agent baselines. Based on OpenCity, we conduct first benchmark test on large-scale social segregation with LLM agents. The results show that OpenCity-accelerated generative agents are effective in reproducing socioeconomic segregation patterns. Furthermore, our scalability analysis demonstrates that the realism of emerging social phenomena increases as the agents scale up, quantitatively validating the necessity of large-scale simulations. Finally, we demonstrate the framework's capability as a policy sandbox through a counterfactual analysis of urban equity. Overall, OpenCity provides a robust and efficient framework that unlocks the potential of LLMs for large-scale, high-fidelity multi-agent systems analysis. Code repo is available at https://github.com/tsinghua-fib-lab/OpenCity.",
+        "canonical_id": "DOI:10.1145/3770855.3818944",
+        "doi": "10.1145/3770855.3818944",
+        "authors": [
+          "Qingbin Zeng",
+          "Yuwei Yan",
+          "Zhiheng Zheng",
+          "Jingzhe Yuan",
+          "Jun Zhang",
+          "Jie Feng",
+          "Fengli Xu",
+          "James A. Evans",
+          "Yong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07019",
+      "identity_tokens": [
+        "id:arXiv:2608.07019",
+        "title:requant fixedgrid discrete refinement for posttraining quantization",
+        "url:https://www.semanticscholar.org/paper/fd6eef075a9b696fb1efaf644ad21d389c8751f6"
+      ],
+      "record": {
+        "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/fd6eef075a9b696fb1efaf644ad21d389c8751f6",
+        "year": 2026,
+        "published": "2026-08-07",
+        "abstract": "Post-training quantization (PTQ) is widely used to reduce the memory and computational cost of large language models. Existing PTQ methods typically obtain an initial quantized model through heuristic rules or greedy optimization, and once quantization is completed the resulting integer assignments are usually treated as final. This observation motivates a complementary optimization stage within PTQ that keeps quantized weights improvable after an executable quantized model has been produced, while preserving the quantized format. We introduce ReQuant, a backpropagation-free fixed-grid refinement procedure for this stage. Agnostic to the PTQ initializer, ReQuant takes an existing quantized model as a feasible starting point and iteratively revisits its discrete weight assignments on the fixed quantization grid. Accepted updates strictly reduce the mean squared reconstruction error and remain on the original grid. In this way, ReQuant turns the initially fixed PTQ output into an iteratively optimizable discrete solution and serves as a plug-and-play post-processing stage for existing PTQ pipelines. Experiments across diverse model families, bit-widths, and downstream tasks show that ReQuant consistently improves quantized models from heterogeneous PTQ initializers, with especially large gains on simple initializers and lower bit-widths. Notably, ReQuant can refine a simple round-to-nearest initialization across multiple sweeps until it approaches or surpasses GPTAQ under the same quantization format. These results establish ReQuant as a practical complementary stage for further improving existing PTQ pipelines.",
+        "canonical_id": "arXiv:2608.07019",
+        "arxiv_id": "2608.07019",
+        "authors": [
+          "Yongge Ma",
+          "Guoan Wang",
+          "Feiyu Wang",
+          "Yao-Ming Li",
+          "Qian Zhang",
+          "Zihan Yan",
+          "Yi Han",
+          "Tong Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06630",
+      "identity_tokens": [
+        "id:arXiv:2608.06630",
+        "title:the sparsity whisperer",
+        "url:https://www.semanticscholar.org/paper/0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+      ],
+      "record": {
+        "title": "The Sparsity Whisperer",
+        "source_url": "https://www.semanticscholar.org/paper/0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+        "year": 2026,
+        "published": "2026-08-06",
+        "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+        "canonical_id": "arXiv:2608.06630",
+        "arxiv_id": "2608.06630",
+        "authors": [
+          "Linghao Kong",
+          "Inimai Subramanian",
+          "Micah Adler",
+          "Dan Alistarh",
+          "D. Gutfreund",
+          "N. Shavit"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.05240",
+      "identity_tokens": [
+        "id:arXiv:2608.05240",
+        "title:one qubit can beat one bit quantum advantage for posttraining quantization",
+        "url:https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519"
+      ],
+      "record": {
+        "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "One-bit post-training quantization represents each weight using only its sign, requiring all deployment contexts to share the same binary weight matrix even when their activation statistics favor different sign patterns. We study this shared-sign constraint and introduce Quantum Random Access Quantization (QRAQ). This framework encodes context-dependent signs in a quantum random-access code and retrieves them via context-matched Pauli measurements. Under an explicit fresh-copy logical readout model, QRAQ produces an unbiased, context-specific binary surrogate with a tractable shot-noise penalty. We prove a row-wise separation from shared-sign one-bit PTQ with signed per-row scales. When the optimal context-wise signs are incompatible, QRAQ achieves a strictly lower ideal reconstruction risk. We also derive finite-shot and calibrated-noise conditions under which this separation is retained. Fixed-readout quantum schemes are classically simulable, so the relevant resource in this model is measurement incompatibility rather than quantization alone. Finally, we characterize the role of scale granularity, provide finite-sample certificates, and evaluate the predicted ideal, finite-shot, noisy, and multi-context regimes in simulator experiments.",
+        "canonical_id": "arXiv:2608.05240",
+        "arxiv_id": "2608.05240",
+        "authors": [
+          "Yuma Ichikawa",
+          "Moeto Mishima"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818581",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818581",
+        "title:cosmos designing energyefficient contextaware multimodal cognitive systems",
+        "url:https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64"
+      ],
+      "record": {
+        "title": "COSMOS: Designing Energy-Efficient Context-Aware Multimodal Cognitive Systems",
+        "source_url": "https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Multimodal AI (MMAI) systems are becoming integral to safety-critical edge applications, from autonomous driving and robotics to smart healthcare and surveillance, where real-time perception must operate under stringent energy and compute constraints. These systems comprise distinct sensing units, such as cameras, microphones, and inertial sensors, each forming a separate subsystem with unique capabilities and constraints. As environments evolve, modality relevance shifts and redundancy emerges, requiring dynamic adaptation to maintain quality of service while extending system lifetime. Existing methods optimize individual subsystems or static inference paths, lacking responsiveness to contextual changes; coordinating adaptation across these heterogeneous subsystems remains essential yet largely unexplored. We introduce COSMOS, a runtime framework for distributed multimodal edge nodes. Its central contribution is a closed-loop control structure that uses predicted semantic context and measured temporal stability to jointly govern modality activation, inference frequency, and subsystemlevel approximation. COSMOS instantiates this control loop through three mechanisms: Scene/State-aware Modality Selection (SMS), Temporal Locality-driven Decision and Regulation (TLDR), and modality-aware Design Space Exploration (DSE). The DSE heuristic coordinates compute, audio preprocessing, sensing, memory, and communication knobs under a unified energy-quality objective. Validated on an FPGA-MCU prototype (Intel Agilex-5 primary + ESP32 auxiliary) for Audio-Visual Event Localization, COSMOS extends system lifetime by 7.73× with <5% accuracy loss, achieving up to 1.77× primary and 3.01× auxiliary energy savings across six transformer backbones.",
+        "canonical_id": "DOI:10.1145/3816440.3818581",
+        "doi": "10.1145/3816440.3818581",
+        "authors": [
+          "Arghadip Das",
+          "Yatharth Agarwal",
+          "Soumendu Kumar Ghosh",
+          "Arnab Raha",
+          "Vijay Raghunathan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818582",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818582",
+        "title:cimflex an integeronly flexible periphery for distributed computeinmemory architectures",
+        "url:https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb"
+      ],
+      "record": {
+        "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures",
+        "source_url": "https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+        "canonical_id": "DOI:10.1145/3816440.3818582",
+        "doi": "10.1145/3816440.3818582",
+        "authors": [
+          "I. Sanli",
+          "Michele Rossi",
+          "E. Ferro",
+          "Abhishek Jha",
+          "A. Burg",
+          "S. Singh",
+          "T. Boesch",
+          "I. Boybat"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e51700097d34014b954d242b8fb441af19831e88ce047f05e7cb90dd8dd78bab",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
