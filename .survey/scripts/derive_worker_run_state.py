@@ -2124,8 +2124,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "next_work_packet": next_work_packet,
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
-            "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability. "
-            "If one Research/Audit paper alone cannot be written, first update the canonical health-probe file once, then report it through a minimal write_blocked_job run-state request so Actions marks that job blocked and releases its claim; continue to another paper. A successful health probe disproves transport_unrecoverable/durable_transports_unavailable. Those stop conditions require transport_health_probe_attempted=true and transport_health_probe_succeeded=false in addition to the normal confirmation evidence."
+            "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability; an actual write to the required canonical path must be attempted before declaring write failure. "
+            "If one Research/Audit paper alone cannot be written, first update the canonical health-probe file once, then report it through a minimal write_blocked_job run-state request so Actions marks that job blocked and releases its claim; continue to another paper. A successful health probe disproves transport_unrecoverable/durable_transports_unavailable/platform_context_limit. Those stop conditions require transport_health_probe_attempted=true and transport_health_probe_succeeded=false in addition to the normal confirmation evidence."
         ),
         "rule": (
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
