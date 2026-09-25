@@ -58,7 +58,40 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
                 self.module.advance(repo, mode="completed")
             self.assertEqual(first_failure, failure.read_text(encoding="utf-8"))
 
-    def test_passing_preflight_auto_materializes_request_and_descriptor(self):
+    def test_descriptor_builder_attaches_verified_preflight_provenance(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            payload = {
+                "kind": "research",
+                "attempt_id": "attempt-proof",
+                "job_id": "job-proof",
+                "record_bank": "a",
+                "preflight_result": ".survey/work-queue/research-preflight/results/pf-proof.json",
+            }
+            base = {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "attempt_id": "attempt-proof",
+                "job_id": "job-proof",
+                "status": "completed",
+            }
+            with mock.patch.object(
+                self.module.prepare_completed_submission,
+                "_expected_blob_sha_from_preflight",
+                return_value=None,
+            ), mock.patch.object(
+                self.module.prepare_completed_submission,
+                "build",
+                return_value=base,
+            ), mock.patch.object(
+                self.module.prepare_completed_submission,
+                "attach_preflight_provenance",
+                return_value={**base, "preflight_result": payload["preflight_result"]},
+            ):
+                descriptor = self.module._build_descriptor_from_payload(repo, payload)
+            self.assertEqual(descriptor["preflight_result"], payload["preflight_result"])
+
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
             result = repo / ".survey/work-queue/research-preflight/results/pf-pass.json"
