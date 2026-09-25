@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2403.03853",
+      "arxiv_id": "2403.03853",
+      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
+      "source_url": "https://arxiv.org/abs/2403.03853",
+      "priority": 85,
+      "reason": "LLM layer compression method reducing inference computation."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-1f4d6cb839c6536c9c6be0c9",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-1f4d6cb839c6536c9c6be0c9.json",
+    "receipt": "sha256:2cc80884cd36aebc8f170adec21162d7bc2836e245802c756936f6dfd4bf7349"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-1f4d6cb839c6536c9c6be0c9",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
