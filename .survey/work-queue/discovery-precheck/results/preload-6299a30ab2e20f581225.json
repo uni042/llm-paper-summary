@@ -1,0 +1,816 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-6299a30ab2e20f581225",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-6299a30ab2e20f581225",
+  "axis": "forward citations of Splitwise for disaggregated LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 5,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f7b09024cd03bc48da8d2b0cce44dfb580606ac5",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 75,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T17:05:34.683726+00:00",
+  "preload_id": "preload-6299a30ab2e20f581225",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 5,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Cross-Model Autoscaling for Shared LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/64fc3429045efa35ffdf8ab2958f37f40d591c5b",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Multi-model LLM serving is moving toward shared MaaS clusters, where co-hosted models compete for a fixed GPU budget while each model experiences time-varying demand and must satisfy its own latency SLO. Existing LLM autoscalers remain largely model-local: their signals expose local runtime activity or delayed latency outcomes, and their scale-up or provisioning decisions do not directly determine how shared capacity should be allocated across competing models. We present the Token-service-share Rebalancing Engine (TRE), a control-plane framework for hot-switched multi-model LLM serving. TRE introduces Token Service Share (TSS), a calibrated, demand-normalized signal that estimates effective token service per active or queued request and yields a comparable health score across heterogeneous models and SLO classes. Guided by TSS, TRE coordinates bounded receiver--donor capacity movement under a fixed GPU budget: it separates fast rescue from slower rebalancing and incrementally reallocates active replicas toward models with the largest calibrated service deficits. We implement TRE on a Kubernetes-based hot-switch serving stack without modifying the inference scheduler. Across seven LLM serving traces, TRE reduces P95 end-to-end latency by 11.9--79.0\\% and P99 latency by 12.5--72.6\\% compared with a state-of-the-art KV-cache-based reactive autoscaler running on the same hot-switch runtime. The gains hold on both targeted stress probes and production-derived conversation/code traces, where TRE reduces P95/P99 latency by 50.8/63.7\\% and 79.0/72.6\\%, respectively. These results show that effective hot-switched autoscaling requires not only fast replica actuation, but also calibrated service-deficit signals and coordinated cross-model capacity arbitration. Our code and artifacts are available at https://github.com/zxzx9898/Token-service-share_Rebalancing_Engine.",
+      "canonical_id": "arXiv:2609.29160",
+      "arxiv_id": "2609.29160"
+    },
+    {
+      "title": "NebulaSD: Many-for-Many Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/5da1eb1fd8f3a51946b258594012a211afcfaf9b",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Speculative decoding accelerates Large Language Model (LLM) inference by using a lightweight draft model to propose candidate tokens for parallel verification by a target model. Drafting and verification, however, exhibit different service characteristics and favor different batch configurations, making fixed draft-target coupling inefficient under concurrent workloads. Existing distributed designs can physically separate the two stages, but often retain request or batch affinities that prevent their capacities from being shared globally. We present NebulaSD, a many-for-many, or M-for-N, speculative decoding system that organizes draft and target workers into independently schedulable resource pools and dynamically reconstructs stage-specific batches from shared request pools. Such dynamic reassignment removes fixed worker locality, requiring request states to be made available at newly selected workers without introducing migration stalls. NebulaSD addresses this challenge through worker-triggered batch reconstruction and asynchronous KV-state preparation overlapped with model execution. We evaluate NebulaSD from both system and scaling perspectives, showing that dynamic pooling improves request-round processing rate by 50.4% over a physically disaggregated baseline and 72.6% over co-located execution on a four-GPU deployment while substantially increasing effective GPU utilization. Profile-driven simulations further show approximately proportional compute-side capacity scaling under idealized state movement.",
+      "canonical_id": "arXiv:2609.29364",
+      "arxiv_id": "2609.29364"
+    },
+    {
+      "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement",
+      "source_url": "https://www.semanticscholar.org/paper/f12d6e9563a3a8ee533f3ffcd6169b223ef86789",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable progress across diverse domains, but continual adaptation to evolving tasks and environments remains a key challenge. Existing memory-augmented approaches retrieve individual past examples as direct references, but do not explicitly synthesize actionable strategies from them, causing the same types of errors to recur. We propose Dynamic Retrieval-based Policy Generation (DRPG), a framework that integrates memory-based retrieval with a dynamic policy generator, leveraging historical data and environment feedback to produce task-specific policies for continual LLM improvement. We evaluate DRPG across six benchmarks spanning text-to-SQL, question answering, medical diagnosis, and Python programming, using seven LLMs from both proprietary and open-weight families. DRPG outperforms strong baselines across most datasets and models. Further analysis demonstrates that DRPG's policy generation is robust to retrieval strategy, operates effectively without prior policy continuity, and can leverage smaller or cross-family models as cost-efficient policy generators. We also find that the benefit of policy-level guidance depends on task characteristics, offering practical insights into when and under what conditions this mechanism is most effective.",
+      "canonical_id": "arXiv:2609.16800",
+      "arxiv_id": "2609.16800",
+      "authors": [
+        "Ting-Wei Chang",
+        "Po-Chun Chen",
+        "Hen-Hsen Huang",
+        "Hsin-Hsi Chen"
+      ]
+    },
+    {
+      "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief",
+      "source_url": "https://www.semanticscholar.org/paper/17e2b21dc927243573a9db2ee25316bf071b0da7",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "Grid studies often represent data-center flexibility as a fixed percentage of load, although no public production trace has shown how much eligible load persists across event durations or co-moves across clusters. We reconstruct 4,439 hourly power observations from a 185-day trace of 155,410 GPUs and derive a workload-semantic flexibility envelope. The fleet's time-averaged Monte Carlo median facility demand is 55.8 MW, while immediate eligible curtailment averages 3.55 MW after retaining allocated-GPU idle power: 12.1% of workload power and 6.35% of median facility power. Under full realization of that eligibility, 95%-available relief falls from 2.51 MW for one hour to 2.32 MW for four hours and 1.95 MW for 24 hours; a common realizable fraction q scales every value exactly by q. A mean-calibrated scalar overstates these quantities by 17%, 25%, and 47%, while a scalar tail-calibrated at four hours understates the one-hour product by 6% and overstates the 24-hour product by 17%; the share that reproduces the surface varies by a factor of 1.6 across durations and reliability levels. Aggregating 13 clusters raises four-hour firmness from 0.38 to 0.66, but cross-cluster covariance limits the gain. The production scheduler exposes almost no additional delay-based capacity: newly deferrable arrivals average 0.008 MW and have zero 95%-available capacity. These results replace an assumed flexibility percentage with duration, reliability, portfolio, and realizability terms that can be written into interconnection and demand-response contracts.",
+      "canonical_id": "arXiv:2609.05406",
+      "arxiv_id": "2609.05406",
+      "authors": [
+        "Mei-Yi Li"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "FlexiTensor: Adaptive Multi-Task Deployment of LLMs on Resource-Constrained Heterogeneous Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/9cbdf19f55100af1b259a573911310823af4b0da",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "The drive for privacy-preserving and low-latency artificial intelligence necessitates executing Large Language Models (LLMs) directly on heterogeneous, resource-constrained edge devices. This paradigm presents a challenge: efficiently running large models across multiple end/edge devices under a strict energy budget. Especially, the problem becomes more complicated when it comes to orchestrating multiple complex tasks using large models at the same time. To address this, we introduce FlexiTensor, an offline planning and deployment system for LLM inference, scaling from a single task to multiple concurrent tasks. FlexiTensor first considers LLM inference for a single task under a strict energy budget. We design a heuristic optimization algorithm to minimize the latency under a strict energy budget. Specifically, we select an optimized subset of devices and tensor allocations. Based on the selection, latency can be reduced by using non-uniform tensor parallelism with quantization. FlexiTensor can be extended to multi-task cases. We model the execution structure of multi-agent workflows as pre-defined Directed Acyclic Graphs (DAGs) and reformulate the problem with energy consumption constraints. FlexiTensor introduces a novel hybrid evolutionary algorithm to address joint task scheduling and resource allocation in multi-task cases. This approach navigates the vast search space of task placement, tensor splitting, and thread assignment to minimize the overall workflow makespan. All optimization algorithms run offline before deployment, using pre-profiled device characteristics to compute a static execution plan. Extensive experiments on a physical testbed of heterogeneous edge devices demonstrate that FlexiTensor significantly outperforms baselines. We accelerate single-task inference by up to 50%. For multi-task workflows, we consistently find superior scheduling solutions, achieving speed improvements by an average of 50% against competitive baselines and by up to 100% in certain scenarios, showcasing its effectiveness and adaptability for real-world edge LLM-based applications.",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3703757",
+      "doi": "10.1109/TPDS.2026.3703757",
+      "authors": [
+        "Bowen Zhang",
+        "Jiahui Hou",
+        "Junyan Zhang"
+      ]
+    },
+    {
+      "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+      "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+      "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+      "doi": "10.1007/s11432-026-5037-1",
+      "authors": [
+        "Assia Belbachir",
+        "M. Blake",
+        "Jin-Song Dong",
+        "S. Dustdar",
+        "Christof Ebert",
+        "C. Ghezzi",
+        "David Harel",
+        "S. Helal",
+        "Chun-Min Hu",
+        "Lin-Peng Huang",
+        "Hans-Arno Jacobsen",
+        "Chang-Jun Jiang",
+        "Zhi Jin",
+        "Jia-Lin Li",
+        "Xuanzhe Liu",
+        "Jian Lu",
+        "Xiao-Xing Ma",
+        "Assaf Marron",
+        "Hong Mei",
+        "B. Nuseibeh",
+        "Xin Peng",
+        "Yuanchun Shi",
+        "Huai-Min Wang",
+        "Ji Wang",
+        "Jian-Min Wang",
+        "Danny Weyns",
+        "James Woodcock",
+        "Tao Xie",
+        "H. Xu",
+        "Mengfei Yang",
+        "Jian-Wei Yin",
+        "Naijun Zhan"
+      ]
+    },
+    {
+      "title": "CADE: Context-aware dispatch engine for energy-efficient VLM inference on heterogeneous edge with discrete neural processing units",
+      "source_url": "https://www.semanticscholar.org/paper/6fd99ba9cc5f0401ed0daf163c894086dffc0c01",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.104016",
+      "doi": "10.1016/j.sysarc.2026.104016"
+    },
+    {
+      "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model",
+      "source_url": "https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142",
+      "year": 2026,
+      "published": "2026-08-30",
+      "abstract": "LLM agents increasingly drive long-running cloud inference workloads in which model calls differ in urgency, redundancy, completion semantics, and replay cost. Model-as-a-Service (MaaS) platforms expose several service models for trading cost against latency, availability, and capacity commitment. These models operate primarily at request, job, or endpoint scopes and provide limited support for combining transient platform supply with the evolving semantics of an agent task. We present SemSpot, a semantics-aware service model that allows agent applications to leverage the spot capacity of LLM inference platforms. At the request level, SemSpot lets a provider publish short-lived offers over successful price, completion probability, and failure-notification deadline; the agent runtime selects among these offers using the current task state and completion rule. An audit of 1,535 cases from six agent benchmarks identifies four recurring workflow structures and shows how this service model may produce different cost, service-time, and fallback behavior. With specialized MaaS support, token-level SemSpot further preserves provider inference state and runtime-verified semantic segments inside a long request. We develop the service model, economic boundary, and the cross-layer research agenda required to realize SemSpot.",
+      "canonical_id": "arXiv:2608.29581",
+      "arxiv_id": "2608.29581",
+      "authors": [
+        "Min-Chen Yu"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Slasher: Power Flexibility for Cloud Datacenters",
+      "source_url": "https://www.semanticscholar.org/paper/ec46ad93bf0d80c583b2289e6627f521e560bfdf",
+      "year": 2026,
+      "published": "2026-08-26",
+      "abstract": "Datacenters consume many megawatts of power, and regularly encounter scenarios that require modulating their power draw. These scenarios include datacenter infrastructure failures, power grid failures, grid services, and more, spanning a diverse range of requirements in terms of the power magnitude, the scope of the reduction, the notice time, and other dimensions. To address these scenarios, we have built Slasher, a general system for modulating the power of \\azure datacenters to handle scenarios ranging from individual racks to regional multi-datacenter grid events. Slasher coordinates datacenter resources with the goal of meeting power targets while minimizing negative impact on hosted workloads. In this paper, we review the main power modulation scenarios, characterize the power reduction levers using data from production cloud datacenters, describe Slasher's system architecture, and formulate the cloud datacenter power modulation control problem. We also develop a high-fidelity datacenter simulator and propose a workload impact model, using them to design and evaluate power control algorithms.",
+      "canonical_id": "arXiv:2608.26021",
+      "arxiv_id": "2608.26021",
+      "authors": [
+        "Liuzixuan Lin",
+        "Fiodar Kazhamiaka",
+        "A. Kumbhare",
+        "Chaojie Zhang",
+        "Jaylen Wang",
+        "H. Khan",
+        "Rodrigo L. Assis",
+        "Mariana Rodrigues",
+        "Kyle Woolcock",
+        "Nithish Mahalingam",
+        "Brijesh Warrier",
+        "Rodrigo Fonseca",
+        "Ricardo Bianchini"
+      ]
+    },
+    {
+      "title": "When LLMs Slow Down: How Environmental Impacts Mediate University Students'LLM Usage",
+      "source_url": "https://www.semanticscholar.org/paper/f5429fc69f381cbfa615c341a1c6d86897e227aa",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "Large Language Models (LLMs) are increasingly being embedded into all facets of society, from search to education, industrial, and financial applications. These systems'carbon and water footprints raise important sustainability concerns, particularly with adoption rates exceeding 80% among university students, despite limited insight into the environmental impacts of individual usage. Eco-feedback interfaces offer a promising approach to encourage more sustainable behaviors, yet their role in shaping LLM users'sustainability awareness and decision-making remains underexplored. We design and deploy the interface that visualizes latency-carbon trade-offs during live LLM interactions. We study its use with undergraduate computer science students (N=89, ages 18-24), enrolled in a computing ethics course, providing an empirical look at how a technically sophisticated and values-oriented user population responds to sustainability-aware AI interfaces. We found that the likelihood of choosing the eco-feedback system significantly decreased as perceived response latency increased (p<.001), while users'willingness increased when they recognized the carbon-saving impacts (p<.01). Also, students with stronger eco-mindedness demonstrated higher baseline willingness to adopt lower-carbon modes and reported increased awareness of the environmental impacts of LLM use, though this effect diminished as latency increased. These results position eco-feedback interfaces as a promising sustainability intervention and highlight their potential as an educational opportunity to promote more sustainable LLM use among university students and beyond.",
+      "canonical_id": "arXiv:2608.23968",
+      "arxiv_id": "2608.23968",
+      "authors": [
+        "Hyeonwook Kim",
+        "Xuesi Chen",
+        "Alex Cabral",
+        "C. Lin",
+        "Udit Gupta",
+        "Josiah D. Hester"
+      ]
+    },
+    {
+      "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents",
+      "source_url": "https://www.semanticscholar.org/paper/05e02f078965449f4ec858e1744ac4e47c01ab36",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "LLM agents increasingly solve tasks by invoking multiple tools, where parallel execution is essential for low latency but difficult to manage safely. Existing agent benchmarks primarily evaluate tool selection, argument generation, and end-to-end success under mostly serial execution, largely overlooking valid parallelization and resource-constrained scheduling. This missing scheduling dimension creates a practical failure mode: serial execution is safe but slow, while resource-agnostic parallel execution is fast but prone to avoidable resource overflows. To address this gap, we introduce PeakBench, a benchmark of executable multi-tool workflows with execution-grounded dependency annotations and measured resource profiles. A central challenge in evaluating such workflows is attribution: failures and inefficiencies may arise from incorrect dependency planning, poor resource-constrained scheduling, or both. PeakBench addresses this challenge with a two-part evaluation framework that disentangles logical planning from physical scheduling, with dedicated metrics for each dimension. Using this framework, we show that strong logical planning does not reliably translate into safe or efficient execution under resource constraints. We further show that exposing resource information can reduce avoidable overflows and improve resource utilization, making PeakBench a useful testbed for diagnosing resource-aware agent behavior. Code is available at https://github.com/Czzzk/Staggering-the-Peaks.",
+      "canonical_id": "arXiv:2608.24509",
+      "arxiv_id": "2608.24509",
+      "authors": [
+        "Zhi-Kai Chen",
+        "Xu-Xiang Zhong",
+        "Song-Yan Li",
+        "De-Chuan Zhan",
+        "Han-Jia Ye"
+      ]
+    },
+    {
+      "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+      "source_url": "https://www.semanticscholar.org/paper/f0bb217fd15d0f60ce0ef49781f7187f046aed08",
+      "year": 2026,
+      "published": "2026-08-24",
+      "abstract": "Masked diffusion language models (dLLMs) can in principle generate text faster than autoregressive (AR) models, since they denoise many tokens at once. Recent systems have begun building serving infrastructure for dLLMs, but none first measure how these models behave under real, concurrent serving load. Serving systems built without this grounding risk carrying over assumptions from AR serving that may not hold for dLLMs. We characterize dLLM serving to close this gap, using LLaDA-8B-Instruct with a D2F (Discrete Diffusion Forcing) LoRA adapter on a single NVIDIA H200 GPU, evaluated on GSM8K and HumanEval. We report three findings. First, request difficulty, the number of denoising steps a request needs, is discrete rather than continuous: requests fall into 11 fixed step-count levels (178 + 29k), and no signal we test predicts the level before generation starts (best R2 = 0.150). Second, benchmarks with short generation budgets below 320 tokens understate serving variance, since requests are cut off before the latency spread appears. Third, only 24% of single-request wall-clock time is GPU computation; the rest is CPU-side dispatch overhead. Batching mainly helps by amortizing this overhead: sharing one forward pass per denoising step improves throughput by 16.0x at batch size 16 over a per-request-dispatch baseline. We also argue structurally that output quality should not degrade with batch size, stating three assumptions this rests on; we measure 74 to 76% GSM8K accuracy at single-request scale. Finally, we derive a batch-timeout rule for fixed-fill synchronized batching under Poisson arrivals. Together, these results show that serving diffusion language models needs parallelism at the level of each denoising step, which differs from AR serving in how admission and eviction interact with an already shared forward pass.",
+      "canonical_id": "arXiv:2608.23807",
+      "arxiv_id": "2608.23807",
+      "authors": [
+        "Farhana Amin",
+        "Sabiha Afroz",
+        "Mona Moghadampanah",
+        "D. Nikolopoulos"
+      ]
+    },
+    {
+      "title": "The Joule Point: an Energy-Optimal Operating Point for AI Inference",
+      "source_url": "https://www.semanticscholar.org/paper/2bb1a4d7c511e43341945d00a8a5619b6d53cc0c",
+      "year": 2026,
+      "published": "2026-08-23",
+      "abstract": "Data centers serving AI inference strive to maximize GPU utilization, running their cards at full power by default: this maximizes throughput and holds latencies down, but it is energy-inefficient, spending more energy per inference than the same work needs at a better operating point. That inefficiency is a scheduling choice, not a hardware limit. The cause is physical: for a given workload, a GPU's board power rises superlinearly along its power-performance curve, on top of a fixed power floor that is paid for as long as the job runs, so energy per inference is U-shaped in the operating point (GPU, power cap). The minimum, which we name the Joule Point, is a cap at 43 to 46 per cent of a large GPU's rated power; capping to it cuts energy per inference by roughly a quarter to a third at a modest cost in capital and latency: each request runs about 1.2 times slower, and holding aggregate throughput takes that same factor more cards. Under load, the Joule Point is nearly a per-card-type constant, so a single static cap per card type captures nearly all the saving (mean penalty under one per cent), turning the online per-job search that prior systems run into a one-time characterization. We ground this in ELF, a dense power-cap dataset that sweeps 20 inference models across four GPUs; replaying it in a fleet simulation under a power budget, capping each job to the least power meeting its deadline spends 18 to 45 per cent less energy per served job. These results recast data-center energy as a schedulable resource an operator can adapt to a budget, an electricity price, or a carbon signal while meeting its service targets.",
+      "canonical_id": "arXiv:2609.27926",
+      "arxiv_id": "2609.27926"
+    },
+    {
+      "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+      "source_url": "https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Cross-model latent guidance lets a frozen large mentor encode an input once and a frozen small student generate from the resulting signal. Existing methods keep this signal fixed, assuming it stays useful as the output grows; we show this fails in long-form generation. On multi-turn instruction following, static guidance pushes a 4B student's constraint satisfaction 2.5 points below its no-guidance baseline; a training-free refresh every 16 tokens changes only the memory content and restores a 2.0-point gain over that baseline. We propose MentorPulse to keep guidance fresh at practical cost: it compresses mentor states into a capped slot memory, incrementally processes newly generated tokens, and updates the memory that the student reads through gated cross-attention without resetting the student's KV cache. Windowed Refresh Training exposes the bridge to prefix-conditioned memory. Across thirteen datasets, MentorPulse closes 52.2% of the mentor-student gap on macro average, outperforming C2C, T2T, and equal-budget LoRA, with the largest gains on long outputs. It performs best on all eleven mentor-student pairs from three model families, with margins that narrow as the capability gap grows, and a lightweight read-pattern check predicts the gain before deployment. Measured costs identify refresh intervals that dominate text guidance on long outputs.",
+      "canonical_id": "arXiv:2608.20927",
+      "arxiv_id": "2608.20927",
+      "authors": [
+        "Ziwu Liu",
+        "Guozhong Li",
+        "Chen Qiu",
+        "Wei-Yang Kong",
+        "Panos Kalnis"
+      ]
+    },
+    {
+      "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+      "source_url": "https://www.semanticscholar.org/paper/dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+      "year": 2026,
+      "published": "2026-08-19",
+      "abstract": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter LLM. We show that a handful of AIPCs, working together over an ordinary network, can serve models beyond the capability of any single one. We use pipeline parallelism: a model is split by layer into per-stage shards, each pre-compiled into an OpenVINO graph, so that every machine runs one shard and passes activations to the next. Three techniques make this fast enough to be useful. First, we recover the speed of the unsplit model: a naive per-stage export runs well below monolithic inference because it misses an OpenVINO GPU optimization, and injecting a beam_idx Gather into each shard triggers that optimization (the IndirectKVCache fusion) and brings the shards to parity. Second, we leverage speculative decoding on stateful OpenVINO models. Third, the pipeline serves several users at once by interleaving their requests across the stages, each request carrying its own cache (micro-batching). Together, a two-node Llama 3.1 8B INT4 pipeline serves two concurrent users at 1.79x the single-user throughput of the unsplit model on the same hardware, and the gap widens under simulated wide-area latency. The same design scales to a 70B model that no single fleet member can hold: a four-node deployment of Lunar Lake AI PCs on Intel Tiber Cloud serves a single user at interactive speed, with output token-for-token identical to the same four-node pipeline decoding without speculation. Code, raw benchmark logs, and reproduction scripts ship as a self-contained package at https://github.com/labscommunity/pipeline-sharded-inference-paper (in the top-level reproduction/ directory).",
+      "canonical_id": "arXiv:2608.19147",
+      "arxiv_id": "2608.19147",
+      "authors": [
+        "Tate Berenbaum",
+        "M. Venkatachalam"
+      ]
+    },
+    {
+      "title": "InFactPlanner: Planning Sustainable Geo-Distributed LLM Data Centers",
+      "source_url": "https://www.semanticscholar.org/paper/0e383eeff8986df39080e60f7e9698ec8e32ce43",
+      "year": 2026,
+      "published": "2026-08-13",
+      "abstract": "The rapid growth of LLM inference is shifting sustainability concerns from one-time training to continuous serving, where infrastructure decisions shape energy use, carbon emissions, water consumption, and service quality. Yet operators often need to compare deployment alternatives before large-scale infrastructure is built, making direct measurement costly, slow, and sometimes infeasible. We present InFactPlanner, a trace-driven decision-support framework for what-if analysis of sustainable AI data center deployment for LLM inference across single and geo-distributed sites. InFactPlanner combines query traces, hardware-model profiles, candidate site configurations, PUE/WUE parameters, renewable generation models, and time-varying grid carbon intensity to estimate power, energy, carbon emissions, water use, latency, and server utilization. The framework abstracts low-level serving effects into configurable hardware-model profiles, enabling rapid comparison of site selection, capacity placement, hardware, model, renewable integration, and routing choices. We validate the energy accounting pipeline by reproducing reference LLM inference energy estimates with less than 10% deviation, evaluate scalability across multiple data centers and server counts, and demonstrate scenario-driven decision analyses for hardware selection, renewable placement, geographic deployment, and carbon-aware routing. Our results show that sustainability-optimal choices can differ from latency-optimal ones, and that the carbon value of deployment depends strongly on the local grid mix.",
+      "canonical_id": "arXiv:2608.12915",
+      "arxiv_id": "2608.12915",
+      "authors": [
+        "Nicoletta Tsiopani",
+        "Moysis Symeonides",
+        "G. Pallis",
+        "M. Dikaiakos"
+      ]
+    },
+    {
+      "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Modern LLM serving systems increasingly adopt elastic inference pipelines where stages frequently join, leave, and migrate across nodes. However, existing GPU communication frameworks like NCCL assume static topologies, causing routing failures and P99 latency spikes during worker transitions that violate sub-millisecond tail latency requirements. We present Connex, a communication system that elevates endpoint mobility from exceptional failure to first-class primitive. Rather than optimizing individual mechanisms in isolation, Connex defines a mobility contract that the communication layer enforces whenever workers join, leave, or migrate while token streams, activations, or KV transfers are in flight. The contract is realized through three cooperating mechanisms: (1) epoch-based routing that bounds staleness without global coordination, (2) explicit handover protocols that preserve stream ordering and provide exactly-once delivery across migrations, and (3) credit-based backpressure with traffic-class isolation that prevents churn-induced interference with latency-critical paths. Evaluation on a 5-node GPU cluster under synthetic and production-derived churn shows that Connex reduces P99 tail spikes by up to 85% compared to NCCL-based baselines, achieves sub-second cutover, and maintains 100% goodput at moderate loads where baselines collapse to 0–28%, while incurring less than 5% steady-state overhead.",
+      "canonical_id": "DOI:10.1145/3789240.3829200",
+      "doi": "10.1145/3789240.3829200",
+      "authors": [
+        "Yanying Lin",
+        "Vincent Liu",
+        "Tao Luo",
+        "Chengzhong Xu",
+        "Ke-Jiang Ye"
+      ]
+    },
+    {
+      "title": "Split-Gate Pooled-Evidence Stochastic-Rollout Scheduling for Timely Progressive Edge Inference",
+      "source_url": "https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "This paper investigates causal radio scheduling for progressive edge inference, with the goal of maximizing timely inference throughput under job-specific deadlines. Specifically, a multi-tenant system is modeled in which each job alternates between wireless transmission and graphics processing unit (GPU) computation. The model captures time-varying uplink service, inter-stage precedence, variant-aware batching, non-preemptive execution on two GPU streams, and heterogeneous deadlines. To account for delayed radio-GPU coupling, a split-gate pooled-evidence stochastic-rollout (SGPE-SR) scheduler is proposed. Candidate and fallback policies are selected on one set of sampled futures, after which admission is evaluated on an independent held-out set; common random numbers are retained within each held-out candidate-fallback comparison. The override is executed only when its pooled nominal/recent-history held-out advantage is sufficiently positive and an independent recent-history replication statistic is nonnegative. System-level simulations using measured GPU profiles and paired random instances show that, in a prespecified long-horizon evaluation over 30 previously unused seeds and 3,379 offered jobs, SGPE-SR improves timely completions over the strongest rate-based baseline by 4.27%, with a mean paired gain of 3.00 jobs per run and a 95% bootstrap interval of [1.60, 4.43].",
+      "canonical_id": "arXiv:2608.08338",
+      "arxiv_id": "2608.08338",
+      "authors": [
+        "Sai Xu",
+        "Yin-Bo Yu",
+        "Yanan Du",
+        "Xusheng Zhu",
+        "Gaojie Chen"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.29160",
+      "identity_tokens": [
+        "id:arXiv:2609.29160",
+        "title:crossmodel autoscaling for shared llm serving",
+        "url:https://www.semanticscholar.org/paper/64fc3429045efa35ffdf8ab2958f37f40d591c5b"
+      ],
+      "record": {
+        "title": "Cross-Model Autoscaling for Shared LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/64fc3429045efa35ffdf8ab2958f37f40d591c5b",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Multi-model LLM serving is moving toward shared MaaS clusters, where co-hosted models compete for a fixed GPU budget while each model experiences time-varying demand and must satisfy its own latency SLO. Existing LLM autoscalers remain largely model-local: their signals expose local runtime activity or delayed latency outcomes, and their scale-up or provisioning decisions do not directly determine how shared capacity should be allocated across competing models. We present the Token-service-share Rebalancing Engine (TRE), a control-plane framework for hot-switched multi-model LLM serving. TRE introduces Token Service Share (TSS), a calibrated, demand-normalized signal that estimates effective token service per active or queued request and yields a comparable health score across heterogeneous models and SLO classes. Guided by TSS, TRE coordinates bounded receiver--donor capacity movement under a fixed GPU budget: it separates fast rescue from slower rebalancing and incrementally reallocates active replicas toward models with the largest calibrated service deficits. We implement TRE on a Kubernetes-based hot-switch serving stack without modifying the inference scheduler. Across seven LLM serving traces, TRE reduces P95 end-to-end latency by 11.9--79.0\\% and P99 latency by 12.5--72.6\\% compared with a state-of-the-art KV-cache-based reactive autoscaler running on the same hot-switch runtime. The gains hold on both targeted stress probes and production-derived conversation/code traces, where TRE reduces P95/P99 latency by 50.8/63.7\\% and 79.0/72.6\\%, respectively. These results show that effective hot-switched autoscaling requires not only fast replica actuation, but also calibrated service-deficit signals and coordinated cross-model capacity arbitration. Our code and artifacts are available at https://github.com/zxzx9898/Token-service-share_Rebalancing_Engine.",
+        "canonical_id": "arXiv:2609.29160",
+        "arxiv_id": "2609.29160"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29364",
+      "identity_tokens": [
+        "id:arXiv:2609.29364",
+        "title:nebulasd manyformany speculative decoding",
+        "url:https://www.semanticscholar.org/paper/5da1eb1fd8f3a51946b258594012a211afcfaf9b"
+      ],
+      "record": {
+        "title": "NebulaSD: Many-for-Many Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/5da1eb1fd8f3a51946b258594012a211afcfaf9b",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Speculative decoding accelerates Large Language Model (LLM) inference by using a lightweight draft model to propose candidate tokens for parallel verification by a target model. Drafting and verification, however, exhibit different service characteristics and favor different batch configurations, making fixed draft-target coupling inefficient under concurrent workloads. Existing distributed designs can physically separate the two stages, but often retain request or batch affinities that prevent their capacities from being shared globally. We present NebulaSD, a many-for-many, or M-for-N, speculative decoding system that organizes draft and target workers into independently schedulable resource pools and dynamically reconstructs stage-specific batches from shared request pools. Such dynamic reassignment removes fixed worker locality, requiring request states to be made available at newly selected workers without introducing migration stalls. NebulaSD addresses this challenge through worker-triggered batch reconstruction and asynchronous KV-state preparation overlapped with model execution. We evaluate NebulaSD from both system and scaling perspectives, showing that dynamic pooling improves request-round processing rate by 50.4% over a physically disaggregated baseline and 72.6% over co-located execution on a four-GPU deployment while substantially increasing effective GPU utilization. Profile-driven simulations further show approximately proportional compute-side capacity scaling under idealized state movement.",
+        "canonical_id": "arXiv:2609.29364",
+        "arxiv_id": "2609.29364"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16800",
+      "identity_tokens": [
+        "id:arXiv:2609.16800",
+        "title:smarter by the moment environmentdriven dynamic policies for continual llm improvement",
+        "url:https://www.semanticscholar.org/paper/f12d6e9563a3a8ee533f3ffcd6169b223ef86789"
+      ],
+      "record": {
+        "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement",
+        "source_url": "https://www.semanticscholar.org/paper/f12d6e9563a3a8ee533f3ffcd6169b223ef86789",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable progress across diverse domains, but continual adaptation to evolving tasks and environments remains a key challenge. Existing memory-augmented approaches retrieve individual past examples as direct references, but do not explicitly synthesize actionable strategies from them, causing the same types of errors to recur. We propose Dynamic Retrieval-based Policy Generation (DRPG), a framework that integrates memory-based retrieval with a dynamic policy generator, leveraging historical data and environment feedback to produce task-specific policies for continual LLM improvement. We evaluate DRPG across six benchmarks spanning text-to-SQL, question answering, medical diagnosis, and Python programming, using seven LLMs from both proprietary and open-weight families. DRPG outperforms strong baselines across most datasets and models. Further analysis demonstrates that DRPG's policy generation is robust to retrieval strategy, operates effectively without prior policy continuity, and can leverage smaller or cross-family models as cost-efficient policy generators. We also find that the benefit of policy-level guidance depends on task characteristics, offering practical insights into when and under what conditions this mechanism is most effective.",
+        "canonical_id": "arXiv:2609.16800",
+        "arxiv_id": "2609.16800",
+        "authors": [
+          "Ting-Wei Chang",
+          "Po-Chun Chen",
+          "Hen-Hsen Huang",
+          "Hsin-Hsi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05406",
+      "identity_tokens": [
+        "id:arXiv:2609.05406",
+        "title:beyond scalar flexibility from eligible ai workloads to dependable load relief",
+        "url:https://www.semanticscholar.org/paper/17e2b21dc927243573a9db2ee25316bf071b0da7"
+      ],
+      "record": {
+        "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief",
+        "source_url": "https://www.semanticscholar.org/paper/17e2b21dc927243573a9db2ee25316bf071b0da7",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "Grid studies often represent data-center flexibility as a fixed percentage of load, although no public production trace has shown how much eligible load persists across event durations or co-moves across clusters. We reconstruct 4,439 hourly power observations from a 185-day trace of 155,410 GPUs and derive a workload-semantic flexibility envelope. The fleet's time-averaged Monte Carlo median facility demand is 55.8 MW, while immediate eligible curtailment averages 3.55 MW after retaining allocated-GPU idle power: 12.1% of workload power and 6.35% of median facility power. Under full realization of that eligibility, 95%-available relief falls from 2.51 MW for one hour to 2.32 MW for four hours and 1.95 MW for 24 hours; a common realizable fraction q scales every value exactly by q. A mean-calibrated scalar overstates these quantities by 17%, 25%, and 47%, while a scalar tail-calibrated at four hours understates the one-hour product by 6% and overstates the 24-hour product by 17%; the share that reproduces the surface varies by a factor of 1.6 across durations and reliability levels. Aggregating 13 clusters raises four-hour firmness from 0.38 to 0.66, but cross-cluster covariance limits the gain. The production scheduler exposes almost no additional delay-based capacity: newly deferrable arrivals average 0.008 MW and have zero 95%-available capacity. These results replace an assumed flexibility percentage with duration, reliability, portfolio, and realizability terms that can be written into interconnection and demand-response contracts.",
+        "canonical_id": "arXiv:2609.05406",
+        "arxiv_id": "2609.05406",
+        "authors": [
+          "Mei-Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3703757",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3703757",
+        "title:flexitensor adaptive multitask deployment of llms on resourceconstrained heterogeneous edge devices",
+        "url:https://www.semanticscholar.org/paper/9cbdf19f55100af1b259a573911310823af4b0da"
+      ],
+      "record": {
+        "title": "FlexiTensor: Adaptive Multi-Task Deployment of LLMs on Resource-Constrained Heterogeneous Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/9cbdf19f55100af1b259a573911310823af4b0da",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "The drive for privacy-preserving and low-latency artificial intelligence necessitates executing Large Language Models (LLMs) directly on heterogeneous, resource-constrained edge devices. This paradigm presents a challenge: efficiently running large models across multiple end/edge devices under a strict energy budget. Especially, the problem becomes more complicated when it comes to orchestrating multiple complex tasks using large models at the same time. To address this, we introduce FlexiTensor, an offline planning and deployment system for LLM inference, scaling from a single task to multiple concurrent tasks. FlexiTensor first considers LLM inference for a single task under a strict energy budget. We design a heuristic optimization algorithm to minimize the latency under a strict energy budget. Specifically, we select an optimized subset of devices and tensor allocations. Based on the selection, latency can be reduced by using non-uniform tensor parallelism with quantization. FlexiTensor can be extended to multi-task cases. We model the execution structure of multi-agent workflows as pre-defined Directed Acyclic Graphs (DAGs) and reformulate the problem with energy consumption constraints. FlexiTensor introduces a novel hybrid evolutionary algorithm to address joint task scheduling and resource allocation in multi-task cases. This approach navigates the vast search space of task placement, tensor splitting, and thread assignment to minimize the overall workflow makespan. All optimization algorithms run offline before deployment, using pre-profiled device characteristics to compute a static execution plan. Extensive experiments on a physical testbed of heterogeneous edge devices demonstrate that FlexiTensor significantly outperforms baselines. We accelerate single-task inference by up to 50%. For multi-task workflows, we consistently find superior scheduling solutions, achieving speed improvements by an average of 50% against competitive baselines and by up to 100% in certain scenarios, showcasing its effectiveness and adaptability for real-world edge LLM-based applications.",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3703757",
+        "doi": "10.1109/TPDS.2026.3703757",
+        "authors": [
+          "Bowen Zhang",
+          "Jiahui Hou",
+          "Junyan Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5037-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5037-1",
+        "title:towards sociocyberphysical systems a software perspective amid ai breakthroughs",
+        "url:https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459"
+      ],
+      "record": {
+        "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+        "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+        "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+        "doi": "10.1007/s11432-026-5037-1",
+        "authors": [
+          "Assia Belbachir",
+          "M. Blake",
+          "Jin-Song Dong",
+          "S. Dustdar",
+          "Christof Ebert",
+          "C. Ghezzi",
+          "David Harel",
+          "S. Helal",
+          "Chun-Min Hu",
+          "Lin-Peng Huang",
+          "Hans-Arno Jacobsen",
+          "Chang-Jun Jiang",
+          "Zhi Jin",
+          "Jia-Lin Li",
+          "Xuanzhe Liu",
+          "Jian Lu",
+          "Xiao-Xing Ma",
+          "Assaf Marron",
+          "Hong Mei",
+          "B. Nuseibeh",
+          "Xin Peng",
+          "Yuanchun Shi",
+          "Huai-Min Wang",
+          "Ji Wang",
+          "Jian-Min Wang",
+          "Danny Weyns",
+          "James Woodcock",
+          "Tao Xie",
+          "H. Xu",
+          "Mengfei Yang",
+          "Jian-Wei Yin",
+          "Naijun Zhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sysarc.2026.104016",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.104016",
+        "title:cade contextaware dispatch engine for energyefficient vlm inference on heterogeneous edge with discrete neural processing units",
+        "url:https://www.semanticscholar.org/paper/6fd99ba9cc5f0401ed0daf163c894086dffc0c01"
+      ],
+      "record": {
+        "title": "CADE: Context-aware dispatch engine for energy-efficient VLM inference on heterogeneous edge with discrete neural processing units",
+        "source_url": "https://www.semanticscholar.org/paper/6fd99ba9cc5f0401ed0daf163c894086dffc0c01",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.sysarc.2026.104016",
+        "doi": "10.1016/j.sysarc.2026.104016"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29581",
+      "identity_tokens": [
+        "id:arXiv:2608.29581",
+        "title:bridging agent semantics with spot capacity an elastic and recoverable service model",
+        "url:https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142"
+      ],
+      "record": {
+        "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model",
+        "source_url": "https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142",
+        "year": 2026,
+        "published": "2026-08-30",
+        "abstract": "LLM agents increasingly drive long-running cloud inference workloads in which model calls differ in urgency, redundancy, completion semantics, and replay cost. Model-as-a-Service (MaaS) platforms expose several service models for trading cost against latency, availability, and capacity commitment. These models operate primarily at request, job, or endpoint scopes and provide limited support for combining transient platform supply with the evolving semantics of an agent task. We present SemSpot, a semantics-aware service model that allows agent applications to leverage the spot capacity of LLM inference platforms. At the request level, SemSpot lets a provider publish short-lived offers over successful price, completion probability, and failure-notification deadline; the agent runtime selects among these offers using the current task state and completion rule. An audit of 1,535 cases from six agent benchmarks identifies four recurring workflow structures and shows how this service model may produce different cost, service-time, and fallback behavior. With specialized MaaS support, token-level SemSpot further preserves provider inference state and runtime-verified semantic segments inside a long request. We develop the service model, economic boundary, and the cross-layer research agenda required to realize SemSpot.",
+        "canonical_id": "arXiv:2608.29581",
+        "arxiv_id": "2608.29581",
+        "authors": [
+          "Min-Chen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26021",
+      "identity_tokens": [
+        "id:arXiv:2608.26021",
+        "title:slasher power flexibility for cloud datacenters",
+        "url:https://www.semanticscholar.org/paper/ec46ad93bf0d80c583b2289e6627f521e560bfdf"
+      ],
+      "record": {
+        "title": "Slasher: Power Flexibility for Cloud Datacenters",
+        "source_url": "https://www.semanticscholar.org/paper/ec46ad93bf0d80c583b2289e6627f521e560bfdf",
+        "year": 2026,
+        "published": "2026-08-26",
+        "abstract": "Datacenters consume many megawatts of power, and regularly encounter scenarios that require modulating their power draw. These scenarios include datacenter infrastructure failures, power grid failures, grid services, and more, spanning a diverse range of requirements in terms of the power magnitude, the scope of the reduction, the notice time, and other dimensions. To address these scenarios, we have built Slasher, a general system for modulating the power of \\azure datacenters to handle scenarios ranging from individual racks to regional multi-datacenter grid events. Slasher coordinates datacenter resources with the goal of meeting power targets while minimizing negative impact on hosted workloads. In this paper, we review the main power modulation scenarios, characterize the power reduction levers using data from production cloud datacenters, describe Slasher's system architecture, and formulate the cloud datacenter power modulation control problem. We also develop a high-fidelity datacenter simulator and propose a workload impact model, using them to design and evaluate power control algorithms.",
+        "canonical_id": "arXiv:2608.26021",
+        "arxiv_id": "2608.26021",
+        "authors": [
+          "Liuzixuan Lin",
+          "Fiodar Kazhamiaka",
+          "A. Kumbhare",
+          "Chaojie Zhang",
+          "Jaylen Wang",
+          "H. Khan",
+          "Rodrigo L. Assis",
+          "Mariana Rodrigues",
+          "Kyle Woolcock",
+          "Nithish Mahalingam",
+          "Brijesh Warrier",
+          "Rodrigo Fonseca",
+          "Ricardo Bianchini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23968",
+      "identity_tokens": [
+        "id:arXiv:2608.23968",
+        "title:when llms slow down how environmental impacts mediate university studentsllm usage",
+        "url:https://www.semanticscholar.org/paper/f5429fc69f381cbfa615c341a1c6d86897e227aa"
+      ],
+      "record": {
+        "title": "When LLMs Slow Down: How Environmental Impacts Mediate University Students'LLM Usage",
+        "source_url": "https://www.semanticscholar.org/paper/f5429fc69f381cbfa615c341a1c6d86897e227aa",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "Large Language Models (LLMs) are increasingly being embedded into all facets of society, from search to education, industrial, and financial applications. These systems'carbon and water footprints raise important sustainability concerns, particularly with adoption rates exceeding 80% among university students, despite limited insight into the environmental impacts of individual usage. Eco-feedback interfaces offer a promising approach to encourage more sustainable behaviors, yet their role in shaping LLM users'sustainability awareness and decision-making remains underexplored. We design and deploy the interface that visualizes latency-carbon trade-offs during live LLM interactions. We study its use with undergraduate computer science students (N=89, ages 18-24), enrolled in a computing ethics course, providing an empirical look at how a technically sophisticated and values-oriented user population responds to sustainability-aware AI interfaces. We found that the likelihood of choosing the eco-feedback system significantly decreased as perceived response latency increased (p<.001), while users'willingness increased when they recognized the carbon-saving impacts (p<.01). Also, students with stronger eco-mindedness demonstrated higher baseline willingness to adopt lower-carbon modes and reported increased awareness of the environmental impacts of LLM use, though this effect diminished as latency increased. These results position eco-feedback interfaces as a promising sustainability intervention and highlight their potential as an educational opportunity to promote more sustainable LLM use among university students and beyond.",
+        "canonical_id": "arXiv:2608.23968",
+        "arxiv_id": "2608.23968",
+        "authors": [
+          "Hyeonwook Kim",
+          "Xuesi Chen",
+          "Alex Cabral",
+          "C. Lin",
+          "Udit Gupta",
+          "Josiah D. Hester"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24509",
+      "identity_tokens": [
+        "id:arXiv:2608.24509",
+        "title:peakbench benchmarking resourceaware tool invocation in llm agents",
+        "url:https://www.semanticscholar.org/paper/05e02f078965449f4ec858e1744ac4e47c01ab36"
+      ],
+      "record": {
+        "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents",
+        "source_url": "https://www.semanticscholar.org/paper/05e02f078965449f4ec858e1744ac4e47c01ab36",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "LLM agents increasingly solve tasks by invoking multiple tools, where parallel execution is essential for low latency but difficult to manage safely. Existing agent benchmarks primarily evaluate tool selection, argument generation, and end-to-end success under mostly serial execution, largely overlooking valid parallelization and resource-constrained scheduling. This missing scheduling dimension creates a practical failure mode: serial execution is safe but slow, while resource-agnostic parallel execution is fast but prone to avoidable resource overflows. To address this gap, we introduce PeakBench, a benchmark of executable multi-tool workflows with execution-grounded dependency annotations and measured resource profiles. A central challenge in evaluating such workflows is attribution: failures and inefficiencies may arise from incorrect dependency planning, poor resource-constrained scheduling, or both. PeakBench addresses this challenge with a two-part evaluation framework that disentangles logical planning from physical scheduling, with dedicated metrics for each dimension. Using this framework, we show that strong logical planning does not reliably translate into safe or efficient execution under resource constraints. We further show that exposing resource information can reduce avoidable overflows and improve resource utilization, making PeakBench a useful testbed for diagnosing resource-aware agent behavior. Code is available at https://github.com/Czzzk/Staggering-the-Peaks.",
+        "canonical_id": "arXiv:2608.24509",
+        "arxiv_id": "2608.24509",
+        "authors": [
+          "Zhi-Kai Chen",
+          "Xu-Xiang Zhong",
+          "Song-Yan Li",
+          "De-Chuan Zhan",
+          "Han-Jia Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23807",
+      "identity_tokens": [
+        "id:arXiv:2608.23807",
+        "title:serving masked diffusion llms characterization and design principles from real hardware",
+        "url:https://www.semanticscholar.org/paper/f0bb217fd15d0f60ce0ef49781f7187f046aed08"
+      ],
+      "record": {
+        "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+        "source_url": "https://www.semanticscholar.org/paper/f0bb217fd15d0f60ce0ef49781f7187f046aed08",
+        "year": 2026,
+        "published": "2026-08-24",
+        "abstract": "Masked diffusion language models (dLLMs) can in principle generate text faster than autoregressive (AR) models, since they denoise many tokens at once. Recent systems have begun building serving infrastructure for dLLMs, but none first measure how these models behave under real, concurrent serving load. Serving systems built without this grounding risk carrying over assumptions from AR serving that may not hold for dLLMs. We characterize dLLM serving to close this gap, using LLaDA-8B-Instruct with a D2F (Discrete Diffusion Forcing) LoRA adapter on a single NVIDIA H200 GPU, evaluated on GSM8K and HumanEval. We report three findings. First, request difficulty, the number of denoising steps a request needs, is discrete rather than continuous: requests fall into 11 fixed step-count levels (178 + 29k), and no signal we test predicts the level before generation starts (best R2 = 0.150). Second, benchmarks with short generation budgets below 320 tokens understate serving variance, since requests are cut off before the latency spread appears. Third, only 24% of single-request wall-clock time is GPU computation; the rest is CPU-side dispatch overhead. Batching mainly helps by amortizing this overhead: sharing one forward pass per denoising step improves throughput by 16.0x at batch size 16 over a per-request-dispatch baseline. We also argue structurally that output quality should not degrade with batch size, stating three assumptions this rests on; we measure 74 to 76% GSM8K accuracy at single-request scale. Finally, we derive a batch-timeout rule for fixed-fill synchronized batching under Poisson arrivals. Together, these results show that serving diffusion language models needs parallelism at the level of each denoising step, which differs from AR serving in how admission and eviction interact with an already shared forward pass.",
+        "canonical_id": "arXiv:2608.23807",
+        "arxiv_id": "2608.23807",
+        "authors": [
+          "Farhana Amin",
+          "Sabiha Afroz",
+          "Mona Moghadampanah",
+          "D. Nikolopoulos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27926",
+      "identity_tokens": [
+        "id:arXiv:2609.27926",
+        "title:the joule point an energyoptimal operating point for ai inference",
+        "url:https://www.semanticscholar.org/paper/2bb1a4d7c511e43341945d00a8a5619b6d53cc0c"
+      ],
+      "record": {
+        "title": "The Joule Point: an Energy-Optimal Operating Point for AI Inference",
+        "source_url": "https://www.semanticscholar.org/paper/2bb1a4d7c511e43341945d00a8a5619b6d53cc0c",
+        "year": 2026,
+        "published": "2026-08-23",
+        "abstract": "Data centers serving AI inference strive to maximize GPU utilization, running their cards at full power by default: this maximizes throughput and holds latencies down, but it is energy-inefficient, spending more energy per inference than the same work needs at a better operating point. That inefficiency is a scheduling choice, not a hardware limit. The cause is physical: for a given workload, a GPU's board power rises superlinearly along its power-performance curve, on top of a fixed power floor that is paid for as long as the job runs, so energy per inference is U-shaped in the operating point (GPU, power cap). The minimum, which we name the Joule Point, is a cap at 43 to 46 per cent of a large GPU's rated power; capping to it cuts energy per inference by roughly a quarter to a third at a modest cost in capital and latency: each request runs about 1.2 times slower, and holding aggregate throughput takes that same factor more cards. Under load, the Joule Point is nearly a per-card-type constant, so a single static cap per card type captures nearly all the saving (mean penalty under one per cent), turning the online per-job search that prior systems run into a one-time characterization. We ground this in ELF, a dense power-cap dataset that sweeps 20 inference models across four GPUs; replaying it in a fleet simulation under a power budget, capping each job to the least power meeting its deadline spends 18 to 45 per cent less energy per served job. These results recast data-center energy as a schedulable resource an operator can adapt to a budget, an electricity price, or a carbon signal while meeting its service targets.",
+        "canonical_id": "arXiv:2609.27926",
+        "arxiv_id": "2609.27926"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20927",
+      "identity_tokens": [
+        "id:arXiv:2608.20927",
+        "title:mentorpulse refreshing crossmodel latent guidance for longform generation",
+        "url:https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef"
+      ],
+      "record": {
+        "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+        "source_url": "https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Cross-model latent guidance lets a frozen large mentor encode an input once and a frozen small student generate from the resulting signal. Existing methods keep this signal fixed, assuming it stays useful as the output grows; we show this fails in long-form generation. On multi-turn instruction following, static guidance pushes a 4B student's constraint satisfaction 2.5 points below its no-guidance baseline; a training-free refresh every 16 tokens changes only the memory content and restores a 2.0-point gain over that baseline. We propose MentorPulse to keep guidance fresh at practical cost: it compresses mentor states into a capped slot memory, incrementally processes newly generated tokens, and updates the memory that the student reads through gated cross-attention without resetting the student's KV cache. Windowed Refresh Training exposes the bridge to prefix-conditioned memory. Across thirteen datasets, MentorPulse closes 52.2% of the mentor-student gap on macro average, outperforming C2C, T2T, and equal-budget LoRA, with the largest gains on long outputs. It performs best on all eleven mentor-student pairs from three model families, with margins that narrow as the capability gap grows, and a lightweight read-pattern check predicts the gain before deployment. Measured costs identify refresh intervals that dominate text guidance on long outputs.",
+        "canonical_id": "arXiv:2608.20927",
+        "arxiv_id": "2608.20927",
+        "authors": [
+          "Ziwu Liu",
+          "Guozhong Li",
+          "Chen Qiu",
+          "Wei-Yang Kong",
+          "Panos Kalnis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19147",
+      "identity_tokens": [
+        "id:arXiv:2608.19147",
+        "title:precompiled pipeline shards for distributed llm inference on intel ai pc fleets",
+        "url:https://www.semanticscholar.org/paper/dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a"
+      ],
+      "record": {
+        "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+        "source_url": "https://www.semanticscholar.org/paper/dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+        "year": 2026,
+        "published": "2026-08-19",
+        "abstract": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter LLM. We show that a handful of AIPCs, working together over an ordinary network, can serve models beyond the capability of any single one. We use pipeline parallelism: a model is split by layer into per-stage shards, each pre-compiled into an OpenVINO graph, so that every machine runs one shard and passes activations to the next. Three techniques make this fast enough to be useful. First, we recover the speed of the unsplit model: a naive per-stage export runs well below monolithic inference because it misses an OpenVINO GPU optimization, and injecting a beam_idx Gather into each shard triggers that optimization (the IndirectKVCache fusion) and brings the shards to parity. Second, we leverage speculative decoding on stateful OpenVINO models. Third, the pipeline serves several users at once by interleaving their requests across the stages, each request carrying its own cache (micro-batching). Together, a two-node Llama 3.1 8B INT4 pipeline serves two concurrent users at 1.79x the single-user throughput of the unsplit model on the same hardware, and the gap widens under simulated wide-area latency. The same design scales to a 70B model that no single fleet member can hold: a four-node deployment of Lunar Lake AI PCs on Intel Tiber Cloud serves a single user at interactive speed, with output token-for-token identical to the same four-node pipeline decoding without speculation. Code, raw benchmark logs, and reproduction scripts ship as a self-contained package at https://github.com/labscommunity/pipeline-sharded-inference-paper (in the top-level reproduction/ directory).",
+        "canonical_id": "arXiv:2608.19147",
+        "arxiv_id": "2608.19147",
+        "authors": [
+          "Tate Berenbaum",
+          "M. Venkatachalam"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12915",
+      "identity_tokens": [
+        "id:arXiv:2608.12915",
+        "title:infactplanner planning sustainable geodistributed llm data centers",
+        "url:https://www.semanticscholar.org/paper/0e383eeff8986df39080e60f7e9698ec8e32ce43"
+      ],
+      "record": {
+        "title": "InFactPlanner: Planning Sustainable Geo-Distributed LLM Data Centers",
+        "source_url": "https://www.semanticscholar.org/paper/0e383eeff8986df39080e60f7e9698ec8e32ce43",
+        "year": 2026,
+        "published": "2026-08-13",
+        "abstract": "The rapid growth of LLM inference is shifting sustainability concerns from one-time training to continuous serving, where infrastructure decisions shape energy use, carbon emissions, water consumption, and service quality. Yet operators often need to compare deployment alternatives before large-scale infrastructure is built, making direct measurement costly, slow, and sometimes infeasible. We present InFactPlanner, a trace-driven decision-support framework for what-if analysis of sustainable AI data center deployment for LLM inference across single and geo-distributed sites. InFactPlanner combines query traces, hardware-model profiles, candidate site configurations, PUE/WUE parameters, renewable generation models, and time-varying grid carbon intensity to estimate power, energy, carbon emissions, water use, latency, and server utilization. The framework abstracts low-level serving effects into configurable hardware-model profiles, enabling rapid comparison of site selection, capacity placement, hardware, model, renewable integration, and routing choices. We validate the energy accounting pipeline by reproducing reference LLM inference energy estimates with less than 10% deviation, evaluate scalability across multiple data centers and server counts, and demonstrate scenario-driven decision analyses for hardware selection, renewable placement, geographic deployment, and carbon-aware routing. Our results show that sustainability-optimal choices can differ from latency-optimal ones, and that the carbon value of deployment depends strongly on the local grid mix.",
+        "canonical_id": "arXiv:2608.12915",
+        "arxiv_id": "2608.12915",
+        "authors": [
+          "Nicoletta Tsiopani",
+          "Moysis Symeonides",
+          "G. Pallis",
+          "M. Dikaiakos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3829200",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829200",
+        "title:connex endpoint mobility primitives for dynamic llm serving",
+        "url:https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f"
+      ],
+      "record": {
+        "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Modern LLM serving systems increasingly adopt elastic inference pipelines where stages frequently join, leave, and migrate across nodes. However, existing GPU communication frameworks like NCCL assume static topologies, causing routing failures and P99 latency spikes during worker transitions that violate sub-millisecond tail latency requirements. We present Connex, a communication system that elevates endpoint mobility from exceptional failure to first-class primitive. Rather than optimizing individual mechanisms in isolation, Connex defines a mobility contract that the communication layer enforces whenever workers join, leave, or migrate while token streams, activations, or KV transfers are in flight. The contract is realized through three cooperating mechanisms: (1) epoch-based routing that bounds staleness without global coordination, (2) explicit handover protocols that preserve stream ordering and provide exactly-once delivery across migrations, and (3) credit-based backpressure with traffic-class isolation that prevents churn-induced interference with latency-critical paths. Evaluation on a 5-node GPU cluster under synthetic and production-derived churn shows that Connex reduces P99 tail spikes by up to 85% compared to NCCL-based baselines, achieves sub-second cutover, and maintains 100% goodput at moderate loads where baselines collapse to 0–28%, while incurring less than 5% steady-state overhead.",
+        "canonical_id": "DOI:10.1145/3789240.3829200",
+        "doi": "10.1145/3789240.3829200",
+        "authors": [
+          "Yanying Lin",
+          "Vincent Liu",
+          "Tao Luo",
+          "Chengzhong Xu",
+          "Ke-Jiang Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08338",
+      "identity_tokens": [
+        "id:arXiv:2608.08338",
+        "title:splitgate pooledevidence stochasticrollout scheduling for timely progressive edge inference",
+        "url:https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2"
+      ],
+      "record": {
+        "title": "Split-Gate Pooled-Evidence Stochastic-Rollout Scheduling for Timely Progressive Edge Inference",
+        "source_url": "https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "This paper investigates causal radio scheduling for progressive edge inference, with the goal of maximizing timely inference throughput under job-specific deadlines. Specifically, a multi-tenant system is modeled in which each job alternates between wireless transmission and graphics processing unit (GPU) computation. The model captures time-varying uplink service, inter-stage precedence, variant-aware batching, non-preemptive execution on two GPU streams, and heterogeneous deadlines. To account for delayed radio-GPU coupling, a split-gate pooled-evidence stochastic-rollout (SGPE-SR) scheduler is proposed. Candidate and fallback policies are selected on one set of sampled futures, after which admission is evaluated on an independent held-out set; common random numbers are retained within each held-out candidate-fallback comparison. The override is executed only when its pooled nominal/recent-history held-out advantage is sufficiently positive and an independent recent-history replication statistic is nonnegative. System-level simulations using measured GPU profiles and paired random instances show that, in a prespecified long-horizon evaluation over 30 previously unused seeds and 3,379 offered jobs, SGPE-SR improves timely completions over the strongest rate-based baseline by 4.27%, with a mean paired gain of 3.00 jobs per run and a 95% bootstrap interval of [1.60, 4.43].",
+        "canonical_id": "arXiv:2608.08338",
+        "arxiv_id": "2608.08338",
+        "authors": [
+          "Sai Xu",
+          "Yin-Bo Yu",
+          "Yanan Du",
+          "Xusheng Zhu",
+          "Gaojie Chen"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:40c1733d5a331ac1e69c5b9415bec6f34663658ce7d1d2f92ea66a786870dc6b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,814 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-564efad6ac610d22d57d",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-564efad6ac610d22d57d",
+  "axis": "recent speculative decoding draft verification parallel decoding LLM inference systems",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=speculative%20decoding%20draft%20verification%20parallel%20decoding%20LLM%20inference&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "IlsxNzg5MTcxMjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjEzMzA0OTM4J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f7b09024cd03bc48da8d2b0cce44dfb580606ac5",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 17,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T17:04:48.104743+00:00",
+  "preload_id": "preload-564efad6ac610d22d57d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Counterfactual Anatomy-Guided Spatial-Temporal Decoding for Annotation-Free Hallucination Mitigation in Medical VLMs",
+      "source_url": "https://doi.org/10.1007/978-3-032-38059-3_9",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2608.17427",
+      "arxiv_id": "2608.17427",
+      "authors": [
+        "Yifan Lu",
+        "Adinath Dukre",
+        "Abhijit Das",
+        "Ziyun Zou",
+        "Haolin Yang",
+        "Yutong Xie",
+        "Imran Razzak"
+      ]
+    },
+    {
+      "title": "Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents",
+      "source_url": "https://arxiv.org/abs/2609.23986",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.23986",
+      "arxiv_id": "2609.23986",
+      "authors": [
+        "Dongming Jiang",
+        "Yi Li",
+        "Bingzhe Li"
+      ]
+    },
+    {
+      "title": "Quantization, Memory Bandwidth Bottlenecks, and Speculative Decoding in Local Large Language Model (LLM) Inference: An Empirical Benchmark of 4-bit/8-bit Transformers (Llama 3, Mistral) on Consumer GPU, Apple Silicon, and Embedded NPU Architectures",
+      "source_url": "https://doi.org/10.5281/zenodo.22898006",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "DOI:10.5281/zenodo.22898006",
+      "doi": "10.5281/zenodo.22898006",
+      "authors": [
+        "Kartik Kothalkar"
+      ]
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "Gabriele Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin Lee",
+        "Michael Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ]
+    },
+    {
+      "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+      "source_url": "https://arxiv.org/abs/2609.24991",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24991",
+      "arxiv_id": "2609.24991",
+      "authors": [
+        "Timothy Urista"
+      ]
+    },
+    {
+      "title": "LADDER: Graph-Guided Diffusion Language Models for Efficient Multi-Hop Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.24346",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24346",
+      "arxiv_id": "2609.24346",
+      "authors": [
+        "Senlei Zhang",
+        "Linhao Luo",
+        "Qianwen Zhang",
+        "Siyu An",
+        "Junnan Dong",
+        "Shuhao Zhang",
+        "Xing Sun"
+      ]
+    },
+    {
+      "title": "Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2609.24698",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24698",
+      "arxiv_id": "2609.24698",
+      "authors": [
+        "Changxu Liu",
+        "Zhaogeng Li"
+      ]
+    },
+    {
+      "title": "Acceptance-Aware Draft Model Training for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.24150",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24150",
+      "arxiv_id": "2609.24150",
+      "authors": [
+        "Tianhua Xia",
+        "Mugilan Ganesan",
+        "Yifei Feng",
+        "Haiyu Wang",
+        "Maximilian Egger",
+        "Sai Qian Zhang"
+      ]
+    },
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "DRT: Dense Reasoning Trace for Efficient and Grounded Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.21675",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2609.21675",
+      "arxiv_id": "2609.21675",
+      "authors": [
+        "Wan Xu",
+        "Yuanfan Guo",
+        "Kevin Han",
+        "Lala Chen",
+        "Wangmeng Zuo"
+      ]
+    },
+    {
+      "title": "Watermarkable Multi-Draft Speculative Sampling via Poisson Processes",
+      "source_url": "https://arxiv.org/abs/2609.21858",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2609.21858",
+      "arxiv_id": "2609.21858",
+      "authors": [
+        "Yanxiao Liu",
+        "Sicheng Wan",
+        "Zhan Gao",
+        "Deniz Gündüz"
+      ]
+    },
+    {
+      "title": "RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.21827",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2609.21827",
+      "arxiv_id": "2609.21827",
+      "authors": [
+        "Qiao Hu",
+        "Yepeng Weng",
+        "Bo Zhang",
+        "Takehisa Yairi"
+      ]
+    },
+    {
+      "title": "To Copy or Not to Copy: Controlling Speculative Decoding via Intrinsic Model Signals",
+      "source_url": "https://arxiv.org/abs/2609.20186",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "arXiv:2609.20186",
+      "arxiv_id": "2609.20186",
+      "authors": [
+        "Roy Eisenstadt",
+        "Ido Cohen",
+        "Edo Cohen-Karlik",
+        "Lior Wolf",
+        "Itamar Zimerman"
+      ]
+    },
+    {
+      "title": "Zarya: A Hybrid Autoregressive--Masked Diffusion Language Model with Flexible Training and Dual-Mode Inference",
+      "source_url": "https://arxiv.org/abs/2609.19868",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "arXiv:2609.19868",
+      "arxiv_id": "2609.19868",
+      "authors": [
+        "Leonid Sinev",
+        "Ilya Koziev",
+        "Vladislav Leshchuk"
+      ]
+    },
+    {
+      "title": "Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions",
+      "source_url": "https://doi.org/10.1145/3846171",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.1145/3846171",
+      "doi": "10.1145/3846171",
+      "authors": [
+        "Yuyang Ji",
+        "Wenjian Xu",
+        "Xiaohong Qian",
+        "Lei Zhang",
+        "Jian Wan"
+      ]
+    },
+    {
+      "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training",
+      "source_url": "https://arxiv.org/abs/2609.19242",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "arXiv:2609.19242",
+      "arxiv_id": "2609.19242",
+      "authors": [
+        "Tarun Suresh",
+        "Pranshu Chaturvedi",
+        "Hangoo Kang",
+        "Parth Shroff",
+        "Ishan S. Khare",
+        "Hermann Kumbong",
+        "Azalia Mirhoseini"
+      ]
+    },
+    {
+      "title": "ReDraft, Don't Just Distill: Reference-Driven Revision for Continual VLLM Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.16639",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2609.16639",
+      "arxiv_id": "2609.16639",
+      "authors": [
+        "Zhihao Zhang",
+        "Mingqi Wu",
+        "Qiaole Dong",
+        "Enyu Zhou",
+        "Shuo Li",
+        "Boyang Liu",
+        "Jiazheng Zhang",
+        "Honglin Guo",
+        "Xin Guo",
+        "Shaofan Liu",
+        "Junzhe Wang",
+        "Dingwei Zhu",
+        "Minlong Peng",
+        "Yuan Hua",
+        "Zhiheng Xi",
+        "Qi Zhang",
+        "Tao Gui",
+        "Xuanjing Huang"
+      ]
+    },
+    {
+      "title": "Reason What Matters: Retrieval-Grounded Reasoning for Universal Multimodal Embeddings",
+      "source_url": "https://arxiv.org/abs/2609.15296",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15296",
+      "arxiv_id": "2609.15296",
+      "authors": [
+        "Mingzhou Jiang",
+        "Peixi Wu",
+        "Hang Cheng",
+        "Yunhao Zhou",
+        "Biao Yang",
+        "Wei Yuan",
+        "Yun Li",
+        "Fan Yang",
+        "Wenwu Ou",
+        "Honghui He"
+      ]
+    },
+    {
+      "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
+      "source_url": "https://arxiv.org/abs/2609.16213",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.16213",
+      "arxiv_id": "2609.16213",
+      "authors": [
+        "Candace S. Y. Chan",
+        "Aris Karatzikos",
+        "Ilias Georgakopoulos-Soares"
+      ]
+    },
+    {
+      "title": "Bypass Observation: A Conceptual Design of a Non-Intrusive Layer-Wise Semantic Extraction Architecture",
+      "source_url": "https://arxiv.org/abs/2609.13807",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13807",
+      "arxiv_id": "2609.13807",
+      "authors": [
+        "Haibin Tong",
+        "Jiang Yu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.17427",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-38059-3_9",
+        "id:arXiv:2608.17427",
+        "title:counterfactual anatomyguided spatialtemporal decoding for annotationfree hallucination mitigation in medical vlms",
+        "url:https://doi.org/10.1007/978-3-032-38059-3_9"
+      ],
+      "record": {
+        "title": "Counterfactual Anatomy-Guided Spatial-Temporal Decoding for Annotation-Free Hallucination Mitigation in Medical VLMs",
+        "source_url": "https://doi.org/10.1007/978-3-032-38059-3_9",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2608.17427",
+        "arxiv_id": "2608.17427",
+        "authors": [
+          "Yifan Lu",
+          "Adinath Dukre",
+          "Abhijit Das",
+          "Ziyun Zou",
+          "Haolin Yang",
+          "Yutong Xie",
+          "Imran Razzak"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23986",
+      "identity_tokens": [
+        "id:arXiv:2609.23986",
+        "title:jevmem systemonecontrolled agentic memory for efficient ai agents",
+        "url:https://arxiv.org/abs/2609.23986"
+      ],
+      "record": {
+        "title": "Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents",
+        "source_url": "https://arxiv.org/abs/2609.23986",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.23986",
+        "arxiv_id": "2609.23986",
+        "authors": [
+          "Dongming Jiang",
+          "Yi Li",
+          "Bingzhe Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.22898006",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.22898006",
+        "title:quantization memory bandwidth bottlenecks and speculative decoding in local large language model llm inference an empirical benchmark of 4bit8bit transformers llama 3 mistral on consumer gpu apple silicon and embedded npu architectures",
+        "url:https://doi.org/10.5281/zenodo.22898006"
+      ],
+      "record": {
+        "title": "Quantization, Memory Bandwidth Bottlenecks, and Speculative Decoding in Local Large Language Model (LLM) Inference: An Empirical Benchmark of 4-bit/8-bit Transformers (Llama 3, Mistral) on Consumer GPU, Apple Silicon, and Embedded NPU Architectures",
+        "source_url": "https://doi.org/10.5281/zenodo.22898006",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "DOI:10.5281/zenodo.22898006",
+        "doi": "10.5281/zenodo.22898006",
+        "authors": [
+          "Kartik Kothalkar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24847",
+      "identity_tokens": [
+        "id:arXiv:2609.24847",
+        "title:spectra adaptive execution of speculative decoding on a runtimereconfigurable tiled architecture",
+        "url:https://arxiv.org/abs/2609.24847"
+      ],
+      "record": {
+        "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+        "source_url": "https://arxiv.org/abs/2609.24847",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24847",
+        "arxiv_id": "2609.24847",
+        "authors": [
+          "Gabriele Tombesi",
+          "William Baisi",
+          "Je Yang",
+          "Elisavet Lydia Alvanaki",
+          "Kevin Lee",
+          "Michael Lippe",
+          "Biruk B. Seyoum",
+          "Luca P. Carloni"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24991",
+      "identity_tokens": [
+        "id:arXiv:2609.24991",
+        "title:who pays for the kv cache attributing shared ai inference spend across kubernetes and llm provider bills",
+        "url:https://arxiv.org/abs/2609.24991"
+      ],
+      "record": {
+        "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+        "source_url": "https://arxiv.org/abs/2609.24991",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24991",
+        "arxiv_id": "2609.24991",
+        "authors": [
+          "Timothy Urista"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24346",
+      "identity_tokens": [
+        "id:arXiv:2609.24346",
+        "title:ladder graphguided diffusion language models for efficient multihop reasoning",
+        "url:https://arxiv.org/abs/2609.24346"
+      ],
+      "record": {
+        "title": "LADDER: Graph-Guided Diffusion Language Models for Efficient Multi-Hop Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.24346",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24346",
+        "arxiv_id": "2609.24346",
+        "authors": [
+          "Senlei Zhang",
+          "Linhao Luo",
+          "Qianwen Zhang",
+          "Siyu An",
+          "Junnan Dong",
+          "Shuhao Zhang",
+          "Xing Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24698",
+      "identity_tokens": [
+        "id:arXiv:2609.24698",
+        "title:adapting treestructured speculative decoding to deepseekv4 for efficient inference",
+        "url:https://arxiv.org/abs/2609.24698"
+      ],
+      "record": {
+        "title": "Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2609.24698",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24698",
+        "arxiv_id": "2609.24698",
+        "authors": [
+          "Changxu Liu",
+          "Zhaogeng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24150",
+      "identity_tokens": [
+        "id:arXiv:2609.24150",
+        "title:acceptanceaware draft model training for speculative decoding",
+        "url:https://arxiv.org/abs/2609.24150"
+      ],
+      "record": {
+        "title": "Acceptance-Aware Draft Model Training for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.24150",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24150",
+        "arxiv_id": "2609.24150",
+        "authors": [
+          "Tianhua Xia",
+          "Mugilan Ganesan",
+          "Yifei Feng",
+          "Haiyu Wang",
+          "Maximilian Egger",
+          "Sai Qian Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21675",
+      "identity_tokens": [
+        "id:arXiv:2609.21675",
+        "title:drt dense reasoning trace for efficient and grounded multimodal reasoning",
+        "url:https://arxiv.org/abs/2609.21675"
+      ],
+      "record": {
+        "title": "DRT: Dense Reasoning Trace for Efficient and Grounded Multimodal Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.21675",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2609.21675",
+        "arxiv_id": "2609.21675",
+        "authors": [
+          "Wan Xu",
+          "Yuanfan Guo",
+          "Kevin Han",
+          "Lala Chen",
+          "Wangmeng Zuo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21858",
+      "identity_tokens": [
+        "id:arXiv:2609.21858",
+        "title:watermarkable multidraft speculative sampling via poisson processes",
+        "url:https://arxiv.org/abs/2609.21858"
+      ],
+      "record": {
+        "title": "Watermarkable Multi-Draft Speculative Sampling via Poisson Processes",
+        "source_url": "https://arxiv.org/abs/2609.21858",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2609.21858",
+        "arxiv_id": "2609.21858",
+        "authors": [
+          "Yanxiao Liu",
+          "Sicheng Wan",
+          "Zhan Gao",
+          "Deniz Gündüz"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21827",
+      "identity_tokens": [
+        "id:arXiv:2609.21827",
+        "title:rheosampling resolving the onehot dilemma in stochastic dynamictree speculative decoding",
+        "url:https://arxiv.org/abs/2609.21827"
+      ],
+      "record": {
+        "title": "RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.21827",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2609.21827",
+        "arxiv_id": "2609.21827",
+        "authors": [
+          "Qiao Hu",
+          "Yepeng Weng",
+          "Bo Zhang",
+          "Takehisa Yairi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20186",
+      "identity_tokens": [
+        "id:arXiv:2609.20186",
+        "title:to copy or not to copy controlling speculative decoding via intrinsic model signals",
+        "url:https://arxiv.org/abs/2609.20186"
+      ],
+      "record": {
+        "title": "To Copy or Not to Copy: Controlling Speculative Decoding via Intrinsic Model Signals",
+        "source_url": "https://arxiv.org/abs/2609.20186",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "arXiv:2609.20186",
+        "arxiv_id": "2609.20186",
+        "authors": [
+          "Roy Eisenstadt",
+          "Ido Cohen",
+          "Edo Cohen-Karlik",
+          "Lior Wolf",
+          "Itamar Zimerman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19868",
+      "identity_tokens": [
+        "id:arXiv:2609.19868",
+        "title:zarya a hybrid autoregressivemasked diffusion language model with flexible training and dualmode inference",
+        "url:https://arxiv.org/abs/2609.19868"
+      ],
+      "record": {
+        "title": "Zarya: A Hybrid Autoregressive--Masked Diffusion Language Model with Flexible Training and Dual-Mode Inference",
+        "source_url": "https://arxiv.org/abs/2609.19868",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "arXiv:2609.19868",
+        "arxiv_id": "2609.19868",
+        "authors": [
+          "Leonid Sinev",
+          "Ilya Koziev",
+          "Vladislav Leshchuk"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3846171",
+      "identity_tokens": [
+        "id:DOI:10.1145/3846171",
+        "title:towards optimal speculative decoding a comprehensive survey on optimizations and future directions",
+        "url:https://doi.org/10.1145/3846171"
+      ],
+      "record": {
+        "title": "Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions",
+        "source_url": "https://doi.org/10.1145/3846171",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.1145/3846171",
+        "doi": "10.1145/3846171",
+        "authors": [
+          "Yuyang Ji",
+          "Wenjian Xu",
+          "Xiaohong Qian",
+          "Lei Zhang",
+          "Jian Wan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19242",
+      "identity_tokens": [
+        "id:arXiv:2609.19242",
+        "title:block parallelism for efficient distributed longcontext diffusion language model training",
+        "url:https://arxiv.org/abs/2609.19242"
+      ],
+      "record": {
+        "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training",
+        "source_url": "https://arxiv.org/abs/2609.19242",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "arXiv:2609.19242",
+        "arxiv_id": "2609.19242",
+        "authors": [
+          "Tarun Suresh",
+          "Pranshu Chaturvedi",
+          "Hangoo Kang",
+          "Parth Shroff",
+          "Ishan S. Khare",
+          "Hermann Kumbong",
+          "Azalia Mirhoseini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16639",
+      "identity_tokens": [
+        "id:arXiv:2609.16639",
+        "title:redraft dont just distill referencedriven revision for continual vllm posttraining",
+        "url:https://arxiv.org/abs/2609.16639"
+      ],
+      "record": {
+        "title": "ReDraft, Don't Just Distill: Reference-Driven Revision for Continual VLLM Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.16639",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2609.16639",
+        "arxiv_id": "2609.16639",
+        "authors": [
+          "Zhihao Zhang",
+          "Mingqi Wu",
+          "Qiaole Dong",
+          "Enyu Zhou",
+          "Shuo Li",
+          "Boyang Liu",
+          "Jiazheng Zhang",
+          "Honglin Guo",
+          "Xin Guo",
+          "Shaofan Liu",
+          "Junzhe Wang",
+          "Dingwei Zhu",
+          "Minlong Peng",
+          "Yuan Hua",
+          "Zhiheng Xi",
+          "Qi Zhang",
+          "Tao Gui",
+          "Xuanjing Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15296",
+      "identity_tokens": [
+        "id:arXiv:2609.15296",
+        "title:reason what matters retrievalgrounded reasoning for universal multimodal embeddings",
+        "url:https://arxiv.org/abs/2609.15296"
+      ],
+      "record": {
+        "title": "Reason What Matters: Retrieval-Grounded Reasoning for Universal Multimodal Embeddings",
+        "source_url": "https://arxiv.org/abs/2609.15296",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15296",
+        "arxiv_id": "2609.15296",
+        "authors": [
+          "Mingzhou Jiang",
+          "Peixi Wu",
+          "Hang Cheng",
+          "Yunhao Zhou",
+          "Biao Yang",
+          "Wei Yuan",
+          "Yun Li",
+          "Fan Yang",
+          "Wenwu Ou",
+          "Honghui He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16213",
+      "identity_tokens": [
+        "id:arXiv:2609.16213",
+        "title:artificial intelligence and biosecurity capabilities threat pathways and defenseindepth governance",
+        "url:https://arxiv.org/abs/2609.16213"
+      ],
+      "record": {
+        "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
+        "source_url": "https://arxiv.org/abs/2609.16213",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.16213",
+        "arxiv_id": "2609.16213",
+        "authors": [
+          "Candace S. Y. Chan",
+          "Aris Karatzikos",
+          "Ilias Georgakopoulos-Soares"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13807",
+      "identity_tokens": [
+        "id:arXiv:2609.13807",
+        "title:bypass observation a conceptual design of a nonintrusive layerwise semantic extraction architecture",
+        "url:https://arxiv.org/abs/2609.13807"
+      ],
+      "record": {
+        "title": "Bypass Observation: A Conceptual Design of a Non-Intrusive Layer-Wise Semantic Extraction Architecture",
+        "source_url": "https://arxiv.org/abs/2609.13807",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13807",
+        "arxiv_id": "2609.13807",
+        "authors": [
+          "Haibin Tong",
+          "Jiang Yu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:55bccdf574b3d0d97a2c70a7e282c5730c82ff6ad8aa9d8226218f2a5bf50ad3",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
