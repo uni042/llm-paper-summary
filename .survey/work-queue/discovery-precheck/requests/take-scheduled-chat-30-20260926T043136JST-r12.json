@@ -1,0 +1,20 @@
+{
+  "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+  "collector_id": "direct-take-scheduled-chat-30-20260926T043136JST-r12",
+  "direct_take": true,
+  "discovery_bank": "a",
+  "discovery_slot_path": ".survey/work-queue/records/chat-record/discovery-preload.json",
+  "initial_cursor": "180",
+  "max_pages": 25,
+  "operation": "precheck_discovery_candidates",
+  "page_size": 20,
+  "preload_id": "preload-561c765b08a24f1caf0f",
+  "preload_seed": false,
+  "provider": "semantic_scholar",
+  "request_id": "take-scheduled-chat-30-20260926T043136JST-r12",
+  "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
+  "schema_version": 3,
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "worker_id": "scheduled-chat-30"
+}
