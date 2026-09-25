@@ -4,7 +4,42 @@
   "slot": "results",
   "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
   "job_id": "job-research-83fc27428de67cd9",
-  "data": {},
+  "data": {
+    "overview": "固定P/D分離との16負荷点で、要求throughput +16.6%、入力token throughput +17.4%、出力token throughput +16.2%の幾何平均改善。最大は入力+42.7%、出力+43.4%。平均TTFTは全点で改善した。",
+    "key_results": [
+      {
+        "metric": "request throughput",
+        "value": "+16.6% geometric mean",
+        "baseline": "Static P/D",
+        "condition": "16 load points",
+        "interpretation": "短期のP/D imbalanceをleaseで吸収する。"
+      },
+      {
+        "metric": "input token throughput",
+        "value": "+17.4% geometric mean; max +42.7%",
+        "baseline": "Static P/D",
+        "condition": "16 load points",
+        "interpretation": "prefill混雑時にdecode余剰計算を利用する効果が大きい。"
+      },
+      {
+        "metric": "output token throughput",
+        "value": "+16.2% geometric mean; max +43.4%",
+        "baseline": "Static P/D",
+        "condition": "16 load points",
+        "interpretation": "decode保護を維持しつつ総処理量を改善する。"
+      },
+      {
+        "metric": "6-node Crossflow",
+        "value": "763K input tok/s, 3.43K output tok/s",
+        "baseline": "9-node Static best: 742K input tok/s, 3.15K output tok/s",
+        "condition": "reported hardware comparison",
+        "interpretation": "少ないnode数でもstatic構成を上回る例を示す。"
+      }
+    ],
+    "negative_results": "GLM-5.2 TraceLabでは平均ITLが20.9〜34.3%悪化した。4P2D TraceLabでは入力throughput -2.8%、平均TTFT +33.3%となる条件があり、decode余剰が小さい構成や干渉が強い条件では借用が逆効果になり得る。",
+    "interpretation": "改善は役割変更の高速化ではなく、decodeを保護したまま余剰能力だけを一時借用することから得られる。",
+    "quality_impact": "serving品質は主にTTFT/ITLで評価され、平均TTFT改善と一部ITL悪化のtrade-offがある。モデル出力品質そのものを変える手法ではない。"
+  },
   "reservation": {
     "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
     "worker_id": "scheduled-chat-00",

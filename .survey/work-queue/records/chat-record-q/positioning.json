@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
   "job_id": "job-research-83fc27428de67cd9",
-  "data": {},
+  "data": {
+    "limitations": "評価はGB300、SGLang、2モデル、2系統のtrace中心で、異なるinterconnectやmodel familyへの一般化は限定的。干渉が強い条件やdecode側が少ない構成ではITL/TTFTが悪化し得る。公式code公開URLやupstream統合状況は本文から確認できない。",
+    "differences": "DistServe/Splitwise等の固定P/D境界に対し、Crossflowは役割固定のまま期限付き多資源予算を貸す。PPDより容量を明示予約・再検証し、DuetServe/Nexus型のcolocationに対してcluster側の借用判断と安全budgetを加える。",
+    "implementation_status": "SGLang研究実装。cluster側約6.7K行Pythonシミュレーション、worker側2,807行追加・36行削除、15ファイル。新規model kernelは不要。公式公開repositoryは本文から確認できない。",
+    "research_positioning": "P/D disaggregationの静的capacity planningと完全なrole reassignmentの中間に、短寿命のcapacity lendingという制御面を導入する研究。agentic workloadで入力/出力比が急変するserving systemに適する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
     "worker_id": "scheduled-chat-00",

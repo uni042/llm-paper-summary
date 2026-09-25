@@ -4,7 +4,26 @@
   "slot": "problem_method",
   "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
   "job_id": "job-research-83fc27428de67cd9",
-  "data": {},
+  "data": {
+    "problem": "未キャッシュ入力対出力トークン比は分単位で大きく変動し、固定P/D分離では片側が混雑する一方でもう片側に余剰が生じる。公開agentic traceでは同一日の時間単位比率が中央値24.5倍まで変動する一方、モデル初期化・通信群構築・キャッシュ・CUDA graph・warmupを伴うレプリカ役割変更には十数分かかるため、短時間の需要変動へ追従できない。",
+    "novelty": "デコードノードの役割を変更せず、安全に貸せる能力を短寿命・取消可能な多資源leaseとして公開し、中央入場制御とノード直前の再検証を組み合わせてプリフィルを一時的に実行させる。",
+    "method_overview": "プリフィルの仮想待ち時間を未キャッシュ入力から推定し、各デコードノードが計算・KV・予測出力・転送・同時貸出数の期限付き枠を公開する。クラスタ側は通常P経路とデコード側局所プリフィルの予測完了時刻を比較し、後者が速く全資源上限を満たす要求だけを原子的に予約する。デコード側はRadix cacheでprefixを再利用し、各実行単位直前に状態を再検証する。危険なら未発行作業を止め、最初のtoken前の失敗は通常P経路へ戻す。",
+    "components": [
+      {
+        "name": "多資源lease",
+        "description": "compute、KV capacity、predicted output、transfer、concurrencyを同時に制約する短寿命予算をdecode nodeが公開する。"
+      },
+      {
+        "name": "完了時刻ベース入場制御",
+        "description": "通常prefillとdecode-side local prefillの予測完了時刻を比較し、借用が有利な要求だけを予約する。"
+      },
+      {
+        "name": "実行直前再検証",
+        "description": "予約後にdecode負荷が変わった場合でも各実行単位直前に安全性を再確認し、必要なら未発行作業を中止する。"
+      }
+    ],
+    "system_design": "役割再配置ではなく余剰能力だけを短期貸出することで、分単位の需給変動へ秒〜要求単位で追従する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
     "worker_id": "scheduled-chat-00",

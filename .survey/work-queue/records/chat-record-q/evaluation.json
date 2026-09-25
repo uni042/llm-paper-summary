@@ -4,7 +4,12 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
   "job_id": "job-research-83fc27428de67cd9",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA GB300。通常6サーバー2P4D、各サーバー288GB GPU×4、tensor parallelism 4。",
+    "software": "2026-06-18時点SGLang、kernel 0.4.2.post2、128K context、100GB Mooncake cache、NIXL、RDMA。",
+    "methodology": "公開TraceLabと内部traceの1時間区間を元の到着時刻を保ってreplayし、複数負荷点でstatic P/Dと動的手法を比較する。throughput、TTFT、ITLを測定し、構成差と負荷差を評価する。",
+    "scope": "GPT-OSS-120BとGLM-5.2を中心に評価。比較対象はStatic P/D、PPD、SMetric、CacheWise。主評価は6サーバー2P4Dで、4P2D等の構成も調べる。"
+  },
   "reservation": {
     "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
     "worker_id": "scheduled-chat-00",

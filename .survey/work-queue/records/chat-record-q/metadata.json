@@ -4,7 +4,49 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
   "job_id": "job-research-83fc27428de67cd9",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2609.27085",
+    "arxiv_id": "2609.27085",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+    "summary": "固定プリフィル／デコード分離では需要比が分単位で変わる一方、レプリカ再配置には十数分かかる。Crossflowはデコードノードの役割を維持したまま、計算量・KV容量・転送量・将来出力を束ねた短寿命で取消可能な貸出枠を公開し、プリフィル混雑時だけ入力処理をデコード側へ貸し出す。SGLang実装をGPT-OSS-120BとGLM-5.2、GB300で評価し、固定P/D分離よりトークンスループットを幾何平均16.2〜17.4%、高負荷で最大43.4%改善した。",
+    "list_summary": "デコード側の余剰資源を短寿命の多資源leaseとしてプリフィルへ貸し、固定P/D分離の短期需給不均衡を緩和する。",
+    "published": "2026-09-22",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint",
+    "lineage": "prefill-decode disaggregation / elastic LLM serving / agentic workloads",
+    "topics": [
+      "LLM serving",
+      "prefill-decode分離",
+      "elasticity",
+      "KV cache",
+      "SGLang"
+    ],
+    "importance": "固定P/D境界をレプリカ再配置せず短時間だけ越えることで、agentic workloadの急速なphase imbalanceへ追従する。",
+    "implementation": "SGLang研究実装。クラスタ側約6.7K行Pythonシミュレーション、worker側2,807行追加・36行削除、15ファイル。新規モデルカーネル不要。",
+    "hardware_evaluation": "NVIDIA GB300。通常6サーバー2P4D、各サーバー288GB GPU×4、TP4。",
+    "quality_effect": "平均TTFTは全評価点で改善した一方、一部条件ではITLやTTFTが悪化する。",
+    "source": "https://arxiv.org/abs/2609.27085",
+    "sources": [
+      "https://arxiv.org/abs/2609.27085",
+      "https://arxiv.org/html/2609.27085v1"
+    ],
+    "code": null,
+    "last_checked": "2026-09-25",
+    "references": [],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary manuscript",
+    "references_total": 65
+  },
   "reservation": {
     "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
     "worker_id": "scheduled-chat-00",
