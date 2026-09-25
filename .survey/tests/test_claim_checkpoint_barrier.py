@@ -39,7 +39,7 @@ def seed_request(
     root: Path,
     request_id: str,
     *,
-    worker_id: str = "scheduled-worker",
+    worker_id: str = "scheduled-chat-30",
     requested_at: datetime = AT,
     checkpointed_jobs=None,
 ):
