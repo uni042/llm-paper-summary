@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 19:27:29 JST**
+> 自動生成: **2026-09-25 19:35:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **361** |
-| 未claim Research job | **218** |
+| 未claim Research job | **217** |
 | 直近24hの検証済みResearch収録 | **7** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-25 18:19:10 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（34時間51分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（35時間0分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **143** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **52** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **3** | **8** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **3** | **9** | **3** | **0** | **143** | **0** | **3** |
+| 合計 | **3** | **9** | **3** | **0** | **144** | **52** | **3** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -154,37 +154,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **0件**
-- `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
-  - claim: **09-25 03:48:37 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
-- `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
-  - claim: **09-25 11:29:37 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
-- `arXiv:2609.27373` — Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models / worker `shared-preload-pool`
-  - claim: **09-25 18:33:37 JST** / heartbeat: **—** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a5acd3b5ba5b245.json`
-- `SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b` — Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers / worker `shared-preload-pool`
-  - claim: **09-25 11:07:04 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0e6a646bc0e365e6.json`
-- `arXiv:2402.12374` — Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding / worker `shared-preload-pool`
-  - claim: **09-25 03:48:37 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0f8cc0c93811431b.json`
-- `arXiv:2506.04301` — The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective / worker `shared-preload-pool`
-  - claim: **09-25 03:48:37 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1846db079990eb9b.json`
-- `arXiv:2511.12286` — Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing / worker `shared-preload-pool`
-  - claim: **09-25 09:24:34 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-19ebd04771d99798.json`
-- `DOI:10.1109/EEI70303.2026.11640499` — PMKS: Co-Designing Distributed Networking and Multi-Tier Storage for Ultra-Long Context LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 18:33:37 JST** / heartbeat: **—** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1edac6e56714dd58.json`
-- `DOI:10.1109/ISCAS66217.2026.11562764` — AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs / worker `shared-preload-pool`
-  - claim: **09-25 09:24:34 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2a1bde22bebd2f67.json`
-- `DOI:10.1145/3620666.3651324` — IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System / worker `shared-preload-pool`
-  - claim: **09-25 03:48:37 JST** / heartbeat: **09-25 18:33:37 JST** / lease expiry: **09-26 06:33:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2b9259708f8f9ac7.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **52件**
+- `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
+  - claim: **09-25 00:26:58 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
+- `arXiv:2609.04724` — FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators / worker `shared-preload-pool`
+  - claim: **09-24 15:33:22 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-04cf5cb095abe08f.json`
+- `arXiv:2609.25451` — Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-05fc71d26e12a3ee.json`
+- `arXiv:2609.23816` — SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0729262d447a8308.json`
+- `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
+- `arXiv:2609.26333` — Disaggregated Quantization: Specializing LLM Prefill and Decode / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1932d6ac89ddfafb.json`
+- `arXiv:2606.31519` — RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-220eaa0cfe111598.json`
+- `arXiv:2608.10545` — ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2db1a9d83c60d21c.json`
+- `DOI:10.1109/HPCA68181.2026.11408577` — LiLo: Harnessing the on-Chip Accelerators in Intel CPUs for Compressed LLM Inference Acceleration / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-33e77bc7b58dbf7d.json`
+- `arXiv:2602.11688` — GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **09-25 19:33:54 JST** / lease expiry: **09-26 07:33:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-352411c0dfdab5c8.json`
 
 #### Audit
 
