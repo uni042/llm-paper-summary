@@ -1,0 +1,89 @@
+from __future__ import annotations
+
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+import backfill_paper_metadata  # noqa: E402
+
+
+class BackfillPaperMetadataTests(unittest.TestCase):
+    def test_incomplete_import_is_completed_from_existing_text_and_arxiv_facts(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/99-other-inference-systems/2026-2609.99991-test.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                """---
+canonical_id: "arXiv:2609.99991"
+arxiv_id: "2609.99991"
+title: "Imported Test Paper"
+list_summary: "既存の一文解説をそのまま再利用してメタデータを補完するためのテスト論文である。"
+source: "https://arxiv.org/abs/2609.99991"
+---
+
+# Imported Test Paper
+
+## 一文解説
+既存の一文解説をそのまま再利用してメタデータを補完するためのテスト論文である。
+
+## 概要
+本文。
+""",
+                encoding="utf-8",
+            )
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+            changed, added = backfill_paper_metadata.backfill(
+                paper,
+                {
+                    "2609.99991": {
+                        "authors": ["Example Author"],
+                        "published": "2026-09-01",
+                        "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+                        "abs_url": "https://arxiv.org/abs/2609.99991",
+                        "pdf_url": "https://arxiv.org/pdf/2609.99991",
+                    }
+                },
+                "2026-09-26",
+            )
+
+            self.assertTrue(changed)
+            self.assertIn("summary(existing-one-line)", added)
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["summary"], meta["list_summary"])
+            self.assertEqual(meta["authors"], ["Example Author"])
+            self.assertEqual(meta["publication"], "arXiv")
+            self.assertEqual(meta["publication_type"], "プレプリント")
+            self.assertEqual(meta["publication_status"], "arXiv preprint")
+            self.assertEqual(meta["arxiv_categories"]["primary"], "cs.LG")
+            self.assertIsNone(meta["code"])
+            self.assertEqual(meta["last_checked"], "2026-09-26")
+            self.assertFalse(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+    def test_body_one_line_can_fill_missing_list_and_summary(self) -> None:
+        meta = {
+            "canonical_id": "arXiv:2609.99992",
+            "arxiv_id": "2609.99992",
+            "title": "Legacy Import",
+        }
+        body = """# Legacy Import
+
+## 一文解説
+チャット退避から戻した旧形式本文に残っている説明を再利用する。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_one_line_summary(body),
+            "チャット退避から戻した旧形式本文に残っている説明を再利用する。",
+        )
+        self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+
+if __name__ == "__main__":
+    unittest.main()
