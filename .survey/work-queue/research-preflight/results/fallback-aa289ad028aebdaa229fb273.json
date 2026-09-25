@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "fallback-aa289ad028aebdaa229fb273",
+  "kind": "research",
+  "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
+  "job_id": "job-research-12d29ccbbefd4d02",
+  "record_bank": "k",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T10:58:09+09:00",
+  "ok": false,
+  "preflight_passed": false,
+  "repair_required": false,
+  "decision": "FIX_PREFLIGHT_REQUEST",
+  "error": "PreflightRequestError: self_review must explicitly pass every item before automated preflight: primary_source_read_to_end, no_unverified_inference, summary_and_list_summary_specific, headline_result_grounded, method_end_to_end_explained, evaluation_conditions_and_baselines_explicit, results_conditions_and_interpretation_explicit, limitations_and_positioning_specific",
+  "checked_at": "2026-09-25T02:06:04+00:00",
+  "next_action": "Fix the preflight request contract. Do not create a completed-submission request until a new preflight result has preflight_passed=true."
+}
