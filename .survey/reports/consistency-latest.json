@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-24T14:36:54.897531+00:00",
-  "status": "passed",
+  "checked_at": "2026-09-25T23:42:03.934278+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 11617,
-  "checked_file_count": 11617,
+  "inventory_file_count": 11844,
+  "checked_file_count": 11844,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,857 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 609,
-  "findings": []
+  "external_url_count": 987,
+  "findings": [
+    {
+      "code": "invalid_json",
+      "path": ".survey/work-queue/run-state/requests/run-state-scheduled-chat-30-20260926T052821JST-r7-start.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "source"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "source"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "source"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2025-2511.00868-flexicache-leveraging-temporal-stability-of-attention-heads-for-efficient-kv-cache-management.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2607.24331-dynacalkv-key-value-cache-compression-via-head-grouping-and-adaptive-rank-allocation.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "last_checked"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md",
+      "detail": "arxiv_categories.primary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "detail": "sources"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "detail": "implementation"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "detail": "last_checked"
+    }
+  ]
 }

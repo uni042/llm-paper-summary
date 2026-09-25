@@ -10511,8 +10511,8 @@
     "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md": {
       "status": "blocked",
       "source_fingerprint": "e24e75886990b06e7feed2f47e9acbee653932c3ca184e7754b099403424bd3d",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-25T23:39:08+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-09-25T23:40:55+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md": {
       "status": "complete",
@@ -10579,10 +10579,13 @@
       "checked_at": "2026-09-25T23:39:16+00:00"
     },
     "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "39481d012cbba2097d9cde9cce5d61f73e17cc1f60afe4e2f4957cf4e95cd72f",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-25T23:39:17+00:00"
+      "references_total": 19,
+      "normalized_references": 8,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2609.27746.pdf",
+      "checked_at": "2026-09-25T23:40:58+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md": {
       "status": "complete",
@@ -10665,5 +10668,5 @@
       "checked_at": "2026-09-25T23:39:28+00:00"
     }
   },
-  "updated_at": "2026-09-25T23:40:32+00:00"
+  "updated_at": "2026-09-25T23:41:16+00:00"
 }

@@ -1,14 +1,19 @@
 ---
-canonical_id: "DOI:10.1016/j.neunet.2026.109617"
-title: "MoEP: Compact and efficient sparsity with modular expert paths"
-list_summary: "固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。"
-authors: ["Joonas Tapaninaho", "Mourad Oussalah"]
-publication: "Neural Networks 205 (2027) 109617"
-published_online: "2026-09-11"
-doi: "10.1016/j.neunet.2026.109617"
-lineage: "02-adaptive-expert-computation-compression"
-source: "https://doi.org/10.1016/j.neunet.2026.109617"
-primary_fulltext: "https://oulurepo.oulu.fi/bitstream/handle/10024/65293/nbnfioulu-202609186152.pdf"
+canonical_id: DOI:10.1016/j.neunet.2026.109617
+title: 'MoEP: Compact and efficient sparsity with modular expert paths'
+list_summary: 固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
+authors:
+- Joonas Tapaninaho
+- Mourad Oussalah
+publication: Neural Networks 205 (2027) 109617
+published_online: '2026-09-11'
+doi: 10.1016/j.neunet.2026.109617
+lineage: 02-adaptive-expert-computation-compression
+source: https://doi.org/10.1016/j.neunet.2026.109617
+primary_fulltext: https://oulurepo.oulu.fi/bitstream/handle/10024/65293/nbnfioulu-202609186152.pdf
+code: null
+last_audited: null
+audit_version: 0
 ---
 # MoEP: Compact and efficient sparsity with modular expert paths
 
