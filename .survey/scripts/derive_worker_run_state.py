@@ -21,6 +21,7 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+import blocked_retry
 import continuation_gate
 import run_finalization_gate
 import worker_quota_policy
@@ -46,6 +47,82 @@ RUNTIME_CONDITIONS = {
 }
 PLATFORM_CONTEXT_LIMIT_EVENT = "platform_tool_call_rejected"
 PLATFORM_CONTEXT_LIMIT_SCOPE = "run_wide"
+WRITE_BLOCKED_REASON = "platform_content_write_rejected_after_bundle_fallback"
+
+
+def _normalize_write_blocked_job(value: Any, worker_id: str, scheduled_slot: str) -> dict[str, Any] | None:
+    if value is None:
+        return None
+    if scheduled_slot == "0830":
+        raise ValueError("08:30 maintenance cannot carry write_blocked_job")
+    if not isinstance(value, dict):
+        raise ValueError("write_blocked_job must be an object")
+    normalized: dict[str, Any] = {}
+    for key in ("job_id", "claim_id", "attempt_id"):
+        raw = str(value.get(key) or "").strip()
+        if not raw or not claim_state.SAFE_ID_RE.fullmatch(raw):
+            raise ValueError(f"write_blocked_job.{key} must be a safe non-empty id")
+        normalized[key] = raw
+    reason = str(value.get("reason") or "").strip()
+    if reason != WRITE_BLOCKED_REASON:
+        raise ValueError(f"write_blocked_job.reason must be {WRITE_BLOCKED_REASON}")
+    normalized["reason"] = reason
+    observed_error = str(value.get("observed_error") or "").strip()
+    if len(observed_error) > 2000:
+        raise ValueError("write_blocked_job.observed_error is too long")
+    normalized["observed_error"] = observed_error
+    normalized["worker_id"] = worker_id
+    return normalized
+
+
+def _apply_write_blocked_job(root: Path, request: dict[str, Any]) -> dict[str, Any]:
+    marker = request.get("write_blocked_job")
+    if not isinstance(marker, dict):
+        return {"applied": False, "status": "none"}
+    now = dt.datetime.now(dt.timezone.utc)
+    timestamp = now.replace(microsecond=0).isoformat()
+    job_id = str(marker["job_id"])
+    job_path = root / ".survey/work-queue/jobs" / f"{job_id}.json"
+    claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
+    job = _read(job_path, {})
+    claim = _read(claim_path, {})
+    if not isinstance(job, dict) or job.get("job_id") != job_id:
+        raise ValueError("write_blocked_job target job is missing or mismatched")
+    if job.get("type") not in {"research", "audit"}:
+        raise ValueError("write_blocked_job target must be Research/Audit")
+    if not isinstance(claim, dict):
+        raise ValueError("write_blocked_job target claim is missing")
+    for key in ("claim_id", "attempt_id"):
+        if str(claim.get(key) or "") != str(marker[key]):
+            raise ValueError(f"write_blocked_job {key} no longer matches current claim")
+    if str(claim.get("worker_id") or "") != request["worker_id"]:
+        raise ValueError("write_blocked_job worker no longer owns current claim")
+    if job.get("status") == "blocked" and job.get("write_blocked_run_state_request_id") == request["request_id"]:
+        return {"applied": True, "status": "already_blocked", "job_id": job_id, "claim_id": marker["claim_id"], "attempt_id": marker["attempt_id"], "retry_not_before": job.get("retry_not_before")}
+    if job.get("status") not in {"ready", "blocked"}:
+        raise ValueError(f"write_blocked_job target is already terminal: {job.get('status')}")
+    if claim.get("released_at") or claim.get("lease_invalidated_at"):
+        raise ValueError("write_blocked_job claim is already released or invalidated")
+
+    job["status"] = "blocked"
+    job["completed_at"] = timestamp
+    job["blocked_at"] = timestamp
+    job["blocker"] = WRITE_BLOCKED_REASON
+    job["write_blocked_run_state_request_id"] = request["request_id"]
+    job["write_blocked_attempt_id"] = marker["attempt_id"]
+    if marker.get("observed_error"):
+        job["write_blocked_observed_error"] = marker["observed_error"]
+    blocked_retry.record_new_block_event(job, now)
+    _write(job_path, job)
+
+    released = dict(claim)
+    released["released_at"] = timestamp
+    released["expires_at"] = timestamp
+    released["release_reason"] = WRITE_BLOCKED_REASON
+    released["write_blocked_run_state_request_id"] = request["request_id"]
+    _write(claim_path, released)
+    return {"applied": True, "status": "blocked", "job_id": job_id, "claim_id": marker["claim_id"], "attempt_id": marker["attempt_id"], "retry_not_before": job.get("retry_not_before")}
+
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -101,6 +178,9 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     runtime_condition_scope = str(value.get("runtime_condition_scope") or "").strip()
     runtime_condition_fallback_exhausted = (
         value.get("runtime_condition_fallback_exhausted") is True
+    )
+    write_blocked_job = _normalize_write_blocked_job(
+        value.get("write_blocked_job"), worker_id, scheduled_slot
     )
 
     direct_inventory = value.get("candidate_inventory_at_start")
@@ -177,6 +257,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_event": runtime_condition_event,
         "runtime_condition_scope": runtime_condition_scope,
         "runtime_condition_fallback_exhausted": runtime_condition_fallback_exhausted,
+        "write_blocked_job": write_blocked_job,
         "route_recovery_source": route_recovery_source,
         "recovered_work_mode_at_start": recovered_work_mode,
         **direct_route,
@@ -1447,6 +1528,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         request["actual_invocation_start_original"] = str(raw_invocation_start).strip()
         request["actual_invocation_start_recovery"] = start_recovery
 
+    write_blocked_job = _apply_write_blocked_job(root, request)
+
     cached = None if force_canonical else run_state_cache.get_run(root, request)
     cached_claims = (
         _refresh_cached_claim_state(root, cached.get("claims", {}))
@@ -1711,6 +1794,9 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     requested_runtime = request["runtime_condition"]
     runtime = requested_runtime
     runtime_condition_ignored_reason = None
+    if write_blocked_job.get("applied") and runtime == "transport_unrecoverable":
+        runtime = "none"
+        runtime_condition_ignored_reason = "target_write_blocked_and_released"
     if runtime == "handoff_guard":
         runtime = "none"
         runtime_condition_ignored_reason = "handoff_guard_is_derived_from_deadline"
@@ -1942,6 +2028,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "runtime_condition_fallback_exhausted", False
         ),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
+        "write_blocked_job": write_blocked_job,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
         **public_submission,
@@ -1988,7 +2075,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
             "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability. "
-            "Before declaring transport_unrecoverable or durable_transports_unavailable, attempt an actual write to the required canonical request/direct-take/submission path and record the concrete failure."
+            "If one Research/Audit paper alone cannot be written, report it through write_blocked_job on the normal run-state request so Actions marks that job blocked and releases its claim; continue to another paper. Before declaring transport_unrecoverable or durable_transports_unavailable, confirm that this run-state quarantine path or other required durable writes are also unavailable."
         ),
         "rule": (
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
