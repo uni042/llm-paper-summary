@@ -1,0 +1,864 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "frontier-578af9cb15034d66a26e2465",
+  "collector_id": "direct-frontier-578af9cb15034d66a26e2465",
+  "run_key": "scheduled-chat-00-20260925T130004JST-4f9a21",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "160",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5d02d4f1d0bff404ad14106d11411900ad36760c",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 15,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T04:02:48.550827+00:00",
+  "preload_id": "preload-44817c2c78e1f088ccec",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": "preload-44817c2c78e1f088ccec",
+  "results": [
+    {
+      "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+      "canonical_id": "arXiv:2608.04048",
+      "arxiv_id": "2608.04048",
+      "authors": [
+        "Yu Luo",
+        "Bo Dong",
+        "Wenhua Cheng",
+        "Haihao Shen"
+      ]
+    },
+    {
+      "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+      "source_url": "https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+      "canonical_id": "arXiv:2608.01126",
+      "arxiv_id": "2608.01126",
+      "authors": [
+        "Leo T. Yang",
+        "Zhouyong Liu"
+      ]
+    },
+    {
+      "title": "Augmented Backpressure for Decentralized Management of Agentic Networks",
+      "source_url": "https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Agentic foundation-model service networks handle requests spanning retrieval, planning, generation, verification, and tool use. Unlike traditional communication networks, control performance depends on queue dynamics and contextual memory states, including prefix/KV blocks, retrieved contexts, expert warm states, and verified tool outputs. These states arise from execution history and alter service work and downstream successor laws under finite local budgets. Treating them as passive caches or an independent process leaves a queueing-control gap. To this end, we propose \\emph{Memory-Augmented Backpressure} (MABP), a queue--memory control framework for stateful foundation-model service networks (SFMSNs) that jointly models commodity queues and causal contextual memory dynamics. MABP represents each request by service and state types, estimates memory-dependent work, penalties, and successor probabilities, then reads queues and resident memory each slot, selects feasible routing, transfer, activation, and service actions using a memory-dependent pressure score, and retains a budget-feasible subset of resident and newly generated objects. We prove an occupation-measure capacity outer bound with conditional tightness. We show that modeling contextual memory can strictly increase the stability region through work reduction and transition shaping, establishing a separation between memory-aware and memory-oblivious decisions. We also prove throughput and drift-plus-penalty guarantees for exact frame-MABP with bounded-loss extensions to approximate solvers.",
+      "canonical_id": "arXiv:2608.00914",
+      "arxiv_id": "2608.00914",
+      "authors": [
+        "Zu-Yuan Zhang",
+        "Sizhe Tang",
+        "Tian Lan"
+      ]
+    },
+    {
+      "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks",
+      "source_url": "https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "The deployment of multimodal large language models (MLLMs) in edge-cloud networks faces critical challenges, including computational resource heterogeneity, memory bottlenecks, and bandwidth constraints. To address these issues, we propose EdgeSD, a novel framework that accelerates MLLM inference by integrating speculative decoding (SD) with edge-cloud collaboration. First, EdgeSD decouples the vision encoding and decoding processes of the draft MLLM across heterogeneous edge servers (ESs). This disaggregation architecture overcomes single-node memory constraints, enabling optimized resource utilization and high-resolution input processing. Second, to resolve the communication bottleneck and computational burden inherent in this distributed architecture, EdgeSD integrates a bandwidth-aware dynamic image token merging (ITM) method. Unlike general pruning techniques, this EdgeSD-specific ITM method focuses on minimizing inter-ES transmission latency for vision-decoding disaggregation while maintaining draft quality. Third, to optimize SD efficiency on consumer-grade ESs, EdgeSD employs an adaptive and scalable token tree structure solved using a parallel delta-stepping algorithm. This structure maximizes the number of accepted tokens under strict edge latency constraints. Extensive experiments on six multimodal datasets and five benchmarks with various MLLM pairs demonstrate that EdgeSD achieves substantial acceleration and throughput gains in edge-cloud collaboration scenarios using a lightweight draft MLLM, achieving 3.04-5.12x speedup compared to baseline methods.",
+      "canonical_id": "DOI:10.1109/TMC.2026.3667591",
+      "doi": "10.1109/TMC.2026.3667591",
+      "authors": [
+        "Hualong Huang",
+        "Wenhan Zhan",
+        "Hancong Duan",
+        "Kai Peng",
+        "Geyong Min",
+        "Zi-Jia Zhao",
+        "Zi-Tian Zhao",
+        "Yalan Ye"
+      ]
+    },
+    {
+      "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+      "source_url": "https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Production LLM serving generates millions of diverse requests, making full-trace replay across serving configurations increasingly expensive. Existing trace reduction methods mainly preserve workload distributions or representative requests, but bottleneck-revealing workloads may be rare and non-representative. Moreover, evidence for one component cannot compensate for missing evidence in another, while using predicted bottlenecks as target truth creates circular evaluation. These limitations make it necessary to preserve evidence for every bottleneck component rather than rely on workload representativeness alone. We propose Bottleneck-Preserving Witnessing (BPW), a quality-constrained framework for compact and diagnostically reliable LLM serving replay suites. BPW first performs Workload Candidate Nomination using response-blind workload features and closed source-side measurements. This stage identifies workloads that may expose scheduler, prefill, decode, or KV-cache bottlenecks. Coverage-Priority Sequence Construction then organizes multi-component proposals as reusable hyperedges and prioritizes weak and uncovered dimensions. Finally, Bottleneck Truth Verification derives prediction-independent labels solely from direct target-system measurements. The verified results determine the earliest prefix satisfying the direct two-witness requirement for every component. Experiments on BurstGPT, ServeGen, and Mooncake show that BPW reaches the verified gate with a compact workload set and outperforms 16 policies, achieving relative improvements of 2.3% and 16.3% in Mean prefix Macro-F1 and WBRC-AUC, respectively. Stage-resolved and sensitivity analyses confirm the distinct contributions and local stability of its three stages. Our code is publicly available at https://github.com/llmllmllm/BPW",
+      "canonical_id": "arXiv:2608.00423",
+      "arxiv_id": "2608.00423",
+      "authors": [
+        "Li-Ming Liu",
+        "Chao Hu",
+        "Ming-Fei Lu",
+        "Cong Tan",
+        "Yi-Wei Ge",
+        "Chi-Jin Zhou",
+        "Yongjun Xie",
+        "Run-Zhe Wang",
+        "Xiaohai Shi",
+        "He-Yuan Shi"
+      ]
+    },
+    {
+      "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+      "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/mc.2026.3695984",
+      "doi": "10.1109/mc.2026.3695984",
+      "authors": [
+        "Mlađan Jovanović",
+        "M. Campbell"
+      ]
+    },
+    {
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "source_url": "https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba",
+      "year": 2026,
+      "published": "2026-07-29",
+      "abstract": "Modern distributed AI workloads run across hundreds of accelerators, making communication a major bottleneck. Existing communication libraries remain largely buffer-centric because user and communication buffers are managed separately, causing redundant data copies or costly user-buffer registration. This paper presents StrataCL, a zero-redundancy and fabric-native communication library for production supernodes. StrataCL introduces registration-on-allocation to realize user-buffer direct communication, and designs communication operators with workload-balanced NPU-core partitioning and NPU-driven SDMA offloading to exploit supernode architecture features. On the Huawei CloudMatrix384, StrataCL improves collective bus bandwidth by up to 1.6x and improves MoE dispatch/combine bus bandwidth by up to 1.4x. Across three production workloads, StrataCL improves LLM inference throughput by 1.9x, reduces P99 TTFT by 2.2x, and reduces LLM and Recsys training iteration time by 1.4x and 1.3x, respectively.",
+      "canonical_id": "arXiv:2607.26444",
+      "arxiv_id": "2607.26444",
+      "authors": [
+        "Tian-Cheng Hu",
+        "Jin Qin",
+        "Yu-Zheng Wang",
+        "Ke Liu",
+        "TangShengsheng Li",
+        "Sheng Wang",
+        "Zhongzhe Hu",
+        "Tian-Lun Hu",
+        "Wei Wang",
+        "Lijun Li",
+        "Jingbin Zhou",
+        "Xiaoming Bao",
+        "Hong-Wei Sun",
+        "Jieru Zhao",
+        "Huimin Cui",
+        "Tao Xie",
+        "Chenxi Wang"
+      ]
+    },
+    {
+      "title": "Kalypso: Relational LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/432b20f8b78c38d6c8ae693e68c5a7186d711a9f",
+      "year": 2026,
+      "published": "2026-07-26",
+      "abstract": "Large language models are increasingly used as semantic operators for filtering, extracting, ranking, joining, and transforming unstructured data. Existing semantic query processing systems invoke request-centric LLM serving systems that are unaware of the query plan, leaving substantial performance opportunities unused. This paper introduces relational LLM serving, an abstraction that makes LLM serving aware of semantic query structure while preserving query semantics and output accuracy. The key opportunity is pipelined execution across semantic operators: when intermediate tuples flow directly from one operator to the next, their KV-cache state can be reused instead of recomputed. We present Kalypso, a relational LLM serving system that exposes an API for semantic query plans and executes them using an adaptive, memory-aware scheduling algorithm. Kalypso addresses a new online scheduling problem in which pipelined operator execution is coupled with GPU memory pressure management to reuse KV-cache state in the serving engine before eviction. Its scheduler continuously adjusts memory allocations to balance upstream parallelism, downstream progress, and GPU utilization. Our evaluation shows that Kalypso improves query completion time over baselines using request-centric LLM serving, with speedups up to 4.57x across diverse workloads, demonstrating that query-aware LLM serving can substantially improve the efficiency of semantic query execution.",
+      "canonical_id": "arXiv:2607.23815",
+      "arxiv_id": "2607.23815",
+      "authors": [
+        "Hojae Son",
+        "Md Ashraful Islam",
+        "H. Cao",
+        "Hui Guan",
+        "Marco Serafini"
+      ]
+    },
+    {
+      "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
+      "source_url": "https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "Datacenter networks follow a multipath doctrine: provision many paths between endpoints, hash flows across them, and let redundancy absorb both failures and load imbalance. The ZCube topology violates this doctrine. It removes the Spine layer, eliminates path multiplicity, and cuts one third of switching hardware, yet delivers better performance for both large model training and inference. We explain this anomaly through a structural connection to Braess's paradox, first observed in 1968: both phenomena trace to congestion-oblivious routing over competing paths. Braess showed that adding paths under this condition can hurt; ZCube shows that removing paths under the same condition can help. First, we show that multipath fabrics under structured LLM traffic operate in Braess's shadow: static ECMP hashing is strictly more fragile than greedy routing. Greedy routing reaches an equilibrium within 4/3 of optimal for affine latencies; static hashing admits unbounded imbalance in the worst case. Second, we prove that ZCube is immune to Braess's paradox and that its orthogonal dual partition provably balances load for arbitrary traffic matrices; AllReduce in training and KV cache transfers in disaggregated inference fall out as two corollaries. Third, we quantify the price of this immunity: ZCube trades microsecond hash recovery for millisecond control plane recovery, a trade that upper-layer resilience in LLM serving makes favorable. Production measurements from a cluster serving GLM-5.1 coding inference report 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time to first token. Our analysis suggests that for workloads driven by model structure, matching topology to traffic matters more than path multiplicity.",
+      "canonical_id": "arXiv:2607.21893",
+      "arxiv_id": "2607.21893",
+      "authors": [
+        "Li Chen"
+      ]
+    },
+    {
+      "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+      "source_url": "https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+      "canonical_id": "arXiv:2607.22854",
+      "arxiv_id": "2607.22854",
+      "authors": [
+        "Goodsol Lee",
+        "Juheon Yi",
+        "Jinglu Wang",
+        "Haowen Xu",
+        "S. Bahk",
+        "Yan Lu"
+      ]
+    },
+    {
+      "title": "Persistent Computational State: A Session-Centric Runtime for Generative World Models",
+      "source_url": "https://www.semanticscholar.org/paper/43738df8ce24b249e5c9d74e8c3b04412dab39c5",
+      "year": 2026,
+      "published": "2026-07-23",
+      "abstract": "Generative world models are increasingly driven as simulators: a planner forks a state, rolls out futures, backtracks, and returns to a visited viewpoint. Recent benchmarks establish that current video world models fail this usage, and attribute it to the model, prescribing new architectures and training objectives. We show this attribution is incomplete, and for an important class of models simply wrong. Snapshotting the state the runtime already holds -- an observation plus RNG state, a memory bank, or a windowed KV context, by architecture -- and restoring it after a genuine excursion reproduces the never-left continuation byte-identically on all three; corrupting only the RNG degrades it. The capability was never missing: request-centric serving discarded it, inheriting from language-model serving the assumption that runtime state is recomputable -- but world-model state carries a non-recomputable kernel. We define Persistent Computational State (PCS), the minimal non-recomputable state that must survive across requests, show it can be discovered by measurement, and build a session-centric runtime over it. Checkpoint and restore cost 0.012 ms against a 1.85 s generation step; resident sessions become host- rather than device-bounded (measured to 1,024); and world memory must be evicted by relevance to the return, not recency -- the inverse of LLM practice.",
+      "canonical_id": "arXiv:2607.21686",
+      "arxiv_id": "2607.21686",
+      "authors": [
+        "Zhen Lin"
+      ]
+    },
+    {
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "source_url": "https://www.semanticscholar.org/paper/f900cbbe0d71efc52a828c66e3a286635cbdad27",
+      "year": 2026,
+      "published": "2026-07-20",
+      "abstract": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+      "canonical_id": "arXiv:2607.18171",
+      "arxiv_id": "2607.18171",
+      "authors": [
+        "Krish Agarwal",
+        "Zhuoming Chen",
+        "Yanyuan Qin",
+        "Zhen-Yu Gu",
+        "Atri Rudra",
+        "Beidi Chen"
+      ]
+    },
+    {
+      "title": "CAGE: An Evaluation Framework for Cache-Augmented Generation Models",
+      "source_url": "https://www.semanticscholar.org/paper/6548e75a865107edb3d3f0c5e08be8cbfe2befcd",
+      "year": 2026,
+      "published": "2026-07-19",
+      "abstract": "Cache-Augmented Generation (CAG) is an emerging design that reduces the cost of repeated prompt processing by reusing previously processed context, yet it lacks a standard evaluation approach. We present CAGE, a framework that combines serving metrics and semantic quality analysis across baselines in cache-aware AI systems. CAGE integrates features from vLLM’s native prefix caching and evaluates latency, TTFT, throughput, and semantic metrics. In our results, native prefix caching reduced latency of 37.4% and TTFT by 65.7% with no loss in faithfulness, whereas RAG increased latency by 70.4% and reduced faithfulness by 11.6%. These results validate the usefulness of CAGE as an approach for evaluating cache-aware LLM systems.",
+      "canonical_id": "DOI:10.5753/wperformance.2026.23603",
+      "doi": "10.5753/wperformance.2026.23603",
+      "authors": [
+        "Lucas Mariano do Carmo",
+        "Wladmir Cardoso Brandão",
+        "H. D. de Freitas"
+      ]
+    },
+    {
+      "title": "Scaling Unmodified Multithreaded Applications with Elastic CXL-based Distributed Shared Memory",
+      "source_url": "https://www.semanticscholar.org/paper/607094d913a538fe1fbf0b87e9b5f6fd467099a0",
+      "year": 2026,
+      "published": "2026-07-17",
+      "abstract": "While CXL presents a promising hardware substrate for Distributed Shared Memory (DSM), seamlessly scaling multithreaded applications across multiple nodes remains a formidable challenge. Existing CXL-based DSMs fall short: they require manual code modifications to share non-heap data, employ rigid data placement policies that fail under diverse and dynamic workloads, and suffer from severe page-fault processing overheads in sub-microsecond ($\\mu\\mathrm{s}$) environments. We present xDSM, a full-space, elastic DSM system built over CXL that transparently scales unmodified multithreaded applications. To eliminate the burden of manual code rewrites, xDSM employs an OS-runtime co-design that establishes a globally coordinated address space, seamlessly sharing all memory segments. To mask CXL access penalties, xDSM abandons static placement rules in favor of a dynamic, latency-driven policy that actively balances data between local DRAM and CXL memory. Finally, to resolve the fundamental tension between high base-page fault overheads and severe huge-page false sharing, xDSM introduces spatial locality-aware elasticity, dynamically coalescing and splitting pages on the fly to amortize processing costs. Evaluated across diverse workloads using 15 system configurations, xDSM outperforms CXL-only baselines by 1.5$\\times$ to 2.2$\\times$ and state-of-the-art hybrid DSMs by 1.1$\\times$ to 2.2$\\times$, while achieving near-linear scalability.",
+      "canonical_id": "arXiv:2607.15569",
+      "arxiv_id": "2607.15569",
+      "authors": [
+        "Guowei Liu",
+        "Kang Chen",
+        "Laiping Zhao",
+        "Yi-Ming Li",
+        "Hanwen Liu",
+        "Chen-lang Peng",
+        "Yichi Chen",
+        "Sheng Chen",
+        "Zhiyuan Su",
+        "Wen-Yu Qu"
+      ]
+    },
+    {
+      "title": "Xema: Efficient Diffusion Serving through Fine-Grained Memory Management and Auto-Configuration",
+      "source_url": "https://www.semanticscholar.org/paper/e6d9640e7d532c5f880bf9709768b4f917469f2a",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Diffusion models are increasingly deployed as production visual-generation services, where serving high-resolution image and long video generation is often limited by GPU memory. Popular memory-saving techniques such as weight offloading, sharding, and VAE slicing are often not practical because they tend to introduce significant performance overhead. In this paper, we present Xema, a memory-efficient diffusion serving system that exploits predictable tensor lifetimes for trace-guided memory optimization. For each request template, Xema derives an offline memory trace to identify short memory-pressure intervals and applies memory mitigation only within these intervals and only by the amount needed to fit the target GPU budget. Xema further constructs a static memory layout for tensors with predictable lifetimes, reducing fragmentation-induced reserved memory and making offline memory reasoning reliable at runtime. Built on this memory optimization layer, Xema introduces an offline planner that jointly selects parallelism, concurrency, and memory control under GPU memory and SLO constraints. The selected plan is stored in a plan table and directly used by the online serving runtime. We implement Xema on production diffusion pipelines and evaluate it with Flux.2, CogVideoX-5B, and LTX-2. Compared with existing serving configurations, Xema improves SLO attainment by up to 3.7x and reduces planning cost from 6.3 hours to 197 seconds compared with grid search.",
+      "canonical_id": "arXiv:2607.11136",
+      "arxiv_id": "2607.11136",
+      "authors": [
+        "Xueze Kang",
+        "Guangyu Xiang",
+        "Suyi Li",
+        "Yuxin Wang",
+        "Shao-Huai Shi",
+        "Lin Zhang",
+        "Xiaowen Chu"
+      ]
+    },
+    {
+      "title": "AutoSLO: Practical Latency SLOs on Cloud Data Warehouses - Extended Version",
+      "source_url": "https://www.semanticscholar.org/paper/b8f4b3a0c98a2dec245b9f83dab43bf57ef60e6f",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Modern cloud data warehouses decouple compute from storage, making it easy for organizations to access the same underlying data with multiple compute clusters. This flexibility is often used for performance isolation among diverse workloads, so that each workload meets its latency service-level objective (SLO) more reliably. For example, interactive dashboards, ad hoc analysis, and batch jobs can each run on separate clusters. However, this dedicated-cluster approach requires each compute cluster to be continuously scaled to adapt to workload evolution, with over-provisioning wasting resources and under-provisioning risking SLO violations. We present AutoSLO, a latency-SLO-aware workload management framework for multi-cluster cloud data warehouses. AutoSLO operates across three timescales through three key components. First, a periodic Policy Tuner plans proactive cluster scaling actions and tunes configuration parameters, using simulations of history-derived workload forecasts. Second, an SLO-aware reactive Autoscaler adjusts the active cluster set when recent workload behavior deviates from the forecast. Third, an online Query Router reacts to live load when placing each query, using a concurrency-aware latency predictor to avoid SLO violations. On realistic Redbench workloads, AutoSLO successfully meets latency SLOs of varying strictness, reducing cost by a mean of 26.4% compared to the per-scenario next-best baseline. Component-level evaluations show that the Query Router and Autoscaler respectively reduce SLO violation rates by a mean of 47.8% and 93.7%, relative to their corresponding alternatives. Finally, we show that the Policy Tuner can reduce the SLO violation rate by a mean of 44.6% using a single day of workload history, and that each component is efficient given its intended operating timescale.",
+      "canonical_id": "arXiv:2607.11770",
+      "arxiv_id": "2607.11770",
+      "authors": [
+        "Markos Markakis",
+        "T. Kraska"
+      ]
+    },
+    {
+      "title": "FlashDiff: Efficient Regional Execution and Scheduling for Diffusion Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/bad55d4f4b3a22d141f4afc9873af33b42c7029c",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Diffusion models have become the central backbone for modern image, video, and audio generation, but their efficient service remains a challenge. Unlike autoregressive decoding, diffusion inference repeatedly updates high-dimensional spatial or temporal latents over many denoising steps. This all-region execution pattern makes generation latency high and limits serving throughput. Existing multi-GPU parallelization methods can reduce per-step computation, but often introduce substantial activation exchange overhead, causing communication to offset or even outweigh the benefits of parallel execution. This paper presents FlashDiff, a diffusion serving system that improves inference efficiency through adaptive regional execution and scheduling. FlashDiff is based on the observation that diffusion refinement is not uniform across latent regions or denoising steps: different regions often stabilize at different rates, while neighboring steps exhibit strong temporal correlation. FlashDiff leverages these properties to selectively execute only regions that require further refinement and to reallocate the resulting compute slack across concurrent serving requests. FlashDiff consists of three mechanisms. First, it decomposes the latent representation into coherent execution regions using early-stage attention signals, preserving semantic structure while exposing fine-grained parallelism. Second, it uses a lightweight runtime controller to estimate region activity and bypass low-impact updates when further refinement is unlikely to affect output quality. Third, it applies an affinity-aware online scheduler that co-locates dependent regions, balances residual load across GPUs, and reuses reclaimed compute capacity to improve serving efficiency. Across real-world image, video, and audio workloads, FlashDiff reduces end-to-end serving latency by 30-97% and improves throughput by 1.2-2.2x.",
+      "canonical_id": "arXiv:2607.12121",
+      "arxiv_id": "2607.12121",
+      "authors": [
+        "Yaqi Qiao",
+        "Ping He",
+        "Song-Ru Xie",
+        "Ayush Barik",
+        "Chen-Song Zhang",
+        "Zhengzhong Tu",
+        "Fan Lai"
+      ]
+    },
+    {
+      "title": "Omnia: Efficient RAG Serving through Speculative Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/16a96d99c0d1b26bb54bc1fbcb217581b3e644c0",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Retrieval-Augmented Generation (RAG) has emerged for enhancing Large Language Models (LLMs) by improving factual accuracy and mitigating hallucinations. A typical RAG pipeline executes in three cascaded stages: retrieval, reranking, and generation. The existing serving systems suffer from two critical system-level bottlenecks when applying to RAG serving: the first is the cumulative latency caused by rigid sequential dependencies between reranking and generation, and the second is the system saturation triggered by bursty, high fan-in reranking workloads. In this paper, we propose Omnia, an efficient distributed system designed to push the throughput-latency frontier of RAG serving. Omnia introduces chunk speculation, a two-level (coarse-to-fine) reranking architecture that enables early-termination through chunk pruning and masks reranking latency via progressive prefilling. To further improve the execution efficiency of chunk speculation, we develop backpressure-aware reranker scheduling (BARS). By monitoring concurrent client counts and real-time KV cache occupancy, BARS dynamically modulates the speculation interval to batch compute-bound prefilling with memory-bound decoding. We implement Omnia as a backend-agnostic framework, supporting vLLM, SGLang, and TensorRT-LLM. Evaluation demonstrates that Omnia maintains near-lossless accuracy while optimizing both the system-level throughput and client-level latency. Compared to existing systems, Omnia increases the maximum request rate the system can handle by 57%. The end-to-end response latency for a client is reduced by averagely 2.99 × (up to 9.84 ×). We foresee Omnia will form a new paradigm for efficient RAG serving.",
+      "canonical_id": "DOI:10.1145/3806645.3807814",
+      "doi": "10.1145/3806645.3807814",
+      "authors": [
+        "Rong-Tian Fu",
+        "Shigang Li",
+        "You-Xuan Xu",
+        "Tong Wu",
+        "Zhi Ma",
+        "Jin-Liang Shi"
+      ]
+    },
+    {
+      "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+      "source_url": "https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2",
+      "year": 2026,
+      "published": "2026-07-11",
+      "abstract": "A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: the destination is bit-identical to the source, or nothing is installed. It relocates the cache in 18.8 ms same-node, 101x faster than save/load. It holds a checksum-verified 92.1-94.8 Gb/s on a 100 Gb fabric. At that rate the cache fits inside one interactive block. Migrating an actively generating session, it converges at a block boundary and the destination continues the world bit for bit. An admissibility condition decides each move. The move must complete inside the readout horizon, over bandwidth that covers the state plus its dirty rate. Lifted to a fleet schedulability test, it governed a consolidation loop that executed 48 of 48 migrations bit-identical across two providers. Two constraints are structural. Bit-exactness survives only inside a controlled configuration of one GPU architecture, so moving the state is the only way to preserve it exactly in interactive time. Verification cannot hide inside the wire on this fabric. Receive-path checksums stall the transport at protocol timescales under fan-in, and unscheduled incast silently collapses a receiver while every delivered byte stays correct. An incast-aware admission controller holds zero misses to 1.4x offered load and sheds overload as rejects. A lossless GPU codec widens the admission gate to fabrics raw motion cannot use. We exercise the serving loop and the mover separately, each end to end. Their composition on one fabric is unbuilt. Exact-state elasticity is a joint scheduling problem over transport and verification.",
+      "canonical_id": "arXiv:2607.10389",
+      "arxiv_id": "2607.10389",
+      "authors": [
+        "Jin Li",
+        "Jiawei Chen"
+      ]
+    },
+    {
+      "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training",
+      "source_url": "https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "It is well established that the reasoning capabilities of large language models (LLMs) can be improved by applying reinforcement learning (RL) in a post-training stage. In a standard RL iteration, the current model (the policy) generates experience through rollouts, and the resulting data is then used to update the policy during training. High-performance RL frameworks such as StreamRL and AReaL employ a disaggregated architecture and asynchronous rollouts to better exploit both rollout and training resources, thereby increasing overall system throughput. Nonetheless, across varying RL setups (e.g., hardware configurations, model scales, staleness levels, and hyperparameters) and under changing workloads, it remains common for both rollout and training resources to experience idle periods. In this paper, we present BiDiRL, a hybrid time-space multiplexing architecture for asynchronous, disaggregated RL designed to reduce resource idleness. First, we develop a hot-switch runtime that enables rapid switching between rollout and training resources with negligible overhead. Second, we propose a static, scheduling-aware planner based on time-performance modeling that chooses a hot-switch-friendly resource partition, so that rollout and training durations are roughly balanced at a coarse level. Third, at execution time, we introduce a bidirectional scheduler that further exploits runtime bubbles through fine-grained resource switching, allowing the bottleneck stage to temporarily borrow idle resources from the other pool. Across a wide range of workloads, datasets, and models on two 32-GPU testbeds, BiDiRL increases RL training throughput by up to 1.94x compared with RL systems including veRL, AReaL, and ROLL, without affecting convergence behavior.",
+      "canonical_id": "arXiv:2607.09207",
+      "arxiv_id": "2607.09207",
+      "authors": [
+        "Zhi-Qiang Tan",
+        "Mao-Xin Wang",
+        "Si-Jie Wang",
+        "Yi-Ming Yin",
+        "Qiang Wang",
+        "Xiaowen Chu",
+        "Shao-Huai Shi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.04048",
+      "identity_tokens": [
+        "id:arXiv:2608.04048",
+        "title:recurrent residual quantization a progressive multiprecision representation for llms",
+        "url:https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17"
+      ],
+      "record": {
+        "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+        "canonical_id": "arXiv:2608.04048",
+        "arxiv_id": "2608.04048",
+        "authors": [
+          "Yu Luo",
+          "Bo Dong",
+          "Wenhua Cheng",
+          "Haihao Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01126",
+      "identity_tokens": [
+        "id:arXiv:2608.01126",
+        "title:spatial prefix caching for wireless edge llm inference a stochasticgeometry and queueing framework",
+        "url:https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff"
+      ],
+      "record": {
+        "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+        "source_url": "https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+        "canonical_id": "arXiv:2608.01126",
+        "arxiv_id": "2608.01126",
+        "authors": [
+          "Leo T. Yang",
+          "Zhouyong Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00914",
+      "identity_tokens": [
+        "id:arXiv:2608.00914",
+        "title:augmented backpressure for decentralized management of agentic networks",
+        "url:https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8"
+      ],
+      "record": {
+        "title": "Augmented Backpressure for Decentralized Management of Agentic Networks",
+        "source_url": "https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Agentic foundation-model service networks handle requests spanning retrieval, planning, generation, verification, and tool use. Unlike traditional communication networks, control performance depends on queue dynamics and contextual memory states, including prefix/KV blocks, retrieved contexts, expert warm states, and verified tool outputs. These states arise from execution history and alter service work and downstream successor laws under finite local budgets. Treating them as passive caches or an independent process leaves a queueing-control gap. To this end, we propose \\emph{Memory-Augmented Backpressure} (MABP), a queue--memory control framework for stateful foundation-model service networks (SFMSNs) that jointly models commodity queues and causal contextual memory dynamics. MABP represents each request by service and state types, estimates memory-dependent work, penalties, and successor probabilities, then reads queues and resident memory each slot, selects feasible routing, transfer, activation, and service actions using a memory-dependent pressure score, and retains a budget-feasible subset of resident and newly generated objects. We prove an occupation-measure capacity outer bound with conditional tightness. We show that modeling contextual memory can strictly increase the stability region through work reduction and transition shaping, establishing a separation between memory-aware and memory-oblivious decisions. We also prove throughput and drift-plus-penalty guarantees for exact frame-MABP with bounded-loss extensions to approximate solvers.",
+        "canonical_id": "arXiv:2608.00914",
+        "arxiv_id": "2608.00914",
+        "authors": [
+          "Zu-Yuan Zhang",
+          "Sizhe Tang",
+          "Tian Lan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3667591",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3667591",
+        "title:edgesd efficient speculative decoding with visiondecoding disaggregation for mllm inference in edgecloud networks",
+        "url:https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec"
+      ],
+      "record": {
+        "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks",
+        "source_url": "https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "The deployment of multimodal large language models (MLLMs) in edge-cloud networks faces critical challenges, including computational resource heterogeneity, memory bottlenecks, and bandwidth constraints. To address these issues, we propose EdgeSD, a novel framework that accelerates MLLM inference by integrating speculative decoding (SD) with edge-cloud collaboration. First, EdgeSD decouples the vision encoding and decoding processes of the draft MLLM across heterogeneous edge servers (ESs). This disaggregation architecture overcomes single-node memory constraints, enabling optimized resource utilization and high-resolution input processing. Second, to resolve the communication bottleneck and computational burden inherent in this distributed architecture, EdgeSD integrates a bandwidth-aware dynamic image token merging (ITM) method. Unlike general pruning techniques, this EdgeSD-specific ITM method focuses on minimizing inter-ES transmission latency for vision-decoding disaggregation while maintaining draft quality. Third, to optimize SD efficiency on consumer-grade ESs, EdgeSD employs an adaptive and scalable token tree structure solved using a parallel delta-stepping algorithm. This structure maximizes the number of accepted tokens under strict edge latency constraints. Extensive experiments on six multimodal datasets and five benchmarks with various MLLM pairs demonstrate that EdgeSD achieves substantial acceleration and throughput gains in edge-cloud collaboration scenarios using a lightweight draft MLLM, achieving 3.04-5.12x speedup compared to baseline methods.",
+        "canonical_id": "DOI:10.1109/TMC.2026.3667591",
+        "doi": "10.1109/TMC.2026.3667591",
+        "authors": [
+          "Hualong Huang",
+          "Wenhan Zhan",
+          "Hancong Duan",
+          "Kai Peng",
+          "Geyong Min",
+          "Zi-Jia Zhao",
+          "Zi-Tian Zhao",
+          "Yalan Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00423",
+      "identity_tokens": [
+        "id:arXiv:2608.00423",
+        "title:diagnose before you compress predictionindependent bottleneck witness refinement for llm serving traces",
+        "url:https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7"
+      ],
+      "record": {
+        "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+        "source_url": "https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Production LLM serving generates millions of diverse requests, making full-trace replay across serving configurations increasingly expensive. Existing trace reduction methods mainly preserve workload distributions or representative requests, but bottleneck-revealing workloads may be rare and non-representative. Moreover, evidence for one component cannot compensate for missing evidence in another, while using predicted bottlenecks as target truth creates circular evaluation. These limitations make it necessary to preserve evidence for every bottleneck component rather than rely on workload representativeness alone. We propose Bottleneck-Preserving Witnessing (BPW), a quality-constrained framework for compact and diagnostically reliable LLM serving replay suites. BPW first performs Workload Candidate Nomination using response-blind workload features and closed source-side measurements. This stage identifies workloads that may expose scheduler, prefill, decode, or KV-cache bottlenecks. Coverage-Priority Sequence Construction then organizes multi-component proposals as reusable hyperedges and prioritizes weak and uncovered dimensions. Finally, Bottleneck Truth Verification derives prediction-independent labels solely from direct target-system measurements. The verified results determine the earliest prefix satisfying the direct two-witness requirement for every component. Experiments on BurstGPT, ServeGen, and Mooncake show that BPW reaches the verified gate with a compact workload set and outperforms 16 policies, achieving relative improvements of 2.3% and 16.3% in Mean prefix Macro-F1 and WBRC-AUC, respectively. Stage-resolved and sensitivity analyses confirm the distinct contributions and local stability of its three stages. Our code is publicly available at https://github.com/llmllmllm/BPW",
+        "canonical_id": "arXiv:2608.00423",
+        "arxiv_id": "2608.00423",
+        "authors": [
+          "Li-Ming Liu",
+          "Chao Hu",
+          "Ming-Fei Lu",
+          "Cong Tan",
+          "Yi-Wei Ge",
+          "Chi-Jin Zhou",
+          "Yongjun Xie",
+          "Run-Zhe Wang",
+          "Xiaohai Shi",
+          "He-Yuan Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3695984",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3695984",
+        "title:optimizing ai a reference architecture to streamline ai inference and performance acceleration",
+        "url:https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82"
+      ],
+      "record": {
+        "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+        "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/mc.2026.3695984",
+        "doi": "10.1109/mc.2026.3695984",
+        "authors": [
+          "Mlađan Jovanović",
+          "M. Campbell"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26444",
+      "identity_tokens": [
+        "id:arXiv:2607.26444",
+        "title:stratacl fabricnative communication library for production supernodes",
+        "url:https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba"
+      ],
+      "record": {
+        "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+        "source_url": "https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba",
+        "year": 2026,
+        "published": "2026-07-29",
+        "abstract": "Modern distributed AI workloads run across hundreds of accelerators, making communication a major bottleneck. Existing communication libraries remain largely buffer-centric because user and communication buffers are managed separately, causing redundant data copies or costly user-buffer registration. This paper presents StrataCL, a zero-redundancy and fabric-native communication library for production supernodes. StrataCL introduces registration-on-allocation to realize user-buffer direct communication, and designs communication operators with workload-balanced NPU-core partitioning and NPU-driven SDMA offloading to exploit supernode architecture features. On the Huawei CloudMatrix384, StrataCL improves collective bus bandwidth by up to 1.6x and improves MoE dispatch/combine bus bandwidth by up to 1.4x. Across three production workloads, StrataCL improves LLM inference throughput by 1.9x, reduces P99 TTFT by 2.2x, and reduces LLM and Recsys training iteration time by 1.4x and 1.3x, respectively.",
+        "canonical_id": "arXiv:2607.26444",
+        "arxiv_id": "2607.26444",
+        "authors": [
+          "Tian-Cheng Hu",
+          "Jin Qin",
+          "Yu-Zheng Wang",
+          "Ke Liu",
+          "TangShengsheng Li",
+          "Sheng Wang",
+          "Zhongzhe Hu",
+          "Tian-Lun Hu",
+          "Wei Wang",
+          "Lijun Li",
+          "Jingbin Zhou",
+          "Xiaoming Bao",
+          "Hong-Wei Sun",
+          "Jieru Zhao",
+          "Huimin Cui",
+          "Tao Xie",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23815",
+      "identity_tokens": [
+        "id:arXiv:2607.23815",
+        "title:kalypso relational llm serving",
+        "url:https://www.semanticscholar.org/paper/432b20f8b78c38d6c8ae693e68c5a7186d711a9f"
+      ],
+      "record": {
+        "title": "Kalypso: Relational LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/432b20f8b78c38d6c8ae693e68c5a7186d711a9f",
+        "year": 2026,
+        "published": "2026-07-26",
+        "abstract": "Large language models are increasingly used as semantic operators for filtering, extracting, ranking, joining, and transforming unstructured data. Existing semantic query processing systems invoke request-centric LLM serving systems that are unaware of the query plan, leaving substantial performance opportunities unused. This paper introduces relational LLM serving, an abstraction that makes LLM serving aware of semantic query structure while preserving query semantics and output accuracy. The key opportunity is pipelined execution across semantic operators: when intermediate tuples flow directly from one operator to the next, their KV-cache state can be reused instead of recomputed. We present Kalypso, a relational LLM serving system that exposes an API for semantic query plans and executes them using an adaptive, memory-aware scheduling algorithm. Kalypso addresses a new online scheduling problem in which pipelined operator execution is coupled with GPU memory pressure management to reuse KV-cache state in the serving engine before eviction. Its scheduler continuously adjusts memory allocations to balance upstream parallelism, downstream progress, and GPU utilization. Our evaluation shows that Kalypso improves query completion time over baselines using request-centric LLM serving, with speedups up to 4.57x across diverse workloads, demonstrating that query-aware LLM serving can substantially improve the efficiency of semantic query execution.",
+        "canonical_id": "arXiv:2607.23815",
+        "arxiv_id": "2607.23815",
+        "authors": [
+          "Hojae Son",
+          "Md Ashraful Islam",
+          "H. Cao",
+          "Hui Guan",
+          "Marco Serafini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21893",
+      "identity_tokens": [
+        "id:arXiv:2607.21893",
+        "title:fewer paths better performance understanding the zcube topology through braesss paradox",
+        "url:https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f"
+      ],
+      "record": {
+        "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
+        "source_url": "https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "Datacenter networks follow a multipath doctrine: provision many paths between endpoints, hash flows across them, and let redundancy absorb both failures and load imbalance. The ZCube topology violates this doctrine. It removes the Spine layer, eliminates path multiplicity, and cuts one third of switching hardware, yet delivers better performance for both large model training and inference. We explain this anomaly through a structural connection to Braess's paradox, first observed in 1968: both phenomena trace to congestion-oblivious routing over competing paths. Braess showed that adding paths under this condition can hurt; ZCube shows that removing paths under the same condition can help. First, we show that multipath fabrics under structured LLM traffic operate in Braess's shadow: static ECMP hashing is strictly more fragile than greedy routing. Greedy routing reaches an equilibrium within 4/3 of optimal for affine latencies; static hashing admits unbounded imbalance in the worst case. Second, we prove that ZCube is immune to Braess's paradox and that its orthogonal dual partition provably balances load for arbitrary traffic matrices; AllReduce in training and KV cache transfers in disaggregated inference fall out as two corollaries. Third, we quantify the price of this immunity: ZCube trades microsecond hash recovery for millisecond control plane recovery, a trade that upper-layer resilience in LLM serving makes favorable. Production measurements from a cluster serving GLM-5.1 coding inference report 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time to first token. Our analysis suggests that for workloads driven by model structure, matching topology to traffic matters more than path multiplicity.",
+        "canonical_id": "arXiv:2607.21893",
+        "arxiv_id": "2607.21893",
+        "authors": [
+          "Li Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22854",
+      "identity_tokens": [
+        "id:arXiv:2607.22854",
+        "title:coordinated networking for ondevice agentaugmented realtime communication",
+        "url:https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb"
+      ],
+      "record": {
+        "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+        "source_url": "https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+        "canonical_id": "arXiv:2607.22854",
+        "arxiv_id": "2607.22854",
+        "authors": [
+          "Goodsol Lee",
+          "Juheon Yi",
+          "Jinglu Wang",
+          "Haowen Xu",
+          "S. Bahk",
+          "Yan Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21686",
+      "identity_tokens": [
+        "id:arXiv:2607.21686",
+        "title:persistent computational state a sessioncentric runtime for generative world models",
+        "url:https://www.semanticscholar.org/paper/43738df8ce24b249e5c9d74e8c3b04412dab39c5"
+      ],
+      "record": {
+        "title": "Persistent Computational State: A Session-Centric Runtime for Generative World Models",
+        "source_url": "https://www.semanticscholar.org/paper/43738df8ce24b249e5c9d74e8c3b04412dab39c5",
+        "year": 2026,
+        "published": "2026-07-23",
+        "abstract": "Generative world models are increasingly driven as simulators: a planner forks a state, rolls out futures, backtracks, and returns to a visited viewpoint. Recent benchmarks establish that current video world models fail this usage, and attribute it to the model, prescribing new architectures and training objectives. We show this attribution is incomplete, and for an important class of models simply wrong. Snapshotting the state the runtime already holds -- an observation plus RNG state, a memory bank, or a windowed KV context, by architecture -- and restoring it after a genuine excursion reproduces the never-left continuation byte-identically on all three; corrupting only the RNG degrades it. The capability was never missing: request-centric serving discarded it, inheriting from language-model serving the assumption that runtime state is recomputable -- but world-model state carries a non-recomputable kernel. We define Persistent Computational State (PCS), the minimal non-recomputable state that must survive across requests, show it can be discovered by measurement, and build a session-centric runtime over it. Checkpoint and restore cost 0.012 ms against a 1.85 s generation step; resident sessions become host- rather than device-bounded (measured to 1,024); and world memory must be evicted by relevance to the return, not recency -- the inverse of LLM practice.",
+        "canonical_id": "arXiv:2607.21686",
+        "arxiv_id": "2607.21686",
+        "authors": [
+          "Zhen Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.18171",
+      "identity_tokens": [
+        "id:arXiv:2607.18171",
+        "title:flashrt agent harness for guiding agents to deploy realtime multimodal applications",
+        "url:https://www.semanticscholar.org/paper/f900cbbe0d71efc52a828c66e3a286635cbdad27"
+      ],
+      "record": {
+        "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+        "source_url": "https://www.semanticscholar.org/paper/f900cbbe0d71efc52a828c66e3a286635cbdad27",
+        "year": 2026,
+        "published": "2026-07-20",
+        "abstract": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+        "canonical_id": "arXiv:2607.18171",
+        "arxiv_id": "2607.18171",
+        "authors": [
+          "Krish Agarwal",
+          "Zhuoming Chen",
+          "Yanyuan Qin",
+          "Zhen-Yu Gu",
+          "Atri Rudra",
+          "Beidi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5753/wperformance.2026.23603",
+      "identity_tokens": [
+        "id:DOI:10.5753/wperformance.2026.23603",
+        "title:cage an evaluation framework for cacheaugmented generation models",
+        "url:https://www.semanticscholar.org/paper/6548e75a865107edb3d3f0c5e08be8cbfe2befcd"
+      ],
+      "record": {
+        "title": "CAGE: An Evaluation Framework for Cache-Augmented Generation Models",
+        "source_url": "https://www.semanticscholar.org/paper/6548e75a865107edb3d3f0c5e08be8cbfe2befcd",
+        "year": 2026,
+        "published": "2026-07-19",
+        "abstract": "Cache-Augmented Generation (CAG) is an emerging design that reduces the cost of repeated prompt processing by reusing previously processed context, yet it lacks a standard evaluation approach. We present CAGE, a framework that combines serving metrics and semantic quality analysis across baselines in cache-aware AI systems. CAGE integrates features from vLLM’s native prefix caching and evaluates latency, TTFT, throughput, and semantic metrics. In our results, native prefix caching reduced latency of 37.4% and TTFT by 65.7% with no loss in faithfulness, whereas RAG increased latency by 70.4% and reduced faithfulness by 11.6%. These results validate the usefulness of CAGE as an approach for evaluating cache-aware LLM systems.",
+        "canonical_id": "DOI:10.5753/wperformance.2026.23603",
+        "doi": "10.5753/wperformance.2026.23603",
+        "authors": [
+          "Lucas Mariano do Carmo",
+          "Wladmir Cardoso Brandão",
+          "H. D. de Freitas"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.15569",
+      "identity_tokens": [
+        "id:arXiv:2607.15569",
+        "title:scaling unmodified multithreaded applications with elastic cxlbased distributed shared memory",
+        "url:https://www.semanticscholar.org/paper/607094d913a538fe1fbf0b87e9b5f6fd467099a0"
+      ],
+      "record": {
+        "title": "Scaling Unmodified Multithreaded Applications with Elastic CXL-based Distributed Shared Memory",
+        "source_url": "https://www.semanticscholar.org/paper/607094d913a538fe1fbf0b87e9b5f6fd467099a0",
+        "year": 2026,
+        "published": "2026-07-17",
+        "abstract": "While CXL presents a promising hardware substrate for Distributed Shared Memory (DSM), seamlessly scaling multithreaded applications across multiple nodes remains a formidable challenge. Existing CXL-based DSMs fall short: they require manual code modifications to share non-heap data, employ rigid data placement policies that fail under diverse and dynamic workloads, and suffer from severe page-fault processing overheads in sub-microsecond ($\\mu\\mathrm{s}$) environments. We present xDSM, a full-space, elastic DSM system built over CXL that transparently scales unmodified multithreaded applications. To eliminate the burden of manual code rewrites, xDSM employs an OS-runtime co-design that establishes a globally coordinated address space, seamlessly sharing all memory segments. To mask CXL access penalties, xDSM abandons static placement rules in favor of a dynamic, latency-driven policy that actively balances data between local DRAM and CXL memory. Finally, to resolve the fundamental tension between high base-page fault overheads and severe huge-page false sharing, xDSM introduces spatial locality-aware elasticity, dynamically coalescing and splitting pages on the fly to amortize processing costs. Evaluated across diverse workloads using 15 system configurations, xDSM outperforms CXL-only baselines by 1.5$\\times$ to 2.2$\\times$ and state-of-the-art hybrid DSMs by 1.1$\\times$ to 2.2$\\times$, while achieving near-linear scalability.",
+        "canonical_id": "arXiv:2607.15569",
+        "arxiv_id": "2607.15569",
+        "authors": [
+          "Guowei Liu",
+          "Kang Chen",
+          "Laiping Zhao",
+          "Yi-Ming Li",
+          "Hanwen Liu",
+          "Chen-lang Peng",
+          "Yichi Chen",
+          "Sheng Chen",
+          "Zhiyuan Su",
+          "Wen-Yu Qu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11136",
+      "identity_tokens": [
+        "id:arXiv:2607.11136",
+        "title:xema efficient diffusion serving through finegrained memory management and autoconfiguration",
+        "url:https://www.semanticscholar.org/paper/e6d9640e7d532c5f880bf9709768b4f917469f2a"
+      ],
+      "record": {
+        "title": "Xema: Efficient Diffusion Serving through Fine-Grained Memory Management and Auto-Configuration",
+        "source_url": "https://www.semanticscholar.org/paper/e6d9640e7d532c5f880bf9709768b4f917469f2a",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Diffusion models are increasingly deployed as production visual-generation services, where serving high-resolution image and long video generation is often limited by GPU memory. Popular memory-saving techniques such as weight offloading, sharding, and VAE slicing are often not practical because they tend to introduce significant performance overhead. In this paper, we present Xema, a memory-efficient diffusion serving system that exploits predictable tensor lifetimes for trace-guided memory optimization. For each request template, Xema derives an offline memory trace to identify short memory-pressure intervals and applies memory mitigation only within these intervals and only by the amount needed to fit the target GPU budget. Xema further constructs a static memory layout for tensors with predictable lifetimes, reducing fragmentation-induced reserved memory and making offline memory reasoning reliable at runtime. Built on this memory optimization layer, Xema introduces an offline planner that jointly selects parallelism, concurrency, and memory control under GPU memory and SLO constraints. The selected plan is stored in a plan table and directly used by the online serving runtime. We implement Xema on production diffusion pipelines and evaluate it with Flux.2, CogVideoX-5B, and LTX-2. Compared with existing serving configurations, Xema improves SLO attainment by up to 3.7x and reduces planning cost from 6.3 hours to 197 seconds compared with grid search.",
+        "canonical_id": "arXiv:2607.11136",
+        "arxiv_id": "2607.11136",
+        "authors": [
+          "Xueze Kang",
+          "Guangyu Xiang",
+          "Suyi Li",
+          "Yuxin Wang",
+          "Shao-Huai Shi",
+          "Lin Zhang",
+          "Xiaowen Chu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11770",
+      "identity_tokens": [
+        "id:arXiv:2607.11770",
+        "title:autoslo practical latency slos on cloud data warehouses extended version",
+        "url:https://www.semanticscholar.org/paper/b8f4b3a0c98a2dec245b9f83dab43bf57ef60e6f"
+      ],
+      "record": {
+        "title": "AutoSLO: Practical Latency SLOs on Cloud Data Warehouses - Extended Version",
+        "source_url": "https://www.semanticscholar.org/paper/b8f4b3a0c98a2dec245b9f83dab43bf57ef60e6f",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Modern cloud data warehouses decouple compute from storage, making it easy for organizations to access the same underlying data with multiple compute clusters. This flexibility is often used for performance isolation among diverse workloads, so that each workload meets its latency service-level objective (SLO) more reliably. For example, interactive dashboards, ad hoc analysis, and batch jobs can each run on separate clusters. However, this dedicated-cluster approach requires each compute cluster to be continuously scaled to adapt to workload evolution, with over-provisioning wasting resources and under-provisioning risking SLO violations. We present AutoSLO, a latency-SLO-aware workload management framework for multi-cluster cloud data warehouses. AutoSLO operates across three timescales through three key components. First, a periodic Policy Tuner plans proactive cluster scaling actions and tunes configuration parameters, using simulations of history-derived workload forecasts. Second, an SLO-aware reactive Autoscaler adjusts the active cluster set when recent workload behavior deviates from the forecast. Third, an online Query Router reacts to live load when placing each query, using a concurrency-aware latency predictor to avoid SLO violations. On realistic Redbench workloads, AutoSLO successfully meets latency SLOs of varying strictness, reducing cost by a mean of 26.4% compared to the per-scenario next-best baseline. Component-level evaluations show that the Query Router and Autoscaler respectively reduce SLO violation rates by a mean of 47.8% and 93.7%, relative to their corresponding alternatives. Finally, we show that the Policy Tuner can reduce the SLO violation rate by a mean of 44.6% using a single day of workload history, and that each component is efficient given its intended operating timescale.",
+        "canonical_id": "arXiv:2607.11770",
+        "arxiv_id": "2607.11770",
+        "authors": [
+          "Markos Markakis",
+          "T. Kraska"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.12121",
+      "identity_tokens": [
+        "id:arXiv:2607.12121",
+        "title:flashdiff efficient regional execution and scheduling for diffusion model serving",
+        "url:https://www.semanticscholar.org/paper/bad55d4f4b3a22d141f4afc9873af33b42c7029c"
+      ],
+      "record": {
+        "title": "FlashDiff: Efficient Regional Execution and Scheduling for Diffusion Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/bad55d4f4b3a22d141f4afc9873af33b42c7029c",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Diffusion models have become the central backbone for modern image, video, and audio generation, but their efficient service remains a challenge. Unlike autoregressive decoding, diffusion inference repeatedly updates high-dimensional spatial or temporal latents over many denoising steps. This all-region execution pattern makes generation latency high and limits serving throughput. Existing multi-GPU parallelization methods can reduce per-step computation, but often introduce substantial activation exchange overhead, causing communication to offset or even outweigh the benefits of parallel execution. This paper presents FlashDiff, a diffusion serving system that improves inference efficiency through adaptive regional execution and scheduling. FlashDiff is based on the observation that diffusion refinement is not uniform across latent regions or denoising steps: different regions often stabilize at different rates, while neighboring steps exhibit strong temporal correlation. FlashDiff leverages these properties to selectively execute only regions that require further refinement and to reallocate the resulting compute slack across concurrent serving requests. FlashDiff consists of three mechanisms. First, it decomposes the latent representation into coherent execution regions using early-stage attention signals, preserving semantic structure while exposing fine-grained parallelism. Second, it uses a lightweight runtime controller to estimate region activity and bypass low-impact updates when further refinement is unlikely to affect output quality. Third, it applies an affinity-aware online scheduler that co-locates dependent regions, balances residual load across GPUs, and reuses reclaimed compute capacity to improve serving efficiency. Across real-world image, video, and audio workloads, FlashDiff reduces end-to-end serving latency by 30-97% and improves throughput by 1.2-2.2x.",
+        "canonical_id": "arXiv:2607.12121",
+        "arxiv_id": "2607.12121",
+        "authors": [
+          "Yaqi Qiao",
+          "Ping He",
+          "Song-Ru Xie",
+          "Ayush Barik",
+          "Chen-Song Zhang",
+          "Zhengzhong Tu",
+          "Fan Lai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3806645.3807814",
+      "identity_tokens": [
+        "id:DOI:10.1145/3806645.3807814",
+        "title:omnia efficient rag serving through speculative scheduling",
+        "url:https://www.semanticscholar.org/paper/16a96d99c0d1b26bb54bc1fbcb217581b3e644c0"
+      ],
+      "record": {
+        "title": "Omnia: Efficient RAG Serving through Speculative Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/16a96d99c0d1b26bb54bc1fbcb217581b3e644c0",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Retrieval-Augmented Generation (RAG) has emerged for enhancing Large Language Models (LLMs) by improving factual accuracy and mitigating hallucinations. A typical RAG pipeline executes in three cascaded stages: retrieval, reranking, and generation. The existing serving systems suffer from two critical system-level bottlenecks when applying to RAG serving: the first is the cumulative latency caused by rigid sequential dependencies between reranking and generation, and the second is the system saturation triggered by bursty, high fan-in reranking workloads. In this paper, we propose Omnia, an efficient distributed system designed to push the throughput-latency frontier of RAG serving. Omnia introduces chunk speculation, a two-level (coarse-to-fine) reranking architecture that enables early-termination through chunk pruning and masks reranking latency via progressive prefilling. To further improve the execution efficiency of chunk speculation, we develop backpressure-aware reranker scheduling (BARS). By monitoring concurrent client counts and real-time KV cache occupancy, BARS dynamically modulates the speculation interval to batch compute-bound prefilling with memory-bound decoding. We implement Omnia as a backend-agnostic framework, supporting vLLM, SGLang, and TensorRT-LLM. Evaluation demonstrates that Omnia maintains near-lossless accuracy while optimizing both the system-level throughput and client-level latency. Compared to existing systems, Omnia increases the maximum request rate the system can handle by 57%. The end-to-end response latency for a client is reduced by averagely 2.99 × (up to 9.84 ×). We foresee Omnia will form a new paradigm for efficient RAG serving.",
+        "canonical_id": "DOI:10.1145/3806645.3807814",
+        "doi": "10.1145/3806645.3807814",
+        "authors": [
+          "Rong-Tian Fu",
+          "Shigang Li",
+          "You-Xuan Xu",
+          "Tong Wu",
+          "Zhi Ma",
+          "Jin-Liang Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10389",
+      "identity_tokens": [
+        "id:arXiv:2607.10389",
+        "title:stateful worlds stateless elasticity exactstate serving for interactive world models",
+        "url:https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2"
+      ],
+      "record": {
+        "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+        "source_url": "https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2",
+        "year": 2026,
+        "published": "2026-07-11",
+        "abstract": "A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: the destination is bit-identical to the source, or nothing is installed. It relocates the cache in 18.8 ms same-node, 101x faster than save/load. It holds a checksum-verified 92.1-94.8 Gb/s on a 100 Gb fabric. At that rate the cache fits inside one interactive block. Migrating an actively generating session, it converges at a block boundary and the destination continues the world bit for bit. An admissibility condition decides each move. The move must complete inside the readout horizon, over bandwidth that covers the state plus its dirty rate. Lifted to a fleet schedulability test, it governed a consolidation loop that executed 48 of 48 migrations bit-identical across two providers. Two constraints are structural. Bit-exactness survives only inside a controlled configuration of one GPU architecture, so moving the state is the only way to preserve it exactly in interactive time. Verification cannot hide inside the wire on this fabric. Receive-path checksums stall the transport at protocol timescales under fan-in, and unscheduled incast silently collapses a receiver while every delivered byte stays correct. An incast-aware admission controller holds zero misses to 1.4x offered load and sheds overload as rejects. A lossless GPU codec widens the admission gate to fabrics raw motion cannot use. We exercise the serving loop and the mover separately, each end to end. Their composition on one fabric is unbuilt. Exact-state elasticity is a joint scheduling problem over transport and verification.",
+        "canonical_id": "arXiv:2607.10389",
+        "arxiv_id": "2607.10389",
+        "authors": [
+          "Jin Li",
+          "Jiawei Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09207",
+      "identity_tokens": [
+        "id:arXiv:2607.09207",
+        "title:bidirectional resource scheduling for disaggregated and asynchronous rl posttraining",
+        "url:https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167"
+      ],
+      "record": {
+        "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training",
+        "source_url": "https://www.semanticscholar.org/paper/40f00e23d50da6eb8bf7678a07b1696e2ba04167",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "It is well established that the reasoning capabilities of large language models (LLMs) can be improved by applying reinforcement learning (RL) in a post-training stage. In a standard RL iteration, the current model (the policy) generates experience through rollouts, and the resulting data is then used to update the policy during training. High-performance RL frameworks such as StreamRL and AReaL employ a disaggregated architecture and asynchronous rollouts to better exploit both rollout and training resources, thereby increasing overall system throughput. Nonetheless, across varying RL setups (e.g., hardware configurations, model scales, staleness levels, and hyperparameters) and under changing workloads, it remains common for both rollout and training resources to experience idle periods. In this paper, we present BiDiRL, a hybrid time-space multiplexing architecture for asynchronous, disaggregated RL designed to reduce resource idleness. First, we develop a hot-switch runtime that enables rapid switching between rollout and training resources with negligible overhead. Second, we propose a static, scheduling-aware planner based on time-performance modeling that chooses a hot-switch-friendly resource partition, so that rollout and training durations are roughly balanced at a coarse level. Third, at execution time, we introduce a bidirectional scheduler that further exploits runtime bubbles through fine-grained resource switching, allowing the bottleneck stage to temporarily borrow idle resources from the other pool. Across a wide range of workloads, datasets, and models on two 32-GPU testbeds, BiDiRL increases RL training throughput by up to 1.94x compared with RL systems including veRL, AReaL, and ROLL, without affecting convergence behavior.",
+        "canonical_id": "arXiv:2607.09207",
+        "arxiv_id": "2607.09207",
+        "authors": [
+          "Zhi-Qiang Tan",
+          "Mao-Xin Wang",
+          "Si-Jie Wang",
+          "Yi-Ming Yin",
+          "Qiang Wang",
+          "Xiaowen Chu",
+          "Shao-Huai Shi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:4b728143a8fde3a34423782dc62e7d9558f97ff18516472780b38c3c9fa0e80f",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
