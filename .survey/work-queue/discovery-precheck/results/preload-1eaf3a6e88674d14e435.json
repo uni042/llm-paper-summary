@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": false,
+  "request_id": "preload-1eaf3a6e88674d14e435",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-1eaf3a6e88674d14e435",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "preload_id": "preload-1eaf3a6e88674d14e435",
+  "error": "DiscoveryProviderError: OpenAlex page fetch failed at cursor 'IlsxNzg4MDQ4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjA2MTU3MjQ1J10i': HTTP Error 429: Too Many Requests",
+  "evaluation_allowed": false,
+  "decision": "FIX_REQUEST",
+  "next_action": "Create a NEW schema-v3 precheck request with one fixed provider search source_url/API query. Do not supply hand-picked records and do not emulate pagination by changing the query.",
+  "recovery_steps": [
+    "Keep the failed request unchanged.",
+    "Use schema_version=3.",
+    "Provide provider, source_url, collector_id, run_key, axis, and optional target_unseen/page_size.",
+    "The source_url must identify one fixed result set; the precheck will fetch page 1, page 2, and later pages itself.",
+    "If that result set is exhausted below target_unseen, accept the smaller buffer and start a separate Discovery round for a different query/axis."
+  ]
+}
