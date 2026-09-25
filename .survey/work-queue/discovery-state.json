@@ -1,60 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-25T01:19:13+00:00",
+  "updated_at": "2026-09-25T01:21:04+00:00",
   "last_run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
-  "last_round": "disc-take-scheduled-chat-00-a7d3c1-r10",
+  "last_round": "frontier-ce0c82e0d5e395c7a26a9c68",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-18T16:00:00+09:00",
-      "round": "specialist-moe-backward-2",
-      "axis": "MoE offload/expert cache系統のbackward/adjacent systems・2025年初頭のmodule scheduling",
-      "query_summary": "新着ランキングが既代表化済みだったため、MoE-Infinity、SSD expert offload、FlexGen周辺の隣接・過去年代へ探索窓を移した。検索結果を月別canonical identity snapshotと照合し、DuoServe-MoE、SSD energy analysis、HybridServe、L2 KV prefetch等の既代表化済み論文を早期除外。MoE-Gen (2503.09716) はarxiv-2503 identity snapshotに存在せず、rejection ledgerにも該当せず、一次arXiv abstractでsystems contributionと実測評価を確認したため採用した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2509.07379",
-        "arXiv:2508.06978",
-        "arXiv:2504.06319",
-        "arXiv:2501.01792",
-        "arXiv:2401.14361"
-      ],
-      "next_axis_hint": "次はMoE batchingから離れ、2024-2025のKV cache metadata/RDMA、storage hierarchy、GPU runtime系の重要論文を月別identity snapshotと照合して欠落を探す",
-      "source_submission": "work-queue/submissions/20260918T1659JST-discovery-specialist-moe-backward-2.json"
-    },
-    {
-      "run_key": "2026-09-18T16:00:00+09:00",
-      "round": "specialist-kv-metadata-3",
-      "axis": "KV cache metadata・RDMA・分離サービングnetwork transport",
-      "query_summary": "MoE batchingからKV metadata/RDMAへ軸を変更。TraCT、LMCache等はcanonical identityで既代表化済み。2505.21919は未代表だったため一次arXiv abstractで評価したが、characterization中心でsystem mechanismの新規性・実装評価が弱く不採用とした。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2512.18194",
-        "arXiv:2510.09665"
-      ],
-      "next_axis_hint": "GPU kernel/runtime・compile/autotuningの2024-2025欠落へ移る",
-      "source_submission": "work-queue/submissions/20260918T1701JST-discovery-specialist-kv-metadata-3.json"
-    },
     {
       "run_key": "2026-09-18T16:00:00+09:00",
       "round": "specialist-ondevice-npu-4",
@@ -9999,6 +9954,74 @@
       "duplicate_ratio": 0.8125,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:frontier-6e420014d069bd1f908e6df1",
+      "precheck_request_id": "frontier-6e420014d069bd1f908e6df1",
+      "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+      "round": "frontier-6e420014d069bd1f908e6df1",
+      "axis": "preload-backward-structured-references",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-daaa0cc7a55c6351d876",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/discovery/closure-a7d3c1-r10b.json",
+      "source_submissions": [
+        "work-queue/submissions/discovery/closure-a7d3c1-r10b.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:frontier-ce0c82e0d5e395c7a26a9c68",
+      "precheck_request_id": "frontier-ce0c82e0d5e395c7a26a9c68",
+      "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+      "round": "frontier-ce0c82e0d5e395c7a26a9c68",
+      "axis": "preload-backward-structured-references",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-83ab01c53e1ec590bac3",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/discovery/frontier-ce0c82e0d5e395c7a26a9c68-zero.json",
+      "source_submissions": [
+        "work-queue/submissions/discovery/frontier-ce0c82e0d5e395c7a26a9c68-zero.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -17916,14 +17939,14 @@
     },
     "preload-backward-structured-references": {
       "last_run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
-      "rounds": 24,
-      "candidate_count": 480,
-      "duplicate_filtered_count": 235,
+      "rounds": 26,
+      "candidate_count": 520,
+      "duplicate_filtered_count": 275,
       "novel_candidate_count": 245,
       "final_duplicate_filtered_count": 3,
       "post_final_dedupe_count": 242,
       "accepted_count": 27,
-      "duplicate_ratio": 0.4895833333333333,
+      "duplicate_ratio": 0.5288461538461539,
       "final_duplicate_ratio": 0.012244897959183673,
       "next_axis_hint": null
     },

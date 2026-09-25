@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 10:19:16 JST**
+> 自動生成: **2026-09-25 10:21:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **207** |
 | 直近24hの検証済みResearch収録 | **17** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
-| 最終検証済みDiscovery探索 | **09-25 10:19:13 JST** |
+| 最終検証済みDiscovery探索 | **09-25 10:21:04 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（25時間43分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（25時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,10 +72,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **25** | **10** | **10** | **0** | **0** | **0** | **17** |
-| 合計 | **25** | **11** | **10** | **0** | **144** | **0** | **17** |
+| Discovery | **27** | **12** | **12** | **0** | **0** | **0** | **17** |
+| 合計 | **27** | **13** | **12** | **0** | **144** | **0** | **17** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -91,6 +91,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
+- **09-25 10:20:58 JST** job `job-ef360b3ddacb49ca` / 候補 **0件**
+  - result: `.survey/work-queue/results/closure-a7d3c1-r10b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/closure-a7d3c1-r10b.json`
+  - 探索軸: preload-backward-structured-references
 - **09-25 10:05:19 JST** job `job-0a660e64270d4061` / 候補 **2件**
   - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1.json`
@@ -127,10 +131,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/frontier-8430fe0ed7339d72ee413a87.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/frontier-8430fe0ed7339d72ee413a87.json`
   - 探索軸: preload-backward-structured-references
-- **09-25 10:05:34 JST** job `job-33e8b118f4a2c73e` / 候補 **3件**
-  - result: `.survey/work-queue/results/frontier-b330f7cdb84142a4e6a587fd.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/frontier-b330f7cdb84142a4e6a587fd.json`
-  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
 
 ### 直近タスク
 
@@ -150,8 +150,12 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-25 10:00 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **0件** / 候補: **17件**
-- 探索軸: forward citations of Sequoia hardware-aware speculative decoding / preload-backward-structured-references / forward citations of LMCache enterprise-scale KV cache layer / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **0件** / 候補: **17件**
+- 探索軸: preload-backward-structured-references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of LMCache enterprise-scale KV cache layer / forward citations of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
+- round `frontier-6e420014d069bd1f908e6df1` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/closure-a7d3c1-r10b.json`
+  - 探索軸: preload-backward-structured-references
+  - 個別result照合: あり / `.survey/work-queue/results/closure-a7d3c1-r10b.json` (`ok=true`)
 - round `disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1.json`
   - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
@@ -188,10 +192,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - submission: `.survey/work-queue/submissions/discovery/frontier-8430fe0ed7339d72ee413a87.json`
   - 探索軸: preload-backward-structured-references
   - 個別result照合: あり / `.survey/work-queue/results/frontier-8430fe0ed7339d72ee413a87.json` (`ok=true`)
-- round `frontier-b330f7cdb84142a4e6a587fd` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/discovery/frontier-b330f7cdb84142a4e6a587fd.json`
-  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
-  - 個別result照合: あり / `.survey/work-queue/results/frontier-b330f7cdb84142a4e6a587fd.json` (`ok=true`)
 
 ### 現在処理中
 
