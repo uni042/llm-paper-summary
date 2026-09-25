@@ -1,6 +1,6 @@
 {
-  "fact_generation": 80,
-  "generation": 175,
+  "fact_generation": 83,
+  "generation": 178,
   "runs": {
     "scheduled-chat-00-20260925T020259+0900-a31f": {
       "actual_invocation_start": "2026-09-24T17:02:59+00:00",
@@ -769,9 +769,8 @@
       "candidate_inventory": 353,
       "claims": {
         "active_assignment": true,
-        "active_claim_count": 11,
+        "active_claim_count": 10,
         "active_job_ids": [
-          "job-research-3ef5cc2d28abc041",
           "job-research-26539a1cc6234f61",
           "job-research-08564236a7f9f91a",
           "job-research-ac58200c186f3e5a",
@@ -789,8 +788,8 @@
         "claim_result_pending_age_seconds": 0,
         "claim_state_checked": true,
         "claim_window": 12,
-        "claim_window_remaining": 1,
-        "foreground_job_id": "job-research-3ef5cc2d28abc041",
+        "claim_window_remaining": 2,
+        "foreground_job_id": "job-research-26539a1cc6234f61",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
@@ -806,7 +805,6 @@
         "preflight_repair_attempt_ids": [],
         "preflight_repair_job_ids": [],
         "standby_job_ids": [
-          "job-research-26539a1cc6234f61",
           "job-research-08564236a7f9f91a",
           "job-research-ac58200c186f3e5a",
           "job-research-d70a9b73142dca6a",
@@ -819,7 +817,7 @@
         ]
       },
       "first_cached_at": "2026-09-25T01:59:20.160311+00:00",
-      "generation": 175,
+      "generation": 178,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
       "scheduled_slot": "00",
@@ -844,6 +842,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-25T02:14:21.404298+00:00",
+  "updated_at": "2026-09-25T02:17:06.431518+00:00",
   "worker_id": "scheduled-chat-00"
 }
