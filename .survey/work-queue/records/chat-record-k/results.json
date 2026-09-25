@@ -5,7 +5,7 @@
   "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
   "job_id": "job-research-12d29ccbbefd4d02",
   "data": {
-    "overview": "L2ノルムが低いkeyを保持するだけでKV容量を削減しつつ品質を維持した。Llama-2-7B-80Kのneedle-in-a-haystackでは50%圧縮で99%正解率、passkey retrievalでは90%圧縮でも100%正解率を報告する。",
+    "overview": "L2 normが低いkeyを保持する単純な規則でも、長文検索とlanguage modelingの双方で中程度から強いKV削減に耐えた。Llama-2-7B-80Kのneedle-in-a-haystackではKVを50%削減して99% accuracyを維持し、passkey retrievalでは90%削減でも100% accuracyだった。一般のlanguage-model評価でも最大およそ50%圧縮まではperplexityへの影響が小さい。これはattention scoreを取得しない軽量proxyでも、FlashAttention互換性を保ちながら実用的なKV memory削減余地があることを示す。ただし90%無損失はpasskeyという限定タスクであり、強圧縮を一般品質へそのまま外挿できない。",
     "key_results": [
       {
         "metric": "Needle-in-a-Haystack accuracy",
