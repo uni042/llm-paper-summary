@@ -191,27 +191,30 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertIn("all_remaining_work_blocked_after_fallback_consideration", result["stop_reasons"])
 
-    def test_run_deadline_guard_overrides_mode_quota(self):
-        for candidate_inventory in (49, 50):
+    def test_run_deadline_is_telemetry_only_and_never_stops_work(self):
+        for candidate_inventory in (287, 288):
             with self.subTest(candidate_inventory=candidate_inventory):
                 result = mod.decide(make_args(
                     candidate_inventory=candidate_inventory,
-                            seconds_to_run_deadline=600,
+                    seconds_to_run_deadline=0,
                 ))
-                self.assertEqual(result["decision"], "STOP_RUN")
-                self.assertTrue(result["finalization_allowed"])
-                self.assertTrue(result["hard_stop"])
-                self.assertIn("run_deadline_within_handoff_guard", result["stop_reasons"])
+                self.assertEqual(result["decision"], "CONTINUE")
+                self.assertFalse(result["finalization_allowed"])
+                self.assertFalse(result["hard_stop"])
+                self.assertFalse(result["handoff_window_active"])
+                self.assertFalse(result["final_handoff_active"])
+                self.assertEqual(result["handoff_time_source"], "disabled_for_control")
 
-    def test_schedule_boundary_is_compatibility_fallback_when_run_deadline_missing(self):
+    def test_next_scheduled_task_is_telemetry_only(self):
         result = mod.decide(make_args(
-            candidate_inventory=50,
-            seconds_to_next_scheduled_task=599,
+            candidate_inventory=288,
+            seconds_to_next_scheduled_task=0,
         ))
-        self.assertEqual(result["decision"], "STOP_RUN")
-        self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
-        self.assertEqual(result["handoff_time_source"], "legacy_next_scheduled_task_compat")
-        self.assertTrue(result["legacy_schedule_handoff_fallback_used"])
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+        self.assertFalse(result["hard_stop"])
+        self.assertFalse(result["legacy_schedule_handoff_fallback_used"])
+        self.assertEqual(result["handoff_time_source"], "disabled_for_control")
 
     def test_discovery_pending_precheck_survives_600_second_start_prohibition_window(self):
         result = mod.decide(make_args(
@@ -232,15 +235,16 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT")
 
-    def test_final_180_second_guard_can_handoff_started_discovery(self):
+    def test_zero_remaining_time_does_not_handoff_started_discovery(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
             discovery_precheck_result_pending=True,
-            seconds_to_run_deadline=180,
+            seconds_to_run_deadline=0,
         ))
-        self.assertEqual(result["decision"], "STOP_RUN")
-        self.assertTrue(result["finalization_allowed"])
-        self.assertIn("run_deadline_within_final_180_second_handoff_guard", result["stop_reasons"])
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "WAIT_FOR_DISCOVERY_PRECHECK_RESULT")
+        self.assertFalse(result["final_handoff_active"])
 
     def test_auto_mode_requires_candidate_inventory(self):
         with self.assertRaises(ValueError):
