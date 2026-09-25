@@ -99,7 +99,7 @@ PROFILES = {
             "claim と bank descriptor の対応を手作業で差し替えない。",
             "競合・期限切れ・dirty bank はこのスクリプトの回収処理に任せる。",
             "キュー整合後に同じ claim 経路を再実行する。",
-            "Research/Auditの内容を含むrecord slot updateとquality_preflight_v1 bundle createが両方platform側で拒否された場合はrun-wide停止へ進まず、hot-dispatch/resume packetの platform_content_write_recovery が示す最小status-only blocked descriptorをcreate-only保存してその論文だけを退避し、次standbyへ進む。",
+            "Research/Auditの内容を含むrecord slot updateとquality_preflight_v1 bundle createが両方platform側で拒否された場合はrun-wide停止へ進まず、hot-dispatch/resume packetの platform_content_write_recovery が示すstatus-only → worker-control → health-probeを各1回まで試す。全てplatform safetyで拒否されてもGitHub read/制御系writeが生きているなら、そのattemptをvolatile pending durabilityとして成功件数には数えず、同じwriteを連打せず、既確保standbyのread-ahead（全文読解→5スロット相当→セルフレビュー）へ進む。成果は最終Scheduled Chat報告のattempt別handoffに残し、次回はcanonical identity一致を確認して再読前に通常耐久経路を1回再試行する。",
         ],
     },
     "process_immutable_submission_batch.py": {
