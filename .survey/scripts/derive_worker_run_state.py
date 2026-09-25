@@ -1769,8 +1769,24 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     )
 
     now = dt.datetime.now(dt.timezone.utc)
-    deadline = started_at + dt.timedelta(seconds=3600)
-    seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
+    next_scheduled_task_at = worker_identity.next_paper_scheduled_start(
+        started_at, str(request["worker_id"])
+    )
+    if next_scheduled_task_at is not None:
+        seconds_to_next_scheduled_task = max(
+            int((next_scheduled_task_at - now).total_seconds()), 0
+        )
+        seconds_to_deadline = None
+        seconds_to_time_boundary = seconds_to_next_scheduled_task
+        time_boundary_source = "next_scheduled_task"
+    else:
+        # Ad-hoc workers have no scheduled successor. Preserve the historical
+        # one-hour ceiling only as their compatibility fallback.
+        deadline = started_at + dt.timedelta(seconds=3600)
+        seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
+        seconds_to_next_scheduled_task = None
+        seconds_to_time_boundary = seconds_to_deadline
+        time_boundary_source = "adhoc_run_deadline"
 
     discovery_pipeline_preload = None
     inflight_count = int(discovery_async.get("discovery_inflight_round_count") or 0)
@@ -1781,7 +1797,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     )
     pipeline_eligible = bool(
         work_mode == "discovery"
-        and seconds_to_deadline > 600
+        and seconds_to_time_boundary > 600
         and async_wait_exists
         and not discovery_async.get("discovery_evaluation_pending")
         and not discovery_async.get("discovery_recovery_required")
@@ -1865,7 +1881,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     # 600s is only a no-new-independent-work window. The final 180s is the
     # unconditional handoff condition.
-    if seconds_to_deadline <= 180:
+    if seconds_to_time_boundary <= 180:
         runtime = "handoff_guard"
         runtime_condition_ignored_reason = None
 
@@ -1914,7 +1930,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         write_failed=False,
         probe="not-run",
         seconds_to_run_deadline=seconds_to_deadline,
-        seconds_to_next_scheduled_task=None,
+        seconds_to_next_scheduled_task=seconds_to_next_scheduled_task,
         scheduled_handoff_guard_seconds=600,
         candidate_inventory=inventory,
         work_mode=work_mode if work_mode in {"research", "discovery"} else "research",
@@ -2080,6 +2096,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "write_blocked_job": write_blocked_job,
         "seconds_to_run_deadline": seconds_to_deadline,
+        "seconds_to_next_scheduled_task": seconds_to_next_scheduled_task,
+        "next_scheduled_task_at": (
+            next_scheduled_task_at.isoformat() if next_scheduled_task_at is not None else None
+        ),
+        "time_boundary_source": time_boundary_source,
         **claims,
         **public_submission,
         **discovery_async,

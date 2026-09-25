@@ -97,14 +97,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
     handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
 
-    if seconds_to_deadline is not None:
-        effective_seconds_to_handoff = int(seconds_to_deadline)
-        handoff_time_source = "run_deadline"
-        handoff_reason = "run_deadline_within_handoff_guard"
-    elif seconds_to_next is not None:
+    if seconds_to_next is not None:
         effective_seconds_to_handoff = int(seconds_to_next)
-        handoff_time_source = "legacy_next_scheduled_task_compat"
+        handoff_time_source = "next_scheduled_task"
         handoff_reason = "next_scheduled_task_within_handoff_guard"
+    elif seconds_to_deadline is not None:
+        effective_seconds_to_handoff = int(seconds_to_deadline)
+        handoff_time_source = "adhoc_run_deadline_compat"
+        handoff_reason = "run_deadline_within_handoff_guard"
     else:
         effective_seconds_to_handoff = None
         handoff_time_source = "unknown"
@@ -119,7 +119,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         and effective_seconds_to_handoff <= 180
     )
     if final_handoff_active and handoff_reason is not None:
-        reasons.append("run_deadline_within_final_180_second_handoff_guard")
+        reasons.append("time_boundary_within_final_180_second_handoff_guard")
 
     if not args.github_read:
         reasons.append("github_read_unavailable_for_repo_state")
@@ -608,7 +608,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             f"candidate_inventory is mandatory: >={claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD} selects Research/Audit and below it selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
-            "Canonical callers must provide seconds_to_run_deadline from actual_invocation_start; seconds_to_next_scheduled_task is a compatibility-only fallback for historical direct callers and must not be used by normal run-state flow. "
+            "Canonical fixed Scheduled Chat callers provide seconds_to_next_scheduled_task; seconds_to_run_deadline is only the ad-hoc compatibility fallback. "
             f"Discovery's {discovery_min_rounds}-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
             f"Research/Audit exposes the combined {research_minimum_completions}-completion quota state. The {research_minimum_completions}-completion floor is not a stop cap: "

@@ -1899,5 +1899,27 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
 
 
 
+class ScheduledBoundaryTests(unittest.TestCase):
+    def test_fixed_worker_uses_next_shared_half_hour_boundary(self):
+        start = dt.datetime(2026, 9, 25, 15, 57, 29, tzinfo=dt.timezone(dt.timedelta(hours=9)))
+        boundary = mod.worker_identity.next_paper_scheduled_start(start, "scheduled-chat-00")
+        self.assertEqual(
+            boundary,
+            dt.datetime(2026, 9, 25, 7, 0, 0, tzinfo=dt.timezone.utc),
+        )
+
+    def test_fixed_worker_normal_start_yields_next_30_minute_task(self):
+        start = dt.datetime(2026, 9, 25, 15, 2, 0, tzinfo=dt.timezone(dt.timedelta(hours=9)))
+        boundary = mod.worker_identity.next_paper_scheduled_start(start, "scheduled-chat-30")
+        self.assertEqual(
+            boundary,
+            dt.datetime(2026, 9, 25, 6, 30, 0, tzinfo=dt.timezone.utc),
+        )
+
+    def test_adhoc_worker_has_no_scheduled_successor(self):
+        start = dt.datetime(2026, 9, 25, 15, 2, 0, tzinfo=dt.timezone(dt.timedelta(hours=9)))
+        self.assertIsNone(mod.worker_identity.next_paper_scheduled_start(start, "worker-1"))
+
+
 if __name__ == "__main__":
     unittest.main()

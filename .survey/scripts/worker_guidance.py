@@ -99,7 +99,7 @@ PROFILES = {
             "claim と bank descriptor の対応を手作業で差し替えない。",
             "競合・期限切れ・dirty bank はこのスクリプトの回収処理に任せる。",
             "キュー整合後に同じ claim 経路を再実行する。",
-            "Research/Auditの内容を含むrecord slot updateとquality_preflight_v1 bundle createが両方platform側で拒否された場合はrun-wide停止へ進まず、hot-dispatch/resume packetの platform_content_write_recovery が示すstatus-only → worker-control → health-probeを各1回まで試す。全てplatform safetyで拒否されてもGitHub read/制御系writeが生きているなら、そのattemptをvolatile pending durabilityとして成功件数には数えず、同じwriteを連打せず、既確保standbyのread-ahead（全文読解→5スロット相当→セルフレビュー）へ進む。成果は最終Scheduled Chat報告のattempt別handoffに残し、次回はcanonical identity一致を確認して再読前に通常耐久経路を1回再試行する。",
+            "Research/Auditの内容を含むrecord slot updateとquality_preflight_v1 bundle createが両方platform側で拒否された場合はrun-wide停止へ進まず、hot-dispatch/resume packetの platform_content_write_recovery が示すstatus-only → worker-control → health-probeを各1回まで試す。全てplatform safetyで拒否されてもGitHub read/制御系writeが生きているなら、そのattemptをvolatile pending durabilityとして成功件数には数えず、同じwriteを連打せず、既確保standbyのread-ahead（全文読解→5スロット相当→セルフレビュー）へ進む。成果は最終Scheduled Chat報告のattempt別handoffに残す。次回Scheduled Taskは同じcontent writeを自動再試行せず、新しい作業を優先する。未反映分はユーザーが通常チャットで一括反映を指示した時だけ最新mainとidentityを確認して反映する。",
         ],
     },
     "process_immutable_submission_batch.py": {
@@ -118,7 +118,7 @@ PROFILES = {
     "derive_worker_run_state.py": {
         "task": "Scheduled Chat run-stateの正規導出",
         "next": [
-            "生成された run-state result の ok / work_mode / pending state / gate.required_action に加え、seconds_to_run_deadline / stop_permit.issued / stop_permit.category / run_termination_allowed / next_action / next_work_packet を確認する。時間窓を終了理由に使えるのは今回run identityと一致する最新snapshotで stop_permit.category=time_window かつ stop_permit.issued=true かつ run_termination_allowed=true の場合だけ。",
+            "生成された run-state result の ok / work_mode / pending state / gate.required_action に加え、next_scheduled_task_at / seconds_to_next_scheduled_task（固定Scheduled Chat）または seconds_to_run_deadline（adhoc）、stop_permit.issued / stop_permit.category / run_termination_allowed / next_action / next_work_packet を確認する。時間窓を終了理由に使えるのは今回run identityと一致する最新snapshotで stop_permit.category=time_window かつ stop_permit.issued=true かつ run_termination_allowed=true の場合だけ。",
             "同じrun内で状態が変化して再判定する場合は、run_key / worker_id / scheduled_slot / actual_invocation_startを維持しつつ、新しい一意なrequest_idで新しいsnapshot requestを作る。",
             "resultが既に存在するrequest_idを再利用して最新状態を得ようとしない。既存resultは不変snapshotとして扱う。",
             "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを追跡する。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認し、worker-router.md第7.0節の待機ミクロタスクを1件処理してから同じrequest_idを再確認する。",
@@ -152,7 +152,7 @@ PROFILES = {
             "Research/Audit runでは --work-mode research と research_audit_completed_this_invocation / research_minimum_completions を、Discovery runでは対応round数を必ず渡す。",
             "next_action=CLAIM_NEXT_RESEARCH_AUDIT なら最終応答を出さず、最新queue/claim stateから次のResearch/Auditを1件claimする。",
             "finalization_permit.issued=false なら next_action / wait_targets に従って状態を進め、run_finalization_gate.py を再実行する。",
-            "finalization_permit.issued=true だけではrunを終了しない。通常の論文workerでは、同一run identityの最新run-state snapshotで stop_permit.issued=true かつ run_termination_allowed=true を確認した場合だけ終了へ進む。時間窓終了なら stop_permit.category=time_window と snapshotの seconds_to_run_deadline を必ず確認する。",
+            "finalization_permit.issued=true だけではrunを終了しない。通常の論文workerでは、同一run identityの最新run-state snapshotで stop_permit.issued=true かつ run_termination_allowed=true を確認した場合だけ終了へ進む。時間窓終了なら stop_permit.category=time_window と、固定Scheduled Chatでは snapshot の next_scheduled_task_at / seconds_to_next_scheduled_task、adhocでは seconds_to_run_deadline を必ず確認する。",
         ],
         "recovery": [
             "continuation decision と finalization_allowed、およびrunのwork_modeと最低条件カウンタを再確認する。",

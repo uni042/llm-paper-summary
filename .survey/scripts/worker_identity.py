@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Shared worker identity rules for survey Scheduled Chat and ad-hoc workers."""
 from __future__ import annotations
+import datetime as dt
 import re
 from typing import Any
 
@@ -10,6 +11,8 @@ FIXED_SCHEDULED_WORKER_SLOTS = {
 }
 ADHOC_SLOT = "adhoc"
 ADHOC_WORKER_RE = re.compile(r"^worker-[0-9]{1,6}$")
+JST = dt.timezone(dt.timedelta(hours=9))
+PAPER_SCHEDULE_MINUTES = (0, 30)
 
 
 def is_adhoc_worker_id(worker_id: Any) -> bool:
@@ -34,6 +37,25 @@ def allowed_slots(worker_id: Any) -> set[str]:
 
 def identity_slot_valid(worker_id: Any, scheduled_slot: Any) -> bool:
     return isinstance(scheduled_slot, str) and scheduled_slot in allowed_slots(worker_id)
+
+
+def next_paper_scheduled_start(actual_invocation_start: dt.datetime, worker_id: str) -> dt.datetime | None:
+    """Return the next shared :00/:30 paper-task boundary after this invocation starts.
+
+    Fixed Scheduled Chat workers share the same paper-task cadence, so a late or manual
+    invocation must yield to whichever :00/:30 task comes next. Ad-hoc workers have no
+    scheduled successor and therefore return None.
+    """
+    if worker_id not in FIXED_SCHEDULED_WORKER_SLOTS:
+        return None
+    if actual_invocation_start.tzinfo is None:
+        raise ValueError("actual_invocation_start must be timezone-aware")
+    local = actual_invocation_start.astimezone(JST)
+    if local.minute < 30:
+        candidate = local.replace(minute=30, second=0, microsecond=0)
+    else:
+        candidate = (local.replace(minute=0, second=0, microsecond=0) + dt.timedelta(hours=1))
+    return candidate.astimezone(dt.timezone.utc)
 
 
 def validate_identity_slot(worker_id: str, scheduled_slot: str) -> str:
