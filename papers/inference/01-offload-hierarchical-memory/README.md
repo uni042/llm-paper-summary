@@ -23,8 +23,12 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   FluxMoEは層の実行直前だけ必要な専門家重みをGPUへ実体化し、直後に解放するPagedTensorと帯域比例のストリーミングで、KVキャッシュを圧迫する常駐重みを減らす。
 
 - **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
-  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：3  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
+
+- **2026-08 · [Potential Applications of HBF in LLM Serving Systems](2026-2608.13127-hbf-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  本研究はHigh-Bandwidth FlashをHBMの代替でなく容量階層としてMoE専門家の複製と複数モデル重みの常駐を増やし、遠隔通信・読み込み・負荷偏りを減らせるか検討する。
 
 - **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -33,10 +37,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-04 · [SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding](2026-2604.10152-specmoe-self-assisted-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
-
-- **2026-08 · [Potential Applications of HBF in LLM Serving Systems](2026-2608.13127-hbf-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  本研究はHigh-Bandwidth FlashをHBMの代替でなく容量階層としてMoE専門家の複製と複数モデル重みの常駐を増やし、遠隔通信・読み込み・負荷偏りを減らせるか検討する。
 
 - **2026-07 · [ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels](2026-2607.18002-expertplex-disaggregated-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -263,11 +263,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 2年前（2024-10〜2025-09）
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：33  
+  実装：✓ ・ リポジトリ内被引用：34  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
-  実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：22  
   FineMoEは反復ごとのルーティング履歴とプロンプト類似性から次に使う専門家を予測し、GPUキャッシュへ先読みしてMoE重み転送待ちを減らす。
 
 - **2025-02 · [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)**  
@@ -295,11 +295,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
 
 - **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   DuoServe-MoEは、密なプリフィルでは二重ストリーム転送、疎なデコードでは次層専門家をMLP予測して先読みするようフェーズ別に切替え、CPU→GPU転送待ちを隠す。
 
 - **2025-08 · [SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution](2025-2508.18983-smoe-expert-substitution-edge.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   低得点の活性専門家をGPU常駐の類似得点専門家へ置換し、重要専門家だけを先読みしてPCIe転送を減らす端末向けMoE推論方式。
 
 - **2025-08 · [Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding](2025-2508.21706-specmoeoff-speculative-decoding-offload.md)**  
@@ -309,6 +309,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-08 · [SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency](2025-2508.06978-ssd-moe-offloading-energy-efficiency.md)**  
   実装：[✓](https://github.com/scale-snu/SSD-offloading) ・ リポジトリ内被引用：4  
   MoE専門家重みをHBM・CPUメモリ・SSDに置いたときのデコードエネルギーを比較し、SSD退避では1トークン当たりMixtralが3.8〜12.5倍、DeepSeek-R1が4.7〜9.8倍増えると示す。
+
+- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
+  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：4  
+  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
 
 - **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
   実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：4  
@@ -325,10 +329,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-05 · [SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices](2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md)**  
   実装：[✓](https://github.com/MobiSense/SpecOffload-public) ・ リポジトリ内被引用：3  
   オフロード中に遊休するGPU計算時間と低効率なGPUメモリへ投機的デコードのドラフトモデルを配置し、CPU計算・重み転送・ドラフト生成を重ねてFlexGen比最大2.54倍のスループットを実現する。
-
-- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
-  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：3  
-  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
 
 - **2025-04 · [MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints](2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -377,27 +377,27 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-10〜2024-09）
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：73  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：74  
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：56  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：58  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：57  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：56  
   LLM in a Flashは直近で使ったFFN重みをDRAMに残し、ニューロン単位でFlash上の重みをまとめて必要部分だけ読み出して大規模モデルを限られたメモリで生成する。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
-  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：52  
   Fiddlerはキャッシュミスした専門家をGPUへ転送するか、活性値だけCPUへ送りCPUで計算するかを実行時に選び、MoEの重み転送待ちを減らす。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：23  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
@@ -431,6 +431,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-10〜2023-09）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：223  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：228  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 <!-- survey:auto:end -->

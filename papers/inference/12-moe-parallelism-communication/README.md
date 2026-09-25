@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（24本）
+## 自動生成の論文一覧（25本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -46,6 +46,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。
+
+- **2025-12 · [Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism](2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md)**  
+  実装：— ・ リポジトリ内被引用：1  
+  分離専門家並列で注意・共有専門家・専門家計算と双方向通信を細粒度タスクへ分割し、粒度と実行順を性能モデルから同時最適化して、最適化済みPPPipe比でスループットを最大1.61倍へ高める。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 

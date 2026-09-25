@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（14本）
+## 自動生成の論文一覧（15本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -26,6 +26,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：✓ ・ リポジトリ内被引用：0  
   強い負荷分散学習でルータ重要度が一様化したMoEでは通常の枝刈り基準が破綻することを示し、最悪影響領域を反復保護するMESAで25%専門家削減時の能力偏りを抑える。
 
+- **2026-08 · [Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving](2026-2608.08910-tied-trit-planes.md)**  
+  実装：— ・ リポジトリ内被引用：0  
+  GPUや主記憶へ全専門家を置けない端末では必要な専門家をSSDから読むため、量子化は容量だけでなくSSD読込み量、専門家キャッシュ容量、実行カーネル入力まで同時に決める。DeepSeek-V4-Flash-0731のルーティング専門家を公開MXFP4重みから一括量子化し、64GBノートPCでSSDストリーミングした。
+
 - **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
   実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：0  
   GEMQは、全層の専門家を一つのメモリ予算で比較してビット幅を配分し、量子化後はルータを微調整して、専門家品質の低下と誤選択を抑える。
@@ -37,7 +41,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：29  
   MC-MoEは、専門家ごとの混合精度で保存重みを圧縮し、トークンごとに寄与の小さい専門家を動的枝刈りして、容量と実行FLOPsを別々に減らす。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
@@ -59,15 +63,15 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-10〜2024-09）
 
 - **2023-10 · [Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness](2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2024-06 · [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：16  
   このベンチマークは、MoEの平均ビット予算を専門家頻度・ブロック位置・線形層へ割り当てて比較し、モデル別に量子化誤差へ効く保護対象を測定する。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：15  
   QMoEは、Switch Transformerの専門家重みをデータ依存に2ビット/三値圧縮し、圧縮表現を直接読むGPUカーネルで展開帯域を抑え、超大規模MoEの保存容量を減らす。
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  

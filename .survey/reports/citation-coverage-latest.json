@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-09-25T04:34:59+00:00",
+  "checked_at": "2026-09-25T23:39:40+00:00",
   "summary": {
-    "total": 1027,
-    "complete": 1027,
-    "incomplete": 0
+    "total": 1049,
+    "complete": 1047,
+    "incomplete": 2
   },
   "families": {
     "inference": {
-      "total": 989,
-      "complete": 989
+      "total": 1011,
+      "complete": 1009
     },
     "training": {
       "total": 25,
@@ -21,5 +21,16 @@
       "complete": 13
     }
   },
-  "incomplete": []
+  "incomplete": [
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109617",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.27746-kvset-online-capacity-planning.md",
+      "canonical_id": "arXiv:2609.27746",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
 }
