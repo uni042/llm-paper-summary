@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
   "job_id": "job-research-12d29ccbbefd4d02",
-  "data": {},
+  "data": {
+    "limitations": "L2 normとattention重要度の相関は層・headで一様でなく初期層を圧縮しない経験的設定に依存する。評価は最大8B級中心で、90%圧縮無損失はpasskey retrievalに限定される。end-to-end latency/throughput実測は限定的。",
+    "differences": "attention-scoreベース手法と異なりquery依存attention weightを取得せずkey自身のL2 normだけでevictionを決め、FlashAttentionと両立しやすい。固定window/sink方式とも異なるdata-dependent eviction。",
+    "implementation_status": "著者実装l2compressを公開。training-free KV pruningとして実装されEMNLP 2024掲載。",
+    "research_positioning": "KV-cache compressionの軽量training-free eviction。key生成時のL2 normだけで重要度を推定する点が特徴。"
+  },
   "reservation": {
     "claim_id": "claim-preload-6b239632cba886a9b742dc0e",
     "worker_id": "scheduled-chat-00",
