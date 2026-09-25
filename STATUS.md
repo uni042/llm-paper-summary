@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 13:24:52 JST**
+> 自動生成: **2026-09-25 13:35:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **358** |
-| 未claim Research job | **227** |
+| 未claim Research job | **214** |
 | 直近24hの検証済みResearch収録 | **18** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-25 13:24:13 JST** |
@@ -34,9 +34,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6822** |
+| 構造化references総候補 | **6827** |
 | 処理済み | **670** |
-| 未処理 | **6152** |
+| 未処理 | **6157** |
 | 収録済みとして除外 | **561** |
 | 無関係として除外 | **49** |
 | 微妙として除外 | **60** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（28時間48分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（28時間59分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **1** | **0** | **0** | **131** | **0** | — |
+| Research | **1** | **1** | **0** | **0** | **144** | **63** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **24** | **8** | **7** | **0** | **0** | **0** | **22** |
-| 合計 | **25** | **9** | **7** | **0** | **131** | **0** | **22** |
+| Discovery | **21** | **8** | **7** | **0** | **0** | **0** | **22** |
+| 合計 | **22** | **9** | **7** | **0** | **144** | **63** | **22** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -186,37 +186,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **131件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
-  - claim: **09-25 11:29:37 JST** / heartbeat: **—** / lease expiry: **09-25 23:29:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
-- `DOI:10.1145/3800690` — Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping / worker `shared-preload-pool`
-  - claim: **09-25 11:28:11 JST** / heartbeat: **—** / lease expiry: **09-25 23:28:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7d990d474868bfd8.json`
-- `DOI:10.1145/3774904.3792382` — LaTune: Lightweight and Adaptive Configuration Tuning for LLM Inference on Edge Devices / worker `shared-preload-pool`
-  - claim: **09-25 11:28:11 JST** / heartbeat: **—** / lease expiry: **09-25 23:28:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f6fb69ab8bfe6fa5.json`
-- `DOI:10.1109/CVIDL70130.2026.11637503` — FlashSandwich: A Hardware-Aware Hybrid SSM-Transformer Architecture with Optimized KV Cache Management for Efficient LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a310d33173ecd821.json`
-- `DOI:10.1109/TCAD.2025.3624135` — AsyncGrid: An Intralayer and Interlayer Asynchronous Hybrid Parallelism System for Responsive Edge LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a36787e70fb2243e.json`
-- `DOI:10.24963/ijcai.2026/475` — Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-af0c2125c07b340e.json`
-- `arXiv:2607.22578` — HeraSys: Collaborative Serving of Multiple LLM Workflows via Fine-Grained End-to-End Optimization / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b1f6c436e803c529.json`
-- `DOI:10.1109/TCASAI.2026.3670075` — Asymmetric KV Cache Compression Using State-Aware Sparsity and Quantization / worker `shared-preload-pool`
-  - claim: **09-25 11:23:56 JST** / heartbeat: **—** / lease expiry: **09-25 23:23:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f57aeaf97369752d.json`
-- `arXiv:2609.23130` — From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving / worker `shared-preload-pool`
-  - claim: **09-25 11:20:20 JST** / heartbeat: **—** / lease expiry: **09-25 23:20:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-82608cb811f87a8c.json`
-- `DOI:10.1145/3820441.3820479` — Towards Efficient Serving of Network-intensive LLM Inferences / worker `shared-preload-pool`
-  - claim: **09-25 11:17:45 JST** / heartbeat: **—** / lease expiry: **09-25 23:17:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-dfcde3edcf70d50d.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **63件**
+- `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
+  - claim: **09-25 00:26:58 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
+- `arXiv:2609.04724` — FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators / worker `shared-preload-pool`
+  - claim: **09-24 15:33:22 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-04cf5cb095abe08f.json`
+- `arXiv:2609.25451` — Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-05fc71d26e12a3ee.json`
+- `arXiv:2609.23816` — SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0729262d447a8308.json`
+- `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
+- `arXiv:2609.26333` — Disaggregated Quantization: Specializing LLM Prefill and Decode / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1932d6ac89ddfafb.json`
+- `arXiv:2606.31519` — RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 05:48:48 JST** / heartbeat: **09-25 13:30:09 JST** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-220eaa0cfe111598.json`
+- `arXiv:2608.10545` — ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **—** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2db1a9d83c60d21c.json`
+- `DOI:10.1109/HPCA68181.2026.11408577` — LiLo: Harnessing the on-Chip Accelerators in Intel CPUs for Compressed LLM Inference Acceleration / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **—** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-33e77bc7b58dbf7d.json`
+- `arXiv:2602.11688` — GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving / worker `shared-preload-pool`
+  - claim: **09-25 13:30:09 JST** / heartbeat: **—** / lease expiry: **09-26 01:30:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-352411c0dfdab5c8.json`
 
 #### Audit
 
