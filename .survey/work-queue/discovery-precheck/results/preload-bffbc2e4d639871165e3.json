@@ -1,0 +1,866 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-bffbc2e4d639871165e3",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-bffbc2e4d639871165e3",
+  "axis": "forward citations of Splitwise for disaggregated LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "140",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 20,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T17:38:21.568235+00:00",
+  "preload_id": "preload-bffbc2e4d639871165e3",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Action Chunk Scheduling for Batched Robot Policy Serving",
+      "source_url": "https://www.semanticscholar.org/paper/0a95ed9351ecb072fc416cf3ffd01f0c92b71612",
+      "year": 2026,
+      "published": "2026-07-31",
+      "abstract": "Deploying robot foundation models at scale is the next step towards realizing the potential of general-purpose robots. However, Vision-Language-Action (VLA) and other foundation models are computationally demanding, and on-device compute is constrained by power and space. In this paper, we introduce the problem of serving a robot policy to multiple robots from a remote GPU and formulate it as a scheduling problem. We build Armory, a serving system validated on fleets of both simulated and real robots. Our experiments show that naive scheduling heuristics perform well when all robots are the same, but fall short when robots consume action chunks at different rates, uncovering a mismatch between conventional batching methods and the closed-loop requirements of robot policy execution. To address this, we propose a scheduling algorithm that accounts for this heterogeneity and improves overall system throughput by up to $18\\%$ in real-world experiments. Additional details are available at https://gatech-rl2.github.io/actionchunkscheduling.",
+      "canonical_id": "arXiv:2608.00337",
+      "arxiv_id": "2608.00337",
+      "authors": [
+        "Rohan Bansal",
+        "David He",
+        "N. R. Arachchige",
+        "Zhenyang Chen",
+        "Soobum Kim",
+        "Kexin Rong",
+        "Danfei Xu"
+      ]
+    },
+    {
+      "title": "Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/9676cfeabfb42f5e2ff4a4468f18be2b683d8b82",
+      "year": 2026,
+      "published": "2026-07-30",
+      "abstract": "Large language model (LLM) workloads motivate multi-partition GPUs as a path to scaling compute and memory capacity, but their non-uniform memory access characteristics and inter-partition communication can amplify contention and degrade locality, leading to suboptimal kernel latency. To address this, we analyze performance-critical LLM kernel implementations spanning weight projection, mixture-of-experts, and attention variants of state-of-the-art serving engines to present a characterization of data access patterns in multi-partition GPUs. First, we introduce memory trace analysis methodology to derive workgroup-level data access and sharing behavior, then evaluate the locality implications on latency using a cycle-level simulator. Using these tools, we categorize LLM kernel operands into three inter-workgroup sharing patterns (global, partial, or private) and show that the required optimization strategies differ across categories, from simple per-workgroup pinning to subgroup-aware co-scheduling. Our findings highlight the need for placement-aware kernel programming and smarter architectural support for work and data locality in multi-partition GPUs.",
+      "canonical_id": "arXiv:2607.28824",
+      "arxiv_id": "2607.28824",
+      "authors": [
+        "Donghyeon Joo",
+        "Sooraj Puthoor",
+        "N. Jayasena",
+        "Bahar Asgari"
+      ]
+    },
+    {
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "source_url": "https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba",
+      "year": 2026,
+      "published": "2026-07-29",
+      "abstract": "Modern distributed AI workloads run across hundreds of accelerators, making communication a major bottleneck. Existing communication libraries remain largely buffer-centric because user and communication buffers are managed separately, causing redundant data copies or costly user-buffer registration. This paper presents StrataCL, a zero-redundancy and fabric-native communication library for production supernodes. StrataCL introduces registration-on-allocation to realize user-buffer direct communication, and designs communication operators with workload-balanced NPU-core partitioning and NPU-driven SDMA offloading to exploit supernode architecture features. On the Huawei CloudMatrix384, StrataCL improves collective bus bandwidth by up to 1.6x and improves MoE dispatch/combine bus bandwidth by up to 1.4x. Across three production workloads, StrataCL improves LLM inference throughput by 1.9x, reduces P99 TTFT by 2.2x, and reduces LLM and Recsys training iteration time by 1.4x and 1.3x, respectively.",
+      "canonical_id": "arXiv:2607.26444",
+      "arxiv_id": "2607.26444",
+      "authors": [
+        "Tian-Cheng Hu",
+        "Jin Qin",
+        "Yu-Zheng Wang",
+        "Ke Liu",
+        "TangShengsheng Li",
+        "Sheng Wang",
+        "Zhongzhe Hu",
+        "Tian-Lun Hu",
+        "Wei Wang",
+        "Lijun Li",
+        "Jingbin Zhou",
+        "Xiaoming Bao",
+        "Hong-Wei Sun",
+        "Jieru Zhao",
+        "Huimin Cui",
+        "Tao Xie",
+        "Chenxi Wang"
+      ]
+    },
+    {
+      "title": "Phase-Wise Analysis of LLM Inference Acceleration on GPU, CPU, and Edge Device",
+      "source_url": "https://www.semanticscholar.org/paper/30b4fcf5da5d6ac737054fbeb7ef50d0f47ff868",
+      "year": 2026,
+      "published": "2026-07-26",
+      "abstract": "Prefill or prompt processing and Decode or token generation are two distinct subphases of LLM inference that are greatly influenced by LLM accelerators such as GPT-Generated Unified Format (GGUF Q4_K_M), NormalFloat 4-bit (NF4) Quantization, FlashAttention-2 and others. Although these accelerators clearly improve end-to-end LLM inference performance, their effectiveness over these subphases remains largely understudied. To address this gap, we present a cross-platform, multi-model empirical study, where we deploy multiple ∼ 1B-parameter LLMs on GPU, CPU, and Raspberry Pi 4B edge hardware platforms in the presence and absence of these accelerators. Each test case evaluates 10,000+ inference runs with separate phase-wise and end-to-end performance indicators. Our study brings several important observations, including the contrastive effect of quantization under different hardware bottlenecks, along with a quantification of runtime delays (up to +139%) caused by the lack of parallelism in the ARM architecture. Based on these benchmarking results and observations, we identify several open research challenges in the concluding section. Our work is fully reproducible and open-sourced on GitHub1.",
+      "canonical_id": "DOI:10.1145/3785462.3815902",
+      "doi": "10.1145/3785462.3815902",
+      "authors": [
+        "Subhransu Das",
+        "Jiaming Cheng",
+        "Swathi Vallabhajosyula",
+        "Brijesh Soni",
+        "Rajiv Ramnath"
+      ]
+    },
+    {
+      "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
+      "source_url": "https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "Datacenter networks follow a multipath doctrine: provision many paths between endpoints, hash flows across them, and let redundancy absorb both failures and load imbalance. The ZCube topology violates this doctrine. It removes the Spine layer, eliminates path multiplicity, and cuts one third of switching hardware, yet delivers better performance for both large model training and inference. We explain this anomaly through a structural connection to Braess's paradox, first observed in 1968: both phenomena trace to congestion-oblivious routing over competing paths. Braess showed that adding paths under this condition can hurt; ZCube shows that removing paths under the same condition can help. First, we show that multipath fabrics under structured LLM traffic operate in Braess's shadow: static ECMP hashing is strictly more fragile than greedy routing. Greedy routing reaches an equilibrium within 4/3 of optimal for affine latencies; static hashing admits unbounded imbalance in the worst case. Second, we prove that ZCube is immune to Braess's paradox and that its orthogonal dual partition provably balances load for arbitrary traffic matrices; AllReduce in training and KV cache transfers in disaggregated inference fall out as two corollaries. Third, we quantify the price of this immunity: ZCube trades microsecond hash recovery for millisecond control plane recovery, a trade that upper-layer resilience in LLM serving makes favorable. Production measurements from a cluster serving GLM-5.1 coding inference report 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time to first token. Our analysis suggests that for workloads driven by model structure, matching topology to traffic matters more than path multiplicity.",
+      "canonical_id": "arXiv:2607.21893",
+      "arxiv_id": "2607.21893",
+      "authors": [
+        "Li Chen"
+      ]
+    },
+    {
+      "title": "FusionML: Prefill, Not Decode - Mechanism and Boundaries of CPU+GPU Co-Execution on Unified-Memory Apple Silicon",
+      "source_url": "https://www.semanticscholar.org/paper/f18c060c09e684ce7dd1055dee701385655ab0a7",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "Apple-Silicon SoCs share CPU, GPU, and Neural Engine over one unified memory system, raising the question of whether transformer inference can be accelerated by splitting single operators across units. Prior attempts, including our own, failed or produced precision-confounded wins. We identify the cause: MLX's lazy-graph scheduler \\emph{serializes} cross-stream work whenever a CPU-stream operation consumes an unmaterialized GPU result inside one evaluation graph, so a row-split matmul that runs \\x{1.38} faster with materialized inputs runs \\x{0.66} slower than GPU-only inside a lazy graph; an eager materialization boundary restores concurrency (\\x{1.34}). \\sys{} implements a per-layer, contention-aware CPU+GPU row split for transformer prefill built on this fix. Evaluated across five chips and three Apple-Silicon generations, community-replicated, the split accelerates Llama-shaped decoder-block prefill by \\x{1.15}--\\x{1.38}, unchanged at full 32-block depth, and reaches \\x{1.18}--\\x{1.25} faster time-to-first-token on a real Qwen2.5-7B checkpoint served through stock MLX-LM, with token-identical outputs and unchanged decode throughput. We characterize the boundaries equally carefully: decode cannot benefit, bound by shared bandwidth co-execution does not add; precision-matched training loses \\x{0.86}--\\x{0.97} on all five chips; ANE dispatch overhead excludes it at layer granularity; and a no-regression runtime gate becomes self-defeating under memory pressure, where probing an alternative mode evicts the active mode's working set. Code, raw results, and generation transcripts are released.",
+      "canonical_id": "arXiv:2607.22785",
+      "arxiv_id": "2607.22785",
+      "authors": [
+        "Om Mohite"
+      ]
+    },
+    {
+      "title": "A Privacy-preserving Edge-cloud Video Analytics System via Policy-based Frame Transformation",
+      "source_url": "https://www.semanticscholar.org/paper/d7ed97030a01243b8fdd20c8329f2c2dce7c9085",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "In real-time edge-cloud video analytics systems, the edge conducts initial analytics on the video frames to a split layer of a trained neural network model. Then, it sends intermediate results to the cloud for follow-up analytics. In this article, we first show that malicious attackers can perform reconstruction attacks and attribute inference attacks on those intermediate results. We present Preva, a new Privacy-preserving Real-time Edge-cloud Video Analytics system that defends against both attacks while respecting latency constraints. Preva first applies a lightweight, policy-based video frames transformation scheme generated on the fly by PrevaNetv2, with a lightweight backbone and an early-exit mechanism that adapts the computation resources of users. To guarantee end-to-end latency, a contextual multi-armed-bandit algorithm (BBSplit) dynamically chooses the optimal split layer, and a frame-similarity filter (PPReuse) amortizes policy generation across video frames. We present a formal privacy analysis and show that Preva can guarantee privacy leakage under reconstruction attacks and attribute inference attacks. We evaluate Preva through three video analytics applications and show that Preva outperforms existing systems by 41.6% in analytics accuracy and 52.7% in privacy leakage.",
+      "canonical_id": "DOI:10.1145/3833875",
+      "doi": "10.1145/3833875",
+      "authors": [
+        "Rui Lu",
+        "Wenhan Wu",
+        "Siping Shi",
+        "Chuang Hu",
+        "Dan Wang"
+      ]
+    },
+    {
+      "title": "LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters",
+      "source_url": "https://www.semanticscholar.org/paper/2305c67f83e9be891efa7c84b13b715cbfbf68fe",
+      "year": 2026,
+      "published": "2026-07-19",
+      "abstract": "Large language model (LLM) services increasingly operate on edge infrastructure, enabling low-latency and privacy-preserving AI services. However, efficiently serving LLM requests across heterogeneous and resource-constrained edge devices require orchestration mechanisms that jointly determine model configuration (family, size, and quantization level) and execution placement while satisfying user- and system-level quality of service (QoS) requirements. This paper introduces LMEdge, a QoS-aware orchestration service that dynamically makes these decisions across heterogeneous edge devices. We formulate the problem as a binary integer linear programming (BILP) optimization that minimizes response time under accuracy, network, and resource constraints. To enable scalable online scheduling, we employ five lightweight machine learning (ML) models to predict query-specific latency, accuracy, resource usage, and response size for each model-size-quantization-device combination, and design a lightweight heuristic that approximates the BILP solution. We collect a comprehensive benchmarking dataset of over 59000 rows to train models and support reproducibility. Evaluation on a Kubernetes-based edge testbed with 57 instances and diverse query categories shows that LMEdge reduces latency, preserves accuracy, improves resource utilization, and increases serving ratio compared to two baselines.",
+      "canonical_id": "arXiv:2607.17175",
+      "arxiv_id": "2607.17175",
+      "authors": [
+        "Reza Farahani",
+        "Zoha Azimi",
+        "Mario Colosi",
+        "S. Dustdar"
+      ]
+    },
+    {
+      "title": "EdgeCoInfer: Hierarchical Collaborative Inference for On-Device Multimodal Large Models",
+      "source_url": "https://www.semanticscholar.org/paper/96a94518a87f26746908f0c97794d2511f240844",
+      "year": 2026,
+      "published": "2026-07-19",
+      "abstract": "To deliver ubiquitous intelligence, modern mobile applications increasingly execute concurrent Multimodal Large Language Models (MLLMs) on edge devices, presenting severe challenges under multi-task concurrency and tight resource constraints. To address this, we propose EdgeCoInfer, a hierarchical collaborative inference framework enabling efficient on-device MLLM inference through coarse-to-fine orchestration. Coarsely, EdgeCoInfer decomposes MLLMs into functional modules for inter-task sharing, avoiding redundant model loading. Finely, it partitions models at the neural network layer level and distributes segments across devices and servers. We jointly optimize layer partitioning, module sharing, and resource allocation under tight constraints. To tackle the non-differentiable combinatorial explosion, we propose a Hybrid Evolutionary Hierarchical Reinforcement Learning (HE-HRL) framework. HE-HRL synchronizes a gradient-free genetic algorithm for discrete partitioning and sharing decisions with a gradient-based soft actor-critic agent for continuous resource refinement. We further embed a constructive cut-step decoder with pre-act pruning and a two-phase curriculum to improve feasibility and accelerate convergence. Experimental results show that EdgeCoInfer breaks the edge memory wall and prevents catastrophic out-of-memory and task failures under high concurrency, reducing memory demand by 53.53\\% and system cost by 59.86\\% compared to existing methods.",
+      "canonical_id": "arXiv:2607.17143",
+      "arxiv_id": "2607.17143",
+      "authors": [
+        "Lin Tan",
+        "Songtao Guo",
+        "Mingyan Li",
+        "David K. Y. Yau"
+      ]
+    },
+    {
+      "title": "Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/88a8947cdd701895dec228caae93afa83caa77e2",
+      "year": 2026,
+      "published": "2026-07-17",
+      "abstract": "To meet the ever-increasing computing demands of large language model (LLM) services, modern cloud platforms have widely deployed neural processing units (NPUs). These NPU chips have been developed and evolved at an incredibly fast pace, this inevitably produces heterogeneous compute pools backed by different versions of NPU chips. Unfortunately, due to the lack of system and architecture support for managing NPU heterogeneity in the cloud, it is unclear how to best utilize heterogeneous NPUs to maximize the energy and cost efficiency for LLM services. In this paper, we first conduct a characterization study of various generations of real NPU chips to demonstrate the potential benefits on energy/cost efficiency and performance by utilizing heterogeneous NPU chips. To realize these benefits, we present NeuScale, an auto-scaling framework to automatically exploit heterogeneous NPUs for cloud platforms. NeuScale manages heterogeneous NPU resources with a new vPod abstraction, which abstracts the core hardware parameters of different NPU versions and provides compatibility with existing ML frameworks. It makes the best-fit vPod allocations for different LLM inference requests using an intuitive and lightweight roofline-based analysis. It supports fine-grained dynamic NPU resource provisioning by adjusting both the vPod configuration (i.e., scaling up/down) and the number of vPods (e.g., scaling in/out). To validate the benefits of NeuScale at scale, we implement it with a production-level NPU simulator. Our evaluation with popular LLMs shows that NeuScale can significantly improve cost efficiency and service-level objective (SLO) satisfaction rate by best utilizing heterogeneous NPU resources.",
+      "canonical_id": "arXiv:2607.16488",
+      "arxiv_id": "2607.16488",
+      "authors": [
+        "Yu Xue",
+        "Jichuan Chang",
+        "Jian Huang"
+      ]
+    },
+    {
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+      "source_url": "https://www.semanticscholar.org/paper/32569012047d06293b95eab261876f53577cfd57",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "The popularity of large language models (LLMs) escalates an ongoing demand for effective inference. However, due to the sequential processing of tokens during the token phase in decoder-only LLMs inference, the inherent low parallelism leads to reduced throughput and suboptimal utilization of the computing units on artificial intelligence (AI) accelerators, particularly when handling long-sequence inputs that impose significant memory overhead. Recently, many reported methods have been developed as potential solutions, since they emerge with numeric deviation. This paper presents FastTPS, a high performance and low-precision loss method for accelerating the token-phase in LLM inference on general AI accelerators which includes three key components: (1) AI accelerator-enabled reloading-free KV Cache concatenation which decreases memory access overhead as well as enables full fusion of Attention, (2) high-efficiency and high-accuracy'RoPE'attention based on the tiling optimized FLAT, and (3) highly-fused MLP with fine-grain pipeline scheduling. Our results confirm that FastTPS significantly alleviates memory bottlenecks in the token phase, delivering a 6x speed improvement (compared to none-fusion) on an AMD Ryzen AI 300 series NPU with BF16 precision while sustaining 93% peak memory bandwidth utilization during Phi3-mini-4k-instruct inference.",
+      "canonical_id": "arXiv:2607.11211",
+      "arxiv_id": "2607.11211",
+      "authors": [
+        "Wenzong Yang",
+        "Danyang Zhang",
+        "Kunteng Cao",
+        "Tejus Siddagangaiah",
+        "Rajeev Patwari",
+        "Zhanxing Pu",
+        "Siyin Kong",
+        "Zijiang Yang",
+        "Hao Zhu",
+        "Varun Sharma",
+        "Yuechen Gao",
+        "Tianping Li",
+        "Fan Yang",
+        "Jicheng Chen",
+        "Yushan Chen",
+        "Fennian Zhao",
+        "A. Ng",
+        "Elliott Delaye",
+        "Ashish Sirasao",
+        "Sudip Nag"
+      ]
+    },
+    {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+      "canonical_id": "arXiv:2607.11368",
+      "arxiv_id": "2607.11368",
+      "authors": [
+        "Weijia Han",
+        "Lisha Qu"
+      ]
+    },
+    {
+      "title": "Rethinking LLM Deployment for Intent-Based Serving",
+      "source_url": "https://www.semanticscholar.org/paper/0b085c127464167ff6ed898a7b15f88fc067ae60",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "Large Language Models (LLMs) expose a large deployment configuration space spanning parallelism and compression techniques, with each configuration introducing different tradeoffs in latency, memory consumption, cost, and output quality. Existing systems either rely on expensive profiling across deployment configurations or inefficiently utilize fragmented GPU resources in multi-tenant clusters. We present MaverIQ, an intent-based LLM inference serving system that automatically maps user intents to deployment configurations while minimizing operational cost for the provider. To reduce profiling overheads, MaverIQ introduces lightweight LLM fingerprints and analytical models that extrapolate latency and memory footprint from only a few observations. To efficiently utilize fragmented GPU resources, MaverIQ leverages our observation that, unlike training, unevenly distributing LLM layers across GPUs has little impact on inference latency. Our evaluation shows that MaverIQ reduces profiling cost by 7-15× compared to state-of-the-art baselines and reduces operational cost by 3.8-8.3× across diverse LLMs, traces, and loads while effectively meeting user intents. Our code is available at https://github.com/UT-SysML/MaverIQ.",
+      "canonical_id": "DOI:10.1145/3830422.3830428",
+      "doi": "10.1145/3830422.3830428",
+      "authors": [
+        "Dimitrios Liakopoulos",
+        "Prasoon Sinha",
+        "Tianrui Hu",
+        "Myungjin Lee",
+        "N. Yadwadkar"
+      ]
+    },
+    {
+      "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+      "source_url": "https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2",
+      "year": 2026,
+      "published": "2026-07-11",
+      "abstract": "A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: the destination is bit-identical to the source, or nothing is installed. It relocates the cache in 18.8 ms same-node, 101x faster than save/load. It holds a checksum-verified 92.1-94.8 Gb/s on a 100 Gb fabric. At that rate the cache fits inside one interactive block. Migrating an actively generating session, it converges at a block boundary and the destination continues the world bit for bit. An admissibility condition decides each move. The move must complete inside the readout horizon, over bandwidth that covers the state plus its dirty rate. Lifted to a fleet schedulability test, it governed a consolidation loop that executed 48 of 48 migrations bit-identical across two providers. Two constraints are structural. Bit-exactness survives only inside a controlled configuration of one GPU architecture, so moving the state is the only way to preserve it exactly in interactive time. Verification cannot hide inside the wire on this fabric. Receive-path checksums stall the transport at protocol timescales under fan-in, and unscheduled incast silently collapses a receiver while every delivered byte stays correct. An incast-aware admission controller holds zero misses to 1.4x offered load and sheds overload as rejects. A lossless GPU codec widens the admission gate to fabrics raw motion cannot use. We exercise the serving loop and the mover separately, each end to end. Their composition on one fabric is unbuilt. Exact-state elasticity is a joint scheduling problem over transport and verification.",
+      "canonical_id": "arXiv:2607.10389",
+      "arxiv_id": "2607.10389",
+      "authors": [
+        "Jin Li",
+        "Jiawei Chen"
+      ]
+    },
+    {
+      "title": "The Economics of AI Decoding Chips: Rebalancing Compute, Capacity, and Bandwidth for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "Every mainstream GPU is built compute-heavy and capacity-light: it pairs enormous arithmetic throughput with too little memory to hold a modern model. In contrast, large language model decoding requires little compute and a large amount of memory: a GPU's floating-point units run at single-digit-percent utilization during decoding, and the memory the workload does need is sold only bundled with yet more compute. The compute is recovered only at hyperscale, where Mixture-of-Experts (MoE) models are spread across 96--320-GPU expert-parallel clusters serving thousands of concurrent users, a scale available to a handful of operators. We formalize the inefficiency with two fixed per-chip constants. F/B, the roofline ridge point, determines whether the compute can be utilized; F/S, the compute bundled with each GB of memory, determines how much compute must be bought. We then argue for a rebalanced decode accelerator: less compute, far more commodity memory, and a deliberately lower and cheaper bandwidth. The Skymizer HTX-301, a purpose-built 28nm PCIe accelerator using commodity DDR5, occupies that design point. Its entry cost is low. A single eight-chip card holds DeepSeek-R1 671B for about \\$19,000, and a 4U server of four four-chip cards serves two users at a deterministic 20.3 tokens per second each for about \\$28,000. Either costs less than a single H100, while the minimum GPU deployment for the model is an eight-GPU node near \\$350,000. Concurrency then scales out by adding hardware: eight 4U servers carry sixteen users for about \\$224,000, two-thirds of the node's price, with the cost per token unchanged at about \\$12 per million against the node's \\$21. The HTX-301's decisive advantage is a supply chain free of every rationed input: it uses no high-bandwidth memory, no CoWoS, and no leading-edge logic.",
+      "canonical_id": "arXiv:2607.13068",
+      "arxiv_id": "2607.13068",
+      "authors": [
+        "M. J. Yuan",
+        "Ju Long"
+      ]
+    },
+    {
+      "title": "DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/2bbc955c67057906ebfefa2bad1755d93152e4df",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "As AI datacenters retire functional GPUs, vast quantities of still capable accelerators enter secondary markets. This paper investigates whether these retired GPUs can find a productive afterlife to form a DumpsterCluster that can serve modern LLM inference, and under what conditions such repurposing is economically viable and environmentally sustainable. We physically built a 128-GPU DumpsterCluster from scratch using only second-hand components and ran it for one year. At current market prices (\\$22K for the DumpsterCluster vs. \\$600K for an 8-GPU B200 system), the economic advantages are substantial. Through pipeline-parallel optimizations, our V100 based DumpsterCluster achieves competitive LLaMA-70B throughput, validating production viability. However, our deployment reveals critical context dependencies. Older GPUs consume significantly more energy per token, making total cost of ownership favorable only in regions with inexpensive electricity. Under grid-average carbon intensity, second-hand systems can produce approximately 4x higher total carbon emissions per token for 8B models, and over 40x for 70B models, compared to current-generation hardware. These findings show that GPU afterlife is not universally sustainable - hardware repurposing must be strategically coupled with low carbon energy sources. When deployed in regions with favourable energy economics and clean electricity, second-hand GPUs offer a viable pathway for expanding AI capacity while advancing affordability, energy security, and environmental responsibility.",
+      "canonical_id": "arXiv:2608.14614",
+      "arxiv_id": "2608.14614",
+      "authors": [
+        "Zeyu Cao",
+        "Xuan Guo",
+        "Cheng Zhang",
+        "C. Lau",
+        "Ilia Shumailov",
+        "Yiren Zhao"
+      ]
+    },
+    {
+      "title": "LLMSGHD: Co-Designing Large Language Model Software and Hardware for Efficient Inference",
+      "source_url": "https://www.semanticscholar.org/paper/0ad6d0ada53e6430fd32cd049d5ae61e2f433e87",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "Over the past two years, the rapid evolution of Large Language Models (LLMs) and the relatively slower progress in hardware development have led to the emergence of many operator-level optimization techniques and theories. These software-based methods accelerate model inference by improving memory management and computational efficiency, and they have demonstrated empirical effectiveness. However, in current computer architecture research, hardware designers often focus on microarchitectural optimizations or the performance of individual operations. They tend to adopt existing software optimizations passively, without actively leveraging them as design principles. Constrained by this limited perspective, researchers may overlook opportunities to systematically integrate insights from software into hardware design, potentially hindering more efficient and flexible architectural innovations. To combine operator-level optimization methods with hardware design, we introduce a hardware evaluation platform called LLMSGHD (Large Language Model Software-Guided Hardware Design), which focuses on operator-level optimized LLM inference workloads. LLMSGHD simulates hardware inference behavior while aiming for broad applicability and high efficiency. LLMSGHD integrates advanced software optimization techniques to offer more insightful analysis for hardware design, particularly regarding computational density variations in inference and their interaction with software-level optimizations. Based on LLMSGHD, we develope a heterogeneous LLM inference platform targeting high throughput and low cost.",
+      "canonical_id": "DOI:10.1145/3820045",
+      "doi": "10.1145/3820045",
+      "authors": [
+        "Qing-Shan Xue",
+        "Sheng Ma",
+        "Rui Xu",
+        "Yi-Hao Shi",
+        "Bo Wang",
+        "Sheng-Bai Luo",
+        "Xue-Yi Zhang",
+        "Li-Bo Huang",
+        "Tie-Jun Li"
+      ]
+    },
+    {
+      "title": "Strategies and design for increasing AI sustainability",
+      "source_url": "https://www.semanticscholar.org/paper/b5d6b40ce057e21a3480d39a38b17af6c5ce2282",
+      "year": 2026,
+      "published": "2026-07-09",
+      "abstract": null,
+      "canonical_id": "DOI:10.1038/s44359-026-00195-w",
+      "doi": "10.1038/s44359-026-00195-w",
+      "authors": [
+        "Andrew A. Chien",
+        "Udit Gupta",
+        "Shaolei Ren",
+        "Akshitha Sriraman",
+        "Bill Tomlinson"
+      ]
+    },
+    {
+      "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156",
+      "year": 2026,
+      "published": "2026-07-07",
+      "abstract": "LLM serving optimization typically benchmarks many configurations and reaches for heavy profilers when latency targets are missed. We argue for the reverse discipline: estimation is the analytical layer of profiling -- without it, optimization degenerates to grid search. Floor First is a residual-driven triage workflow. Each decode step is modeled as a five-dimensional resource vector (HBM bytes, FLOPs, network bytes, network messages, KV capacity); summing within a resource and maximizing across resources gives an optimistic floor, the plain sum a pessimistic one. Where a measurement lands inside this [max, sum] interval reads out overlap quality before any profiler is opened, and profilers escalate only on residuals above a stated threshold. Deployment alternatives are compared by wall ordering -- which resource wall binds first as load grows -- rather than by point benchmarks. The account is compositional: new attention or state-space variants enter by declaring one module, and the workflow ships as a zero-dependency calculator plus an agent skill that enforces the discipline in agentic optimization loops. As a case study we analyze a DeepSeek-V3.2-style 671B MoE/MLA model on 16 NVIDIA H20 GPUs, whose ridge point of ~74 FLOP/byte (vs ~590 for H100) makes it an extreme decode-oriented part. The floors show TP16 decoding is KV-capacity-limited to ~70 concurrent 8K requests; sparse attention removes the KV-bandwidth term but not the capacity wall; an EP16+DP-attention layout accepts slightly worse same-batch weight traffic for an order-of-magnitude higher capacity wall (~644) -- while single-stream latency favors TP by 2.4x. The layout judgment is thus a computable function of the operating point, explaining why production deployments on identical hardware have shipped opposite attention layouts.",
+      "canonical_id": "arXiv:2607.05876",
+      "arxiv_id": "2607.05876",
+      "authors": [
+        "Yihua Liu"
+      ]
+    },
+    {
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/70ea82273ae258725936011cf4ed651f71ed7b5b",
+      "year": 2026,
+      "published": "2026-07-06",
+      "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely bottlenecked by hardware inefficiency. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, uniquely spanning five mainstream frameworks (e.g., llama.cpp, GENIE) and three hardware backends (CPU, GPU, NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that provides the first backend-specific energy attribution, moving beyond traditional device-level measurements. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to 10x using custom operators due to divergent offloading and quantization strategies. (2) We identify a distinct phase split where NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This is driven by the NPU's preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in up to 40% energy waste. Leveraging these findings, we present an energy-oriented best-practice configuration for mobile LLM inference. We estimate that this configuration could reduce energy consumption by up to 54.8% on the NPU backend across three datasets.",
+      "canonical_id": "arXiv:2607.05475",
+      "arxiv_id": "2607.05475",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Lingkun Li",
+        "Ji-Liang Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.00337",
+      "identity_tokens": [
+        "id:arXiv:2608.00337",
+        "title:action chunk scheduling for batched robot policy serving",
+        "url:https://www.semanticscholar.org/paper/0a95ed9351ecb072fc416cf3ffd01f0c92b71612"
+      ],
+      "record": {
+        "title": "Action Chunk Scheduling for Batched Robot Policy Serving",
+        "source_url": "https://www.semanticscholar.org/paper/0a95ed9351ecb072fc416cf3ffd01f0c92b71612",
+        "year": 2026,
+        "published": "2026-07-31",
+        "abstract": "Deploying robot foundation models at scale is the next step towards realizing the potential of general-purpose robots. However, Vision-Language-Action (VLA) and other foundation models are computationally demanding, and on-device compute is constrained by power and space. In this paper, we introduce the problem of serving a robot policy to multiple robots from a remote GPU and formulate it as a scheduling problem. We build Armory, a serving system validated on fleets of both simulated and real robots. Our experiments show that naive scheduling heuristics perform well when all robots are the same, but fall short when robots consume action chunks at different rates, uncovering a mismatch between conventional batching methods and the closed-loop requirements of robot policy execution. To address this, we propose a scheduling algorithm that accounts for this heterogeneity and improves overall system throughput by up to $18\\%$ in real-world experiments. Additional details are available at https://gatech-rl2.github.io/actionchunkscheduling.",
+        "canonical_id": "arXiv:2608.00337",
+        "arxiv_id": "2608.00337",
+        "authors": [
+          "Rohan Bansal",
+          "David He",
+          "N. R. Arachchige",
+          "Zhenyang Chen",
+          "Soobum Kim",
+          "Kexin Rong",
+          "Danfei Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28824",
+      "identity_tokens": [
+        "id:arXiv:2607.28824",
+        "title:characterizing llm kernel access and memory interaction in multipartition numa gpus",
+        "url:https://www.semanticscholar.org/paper/9676cfeabfb42f5e2ff4a4468f18be2b683d8b82"
+      ],
+      "record": {
+        "title": "Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs",
+        "source_url": "https://www.semanticscholar.org/paper/9676cfeabfb42f5e2ff4a4468f18be2b683d8b82",
+        "year": 2026,
+        "published": "2026-07-30",
+        "abstract": "Large language model (LLM) workloads motivate multi-partition GPUs as a path to scaling compute and memory capacity, but their non-uniform memory access characteristics and inter-partition communication can amplify contention and degrade locality, leading to suboptimal kernel latency. To address this, we analyze performance-critical LLM kernel implementations spanning weight projection, mixture-of-experts, and attention variants of state-of-the-art serving engines to present a characterization of data access patterns in multi-partition GPUs. First, we introduce memory trace analysis methodology to derive workgroup-level data access and sharing behavior, then evaluate the locality implications on latency using a cycle-level simulator. Using these tools, we categorize LLM kernel operands into three inter-workgroup sharing patterns (global, partial, or private) and show that the required optimization strategies differ across categories, from simple per-workgroup pinning to subgroup-aware co-scheduling. Our findings highlight the need for placement-aware kernel programming and smarter architectural support for work and data locality in multi-partition GPUs.",
+        "canonical_id": "arXiv:2607.28824",
+        "arxiv_id": "2607.28824",
+        "authors": [
+          "Donghyeon Joo",
+          "Sooraj Puthoor",
+          "N. Jayasena",
+          "Bahar Asgari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26444",
+      "identity_tokens": [
+        "id:arXiv:2607.26444",
+        "title:stratacl fabricnative communication library for production supernodes",
+        "url:https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba"
+      ],
+      "record": {
+        "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+        "source_url": "https://www.semanticscholar.org/paper/54e5f0e2eab6a768db62b3aa463e274c095237ba",
+        "year": 2026,
+        "published": "2026-07-29",
+        "abstract": "Modern distributed AI workloads run across hundreds of accelerators, making communication a major bottleneck. Existing communication libraries remain largely buffer-centric because user and communication buffers are managed separately, causing redundant data copies or costly user-buffer registration. This paper presents StrataCL, a zero-redundancy and fabric-native communication library for production supernodes. StrataCL introduces registration-on-allocation to realize user-buffer direct communication, and designs communication operators with workload-balanced NPU-core partitioning and NPU-driven SDMA offloading to exploit supernode architecture features. On the Huawei CloudMatrix384, StrataCL improves collective bus bandwidth by up to 1.6x and improves MoE dispatch/combine bus bandwidth by up to 1.4x. Across three production workloads, StrataCL improves LLM inference throughput by 1.9x, reduces P99 TTFT by 2.2x, and reduces LLM and Recsys training iteration time by 1.4x and 1.3x, respectively.",
+        "canonical_id": "arXiv:2607.26444",
+        "arxiv_id": "2607.26444",
+        "authors": [
+          "Tian-Cheng Hu",
+          "Jin Qin",
+          "Yu-Zheng Wang",
+          "Ke Liu",
+          "TangShengsheng Li",
+          "Sheng Wang",
+          "Zhongzhe Hu",
+          "Tian-Lun Hu",
+          "Wei Wang",
+          "Lijun Li",
+          "Jingbin Zhou",
+          "Xiaoming Bao",
+          "Hong-Wei Sun",
+          "Jieru Zhao",
+          "Huimin Cui",
+          "Tao Xie",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3785462.3815902",
+      "identity_tokens": [
+        "id:DOI:10.1145/3785462.3815902",
+        "title:phasewise analysis of llm inference acceleration on gpu cpu and edge device",
+        "url:https://www.semanticscholar.org/paper/30b4fcf5da5d6ac737054fbeb7ef50d0f47ff868"
+      ],
+      "record": {
+        "title": "Phase-Wise Analysis of LLM Inference Acceleration on GPU, CPU, and Edge Device",
+        "source_url": "https://www.semanticscholar.org/paper/30b4fcf5da5d6ac737054fbeb7ef50d0f47ff868",
+        "year": 2026,
+        "published": "2026-07-26",
+        "abstract": "Prefill or prompt processing and Decode or token generation are two distinct subphases of LLM inference that are greatly influenced by LLM accelerators such as GPT-Generated Unified Format (GGUF Q4_K_M), NormalFloat 4-bit (NF4) Quantization, FlashAttention-2 and others. Although these accelerators clearly improve end-to-end LLM inference performance, their effectiveness over these subphases remains largely understudied. To address this gap, we present a cross-platform, multi-model empirical study, where we deploy multiple ∼ 1B-parameter LLMs on GPU, CPU, and Raspberry Pi 4B edge hardware platforms in the presence and absence of these accelerators. Each test case evaluates 10,000+ inference runs with separate phase-wise and end-to-end performance indicators. Our study brings several important observations, including the contrastive effect of quantization under different hardware bottlenecks, along with a quantification of runtime delays (up to +139%) caused by the lack of parallelism in the ARM architecture. Based on these benchmarking results and observations, we identify several open research challenges in the concluding section. Our work is fully reproducible and open-sourced on GitHub1.",
+        "canonical_id": "DOI:10.1145/3785462.3815902",
+        "doi": "10.1145/3785462.3815902",
+        "authors": [
+          "Subhransu Das",
+          "Jiaming Cheng",
+          "Swathi Vallabhajosyula",
+          "Brijesh Soni",
+          "Rajiv Ramnath"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21893",
+      "identity_tokens": [
+        "id:arXiv:2607.21893",
+        "title:fewer paths better performance understanding the zcube topology through braesss paradox",
+        "url:https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f"
+      ],
+      "record": {
+        "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
+        "source_url": "https://www.semanticscholar.org/paper/26a483b73f1774eb715b7c4756ecfd00036a4b5f",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "Datacenter networks follow a multipath doctrine: provision many paths between endpoints, hash flows across them, and let redundancy absorb both failures and load imbalance. The ZCube topology violates this doctrine. It removes the Spine layer, eliminates path multiplicity, and cuts one third of switching hardware, yet delivers better performance for both large model training and inference. We explain this anomaly through a structural connection to Braess's paradox, first observed in 1968: both phenomena trace to congestion-oblivious routing over competing paths. Braess showed that adding paths under this condition can hurt; ZCube shows that removing paths under the same condition can help. First, we show that multipath fabrics under structured LLM traffic operate in Braess's shadow: static ECMP hashing is strictly more fragile than greedy routing. Greedy routing reaches an equilibrium within 4/3 of optimal for affine latencies; static hashing admits unbounded imbalance in the worst case. Second, we prove that ZCube is immune to Braess's paradox and that its orthogonal dual partition provably balances load for arbitrary traffic matrices; AllReduce in training and KV cache transfers in disaggregated inference fall out as two corollaries. Third, we quantify the price of this immunity: ZCube trades microsecond hash recovery for millisecond control plane recovery, a trade that upper-layer resilience in LLM serving makes favorable. Production measurements from a cluster serving GLM-5.1 coding inference report 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time to first token. Our analysis suggests that for workloads driven by model structure, matching topology to traffic matters more than path multiplicity.",
+        "canonical_id": "arXiv:2607.21893",
+        "arxiv_id": "2607.21893",
+        "authors": [
+          "Li Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22785",
+      "identity_tokens": [
+        "id:arXiv:2607.22785",
+        "title:fusionml prefill not decode mechanism and boundaries of cpugpu coexecution on unifiedmemory apple silicon",
+        "url:https://www.semanticscholar.org/paper/f18c060c09e684ce7dd1055dee701385655ab0a7"
+      ],
+      "record": {
+        "title": "FusionML: Prefill, Not Decode - Mechanism and Boundaries of CPU+GPU Co-Execution on Unified-Memory Apple Silicon",
+        "source_url": "https://www.semanticscholar.org/paper/f18c060c09e684ce7dd1055dee701385655ab0a7",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "Apple-Silicon SoCs share CPU, GPU, and Neural Engine over one unified memory system, raising the question of whether transformer inference can be accelerated by splitting single operators across units. Prior attempts, including our own, failed or produced precision-confounded wins. We identify the cause: MLX's lazy-graph scheduler \\emph{serializes} cross-stream work whenever a CPU-stream operation consumes an unmaterialized GPU result inside one evaluation graph, so a row-split matmul that runs \\x{1.38} faster with materialized inputs runs \\x{0.66} slower than GPU-only inside a lazy graph; an eager materialization boundary restores concurrency (\\x{1.34}). \\sys{} implements a per-layer, contention-aware CPU+GPU row split for transformer prefill built on this fix. Evaluated across five chips and three Apple-Silicon generations, community-replicated, the split accelerates Llama-shaped decoder-block prefill by \\x{1.15}--\\x{1.38}, unchanged at full 32-block depth, and reaches \\x{1.18}--\\x{1.25} faster time-to-first-token on a real Qwen2.5-7B checkpoint served through stock MLX-LM, with token-identical outputs and unchanged decode throughput. We characterize the boundaries equally carefully: decode cannot benefit, bound by shared bandwidth co-execution does not add; precision-matched training loses \\x{0.86}--\\x{0.97} on all five chips; ANE dispatch overhead excludes it at layer granularity; and a no-regression runtime gate becomes self-defeating under memory pressure, where probing an alternative mode evicts the active mode's working set. Code, raw results, and generation transcripts are released.",
+        "canonical_id": "arXiv:2607.22785",
+        "arxiv_id": "2607.22785",
+        "authors": [
+          "Om Mohite"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3833875",
+      "identity_tokens": [
+        "id:DOI:10.1145/3833875",
+        "title:a privacypreserving edgecloud video analytics system via policybased frame transformation",
+        "url:https://www.semanticscholar.org/paper/d7ed97030a01243b8fdd20c8329f2c2dce7c9085"
+      ],
+      "record": {
+        "title": "A Privacy-preserving Edge-cloud Video Analytics System via Policy-based Frame Transformation",
+        "source_url": "https://www.semanticscholar.org/paper/d7ed97030a01243b8fdd20c8329f2c2dce7c9085",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "In real-time edge-cloud video analytics systems, the edge conducts initial analytics on the video frames to a split layer of a trained neural network model. Then, it sends intermediate results to the cloud for follow-up analytics. In this article, we first show that malicious attackers can perform reconstruction attacks and attribute inference attacks on those intermediate results. We present Preva, a new Privacy-preserving Real-time Edge-cloud Video Analytics system that defends against both attacks while respecting latency constraints. Preva first applies a lightweight, policy-based video frames transformation scheme generated on the fly by PrevaNetv2, with a lightweight backbone and an early-exit mechanism that adapts the computation resources of users. To guarantee end-to-end latency, a contextual multi-armed-bandit algorithm (BBSplit) dynamically chooses the optimal split layer, and a frame-similarity filter (PPReuse) amortizes policy generation across video frames. We present a formal privacy analysis and show that Preva can guarantee privacy leakage under reconstruction attacks and attribute inference attacks. We evaluate Preva through three video analytics applications and show that Preva outperforms existing systems by 41.6% in analytics accuracy and 52.7% in privacy leakage.",
+        "canonical_id": "DOI:10.1145/3833875",
+        "doi": "10.1145/3833875",
+        "authors": [
+          "Rui Lu",
+          "Wenhan Wu",
+          "Siping Shi",
+          "Chuang Hu",
+          "Dan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.17175",
+      "identity_tokens": [
+        "id:arXiv:2607.17175",
+        "title:lmedge qosaware llm inference orchestration on edge clusters",
+        "url:https://www.semanticscholar.org/paper/2305c67f83e9be891efa7c84b13b715cbfbf68fe"
+      ],
+      "record": {
+        "title": "LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters",
+        "source_url": "https://www.semanticscholar.org/paper/2305c67f83e9be891efa7c84b13b715cbfbf68fe",
+        "year": 2026,
+        "published": "2026-07-19",
+        "abstract": "Large language model (LLM) services increasingly operate on edge infrastructure, enabling low-latency and privacy-preserving AI services. However, efficiently serving LLM requests across heterogeneous and resource-constrained edge devices require orchestration mechanisms that jointly determine model configuration (family, size, and quantization level) and execution placement while satisfying user- and system-level quality of service (QoS) requirements. This paper introduces LMEdge, a QoS-aware orchestration service that dynamically makes these decisions across heterogeneous edge devices. We formulate the problem as a binary integer linear programming (BILP) optimization that minimizes response time under accuracy, network, and resource constraints. To enable scalable online scheduling, we employ five lightweight machine learning (ML) models to predict query-specific latency, accuracy, resource usage, and response size for each model-size-quantization-device combination, and design a lightweight heuristic that approximates the BILP solution. We collect a comprehensive benchmarking dataset of over 59000 rows to train models and support reproducibility. Evaluation on a Kubernetes-based edge testbed with 57 instances and diverse query categories shows that LMEdge reduces latency, preserves accuracy, improves resource utilization, and increases serving ratio compared to two baselines.",
+        "canonical_id": "arXiv:2607.17175",
+        "arxiv_id": "2607.17175",
+        "authors": [
+          "Reza Farahani",
+          "Zoha Azimi",
+          "Mario Colosi",
+          "S. Dustdar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.17143",
+      "identity_tokens": [
+        "id:arXiv:2607.17143",
+        "title:edgecoinfer hierarchical collaborative inference for ondevice multimodal large models",
+        "url:https://www.semanticscholar.org/paper/96a94518a87f26746908f0c97794d2511f240844"
+      ],
+      "record": {
+        "title": "EdgeCoInfer: Hierarchical Collaborative Inference for On-Device Multimodal Large Models",
+        "source_url": "https://www.semanticscholar.org/paper/96a94518a87f26746908f0c97794d2511f240844",
+        "year": 2026,
+        "published": "2026-07-19",
+        "abstract": "To deliver ubiquitous intelligence, modern mobile applications increasingly execute concurrent Multimodal Large Language Models (MLLMs) on edge devices, presenting severe challenges under multi-task concurrency and tight resource constraints. To address this, we propose EdgeCoInfer, a hierarchical collaborative inference framework enabling efficient on-device MLLM inference through coarse-to-fine orchestration. Coarsely, EdgeCoInfer decomposes MLLMs into functional modules for inter-task sharing, avoiding redundant model loading. Finely, it partitions models at the neural network layer level and distributes segments across devices and servers. We jointly optimize layer partitioning, module sharing, and resource allocation under tight constraints. To tackle the non-differentiable combinatorial explosion, we propose a Hybrid Evolutionary Hierarchical Reinforcement Learning (HE-HRL) framework. HE-HRL synchronizes a gradient-free genetic algorithm for discrete partitioning and sharing decisions with a gradient-based soft actor-critic agent for continuous resource refinement. We further embed a constructive cut-step decoder with pre-act pruning and a two-phase curriculum to improve feasibility and accelerate convergence. Experimental results show that EdgeCoInfer breaks the edge memory wall and prevents catastrophic out-of-memory and task failures under high concurrency, reducing memory demand by 53.53\\% and system cost by 59.86\\% compared to existing methods.",
+        "canonical_id": "arXiv:2607.17143",
+        "arxiv_id": "2607.17143",
+        "authors": [
+          "Lin Tan",
+          "Songtao Guo",
+          "Mingyan Li",
+          "David K. Y. Yau"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16488",
+      "identity_tokens": [
+        "id:arXiv:2607.16488",
+        "title:autoscaling heterogeneous neural processing units for energy and costefficient llm serving",
+        "url:https://www.semanticscholar.org/paper/88a8947cdd701895dec228caae93afa83caa77e2"
+      ],
+      "record": {
+        "title": "Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/88a8947cdd701895dec228caae93afa83caa77e2",
+        "year": 2026,
+        "published": "2026-07-17",
+        "abstract": "To meet the ever-increasing computing demands of large language model (LLM) services, modern cloud platforms have widely deployed neural processing units (NPUs). These NPU chips have been developed and evolved at an incredibly fast pace, this inevitably produces heterogeneous compute pools backed by different versions of NPU chips. Unfortunately, due to the lack of system and architecture support for managing NPU heterogeneity in the cloud, it is unclear how to best utilize heterogeneous NPUs to maximize the energy and cost efficiency for LLM services. In this paper, we first conduct a characterization study of various generations of real NPU chips to demonstrate the potential benefits on energy/cost efficiency and performance by utilizing heterogeneous NPU chips. To realize these benefits, we present NeuScale, an auto-scaling framework to automatically exploit heterogeneous NPUs for cloud platforms. NeuScale manages heterogeneous NPU resources with a new vPod abstraction, which abstracts the core hardware parameters of different NPU versions and provides compatibility with existing ML frameworks. It makes the best-fit vPod allocations for different LLM inference requests using an intuitive and lightweight roofline-based analysis. It supports fine-grained dynamic NPU resource provisioning by adjusting both the vPod configuration (i.e., scaling up/down) and the number of vPods (e.g., scaling in/out). To validate the benefits of NeuScale at scale, we implement it with a production-level NPU simulator. Our evaluation with popular LLMs shows that NeuScale can significantly improve cost efficiency and service-level objective (SLO) satisfaction rate by best utilizing heterogeneous NPU resources.",
+        "canonical_id": "arXiv:2607.16488",
+        "arxiv_id": "2607.16488",
+        "authors": [
+          "Yu Xue",
+          "Jichuan Chang",
+          "Jian Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11211",
+      "identity_tokens": [
+        "id:arXiv:2607.11211",
+        "title:fasttps an optimized method for llm token phase for ai accelerators",
+        "url:https://www.semanticscholar.org/paper/32569012047d06293b95eab261876f53577cfd57"
+      ],
+      "record": {
+        "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+        "source_url": "https://www.semanticscholar.org/paper/32569012047d06293b95eab261876f53577cfd57",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "The popularity of large language models (LLMs) escalates an ongoing demand for effective inference. However, due to the sequential processing of tokens during the token phase in decoder-only LLMs inference, the inherent low parallelism leads to reduced throughput and suboptimal utilization of the computing units on artificial intelligence (AI) accelerators, particularly when handling long-sequence inputs that impose significant memory overhead. Recently, many reported methods have been developed as potential solutions, since they emerge with numeric deviation. This paper presents FastTPS, a high performance and low-precision loss method for accelerating the token-phase in LLM inference on general AI accelerators which includes three key components: (1) AI accelerator-enabled reloading-free KV Cache concatenation which decreases memory access overhead as well as enables full fusion of Attention, (2) high-efficiency and high-accuracy'RoPE'attention based on the tiling optimized FLAT, and (3) highly-fused MLP with fine-grain pipeline scheduling. Our results confirm that FastTPS significantly alleviates memory bottlenecks in the token phase, delivering a 6x speed improvement (compared to none-fusion) on an AMD Ryzen AI 300 series NPU with BF16 precision while sustaining 93% peak memory bandwidth utilization during Phi3-mini-4k-instruct inference.",
+        "canonical_id": "arXiv:2607.11211",
+        "arxiv_id": "2607.11211",
+        "authors": [
+          "Wenzong Yang",
+          "Danyang Zhang",
+          "Kunteng Cao",
+          "Tejus Siddagangaiah",
+          "Rajeev Patwari",
+          "Zhanxing Pu",
+          "Siyin Kong",
+          "Zijiang Yang",
+          "Hao Zhu",
+          "Varun Sharma",
+          "Yuechen Gao",
+          "Tianping Li",
+          "Fan Yang",
+          "Jicheng Chen",
+          "Yushan Chen",
+          "Fennian Zhao",
+          "A. Ng",
+          "Elliott Delaye",
+          "Ashish Sirasao",
+          "Sudip Nag"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11368",
+      "identity_tokens": [
+        "id:arXiv:2607.11368",
+        "title:decomposing runtime kernel and quantization speedups via a matched fp16 intermediate a hardwareconditioned case study on four nvidia rtx a5000 gpus",
+        "url:https://www.semanticscholar.org/paper/af8fe4d0c19d59d954ba3f0cb0caf019ae260293"
+      ],
+      "record": {
+        "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+        "source_url": "https://www.semanticscholar.org/paper/af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+        "canonical_id": "arXiv:2607.11368",
+        "arxiv_id": "2607.11368",
+        "authors": [
+          "Weijia Han",
+          "Lisha Qu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830422.3830428",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830422.3830428",
+        "title:rethinking llm deployment for intentbased serving",
+        "url:https://www.semanticscholar.org/paper/0b085c127464167ff6ed898a7b15f88fc067ae60"
+      ],
+      "record": {
+        "title": "Rethinking LLM Deployment for Intent-Based Serving",
+        "source_url": "https://www.semanticscholar.org/paper/0b085c127464167ff6ed898a7b15f88fc067ae60",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "Large Language Models (LLMs) expose a large deployment configuration space spanning parallelism and compression techniques, with each configuration introducing different tradeoffs in latency, memory consumption, cost, and output quality. Existing systems either rely on expensive profiling across deployment configurations or inefficiently utilize fragmented GPU resources in multi-tenant clusters. We present MaverIQ, an intent-based LLM inference serving system that automatically maps user intents to deployment configurations while minimizing operational cost for the provider. To reduce profiling overheads, MaverIQ introduces lightweight LLM fingerprints and analytical models that extrapolate latency and memory footprint from only a few observations. To efficiently utilize fragmented GPU resources, MaverIQ leverages our observation that, unlike training, unevenly distributing LLM layers across GPUs has little impact on inference latency. Our evaluation shows that MaverIQ reduces profiling cost by 7-15× compared to state-of-the-art baselines and reduces operational cost by 3.8-8.3× across diverse LLMs, traces, and loads while effectively meeting user intents. Our code is available at https://github.com/UT-SysML/MaverIQ.",
+        "canonical_id": "DOI:10.1145/3830422.3830428",
+        "doi": "10.1145/3830422.3830428",
+        "authors": [
+          "Dimitrios Liakopoulos",
+          "Prasoon Sinha",
+          "Tianrui Hu",
+          "Myungjin Lee",
+          "N. Yadwadkar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10389",
+      "identity_tokens": [
+        "id:arXiv:2607.10389",
+        "title:stateful worlds stateless elasticity exactstate serving for interactive world models",
+        "url:https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2"
+      ],
+      "record": {
+        "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+        "source_url": "https://www.semanticscholar.org/paper/a26c458bec3deafa5edde8bd93ac010b2b49bfa2",
+        "year": 2026,
+        "published": "2026-07-11",
+        "abstract": "A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: the destination is bit-identical to the source, or nothing is installed. It relocates the cache in 18.8 ms same-node, 101x faster than save/load. It holds a checksum-verified 92.1-94.8 Gb/s on a 100 Gb fabric. At that rate the cache fits inside one interactive block. Migrating an actively generating session, it converges at a block boundary and the destination continues the world bit for bit. An admissibility condition decides each move. The move must complete inside the readout horizon, over bandwidth that covers the state plus its dirty rate. Lifted to a fleet schedulability test, it governed a consolidation loop that executed 48 of 48 migrations bit-identical across two providers. Two constraints are structural. Bit-exactness survives only inside a controlled configuration of one GPU architecture, so moving the state is the only way to preserve it exactly in interactive time. Verification cannot hide inside the wire on this fabric. Receive-path checksums stall the transport at protocol timescales under fan-in, and unscheduled incast silently collapses a receiver while every delivered byte stays correct. An incast-aware admission controller holds zero misses to 1.4x offered load and sheds overload as rejects. A lossless GPU codec widens the admission gate to fabrics raw motion cannot use. We exercise the serving loop and the mover separately, each end to end. Their composition on one fabric is unbuilt. Exact-state elasticity is a joint scheduling problem over transport and verification.",
+        "canonical_id": "arXiv:2607.10389",
+        "arxiv_id": "2607.10389",
+        "authors": [
+          "Jin Li",
+          "Jiawei Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13068",
+      "identity_tokens": [
+        "id:arXiv:2607.13068",
+        "title:the economics of ai decoding chips rebalancing compute capacity and bandwidth for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da"
+      ],
+      "record": {
+        "title": "The Economics of AI Decoding Chips: Rebalancing Compute, Capacity, and Bandwidth for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/75df42263f03712ec90b2724903f77bd699756da",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "Every mainstream GPU is built compute-heavy and capacity-light: it pairs enormous arithmetic throughput with too little memory to hold a modern model. In contrast, large language model decoding requires little compute and a large amount of memory: a GPU's floating-point units run at single-digit-percent utilization during decoding, and the memory the workload does need is sold only bundled with yet more compute. The compute is recovered only at hyperscale, where Mixture-of-Experts (MoE) models are spread across 96--320-GPU expert-parallel clusters serving thousands of concurrent users, a scale available to a handful of operators. We formalize the inefficiency with two fixed per-chip constants. F/B, the roofline ridge point, determines whether the compute can be utilized; F/S, the compute bundled with each GB of memory, determines how much compute must be bought. We then argue for a rebalanced decode accelerator: less compute, far more commodity memory, and a deliberately lower and cheaper bandwidth. The Skymizer HTX-301, a purpose-built 28nm PCIe accelerator using commodity DDR5, occupies that design point. Its entry cost is low. A single eight-chip card holds DeepSeek-R1 671B for about \\$19,000, and a 4U server of four four-chip cards serves two users at a deterministic 20.3 tokens per second each for about \\$28,000. Either costs less than a single H100, while the minimum GPU deployment for the model is an eight-GPU node near \\$350,000. Concurrency then scales out by adding hardware: eight 4U servers carry sixteen users for about \\$224,000, two-thirds of the node's price, with the cost per token unchanged at about \\$12 per million against the node's \\$21. The HTX-301's decisive advantage is a supply chain free of every rationed input: it uses no high-bandwidth memory, no CoWoS, and no leading-edge logic.",
+        "canonical_id": "arXiv:2607.13068",
+        "arxiv_id": "2607.13068",
+        "authors": [
+          "M. J. Yuan",
+          "Ju Long"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14614",
+      "identity_tokens": [
+        "id:arXiv:2608.14614",
+        "title:dumpstercluster from dumpster diving to serving llama70b on 60 gpus",
+        "url:https://www.semanticscholar.org/paper/2bbc955c67057906ebfefa2bad1755d93152e4df"
+      ],
+      "record": {
+        "title": "DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs",
+        "source_url": "https://www.semanticscholar.org/paper/2bbc955c67057906ebfefa2bad1755d93152e4df",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "As AI datacenters retire functional GPUs, vast quantities of still capable accelerators enter secondary markets. This paper investigates whether these retired GPUs can find a productive afterlife to form a DumpsterCluster that can serve modern LLM inference, and under what conditions such repurposing is economically viable and environmentally sustainable. We physically built a 128-GPU DumpsterCluster from scratch using only second-hand components and ran it for one year. At current market prices (\\$22K for the DumpsterCluster vs. \\$600K for an 8-GPU B200 system), the economic advantages are substantial. Through pipeline-parallel optimizations, our V100 based DumpsterCluster achieves competitive LLaMA-70B throughput, validating production viability. However, our deployment reveals critical context dependencies. Older GPUs consume significantly more energy per token, making total cost of ownership favorable only in regions with inexpensive electricity. Under grid-average carbon intensity, second-hand systems can produce approximately 4x higher total carbon emissions per token for 8B models, and over 40x for 70B models, compared to current-generation hardware. These findings show that GPU afterlife is not universally sustainable - hardware repurposing must be strategically coupled with low carbon energy sources. When deployed in regions with favourable energy economics and clean electricity, second-hand GPUs offer a viable pathway for expanding AI capacity while advancing affordability, energy security, and environmental responsibility.",
+        "canonical_id": "arXiv:2608.14614",
+        "arxiv_id": "2608.14614",
+        "authors": [
+          "Zeyu Cao",
+          "Xuan Guo",
+          "Cheng Zhang",
+          "C. Lau",
+          "Ilia Shumailov",
+          "Yiren Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3820045",
+      "identity_tokens": [
+        "id:DOI:10.1145/3820045",
+        "title:llmsghd codesigning large language model software and hardware for efficient inference",
+        "url:https://www.semanticscholar.org/paper/0ad6d0ada53e6430fd32cd049d5ae61e2f433e87"
+      ],
+      "record": {
+        "title": "LLMSGHD: Co-Designing Large Language Model Software and Hardware for Efficient Inference",
+        "source_url": "https://www.semanticscholar.org/paper/0ad6d0ada53e6430fd32cd049d5ae61e2f433e87",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "Over the past two years, the rapid evolution of Large Language Models (LLMs) and the relatively slower progress in hardware development have led to the emergence of many operator-level optimization techniques and theories. These software-based methods accelerate model inference by improving memory management and computational efficiency, and they have demonstrated empirical effectiveness. However, in current computer architecture research, hardware designers often focus on microarchitectural optimizations or the performance of individual operations. They tend to adopt existing software optimizations passively, without actively leveraging them as design principles. Constrained by this limited perspective, researchers may overlook opportunities to systematically integrate insights from software into hardware design, potentially hindering more efficient and flexible architectural innovations. To combine operator-level optimization methods with hardware design, we introduce a hardware evaluation platform called LLMSGHD (Large Language Model Software-Guided Hardware Design), which focuses on operator-level optimized LLM inference workloads. LLMSGHD simulates hardware inference behavior while aiming for broad applicability and high efficiency. LLMSGHD integrates advanced software optimization techniques to offer more insightful analysis for hardware design, particularly regarding computational density variations in inference and their interaction with software-level optimizations. Based on LLMSGHD, we develope a heterogeneous LLM inference platform targeting high throughput and low cost.",
+        "canonical_id": "DOI:10.1145/3820045",
+        "doi": "10.1145/3820045",
+        "authors": [
+          "Qing-Shan Xue",
+          "Sheng Ma",
+          "Rui Xu",
+          "Yi-Hao Shi",
+          "Bo Wang",
+          "Sheng-Bai Luo",
+          "Xue-Yi Zhang",
+          "Li-Bo Huang",
+          "Tie-Jun Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s44359-026-00195-w",
+      "identity_tokens": [
+        "id:DOI:10.1038/s44359-026-00195-w",
+        "title:strategies and design for increasing ai sustainability",
+        "url:https://www.semanticscholar.org/paper/b5d6b40ce057e21a3480d39a38b17af6c5ce2282"
+      ],
+      "record": {
+        "title": "Strategies and design for increasing AI sustainability",
+        "source_url": "https://www.semanticscholar.org/paper/b5d6b40ce057e21a3480d39a38b17af6c5ce2282",
+        "year": 2026,
+        "published": "2026-07-09",
+        "abstract": null,
+        "canonical_id": "DOI:10.1038/s44359-026-00195-w",
+        "doi": "10.1038/s44359-026-00195-w",
+        "authors": [
+          "Andrew A. Chien",
+          "Udit Gupta",
+          "Shaolei Ren",
+          "Akshitha Sriraman",
+          "Bill Tomlinson"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05876",
+      "identity_tokens": [
+        "id:arXiv:2607.05876",
+        "title:think before you gridsearch floorfirst triage for llm serving",
+        "url:https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156"
+      ],
+      "record": {
+        "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/3c331e21774b3b85368b56e75211cddfad57d156",
+        "year": 2026,
+        "published": "2026-07-07",
+        "abstract": "LLM serving optimization typically benchmarks many configurations and reaches for heavy profilers when latency targets are missed. We argue for the reverse discipline: estimation is the analytical layer of profiling -- without it, optimization degenerates to grid search. Floor First is a residual-driven triage workflow. Each decode step is modeled as a five-dimensional resource vector (HBM bytes, FLOPs, network bytes, network messages, KV capacity); summing within a resource and maximizing across resources gives an optimistic floor, the plain sum a pessimistic one. Where a measurement lands inside this [max, sum] interval reads out overlap quality before any profiler is opened, and profilers escalate only on residuals above a stated threshold. Deployment alternatives are compared by wall ordering -- which resource wall binds first as load grows -- rather than by point benchmarks. The account is compositional: new attention or state-space variants enter by declaring one module, and the workflow ships as a zero-dependency calculator plus an agent skill that enforces the discipline in agentic optimization loops. As a case study we analyze a DeepSeek-V3.2-style 671B MoE/MLA model on 16 NVIDIA H20 GPUs, whose ridge point of ~74 FLOP/byte (vs ~590 for H100) makes it an extreme decode-oriented part. The floors show TP16 decoding is KV-capacity-limited to ~70 concurrent 8K requests; sparse attention removes the KV-bandwidth term but not the capacity wall; an EP16+DP-attention layout accepts slightly worse same-batch weight traffic for an order-of-magnitude higher capacity wall (~644) -- while single-stream latency favors TP by 2.4x. The layout judgment is thus a computable function of the operating point, explaining why production deployments on identical hardware have shipped opposite attention layouts.",
+        "canonical_id": "arXiv:2607.05876",
+        "arxiv_id": "2607.05876",
+        "authors": [
+          "Yihua Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05475",
+      "identity_tokens": [
+        "id:arXiv:2607.05475",
+        "title:is your npu ready for llms dissecting the hidden efficiency bottlenecks in mobile llm inference",
+        "url:https://www.semanticscholar.org/paper/70ea82273ae258725936011cf4ed651f71ed7b5b"
+      ],
+      "record": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/70ea82273ae258725936011cf4ed651f71ed7b5b",
+        "year": 2026,
+        "published": "2026-07-06",
+        "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely bottlenecked by hardware inefficiency. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, uniquely spanning five mainstream frameworks (e.g., llama.cpp, GENIE) and three hardware backends (CPU, GPU, NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that provides the first backend-specific energy attribution, moving beyond traditional device-level measurements. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to 10x using custom operators due to divergent offloading and quantization strategies. (2) We identify a distinct phase split where NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This is driven by the NPU's preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in up to 40% energy waste. Leveraging these findings, we present an energy-oriented best-practice configuration for mobile LLM inference. We estimate that this configuration could reduce energy consumption by up to 54.8% on the NPU backend across three datasets.",
+        "canonical_id": "arXiv:2607.05475",
+        "arxiv_id": "2607.05475",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Ji-Liang Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d9c9d1df52238046e429cade1ac97b494ae0010663e6145af43135534d726583",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

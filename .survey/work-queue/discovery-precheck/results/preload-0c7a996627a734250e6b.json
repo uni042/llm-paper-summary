@@ -1,0 +1,838 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-0c7a996627a734250e6b",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-0c7a996627a734250e6b",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "200",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 14,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T17:37:46.782435+00:00",
+  "preload_id": "preload-0c7a996627a734250e6b",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+      "canonical_id": "arXiv:2607.02584",
+      "arxiv_id": "2607.02584",
+      "authors": [
+        "Yaofu Liu",
+        "W. Lan",
+        "Jinxi Li",
+        "Binhang Yuan",
+        "Harry Yang"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "doi": "10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wentao Zhou",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ]
+    },
+    {
+      "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+      "canonical_id": "arXiv:2607.21985",
+      "arxiv_id": "2607.21985",
+      "authors": [
+        "Jin-hong Kim",
+        "Yejoo Lee",
+        "Jaeyoung Do"
+      ]
+    },
+    {
+      "title": "Congestion-Aware Scheduling for Heterogeneous LLM-Agent Teams",
+      "source_url": "https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Coordinating heterogeneous LLM agents under congested online settings is difficult because bursty task arrivals and limited per-agent capacity may induce hotspot overload and severe tail waiting time. This paper proposes an online scheduling method based on candidate-set contraction before assignment. Specifically, tasks are first routed through subscription matching to identify a task-relevant candidate pool, after which layered gating is applied to enforce capability feasibility, historical quality, and real-time load constraints. The remaining candidates are then ranked using a composite score that balances competence and load, with stable tie-breaking introduced to reduce assignment fluctuations under contention. We evaluate the method under a reproducible protocol with both regular and congested regimes. Across benchmarks covering code generation, arithmetic reasoning, and preference-based evaluation, the proposed approach preserves competitive task performance while reducing both mean and 95th-percentile waiting time in congested settings relative to representative linear, flat, and hierarchical baselines. The findings suggest that candidate contraction is a useful strategy for achieving more stable coordination in heterogeneous LLM-agent systems.",
+      "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00432",
+      "doi": "10.1109/COMPSAC69091.2026.00432",
+      "authors": [
+        "Wei-Qi Xie",
+        "Yuyao Li"
+      ]
+    },
+    {
+      "title": "ParaCascade: A Parallel Cascading Framework Supporting Early Routing",
+      "source_url": "https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Real-world inference tasks for large language models exhibit diverse difficulty levels. Existing LLM serving systems integrate models of different sizes and attempt to route tasks of appropriate difficulty to the most suitable model, aiming to reduce resource waste while guaranteeing service quality. Such systems usually adopt a cascading architecture, which performs inference sequentially from lightweight models to heavyweight models and validates outputs until a model that meets the task requirements is identified. However, when handling complex tasks, the cascading architecture inevitably processes unnecessary small models first, leading to cumulative latency and redundant resource consumption. This paper proposes ParaCascade, a parallel cascading framework that supports early routing. The core idea of ParaCascade is to bypass lightweight models and directly route difficult instances to heavyweight model tiers by pre-estimating task complexity, thus avoiding ineffective computation on lightweight models. In addition, ParaCascade adopts parallel prediction and model parallel inference strategies. At the cost of a slight increase in energy consumption, it significantly reduces the systemic latency caused by sequential processing, thereby improving the overall QoS. Extensive evaluations across diverse workloads on the MMLU-pro and MATH benchmarks show that ParaCascade significantly outperforms both single-model deployments and serial inference serving baselines. While maintaining answer quality, it achieves an inference speedup of 1.16× to 1.51×, demonstrating its superiority in efficient LLM serving systems.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00031",
+      "doi": "10.1109/JCC72984.2026.00031",
+      "authors": [
+        "Hao Wei",
+        "Lu-Jia Yin",
+        "Chen Chen",
+        "Jia-Nan Sun",
+        "Miao Zhang",
+        "Yong Peng"
+      ]
+    },
+    {
+      "title": "GreenAlign: Aligning Mixed LLM Workloads with Intermittent Renewable Supply",
+      "source_url": "https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The increasing use of renewable energy in data centers creates an opportunity to reduce the carbon footprint of energy-intensive LLM inference workloads. Unlike traditional stable power supply, renewable generation fluctuates over time, making it difficult to match computation demand with available energy. However, existing LLM serving systems primarily optimize latency and throughput without considering energy supply dynamics, leading to underutilization of renewable energy and unnecessary reliance on thermal power, and consequently, higher carbon emissions. We present GreenAlign, a renewable-aware scheduling framework that addresses this mismatch by treating best-effort (BE) requests as temporally shiftable load. GreenAlign enforces a power-constrained policy that executes BE requests using only residual renewable energy under normal conditions, and introduces a backlog risk metric to selectively relax this constraint when deadline violations are imminent. To ensure responsiveness, it maintains standby capacity to absorb unpredictable latencycritical (LC) bursts and uses lightweight length estimation to handle request uncertainty. Simulation results show that GreenAlign significantly reduces thermal energy usage while preserving LC latency and BE deadline satisfaction.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00021",
+      "doi": "10.1109/JCC72984.2026.00021",
+      "authors": [
+        "Chang Liu",
+        "Jiacheng Liu",
+        "Xiaofeng Hou",
+        "Chao Li",
+        "Minyi Guo"
+      ]
+    },
+    {
+      "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large Language Model (LLM) serving systems face a KV-cache (KVC) bottleneck. In this paper, our experimental study shows that block-based allocation increases Time-Between-Tokens (TBT) due to preemptions, while prediction-based allocation increases Time-to-First-Token (TTFT) and TBT due to allocated but unused KVC and inaccurate predictions. To address the problems to satisfy users' TTFT and TBT SLOs, we propose a system for Managing KV Cache for Coordinated TTFT and TBT (MC2). First, instead of using a constant padding in output length estimation, MC2 dynamically determines padding to bound prediction deviations with high probability and adjusts it based on request arrival rates to balance TTFT and TBT. Second, it allocates a block to requests requiring execution in the next iteration to meet their TTFT and TBT SLOs, and then distributes the remaining KVC to batched requests based on their SLOs and remaining iterations. Third, it proactively allocates KVC before depletion and reserves KVC globally to prevent preemptions. Experiments show that MC2 achieves up to 3.29× and 2.83× lower tail TBT and tail TTFT, 47% and 53% higher TTFT and TBT SLO attainments, and supports up to 1.58× higher request arrival rate than the state-of-the-art.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662646",
+      "doi": "10.1109/ICCCN69946.2026.11662646",
+      "authors": [
+        "Hai-Ying Shen",
+        "Tanmoy Sen",
+        "Masahiro Tanaka"
+      ]
+    },
+    {
+      "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Multi-agent applications increasingly rely on shared large language model backends in the public cloud, where bursty workloads cause requests from different agents to contend for the same LLM instances, leading to long queues, memory imbalance, and severe tail-latency inflation. Existing approaches typically prioritize requests using coarse workflow positions or static execution heuristics, which fail to adapt to short-term overload dynamics. We present FlowGuard, a workflow-aware overload controller for multi-agent LLM serving. Its key insight is that under sustained overload, GPU cycles spent on requests whose execution service-level-objectives (SLOs) are already violated are wasted. FlowGuard continuously recomputes per-request slack and prioritizes requests with the greatest remaining time before their deadlines, thereby maximizing on-time completions. In addition, a resource-aware dispatcher jointly accounts for KV-cache memory pressure and in-flight queue depth to reduce preemption across shared instances. Evaluated on a deliberately over-subscribed two-GPU backend, where all policies exhibit high absolute miss rates (i.e., the percentage of workflows that miss their deadlines), FlowGuard reduces the miss rate by 14–28% points over workflow-oblivious and static-priority baselines under BurstGPT-driven load, and by 34–38% points under co-located mixed-agent workloads.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662939",
+      "doi": "10.1109/ICCCN69946.2026.11662939",
+      "authors": [
+        "Ali Zafar Sadiq",
+        "Hai-Ying Shen"
+      ]
+    },
+    {
+      "title": "UTARI: An On-Prem GPU-Accelerated LLM Platform for Higher-Education Services",
+      "source_url": "https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Higher-education institutions increasingly require generative AI services that are responsive, governable, privacy-aware, and deployable within institutional infrastructure. This paper presents UTARI (UT Artificial Intelligence), an on-premises GPU-accelerated large language model (LLM) platform designed to support higher-education services, including academic assistance, institutional knowledge access, and internal conversational AI. UTARI combines local LLM serving with optional retrieval-augmented generation (RAG) to provide grounded responses over curated knowledge sources while preserving institutional control over data and infrastructure. The platform is evaluated through matched A/B experiments comparing a baseline non-RAG path (S0) and a RAG-enabled path (S1) under two output-length regimes. In the 256-token setting, both configurations achieve a median latency of approximately 6.3 s, with throughputs of 3.93 req/s and 3.91 req/s, respectively, and a 0% failure rate. In the 64-token setting, both configurations achieve a median latency of 1.5 s, with throughputs of 10.67 req/s and 10.64 req/s, respectively, again with 0% failures. The main difference appears in tail behavior: p99 latency increases from 6.3 s to 6.4 s in the 256-token regime and from 1.6 s to 1.9 s in the 64-token regime, while p99.9 reaches 6.8 s and 2.1 s in the RAG-enabled scenarios. These results show that RAG can be integrated into an on-premises campus LLM platform with negligible impact on median latency and throughput, while introducing a modest increase in upper-tail latency, particularly in short-response scenarios.",
+      "canonical_id": "DOI:10.1109/ICoICT71118.2026.11664754",
+      "doi": "10.1109/ICoICT71118.2026.11664754",
+      "authors": [
+        "Muhammad Rif'an",
+        "Fitria Amastini",
+        "D. Aprizal",
+        "Agung Wicaksono",
+        "Sonasa Rinusantoro",
+        "Abdul Rizal Adompo"
+      ]
+    },
+    {
+      "title": "WaSMa: Workflow-Aware Scheduling for Multi-Agent LLM Systems",
+      "source_url": "https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Public LLM services serve diverse multi-agent applications with varying workflow dependencies and performance requirements. Requests generated by these applications often exhibit commonality and interdependence, yet current systems largely ignore such application-level structure. As a result, at the LLM engine cluster level, assigning requests to engines with the shortest queue can cause inefficient KV-cache transfers across GPUs. Using three representative multi-agent applications, we show that current scheduling methods miss opportunities to (a) improve performance through KV-cache reuse and reduced data transfer, and (b) increase goodput via batch management informed by workflow dependencies. Motivated by these observations, we propose a Workflow-Aware Scheduling system for Multi-Agent LLM systems (WaSMa) that incorporates cluster-and engine-level scheduling to optimize LLM request execution across GPU resources. Experimental results show that WaSMa reduces the P95 tail latency by up to 48% and improves goodput by up to 107% compared to existing methods.",
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662938",
+      "doi": "10.1109/ICCCN69946.2026.11662938",
+      "authors": [
+        "Uttam Rao",
+        "Ali Zafar Sadiq",
+        "Hai-Ying Shen",
+        "Yuqing Yang",
+        "Elijah-Amir Randall Hodges",
+        "Marcus Muntean"
+      ]
+    },
+    {
+      "title": "BYSTANDER: State-Aware End-to-End Latency Prediction for Heterogeneous LLM Inference Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/a2868db01de3a1033fb5eabf71ce212396fb07b0",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large Language Model (LLM) inference services increasingly rely on heterogeneous GPU clusters to balance cost and performance. However, request routing in such environments is challenging because schedulers must account for hardware heterogeneity, dynamic workload characteristics, and bursty arrivals. Existing approaches either ignore hardware differences, rely on static heterogeneity-aware allocation, or use queue-based proxies that fail to capture the true remaining work under load. We present BYSTANDER, a prediction-based scheduling framework that uses a small language model (SLM) to estimate End-to-End (E2E) latency of request for each GPU pool from request features and current pool state. BYSTANDER then adaptively narrows the candidate pools via Fisher–Jenks grouping and performs queue-aware selection within that set. Its pool-based design keeps prediction overhead scalable as cluster size grows. We evaluate BYSTANDER on ShareGPT and LMSYS-Chat workloads over heterogeneous clusters of 3–7 GPUs (RTX 3090/4090/5090). Compared with round-robin, oracle-weighted round-robin, shortest-queue-first, and SLM Adaptive baselines, BYSTANDER reduces P99 E2E latency by up to 63.4% and P99 time-to-first-token by up to 87.4% under bursty traffic.",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00037",
+      "doi": "10.1109/CLOUD72782.2026.00037",
+      "authors": [
+        "Minjae Jung",
+        "Hyungjun Kim",
+        "Hokun Park",
+        "Hwamin Lee",
+        "Heonchang Yu"
+      ]
+    },
+    {
+      "title": "Kairos: SLO-Aware Scheduling and a Benchmark for Multi-Tenant LLM Inference Serving under Bursty, Heterogeneous Load",
+      "source_url": "https://www.semanticscholar.org/paper/10f0eaab248b285ec6791b9b260f084e7ce60366",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large language model (LLM) inference is increasingly served as a shared, multi-tenant utility: a single engine concurrently handles interactive chat, long-context retrieval-augmented generation (RAG), agentic tool calls, and batch jobs, each with its own service-level objectives (SLOs) on time-to-first-token (TTFT) and time-per-output-token (TPOT). Existing serving systems optimize aggregate throughput or a single latency target, and—crucially—are evaluated on bespoke, single-tenant workloads with ad-hoc metrics. There is no standard benchmark that scores SLO goodput, burstiness, request heterogeneity, and multitenant fairness together. We close this gap with two contributions. First, Serve-Bench, a reproducible benchmark that drives a calibrated discrete-event model of a continuous-batching engine (KV-cache blocks, prefill/decode iteration latencies, preemption) with bursty, heterogeneous, tenant-skewed load, and scores schedulers on a unified SLO-goodput-and-fairness suite. Second, Kairos, a reference scheduler that unifies four ideas—adaptive token-budget chunked prefill, SLO-deadline ordering, per-tenant fair queueing, and memory-admission control—behind one policy. Across 1344 configurations and over 780000 simulated requests, Kairos raises SLO goodput at the saturation knee from 51.1% (a vLLM-style baseline) and 59.8% (the strongest baseline) to 77.5%, while simultaneously cutting tail TPOT by more than half and matching a fairness-specialized baseline on Jain’s index (0.80 vs 0.84) where fairness-unaware schedulers collapse to 0.54. An ablation shows the four components are complementary and target different SLOs. We release Serve-Bench and Kairos as an open baseline for multi-tenant LLM-serving research.",
+      "canonical_id": "DOI:10.1109/ICERA72709.2026.11666706",
+      "doi": "10.1109/ICERA72709.2026.11666706",
+      "authors": [
+        "Sneha Gullapalli",
+        "Veera Ravindra Divi"
+      ]
+    },
+    {
+      "title": "REKV: Cross-Precision Model Switching with Persistent KV Cache Reuse for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/0b66702ed749d5b705daaff326ebdb8d21e4a4d1",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large language model (LLM) serving demands substantial compute and memory resources under dynamic workloads. Model switching has emerged as a promising strategy to balance service quality and system throughput. However, existing model switching approaches typically require restarting the service or recomputing previously generated tokens, causing significant redundant computation. We propose ReKV, a crossprecision model switching mechanism that persistently reuses KV cache states across model transitions. By eliminating prefix recomputation, ReKV enables seamless switching during ongoing generation. ReKV extends FlashInfer CUDA kernels to support multi-segment KV representations without data movement, and employs a layer-wise weight transfer strategy that overlaps weight loading with token generation to reduce switching latency. Experimental results show that ReKV achieves a peak overlap ratio of 13.07% between weight loading and inference, improves system throughput by up to $\\mathbf{1. 3 6} \\times$, and reduces Service Level Objective (SLO) violation rates by 86.59% on average compared with static high-precision configurations.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00120",
+      "doi": "10.1109/ICWS72778.2026.00120",
+      "authors": [
+        "Jia-Lin Wu",
+        "Minxian Xu",
+        "Yang Wang",
+        "Ke-Jiang Ye",
+        "Hao Dai",
+        "Cheng-zhong Xu"
+      ]
+    },
+    {
+      "title": "EcoFlow: Cost-Aware LLM Serving on Heterogeneous GPUs via Min-Cost Max-Flow",
+      "source_url": "https://www.semanticscholar.org/paper/1288b96035976b66a3b6eea4c739842d2efb5252",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Service operators provisioning heterogeneous GPU clusters for large language model (LLM) serving face a pressing challenge: GPU types differ by an order of magnitude in hourly cost while throughput varies far less, making cost-optimal and throughput-optimal placements structurally different. Existing cost-aware systems decouple placement from routing, fundamentally limiting the cost-throughput trade-off space. We propose EcoFlow, a cost-aware LLM serving system that jointly optimizes layer placement and flow routing by formulating the problem as min-cost max-flow optimization. EcoFlow models the GPU cluster as a directed flow network with per-token cost weights and a throughput-floor constraint, producing a Pareto frontier of cost-throughput operating points. Evaluated on heterogeneous clusters with up to 7 GPU types and 42 nodes, EcoFlow reduces serving cost by 18 – 32 % at 90 % of maximum throughput and 68-79 % at 50 %. A central finding is that cost-aware placement induces structurally distinct pipeline topologies—from dense DAG to staged GPU-type segmentation to region-locked WANconstrained pipelines-not produced by throughput-maximizing optimization. No decoupled heuristic matches the cost of EcoFlow above 59% of maximum throughput; EcoFlow covers the full 50-100 % range with 17 – 29 % savings over the best alternative. These results establish joint placement-routing optimization as an effective framework for cost-throughput trade-offs in heterogeneous LLM serving.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00182",
+      "doi": "10.1109/ICWS72778.2026.00182",
+      "authors": [
+        "Feng-Kai Jiang",
+        "Fu-Lu Kou",
+        "Jinquan Zhang",
+        "Rui Yang",
+        "Shu-Jie Pang"
+      ]
+    },
+    {
+      "title": "Ensuring Efficiency and Timeliness in Real-Time Rag Services: an AoI-Aware Approach",
+      "source_url": "https://www.semanticscholar.org/paper/dd6c5b8833f35df325fe6ef538755354bba19227",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large language models (LLMs) have been widely used in service automation and decision support. However, given that they rely on fixed parametric knowledge, they often struggle to provide timely and reliable responses when the underlying information changes continuously. Retrieval-augmented generation (RAG) addresses this limitation by retrieving external knowledge during inference, thereby improving response reliability. However, most existing RAG systems are built upon a static knowledge base and mainly focus on latency and accuracy, while paying limited attention to information timeliness. In real-time scenarios, information is continuously updated, and stale information may significantly reduce the usefulness of the generated response. Therefore, timeliness and efficiency are critical for RAG systems in such scenarios. This paper proposes a real-time RAG framework, defines query timeliness, and derives the average query timeliness based on Age of Information (AoI) and response latency. Based on the proposed model, we develop QoE-aware and Pareto-based multi-objective optimization methods for service configuration, which balance query timeliness with other key metrics. Experimental results verify the accuracy of the derived theorem, while achieving a trade-off among timeliness, latency, accuracy, and cost.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00079",
+      "doi": "10.1109/ICWS72778.2026.00079",
+      "authors": [
+        "Jie Shi",
+        "Xiang-Ru Liang",
+        "Yeping Zhu",
+        "Jian-Bing Zhang",
+        "Jiwei Huang"
+      ]
+    },
+    {
+      "title": "QoS-Aware Prefix Orchestration for Geo-Distributed LLM-as-a-Service",
+      "source_url": "https://www.semanticscholar.org/paper/e46c62a209710a05cccb39f903471ec5fbca3674",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Geo-distributed LLM-as-a-Service (LLMaaS) increasingly shards large models across heterogeneous sites via pipeline parallelism to meet regional capacity and latency constraints, which naturally co-partitions the KV Cache along model layers. This architectural shift transforms prefix caching from a local engine optimization into a cross-layer service orchestration problem, introducing three tightly coupled challenges: layer-wise eviction divergence lowers the safe effectivehit boundary, independent per-node scheduling disrupts temporal prefix locality, and cache-state invisibility prevents global routers from dispatching requests to cache-warm pipelines. To support QoS-aware serving under these failure modes, we present a prefix orchestration framework built on a shared cumulative-hash interface. The framework maintains routing visibility, execution-order consistency, and safe hit-boundary exposure through three synergistic components: the Global Prefix-Aware Router (GPAR), which dispatches requests via a dynamic link-prefix bipartite graph; the Prefix-Aware Fairness Scheduler (PAFS), which assigns and enforces a prefix-aware execution order across downstream stages; and the Layered KV Cache Manager (LKVM), which exposes conservative per-layer hit boundaries for safe reuse. Evaluated on a heterogeneous RTX 3090/4090 cluster serving LLaMA-2 13B, hierarchical prefix caching alone improves throughput from 3.2 req/s to 6.5 req/s. The full orchestrated system achieves 7.4 req/s with a p95 prompt latency of 21.39 s, improving throughput by 2.3x and reducing tail latency by 27% over the no-cache baseline, while consistently outperforming distributed baselines including GORGO, BanaServe, and Mooncake in both throughput and latency-sensitive QoS metrics.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00179",
+      "doi": "10.1109/ICWS72778.2026.00179",
+      "authors": [
+        "Zhang-Yang Ge",
+        "Long Chen"
+      ]
+    },
+    {
+      "title": "CompQ: QoE-Aware Compensation for Resumed Requests in Interactive LLM Inference Services",
+      "source_url": "https://www.semanticscholar.org/paper/2e5656ed20e6edc39cb9fa80737a73789e4e7a96",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Interactive large language model (LLM) services increasingly support tool invocation, external retrieval, and multi-step task execution, making pause-and-resume generation a common execution pattern. Although resumed phases are semantically part of the same user session, existing serving systems typically treat resumed requests as ordinary new arrivals, ignoring the waiting and service burden already accumulated before re-entry. As a result, resumed requests may face a second round of queuing, degrading service continuity and resumedphase Quality of Experience (QoE). We propose CompQ, a lightweight QoE-aware compensation mechanism that introduces a pre-resumption time-per-token metric to quantify this burden and selectively compensates requests most likely to suffer poor resumed-phase QoE. We implement a scheduler-side prototype in SGLang and evaluate it on a single GPU under controlled stall injection. Results show that CompQ substantially reduces resumed-phase latency in critical degradation regions, while revealing a structural trade-off with the first-token latency of newly arrived requests. These findings indicate that QoE-aware compensation for resumed requests is a distinct and worthwhile scheduling problem in interactive LLM services.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00108",
+      "doi": "10.1109/ICWS72778.2026.00108",
+      "authors": [
+        "Yin-Ming Tan",
+        "Jinquan Zhang",
+        "Long Chen",
+        "Kai Di",
+        "Pan Li"
+      ]
+    },
+    {
+      "title": "MAP: GPU Resource Planning for Multi-Agent Systems With Stochastic and Verbose Outputs",
+      "source_url": "https://www.semanticscholar.org/paper/c5d9efc213702b159e5abce4e127c6f8d43a8c4a",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Multi-agent systems (MAS) powered by large language models (LLMs) have shown strong potential in complex reasoning and decision-making tasks. While existing research has made significant efforts in designing agent collaboration strategies and optimizing runtime execution, a foundational systems challenge remains underexplored: GPU resource planning, i.e., how to allocate limited GPU resources across diverse MAS services while meeting throughput-oriented service-level agreements (SLAs). This article introduces MAP, a resource planning framework that minimizes GPU provisioning costs for MAS deployments while ensuring SLA compliance. MAP tackles two key technical challenges. First, it models the GPU allocation problem as a chance-constrained optimization, accounting for the stochastic nature of LLM-generated output lengths and providing probabilistic guarantees on service performance. Second, it proposes a topology-aware output regularization mechanism that selectively compresses agent outputs based on their position and role within the collaboration graph, effectively reducing verbosity and improving computational efficiency while preserving task accuracy within a bounded degradation threshold. Extensive experiments across a range of MAS workloads show that MAP reduces GPU usage by up to 77% compared with the conservative over-provisioning baseline, while maintaining or improving service quality.",
+      "canonical_id": "DOI:10.1109/TCC.2026.3712315",
+      "doi": "10.1109/TCC.2026.3712315",
+      "authors": [
+        "Qi Zhang",
+        "Ming-Yang Li",
+        "Qiang Li",
+        "Xiao-Qi Hua",
+        "Fahao Chen",
+        "De-Ze Zeng",
+        "Peng Li"
+      ]
+    },
+    {
+      "title": "SLO-Aware Disaggregated LLM Serving Over Heterogeneous Edge-Cloud Clusters",
+      "source_url": "https://www.semanticscholar.org/paper/6a4c089585cc48184546de35a86687d47ed40d29",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Disaggregated large language model (LLM) inference, which separates the prefill and decode phases onto dedicated GPU pools, has emerged as a promising architecture for high-throughput serving in data centers. However, existing systems such as DistServe and Mooncake assume data-center clusters with high-bandwidth interconnects, leaving heterogeneous edge-cloud environments largely unexplored. In such environments, the wide disparity in GPU capabilities and inter-node bandwidth makes naïve prefill-decode splitting insufficient: KV cache transfers across low-bandwidth links can dominate end-to-end latency and cause frequent Service Level Objective (SLO) violations. We present HEC-Serve, a scheduling framework that jointly considers GPU heterogeneity, network bandwidth, KV cache migration cost, and per-request SLO constraints. HEC-Serve introduces an SLO violation risk score that accounts for KV-transfer-aware user-visible TTFT and steady-state per-token decode latency to guide placement decisions. A scheduling algorithm routes long-prompt requests to high-bandwidth cloud prefill nodes while retaining short-prompt, short-output, latency-sensitive requests at nearby edge nodes when feasible, and applies cache-affinity routing to reduce redundant KV transfers. Simulation experiments on Llama-2-7B and Llama-3-8B using LMSYS-Chat-1M and LongBench-derived workloads show that HEC-Serve reduces SLO violation rates by up to 42% and KV cache transfer volume by 35-49% compared to SLO-oblivious disaggregated baselines, while maintaining competitive goodput.",
+      "canonical_id": "DOI:10.1109/AIoTC71250.2026.11689386",
+      "doi": "10.1109/AIoTC71250.2026.11689386",
+      "authors": [
+        "Yuxuan Zheng",
+        "Shuo Wang",
+        "Ben-Chen Su",
+        "A. Zhu",
+        "Zhi-Zhen Zhu"
+      ]
+    },
+    {
+      "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+      "source_url": "https://www.semanticscholar.org/paper/2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+      "year": 2026,
+      "published": "2026-06-30",
+      "abstract": "Large reasoning models (LRMs) such as DeepSeek-R1 have achieved strong performance through extended chain-of-thought (CoT) generation. However, deploying them on edge devices raises a conflict between long CoT sequences and constrained resources. Recent confidence-based early exit methods reduce CoT length for individual requests, yet they apply fixed thresholds from a single-request perspective, ignoring multi-request concurrency and load fluctuation in edge serving. To bridge this gap, we propose \\underline{L}oad-\\underline{A}ware \\underline{S}erving with \\underline{E}arly-exit for \\underline{R}easoning (LASER). LASER couples two complementary designs: (1) a load-aware adaptive exit threshold that adjusts the confidence bar based on real-time system load within an empirically validated robust range, and (2) a difficulty- and load-aware reasoning budget pre-allocation that assigns compute resources by request difficulty and system capacity. We formulate the problem as a joint optimization of reasoning quality and service latency. Experiments on two reasoning models, four benchmarks, and diverse load conditions show that LASER reduces average latency by 17--38\\% and improves service-level objective (SLO) satisfaction by 3--6\\% over fixed-threshold baselines, at an average accuracy cost of only 1\\%.",
+      "canonical_id": "arXiv:2606.31580",
+      "arxiv_id": "2606.31580",
+      "authors": [
+        "Zhiqing Tang",
+        "Size Li",
+        "Han-Shuai Cui",
+        "Zi-Lang Huang",
+        "Jian-Xiong Guo",
+        "Tian Wang",
+        "Yuan Wu",
+        "Wei-Jia Jia"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.02584",
+      "identity_tokens": [
+        "id:arXiv:2607.02584",
+        "title:rotateattention ropeaware rotation and range rectification for int4 quantized attention in video generation",
+        "url:https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708"
+      ],
+      "record": {
+        "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+        "canonical_id": "arXiv:2607.02584",
+        "arxiv_id": "2607.02584",
+        "authors": [
+          "Yaofu Liu",
+          "W. Lan",
+          "Jinxi Li",
+          "Binhang Yuan",
+          "Harry Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "doi": "10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wentao Zhou",
+          "Bin Guo",
+          "Zhiwen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21985",
+      "identity_tokens": [
+        "id:arXiv:2607.21985",
+        "title:unified staticdynamic pruning for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486"
+      ],
+      "record": {
+        "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/26effe73105f75da2bbd0a1c6c238dfd62428486",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+        "canonical_id": "arXiv:2607.21985",
+        "arxiv_id": "2607.21985",
+        "authors": [
+          "Jin-hong Kim",
+          "Yejoo Lee",
+          "Jaeyoung Do"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/compsac69091.2026.00432",
+      "identity_tokens": [
+        "id:DOI:10.1109/compsac69091.2026.00432",
+        "title:congestionaware scheduling for heterogeneous llmagent teams",
+        "url:https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e"
+      ],
+      "record": {
+        "title": "Congestion-Aware Scheduling for Heterogeneous LLM-Agent Teams",
+        "source_url": "https://www.semanticscholar.org/paper/90339aea366d0e19556fd6fbc6a4959e1541935e",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Coordinating heterogeneous LLM agents under congested online settings is difficult because bursty task arrivals and limited per-agent capacity may induce hotspot overload and severe tail waiting time. This paper proposes an online scheduling method based on candidate-set contraction before assignment. Specifically, tasks are first routed through subscription matching to identify a task-relevant candidate pool, after which layered gating is applied to enforce capability feasibility, historical quality, and real-time load constraints. The remaining candidates are then ranked using a composite score that balances competence and load, with stable tie-breaking introduced to reduce assignment fluctuations under contention. We evaluate the method under a reproducible protocol with both regular and congested regimes. Across benchmarks covering code generation, arithmetic reasoning, and preference-based evaluation, the proposed approach preserves competitive task performance while reducing both mean and 95th-percentile waiting time in congested settings relative to representative linear, flat, and hierarchical baselines. The findings suggest that candidate contraction is a useful strategy for achieving more stable coordination in heterogeneous LLM-agent systems.",
+        "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00432",
+        "doi": "10.1109/COMPSAC69091.2026.00432",
+        "authors": [
+          "Wei-Qi Xie",
+          "Yuyao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00031",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00031",
+        "title:paracascade a parallel cascading framework supporting early routing",
+        "url:https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488"
+      ],
+      "record": {
+        "title": "ParaCascade: A Parallel Cascading Framework Supporting Early Routing",
+        "source_url": "https://www.semanticscholar.org/paper/552baa98cf63645b225ddddfe3d79ddf8a6e9488",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Real-world inference tasks for large language models exhibit diverse difficulty levels. Existing LLM serving systems integrate models of different sizes and attempt to route tasks of appropriate difficulty to the most suitable model, aiming to reduce resource waste while guaranteeing service quality. Such systems usually adopt a cascading architecture, which performs inference sequentially from lightweight models to heavyweight models and validates outputs until a model that meets the task requirements is identified. However, when handling complex tasks, the cascading architecture inevitably processes unnecessary small models first, leading to cumulative latency and redundant resource consumption. This paper proposes ParaCascade, a parallel cascading framework that supports early routing. The core idea of ParaCascade is to bypass lightweight models and directly route difficult instances to heavyweight model tiers by pre-estimating task complexity, thus avoiding ineffective computation on lightweight models. In addition, ParaCascade adopts parallel prediction and model parallel inference strategies. At the cost of a slight increase in energy consumption, it significantly reduces the systemic latency caused by sequential processing, thereby improving the overall QoS. Extensive evaluations across diverse workloads on the MMLU-pro and MATH benchmarks show that ParaCascade significantly outperforms both single-model deployments and serial inference serving baselines. While maintaining answer quality, it achieves an inference speedup of 1.16× to 1.51×, demonstrating its superiority in efficient LLM serving systems.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00031",
+        "doi": "10.1109/JCC72984.2026.00031",
+        "authors": [
+          "Hao Wei",
+          "Lu-Jia Yin",
+          "Chen Chen",
+          "Jia-Nan Sun",
+          "Miao Zhang",
+          "Yong Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00021",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00021",
+        "title:greenalign aligning mixed llm workloads with intermittent renewable supply",
+        "url:https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c"
+      ],
+      "record": {
+        "title": "GreenAlign: Aligning Mixed LLM Workloads with Intermittent Renewable Supply",
+        "source_url": "https://www.semanticscholar.org/paper/329c1eb1f1b591423f655e80cc17714ee829fc6c",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The increasing use of renewable energy in data centers creates an opportunity to reduce the carbon footprint of energy-intensive LLM inference workloads. Unlike traditional stable power supply, renewable generation fluctuates over time, making it difficult to match computation demand with available energy. However, existing LLM serving systems primarily optimize latency and throughput without considering energy supply dynamics, leading to underutilization of renewable energy and unnecessary reliance on thermal power, and consequently, higher carbon emissions. We present GreenAlign, a renewable-aware scheduling framework that addresses this mismatch by treating best-effort (BE) requests as temporally shiftable load. GreenAlign enforces a power-constrained policy that executes BE requests using only residual renewable energy under normal conditions, and introduces a backlog risk metric to selectively relax this constraint when deadline violations are imminent. To ensure responsiveness, it maintains standby capacity to absorb unpredictable latencycritical (LC) bursts and uses lightweight length estimation to handle request uncertainty. Simulation results show that GreenAlign significantly reduces thermal energy usage while preserving LC latency and BE deadline satisfaction.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00021",
+        "doi": "10.1109/JCC72984.2026.00021",
+        "authors": [
+          "Chang Liu",
+          "Jiacheng Liu",
+          "Xiaofeng Hou",
+          "Chao Li",
+          "Minyi Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662646",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662646",
+        "title:managing kv cache for coordinated waiting and execution time in llm serving",
+        "url:https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0"
+      ],
+      "record": {
+        "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/cccfa7b50a0051aa8bc4d427b9c54e585e195ff0",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large Language Model (LLM) serving systems face a KV-cache (KVC) bottleneck. In this paper, our experimental study shows that block-based allocation increases Time-Between-Tokens (TBT) due to preemptions, while prediction-based allocation increases Time-to-First-Token (TTFT) and TBT due to allocated but unused KVC and inaccurate predictions. To address the problems to satisfy users' TTFT and TBT SLOs, we propose a system for Managing KV Cache for Coordinated TTFT and TBT (MC2). First, instead of using a constant padding in output length estimation, MC2 dynamically determines padding to bound prediction deviations with high probability and adjusts it based on request arrival rates to balance TTFT and TBT. Second, it allocates a block to requests requiring execution in the next iteration to meet their TTFT and TBT SLOs, and then distributes the remaining KVC to batched requests based on their SLOs and remaining iterations. Third, it proactively allocates KVC before depletion and reserves KVC globally to prevent preemptions. Experiments show that MC2 achieves up to 3.29× and 2.83× lower tail TBT and tail TTFT, 47% and 53% higher TTFT and TBT SLO attainments, and supports up to 1.58× higher request arrival rate than the state-of-the-art.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662646",
+        "doi": "10.1109/ICCCN69946.2026.11662646",
+        "authors": [
+          "Hai-Ying Shen",
+          "Tanmoy Sen",
+          "Masahiro Tanaka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662939",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662939",
+        "title:flowguard slackaware overload control for multiagent llm serving",
+        "url:https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9"
+      ],
+      "record": {
+        "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/c7699fd0e4dfc2cfc0f1eb23302e8f37e14944f9",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Multi-agent applications increasingly rely on shared large language model backends in the public cloud, where bursty workloads cause requests from different agents to contend for the same LLM instances, leading to long queues, memory imbalance, and severe tail-latency inflation. Existing approaches typically prioritize requests using coarse workflow positions or static execution heuristics, which fail to adapt to short-term overload dynamics. We present FlowGuard, a workflow-aware overload controller for multi-agent LLM serving. Its key insight is that under sustained overload, GPU cycles spent on requests whose execution service-level-objectives (SLOs) are already violated are wasted. FlowGuard continuously recomputes per-request slack and prioritizes requests with the greatest remaining time before their deadlines, thereby maximizing on-time completions. In addition, a resource-aware dispatcher jointly accounts for KV-cache memory pressure and in-flight queue depth to reduce preemption across shared instances. Evaluated on a deliberately over-subscribed two-GPU backend, where all policies exhibit high absolute miss rates (i.e., the percentage of workflows that miss their deadlines), FlowGuard reduces the miss rate by 14–28% points over workflow-oblivious and static-priority baselines under BurstGPT-driven load, and by 34–38% points under co-located mixed-agent workloads.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662939",
+        "doi": "10.1109/ICCCN69946.2026.11662939",
+        "authors": [
+          "Ali Zafar Sadiq",
+          "Hai-Ying Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icoict71118.2026.11664754",
+      "identity_tokens": [
+        "id:DOI:10.1109/icoict71118.2026.11664754",
+        "title:utari an onprem gpuaccelerated llm platform for highereducation services",
+        "url:https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c"
+      ],
+      "record": {
+        "title": "UTARI: An On-Prem GPU-Accelerated LLM Platform for Higher-Education Services",
+        "source_url": "https://www.semanticscholar.org/paper/ad3423f4c8c9afa3c25fae98c3c18ed6aba1831c",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Higher-education institutions increasingly require generative AI services that are responsive, governable, privacy-aware, and deployable within institutional infrastructure. This paper presents UTARI (UT Artificial Intelligence), an on-premises GPU-accelerated large language model (LLM) platform designed to support higher-education services, including academic assistance, institutional knowledge access, and internal conversational AI. UTARI combines local LLM serving with optional retrieval-augmented generation (RAG) to provide grounded responses over curated knowledge sources while preserving institutional control over data and infrastructure. The platform is evaluated through matched A/B experiments comparing a baseline non-RAG path (S0) and a RAG-enabled path (S1) under two output-length regimes. In the 256-token setting, both configurations achieve a median latency of approximately 6.3 s, with throughputs of 3.93 req/s and 3.91 req/s, respectively, and a 0% failure rate. In the 64-token setting, both configurations achieve a median latency of 1.5 s, with throughputs of 10.67 req/s and 10.64 req/s, respectively, again with 0% failures. The main difference appears in tail behavior: p99 latency increases from 6.3 s to 6.4 s in the 256-token regime and from 1.6 s to 1.9 s in the 64-token regime, while p99.9 reaches 6.8 s and 2.1 s in the RAG-enabled scenarios. These results show that RAG can be integrated into an on-premises campus LLM platform with negligible impact on median latency and throughput, while introducing a modest increase in upper-tail latency, particularly in short-response scenarios.",
+        "canonical_id": "DOI:10.1109/ICoICT71118.2026.11664754",
+        "doi": "10.1109/ICoICT71118.2026.11664754",
+        "authors": [
+          "Muhammad Rif'an",
+          "Fitria Amastini",
+          "D. Aprizal",
+          "Agung Wicaksono",
+          "Sonasa Rinusantoro",
+          "Abdul Rizal Adompo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccn69946.2026.11662938",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662938",
+        "title:wasma workflowaware scheduling for multiagent llm systems",
+        "url:https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150"
+      ],
+      "record": {
+        "title": "WaSMa: Workflow-Aware Scheduling for Multi-Agent LLM Systems",
+        "source_url": "https://www.semanticscholar.org/paper/ba7f64175d1733da158ace7cb38230f0a9136150",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Public LLM services serve diverse multi-agent applications with varying workflow dependencies and performance requirements. Requests generated by these applications often exhibit commonality and interdependence, yet current systems largely ignore such application-level structure. As a result, at the LLM engine cluster level, assigning requests to engines with the shortest queue can cause inefficient KV-cache transfers across GPUs. Using three representative multi-agent applications, we show that current scheduling methods miss opportunities to (a) improve performance through KV-cache reuse and reduced data transfer, and (b) increase goodput via batch management informed by workflow dependencies. Motivated by these observations, we propose a Workflow-Aware Scheduling system for Multi-Agent LLM systems (WaSMa) that incorporates cluster-and engine-level scheduling to optimize LLM request execution across GPU resources. Experimental results show that WaSMa reduces the P95 tail latency by up to 48% and improves goodput by up to 107% compared to existing methods.",
+        "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662938",
+        "doi": "10.1109/ICCCN69946.2026.11662938",
+        "authors": [
+          "Uttam Rao",
+          "Ali Zafar Sadiq",
+          "Hai-Ying Shen",
+          "Yuqing Yang",
+          "Elijah-Amir Randall Hodges",
+          "Marcus Muntean"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cloud72782.2026.00037",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud72782.2026.00037",
+        "title:bystander stateaware endtoend latency prediction for heterogeneous llm inference scheduling",
+        "url:https://www.semanticscholar.org/paper/a2868db01de3a1033fb5eabf71ce212396fb07b0"
+      ],
+      "record": {
+        "title": "BYSTANDER: State-Aware End-to-End Latency Prediction for Heterogeneous LLM Inference Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/a2868db01de3a1033fb5eabf71ce212396fb07b0",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large Language Model (LLM) inference services increasingly rely on heterogeneous GPU clusters to balance cost and performance. However, request routing in such environments is challenging because schedulers must account for hardware heterogeneity, dynamic workload characteristics, and bursty arrivals. Existing approaches either ignore hardware differences, rely on static heterogeneity-aware allocation, or use queue-based proxies that fail to capture the true remaining work under load. We present BYSTANDER, a prediction-based scheduling framework that uses a small language model (SLM) to estimate End-to-End (E2E) latency of request for each GPU pool from request features and current pool state. BYSTANDER then adaptively narrows the candidate pools via Fisher–Jenks grouping and performs queue-aware selection within that set. Its pool-based design keeps prediction overhead scalable as cluster size grows. We evaluate BYSTANDER on ShareGPT and LMSYS-Chat workloads over heterogeneous clusters of 3–7 GPUs (RTX 3090/4090/5090). Compared with round-robin, oracle-weighted round-robin, shortest-queue-first, and SLM Adaptive baselines, BYSTANDER reduces P99 E2E latency by up to 63.4% and P99 time-to-first-token by up to 87.4% under bursty traffic.",
+        "canonical_id": "DOI:10.1109/CLOUD72782.2026.00037",
+        "doi": "10.1109/CLOUD72782.2026.00037",
+        "authors": [
+          "Minjae Jung",
+          "Hyungjun Kim",
+          "Hokun Park",
+          "Hwamin Lee",
+          "Heonchang Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icera72709.2026.11666706",
+      "identity_tokens": [
+        "id:DOI:10.1109/icera72709.2026.11666706",
+        "title:kairos sloaware scheduling and a benchmark for multitenant llm inference serving under bursty heterogeneous load",
+        "url:https://www.semanticscholar.org/paper/10f0eaab248b285ec6791b9b260f084e7ce60366"
+      ],
+      "record": {
+        "title": "Kairos: SLO-Aware Scheduling and a Benchmark for Multi-Tenant LLM Inference Serving under Bursty, Heterogeneous Load",
+        "source_url": "https://www.semanticscholar.org/paper/10f0eaab248b285ec6791b9b260f084e7ce60366",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large language model (LLM) inference is increasingly served as a shared, multi-tenant utility: a single engine concurrently handles interactive chat, long-context retrieval-augmented generation (RAG), agentic tool calls, and batch jobs, each with its own service-level objectives (SLOs) on time-to-first-token (TTFT) and time-per-output-token (TPOT). Existing serving systems optimize aggregate throughput or a single latency target, and—crucially—are evaluated on bespoke, single-tenant workloads with ad-hoc metrics. There is no standard benchmark that scores SLO goodput, burstiness, request heterogeneity, and multitenant fairness together. We close this gap with two contributions. First, Serve-Bench, a reproducible benchmark that drives a calibrated discrete-event model of a continuous-batching engine (KV-cache blocks, prefill/decode iteration latencies, preemption) with bursty, heterogeneous, tenant-skewed load, and scores schedulers on a unified SLO-goodput-and-fairness suite. Second, Kairos, a reference scheduler that unifies four ideas—adaptive token-budget chunked prefill, SLO-deadline ordering, per-tenant fair queueing, and memory-admission control—behind one policy. Across 1344 configurations and over 780000 simulated requests, Kairos raises SLO goodput at the saturation knee from 51.1% (a vLLM-style baseline) and 59.8% (the strongest baseline) to 77.5%, while simultaneously cutting tail TPOT by more than half and matching a fairness-specialized baseline on Jain’s index (0.80 vs 0.84) where fairness-unaware schedulers collapse to 0.54. An ablation shows the four components are complementary and target different SLOs. We release Serve-Bench and Kairos as an open baseline for multi-tenant LLM-serving research.",
+        "canonical_id": "DOI:10.1109/ICERA72709.2026.11666706",
+        "doi": "10.1109/ICERA72709.2026.11666706",
+        "authors": [
+          "Sneha Gullapalli",
+          "Veera Ravindra Divi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00120",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00120",
+        "title:rekv crossprecision model switching with persistent kv cache reuse for llm serving",
+        "url:https://www.semanticscholar.org/paper/0b66702ed749d5b705daaff326ebdb8d21e4a4d1"
+      ],
+      "record": {
+        "title": "REKV: Cross-Precision Model Switching with Persistent KV Cache Reuse for LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/0b66702ed749d5b705daaff326ebdb8d21e4a4d1",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large language model (LLM) serving demands substantial compute and memory resources under dynamic workloads. Model switching has emerged as a promising strategy to balance service quality and system throughput. However, existing model switching approaches typically require restarting the service or recomputing previously generated tokens, causing significant redundant computation. We propose ReKV, a crossprecision model switching mechanism that persistently reuses KV cache states across model transitions. By eliminating prefix recomputation, ReKV enables seamless switching during ongoing generation. ReKV extends FlashInfer CUDA kernels to support multi-segment KV representations without data movement, and employs a layer-wise weight transfer strategy that overlaps weight loading with token generation to reduce switching latency. Experimental results show that ReKV achieves a peak overlap ratio of 13.07% between weight loading and inference, improves system throughput by up to $\\mathbf{1. 3 6} \\times$, and reduces Service Level Objective (SLO) violation rates by 86.59% on average compared with static high-precision configurations.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00120",
+        "doi": "10.1109/ICWS72778.2026.00120",
+        "authors": [
+          "Jia-Lin Wu",
+          "Minxian Xu",
+          "Yang Wang",
+          "Ke-Jiang Ye",
+          "Hao Dai",
+          "Cheng-zhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00182",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00182",
+        "title:ecoflow costaware llm serving on heterogeneous gpus via mincost maxflow",
+        "url:https://www.semanticscholar.org/paper/1288b96035976b66a3b6eea4c739842d2efb5252"
+      ],
+      "record": {
+        "title": "EcoFlow: Cost-Aware LLM Serving on Heterogeneous GPUs via Min-Cost Max-Flow",
+        "source_url": "https://www.semanticscholar.org/paper/1288b96035976b66a3b6eea4c739842d2efb5252",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Service operators provisioning heterogeneous GPU clusters for large language model (LLM) serving face a pressing challenge: GPU types differ by an order of magnitude in hourly cost while throughput varies far less, making cost-optimal and throughput-optimal placements structurally different. Existing cost-aware systems decouple placement from routing, fundamentally limiting the cost-throughput trade-off space. We propose EcoFlow, a cost-aware LLM serving system that jointly optimizes layer placement and flow routing by formulating the problem as min-cost max-flow optimization. EcoFlow models the GPU cluster as a directed flow network with per-token cost weights and a throughput-floor constraint, producing a Pareto frontier of cost-throughput operating points. Evaluated on heterogeneous clusters with up to 7 GPU types and 42 nodes, EcoFlow reduces serving cost by 18 – 32 % at 90 % of maximum throughput and 68-79 % at 50 %. A central finding is that cost-aware placement induces structurally distinct pipeline topologies—from dense DAG to staged GPU-type segmentation to region-locked WANconstrained pipelines-not produced by throughput-maximizing optimization. No decoupled heuristic matches the cost of EcoFlow above 59% of maximum throughput; EcoFlow covers the full 50-100 % range with 17 – 29 % savings over the best alternative. These results establish joint placement-routing optimization as an effective framework for cost-throughput trade-offs in heterogeneous LLM serving.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00182",
+        "doi": "10.1109/ICWS72778.2026.00182",
+        "authors": [
+          "Feng-Kai Jiang",
+          "Fu-Lu Kou",
+          "Jinquan Zhang",
+          "Rui Yang",
+          "Shu-Jie Pang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00079",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00079",
+        "title:ensuring efficiency and timeliness in realtime rag services an aoiaware approach",
+        "url:https://www.semanticscholar.org/paper/dd6c5b8833f35df325fe6ef538755354bba19227"
+      ],
+      "record": {
+        "title": "Ensuring Efficiency and Timeliness in Real-Time Rag Services: an AoI-Aware Approach",
+        "source_url": "https://www.semanticscholar.org/paper/dd6c5b8833f35df325fe6ef538755354bba19227",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large language models (LLMs) have been widely used in service automation and decision support. However, given that they rely on fixed parametric knowledge, they often struggle to provide timely and reliable responses when the underlying information changes continuously. Retrieval-augmented generation (RAG) addresses this limitation by retrieving external knowledge during inference, thereby improving response reliability. However, most existing RAG systems are built upon a static knowledge base and mainly focus on latency and accuracy, while paying limited attention to information timeliness. In real-time scenarios, information is continuously updated, and stale information may significantly reduce the usefulness of the generated response. Therefore, timeliness and efficiency are critical for RAG systems in such scenarios. This paper proposes a real-time RAG framework, defines query timeliness, and derives the average query timeliness based on Age of Information (AoI) and response latency. Based on the proposed model, we develop QoE-aware and Pareto-based multi-objective optimization methods for service configuration, which balance query timeliness with other key metrics. Experimental results verify the accuracy of the derived theorem, while achieving a trade-off among timeliness, latency, accuracy, and cost.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00079",
+        "doi": "10.1109/ICWS72778.2026.00079",
+        "authors": [
+          "Jie Shi",
+          "Xiang-Ru Liang",
+          "Yeping Zhu",
+          "Jian-Bing Zhang",
+          "Jiwei Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00179",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00179",
+        "title:qosaware prefix orchestration for geodistributed llmasaservice",
+        "url:https://www.semanticscholar.org/paper/e46c62a209710a05cccb39f903471ec5fbca3674"
+      ],
+      "record": {
+        "title": "QoS-Aware Prefix Orchestration for Geo-Distributed LLM-as-a-Service",
+        "source_url": "https://www.semanticscholar.org/paper/e46c62a209710a05cccb39f903471ec5fbca3674",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Geo-distributed LLM-as-a-Service (LLMaaS) increasingly shards large models across heterogeneous sites via pipeline parallelism to meet regional capacity and latency constraints, which naturally co-partitions the KV Cache along model layers. This architectural shift transforms prefix caching from a local engine optimization into a cross-layer service orchestration problem, introducing three tightly coupled challenges: layer-wise eviction divergence lowers the safe effectivehit boundary, independent per-node scheduling disrupts temporal prefix locality, and cache-state invisibility prevents global routers from dispatching requests to cache-warm pipelines. To support QoS-aware serving under these failure modes, we present a prefix orchestration framework built on a shared cumulative-hash interface. The framework maintains routing visibility, execution-order consistency, and safe hit-boundary exposure through three synergistic components: the Global Prefix-Aware Router (GPAR), which dispatches requests via a dynamic link-prefix bipartite graph; the Prefix-Aware Fairness Scheduler (PAFS), which assigns and enforces a prefix-aware execution order across downstream stages; and the Layered KV Cache Manager (LKVM), which exposes conservative per-layer hit boundaries for safe reuse. Evaluated on a heterogeneous RTX 3090/4090 cluster serving LLaMA-2 13B, hierarchical prefix caching alone improves throughput from 3.2 req/s to 6.5 req/s. The full orchestrated system achieves 7.4 req/s with a p95 prompt latency of 21.39 s, improving throughput by 2.3x and reducing tail latency by 27% over the no-cache baseline, while consistently outperforming distributed baselines including GORGO, BanaServe, and Mooncake in both throughput and latency-sensitive QoS metrics.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00179",
+        "doi": "10.1109/ICWS72778.2026.00179",
+        "authors": [
+          "Zhang-Yang Ge",
+          "Long Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00108",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00108",
+        "title:compq qoeaware compensation for resumed requests in interactive llm inference services",
+        "url:https://www.semanticscholar.org/paper/2e5656ed20e6edc39cb9fa80737a73789e4e7a96"
+      ],
+      "record": {
+        "title": "CompQ: QoE-Aware Compensation for Resumed Requests in Interactive LLM Inference Services",
+        "source_url": "https://www.semanticscholar.org/paper/2e5656ed20e6edc39cb9fa80737a73789e4e7a96",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Interactive large language model (LLM) services increasingly support tool invocation, external retrieval, and multi-step task execution, making pause-and-resume generation a common execution pattern. Although resumed phases are semantically part of the same user session, existing serving systems typically treat resumed requests as ordinary new arrivals, ignoring the waiting and service burden already accumulated before re-entry. As a result, resumed requests may face a second round of queuing, degrading service continuity and resumedphase Quality of Experience (QoE). We propose CompQ, a lightweight QoE-aware compensation mechanism that introduces a pre-resumption time-per-token metric to quantify this burden and selectively compensates requests most likely to suffer poor resumed-phase QoE. We implement a scheduler-side prototype in SGLang and evaluate it on a single GPU under controlled stall injection. Results show that CompQ substantially reduces resumed-phase latency in critical degradation regions, while revealing a structural trade-off with the first-token latency of newly arrived requests. These findings indicate that QoE-aware compensation for resumed requests is a distinct and worthwhile scheduling problem in interactive LLM services.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00108",
+        "doi": "10.1109/ICWS72778.2026.00108",
+        "authors": [
+          "Yin-Ming Tan",
+          "Jinquan Zhang",
+          "Long Chen",
+          "Kai Di",
+          "Pan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcc.2026.3712315",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcc.2026.3712315",
+        "title:map gpu resource planning for multiagent systems with stochastic and verbose outputs",
+        "url:https://www.semanticscholar.org/paper/c5d9efc213702b159e5abce4e127c6f8d43a8c4a"
+      ],
+      "record": {
+        "title": "MAP: GPU Resource Planning for Multi-Agent Systems With Stochastic and Verbose Outputs",
+        "source_url": "https://www.semanticscholar.org/paper/c5d9efc213702b159e5abce4e127c6f8d43a8c4a",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Multi-agent systems (MAS) powered by large language models (LLMs) have shown strong potential in complex reasoning and decision-making tasks. While existing research has made significant efforts in designing agent collaboration strategies and optimizing runtime execution, a foundational systems challenge remains underexplored: GPU resource planning, i.e., how to allocate limited GPU resources across diverse MAS services while meeting throughput-oriented service-level agreements (SLAs). This article introduces MAP, a resource planning framework that minimizes GPU provisioning costs for MAS deployments while ensuring SLA compliance. MAP tackles two key technical challenges. First, it models the GPU allocation problem as a chance-constrained optimization, accounting for the stochastic nature of LLM-generated output lengths and providing probabilistic guarantees on service performance. Second, it proposes a topology-aware output regularization mechanism that selectively compresses agent outputs based on their position and role within the collaboration graph, effectively reducing verbosity and improving computational efficiency while preserving task accuracy within a bounded degradation threshold. Extensive experiments across a range of MAS workloads show that MAP reduces GPU usage by up to 77% compared with the conservative over-provisioning baseline, while maintaining or improving service quality.",
+        "canonical_id": "DOI:10.1109/TCC.2026.3712315",
+        "doi": "10.1109/TCC.2026.3712315",
+        "authors": [
+          "Qi Zhang",
+          "Ming-Yang Li",
+          "Qiang Li",
+          "Xiao-Qi Hua",
+          "Fahao Chen",
+          "De-Ze Zeng",
+          "Peng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aiotc71250.2026.11689386",
+      "identity_tokens": [
+        "id:DOI:10.1109/aiotc71250.2026.11689386",
+        "title:sloaware disaggregated llm serving over heterogeneous edgecloud clusters",
+        "url:https://www.semanticscholar.org/paper/6a4c089585cc48184546de35a86687d47ed40d29"
+      ],
+      "record": {
+        "title": "SLO-Aware Disaggregated LLM Serving Over Heterogeneous Edge-Cloud Clusters",
+        "source_url": "https://www.semanticscholar.org/paper/6a4c089585cc48184546de35a86687d47ed40d29",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Disaggregated large language model (LLM) inference, which separates the prefill and decode phases onto dedicated GPU pools, has emerged as a promising architecture for high-throughput serving in data centers. However, existing systems such as DistServe and Mooncake assume data-center clusters with high-bandwidth interconnects, leaving heterogeneous edge-cloud environments largely unexplored. In such environments, the wide disparity in GPU capabilities and inter-node bandwidth makes naïve prefill-decode splitting insufficient: KV cache transfers across low-bandwidth links can dominate end-to-end latency and cause frequent Service Level Objective (SLO) violations. We present HEC-Serve, a scheduling framework that jointly considers GPU heterogeneity, network bandwidth, KV cache migration cost, and per-request SLO constraints. HEC-Serve introduces an SLO violation risk score that accounts for KV-transfer-aware user-visible TTFT and steady-state per-token decode latency to guide placement decisions. A scheduling algorithm routes long-prompt requests to high-bandwidth cloud prefill nodes while retaining short-prompt, short-output, latency-sensitive requests at nearby edge nodes when feasible, and applies cache-affinity routing to reduce redundant KV transfers. Simulation experiments on Llama-2-7B and Llama-3-8B using LMSYS-Chat-1M and LongBench-derived workloads show that HEC-Serve reduces SLO violation rates by up to 42% and KV cache transfer volume by 35-49% compared to SLO-oblivious disaggregated baselines, while maintaining competitive goodput.",
+        "canonical_id": "DOI:10.1109/AIoTC71250.2026.11689386",
+        "doi": "10.1109/AIoTC71250.2026.11689386",
+        "authors": [
+          "Yuxuan Zheng",
+          "Shuo Wang",
+          "Ben-Chen Su",
+          "A. Zhu",
+          "Zhi-Zhen Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31580",
+      "identity_tokens": [
+        "id:arXiv:2606.31580",
+        "title:laser loadaware serving with earlyexit for reasoning llms at the edge",
+        "url:https://www.semanticscholar.org/paper/2f8dc745bb77102d2a26e39371f304a1f4d55ae9"
+      ],
+      "record": {
+        "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+        "source_url": "https://www.semanticscholar.org/paper/2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+        "year": 2026,
+        "published": "2026-06-30",
+        "abstract": "Large reasoning models (LRMs) such as DeepSeek-R1 have achieved strong performance through extended chain-of-thought (CoT) generation. However, deploying them on edge devices raises a conflict between long CoT sequences and constrained resources. Recent confidence-based early exit methods reduce CoT length for individual requests, yet they apply fixed thresholds from a single-request perspective, ignoring multi-request concurrency and load fluctuation in edge serving. To bridge this gap, we propose \\underline{L}oad-\\underline{A}ware \\underline{S}erving with \\underline{E}arly-exit for \\underline{R}easoning (LASER). LASER couples two complementary designs: (1) a load-aware adaptive exit threshold that adjusts the confidence bar based on real-time system load within an empirically validated robust range, and (2) a difficulty- and load-aware reasoning budget pre-allocation that assigns compute resources by request difficulty and system capacity. We formulate the problem as a joint optimization of reasoning quality and service latency. Experiments on two reasoning models, four benchmarks, and diverse load conditions show that LASER reduces average latency by 17--38\\% and improves service-level objective (SLO) satisfaction by 3--6\\% over fixed-threshold baselines, at an average accuracy cost of only 1\\%.",
+        "canonical_id": "arXiv:2606.31580",
+        "arxiv_id": "2606.31580",
+        "authors": [
+          "Zhiqing Tang",
+          "Size Li",
+          "Han-Shuai Cui",
+          "Zi-Lang Huang",
+          "Jian-Xiong Guo",
+          "Tian Wang",
+          "Yuan Wu",
+          "Wei-Jia Jia"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:560349584e9fc52162aec10cef0fe2a38eedc85f3afa6be741f144c8b4dd611c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,892 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-b7059327cf3a593ead8a",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-b7059327cf3a593ead8a",
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 11,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T17:38:16.858212+00:00",
+  "preload_id": "preload-b7059327cf3a593ead8a",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Block-Sparse Attention with Semantic-Geometric Decoupled Routing",
+      "source_url": "https://www.semanticscholar.org/paper/5752396da8a2404465f6354a4e5a9e11dd728d4f",
+      "year": 2026,
+      "published": "2026-09-19",
+      "abstract": "Long-context inference has become a defining capability of large language models, but exact dense attention remains costly due to its quadratic scaling with sequence length. Block-sparse attention offers a hardware-friendly alternative by routing each query block to a small set of relevant key blocks, yet accurate training-free block routing remains difficult. Existing routers often pool post-RoPE token representations, which entangles semantic aggregation with RoPE-induced geometry and attenuates local positional cues through high-frequency phase cancellation. To resolve this mismatch, we propose \\textbf{Semantic-Geometric Decoupled Routing}, a training-free block routing framework that shifts semantic aggregation to the pre-RoPE space and reconstructs geometric bias with an offline structural prior and relative block distances. This decomposition yields an explicit closed-form block routing score without token-level search or post-hoc calibration. Experiments on long-context text and video tasks show that our method approaches full-attention accuracy across 4K--128K contexts, keeps routing overhead below 3.4 ms, and achieves a 5.03$\\times$ speedup over FlashAttn at a 128K context length.",
+      "canonical_id": "arXiv:2609.22884",
+      "arxiv_id": "2609.22884",
+      "authors": [
+        "Xin-Wei Long",
+        "Wei-Gao Sun",
+        "Wei-Bo Gao",
+        "Peng-Kun Jiao",
+        "Bin Qi",
+        "Fei-Da Zhu",
+        "Yi-Ran Zhong",
+        "Steven Hoi",
+        "Bo-Wen Zhou"
+      ]
+    },
+    {
+      "title": "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+      "source_url": "https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Large language models (LLMs) are moving onto mobile devices for increasingly diverse workloads over text, images, video, and audio. These applications often require long contexts, making the Key-Value (KV) cache a dominant memory bottleneck because it grows linearly with sequence length and is accessed at every decoding step. Prior work reduces KV-cache footprint through low-rank compression, token eviction, or flash offloading, but the resulting reconstruction overhead, irreversible token loss, or I/O stalls can offset the benefit of saving memory. We present TierKV, a mobile LLM inference framework built on Predictive Multi-Tier Cache Optimization (PMCO). Before decoding starts, PMCO predicts future cache demand from prefill hidden states and jointly assigns tokens to exact, low-rank, and flash-offloaded tiers under the device memory and accuracy budgets. This formulation retains access to the full context, removes the circular dependency of reactive eviction, and admits a closed-form solver that selects tier boundaries and per-layer ranks at runtime. Across eight text, vision, and audio models on three mobile SoCs, TierKV improves prefill throughput by up to 17.6x over existing mobile LLM frameworks, reduces RAM-resident KV cache by 12.5-34%, thereby enabling substantially longer contexts under the same memory budget, while incurring only minor accuracy degradation.",
+      "canonical_id": "arXiv:2609.21172",
+      "arxiv_id": "2609.21172",
+      "authors": [
+        "Zhihao Shu",
+        "Md Musfiqur Rahman Sanim",
+        "Jie Hu",
+        "Kun Yuan",
+        "Ming-Hai Qin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ]
+    },
+    {
+      "title": "Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study",
+      "source_url": "https://www.semanticscholar.org/paper/8562f398cb6eb18bf181f9e7b2f5714b9693bba7",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Spatial NPUs such as AMD XDNA place compute tiles beside small local memories and leave data movement between them to software. Mapping a multi-stage workload onto such a device is largely a question of where the intermediate tensors live. We report what we learned making those choices for FlashAttention with the open-source IRON and MLIR-AIR flows. We compare four reference designs on XDNA 1 and XDNA 2: one runs each operator separately, two stream between operators on chip, and one fuses all three attention stages into a single kernel. The fused kernel holds the $\\boldsymbol{QK}^{\\mathsf T}$ scores in compute-tile local memory and reduces partial results over the cascade interconnect, so the scores never return to shared MemTile memory. On XDNA 2, it reaches 3.62 TFLOP/s over complete end-to-end execution, twice the IRON design, with 5.3 to 7.2 times the energy efficiency of the integrated GPU on the same chip at 2K tokens and above. It covers twelve LLM configurations, from BERT to DeepSeek, up to 128K tokens. Roofline analysis at each memory level explains this result and shows when to stop. XDNA 1 has lower ridge points, so streaming on chip already reaches the compute-bound regime: the same fusion that doubles throughput on XDNA 2 is nearly wasted on XDNA 1. Comparing a mapping's operational intensity against each level's ridge point predicts which case applies before writing any code. Fuse until the mapping clears that ridge point, then stop. We release the reference designs as maintained open source.",
+      "canonical_id": "arXiv:2609.21264",
+      "arxiv_id": "2609.21264",
+      "authors": [
+        "Erwei Wang",
+        "Ephrem C. Wu",
+        "V. J. Jung",
+        "Jia-Jie Li",
+        "Andre Rosti",
+        "Joseph Melber",
+        "Samuel Bayliss"
+      ]
+    },
+    {
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "source_url": "https://www.semanticscholar.org/paper/d5665d214770386a1e9c09170949504e3c16e1cf",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low latency; and preserving scene identity when a location is revisited. We present ZYT-World, a single architecture that natively generates four fisheye views with field of view>180{\\deg} and three pinhole views. Projection-specific Plucker adapters encode camera geometry, ego-motion adaptive layer normalization provides global motion control, and a lightweight pixel-aligned layout conditions traffic participants and signals through instance-level boxes, headings and colors. Heterogeneous training combines full-rig geometric coverage with high-resolution detail. Teacher forcing, causal consistency distillation, self-rollout distribution matching distillation, and RigCritic transform a 40-step bidirectional teacher into a one-step, per-latent streaming generator, with RigCritic evaluating the seven-view rig jointly. A 19M-parameter variational autoencoder decoder (TinyVAE), W8A8 quantization, and our inference engine reduce decoding, backbone, and incremental-execution costs, respectively. Finally, cross-trajectory pairs derived from real captures train a plug-in implicit-memory module that preserves place-specific evidence. On the internal multi-view test set, the one-step model retains more than 90% of the teacher's PSNR and SSIM, while FID, FVD, and LPIPS stay within 11% of the teacher. Under the generator-only timing in Figure 2, it is 107.7 times faster than the 40-step bidirectional teacher. TinyVAE decodes 59.8 times faster than Wan. 30s rollouts and cross-trajectory revisits show the intended long-horizon and memory behavior.",
+      "canonical_id": "arXiv:2609.21712",
+      "arxiv_id": "2609.21712",
+      "authors": [
+        "Bo-Ni Hu",
+        "Xiong Wei",
+        "Hao-Ming Huang",
+        "Yong Huang",
+        "Chen-Bo Wang",
+        "Yi Yang",
+        "Jian-Cheng Wang",
+        "Rui-Cheng Zhu",
+        "Zhi-Ming Yang",
+        "Guang-Lai Liu",
+        "Qiao-Wan Jin",
+        "Dong-Zhuo Wang",
+        "Hai-Wei Kuang",
+        "Jia-Jun Fan",
+        "Yue-Ying Wu",
+        "Jia-Xin Wei",
+        "Hao Sun",
+        "Fei-Hong Yan",
+        "Yu-Yao Zhou",
+        "Wei-Zhang Bi",
+        "Kai-Xuan Wang",
+        "Zi-Chao Guo",
+        "Xiaozhi Chen"
+      ]
+    },
+    {
+      "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN",
+      "source_url": "https://www.semanticscholar.org/paper/7e5f8ed977a4e193499a579ff5700a247b51a205",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Vision Transformers allocate most parameters to multi-layer perceptrons (MLPs) for channel mixing, while token interactions usually rely on quadratic multi-head self-attention (MHSA). Linear attention reduces sequence complexity to O(N), but remains coupled with the same fixed-activation MLP as softmax Transformers. Kolmogorov-Arnold Networks (KANs) instead place learnable univariate maps on edges, yet prior vision KANs keep MHSA or omit attention entirely. We introduce LKAT (Linear Kolmogorov-Arnold Transformer), an isotropic ViT encoder that couples chunkwise Gated Linear Attention (GLA) with a two-layer KAN feed-forward, and we provide an I/O-aware fused RBF-KAN kernel for the radial-basis grid maps. Under a shared DeiT-style recipe we compare LKAT with ViT, ViT-5, and MLP-Mixer. LKAT-B exceeds ViT-B/16, ViT-5-B, and Mixer-B/16 on ImageNet-100. Tiny/Small/Base LKAT variants scale consistently on CIFAR-10/100, and ImageNet-100 pretraining transfers to CIFAR fine-tuning. The results support gated linear attention and KAN-based radial-basis functions as complementary inductive biases for mid-scale visual representation learning.",
+      "canonical_id": "arXiv:2609.22506",
+      "arxiv_id": "2609.22506",
+      "authors": [
+        "Ali Mehizel",
+        "O. Khaldi"
+      ]
+    },
+    {
+      "title": "Conditional Generation and Inpainting of Non-Coding RNA Sequences with Masked Discrete Diffusion",
+      "source_url": "https://www.semanticscholar.org/paper/5297acbb22116e269c4b8085f1c4f8423ed7701e",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Designing functional non-coding RNA (ncRNA) is fundamental to synthetic biology and RNA therapeutics, yet generative modelling for ncRNA has received far less attention than protein design. We present RNA-MDLM, a framework that extends Masked Discrete Language Models (MDLM) to the conditional generation and inpainting of ncRNA. We make two additions: first, conditioning on RNA-type representations from a pretrained RNA language model, and second, a modified classifier-free guidance scheme (Mod-CFG) that interpolates among conditional, unconditional, and random-sequence probabilities for better control. We also introduce REPAINT GAMES, a benchmark of seven structured masking tasks to probe a model’s performance on sequence patterns, structural motifs, and base-pairing per RNA type. Our model is trained on 4.6 million ncRNA sequences spanning six evaluable classes. It produces sequences whose composition and folding statistics closely match natural RNAs. Through extensive ablation studies, we find that the embedding-conditioned model achieves the best balance of structural fidelity, biological novelty, and inpainting accuracy, and its class label steers generation far more strongly than a plain label baseline. We further show that a model trained on a smaller, class-balanced subset can appear more realistic mainly by copying abundant natural sequences rather than learning their rules. We also benchmark against a masked-diffusion model and a family-specific VAE on ribozyme families, and find that a type-conditioned model like ours and a perfamily model are solving different tasks, which must be accounted for in a fair comparison. We will release the code and the trained models.",
+      "canonical_id": "DOI:10.64898/2026.09.17.752279",
+      "doi": "10.64898/2026.09.17.752279",
+      "authors": [
+        "Utkarsh Upadhyay",
+        "Chuan-Kai Dai",
+        "Julian Herold",
+        "Kengo Sato",
+        "Alexander Schug"
+      ]
+    },
+    {
+      "title": "Cost efficient multimodal LLM deployment integrating tokenization economics MLOps and FinOps environments",
+      "source_url": "https://www.semanticscholar.org/paper/dd5f8a5d972dfcd2ffe990771c949ac66f059b1a",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "The economic implications of tokenization have recently become a black box that is a point of contention in the economic implications of the transition of Large Language Models (LLMs) between experimental prototypes and commercially marketable multimodal systems. Despite the worldwide use of reigning pricing models of the same principle, which all cost according to the input modality, cost differences in relation to the same information are significant: the same information costs significantly different prices depending on whether the information is processed as text, image, audio, or video. A systematic study of five major AI providers (OpenAI, Google Gemini, Anthropic, Perplexity, and xAI) is carried out in this investigation to show that the textual content is not always the most cost-effective form. The study finds what appears to be a paradoxical phenomenon of so-called break-even whereby converting long-form text (over 800 words) into image inputs leads to cost savings of 70–95%. The insights are implemented as empirical scaling laws and form the basis of the realization of ModalRoute, a framework of intelligent routing that allows one to choose the most effective input modality dynamically. In practice, empirical tests at production settings have shown that ModalRoute demonstrates a reduction of up to 68.3 percent of the cost while retaining 97.3 percent of the original performance. A universal assessment package and verifiable data are available to standardize the nascent science of cross-modal token arbitrage.",
+      "canonical_id": "DOI:10.1007/s10791-026-10449-7",
+      "doi": "10.1007/s10791-026-10449-7",
+      "authors": [
+        "Anirudha Sahu",
+        "Anurag Singh",
+        "Snehasagar Sahu",
+        "D. P. Mishra",
+        "S. R. Mallick",
+        "Dibya Jyoti Mishra",
+        "Pramod Pandey"
+      ]
+    },
+    {
+      "title": "The Life of a Token: from Words to Bits on the Wire",
+      "source_url": "https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+      "canonical_id": "arXiv:2609.19924",
+      "arxiv_id": "2609.19924",
+      "authors": [
+        "Davide Avesani",
+        "Pengwenlong Gu",
+        "S. Skaperas",
+        "Stefano Secci"
+      ]
+    },
+    {
+      "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count. GitHub code available at: https://github.com/OpenVDN/vdn-minimax-h3. Weights available at: https://huggingface.co/OpenVDN/vdn-minimax-h3",
+      "canonical_id": "arXiv:2609.20744",
+      "arxiv_id": "2609.20744",
+      "authors": [
+        "Haocheng Xi",
+        "Yiming Xie",
+        "He-Xue Zhao",
+        "Yi-Wen Zhang",
+        "Michael F. Liu",
+        "Thomas Creavin",
+        "Kurt Keutzer",
+        "Xiu-Yu Li",
+        "Zhao-Yang Lv",
+        "Chen-Feng Xu",
+        "Hai-Wen Feng"
+      ]
+    },
+    {
+      "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+      "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+      "canonical_id": "arXiv:2609.20614",
+      "arxiv_id": "2609.20614",
+      "authors": [
+        "Sarah Radway",
+        "Andrew Cheng",
+        "V. Reddi",
+        "James Mickens"
+      ]
+    },
+    {
+      "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+      "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+      "canonical_id": "arXiv:2609.20446",
+      "arxiv_id": "2609.20446",
+      "authors": [
+        "U. Barzelay",
+        "Ophir Azulai",
+        "Idan Friedman",
+        "Inbar Shapira",
+        "Foad Abo Dahood",
+        "Yevgeny Burshtein",
+        "Orit Prince",
+        "Michael Soloveitchik",
+        "O. Naparstek",
+        "Roi Pony",
+        "Tal Drory",
+        "Michael Factor"
+      ]
+    },
+    {
+      "title": "PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving",
+      "source_url": "https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Online image generation with Diffusion Transformers (DiTs) must meet latency service-level objectives (SLOs) while using GPU resources efficiently. Existing systems improve GPU utilization by batching multiple requests for joint execution. However, request-level batching offers limited control over batch size: batches may be too small to saturate GPU compute, while larger ones may violate latency SLOs. Globally coordinated scheduling introduces further delays by requiring independently progressing GPUs to synchronize before admitting new work. We present PixelFlow, a distributed DiT serving system that addresses these limitations through token-level workload management. Its key idea is to use image tokens (the units a DiT processes to generate an image) to divide and batch request workloads at a finer granularity. This allows each GPU to take on a portion of additional work under latency constraints. By distributing these portions across GPUs, PixelFlow accommodates more concurrent requests, improving GPU utilization while reducing queueing delays. To realize this flexibility, PixelFlow provides a runtime that splits requests into variable-sized partitions and batches them efficiently on each GPU. To reduce the resulting communication overhead, it optimizes token placement to limit cross-GPU data exchange while balancing GPU workloads. It further exploits similarity across denoising steps to overlap the remaining transfers with computation. An SLO-aware scheduler groups GPUs to share compute resources among requests with compatible latency requirements. Each group progresses independently, synchronizing with others only when their combined resources are needed to admit a new request. Evaluation with Stable Diffusion 3 and FLUX.1-dev on H100 GPUs shows that PixelFlow improves SLO attainment by up to 43% and achieves up to 2.8 times the goodput of state-of-the-art DiT serving systems.",
+      "canonical_id": "arXiv:2609.20723",
+      "arxiv_id": "2609.20723",
+      "authors": [
+        "Zhexiang Zhang",
+        "Min-Chen Yu",
+        "Yi-Fan Sun",
+        "Xu Bai",
+        "Xing-Liang Yuan",
+        "A. N. Toosi"
+      ]
+    },
+    {
+      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+      "source_url": "https://www.semanticscholar.org/paper/8f6005c335e4d40ddb9a0759f4c819efc355e6f5",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introduces a \\emph{quality-gated post-training conversion} framework using CeNN-inspired cellular-recurrent layers with bounded local processing, compact recurrent memory, routing, fusion, and accept-or-rollback validation. Three implementations are studied: Integrated Memory, MemoryFusion, and PDelta3-GDN2-CLVR+Local32. Strict PDelta3 conversion accepts a layer only when representation and NLL criteria pass fixed thresholds. On SmolLM2-135M, layers 0-2 are accepted with cumulative $\\Delta\\mathrm{NLL}=+0.01209$, while layer 3 is rejected despite acceptable NLL because representation fidelity fails. On Qwen3.5-0.8B, full-attention layers 3, 7, and 11 are accepted with final $\\Delta\\mathrm{NLL}=+0.02073$. Integrated Memory keeps perplexity within $-0.07\\%$ to $+0.93\\%$ while reducing total cache by up to $6.01\\%$. A sampled 200-item downstream sanity check gives $28.5\\%$--$32.0\\%$ overall accuracy for converted Qwen releases. The results support conservative, quality-gated structural conversion rather than universal attention replacement or speedup.",
+      "canonical_id": "arXiv:2609.21139",
+      "arxiv_id": "2609.21139",
+      "authors": [
+        "Kabeh Mohsenzadegan",
+        "Vahid Tavakkoli",
+        "K. Kyamakya"
+      ]
+    },
+    {
+      "title": "How Much of a Real Workload Can LLM-Generated GPU Kernels Actually Reach?",
+      "source_url": "https://www.semanticscholar.org/paper/7c606506a75530a50104086474b21d06f4d3a119",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Language models can now write GPU kernels that outperform PyTorch. We evaluate five model configurations on KernelBench level 1 and find that a frontier model produces correct kernels for 91.1% of problems and independently verified speedups on 22 of 56, including three convolutions, with a median of 1.235x. Open-weights models are far behind: the best reaches 30.4% correct with three verified speedups and solves zero convolutions. We then ask a question the literature does not: what fraction of a real model's wall clock do such kernels govern? Profiling seven workloads across three domains, we find the addressable fraction ranges from 8.9% to 58.2%. On transformers, 80-86% of runtime is spent in cuBLAS GEMM and FlashAttention, bounding realistic end-to-end improvement at roughly 1%, and the fraction shrinks with model scale. On recommenders it is 58.2%, concentrated in a single embedding kernel. We introduce DLRM-Bench, 12 recommender kernel problems in KernelBench format, and measure a 41.7% win rate at a 1.552x median there, projecting 8.63% end-to-end. Separately, we show that KernelBench's correctness check (torch.allclose with an absolute tolerance) is satisfied by a tensor of zeros on 4 of 60 level-1 problems. Two kernels in our own results exploited this before we detected them, including one scored at 283x that wrote 0.3% of its output buffer. We propose scale-invariant replacements and release all 879 evaluations.",
+      "canonical_id": "arXiv:2609.21058",
+      "arxiv_id": "2609.21058",
+      "authors": [
+        "Gaurav Agarwal",
+        "Ashish Garg",
+        "Isha Singhal"
+      ]
+    },
+    {
+      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+      "source_url": "https://www.semanticscholar.org/paper/4c87f5d74a5b8cbe184586182c18677494631208",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware Routing (AAR), which augments the router with temporal and spectral features extracted from a sliding window of attention weights that represent a summary of the model's contextual state, disentangled from the hidden state. Keeping the base transformer entirely frozen, we train only the routing parameters, isolating routing as the sole variable. AAR improves GSM8K by +3.37 pp over a routing-only SFT baseline on OLMoE. Beyond performance, we show that routing and attention form a coupled circuit: routing changes at layer l propagate through the residual stream to amplify attention sinks at layer l+1, reshaping attention without any direct update to the attention mechanism itself. Further, AAR reduces long diverging generation, with incorrect answers getting shorter, while correct answers remain unchanged in length. Finally, AAR is strongly depth-sensitive: applying it indiscriminately across layers can degrade factual retrieval, whereas mathematical reasoning gains persist when it is introduced deeper in the network. This sensitivity exposes a retrieval--reasoning tension across depth and makes layer-selective AAR a controlled probe of the routing-relevant information carried by attention at different layers.",
+      "canonical_id": "arXiv:2609.20974",
+      "arxiv_id": "2609.20974",
+      "authors": [
+        "Despoina Kosmopoulou",
+        "Anastasios Tsetsilas",
+        "Efthymios Georgiou",
+        "Giannis Karamanolakis",
+        "Swastik Roy",
+        "A. Potamianos"
+      ]
+    },
+    {
+      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/01a1cff3fca9805af6851d48c8d13f9887b04855",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse block selection can reduce this cost, but a block centroid may hide a highly relevant token among many irrelevant ones. We call this failure mode mean dilution and propose RBS-Attention, a training-free sparse-prefill method with two complementary selection branches. A centroid base branch captures average relevance, while a rescue branch uses the maximum key-block radius and its prompt-, layer-, and head-dependent distribution to identify blocks at risk of underestimation. Independently thresholding the two branches and combining their masks controls the contribution of rescue blocks while preserving regular block-sparse FlashAttention execution. On H100 GPUs, RBS-Attention achieves 20.65$\\times$ standalone prefill-attention speedup, 11.92$\\times$ vLLM prefill-attention speedup, and 5.97$\\times$ end-to-end time-to-first-token speedup at 128K on Qwen3-30B-A3B-Instruct-2507-FP8. On the dense Qwen3-32B model, it obtains 88.65 overall RULER accuracy versus 89.52 for dense attention; LongBench-v2, InfiniteBench, and Video-MME provide additional quality evaluation. Supporting experiments measure actual retention, compare selectors at matched density, and characterize block-size, threshold, and memory behavior. Together, these results support radius-adaptive dual-branch selection as an effective approach to long-context prefill.",
+      "canonical_id": "arXiv:2609.20971",
+      "arxiv_id": "2609.20971",
+      "authors": [
+        "Chu-Xu Song",
+        "Jiu-Qi Wei",
+        "Zhencan Peng"
+      ]
+    },
+    {
+      "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+      "source_url": "https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architectures. vidax covers a diverse set of spatiotemporal models --- including Diffusion Transformers, omnimodal Mixture-of-Transformers, 3D VAEs, text encoders, and native samplers --- with zero PyTorch dependency in the execution path. The framework unifies 1D tensor parallelism with DeepSpeed-Ulysses sequence parallelism on a single JAX sharding mesh, integrates TPU flash-attention kernels, and implements per-layer weight offloading to support reference resolutions that exceed single-device memory. We benchmark compile times, latency, and peak memory utilization on TPU v4-8 hardware, and document real-world numerical bugs surfaced during checkpoint translation. vidax is released open-source as a baseline for JAX and TPU video generation research.",
+      "canonical_id": "arXiv:2609.18077",
+      "arxiv_id": "2609.18077",
+      "authors": [
+        "Congyue Deng"
+      ]
+    },
+    {
+      "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+      "source_url": "https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pinned, and free placement constraints, making it applicable when recurring decoded fields are not frozen by a public format contract. We instantiate the framework for NVIDIA SASS: raw public encoding text is normalized into a machine-readable specification, a SASS disassembler is validated against nvdisasm on 3.78M instructions, released as an open benchmark, and CP-SAT synthesis is used for fixed-length and variable-length encodings. On 142 Blackwell kernel inputs, variable-length synthesis reduces instruction footprint by 33%, with comparable reductions after re-synthesis on Ampere and Hopper; fixed-length synthesis on the same specification reduces decoder area by 16% against a decoder generated from the NVIDIA-observed 128-bit layout by the same generator and flow. Generated fetch/decode RTL meets 1.5 GHz in TSMC 22 nm with a replicated area delta of 0.12% of a GA100-class die; a same-node SRAM comparison shows the footprint reduction corresponds to about 9x this added logic in instruction-SRAM bit-cell area.",
+      "canonical_id": "arXiv:2609.18662",
+      "arxiv_id": "2609.18662",
+      "authors": [
+        "Ming-Yuan Ma",
+        "Hu He"
+      ]
+    },
+    {
+      "title": "Rosetta: Automating First-Principles Performance Modeling Using Multi-Agent LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/19a3f22f91960a81e00385d2ab6d9e085930080d",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Analytical performance models --- derivations of throughput or speedup from hardware parameters --- make claims independently verifiable and expose binding constraints, yet rarely accompany architecture papers because building one by hand takes weeks of expert effort. We present Rosetta, a multi-agent LLM pipeline that automatically generates first-principles analytical models from research paper PDFs. Given a paper as sole input, Rosetta produces a mathematical specification, an executable Python model, and a plain-English interpretation --- all autonomously, with zero human intervention. The formalization process itself is the primary value: it surfaces implicit assumptions and identifies missing parameters. Four design decisions address failure modes of na\\\"ive LLM-based generation: a scientific constitution that prohibits circular reasoning, verify-repair loops with independent critic agents, dual verification separating functional correctness from scientific validity, and a best-of-$N$ ensemble that exploits LLM stochasticity. We evaluate Rosetta across three complementary tracks: expert evaluation of 12 landmark papers (CS1), automated scoring of 97 unfiltered ISCA 2025 and HPCA 2026 papers (CS2), and author self-evaluation by six active research groups (CS3). Across CS1, specification quality scores 4--5/5 on 10 of 12 papers with zero significant hallucinations; across CS2, 56\\% of fit-screened papers reach Tier~A insight quality. The strongest finding comes from CS3: Rosetta's output led to revised claims and new experiments in active submissions, and five of six author-evaluators said they would use it again.",
+      "canonical_id": "arXiv:2609.19376",
+      "arxiv_id": "2609.19376",
+      "authors": [
+        "K. Sankaralingam"
+      ]
+    },
+    {
+      "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training",
+      "source_url": "https://www.semanticscholar.org/paper/385ade86c0573e8d32695b96527330b49b31b8c7",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Block diffusion language models (BDLMs) combine autoregressive dependencies across blocks with parallel denoising within blocks, but long-context training is constrained by distributed attention communication and activation memory. Conventional context parallelism (CP) shards the combined clean-plus-corrupted sequence by position, communicating shared clean K/V together with block-specific corrupted K/V and their gradients. We observe that the BDLM objective separates over target blocks. We introduce block parallelism (BP), a new distributed parallelism dimension that assigns each corrupted-block computation to one rank. To scale BP to long contexts, we introduce context-sharded block parallelism (CSBP), which also shards the shared clean sequence across those ranks. CSBP keeps corrupted K/V and gradients local, avoids replicated clean prefixes, and preserves BDLM training semantics. On 16 H200 GPUs at 256K context, CSBP improves throughput over the best baseline by 1.18-1.45x for supervised fine-tuning and 1.27-1.33x for conversion of autoregressive models to BDLMs, while matching or reducing peak HBM. Full-model speedup reaches 1.61x at 512K. On eight H100 GPUs, CSBP accelerates DFlash2 speculative-decoder training by 2.48x at 512K and 7.59x at 1M. In matched 12-hour DiffusionGemma 26B-A4B SFT runs, CSBP achieves higher pass rates at every trained checkpoint on SWE-bench Verified and Terminal-Bench Lite. Code: https://github.com/ScalingIntelligence/Turbo-dLLM",
+      "canonical_id": "arXiv:2609.19242",
+      "arxiv_id": "2609.19242",
+      "authors": [
+        "Tarun Suresh",
+        "Pranshu Chaturvedi",
+        "Hangoo Kang",
+        "Parth Shroff",
+        "Ishan S. Khare",
+        "Hermann Kumbong",
+        "Azalia Mirhoseini"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.22884",
+      "identity_tokens": [
+        "id:arXiv:2609.22884",
+        "title:blocksparse attention with semanticgeometric decoupled routing",
+        "url:https://www.semanticscholar.org/paper/5752396da8a2404465f6354a4e5a9e11dd728d4f"
+      ],
+      "record": {
+        "title": "Block-Sparse Attention with Semantic-Geometric Decoupled Routing",
+        "source_url": "https://www.semanticscholar.org/paper/5752396da8a2404465f6354a4e5a9e11dd728d4f",
+        "year": 2026,
+        "published": "2026-09-19",
+        "abstract": "Long-context inference has become a defining capability of large language models, but exact dense attention remains costly due to its quadratic scaling with sequence length. Block-sparse attention offers a hardware-friendly alternative by routing each query block to a small set of relevant key blocks, yet accurate training-free block routing remains difficult. Existing routers often pool post-RoPE token representations, which entangles semantic aggregation with RoPE-induced geometry and attenuates local positional cues through high-frequency phase cancellation. To resolve this mismatch, we propose \\textbf{Semantic-Geometric Decoupled Routing}, a training-free block routing framework that shifts semantic aggregation to the pre-RoPE space and reconstructs geometric bias with an offline structural prior and relative block distances. This decomposition yields an explicit closed-form block routing score without token-level search or post-hoc calibration. Experiments on long-context text and video tasks show that our method approaches full-attention accuracy across 4K--128K contexts, keeps routing overhead below 3.4 ms, and achieves a 5.03$\\times$ speedup over FlashAttn at a 128K context length.",
+        "canonical_id": "arXiv:2609.22884",
+        "arxiv_id": "2609.22884",
+        "authors": [
+          "Xin-Wei Long",
+          "Wei-Gao Sun",
+          "Wei-Bo Gao",
+          "Peng-Kun Jiao",
+          "Bin Qi",
+          "Fei-Da Zhu",
+          "Yi-Ran Zhong",
+          "Steven Hoi",
+          "Bo-Wen Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21172",
+      "identity_tokens": [
+        "id:arXiv:2609.21172",
+        "title:tierkv longcontext ondevice llms via predictive multitier kv caching",
+        "url:https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50"
+      ],
+      "record": {
+        "title": "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+        "source_url": "https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Large language models (LLMs) are moving onto mobile devices for increasingly diverse workloads over text, images, video, and audio. These applications often require long contexts, making the Key-Value (KV) cache a dominant memory bottleneck because it grows linearly with sequence length and is accessed at every decoding step. Prior work reduces KV-cache footprint through low-rank compression, token eviction, or flash offloading, but the resulting reconstruction overhead, irreversible token loss, or I/O stalls can offset the benefit of saving memory. We present TierKV, a mobile LLM inference framework built on Predictive Multi-Tier Cache Optimization (PMCO). Before decoding starts, PMCO predicts future cache demand from prefill hidden states and jointly assigns tokens to exact, low-rank, and flash-offloaded tiers under the device memory and accuracy budgets. This formulation retains access to the full context, removes the circular dependency of reactive eviction, and admits a closed-form solver that selects tier boundaries and per-layer ranks at runtime. Across eight text, vision, and audio models on three mobile SoCs, TierKV improves prefill throughput by up to 17.6x over existing mobile LLM frameworks, reduces RAM-resident KV cache by 12.5-34%, thereby enabling substantially longer contexts under the same memory budget, while incurring only minor accuracy degradation.",
+        "canonical_id": "arXiv:2609.21172",
+        "arxiv_id": "2609.21172",
+        "authors": [
+          "Zhihao Shu",
+          "Md Musfiqur Rahman Sanim",
+          "Jie Hu",
+          "Kun Yuan",
+          "Ming-Hai Qin",
+          "Gagan Agrawal",
+          "Wei Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21264",
+      "identity_tokens": [
+        "id:arXiv:2609.21264",
+        "title:programming amd xdna npus with opensource compiler tools a flashattention case study",
+        "url:https://www.semanticscholar.org/paper/8562f398cb6eb18bf181f9e7b2f5714b9693bba7"
+      ],
+      "record": {
+        "title": "Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study",
+        "source_url": "https://www.semanticscholar.org/paper/8562f398cb6eb18bf181f9e7b2f5714b9693bba7",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Spatial NPUs such as AMD XDNA place compute tiles beside small local memories and leave data movement between them to software. Mapping a multi-stage workload onto such a device is largely a question of where the intermediate tensors live. We report what we learned making those choices for FlashAttention with the open-source IRON and MLIR-AIR flows. We compare four reference designs on XDNA 1 and XDNA 2: one runs each operator separately, two stream between operators on chip, and one fuses all three attention stages into a single kernel. The fused kernel holds the $\\boldsymbol{QK}^{\\mathsf T}$ scores in compute-tile local memory and reduces partial results over the cascade interconnect, so the scores never return to shared MemTile memory. On XDNA 2, it reaches 3.62 TFLOP/s over complete end-to-end execution, twice the IRON design, with 5.3 to 7.2 times the energy efficiency of the integrated GPU on the same chip at 2K tokens and above. It covers twelve LLM configurations, from BERT to DeepSeek, up to 128K tokens. Roofline analysis at each memory level explains this result and shows when to stop. XDNA 1 has lower ridge points, so streaming on chip already reaches the compute-bound regime: the same fusion that doubles throughput on XDNA 2 is nearly wasted on XDNA 1. Comparing a mapping's operational intensity against each level's ridge point predicts which case applies before writing any code. Fuse until the mapping clears that ridge point, then stop. We release the reference designs as maintained open source.",
+        "canonical_id": "arXiv:2609.21264",
+        "arxiv_id": "2609.21264",
+        "authors": [
+          "Erwei Wang",
+          "Ephrem C. Wu",
+          "V. J. Jung",
+          "Jia-Jie Li",
+          "Andre Rosti",
+          "Joseph Melber",
+          "Samuel Bayliss"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21712",
+      "identity_tokens": [
+        "id:arXiv:2609.21712",
+        "title:zytworld a realtime controllable world model for closedloop autonomousdriving simulation",
+        "url:https://www.semanticscholar.org/paper/d5665d214770386a1e9c09170949504e3c16e1cf"
+      ],
+      "record": {
+        "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+        "source_url": "https://www.semanticscholar.org/paper/d5665d214770386a1e9c09170949504e3c16e1cf",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low latency; and preserving scene identity when a location is revisited. We present ZYT-World, a single architecture that natively generates four fisheye views with field of view>180{\\deg} and three pinhole views. Projection-specific Plucker adapters encode camera geometry, ego-motion adaptive layer normalization provides global motion control, and a lightweight pixel-aligned layout conditions traffic participants and signals through instance-level boxes, headings and colors. Heterogeneous training combines full-rig geometric coverage with high-resolution detail. Teacher forcing, causal consistency distillation, self-rollout distribution matching distillation, and RigCritic transform a 40-step bidirectional teacher into a one-step, per-latent streaming generator, with RigCritic evaluating the seven-view rig jointly. A 19M-parameter variational autoencoder decoder (TinyVAE), W8A8 quantization, and our inference engine reduce decoding, backbone, and incremental-execution costs, respectively. Finally, cross-trajectory pairs derived from real captures train a plug-in implicit-memory module that preserves place-specific evidence. On the internal multi-view test set, the one-step model retains more than 90% of the teacher's PSNR and SSIM, while FID, FVD, and LPIPS stay within 11% of the teacher. Under the generator-only timing in Figure 2, it is 107.7 times faster than the 40-step bidirectional teacher. TinyVAE decodes 59.8 times faster than Wan. 30s rollouts and cross-trajectory revisits show the intended long-horizon and memory behavior.",
+        "canonical_id": "arXiv:2609.21712",
+        "arxiv_id": "2609.21712",
+        "authors": [
+          "Bo-Ni Hu",
+          "Xiong Wei",
+          "Hao-Ming Huang",
+          "Yong Huang",
+          "Chen-Bo Wang",
+          "Yi Yang",
+          "Jian-Cheng Wang",
+          "Rui-Cheng Zhu",
+          "Zhi-Ming Yang",
+          "Guang-Lai Liu",
+          "Qiao-Wan Jin",
+          "Dong-Zhuo Wang",
+          "Hai-Wei Kuang",
+          "Jia-Jun Fan",
+          "Yue-Ying Wu",
+          "Jia-Xin Wei",
+          "Hao Sun",
+          "Fei-Hong Yan",
+          "Yu-Yao Zhou",
+          "Wei-Zhang Bi",
+          "Kai-Xuan Wang",
+          "Zi-Chao Guo",
+          "Xiaozhi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22506",
+      "identity_tokens": [
+        "id:arXiv:2609.22506",
+        "title:rethinking vision architectures with gated linear attention and kan",
+        "url:https://www.semanticscholar.org/paper/7e5f8ed977a4e193499a579ff5700a247b51a205"
+      ],
+      "record": {
+        "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN",
+        "source_url": "https://www.semanticscholar.org/paper/7e5f8ed977a4e193499a579ff5700a247b51a205",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Vision Transformers allocate most parameters to multi-layer perceptrons (MLPs) for channel mixing, while token interactions usually rely on quadratic multi-head self-attention (MHSA). Linear attention reduces sequence complexity to O(N), but remains coupled with the same fixed-activation MLP as softmax Transformers. Kolmogorov-Arnold Networks (KANs) instead place learnable univariate maps on edges, yet prior vision KANs keep MHSA or omit attention entirely. We introduce LKAT (Linear Kolmogorov-Arnold Transformer), an isotropic ViT encoder that couples chunkwise Gated Linear Attention (GLA) with a two-layer KAN feed-forward, and we provide an I/O-aware fused RBF-KAN kernel for the radial-basis grid maps. Under a shared DeiT-style recipe we compare LKAT with ViT, ViT-5, and MLP-Mixer. LKAT-B exceeds ViT-B/16, ViT-5-B, and Mixer-B/16 on ImageNet-100. Tiny/Small/Base LKAT variants scale consistently on CIFAR-10/100, and ImageNet-100 pretraining transfers to CIFAR fine-tuning. The results support gated linear attention and KAN-based radial-basis functions as complementary inductive biases for mid-scale visual representation learning.",
+        "canonical_id": "arXiv:2609.22506",
+        "arxiv_id": "2609.22506",
+        "authors": [
+          "Ali Mehizel",
+          "O. Khaldi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.09.17.752279",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.09.17.752279",
+        "title:conditional generation and inpainting of noncoding rna sequences with masked discrete diffusion",
+        "url:https://www.semanticscholar.org/paper/5297acbb22116e269c4b8085f1c4f8423ed7701e"
+      ],
+      "record": {
+        "title": "Conditional Generation and Inpainting of Non-Coding RNA Sequences with Masked Discrete Diffusion",
+        "source_url": "https://www.semanticscholar.org/paper/5297acbb22116e269c4b8085f1c4f8423ed7701e",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Designing functional non-coding RNA (ncRNA) is fundamental to synthetic biology and RNA therapeutics, yet generative modelling for ncRNA has received far less attention than protein design. We present RNA-MDLM, a framework that extends Masked Discrete Language Models (MDLM) to the conditional generation and inpainting of ncRNA. We make two additions: first, conditioning on RNA-type representations from a pretrained RNA language model, and second, a modified classifier-free guidance scheme (Mod-CFG) that interpolates among conditional, unconditional, and random-sequence probabilities for better control. We also introduce REPAINT GAMES, a benchmark of seven structured masking tasks to probe a model’s performance on sequence patterns, structural motifs, and base-pairing per RNA type. Our model is trained on 4.6 million ncRNA sequences spanning six evaluable classes. It produces sequences whose composition and folding statistics closely match natural RNAs. Through extensive ablation studies, we find that the embedding-conditioned model achieves the best balance of structural fidelity, biological novelty, and inpainting accuracy, and its class label steers generation far more strongly than a plain label baseline. We further show that a model trained on a smaller, class-balanced subset can appear more realistic mainly by copying abundant natural sequences rather than learning their rules. We also benchmark against a masked-diffusion model and a family-specific VAE on ribozyme families, and find that a type-conditioned model like ours and a perfamily model are solving different tasks, which must be accounted for in a fair comparison. We will release the code and the trained models.",
+        "canonical_id": "DOI:10.64898/2026.09.17.752279",
+        "doi": "10.64898/2026.09.17.752279",
+        "authors": [
+          "Utkarsh Upadhyay",
+          "Chuan-Kai Dai",
+          "Julian Herold",
+          "Kengo Sato",
+          "Alexander Schug"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10449-7",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10449-7",
+        "title:cost efficient multimodal llm deployment integrating tokenization economics mlops and finops environments",
+        "url:https://www.semanticscholar.org/paper/dd5f8a5d972dfcd2ffe990771c949ac66f059b1a"
+      ],
+      "record": {
+        "title": "Cost efficient multimodal LLM deployment integrating tokenization economics MLOps and FinOps environments",
+        "source_url": "https://www.semanticscholar.org/paper/dd5f8a5d972dfcd2ffe990771c949ac66f059b1a",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "The economic implications of tokenization have recently become a black box that is a point of contention in the economic implications of the transition of Large Language Models (LLMs) between experimental prototypes and commercially marketable multimodal systems. Despite the worldwide use of reigning pricing models of the same principle, which all cost according to the input modality, cost differences in relation to the same information are significant: the same information costs significantly different prices depending on whether the information is processed as text, image, audio, or video. A systematic study of five major AI providers (OpenAI, Google Gemini, Anthropic, Perplexity, and xAI) is carried out in this investigation to show that the textual content is not always the most cost-effective form. The study finds what appears to be a paradoxical phenomenon of so-called break-even whereby converting long-form text (over 800 words) into image inputs leads to cost savings of 70–95%. The insights are implemented as empirical scaling laws and form the basis of the realization of ModalRoute, a framework of intelligent routing that allows one to choose the most effective input modality dynamically. In practice, empirical tests at production settings have shown that ModalRoute demonstrates a reduction of up to 68.3 percent of the cost while retaining 97.3 percent of the original performance. A universal assessment package and verifiable data are available to standardize the nascent science of cross-modal token arbitrage.",
+        "canonical_id": "DOI:10.1007/s10791-026-10449-7",
+        "doi": "10.1007/s10791-026-10449-7",
+        "authors": [
+          "Anirudha Sahu",
+          "Anurag Singh",
+          "Snehasagar Sahu",
+          "D. P. Mishra",
+          "S. R. Mallick",
+          "Dibya Jyoti Mishra",
+          "Pramod Pandey"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19924",
+      "identity_tokens": [
+        "id:arXiv:2609.19924",
+        "title:the life of a token from words to bits on the wire",
+        "url:https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620"
+      ],
+      "record": {
+        "title": "The Life of a Token: from Words to Bits on the Wire",
+        "source_url": "https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+        "canonical_id": "arXiv:2609.19924",
+        "arxiv_id": "2609.19924",
+        "authors": [
+          "Davide Avesani",
+          "Pengwenlong Gu",
+          "S. Skaperas",
+          "Stefano Secci"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20744",
+      "identity_tokens": [
+        "id:arXiv:2609.20744",
+        "title:video deltanet a videonative hybrid attention for livestream video generation",
+        "url:https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a"
+      ],
+      "record": {
+        "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count. GitHub code available at: https://github.com/OpenVDN/vdn-minimax-h3. Weights available at: https://huggingface.co/OpenVDN/vdn-minimax-h3",
+        "canonical_id": "arXiv:2609.20744",
+        "arxiv_id": "2609.20744",
+        "authors": [
+          "Haocheng Xi",
+          "Yiming Xie",
+          "He-Xue Zhao",
+          "Yi-Wen Zhang",
+          "Michael F. Liu",
+          "Thomas Creavin",
+          "Kurt Keutzer",
+          "Xiu-Yu Li",
+          "Zhao-Yang Lv",
+          "Chen-Feng Xu",
+          "Hai-Wen Feng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20614",
+      "identity_tokens": [
+        "id:arXiv:2609.20614",
+        "title:inferenceengine fingerprinting attacks are practical exploring modeldriven environmental discovery exploitation and escape",
+        "url:https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e"
+      ],
+      "record": {
+        "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+        "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+        "canonical_id": "arXiv:2609.20614",
+        "arxiv_id": "2609.20614",
+        "authors": [
+          "Sarah Radway",
+          "Andrew Cheng",
+          "V. Reddi",
+          "James Mickens"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20446",
+      "identity_tokens": [
+        "id:arXiv:2609.20446",
+        "title:spotlights discovering improvement opportunities in software repositories",
+        "url:https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962"
+      ],
+      "record": {
+        "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+        "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+        "canonical_id": "arXiv:2609.20446",
+        "arxiv_id": "2609.20446",
+        "authors": [
+          "U. Barzelay",
+          "Ophir Azulai",
+          "Idan Friedman",
+          "Inbar Shapira",
+          "Foad Abo Dahood",
+          "Yevgeny Burshtein",
+          "Orit Prince",
+          "Michael Soloveitchik",
+          "O. Naparstek",
+          "Roi Pony",
+          "Tal Drory",
+          "Michael Factor"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20723",
+      "identity_tokens": [
+        "id:arXiv:2609.20723",
+        "title:pixelflow tokenlevel workload management for efficient distributed dit serving",
+        "url:https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925"
+      ],
+      "record": {
+        "title": "PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving",
+        "source_url": "https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Online image generation with Diffusion Transformers (DiTs) must meet latency service-level objectives (SLOs) while using GPU resources efficiently. Existing systems improve GPU utilization by batching multiple requests for joint execution. However, request-level batching offers limited control over batch size: batches may be too small to saturate GPU compute, while larger ones may violate latency SLOs. Globally coordinated scheduling introduces further delays by requiring independently progressing GPUs to synchronize before admitting new work. We present PixelFlow, a distributed DiT serving system that addresses these limitations through token-level workload management. Its key idea is to use image tokens (the units a DiT processes to generate an image) to divide and batch request workloads at a finer granularity. This allows each GPU to take on a portion of additional work under latency constraints. By distributing these portions across GPUs, PixelFlow accommodates more concurrent requests, improving GPU utilization while reducing queueing delays. To realize this flexibility, PixelFlow provides a runtime that splits requests into variable-sized partitions and batches them efficiently on each GPU. To reduce the resulting communication overhead, it optimizes token placement to limit cross-GPU data exchange while balancing GPU workloads. It further exploits similarity across denoising steps to overlap the remaining transfers with computation. An SLO-aware scheduler groups GPUs to share compute resources among requests with compatible latency requirements. Each group progresses independently, synchronizing with others only when their combined resources are needed to admit a new request. Evaluation with Stable Diffusion 3 and FLUX.1-dev on H100 GPUs shows that PixelFlow improves SLO attainment by up to 43% and achieves up to 2.8 times the goodput of state-of-the-art DiT serving systems.",
+        "canonical_id": "arXiv:2609.20723",
+        "arxiv_id": "2609.20723",
+        "authors": [
+          "Zhexiang Zhang",
+          "Min-Chen Yu",
+          "Yi-Fan Sun",
+          "Xu Bai",
+          "Xing-Liang Yuan",
+          "A. N. Toosi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21139",
+      "identity_tokens": [
+        "id:arXiv:2609.21139",
+        "title:tinycennlm qualitygated conversion of pretrained attention with cenninspired cellularrecurrent layers",
+        "url:https://www.semanticscholar.org/paper/8f6005c335e4d40ddb9a0759f4c819efc355e6f5"
+      ],
+      "record": {
+        "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+        "source_url": "https://www.semanticscholar.org/paper/8f6005c335e4d40ddb9a0759f4c819efc355e6f5",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introduces a \\emph{quality-gated post-training conversion} framework using CeNN-inspired cellular-recurrent layers with bounded local processing, compact recurrent memory, routing, fusion, and accept-or-rollback validation. Three implementations are studied: Integrated Memory, MemoryFusion, and PDelta3-GDN2-CLVR+Local32. Strict PDelta3 conversion accepts a layer only when representation and NLL criteria pass fixed thresholds. On SmolLM2-135M, layers 0-2 are accepted with cumulative $\\Delta\\mathrm{NLL}=+0.01209$, while layer 3 is rejected despite acceptable NLL because representation fidelity fails. On Qwen3.5-0.8B, full-attention layers 3, 7, and 11 are accepted with final $\\Delta\\mathrm{NLL}=+0.02073$. Integrated Memory keeps perplexity within $-0.07\\%$ to $+0.93\\%$ while reducing total cache by up to $6.01\\%$. A sampled 200-item downstream sanity check gives $28.5\\%$--$32.0\\%$ overall accuracy for converted Qwen releases. The results support conservative, quality-gated structural conversion rather than universal attention replacement or speedup.",
+        "canonical_id": "arXiv:2609.21139",
+        "arxiv_id": "2609.21139",
+        "authors": [
+          "Kabeh Mohsenzadegan",
+          "Vahid Tavakkoli",
+          "K. Kyamakya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21058",
+      "identity_tokens": [
+        "id:arXiv:2609.21058",
+        "title:how much of a real workload can llmgenerated gpu kernels actually reach",
+        "url:https://www.semanticscholar.org/paper/7c606506a75530a50104086474b21d06f4d3a119"
+      ],
+      "record": {
+        "title": "How Much of a Real Workload Can LLM-Generated GPU Kernels Actually Reach?",
+        "source_url": "https://www.semanticscholar.org/paper/7c606506a75530a50104086474b21d06f4d3a119",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Language models can now write GPU kernels that outperform PyTorch. We evaluate five model configurations on KernelBench level 1 and find that a frontier model produces correct kernels for 91.1% of problems and independently verified speedups on 22 of 56, including three convolutions, with a median of 1.235x. Open-weights models are far behind: the best reaches 30.4% correct with three verified speedups and solves zero convolutions. We then ask a question the literature does not: what fraction of a real model's wall clock do such kernels govern? Profiling seven workloads across three domains, we find the addressable fraction ranges from 8.9% to 58.2%. On transformers, 80-86% of runtime is spent in cuBLAS GEMM and FlashAttention, bounding realistic end-to-end improvement at roughly 1%, and the fraction shrinks with model scale. On recommenders it is 58.2%, concentrated in a single embedding kernel. We introduce DLRM-Bench, 12 recommender kernel problems in KernelBench format, and measure a 41.7% win rate at a 1.552x median there, projecting 8.63% end-to-end. Separately, we show that KernelBench's correctness check (torch.allclose with an absolute tolerance) is satisfied by a tensor of zeros on 4 of 60 level-1 problems. Two kernels in our own results exploited this before we detected them, including one scored at 283x that wrote 0.3% of its output buffer. We propose scale-invariant replacements and release all 879 evaluations.",
+        "canonical_id": "arXiv:2609.21058",
+        "arxiv_id": "2609.21058",
+        "authors": [
+          "Gaurav Agarwal",
+          "Ashish Garg",
+          "Isha Singhal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20974",
+      "identity_tokens": [
+        "id:arXiv:2609.20974",
+        "title:attentionaware routing coupling routing and attention in moes",
+        "url:https://www.semanticscholar.org/paper/4c87f5d74a5b8cbe184586182c18677494631208"
+      ],
+      "record": {
+        "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+        "source_url": "https://www.semanticscholar.org/paper/4c87f5d74a5b8cbe184586182c18677494631208",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware Routing (AAR), which augments the router with temporal and spectral features extracted from a sliding window of attention weights that represent a summary of the model's contextual state, disentangled from the hidden state. Keeping the base transformer entirely frozen, we train only the routing parameters, isolating routing as the sole variable. AAR improves GSM8K by +3.37 pp over a routing-only SFT baseline on OLMoE. Beyond performance, we show that routing and attention form a coupled circuit: routing changes at layer l propagate through the residual stream to amplify attention sinks at layer l+1, reshaping attention without any direct update to the attention mechanism itself. Further, AAR reduces long diverging generation, with incorrect answers getting shorter, while correct answers remain unchanged in length. Finally, AAR is strongly depth-sensitive: applying it indiscriminately across layers can degrade factual retrieval, whereas mathematical reasoning gains persist when it is introduced deeper in the network. This sensitivity exposes a retrieval--reasoning tension across depth and makes layer-selective AAR a controlled probe of the routing-relevant information carried by attention at different layers.",
+        "canonical_id": "arXiv:2609.20974",
+        "arxiv_id": "2609.20974",
+        "authors": [
+          "Despoina Kosmopoulou",
+          "Anastasios Tsetsilas",
+          "Efthymios Georgiou",
+          "Giannis Karamanolakis",
+          "Swastik Roy",
+          "A. Potamianos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20971",
+      "identity_tokens": [
+        "id:arXiv:2609.20971",
+        "title:rbsattention radiusbounded sparse prefill for longcontext large language models",
+        "url:https://www.semanticscholar.org/paper/01a1cff3fca9805af6851d48c8d13f9887b04855"
+      ],
+      "record": {
+        "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/01a1cff3fca9805af6851d48c8d13f9887b04855",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse block selection can reduce this cost, but a block centroid may hide a highly relevant token among many irrelevant ones. We call this failure mode mean dilution and propose RBS-Attention, a training-free sparse-prefill method with two complementary selection branches. A centroid base branch captures average relevance, while a rescue branch uses the maximum key-block radius and its prompt-, layer-, and head-dependent distribution to identify blocks at risk of underestimation. Independently thresholding the two branches and combining their masks controls the contribution of rescue blocks while preserving regular block-sparse FlashAttention execution. On H100 GPUs, RBS-Attention achieves 20.65$\\times$ standalone prefill-attention speedup, 11.92$\\times$ vLLM prefill-attention speedup, and 5.97$\\times$ end-to-end time-to-first-token speedup at 128K on Qwen3-30B-A3B-Instruct-2507-FP8. On the dense Qwen3-32B model, it obtains 88.65 overall RULER accuracy versus 89.52 for dense attention; LongBench-v2, InfiniteBench, and Video-MME provide additional quality evaluation. Supporting experiments measure actual retention, compare selectors at matched density, and characterize block-size, threshold, and memory behavior. Together, these results support radius-adaptive dual-branch selection as an effective approach to long-context prefill.",
+        "canonical_id": "arXiv:2609.20971",
+        "arxiv_id": "2609.20971",
+        "authors": [
+          "Chu-Xu Song",
+          "Jiu-Qi Wei",
+          "Zhencan Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18077",
+      "identity_tokens": [
+        "id:arXiv:2609.18077",
+        "title:vidax a unified jax framework for video generative models on accelerator meshes",
+        "url:https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b"
+      ],
+      "record": {
+        "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+        "source_url": "https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architectures. vidax covers a diverse set of spatiotemporal models --- including Diffusion Transformers, omnimodal Mixture-of-Transformers, 3D VAEs, text encoders, and native samplers --- with zero PyTorch dependency in the execution path. The framework unifies 1D tensor parallelism with DeepSpeed-Ulysses sequence parallelism on a single JAX sharding mesh, integrates TPU flash-attention kernels, and implements per-layer weight offloading to support reference resolutions that exceed single-device memory. We benchmark compile times, latency, and peak memory utilization on TPU v4-8 hardware, and document real-world numerical bugs surfaced during checkpoint translation. vidax is released open-source as a baseline for JAX and TPU video generation research.",
+        "canonical_id": "arXiv:2609.18077",
+        "arxiv_id": "2609.18077",
+        "authors": [
+          "Congyue Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18662",
+      "identity_tokens": [
+        "id:arXiv:2609.18662",
+        "title:automated instruction encoding synthesis for modern gpu isa compression",
+        "url:https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38"
+      ],
+      "record": {
+        "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+        "source_url": "https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pinned, and free placement constraints, making it applicable when recurring decoded fields are not frozen by a public format contract. We instantiate the framework for NVIDIA SASS: raw public encoding text is normalized into a machine-readable specification, a SASS disassembler is validated against nvdisasm on 3.78M instructions, released as an open benchmark, and CP-SAT synthesis is used for fixed-length and variable-length encodings. On 142 Blackwell kernel inputs, variable-length synthesis reduces instruction footprint by 33%, with comparable reductions after re-synthesis on Ampere and Hopper; fixed-length synthesis on the same specification reduces decoder area by 16% against a decoder generated from the NVIDIA-observed 128-bit layout by the same generator and flow. Generated fetch/decode RTL meets 1.5 GHz in TSMC 22 nm with a replicated area delta of 0.12% of a GA100-class die; a same-node SRAM comparison shows the footprint reduction corresponds to about 9x this added logic in instruction-SRAM bit-cell area.",
+        "canonical_id": "arXiv:2609.18662",
+        "arxiv_id": "2609.18662",
+        "authors": [
+          "Ming-Yuan Ma",
+          "Hu He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19376",
+      "identity_tokens": [
+        "id:arXiv:2609.19376",
+        "title:rosetta automating firstprinciples performance modeling using multiagent llms",
+        "url:https://www.semanticscholar.org/paper/19a3f22f91960a81e00385d2ab6d9e085930080d"
+      ],
+      "record": {
+        "title": "Rosetta: Automating First-Principles Performance Modeling Using Multi-Agent LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/19a3f22f91960a81e00385d2ab6d9e085930080d",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Analytical performance models --- derivations of throughput or speedup from hardware parameters --- make claims independently verifiable and expose binding constraints, yet rarely accompany architecture papers because building one by hand takes weeks of expert effort. We present Rosetta, a multi-agent LLM pipeline that automatically generates first-principles analytical models from research paper PDFs. Given a paper as sole input, Rosetta produces a mathematical specification, an executable Python model, and a plain-English interpretation --- all autonomously, with zero human intervention. The formalization process itself is the primary value: it surfaces implicit assumptions and identifies missing parameters. Four design decisions address failure modes of na\\\"ive LLM-based generation: a scientific constitution that prohibits circular reasoning, verify-repair loops with independent critic agents, dual verification separating functional correctness from scientific validity, and a best-of-$N$ ensemble that exploits LLM stochasticity. We evaluate Rosetta across three complementary tracks: expert evaluation of 12 landmark papers (CS1), automated scoring of 97 unfiltered ISCA 2025 and HPCA 2026 papers (CS2), and author self-evaluation by six active research groups (CS3). Across CS1, specification quality scores 4--5/5 on 10 of 12 papers with zero significant hallucinations; across CS2, 56\\% of fit-screened papers reach Tier~A insight quality. The strongest finding comes from CS3: Rosetta's output led to revised claims and new experiments in active submissions, and five of six author-evaluators said they would use it again.",
+        "canonical_id": "arXiv:2609.19376",
+        "arxiv_id": "2609.19376",
+        "authors": [
+          "K. Sankaralingam"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19242",
+      "identity_tokens": [
+        "id:arXiv:2609.19242",
+        "title:block parallelism for efficient distributed longcontext diffusion language model training",
+        "url:https://www.semanticscholar.org/paper/385ade86c0573e8d32695b96527330b49b31b8c7"
+      ],
+      "record": {
+        "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training",
+        "source_url": "https://www.semanticscholar.org/paper/385ade86c0573e8d32695b96527330b49b31b8c7",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Block diffusion language models (BDLMs) combine autoregressive dependencies across blocks with parallel denoising within blocks, but long-context training is constrained by distributed attention communication and activation memory. Conventional context parallelism (CP) shards the combined clean-plus-corrupted sequence by position, communicating shared clean K/V together with block-specific corrupted K/V and their gradients. We observe that the BDLM objective separates over target blocks. We introduce block parallelism (BP), a new distributed parallelism dimension that assigns each corrupted-block computation to one rank. To scale BP to long contexts, we introduce context-sharded block parallelism (CSBP), which also shards the shared clean sequence across those ranks. CSBP keeps corrupted K/V and gradients local, avoids replicated clean prefixes, and preserves BDLM training semantics. On 16 H200 GPUs at 256K context, CSBP improves throughput over the best baseline by 1.18-1.45x for supervised fine-tuning and 1.27-1.33x for conversion of autoregressive models to BDLMs, while matching or reducing peak HBM. Full-model speedup reaches 1.61x at 512K. On eight H100 GPUs, CSBP accelerates DFlash2 speculative-decoder training by 2.48x at 512K and 7.59x at 1M. In matched 12-hour DiffusionGemma 26B-A4B SFT runs, CSBP achieves higher pass rates at every trained checkpoint on SWE-bench Verified and Terminal-Bench Lite. Code: https://github.com/ScalingIntelligence/Turbo-dLLM",
+        "canonical_id": "arXiv:2609.19242",
+        "arxiv_id": "2609.19242",
+        "authors": [
+          "Tarun Suresh",
+          "Pranshu Chaturvedi",
+          "Hangoo Kang",
+          "Parth Shroff",
+          "Ishan S. Khare",
+          "Hermann Kumbong",
+          "Azalia Mirhoseini"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:59af4be9747f2821fbbfb475cb0b6909f234b75ad4b66cfae9819ee33a62934a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
