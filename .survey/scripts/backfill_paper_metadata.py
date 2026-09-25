@@ -177,7 +177,11 @@ def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | No
     meta = parser.values
     authors = [x.strip() for x in meta.get("citation_author", []) if x.strip()]
     dates = meta.get("citation_date", []) or meta.get("citation_publication_date", [])
-    published = dates[0][:10] if dates else ""
+    published = ""
+    if dates:
+        date_match = re.search(r"(\d{4})[-/](\d{2})(?:[-/](\d{2}))?", dates[0])
+        if date_match:
+            published = "-".join(part for part in date_match.groups() if part)
     keyword_values = meta.get("citation_keywords", [])
     category_codes: list[str] = []
     for value in keyword_values:
