@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2407.04153",
+      "arxiv_id": "2407.04153",
+      "title": "Mixture of A Million Experts",
+      "source_url": "https://arxiv.org/abs/2407.04153",
+      "priority": 88,
+      "reason": "Relevant MoE architecture and routing work."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-a7d3c1-r13",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r13.json",
+    "receipt": "sha256:c9139e263c747ebf1453a51e1c83ad5875973fa14fd00430a87773965c95c5b6"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-a7d3c1-r13",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
