@@ -160,5 +160,40 @@ source: "https://arxiv.org/abs/2609.99991"
         self.assertEqual(row["arxiv_categories"]["cross_list"], ["cs.AI"])
 
 
+    def test_html_metadata_uses_abs_primary_subject_when_full_html_has_no_category(self) -> None:
+        full_html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026-09-01">
+</head><body></body></html>"""
+        abs_html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026-09-01">
+</head><body><span class="primary-subject">Machine Learning (cs.LG)</span></body></html>"""
+
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return self.payload
+
+        def fake_urlopen(req, timeout=60):
+            if req.full_url.endswith("/html/2609.99991"):
+                return Response(full_html)
+            if req.full_url.endswith("/abs/2609.99991"):
+                return Response(abs_html)
+            raise AssertionError(req.full_url)
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            row = backfill_paper_metadata._fetch_arxiv_html("2609.99991")
+
+        self.assertIsNotNone(row)
+        self.assertEqual(row["arxiv_categories"]["primary"], "cs.LG")
+        self.assertEqual(row["arxiv_categories"]["cross_list"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
