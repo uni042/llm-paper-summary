@@ -43,7 +43,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
                 "workflow_version": 10,
                 "claim_id": "claim-done",
                 "job_id": "job-done",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-30",
                 "worker_kind": "scheduled_chat",
                 "attempt_id": "attempt-done",
                 "request_id": "req-old",
@@ -67,7 +67,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
             write_json(queue / "claim-requests/req-next.json", {
                 "schema_version": 1,
                 "request_id": "req-next",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-30",
                 "worker_kind": "scheduled_chat",
                 "requested_at": AT.replace(microsecond=0).isoformat(),
                 "max_jobs": 1,
@@ -102,7 +102,7 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
             write_json(queue / "claim-requests/req-r1.json", {
                 "schema_version": 1,
                 "request_id": "req-r1",
-                "worker_id": "scheduled-chat-llm-survey",
+                "worker_id": "scheduled-chat-30",
                 "worker_kind": "scheduled_chat",
                 "requested_at": AT.replace(microsecond=0).isoformat(),
                 "max_jobs": 1,
