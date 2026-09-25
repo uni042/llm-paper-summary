@@ -1,14 +1,14 @@
 {
   "data": {
-    "axis": "recent MoE expert prefetch prediction offload inference alternate provider",
-    "citation_direction": "normal",
-    "created_at": "2026-09-25T07:36:25.643640+00:00",
-    "precheck_request_id": "preload-095a5f35fb098de9c2d2",
-    "provider": "semantic_scholar",
+    "axis": "preload-backward-structured-references",
+    "citation_direction": "backward",
+    "created_at": "2026-09-25T08:53:22.467659+00:00",
+    "precheck_request_id": "preload-a3ef887c448b32ba2cba",
+    "provider": "repository_references",
     "seed_canonical_id": null,
-    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=MoE%20expert%20prefetch%20prediction%20offload%20inference&fields=title,abstract,year,externalIds,url,publicationDate&limit=100"
+    "source_url": "repository://structured-references"
   },
-  "preload_id": "preload-095a5f35fb098de9c2d2",
+  "preload_id": "preload-a3ef887c448b32ba2cba",
   "schema_version": 1,
   "slot": "discovery-preload",
   "transport_version": 10
