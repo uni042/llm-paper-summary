@@ -10,21 +10,21 @@
   },
   "slot": "problem_method",
   "data": {
-    "problem": "長文生成ではKVキャッシュが文脈長に比例して増え、GPUメモリ容量とデコード時のメモリ帯域を圧迫する。既存の学習不要圧縮は注意重みを重要度として使うものが多いが、注意行列を明示しないFlashAttention系カーネルとの統合が難しい。追加学習や注意重み取得なしで、保存済みKVだけから重要トークンを判定することが課題である。",
-    "novelty": "デコーダ型Transformerで、キー埋め込みのL2ノルムが小さいKVほど後続問い合わせから大きな注意重みを受けやすいという逆相関を観測し、キー自身のノルムだけを追い出し指標に使う。問い合わせ依存の注意重みを計算しないため、学習不要かつFlashAttention互換のKV圧縮になる。",
-    "method_overview": "各層・各ヘッドのキャッシュ済みキーについてL2ノルムを計算し、キャッシュ容量を超えた際にノルムが大きいキーと対応する値を優先して削除し、低ノルムKVを保持する。著者は削除対象の注意質量と理想的削除の差をAttention Loss Referenceで分析し、相関が弱い層を特定する。既定設定では最初の2層を圧縮対象外として重要情報の損失を抑える。",
+    "problem": "長文の自己回帰生成では各層が過去tokenのkey/valueを保持するためKV cache容量がcontext長に比例して増え、GPU memory容量だけでなくdecode時に読み出すmemory bandwidthも圧迫する。既存のtraining-free evictionにはattention weightを重要度として使う方式が多いが、FlashAttentionのようにattention matrixを明示的にmaterializeしない高速kernelでは重みの収集自体が追加I/Oと実装複雑性を生む。そこで、queryやattention scoreを取り出さず、cache済みkeyそのものから重要度を推定してKV budgetを削減することが課題である。",
+    "novelty": "本論文はdecoder-only Transformerを層・head別に調べ、key embeddingのL2 normが小さいtokenほど後続queryから大きいattention weightを受けやすいという逆相関を利用する。query依存のscoreではなくkey生成時点で得られる単純な幾何量をeviction signalにするため、追加学習を要さず、attention matrix非materialize型のFlashAttentionとも両立しやすい。さらに相関が弱い初期層を圧縮対象外にする層選択で単純な全層一律pruningの弱点を補う。",
+    "method_overview": "推論中に各layer/headのcache済みkeyについてL2 normを計算し、KV cacheが設定budgetを超えた時点でnormが大きいkeyと同じtoken位置のvalueを対として優先的に削除し、低normのKVを残す。著者はAttention Loss Referenceを用いてL2順位による削除が理想的なattention-based削除からどれだけ外れるかを分析し、相関の弱い最初の2層は既定で圧縮しない。以後のattention計算は残存KVだけを通常どおりFlashAttention等へ渡すため、model weight、attention kernel、training objectiveを変更せずにcache容量を制限できる。",
     "components": [
       {
         "name": "L2ノルム重要度",
-        "description": "キー埋め込み単体のL2ノルムをKV重要度の代理指標とし、低ノルムほど保持する。問い合わせや注意行列を必要としない。"
+        "description": "各key embeddingのL2 normを計算し、低normほど重要とみなして保持する。queryやattention matrixを参照しないため、重要度算出をkey生成時に局所化できる。"
       },
       {
         "name": "層選択圧縮",
-        "description": "L2ノルムと注意重みの相関が弱い初期層を圧縮対象外にし、層ごとの経験的差を吸収する。"
+        "description": "層・head別の相関分析で初期層のproxy精度が低いことを確認し、既定では最初の2層を圧縮対象外にして情報損失を抑える。"
       },
       {
         "name": "容量制約付き追い出し",
-        "description": "所定のKV予算を超えたとき高L2ノルムのKVペアを削除し、同じトークン位置のkey/valueを一体で管理する。"
+        "description": "設定したKV budgetを超えると高L2 normのkeyを順位付けして削除し、対応するvalueも同時に除去することでcache shapeとtoken対応を保つ。"
       }
     ],
     "system_design": "通常の自己回帰推論で生成されたKVをキャッシュし、keyのL2ノルムを付随統計として保持する。容量上限に達した時点でノルム順位に基づき高ノルムKVを除去する。注意スコアを外部へ取り出さないためFlashAttentionのI/O効率化を維持でき、モデル重みの変更や再学習も不要である。"
