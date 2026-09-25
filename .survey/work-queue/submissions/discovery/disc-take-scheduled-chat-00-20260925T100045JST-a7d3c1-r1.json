@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.24411",
+      "arxiv_id": "2608.24411",
+      "title": "ResiSpec: Enhancing Multi-Candidate Speculative Sampling via Residual Distribution Shaping",
+      "source_url": "https://arxiv.org/abs/2608.24411",
+      "priority": 88,
+      "reason": "Recent speculative-decoding method directly targeting multi-candidate acceptance efficiency and serving throughput."
+    },
+    {
+      "canonical_id": "arXiv:2604.26412",
+      "arxiv_id": "2604.26412",
+      "title": "When Hidden States Drift: Can KV Caches Rescue Long-Range Speculative Decoding?",
+      "source_url": "https://arxiv.org/abs/2604.26412",
+      "priority": 87,
+      "reason": "Connects speculative decoding accuracy decay to KV-cache context preservation, relevant to inference-system memory/decoding lineage."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1.json",
+    "receipt": "sha256:1eb6ab0b77ed6324e6e02308ecdfdfbb5db99c32608a2cba282709a046de3d62"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1",
+    "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+    "candidate_count": 20,
+    "accepted_count": 2,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}
