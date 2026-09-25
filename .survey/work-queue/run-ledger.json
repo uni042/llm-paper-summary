@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T22:47:20.163013+00:00",
+  "updated_at": "2026-09-25T02:00:37.833827+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45752,6 +45752,56 @@
           "type": "research",
           "canonical_id": "arXiv:2511.19480",
           "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1026,
+      "paper_active_count_after": 1026,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36084424154",
+      "first_recorded_at": "2026-09-25T02:00:37.833827+00:00",
+      "last_recorded_at": "2026-09-25T02:00:37.833827+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36084424154:1",
+          "recorded_at": "2026-09-25T02:00:37.833827+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36084424154",
+            "run_attempt": "1",
+            "source_sha": "1b60cb318403eb7d07f7375a9d0beb04ae4d60eb"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-c312adffcbd5fa76",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02652",
+          "title": "Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights",
           "from": "ready",
           "to": "blocked"
         }
