@@ -155,7 +155,7 @@ source: "https://arxiv.org/abs/2609.99991"
 
         row = result["2609.99991"]
         self.assertEqual(row["authors"], ["Example Author", "Second Author"])
-        self.assertEqual(row["published"], "2026/09/01")
+        self.assertEqual(row["published"], "2026-09-01")
         self.assertEqual(row["arxiv_categories"]["primary"], "cs.LG")
         self.assertEqual(row["arxiv_categories"]["cross_list"], ["cs.AI"])
 
