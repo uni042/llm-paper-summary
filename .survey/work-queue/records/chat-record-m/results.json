@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-a97be831bb70984ef4b69fe8",
-  "job_id": "job-research-6884e3d688f660cb",
-  "data": {
-    "key_results": [
-      "Mixtral 8x7BのMMLU相当の専門家偏りでは、分布のみの予測が評価した最良のトークン単位予測よりエンドツーエンド推論時間を23%以上短縮した。",
-      "高帯域NVLink条件では通信比率が小さく、トークン単位予測の追加計算コストを通信削減で回収しにくいため、低オーバーヘッドな分布のみ予測が広い偏り範囲で有利だった。",
-      "低帯域PCIe条件かつ専門家需要の偏りが大きい場合は、個別トークンの行先を当ててscatter通信も削減できるトークン単位予測が有利になり得た。",
-      "付録のLlama-MoEとSwitch Transformerでも、通信帯域・負荷偏り・予測器オーバーヘッドによって最適な予測戦略が変わるという定性的傾向を確認した。"
-    ],
-    "quantitative_results": [
-      {
-        "metric": "end-to-end inference latency improvement",
-        "result": ">23%",
-        "condition": "Mixtral 8x7B、MMLU相当の偏り、分布のみ予測と評価中の最良トークン単位予測の比較"
-      },
-      {
-        "metric": "evaluation workload",
-        "result": "batch size 1 / sequence length 512",
-        "condition": "Mixtral 8x7B単一MoE層prefillのシミュレーション"
-      }
-    ],
-    "interpretation": "最適化対象は予測精度そのものではなく、予測器コスト、専門家複製による計算負荷均衡、scatter通信削減の総和である。したがって高精度なトークン単位予測が常に最速とは限らず、帯域が十分なら分布だけを低コストに推定する方が速い。",
-    "limitations": [
-      "主要評価は4基A100をモデル化したシミュレーションで、実機の完全な多層・長時間生成サービス測定ではない。",
-      "主要な定量結果はMixtral 8x7Bの単一MoE層prefill、バッチサイズ1、系列長512に依存する。",
-      "GPUトポロジ、バッチング、複製メモリ制約、モデルや入力分布が変わると戦略の交差点は変化し得る。",
-      "公開コード実装は確認できず、シミュレータの再現性は論文記述に依存する。"
-    ]
-  },
+  "attempt_id": "attempt-preload-9d8f543a5fc423a64bc26017",
+  "job_id": "job-research-898c6226a202425e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-a97be831bb70984ef4b69fe8",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-preload-9d8f543a5fc423a64bc26017",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
