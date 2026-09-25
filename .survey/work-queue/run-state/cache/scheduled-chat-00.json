@@ -1,6 +1,6 @@
 {
-  "fact_generation": 74,
-  "generation": 169,
+  "fact_generation": 75,
+  "generation": 170,
   "runs": {
     "scheduled-chat-00-20260925T020259+0900-a31f": {
       "actual_invocation_start": "2026-09-24T17:02:59+00:00",
@@ -749,15 +749,21 @@
         ],
         "claim_monitor_window_seconds": 60,
         "claim_refill_threshold": 10,
-        "claim_result_pending": false,
+        "claim_result_pending": true,
         "claim_result_pending_age_seconds": 0,
         "claim_state_checked": true,
         "claim_window": 12,
         "claim_window_remaining": 3,
         "foreground_job_id": "job-research-12d29ccbbefd4d02",
-        "pending_claim_request_ages_seconds": {},
-        "pending_claim_request_ids": [],
-        "pending_claim_requested_at": {},
+        "pending_claim_request_ages_seconds": {
+          "claim-scheduled-chat-00-20260925T1109Z-refill-2f71c9": 0
+        },
+        "pending_claim_request_ids": [
+          "claim-scheduled-chat-00-20260925T1109Z-refill-2f71c9"
+        ],
+        "pending_claim_requested_at": {
+          "claim-scheduled-chat-00-20260925T1109Z-refill-2f71c9": "2026-09-25T02:09:00+00:00"
+        },
         "preflight_inflight_count": 0,
         "preflight_parked_attempt_ids": [],
         "preflight_parked_job_ids": [],
@@ -785,7 +791,7 @@
         ]
       },
       "first_cached_at": "2026-09-25T01:59:20.160311+00:00",
-      "generation": 169,
+      "generation": 170,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
       "scheduled_slot": "00",
@@ -806,6 +812,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-25T02:07:09.809853+00:00",
+  "updated_at": "2026-09-25T02:07:55.284856+00:00",
   "worker_id": "scheduled-chat-00"
 }
