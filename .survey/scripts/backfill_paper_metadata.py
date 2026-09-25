@@ -160,15 +160,31 @@ class _ArxivMetaParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.values: dict[str, list[str]] = {}
+        self._primary_subject_depth = 0
+        self.primary_subject_text: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        amap = {str(k).lower(): (v or "") for k, v in attrs}
+        classes = set(amap.get("class", "").split())
+        if self._primary_subject_depth:
+            self._primary_subject_depth += 1
+        elif "primary-subject" in classes:
+            self._primary_subject_depth = 1
+
         if tag.lower() != "meta":
             return
-        amap = {str(k).lower(): (v or "") for k, v in attrs}
         name = amap.get("name", "").lower()
         content = amap.get("content", "").strip()
         if name and content:
             self.values.setdefault(name, []).append(content)
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._primary_subject_depth:
+            self._primary_subject_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self._primary_subject_depth and data.strip():
+            self.primary_subject_text.append(data.strip())
 
 
 def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | None:
@@ -184,11 +200,12 @@ def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | No
             published = "-".join(part for part in date_match.groups() if part)
     keyword_values = meta.get("citation_keywords", [])
     category_codes: list[str] = []
-    for value in keyword_values:
-        for code in re.findall(r"\(([a-z-]+\.[A-Z]{2,})\)", value):
+    category_sources = [*keyword_values, *parser.primary_subject_text]
+    for value in category_sources:
+        for code in re.findall(r"\(([A-Za-z][A-Za-z0-9.-]*[.-][A-Za-z0-9-]+)\)", value):
             if code not in category_codes:
                 category_codes.append(code)
-        for code in re.findall(r"\b([a-z-]+\.[A-Z]{2,})\b", value):
+        for code in re.findall(r"\b([A-Za-z][A-Za-z0-9-]*\.[A-Za-z0-9.-]+)\b", value):
             if code not in category_codes:
                 category_codes.append(code)
     if not authors and not published and not category_codes:
@@ -213,6 +230,7 @@ def _fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
         "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.1",
     }
     errors: list[str] = []
+    best: dict[str, Any] | None = None
     for url in (
         f"https://arxiv.org/html/{arxiv_id}",
         f"https://arxiv.org/abs/{arxiv_id}",
@@ -223,10 +241,21 @@ def _fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
                 raw = response.read()
             parsed = _parse_arxiv_html_metadata(arxiv_id, raw)
             if parsed:
-                return parsed
-            errors.append(f"{url}: no citation metadata")
+                if best is None:
+                    best = parsed
+                else:
+                    for key, value in parsed.items():
+                        if value and not best.get(key):
+                            best[key] = value
+                categories = best.get("arxiv_categories")
+                if isinstance(categories, dict) and categories.get("primary"):
+                    return best
+            else:
+                errors.append(f"{url}: no citation metadata")
         except Exception as exc:
             errors.append(f"{url}: {type(exc).__name__}: {exc}")
+    if best is not None:
+        return best
     print(
         f"WARNING arXiv HTML metadata unavailable for {arxiv_id}: "
         + " | ".join(errors),
