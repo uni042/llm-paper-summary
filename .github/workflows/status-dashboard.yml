@@ -8,6 +8,7 @@ on:
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard_core.py'
       - '.survey/scripts/reference_pool.py'
+      - '.survey/scripts/build_worker_worklist.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   push:
@@ -18,6 +19,7 @@ on:
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard_core.py'
       - '.survey/scripts/reference_pool.py'
+      - '.survey/scripts/build_worker_worklist.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   # Queue-only pushes stay decoupled so STATUS publication does not amplify the
@@ -50,6 +52,8 @@ jobs:
         run: python -m unittest discover -s .survey/tests -p 'test_status*.py'
       - name: Render dashboard in check mode
         run: python .survey/scripts/render_status_dashboard.py --output /tmp/STATUS.md
+      - name: Render shared worker worklist in check mode
+        run: python .survey/scripts/build_worker_worklist.py --repo-root . --markdown-output /tmp/WORKLIST.md --json-output /tmp/worker-worklist.json
 
   publish:
     if: >-
@@ -86,7 +90,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
-            git add STATUS.md
+            python .survey/scripts/build_worker_worklist.py --repo-root . --markdown-output .survey/work-queue/WORKLIST.md --json-output .survey/work-queue/worker-worklist.json
+            git add STATUS.md .survey/work-queue/WORKLIST.md .survey/work-queue/worker-worklist.json
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
               exit 0
