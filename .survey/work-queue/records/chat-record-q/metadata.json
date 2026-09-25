@@ -2,67 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-preload-8fa24d135cc0417a00493d88",
-  "job_id": "job-research-14b72fcf4a8168cf",
-  "data": {
-    "canonical_id": "DOI:10.1109/CLOUD67622.2025.00028",
-    "arxiv_id": "2411.05239",
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.IT"
-      ]
-    },
-    "doi": "10.1109/CLOUD67622.2025.00028",
-    "title": "ZipNN: Lossless Compression for AI Models",
-    "summary": "ZipNNはニューラルネットワーク重みの浮動小数点表現に残る偏った指数分布を利用する無損失圧縮である。指数バイトを仮数・符号から分離し、反復探索を省いてHuffman符号化を適用することで、BF16の通常モデルを概ね元サイズの約66%へ、FP32通常モデルを約83%へ圧縮する。丸め等を経たclean modelでは仮数側もbyte groupingして50%超の削減が可能である。圧縮後も復号すれば元の重みへbit-for-bitで戻るため推論品質を変えず、モデル配布・保管・checkpoint転送の帯域と容量を削減する。",
-    "list_summary": "浮動小数点の指数を分離してHuffman符号化する無損失モデル圧縮。BF16で約33%容量削減し、通常圧縮より高い圧縮率と速度を両立する。",
-    "source": "https://arxiv.org/abs/2411.05239",
-    "sources": [
-      "https://arxiv.org/abs/2411.05239",
-      "https://doi.org/10.1109/CLOUD67622.2025.00028",
-      "https://github.com/zipnn/zipnn"
-    ],
-    "code": "https://github.com/zipnn/zipnn",
-    "authors": [
-      "Moshik Hershcovitch",
-      "Andrew Wood",
-      "Leshem Choshen",
-      "Guy Girmonsky",
-      "Roy Leibovitz",
-      "Or Ozeri",
-      "Ilias Ennmouri",
-      "Michal Malka",
-      "Peter Chin",
-      "Swaminathan Sundararaman",
-      "Danny Harnik"
-    ],
-    "published": "2025-07-07",
-    "publication": "2025 IEEE 18th International Conference on Cloud Computing (CLOUD), pp. 186-198",
-    "publication_type": "conference paper",
-    "publication_status": "published at IEEE CLOUD 2025; arXiv v2 revised 2025-06-04",
-    "topics": [
-      "無損失圧縮",
-      "モデル配布",
-      "ストレージ削減",
-      "エントロピー符号化",
-      "チェックポイント圧縮"
-    ],
-    "implementation": "著者公式ZipNNライブラリあり。CPU上で型に応じたbyte grouping、指数抽出、Huffman/Zstd等を選択し、safetensors、Hugging Face、vLLM連携も提供する。",
-    "implementation_status": "official open-source implementation available",
-    "hardware_evaluation": "単一スレッド/ワーカーの圧縮比較に加え、多ワーカー・多スレッドのCPUスケーリングを実機評価。後続公開実装ではIntel Xeon Platinum 8480+の224コア・2 NUMAノードで最大80GB/s復号を報告。",
-    "hardware_details": "論文の中心評価はCPU圧縮・復号スループットと圧縮サイズ。モデルファイルをチャンク処理し、一般圧縮器との速度・容量を比較する。",
-    "quality_effect": "完全無損失であり、復号後のモデル重みは元データと同一。量子化・枝刈りのような精度劣化は導入しない。代わりに実行時には復号工程が必要で、実行中の展開済みモデルVRAM自体を直接削減する方式ではない。",
-    "evaluation_type": "real-system compression/decompression benchmarking + model corpus analysis",
-    "references": [],
-    "references_total": 0,
-    "references_checked_at": "2026-09-24",
-    "references_source": "arXiv:2411.05239v2 full text; references not promoted into structured lineage entries in this record",
-    "last_checked": "2026-09-24"
-  },
+  "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
+  "job_id": "job-research-83fc27428de67cd9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-8fa24d135cc0417a00493d88",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }

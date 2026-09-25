@@ -2,69 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-preload-8fa24d135cc0417a00493d88",
-  "job_id": "job-research-14b72fcf4a8168cf",
-  "data": {
-    "hardware": [
-      "CPU上の圧縮・復号スループットを実機測定。",
-      "公開実装の大規模並列評価ではIntel Xeon Platinum 8480+、224 cores、2 NUMA nodes、2TB DRAMを使用。"
-    ],
-    "software": [
-      "ZipNN公式実装。",
-      "比較対象はZstdを中心にLZ4、Snappy等の一般無損失圧縮器。",
-      "公開実装はsafetensors/Hugging Face/vLLM連携を提供。"
-    ],
-    "model": [
-      "通常BF16: Falcon-7B、BLOOM、OpenLLaMA-3B、Mistral、Llama-3.1等。",
-      "通常FP32: wav2vec、BERT、OLMo等。",
-      "clean model: XLM-RoBERTa、CLIP、T5-base等。",
-      "FP16および量子化済みモデルも圧縮可能性を調査。",
-      "checkpoint/delta評価では学習過程の複数モデル版を使用。"
-    ],
-    "datasets": [
-      "モデル重みファイル自体が評価対象で、通常モデルは大規模モデルの中間1GBまたは小規模モデルのほぼ全体を測定。",
-      "checkpoint評価ではResNet、Amber、OLMo等の連続checkpointを解析。"
-    ],
-    "baselines": [
-      "Zstd",
-      "LZ4",
-      "Snappy",
-      "モデル型に応じたZipNN各variant",
-      "単体モデル圧縮に対するXOR delta圧縮"
-    ],
-    "settings": [
-      {
-        "name": "圧縮サイズ",
-        "description": "圧縮後サイズを元データ比の百分率で報告し、低いほど良い。大規模モデルは中央1GB、小規模モデルはヘッダ等の先頭10MBを除く全体を使う条件がある。"
-      },
-      {
-        "name": "通常モデル",
-        "description": "指数抽出とHuffman単独符号化を適用し、BF16/FP32/FP16で圧縮後サイズを比較する。"
-      },
-      {
-        "name": "clean model",
-        "description": "byte groupingで指数と各仮数byteを分離し、各群の圧縮性を利用する。追加fine-tuning後にclean性が失われる挙動も確認する。"
-      },
-      {
-        "name": "速度比較",
-        "description": "同じモデルデータで圧縮・復号スループットをZstd等と比較する。公開実装の単一スレッド例ではBF16でZipNN約1.12GB/s圧縮・1.66GB/s復号、Zstd約0.785GB/s・0.95GB/s。"
-      },
-      {
-        "name": "並列スケーリング",
-        "description": "複数workerとthreadをNUMAノード内に配置し、100MB〜10GB級入力で並列度を増やしてスループットを測る。最大値は復号約80GB/s、圧縮約13GB/s。"
-      },
-      {
-        "name": "delta checkpoint",
-        "description": "基準checkpointとのXOR差分を圧縮し、連続差分や一定間隔でbaseを置く方式を比較する。"
-      }
-    ],
-    "correctness": "無損失方式のため評価上の正しさは復号後byte列が入力と完全一致すること。モデル精度の近似評価は不要で、重みを変えないことが品質保証になる。",
-    "methodology": "多数の実モデルで圧縮後サイズを測り、一般圧縮器との差を型別・モデル特性別に分解する。さらに指数分布、shuffle実験、byte group別圧縮率から圧縮性の原因を検証し、速度は実CPU上の圧縮/復号throughputで測定する。checkpointについては学習進行に伴うparameter/byte変化率とdelta圧縮率を追跡する。",
-    "scope": "主対象は保存・転送時のモデルbyte列であり、展開後の推論VRAM、GPU計算量、KV cache、token生成速度を直接削減する方式ではない。効果はデータ型と後処理履歴に依存し、量子化済みモデルでは圧縮余地が小さい場合がある。"
-  },
+  "attempt_id": "attempt-preload-9987a5a8680eb61e60073d37",
+  "job_id": "job-research-83fc27428de67cd9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-8fa24d135cc0417a00493d88",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-preload-9987a5a8680eb61e60073d37",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
