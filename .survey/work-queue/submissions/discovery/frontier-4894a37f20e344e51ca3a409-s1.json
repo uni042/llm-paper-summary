@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2112.06905",
+      "arxiv_id": "2112.06905",
+      "title": "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2112.06905",
+      "priority": 84,
+      "reason": "Foundational large-scale sparse MoE language-model systems baseline relevant to expert routing, scaling and efficiency."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-4894a37f20e344e51ca3a409",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-4894a37f20e344e51ca3a409.json",
+    "receipt": "sha256:560476446b361a846ce228ace6badf5196d3baae29c8b9e83e07f7d6bbfe25d4"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-4894a37f20e344e51ca3a409",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
