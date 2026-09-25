@@ -42,6 +42,7 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
             descriptor = {
                 "schema_version": 1, "transport_version": 10, "kind": "research",
                 "attempt_id": "attempt-good", "job_id": "job-good", "status": "completed",
+                "preflight_result": ".survey/work-queue/research-preflight/results/pf-good.json",
             }
             with mock.patch.object(self.module, "_build_descriptor_from_payload", return_value=descriptor):
                 summary = self.module.advance(repo, mode="completed")
@@ -71,6 +72,7 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
             descriptor = {
                 "schema_version": 1, "transport_version": 10, "kind": "audit",
                 "attempt_id": "attempt-pass", "job_id": "job-pass", "status": "completed",
+                "preflight_result": ".survey/work-queue/research-preflight/results/pf-pass.json",
             }
             with mock.patch.object(self.module, "_build_descriptor_from_payload", return_value=descriptor):
                 summary = self.module.advance(repo, mode="preflight")
@@ -81,6 +83,27 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
             self.assertTrue(output.is_file())
             self.assertEqual(json.loads(request.read_text(encoding="utf-8"))["generated_by"], "research-preflight-pipeline")
             self.assertEqual(summary["next_action"], "dispatch_submission_drain_once")
+
+    def test_pipeline_rejects_proofless_completed_descriptor(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            payload = {
+                "kind": "research",
+                "attempt_id": "attempt-proofless",
+                "job_id": "job-proofless",
+                "record_bank": "a",
+                "preflight_result": ".survey/work-queue/research-preflight/results/pf-proofless.json",
+            }
+            descriptor = {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "attempt_id": "attempt-proofless",
+                "job_id": "job-proofless",
+                "status": "completed",
+            }
+            with self.assertRaisesRegex(ValueError, "exact passing preflight_result provenance"):
+                self.module._write_descriptor(repo, payload, descriptor)
 
     def test_settled_legacy_request_without_preflight_is_not_quarantined(self):
         with tempfile.TemporaryDirectory() as td:
