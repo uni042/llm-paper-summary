@@ -1,14 +1,14 @@
 {
   "data": {
-    "axis": "OpenAlex recent KV cache compression offload serving",
-    "citation_direction": "normal",
-    "created_at": "2026-09-25T07:36:25.643640+00:00",
-    "precheck_request_id": "preload-04b6f4ebde02df253f2d",
-    "provider": "openalex",
+    "axis": "forward citations of MoE-Lightning for offloaded MoE inference",
+    "citation_direction": "forward",
+    "created_at": "2026-09-25T17:04:37.160857+00:00",
+    "precheck_request_id": "preload-50d8a611cc96a1a46259",
+    "provider": "semantic_scholar",
     "seed_canonical_id": null,
-    "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20offload%20serving&sort=publication_date:desc&per-page=100"
+    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2411.11217/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100"
   },
-  "preload_id": "preload-04b6f4ebde02df253f2d",
+  "preload_id": "preload-50d8a611cc96a1a46259",
   "schema_version": 1,
   "slot": "discovery-preload",
   "transport_version": 10
