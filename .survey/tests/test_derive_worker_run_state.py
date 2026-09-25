@@ -136,6 +136,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             value["runtime_condition_confirmed"] = True
             value["runtime_condition_attempts"] = 2
             value["runtime_condition_detail"] = "two failed durable transport recovery attempts"
+            value["transport_health_probe_attempted"] = True
+            value["transport_health_probe_succeeded"] = False
             result = mod.derive(root, value)
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("all_remaining_work_blocked_after_fallback_consideration", result["gate"]["stop_reasons"])
