@@ -1,21 +1,11 @@
 {
-  "early_ack": true,
-  "formal_precheck_ready_at": "2026-09-25T17:31:31.488542+00:00",
-  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/discovery-scheduled-chat-30-20260926T022843JST-r9.json",
-  "frontier_target": 3,
-  "frontier_work_available": false,
-  "ok": true,
+  "error": "ValueError: direct Discovery claim lease is missing or expired",
+  "ok": false,
   "operation": "direct_take_discovery",
   "preload_id": "preload-551cb81ccce306db3742",
-  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-551cb81ccce306db3742.json",
-  "processed_at": "2026-09-25T17:31:07+00:00",
-  "receipt": "sha256:495fcbbc8a5c50900440014a188fd0580da324b28433337696e1281a98ee007d",
-  "request_id": "discovery-scheduled-chat-30-20260926T022843JST-r9",
-  "reserved_frontier": [],
-  "run_key": "run-scheduled-chat-30-20260926T022843JST-4",
+  "processed_at": "2026-09-25T19:27:41+00:00",
   "schema_version": 1,
-  "status": "ready_for_submission",
-  "submission_allowed": true,
-  "work_start_allowed": true,
-  "worker_id": "scheduled-chat-30"
+  "status": "recovery_required",
+  "submission_allowed": false,
+  "work_start_allowed": false
 }
