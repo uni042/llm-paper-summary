@@ -68,6 +68,7 @@ def _make_descriptor(repo: Path, module, *, attempt="attempt-a", job="job-a", ba
         "kind": "research",
         "attempt_id": attempt,
         "job_id": job,
+        "status": "completed",
         "record_bank": bank,
         "paper_path": f"papers/inference/test/{job}.md",
         "record_slots": refs,
