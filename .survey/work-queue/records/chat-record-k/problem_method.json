@@ -12,19 +12,19 @@
   "data": {
     "problem": "長文の自己回帰生成では各層が過去tokenのkey/valueを保持するためKV cache容量がcontext長に比例して増え、GPU memory容量だけでなくdecode時に読み出すmemory bandwidthも圧迫する。既存のtraining-free evictionにはattention weightを重要度として使う方式が多いが、FlashAttentionのようにattention matrixを明示的にmaterializeしない高速kernelでは重みの収集自体が追加I/Oと実装複雑性を生む。そこで、queryやattention scoreを取り出さず、cache済みkeyそのものから重要度を推定してKV budgetを削減することが課題である。",
     "novelty": "本論文はdecoder-only Transformerを層・head別に調べ、key embeddingのL2 normが小さいtokenほど後続queryから大きいattention weightを受けやすいという逆相関を利用する。query依存のscoreではなくkey生成時点で得られる単純な幾何量をeviction signalにするため、追加学習を要さず、attention matrix非materialize型のFlashAttentionとも両立しやすい。さらに相関が弱い初期層を圧縮対象外にする層選択で単純な全層一律pruningの弱点を補う。",
-    "method_overview": "推論でkey/valueを生成した後、各layer・headのcache済みkeyごとにL2 normを計算して付随統計として保持する。cache長がbudgetを超えるとnormが大きいkeyを低重要度とみなし、同じtoken位置のvalueと対にして順位順に削除する。著者はAttention Loss Referenceで削除対象が失うattention massを分析し、L2 proxyの信頼性が低い層を特定する。既定では最初の2層を圧縮せず、残りの層だけへL2 evictionを適用する。次のattention計算は残存KVを既存kernelへそのまま渡すため、model weight、training、query計算、attention score materializationを変更しない。したがってkey生成時のimportance算出、budget超過時のeviction、圧縮後decodeまでを既存推論経路へ追加できる。",
+    "method_overview": "処理は通常の自己回帰decode経路へ小さなeviction段を追加する形で構成される。まず各tokenのforwardで各layer・attention headのkey/valueを通常どおり生成し、key vectorについてL2 normを計算してcache entryの付随統計として保持する。KV cache長が設定budget以内なら何も削除せず、そのまま次stepへ進む。budgetを超えた場合だけ、各対象layer/headでL2 normが大きいentryを低重要度候補として順位付けし、上限を満たすまでkeyと同じtoken位置のvalueを対にして除去する。重要なのは、この順位が現在のqueryやattention matrixからではなく保存済みkeyだけで決まる点である。著者はAttention Loss Referenceを使い、候補を削除したときに失われる実attention massと理想的なattention-based evictionとの差を層・head別に調べる。その分析で初期層はL2 proxyとの対応が弱いことを確認し、既定では最初の2層を圧縮対象外にする。残りの層ではeviction後の短いKV cacheを通常のattention kernelへ渡して次tokenを生成する。この流れはmodel weight、training objective、query計算、attention scoreのmaterializationを変更せず、FlashAttentionがattention matrixを外部へ出さない性質も維持する。したがってkey生成時のnorm計算、budget監視、必要時だけの順位付けとKV pair削除、既存kernelでのdecodeというend-to-end経路でmemory footprintを抑える。",
     "components": [
       {
         "name": "L2ノルム重要度",
-        "description": "各key embeddingのL2 normを計算し、低normほど将来のqueryから高attentionを受けやすいという観測をimportance proxyにする。key単体で決まるためquery依存attention weightの保存や再計算を要しない。"
+        "description": "L2 norm importance proxyは各cache済みkey embeddingの大きさだけを使う局所的な重要度指標である。論文が観測した「低いL2 normのkeyほど後続queryから高いattention weightを受けやすい」という逆相関を利用し、低norm entryを優先して保持する。queryごとのattention scoreを取得・累積しないため、importance bookkeepingのためにattention matrixをmaterializeする必要がなく、FlashAttention系kernelのI/O効率を崩しにくい。"
       },
       {
         "name": "層選択圧縮",
-        "description": "L2 normとattention重要度の対応は層ごとに異なるためAttention Loss Referenceでproxy精度を分析する。既定では相関の弱い最初の2層を非圧縮にして、全層一律evictionによる品質劣化を避ける。"
+        "description": "Layer-aware compressionはL2 proxyを全層へ機械的に適用しないための品質保護機構である。著者はAttention Loss Referenceを用いて、L2順位で選んだ削除集合が実際にどれだけattention massを失うかを層・head別に調べ、初期層では相関が弱いことを確認する。既定設定では最初の2層を非圧縮にし、それ以降だけをeviction対象にすることで、proxyの弱い場所で重要KVを誤って捨てるリスクを抑える。"
       },
       {
         "name": "容量制約付き追い出し",
-        "description": "KV cacheが上限を超えた時に高L2 normのkeyを優先的に除去し、対応するvalueも同時に削除する。残存KVだけを次stepのattentionへ渡してcache容量を直接制限し、既存FlashAttention互換decode経路を維持する。"
+        "description": "Budget-constrained evictionはcache容量を直接上限へ収める実行段である。設定したKV budgetを超えたときだけ高L2 normのkeyを順位順に選び、同じtoken位置のvalueも必ず同時に削除してkey/value対応を維持する。eviction後は残存KVだけを通常のattentionへ入力するため、model architectureやweightを変更せずcache lengthと読み出し量を減らせる。削除は必要時のみ発生し、圧縮しない初期層と組み合わせてmemory削減と品質維持を両立させる。"
       }
     ],
     "system_design": "通常の自己回帰推論で生成されたKVをキャッシュし、keyのL2ノルムを付随統計として保持する。容量上限に達した時点でノルム順位に基づき高ノルムKVを除去する。注意スコアを外部へ取り出さないためFlashAttentionのI/O効率化を維持でき、モデル重みの変更や再学習も不要である。"
