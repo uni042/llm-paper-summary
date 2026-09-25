@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-26T02:28:43+09:00",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "run-scheduled-chat-30-20260926T022843JST-4",
+    "round": "round-1",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "Structured-reference backward window screened; no strong missing LLM inference-system candidate selected from this window.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 20,
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  },
+  "discovery_precheck": {
+    "request_id": "discovery-scheduled-chat-30-20260926T022843JST-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/discovery-scheduled-chat-30-20260926T022843JST-r1.json",
+    "receipt": "sha256:68078354e8235125740160f9f385c957fb7322b2586fdaa2b7588cd641c6b52f"
+  }
+}
