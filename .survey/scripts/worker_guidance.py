@@ -118,7 +118,7 @@ PROFILES = {
     "derive_worker_run_state.py": {
         "task": "Scheduled Chat run-stateの正規導出",
         "next": [
-            "生成された run-state result の ok / work_mode / pending state / gate.required_action を確認する。",
+            "生成された run-state result の ok / work_mode / pending state / gate.required_action に加え、seconds_to_run_deadline / stop_permit.issued / stop_permit.category / run_termination_allowed / next_action / next_work_packet を確認する。時間窓を終了理由に使えるのは今回run identityと一致する最新snapshotで stop_permit.category=time_window かつ stop_permit.issued=true かつ run_termination_allowed=true の場合だけ。",
             "同じrun内で状態が変化して再判定する場合は、run_key / worker_id / scheduled_slot / actual_invocation_startを維持しつつ、新しい一意なrequest_idで新しいsnapshot requestを作る。",
             "resultが既に存在するrequest_idを再利用して最新状態を得ようとしない。既存resultは不変snapshotとして扱う。",
             "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを追跡する。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認し、worker-router.md第7.0節の待機ミクロタスクを1件処理してから同じrequest_idを再確認する。",
@@ -142,7 +142,7 @@ PROFILES = {
         "recovery": [
             "最新の claim 状態と submission 状態を確認してから判定をやり直す。claim result pending中は、同じrequestを作ったcommitに対応するSurvey claim fast laneのActions状態も確認する。",
             "submission pendingだけを理由に次paperのclaimを止めない。残り600秒より多くclaim可能jobがあれば次のResearch/Auditへ進み、返済済みfailureやrepair_requiredだけをnext_action / recovery_stepsに従って耐久回復する。",
-            "判定結果を飛ばして直接 finalization へ進まない。",
+            "判定結果を飛ばして直接 finalization へ進まない。run-stateが run_termination_allowed=false または stop_permit.issued=false を返している間は、チャット現在時刻やscheduled slotから独自に残り時間を推定して終了せず、next_action / next_work_packetを実行する。",
         ],
     },
     "run_finalization_gate.py": {
@@ -152,7 +152,7 @@ PROFILES = {
             "Research/Audit runでは --work-mode research と research_audit_completed_this_invocation / research_minimum_completions を、Discovery runでは対応round数を必ず渡す。",
             "next_action=CLAIM_NEXT_RESEARCH_AUDIT なら最終応答を出さず、最新queue/claim stateから次のResearch/Auditを1件claimする。",
             "finalization_permit.issued=false なら next_action / wait_targets に従って状態を進め、run_finalization_gate.py を再実行する。",
-            "finalization_permit.issued=true の場合だけ最終応答へ進む。",
+            "finalization_permit.issued=true だけではrunを終了しない。通常の論文workerでは、同一run identityの最新run-state snapshotで stop_permit.issued=true かつ run_termination_allowed=true を確認した場合だけ終了へ進む。時間窓終了なら stop_permit.category=time_window と snapshotの seconds_to_run_deadline を必ず確認する。",
         ],
         "recovery": [
             "continuation decision と finalization_allowed、およびrunのwork_modeと最低条件カウンタを再確認する。",
