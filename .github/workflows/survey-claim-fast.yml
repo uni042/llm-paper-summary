@@ -6,6 +6,9 @@ on:
     paths:
       - '.survey/work-queue/claim-requests/*.json'
       - '.survey/work-queue/direct-takes/research/*.json'
+      - '.survey/scripts/claim_fast_path.py'
+      - '.survey/scripts/hot_dispatch.py'
+      - '.survey/scripts/auto_claim_from_run_state.py'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
@@ -44,6 +47,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            # Also materializes fixed Scheduled Chat expired-record recovery before
+            # processing claims, so recovery never depends on a worker-side run-state write.
             python .survey/scripts/claim_fast_path.py --repo-root .
 
             git add \

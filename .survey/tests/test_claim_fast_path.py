@@ -76,6 +76,44 @@ class ClaimFastPathTests(unittest.TestCase):
             self.assertFalse(result["repair"]["skipped"])
             self.assertEqual(result["repair"]["repaired"], 1)
 
+    def test_fixed_worker_recovery_is_materialized_without_run_state_identity(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            packet = {
+                "resume_recovery": True,
+                "worker_id": "scheduled-chat-00",
+                "job_id": "job-recover",
+                "claim_id": "claim-pool-current",
+                "attempt_id": "attempt-pool-current",
+                "recovery_source_claim_id": "claim-old",
+                "recovery_source_attempt_id": "attempt-old",
+                "recovery_source_record_bank": "m",
+            }
+            with mock.patch.object(
+                mod.hot_dispatch,
+                "build_index",
+                return_value={
+                    "research_recovery_resume": {
+                        "scheduled-chat-00": [packet],
+                        "worker-7": [{**packet, "worker_id": "worker-7", "job_id": "job-adhoc"}],
+                    }
+                },
+            ):
+                result = mod._materialize_background_recovery_requests(root)
+
+            self.assertEqual(len(result["created"]), 1)
+            created = result["created"][0]
+            self.assertEqual(created["worker_id"], "scheduled-chat-00")
+            request = json.loads((root / created["request_path"]).read_text(encoding="utf-8"))
+            self.assertTrue(request["auto_background_recovery"])
+            self.assertEqual(request["job_ids"], ["job-recover"])
+            self.assertEqual(request["recovery_pool_claim_id"], "claim-pool-current")
+            self.assertEqual(request["recovery_source_attempt_id"], "attempt-old")
+            self.assertEqual(request["recovery_source_record_bank"], "m")
+            self.assertNotIn("run_key", request)
+            self.assertNotIn("scheduled_slot", request)
+            self.assertNotIn("actual_invocation_start", request)
+
 
 if __name__ == "__main__":
     unittest.main()

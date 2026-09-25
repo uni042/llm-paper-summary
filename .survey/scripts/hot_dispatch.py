@@ -352,7 +352,7 @@ def _research_recovery_resume_packets(
             "job": job,
             "resume_recovery": True,
             "resume_requires_direct_take": False,
-            "recovery_transport": "run_state_auto_claim",
+            "recovery_transport": "claim_fast_path_background_auto_claim",
             "resume_without_new_claim": False,
             "work_start_allowed": True,
             "record_write_allowed": False,
@@ -483,13 +483,15 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     ]
     for packet in recovery_packets:
         packet["run_state_recovery_contract"] = {
-            "transport": "auto_recovery_claim",
+            "transport": "claim_fast_path_background_auto_claim",
             "requires_worker_direct_take": False,
+            "run_state_request_required": False,
+            "worker_write_required": False,
             "worker_id": packet.get("worker_id"),
             "job_id": packet.get("job_id"),
             "source_attempt_id": packet.get("recovery_source_attempt_id"),
             "source_record_bank": packet.get("recovery_source_record_bank"),
-            "trigger": "persist_or_reuse_current_run_state_request",
+            "trigger": "periodic_claim_fast_path_reconciliation",
         }
 
     for packet in research_packets:
