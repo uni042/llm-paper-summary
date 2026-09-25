@@ -256,6 +256,18 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
             raise ValueError(f"{path_text} attempt_id/job_id mismatch")
         normalized_refs.append(normalized_ref)
 
+    preflight_result = descriptor.get("preflight_result")
+    if preflight_result is not None:
+        preflight_result = _safe_rel(preflight_result, "preflight_result")
+        if (
+            not preflight_result.startswith(".survey/work-queue/research-preflight/results/")
+            or not preflight_result.endswith(".json")
+        ):
+            raise ValueError(
+                "preflight_result must point to research-preflight/results/*.json"
+            )
+        out["preflight_result"] = preflight_result
+
     out["record_bank"] = bank
     out["paper_path"] = paper_path
     out["record_slots"] = normalized_refs
