@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission": "work-queue/submissions/discovery-scheduled-chat-00-20260925T090214Z-3-backward-r1.json",
+  "ok": false,
+  "operation": "submit_discovery_round",
+  "failure_class": "discovery_recovery_exception",
+  "error_code": "DISCOVERY_RECOVERY_EXCEPTION",
+  "error": "ValueError: the precheck round is already complete; do not append another submission",
+  "next_action": "Do not replay this immutable submission unchanged; create a fresh canonical Discovery round if work remains.",
+  "recovery_steps": [
+    "Preserve the failed immutable submission and this result for audit evidence.",
+    "Use the current worker-router and workflow-produced precheck result to create a new submission when retry is appropriate.",
+    "Continue recovery of unrelated Discovery submissions; this isolated submission must not poison the queue."
+  ],
+  "submitted_job_id": null
+}
