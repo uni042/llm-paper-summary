@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2405.16646",
+      "arxiv_id": "2405.16646",
+      "title": "A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2405.16646",
+      "priority": 86,
+      "reason": "Expert-pruning method explicitly reducing MoE inference model size and computation while preserving accuracy."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-8430fe0ed7339d72ee413a87",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-8430fe0ed7339d72ee413a87.json",
+    "receipt": "sha256:0c6276173ba371043f54d46a01e3dbf35347a5c1340c9bf5aa0d86f7453acd14"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-8430fe0ed7339d72ee413a87",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
