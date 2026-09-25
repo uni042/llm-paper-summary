@@ -25,6 +25,12 @@ import yaml
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
 URL_RE = re.compile(r"https?://[^\s）)】>]+")
+REQUIRED_METADATA = (
+    "canonical_id", "title", "summary", "authors", "published", "publication",
+    "publication_type", "publication_status", "source", "sources", "implementation",
+    "code", "last_checked",
+)
+
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, Any], str]:
@@ -59,6 +65,36 @@ def set_missing(meta: dict[str, Any], key: str, value: Any) -> bool:
     if key not in meta or empty(meta.get(key)):
         if value is not None and value != "" and value != []:
             meta[key] = value
+            return True
+    return False
+
+
+def body_one_line_summary(body: str) -> str | None:
+    """Reuse an already-authored one-line explanation; never invent prose."""
+    patterns = (
+        r"##\s+一文解説\s*\n+\s*([^\n]+)",
+        r"^>\s*([^\n]+)$",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, body, re.MULTILINE)
+        if match:
+            value = match.group(1).strip()
+            if value:
+                return value
+    return None
+
+
+def metadata_needs_backfill(meta: dict[str, Any], body: str) -> bool:
+    for key in REQUIRED_METADATA:
+        if key == "code":
+            if key not in meta:
+                return True
+            continue
+        if key not in meta or empty(meta.get(key)):
+            return True
+    if meta.get("arxiv_id"):
+        categories = meta.get("arxiv_categories")
+        if not isinstance(categories, dict) or not categories.get("primary"):
             return True
     return False
 
@@ -209,6 +245,12 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     bib = body_bibliography(body)
     added: list[str] = []
 
+    authored_one_line = body_one_line_summary(body)
+    if set_missing(meta, "list_summary", authored_one_line):
+        added.append("list_summary(body)")
+    if set_missing(meta, "summary", meta.get("list_summary") or authored_one_line):
+        added.append("summary(existing-one-line)")
+
     if "authors" in bib and set_missing(meta, "authors", split_authors(bib["authors"])):
         added.append("authors(body)")
     if ("authors" not in meta or empty(meta.get("authors"))) and meta.get("authors_affiliations"):
@@ -296,9 +338,20 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
     parser.add_argument("--no-network", action="store_true")
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="Process only papers with incomplete canonical metadata.",
+    )
     args = parser.parse_args()
     root = Path(args.repo_root).resolve()
     paths = paper_paths(root)
+    if args.missing_only:
+        paths = [
+            path
+            for path in paths
+            if metadata_needs_backfill(*parse_frontmatter(path))
+        ]
     ids = arxiv_ids(paths)
     arxiv = {} if args.no_network else fetch_arxiv(ids)
     checked = datetime.now(timezone.utc).date().isoformat()
