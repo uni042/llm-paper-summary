@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "research-preflight-xami-1f8cc572-r7",
+  "kind": "research",
+  "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+  "job_id": "job-research-98fce5e6481e51fa",
+  "record_bank": "k",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260926T052821JST-r7",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T20:28:21+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:1fed9749c9f31e7b547b897ed5d884bc063af213d2b47a82e352b6f263ffd4f4",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-k/metadata.json",
+      "blob_sha": "b010862506050520bdcc3e81ba06143348b12552"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-k/problem_method.json",
+      "blob_sha": "8994333813366c82815b8d12c70a0d1a174b515d"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-k/evaluation.json",
+      "blob_sha": "f2dcadb3242ab889ecda9b71bb40dab50432c48e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-k/results.json",
+      "blob_sha": "d89132e55248ccfb172b8d1a9ad5696a3f6a680d"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-k/positioning.json",
+      "blob_sha": "5bb2fbe70a6b3ee837e3f9138edff4a58f880b86"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short"
+  ],
+  "checked_at": "2026-09-25T20:30:40+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
