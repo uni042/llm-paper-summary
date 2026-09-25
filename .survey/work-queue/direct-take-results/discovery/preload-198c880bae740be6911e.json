@@ -1,19 +1,46 @@
 {
   "early_ack": true,
+  "formal_precheck_ready_at": "2026-09-25T01:18:01.201131+00:00",
   "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r10.json",
   "frontier_target": 3,
-  "frontier_work_available": false,
+  "frontier_work_available": true,
   "ok": true,
   "operation": "direct_take_discovery",
   "preload_id": "preload-198c880bae740be6911e",
   "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-198c880bae740be6911e.json",
   "processed_at": "2026-09-25T01:17:49+00:00",
+  "receipt": "sha256:c795c3b78cfde3a8ad605989c66f5b4cdf8b9c3a57a1f4158b5ee419fb4227f0",
   "request_id": "disc-take-scheduled-chat-00-a7d3c1-r10",
-  "reserved_frontier": [],
+  "reserved_frontier": [
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "b",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-b/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-ce0c82e0d5e395c7a26a9c68.json",
+      "preload_id": "preload-83ab01c53e1ec590bac3",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-83ab01c53e1ec590bac3.json",
+      "request_id": "frontier-ce0c82e0d5e395c7a26a9c68",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    },
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "i",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-i/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-6e420014d069bd1f908e6df1.json",
+      "preload_id": "preload-daaa0cc7a55c6351d876",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-daaa0cc7a55c6351d876.json",
+      "request_id": "frontier-6e420014d069bd1f908e6df1",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
   "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
   "schema_version": 1,
-  "status": "precheck_pending",
-  "submission_allowed": false,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
   "work_start_allowed": true,
   "worker_id": "scheduled-chat-00"
 }
