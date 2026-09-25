@@ -182,8 +182,9 @@ def _build_descriptor_from_payload(repo: Path, payload: dict[str, Any]) -> dict[
         scheduled_slot=payload.get("scheduled_slot"),
         actual_invocation_start=payload.get("actual_invocation_start"),
     )
-    prepare_completed_submission.verify_preflight_result(repo, descriptor, preflight_result)
-    return descriptor
+    return prepare_completed_submission.attach_preflight_provenance(
+        repo, descriptor, preflight_result
+    )
 
 
 def _descriptor_path(repo: Path, payload: dict[str, Any]) -> Path:
