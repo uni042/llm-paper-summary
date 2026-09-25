@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-25T02:07:36.850922+00:00",
+  "updated_at": "2026-09-25T02:14:22.259444+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -46006,6 +46006,56 @@
       "paper_active_count_before": 1026,
       "paper_active_count_after": 1026,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36085403256",
+      "first_recorded_at": "2026-09-25T02:14:22.259444+00:00",
+      "last_recorded_at": "2026-09-25T02:14:22.259444+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36085403256:1",
+          "recorded_at": "2026-09-25T02:14:22.259444+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36085403256",
+            "run_attempt": "1",
+            "source_sha": "2e2a69378fc87db731bbfead3dd5bdff4b49666b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-12d29ccbbefd4d02",
+          "type": "research",
+          "canonical_id": "arXiv:2406.11430",
+          "title": "A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1026,
+      "paper_active_count_after": 1026,
+      "last_successful_action": "research_completed"
     }
   ]
 }
