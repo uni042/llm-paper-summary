@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import research_job_reconciliation
 
 
 def _now() -> str:
@@ -37,6 +38,7 @@ def _write(path: Path, value: Any) -> None:
 def build_snapshot(repo_root: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     jobs_dir = repo_root / ".survey/work-queue/jobs"
+    paper_index = research_job_reconciliation.build_paper_index(repo_root)
     jobs: list[dict[str, Any]] = []
     for path in sorted(jobs_dir.glob("*.json")) if jobs_dir.is_dir() else []:
         job = _read(path, {})
@@ -44,6 +46,18 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             continue
         row = dict(job)
         row.setdefault("job_id", path.stem)
+        if (
+            row.get("status") == "ready"
+            and row.get("type") == "research"
+        ):
+            represented = research_job_reconciliation.match_represented_research_job(
+                row, paper_index
+            )
+            if represented is not None:
+                # Defensive derived-view reconciliation: even before the durable
+                # job mutation lands, do not advertise already represented work.
+                row["status"] = "superseded"
+                row["represented_paper_path"] = represented.get("path")
         jobs.append(row)
 
     counts: dict[str, dict[str, int]] = {}
