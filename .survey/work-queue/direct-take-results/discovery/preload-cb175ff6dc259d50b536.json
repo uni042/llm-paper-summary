@@ -1,19 +1,34 @@
 {
   "early_ack": true,
+  "formal_precheck_ready_at": "2026-09-25T01:22:52.029746+00:00",
   "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r13.json",
   "frontier_target": 3,
-  "frontier_work_available": false,
+  "frontier_work_available": true,
   "ok": true,
   "operation": "direct_take_discovery",
   "preload_id": "preload-cb175ff6dc259d50b536",
   "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-cb175ff6dc259d50b536.json",
   "processed_at": "2026-09-25T01:22:47+00:00",
+  "receipt": "sha256:c9139e263c747ebf1453a51e1c83ad5875973fa14fd00430a87773965c95c5b6",
   "request_id": "disc-take-scheduled-chat-00-a7d3c1-r13",
-  "reserved_frontier": [],
+  "reserved_frontier": [
+    {
+      "axis": "forward citations of KVLink efficient KV cache reuse",
+      "citation_direction": "forward",
+      "discovery_bank": "r",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-r/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-2eb0f8e747ce792c0837f431.json",
+      "preload_id": "preload-3ff437682c7ba1e6b3d3",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3ff437682c7ba1e6b3d3.json",
+      "request_id": "frontier-2eb0f8e747ce792c0837f431",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
   "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
   "schema_version": 1,
-  "status": "precheck_pending",
-  "submission_allowed": false,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
   "work_start_allowed": true,
   "worker_id": "scheduled-chat-00"
 }
