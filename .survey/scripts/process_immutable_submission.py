@@ -16,6 +16,7 @@ if str(HERE) not in sys.path:
 
 import immutable_submission  # noqa: E402
 import paper_quality_gate  # noqa: E402
+import prepare_completed_submission  # noqa: E402
 import queue_worker  # noqa: E402
 
 
@@ -123,6 +124,34 @@ def _precheck_paper(repo_root: Path, descriptor: dict[str, Any], *, rendered_con
         if desired_bytes is not None and current_bytes == desired_bytes:
             return
         raise ValueError(f"paper blob changed: expected {expected}, current {current}")
+
+
+def _verify_completed_preflight(repo_root: Path, descriptor: dict[str, Any]) -> dict[str, Any]:
+    """Require an exact passing preflight before any completed publication."""
+    preflight_result = descriptor.get("preflight_result")
+    if not preflight_result:
+        request_path = (
+            repo_root
+            / ".survey/work-queue/completed-submission-requests"
+            / f"{descriptor['attempt_id']}.json"
+        )
+        request = _read(request_path, {}) or {}
+        if (
+            isinstance(request, dict)
+            and request.get("attempt_id") in (None, descriptor["attempt_id"])
+            and request.get("job_id") in (None, descriptor["job_id"])
+        ):
+            preflight_result = request.get("preflight_result")
+    if not isinstance(preflight_result, str) or not preflight_result.strip():
+        raise ValueError(
+            "completed immutable descriptor requires exact passing preflight provenance; "
+            "repair the record and create a new research-preflight request"
+        )
+    candidate = dict(descriptor)
+    candidate.pop("preflight_result", None)
+    return prepare_completed_submission.verify_preflight_result(
+        repo_root, candidate, Path(preflight_result)
+    )
 
 
 def _refresh_snapshot(repo_root: Path) -> None:
@@ -287,6 +316,7 @@ def process(repo_root: Path, submission_path: Path, *, defer_shared_state: bool 
     sub["_file"] = relative_submission
     sub["status"] = status
     if status == "completed":
+        _verify_completed_preflight(repo_root, descriptor)
         rendered_content = render_descriptor(repo_root, descriptor)
         _precheck_paper(repo_root, descriptor, rendered_content=rendered_content)
         paper_quality_gate.validate_rendered_paper(repo_root, descriptor["paper_path"], rendered_content)
