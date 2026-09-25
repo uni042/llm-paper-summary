@@ -1,13 +1,60 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "metadata",
   "attempt_id": "attempt-preload-ba06b04eb9857b4408e2252b",
   "job_id": "job-research-fd194814c677a98c",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-ba06b04eb9857b4408e2252b",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2609.27040",
+    "arxiv_id": "2609.27040",
+    "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
+    "summary": "大規模言語モデル（LLM）推論では、重みはほぼ固定でもKVキャッシュが要求数や生成長に応じて増減するため、同一サーバ内で一部GPUのHBMだけが不足し、隣接GPUの空き容量とGPU間帯域が遊休する。EMAは、直接接続されたGPU対ごとにメモリスライスを構成し、遠隔HBMを動的に貸借・回収する。予測可能な層アクセスを利用した先読みと大粒度転送で遠隔配置の転送時間を計算に隠し、借り手にはローカル相当の性能、貸し手には静的割当を下回らない回収可能性を同時に与える。実LLMワークロードでは静的分割比で個別利用者のスループットを最大52%改善し、KVキャッシュ容量を2倍に固定増設した構成の96%のスループットへ到達した。",
+    "source": "https://arxiv.org/abs/2609.27040",
+    "sources": [
+      "https://arxiv.org/abs/2609.27040",
+      "https://arxiv.org/html/2609.27040"
+    ],
+    "authors": [
+      "Yi Xu",
+      "Tian Xia",
+      "Ion Stoica"
+    ],
+    "publication": "arXiv",
+    "publication_type": "preprint",
+    "published": "2026-09-22",
+    "publication_status": "preprint v1",
+    "topics": [
+      "LLM inference",
+      "GPU memory pooling",
+      "KV cache",
+      "NVLink",
+      "prefetching"
+    ],
+    "implementation": "論文でEMAプロトタイプ実装を評価。今回の一次資料確認では公式公開コードURLは確認できず。",
+    "code": null,
+    "last_checked": "2026-09-25",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    "hardware_evaluation": "同一ノードの複数GPUと高速GPU間接続を用いる実機プロトタイプ評価。論文はA100/H100等のNVLink接続環境を背景とし、メモリスライスの容量を実効帯域と計算の待ち時間窓から決定する。",
+    "quality_effect": "近似や量子化ではなくKVキャッシュの配置・転送を変えるシステム手法であり、モデル出力品質を意図的に変えない。性能透明性を成立させる範囲で容量を貸借する。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2411.09317",
+        "arxiv_id": "2411.09317"
+      }
+    ],
+    "references_checked_at": "2026-09-25",
+    "references_source": "arXiv HTML reference section and cited Pie primary record",
+    "references_total": 1
   }
 }
