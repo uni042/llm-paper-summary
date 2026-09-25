@@ -4,7 +4,12 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-ba06b04eb9857b4408e2252b",
   "job_id": "job-research-fd194814c677a98c",
-  "data": {},
+  "data": {
+    "hardware": "同一ノード内の複数GPUと高帯域GPU間リンクを使う実機評価。論文の設計議論ではA100/H100級NVLinkを対象とし、GPU間の数百GB/s規模の帯域を前提に転送を計算へ重畳する。",
+    "software": "EMAのLLM推論プロトタイプを用い、KVキャッシュの動的需要を対象に静的メモリ分割および容量を固定的に増やした比較構成と比較する。",
+    "methodology": "ShareGPT型の変動する要求を含む実LLMワークロードで、利用者ごとのスループット、総容量を増設した上限寄り構成への到達率、トークン当たり遅延を測る。背景分析では最大バッチ256の推論需要を用いて個別需要と集約需要の時間変動も比較する。",
+    "scope": "ノード内で直接高帯域接続されたGPU間のHBM共有に焦点を当てた評価であり、PCIeのみの構成、ノード間ネットワーク、異種GPU、巨大なラック全体で同じ透明性が成立することまでは実証していない。"
+  },
   "reservation": {
     "claim_id": "claim-preload-ba06b04eb9857b4408e2252b",
     "worker_id": "scheduled-chat-30",
