@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "record_bundle_mode": "quality_preflight_v1",
+  "origin": "claimed_worker",
+  "kind": "research",
+  "job_id": "job-research-98fce5e6481e51fa",
+  "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+  "worker_id": "scheduled-chat-30",
+  "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+  "depends_on_job_ids": [
+    "job-research-98fce5e6481e51fa"
+  ],
+  "paper_path": "papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md",
+  "run_key": "scheduled-chat-30-20260926T052821JST-r7",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-26T05:28:21+09:00",
+  "self_review": {
+    "primary_source_read_to_end": true,
+    "no_unverified_inference": true,
+    "summary_and_list_summary_specific": true,
+    "headline_result_grounded": true,
+    "method_end_to_end_explained": true,
+    "evaluation_conditions_and_baselines_explicit": true,
+    "results_conditions_and_interpretation_explicit": true,
+    "limitations_and_positioning_specific": true
+  },
+  "writes": [
+    {
+      "path": ".survey/work-queue/records/chat-record-k/metadata.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "metadata",
+        "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+        "job_id": "job-research-98fce5e6481e51fa",
+        "data": {
+          "canonical_id": "DOI:10.36227/techrxiv.177205041.14536362/v1",
+          "doi": "10.36227/techrxiv.177205041.14536362/v1",
+          "arxiv_id": null,
+          "openreview_id": null,
+          "title": "Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores",
+          "summary": "混合専門家モデルは各トークンで少数のエキスパートしか使わなくても全エキスパート重みを保持する必要がある。Xamiは校正データ上のルーティング頻度から各層の重要エキスパートを選び、頻繁に使うものへ2:4構造化疎性、残りへ1:4を適用する。1:4重みはK/4で圧縮保存し、GPU共有メモリへ読む途中で2:4形式へ展開して既存のSparse Tensor Coreで実行する。Qwen1.5-MoEでは密モデル比最大2.4倍圧縮し、均一2:4の1.8倍を上回る。",
+          "list_summary": "ルーティング頻度でMoEエキスパートを重要度別に分け、重要側2:4・低頻度側1:4へ構造化枝刈りし、1:4を実行時に2:4へ展開して既存Sparse Tensor Core互換のまま最大2.4倍圧縮する。",
+          "authors": [
+            "Johnson Umeike",
+            "Bahar Asgari"
+          ],
+          "authors_affiliations": "University of Maryland, College Park",
+          "published": "2026-02-25",
+          "publication": "TechRxiv preprint; later IEEE Computer Architecture Letters 25(1):154-157",
+          "publication_type": "Journal article / preprint version",
+          "publication_status": "Published",
+          "lineage": "MoE structured sparsity / expert-aware compression",
+          "topics": [
+            "MoE",
+            "structured sparsity",
+            "expert compression",
+            "Sparse Tensor Cores"
+          ],
+          "importance": "エキスパート利用頻度の偏りを、配置やオフロードではなくハードウェア互換の圧縮率差へ直接変換した点が重要。",
+          "hardware_evaluation": "実機NVIDIA L40S 48GB GDDR6、CUDA 12.1、PyTorch 2.1.2。精度評価は4×L40S。",
+          "quality_effect": "近似手法。強い1:4枝刈りを増やすほど精度が低下し、ルーティング被覆率を0.7から0.9へ上げると圧縮率を犠牲に精度が回復する。",
+          "source": "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+          "sources": [
+            "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+            "https://doi.org/10.1109/LCA.2026.3679449"
+          ],
+          "code": null,
+          "implementation": "Samoyedsの構造化疎性実装を拡張し、1:4圧縮保存と実行時2:4展開を行う統一GPUカーネルを試作。公式コード公開は一次資料で確認できない。",
+          "last_checked": "2026-09-25",
+          "references": [
+            {
+              "canonical_id": "arXiv:2402.14800",
+              "arxiv_id": "2402.14800"
+            },
+            {
+              "canonical_id": "arXiv:2104.08378",
+              "arxiv_id": "2104.08378"
+            }
+          ],
+          "references_checked_at": "2026-09-25",
+          "references_source": "primary-reference-section",
+          "references_total": 7
+        },
+        "reservation": {
+          "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-k/problem_method.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "problem_method",
+        "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+        "job_id": "job-research-98fce5e6481e51fa",
+        "data": {
+          "problem": "混合専門家モデル（Mixture-of-Experts; MoE）は少数のエキスパートだけを計算しても全重みを保持するため、活性計算量より重みメモリ量が大きい。Mixtral-8×7Bは47Bを保持して14Bだけを使い約3.4倍、DeepSeek-MoE-16Bは約5.7倍、DeepSeek-V3は約18倍の保存量と活性量の差を持つ。MegaBlocksはルーティング由来の活性疎性で計算を効率化するが重み保存量を減らさず、Pre-gated MoEはCPUから必要エキスパートを先読みするが重み密度を利用頻度別に変えない。Samoyedsの均一2:4構造化枝刈りはSparse Tensor Coreへ適合する一方、頻繁に使うエキスパートと低頻度エキスパートへ同じ密度を課すため、重要側の品質を守ると低頻度側の圧縮余地が残る。",
+          "novelty": "Xamiはルータが示すエキスパート利用頻度の偏りを、配置ではなくエキスパートごとの重み密度へ直接変換する。校正データで各層の選択回数を数え、活性率を降順に並べ、累積ルーティング質量が被覆率αへ達するまでを高頻度群として2:4、残りを低頻度群として1:4へ枝刈りする。1:4はSparse Tensor Coreが直接実行できないため、低頻度重みをK/4で圧縮保存し、GPU共有メモリへ転送する途中でゼロを挿入してK/2の2:4形式へ展開する。これにより保存時の1:4容量削減と既存2:4ハードウェア互換を両立する。",
+          "method_overview": "処理はオフライン校正、分類、適応枝刈り、短い微調整、オンライン実行の順に進む。まず5,000混合サンプルを通して各MoE層のルータ選択回数を数え、層内総数で割った活性率を降順に累積し、被覆率αへ達する最小集合を高頻度群とする。極端な偏りで集合が小さくなり過ぎないよう最低個数も課す。次にup_proj、gate_proj、down_projを高頻度側では2:4、低頻度側では1:4へ構造化枝刈りし、固定マスクのまま0.5k〜3kステップ微調整する。推論時、高頻度重みはK/2の2:4形式を直接読み、低頻度重みはK/4の非ゼロ値を転送しながらゼロを補ってK/2へ変換する。配置メタデータは2:4互換を維持するため、展開後は双方を同じSparse Tensor Core行列積で処理できる。MoE層がメモリ帯域律速なら低頻度側のグローバルメモリ読込み削減が展開費を上回る。逆に計算律速、または校正時と本番のルーティング分布がずれる条件では、速度・品質利得が小さくなる。",
+          "components": [
+            {
+              "name": "ルーティング被覆率分類",
+              "description": "入力は校正サンプルで得た各層・各エキスパートの選択回数である。層ごとに活性率を作り、高い順に並べて累積ルーティング質量がαへ達するまでを高頻度集合へ入れる。固定閾値ではエキスパート数や分布形状が異なるモデルを扱いにくいため、層内の相対的な累積質量を使う。α=0.7ではMixtralの71.5%、Qwen1.5-MoEの44.9%、DeepSeek-MoEの53.2%が高頻度側となる。出力ラベルが次段の枝刈り密度を決めるが、校正分布と本番分布がずれると重要エキスパートを低頻度側へ誤分類し得る。"
+            },
+            {
+              "name": "適応構造化枝刈り",
+              "description": "高頻度側のup_proj・gate_proj・down_projは4要素中2個を残す2:4、低頻度側は1個だけを残す1:4へ枝刈りする。高頻度側は品質を守り、低頻度側は保存量を優先する。αを上げると2:4側が増えて精度は回復するが圧縮率は下がる。枝刈り後は固定マスクで0.5k〜3kステップ微調整する。DeepSeek-MoEではα=0.7の平均精度43.4が密51.1、均一2:4の47.1を下回り、強い1:4適用が品質リスクになる。"
+            },
+            {
+              "name": "二重保存と転送中1:4→2:4展開",
+              "description": "Sparse Tensor Coreは1:4を直接実行できないため、低頻度重みは非ゼロ値をK/4で保存し、2:4互換のK/2メタデータを保持する。共有メモリへの転送中に各保存値へゼロを補ってK/2へ展開し、高頻度2:4重みと同じ疎行列積へ渡す。これにより1:4専用演算器なしで保存量とグローバルメモリ転送を減らせる。追加のゼロ挿入はあるが、メモリ帯域律速なら転送と重ねて隠せる一方、計算律速では利得が縮む。"
+            }
+          ],
+          "system_design": "オフラインで統計収集、分類、枝刈り、微調整を終え、オンラインでは通常のMoEルータを変えず、選ばれたエキスパートの保存形式だけを高頻度2:4と低頻度1:4で分ける。低頻度側は転送中に2:4へ戻すため既存Sparse Tensor Core実行を維持する。αを下げるほど容量は減るが品質が落ちやすく、偏りが弱いモデルでは低頻度集合が小さく利得も小さい。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-k/evaluation.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "evaluation",
+        "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+        "job_id": "job-research-98fce5e6481e51fa",
+        "data": {
+          "hardware": "NVIDIA L40S GPU、48GB GDDR6、864GB/s。CUDA 12.1、PyTorch 2.1.2。精度評価は4×L40S。",
+          "software": "Samoyedsの構造化疎性実装を拡張した統一GPUカーネル。比較対象は密なTransformers、MegaBlocks、均一2:4のSamoyeds。",
+          "methodology": "Mixtral-8×7B、Mixtral-8×22B、DeepSeek-MoE-16B、Qwen1.5-MoE-A2.7Bを評価。5,000混合サンプルでルーティングを測り、α=0.7/0.8/0.9を比較する。枝刈り後0.5k〜3kステップ微調整し、ARC-Challenge、WinoGrande、MMLU Astronomy、OpenBookQAの精度、モデル圧縮率、MoE層速度、バッチ別スループットを測る。",
+          "scope": "実GPU評価だが主な速度値はMoE層単位で、サービス全体のエンドツーエンド遅延ではない。分類はオフライン校正分布に依存し、長期運用での分布ずれへの再分類費用は評価していない。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-k/results.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "results",
+        "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+        "job_id": "job-research-98fce5e6481e51fa",
+        "data": {
+          "overview": "Qwen1.5-MoEはα=0.7で密モデル比2.4倍、DeepSeek-MoEは2.2倍へ圧縮され、均一2:4の約1.8倍を上回る。Mixtral-8×7BのMoE層では密行列積比1.32倍で、Samoyedsの1.20倍より高い。バッチ1〜16では2.35〜2.49Kトークン/秒でSamoyedsより最大15.3%、密行列積より最大45.7%高い。一方、強い圧縮は精度を下げ、Qwen平均精度は密55.0、均一2:4 52.8、α=0.7 52.0、α=0.9 53.6となるため、容量利得は無損失ではない。",
+          "key_results": [
+            {
+              "metric": "Qwen1.5-MoEモデル圧縮率",
+              "value": "最大2.4×",
+              "baseline": "均一2:4の1.8×",
+              "condition": "FP16、α=0.7",
+              "interpretation": "低頻度エキスパートを1:4へ強く圧縮できるため、偏りの大きいモデルほど容量利得が増える。"
+            },
+            {
+              "metric": "Mixtral-8×7B MoE層速度",
+              "value": "1.32×",
+              "baseline": "密GEMM 1.0×、Samoyeds 1.20×",
+              "condition": "NVIDIA L40S",
+              "interpretation": "K/4保存によるメモリ転送削減が1:4展開費を上回り、均一2:4より速い。"
+            },
+            {
+              "metric": "Mixtral-8×7Bバッチ別スループット",
+              "value": "2.35–2.49K tokens/s",
+              "baseline": "Samoyeds 2.04–2.18K tokens/s",
+              "condition": "batch 1–16",
+              "interpretation": "最大15.3%高く、転送中展開が新しい律速になっていない。"
+            },
+            {
+              "metric": "Qwen平均精度",
+              "value": "53.6 at α=0.9",
+              "baseline": "Dense 55.0、uniform 2:4 52.8",
+              "condition": "4評価タスク平均",
+              "interpretation": "高い被覆率では均一2:4を上回るが密モデルには届かず、近似圧縮の品質差が残る。"
+            }
+          ],
+          "negative_results": "DeepSeek-MoEではα=0.7の平均精度43.4で密51.1、均一2:4の47.1を下回り、強い1:4適用は品質を明確に悪化させる。小バッチのDeepSeek/QwenではMegaBlocksが最速の場合があり、Xamiが常に速度最良ではない。",
+          "interpretation": "ルーティング偏りが大きいほど低頻度群を多く1:4へでき、容量とメモリ帯域の利得が増える。αを上げると重要集合が広がって精度は回復するが圧縮率は低下する。速度面ではMoEの低局所性によるメモリ律速が強いと、圧縮転送の利得で展開費を隠せる。",
+          "quality_impact": "近似あり。枝刈り後の短い微調整で回復するが、特にDeepSeekのα=0.7では精度低下が大きい。α=0.9ではQwen平均53.6で均一2:4の52.8を上回るなど、重要エキスパートを広く保護すると品質が改善する。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-k/positioning.json",
+      "content": {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": "positioning",
+        "attempt_id": "attempt-preload-1f8cc572cf9d3187f0873c02",
+        "job_id": "job-research-98fce5e6481e51fa",
+        "data": {
+          "limitations": "オフラインの校正分布で高頻度・低頻度を固定するため、本番タスクの分布ずれで重要度が変わると1:4枝刈り対象が不適切になる可能性がある。1:4はネイティブ演算ではなく2:4へ展開するため、計算律速条件では転送削減の利得が小さくなる。速度評価は主にMoE層で、通信・注意・スケジューリングを含む大規模サービス全体ではない。強い圧縮は無損失ではなくDeepSeekで顕著な精度低下がある。",
+          "differences": "MegaBlocksはルーティングで生じる活性のブロック疎性を使って計算を効率化するが、全エキスパート重みの保存量を減らさない。Pre-gated MoEなどは必要エキスパートを予測してCPUから先読みするが、重み自体の圧縮率は利用頻度に応じて変えない。Samoyedsは全エキスパートへ均一2:4を適用する。Xamiはルーティング頻度を圧縮率へ変換し、低頻度だけ1:4で保存しつつ既存2:4ハードウェアへ戻す点が異なる。",
+          "implementation_status": "NVIDIA L40S上でSamoyedsを拡張した研究試作を実装し、1:4圧縮保存、転送中2:4展開、統一Sparse Tensor Coreカーネルを実測。一次資料で公式コード公開は確認できない。",
+          "research_positioning": "MoEのエキスパート異質性をキャッシュ・配置・オフロードだけでなく、保存密度そのものへ利用する系統。将来は実行時ルーティング統計で分類を更新する適応圧縮、エキスパートキャッシュとの併用、SSD/CPUオフロードで転送量をさらに減らす設計へ接続できる。"
+        },
+        "reservation": {
+          "claim_id": "claim-preload-1f8cc572cf9d3187f0873c02",
+          "worker_id": "scheduled-chat-30",
+          "worker_kind": "scheduled_chat"
+        }
+      }
+    }
+  ]
+}
