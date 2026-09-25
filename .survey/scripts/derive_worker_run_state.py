@@ -1326,8 +1326,6 @@ def _build_stop_permit(
     category: str | None = None
     if work_mode == "maintenance" and "scheduled_0830_maintenance_complete" in stop_reasons:
         category = "maintenance_complete"
-    elif bool(gate.get("handoff_window_active")) or bool(gate.get("final_handoff_active")):
-        category = "time_window"
     elif (
         runtime_condition == "platform_context_limit"
         and runtime_condition_confirmed
@@ -1773,20 +1771,18 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         started_at, str(request["worker_id"])
     )
     if next_scheduled_task_at is not None:
-        seconds_to_next_scheduled_task = max(
-            int((next_scheduled_task_at - now).total_seconds()), 0
+        seconds_to_next_scheduled_task = int(
+            (next_scheduled_task_at - now).total_seconds()
         )
         seconds_to_deadline = None
-        seconds_to_time_boundary = seconds_to_next_scheduled_task
-        time_boundary_source = "next_scheduled_task"
     else:
-        # Ad-hoc workers have no scheduled successor. Preserve the historical
-        # one-hour ceiling only as their compatibility fallback.
+        # Retain the historical one-hour value as telemetry for old readers only.
         deadline = started_at + dt.timedelta(seconds=3600)
-        seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
+        seconds_to_deadline = int((deadline - now).total_seconds())
         seconds_to_next_scheduled_task = None
-        seconds_to_time_boundary = seconds_to_deadline
-        time_boundary_source = "adhoc_run_deadline"
+    # Time boundaries are observability only. They never gate work or finalization.
+    seconds_to_time_boundary = None
+    time_boundary_source = "telemetry_only"
 
     discovery_pipeline_preload = None
     inflight_count = int(discovery_async.get("discovery_inflight_round_count") or 0)
@@ -1797,7 +1793,6 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     )
     pipeline_eligible = bool(
         work_mode == "discovery"
-        and seconds_to_time_boundary > 600
         and async_wait_exists
         and not discovery_async.get("discovery_evaluation_pending")
         and not discovery_async.get("discovery_recovery_required")
