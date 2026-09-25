@@ -27,9 +27,15 @@ def _blob_sha(repo: Path, rel: str) -> str:
 
 
 def descriptor_fingerprint(descriptor: dict) -> str:
-    """Return a stable digest for the exact validated descriptor candidate."""
+    """Return a stable digest for the exact validated descriptor candidate.
+
+    Provenance is attached only after a passing preflight, so it is excluded
+    from the preflight-bound fingerprint itself.
+    """
+    payload_descriptor = dict(descriptor)
+    payload_descriptor.pop("preflight_result", None)
     payload = json.dumps(
-        descriptor,
+        payload_descriptor,
         ensure_ascii=False,
         sort_keys=True,
         separators=(",", ":"),
@@ -95,6 +101,25 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
     if result.get("record_slots") != descriptor.get("record_slots"):
         raise ValueError("preflight result is stale: record slot blobs changed after the check")
     return result
+
+
+def attach_preflight_provenance(repo: Path, descriptor: dict, preflight_result: Path) -> dict:
+    """Attach canonical passing-preflight provenance after exact verification."""
+    verify_preflight_result(repo, descriptor, preflight_result)
+    repo = repo.resolve()
+    path = Path(preflight_result)
+    if not path.is_absolute():
+        path = repo / path
+    path = path.resolve()
+    try:
+        relative = path.relative_to(repo).as_posix()
+    except ValueError as exc:
+        raise ValueError("preflight result must stay within repository") from exc
+    if not relative.startswith(".survey/work-queue/research-preflight/results/") or not relative.endswith(".json"):
+        raise ValueError("preflight result must live under research-preflight/results")
+    out = dict(descriptor)
+    out["preflight_result"] = relative
+    return validate_descriptor(repo, out)
 
 
 def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None, worker_id: str | None = None, run_key: str | None = None, scheduled_slot: str | None = None, actual_invocation_start: str | None = None) -> dict:
@@ -165,7 +190,7 @@ def main() -> int:
         scheduled_slot=args.scheduled_slot,
         actual_invocation_start=args.actual_invocation_start,
     )
-    verify_preflight_result(args.repo_root, descriptor, args.preflight_result)
+    descriptor = attach_preflight_provenance(args.repo_root, descriptor, args.preflight_result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(descriptor, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("[WORKER-GUIDE] exact-blob quality preflight verified; completed descriptor validated and written")
