@@ -150,10 +150,6 @@ def _recovery_packet(root: Path, result: dict[str, Any]) -> dict[str, Any] | Non
     for packet in rows:
         if not isinstance(packet, dict):
             continue
-        if packet.get("recovery_transport") == "claim_fast_path_background_auto_claim":
-            # Fixed Scheduled Chat recovery is owned by the periodic claim lane;
-            # a current run-state request must not create a competing claim.
-            continue
         if (
             packet.get("resume_recovery") is True
             and packet.get("job_id")

@@ -8,7 +8,6 @@ compilation, repository-wide route enrichment, and unconditional repair scans.
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import hashlib
 import json
 import tempfile
@@ -22,10 +21,8 @@ import hot_dispatch
 import normalize_research_paper_paths
 import repair_claim_bank_recovery
 
-CLAIM_REQUESTS = Path(".survey/work-queue/claim-requests")
 CLAIM_RESULTS = Path(".survey/work-queue/claim-results")
 JOBS = Path(".survey/work-queue/jobs")
-FIXED_RECOVERY_WORKERS = ("scheduled-chat-00", "scheduled-chat-30")
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -63,98 +60,6 @@ def _changed_results(root: Path, before: dict[str, str]) -> list[Path]:
         if before.get(rel) != _digest(path):
             changed.append(path.relative_to(root))
     return changed
-
-
-def _background_recovery_request_id(packet: dict[str, Any]) -> str:
-    material = "\n".join(
-        str(packet.get(key) or "")
-        for key in (
-            "worker_id",
-            "job_id",
-            "claim_id",
-            "recovery_source_attempt_id",
-        )
-    )
-    digest = hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
-    return f"auto-background-recovery-{digest}"
-
-
-def _materialize_background_recovery_requests(root: Path) -> dict[str, Any]:
-    """Recover fixed Scheduled Chat carry-over without a worker-side run-state write."""
-    index = hot_dispatch.build_index(root)
-    recovery_map = index.get("research_recovery_resume") if isinstance(index, dict) else {}
-    if not isinstance(recovery_map, dict):
-        recovery_map = {}
-
-    created: list[dict[str, str]] = []
-    skipped: list[dict[str, str]] = []
-    now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
-
-    for worker_id in FIXED_RECOVERY_WORKERS:
-        rows = recovery_map.get(worker_id, [])
-        if not isinstance(rows, list):
-            continue
-        packet = next(
-            (
-                row for row in rows
-                if isinstance(row, dict)
-                and row.get("resume_recovery") is True
-                and row.get("job_id")
-                and row.get("claim_id")
-                and row.get("recovery_source_attempt_id")
-            ),
-            None,
-        )
-        if packet is None:
-            continue
-
-        request_id = _background_recovery_request_id(packet)
-        request_rel = CLAIM_REQUESTS / f"{request_id}.json"
-        result_rel = CLAIM_RESULTS / f"{request_id}.json"
-        request_path = root / request_rel
-        result_path = root / result_rel
-        if request_path.exists() or result_path.exists():
-            skipped.append({
-                "worker_id": worker_id,
-                "job_id": str(packet["job_id"]),
-                "request_id": request_id,
-                "reason": "deterministic_background_recovery_already_exists",
-            })
-            continue
-
-        payload = {
-            "schema_version": 1,
-            "request_id": request_id,
-            "worker_id": worker_id,
-            "worker_kind": "scheduled_chat",
-            "requested_at": now,
-            "max_jobs": 1,
-            "job_types": ["research", "audit"],
-            "job_ids": [str(packet["job_id"])],
-            "auto_background_recovery": True,
-            "recovery_pool_claim_id": packet.get("claim_id"),
-            "recovery_source_claim_id": packet.get("recovery_source_claim_id"),
-            "recovery_source_attempt_id": packet.get("recovery_source_attempt_id"),
-            "recovery_source_record_bank": packet.get("recovery_source_record_bank"),
-        }
-        request_path.parent.mkdir(parents=True, exist_ok=True)
-        request_path.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8",
-        )
-        created.append({
-            "worker_id": worker_id,
-            "job_id": str(packet["job_id"]),
-            "request_id": request_id,
-            "request_path": request_rel.as_posix(),
-            "result_path": result_rel.as_posix(),
-        })
-
-    return {
-        "created": created,
-        "skipped": skipped,
-        "fixed_workers_checked": len(FIXED_RECOVERY_WORKERS),
-    }
 
 
 def _needs_paper_path_normalization(root: Path) -> bool:
@@ -202,7 +107,6 @@ def process(repo_root: Path) -> dict[str, Any]:
         normalization["skipped"] = False
 
     barriers = apply_library_checkpoint_barriers.apply(root)
-    background_recovery = _materialize_background_recovery_requests(root)
     direct_takes = hot_dispatch.process_research_takes(root)
     allocation = claim_worker_with_banks.process_requests(root)
     allocation.update(claim_worker_with_banks.maintain_shared_pool(root))
@@ -237,7 +141,6 @@ def process(repo_root: Path) -> dict[str, Any]:
         "ok": True,
         "normalization": normalization,
         "checkpoint_barriers": barriers,
-        "background_recovery": background_recovery,
         "direct_takes": direct_takes,
         "allocation": allocation,
         "repair": repair,
