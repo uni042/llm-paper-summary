@@ -1839,7 +1839,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         runtime_condition_ignored_reason = "target_write_blocked_and_released"
     if runtime == "handoff_guard":
         runtime = "none"
-        runtime_condition_ignored_reason = "handoff_guard_is_derived_from_deadline"
+        runtime_condition_ignored_reason = "handoff_guard_is_deprecated_time_control"
     elif runtime == "github_read_unavailable":
         if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 2:
             runtime = "none"
@@ -1874,11 +1874,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
                 "platform_limit_requires_run_wide_tool_rejection_exhausted_fallback_and_failed_health_probe"
             )
 
-    # 600s is only a no-new-independent-work window. The final 180s is the
-    # unconditional handoff condition.
-    if seconds_to_time_boundary <= 180:
-        runtime = "handoff_guard"
-        runtime_condition_ignored_reason = None
+    # No clock-derived handoff condition exists. Time fields are telemetry only.
 
     github_read = runtime != "github_read_unavailable"
     durable_unavailable = runtime == "durable_transports_unavailable"
