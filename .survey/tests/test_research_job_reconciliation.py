@@ -169,5 +169,47 @@ class ResearchJobReconciliationTests(unittest.TestCase):
             self.assertEqual(second["changed"], 0)
 
 
+    def test_legacy_paper_without_frontmatter_still_reconciles(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            legacy = (
+                repo
+                / "papers/inference/02-adaptive-expert-computation-compression"
+                / "2026-2607.08780-sticky-routing-memory-efficient-inference.md"
+            )
+            legacy.parent.mkdir(parents=True, exist_ok=True)
+            legacy.write_text(
+                """# Sticky Routing: Training MoE Models for Memory-Efficient Inference
+
+identity: arXiv:2607.08780
+
+## 一次資料
+- https://arxiv.org/abs/2607.08780
+""",
+                encoding="utf-8",
+            )
+            job_path = repo / ".survey/work-queue/jobs/job-sticky.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-sticky",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2607.08780",
+                    "paper_path": legacy.relative_to(repo).as_posix(),
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(repo)
+
+            self.assertEqual(result["changed"], 1)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "superseded")
+            self.assertEqual(
+                job["represented_paper_path"],
+                legacy.relative_to(repo).as_posix(),
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
