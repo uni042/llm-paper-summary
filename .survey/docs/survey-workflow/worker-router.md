@@ -19,8 +19,10 @@ Scheduled Chat / WorkワーカーがGitHub本文書込みを拒否された場�
 3. Library成果のidentityと想定配置先を確認し、現在の正規配置と異なる場合は最新main側を優先して正規化する。
 4. 対象pathを最新mainで取得する。未存在ならcreate、既存なら現在blob SHAを取得して内容を統合したうえでupdateする。古いLibrary記録のSHAをwrite前提に使わない。
 5. write後に同じpathをmainから再取得し、反映内容とcommitを確認する。
-6. 論文本文、探索結果、候補リストのいずれもこの経路で取り込める。ただし、探索結果は現在のDiscovery正規フォーマット／配置先へ変換し、claim・reservation・submission等の制御ファイルを「取り込み済みに見せる」目的では生成しない。
-7. GitHub writeが拒否された場合は回避せず、Library原本を残して失敗段階を報告する。Scheduled Task自体の有効状態・schedule・通知設定は変更しない。
+6. 論文本文を通常チャット経路から追加した場合、paper push後の正規reconciliationが実論文MarkdownとResearch jobをstable identity / declared paper_pathで照合する。既に本文が表現済みの `ready` Research jobは、通常Research完了を偽装せず `status=superseded` / `superseded_reason=paper_already_represented` として終端化する。派生 `next-jobs` とworker worklistも論文実体を再照合し、reconciliation commitが一時的に遅れても既収録論文を未処理として再提示しない。
+7. 論文frontmatterの `references` は既存の構造化reference poolへ自動供給される。引用論文を通常チャット取り込み時に直接Research job化せず、Discoveryの重複除外・対象判定を通してから候補化する。引用情報が未記録の論文は通常のResearch/Auditメタデータ整備で補完し、取り込み経路だけで推測生成しない。
+8. 論文本文、探索結果、候補リストのいずれもこの経路で取り込める。ただし、探索結果は現在のDiscovery正規フォーマット／配置先へ変換し、claim・reservation・submission等の制御ファイルを「取り込み済みに見せる」目的では生成しない。
+9. GitHub writeが拒否された場合は回避せず、Library原本を残して失敗段階を報告する。Scheduled Task自体の有効状態・schedule・通知設定は変更しない。
 
 この経路では、ユーザーが「保存したものをGitHubへ上げて」「Libraryの未反映分を反映して」「この論文／探索結果を入れて」等と明示したことを、その成果をmainへ反映するwrite承認として扱う。対象が曖昧な場合だけLibraryの未反映成果を列挙して選択を求める。
 
