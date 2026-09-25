@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 07:50:28 JST**
+> 自動生成: **2026-09-25 09:39:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **334** |
-| 未claim Research job | **191** |
+| 未claim Research job | **190** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
 | 最終検証済みDiscovery探索 | **09-25 07:28:01 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（23時間14分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（25時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **1** | **0** | **0** | **143** | **2** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **15** | **15** | **15** | **0** | **0** | **0** | **36** |
-| 合計 | **18** | **16** | **15** | **0** | **143** | **2** | **36** |
+| 合計 | **15** | **16** | **15** | **0** | **144** | **0** | **36** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,21 +83,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
-- **09-25 03:12:55 JST** [research] `arXiv:2606.24033` — RoPE-Aware Bit Allocation for KV-Cache Quantization
-  - job: `.survey/work-queue/jobs/job-research-ed39f178b202751f.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-d0b404e285d49a0ce5994e57.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-d0b404e285d49a0ce5994e57.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.24033-rope-aware-bit-allocation-for-kv-cache-quantization.md`
-- **09-25 03:07:25 JST** [research] `arXiv:2508.15487` — Dream 7B: Diffusion Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-1ba7917ba260cdda.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-3a8d1487d30c19a489a3f0c1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-3a8d1487d30c19a489a3f0c1.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md`
-- **09-25 03:07:25 JST** [research] `arXiv:2509.12211` — TinyServe: Query-Aware Cache Selection for Efficient LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-3d37c9d48dc78998.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-88865dce95348e7f779dacec.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-88865dce95348e7f779dacec.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md`
+- 検証済み完了なし。
 
 ### Audit
 
@@ -211,37 +197,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **2件**
-- `arXiv:2604.17701` — WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0b37f63c9c1b5db3.json`
-- `arXiv:2608.12435` — MARCH: Scaling Recurrent Memory with Content-Routed State Anchors / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-17b6142b52e58156.json`
-- `arXiv:2605.09735` — KV-RM: Regularizing KV-Cache Movement for Static-Graph LLM Serving / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-17d7652f0f68de09.json`
-- `DOI:10.1145/3832810.3832811` — MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference / worker `shared-preload-pool`
-  - claim: **09-25 01:31:55 JST** / heartbeat: **09-25 07:40:58 JST** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2bf4246af1e4513a.json`
-- `arXiv:2609.23321` — Co-occurrence Patterns of LoRA Adapters in Production Diffusion Model Inference Services / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-38a0543460e70964.json`
-- `arXiv:2609.22471` — Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation / worker `shared-preload-pool`
-  - claim: **09-25 01:31:55 JST** / heartbeat: **09-25 07:40:58 JST** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3df54953f7b89e06.json`
-- `arXiv:2604.07815` — AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9450092f13367cb2.json`
-- `arXiv:2607.04181` — CoCoScale: Leveraging Layer-wise Scaling to Unlock the Potential of Online LLM Serving / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-979f96b1e5e1127f.json`
-- `arXiv:2604.21026` — MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9c720b7578a5562f.json`
-- `arXiv:2608.10823` — MoE Proxy Models for Low-Cost Failure Reproduction and Diagnosis in LLM RL Post-Training / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:40:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ab23d188aa78852c.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.27373` — Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models / worker `shared-preload-pool`
+  - claim: **09-25 02:05:15 JST** / heartbeat: **09-25 09:24:34 JST** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0a5acd3b5ba5b245.json`
+- `arXiv:2406.11430` — A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression / worker `shared-preload-pool`
+  - claim: **09-25 09:24:34 JST** / heartbeat: **—** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-12d29ccbbefd4d02.json`
+- `DOI:10.1109/cloud67622.2025.00028` — ZipNN: Lossless Compression for AI Models / worker `shared-preload-pool`
+  - claim: **09-25 09:24:34 JST** / heartbeat: **—** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-14b72fcf4a8168cf.json`
+- `arXiv:2511.12286` — Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing / worker `shared-preload-pool`
+  - claim: **09-25 09:24:34 JST** / heartbeat: **—** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-19ebd04771d99798.json`
+- `DOI:10.1109/EEI70303.2026.11640499` — PMKS: Co-Designing Distributed Networking and Multi-Tier Storage for Ultra-Long Context LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 02:05:15 JST** / heartbeat: **09-25 09:24:34 JST** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1edac6e56714dd58.json`
+- `DOI:10.1109/ISCAS66217.2026.11562764` — AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs / worker `shared-preload-pool`
+  - claim: **09-25 09:24:34 JST** / heartbeat: **—** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2a1bde22bebd2f67.json`
+- `DOI:10.1109/CCGrid68966.2026.00023` — LLM-Pilot: SLO-Aware and Cost-Efficient LLM Serving on Public Cloud VM Clusters via Offloading / worker `shared-preload-pool`
+  - claim: **09-25 02:05:15 JST** / heartbeat: **09-25 09:24:34 JST** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2efe9f8fbd9f6b33.json`
+- `arXiv:2609.20957` — An Approximate Queueing Model of LLM Inference Serving for SLO-Driven Autoscaling / worker `shared-preload-pool`
+  - claim: **09-25 02:05:15 JST** / heartbeat: **09-25 09:24:34 JST** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3cdf7ee7d40468db.json`
+- `arXiv:2602.01519` — You Need an Encoder for Native Position-Independent Caching / worker `shared-preload-pool`
+  - claim: **09-25 02:05:15 JST** / heartbeat: **09-25 09:24:34 JST** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-4044c82745a32e7d.json`
+- `arXiv:1911.02150` — Fast Transformer Decoding: One Write-Head is All You Need / worker `shared-preload-pool`
+  - claim: **09-25 09:24:34 JST** / heartbeat: **—** / lease expiry: **09-25 21:24:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-4b8b460ef9d10a4e.json`
 
 #### Audit
 
