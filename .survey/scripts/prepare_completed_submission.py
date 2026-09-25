@@ -34,6 +34,7 @@ def descriptor_fingerprint(descriptor: dict) -> str:
     """
     payload_descriptor = dict(descriptor)
     payload_descriptor.pop("preflight_result", None)
+    payload_descriptor.setdefault("status", "completed")
     payload = json.dumps(
         payload_descriptor,
         ensure_ascii=False,
