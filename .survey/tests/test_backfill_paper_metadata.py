@@ -3,6 +3,9 @@ from __future__ import annotations
 import sys
 import tempfile
 import unittest
+from io import BytesIO
+from urllib.error import HTTPError
+from unittest.mock import patch
 from pathlib import Path
 
 
@@ -83,6 +86,41 @@ source: "https://arxiv.org/abs/2609.99991"
             "チャット退避から戻した旧形式本文に残っている説明を再利用する。",
         )
         self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+
+    def test_arxiv_fetch_falls_back_after_http_error(self) -> None:
+        xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <entry>
+    <id>http://arxiv.org/abs/2609.99991v1</id>
+    <published>2026-09-01T00:00:00Z</published>
+    <author><name>Example Author</name></author>
+    <arxiv:primary_category term="cs.LG"/>
+    <category term="cs.LG"/>
+  </entry>
+</feed>"""
+        class Response:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return xml
+
+        calls = []
+        def fake_urlopen(req, timeout=60):
+            calls.append(req.full_url)
+            if req.full_url.startswith("https://export.arxiv.org/"):
+                raise HTTPError(req.full_url, 406, "Not Acceptable", {}, BytesIO())
+            return Response()
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            with patch.object(backfill_paper_metadata.time, "sleep"):
+                result = backfill_paper_metadata.fetch_arxiv(["2609.99991"])
+
+        self.assertIn("2609.99991", result)
+        self.assertEqual(result["2609.99991"]["authors"], ["Example Author"])
+        self.assertTrue(any(url.startswith("https://arxiv.org/api/query?") for url in calls))
 
 
 if __name__ == "__main__":
