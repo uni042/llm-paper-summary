@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1145/3806645.3807814",
+      "title": "Omnia: Efficient RAG Serving through Speculative Scheduling",
+      "source_url": "https://doi.org/10.1145/3806645.3807814",
+      "priority": 96,
+      "reason": "Recent system-level RAG serving work with speculative scheduling across retrieval, reranking, and generation; directly relevant to end-to-end LLM serving pipelines."
+    },
+    {
+      "canonical_id": "arXiv:2607.23815",
+      "arxiv_id": "2607.23815",
+      "title": "Kalypso: Relational LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.23815",
+      "priority": 95,
+      "reason": "Recent LLM serving architecture that exposes relational query-plan structure to the serving layer, a distinct systems mechanism for cross-request optimization."
+    },
+    {
+      "canonical_id": "arXiv:2607.18171",
+      "arxiv_id": "2607.18171",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "source_url": "https://arxiv.org/abs/2607.18171",
+      "priority": 93,
+      "reason": "Recent systems work on automated placement, streaming, and intra-model parallelism for heterogeneous real-time multimodal inference pipelines."
+    },
+    {
+      "canonical_id": "DOI:10.1109/TMC.2026.3667591",
+      "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3667591",
+      "priority": 92,
+      "reason": "Recent speculative-decoding system combining vision/decoding disaggregation with heterogeneous edge-cloud placement under memory and bandwidth constraints."
+    },
+    {
+      "canonical_id": "arXiv:2608.00423",
+      "arxiv_id": "2608.00423",
+      "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+      "source_url": "https://arxiv.org/abs/2608.00423",
+      "priority": 90,
+      "reason": "Recent serving-measurement systems work targeting bottleneck-preserving trace reduction, useful for efficient configuration evaluation and production diagnosis."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-578af9cb15034d66a26e2465",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-578af9cb15034d66a26e2465.json",
+    "receipt": "sha256:4b728143a8fde3a34423782dc62e7d9558f97ff18516472780b38c3c9fa0e80f"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T130004JST-4f9a21",
+    "round": "frontier-578af9cb15034d66a26e2465",
+    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "candidate_count": 20,
+    "accepted_count": 5,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}
