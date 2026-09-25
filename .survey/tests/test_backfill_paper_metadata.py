@@ -123,5 +123,42 @@ source: "https://arxiv.org/abs/2609.99991"
         self.assertTrue(any(url.startswith("https://arxiv.org/api/query?") for url in calls))
 
 
+    def test_arxiv_fetch_falls_back_to_html_metadata(self) -> None:
+        html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_author" content="Second Author">
+<meta name="citation_date" content="2026/09/01">
+<meta name="citation_keywords" content="Machine Learning (cs.LG); Artificial Intelligence (cs.AI)">
+</head><body></body></html>"""
+
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return self.payload
+
+        def fake_urlopen(req, timeout=60):
+            url = req.full_url
+            if "/api/query?" in url:
+                raise HTTPError(url, 406, "Not Acceptable", {}, BytesIO())
+            if url == "https://arxiv.org/html/2609.99991":
+                return Response(html)
+            raise AssertionError(url)
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            with patch.object(backfill_paper_metadata.time, "sleep"):
+                result = backfill_paper_metadata.fetch_arxiv(["2609.99991"])
+
+        row = result["2609.99991"]
+        self.assertEqual(row["authors"], ["Example Author", "Second Author"])
+        self.assertEqual(row["published"], "2026/09/01")
+        self.assertEqual(row["arxiv_categories"]["primary"], "cs.LG")
+        self.assertEqual(row["arxiv_categories"]["cross_list"], ["cs.AI"])
+
+
 if __name__ == "__main__":
     unittest.main()
