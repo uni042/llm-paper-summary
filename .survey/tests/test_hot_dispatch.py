@@ -228,7 +228,7 @@ class HotDispatchTests(unittest.TestCase):
             rejected = recovery["on_status_only_write_rejected"]
             self.assertEqual(
                 rejected["next_action"],
-                "UPDATE_HEALTH_PROBE_THEN_WRITE_MINIMAL_RUN_STATE_QUARANTINE",
+                "UPDATE_HEALTH_PROBE_WITH_QUARANTINE_THEN_READ_RESULT",
             )
             self.assertEqual(
                 rejected["health_probe_path"],
@@ -236,9 +236,16 @@ class HotDispatchTests(unittest.TestCase):
             )
             self.assertEqual(rejected["health_probe_operation"], "update_existing_file_once")
             self.assertTrue(rejected["health_probe_requires_latest_blob_sha"])
-            self.assertEqual(rejected["run_state_runtime_condition"], "none")
             self.assertEqual(
-                rejected["write_blocked_job_base"],
+                rejected["health_probe_result_directory"],
+                ".survey/work-queue/transport/health-probe-results",
+            )
+            self.assertEqual(
+                rejected["health_probe_payload_base"]["worker_id"],
+                "scheduled-chat-30",
+            )
+            self.assertEqual(
+                rejected["health_probe_payload_base"]["write_blocked_job"],
                 {
                     "job_id": job_id,
                     "claim_id": "claim-carryover",
@@ -247,10 +254,15 @@ class HotDispatchTests(unittest.TestCase):
                 },
             )
             self.assertEqual(
+                set(rejected["health_probe_required_runtime_fields"]),
+                {"probe_id", "scheduled_slot", "run_key", "actual_invocation_start"},
+            )
+            self.assertEqual(
                 rejected["carry_intended_status_reason_as"],
-                "source_reason",
+                "write_blocked_job.source_reason",
             )
             self.assertTrue(rejected["continue_after_quarantine_result"])
+            self.assertTrue(rejected["run_state_request_not_required_for_quarantine"])
 
     def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
         with tempfile.TemporaryDirectory() as td:
