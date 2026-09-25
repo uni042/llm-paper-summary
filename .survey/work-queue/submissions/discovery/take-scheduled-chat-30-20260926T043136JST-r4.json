@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-26T04:31:36+09:00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.02897",
+      "arxiv_id": "2609.02897",
+      "title": "Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.02897",
+      "priority": 95,
+      "reason": "固定windowではなく段階別marginで投機的復号を制御する推論高速化で、検証規則の設計差が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2606.10935",
+      "arxiv_id": "2606.10935",
+      "title": "CLP: Collocation-Length Prediction for Zero-Loss Adaptive Multi-Token Inference",
+      "source_url": "https://arxiv.org/abs/2606.10935",
+      "priority": 94,
+      "reason": "zero-loss条件で複数トークン推論長を適応予測する方式で、可変検証長・投機推論系統に直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.14978",
+      "arxiv_id": "2605.14978",
+      "title": "Performance-Driven Policy Optimization for Speculative Decoding with Adaptive Windowing",
+      "source_url": "https://arxiv.org/abs/2605.14978",
+      "priority": 92,
+      "reason": "実性能を目的に投機windowを適応制御するため、ハードウェア認識型投機的復号の追跡候補として妥当。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
+    "round": "round-4",
+    "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+    "query_summary": "固定取得窓20件を評価し、推論システムとして直接性の高い候補3件を採用。",
+    "candidate_count": 20,
+    "accepted_count": 3,
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  },
+  "discovery_precheck": {
+    "request_id": "take-scheduled-chat-30-20260926T043136JST-r4",
+    "result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-30-20260926T043136JST-r4.json",
+    "receipt": "sha256:cd75170eb37450a593ec84a87ceff68f4c11ae1340cedcb1f053fdf67ca515a2"
+  }
+}
