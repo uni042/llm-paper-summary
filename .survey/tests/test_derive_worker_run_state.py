@@ -539,7 +539,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
         self.assertNotEqual(packet.get("job_id"), "job-fresh")
 
 
-    def test_safe_time_window_issues_explicit_stop_permit(self):
+    def test_old_time_window_never_issues_stop_permit(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             write_json(
@@ -550,14 +550,17 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
             value["actual_invocation_start"] = (
-                dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=55)
+                dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)
             ).isoformat()
             result = mod.derive(root, value)
-            self.assertTrue(result["finalization_permit_issued"])
-            self.assertTrue(result["stop_permit"]["issued"])
-            self.assertEqual(result["stop_permit"]["category"], "time_window")
-            self.assertTrue(result["run_termination_allowed"])
-            self.assertFalse(result["continuation_contract"]["must_consume_next_work_packet"])
+            self.assertFalse(result["finalization_permit_issued"])
+            self.assertFalse(result["stop_permit"]["issued"])
+            self.assertFalse(result["run_termination_allowed"])
+            self.assertTrue(result["continuation_contract"]["must_consume_next_work_packet"])
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertFalse(result["gate"]["handoff_window_active"])
+            self.assertFalse(result["gate"]["final_handoff_active"])
+            self.assertNotEqual(result["stop_permit"].get("category"), "time_window")
 
     def test_confirmed_platform_limit_uses_observed_limit_stop_permit(self):
         with tempfile.TemporaryDirectory() as td:
