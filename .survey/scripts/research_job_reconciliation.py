@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any
 
 import paper_identity
+import re
+
 import survey
 
 
@@ -53,45 +55,107 @@ def _write_json(path: Path, value: dict[str, Any]) -> None:
     staged.replace(path)
 
 
-def build_paper_index(repo_root: Path) -> dict[str, Any]:
-    """Build a stable-ID/path index from actual repository paper files only."""
-    repo_root = Path(repo_root).resolve()
-    old_root = survey.ROOT
-    try:
-        survey.ROOT = _survey_root(repo_root)
-        papers = survey.papers()
-    finally:
-        survey.ROOT = old_root
+def _inferred_paper_record(path: Path, repo_root: Path) -> dict[str, Any] | None:
+    """Read one real paper file without requiring perfect frontmatter.
 
+    Reconciliation must not become unavailable because one historical/imported
+    Markdown predates the current metadata schema. The canonical repository
+    quality/index builders may still report that metadata defect separately.
+    """
+    if path.name == "README.md" or path.name == "comparison.md":
+        return None
+    try:
+        meta, body = survey.front(path)
+    except Exception:
+        meta, body = {}, path.read_text(encoding="utf-8", errors="replace")
+
+    record = dict(meta or {})
+    title = str(record.get("title") or "").strip()
+    if not title:
+        match = re.search(r"^#\s+(.+?)\s*$", body, re.MULTILINE)
+        if match:
+            title = match.group(1).strip()
+            record["title"] = title
+
+    canonical = str(record.get("canonical_id") or "").strip()
+    if not canonical:
+        probes = [
+            str(record.get("source") or ""),
+            str(record.get("source_url") or ""),
+            body,
+            path.name,
+        ]
+        for probe in probes:
+            match = re.search(
+                r"(?:arXiv:|arxiv\.org/(?:abs|pdf)/)?(\d{4}\.\d{4,5})(?:v\d+)?",
+                probe,
+                re.IGNORECASE,
+            )
+            if match:
+                canonical = "arXiv:" + match.group(1)
+                record["canonical_id"] = canonical
+                record.setdefault("arxiv_id", match.group(1))
+                break
+        if not canonical:
+            doi = str(record.get("doi") or "").strip()
+            if doi:
+                canonical = doi if doi.lower().startswith("doi:") else "DOI:" + doi
+                record["canonical_id"] = canonical
+
+    if not record.get("source") and canonical.startswith("arXiv:"):
+        record["source"] = "https://arxiv.org/abs/" + canonical.split(":", 1)[1]
+
+    rel = path.relative_to(repo_root).as_posix()
+    identifiers = sorted(paper_identity.record_identifiers(record))
+    if not identifiers and canonical:
+        normalized = paper_identity.safe_norm_id(canonical)
+        if normalized:
+            identifiers = [normalized]
+    if not identifiers:
+        return None
+    return {
+        "canonical_id": canonical or identifiers[0],
+        "path": rel,
+        "identifiers": identifiers,
+        "title": title,
+    }
+
+
+def build_paper_index(repo_root: Path) -> dict[str, Any]:
+    """Build a stable-ID/path index from actual repository paper files only.
+
+    Unlike the canonical paper-index builder, this reconciliation index is
+    intentionally tolerant of historical Markdown missing current frontmatter:
+    one malformed imported paper must not keep every stale Research job alive.
+    """
+    repo_root = Path(repo_root).resolve()
     by_path: dict[str, dict[str, Any]] = {}
     by_identifier: dict[str, dict[str, Any]] = {}
-    for paper in papers:
-        record = dict(paper.get("meta") or {})
-        record["canonical_id"] = paper.get("canonical_id")
-        record["identifiers"] = paper.get("identifiers") or []
-        record["title"] = paper.get("title")
-        normalized = {
-            "canonical_id": paper.get("canonical_id"),
-            "path": paper.get("path"),
-            "identifiers": sorted(paper_identity.record_identifiers(record)),
-            "title": paper.get("title"),
-        }
-        path = str(paper.get("path") or "").strip()
-        if path:
-            by_path[path] = normalized
-        for identifier in normalized["identifiers"]:
-            prior = by_identifier.get(identifier)
-            if prior is not None and prior.get("path") != normalized.get("path"):
-                raise ValueError(
-                    f"duplicate represented identifier {identifier}: "
-                    f"{prior.get('path')} vs {normalized.get('path')}"
-                )
-            by_identifier[identifier] = normalized
+    paper_count = 0
+
+    for family in ("inference", "training", "survey"):
+        folder = repo_root / "papers" / family
+        if not folder.is_dir():
+            continue
+        for path in sorted(folder.glob("*/*.md")):
+            paper = _inferred_paper_record(path, repo_root)
+            if paper is None:
+                continue
+            paper_count += 1
+            by_path[paper["path"]] = paper
+            for identifier in paper["identifiers"]:
+                prior = by_identifier.get(identifier)
+                if prior is not None and prior.get("path") != paper.get("path"):
+                    raise ValueError(
+                        f"duplicate represented identifier {identifier}: "
+                        f"{prior.get('path')} vs {paper.get('path')}"
+                    )
+                by_identifier[identifier] = paper
 
     return {
         "by_path": by_path,
         "by_identifier": by_identifier,
-        "paper_count": len(papers),
+        "paper_count": paper_count,
     }
 
 
