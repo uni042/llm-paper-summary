@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 11:04:59 JST**
+> 自動生成: **2026-09-25 11:07:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **350** |
-| 未claim Research job | **208** |
+| 収録候補論文 | **349** |
+| 未claim Research job | **205** |
 | 直近24hの検証済みResearch収録 | **17** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
 | 最終検証済みDiscovery探索 | **09-25 10:26:34 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **350** |
+| canonical_id確認済みの一意な候補論文 | **349** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **350** |
+| 非終端Research job合計 | **349** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（26時間29分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（26時間31分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **2** | **0** | **0** | **142** | **10** | — |
+| Research | **0** | **3** | **0** | **0** | **144** | **9** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **29** | **15** | **14** | **0** | **0** | **0** | **19** |
-| 合計 | **29** | **17** | **14** | **0** | **142** | **10** | **19** |
+| 合計 | **29** | **18** | **14** | **0** | **144** | **9** | **19** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -137,11 +137,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-60392f6ae28160ede948e3b0.json` (job `job-research-6be480b73a6003b5`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-60392f6ae28160ede948e3b0.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (job `job-research-0dc5dd60b4569a06`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (job `job-research-b374f59330145700`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
@@ -199,7 +201,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **10件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **9件**
+- `SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b` — Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers / worker `shared-preload-pool`
+  - claim: **09-25 11:07:04 JST** / heartbeat: **—** / lease expiry: **09-25 23:07:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0e6a646bc0e365e6.json`
+- `DOI:10.1109/TPDS.2026.3729256` — Mix-or-Split: Latency-Aware Scheduling for Edge–Cloud LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 11:07:04 JST** / heartbeat: **—** / lease expiry: **09-25 23:07:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-59e372dc16ca4938.json`
+- `DOI:10.1145/3797905.3800532` — dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving / worker `shared-preload-pool`
+  - claim: **09-25 11:07:04 JST** / heartbeat: **—** / lease expiry: **09-25 23:07:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e5a3730c61eb2d64.json`
 - `arXiv:2609.27746` — The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems / worker `shared-preload-pool`
   - claim: **09-25 11:00:54 JST** / heartbeat: **—** / lease expiry: **09-25 23:00:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-7f906f58d99b0778.json`
@@ -221,15 +232,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2607.27269` — Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding / worker `scheduled-chat-00`
   - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:00:52 JST** / lease expiry: **09-25 12:30:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-ac58200c186f3e5a.json`
-- `DOI:10.1145/3830086` — CELLServe: An SLO-Aware and Cost Efficient LLMs Serving System for Serverless Computing Environments / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:00:52 JST** / lease expiry: **09-25 12:30:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b374f59330145700.json`
-- `arXiv:2605.15508` — STS: Efficient Sparse Attention with Speculative Token Sparsity / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:00:52 JST** / lease expiry: **09-25 12:30:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c97d88c20de27e1f.json`
-- `arXiv:2609.04526` — Scale-QLoRA: Code-Invariant Adapter Merging for Native 4-bit Microscaling LLMs / worker `scheduled-chat-00`
-  - claim: **09-25 11:00:52 JST** / heartbeat: **09-25 11:00:52 JST** / lease expiry: **09-25 12:30:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d13140588fd6d656.json`
 
 #### Audit
 
@@ -249,7 +251,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **350** |
+| ready | **349** |
 
 ### 候補の重複・識別情報欠損
 
@@ -277,8 +279,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **263** |
-| └ Research | **182** |
+| 成功result未照合のimmutable submission | **264** |
+| └ Research | **183** |
 | └ Audit | **2** |
 | └ Discovery | **52** |
 | └ Other/Unknown | **27** |
