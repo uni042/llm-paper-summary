@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 19:17:44 JST**
+> 自動生成: **2026-09-25 19:27:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（34時間41分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（34時間51分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,8 +72,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **143** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **5** | **8** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **5** | **9** | **3** | **0** | **143** | **0** | **3** |
+| Discovery | **3** | **8** | **3** | **0** | **0** | **0** | **3** |
+| 合計 | **3** | **9** | **3** | **0** | **143** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -103,14 +103,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/discovery-scheduled-chat-00-20260925T090214Z-3-r2-empty.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/discovery-scheduled-chat-00-20260925T090214Z-3-r2-empty.json`
   - 探索軸: preload-backward-structured-references
-- **09-25 13:23:58 JST** job `job-c9e9af732e39e63e` / 候補 **5件**
-  - result: `.survey/work-queue/results/discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21-p1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21-p1.json`
-  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-- **09-25 13:24:13 JST** job `job-bd053531dae40c6f` / 候補 **2件**
-  - result: `.survey/work-queue/results/discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21-p2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21-p2.json`
-  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
 
 ### 直近タスク
 
