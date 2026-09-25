@@ -93,33 +93,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if args.platform_limit:
         reasons.append("platform_limit_reached")
 
+    # Time-boundary fields are retained as telemetry/read compatibility only.
+    # Scheduled/adhoc deadlines must never authorize stopping or suppress new work.
     seconds_to_next = getattr(args, "seconds_to_next_scheduled_task", None)
     seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
     handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
-
-    if seconds_to_next is not None:
-        effective_seconds_to_handoff = int(seconds_to_next)
-        handoff_time_source = "next_scheduled_task"
-        handoff_reason = "next_scheduled_task_within_handoff_guard"
-    elif seconds_to_deadline is not None:
-        effective_seconds_to_handoff = int(seconds_to_deadline)
-        handoff_time_source = "adhoc_run_deadline_compat"
-        handoff_reason = "run_deadline_within_handoff_guard"
-    else:
-        effective_seconds_to_handoff = None
-        handoff_time_source = "unknown"
-        handoff_reason = None
-
-    handoff_window_active = bool(
-        effective_seconds_to_handoff is not None
-        and effective_seconds_to_handoff <= handoff_guard
-    )
-    final_handoff_active = bool(
-        effective_seconds_to_handoff is not None
-        and effective_seconds_to_handoff <= 180
-    )
-    if final_handoff_active and handoff_reason is not None:
-        reasons.append("time_boundary_within_final_180_second_handoff_guard")
+    effective_seconds_to_handoff = None
+    handoff_time_source = "disabled_for_control"
+    handoff_reason = None
+    handoff_window_active = False
+    final_handoff_active = False
 
     if not args.github_read:
         reasons.append("github_read_unavailable_for_repo_state")
@@ -241,12 +224,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"
             finalization_allowed = False
-        elif handoff_window_active:
-            reasons.append(handoff_reason or "handoff_window_no_new_discovery_round")
-            reasons.append("handoff_window_no_new_discovery_round")
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
         elif discovery_rounds_completed < discovery_min_rounds:
             decision = "CONTINUE"
             required_action = "DISCOVER_AGAIN"
@@ -310,12 +287,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             else:
                 required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
             finalization_allowed = False
-        elif handoff_window_active:
-            reasons.append(handoff_reason or "handoff_window_no_new_research_audit_claim")
-            reasons.append("handoff_window_no_new_research_audit_claim")
-            decision = "STOP_RUN"
-            required_action = "FINALIZE"
-            finalization_allowed = True
         elif not independent_work:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
@@ -325,9 +296,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             finalization_allowed = False
 
-    # Reasons added by the 600-second start-prohibition branch are canonical hard
-    # stop reasons too. Recompute after routing so finalization sees the same state
-    # that worker-router.md defines.
+    # Only concrete platform/read/durability/global dependency reasons can stop a run.
+    # Clock time is deliberately excluded from hard-stop derivation.
     hard_stop = bool(reasons)
 
     write_scope = "none"
@@ -507,8 +477,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = required_action
 
     productive_wait_required = bool(
-        not final_handoff_active
-        and required_action
+        required_action
         in {
             "MONITOR_CLAIM_FAST_LANE",
             "WAIT_FOR_CLAIM_RESULT",
@@ -603,21 +572,20 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             f"A refill is triggered while half of the hot bank-ready slice remains (current threshold {claim_refill_threshold}) and fills back toward the target window. "
             "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately. "
             "All submitted attempts remain durably tracked. "
-            "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
-            "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
+            "Submission results are monitored concurrently and do not become a claim barrier while independent Research/Audit work remains claimable. "
+            "Run deadlines and next-scheduled-task timestamps are telemetry only and never suppress new work or authorize finalization. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             f"candidate_inventory is mandatory: >={claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD} selects Research/Audit and below it selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
-            "Canonical fixed Scheduled Chat callers provide seconds_to_next_scheduled_task; seconds_to_run_deadline is only the ad-hoc compatibility fallback. "
+            "Legacy seconds_to_next_scheduled_task / seconds_to_run_deadline inputs may still be reported for compatibility but are ignored for control. "
             f"Discovery's {discovery_min_rounds}-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
             f"Research/Audit exposes the combined {research_minimum_completions}-completion quota state. The {research_minimum_completions}-completion floor is not a stop cap: "
-            "whenever claimable independent Research/Audit work exists outside the 600-second no-new-work window, "
+            "whenever claimable independent Research/Audit work exists, "
             "the required action is CLAIM_NEXT_RESEARCH_AUDIT even after the floor has been met. A pending "
             "submission therefore does not become a claim barrier while new Research/Audit work remains claimable; hard "
-            "handoff/platform/durability/read "
-            "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
-            "the final 180 seconds force safe handoff. The 600-second window never aborts an already-started Discovery precheck/evaluation/submission/recovery. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
+            "platform/durability/read failures override ordinary continuation. Time boundaries do not. "
+            "Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
             "Discovery has no exhaustion-based ordinary early stop."
         ),
     }
