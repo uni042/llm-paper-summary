@@ -1,4 +1,4 @@
-# Worker router — workflow v10.20
+# Worker router — workflow v10.21
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -29,8 +29,8 @@ Scheduled Chat / WorkワーカーがGitHub本文書込みを拒否された場�
 各実行（run）の開始時に最新 `main` HEADを取得し、同じHEADで次を読む。
 
 - `.survey/work-queue/hot-dispatch.json`（存在する場合。ゼロ待ち開始用の再構築可能index）
-- `.survey/work-queue/worker-worklist.json`（存在する場合。Library-first Scheduled worker向けの約100件共有選択index）
-- `.survey/work-queue/WORKLIST.md`（上記indexの人間向け表示。機械処理はJSONを優先）
+- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json`（専用100件index）と `.survey/work-queue/WORKLIST-00.md`
+- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json`（専用100件index）と `.survey/work-queue/WORKLIST-30.md`
 - `.survey/work-queue/next-jobs.json`
 - `.survey/work-queue/maintenance-cycle.json`
 - `.survey/work-queue/discovery-state.json`
@@ -80,23 +80,18 @@ runノルマの正規値は `.survey/scripts/worker_quota_policy.py` に一元�
 - **探索モード**: 今回のrunで最低8つの**成功した正規schema v3 precheck**を完了させ、そのprecheckに対応するDiscovery submission/resultまで耐久反映する。**1つのprecheck `request_id` = 1ラウンド**と数える。同じprecheckから候補を複数submissionへ分割しても1ラウンドのままであり、逆に別の成功precheckなら同じprovider・同じ探索元でも別ラウンドとして数える。候補0件の成功precheckも、0件submission/resultまで正規経路を完了すれば1ラウンドに数える。8ラウンドは停止上限ではない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能などのhard stopはノルマより優先する。ただし、**Research / Auditの内容書込みだけがplatform safetyで拒否され、claim/direct-take等の制御系GitHub writeとGitHub readが生きている場合はrun-wide hard stopへ昇格しない。** 第2.1節の `volatile pending durability` 規則で内容完成とGitHub耐久反映を分離し、既確保standbyの読解を継続する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
-### 2.0 Library-first共有ワークリスト
+### 2.0 Library-first専用ワークリスト
 
-現在の `:00` / `:30` Scheduled Chatが**Library-first運用**を指示されている場合は、対象選択の加速面として `.survey/work-queue/worker-worklist.json` を使う。同内容を `.survey/work-queue/WORKLIST.md` に人間向け表示する。これはjob / claim / paper実体 / relevance ledgerから再構築されるindexであり、それらの正本を置き換えない。
+現在の `:00` / `:30` Scheduled Chatが**Library-first運用**を指示されている場合は、workerごとに分離した専用indexを対象選択の第一入口として使う。
 
-worklistは次の2レーンをそれぞれ最大100件公開する。
+- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json` / 人間向け `.survey/work-queue/WORKLIST-00.md`
+- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json` / 人間向け `.survey/work-queue/WORKLIST-30.md`
 
-- `research_audit.rows`: readyかつ現在active claimではないResearch / Audit候補。
-- `discovery_review.rows`: 構造化referencesから、収録済み・無関係・borderlineのいずれにもまだ確定していないリスト入り判定待ち候補。
+各専用ページは、Research / Audit候補を最大100件、リスト入り判定待ちDiscovery候補を最大100件持つ。生成時に同一の正規候補列を決定的なround-robinで二分し、十分な候補在庫がある限り`:00`と`:30`の割当は重複させない。**「共有ページの先頭／末尾」という概念は使わない。** 各workerは自分専用の100件だけを処理候補として扱う。
 
-固定Scheduled workerの走査方向は競合低減のため次で固定する。
+worklistはjob / claim / paper実体 / relevance ledgerから再構築されるindexであり、それらの正本を置き換えない。Library-first runでは処理直前に最新mainの正本状態を再確認し、すでに処理済み・active claim済み・対象外となった行をskipする。同じpaper identityまたは探索candidate identityの完成成果がChatGPT Libraryへすでに耐久保存され、GitHub反映待ちになっている場合もskipして同じ専用ページの次候補へ進む。
 
-- `scheduled-chat-00`: 各レーンを **rankの小さい側（上）から下へ**走査する。
-- `scheduled-chat-30`: 各レーンを **rankの大きい側（下）から上へ**走査する。
-
-Library-first runでは、処理直前に最新mainの正本状態を再確認し、すでに処理済み・active claim済み・対象外となった行をskipする。さらに同じpaper identityまたは探索candidate identityの完成成果がChatGPT Libraryへすでに耐久保存され、GitHub反映待ちになっている場合もskipして次行へ進む。worklistが古い、欠損している、または対象レーンが空の場合だけ既存の正規job/reference poolから直接選ぶ。
-
-この上下分担は**対象を選ぶ順序だけ**を規定する。claim、重複排除、relevance判定、submissionなどGitHub正規経路を使うrunでは、それぞれの正規安全規則を省略しない。Library-first runでは完成内容をGitHub本文へ直接反映せず、タスク本文で指定されたLibrary保存規則を優先する。
+専用worklistが欠損・古い・該当レーン空の場合だけ既存の正規job/reference poolから直接選ぶ。その場合も可能な限りもう一方の固定Scheduled workerが処理中・Library保存済みのidentityを避ける。claim、重複排除、relevance判定、submissionなどGitHub正規経路を使うrunでは、それぞれの正規安全規則を省略しない。Library-first runでは完成内容をGitHub本文へ直接反映せず、タスク本文で指定されたLibrary保存規則を優先する。
 
 ### 2.0.1 ゼロ待ちhot dispatch（Research / Discovery共通）
 

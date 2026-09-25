@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build the shared top/bottom worklist used by scheduled survey workers.
+"""Build dedicated 100-item worklists for scheduled-chat-00 and scheduled-chat-30.
 
-The output is a rebuildable selection surface only. Canonical job/claim state and
-reference relevance ledgers remain authoritative. A worker must re-check canonical
-state immediately before doing content work.
+The worklists are rebuildable selection indexes only. Canonical job/claim state,
+paper files, and reference relevance ledgers remain authoritative. The two worker
+pages are deterministically disjoint whenever at least 200 eligible rows exist.
 """
 from __future__ import annotations
 
@@ -18,8 +18,7 @@ import claim_state
 import reference_pool
 
 DEFAULT_LIMIT = 100
-DEFAULT_JSON = Path(".survey/work-queue/worker-worklist.json")
-DEFAULT_MARKDOWN = Path(".survey/work-queue/WORKLIST.md")
+WORKERS = ("00", "30")
 
 
 def _now() -> str:
@@ -60,7 +59,7 @@ def _jobs(root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _research_rows(root: Path, *, limit: int) -> tuple[list[dict[str, Any]], int, int]:
+def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     jobs = _jobs(root)
     claims = claim_state.current_claims(root)
     ready = [
@@ -81,11 +80,11 @@ def _research_rows(root: Path, *, limit: int) -> tuple[list[dict[str, Any]], int
             str(row.get("job_id") or ""),
         )
     )
-    selected: list[dict[str, Any]] = []
-    for rank, row in enumerate(claimable[:limit], start=1):
-        selected.append(
+    out: list[dict[str, Any]] = []
+    for source_rank, row in enumerate(claimable, start=1):
+        out.append(
             {
-                "rank": rank,
+                "source_rank": source_rank,
                 "source_kind": "research_job",
                 "job_id": row.get("job_id"),
                 "type": row.get("type"),
@@ -97,20 +96,20 @@ def _research_rows(root: Path, *, limit: int) -> tuple[list[dict[str, Any]], int
                 "created_at": row.get("created_at"),
             }
         )
-    return selected, len(ready), len(claimable)
+    return out, len(ready)
 
 
-def _discovery_rows(root: Path, *, limit: int) -> tuple[list[dict[str, Any]], int]:
+def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     pool = reference_pool.build_reference_pool(root)
     source = pool.get("candidates")
     candidates = source if isinstance(source, list) else []
-    selected: list[dict[str, Any]] = []
-    for rank, row in enumerate(candidates[:limit], start=1):
+    out: list[dict[str, Any]] = []
+    for source_rank, row in enumerate(candidates, start=1):
         if not isinstance(row, dict):
             continue
-        selected.append(
+        out.append(
             {
-                "rank": rank,
+                "source_rank": source_rank,
                 "source_kind": "reference_review_candidate",
                 "canonical_id": row.get("canonical_id"),
                 "identity_tokens": row.get("identity_tokens"),
@@ -123,47 +122,61 @@ def _discovery_rows(root: Path, *, limit: int) -> tuple[list[dict[str, Any]], in
                 "linked_from": row.get("linked_from"),
             }
         )
-    return selected, int(pool.get("candidate_count") or len(candidates))
+    return out, int(pool.get("candidate_count") or len(candidates))
 
 
-def build(root: Path, *, limit: int) -> dict[str, Any]:
-    research, research_ready, research_claimable = _research_rows(root, limit=limit)
-    discovery, discovery_pending = _discovery_rows(root, limit=limit)
-    return {
-        "schema_version": 1,
-        "purpose": "scheduled-worker-selection-surface",
-        "limits": {
-            "research_audit": limit,
-            "discovery_review": limit,
-        },
-        "worker_directions": {
-            "scheduled-chat-00": {
-                "direction": "top_to_bottom",
-                "rank_order": "ascending",
+def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str, Any]]]:
+    """Assign alternating canonical rows to 00/30, with no overlap."""
+    assigned = {"00": [], "30": []}
+    for index, source in enumerate(rows):
+        worker = WORKERS[index % 2]
+        if len(assigned[worker]) >= limit:
+            other = "30" if worker == "00" else "00"
+            if len(assigned[other]) >= limit:
+                break
+            worker = other
+        row = dict(source)
+        row["rank"] = len(assigned[worker]) + 1
+        row["assigned_worker"] = f"scheduled-chat-{worker}"
+        assigned[worker].append(row)
+        if all(len(assigned[key]) >= limit for key in WORKERS):
+            break
+    return assigned
+
+
+def build(root: Path, *, limit: int) -> dict[str, dict[str, Any]]:
+    research_all, research_ready = _research_candidates(root)
+    discovery_all, discovery_pending = _discovery_candidates(root)
+    research = _split(research_all, limit=limit)
+    discovery = _split(discovery_all, limit=limit)
+
+    result: dict[str, dict[str, Any]] = {}
+    for worker in WORKERS:
+        worker_id = f"scheduled-chat-{worker}"
+        result[worker] = {
+            "schema_version": 2,
+            "purpose": "dedicated-scheduled-worker-selection-surface",
+            "worker_id": worker_id,
+            "assignment_policy": "deterministic_disjoint_round_robin",
+            "selection_rules": [
+                "Use only this worker's dedicated page/index; do not consume the other scheduled worker's page.",
+                "This is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
+                "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
+                "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
+            ],
+            "research_audit": {
+                "ready_total": research_ready,
+                "claimable_total": len(research_all),
+                "displayed": len(research[worker]),
+                "rows": research[worker],
             },
-            "scheduled-chat-30": {
-                "direction": "bottom_to_top",
-                "rank_order": "descending",
+            "discovery_review": {
+                "pending_total": discovery_pending,
+                "displayed": len(discovery[worker]),
+                "rows": discovery[worker],
             },
-        },
-        "selection_rules": [
-            "This file is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
-            "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
-            "For Library-first runs, skip a paper identity already saved in ChatGPT Library as a completed pending GitHub import.",
-            "scheduled-chat-00 scans from rank 1 upward; scheduled-chat-30 scans from the largest displayed rank downward.",
-        ],
-        "research_audit": {
-            "ready_total": research_ready,
-            "claimable_total": research_claimable,
-            "displayed": len(research),
-            "rows": research,
-        },
-        "discovery_review": {
-            "pending_total": discovery_pending,
-            "displayed": len(discovery),
-            "rows": discovery,
-        },
-    }
+        }
+    return result
 
 
 def _esc(value: Any) -> str:
@@ -177,26 +190,26 @@ def _link(label: Any, url: Any) -> str:
     return f"[{label_s}]({url_s})" if url_s else label_s
 
 
-def render_markdown(payload: dict[str, Any]) -> str:
+def render_markdown(payload: dict[str, Any], worker: str) -> str:
     generated = str(payload.get("generated_at") or "")
     research = payload["research_audit"]
     discovery = payload["discovery_review"]
     out = [
-        "# Scheduled worker shared worklist",
+        f"# Scheduled worker :{worker} worklist",
         "",
+        f"Worker: `scheduled-chat-{worker}`  ",
         f"Generated: `{generated}`",
         "",
-        "このページは再構築可能な選択索引です。正本は `.survey/work-queue/jobs/`、claim、論文実体、"
-        "およびrelevance ledgerです。処理直前に最新正本を再確認してください。",
+        "このページはこのworker専用の再構築可能な選択索引です。もう一方のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。",
+        "正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。",
         "",
-        "- `scheduled-chat-00`: **上から下**へ処理する。",
-        "- `scheduled-chat-30`: **下から上**へ処理する。",
-        "- Library-first runでは、同じidentityの完成原稿・探索結果がすでにChatGPT Libraryへ保存済みならskipする。",
-        "- 行が最新状態で処理済み・claim済み・対象外になっていればskipし、次の行へ進む。",
+        "- このページに割り当てられた候補だけを使用する。",
+        "- Library-first runでは、同じidentityの完成原稿・探索結果がChatGPT Libraryへ保存済みならskipする。",
+        "- 最新状態で処理済み・claim済み・対象外ならskipし、同じページ内の次候補へ進む。",
         "",
         "## 未処理 Research / Audit",
         "",
-        f"ready総数: **{research['ready_total']}** / 未claim総数: **{research['claimable_total']}** / 表示: **{research['displayed']}**",
+        f"ready総数: **{research['ready_total']}** / 未claim総数: **{research['claimable_total']}** / このworker向け: **{research['displayed']}**",
         "",
         "| # | 種別 | identity | title | source | 想定配置先 |",
         "|---:|---|---|---|---|---|",
@@ -218,7 +231,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "",
             "## リスト入り判定待ち Discovery候補",
             "",
-            f"未判定総数: **{discovery['pending_total']}** / 表示: **{discovery['displayed']}**",
+            f"未判定総数: **{discovery['pending_total']}** / このworker向け: **{discovery['displayed']}**",
             "",
             "| # | identity | title | year | 関連数 | 系統候補 | source |",
             "|---:|---|---|---:|---:|---|---|",
@@ -242,37 +255,41 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Machine-readable",
             "",
-            "同じ内容は [worker-worklist.json](worker-worklist.json) にあります。Scheduled workerはMarkdownの表を解析せず、可能ならJSONを使用します。",
+            f"同じ割当は [worker-worklist-{worker}.json](worker-worklist-{worker}.json) にあります。",
             "",
         ]
     )
     return "\n".join(out)
 
 
-def write_outputs(
-    root: Path,
-    payload: dict[str, Any],
-    *,
-    json_output: Path,
-    markdown_output: Path,
-) -> dict[str, Any]:
-    json_path = json_output if json_output.is_absolute() else root / json_output
-    markdown_path = markdown_output if markdown_output.is_absolute() else root / markdown_output
-
-    old = _read(json_path, {})
-    old_cmp = dict(old) if isinstance(old, dict) else {}
-    old_cmp.pop("generated_at", None)
-    if old_cmp == payload:
-        generated = str(old.get("generated_at") or _now())
-    else:
-        generated = _now()
-
-    final = {"generated_at": generated, **payload}
-    _write_text(
-        json_path,
-        json.dumps(final, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+def _paths(output_dir: Path, worker: str) -> tuple[Path, Path]:
+    return (
+        output_dir / f"worker-worklist-{worker}.json",
+        output_dir / f"WORKLIST-{worker}.md",
     )
-    _write_text(markdown_path, render_markdown(final) + "\n")
+
+
+def write_outputs(root: Path, payloads: dict[str, dict[str, Any]], *, output_dir: Path) -> dict[str, dict[str, Any]]:
+    base = output_dir if output_dir.is_absolute() else root / output_dir
+    final: dict[str, dict[str, Any]] = {}
+    for worker in WORKERS:
+        json_path, markdown_path = _paths(base, worker)
+        payload = payloads[worker]
+        old = _read(json_path, {})
+        old_cmp = dict(old) if isinstance(old, dict) else {}
+        old_cmp.pop("generated_at", None)
+        generated = (
+            str(old.get("generated_at") or _now())
+            if old_cmp == payload
+            else _now()
+        )
+        worker_payload = {"generated_at": generated, **payload}
+        _write_text(
+            json_path,
+            json.dumps(worker_payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        )
+        _write_text(markdown_path, render_markdown(worker_payload, worker) + "\n")
+        final[worker] = worker_payload
     return final
 
 
@@ -280,27 +297,25 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--limit", type=int, default=DEFAULT_LIMIT)
-    parser.add_argument("--json-output", type=Path, default=DEFAULT_JSON)
-    parser.add_argument("--markdown-output", type=Path, default=DEFAULT_MARKDOWN)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path(".survey/work-queue"),
+    )
     args = parser.parse_args()
     if args.limit <= 0:
         parser.error("--limit must be > 0")
     root = args.repo_root.resolve()
-    payload = build(root, limit=args.limit)
-    final = write_outputs(
-        root,
-        payload,
-        json_output=args.json_output,
-        markdown_output=args.markdown_output,
-    )
+    payloads = build(root, limit=args.limit)
+    final = write_outputs(root, payloads, output_dir=args.output_dir)
     print(
         json.dumps(
             {
-                "generated_at": final["generated_at"],
-                "research_displayed": final["research_audit"]["displayed"],
-                "research_claimable_total": final["research_audit"]["claimable_total"],
-                "discovery_displayed": final["discovery_review"]["displayed"],
-                "discovery_pending_total": final["discovery_review"]["pending_total"],
+                worker: {
+                    "research_displayed": final[worker]["research_audit"]["displayed"],
+                    "discovery_displayed": final[worker]["discovery_review"]["displayed"],
+                }
+                for worker in WORKERS
             },
             ensure_ascii=False,
         )
