@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "submission_id": "discovery-scheduled-chat-00-20260925T090214Z-3-backward-r1",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+  "discovery_precheck": {
+    "request_id": "take-scheduled-chat-00-20260925T090214Z-3-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-00-20260925T090214Z-3-r2.json",
+    "receipt": "sha256:fe118415428dd45d16cc2eb8ac860cfe7309488faa67b2d8b1a87d9390b8ae06"
+  },
+  "discovery_stats": {
+    "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+    "round": "backward-r1",
+    "axis": "preload-backward-structured-references",
+    "topic": "structured references",
+    "source": "repository_references",
+    "date_range": "repository-wide",
+    "category": "inference-systems",
+    "citation_direction": "backward",
+    "query_family": "structured-reference-curation",
+    "search_window_key": "preload-43c1e58856fe5daff15c",
+    "raw_result_count": 20,
+    "unseen_result_count": 20,
+    "candidate_evaluation_count": 20,
+    "candidate_accepted_count": 0,
+    "last_position": "preload-43c1e58856fe5daff15c"
+  },
+  "candidates": []
+}
