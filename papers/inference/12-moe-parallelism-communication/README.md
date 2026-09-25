@@ -48,7 +48,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。
 
 - **2025-12 · [Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism](2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md)**  
-  実装：— ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：1  
   分離専門家並列で注意・共有専門家・専門家計算と双方向通信を細粒度タスクへ分割し、粒度と実行順を性能モデルから同時最適化して、最適化済みPPPipe比でスループットを最大1.61倍へ高める。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）

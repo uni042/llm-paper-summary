@@ -369,7 +369,7 @@
   端末側でモダリティ別特徴を先に融合してから64次元へ学習圧縮し、固定長潜在表現だけをサーバへ送ることで通信量を32分の1、帯域制約下の推定総遅延を最大3.4倍改善する。
 
 - **2026-09 · [Disaggregated Quantization: Specializing LLM Prefill and Decode](2026-2609.26333-disaggregated-quantization-prefill-decode.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   分離量子化（Disaggregated Quantization; DQ）は、両段階に同じ量子化形式を強制せず、プリフィルには演算器が高速に扱えるNVFP4等、復号には2〜3ビット級の重みのみ量子化を割り当てる。
 
 - **2026-09 · [Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows](2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md)**  

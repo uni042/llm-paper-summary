@@ -49,7 +49,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels](2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   新しい注意方式を提案しても、実用速度を得るには専用GPUカーネルを書く必要がある。RTX 3090のRoPE付き因果注意では柔軟注意に対して2.10倍高速化し、H100ではLlama-3-8Bの訓練ステップをPyTorchの手調整済み後端との差5%以内で実行した。
 
 - **2026-08 · [UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge](2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md)**  

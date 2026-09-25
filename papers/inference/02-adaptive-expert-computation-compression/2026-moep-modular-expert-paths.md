@@ -14,7 +14,14 @@ primary_fulltext: https://oulurepo.oulu.fi/bitstream/handle/10024/65293/nbnfioul
 code: null
 last_audited: null
 audit_version: 0
+summary: 固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
+sources:
+- https://doi.org/10.1016/j.neunet.2026.109617
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-09-25'
 ---
+
 # MoEP: Compact and efficient sparsity with modular expert paths
 
 > 固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。

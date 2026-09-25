@@ -84,8 +84,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/Y-Research-SBU/SeqTopK) ・ リポジトリ内被引用：2  
   系列全体で同じ総エキスパート予算を保ちながら、容易なトークンから難しいトークンへ計算を再配分し、高スパースMoEの品質を改善するSeqTopKを提案。
 
-- **2026-07 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
-  実装：— ・ リポジトリ内被引用：1  
+- **2026-06 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
   混合専門家（Mixture-of-Experts; MoE）モデルは各トークンで一部の専門家だけを活性化するため演算量を抑えられる一方、端末側では全専門家重みを高速メモリへ常駐できないことがある。隣接トークンが別々の専門家を選ぶと、低速な主記憶やストレージから重みを繰り返し入れ替える必要が生じ、疎な計算という利点がメモリ転送で相殺される。
 
 - **2026-05 · [SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training](2026-2605.08738-slimqwen-pruning-distillation.md)**  
@@ -235,7 +235,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   固定Top-K候補を学習二値マスクでトークンごとに削り、vLLM CUDA実装で実際の専門家計算を省略する動的MoEルーティング。
 
 - **2026-03 · [LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing](2026-2603.12645-lightmoe-expert-replacing.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   枝刈りは知識を不可逆に捨て、統合は異なる専門性を平均化しやすい。OLMoE-1B-7B-SFTを5種類の下流課題で評価した結果、30%圧縮では非圧縮モデルへのLoRA微調整とほぼ同等の平均性能を維持し、50%圧縮では同じ学習予算の既存圧縮法を平均5.6%、単純置換を3.8%上回った。
 
 - **2026-02 · [VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse](2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md)**  
@@ -421,6 +421,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 公開時期未分類
 
 - **2026 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
 <!-- survey:auto:end -->
