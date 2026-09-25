@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
   "job_id": "job-research-0a5acd3b5ba5b245",
-  "data": {},
+  "data": {
+    "limitations": "recurrent architecture中心で通常Transformerへの一般化は未確認。品質評価規模は100例中心で、4Kでは約3.3 F1 point低下。最適td/etaはmodel・task依存で、production serving統合評価も限定的。",
+    "differences": "early exitは後半反復自体を省くがWISEは全recurrent depthを残してattention supportだけを縮小する。static sparse attentionと異なり初期反復の実attentionから入力固有working setを作る。FlashAttention型kernel最適化とは相補的。",
+    "implementation_status": "training-free inference methodとして実装・評価。公開code URLは今回確認した一次資料情報から確定できない。",
+    "research_positioning": "recurrent LLMのdynamic sparse attentionとinference accelerationの交点に位置する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-c6201f095f5e02114030eae0",
     "worker_id": "scheduled-chat-00",

@@ -4,7 +4,12 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
   "job_id": "job-research-0a5acd3b5ba5b245",
-  "data": {},
+  "data": {
+    "hardware": "system latencyはNVIDIA RTX A6000で測定。",
+    "software": "HuginnおよびRecurrent-Llama-T32系recurrent language model。WISEはtraining-free inference modification。",
+    "methodology": "HotpotQA、2WikiMultiHopQA、GSM8Kで評価。品質100例、機構分析30例、system latency30例。T=32, td=12, block size 32, eta=0.95を主要設定とし、dense FlashAttentionとsupport size一致の静的baseline等を比較。",
+    "scope": "recurrent LLMのmulti-hop QA・reasoningとattention latencyを中心に検証。4K長文脈を含む。"
+  },
   "reservation": {
     "claim_id": "claim-preload-c6201f095f5e02114030eae0",
     "worker_id": "scheduled-chat-00",

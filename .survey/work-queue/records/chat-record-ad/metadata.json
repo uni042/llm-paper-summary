@@ -4,7 +4,49 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
   "job_id": "job-research-0a5acd3b5ba5b245",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2609.27373",
+    "arxiv_id": "2609.27373",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+    "summary": "WISEはrecurrent LLMでattention routingが表現収束より早く安定する観測を利用し、初期反復で得た高質量attention block集合を後半反復で再利用するtraining-free推論法。32反復中12反復まで通常attentionを行い、9〜12反復で95%注意質量を覆うworking setを構築して残り20反復で固定利用する。4KではRTX A6000上で後半attentionを1.758倍、32反復全体を1.355倍高速化する一方、条件によって品質低下も観測される。",
+    "list_summary": "recurrent LLMの早期安定するattention supportを後半反復で再利用し、反復深度を削らずattention計算を高速化する。",
+    "authors": [
+      "Ke Wan",
+      "Chen Chen"
+    ],
+    "published": "2026-09-23",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint",
+    "lineage": "recurrent language models / sparse attention / inference acceleration",
+    "topics": [
+      "recurrent LLM",
+      "sparse attention",
+      "working set",
+      "attention routing"
+    ],
+    "importance": "反復回数を早期終了せずattention支持集合だけを固定化して後半計算を削減する。",
+    "implementation": "training-free inference-time working-set attention。T=32, td=12, block size 32, eta=0.95を中心に評価。",
+    "hardware_evaluation": "NVIDIA RTX A6000。",
+    "quality_effect": "4K条件ではF1が約3.3ポイント低下する例があり、静的supportに対する品質優位も一貫しない。",
+    "source": "https://arxiv.org/abs/2609.27373",
+    "sources": [
+      "https://arxiv.org/abs/2609.27373"
+    ],
+    "code": null,
+    "last_checked": "2026-09-25",
+    "references": [],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary manuscript"
+  },
   "reservation": {
     "claim_id": "claim-preload-c6201f095f5e02114030eae0",
     "worker_id": "scheduled-chat-00",

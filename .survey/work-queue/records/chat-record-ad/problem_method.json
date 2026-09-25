@@ -4,7 +4,26 @@
   "slot": "problem_method",
   "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
   "job_id": "job-research-0a5acd3b5ba5b245",
-  "data": {},
+  "data": {
+    "problem": "Recurrent language modelは同じblockを多数反復して表現を改善できるが、各反復で長いKV系列へのattentionを繰り返すため長文脈ではattentionが推論時間を支配する。early exitは反復深度を削って品質を損ね得る。",
+    "novelty": "attention routingがhidden representationより早く安定する性質を利用し、初期反復だけdense attentionを実行して入力固有block working setを抽出し、後半反復で同じsupportを再利用する。",
+    "method_overview": "T=32のうちtd=12までは通常attention。反復9〜12のattention massをblock size 32単位で集計し累積95%を覆うblock集合をworking setとする。13〜32反復ではquery更新を続けつつkey/value参照先をworking setへ限定する。training不要。",
+    "components": [
+      {
+        "name": "early routing observation",
+        "description": "初期反復のattention supportが後半まで安定することを利用する。"
+      },
+      {
+        "name": "dynamic working set",
+        "description": "入力ごとのattention massから95%を覆うblock集合を選ぶ。"
+      },
+      {
+        "name": "late-iteration reuse",
+        "description": "後半反復でworking setだけにattentionしrecurrent depthは維持する。"
+      }
+    ],
+    "system_design": "early exitではなくtrajectory後半のattention supportだけを入力適応的に固定する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-c6201f095f5e02114030eae0",
     "worker_id": "scheduled-chat-00",

@@ -4,7 +4,28 @@
   "slot": "results",
   "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
   "job_id": "job-research-0a5acd3b5ba5b245",
-  "data": {},
+  "data": {
+    "overview": "4KでRTX A6000上の後半attentionは161.382 msから91.820 msへ低下し1.758倍高速化、32反復全体は258.787 msから190.973 msへ低下し1.355倍高速化。一方4KではF1が約3.3ポイント低下する例がある。",
+    "key_results": [
+      {
+        "metric": "late attention latency",
+        "value": "161.382 ms → 91.820 ms (1.758×)",
+        "baseline": "dense attention",
+        "condition": "4K, RTX A6000",
+        "interpretation": "working set再利用で後半KV参照量を削減。"
+      },
+      {
+        "metric": "full trajectory latency",
+        "value": "258.787 ms → 190.973 ms (1.355×)",
+        "baseline": "dense 32-step trajectory",
+        "condition": "4K, RTX A6000",
+        "interpretation": "全反復を含めても実時間短縮が残る。"
+      }
+    ],
+    "negative_results": "4KではF1が約3.3ポイント低下する条件がある。Recurrent-Llama-T32ではsupport size一致の静的baselineに対するWISEのF1優位が一貫しない。",
+    "interpretation": "early support stabilityは計算削減に利用できるが固定化近似の誤差はmodel・task・context依存。",
+    "quality_impact": "recurrent depthは維持するがsupport固定による情報欠落で品質低下が起こり得る。"
+  },
   "reservation": {
     "claim_id": "claim-preload-c6201f095f5e02114030eae0",
     "worker_id": "scheduled-chat-00",
