@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-e6d3f0c74155be3ba893092d",
+  "attempt_id": "attempt-preload-7635f07ba289706ec71d837f",
   "job_id": "job-research-6884e3d688f660cb",
   "data": {
     "problem": "専門家並列の混合専門家モデルでは各専門家をGPUへ分散配置しても、実際のルータ選択は入力依存で偏るため、あるGPUへトークンが集中してフィードフォワードネットワーク計算が律速になる。動的な専門家複製は人気専門家のコピーを空いているGPUへ置くことでこの偏りを緩和できるが、ルーティング前に将来の専門家需要を予測する必要がある。従来の各トークンの専門家を直接予測する設計は、当たれば通信と計算の両方を減らせる一方、精度を上げるほど予測器自体の計算・状態保持コストが増える。したがって予測精度だけを最大化してもエンドツーエンド遅延は最小化されず、相互接続帯域やワークロード偏りを含めたシステム全体の選択基準が必要になる。",
@@ -21,7 +21,7 @@
     "system_design": "Mixtral 8x7Bの専門家並列層を対象に、専門家需要予測、複製配置、トークンディスパッチ、注意機構・フィードフォワードネットワーク・通信・予測器の遅延集計を一体化したシミュレーション設計。"
   },
   "reservation": {
-    "claim_id": "claim-preload-e6d3f0c74155be3ba893092d",
+    "claim_id": "claim-preload-7635f07ba289706ec71d837f",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
