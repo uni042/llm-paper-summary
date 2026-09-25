@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.859",
+      "doi": "10.18653/v1/2026.acl-long.859",
+      "title": "SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.859",
+      "priority": 93,
+      "reason": "KV-cache reuse method for reducing long-context RAG prefill latency."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-2eb0f8e747ce792c0837f431",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-2eb0f8e747ce792c0837f431.json",
+    "receipt": "sha256:b1ea1d2d0aa8cac7b46365c35dc822e21d05d98893d0b92e502114f021179366"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-2eb0f8e747ce792c0837f431",
+    "axis": "forward citations of KVLink efficient KV cache reuse",
+    "candidate_count": 13,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}
