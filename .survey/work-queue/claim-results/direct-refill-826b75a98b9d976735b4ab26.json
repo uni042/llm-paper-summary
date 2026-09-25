@@ -734,7 +734,16 @@
       "preloaded_at": "2026-09-24T13:35:28+00:00",
       "preload_pool_adopted_at": "2026-09-25T02:00:52+00:00",
       "pipeline_position": 12,
-      "pipeline_role": "standby"
+      "pipeline_role": "standby",
+      "record_bank": "af",
+      "record_bank_root": ".survey/work-queue/records/chat-record-af",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-af/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-af/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-af/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-af/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-af/positioning.json"
+      }
     }
   ],
   "processed_at": "2026-09-25T02:00:52+00:00",
