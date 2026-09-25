@@ -68,6 +68,28 @@ jobs:
             .survey/scripts/survey.py
           python -m unittest discover -s .survey/tests -p 'test_*.py'
 
+      - name: Backfill incomplete paper metadata once
+        shell: bash
+        run: |
+          set -euo pipefail
+          for publish_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/backfill_paper_metadata.py --repo-root . --missing-only
+            python .survey/scripts/survey.py --root .survey build
+            git add README.md papers .survey/survey-state/paper-identity-index.json
+            if git diff --cached --quiet; then
+              echo 'No paper metadata changes to publish.'
+              break
+            fi
+            git commit -m 'data: backfill incomplete paper metadata'
+            if git push origin HEAD:main; then
+              break
+            fi
+            echo "Metadata push race on attempt ${publish_attempt}; recomputing from latest main."
+            sleep $((publish_attempt * 2))
+          done
+
       - name: Backfill references in durable batches
         shell: bash
         run: |
@@ -80,7 +102,6 @@ jobs:
               git fetch origin main
               git reset --hard origin/main
               echo "citation backfill batch ${round}, publish attempt ${publish_attempt}"
-              python .survey/scripts/backfill_paper_metadata.py --repo-root . --missing-only
               result=$(python .survey/scripts/backfill_citations.py --root . --limit 25 --delay 0.75 --apply)
               echo "$result"
               python .survey/scripts/citation_graph.py \
