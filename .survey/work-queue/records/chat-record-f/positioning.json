@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
+  "attempt_id": "attempt-preload-a847c8ad5a2c39900cee895a",
   "job_id": "job-research-c312adffcbd5fa76",
   "data": {
     "limitations": "The main kernel study focuses on batch-1 decode and L40S. A100 does not reproduce the L40S speedup, so results depend on memory hierarchy and launch geometry. The 4B end-to-end result with an int8 output head includes a change outside the lattice weight kernel. Quality is measured on a limited set of models and tasks.",
@@ -11,7 +11,7 @@
     "research_positioning": "This is a systems-oriented low-bit inference paper at the boundary between vector quantization and GPU kernel/memory-layout design. Its key systems lesson is that compression quality per file bit is insufficient: VRAM bytes per weight, decode regularity, and the target GPU byte bound must be evaluated together."
   },
   "reservation": {
-    "claim_id": "claim-preload-9a2b16779f8e3ddfeb6f3da7",
+    "claim_id": "claim-preload-a847c8ad5a2c39900cee895a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
+  "attempt_id": "attempt-preload-a847c8ad5a2c39900cee895a",
   "job_id": "job-research-c312adffcbd5fa76",
   "data": {
     "problem": "Leech-lattice vector quantizationは2 bit/weight級で高い品質を報告するが、元のserving kernelは単一shellしか復号せず、2.000 b/wのrateに必要な全301 classのmulti-shell codebookを実際にGPUで復号する経路が欠けていた。さらに圧縮ファイルのbit rateが小さくても、巨大codebookをGPUで分岐なく復号するにはindexを展開したVRAM表現が必要となり、実際のmemory trafficと速度はon-disk rateから予測できない。",
@@ -29,7 +29,7 @@
     "system_design": "全体設計は、圧縮率を最小にする保存形式と、GPUが高速に消費できる実行形式を同一視しない。保存側では2 bit/weight級のLeech格子表現を維持し、load-time transcoderで複雑さを一度だけ支払って規則的なVRAM recordへ変換する。推論側では固定stride読出し、table参照、predicated復号、積和を一つの融合経路にまとめる。このため設計上の主要なトレードオフは、ファイル容量、VRAM bytes/weight、復号規則性、対象GPUで得られる実効帯域の4点となる。"
   },
   "reservation": {
-    "claim_id": "claim-preload-9a2b16779f8e3ddfeb6f3da7",
+    "claim_id": "claim-preload-a847c8ad5a2c39900cee895a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
