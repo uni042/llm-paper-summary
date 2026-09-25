@@ -51,6 +51,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertNotIn("最大2本先行", router)
 
     def test_repeated_30_second_polling_contract_is_absent(self):
+        # One bounded grace wait is intentional; repeated fixed-interval polling is not.
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
