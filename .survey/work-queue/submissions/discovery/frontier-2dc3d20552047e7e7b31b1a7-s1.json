@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2407.04656",
+      "arxiv_id": "2407.04656",
+      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2407.04656",
+      "priority": 88,
+      "reason": "MoE systems work on adaptive expert placement, elasticity and fault recovery."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-2dc3d20552047e7e7b31b1a7",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-2dc3d20552047e7e7b31b1a7.json",
+    "receipt": "sha256:2a0e54af0ce80bd396b1f8d9020884509e7fb8d443f2d1875c69dc94fd93b8ca"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-2dc3d20552047e7e7b31b1a7",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
