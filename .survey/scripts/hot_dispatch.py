@@ -221,6 +221,9 @@ def _research_resume_packets(
             and slot_paths
             and all(isinstance(value, str) and value for value in slot_paths.values())
         )
+        foreground_guard = hashlib.sha256(
+            "\0".join((job_id, claim_id, attempt_id)).encode("utf-8")
+        ).hexdigest()
         packet: dict[str, Any] = {
             "claim_id": claim_id,
             "job_id": job_id,
@@ -271,32 +274,52 @@ def _research_resume_packets(
                 "continue_after_durable_create": True,
                 "retry_policy": "blocked_retry_7d",
                 "on_status_only_write_rejected": {
-                    "next_action": "UPDATE_HEALTH_PROBE_WITH_QUARANTINE_THEN_READ_RESULT",
-                    "health_probe_path": ".survey/work-queue/transport/health-probe.json",
-                    "health_probe_operation": "update_existing_file_once",
-                    "health_probe_requires_latest_blob_sha": True,
-                    "health_probe_result_directory": ".survey/work-queue/transport/health-probe-results",
-                    "health_probe_payload_base": {
+                    "next_action": "UPDATE_WORKER_CONTROL_WITH_FOREGROUND_GUARD_THEN_READ_RESULT",
+                    "worker_control_path": (
+                        Path(".survey/work-queue/transport/worker-control")
+                        / f"{worker_id}.json"
+                    ).as_posix(),
+                    "worker_control_operation": "update_existing_file_once",
+                    "worker_control_requires_latest_blob_sha": True,
+                    "worker_control_result_directory": (
+                        ".survey/work-queue/transport/worker-control-results"
+                    ),
+                    "worker_control_payload_base": {
                         "schema_version": 1,
-                        "kind": "github_write_health_probe",
-                        "target_path": ".survey/work-queue/transport/health-probe.json",
+                        "kind": "scheduled_chat_worker_control",
                         "worker_id": worker_id,
-                        "write_blocked_job": {
-                            "job_id": job_id,
-                            "claim_id": claim_id,
-                            "attempt_id": attempt_id,
-                            "reason": "platform_content_write_rejected_after_bundle_fallback",
-                        },
+                        "command": "quarantine_foreground",
+                        "foreground_guard": foreground_guard,
                     },
-                    "health_probe_required_runtime_fields": [
-                        "probe_id",
-                        "scheduled_slot",
-                        "run_key",
-                        "actual_invocation_start",
-                    ],
-                    "carry_intended_status_reason_as": "write_blocked_job.source_reason",
+                    "worker_control_required_runtime_fields": ["seq"],
                     "continue_after_quarantine_result": True,
                     "run_state_request_not_required_for_quarantine": True,
+                    "on_worker_control_write_rejected": {
+                        "next_action": "UPDATE_HEALTH_PROBE_WITH_QUARANTINE_THEN_READ_RESULT",
+                        "health_probe_path": ".survey/work-queue/transport/health-probe.json",
+                        "health_probe_operation": "update_existing_file_once",
+                        "health_probe_requires_latest_blob_sha": True,
+                        "health_probe_result_directory": ".survey/work-queue/transport/health-probe-results",
+                        "health_probe_payload_base": {
+                            "schema_version": 1,
+                            "kind": "github_write_health_probe",
+                            "target_path": ".survey/work-queue/transport/health-probe.json",
+                            "worker_id": worker_id,
+                            "write_blocked_job": {
+                                "job_id": job_id,
+                                "claim_id": claim_id,
+                                "attempt_id": attempt_id,
+                                "reason": "platform_content_write_rejected_after_bundle_fallback",
+                            },
+                        },
+                        "health_probe_required_runtime_fields": [
+                            "probe_id",
+                            "scheduled_slot",
+                            "run_key",
+                            "actual_invocation_start",
+                        ],
+                        "carry_intended_status_reason_as": "write_blocked_job.source_reason",
+                    },
                 },
             },
             "source_unavailable_next_action": (
