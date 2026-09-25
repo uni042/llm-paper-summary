@@ -67,7 +67,7 @@ class RepairCheckpointDeadlockTests(unittest.TestCase):
             write_json(request_path, {
                 "schema_version": 1,
                 "request_id": request_id,
-                "worker_id": "scheduled-chat-llm-survey-20260915T1200JST",
+                "worker_id": "worker-4",
                 "worker_kind": "scheduled_chat",
                 "requested_at": AT.isoformat().replace("+00:00", "Z"),
                 "max_jobs": 1,
