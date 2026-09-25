@@ -79,6 +79,17 @@ def _make_descriptor(repo: Path, module, *, attempt="attempt-a", job="job-a", ba
 
 
 class ProcessImmutableSubmissionTests(unittest.TestCase):
+    def test_completed_descriptor_without_preflight_provenance_is_rejected(self):
+        module = _load(SCRIPTS / "process_immutable_submission.py", "processor_preflight_provenance")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            descriptor = {
+                "attempt_id": "attempt-no-preflight",
+                "job_id": "job-no-preflight",
+            }
+            with self.assertRaisesRegex(ValueError, "requires exact passing preflight provenance"):
+                module._verify_completed_preflight(repo, descriptor)
+
     def test_processes_only_requested_descriptor_and_is_idempotent(self):
         self.assertTrue((SCRIPTS / "process_immutable_submission.py").exists(), "processor must exist")
         with tempfile.TemporaryDirectory() as td:
