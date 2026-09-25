@@ -16,7 +16,7 @@ Scheduled Chat / WorkワーカーがGitHub本文書込みを拒否された場�
 
 1. Libraryからユーザーが指定した成果、または「未反映の任意の論文／探索結果」として指定された成果を取得する。
 2. 最新mainを読み、同じmain上の本routerと対象フォーマット／配置規則を確認する。
-3. Library成果のidentityと想定配置先を確認し、現在の正規配置と異なる場合は最新main側を優先して正規化する。**対象pathだけを見る前に、canonical_id / arXiv ID / DOI / OpenReview IDを使ってrepository全体の既収録paper identityを照合する。** 同一identityが別pathに存在する場合は新規createせず、その既存paperを現在のcanonical配置として統合/updateする。identity indexが一時的に古い場合でも `papers/**` の実体照合を省略しない。
+3. Library成果のidentityと想定配置先を確認し、現在の正規配置と異なる場合は最新main側を優先して正規化する。**対象pathだけを見る前に、canonical_id / arXiv ID / DOI / OpenReview IDを使ってrepository全体の既収録paper identityを照合する。** 通常チャット取り込みでは `.survey/scripts/resolve_paper_identity.py` をstable identity付きで実行し、`status=represented` なら返された `paper_path` をupdate対象とする。`status=not_found` の場合だけ新規create候補として扱う。同一identityが別pathに存在する場合は新規createせず、その既存paperを現在のcanonical配置として統合/updateする。identity indexが一時的に古い場合でもresolverは `papers/**` 実体から再構築するため、実体照合を省略しない。
 4. repository全体のidentity照合後、確定した対象pathを最新mainで取得する。未存在ならcreate、既存なら現在blob SHAを取得して内容を統合したうえでupdateする。古いLibrary記録のSHAをwrite前提に使わない。**同じcanonical identityの第二ファイルを作成してから後で重複解消する運用は禁止する。**
 5. write後に同じpathをmainから再取得し、反映内容とcommitを確認する。
 6. 論文本文を通常チャット経路から追加した場合、paper push後の正規reconciliationが実論文MarkdownとResearch jobをstable identity / declared paper_pathで照合する。既に本文が表現済みの `ready` Research jobは、通常Research完了を偽装せず `status=superseded` / `superseded_reason=paper_already_represented` として終端化する。派生 `next-jobs` とworker worklistも論文実体を再照合し、reconciliation commitが一時的に遅れても既収録論文を未処理として再提示しない。
