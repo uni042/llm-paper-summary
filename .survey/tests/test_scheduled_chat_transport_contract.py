@@ -22,6 +22,40 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
             text,
         )
 
+    def test_transport_stop_requires_health_probe_contract(self):
+        text = ROUTER.read_text(encoding="utf-8")
+        self.assertIn(
+            ".survey/work-queue/transport/health-probe.json",
+            text,
+        )
+        self.assertIn(
+            "transport_health_probe_attempted=true",
+            text,
+        )
+        self.assertIn(
+            "transport_health_probe_succeeded=false",
+            text,
+        )
+        self.assertIn(
+            "shell、Python、manual Actions dispatch、低レベルGit ref操作を要求しない",
+            text,
+        )
+
+    def test_completed_submission_cannot_bypass_preflight(self):
+        text = ROUTER.read_text(encoding="utf-8")
+        self.assertIn(
+            "completed immutable descriptor writeも行わず",
+            text,
+        )
+        self.assertIn(
+            "preflight_result",
+            text,
+        )
+        self.assertIn(
+            "submission processorが拒否する",
+            text,
+        )
+
     def test_scheduled_chat_specific_relay_is_not_the_default(self):
         text = ROUTER.read_text(encoding="utf-8")
         self.assertIn("Scheduled Chat固有の別transportを設けない。", text)
