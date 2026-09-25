@@ -175,7 +175,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition"], "none")
             self.assertEqual(
                 result["runtime_condition_ignored_reason"],
-                "platform_limit_requires_run_wide_tool_rejection_and_exhausted_status_only_fallback",
+                "platform_limit_requires_run_wide_tool_rejection_exhausted_fallback_and_failed_health_probe",
             )
             self.assertEqual(result["gate"]["decision"], "CONTINUE")
             self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
@@ -199,7 +199,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition"], "none")
             self.assertEqual(
                 result["runtime_condition_ignored_reason"],
-                "platform_limit_requires_run_wide_tool_rejection_and_exhausted_status_only_fallback",
+                "platform_limit_requires_run_wide_tool_rejection_exhausted_fallback_and_failed_health_probe",
             )
             self.assertEqual(result["gate"]["decision"], "CONTINUE")
             self.assertNotIn("platform_limit_reached", result["gate"]["stop_reasons"])
@@ -229,7 +229,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertFalse(result["runtime_condition_fallback_exhausted"])
             self.assertEqual(
                 result["runtime_condition_ignored_reason"],
-                "platform_limit_requires_run_wide_tool_rejection_and_exhausted_status_only_fallback",
+                "platform_limit_requires_run_wide_tool_rejection_exhausted_fallback_and_failed_health_probe",
             )
             self.assertEqual(result["gate"]["decision"], "CONTINUE")
 
@@ -249,6 +249,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
             value["runtime_condition_scope"] = mod.PLATFORM_CONTEXT_LIMIT_SCOPE
             value["runtime_condition_fallback_exhausted"] = True
+            value["transport_health_probe_attempted"] = True
+            value["transport_health_probe_succeeded"] = False
             value["runtime_condition_detail"] = "platform rejected all required tool calls after the documented fallback route was attempted"
             result = mod.derive(root, value)
             self.assertEqual(result["runtime_condition"], "platform_context_limit")
@@ -256,6 +258,31 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition_scope"], mod.PLATFORM_CONTEXT_LIMIT_SCOPE)
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("platform_limit_reached", result["gate"]["stop_reasons"])
+
+    def test_platform_context_limit_is_downgraded_when_health_probe_succeeds(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "platform_context_limit"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
+            value["runtime_condition_scope"] = mod.PLATFORM_CONTEXT_LIMIT_SCOPE
+            value["runtime_condition_fallback_exhausted"] = True
+            value["transport_health_probe_attempted"] = True
+            value["transport_health_probe_succeeded"] = True
+            value["runtime_condition_detail"] = "content writes failed but the canonical control-write probe succeeded"
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(result["runtime_condition_ignored_reason"], "transport_health_probe_succeeded")
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertFalse(result["run_termination_allowed"])
 
     def test_write_blocked_job_is_quarantined_and_worker_continues(self):
         with tempfile.TemporaryDirectory() as td:
@@ -271,6 +298,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 "claim_id": "claim-write-blocked",
                 "attempt_id": "attempt-write-blocked",
                 "reason": mod.WRITE_BLOCKED_REASON,
+                "source_reason": "primary_full_text_unavailable",
                 "observed_error": "platform safety rejected record and status-only writes",
             }
             write_json(
@@ -316,7 +344,9 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             job = json.loads((root / ".survey/work-queue/jobs/job-write-blocked.json").read_text())
             claim = json.loads((root / ".survey/work-queue/claims/job-write-blocked.json").read_text())
             self.assertEqual(job["status"], "blocked")
-            self.assertEqual(job["blocker"], mod.WRITE_BLOCKED_REASON)
+            self.assertEqual(job["blocker"], "primary_full_text_unavailable")
+            self.assertEqual(job["write_blocked_source_reason"], "primary_full_text_unavailable")
+            self.assertEqual(job["write_blocked_transport_reason"], mod.WRITE_BLOCKED_REASON)
             self.assertIn("retry_not_before", job)
             self.assertIn("released_at", claim)
             self.assertEqual(claim["release_reason"], mod.WRITE_BLOCKED_REASON)
