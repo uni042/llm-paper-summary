@@ -4,7 +4,42 @@
   "slot": "results",
   "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
   "job_id": "job-research-98fce5e6481e51fa",
-  "data": {},
+  "data": {
+    "overview": "Qwen1.5-MoEはα=0.7で密モデル比2.4倍、DeepSeek-MoEは2.2倍へ圧縮され、均一2:4の約1.8倍を上回る。Mixtral-8×7BのMoE層では密行列積比1.32倍で、Samoyedsの1.20倍より高い。バッチ1〜16では2.35〜2.49Kトークン/秒でSamoyedsより最大15.3%、密行列積より最大45.7%高い。一方、強い圧縮は精度を下げ、Qwen平均精度は密55.0、均一2:4 52.8、α=0.7 52.0、α=0.9 53.6となるため、容量利得は無損失ではない。",
+    "key_results": [
+      {
+        "metric": "Qwen1.5-MoEモデル圧縮率",
+        "value": "最大2.4×",
+        "baseline": "均一2:4の1.8×",
+        "condition": "FP16、α=0.7",
+        "interpretation": "低頻度エキスパートを1:4へ強く圧縮できるため、偏りの大きいモデルほど容量利得が増える。"
+      },
+      {
+        "metric": "Mixtral-8×7B MoE層速度",
+        "value": "1.32×",
+        "baseline": "密GEMM 1.0×、Samoyeds 1.20×",
+        "condition": "NVIDIA L40S",
+        "interpretation": "K/4保存によるメモリ転送削減が1:4展開費を上回り、均一2:4より速い。"
+      },
+      {
+        "metric": "Mixtral-8×7Bバッチ別スループット",
+        "value": "2.35–2.49K tokens/s",
+        "baseline": "Samoyeds 2.04–2.18K tokens/s",
+        "condition": "batch 1–16",
+        "interpretation": "最大15.3%高く、転送中展開が新しい律速になっていない。"
+      },
+      {
+        "metric": "Qwen平均精度",
+        "value": "53.6 at α=0.9",
+        "baseline": "Dense 55.0、uniform 2:4 52.8",
+        "condition": "4評価タスク平均",
+        "interpretation": "高い被覆率では均一2:4を上回るが密モデルには届かず、近似圧縮の品質差が残る。"
+      }
+    ],
+    "negative_results": "DeepSeek-MoEではα=0.7の平均精度43.4で密51.1、均一2:4の47.1を下回り、強い1:4適用は品質を明確に悪化させる。小バッチのDeepSeek/QwenではMegaBlocksが最速の場合があり、Xamiが常に速度最良ではない。",
+    "interpretation": "ルーティング偏りが大きいほど低頻度群を多く1:4へでき、容量とメモリ帯域の利得が増える。αを上げると重要集合が広がって精度は回復するが圧縮率は低下する。速度面ではMoEの低局所性によるメモリ律速が強いと、圧縮転送の利得で展開費を隠せる。",
+    "quality_impact": "近似あり。枝刈り後の短い微調整で回復するが、特にDeepSeekのα=0.7では精度低下が大きい。α=0.9ではQwen平均53.6で均一2:4の52.8を上回るなど、重要エキスパートを広く保護すると品質が改善する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
     "worker_id": "scheduled-chat-30",

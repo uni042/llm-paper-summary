@@ -4,7 +4,12 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
   "job_id": "job-research-98fce5e6481e51fa",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA L40S GPU、48GB GDDR6、864GB/s。CUDA 12.1、PyTorch 2.1.2。精度評価は4×L40S。",
+    "software": "Samoyedsの構造化疎性実装を拡張した統一GPUカーネル。比較対象は密なTransformers、MegaBlocks、均一2:4のSamoyeds。",
+    "methodology": "Mixtral-8×7B、Mixtral-8×22B、DeepSeek-MoE-16B、Qwen1.5-MoE-A2.7Bを評価。5,000混合サンプルでルーティングを測り、α=0.7/0.8/0.9を比較する。枝刈り後0.5k〜3kステップ微調整し、ARC-Challenge、WinoGrande、MMLU Astronomy、OpenBookQAの精度、モデル圧縮率、MoE層速度、バッチ別スループットを測る。",
+    "scope": "実GPU評価だが主な速度値はMoE層単位で、サービス全体のエンドツーエンド遅延ではない。分類はオフライン校正分布に依存し、長期運用での分布ずれへの再分類費用は評価していない。"
+  },
   "reservation": {
     "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
     "worker_id": "scheduled-chat-30",
