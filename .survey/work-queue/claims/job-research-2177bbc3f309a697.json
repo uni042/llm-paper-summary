@@ -9,7 +9,7 @@
   ],
   "direct_take": true,
   "direct_take_marker": ".survey/work-queue/direct-takes/research/claim-preload-c1733e1a707d4c1b7021fcd6.json",
-  "expires_at": "2026-09-25T03:59:35+00:00",
+  "expires_at": "2026-09-25T03:50:27+00:00",
   "heartbeat_at": "2026-09-25T02:29:35+00:00",
   "invalidated": false,
   "job_id": "job-research-2177bbc3f309a697",
@@ -21,7 +21,18 @@
   "preload_pool_worker_id": "shared-preload-pool",
   "preloaded_at": "2026-09-24T15:26:58+00:00",
   "previous_claim_id": "claim-preload-b9a140e89d8f8b881aa80baf",
+  "record_bank": "f",
+  "record_bank_root": ".survey/work-queue/records/chat-record-f",
+  "record_slot_paths": {
+    "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+    "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+    "positioning": ".survey/work-queue/records/chat-record-f/positioning.json",
+    "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+    "results": ".survey/work-queue/records/chat-record-f/results.json"
+  },
+  "release_reason": "platform_content_write_rejected_after_bundle_fallback",
   "released": false,
+  "released_at": "2026-09-25T03:50:27+00:00",
   "request_id": "take-scheduled-chat-30-20260925T112751JST-a41c7e-01",
   "run_key": "scheduled-chat-30-20260925T112751JST-a41c7e",
   "scheduled_slot": "30",
@@ -31,13 +42,5 @@
   "worker_id": "scheduled-chat-30",
   "worker_kind": "scheduled_chat",
   "workflow_version": 10,
-  "record_bank": "f",
-  "record_bank_root": ".survey/work-queue/records/chat-record-f",
-  "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-f/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
-  }
+  "write_blocked_run_state_request_id": "worker-control-scheduled-chat-30-1"
 }
