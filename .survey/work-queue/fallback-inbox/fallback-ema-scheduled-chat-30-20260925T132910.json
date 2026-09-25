@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "fallback-ema-scheduled-chat-30-20260925T132910",
+  "origin": "claimed_worker",
+  "record_bundle_mode": "quality_preflight_v1",
+  "kind": "research",
+  "job_id": "job-research-fd194814c677a98c",
+  "claim_id": "claim-preload-ba06b04eb9857b4408e2252b",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "attempt_id": "attempt-preload-ba06b04eb9857b4408e2252b",
+  "depends_on_job_ids": [
+    "job-research-fd194814c677a98c"
+  ],
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.27040-ema-elastic-and-performance-transparent-memory-across-gpus.md",
+  "run_key": "scheduled-chat-30-20260925T132910JST-ema",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T13:29:10+09:00",
+  "requested_at": "2026-09-25T04:34:00+00:00",
+  "self_review": {
+    "primary_source_read_to_end": true,
+    "no_unverified_inference": true,
+    "summary_and_list_summary_specific": true,
+    "headline_result_grounded": true,
+    "method_end_to_end_explained": true,
+    "evaluation_conditions_and_baselines_explicit": true,
+    "results_conditions_and_interpretation_explicit": true,
+    "limitations_and_positioning_specific": true
+  },
+  "writes": [
+    {
+      "path": ".survey/work-queue/records/chat-record-r/metadata.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"slot\": \"metadata\",\n  \"attempt_id\": \"attempt-preload-ba06b04eb9857b4408e2252b\",\n  \"job_id\": \"job-research-fd194814c677a98c\",\n  \"data\": {\n    \"canonical_id\": \"arXiv:2609.27040\",\n    \"arxiv_id\": \"2609.27040\",\n    \"title\": \"EMA: Elastic and Performance Transparent Memory Across GPUs\",\n    \"summary\": \"大規模言語モデル（LLM）推論では、重みはほぼ固定でもKVキャッシュが要求数や生成長に応じて増減するため、同一サーバ内で一部GPUのHBMだけが不足し、隣接GPUの空き容量とGPU間帯域が遊休する。EMAは直接接続されたGPU対ごとにメモリスライスを構成し、遠隔HBMを動的に貸借・回収する。予測可能な層アクセスを利用した先読みと大粒度転送で遠隔配置の転送時間を計算に隠し、借り手にはローカル相当の性能、貸し手には静的割当を下回らない回収可能性を同時に与える。実LLMワークロードでは静的分割比で個別利用者のスループットを最大52%改善し、KVキャッシュ容量を2倍に固定増設した構成の96%のスループットへ到達した。\",\n    \"source\": \"https://arxiv.org/abs/2609.27040\",\n    \"sources\": [\n      \"https://arxiv.org/abs/2609.27040\",\n      \"https://arxiv.org/html/2609.27040\"\n    ],\n    \"authors\": [\n      \"Yi Xu\",\n      \"Tian Xia\",\n      \"Ion Stoica\"\n    ],\n    \"publication\": \"arXiv\",\n    \"publication_type\": \"preprint\",\n    \"published\": \"2026-09-22\",\n    \"publication_status\": \"preprint v1\",\n    \"topics\": [\n      \"LLM推論\",\n      \"GPUメモリ共有\",\n      \"KVキャッシュ\",\n      \"NVLink\",\n      \"先読み\"\n    ],\n    \"implementation\": \"論文でEMAプロトタイプを評価。今回の一次資料確認では公式公開コードURLは確認できず。\",\n    \"code\": null,\n    \"last_checked\": \"2026-09-25\",\n    \"arxiv_categories\": {\n      \"primary\": \"cs.DC\",\n      \"cross_list\": [\n        \"cs.AI\",\n        \"cs.LG\"\n      ]\n    },\n    \"hardware_evaluation\": \"同一ノードの複数GPUと高速GPU間接続を用いる実機プロトタイプ評価。メモリスライス容量を実効帯域と計算待ち時間窓から決定する。\",\n    \"quality_effect\": \"近似や量子化ではなくKVキャッシュの配置・転送を変えるシステム手法で、モデル出力品質を意図的に変えない。\",\n    \"references\": [\n      {\n        \"canonical_id\": \"arXiv:2411.09317\",\n        \"arxiv_id\": \"2411.09317\"\n      }\n    ],\n    \"references_checked_at\": \"2026-09-25\",\n    \"references_source\": \"arXiv HTML reference section\",\n    \"references_total\": 1\n  },\n  \"reservation\": {\n    \"claim_id\": \"claim-preload-ba06b04eb9857b4408e2252b\",\n    \"worker_id\": \"scheduled-chat-30\",\n    \"worker_kind\": \"scheduled_chat\"\n  }\n}\n"
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-r/problem_method.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"slot\": \"problem_method\",\n  \"attempt_id\": \"attempt-preload-ba06b04eb9857b4408e2252b\",\n  \"job_id\": \"job-research-fd194814c677a98c\",\n  \"data\": {\n    \"problem\": \"LLM推論のGPUメモリ需要は静的ではない。モデル重みは固定でもKVキャッシュは同時要求数と系列長に比例して増え、要求終了時には急減する。静的なGPU割当では、ある利用者がローカルHBM不足で同時実行数を制限される一方、同一ノードの別GPUには空きHBMが残る。論文のShareGPT由来の例では個別の静的割当が不足する時間が49.5%に達する一方、二利用者の合計需要が総容量を超える時間はそれより小さく、統計多重化の余地がある。CPUへの通常の退避は帯域と転送遅延が前景計算へ露出しやすく、単純な遠隔GPUアクセスも小粒度転送では実効帯域を使い切れないため、容量共有だけでは性能保証にならない。\",\n    \"novelty\": \"EMAは容量を単に共有するのではなく、借り手側のローカル・遠隔対称性と貸し手側の静的・動的対称性を同時に契約として設計する。GPU対ごとのメモリスライスで容量と専用リンク帯域を結び付け、アプリケーションの安全なプリエンプション点と予測可能なアクセス順序を利用する。これにより遠隔配置を先読みで隠しながら、貸し手が必要になった容量を即時に取り戻して静的割当相当の下限を維持する。\",\n    \"method_overview\": \"各GPUは私有領域に加えて、直接接続された相手GPUとのメモリスライスへ同量の物理容量を拠出する。スライス内の論理所有権は需要に応じて変わり、仮想物理対応表で各領域を一方の利用者だけに割り当てる。EMAはLLMの層ごとの周期的アクセスを利用し、次に必要になる遠隔KVキャッシュを計算中に先読みする。転送量は利用可能なGPU間帯域と、同じ層群が再び必要になるまでの待ち時間窓から制約される。回収時には貸し手が不足を検出すると借り手の要求を安全な点でプリエンプトし、遠隔側だけでなく依存するローカル側KVキャッシュも対応して解放する。論文は拡張率2を採用し、借用した遠隔容量とそれを成立させるローカル容量を対称に扱う。さらにスラブ割当と層群化で論理的に連続する層を物理的にも連続させ、小さいコピーの乱発を避けてNVLinkの実効帯域を高く保つ。複数のGPU対スライスを集約し、各GPUからは需要に応じて拡縮する容量プールとして見せる。\",\n    \"components\": [\n      {\n        \"name\": \"メモリスライス\",\n        \"description\": \"直接リンクを持つGPU二台が同量のHBMを拠出する共有単位。スライス内では物理配置と論理所有権を分離し、需要に応じて一方が相手の容量を借りる。帯域と計算待ち時間窓から透明に転送できる上限を決め、各GPUが最低でも元の静的容量相当を利用できるようにする。拡張率を2に固定することで、回収時に遠隔側と依存するローカル側を同量ずつ解放でき、容量と帯域の不整合を避ける。\"\n      },\n      {\n        \"name\": \"先読みと転送順序制御\",\n        \"description\": \"Transformerの層アクセスが規則的であることを利用し、遠隔HBMにあるKVキャッシュを実際の層計算より前にローカルへ移す。GPU対の双方向転送をEMAが順序付け、コピー時間を計算の待ち時間窓内へ収めることで前景アプリケーションから遠隔アクセス遅延を隠す。単なる統一アドレス空間ではなく、アクセス時点までに必要データを到着させることが性能透明性の核心である。\"\n      },\n      {\n        \"name\": \"スラブ・層群配置\",\n        \"description\": \"動的な貸借で異なる利用者の領域が細かく交互配置されると、小粒度コピーが増えてGPU間帯域効率が落ちる。EMAは多数のKVブロックをまとめたスラブを一利用者へ割り当て、さらに論理的に連続する複数層を層群として物理的にも連続配置する。これにより交換を大きな連続転送へ変え、帯域飽和に必要な粒度を確保しつつ、過大スラブによる内部断片化との均衡を取る。\"\n      }\n    ],\n    \"system_design\": \"各GPUに計算プロセス、各メモリスライスに管理プロセスを置き、アドレス変換、割当、先読み、回収を協調させる。GPUが新規割当に失敗した際、自身の使用量が静的保証未満なら相手が借りている領域を対象に要求をプリエンプトして容量を戻す。貸借は直接GPUリンクを持つ対に限定され、複数スライスの集約でノード内の弾力的な容量プールを構成する。\"\n  },\n  \"reservation\": {\n    \"claim_id\": \"claim-preload-ba06b04eb9857b4408e2252b\",\n    \"worker_id\": \"scheduled-chat-30\",\n    \"worker_kind\": \"scheduled_chat\"\n  }\n}\n"
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-r/evaluation.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"slot\": \"evaluation\",\n  \"attempt_id\": \"attempt-preload-ba06b04eb9857b4408e2252b\",\n  \"job_id\": \"job-research-fd194814c677a98c\",\n  \"data\": {\n    \"hardware\": \"同一ノード内の複数GPUと高帯域GPU間リンクを使う実機評価。論文の設計議論ではA100/H100級NVLinkを対象とし、GPU間の数百GB/s規模の帯域を前提に転送を計算へ重畳する。\",\n    \"software\": \"EMAのLLM推論プロトタイプを用い、KVキャッシュの動的需要を対象に静的メモリ分割および容量を固定的に増やした比較構成と比較する。\",\n    \"methodology\": \"ShareGPT型の変動する要求を含む実LLMワークロードで、利用者ごとのスループット、総容量を増設した上限寄り構成への到達率、トークン当たり遅延を測る。背景分析では最大バッチ256の推論需要を用いて個別需要と集約需要の時間変動も比較する。\",\n    \"scope\": \"ノード内で直接高帯域接続されたGPU間のHBM共有に焦点を当てた評価であり、PCIeのみの構成、ノード間ネットワーク、異種GPU、巨大なラック全体で同じ透明性が成立することまでは実証していない。\"\n  },\n  \"reservation\": {\n    \"claim_id\": \"claim-preload-ba06b04eb9857b4408e2252b\",\n    \"worker_id\": \"scheduled-chat-30\",\n    \"worker_kind\": \"scheduled_chat\"\n  }\n}\n"
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-r/results.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"slot\": \"results\",\n  \"attempt_id\": \"attempt-preload-ba06b04eb9857b4408e2252b\",\n  \"job_id\": \"job-research-fd194814c677a98c\",\n  \"data\": {\n    \"overview\": \"EMAは需要が時間的にずれる利用者間で遊休HBMを貸借し、静的分割より高い同時実行余地を作りながら、先読みで遠隔配置の遅延を前景計算から隠した。最大の個別スループット改善は52%で、単純にKVキャッシュ容量を2倍へ増設した構成の96%まで到達する。主な利得は計算自体の高速化ではなく、同じ物理容量を動的に再配分してメモリ不足による並行性制限を減らすことから生じる。\",\n    \"key_results\": [\n      {\n        \"metric\": \"個別利用者スループット\",\n        \"value\": \"最大52%向上\",\n        \"baseline\": \"静的メモリ分割\",\n        \"condition\": \"実LLMワークロードでGPU間メモリ貸借を有効化\",\n        \"interpretation\": \"平均需要では余る他GPUのHBMを需要ピーク時だけ借り、メモリ不足による処理量制限を緩和する。\"\n      },\n      {\n        \"metric\": \"2倍容量構成に対するスループット\",\n        \"value\": \"96%\",\n        \"baseline\": \"KVキャッシュ容量を2倍に固定した構成\",\n        \"condition\": \"EMAの弾力的メモリ共有\",\n        \"interpretation\": \"物理容量を各利用者へ恒久的に倍増せず、需要の時間差で上限寄り構成に近い処理量へ到達する。\"\n      },\n      {\n        \"metric\": \"遅延\",\n        \"value\": \"静的ローカル基準と同程度\",\n        \"baseline\": \"静的ローカルHBM配置\",\n        \"condition\": \"先読み可能な範囲で遠隔HBMを利用\",\n        \"interpretation\": \"遠隔転送を計算の待ち時間窓へ重ね、容量増加時も前景遅延を大きく悪化させない。\"\n      }\n    ],\n    \"negative_results\": \"性能透明性には転送を隠せる十分なGPU間帯域と待ち時間窓が必要である。細粒度断片化ではコピー効率が低下するため層群化が必要で、層群を大きくし過ぎると転送バッファ増加、内部断片化、実効待ち時間窓の縮小が生じる。任意の接続・任意のアクセスパターンで無条件に遠隔HBMがローカル同等になるわけではない。\",\n    \"interpretation\": \"利得は利用者間のメモリ需要が完全同期していないほど大きい。全GPUが同時に容量ピークへ達すると貸し出せる余剰が減る。一方、需要ピークがずれるサービングでは集約需要が平滑化され、動的共有が静的な過剰プロビジョニングを代替しやすい。\",\n    \"quality_impact\": \"KVキャッシュ内容やモデル計算を近似・圧縮せず、保存場所と転送時刻を変更するため、アルゴリズム上のモデル品質劣化は想定しない。評価の焦点はスループットと遅延であり、品質改善を主張する手法ではない。\"\n  },\n  \"reservation\": {\n    \"claim_id\": \"claim-preload-ba06b04eb9857b4408e2252b\",\n    \"worker_id\": \"scheduled-chat-30\",\n    \"worker_kind\": \"scheduled_chat\"\n  }\n}\n"
+    },
+    {
+      "path": ".survey/work-queue/records/chat-record-r/positioning.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"slot\": \"positioning\",\n  \"attempt_id\": \"attempt-preload-ba06b04eb9857b4408e2252b\",\n  \"job_id\": \"job-research-fd194814c677a98c\",\n  \"data\": {\n    \"limitations\": \"直接高帯域接続されたGPU対、予測可能なアクセス順序、十分な計算待ち時間窓、安全に要求をプリエンプトできるLLM推論という条件に依存する。拡張率2という設計は回収と帯域利用を単純化する一方、任意倍率の容量拡張を提供しない。スラブと層群には内部断片化・転送バッファ・転送粒度のトレードオフがある。ノード間ネットワークや異種GPUへの一般化は今後の検証事項である。\",\n    \"differences\": \"先行するPieはGPUとCPUメモリ間で層アクセスの待ち時間を使った性能透明な交換を行うのに対し、EMAは同一ノードのGPU同士を対等な貸し手・借り手として扱い、容量の動的所有権と貸し手の回収保証まで扱う。通常の遠隔メモリがアクセス機構を提供するだけなのに対し、EMAは帯域予算、先読み、プリエンプション、配置粒度を一体化して二重の性能対称性を目標にする。\",\n    \"implementation_status\": \"論文はEMAプロトタイプを実装して実LLMワークロードで評価している。今回確認したarXiv一次資料のメタデータと本文には公式コードURLを確認できなかったため、再現用公開実装の有無は未確認として扱う。\",\n    \"research_positioning\": \"階層メモリ・KVキャッシュ退避の系統に属するが、CPUやSSDへの低速階層化ではなく、ノード内の余剰GPU HBMを近接な共有階層として弾力化する。メモリ容量の統計多重化と遠隔転送の性能透明化を同時に扱うため、GPUメモリプール、KVキャッシュ管理、分離型サービングの間を接続する研究として位置付けられる。\"\n  },\n  \"reservation\": {\n    \"claim_id\": \"claim-preload-ba06b04eb9857b4408e2252b\",\n    \"worker_id\": \"scheduled-chat-30\",\n    \"worker_kind\": \"scheduled_chat\"\n  }\n}\n"
+    }
+  ]
+}
