@@ -154,17 +154,38 @@ def arxiv_ids(paths: list[Path]) -> list[str]:
     return ids
 
 
+def _fetch_arxiv_batch(batch: list[str]) -> ET.Element:
+    query = urlencode({"id_list": ",".join(batch), "max_results": str(len(batch))})
+    headers = {
+        "User-Agent": "llm-paper-summary-metadata-backfill/1.1 (citation metadata maintenance)",
+        "Accept": "application/atom+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.1",
+    }
+    endpoints = (
+        "https://export.arxiv.org/api/query?",
+        "https://arxiv.org/api/query?",
+    )
+    errors: list[str] = []
+    for endpoint in endpoints:
+        for attempt in range(3):
+            req = Request(endpoint + query, headers=headers)
+            try:
+                with urlopen(req, timeout=60) as response:
+                    payload = response.read()
+                return ET.fromstring(payload)
+            except Exception as exc:
+                errors.append(f"{endpoint} attempt={attempt + 1}: {type(exc).__name__}: {exc}")
+                if attempt < 2:
+                    time.sleep(2.0 * (attempt + 1))
+    raise RuntimeError(
+        "arXiv metadata fetch failed after endpoint fallbacks: " + " | ".join(errors)
+    )
+
+
 def fetch_arxiv(ids: list[str], batch_size: int = 25) -> dict[str, dict[str, Any]]:
     result: dict[str, dict[str, Any]] = {}
     for offset in range(0, len(ids), batch_size):
         batch = ids[offset : offset + batch_size]
-        query = urlencode({"id_list": ",".join(batch), "max_results": str(len(batch))})
-        req = Request(
-            "https://export.arxiv.org/api/query?" + query,
-            headers={"User-Agent": "llm-paper-summary-metadata-backfill/1.0"},
-        )
-        with urlopen(req, timeout=60) as response:
-            root = ET.fromstring(response.read())
+        root = _fetch_arxiv_batch(batch)
         for entry in root.findall(ATOM + "entry"):
             raw_id = (entry.findtext(ATOM + "id") or "").rstrip("/").split("/")[-1]
             raw_id = re.sub(r"v\d+$", "", raw_id)
