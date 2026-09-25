@@ -257,6 +257,76 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("platform_limit_reached", result["gate"]["stop_reasons"])
 
+    def test_write_blocked_job_is_quarantined_and_worker_continues(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            value["request_id"] = "snap-write-blocked"
+            value["runtime_condition"] = "transport_unrecoverable"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_detail"] = "paper content writes were rejected"
+            value["write_blocked_job"] = {
+                "job_id": "job-write-blocked",
+                "claim_id": "claim-write-blocked",
+                "attempt_id": "attempt-write-blocked",
+                "reason": mod.WRITE_BLOCKED_REASON,
+                "observed_error": "platform safety rejected record and status-only writes",
+            }
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 299}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/jobs/job-write-blocked.json",
+                {
+                    "schema_version": 1,
+                    "job_id": "job-write-blocked",
+                    "type": "research",
+                    "status": "ready",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/claims/job-write-blocked.json",
+                {
+                    "schema_version": 1,
+                    "job_id": "job-write-blocked",
+                    "claim_id": "claim-write-blocked",
+                    "attempt_id": "attempt-write-blocked",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "expires_at": (
+                        dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30)
+                    ).isoformat(),
+                },
+            )
+            normalized = mod._normalize_request(
+                root / ".survey/work-queue/run-state/requests/snap-write-blocked.json",
+                value,
+            )
+            result = mod.derive(root, normalized)
+            job = json.loads((root / ".survey/work-queue/jobs/job-write-blocked.json").read_text())
+            claim = json.loads((root / ".survey/work-queue/claims/job-write-blocked.json").read_text())
+            self.assertEqual(job["status"], "blocked")
+            self.assertEqual(job["blocker"], mod.WRITE_BLOCKED_REASON)
+            self.assertIn("retry_not_before", job)
+            self.assertIn("released_at", claim)
+            self.assertEqual(claim["release_reason"], mod.WRITE_BLOCKED_REASON)
+            self.assertEqual(result["write_blocked_job"]["status"], "blocked")
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(result["runtime_condition_ignored_reason"], "target_write_blocked_and_released")
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+            self.assertFalse(result["run_termination_allowed"])
+
     def test_bare_finalization_permit_without_approved_stop_reason_is_not_enough(self):
         permit = mod._build_stop_permit(
             finalization_permit_issued=True,
