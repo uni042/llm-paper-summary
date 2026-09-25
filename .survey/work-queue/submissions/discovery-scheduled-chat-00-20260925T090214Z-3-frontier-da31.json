@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "submission_id": "discovery-scheduled-chat-00-20260925T090214Z-3-frontier-da31",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+  "discovery_precheck": {
+    "request_id": "frontier-da31f9d4237983eb861be17f",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-da31f9d4237983eb861be17f.json",
+    "receipt": "sha256:ad4907ba68537e0b639c1536711f2cf56987e587bb3691c70abc0dab91da1a4c"
+  },
+  "discovery_stats": {
+    "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+    "round": "backward-r3",
+    "axis": "preload-backward-structured-references",
+    "topic": "structured references",
+    "source": "repository_references",
+    "date_range": "repository-wide",
+    "category": "inference-systems",
+    "citation_direction": "backward",
+    "query_family": "structured-reference-curation",
+    "search_window_key": "frontier-da31f9d4237983eb861be17f",
+    "raw_result_count": 20,
+    "unseen_result_count": 20,
+    "candidate_evaluation_count": 20,
+    "candidate_accepted_count": 0,
+    "last_position": "frontier-da31f9d4237983eb861be17f"
+  },
+  "candidates": []
+}
