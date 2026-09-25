@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-7b508da4f5b23e0f0512f37f",
+  "attempt_id": "attempt-preload-8fa24d135cc0417a00493d88",
   "job_id": "job-research-14b72fcf4a8168cf",
   "data": {
     "problem": "大規模モデルでは、モデルハブから推論機への配布、学習ノードから保存系へのcheckpoint書き出し、分散・協調学習での重み交換が、計算とは別のネットワーク帯域とストレージ容量を大量に消費する。論文はMistral級モデルの多数ダウンロードを例に、単一人気モデルだけでも月間数十PB級の転送になり得ると動機付ける。量子化・枝刈り・蒸留は実行時のモデルを小さくできる一方でパラメータ表現を不可逆に変更するため、元の重みを完全保持するcheckpoint、配布原本、再学習用モデルの保存にはそのまま使えない。一般的なLZ4/Snappyはモデル重みが局所的に無秩序で複数byte反復が少ないためほぼ縮まず、Zstd/zlibはentropy codingにより多少縮むものの、圧縮不能な仮数まで走査し、モデル固有の浮動小数点構造を利用しない。このため、bit単位の完全復元を保ちながらモデルに固有の低entropy部分だけを高速に圧縮する方法が必要になる。",
@@ -29,7 +29,7 @@
     "system_design": "圧縮器は入力の数値型を識別し、チャンク単位でbyteを読み込む。通常浮動小数点では指数streamとpass-through streamへ分離し、clean判定された場合はさらにbyte位置別streamへ分ける。各streamは事前判定に従ってHuffman等で圧縮するかそのまま保持し、出力headerへ型、group構成、元長、復号に必要な情報を記録する。復号器は各streamを独立に展開し、指数・符号・仮数byteを元の順序へ再配置する。したがって圧縮状態のまま推論計算するのではなく、ストレージ/ネットワークでは小さい表現を運び、CPUで高速復号して元のtensor byte列をロード先へ渡す設計である。"
   },
   "reservation": {
-    "claim_id": "claim-preload-7b508da4f5b23e0f0512f37f",
+    "claim_id": "claim-preload-8fa24d135cc0417a00493d88",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

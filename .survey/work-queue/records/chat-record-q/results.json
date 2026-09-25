@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-7b508da4f5b23e0f0512f37f",
+  "attempt_id": "attempt-preload-8fa24d135cc0417a00493d88",
   "job_id": "job-research-14b72fcf4a8168cf",
   "data": {
     "overview": "ZipNNは通常BF16モデルを概ね元サイズの66〜67%へ圧縮し、通常FP32は約83%、clean FP32では33〜48%級まで縮小する。Llama-3.1 BF16ではZstdの77.7%に対しZipNN 66.4%で、圧縮1.15GB/s・復号1.65GB/sとZstdの0.71/1.02GB/sも上回る。モデル固有の指数分布を利用することで、容量削減と速度を同時に改善する。並列CPU実装では最大80GB/s復号、13GB/s圧縮まで拡張され、モデルハブやクラスタ保存系の帯域削減に適する。",
@@ -79,7 +79,7 @@
     "quality_impact": "復号後は元データとbit単位で一致するためモデル品質への近似誤差はない。トレードオフは品質ではなく、復号CPUコスト、並列度、データ型ごとの圧縮余地、baseを必要とするdelta方式の復元依存性にある。"
   },
   "reservation": {
-    "claim_id": "claim-preload-7b508da4f5b23e0f0512f37f",
+    "claim_id": "claim-preload-8fa24d135cc0417a00493d88",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

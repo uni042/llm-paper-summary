@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "auto-recovery-claim-3e7ac247f5c101ce8ea3f839",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "run_key": "scheduled-chat-30-20260925T103242JST-6c2e8a",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T01:32:42+00:00",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-14b72fcf4a8168cf",
+      "claim_id": "claim-preload-8fa24d135cc0417a00493d88",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-preload-8fa24d135cc0417a00493d88",
+      "claimed_at": "2026-09-25T01:33:45+00:00",
+      "expires_at": "2026-09-25T03:03:45+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-14b72fcf4a8168cf"
+      ],
+      "job": {
+        "job_id": "job-research-14b72fcf4a8168cf",
+        "type": "research",
+        "parent_job_id": "job-6b91941a45cfbd24",
+        "priority": 90,
+        "canonical_id": "DOI:10.1109/cloud67622.2025.00028",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "ZipNN: Lossless Compression for AI Models",
+        "source_url": "https://doi.org/10.1109/cloud67622.2025.00028",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-zipnn-lossless-model-compression.md",
+        "selection_reason": "Lossless model compression specialized for neural-network weights, directly reducing model storage and network-transfer cost while maintaining high decompression throughput.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:03+00:00"
+      },
+      "run_key": "scheduled-chat-30-20260925T103242JST-6c2e8a",
+      "scheduled_slot": "30",
+      "actual_invocation_start": "2026-09-25T01:32:42+00:00",
+      "pipeline_order": 0,
+      "pool_order": 408,
+      "stock_bank": "y",
+      "stock_lane": "research",
+      "preloaded_at": "2026-09-25T00:24:34+00:00",
+      "preload_pool_adopted_at": "2026-09-25T01:33:45+00:00",
+      "pipeline_position": 1,
+      "pipeline_role": "foreground",
+      "record_bank": "q",
+      "record_bank_root": ".survey/work-queue/records/chat-record-q",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-q/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-q/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-q/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-q/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-q/positioning.json"
+      },
+      "record_bank_recovery": "expired-same-job",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-preload-7b508da4f5b23e0f0512f37f"
+      ]
+    }
+  ],
+  "processed_at": "2026-09-25T01:33:45+00:00",
+  "checkpoint_released": 0,
+  "claim_window": 12,
+  "hot_banked_claim_target": 4,
+  "claim_refill_threshold": 10,
+  "active_claim_count": 1,
+  "claim_window_remaining": 11,
+  "foreground_job_id": "job-research-14b72fcf4a8168cf",
+  "standby_job_ids": [],
+  "shared_pool_adopted_count": 1,
+  "reason": "scheduled_chat_claim_window"
+}
