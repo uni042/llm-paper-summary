@@ -71,6 +71,10 @@ def _normalize_write_blocked_job(value: Any, worker_id: str, scheduled_slot: str
     if len(observed_error) > 2000:
         raise ValueError("write_blocked_job.observed_error is too long")
     normalized["observed_error"] = observed_error
+    source_reason = str(value.get("source_reason") or "").strip()
+    if len(source_reason) > 500:
+        raise ValueError("write_blocked_job.source_reason is too long")
+    normalized["source_reason"] = source_reason
     normalized["worker_id"] = worker_id
     return normalized
 
@@ -104,12 +108,16 @@ def _apply_write_blocked_job(root: Path, request: dict[str, Any]) -> dict[str, A
     if claim.get("released_at") or claim.get("lease_invalidated_at"):
         raise ValueError("write_blocked_job claim is already released or invalidated")
 
+    source_reason = str(marker.get("source_reason") or "").strip()
     job["status"] = "blocked"
     job["completed_at"] = timestamp
     job["blocked_at"] = timestamp
-    job["blocker"] = WRITE_BLOCKED_REASON
+    job["blocker"] = source_reason or WRITE_BLOCKED_REASON
+    job["write_blocked_transport_reason"] = WRITE_BLOCKED_REASON
     job["write_blocked_run_state_request_id"] = request["request_id"]
     job["write_blocked_attempt_id"] = marker["attempt_id"]
+    if source_reason:
+        job["write_blocked_source_reason"] = source_reason
     if marker.get("observed_error"):
         job["write_blocked_observed_error"] = marker["observed_error"]
     blocked_retry.record_new_block_event(job, now)
@@ -121,7 +129,16 @@ def _apply_write_blocked_job(root: Path, request: dict[str, Any]) -> dict[str, A
     released["release_reason"] = WRITE_BLOCKED_REASON
     released["write_blocked_run_state_request_id"] = request["request_id"]
     _write(claim_path, released)
-    return {"applied": True, "status": "blocked", "job_id": job_id, "claim_id": marker["claim_id"], "attempt_id": marker["attempt_id"], "retry_not_before": job.get("retry_not_before")}
+    return {
+        "applied": True,
+        "status": "blocked",
+        "job_id": job_id,
+        "claim_id": marker["claim_id"],
+        "attempt_id": marker["attempt_id"],
+        "retry_not_before": job.get("retry_not_before"),
+        "source_reason": source_reason or None,
+        "transport_reason": WRITE_BLOCKED_REASON,
+    }
 
 
 
@@ -179,6 +196,12 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     runtime_condition_fallback_exhausted = (
         value.get("runtime_condition_fallback_exhausted") is True
     )
+    transport_health_probe_attempted = value.get("transport_health_probe_attempted") is True
+    transport_health_probe_succeeded = value.get("transport_health_probe_succeeded") is True
+    if transport_health_probe_succeeded and not transport_health_probe_attempted:
+        raise ValueError(
+            "transport_health_probe_succeeded requires transport_health_probe_attempted=true"
+        )
     write_blocked_job = _normalize_write_blocked_job(
         value.get("write_blocked_job"), worker_id, scheduled_slot
     )
@@ -257,6 +280,8 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_event": runtime_condition_event,
         "runtime_condition_scope": runtime_condition_scope,
         "runtime_condition_fallback_exhausted": runtime_condition_fallback_exhausted,
+        "transport_health_probe_attempted": transport_health_probe_attempted,
+        "transport_health_probe_succeeded": transport_health_probe_succeeded,
         "write_blocked_job": write_blocked_job,
         "route_recovery_source": route_recovery_source,
         "recovered_work_mode_at_start": recovered_work_mode,
@@ -1794,16 +1819,30 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     requested_runtime = request["runtime_condition"]
     runtime = requested_runtime
     runtime_condition_ignored_reason = None
-    if write_blocked_job.get("applied") and runtime == "transport_unrecoverable":
+    if write_blocked_job.get("applied") and runtime in {
+        "durable_transports_unavailable",
+        "platform_context_limit",
+        "transport_unrecoverable",
+    }:
         runtime = "none"
         runtime_condition_ignored_reason = "target_write_blocked_and_released"
     if runtime == "handoff_guard":
         runtime = "none"
         runtime_condition_ignored_reason = "handoff_guard_is_derived_from_deadline"
-    elif runtime in {"github_read_unavailable", "durable_transports_unavailable", "transport_unrecoverable"}:
+    elif runtime == "github_read_unavailable":
         if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 2:
             runtime = "none"
             runtime_condition_ignored_reason = "transient_runtime_condition_not_confirmed_after_two_attempts"
+    elif runtime in {"durable_transports_unavailable", "transport_unrecoverable"}:
+        if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 2:
+            runtime = "none"
+            runtime_condition_ignored_reason = "transient_runtime_condition_not_confirmed_after_two_attempts"
+        elif not request.get("transport_health_probe_attempted"):
+            runtime = "none"
+            runtime_condition_ignored_reason = "transport_stop_requires_failed_health_probe"
+        elif request.get("transport_health_probe_succeeded"):
+            runtime = "none"
+            runtime_condition_ignored_reason = "transport_health_probe_succeeded"
     elif runtime == "platform_context_limit":
         explicit_platform_rejection = bool(
             request.get("runtime_condition_confirmed")
@@ -2027,6 +2066,12 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_fallback_exhausted": request.get(
             "runtime_condition_fallback_exhausted", False
         ),
+        "transport_health_probe_attempted": request.get(
+            "transport_health_probe_attempted", False
+        ),
+        "transport_health_probe_succeeded": request.get(
+            "transport_health_probe_succeeded", False
+        ),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "write_blocked_job": write_blocked_job,
         "seconds_to_run_deadline": seconds_to_deadline,
@@ -2075,7 +2120,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
             "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability. "
-            "If one Research/Audit paper alone cannot be written, report it through write_blocked_job on the normal run-state request so Actions marks that job blocked and releases its claim; continue to another paper. Before declaring transport_unrecoverable or durable_transports_unavailable, confirm that this run-state quarantine path or other required durable writes are also unavailable."
+            "If one Research/Audit paper alone cannot be written, first update the canonical health-probe file once, then report it through a minimal write_blocked_job run-state request so Actions marks that job blocked and releases its claim; continue to another paper. A successful health probe disproves transport_unrecoverable/durable_transports_unavailable. Those stop conditions require transport_health_probe_attempted=true and transport_health_probe_succeeded=false in addition to the normal confirmation evidence."
         ),
         "rule": (
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
