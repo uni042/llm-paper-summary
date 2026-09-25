@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2409.02060",
+      "arxiv_id": "2409.02060",
+      "title": "OLMoE: Open Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2409.02060",
+      "priority": 86,
+      "reason": "Open MoE model study with routing-specialization analysis; relevant baseline for MoE expert routing and inference lineages."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1b",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1b.json",
+    "receipt": "sha256:697ed06f9a8ee128997ca52608e5f4719513a5e2c7d3a69062eb172a27611048"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-20260925T100045JST-a7d3c1-r1b",
+    "axis": "preload-backward-structured-references",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
