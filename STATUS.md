@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 22:26:45 JST**
+> 自動生成: **2026-09-26 00:19:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **361** |
-| 未claim Research job | **217** |
-| 直近24hの検証済みResearch収録 | **7** |
+| 収録候補論文 | **351** |
+| 未claim Research job | **220** |
+| 直近24hの検証済みResearch収録 | **6** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-25 18:19:10 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **361** |
+| canonical_id確認済みの一意な候補論文 | **351** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **361** |
+| 非終端Research job合計 | **351** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6827** |
-| 処理済み | **670** |
-| 未処理 | **6157** |
-| 収録済みとして除外 | **561** |
+| 処理済み | **673** |
+| 未処理 | **6154** |
+| 収録済みとして除外 | **564** |
 | 無関係として除外 | **49** |
 | 微妙として除外 | **60** |
 
-- 消化率: **9.8%**
+- 消化率: **9.9%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（37時間50分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（39時間43分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **131** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **8** | **3** | **0** | **0** | **0** | **3** |
-| 合計 | **3** | **9** | **3** | **0** | **144** | **0** | **3** |
+| Discovery | **0** | **8** | **3** | **0** | **0** | **0** | **3** |
+| 合計 | **0** | **9** | **3** | **0** | **131** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -91,18 +91,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
-- **09-25 18:19:10 JST** job `job-428a6d139aa9ac99` / 候補 **0件**
-  - result: `.survey/work-queue/results/discovery-scheduled-chat-00-20260925T090214Z-3-frontier-da31.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery-scheduled-chat-00-20260925T090214Z-3-frontier-da31.json`
-  - 探索軸: preload-backward-structured-references
-- **09-25 18:17:45 JST** job `job-b3f398063f19f6bd` / 候補 **0件**
-  - result: `.survey/work-queue/results/discovery-scheduled-chat-00-20260925T090214Z-3-r1-forward-empty.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/discovery-scheduled-chat-00-20260925T090214Z-3-r1-forward-empty.json`
-  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-- **09-25 18:17:57 JST** job `job-5b5d556ff19ac83d` / 候補 **0件**
-  - result: `.survey/work-queue/results/discovery-scheduled-chat-00-20260925T090214Z-3-r2-empty.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/discovery-scheduled-chat-00-20260925T090214Z-3-r2-empty.json`
-  - 探索軸: preload-backward-structured-references
+- 検証済み成功なし。
 
 ### 直近タスク
 
@@ -154,10 +143,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.27373` — Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models / worker `shared-preload-pool`
-  - claim: **09-25 21:32:29 JST** / heartbeat: **—** / lease expiry: **09-26 09:32:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a5acd3b5ba5b245.json`
+- 未失効かつ非terminal jobのclaim: **131件** / 直近15分heartbeat: **0件**
 - `arXiv:2604.17701` — WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference / worker `shared-preload-pool`
   - claim: **09-25 07:40:58 JST** / heartbeat: **09-25 21:32:29 JST** / lease expiry: **09-26 09:32:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-0b37f63c9c1b5db3.json`
@@ -185,6 +171,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2608.24664` — Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration / worker `shared-preload-pool`
   - claim: **09-25 21:32:29 JST** / heartbeat: **—** / lease expiry: **09-26 09:32:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-898c6226a202425e.json`
+- `arXiv:2604.07815` — AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention / worker `shared-preload-pool`
+  - claim: **09-25 07:40:58 JST** / heartbeat: **09-25 21:32:29 JST** / lease expiry: **09-26 09:32:29 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9450092f13367cb2.json`
 
 #### Audit
 
@@ -204,7 +193,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **361** |
+| ready | **351** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +213,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1028** |
+| inference/training/survey配下の論文Markdown実体 | **1037** |
 
 ### immutable submissionの未照合
 
