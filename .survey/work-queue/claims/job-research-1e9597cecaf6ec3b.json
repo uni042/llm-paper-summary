@@ -9,7 +9,7 @@
   ],
   "direct_take": true,
   "direct_take_marker": ".survey/work-queue/direct-takes/research/claim-preload-81984cfdaed69bbd424098a4.json",
-  "expires_at": "2026-09-25T11:03:35+00:00",
+  "expires_at": "2026-09-25T09:37:13+00:00",
   "heartbeat_at": "2026-09-25T09:33:35+00:00",
   "invalidated": false,
   "job_id": "job-research-1e9597cecaf6ec3b",
@@ -21,7 +21,18 @@
   "preload_pool_worker_id": "shared-preload-pool",
   "preloaded_at": "2026-09-24T18:48:37+00:00",
   "previous_claim_id": "claim-preload-31346625ffdfc4185afce20f",
+  "record_bank": "j",
+  "record_bank_root": ".survey/work-queue/records/chat-record-j",
+  "record_slot_paths": {
+    "evaluation": ".survey/work-queue/records/chat-record-j/evaluation.json",
+    "metadata": ".survey/work-queue/records/chat-record-j/metadata.json",
+    "positioning": ".survey/work-queue/records/chat-record-j/positioning.json",
+    "problem_method": ".survey/work-queue/records/chat-record-j/problem_method.json",
+    "results": ".survey/work-queue/records/chat-record-j/results.json"
+  },
+  "release_reason": "platform_content_write_rejected_after_bundle_fallback",
   "released": false,
+  "released_at": "2026-09-25T09:37:13+00:00",
   "request_id": "directtake-scheduled-chat-30-20260925T183229JST-a1",
   "run_key": "run-scheduled-chat-30-20260925T183229JST-a1",
   "scheduled_slot": "30",
@@ -31,13 +42,5 @@
   "worker_id": "scheduled-chat-30",
   "worker_kind": "scheduled_chat",
   "workflow_version": 10,
-  "record_bank": "j",
-  "record_bank_root": ".survey/work-queue/records/chat-record-j",
-  "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-j/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-j/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-j/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-j/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-j/positioning.json"
-  }
+  "write_blocked_run_state_request_id": "worker-control-scheduled-chat-30-2"
 }
