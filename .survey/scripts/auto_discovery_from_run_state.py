@@ -84,7 +84,6 @@ def _eligible(result: dict[str, Any]) -> bool:
         and result.get("discovery_submission_result_pending") is False
         and result.get("discovery_evaluation_pending") is False
         and result.get("discovery_recovery_required") is False
-        and int(result.get("seconds_to_run_deadline") or 0) > 600
         and bool(preload.get("preload_id"))
         and direction in {"backward", "forward", "normal"}
         and str(preload.get("citation_direction") or "") == direction
