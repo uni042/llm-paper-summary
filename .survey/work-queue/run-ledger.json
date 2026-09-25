@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-25T02:04:29.068553+00:00",
+  "updated_at": "2026-09-25T02:04:59.534126+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45906,6 +45906,56 @@
       "paper_active_count_before": 1026,
       "paper_active_count_after": 1026,
       "last_successful_action": "fallback_archived"
+    },
+    {
+      "run_key": "unattributed:36084712552",
+      "first_recorded_at": "2026-09-25T02:04:59.534126+00:00",
+      "last_recorded_at": "2026-09-25T02:04:59.534126+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36084712552:1",
+          "recorded_at": "2026-09-25T02:04:59.534126+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36084712552",
+            "run_attempt": "1",
+            "source_sha": "23e25af7cf5bdb42d193fb7c63b498f1ddddfbe2"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-6be480b73a6003b5",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3770855.3817626",
+          "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1026,
+      "paper_active_count_after": 1026,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
