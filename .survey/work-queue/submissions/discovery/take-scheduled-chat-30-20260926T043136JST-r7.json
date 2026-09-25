@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-26T04:31:36+09:00",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/ICCCN69946.2026.11662646",
+      "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving",
+      "source_url": "https://doi.org/10.1109/ICCCN69946.2026.11662646",
+      "priority": 96,
+      "reason": "KV allocationがTTFT/TBTへ与える影響を扱うサービング資源管理研究で、KV管理とスケジューリングの接点にある。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00037",
+      "title": "BYSTANDER: State-Aware End-to-End Latency Prediction for Heterogeneous LLM Inference Scheduling",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00037",
+      "priority": 95,
+      "reason": "異種GPU環境の状態認識型遅延予測をスケジューリングへ用いるため、LLMサービング基盤の中心課題に一致。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00120",
+      "title": "REKV: Cross-Precision Model Switching with Persistent KV Cache Reuse for LLM Serving",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00120",
+      "priority": 96,
+      "reason": "精度切替時にもKVを保持・再利用するサービング方式で、モデル切替とKV互換性を同時に扱う。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00182",
+      "title": "EcoFlow: Cost-Aware LLM Serving on Heterogeneous GPUs via Min-Cost Max-Flow",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00182",
+      "priority": 94,
+      "reason": "異種GPU配置を最小費用最大流として解くLLMサービング研究で、コスト・スループット配置最適化に適合。"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00179",
+      "title": "QoS-Aware Prefix Orchestration for Geo-Distributed LLM-as-a-Service",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00179",
+      "priority": 94,
+      "reason": "地理分散LLMaaSでprefix/KVをQoS認識に編成するため、分散KVとサービング制御の新規候補として有望。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
+    "round": "round-7",
+    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "query_summary": "固定取得窓20件を評価し、推論システムとして直接性の高い候補5件を採用。",
+    "candidate_count": 20,
+    "accepted_count": 5,
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  },
+  "discovery_precheck": {
+    "request_id": "take-scheduled-chat-30-20260926T043136JST-r7",
+    "result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-30-20260926T043136JST-r7.json",
+    "receipt": "sha256:147e88ad2ed22a4ccafdae649c4325e2d5b9b421b0f5de9bcd4b4fa72ee28f28"
+  }
+}
