@@ -16,6 +16,7 @@ from typing import Any
 
 import claim_state
 import reference_pool
+import research_job_reconciliation
 
 DEFAULT_LIMIT = 100
 WORKERS = ("00", "30")
@@ -62,11 +63,18 @@ def _jobs(root: Path) -> list[dict[str, Any]]:
 def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     jobs = _jobs(root)
     claims = claim_state.current_claims(root)
+    paper_index = research_job_reconciliation.build_paper_index(root)
     ready = [
         row
         for row in jobs
         if row.get("status") == "ready"
         and row.get("type") in {"research", "audit"}
+        and not (
+            row.get("type") == "research"
+            and research_job_reconciliation.match_represented_research_job(
+                row, paper_index
+            ) is not None
+        )
     ]
     claimable = [
         row
