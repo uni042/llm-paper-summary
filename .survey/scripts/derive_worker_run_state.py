@@ -1850,12 +1850,17 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             and request.get("runtime_condition_event") == PLATFORM_CONTEXT_LIMIT_EVENT
             and request.get("runtime_condition_scope") == PLATFORM_CONTEXT_LIMIT_SCOPE
             and request.get("runtime_condition_fallback_exhausted") is True
+            and request.get("transport_health_probe_attempted") is True
+            and request.get("transport_health_probe_succeeded") is False
             and str(request.get("runtime_condition_detail") or "").strip()
         )
-        if not explicit_platform_rejection:
+        if request.get("transport_health_probe_succeeded"):
+            runtime = "none"
+            runtime_condition_ignored_reason = "transport_health_probe_succeeded"
+        elif not explicit_platform_rejection:
             runtime = "none"
             runtime_condition_ignored_reason = (
-                "platform_limit_requires_run_wide_tool_rejection_and_exhausted_status_only_fallback"
+                "platform_limit_requires_run_wide_tool_rejection_exhausted_fallback_and_failed_health_probe"
             )
 
     # 600s is only a no-new-independent-work window. The final 180s is the
@@ -2133,7 +2138,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
-            "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected, runtime_condition_scope=run_wide, runtime_condition_fallback_exhausted=true, and a concrete observed-error detail; a single paper/source/content-write failure is never platform-context evidence. "
+            "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected, runtime_condition_scope=run_wide, runtime_condition_fallback_exhausted=true, transport_health_probe_attempted=true, transport_health_probe_succeeded=false, and a concrete observed-error detail; a successful health probe disproves the run-wide platform stop. A single paper/source/content-write failure is never platform-context evidence. "
             "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to productive work instead of monitoring the claim as foreground work. Same-worker expired-claim record recovery packets are selected before unrelated fresh pool packets and are canonicalized by the run-state workflow through a deterministic pinned claim, without a worker-side direct-take write. Fresh stock may still use create-only direct take. An already-active owned foreground remains authoritative. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "
