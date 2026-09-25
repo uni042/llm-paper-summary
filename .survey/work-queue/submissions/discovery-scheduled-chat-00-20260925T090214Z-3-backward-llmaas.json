@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "submission_id": "discovery-scheduled-chat-00-20260925T090214Z-3-backward-llmaas",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+  "discovery_precheck": {
+    "request_id": "take-scheduled-chat-00-20260925T090214Z-3-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-00-20260925T090214Z-3-r2.json",
+    "receipt": "sha256:fe118415428dd45d16cc2eb8ac860cfe7309488faa67b2d8b1a87d9390b8ae06"
+  },
+  "discovery_stats": {
+    "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+    "round": "backward-r1d",
+    "axis": "preload-backward-structured-references",
+    "citation_direction": "backward"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2403.11805",
+      "arxiv_id": "2403.11805",
+      "source_url": "https://arxiv.org/abs/2403.11805",
+      "priority": 92
+    }
+  ]
+}
