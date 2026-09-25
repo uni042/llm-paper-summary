@@ -1,4 +1,4 @@
-# Worker router — workflow v10.16
+# Worker router — workflow v10.17
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -59,7 +59,7 @@ runノルマの正規値は `.survey/scripts/worker_quota_policy.py` に一元�
 - **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低5件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→ワーカー自身のセルフレビュー→exact blob preflight合格→不変submission→submission result成功→最新mainへの反映確認まで、Auditも同じ提出前ゲート→不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。5件は停止上限ではない。最低5件を達成した後も、残り600秒の新規開始禁止窓に入るまでは、継続可能なResearch / Auditがある限り機械案内は `CLAIM_NEXT_RESEARCH_AUDIT` を返し、既確保standbyの昇格またはclaim windowの補充を行って同じ読解モードを継続する。曖昧な `CONTINUE_WORK` を最低件数達成後の停止・待機理由として扱わない。
 - **探索モード**: 今回のrunで最低8つの**成功した正規schema v3 precheck**を完了させ、そのprecheckに対応するDiscovery submission/resultまで耐久反映する。**1つのprecheck `request_id` = 1ラウンド**と数える。同じprecheckから候補を複数submissionへ分割しても1ラウンドのままであり、逆に別の成功precheckなら同じprovider・同じ探索元でも別ラウンドとして数える。候補0件の成功precheckも、0件submission/resultまで正規経路を完了すれば1ラウンドに数える。8ラウンドは停止上限ではない。
 
-handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
+handoff guard、platform/context limit、GitHub正本の読取不能などのhard stopはノルマより優先する。ただし、**Research / Auditの内容書込みだけがplatform safetyで拒否され、claim/direct-take等の制御系GitHub writeとGitHub readが生きている場合はrun-wide hard stopへ昇格しない。** 第2.1節の `volatile pending durability` 規則で内容完成とGitHub耐久反映を分離し、既確保standbyの読解を継続する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ### 2.0.1 ゼロ待ちhot dispatch（Research / Discovery共通）
 
 通常runでは、`.survey/work-queue/hot-dispatch.json` が存在し、`direct_start_allowed=true` なら、**Actions resultを待ってから最初の内容作業を始めてはならない。** このindexは共有Research preload FIFOとDiscovery PRECHECKED preloadを1 readで公開する再構築可能な加速面である。`candidate_inventory` / `research_discovery_threshold` / `suggested_work_mode` を今回runの開始値として固定し、同時に通常のrun-state requestをmainへ保存するが、そのrequestには次の4項目も付けて**run-state Actionsは非同期の整合確認へ回す**。
@@ -103,7 +103,17 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 このworker-control updateを受けたrun-state Actionsは、最新canonical claim stateからそのworkerのResearch/Audit foregroundを自分で解決し、`foreground_guard` が一致する場合だけ対象jobを `blocked` にしてclaimをreleaseし、7日cooldownを設定する。結果は `.survey/work-queue/transport/worker-control-results/<worker_id>-<seq>.json` に耐久保存される。`status=quarantined` / `next_action=CONTINUE_NEXT_RESEARCH_AUDIT` を確認したら、その論文を成功件数には数えず最古standbyへ直ちに進む。`foreground_guard_mismatch` の場合は古い命令を別論文へ適用せず、最新hot-dispatchを読み直す。**status-only createが1回拒否されたら、同じcreateを連打せずこのupdate-only第2経路を試す。**
 
-**worker-control update自体もplatform safetyで拒否された場合だけ、第3経路として従来のhealth-probe update-only quarantineへ進む。** `on_worker_control_write_rejected` の契約を使い、`.survey/work-queue/transport/health-probe.json` の最新blob SHAを取り直して1回updateする。この第3経路では一意な `probe_id` と現在run identity、およびcanonical identityを明示した最小 `write_blocked_job` を使う。probe成功ならrun-wide障害ではない。worker-controlまたはhealth-probeのどちらかでquarantineが成功した場合、run-state requestのcreateは追加要求せず次のResearch/Auditへ進む。health-probe updateまで拒否された場合にだけ、Libraryを含む残りfallbackを確認した上でrun-wide診断へ進む。
+**worker-control update自体もplatform safetyで拒否された場合だけ、第3経路として従来のhealth-probe update-only quarantineへ進む。** `on_worker_control_write_rejected` の契約を使い、`.survey/work-queue/transport/health-probe.json` の最新blob SHAを取り直して1回updateする。この第3経路では一意な `probe_id` と現在run identity、およびcanonical identityを明示した最小 `write_blocked_job` を使う。probe成功ならrun-wide障害ではない。worker-controlまたはhealth-probeのどちらかでquarantineが成功した場合、run-state requestのcreateは追加要求せず次のResearch/Auditへ進む。health-probe updateまで拒否された場合でも、**GitHub readとclaim/direct-take等の制御系writeがこのrunで成功しているなら、Research / Audit全体のtransport障害とは扱わない。** そのattemptだけを **`volatile pending durability`** として内容完成済み・GitHub耐久反映待ちに分離し、同じ内容writeやquarantine writeをこのrunで繰り返さない。
+
+`volatile pending durability` に入れる条件は、(1) 一次資料全文の読解と5スロット相当の完成、(2) セルフレビュー完了、(3) 通常slot/bundle/status-only/worker-control/health-probeの正規回復を各1回まで実試行してplatform safety拒否を観測、(4) GitHub readまたは同runの制御系write成功実績があること、の全てである。これはResearch/Auditの**内容完成（content completion）**を表すだけで、成功件数・preflight PASS・immutable submission・耐久完了（durable completion）には数えない。
+
+この状態ではcanonical foregroundを成功扱い・release済み扱いに捏造しない。一方、**既に同一workerへ正規claim済みのstandbyがあるなら、最古standbyをread-ahead対象として一次資料取得・全文読解・5スロット相当の作成・セルフレビューまで進めてよい。** foreground昇格やrecord route確定を要するGitHub書込み、preflight、submissionは行わず、内容完成だけを先行する。これにより1本のcontent-write拒否でrunの残り時間を捨てない。既確保standbyが無い場合は、制御系writeが生きていることを実測できるときだけ通常のclaim/direct-take経路でstandbyを補充してよい。制御系writeまで拒否された場合は新規claimを増やさず、既確保分のread-aheadに限定する。
+
+`volatile pending durability` の成果は、run終了時のScheduled Chat最終報告に機械可読なhandoffとして残す。各attemptについて最低限 `kind/job_id/claim_id/attempt_id/worker_id/run_key/source identity/5スロット完成内容/self_review/failed_operation/last_successful_operation/recovery_attempts/observed_error/next_action` を保持する。**次回同じScheduled Chatは、同一attemptがcanonical上まだ再開可能なら一次資料を再読する前にこのhandoffを再利用し、通常のslot/bundle経路を1回だけ再試行する。** canonical identityが変わっていれば古いhandoffを別attemptへ流用しない。
+
+Libraryは一次PDFキャッシュや、Libraryへ直接保存できる正規経路が実際に利用可能な場合だけ補助耐久先として使う。**作業コンテナに生成したファイルをLibraryへmaterialize/uploadできない環境では、それ自体を追加fallbackとして要求しない。** Library境界の不一致だけを理由にrunを終了せず、上記volatile handoffとread-aheadへ進む。
+
+この分離後、run-wide hard stopへ昇格できるのは、GitHub正本のread不能、claim/direct-takeを含む制御系transportも実際に拒否され既確保standbyも無い、または残り時間/取得上限/安全なidentity維持不能などにより内容作業そのものを継続できない場合である。
 
 `transport_unrecoverable` / `durable_transports_unavailable` を申告してhandoffする前に、**今回必要な正規pathへの実writeを少なくとも1回は実際に試す。** write操作を一度も試していない、または「直接スクリプトを実行できない」ことしか確認していない状態はtransport障害ではない。create-only pathで既存ファイル競合が返った場合もwrite不能ではなく排他取得競合なので、routerが定める次packet/同一identity確認へ進む。
 
@@ -552,7 +562,7 @@ hot-dispatch direct startではrun-state requestを**内容作業開始前に耐
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、status-only終端、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - **`run_termination_allowed=false` のsnapshotを観測した状態で通常handoff・run終了へ進んではならない。** 特に残り600秒より多く `next_work_packet` が存在する場合、そのpacketを消費することが次の必須操作であり、「耐久保存できた」「一区切り」「次回再開可能」は終了理由にならない。
 - **通常runは、次の3系統以外を理由に終了してはならない。** (1) 正規回復を試しても継続不能または安全に継続できない具体的な問題が発生した場合、(2) PDF・一次資料・Web/provider・Library等の**取得上限が実際に観測され**、必要な取得をそれ以上継続できない場合、(3) runの終了時刻が近づき、600秒開始禁止窓または180秒最終handoff窓の規則に従って安全にhandoffすべき場合。ノルマ達成、1本/1round完了、候補0件、submission/precheck/result pending、Actions進行中、単一provider失敗、単一論文の取得失敗、待機が発生したこと、次手が分かりにくいこと、通常処理が一区切り付いたことは、それ単独では終了理由にしない。取得上限は推測で立てず、実際の上限・拒否・quota/cap到達を観測した場合だけ使う。
-- `finalization_gate` / `finalization_permit_issued` は停止判断には使用してよいが、**報告許可として扱わない。終了すると決めたrunは、終了理由が問題・取得上限・終了時刻接近のどれであっても、Scheduled Chatへ必ず最終報告を残してから終了する。** hard stop、safe handoff、取得上限、時間切れ接近を含め、報告を省略して終了してはならない。最終報告には少なくとも選択モード、今回の処理件数/round数、耐久反映、未完了事項、終了理由、確認できた最終main SHAを含める。最終mainを再取得できない問題で終了する場合は、最後に確認できたSHAと再取得不能であることを明記する。
+- `finalization_gate` / `finalization_permit_issued` は停止判断には使用してよいが、**報告許可として扱わない。終了すると決めたrunは、終了理由が問題・取得上限・終了時刻接近のどれであっても、Scheduled Chatへ必ず最終報告を残してから終了する。** hard stop、safe handoff、取得上限、時間切れ接近を含め、報告を省略して終了してはならない。最終報告には少なくとも選択モード、今回の処理件数/round数、耐久反映、未完了事項、終了理由、確認できた最終main SHAを含める。`volatile pending durability` がある場合は、**成功件数とは別に `content_completed` と `durable_completed` を分けて報告し、次回再利用できるattempt別handoffを省略しない。**最終mainを再取得できない問題で終了する場合は、最後に確認できたSHAと再取得不能であることを明記する。
 - 残り600秒以下の開始禁止窓に入ったら新規独立作業を開始しない。**ただし開始済みDiscovery round（precheck result待ち、成功precheckの評価中、Discovery submission result待ち、正規recovery中）もResearch/Auditの開始済み作業と同じく継続対象**であり、600秒到達だけで終了してはならない。進行中作業・必要な非同期結果確認が本当に0件のときだけ安全handoff後に終了してよい。残り180秒以下では新規内容作業を止め、耐久保存と安全な引き継ぎだけを行う。処理中resultが残る場合、180秒より前は待機ミクロタスクを挟みながら追跡し、180秒以下になってもpendingならsubmission/request identity・result path・現在状態・次に行うべき正規操作が耐久保存済みであることを確認してhandoffする。
 
 ### 7.3 実行環境・transport障害の診断記録
