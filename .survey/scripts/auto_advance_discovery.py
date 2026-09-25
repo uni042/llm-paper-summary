@@ -324,7 +324,6 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
         if (
             state.get("work_mode") == "discovery"
             and required_action == "DISCOVER_AGAIN"
-            and int(state.get("seconds_to_run_deadline") or 0) > 600
             and request.get("scheduled_slot") != "0830"
         ):
             selector = state.get("discovery_selector") if isinstance(state.get("discovery_selector"), dict) else {}
