@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.27746",
+      "arxiv_id": "2609.27746",
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "source_url": "https://arxiv.org/abs/2609.27746",
+      "priority": 94,
+      "reason": "Directly studies online KV-cache capacity planning for agentic LLM serving and prefix-cache retention."
+    },
+    {
+      "canonical_id": "arXiv:2606.05875",
+      "arxiv_id": "2606.05875",
+      "title": "QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving",
+      "source_url": "https://arxiv.org/abs/2606.05875",
+      "priority": 92,
+      "reason": "Direct cache-fusion serving work reducing RAG prefill cost through query-aware KV reuse."
+    },
+    {
+      "canonical_id": "arXiv:2607.22578",
+      "arxiv_id": "2607.22578",
+      "title": "HeraSys: Collaborative Serving of Multiple LLM Workflows via Fine-Grained End-to-End Optimization",
+      "source_url": "https://arxiv.org/abs/2607.22578",
+      "priority": 90,
+      "reason": "Systems paper on concurrent multi-tenant agentic workflow serving and end-to-end orchestration."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-b330f7cdb84142a4e6a587fd",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-b330f7cdb84142a4e6a587fd.json",
+    "receipt": "sha256:878496dfe2190b8684950760e868330a866c64a465878b1664bcb556e116744a"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "frontier-b330f7cdb84142a4e6a587fd",
+    "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+    "candidate_count": 20,
+    "accepted_count": 3,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}
