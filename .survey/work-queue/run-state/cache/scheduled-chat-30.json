@@ -1,6 +1,6 @@
 {
-  "fact_generation": 107,
-  "generation": 175,
+  "fact_generation": 108,
+  "generation": 176,
   "runs": {
     "run-scheduled-chat-30-20260925T183229JST-a1": {
       "actual_invocation_start": "2026-09-25T09:32:29+00:00",
@@ -9,9 +9,8 @@
       "candidate_inventory": 361,
       "claims": {
         "active_assignment": true,
-        "active_claim_count": 12,
+        "active_claim_count": 11,
         "active_job_ids": [
-          "job-research-1e9597cecaf6ec3b",
           "job-research-98fce5e6481e51fa",
           "job-research-9ac6b8b0fe0cfe37",
           "job-research-898c6226a202425e",
@@ -30,8 +29,8 @@
         "claim_result_pending_age_seconds": 0,
         "claim_state_checked": true,
         "claim_window": 12,
-        "claim_window_remaining": 0,
-        "foreground_job_id": "job-research-1e9597cecaf6ec3b",
+        "claim_window_remaining": 1,
+        "foreground_job_id": "job-research-98fce5e6481e51fa",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
@@ -44,10 +43,13 @@
         "preflight_pipeline_overflow_count": 0,
         "preflight_pipeline_saturated": false,
         "preflight_pipeline_window": 2,
-        "preflight_repair_attempt_ids": [],
-        "preflight_repair_job_ids": [],
+        "preflight_repair_attempt_ids": [
+          "attempt-preload-52c66e1ec1f42a4421674171"
+        ],
+        "preflight_repair_job_ids": [
+          "job-research-98fce5e6481e51fa"
+        ],
         "standby_job_ids": [
-          "job-research-98fce5e6481e51fa",
           "job-research-9ac6b8b0fe0cfe37",
           "job-research-898c6226a202425e",
           "job-research-ca4192f3e116d4ad",
@@ -61,7 +63,7 @@
         ]
       },
       "first_cached_at": "2026-09-25T09:33:42.537080+00:00",
-      "generation": 175,
+      "generation": 176,
       "rebuilt_from_canonical": true,
       "run_key": "run-scheduled-chat-30-20260925T183229JST-a1",
       "scheduled_slot": "30",
@@ -1011,6 +1013,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-25T09:33:42.537435+00:00",
+  "updated_at": "2026-09-25T10:14:05.352868+00:00",
   "worker_id": "scheduled-chat-30"
 }
