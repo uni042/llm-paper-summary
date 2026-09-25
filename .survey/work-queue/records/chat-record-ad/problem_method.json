@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-c6201f095f5e02114030eae0",
+  "attempt_id": "attempt-preload-aa921fef07ed3dce8f3ff743",
   "job_id": "job-research-0a5acd3b5ba5b245",
   "data": {
     "problem": "Recurrent language modelは同じblockを多数反復して表現を改善できるが、各反復で長いKV系列へのattentionを繰り返すため長文脈ではattentionが推論時間を支配する。early exitは反復深度を削って品質を損ね得る。",
@@ -25,7 +25,7 @@
     "system_design": "early exitではなくtrajectory後半のattention supportだけを入力適応的に固定する。"
   },
   "reservation": {
-    "claim_id": "claim-preload-c6201f095f5e02114030eae0",
+    "claim_id": "claim-preload-aa921fef07ed3dce8f3ff743",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

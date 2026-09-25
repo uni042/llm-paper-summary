@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "auto-recovery-claim-e3ca4d8a67dddae001277bc9",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "run_key": "scheduled-chat-00-20260925T200048JST-a51c2d",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T11:00:48+00:00",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-0a5acd3b5ba5b245",
+      "claim_id": "claim-preload-aa921fef07ed3dce8f3ff743",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-preload-aa921fef07ed3dce8f3ff743",
+      "claimed_at": "2026-09-25T11:02:16+00:00",
+      "expires_at": "2026-09-25T12:32:16+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-0a5acd3b5ba5b245"
+      ],
+      "job": {
+        "job_id": "job-research-0a5acd3b5ba5b245",
+        "type": "research",
+        "parent_job_id": "job-9bd5c86cf0f0a7c8",
+        "priority": 95,
+        "canonical_id": "arXiv:2609.27373",
+        "arxiv_id": "2609.27373",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/2b244bde0bf233ad6b470eac0261a9d2b10a8b55",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+        "lineage": null,
+        "selection_reason": "recurrent LLMでattention supportの早期安定を利用し、後段でblock-structured working setを再利用するtraining-free推論法。4KでFlashAttention比attention 1.76x、全32-step trajectory 1.36xを報告し、sparse attention serving系統に直接寄与。",
+        "priority_breakdown": {
+          "base": 45,
+          "lineage": 30,
+          "recency": 20,
+          "venue": 0,
+          "total": 95
+        },
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+        "schema_version": 1,
+        "created_at": "2026-09-24T16:05:48+00:00"
+      },
+      "run_key": "scheduled-chat-00-20260925T200048JST-a51c2d",
+      "scheduled_slot": "00",
+      "actual_invocation_start": "2026-09-25T11:00:48+00:00",
+      "pipeline_order": 0,
+      "pool_order": 455,
+      "stock_bank": "h",
+      "stock_lane": "research",
+      "preloaded_at": "2026-09-25T09:33:37+00:00",
+      "preload_pool_adopted_at": "2026-09-25T11:02:16+00:00",
+      "pipeline_position": 1,
+      "pipeline_role": "foreground",
+      "record_bank": "ad",
+      "record_bank_root": ".survey/work-queue/records/chat-record-ad",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-ad/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-ad/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-ad/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-ad/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-ad/positioning.json"
+      },
+      "record_bank_recovery": "expired-same-job",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-preload-c6201f095f5e02114030eae0"
+      ]
+    }
+  ],
+  "processed_at": "2026-09-25T11:02:16+00:00",
+  "checkpoint_released": 0,
+  "claim_window": 12,
+  "hot_banked_claim_target": 4,
+  "claim_refill_threshold": 10,
+  "active_claim_count": 1,
+  "claim_window_remaining": 11,
+  "foreground_job_id": "job-research-0a5acd3b5ba5b245",
+  "standby_job_ids": [],
+  "shared_pool_adopted_count": 1,
+  "reason": "scheduled_chat_claim_window"
+}
