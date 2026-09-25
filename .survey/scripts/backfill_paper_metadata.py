@@ -12,8 +12,10 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 import re
+import sys
 import time
 from typing import Any
 from urllib.parse import urlencode
@@ -154,6 +156,81 @@ def arxiv_ids(paths: list[Path]) -> list[str]:
     return ids
 
 
+class _ArxivMetaParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.values: dict[str, list[str]] = {}
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "meta":
+            return
+        amap = {str(k).lower(): (v or "") for k, v in attrs}
+        name = amap.get("name", "").lower()
+        content = amap.get("content", "").strip()
+        if name and content:
+            self.values.setdefault(name, []).append(content)
+
+
+def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | None:
+    parser = _ArxivMetaParser()
+    parser.feed(raw.decode("utf-8", errors="replace"))
+    meta = parser.values
+    authors = [x.strip() for x in meta.get("citation_author", []) if x.strip()]
+    dates = meta.get("citation_date", []) or meta.get("citation_publication_date", [])
+    published = dates[0][:10] if dates else ""
+    keyword_values = meta.get("citation_keywords", [])
+    category_codes: list[str] = []
+    for value in keyword_values:
+        for code in re.findall(r"\(([a-z-]+\.[A-Z]{2,})\)", value):
+            if code not in category_codes:
+                category_codes.append(code)
+        for code in re.findall(r"\b([a-z-]+\.[A-Z]{2,})\b", value):
+            if code not in category_codes:
+                category_codes.append(code)
+    if not authors and not published and not category_codes:
+        return None
+    primary = category_codes[0] if category_codes else ""
+    return {
+        "authors": authors,
+        "published": published,
+        "arxiv_categories": (
+            {"primary": primary, "cross_list": category_codes[1:]}
+            if primary
+            else None
+        ),
+        "abs_url": f"https://arxiv.org/abs/{arxiv_id}",
+        "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}",
+    }
+
+
+def _fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
+    headers = {
+        "User-Agent": "llm-paper-summary-metadata-backfill/1.1 (https://github.com/uni042/llm-paper-summary)",
+        "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.1",
+    }
+    errors: list[str] = []
+    for url in (
+        f"https://arxiv.org/html/{arxiv_id}",
+        f"https://arxiv.org/abs/{arxiv_id}",
+    ):
+        try:
+            req = Request(url, headers=headers)
+            with urlopen(req, timeout=60) as response:
+                raw = response.read()
+            parsed = _parse_arxiv_html_metadata(arxiv_id, raw)
+            if parsed:
+                return parsed
+            errors.append(f"{url}: no citation metadata")
+        except Exception as exc:
+            errors.append(f"{url}: {type(exc).__name__}: {exc}")
+    print(
+        f"WARNING arXiv HTML metadata unavailable for {arxiv_id}: "
+        + " | ".join(errors),
+        file=sys.stderr,
+    )
+    return None
+
+
 def _fetch_arxiv_batch(batch: list[str]) -> ET.Element:
     query = urlencode({"id_list": ",".join(batch), "max_results": str(len(batch))})
     headers = {
@@ -185,33 +262,46 @@ def fetch_arxiv(ids: list[str], batch_size: int = 25) -> dict[str, dict[str, Any
     result: dict[str, dict[str, Any]] = {}
     for offset in range(0, len(ids), batch_size):
         batch = ids[offset : offset + batch_size]
-        root = _fetch_arxiv_batch(batch)
-        for entry in root.findall(ATOM + "entry"):
-            raw_id = (entry.findtext(ATOM + "id") or "").rstrip("/").split("/")[-1]
-            raw_id = re.sub(r"v\d+$", "", raw_id)
-            if not raw_id:
-                continue
-            authors = [
-                (a.findtext(ATOM + "name") or "").strip()
-                for a in entry.findall(ATOM + "author")
-                if (a.findtext(ATOM + "name") or "").strip()
-            ]
-            published = (entry.findtext(ATOM + "published") or "").strip()
-            primary_node = entry.find(ARXIV + "primary_category")
-            primary = primary_node.attrib.get("term", "").strip() if primary_node is not None else ""
-            categories = [
-                node.attrib.get("term", "").strip()
-                for node in entry.findall(ATOM + "category")
-                if node.attrib.get("term", "").strip()
-            ]
-            cross = [cat for cat in categories if cat != primary]
-            result[raw_id] = {
-                "authors": authors,
-                "published": published[:10] if published else "",
-                "arxiv_categories": {"primary": primary, "cross_list": cross} if primary else None,
-                "abs_url": f"https://arxiv.org/abs/{raw_id}",
-                "pdf_url": f"https://arxiv.org/pdf/{raw_id}",
-            }
+        try:
+            root = _fetch_arxiv_batch(batch)
+        except Exception as exc:
+            print(
+                f"WARNING arXiv Atom API unavailable for batch {batch}: {type(exc).__name__}: {exc}",
+                file=sys.stderr,
+            )
+            root = None
+        if root is not None:
+            for entry in root.findall(ATOM + "entry"):
+                raw_id = (entry.findtext(ATOM + "id") or "").rstrip("/").split("/")[-1]
+                raw_id = re.sub(r"v\d+$", "", raw_id)
+                if not raw_id:
+                    continue
+                authors = [
+                    (a.findtext(ATOM + "name") or "").strip()
+                    for a in entry.findall(ATOM + "author")
+                    if (a.findtext(ATOM + "name") or "").strip()
+                ]
+                published = (entry.findtext(ATOM + "published") or "").strip()
+                primary_node = entry.find(ARXIV + "primary_category")
+                primary = primary_node.attrib.get("term", "").strip() if primary_node is not None else ""
+                categories = [
+                    node.attrib.get("term", "").strip()
+                    for node in entry.findall(ATOM + "category")
+                    if node.attrib.get("term", "").strip()
+                ]
+                cross = [cat for cat in categories if cat != primary]
+                result[raw_id] = {
+                    "authors": authors,
+                    "published": published[:10] if published else "",
+                    "arxiv_categories": {"primary": primary, "cross_list": cross} if primary else None,
+                    "abs_url": f"https://arxiv.org/abs/{raw_id}",
+                    "pdf_url": f"https://arxiv.org/pdf/{raw_id}",
+                }
+        for arxiv_id in batch:
+            if arxiv_id not in result:
+                parsed = _fetch_arxiv_html(arxiv_id)
+                if parsed:
+                    result[arxiv_id] = parsed
         if offset + batch_size < len(ids):
             time.sleep(3.1)
     return result
