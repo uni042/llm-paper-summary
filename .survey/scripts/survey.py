@@ -253,8 +253,11 @@ def paper_views():
                 "source_lineage": source_lineage,
                 "path": rel,
                 "file": p,
-                "title": meta["title"],
-                "summary": compact_list_summary(body, meta["summary"]),
+                "title": meta.get("title") or p.stem,
+                "summary": compact_list_summary(
+                    body,
+                    meta.get("summary") or meta.get("list_summary") or "",
+                ),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),
