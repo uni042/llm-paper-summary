@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-25T02:19:45.638804+00:00",
+  "updated_at": "2026-09-25T02:27:34.178457+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -46095,6 +46095,64 @@
           "type": "research",
           "canonical_id": "arXiv:2607.27269",
           "title": "Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1026,
+      "paper_active_count_after": 1026,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36086295105",
+      "first_recorded_at": "2026-09-25T02:27:34.178457+00:00",
+      "last_recorded_at": "2026-09-25T02:27:34.178457+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 2,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36086295105:1",
+          "recorded_at": "2026-09-25T02:27:34.178457+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36086295105",
+            "run_attempt": "1",
+            "source_sha": "cebbdf797a72831d5eccd768236d2cd5bbecf1f8"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-058d69df18b4e613",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571388",
+          "title": "CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-319ee9e5d994faaf",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571450",
+          "title": "Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach",
           "from": "ready",
           "to": "blocked"
         }
