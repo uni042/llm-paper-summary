@@ -1,46 +1,11 @@
 {
-  "early_ack": true,
-  "formal_precheck_ready_at": "2026-09-25T06:58:58.371055+00:00",
-  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a91f6c-r1.json",
-  "frontier_target": 3,
-  "frontier_work_available": true,
-  "ok": true,
+  "error": "ValueError: direct Discovery claim lease is missing or expired",
+  "ok": false,
   "operation": "direct_take_discovery",
   "preload_id": "preload-a2d84e15c55a55beb93b",
-  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-a2d84e15c55a55beb93b.json",
-  "processed_at": "2026-09-25T06:58:48+00:00",
-  "receipt": "sha256:f8420744d0071cdc2ee390ce55b2cdd65dbeb35e0cbee0aa247b09d943230dad",
-  "request_id": "disc-take-scheduled-chat-00-a91f6c-r1",
-  "reserved_frontier": [
-    {
-      "axis": "forward citations of AWQ weight quantization and inference kernels retry",
-      "citation_direction": "forward",
-      "discovery_bank": "ac",
-      "discovery_slot_path": ".survey/work-queue/records/chat-record-ac/discovery-preload.json",
-      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-8cf40f48135d1c5e393ffb1c.json",
-      "preload_id": "preload-0a90e0d0552ddf5788d8",
-      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-0a90e0d0552ddf5788d8.json",
-      "request_id": "frontier-8cf40f48135d1c5e393ffb1c",
-      "submission_allowed": false,
-      "work_start_allowed": true
-    },
-    {
-      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-      "citation_direction": "forward",
-      "discovery_bank": "p",
-      "discovery_slot_path": ".survey/work-queue/records/chat-record-p/discovery-preload.json",
-      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-9761ffc0ff374f0b84670e99.json",
-      "preload_id": "preload-47bcb81c3b58b7fa40ec",
-      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-47bcb81c3b58b7fa40ec.json",
-      "request_id": "frontier-9761ffc0ff374f0b84670e99",
-      "submission_allowed": false,
-      "work_start_allowed": true
-    }
-  ],
-  "run_key": "scheduled-chat-00-20260925T155729JST-a91f6c",
+  "processed_at": "2026-09-25T08:30:59+00:00",
   "schema_version": 1,
-  "status": "ready_for_submission",
-  "submission_allowed": true,
-  "work_start_allowed": true,
-  "worker_id": "scheduled-chat-00"
+  "status": "recovery_required",
+  "submission_allowed": false,
+  "work_start_allowed": false
 }
