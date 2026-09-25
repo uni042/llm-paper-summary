@@ -103,7 +103,7 @@ jobs:
             python .survey/scripts/refresh_queue_snapshot.py --repo-root . >/tmp/next-jobs.json
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             python .survey/scripts/build_worker_worklist.py --repo-root .
-            git add -A STATUS.md .survey/work-queue/jobs .survey/work-queue/next-jobs.json .survey/work-queue/WORKLIST-00.md .survey/work-queue/WORKLIST-30.md .survey/work-queue/worker-worklist-00.json .survey/work-queue/worker-worklist-30.json .survey/work-queue/WORKLIST.md .survey/work-queue/worker-worklist.json
+            git add -A STATUS.md .survey/work-queue/jobs .survey/work-queue/next-jobs.json .survey/work-queue/WORKLIST-00.md .survey/work-queue/WORKLIST-30.md .survey/work-queue/worker-worklist-00.json .survey/work-queue/worker-worklist-30.json
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
               exit 0
