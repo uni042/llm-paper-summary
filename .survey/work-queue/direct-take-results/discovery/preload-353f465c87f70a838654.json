@@ -1,5 +1,6 @@
 {
   "early_ack": true,
+  "formal_precheck_ready_at": "2026-09-25T17:31:31.406351+00:00",
   "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/discovery-scheduled-chat-30-20260926T022843JST-r11.json",
   "frontier_target": 3,
   "frontier_work_available": false,
@@ -8,12 +9,13 @@
   "preload_id": "preload-353f465c87f70a838654",
   "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-353f465c87f70a838654.json",
   "processed_at": "2026-09-25T17:31:07+00:00",
+  "receipt": "sha256:cbadc3d4dd90f2a134c452262f0317d7fb444f7ea6e00f8373cbabe401335ad7",
   "request_id": "discovery-scheduled-chat-30-20260926T022843JST-r11",
   "reserved_frontier": [],
   "run_key": "run-scheduled-chat-30-20260926T022843JST-4",
   "schema_version": 1,
-  "status": "precheck_pending",
-  "submission_allowed": false,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
   "work_start_allowed": true,
   "worker_id": "scheduled-chat-30"
 }
