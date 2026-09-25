@@ -4,7 +4,55 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-52c66e1ec1f42a4421674171",
   "job_id": "job-research-98fce5e6481e51fa",
-  "data": {},
+  "data": {
+    "canonical_id": "DOI:10.36227/techrxiv.177205041.14536362/v1",
+    "doi": "10.36227/techrxiv.177205041.14536362/v1",
+    "arxiv_id": null,
+    "openreview_id": null,
+    "title": "Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores",
+    "summary": "混合専門家モデルは各トークンで少数のエキスパートしか使わなくても全エキスパート重みを保持する必要がある。Xamiは校正データ上のルーティング頻度から各層の重要エキスパートを選び、頻繁に使うものへ2:4構造化疎性、残りへ1:4を適用する。1:4重みはK/4で圧縮保存し、GPU共有メモリへ読む途中で2:4形式へ展開して既存のSparse Tensor Coreで実行する。Qwen1.5-MoEでは密モデル比最大2.4倍圧縮し、均一2:4の1.8倍を上回る。",
+    "list_summary": "ルーティング頻度でMoEエキスパートを重要度別に分け、重要側2:4・低頻度側1:4へ構造化枝刈りし、1:4を実行時に2:4へ展開して既存Sparse Tensor Core互換のまま最大2.4倍圧縮する。",
+    "authors": [
+      "Johnson Umeike",
+      "Bahar Asgari"
+    ],
+    "authors_affiliations": "University of Maryland, College Park",
+    "published": "2026-02-25",
+    "publication": "TechRxiv preprint; later IEEE Computer Architecture Letters 25(1):154-157",
+    "publication_type": "Journal article / preprint version",
+    "publication_status": "Published",
+    "lineage": "MoE structured sparsity / expert-aware compression",
+    "topics": [
+      "MoE",
+      "structured sparsity",
+      "expert compression",
+      "Sparse Tensor Cores"
+    ],
+    "importance": "エキスパート利用頻度の偏りを、配置やオフロードではなくハードウェア互換の圧縮率差へ直接変換した点が重要。",
+    "hardware_evaluation": "実機NVIDIA L40S 48GB GDDR6、CUDA 12.1、PyTorch 2.1.2。精度評価は4×L40S。",
+    "quality_effect": "近似手法。強い1:4枝刈りを増やすほど精度が低下し、ルーティング被覆率を0.7から0.9へ上げると圧縮率を犠牲に精度が回復する。",
+    "source": "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+    "sources": [
+      "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+      "https://doi.org/10.1109/LCA.2026.3679449"
+    ],
+    "code": null,
+    "implementation": "Samoyedsの構造化疎性実装を拡張し、1:4圧縮保存と実行時2:4展開を行う統一GPUカーネルを試作。公式コード公開は一次資料で確認できない。",
+    "last_checked": "2026-09-25",
+    "references": [
+      {
+        "canonical_id": "arXiv:2402.14800",
+        "arxiv_id": "2402.14800"
+      },
+      {
+        "canonical_id": "arXiv:2104.08378",
+        "arxiv_id": "2104.08378"
+      }
+    ],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary-reference-section",
+    "references_total": 7
+  },
   "reservation": {
     "claim_id": "claim-preload-52c66e1ec1f42a4421674171",
     "worker_id": "scheduled-chat-30",
