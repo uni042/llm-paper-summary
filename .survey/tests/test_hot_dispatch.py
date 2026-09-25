@@ -225,6 +225,32 @@ class HotDispatchTests(unittest.TestCase):
             )
             self.assertNotIn("record_bank", recovery["descriptor"])
             self.assertNotIn("record_slots", recovery["descriptor"])
+            rejected = recovery["on_status_only_write_rejected"]
+            self.assertEqual(
+                rejected["next_action"],
+                "UPDATE_HEALTH_PROBE_THEN_WRITE_MINIMAL_RUN_STATE_QUARANTINE",
+            )
+            self.assertEqual(
+                rejected["health_probe_path"],
+                ".survey/work-queue/transport/health-probe.json",
+            )
+            self.assertEqual(rejected["health_probe_operation"], "update_existing_file_once")
+            self.assertTrue(rejected["health_probe_requires_latest_blob_sha"])
+            self.assertEqual(rejected["run_state_runtime_condition"], "none")
+            self.assertEqual(
+                rejected["write_blocked_job_base"],
+                {
+                    "job_id": job_id,
+                    "claim_id": "claim-carryover",
+                    "attempt_id": "attempt-carryover",
+                    "reason": "platform_content_write_rejected_after_bundle_fallback",
+                },
+            )
+            self.assertEqual(
+                rejected["carry_intended_status_reason_as"],
+                "source_reason",
+            )
+            self.assertTrue(rejected["continue_after_quarantine_result"])
 
     def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
         with tempfile.TemporaryDirectory() as td:
