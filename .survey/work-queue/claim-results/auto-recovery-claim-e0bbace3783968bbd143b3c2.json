@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "auto-recovery-claim-e0bbace3783968bbd143b3c2",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "run_key": "scheduled-chat-00-20260925T112620JST-a41c7e",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T02:26:20+00:00",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-6884e3d688f660cb",
+      "claim_id": "claim-preload-a97be831bb70984ef4b69fe8",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-preload-a97be831bb70984ef4b69fe8",
+      "claimed_at": "2026-09-25T02:28:10+00:00",
+      "expires_at": "2026-09-25T03:58:10+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-6884e3d688f660cb"
+      ],
+      "job": {
+        "job_id": "job-research-6884e3d688f660cb",
+        "type": "research",
+        "parent_job_id": "job-6c396baca556989f",
+        "priority": 91,
+        "canonical_id": "arXiv:2506.07366",
+        "arxiv_id": "2506.07366",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing",
+        "source_url": "https://www.semanticscholar.org/paper/b3d726f638aad791664917fc471740ff5c41eef9",
+        "paper_path": "papers/inference/99-other-inference-systems/2025-2506.07366-moe-gps-guidlines-for-prediction-strategy-for-dynamic-expert-duplication-in-moe-load-balancing.md",
+        "selection_reason": "Systems study of prediction strategy for dynamic expert duplication/load balancing; reports >23% end-to-end inference improvement on Mixtral 8x7B.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:49:25+00:00"
+      },
+      "run_key": "scheduled-chat-00-20260925T112620JST-a41c7e",
+      "scheduled_slot": "00",
+      "actual_invocation_start": "2026-09-25T02:26:20+00:00",
+      "pipeline_order": 0,
+      "pool_order": 428,
+      "stock_bank": "m",
+      "stock_lane": "research",
+      "preloaded_at": "2026-09-25T02:18:59+00:00",
+      "preload_pool_adopted_at": "2026-09-25T02:28:10+00:00",
+      "pipeline_position": 1,
+      "pipeline_role": "foreground",
+      "record_bank": "m",
+      "record_bank_root": ".survey/work-queue/records/chat-record-m",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-m/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-m/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-m/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-m/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-m/positioning.json"
+      },
+      "record_bank_recovery": "expired-same-job",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-preload-7635f07ba289706ec71d837f"
+      ]
+    }
+  ],
+  "processed_at": "2026-09-25T02:28:10+00:00",
+  "checkpoint_released": 0,
+  "claim_window": 12,
+  "hot_banked_claim_target": 4,
+  "claim_refill_threshold": 10,
+  "active_claim_count": 1,
+  "claim_window_remaining": 11,
+  "foreground_job_id": "job-research-6884e3d688f660cb",
+  "standby_job_ids": [],
+  "shared_pool_adopted_count": 1,
+  "reason": "scheduled_chat_claim_window"
+}
