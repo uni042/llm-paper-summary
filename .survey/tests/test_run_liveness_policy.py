@@ -50,11 +50,12 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertNotIn("MAX_PIPELINE_AHEAD_COUNT", continuation)
         self.assertNotIn("最大2本先行", router)
 
-    def test_old_30_second_contract_is_absent(self):
+    def test_repeated_30_second_polling_contract_is_absent(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
-        self.assertNotIn("30秒", router)
+        self.assertIn("最大30秒の単発猶予待ちを1回だけ", router)
+        self.assertIn("同じ短時間sleepを繰り返さない", router)
         self.assertNotIn("30-second", continuation)
         self.assertNotIn("30-second", finalization)
 
