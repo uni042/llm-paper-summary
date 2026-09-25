@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 11:29:52 JST**
+> 自動生成: **2026-09-25 12:02:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **338** |
+| 収録候補論文 | **337** |
 | 未claim Research job | **194** |
 | 直近24hの検証済みResearch収録 | **18** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **338** |
+| canonical_id確認済みの一意な候補論文 | **337** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **338** |
+| 非終端Research job合計 | **337** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（26時間53分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（27時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **1** | **0** | **0** | **144** | **13** | — |
+| Research | **1** | **1** | **0** | **0** | **143** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **29** | **15** | **14** | **0** | **0** | **0** | **19** |
-| 合計 | **30** | **16** | **14** | **0** | **144** | **13** | **19** |
+| 合計 | **30** | **16** | **14** | **0** | **143** | **0** | **19** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **13件**
+- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
   - claim: **09-25 11:29:37 JST** / heartbeat: **—** / lease expiry: **09-25 23:29:37 JST**
   - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
@@ -251,7 +251,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **338** |
+| ready | **337** |
 
 ### 候補の重複・識別情報欠損
 
@@ -279,8 +279,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **272** |
-| └ Research | **191** |
+| 成功result未照合のimmutable submission | **273** |
+| └ Research | **192** |
 | └ Audit | **2** |
 | └ Discovery | **52** |
 | └ Other/Unknown | **27** |

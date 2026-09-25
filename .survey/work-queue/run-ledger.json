@@ -1,300 +1,8 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-25T02:27:34.178457+00:00",
+  "updated_at": "2026-09-25T03:02:38.534530+00:00",
   "entries": [
-    {
-      "run_key": "2026-09-10T23:30:00+09:00",
-      "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T15:11:49.303719+00:00",
-      "signals": [
-        "discovery_or_queue_expanded",
-        "research_completed",
-        "paper_materialized"
-      ],
-      "counts": {
-        "research_completed": 5,
-        "audit_completed": 0,
-        "discovery_completed": 3,
-        "blocked": 0,
-        "new_jobs": 10,
-        "new_papers": 7,
-        "fallback_archived": 0
-      },
-      "events": [
-        {
-          "event_id": "34489769706:1",
-          "recorded_at": "2026-09-10T14:33:05.581963+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34489769706",
-            "run_attempt": "1",
-            "source_sha": "c49a600ad250d754ff0d5f22d5b2d11ae0320e4a"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
-        {
-          "event_id": "34490475119:1",
-          "recorded_at": "2026-09-10T14:39:31.551759+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34490475119",
-            "run_attempt": "1",
-            "source_sha": "81a93a20235c52342ab09e637ff98d2c35279e0e"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
-        {
-          "event_id": "34491049634:1",
-          "recorded_at": "2026-09-10T14:44:42.369950+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34491049634",
-            "run_attempt": "1",
-            "source_sha": "9ac3635041dfaf1a2992949e5f4404e84cc97e15"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
-        {
-          "event_id": "34491620017:1",
-          "recorded_at": "2026-09-10T14:49:54.220575+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34491620017",
-            "run_attempt": "1",
-            "source_sha": "2394b1fef594b3c656e3623a6e524cc95793e96d"
-          },
-          "signals": [
-            "research_completed",
-            "discovery_or_queue_expanded"
-          ]
-        },
-        {
-          "event_id": "34491801271:1",
-          "recorded_at": "2026-09-10T14:51:32.798477+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34491801271",
-            "run_attempt": "1",
-            "source_sha": "08d71ab2b3db8f49202f04ecdc05b5be3ff0e926"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
-        {
-          "event_id": "34492640865:1",
-          "recorded_at": "2026-09-10T14:59:16.128030+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34492640865",
-            "run_attempt": "1",
-            "source_sha": "29c96a98a9ec0b13b6767d24f7c1e3d63664761b"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
-        {
-          "event_id": "34493858726:1",
-          "recorded_at": "2026-09-10T15:10:32.962043+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34493858726",
-            "run_attempt": "1",
-            "source_sha": "5eeec414adf1d41e7c814740e9d1ba3fc660dc76"
-          },
-          "signals": [
-            "research_completed",
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
-        {
-          "event_id": "34493958067:1",
-          "recorded_at": "2026-09-10T15:11:49.303719+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34493958067",
-            "run_attempt": "1",
-            "source_sha": "53b7af3e85a6e7b766394277d553f64288d940f5"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        }
-      ],
-      "terminal_transitions": [
-        {
-          "job_id": "job-b8950ae37173052f",
-          "type": "discovery",
-          "canonical_id": null,
-          "title": null,
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-research-66083cca6d53c9c6",
-          "type": "research",
-          "canonical_id": "arxiv:2602.03495",
-          "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs",
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-research-f0c19ed4ae256352",
-          "type": "research",
-          "canonical_id": "arxiv:2605.27081",
-          "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference",
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-research-53e88cd1653ca310",
-          "type": "research",
-          "canonical_id": "arxiv:2608.21614",
-          "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning",
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-e7daaf93cae1285e",
-          "type": "discovery",
-          "canonical_id": null,
-          "title": null,
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-research-11443ee95cff6866",
-          "type": "research",
-          "canonical_id": "arxiv:2603.27624",
-          "title": "Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling",
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-research-35c9432189855703",
-          "type": "research",
-          "canonical_id": "arxiv:2508.06978",
-          "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency",
-          "from": "ready",
-          "to": "completed"
-        },
-        {
-          "job_id": "job-93a01902fba27898",
-          "type": "discovery",
-          "canonical_id": null,
-          "title": null,
-          "from": "ready",
-          "to": "completed"
-        }
-      ],
-      "new_jobs": [
-        {
-          "job_id": "job-research-53e88cd1653ca310",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arxiv:2608.21614",
-          "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning"
-        },
-        {
-          "job_id": "job-research-66083cca6d53c9c6",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arxiv:2602.03495",
-          "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs"
-        },
-        {
-          "job_id": "job-research-f0c19ed4ae256352",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arxiv:2605.27081",
-          "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference"
-        },
-        {
-          "job_id": "job-e7daaf93cae1285e",
-          "status": "ready",
-          "type": "discovery",
-          "canonical_id": null,
-          "title": null
-        },
-        {
-          "job_id": "job-research-0b5ba8c01f86b1fe",
-          "status": "superseded",
-          "type": "research",
-          "canonical_id": "arxiv:2603.19289",
-          "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts"
-        },
-        {
-          "job_id": "job-research-11443ee95cff6866",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arxiv:2603.27624",
-          "title": "Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling"
-        },
-        {
-          "job_id": "job-research-35c9432189855703",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arxiv:2508.06978",
-          "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency"
-        },
-        {
-          "job_id": "job-93a01902fba27898",
-          "status": "ready",
-          "type": "discovery",
-          "canonical_id": null,
-          "title": null
-        },
-        {
-          "job_id": "job-research-63905827eb5cf813",
-          "status": "ready",
-          "type": "research",
-          "canonical_id": "arXiv:2602.18755",
-          "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS"
-        },
-        {
-          "job_id": "job-research-dfe0eeb59b2bedb1",
-          "status": "superseded",
-          "type": "research",
-          "canonical_id": "arXiv:2601.20309",
-          "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips"
-        }
-      ],
-      "new_paper_ids": [
-        "arXiv:2508.06978",
-        "arXiv:2602.03495",
-        "arXiv:2603.27624",
-        "arXiv:2604.07396",
-        "arXiv:2604.26837",
-        "arXiv:2605.27081",
-        "arXiv:2608.21614"
-      ],
-      "new_discovery_results": [
-        ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json",
-        ".survey/work-queue/results/discovery-20260910-2351-streaming-edge.json",
-        ".survey/work-queue/results/20260911T0012JST-discovery-93a01902fba27898.json"
-      ],
-      "new_fallback_archive_files": [],
-      "paper_active_count_before": 203,
-      "paper_active_count_after": 210,
-      "last_successful_action": "discovery_or_queue_expanded"
-    },
     {
       "run_key": "2026-09-11T00:30:00+09:00",
       "first_recorded_at": "2026-09-10T15:33:22.083222+00:00",
@@ -46153,6 +45861,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571450",
           "title": "Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1026,
+      "paper_active_count_after": 1026,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36088712425",
+      "first_recorded_at": "2026-09-25T03:02:38.534530+00:00",
+      "last_recorded_at": "2026-09-25T03:02:38.534530+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36088712425:1",
+          "recorded_at": "2026-09-25T03:02:38.534530+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36088712425",
+            "run_attempt": "1",
+            "source_sha": "3d485e471b064813f13861fd272129e474005654"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-6884e3d688f660cb",
+          "type": "research",
+          "canonical_id": "arXiv:2506.07366",
+          "title": "MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing",
           "from": "ready",
           "to": "blocked"
         }
