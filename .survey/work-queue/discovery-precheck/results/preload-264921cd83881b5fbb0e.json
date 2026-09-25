@@ -1,0 +1,1979 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-264921cd83881b5fbb0e",
+  "collector_id": "discovery-preload-backward",
+  "run_key": "preload:preload-264921cd83881b5fbb0e",
+  "axis": "preload-backward-structured-references",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "140",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "951ec5443b497b8e6440228ce2c017ffcd64bb6b",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": {
+    "reference_total_count": 6822,
+    "reference_processed_count": 668,
+    "reference_remaining_count": 6154,
+    "reference_represented_count": 559,
+    "reference_unrelated_count": 49,
+    "reference_borderline_count": 60
+  },
+  "progress_observed_at": "2026-09-25T01:14:10.437682+00:00",
+  "preload_id": "preload-264921cd83881b5fbb0e",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "canonical_id": "arXiv:1805.02867",
+      "identity_tokens": [
+        "arXiv:1805.02867"
+      ],
+      "arxiv_id": "1805.02867",
+      "source_url": "https://arxiv.org/abs/1805.02867",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.09921-hilos-near-storage-processing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15473-q-first-disaggregated-decoding.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "linked_from_titles": [
+        "A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs",
+        "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+        "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
+        "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
+        "MoBA: Mixture of Block Attention for Long-Context LLMs",
+        "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+        "No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs",
+        "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
+        "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+        "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving"
+      ],
+      "linked_from_lineages": [
+        "02-hardware-accelerators",
+        "KV Cache Offload / Recomputation",
+        "distributed LLM serving / KV cache / latent attention / GPU fabrics",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "llm-serving-scheduling-disaggregation",
+        "offload-hierarchical-memory",
+        "survey-long-context-serving",
+        "分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "疎注意／長文脈学習"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:1510.00149",
+      "identity_tokens": [
+        "arXiv:1510.00149"
+      ],
+      "arxiv_id": "1510.00149",
+      "source_url": "https://arxiv.org/abs/1510.00149",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15309-vtensor-virtual-memory-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "linked_from_titles": [
+        "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms",
+        "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+        "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
+        "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
+        "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+        "HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts",
+        "It Takes a MAESTRO To Prune Bad Experts",
+        "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
+        "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+        "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+        "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "05-kv-キャッシュ-メモリ-management",
+        "Adaptive Expert Computation / Compression",
+        "CPUオフロード / 活性化疎性 / 階層メモリ",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KVキャッシュ圧縮・分離サービング・ネットワーク転送・投機的生成",
+        "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction",
+        "MoE inference / on-device LLM / expert offloading / expert caching",
+        "adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection",
+        "survey-low-bit-llm",
+        "投機的デコード / 自己投機的デコード / 層スキップ"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2306.08543",
+      "identity_tokens": [
+        "arXiv:2306.08543"
+      ],
+      "arxiv_id": "2306.08543",
+      "source_url": "https://arxiv.org/abs/2306.08543",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "linked_from_titles": [
+        "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+        "A Survey on Inference Optimization Techniques for Mixture of Experts Models",
+        "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
+        "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+        "Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate",
+        "HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference",
+        "Online Speculative Decoding",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models",
+        "Temporally Extended Mixture-of-Experts Models",
+        "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction"
+      ],
+      "linked_from_lineages": [
+        "Expert Prefetch",
+        "MoE routing / expert offloading / temporal expert persistence",
+        "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+        "MoE推論／SSDストリーミング／エキスパート先読み／ルーティング予測／量子化回復",
+        "other-inference-systems",
+        "survey-moe-inference-optimization",
+        "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+        "投機的復号・オンライン適応・知識蒸留",
+        "推論エンジン／推論基盤"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:1710.03740",
+      "identity_tokens": [
+        "arXiv:1710.03740"
+      ],
+      "arxiv_id": "1710.03740",
+      "source_url": "https://arxiv.org/abs/1710.03740",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md",
+        "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
+        "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ],
+      "linked_from_titles": [
+        "10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training",
+        "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
+        "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+        "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+        "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts",
+        "Generating Long Sequences with Sparse Transformers",
+        "LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models",
+        "MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall",
+        "MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning",
+        "ProTrain: Efficient LLM Training via Memory-Aware Techniques",
+        "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+      ],
+      "linked_from_lineages": [
+        "LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索",
+        "diffusion-llm-inference / caching / low-precision",
+        "moe-parallelism-communication",
+        "sparse attention / long-context Transformer",
+        "speculative-decoding",
+        "survey-distributed-training-systems",
+        "その他システム研究",
+        "オフロード／階層メモリ"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2403.07652",
+      "identity_tokens": [
+        "arXiv:2403.07652"
+      ],
+      "arxiv_id": "2403.07652",
+      "source_url": "https://arxiv.org/abs/2403.07652",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.02237-opportunistic-expert-activation.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md"
+      ],
+      "linked_from_titles": [
+        "AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert",
+        "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+        "Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression",
+        "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+        "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+        "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
+        "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+        "Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts",
+        "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
+        "Route Experts by Sequence, not by Token",
+        "VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse"
+      ],
+      "linked_from_lineages": [
+        "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling",
+        "MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation",
+        "MoE動的クラスタリング / shared-base low-rank residual / hierarchical routing / expert offloading",
+        "adaptive expert computation / compression; end-side sparse MoE",
+        "adaptive expert computation / dynamic MoE routing / expert sparsification",
+        "adaptive-expert-computation-compression",
+        "multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing",
+        "動的MoE / Top-pルーティング / 計算予算制御 / 適応的専門家計算 / 事前学習"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2305.14233",
+      "identity_tokens": [
+        "arXiv:2305.14233"
+      ],
+      "arxiv_id": "2305.14233",
+      "source_url": "https://arxiv.org/abs/2305.14233",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md",
+        "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "linked_from_titles": [
+        "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+        "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+        "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
+        "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding",
+        "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+        "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
+        "REST: Retrieval-Based Speculative Decoding",
+        "Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design",
+        "SnapKV: LLM Knows What You are Looking for Before Generation",
+        "Stateful Large Language Model Serving with Pensieve",
+        "TRACE: Unlocking Effective CXL Bandwidth via Lossless Compression and Precision Scaling"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM推論メモリ階層／無損失圧縮／KVキャッシュ圧縮／動的量子化／メモリ制御器協調設計",
+        "Speculative Decoding",
+        "Speculative decoding × MoE",
+        "speculative decoding / parallel drafting / diffusion-inspired language modeling",
+        "大規模分散学習・整合学習基盤",
+        "投機的復号 / EAGLE"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2502.11089",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.11089",
+        "arXiv:2502.11089"
+      ],
+      "arxiv_id": "2502.11089",
+      "source_url": "https://arxiv.org/abs/2502.11089",
+      "doi": "10.48550/arxiv.2502.11089",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.19179-l4-length-aware-scheduling.md",
+        "papers/inference/13-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md",
+        "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md",
+        "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md"
+      ],
+      "linked_from_titles": [
+        "Beyond Sparse Weights: When Is Attention Compressible?",
+        "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+        "CascadeInfer: Length-Aware Scheduling of LLM Serving with Low Latency and Load Balancing",
+        "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference",
+        "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+        "MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints",
+        "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching",
+        "Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts",
+        "RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention",
+        "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+        "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?"
+      ],
+      "linked_from_lineages": [
+        "KVキャッシュオフロード・再計算",
+        "KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計",
+        "MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論",
+        "long-context inference / dynamic sparse attention / hierarchical attention / post-hoc attention acceleration",
+        "long-context training / hierarchical memory / activation recomputation / KV-cache offload",
+        "sparse-attention",
+        "推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:1905.10044",
+      "identity_tokens": [
+        "arXiv:1905.10044"
+      ],
+      "arxiv_id": "1905.10044",
+      "source_url": "https://arxiv.org/abs/1905.10044",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2506.17615-equarx-quantized-allreduce-xla.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
+      ],
+      "linked_from_titles": [
+        "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+        "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems",
+        "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning",
+        "Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs",
+        "EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration",
+        "FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference",
+        "FloE: On-the-Fly MoE Inference on Memory-constrained GPU",
+        "LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference",
+        "MoE-PHDS: One MoE checkpoint for flexible runtime sparsity",
+        "MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance",
+        "Unveiling Super Experts in Mixture-of-Experts Large Language Models"
+      ],
+      "linked_from_lineages": [
+        "Adaptive computation／cache-aware MoE",
+        "MoE compression / expert pruning / neuron-level recombination / expert reconstruction",
+        "Quantization × MoE × Offload",
+        "adaptive-expert-computation-compression",
+        "early-exit-offloading-self-speculative-decoding",
+        "分散推論／集団通信圧縮／量子化AllReduce／XLA・TPU"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2309.14509",
+      "identity_tokens": [
+        "arXiv:2309.14509"
+      ],
+      "arxiv_id": "2309.14509",
+      "source_url": "https://arxiv.org/abs/2309.14509",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
+      ],
+      "linked_from_titles": [
+        "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+        "Adaptive Context Parallelism for Production LLM Serving",
+        "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+        "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
+        "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+        "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core",
+        "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+        "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+        "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems",
+        "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
+        "Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving scheduling / hybrid QoS / KV cache management",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "other-inference-systems",
+        "survey-long-context-serving",
+        "その他システム研究"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2410.00428",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.00428",
+        "arXiv:2410.00428"
+      ],
+      "arxiv_id": "2410.00428",
+      "source_url": "https://arxiv.org/abs/2410.00428",
+      "doi": "10.48550/arxiv.2410.00428",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
+        "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
+        "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md",
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "linked_from_titles": [
+        "Adaptive KV Cache Reuse for Fast Long-Context LLM Serving",
+        "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+        "Efficient Remote KV Cache Reuse with GPU-native Video Codec",
+        "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+        "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+        "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+        "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees",
+        "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
+        "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+        "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+        "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+      ],
+      "linked_from_lineages": [
+        "CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停",
+        "KV Cache Offload / Recomputation",
+        "Quantization × MoE × Offload",
+        "System-aware KV cache",
+        "kv-cache-offload-recomputation",
+        "offload-hierarchical-memory"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2602.06036",
+      "identity_tokens": [
+        "arXiv:2602.06036"
+      ],
+      "arxiv_id": "2602.06036",
+      "source_url": "https://arxiv.org/abs/2602.06036",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2603.03251-speculative-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.18810-d-pace.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.29343-draft-opd.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "linked_from_titles": [
+        "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
+        "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
+        "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+        "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+        "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+        "Draft-OPD: On-Policy Distillation for Speculative Draft Models",
+        "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "Speculative Speculative Decoding",
+        "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+        "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models"
+      ],
+      "linked_from_lineages": [
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "Speculative decoding × MoE",
+        "speculative-decoding",
+        "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2510.00636",
+      "identity_tokens": [
+        "arXiv:2510.00636"
+      ],
+      "arxiv_id": "2510.00636",
+      "source_url": "https://arxiv.org/abs/2510.00636",
+      "relation_count": 11,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.15498-varrate-training-free-variable-rate-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+        "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md"
+      ],
+      "linked_from_titles": [
+        "A Probabilistic Interpretation of KV Cache Eviction",
+        "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+        "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+        "KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression",
+        "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+        "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+        "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+        "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving",
+        "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
+        "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+        "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Optimization / Compression",
+        "KV cache compression / KV eviction / probabilistic inference / importance sampling",
+        "kv-cache-memory-management",
+        "kv-cache-offload-recomputation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:1907.11692",
+      "identity_tokens": [
+        "arXiv:1907.11692"
+      ],
+      "arxiv_id": "1907.11692",
+      "source_url": "https://arxiv.org/abs/1907.11692",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md",
+        "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+      ],
+      "linked_from_titles": [
+        "Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling",
+        "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+        "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+        "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+        "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+        "Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors",
+        "Recursive Offloading for LLM Serving in Multi-tier Networks",
+        "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
+        "Splitwise: Efficient Generative LLM Inference Using Phase Splitting"
+      ],
+      "linked_from_lineages": [
+        "Adaptive Expert Computation / Compression",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance",
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+        "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization",
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration",
+        "その他システム研究",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2206.07682",
+      "identity_tokens": [
+        "arXiv:2206.07682"
+      ],
+      "arxiv_id": "2206.07682",
+      "source_url": "https://arxiv.org/abs/2206.07682",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md"
+      ],
+      "linked_from_titles": [
+        "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+        "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+        "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+        "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+        "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
+        "HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+        "MoE Pathfinder: Trajectory-driven Expert Pruning",
+        "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training"
+      ],
+      "linked_from_lineages": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "LLM Serving / Scheduling / Disaggregation",
+        "MoE expert pruning / trajectory-aware compression / task-specific MoE compression",
+        "Offload / Hierarchical Memory",
+        "llm-serving-scheduling-disaggregation",
+        "other-inference-systems",
+        "その他システム研究",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+        "推論エンジン／推論基盤",
+        "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2401.08092",
+      "identity_tokens": [
+        "arXiv:2401.08092"
+      ],
+      "arxiv_id": "2401.08092",
+      "source_url": "https://arxiv.org/abs/2401.08092",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
+        "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+      ],
+      "linked_from_titles": [
+        "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+        "A Survey on Inference Optimization Techniques for Mixture of Experts Models",
+        "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+        "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+        "Fast On-device LLM Inference with NPUs",
+        "Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline",
+        "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+        "PowerInfer-2: Fast Large Language Model Inference on a Smartphone",
+        "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
+        "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+      ],
+      "linked_from_lineages": [
+        "Edge／on-device MoE",
+        "System-aware KV cache",
+        "llm-serving-systems",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling",
+        "survey-distributed-training-systems",
+        "survey-long-context-serving",
+        "survey-moe-inference-optimization",
+        "オフロード／階層メモリ",
+        "推論エンジン／推論基盤"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:1308.3432",
+      "identity_tokens": [
+        "arXiv:1308.3432"
+      ],
+      "arxiv_id": "1308.3432",
+      "source_url": "https://arxiv.org/abs/1308.3432",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md",
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "linked_from_titles": [
+        "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+        "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+        "D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models",
+        "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+        "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+        "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+        "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models",
+        "Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System",
+        "Soft Merging of Experts with Adaptive Routing",
+        "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation"
+      ],
+      "linked_from_lineages": [
+        "Conditional Computation",
+        "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+        "Quantization × MoE × Offload",
+        "adaptive expert computation / dynamic MoE routing / expert sparsification",
+        "conditional computation / mixture-of-experts / mixture-of-depths / KV-cache quantization / adaptive inference",
+        "survey-distributed-training-systems",
+        "その他システム研究",
+        "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization",
+        "重み専用量子化 / 推論カーネル"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2206.09557",
+      "identity_tokens": [
+        "arXiv:2206.09557"
+      ],
+      "arxiv_id": "2206.09557",
+      "source_url": "https://arxiv.org/abs/2206.09557",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md"
+      ],
+      "linked_from_titles": [
+        "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+        "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+        "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+        "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+        "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+        "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models",
+        "REST: Retrieval-Based Speculative Decoding",
+        "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+        "SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification",
+        "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration"
+      ],
+      "linked_from_lineages": [
+        "Offload / Hierarchical Memory",
+        "Quantization × MoE × Offload",
+        "Speculative Decoding",
+        "hardware-accelerators",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "投機的デコード / 自己投機的デコード / 層スキップ",
+        "近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション",
+        "重み専用量子化 / 推論カーネル"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2210.09261",
+      "identity_tokens": [
+        "arXiv:2210.09261"
+      ],
+      "arxiv_id": "2210.09261",
+      "source_url": "https://arxiv.org/abs/2210.09261",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
+        "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "linked_from_titles": [
+        "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+        "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+        "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+        "Dream 7B: Diffusion Large Language Models",
+        "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+        "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+        "Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts",
+        "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+        "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
+        "SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training"
+      ],
+      "linked_from_lineages": [
+        "Conditional Computation",
+        "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+        "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling",
+        "MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next",
+        "MoE圧縮 / expert pruning / expert merging / post-compression adjustment",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "fine-grained MoE / atomic experts / product routing / expert-centric GPU scheduling",
+        "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+        "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.15793",
+      "identity_tokens": [
+        "arXiv:2405.15793"
+      ],
+      "arxiv_id": "2405.15793",
+      "source_url": "https://arxiv.org/abs/2405.15793",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.13537-dynamic-hbm-repartitioning.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+      ],
+      "linked_from_titles": [
+        "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+        "Agentic AI Workload Characteristics",
+        "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+        "Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+        "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+        "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
+        "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+        "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
+        "KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU",
+        "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "Edge／on-device MoE",
+        "KV Cache Offload / Recomputation",
+        "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+        "LLMサービング・スケジューリング・KVキャッシュ保持",
+        "MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving",
+        "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+        "agentic serving workload characterization / KV-cache / inference benchmarking",
+        "kv-cache-offload-recomputation",
+        "other"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1038/s41586-025-09422-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-09422-z"
+      ],
+      "doi": "10.1038/s41586-025-09422-z",
+      "source_url": "https://doi.org/10.1038/s41586-025-09422-z",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
+        "papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ],
+      "linked_from_titles": [
+        "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference",
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+        "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
+        "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+        "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+        "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+        "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
+        "Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts",
+        "OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+        "LLMサービング・スケジューリング・分離実行",
+        "Offload / Hierarchical Memory",
+        "Speculative decoding × MoE",
+        "chunked-prefill scheduling / fairness / latency control",
+        "kv-cache-optimization-compression",
+        "reasoning-model compression / post-training pruning / calibration-data selection / causal intervention",
+        "オフロード／階層メモリ",
+        "自己投機的復号・長文脈推論・疎注意・連続バッチ処理"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:1805.02867",
+      "identity_tokens": [
+        "id:arXiv:1805.02867",
+        "url:https://arxiv.org/abs/1805.02867"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1805.02867",
+        "identity_tokens": [
+          "arXiv:1805.02867"
+        ],
+        "arxiv_id": "1805.02867",
+        "source_url": "https://arxiv.org/abs/1805.02867",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2025-2502.09921-hilos-near-storage-processing.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15473-q-first-disaggregated-decoding.md",
+          "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+          "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+          "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+          "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+          "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md",
+          "papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md",
+          "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+        ],
+        "linked_from_titles": [
+          "A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs",
+          "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+          "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+          "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
+          "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
+          "MoBA: Mixture of Block Attention for Long-Context LLMs",
+          "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+          "No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs",
+          "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
+          "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+          "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving"
+        ],
+        "linked_from_lineages": [
+          "02-hardware-accelerators",
+          "KV Cache Offload / Recomputation",
+          "distributed LLM serving / KV cache / latent attention / GPU fabrics",
+          "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+          "llm-serving-scheduling-disaggregation",
+          "offload-hierarchical-memory",
+          "survey-long-context-serving",
+          "分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散",
+          "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+          "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+          "疎注意／長文脈学習"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1510.00149",
+      "identity_tokens": [
+        "id:arXiv:1510.00149",
+        "url:https://arxiv.org/abs/1510.00149"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1510.00149",
+        "identity_tokens": [
+          "arXiv:1510.00149"
+        ],
+        "arxiv_id": "1510.00149",
+        "source_url": "https://arxiv.org/abs/1510.00149",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2407.15309-vtensor-virtual-memory-management.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
+          "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+          "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+        ],
+        "linked_from_titles": [
+          "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms",
+          "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+          "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
+          "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
+          "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+          "HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts",
+          "It Takes a MAESTRO To Prune Bad Experts",
+          "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
+          "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+          "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+          "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "05-kv-キャッシュ-メモリ-management",
+          "Adaptive Expert Computation / Compression",
+          "CPUオフロード / 活性化疎性 / 階層メモリ",
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "KVキャッシュ圧縮・分離サービング・ネットワーク転送・投機的生成",
+          "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction",
+          "MoE inference / on-device LLM / expert offloading / expert caching",
+          "adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection",
+          "survey-low-bit-llm",
+          "投機的デコード / 自己投機的デコード / 層スキップ"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2306.08543",
+      "identity_tokens": [
+        "id:arXiv:2306.08543",
+        "url:https://arxiv.org/abs/2306.08543"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2306.08543",
+        "identity_tokens": [
+          "arXiv:2306.08543"
+        ],
+        "arxiv_id": "2306.08543",
+        "source_url": "https://arxiv.org/abs/2306.08543",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+          "papers/inference/01-offload-hierarchical-memory/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+          "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+          "papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md",
+          "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+          "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+        ],
+        "linked_from_titles": [
+          "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+          "A Survey on Inference Optimization Techniques for Mixture of Experts Models",
+          "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
+          "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+          "Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate",
+          "HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference",
+          "Online Speculative Decoding",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models",
+          "Temporally Extended Mixture-of-Experts Models",
+          "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction"
+        ],
+        "linked_from_lineages": [
+          "Expert Prefetch",
+          "MoE routing / expert offloading / temporal expert persistence",
+          "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+          "MoE推論／SSDストリーミング／エキスパート先読み／ルーティング予測／量子化回復",
+          "other-inference-systems",
+          "survey-moe-inference-optimization",
+          "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+          "投機的復号・オンライン適応・知識蒸留",
+          "推論エンジン／推論基盤"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1710.03740",
+      "identity_tokens": [
+        "id:arXiv:1710.03740",
+        "url:https://arxiv.org/abs/1710.03740"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1710.03740",
+        "identity_tokens": [
+          "arXiv:1710.03740"
+        ],
+        "arxiv_id": "1710.03740",
+        "source_url": "https://arxiv.org/abs/1710.03740",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+          "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md",
+          "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+          "papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md",
+          "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md",
+          "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+          "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
+          "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+          "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
+          "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
+          "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+        ],
+        "linked_from_titles": [
+          "10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training",
+          "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
+          "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+          "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+          "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts",
+          "Generating Long Sequences with Sparse Transformers",
+          "LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models",
+          "MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall",
+          "MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning",
+          "ProTrain: Efficient LLM Training via Memory-Aware Techniques",
+          "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+        ],
+        "linked_from_lineages": [
+          "LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索",
+          "diffusion-llm-inference / caching / low-precision",
+          "moe-parallelism-communication",
+          "sparse attention / long-context Transformer",
+          "speculative-decoding",
+          "survey-distributed-training-systems",
+          "その他システム研究",
+          "オフロード／階層メモリ"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.07652",
+      "identity_tokens": [
+        "id:arXiv:2403.07652",
+        "url:https://arxiv.org/abs/2403.07652"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2403.07652",
+        "identity_tokens": [
+          "arXiv:2403.07652"
+        ],
+        "arxiv_id": "2403.07652",
+        "source_url": "https://arxiv.org/abs/2403.07652",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2511.02237-opportunistic-expert-activation.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md"
+        ],
+        "linked_from_titles": [
+          "AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert",
+          "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+          "Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression",
+          "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+          "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
+          "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+          "Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts",
+          "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
+          "Route Experts by Sequence, not by Token",
+          "VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse"
+        ],
+        "linked_from_lineages": [
+          "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling",
+          "MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation",
+          "MoE動的クラスタリング / shared-base low-rank residual / hierarchical routing / expert offloading",
+          "adaptive expert computation / compression; end-side sparse MoE",
+          "adaptive expert computation / dynamic MoE routing / expert sparsification",
+          "adaptive-expert-computation-compression",
+          "multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing",
+          "動的MoE / Top-pルーティング / 計算予算制御 / 適応的専門家計算 / 事前学習"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.14233",
+      "identity_tokens": [
+        "id:arXiv:2305.14233",
+        "url:https://arxiv.org/abs/2305.14233"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2305.14233",
+        "identity_tokens": [
+          "arXiv:2305.14233"
+        ],
+        "arxiv_id": "2305.14233",
+        "source_url": "https://arxiv.org/abs/2305.14233",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+          "papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md",
+          "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md",
+          "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+        ],
+        "linked_from_titles": [
+          "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+          "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+          "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test",
+          "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding",
+          "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+          "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
+          "REST: Retrieval-Based Speculative Decoding",
+          "Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design",
+          "SnapKV: LLM Knows What You are Looking for Before Generation",
+          "Stateful Large Language Model Serving with Pensieve",
+          "TRACE: Unlocking Effective CXL Bandwidth via Lossless Compression and Precision Scaling"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM推論メモリ階層／無損失圧縮／KVキャッシュ圧縮／動的量子化／メモリ制御器協調設計",
+          "Speculative Decoding",
+          "Speculative decoding × MoE",
+          "speculative decoding / parallel drafting / diffusion-inspired language modeling",
+          "大規模分散学習・整合学習基盤",
+          "投機的復号 / EAGLE"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.11089",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.11089",
+        "id:arXiv:2502.11089",
+        "url:https://arxiv.org/abs/2502.11089"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2502.11089",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2502.11089",
+          "arXiv:2502.11089"
+        ],
+        "arxiv_id": "2502.11089",
+        "source_url": "https://arxiv.org/abs/2502.11089",
+        "doi": "10.48550/arxiv.2502.11089",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.19179-l4-length-aware-scheduling.md",
+          "papers/inference/13-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md",
+          "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md",
+          "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+          "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+          "papers/inference/99-other-inference-systems/2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md"
+        ],
+        "linked_from_titles": [
+          "Beyond Sparse Weights: When Is Attention Compressible?",
+          "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+          "CascadeInfer: Length-Aware Scheduling of LLM Serving with Low Latency and Load Balancing",
+          "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference",
+          "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+          "MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints",
+          "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching",
+          "Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts",
+          "RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention",
+          "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+          "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?"
+        ],
+        "linked_from_lineages": [
+          "KVキャッシュオフロード・再計算",
+          "KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計",
+          "MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論",
+          "long-context inference / dynamic sparse attention / hierarchical attention / post-hoc attention acceleration",
+          "long-context training / hierarchical memory / activation recomputation / KV-cache offload",
+          "sparse-attention",
+          "推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1905.10044",
+      "identity_tokens": [
+        "id:arXiv:1905.10044",
+        "url:https://arxiv.org/abs/1905.10044"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1905.10044",
+        "identity_tokens": [
+          "arXiv:1905.10044"
+        ],
+        "arxiv_id": "1905.10044",
+        "source_url": "https://arxiv.org/abs/1905.10044",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+          "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
+          "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+          "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+          "papers/inference/99-other-inference-systems/2025-2506.17615-equarx-quantized-allreduce-xla.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
+        ],
+        "linked_from_titles": [
+          "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+          "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems",
+          "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning",
+          "Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs",
+          "EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration",
+          "FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference",
+          "FloE: On-the-Fly MoE Inference on Memory-constrained GPU",
+          "LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference",
+          "MoE-PHDS: One MoE checkpoint for flexible runtime sparsity",
+          "MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance",
+          "Unveiling Super Experts in Mixture-of-Experts Large Language Models"
+        ],
+        "linked_from_lineages": [
+          "Adaptive computation／cache-aware MoE",
+          "MoE compression / expert pruning / neuron-level recombination / expert reconstruction",
+          "Quantization × MoE × Offload",
+          "adaptive-expert-computation-compression",
+          "early-exit-offloading-self-speculative-decoding",
+          "分散推論／集団通信圧縮／量子化AllReduce／XLA・TPU"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.14509",
+      "identity_tokens": [
+        "id:arXiv:2309.14509",
+        "url:https://arxiv.org/abs/2309.14509"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2309.14509",
+        "identity_tokens": [
+          "arXiv:2309.14509"
+        ],
+        "arxiv_id": "2309.14509",
+        "source_url": "https://arxiv.org/abs/2309.14509",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+          "papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+          "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+          "papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md",
+          "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
+          "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
+          "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
+        ],
+        "linked_from_titles": [
+          "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+          "Adaptive Context Parallelism for Production LLM Serving",
+          "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+          "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
+          "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+          "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core",
+          "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+          "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+          "RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems",
+          "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
+          "Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM serving scheduling / hybrid QoS / KV cache management",
+          "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+          "other-inference-systems",
+          "survey-long-context-serving",
+          "その他システム研究"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.00428",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.00428",
+        "id:arXiv:2410.00428",
+        "url:https://arxiv.org/abs/2410.00428"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2410.00428",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2410.00428",
+          "arXiv:2410.00428"
+        ],
+        "arxiv_id": "2410.00428",
+        "source_url": "https://arxiv.org/abs/2410.00428",
+        "doi": "10.48550/arxiv.2410.00428",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
+          "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+          "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
+          "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md",
+          "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+        ],
+        "linked_from_titles": [
+          "Adaptive KV Cache Reuse for Fast Long-Context LLM Serving",
+          "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+          "Efficient Remote KV Cache Reuse with GPU-native Video Codec",
+          "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+          "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+          "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+          "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees",
+          "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
+          "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+          "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+          "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+        ],
+        "linked_from_lineages": [
+          "CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停",
+          "KV Cache Offload / Recomputation",
+          "Quantization × MoE × Offload",
+          "System-aware KV cache",
+          "kv-cache-offload-recomputation",
+          "offload-hierarchical-memory"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06036",
+      "identity_tokens": [
+        "id:arXiv:2602.06036",
+        "url:https://arxiv.org/abs/2602.06036"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2602.06036",
+        "identity_tokens": [
+          "arXiv:2602.06036"
+        ],
+        "arxiv_id": "2602.06036",
+        "source_url": "https://arxiv.org/abs/2602.06036",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2603.03251-speculative-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.18810-d-pace.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.29343-draft-opd.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+        ],
+        "linked_from_titles": [
+          "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
+          "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
+          "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+          "DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding",
+          "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+          "Draft-OPD: On-Policy Distillation for Speculative Draft Models",
+          "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "Speculative Speculative Decoding",
+          "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+          "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models"
+        ],
+        "linked_from_lineages": [
+          "Other Inference Systems / Lossless Parallel Decoding",
+          "Speculative decoding × MoE",
+          "speculative-decoding",
+          "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+          "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.00636",
+      "identity_tokens": [
+        "id:arXiv:2510.00636",
+        "url:https://arxiv.org/abs/2510.00636"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2510.00636",
+        "identity_tokens": [
+          "arXiv:2510.00636"
+        ],
+        "arxiv_id": "2510.00636",
+        "source_url": "https://arxiv.org/abs/2510.00636",
+        "relation_count": 11,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2607.15498-varrate-training-free-variable-rate-kv-cache-compression.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+          "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+          "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md"
+        ],
+        "linked_from_titles": [
+          "A Probabilistic Interpretation of KV Cache Eviction",
+          "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+          "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+          "KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression",
+          "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+          "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+          "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+          "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving",
+          "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
+          "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+          "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization"
+        ],
+        "linked_from_lineages": [
+          "KV Cache Optimization / Compression",
+          "KV cache compression / KV eviction / probabilistic inference / importance sampling",
+          "kv-cache-memory-management",
+          "kv-cache-offload-recomputation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1907.11692",
+      "identity_tokens": [
+        "id:arXiv:1907.11692",
+        "url:https://arxiv.org/abs/1907.11692"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1907.11692",
+        "identity_tokens": [
+          "arXiv:1907.11692"
+        ],
+        "arxiv_id": "1907.11692",
+        "source_url": "https://arxiv.org/abs/1907.11692",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md",
+          "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+          "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md",
+          "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+        ],
+        "linked_from_titles": [
+          "Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling",
+          "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+          "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+          "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+          "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+          "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+          "Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors",
+          "Recursive Offloading for LLM Serving in Multi-tier Networks",
+          "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
+          "Splitwise: Efficient Generative LLM Inference Using Phase Splitting"
+        ],
+        "linked_from_lineages": [
+          "Adaptive Expert Computation / Compression",
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance",
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization",
+          "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+          "multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration",
+          "その他システム研究",
+          "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2206.07682",
+      "identity_tokens": [
+        "id:arXiv:2206.07682",
+        "url:https://arxiv.org/abs/2206.07682"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2206.07682",
+        "identity_tokens": [
+          "arXiv:2206.07682"
+        ],
+        "arxiv_id": "2206.07682",
+        "source_url": "https://arxiv.org/abs/2206.07682",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+          "papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md",
+          "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+          "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md"
+        ],
+        "linked_from_titles": [
+          "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+          "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+          "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+          "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+          "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
+          "HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+          "MoE Pathfinder: Trajectory-driven Expert Pruning",
+          "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training"
+        ],
+        "linked_from_lineages": [
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "LLM Serving / Scheduling / Disaggregation",
+          "MoE expert pruning / trajectory-aware compression / task-specific MoE compression",
+          "Offload / Hierarchical Memory",
+          "llm-serving-scheduling-disaggregation",
+          "other-inference-systems",
+          "その他システム研究",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+          "推論エンジン／推論基盤",
+          "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.08092",
+      "identity_tokens": [
+        "id:arXiv:2401.08092",
+        "url:https://arxiv.org/abs/2401.08092"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2401.08092",
+        "identity_tokens": [
+          "arXiv:2401.08092"
+        ],
+        "arxiv_id": "2401.08092",
+        "source_url": "https://arxiv.org/abs/2401.08092",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+          "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
+          "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+          "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+          "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+          "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+          "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+          "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+          "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
+          "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+        ],
+        "linked_from_titles": [
+          "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+          "A Survey on Inference Optimization Techniques for Mixture of Experts Models",
+          "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+          "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+          "Fast On-device LLM Inference with NPUs",
+          "Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline",
+          "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+          "PowerInfer-2: Fast Large Language Model Inference on a Smartphone",
+          "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
+          "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+        ],
+        "linked_from_lineages": [
+          "Edge／on-device MoE",
+          "System-aware KV cache",
+          "llm-serving-systems",
+          "on-device LLM / heterogeneous inference / NPU offloading",
+          "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling",
+          "survey-distributed-training-systems",
+          "survey-long-context-serving",
+          "survey-moe-inference-optimization",
+          "オフロード／階層メモリ",
+          "推論エンジン／推論基盤"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1308.3432",
+      "identity_tokens": [
+        "id:arXiv:1308.3432",
+        "url:https://arxiv.org/abs/1308.3432"
+      ],
+      "record": {
+        "canonical_id": "arXiv:1308.3432",
+        "identity_tokens": [
+          "arXiv:1308.3432"
+        ],
+        "arxiv_id": "1308.3432",
+        "source_url": "https://arxiv.org/abs/1308.3432",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md",
+          "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+          "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+          "papers/inference/99-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+          "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+          "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+        ],
+        "linked_from_titles": [
+          "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+          "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+          "D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models",
+          "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+          "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+          "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+          "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models",
+          "Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System",
+          "Soft Merging of Experts with Adaptive Routing",
+          "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation"
+        ],
+        "linked_from_lineages": [
+          "Conditional Computation",
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+          "Quantization × MoE × Offload",
+          "adaptive expert computation / dynamic MoE routing / expert sparsification",
+          "conditional computation / mixture-of-experts / mixture-of-depths / KV-cache quantization / adaptive inference",
+          "survey-distributed-training-systems",
+          "その他システム研究",
+          "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization",
+          "重み専用量子化 / 推論カーネル"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2206.09557",
+      "identity_tokens": [
+        "id:arXiv:2206.09557",
+        "url:https://arxiv.org/abs/2206.09557"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2206.09557",
+        "identity_tokens": [
+          "arXiv:2206.09557"
+        ],
+        "arxiv_id": "2206.09557",
+        "source_url": "https://arxiv.org/abs/2206.09557",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
+          "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+          "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+          "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+          "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+          "papers/inference/16-weight-quantization-compression/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md",
+          "papers/inference/17-pim-near-data-acceleration/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md"
+        ],
+        "linked_from_titles": [
+          "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+          "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+          "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+          "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+          "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+          "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models",
+          "REST: Retrieval-Based Speculative Decoding",
+          "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+          "SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification",
+          "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration"
+        ],
+        "linked_from_lineages": [
+          "Offload / Hierarchical Memory",
+          "Quantization × MoE × Offload",
+          "Speculative Decoding",
+          "hardware-accelerators",
+          "post-training quantization / second-order compression / weight-only LLM inference",
+          "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+          "投機的デコード / 自己投機的デコード / 層スキップ",
+          "近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション",
+          "重み専用量子化 / 推論カーネル"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2210.09261",
+      "identity_tokens": [
+        "id:arXiv:2210.09261",
+        "url:https://arxiv.org/abs/2210.09261"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2210.09261",
+        "identity_tokens": [
+          "arXiv:2210.09261"
+        ],
+        "arxiv_id": "2210.09261",
+        "source_url": "https://arxiv.org/abs/2210.09261",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
+          "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+          "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+          "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+        ],
+        "linked_from_titles": [
+          "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+          "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+          "DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+          "Dream 7B: Diffusion Large Language Models",
+          "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+          "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models",
+          "Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts",
+          "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+          "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
+          "SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training"
+        ],
+        "linked_from_lineages": [
+          "Conditional Computation",
+          "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+          "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling",
+          "MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next",
+          "MoE圧縮 / expert pruning / expert merging / post-compression adjustment",
+          "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+          "fine-grained MoE / atomic experts / product routing / expert-centric GPU scheduling",
+          "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+          "適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.15793",
+      "identity_tokens": [
+        "id:arXiv:2405.15793",
+        "url:https://arxiv.org/abs/2405.15793"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.15793",
+        "identity_tokens": [
+          "arXiv:2405.15793"
+        ],
+        "arxiv_id": "2405.15793",
+        "source_url": "https://arxiv.org/abs/2405.15793",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2609.13537-dynamic-hbm-repartitioning.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+          "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md",
+          "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+          "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md",
+          "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+        ],
+        "linked_from_titles": [
+          "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+          "Agentic AI Workload Characteristics",
+          "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+          "Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+          "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+          "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
+          "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+          "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
+          "KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU",
+          "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "Edge／on-device MoE",
+          "KV Cache Offload / Recomputation",
+          "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+          "LLMサービング・スケジューリング・KVキャッシュ保持",
+          "MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving",
+          "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+          "agentic serving workload characterization / KV-cache / inference benchmarking",
+          "kv-cache-offload-recomputation",
+          "other"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41586-025-09422-z",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41586-025-09422-z",
+        "url:https://doi.org/10.1038/s41586-025-09422-z"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1038/s41586-025-09422-z",
+        "identity_tokens": [
+          "DOI:10.1038/s41586-025-09422-z"
+        ],
+        "doi": "10.1038/s41586-025-09422-z",
+        "source_url": "https://doi.org/10.1038/s41586-025-09422-z",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
+          "papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md",
+          "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+        ],
+        "linked_from_titles": [
+          "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference",
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+          "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
+          "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+          "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+          "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+          "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
+          "Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts",
+          "OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+          "LLMサービング・スケジューリング・分離実行",
+          "Offload / Hierarchical Memory",
+          "Speculative decoding × MoE",
+          "chunked-prefill scheduling / fairness / latency control",
+          "kv-cache-optimization-compression",
+          "reasoning-model compression / post-training pruning / calibration-data selection / causal intervention",
+          "オフロード／階層メモリ",
+          "自己投機的復号・長文脈推論・疎注意・連続バッチ処理"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:57b417c5bc81c91ebf544b256e274425507b558e800fd31873df833099ad748b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
