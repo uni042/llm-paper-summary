@@ -270,6 +270,21 @@ def _research_resume_packets(
                 },
                 "continue_after_durable_create": True,
                 "retry_policy": "blocked_retry_7d",
+                "on_status_only_write_rejected": {
+                    "next_action": "UPDATE_HEALTH_PROBE_THEN_WRITE_MINIMAL_RUN_STATE_QUARANTINE",
+                    "health_probe_path": ".survey/work-queue/transport/health-probe.json",
+                    "health_probe_operation": "update_existing_file_once",
+                    "health_probe_requires_latest_blob_sha": True,
+                    "run_state_runtime_condition": "none",
+                    "write_blocked_job_base": {
+                        "job_id": job_id,
+                        "claim_id": claim_id,
+                        "attempt_id": attempt_id,
+                        "reason": "platform_content_write_rejected_after_bundle_fallback",
+                    },
+                    "carry_intended_status_reason_as": "source_reason",
+                    "continue_after_quarantine_result": True,
+                },
             },
             "source_unavailable_next_action": (
                 "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY"
