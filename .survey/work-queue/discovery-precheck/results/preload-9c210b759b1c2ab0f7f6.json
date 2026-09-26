@@ -2,9 +2,9 @@
   "schema_version": 3,
   "operation": "precheck_discovery_candidates",
   "ok": true,
-  "request_id": "preload-3b30f92067bc440b58cd",
+  "request_id": "preload-9c210b759b1c2ab0f7f6",
   "collector_id": "discovery-preload-forward",
-  "run_key": "preload:preload-3b30f92067bc440b58cd",
+  "run_key": "preload:preload-9c210b759b1c2ab0f7f6",
   "axis": "forward citations of H2O KV cache eviction and efficient inference",
   "provider": "semantic_scholar",
   "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
@@ -18,7 +18,7 @@
   "stop_reason": "TARGET_REACHED",
   "evaluation_allowed": true,
   "decision": "READY_FOR_EVALUATION",
-  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "snapshot_source_commit": "9fe809684b771e16d53c93e68cca4a902198dd46",
   "raw_search_result_count": 40,
   "retrieval_duplicate_filtered_count": 18,
   "represented_paper_match_filtered_count": 0,
@@ -30,8 +30,8 @@
   "unresolved_identity_count": 0,
   "unseen_result_count": 20,
   "provider_progress": null,
-  "progress_observed_at": "2026-09-25T17:38:03.880192+00:00",
-  "preload_id": "preload-3b30f92067bc440b58cd",
+  "progress_observed_at": "2026-09-26T18:31:18.882713+00:00",
+  "preload_id": "preload-9c210b759b1c2ab0f7f6",
   "preload_seed": true,
   "preload_cache_used": false,
   "preload_cached_pages_used": 0,
@@ -85,7 +85,7 @@
       "authors": [
         "Weizhong Huang",
         "Jinchao Zhang",
-        "Xiawu Zheng"
+        "Xia-Wu Zheng"
       ]
     },
     {
@@ -120,7 +120,7 @@
         "Luxi Lin",
         "Rui-Zhi Qiao",
         "Xing Sun",
-        "Rongrong Ji"
+        "Rong-Rong Ji"
       ]
     },
     {
@@ -146,7 +146,7 @@
       "authors": [
         "Xingyu Ren",
         "Youran Sun",
-        "Chugang Yi",
+        "Chu-Gang Yi",
         "Haizhao Yang"
       ]
     },
@@ -180,7 +180,7 @@
         "Zhichen Liu",
         "Ruihan Sun",
         "Heng Yang",
-        "Zipeng Wu",
+        "Zi-Peng Wu",
         "Zhaohan Chen",
         "Xiaofan Zhang",
         "Yang Xu"
@@ -254,7 +254,7 @@
       "authors": [
         "Jun-Lin Fang",
         "Do Nguyen-Thanh",
-        "Xiaogang Xu",
+        "Xiao-Gang Xu",
         "Zhen Fang",
         "Sean Du"
       ]
@@ -429,7 +429,7 @@
         "authors": [
           "Weizhong Huang",
           "Jinchao Zhang",
-          "Xiawu Zheng"
+          "Xia-Wu Zheng"
         ]
       }
     },
@@ -480,7 +480,7 @@
           "Luxi Lin",
           "Rui-Zhi Qiao",
           "Xing Sun",
-          "Rongrong Ji"
+          "Rong-Rong Ji"
         ]
       }
     },
@@ -522,7 +522,7 @@
         "authors": [
           "Xingyu Ren",
           "Youran Sun",
-          "Chugang Yi",
+          "Chu-Gang Yi",
           "Haizhao Yang"
         ]
       }
@@ -572,7 +572,7 @@
           "Zhichen Liu",
           "Ruihan Sun",
           "Heng Yang",
-          "Zipeng Wu",
+          "Zi-Peng Wu",
           "Zhaohan Chen",
           "Xiaofan Zhang",
           "Yang Xu"
@@ -686,7 +686,7 @@
         "authors": [
           "Jun-Lin Fang",
           "Do Nguyen-Thanh",
-          "Xiaogang Xu",
+          "Xiao-Gang Xu",
           "Zhen Fang",
           "Sean Du"
         ]
@@ -839,6 +839,6 @@
       }
     }
   ],
-  "receipt": "sha256:0083c8d44d9c7122ea4aa48396eab1e2f641684b90963e63f455f8ca6a6049e2",
+  "receipt": "sha256:8a0c597d21ab1727700741aafb724863b66b5a0875c16583e0edc93007148359",
   "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
 }

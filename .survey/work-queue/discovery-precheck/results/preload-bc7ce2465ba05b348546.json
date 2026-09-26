@@ -2,9 +2,9 @@
   "schema_version": 3,
   "operation": "precheck_discovery_candidates",
   "ok": true,
-  "request_id": "preload-9dbab0e0c09572c27a89",
+  "request_id": "preload-bc7ce2465ba05b348546",
   "collector_id": "discovery-preload-forward",
-  "run_key": "preload:preload-9dbab0e0c09572c27a89",
+  "run_key": "preload:preload-bc7ce2465ba05b348546",
   "axis": "forward citations of Sequoia hardware-aware speculative decoding",
   "provider": "semantic_scholar",
   "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.12374/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
@@ -18,7 +18,7 @@
   "stop_reason": "TARGET_REACHED",
   "evaluation_allowed": true,
   "decision": "READY_FOR_EVALUATION",
-  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "snapshot_source_commit": "9fe809684b771e16d53c93e68cca4a902198dd46",
   "raw_search_result_count": 40,
   "retrieval_duplicate_filtered_count": 7,
   "represented_paper_match_filtered_count": 0,
@@ -30,8 +30,8 @@
   "unresolved_identity_count": 0,
   "unseen_result_count": 20,
   "provider_progress": null,
-  "progress_observed_at": "2026-09-25T17:38:14.313424+00:00",
-  "preload_id": "preload-9dbab0e0c09572c27a89",
+  "progress_observed_at": "2026-09-26T18:31:56.439804+00:00",
+  "preload_id": "preload-bc7ce2465ba05b348546",
   "preload_seed": true,
   "preload_cache_used": false,
   "preload_cached_pages_used": 0,
@@ -47,7 +47,7 @@
       "canonical_id": "arXiv:2505.24196",
       "arxiv_id": "2505.24196",
       "authors": [
-        "Longze Chen",
+        "Long-Ze Chen",
         "Renke Shan",
         "Huiming Wang",
         "Lu Wang",
@@ -72,7 +72,7 @@
         "Yuhui Zhou",
         "Jiazhi Jiang",
         "Jiangsu Du",
-        "Yutong Lu"
+        "Yu-Tong Lu"
       ]
     },
     {
@@ -123,7 +123,7 @@
       "arxiv_id": "2505.20316",
       "authors": [
         "Yingpeng Du",
-        "Tianjun Wei",
+        "Tian-Jun Wei",
         "Zhu Sun",
         "Jie Zhang",
         "Xun Jiang"
@@ -139,7 +139,7 @@
       "arxiv_id": "2505.15141",
       "authors": [
         "Yunlong Hou",
-        "Fengzhuo Zhang",
+        "Feng-Zhuo Zhang",
         "Cun-Xiao Du",
         "Xuan Zhang",
         "Jiachun Pan",
@@ -413,7 +413,7 @@
         "canonical_id": "arXiv:2505.24196",
         "arxiv_id": "2505.24196",
         "authors": [
-          "Longze Chen",
+          "Long-Ze Chen",
           "Renke Shan",
           "Huiming Wang",
           "Lu Wang",
@@ -446,7 +446,7 @@
           "Yuhui Zhou",
           "Jiazhi Jiang",
           "Jiangsu Du",
-          "Yutong Lu"
+          "Yu-Tong Lu"
         ]
       }
     },
@@ -521,7 +521,7 @@
         "arxiv_id": "2505.20316",
         "authors": [
           "Yingpeng Du",
-          "Tianjun Wei",
+          "Tian-Jun Wei",
           "Zhu Sun",
           "Jie Zhang",
           "Xun Jiang"
@@ -545,7 +545,7 @@
         "arxiv_id": "2505.15141",
         "authors": [
           "Yunlong Hou",
-          "Fengzhuo Zhang",
+          "Feng-Zhuo Zhang",
           "Cun-Xiao Du",
           "Xuan Zhang",
           "Jiachun Pan",
@@ -915,6 +915,6 @@
       }
     }
   ],
-  "receipt": "sha256:a0de03bac3299753342e0bff45cc4e96463a5d0e1a037b3676a0c82bf8d6f9ad",
+  "receipt": "sha256:22f2ed0ae72d58c4da0005939b4ea3e01063de871b109d2ee40788bf7ca1d504",
   "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
 }

@@ -2,9 +2,9 @@
   "schema_version": 3,
   "operation": "precheck_discovery_candidates",
   "ok": true,
-  "request_id": "preload-1c3061c458299c027601",
+  "request_id": "preload-657615f1deff9ca2bcab",
   "collector_id": "discovery-preload-forward",
-  "run_key": "preload:preload-1c3061c458299c027601",
+  "run_key": "preload:preload-657615f1deff9ca2bcab",
   "axis": "forward citations of KVLink efficient KV cache reuse",
   "provider": "semantic_scholar",
   "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
@@ -18,7 +18,7 @@
   "stop_reason": "PROVIDER_EXHAUSTED",
   "evaluation_allowed": true,
   "decision": "READY_FOR_EVALUATION",
-  "snapshot_source_commit": "5345742d18003184926774759a54c424b2c0fd6d",
+  "snapshot_source_commit": "9fe809684b771e16d53c93e68cca4a902198dd46",
   "raw_search_result_count": 16,
   "retrieval_duplicate_filtered_count": 3,
   "represented_paper_match_filtered_count": 0,
@@ -30,8 +30,8 @@
   "unresolved_identity_count": 0,
   "unseen_result_count": 13,
   "provider_progress": null,
-  "progress_observed_at": "2026-09-25T17:37:49.174694+00:00",
-  "preload_id": "preload-1c3061c458299c027601",
+  "progress_observed_at": "2026-09-26T18:31:11.059842+00:00",
+  "preload_id": "preload-657615f1deff9ca2bcab",
   "preload_seed": true,
   "preload_cache_used": false,
   "preload_cached_pages_used": 0,
@@ -52,7 +52,7 @@
         "Hanling Zhang",
         "Jichao Yan",
         "Guohao Dai",
-        "Wanli Ouyang",
+        "Wan-Li Ouyang",
         "Yu Wang"
       ]
     },
@@ -141,6 +141,7 @@
       "authors": [
         "Qizheng Zhang",
         "Michael Wornow",
+        "Gerry Wan",
         "K. Olukotun"
       ]
     },
@@ -261,7 +262,7 @@
           "Hanling Zhang",
           "Jichao Yan",
           "Guohao Dai",
-          "Wanli Ouyang",
+          "Wan-Li Ouyang",
           "Yu Wang"
         ]
       }
@@ -398,6 +399,7 @@
         "authors": [
           "Qizheng Zhang",
           "Michael Wornow",
+          "Gerry Wan",
           "K. Olukotun"
         ]
       }
@@ -545,6 +547,6 @@
       }
     }
   ],
-  "receipt": "sha256:b78e6e70d3df3c959e18272bcd15cfe9e88aaf11f34c4c581046dcd9332a005e",
+  "receipt": "sha256:88d85d4745357ba3e4ee6b1325c16b1edf8f8b724ccc637b2cfbd863bd0161b3",
   "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
 }
