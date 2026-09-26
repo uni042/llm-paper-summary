@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-26T00:10:25+00:00",
+  "generated_at": "2026-09-26T00:11:20+00:00",
   "paper_count": 1049,
-  "edge_count": 8810,
+  "edge_count": 8812,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 228,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 56,
@@ -110,7 +110,7 @@
     "papers/inference/01-offload-hierarchical-memory/2026-2609.26061-topocompress-topology-aware-token-compression-algorithm-for-distributed-edge-moe-inference.md": 0,
     "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md": 10,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md": 40,
-    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md": 23,
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md": 24,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md": 33,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md": 10,
     "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md": 6,
@@ -804,7 +804,7 @@
     "papers/inference/13-sparse-attention/2024-2406.10774-quest.md": 55,
     "papers/inference/13-sparse-attention/2024-2407.02490-minference.md": 26,
     "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md": 11,
-    "papers/inference/13-sparse-attention/2025-2502.13189-moba.md": 9,
+    "papers/inference/13-sparse-attention/2025-2502.13189-moba.md": 10,
     "papers/inference/13-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md": 0,
     "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md": 0,
     "papers/inference/13-sparse-attention/2026-delta.md": 1,
@@ -3052,7 +3052,10 @@
       "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
     ],
-    "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md": [],
+    "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
     "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md": [
       "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
     ],

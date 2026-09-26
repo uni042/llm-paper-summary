@@ -23,6 +23,19 @@ last_checked: '2026-09-25'
 published: '2026-09-11'
 publication_type: 査読付き学術論文
 publication_status: published
+references:
+- canonical_id: arXiv:2112.06905
+  arxiv_id: '2112.06905'
+  doi: 10.18653/v1/2025.emnlp-main.718
+- canonical_id: arXiv:2502.13189
+  arxiv_id: '2508.10925'
+  doi: 10.48550/arxiv.2404.02258
+- canonical_id: arXiv:2202.09368
+  arxiv_id: '2508.00544'
+  doi: 10.1109/tpds.2024.3385639
+references_checked_at: '2026-09-26'
+references_source: primary-pdf-reference-section
+references_total: 3
 ---
 
 # MoEP: Compact and efficient sparsity with modular expert paths
