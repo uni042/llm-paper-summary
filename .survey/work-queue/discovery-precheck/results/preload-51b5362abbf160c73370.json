@@ -1,0 +1,920 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-51b5362abbf160c73370",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-51b5362abbf160c73370",
+  "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.12374/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1662eff13fd87da48e45e402a542d6286eca32df",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T01:40:36.839821+00:00",
+  "preload_id": "preload-51b5362abbf160c73370",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "CLaSp: In-Context Layer Skip for Self-Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/11ade5f139e9174fd80956224be0ac874f4fdc7b",
+      "year": 2025,
+      "published": "2025-05-30",
+      "abstract": "Speculative decoding (SD) is a promising method for accelerating the decoding process of Large Language Models (LLMs). The efficiency of SD primarily hinges on the consistency between the draft model and the verify model. However, existing drafting approaches typically require additional modules to be trained, which can be challenging to implement and ensure compatibility across various LLMs. In this paper, we propose CLaSp, an in-context layer-skipping strategy for self-speculative decoding. Unlike prior methods, CLaSp does not require additional drafting modules or extra training. Instead, it employs a plug-and-play mechanism by skipping intermediate layers of the verify model to construct a compressed draft model. Specifically, we develop a dynamic programming algorithm that optimizes the layer-skipping process by leveraging the complete hidden states from the last verification stage as an objective. This enables CLaSp to dynamically adjust its layer-skipping strategy after each verification stage, without relying on pre-optimized sets of skipped layers. Experimental results across diverse downstream tasks demonstrate that CLaSp achieves a speedup of 1.3x ~ 1.7x on LLaMA3 series models without altering the original distribution of the generated text.",
+      "canonical_id": "arXiv:2505.24196",
+      "arxiv_id": "2505.24196",
+      "authors": [
+        "Longze Chen",
+        "Renke Shan",
+        "Huiming Wang",
+        "Lu Wang",
+        "Ziqiang Liu",
+        "Run Luo",
+        "Jiawei Wang",
+        "H. Alinejad-Rokny",
+        "Min Yang"
+      ]
+    },
+    {
+      "title": "Ghidorah: Fast LLM Inference on Edge with Speculative Decoding and Hetero-Core Parallelism",
+      "source_url": "https://www.semanticscholar.org/paper/b4ffec86ddd82cb7f6fb163df9f00540c0aec113",
+      "year": 2025,
+      "published": "2025-05-29",
+      "abstract": "In-situ LLM inference on end-user devices has gained significant interest due to its privacy benefits and reduced dependency on external infrastructure. However, as the decoding process is memory-bandwidth-bound, the diverse processing units in modern end-user devices cannot be fully exploited, resulting in slow LLM inference. This paper presents Ghidorah, an LLM inference system for end-user devices with the unified memory architecture. The key idea of Ghidorah can be summarized in two steps: 1) leveraging speculative decoding approaches to enhance parallelism, and 2) ingeniously distributing workloads across multiple heterogeneous processing units to maximize computing power utilization. Ghidorah includes the hetero-core model parallelism (HCMP) architecture and the architecture-aware profiling (ARCA) approach. The HCMP architecture guides partitioning by leveraging the unified memory design of end-user devices and adapting to the hybrid computational demands of speculative decoding. The ARCA approach is used to determine the optimal speculative strategy and partitioning strategy, balancing acceptance rate with parallel capability to maximize the speedup. Additionally, we optimize sparse computation on ARM CPUs. Experimental results show that Ghidorah can achieve up to $7.6 \\times$ speedup in the dominant LLM decoding phase compared to the sequential decoding approach on NVIDIA Jetson NX.",
+      "canonical_id": "arXiv:2505.23219",
+      "arxiv_id": "2505.23219",
+      "authors": [
+        "Jinhui Wei",
+        "Yen-Chieh Huang",
+        "Yuhui Zhou",
+        "Jiazhi Jiang",
+        "Jiangsu Du",
+        "Yutong Lu"
+      ]
+    },
+    {
+      "title": "Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion",
+      "source_url": "https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a",
+      "year": 2025,
+      "published": "2025-05-27",
+      "abstract": "Diffusion language models offer parallel token generation and inherent bidirectionality, promising more efficient and powerful sequence modeling compared to autoregressive approaches. However, state-of-the-art diffusion models (e.g., Dream 7B, LLaDA 8B) suffer from slow inference. While they match the quality of similarly sized autoregressive (AR) models (e.g., Qwen2.5 7B, Llama3 8B), their iterative denoising requires multiple full-sequence forward passes, resulting in high computational costs and latency, particularly for long input prompts and long-context scenarios. Furthermore, parallel token generation introduces token incoherence problems, and current sampling heuristics suffer from significant quality drops with decreasing denoising steps. We address these limitations with two training-free techniques. First, we propose FreeCache, a Key-Value (KV) approximation caching technique that reuses stable KV projections across denoising steps, effectively reducing the computational cost of DLM inference. Second, we introduce Guided Diffusion, a training-free method that uses a lightweight pretrained autoregressive model to supervise token unmasking, dramatically reducing the total number of denoising iterations without sacrificing quality. We conduct extensive evaluations on open-source reasoning benchmarks, and our combined methods deliver an average of 12.14x end-to-end speedup across various tasks with negligible accuracy degradation. For the first time, diffusion language models achieve a comparable and even faster latency as the widely adopted autoregressive models. Our work successfully paved the way for scaling up the diffusion language model to a broader scope of applications across different domains.",
+      "canonical_id": "arXiv:2505.21467",
+      "arxiv_id": "2505.21467",
+      "authors": [
+        "Zhanqiu Hu",
+        "Jian Meng",
+        "Yash Akhauri",
+        "Mohamed S. Abdelfattah",
+        "Jae-sun Seo",
+        "Zhiru Zhang",
+        "Udit Gupta"
+      ]
+    },
+    {
+      "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+      "year": 2025,
+      "published": "2025-05-25",
+      "abstract": "Speculative decoding (SD) has emerged as a powerful method for accelerating autoregressive generation in large language models (LLMs), yet its integration into vision-language models (VLMs) remains underexplored. We introduce DREAM, a novel speculative decoding framework tailored for VLMs that combines three key innovations: (1) a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, (2) adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and (3) visual token compression to reduce draft model latency. DREAM enables efficient, accurate, and parallel multimodal decoding with significant throughput improvement. Experiments across a diverse set of recent popular VLMs, including LLaVA, Pixtral, SmolVLM and Gemma3, demonstrate up to 3.6x speedup over conventional decoding and significantly outperform prior SD baselines in both inference throughput and speculative draft acceptance length across a broad range of multimodal benchmarks. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM.git",
+      "canonical_id": "arXiv:2505.19201",
+      "arxiv_id": "2505.19201",
+      "authors": [
+        "Yunhai Hu",
+        "Tian-Hua Xia",
+        "Zining Liu",
+        "Rahul Raman",
+        "Xingyu Liu",
+        "Bo Bao",
+        "E. Sather",
+        "Vithursan Thangarasa",
+        "Sai-Qian Zhang"
+      ]
+    },
+    {
+      "title": "Reinforcement Speculative Decoding for Fast Ranking",
+      "source_url": "https://www.semanticscholar.org/paper/bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+      "year": 2025,
+      "published": "2025-05-23",
+      "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems such as information retrieval (IR) systems and recommender systems (RSs). To alleviate the latency of auto-regressive decoding, some studies explore the single (first) token decoding for ranking approximation, but they suffer from severe degradation in tail positions. Although speculative decoding (SD) methods can be a remedy with verification at different positions, they face challenges in ranking systems due to their left-to-right decoding paradigm. Firstly, ranking systems require strict latency constraints, but verification rounds in SD methods remain agnostic; Secondly, SD methods usually discard listwise ranking knowledge about unaccepted items in previous rounds, hindering future multi-token prediction, especially when candidate tokens are the unaccepted items. In this paper, we propose a Reinforcement Speculative Decoding method for fast ranking inference of LLMs. To meet the ranking systems' latency requirement, we propose an up-to-down decoding paradigm that employs an agent to iteratively modify the ranking sequence under a constrained budget. Specifically, we design a ranking-tailored policy optimization, actively exploring optimal multi-round ranking modification policy verified by LLMs via reinforcement learning (RL). To better approximate the target LLM under the constrained budget, we trigger the agent fully utilizing the listwise ranking knowledge about all items verified by LLMs across different rounds in RL, enhancing the modification policy of the agent. More importantly, we demonstrate the theoretical robustness and advantages of our paradigm and implementation. Experiments on both IR and RS tasks show the effectiveness of our proposed method.",
+      "canonical_id": "arXiv:2505.20316",
+      "arxiv_id": "2505.20316",
+      "authors": [
+        "Yingpeng Du",
+        "Tianjun Wei",
+        "Zhu Sun",
+        "Jie Zhang",
+        "Xun Jiang"
+      ]
+    },
+    {
+      "title": "BanditSpec: Adaptive Speculative Decoding via Bandit Algorithms",
+      "source_url": "https://www.semanticscholar.org/paper/44c733e11c1de985f9cc31102a7e3d1a284421a2",
+      "year": 2025,
+      "published": "2025-05-21",
+      "abstract": "Speculative decoding has emerged as a popular method to accelerate the inference of Large Language Models (LLMs) while retaining their superior text generation performance. Previous methods either adopt a fixed speculative decoding configuration regardless of the prefix tokens, or train draft models in an offline or online manner to align them with the context. This paper proposes a training-free online learning framework to adaptively choose the configuration of the hyperparameters for speculative decoding as text is being generated. We first formulate this hyperparameter selection problem as a Multi-Armed Bandit problem and provide a general speculative decoding framework BanditSpec. Furthermore, two bandit-based hyperparameter selection algorithms, UCBSpec and EXP3Spec, are designed and analyzed in terms of a novel quantity, the stopping time regret. We upper bound this regret under both stochastic and adversarial reward settings. By deriving an information-theoretic impossibility result, it is shown that the regret performance of UCBSpec is optimal up to universal constants. Finally, extensive empirical experiments with LLaMA3 and Qwen2 demonstrate that our algorithms are effective compared to existing methods, and the throughput is close to the oracle best hyperparameter in simulated real-life LLM serving scenarios with diverse input prompts.",
+      "canonical_id": "arXiv:2505.15141",
+      "arxiv_id": "2505.15141",
+      "authors": [
+        "Yunlong Hou",
+        "Fengzhuo Zhang",
+        "Cun-Xiao Du",
+        "Xuan Zhang",
+        "Jiachun Pan",
+        "Tianyu Pang",
+        "Chao Du",
+        "Vincent Y. F. Tan",
+        "Zhuoran Yang"
+      ]
+    },
+    {
+      "title": "Automatic Task Detection and Heterogeneous LLM Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/780202d9084f7c495545842b7a16617195f4ee66",
+      "year": 2025,
+      "published": "2025-05-13",
+      "abstract": "Speculative decoding, which combines a draft model with a target model, has emerged as an effective approach to accelerate large language model (LLM) inference. However, existing methods often face a trade-off between the acceptance rate and decoding speed in downstream tasks due to the limited capacity of the draft model, making it difficult to ensure efficiency across diverse tasks. To address this problem, we propose a speculative decoding algorithm tailored for downstream task optimization. It includes an automatic task partitioning and assigning method, which automatically categorizes downstream tasks into different sub-tasks and assigns them to a set of heterogeneous draft models. Each draft model is aligned with the target model using task-specific data, thereby enhancing the consistency of inference results. In addition, our proposed method incorporates an online lightweight prompt classifier to dynamically route prompts to the appropriate draft model. Experimental results demonstrate that the proposed method improves draft accuracy by 6% to 50% over vanilla speculative decoding, while achieving a speedup of 1.10x to 2.64x in LLM inference.",
+      "canonical_id": "arXiv:2505.08600",
+      "arxiv_id": "2505.08600",
+      "authors": [
+        "Dan-Ying Ge",
+        "Jian-Hua Gao",
+        "Qi-Zhi Jiang",
+        "Yi-Fei Feng",
+        "Wei-Xing Ji"
+      ]
+    },
+    {
+      "title": "Scaling Laws for Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/b5a636c16c076fdbb4adb39bf7a0fa4a880ba629",
+      "year": 2025,
+      "published": "2025-05-08",
+      "abstract": "The escalating demand for efficient decoding in large language models (LLMs) is particularly critical for reasoning-intensive architectures like OpenAI-o3 and DeepSeek-R1, which depend on extended chain-of-thought reasoning. This study investigates speculative decoding techniques through dense LLM architectures to establish foundational insights for accelerating reasoning tasks. While speculative decoding methods leveraging parallel draft-verification cycles have emerged as promising acceleration techniques, the scaling laws governing decoding efficiency remain under-explored compared to conventional backbone LLMs developed through Pretraining->SFT->RLHF training paradigms. In this work, we discover Log-linear Scaling Laws (Theorem 1.1, 1.2 and 1.3) governing draft model acceptance rate (or decoding speed) across three dimensions: pretraining token volume, draft model capacity, and decoding batch size. Building on these laws, we achieve Scylla, which coordinates multi-dimensional scaling for popular LLMs (Llama2/3, Qwen2.5). Empirical validation shows Scylla achieves 1.5-2.2 higher acceptance rate than EAGLE2 and 0.3 higher than EAGLE3 at temperature T = 0, with peak performance gains on summarization and QA tasks (Figure 2). Industrial inference engine deployments demonstrate 2X decoding throughput improvements over EAGLE2 (Table 5), validating the transformative potential of systematic scaling for efficient LLM inference. Code will be released later.",
+      "canonical_id": "arXiv:2505.07858",
+      "arxiv_id": "2505.07858",
+      "authors": [
+        "Siyuan Yan",
+        "Mo Zhu",
+        "Guo-qing Jiang",
+        "Jianfei Wang",
+        "Jiaxing Chen",
+        "Wentai Zhang",
+        "Xiang Liao",
+        "Xiao Cui",
+        "Chen Zhang",
+        "Zhuoran Song",
+        "Ran Zhu"
+      ]
+    },
+    {
+      "title": "AutoJudge: Judge Decoding Without Manual Annotation",
+      "source_url": "https://www.semanticscholar.org/paper/9c2db91ea3795306d2a404b8f040a10ddea8b09a",
+      "year": 2025,
+      "published": "2025-04-28",
+      "abstract": "We introduce AutoJudge, a method that accelerates large language model (LLM) inference with task-specific lossy speculative decoding. Instead of matching the original model output distribution token-by-token, we identify which of the generated tokens affect the downstream quality of the response, relaxing the distribution match guarantee so that the\"unimportant\"tokens can be generated faster. Our approach relies on a semi-greedy search algorithm to test which of the mismatches between target and draft models should be corrected to preserve quality and which ones may be skipped. We then train a lightweight classifier based on existing LLM embeddings to predict, at inference time, which mismatching tokens can be safely accepted without compromising the final answer quality. We evaluate the effectiveness of AutoJudge with multiple draft/target model pairs on mathematical reasoning and programming benchmarks, achieving significant speedups at the cost of a minor accuracy reduction. Notably, on GSM8k with the Llama 3.1 70B target model, our approach achieves up to $\\approx2\\times$ speedup over speculative decoding at the cost of $\\le 1\\%$ drop in accuracy. When applied to the LiveCodeBench benchmark, AutoJudge automatically detects programming-specific important tokens, accepting $\\ge 25$ tokens per speculation cycle at $2\\%$ drop in Pass@1. Our approach requires no human annotation and is easy to integrate with modern LLM inference frameworks.",
+      "canonical_id": "arXiv:2504.20039",
+      "arxiv_id": "2504.20039",
+      "authors": [
+        "Roman Garipov",
+        "Fedor Velikonivtsev",
+        "Ruslan Svirschevski",
+        "Vage Egiazarian",
+        "Max Ryabinin"
+      ]
+    },
+    {
+      "title": "PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation",
+      "source_url": "https://www.semanticscholar.org/paper/e7bc935576e3303090e3bd5b1b062435c4a6091f",
+      "year": 2025,
+      "published": "2025-04-23",
+      "abstract": "The autoregressive nature of large language models (LLMs) fundamentally limits inference speed, as each forward pass generates only a single token and is often bottlenecked by memory bandwidth. Speculative decoding has emerged as a promising solution, adopting a draft-then-verify strategy to accelerate token generation. While the EAGLE series achieves strong acceleration, its requirement of training a separate draft head for each target model introduces substantial adaptation costs. In this work, we propose \\textbf{PARD (PARallel Draft)}, a novel speculative decoding method featuring \\textit{target-independence} and \\textit{parallel token prediction}. Specifically, PARD enables a single draft model to be applied across an entire family of target models without requiring separate training for each variant, thereby minimizing adaptation costs. Meanwhile, PARD substantially accelerates inference by predicting multiple future tokens within a single forward pass of the draft phase. To further reduce the training adaptation cost of PARD, we propose a COnditional Drop-token (COD) mechanism based on the integrity of prefix key-value states, enabling autoregressive draft models to be adapted into parallel draft models at low-cost. Our experiments show that the proposed COD method improves draft model training efficiency by \\textbf{3$\\times$} compared with traditional masked prediction training. On the \\texttt{vLLM} inference framework, PARD achieves up to \\textbf{3.67$\\times$} speedup on LLaMA3.1-8B, reaching \\textbf{264.88} tokens per second, which is \\textbf{1.15$\\times$} faster than EAGLE-3. Our code is available at https://github.com/AMD-AIG-AIMA/PARD.",
+      "canonical_id": "arXiv:2504.18583",
+      "arxiv_id": "2504.18583",
+      "authors": [
+        "Zi-Hao An",
+        "Huajun Bai",
+        "Zi-Qiong Liu",
+        "Dong Li",
+        "E. Barsoum"
+      ]
+    },
+    {
+      "title": "Leveraging Scalable Cloud Infrastructure for Autonomous Driving Data Lakes and Real-Time Decision Making",
+      "source_url": "https://www.semanticscholar.org/paper/0ac5ef6a14a7430035d602469c6c90e5de25165b",
+      "year": 2025,
+      "published": "2025-03-28",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/AIITA65135.2025.11048068",
+      "doi": "10.1109/AIITA65135.2025.11048068",
+      "authors": [
+        "Junjie Chen"
+      ]
+    },
+    {
+      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
+      "source_url": "https://www.semanticscholar.org/paper/c110e21884b7167b0ac07cdee9bd77e42ec68bdb",
+      "year": 2025,
+      "published": "2025-02-28",
+      "abstract": "Speculative Decoding (SD) enforces strict distributional equivalence to the target model when accepting candidate tokens. While it maintains the target model's generation quality, this strict equivalence limits the speedup achievable by SD and prevents users from trading deviations from the target distribution in exchange for further inference speed gains. To address these limitations, we introduce Fuzzy Speculative Decoding (FSD) - a decoding algorithm that generalizes SD by accepting candidate tokens based on the divergences between the target and draft model distributions. By allowing for controlled divergence from the target model, FSD enables users to flexibly trade generation quality for inference speed. Across several benchmarks, our method is able to achieve significant runtime improvements of over 5 tokens per second faster than SD at only an approximate 2% absolute reduction in benchmark accuracy. In many cases, FSD is even able to match SD benchmark accuracy at over 2 tokens per second faster, demonstrating that distributional equivalence is not necessary to maintain target model performance. Furthermore, FSD can be seamlessly integrated into existing SD extensions; we demonstrate this by applying FSD to EAGLE-2, greatly enhancing this existing extension's efficiency while allowing it to leverage FSD's tunable quality-speed trade-off.",
+      "canonical_id": "arXiv:2502.20704",
+      "arxiv_id": "2502.20704",
+      "authors": [
+        "Maximilian Holsman",
+        "Yukun Huang",
+        "Bhuwan Dhingra"
+      ]
+    },
+    {
+      "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+      "source_url": "https://www.semanticscholar.org/paper/adb0c91669f211d3e99590d8efb1a6d06aabf016",
+      "year": 2025,
+      "published": "2025-02-27",
+      "abstract": "Sequential dependencies present a fundamental bottleneck in deploying large-scale autoregressive models, particularly for real-time applications. While traditional optimization approaches like pruning and quantization often compromise model quality, recent advances in generation-refinement frameworks demonstrate that this trade-off can be significantly mitigated. This survey presents a comprehensive taxonomy of generation-refinement frameworks, analyzing methods across autoregressive sequence tasks. We categorize methods based on their generation strategies (from simple n-gram prediction to sophisticated draft models) and refinement mechanisms (including single-pass verification and iterative approaches). Through systematic analysis of both algorithmic innovations and system-level implementations, we examine deployment strategies across computing environments and explore applications spanning text, images, and speech generation. This systematic examination of both theoretical frameworks and practical implementations provides a foundation for future research in efficient autoregressive decoding.",
+      "canonical_id": "arXiv:2502.19732",
+      "arxiv_id": "2502.19732",
+      "authors": [
+        "Yunhai Hu",
+        "Zining Liu",
+        "Zhenyuan Dong",
+        "Tianfan Peng",
+        "Bradley McDanel",
+        "Sai-Qian Zhang"
+      ]
+    },
+    {
+      "title": "Towards Optimal Multi-draft Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/50af31e0aa76103dfb0ed901acea0bddbdbaef8d",
+      "year": 2025,
+      "published": "2025-02-26",
+      "abstract": "Large Language Models (LLMs) have become an indispensable part of natural language processing tasks. However, autoregressive sampling has become an efficiency bottleneck. Multi-Draft Speculative Decoding (MDSD) is a recent approach where, when generating each token, a small draft model generates multiple drafts, and the target LLM verifies them in parallel, ensuring that the final output conforms to the target model distribution. The two main design choices in MDSD are the draft sampling method and the verification algorithm. For a fixed draft sampling method, the optimal acceptance rate is a solution to an optimal transport problem, but the complexity of this problem makes it difficult to solve for the optimal acceptance rate and measure the gap between existing verification algorithms and the theoretical upper bound. This paper discusses the dual of the optimal transport problem, providing a way to efficiently compute the optimal acceptance rate. For the first time, we measure the theoretical upper bound of MDSD efficiency for vocabulary sizes in the thousands and quantify the gap between existing verification algorithms and this bound. We also compare different draft sampling methods based on their optimal acceptance rates. Our results show that the draft sampling method strongly influences the optimal acceptance rate, with sampling without replacement outperforming sampling with replacement. Additionally, existing verification algorithms do not reach the theoretical upper bound for both without replacement and with replacement sampling. Our findings suggest that carefully designed draft sampling methods can potentially improve the optimal acceptance rate and enable the development of verification algorithms that closely match the theoretical upper bound.",
+      "canonical_id": "arXiv:2502.18779",
+      "arxiv_id": "2502.18779",
+      "authors": [
+        "Zhengmian Hu",
+        "Tong Zheng",
+        "V. Viswanathan",
+        "Ziyi Chen",
+        "Ryan A. Rossi",
+        "Yihan Wu",
+        "Dinesh Manocha",
+        "Heng Huang"
+      ]
+    },
+    {
+      "title": "CORAL: Learning Consistent Representations across Multi-step Training with Lighter Speculative Drafter",
+      "source_url": "https://www.semanticscholar.org/paper/061b9d662f76b06e0319ee42aabc489b59e0bc97",
+      "year": 2025,
+      "published": "2025-02-24",
+      "abstract": "Speculative decoding is a powerful technique that accelerates Large Language Model (LLM) inference by leveraging a lightweight speculative draft model. However, existing designs suffers in performance due to misalignment between training and inference. Recent methods have tried to solve this issue by adopting a multi-step training strategy, but the complex inputs of different training steps make it harder for the draft model to converge. To address this, we propose CORAL, a novel framework that improves both accuracy and efficiency in speculative drafting. CORAL introduces Cross-Step Representation Alignment, a method that enhances consistency across multiple training steps, significantly improving speculative drafting performance. Additionally, we identify the LM head as a major bottleneck in the inference speed of the draft model. We introduce a weight-grouping mechanism that selectively activates a subset of LM head parameters during inference, substantially reducing the latency of the draft model. We evaluate CORAL on three LLM families and three benchmark datasets, achieving speedup ratios of 2.50x-4.07x, outperforming state-of-the-art methods such as EAGLE-2 and HASS. Our results demonstrate that CORAL effectively mitigates training-inference misalignment and delivers significant speedup for modern LLMs with large vocabularies.",
+      "canonical_id": "arXiv:2502.16880",
+      "arxiv_id": "2502.16880",
+      "authors": [
+        "Yepeng Weng",
+        "Dianwen Mei",
+        "Huishi Qiu",
+        "Xujie Chen",
+        "Li Liu",
+        "Jiang Tian",
+        "Zhongchao Shi"
+      ]
+    },
+    {
+      "title": "Minions: Cost-efficient Collaboration Between On-device and Cloud Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/54ade47ed89a74f042004da95d671f22fde2917f",
+      "year": 2025,
+      "published": "2025-02-21",
+      "abstract": "We investigate an emerging setup in which a small, on-device language model (LM) with access to local data communicates with a frontier, cloud-hosted LM to solve real-world tasks involving financial, medical, and scientific reasoning over long documents. Can a local-remote collaboration reduce cloud inference costs while preserving quality? First, we consider a naive collaboration protocol where the local and remote models simply chat back and forth. Because only the local model reads the full context, this protocol achieves a 30.4x reduction in remote costs, but recovers only 87% of the performance of the frontier model. We identify two key limitations of this protocol: the local model struggles to (1) follow the remote model's multi-step instructions and (2) reason over long contexts. Motivated by these observations, we study an extension of this protocol, coined MinionS, in which the remote model decomposes the task into easier subtasks over shorter chunks of the document, that are executed locally in parallel. MinionS reduces costs by 5.7x on average while recovering 97.9% of the performance of the remote model alone. Our analysis reveals several key design choices that influence the trade-off between cost and performance in local-remote systems.",
+      "canonical_id": "arXiv:2502.15964",
+      "arxiv_id": "2502.15964",
+      "authors": [
+        "A. Narayan",
+        "Dan Biderman",
+        "Sabri Eyuboglu",
+        "Avner May",
+        "Scott W. Linderman",
+        "James Zou",
+        "Christopher Ré"
+      ]
+    },
+    {
+      "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/15edba4c3c66d5b9547485e0e838f578dc067a60",
+      "year": 2025,
+      "published": "2025-02-16",
+      "abstract": "Speculative decoding accelerates inference in large language models (LLMs) by generating multiple draft tokens simultaneously. However, existing methods often struggle with token misalignment between the training and decoding phases, limiting their performance. To address this, we propose GRIFFIN, a novel framework that incorporates a token-alignable training strategy and a token-alignable draft model to mitigate misalignment. The training strategy employs a loss masking mechanism to exclude highly misaligned tokens during training, preventing them from negatively impacting the draft model's optimization. The token-alignable draft model introduces input tokens to correct inconsistencies in generated features. Experiments on LLaMA, Vicuna, Qwen and Mixtral models demonstrate that GRIFFIN achieves an average acceptance length improvement of over 8% and a speedup ratio exceeding 7%, outperforming current speculative decoding state-of-the-art methods. Our code and GRIFFIN's draft models are released publicly in https://github.com/hsj576/GRIFFIN.",
+      "canonical_id": "arXiv:2502.11018",
+      "arxiv_id": "2502.11018",
+      "authors": [
+        "Shijing Hu",
+        "Jingyang Li",
+        "Xingyu Xie",
+        "Zhihui Lu",
+        "Kim-Chuan Toh",
+        "Pan Zhou"
+      ]
+    },
+    {
+      "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+      "source_url": "https://www.semanticscholar.org/paper/a0bb01a427e833fe6ee33a29fbd3466c4a688d89",
+      "year": 2025,
+      "published": "2025-02-05",
+      "abstract": "Large Language Models (LLMs) are increasingly being deployed on edge devices for long-context settings, creating a growing need for fast and efficient long-context inference. In these scenarios, the Key-Value (KV) cache is the primary bottleneck in terms of both GPU memory and latency, as the full KV cache must be loaded for each decoding step. While speculative decoding is a widely accepted technique to accelerate autoregressive decoding, existing methods often struggle to achieve significant speedups due to inefficient KV cache optimization strategies and result in low acceptance rates. To address these challenges, we propose a novel self-speculative decoding framework, QuantSpec, where the draft model shares the architecture of the target model but employs a hierarchical 4-bit quantized KV cache and 4-bit quantized weights for acceleration. QuantSpec maintains high acceptance rates ($>$90%) and reliably provides consistent end-to-end speedups upto $\\sim2.5\\times$, outperforming other self-speculative decoding methods that use sparse KV cache for long-context LLM inference. QuantSpec also reduces the memory requirements by $\\sim 1.3\\times$ compared to these alternatives.",
+      "canonical_id": "arXiv:2502.10424",
+      "arxiv_id": "2502.10424",
+      "authors": [
+        "Rishabh Tiwari",
+        "Haocheng Xi",
+        "Aditya Tomar",
+        "Coleman Hooper",
+        "Sehoon Kim",
+        "Max Horton",
+        "Mahyar Najibi",
+        "Michael W. Mahoney",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ]
+    },
+    {
+      "title": "CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing",
+      "source_url": "https://www.semanticscholar.org/paper/cc1adc975d62a3559fa363fed4f8338bb0d05397",
+      "year": 2025,
+      "published": "2025-02-04",
+      "abstract": "Large language models have achieved remarkable success in various tasks but suffer from high computational costs during inference, limiting their deployment in resource-constrained applications. To address this issue, we propose a novel Collaborative Inference with Token-lEvel Routing (CITER) framework that enables efficient collaboration between small and large language models (SLMs \\&LLMs) through a token-level routing strategy. Specifically, CITER routes non-critical tokens to an SLM for efficiency and routes critical tokens to an LLM for generalization quality. We formulate router training as a policy optimization, where the router receives rewards based on both the quality of predictions and the inference costs of generation. This allows the router to learn to predict token-level routing scores and make routing decisions based on both the current token and the future impact of its decisions. To further accelerate the reward evaluation process, we introduce a shortcut which significantly reduces the costs of the reward estimation and improving the practicality of our approach. Extensive experiments on five benchmark datasets demonstrate that CITER reduces the inference costs while preserving high-quality generation, offering a promising solution for real-time and resource-constrained applications. Our data and code are available at https://github.com/aiming-lab/CITER.",
+      "canonical_id": "arXiv:2502.01976",
+      "arxiv_id": "2502.01976",
+      "authors": [
+        "Wenhao Zheng",
+        "Yixiao Chen",
+        "Weitong Zhang",
+        "Souvik Kundu",
+        "Yun Li",
+        "Zhengzhong Liu",
+        "Eric P. Xing",
+        "Hongyi Wang",
+        "Huaxiu Yao"
+      ]
+    },
+    {
+      "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
+      "source_url": "https://www.semanticscholar.org/paper/6008a7676b3cae015670217c263ec0fdfc31e38b",
+      "year": 2025,
+      "published": "2025-01-31",
+      "abstract": "The performance of large language models (LLMs) is closely linked to their underlying size, leading to ever-growing networks and hence slower inference. Speculative decoding has been proposed as a technique to accelerate autoregressive generation, leveraging a fast draft model to propose candidate tokens, which are then verified in parallel based on their likelihood under the target model. While this approach guarantees to reproduce the target output, it incurs a substantial penalty: many high-quality draft tokens are rejected, even when they represent objectively valid continuations. Indeed, we show that even powerful draft models such as GPT-4o, as well as human text cannot achieve high acceptance rates under the standard verification scheme. This severely limits the speedup potential of current speculative decoding methods, as an early rejection becomes overwhelmingly likely when solely relying on alignment of draft and target. We thus ask the following question: Can we adapt verification to recognize correct, but non-aligned replies? To this end, we draw inspiration from the LLM-as-a-judge framework, which demonstrated that LLMs are able to rate answers in a versatile way. We carefully design a dataset to elicit the same capability in the target model by training a compact module on top of the embeddings to produce ``judgements\"of the current continuation. We showcase our strategy on the Llama-3.1 family, where our 8b/405B-Judge achieves a speedup of 9x over Llama-405B, while maintaining its quality on a large range of benchmarks. These benefits remain present even in optimized inference frameworks, where our method reaches up to 141 tokens/s for 8B/70B-Judge and 129 tokens/s for 8B/405B on 2 and 8 H100s respectively.",
+      "canonical_id": "arXiv:2501.19309",
+      "arxiv_id": "2501.19309",
+      "authors": [
+        "Gregor Bachmann",
+        "Sotiris Anagnostidis",
+        "Albert Pumarola",
+        "Markos Georgopoulos",
+        "Artsiom Sanakoyeu",
+        "Yuming Du",
+        "Edgar Schönfeld",
+        "Ali K. Thabet",
+        "J. Kohler"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.24196",
+      "identity_tokens": [
+        "id:arXiv:2505.24196",
+        "title:clasp incontext layer skip for selfspeculative decoding",
+        "url:https://www.semanticscholar.org/paper/11ade5f139e9174fd80956224be0ac874f4fdc7b"
+      ],
+      "record": {
+        "title": "CLaSp: In-Context Layer Skip for Self-Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/11ade5f139e9174fd80956224be0ac874f4fdc7b",
+        "year": 2025,
+        "published": "2025-05-30",
+        "abstract": "Speculative decoding (SD) is a promising method for accelerating the decoding process of Large Language Models (LLMs). The efficiency of SD primarily hinges on the consistency between the draft model and the verify model. However, existing drafting approaches typically require additional modules to be trained, which can be challenging to implement and ensure compatibility across various LLMs. In this paper, we propose CLaSp, an in-context layer-skipping strategy for self-speculative decoding. Unlike prior methods, CLaSp does not require additional drafting modules or extra training. Instead, it employs a plug-and-play mechanism by skipping intermediate layers of the verify model to construct a compressed draft model. Specifically, we develop a dynamic programming algorithm that optimizes the layer-skipping process by leveraging the complete hidden states from the last verification stage as an objective. This enables CLaSp to dynamically adjust its layer-skipping strategy after each verification stage, without relying on pre-optimized sets of skipped layers. Experimental results across diverse downstream tasks demonstrate that CLaSp achieves a speedup of 1.3x ~ 1.7x on LLaMA3 series models without altering the original distribution of the generated text.",
+        "canonical_id": "arXiv:2505.24196",
+        "arxiv_id": "2505.24196",
+        "authors": [
+          "Longze Chen",
+          "Renke Shan",
+          "Huiming Wang",
+          "Lu Wang",
+          "Ziqiang Liu",
+          "Run Luo",
+          "Jiawei Wang",
+          "H. Alinejad-Rokny",
+          "Min Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23219",
+      "identity_tokens": [
+        "id:arXiv:2505.23219",
+        "title:ghidorah fast llm inference on edge with speculative decoding and heterocore parallelism",
+        "url:https://www.semanticscholar.org/paper/b4ffec86ddd82cb7f6fb163df9f00540c0aec113"
+      ],
+      "record": {
+        "title": "Ghidorah: Fast LLM Inference on Edge with Speculative Decoding and Hetero-Core Parallelism",
+        "source_url": "https://www.semanticscholar.org/paper/b4ffec86ddd82cb7f6fb163df9f00540c0aec113",
+        "year": 2025,
+        "published": "2025-05-29",
+        "abstract": "In-situ LLM inference on end-user devices has gained significant interest due to its privacy benefits and reduced dependency on external infrastructure. However, as the decoding process is memory-bandwidth-bound, the diverse processing units in modern end-user devices cannot be fully exploited, resulting in slow LLM inference. This paper presents Ghidorah, an LLM inference system for end-user devices with the unified memory architecture. The key idea of Ghidorah can be summarized in two steps: 1) leveraging speculative decoding approaches to enhance parallelism, and 2) ingeniously distributing workloads across multiple heterogeneous processing units to maximize computing power utilization. Ghidorah includes the hetero-core model parallelism (HCMP) architecture and the architecture-aware profiling (ARCA) approach. The HCMP architecture guides partitioning by leveraging the unified memory design of end-user devices and adapting to the hybrid computational demands of speculative decoding. The ARCA approach is used to determine the optimal speculative strategy and partitioning strategy, balancing acceptance rate with parallel capability to maximize the speedup. Additionally, we optimize sparse computation on ARM CPUs. Experimental results show that Ghidorah can achieve up to $7.6 \\times$ speedup in the dominant LLM decoding phase compared to the sequential decoding approach on NVIDIA Jetson NX.",
+        "canonical_id": "arXiv:2505.23219",
+        "arxiv_id": "2505.23219",
+        "authors": [
+          "Jinhui Wei",
+          "Yen-Chieh Huang",
+          "Yuhui Zhou",
+          "Jiazhi Jiang",
+          "Jiangsu Du",
+          "Yutong Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21467",
+      "identity_tokens": [
+        "id:arXiv:2505.21467",
+        "title:accelerating diffusion language model inference via efficient kv caching and guided diffusion",
+        "url:https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a"
+      ],
+      "record": {
+        "title": "Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion",
+        "source_url": "https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a",
+        "year": 2025,
+        "published": "2025-05-27",
+        "abstract": "Diffusion language models offer parallel token generation and inherent bidirectionality, promising more efficient and powerful sequence modeling compared to autoregressive approaches. However, state-of-the-art diffusion models (e.g., Dream 7B, LLaDA 8B) suffer from slow inference. While they match the quality of similarly sized autoregressive (AR) models (e.g., Qwen2.5 7B, Llama3 8B), their iterative denoising requires multiple full-sequence forward passes, resulting in high computational costs and latency, particularly for long input prompts and long-context scenarios. Furthermore, parallel token generation introduces token incoherence problems, and current sampling heuristics suffer from significant quality drops with decreasing denoising steps. We address these limitations with two training-free techniques. First, we propose FreeCache, a Key-Value (KV) approximation caching technique that reuses stable KV projections across denoising steps, effectively reducing the computational cost of DLM inference. Second, we introduce Guided Diffusion, a training-free method that uses a lightweight pretrained autoregressive model to supervise token unmasking, dramatically reducing the total number of denoising iterations without sacrificing quality. We conduct extensive evaluations on open-source reasoning benchmarks, and our combined methods deliver an average of 12.14x end-to-end speedup across various tasks with negligible accuracy degradation. For the first time, diffusion language models achieve a comparable and even faster latency as the widely adopted autoregressive models. Our work successfully paved the way for scaling up the diffusion language model to a broader scope of applications across different domains.",
+        "canonical_id": "arXiv:2505.21467",
+        "arxiv_id": "2505.21467",
+        "authors": [
+          "Zhanqiu Hu",
+          "Jian Meng",
+          "Yash Akhauri",
+          "Mohamed S. Abdelfattah",
+          "Jae-sun Seo",
+          "Zhiru Zhang",
+          "Udit Gupta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19201",
+      "identity_tokens": [
+        "id:arXiv:2505.19201",
+        "title:dream drafting with refined target features and entropyadaptive crossattention fusion for multimodal speculative decoding",
+        "url:https://www.semanticscholar.org/paper/88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4"
+      ],
+      "record": {
+        "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+        "year": 2025,
+        "published": "2025-05-25",
+        "abstract": "Speculative decoding (SD) has emerged as a powerful method for accelerating autoregressive generation in large language models (LLMs), yet its integration into vision-language models (VLMs) remains underexplored. We introduce DREAM, a novel speculative decoding framework tailored for VLMs that combines three key innovations: (1) a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, (2) adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and (3) visual token compression to reduce draft model latency. DREAM enables efficient, accurate, and parallel multimodal decoding with significant throughput improvement. Experiments across a diverse set of recent popular VLMs, including LLaVA, Pixtral, SmolVLM and Gemma3, demonstrate up to 3.6x speedup over conventional decoding and significantly outperform prior SD baselines in both inference throughput and speculative draft acceptance length across a broad range of multimodal benchmarks. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM.git",
+        "canonical_id": "arXiv:2505.19201",
+        "arxiv_id": "2505.19201",
+        "authors": [
+          "Yunhai Hu",
+          "Tian-Hua Xia",
+          "Zining Liu",
+          "Rahul Raman",
+          "Xingyu Liu",
+          "Bo Bao",
+          "E. Sather",
+          "Vithursan Thangarasa",
+          "Sai-Qian Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.20316",
+      "identity_tokens": [
+        "id:arXiv:2505.20316",
+        "title:reinforcement speculative decoding for fast ranking",
+        "url:https://www.semanticscholar.org/paper/bb14404a8d0f5b9db1a66726ffd7317447cdae9a"
+      ],
+      "record": {
+        "title": "Reinforcement Speculative Decoding for Fast Ranking",
+        "source_url": "https://www.semanticscholar.org/paper/bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+        "year": 2025,
+        "published": "2025-05-23",
+        "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems such as information retrieval (IR) systems and recommender systems (RSs). To alleviate the latency of auto-regressive decoding, some studies explore the single (first) token decoding for ranking approximation, but they suffer from severe degradation in tail positions. Although speculative decoding (SD) methods can be a remedy with verification at different positions, they face challenges in ranking systems due to their left-to-right decoding paradigm. Firstly, ranking systems require strict latency constraints, but verification rounds in SD methods remain agnostic; Secondly, SD methods usually discard listwise ranking knowledge about unaccepted items in previous rounds, hindering future multi-token prediction, especially when candidate tokens are the unaccepted items. In this paper, we propose a Reinforcement Speculative Decoding method for fast ranking inference of LLMs. To meet the ranking systems' latency requirement, we propose an up-to-down decoding paradigm that employs an agent to iteratively modify the ranking sequence under a constrained budget. Specifically, we design a ranking-tailored policy optimization, actively exploring optimal multi-round ranking modification policy verified by LLMs via reinforcement learning (RL). To better approximate the target LLM under the constrained budget, we trigger the agent fully utilizing the listwise ranking knowledge about all items verified by LLMs across different rounds in RL, enhancing the modification policy of the agent. More importantly, we demonstrate the theoretical robustness and advantages of our paradigm and implementation. Experiments on both IR and RS tasks show the effectiveness of our proposed method.",
+        "canonical_id": "arXiv:2505.20316",
+        "arxiv_id": "2505.20316",
+        "authors": [
+          "Yingpeng Du",
+          "Tianjun Wei",
+          "Zhu Sun",
+          "Jie Zhang",
+          "Xun Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15141",
+      "identity_tokens": [
+        "id:arXiv:2505.15141",
+        "title:banditspec adaptive speculative decoding via bandit algorithms",
+        "url:https://www.semanticscholar.org/paper/44c733e11c1de985f9cc31102a7e3d1a284421a2"
+      ],
+      "record": {
+        "title": "BanditSpec: Adaptive Speculative Decoding via Bandit Algorithms",
+        "source_url": "https://www.semanticscholar.org/paper/44c733e11c1de985f9cc31102a7e3d1a284421a2",
+        "year": 2025,
+        "published": "2025-05-21",
+        "abstract": "Speculative decoding has emerged as a popular method to accelerate the inference of Large Language Models (LLMs) while retaining their superior text generation performance. Previous methods either adopt a fixed speculative decoding configuration regardless of the prefix tokens, or train draft models in an offline or online manner to align them with the context. This paper proposes a training-free online learning framework to adaptively choose the configuration of the hyperparameters for speculative decoding as text is being generated. We first formulate this hyperparameter selection problem as a Multi-Armed Bandit problem and provide a general speculative decoding framework BanditSpec. Furthermore, two bandit-based hyperparameter selection algorithms, UCBSpec and EXP3Spec, are designed and analyzed in terms of a novel quantity, the stopping time regret. We upper bound this regret under both stochastic and adversarial reward settings. By deriving an information-theoretic impossibility result, it is shown that the regret performance of UCBSpec is optimal up to universal constants. Finally, extensive empirical experiments with LLaMA3 and Qwen2 demonstrate that our algorithms are effective compared to existing methods, and the throughput is close to the oracle best hyperparameter in simulated real-life LLM serving scenarios with diverse input prompts.",
+        "canonical_id": "arXiv:2505.15141",
+        "arxiv_id": "2505.15141",
+        "authors": [
+          "Yunlong Hou",
+          "Fengzhuo Zhang",
+          "Cun-Xiao Du",
+          "Xuan Zhang",
+          "Jiachun Pan",
+          "Tianyu Pang",
+          "Chao Du",
+          "Vincent Y. F. Tan",
+          "Zhuoran Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.08600",
+      "identity_tokens": [
+        "id:arXiv:2505.08600",
+        "title:automatic task detection and heterogeneous llm speculative decoding",
+        "url:https://www.semanticscholar.org/paper/780202d9084f7c495545842b7a16617195f4ee66"
+      ],
+      "record": {
+        "title": "Automatic Task Detection and Heterogeneous LLM Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/780202d9084f7c495545842b7a16617195f4ee66",
+        "year": 2025,
+        "published": "2025-05-13",
+        "abstract": "Speculative decoding, which combines a draft model with a target model, has emerged as an effective approach to accelerate large language model (LLM) inference. However, existing methods often face a trade-off between the acceptance rate and decoding speed in downstream tasks due to the limited capacity of the draft model, making it difficult to ensure efficiency across diverse tasks. To address this problem, we propose a speculative decoding algorithm tailored for downstream task optimization. It includes an automatic task partitioning and assigning method, which automatically categorizes downstream tasks into different sub-tasks and assigns them to a set of heterogeneous draft models. Each draft model is aligned with the target model using task-specific data, thereby enhancing the consistency of inference results. In addition, our proposed method incorporates an online lightweight prompt classifier to dynamically route prompts to the appropriate draft model. Experimental results demonstrate that the proposed method improves draft accuracy by 6% to 50% over vanilla speculative decoding, while achieving a speedup of 1.10x to 2.64x in LLM inference.",
+        "canonical_id": "arXiv:2505.08600",
+        "arxiv_id": "2505.08600",
+        "authors": [
+          "Dan-Ying Ge",
+          "Jian-Hua Gao",
+          "Qi-Zhi Jiang",
+          "Yi-Fei Feng",
+          "Wei-Xing Ji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07858",
+      "identity_tokens": [
+        "id:arXiv:2505.07858",
+        "title:scaling laws for speculative decoding",
+        "url:https://www.semanticscholar.org/paper/b5a636c16c076fdbb4adb39bf7a0fa4a880ba629"
+      ],
+      "record": {
+        "title": "Scaling Laws for Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/b5a636c16c076fdbb4adb39bf7a0fa4a880ba629",
+        "year": 2025,
+        "published": "2025-05-08",
+        "abstract": "The escalating demand for efficient decoding in large language models (LLMs) is particularly critical for reasoning-intensive architectures like OpenAI-o3 and DeepSeek-R1, which depend on extended chain-of-thought reasoning. This study investigates speculative decoding techniques through dense LLM architectures to establish foundational insights for accelerating reasoning tasks. While speculative decoding methods leveraging parallel draft-verification cycles have emerged as promising acceleration techniques, the scaling laws governing decoding efficiency remain under-explored compared to conventional backbone LLMs developed through Pretraining->SFT->RLHF training paradigms. In this work, we discover Log-linear Scaling Laws (Theorem 1.1, 1.2 and 1.3) governing draft model acceptance rate (or decoding speed) across three dimensions: pretraining token volume, draft model capacity, and decoding batch size. Building on these laws, we achieve Scylla, which coordinates multi-dimensional scaling for popular LLMs (Llama2/3, Qwen2.5). Empirical validation shows Scylla achieves 1.5-2.2 higher acceptance rate than EAGLE2 and 0.3 higher than EAGLE3 at temperature T = 0, with peak performance gains on summarization and QA tasks (Figure 2). Industrial inference engine deployments demonstrate 2X decoding throughput improvements over EAGLE2 (Table 5), validating the transformative potential of systematic scaling for efficient LLM inference. Code will be released later.",
+        "canonical_id": "arXiv:2505.07858",
+        "arxiv_id": "2505.07858",
+        "authors": [
+          "Siyuan Yan",
+          "Mo Zhu",
+          "Guo-qing Jiang",
+          "Jianfei Wang",
+          "Jiaxing Chen",
+          "Wentai Zhang",
+          "Xiang Liao",
+          "Xiao Cui",
+          "Chen Zhang",
+          "Zhuoran Song",
+          "Ran Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.20039",
+      "identity_tokens": [
+        "id:arXiv:2504.20039",
+        "title:autojudge judge decoding without manual annotation",
+        "url:https://www.semanticscholar.org/paper/9c2db91ea3795306d2a404b8f040a10ddea8b09a"
+      ],
+      "record": {
+        "title": "AutoJudge: Judge Decoding Without Manual Annotation",
+        "source_url": "https://www.semanticscholar.org/paper/9c2db91ea3795306d2a404b8f040a10ddea8b09a",
+        "year": 2025,
+        "published": "2025-04-28",
+        "abstract": "We introduce AutoJudge, a method that accelerates large language model (LLM) inference with task-specific lossy speculative decoding. Instead of matching the original model output distribution token-by-token, we identify which of the generated tokens affect the downstream quality of the response, relaxing the distribution match guarantee so that the\"unimportant\"tokens can be generated faster. Our approach relies on a semi-greedy search algorithm to test which of the mismatches between target and draft models should be corrected to preserve quality and which ones may be skipped. We then train a lightweight classifier based on existing LLM embeddings to predict, at inference time, which mismatching tokens can be safely accepted without compromising the final answer quality. We evaluate the effectiveness of AutoJudge with multiple draft/target model pairs on mathematical reasoning and programming benchmarks, achieving significant speedups at the cost of a minor accuracy reduction. Notably, on GSM8k with the Llama 3.1 70B target model, our approach achieves up to $\\approx2\\times$ speedup over speculative decoding at the cost of $\\le 1\\%$ drop in accuracy. When applied to the LiveCodeBench benchmark, AutoJudge automatically detects programming-specific important tokens, accepting $\\ge 25$ tokens per speculation cycle at $2\\%$ drop in Pass@1. Our approach requires no human annotation and is easy to integrate with modern LLM inference frameworks.",
+        "canonical_id": "arXiv:2504.20039",
+        "arxiv_id": "2504.20039",
+        "authors": [
+          "Roman Garipov",
+          "Fedor Velikonivtsev",
+          "Ruslan Svirschevski",
+          "Vage Egiazarian",
+          "Max Ryabinin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.18583",
+      "identity_tokens": [
+        "id:arXiv:2504.18583",
+        "title:pard accelerating llm inference with lowcost parallel draft model adaptation",
+        "url:https://www.semanticscholar.org/paper/e7bc935576e3303090e3bd5b1b062435c4a6091f"
+      ],
+      "record": {
+        "title": "PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation",
+        "source_url": "https://www.semanticscholar.org/paper/e7bc935576e3303090e3bd5b1b062435c4a6091f",
+        "year": 2025,
+        "published": "2025-04-23",
+        "abstract": "The autoregressive nature of large language models (LLMs) fundamentally limits inference speed, as each forward pass generates only a single token and is often bottlenecked by memory bandwidth. Speculative decoding has emerged as a promising solution, adopting a draft-then-verify strategy to accelerate token generation. While the EAGLE series achieves strong acceleration, its requirement of training a separate draft head for each target model introduces substantial adaptation costs. In this work, we propose \\textbf{PARD (PARallel Draft)}, a novel speculative decoding method featuring \\textit{target-independence} and \\textit{parallel token prediction}. Specifically, PARD enables a single draft model to be applied across an entire family of target models without requiring separate training for each variant, thereby minimizing adaptation costs. Meanwhile, PARD substantially accelerates inference by predicting multiple future tokens within a single forward pass of the draft phase. To further reduce the training adaptation cost of PARD, we propose a COnditional Drop-token (COD) mechanism based on the integrity of prefix key-value states, enabling autoregressive draft models to be adapted into parallel draft models at low-cost. Our experiments show that the proposed COD method improves draft model training efficiency by \\textbf{3$\\times$} compared with traditional masked prediction training. On the \\texttt{vLLM} inference framework, PARD achieves up to \\textbf{3.67$\\times$} speedup on LLaMA3.1-8B, reaching \\textbf{264.88} tokens per second, which is \\textbf{1.15$\\times$} faster than EAGLE-3. Our code is available at https://github.com/AMD-AIG-AIMA/PARD.",
+        "canonical_id": "arXiv:2504.18583",
+        "arxiv_id": "2504.18583",
+        "authors": [
+          "Zi-Hao An",
+          "Huajun Bai",
+          "Zi-Qiong Liu",
+          "Dong Li",
+          "E. Barsoum"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aiita65135.2025.11048068",
+      "identity_tokens": [
+        "id:DOI:10.1109/aiita65135.2025.11048068",
+        "title:leveraging scalable cloud infrastructure for autonomous driving data lakes and realtime decision making",
+        "url:https://www.semanticscholar.org/paper/0ac5ef6a14a7430035d602469c6c90e5de25165b"
+      ],
+      "record": {
+        "title": "Leveraging Scalable Cloud Infrastructure for Autonomous Driving Data Lakes and Real-Time Decision Making",
+        "source_url": "https://www.semanticscholar.org/paper/0ac5ef6a14a7430035d602469c6c90e5de25165b",
+        "year": 2025,
+        "published": "2025-03-28",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/AIITA65135.2025.11048068",
+        "doi": "10.1109/AIITA65135.2025.11048068",
+        "authors": [
+          "Junjie Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.20704",
+      "identity_tokens": [
+        "id:arXiv:2502.20704",
+        "title:fuzzy speculative decoding for a tunable accuracyruntime tradeoff",
+        "url:https://www.semanticscholar.org/paper/c110e21884b7167b0ac07cdee9bd77e42ec68bdb"
+      ],
+      "record": {
+        "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
+        "source_url": "https://www.semanticscholar.org/paper/c110e21884b7167b0ac07cdee9bd77e42ec68bdb",
+        "year": 2025,
+        "published": "2025-02-28",
+        "abstract": "Speculative Decoding (SD) enforces strict distributional equivalence to the target model when accepting candidate tokens. While it maintains the target model's generation quality, this strict equivalence limits the speedup achievable by SD and prevents users from trading deviations from the target distribution in exchange for further inference speed gains. To address these limitations, we introduce Fuzzy Speculative Decoding (FSD) - a decoding algorithm that generalizes SD by accepting candidate tokens based on the divergences between the target and draft model distributions. By allowing for controlled divergence from the target model, FSD enables users to flexibly trade generation quality for inference speed. Across several benchmarks, our method is able to achieve significant runtime improvements of over 5 tokens per second faster than SD at only an approximate 2% absolute reduction in benchmark accuracy. In many cases, FSD is even able to match SD benchmark accuracy at over 2 tokens per second faster, demonstrating that distributional equivalence is not necessary to maintain target model performance. Furthermore, FSD can be seamlessly integrated into existing SD extensions; we demonstrate this by applying FSD to EAGLE-2, greatly enhancing this existing extension's efficiency while allowing it to leverage FSD's tunable quality-speed trade-off.",
+        "canonical_id": "arXiv:2502.20704",
+        "arxiv_id": "2502.20704",
+        "authors": [
+          "Maximilian Holsman",
+          "Yukun Huang",
+          "Bhuwan Dhingra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.19732",
+      "identity_tokens": [
+        "id:arXiv:2502.19732",
+        "title:speculative decoding and beyond an indepth survey of techniques",
+        "url:https://www.semanticscholar.org/paper/adb0c91669f211d3e99590d8efb1a6d06aabf016"
+      ],
+      "record": {
+        "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+        "source_url": "https://www.semanticscholar.org/paper/adb0c91669f211d3e99590d8efb1a6d06aabf016",
+        "year": 2025,
+        "published": "2025-02-27",
+        "abstract": "Sequential dependencies present a fundamental bottleneck in deploying large-scale autoregressive models, particularly for real-time applications. While traditional optimization approaches like pruning and quantization often compromise model quality, recent advances in generation-refinement frameworks demonstrate that this trade-off can be significantly mitigated. This survey presents a comprehensive taxonomy of generation-refinement frameworks, analyzing methods across autoregressive sequence tasks. We categorize methods based on their generation strategies (from simple n-gram prediction to sophisticated draft models) and refinement mechanisms (including single-pass verification and iterative approaches). Through systematic analysis of both algorithmic innovations and system-level implementations, we examine deployment strategies across computing environments and explore applications spanning text, images, and speech generation. This systematic examination of both theoretical frameworks and practical implementations provides a foundation for future research in efficient autoregressive decoding.",
+        "canonical_id": "arXiv:2502.19732",
+        "arxiv_id": "2502.19732",
+        "authors": [
+          "Yunhai Hu",
+          "Zining Liu",
+          "Zhenyuan Dong",
+          "Tianfan Peng",
+          "Bradley McDanel",
+          "Sai-Qian Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.18779",
+      "identity_tokens": [
+        "id:arXiv:2502.18779",
+        "title:towards optimal multidraft speculative decoding",
+        "url:https://www.semanticscholar.org/paper/50af31e0aa76103dfb0ed901acea0bddbdbaef8d"
+      ],
+      "record": {
+        "title": "Towards Optimal Multi-draft Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/50af31e0aa76103dfb0ed901acea0bddbdbaef8d",
+        "year": 2025,
+        "published": "2025-02-26",
+        "abstract": "Large Language Models (LLMs) have become an indispensable part of natural language processing tasks. However, autoregressive sampling has become an efficiency bottleneck. Multi-Draft Speculative Decoding (MDSD) is a recent approach where, when generating each token, a small draft model generates multiple drafts, and the target LLM verifies them in parallel, ensuring that the final output conforms to the target model distribution. The two main design choices in MDSD are the draft sampling method and the verification algorithm. For a fixed draft sampling method, the optimal acceptance rate is a solution to an optimal transport problem, but the complexity of this problem makes it difficult to solve for the optimal acceptance rate and measure the gap between existing verification algorithms and the theoretical upper bound. This paper discusses the dual of the optimal transport problem, providing a way to efficiently compute the optimal acceptance rate. For the first time, we measure the theoretical upper bound of MDSD efficiency for vocabulary sizes in the thousands and quantify the gap between existing verification algorithms and this bound. We also compare different draft sampling methods based on their optimal acceptance rates. Our results show that the draft sampling method strongly influences the optimal acceptance rate, with sampling without replacement outperforming sampling with replacement. Additionally, existing verification algorithms do not reach the theoretical upper bound for both without replacement and with replacement sampling. Our findings suggest that carefully designed draft sampling methods can potentially improve the optimal acceptance rate and enable the development of verification algorithms that closely match the theoretical upper bound.",
+        "canonical_id": "arXiv:2502.18779",
+        "arxiv_id": "2502.18779",
+        "authors": [
+          "Zhengmian Hu",
+          "Tong Zheng",
+          "V. Viswanathan",
+          "Ziyi Chen",
+          "Ryan A. Rossi",
+          "Yihan Wu",
+          "Dinesh Manocha",
+          "Heng Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.16880",
+      "identity_tokens": [
+        "id:arXiv:2502.16880",
+        "title:coral learning consistent representations across multistep training with lighter speculative drafter",
+        "url:https://www.semanticscholar.org/paper/061b9d662f76b06e0319ee42aabc489b59e0bc97"
+      ],
+      "record": {
+        "title": "CORAL: Learning Consistent Representations across Multi-step Training with Lighter Speculative Drafter",
+        "source_url": "https://www.semanticscholar.org/paper/061b9d662f76b06e0319ee42aabc489b59e0bc97",
+        "year": 2025,
+        "published": "2025-02-24",
+        "abstract": "Speculative decoding is a powerful technique that accelerates Large Language Model (LLM) inference by leveraging a lightweight speculative draft model. However, existing designs suffers in performance due to misalignment between training and inference. Recent methods have tried to solve this issue by adopting a multi-step training strategy, but the complex inputs of different training steps make it harder for the draft model to converge. To address this, we propose CORAL, a novel framework that improves both accuracy and efficiency in speculative drafting. CORAL introduces Cross-Step Representation Alignment, a method that enhances consistency across multiple training steps, significantly improving speculative drafting performance. Additionally, we identify the LM head as a major bottleneck in the inference speed of the draft model. We introduce a weight-grouping mechanism that selectively activates a subset of LM head parameters during inference, substantially reducing the latency of the draft model. We evaluate CORAL on three LLM families and three benchmark datasets, achieving speedup ratios of 2.50x-4.07x, outperforming state-of-the-art methods such as EAGLE-2 and HASS. Our results demonstrate that CORAL effectively mitigates training-inference misalignment and delivers significant speedup for modern LLMs with large vocabularies.",
+        "canonical_id": "arXiv:2502.16880",
+        "arxiv_id": "2502.16880",
+        "authors": [
+          "Yepeng Weng",
+          "Dianwen Mei",
+          "Huishi Qiu",
+          "Xujie Chen",
+          "Li Liu",
+          "Jiang Tian",
+          "Zhongchao Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.15964",
+      "identity_tokens": [
+        "id:arXiv:2502.15964",
+        "title:minions costefficient collaboration between ondevice and cloud language models",
+        "url:https://www.semanticscholar.org/paper/54ade47ed89a74f042004da95d671f22fde2917f"
+      ],
+      "record": {
+        "title": "Minions: Cost-efficient Collaboration Between On-device and Cloud Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/54ade47ed89a74f042004da95d671f22fde2917f",
+        "year": 2025,
+        "published": "2025-02-21",
+        "abstract": "We investigate an emerging setup in which a small, on-device language model (LM) with access to local data communicates with a frontier, cloud-hosted LM to solve real-world tasks involving financial, medical, and scientific reasoning over long documents. Can a local-remote collaboration reduce cloud inference costs while preserving quality? First, we consider a naive collaboration protocol where the local and remote models simply chat back and forth. Because only the local model reads the full context, this protocol achieves a 30.4x reduction in remote costs, but recovers only 87% of the performance of the frontier model. We identify two key limitations of this protocol: the local model struggles to (1) follow the remote model's multi-step instructions and (2) reason over long contexts. Motivated by these observations, we study an extension of this protocol, coined MinionS, in which the remote model decomposes the task into easier subtasks over shorter chunks of the document, that are executed locally in parallel. MinionS reduces costs by 5.7x on average while recovering 97.9% of the performance of the remote model alone. Our analysis reveals several key design choices that influence the trade-off between cost and performance in local-remote systems.",
+        "canonical_id": "arXiv:2502.15964",
+        "arxiv_id": "2502.15964",
+        "authors": [
+          "A. Narayan",
+          "Dan Biderman",
+          "Sabri Eyuboglu",
+          "Avner May",
+          "Scott W. Linderman",
+          "James Zou",
+          "Christopher Ré"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.11018",
+      "identity_tokens": [
+        "id:arXiv:2502.11018",
+        "title:griffin effective token alignment for faster speculative decoding",
+        "url:https://www.semanticscholar.org/paper/15edba4c3c66d5b9547485e0e838f578dc067a60"
+      ],
+      "record": {
+        "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/15edba4c3c66d5b9547485e0e838f578dc067a60",
+        "year": 2025,
+        "published": "2025-02-16",
+        "abstract": "Speculative decoding accelerates inference in large language models (LLMs) by generating multiple draft tokens simultaneously. However, existing methods often struggle with token misalignment between the training and decoding phases, limiting their performance. To address this, we propose GRIFFIN, a novel framework that incorporates a token-alignable training strategy and a token-alignable draft model to mitigate misalignment. The training strategy employs a loss masking mechanism to exclude highly misaligned tokens during training, preventing them from negatively impacting the draft model's optimization. The token-alignable draft model introduces input tokens to correct inconsistencies in generated features. Experiments on LLaMA, Vicuna, Qwen and Mixtral models demonstrate that GRIFFIN achieves an average acceptance length improvement of over 8% and a speedup ratio exceeding 7%, outperforming current speculative decoding state-of-the-art methods. Our code and GRIFFIN's draft models are released publicly in https://github.com/hsj576/GRIFFIN.",
+        "canonical_id": "arXiv:2502.11018",
+        "arxiv_id": "2502.11018",
+        "authors": [
+          "Shijing Hu",
+          "Jingyang Li",
+          "Xingyu Xie",
+          "Zhihui Lu",
+          "Kim-Chuan Toh",
+          "Pan Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.10424",
+      "identity_tokens": [
+        "id:arXiv:2502.10424",
+        "title:quantspec selfspeculative decoding with hierarchical quantized kv cache",
+        "url:https://www.semanticscholar.org/paper/a0bb01a427e833fe6ee33a29fbd3466c4a688d89"
+      ],
+      "record": {
+        "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+        "source_url": "https://www.semanticscholar.org/paper/a0bb01a427e833fe6ee33a29fbd3466c4a688d89",
+        "year": 2025,
+        "published": "2025-02-05",
+        "abstract": "Large Language Models (LLMs) are increasingly being deployed on edge devices for long-context settings, creating a growing need for fast and efficient long-context inference. In these scenarios, the Key-Value (KV) cache is the primary bottleneck in terms of both GPU memory and latency, as the full KV cache must be loaded for each decoding step. While speculative decoding is a widely accepted technique to accelerate autoregressive decoding, existing methods often struggle to achieve significant speedups due to inefficient KV cache optimization strategies and result in low acceptance rates. To address these challenges, we propose a novel self-speculative decoding framework, QuantSpec, where the draft model shares the architecture of the target model but employs a hierarchical 4-bit quantized KV cache and 4-bit quantized weights for acceleration. QuantSpec maintains high acceptance rates ($>$90%) and reliably provides consistent end-to-end speedups upto $\\sim2.5\\times$, outperforming other self-speculative decoding methods that use sparse KV cache for long-context LLM inference. QuantSpec also reduces the memory requirements by $\\sim 1.3\\times$ compared to these alternatives.",
+        "canonical_id": "arXiv:2502.10424",
+        "arxiv_id": "2502.10424",
+        "authors": [
+          "Rishabh Tiwari",
+          "Haocheng Xi",
+          "Aditya Tomar",
+          "Coleman Hooper",
+          "Sehoon Kim",
+          "Max Horton",
+          "Mahyar Najibi",
+          "Michael W. Mahoney",
+          "Kurt Keutzer",
+          "Amir Gholami"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.01976",
+      "identity_tokens": [
+        "id:arXiv:2502.01976",
+        "title:citer collaborative inference for efficient large language model decoding with tokenlevel routing",
+        "url:https://www.semanticscholar.org/paper/cc1adc975d62a3559fa363fed4f8338bb0d05397"
+      ],
+      "record": {
+        "title": "CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing",
+        "source_url": "https://www.semanticscholar.org/paper/cc1adc975d62a3559fa363fed4f8338bb0d05397",
+        "year": 2025,
+        "published": "2025-02-04",
+        "abstract": "Large language models have achieved remarkable success in various tasks but suffer from high computational costs during inference, limiting their deployment in resource-constrained applications. To address this issue, we propose a novel Collaborative Inference with Token-lEvel Routing (CITER) framework that enables efficient collaboration between small and large language models (SLMs \\&LLMs) through a token-level routing strategy. Specifically, CITER routes non-critical tokens to an SLM for efficiency and routes critical tokens to an LLM for generalization quality. We formulate router training as a policy optimization, where the router receives rewards based on both the quality of predictions and the inference costs of generation. This allows the router to learn to predict token-level routing scores and make routing decisions based on both the current token and the future impact of its decisions. To further accelerate the reward evaluation process, we introduce a shortcut which significantly reduces the costs of the reward estimation and improving the practicality of our approach. Extensive experiments on five benchmark datasets demonstrate that CITER reduces the inference costs while preserving high-quality generation, offering a promising solution for real-time and resource-constrained applications. Our data and code are available at https://github.com/aiming-lab/CITER.",
+        "canonical_id": "arXiv:2502.01976",
+        "arxiv_id": "2502.01976",
+        "authors": [
+          "Wenhao Zheng",
+          "Yixiao Chen",
+          "Weitong Zhang",
+          "Souvik Kundu",
+          "Yun Li",
+          "Zhengzhong Liu",
+          "Eric P. Xing",
+          "Hongyi Wang",
+          "Huaxiu Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.19309",
+      "identity_tokens": [
+        "id:arXiv:2501.19309",
+        "title:judge decoding faster speculative sampling requires going beyond model alignment",
+        "url:https://www.semanticscholar.org/paper/6008a7676b3cae015670217c263ec0fdfc31e38b"
+      ],
+      "record": {
+        "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
+        "source_url": "https://www.semanticscholar.org/paper/6008a7676b3cae015670217c263ec0fdfc31e38b",
+        "year": 2025,
+        "published": "2025-01-31",
+        "abstract": "The performance of large language models (LLMs) is closely linked to their underlying size, leading to ever-growing networks and hence slower inference. Speculative decoding has been proposed as a technique to accelerate autoregressive generation, leveraging a fast draft model to propose candidate tokens, which are then verified in parallel based on their likelihood under the target model. While this approach guarantees to reproduce the target output, it incurs a substantial penalty: many high-quality draft tokens are rejected, even when they represent objectively valid continuations. Indeed, we show that even powerful draft models such as GPT-4o, as well as human text cannot achieve high acceptance rates under the standard verification scheme. This severely limits the speedup potential of current speculative decoding methods, as an early rejection becomes overwhelmingly likely when solely relying on alignment of draft and target. We thus ask the following question: Can we adapt verification to recognize correct, but non-aligned replies? To this end, we draw inspiration from the LLM-as-a-judge framework, which demonstrated that LLMs are able to rate answers in a versatile way. We carefully design a dataset to elicit the same capability in the target model by training a compact module on top of the embeddings to produce ``judgements\"of the current continuation. We showcase our strategy on the Llama-3.1 family, where our 8b/405B-Judge achieves a speedup of 9x over Llama-405B, while maintaining its quality on a large range of benchmarks. These benefits remain present even in optimized inference frameworks, where our method reaches up to 141 tokens/s for 8B/70B-Judge and 129 tokens/s for 8B/405B on 2 and 8 H100s respectively.",
+        "canonical_id": "arXiv:2501.19309",
+        "arxiv_id": "2501.19309",
+        "authors": [
+          "Gregor Bachmann",
+          "Sotiris Anagnostidis",
+          "Albert Pumarola",
+          "Markos Georgopoulos",
+          "Artsiom Sanakoyeu",
+          "Yuming Du",
+          "Edgar Schönfeld",
+          "Ali K. Thabet",
+          "J. Kohler"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:52e69d84ad214d4214802cce4720a63b3d54398e6a421a5d7c159dffa5084898",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

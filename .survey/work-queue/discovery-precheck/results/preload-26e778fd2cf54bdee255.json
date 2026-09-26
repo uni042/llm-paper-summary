@@ -1,0 +1,880 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-26e778fd2cf54bdee255",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-26e778fd2cf54bdee255",
+  "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.12374/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "60",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1662eff13fd87da48e45e402a542d6286eca32df",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 27,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T01:41:11.084691+00:00",
+  "preload_id": "preload-26e778fd2cf54bdee255",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Speculative Decoding at Temperature Zero: A Scoped Safety-Invariance Screen with a 48,072-Sample Expansion",
+      "source_url": "https://www.semanticscholar.org/paper/1017427283d33ba4824637b53dcfe9fbdc7e306e",
+      "year": 2026,
+      "published": "2026-06-23",
+      "abstract": "Speculative decoding accelerates inference by letting a draft model propose tokens for a target model to verify, raising a concrete safety question: at temperature zero, can draft-side behavior leak into safety-scored outputs? We answer with Typical-Acceptance Invariance Screen (TAIS), a behavioral-equivalence screen that pairs target-only and speculative outputs on the same safety battery and requires byte-identity evidence, TOST equivalence at +/-3pp, and per-task Cohen's h below a calibrated null cutoff of |h|<0.1. Applied to a 16,783-sample confirmatory core plus 44,066 matched expansion samples (fp16/bf16 execution, canonical and DPO-adversarial drafts, GPTQ-4bit drafts, two seeds, and four safety benchmarks), the tested temperature-zero vLLM stacks show no detectable safety divergence under TAIS. The largest absolute Cohen's h on matched target-only versus speculative refusal is 0.024, roughly an order of magnitude below the conventional trivial-effect floor; 25 of 27 per-task TOST contrasts pass at the +/-3pp margin (the two non-pass contrasts are capability-domain Wald-CI edge cases at identical ceiling rates, not genuine non-equivalence); the DPO-adversarial draft produces byte-identical output to the canonical draft across 4,006 samples; and bf16 changes 36%-53% of output bytes without moving any per-task safety rate outside equivalence. A separate 4,006-sample 70B production-scale probe, which lacks a matched 70B target-only arm and is therefore not counted as a TAIS pass, produces AdvBench refusal 0.839 over 700 AdvBench completions with 95% Wilson CI [0.809, 0.864]. We make no claim about sampling temperatures, untested frameworks, untested model families, or tree-speculation variants such as EAGLE and Medusa.",
+      "canonical_id": "arXiv:2606.25097",
+      "arxiv_id": "2606.25097",
+      "authors": [
+        "Sahil Kadadekar"
+      ]
+    },
+    {
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://www.semanticscholar.org/paper/94ffb9a0b41915326a8831094a5331a282eb190d",
+      "year": 2026,
+      "published": "2026-06-03",
+      "abstract": "Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D^2SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D^2SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.",
+      "canonical_id": "arXiv:2606.04446",
+      "arxiv_id": "2606.04446",
+      "authors": [
+        "Liyuan Zhang",
+        "Jiarui Zhang",
+        "Jinwei Yao",
+        "Ran Yan",
+        "Yuchen Yang",
+        "Jiahao Zhang",
+        "Tong-Kai Yang",
+        "Yi Wu",
+        "Binhang Yuan"
+      ]
+    },
+    {
+      "title": "DREAM-S: Speculative Decoding with Searchable Drafting and Target-Aware Refinement for Multimodal Generation",
+      "source_url": "https://www.semanticscholar.org/paper/2f536b589f323eaf441f098093a9206221861504",
+      "year": 2026,
+      "published": "2026-05-30",
+      "abstract": "Speculative decoding (SD) has proven to be an effective technique for accelerating autoregressive generation in large language models (LLMs) however, its application to vision-language models (VLMs) remains relatively unexplored. We propose~\\textit{DREAM-S}, a novel SD framework designed specifically for fast and efficient decoding in VLMs. DREAM-S leverages a neural architecture search (NAS) framework with target-aware supernet training to automatically identify both the optimal interaction strategy between the draft and target models, and the most suitable draft model architecture for the underlying hardware implementation platform. DREAM-S additionally incorporates adaptive intermediate feature distillation, guided by attention entropy, to enable efficient draft training. Experiments on a range of well-established VLMs show that DREAM-S achieves up to a $3.85\\times$ speedup compared to standard decoding approaches and significantly outperforms existing SD baselines. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM-S .",
+      "canonical_id": "arXiv:2606.00535",
+      "arxiv_id": "2606.00535",
+      "authors": [
+        "Zining Liu",
+        "Yunhai Hu",
+        "Tian-Hua Xia",
+        "Bo Bao",
+        "E. Sather",
+        "Vithursan Thangarasa",
+        "Sai-Qian Zhang"
+      ]
+    },
+    {
+      "title": "Bastion: Budget-Aware Speculative Decoding with Tree-structured Block Diffusion Drafting",
+      "source_url": "https://www.semanticscholar.org/paper/ef86789aa7662b87dfd498da51de6d9135c45326",
+      "year": 2026,
+      "published": "2026-05-28",
+      "abstract": "Block-diffusion drafters have recently emerged as a powerful alternative for speculative decoding by predicting multiple future-token distributions in a single parallel step. However, since these parallel predictions are sampled from position-wise marginals rather than fully conditioned sequences, committing to a single greedy path often fails to capture the target model's preferred trajectory. To address this, we propose BASTION, a budget-aware speculative decoding framework with tree-based diffusion drafting. Unlike existing methods that rely on static tree topologies, BASTION dynamically constructs query-dependent trees by balancing draft quality against hardware constraints. Our framework integrates three synergistic components: (1) an acceptance surrogate that estimates expected accepted length via path confidence, (2) an online latency estimator that calibrates a hardware-aware roofline model, and (3) an adaptive best-first expansion that grows the tree until marginal gains no longer justify incremental verification costs. BASTION is training-free, preserves the target model's distribution, and requires no per-setting tuning. Across diverse benchmarks and GPU architectures, BASTION achieves up to a 6.61x speedup over standard autoregressive decoding, outperforming state-of-the-art block-diffusion baselines by 39%.",
+      "canonical_id": "arXiv:2605.29727",
+      "arxiv_id": "2605.29727",
+      "authors": [
+        "Soowon Oh",
+        "Nam Cao",
+        "Yujin Kim",
+        "Hojung Jung",
+        "Huzama Ahmad",
+        "Sangmin Bae",
+        "SeYoung Yun"
+      ]
+    },
+    {
+      "title": "DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution",
+      "source_url": "https://www.semanticscholar.org/paper/8cdc77d49d7f7a267b1c1511bd70c28741d39973",
+      "year": 2026,
+      "published": "2026-05-27",
+      "abstract": "Speculative reasoning has recently been proposed as a means to accelerate reasoning-intensive generation in large multimodal models, but its effectiveness is often constrained by misalignment between speculative drafts and target-verified reasoning. In this work, we introduce DREAM-R, a framework that substantially improves the performance of speculative reasoning. At its core, DREAM-R employs Speculative Alignment Policy Optimization (SAPO), a reinforcement-learning objective that trains draft models to generate reasoning steps that are both faithful to target trajectories and concise. We further propose a Threshold-based Verification Mechanism (TBVM) that uses a ratio-based criterion to provide stable and interpretable acceptance of speculative steps only when positive evidence clearly dominates, thereby preventing error propagation. Building on these components, we develop a Fully Parallel Speculative Reasoning (FPSR) framework that parallelizes draft generation, target-side reasoning, and verification across multi-step reasoning, enabling early stopping and clean fallback. Experiments on reasoning-heavy benchmarks demonstrate up to speedup while preserving target-model accuracy, yielding substantial efficiency gains without compromising reasoning quality.",
+      "canonical_id": "arXiv:2605.28678",
+      "arxiv_id": "2605.28678",
+      "authors": [
+        "Yunhai Hu",
+        "Zining Liu",
+        "Xiang Yin",
+        "Tian-Hua Xia",
+        "Bo Bao",
+        "E. Sather",
+        "Vithursan Thangarasa",
+        "Sai-Qian Zhang"
+      ]
+    },
+    {
+      "title": "CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "As large language models (LLMs) move from centralized clouds to mobile edge environments, efficient serving must balance latency, energy consumption, and accuracy under constrained device-edge resources. Query-level routing between lightweight on-device models and stronger edge models provides a flexible mechanism to navigate this trade-off. However, existing routers are designed for centralized cloud settings and optimize token-level costs, failing to capture the dynamic latency and energy overheads in wireless edge deployments. In this paper, we formulate mobile edge LLM routing as a deployment-constrained, cost-aware decision problem, and propose CR^2, a two-stage device-edge routing framework. CR^2 decouples a lightweight on-device margin gate from an edge-side utility selector for deferred queries. The margin gate operates on frozen query embeddings and a user-specified cost weight to predict whether local execution is utility-optimal relative to the best edge alternative under the target operating point. We further introduce a conformal risk control (CRC) calibration procedure that maps each operating point to an acceptance threshold, enabling explicit control of the marginal false-acceptance risk under the full-information utility reference. Experiments on the routing task show that CR^2 closely matches a full-information reference router using only device-side signals before deferral. Compared with strong query-level baselines, CR^2 consistently improves the deployable accuracy-cost Pareto frontier and reduces normalized deployment cost by up to 16.9% at matched accuracy.",
+      "canonical_id": "arXiv:2605.12001",
+      "arxiv_id": "2605.12001",
+      "authors": [
+        "Nan Xue",
+        "Shengkang Chen",
+        "Zhi-Yong Chen",
+        "Jiangchao Yao",
+        "Yaping Sun",
+        "Zixia Hu",
+        "Mei-Xia Tao"
+      ]
+    },
+    {
+      "title": "Position-Aware Drafting for Inference Acceleration in LLM-Based Generative List-Wise Recommendation",
+      "source_url": "https://www.semanticscholar.org/paper/503c12e34ed44acb851e62cb32f217599b7968c0",
+      "year": 2026,
+      "published": "2026-04-30",
+      "abstract": "Large language model (LLM)-based generative list-wise recommendation has advanced rapidly, but decoding remains sequential and thus latency-prone. To accelerate inference without changing the target distribution, speculative decoding (SD) uses a small draft model to propose several next tokens at once and a target LLM to verify and accept the longest prefix, skipping multiple steps per round. In generative recommendation, however, each item is represented by multiple semantic-ID tokens, often with separators, and current drafts typically treat these tokens uniformly. This overlooks two practical facts: (i) a token's semantics depend on its within-item slot, and (ii) uncertainty tends to increase with speculation depth. Without modeling these effects, SD's speedups can be limited. We introduce PAD-Rec, Position-Aware Drafting for generative Recommendation, a lightweight module that augments the draft model with two complementary signals. Item position embeddings explicitly encode the within-item slot of each token, strengthening structural awareness. Step position embeddings encode the draft step, allowing the model to adapt to depth-dependent uncertainty and improve proposal quality. To harmonize these signals with base features, we add simple gates: a learnable coefficient for item slots and a context-driven gate for draft steps. The module is trainable, easy to integrate with standard draft models, and adds negligible inference overhead. Extensive experiments on four real-world datasets show up to 3.1x wall-clock speedup and about 5% average wall-clock speedup gain over strong SD baselines, while largely preserving recommendation quality.",
+      "canonical_id": "arXiv:2604.27747",
+      "arxiv_id": "2604.27747",
+      "authors": [
+        "Jiaju Chen",
+        "Chongming Gao",
+        "Chenxiao Fan",
+        "Haoyan Liu",
+        "Qing-Peng Cai",
+        "Peng Jiang",
+        "Xiangnan He"
+      ]
+    },
+    {
+      "title": "From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/93ee8977d9a7412df81f6e48a1008443b76722d8",
+      "year": 2026,
+      "published": "2026-04-16",
+      "abstract": "Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard, a verification-aware speculative decoding framework that performs step-level verification using only model-internal signals. At each step, SpecGuard samples multiple draft candidates and selects the most consistent step, which is then validated using an ensemble of two lightweight model-internal signals: (i) an attention-based grounding score that measures attribution to the input and previously accepted steps, and (ii) a log-probability-based score that captures token-level confidence. These signals jointly determine whether a step is accepted or recomputed using the target, allocating compute selectively. Experiments across a range of reasoning benchmarks show that SpecGuard improves accuracy by 3.6% while reducing latency by ~11%, outperforming both SD and reward-guided SD.",
+      "canonical_id": "arXiv:2604.15244",
+      "arxiv_id": "2604.15244",
+      "authors": [
+        "Kiran Purohit",
+        "Ramasuri Narayanam",
+        "Soumyabrata Pal"
+      ]
+    },
+    {
+      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
+      "source_url": "https://www.semanticscholar.org/paper/b93e282fb0b0a2746cd9514fae8ed2ec2301340d",
+      "year": 2026,
+      "published": "2026-04-15",
+      "abstract": "Speculative decoding accelerates autoregressive generation by letting draft tokens bypass full verification, but conventional frameworks suffer from frequent false rejections, particularly when draft models produce semantically correct but lexically divergent outputs. In this paper, we present Calibrated Speculative Decoding (CSD), a training-free framework that recovers valid tokens discarded by standard verification. Guided by the principle of\"Frequency-Guided Candidate Selection and Probability-Guarded Acceptance,\"CSD incorporates two lightweight modules: Online Correction Memory, which aggregates historical rejections to propose recurring divergence patterns as rescue candidates, and Semantic Consistency Gating, which verifies candidate admissibility using probability ratios instead of exact token matching. Our evaluation across diverse large language models demonstrates that CSD outperforms existing methods, achieving a peak throughput speedup of 2.33x. CSD preserves model accuracy across all tasks while further boosting performance on complex reasoning datasets. These results establish CSD as a highly effective, lightweight solution for practical LLM deployments.",
+      "canonical_id": "arXiv:2604.13634",
+      "arxiv_id": "2604.13634",
+      "authors": [
+        "Xuwen Zhou",
+        "Fangxin Liu",
+        "Chao Wang",
+        "Xiaoyun Zheng",
+        "Hao Zheng",
+        "Ming He",
+        "Li Jiang",
+        "Haibing Guan"
+      ]
+    },
+    {
+      "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/25a69145c46da12196ad562a0b30d7e3edd3af0e",
+      "year": 2026,
+      "published": "2026-04-14",
+      "abstract": "Speculative Decoding (SD) accelerates Large Language Model (LLM) inference by employing a lightweight draft model to propose candidate tokens, which are verified in parallel by the target model, without compromising generation quality. While Retrieval-based Speculative Decoding (RSD) is favored for its plug-and-play versatility, its potential is impeded by rigid lexical dependencies, rendering both retrieval and verification brittle to surface-level variations. To address this, we propose SENSE (Semantic Embedding Navigation with Soft-gated Evaluation). By anchoring retrieval on the hidden states of the target model, SENSE establishes robust semantic alignment, which empowers the Soft-gated Evaluation module to validate semantic equivalence rather than surface forms. To ensure rigorous benchmarking, we deconstruct existing methods into atomic primitives within a unified framework, facilitating granular, component-level comparison. Extensive experiments across diverse domains demonstrate that SENSE outperforms multiple baselines on the LLaMA and Qwen families, attaining up to 4.09 mean acceptance length and 3.26x speedup, while preserving generation quality. Our code will be released upon publication.",
+      "canonical_id": "arXiv:2606.00021",
+      "arxiv_id": "2606.00021",
+      "authors": [
+        "Shao-Wen Chen",
+        "Zhicheng Liao",
+        "Hongwei Wang"
+      ]
+    },
+    {
+      "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/99041da4ebbc8a288bb910b09275cd6401e197b4",
+      "year": 2026,
+      "published": "2026-04-01",
+      "abstract": "Autoregressive language models suffer from high inference latency due to their sequential decoding nature. Speculative decoding (SD) mitigates this by employing a lightweight draft model to propose candidate tokens, which are selectively verified by a larger target model. While existing methods either adopt multi-draft strategies to increase acceptance rates or block verification techniques to jointly verify multiple tokens, they remain limited by treating these improvements in isolation. In this work, we propose SpecTr-GBV, a novel SD method that unifies multi-draft and greedy block verification (GBV) into a single framework. By formulating the verification step as an optimal transport problem over draft and target token blocks, SpecTr-GBV improves both theoretical efficiency and empirical performance. We theoretically prove that SpecTr-GBV achieves the optimal expected acceptance length physically attainable within the framework of i.i.d. draft generation, and this bound improves as the number of drafts increases. Empirically, we evaluate SpecTr-GBV across five datasets and four baselines. Our method achieves superior speedup and significantly higher block efficiency while preserving output quality. In addition, we perform comprehensive ablation studies to evaluate the impact of various hyperparameters in the model.",
+      "canonical_id": "arXiv:2604.25925",
+      "arxiv_id": "2604.25925",
+      "authors": [
+        "Yi-Jun Lin",
+        "Jinhao Sheng",
+        "Qingyu Cai",
+        "Feng Zhou"
+      ]
+    },
+    {
+      "title": "Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4",
+      "year": 2026,
+      "published": "2026-02-19",
+      "abstract": "Multi-path speculative decoding accelerates lossless sampling from a target model by using a cheaper draft model to generate a draft tree of tokens, and then applies a verification algorithm that accepts a subset of these. While prior work has proposed various verification algorithms for i.i.d rollouts, their relative performance under matched settings remains unclear. In this work, we firstly present a systematic evaluation of verification strategies across model families, tasks, and sampling regimes, and find that Traversal Verification dominates consistently, with OT-based methods lagging far behind. Our analysis uncovers that this occurs because OT-based methods achieve high multi-token acceptance near the root of the draft tree, while multi-token gains are most impactful deeper in the draft tree, where draft and target distributions diverge. Based on this insight, we propose delayed tree expansion, which drafts a partial single path, delaying the i.i.d. branching point. We show that delayed tree expansion preserves the target distribution and improves on root-node i.i.d rollouts. Further, we develop a dynamic neural selector that estimates the expected block efficiency of optimal-transport-based verification methods from draft and target features, enabling context-dependent expansion decisions. Our neural selector allows OT-based methods like SpecInfer to outperform Traversal Verification for the first time, achieving 5% higher average throughput across a wide range of models, datasets, and sampling settings.",
+      "canonical_id": "arXiv:2602.16994",
+      "arxiv_id": "2602.16994",
+      "authors": [
+        "R. Thomas",
+        "Teo Kitanovski",
+        "Micah Goldblum",
+        "Arka Pal"
+      ]
+    },
+    {
+      "title": "Variational Speculative Decoding: Rethinking Draft Training from Token Likelihood to Sequence Acceptance",
+      "source_url": "https://www.semanticscholar.org/paper/b9aafc2ad1d4249865782e1570ea4f658086ed95",
+      "year": 2026,
+      "published": "2026-02-05",
+      "abstract": "Speculative decoding accelerates inference for (M)LLMs, yet a training-decoding discrepancy persists: while existing methods optimize single greedy trajectories, decoding involves verifying and ranking multiple sampled draft paths. We propose Variational Speculative Decoding (VSD), formulating draft training as variational inference over latent proposals (draft paths). VSD maximizes the marginal probability of target-model acceptance, yielding an ELBO that promotes high-quality latent proposals while minimizing divergence from the target distribution. To enhance quality and reduce variance, we incorporate a path-level utility and optimize via an Expectation-Maximization procedure. The E-step draws Monte Carlo samples from an oracle-filtered posterior, while the M-step maximizes weighted likelihood using Adaptive Rejection Weighting (ARW) and Confidence-Aware Regularization (CAR). Theoretical analysis confirms that VSD increases expected acceptance length and speedup. Extensive experiments across LLMs and MLLMs show that VSD achieves up to a 9.6% speedup over EAGLE-3 and 7.9% over ViSpec, significantly improving decoding efficiency.",
+      "canonical_id": "arXiv:2602.05774",
+      "arxiv_id": "2602.05774",
+      "authors": [
+        "Xiandong Zou",
+        "Jian-Shu Li",
+        "Jing Huang",
+        "Pan Zhou"
+      ]
+    },
+    {
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4156ff1bee3fdff0c526dadb0afefd62ce562a87",
+      "year": 2026,
+      "published": "2026-02-01",
+      "abstract": "Large language models in IoT–edge–cloud settings face bursty, heterogeneous requests that make pipeline-parallel inference prone to micro-batch imbalance and communication stalls, causing GPU idle time and SLO violations. We propose a runtime-adaptive scheduler that jointly tunes token budgets and micro-batch counts to balance prefill/decode workloads and minimize pipeline bubbles under changing compute and network conditions. On a four-node pipeline-parallel cluster across Llama-2-13b and Qwen2.5-14b at 100/1000 Mbps, our method outperforms vLLM and SGLang, reducing GPU idle time by up to 55% and improving throughput by up to 1.61 × while improving TTFT/ITL SLO satisfaction. These results show that dynamic scheduling is essential for scalable, latency-stable LLM inference in IoT–edge–cloud environments.",
+      "canonical_id": "DOI:10.3390/s26041101",
+      "doi": "10.3390/s26041101",
+      "authors": [
+        "Juncheol Ahn",
+        "Yubin Son",
+        "Daemin Kim",
+        "Sejin Park"
+      ]
+    },
+    {
+      "title": "MARS: Unleashing the Power of Speculative Decoding via Margin-Aware Verification",
+      "source_url": "https://www.semanticscholar.org/paper/46295f0ac974a620ac50d17e160dd3523817e69a",
+      "year": 2026,
+      "published": "2026-01-21",
+      "abstract": "Speculative Decoding (SD) accelerates autoregressive large language model (LLM) inference by decoupling generation and verification. While recent methods improve draft quality by tightly coupling the drafter with the target model, the verification mechanism itself remains largely unchanged, relying on strict token-level rejection sampling. In practice, modern LLMs frequently operate in low-margin regimes where the target model exhibits weak preference among top candidates. In such cases, rejecting plausible runner-up tokens yields negligible information gain while incurring substantial rollback cost, leading to a fundamental inefficiency in verification. We propose Margin-Aware Speculative Verification, a training-free and domain-agnostic verification strategy that adapts to the target model's local decisiveness. Our method conditions verification on decision stability measured directly from the target logits and relaxes rejection only when strict verification provides minimal benefit. Importantly, the approach modifies only the verification rule and is fully compatible with existing target-coupled speculative decoding frameworks. Extensive experiments across model scales ranging from 8B to 235B demonstrate that our method delivers consistent and significant inference speedups over state-of-the-art baselines while preserving generation quality across diverse benchmarks. The code is available at https://github.com/5SSjw/MARS.",
+      "canonical_id": "arXiv:2601.15498",
+      "arxiv_id": "2601.15498",
+      "authors": [
+        "Jing-Wei Song",
+        "Xinyu Wang",
+        "Hanbin Wang",
+        "Xiaoxuan Lei",
+        "Bill Shi",
+        "Shixin Han",
+        "Eric Yang",
+        "Xiao-Wen Chang",
+        "Lynn Ai"
+      ]
+    },
+    {
+      "title": "TALON: Confidence-Aware Speculative Decoding with Adaptive Token Trees",
+      "source_url": "https://www.semanticscholar.org/paper/c37d87b414a1cf830547eb6311f9e4f3e28d4182",
+      "year": 2026,
+      "published": "2026-01-12",
+      "abstract": "Speculative decoding (SD) has become a standard technique for accelerating LLM inference without sacrificing output quality. Recent advances in speculative decoding have shifted from sequential chain-based drafting to tree-structured generation, where the draft model constructs a tree of candidate tokens to explore multiple possible drafts in parallel. However, existing tree-based SD methods typically build a fixed-width, fixed-depth draft tree, which fails to adapt to the varying difficulty of tokens and contexts. As a result, the draft model cannot dynamically adjust the tree structure to early stop on difficult tokens and extend generation for simple ones. To address these challenges, we introduce TALON, a training-free, budget-driven adaptive tree expansion framework that can be plugged into existing tree-based methods. Unlike static methods, TALON constructs the draft tree iteratively until a fixed token budget is met, using a hybrid expansion strategy that adaptively allocates the node budget to each layer of the draft tree. This framework naturally shapes the draft tree into a\"deep-and-narrow\"form for deterministic contexts and a\"shallow-and-wide\"form for uncertain branches, effectively optimizing the trade-off between exploration width and generation depth under a given budget. Extensive experiments across 5 models and 6 datasets demonstrate that TALON consistently outperforms state-of-the-art EAGLE-3, achieving up to 5.16x end-to-end speedup over auto-regressive decoding.",
+      "canonical_id": "arXiv:2601.07353",
+      "arxiv_id": "2601.07353",
+      "authors": [
+        "Tianyu Liu",
+        "Qitan Lv",
+        "Yuhao Shen",
+        "Xiao Sun",
+        "Xiao-Yan Sun"
+      ]
+    },
+    {
+      "title": "Yggdrasil: Bridging Dynamic Speculation and Static Runtime for Latency-Optimal Tree-Based LLM Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/16523bc05355049bea8f4e20e7f17ef32ca9f295",
+      "year": 2025,
+      "published": "2025-12-29",
+      "abstract": "Speculative decoding improves LLM inference by generating and verifying multiple tokens in parallel, but existing systems suffer from suboptimal performance due to a mismatch between dynamic speculation and static runtime assumptions. We present Yggdrasil, a co-designed system that enables latency-optimal speculative decoding through context-aware tree drafting and compiler-friendly execution. Yggdrasil introduces an equal-growth tree structure for static graph compatibility, a latency-aware optimization objective for draft selection, and stage-based scheduling to reduce overhead. Yggdrasil supports unmodified LLMs and achieves up to $3.98\\times$ speedup over state-of-the-art baselines across multiple hardware setups.",
+      "canonical_id": "arXiv:2512.23858",
+      "arxiv_id": "2512.23858",
+      "authors": [
+        "Yue Guan",
+        "Changming Yu",
+        "Shihan Fang",
+        "Weiming Hu",
+        "Zai-Feng Pan",
+        "Zheng Wang",
+        "Zihan Liu",
+        "Yangjie Zhou",
+        "Yu-Fei Ding",
+        "Minyi Guo",
+        "Jingwen Leng"
+      ]
+    },
+    {
+      "title": "Device-Server Collaborative Speculative Decoding for Real-Time LLM Streaming",
+      "source_url": "https://www.semanticscholar.org/paper/1c8ccd0914b691d8ac33006eeed0b37b8af0f36d",
+      "year": 2025,
+      "published": "2025-12-08",
+      "abstract": "This paper addresses the challenge of real-time text streaming with large language models (LLMs) over unstable networks and server contention. To mitigate delays from packet loss and computational bottlenecks, we propose an adaptive framework that integrates speculative decoding with network-aware optimization. A lightweight draft model runs on the user’s edge device to generate tokens autoregressively, while a larger target model on the server periodically verifies them. We explicitly model end-to-end latency with respect to verification acceptance rates and packet loss, and optimize the verification ratio under latency constraints. Experiments show improved resilience to high packet loss and server contention, achieving over 4× lower rebuffering and 60% higher verification ratios compared to baselines.",
+      "canonical_id": "DOI:10.1109/GLOBECOM59602.2025.11432593",
+      "doi": "10.1109/GLOBECOM59602.2025.11432593",
+      "authors": [
+        "Bishakha Rani Biswas",
+        "Yongjie Guan",
+        "Mingrui Yin",
+        "Tao Han",
+        "Xueyu Hou"
+      ]
+    },
+    {
+      "title": "Striking the Right Balance between Compute and Copy: Improving LLM Inferencing Under Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/61110b18baed2ba8f16ba66943ec48b40077767f",
+      "year": 2025,
+      "published": "2025-11-15",
+      "abstract": "With the skyrocketing costs of GPUs and their virtual instances in the cloud, there is a significant desire to use CPUs for large language model (LLM) inference. KV cache update, often implemented as allocation, copying, and in-place strided update for each generated token, incurs significant overhead. As the sequence length increases, the allocation and copy overheads dominate the performance. Alternate approaches may allocate large KV tensors upfront to enable in-place updates, but these matrices (with zero-padded rows) cause redundant computations. In this work, we propose a new KV cache allocation mechanism called Balancing Memory and Compute (BMC). BMC allocates, once every r iterations, KV tensors with r redundant rows, allowing in-place update without copy overhead for those iterations, but at the expense of a small amount of redundant computation. Second, we make an interesting observation that the extra rows allocated in the KV tensors and the resulting redundant computation can be repurposed for Speculative Decoding (SD) that improves token generation efficiency. Last, BMC represents a spectrum of design points with different values of r. To identify the best-performing design point(s), we derive a simple analytical model for BMC. The proposed BMC method achieves an average throughput acceleration of up to 3.2x over baseline HuggingFace (without SD). Importantly when we apply BMC with SD, it results in an additional speedup of up to 1.39x, over and above the speedup offered by SD. Further, BMC achieves a throughput acceleration of up to 1.36x and 2.29x over state-of-the-art inference servers vLLM and DeepSpeed, respectively. Although the BMC technique is evaluated extensively across different classes of CPUs (desktop and server class), we also evaluate the scheme with GPUs and demonstrate that it works well for GPUs.",
+      "canonical_id": "arXiv:2511.12031",
+      "arxiv_id": "2511.12031",
+      "authors": [
+        "A. Ramachandran",
+        "R. Govindarajan",
+        "Murali Annavaram",
+        "P. Raghavendra",
+        "Hossein Entezari Zarch",
+        "Lei Gao",
+        "Chaoyi Jiang"
+      ]
+    },
+    {
+      "title": "Leveraging DeepSeek AI for Bridging Educational Gaps: A Study of Perceived Learning Impact Among XYZ University Student",
+      "source_url": "https://www.semanticscholar.org/paper/055c44f1688da5e59cc9118fbd427659b5f32f5d",
+      "year": 2025,
+      "published": "2025-11-06",
+      "abstract": "Indonesian students’ usage of AI is still facing a number of difficulties, including not sufficient AI literacy and a tendency to use it spontaneous without critical understanding. The purpose of this study is to examine the role of artificial intelligence (AI) for university students in the digital age, specifically its impact on the learning experience. We use the DeepSeek AI platform as a case study to evaluate the relationship between AI quality, AI literacy, user satisfaction, and the perceived impact on learning. Quantitative approaches were used, with data collected through questionnaire. The data was examined using structural equation modeling (SEM) to assess construct validity and the strength of variable correlations. The results reveal that AI quality and literacy have a major impact on user satisfaction, which molds positive impressions of AI’s impact on learning. The technical component sub variable received a score of 3.904, emphasizing the need for increased system stability, data security, and reaction speed. This study contributes to the restricted empirical research on AI use in Indonesian higher education and gives practical insights by recommending technological advancements including hybrid routing, semantic caching, and differential privacy.",
+      "canonical_id": "DOI:10.1109/ICITDA68167.2025.11332498",
+      "doi": "10.1109/ICITDA68167.2025.11332498",
+      "authors": [
+        "Aileen Cresentia Levina Thendy",
+        "Vaneina Ayeisha Nizar",
+        "Duhita Anindya Nismara",
+        "S. Hartono"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.25097",
+      "identity_tokens": [
+        "id:arXiv:2606.25097",
+        "title:speculative decoding at temperature zero a scoped safetyinvariance screen with a 48072sample expansion",
+        "url:https://www.semanticscholar.org/paper/1017427283d33ba4824637b53dcfe9fbdc7e306e"
+      ],
+      "record": {
+        "title": "Speculative Decoding at Temperature Zero: A Scoped Safety-Invariance Screen with a 48,072-Sample Expansion",
+        "source_url": "https://www.semanticscholar.org/paper/1017427283d33ba4824637b53dcfe9fbdc7e306e",
+        "year": 2026,
+        "published": "2026-06-23",
+        "abstract": "Speculative decoding accelerates inference by letting a draft model propose tokens for a target model to verify, raising a concrete safety question: at temperature zero, can draft-side behavior leak into safety-scored outputs? We answer with Typical-Acceptance Invariance Screen (TAIS), a behavioral-equivalence screen that pairs target-only and speculative outputs on the same safety battery and requires byte-identity evidence, TOST equivalence at +/-3pp, and per-task Cohen's h below a calibrated null cutoff of |h|<0.1. Applied to a 16,783-sample confirmatory core plus 44,066 matched expansion samples (fp16/bf16 execution, canonical and DPO-adversarial drafts, GPTQ-4bit drafts, two seeds, and four safety benchmarks), the tested temperature-zero vLLM stacks show no detectable safety divergence under TAIS. The largest absolute Cohen's h on matched target-only versus speculative refusal is 0.024, roughly an order of magnitude below the conventional trivial-effect floor; 25 of 27 per-task TOST contrasts pass at the +/-3pp margin (the two non-pass contrasts are capability-domain Wald-CI edge cases at identical ceiling rates, not genuine non-equivalence); the DPO-adversarial draft produces byte-identical output to the canonical draft across 4,006 samples; and bf16 changes 36%-53% of output bytes without moving any per-task safety rate outside equivalence. A separate 4,006-sample 70B production-scale probe, which lacks a matched 70B target-only arm and is therefore not counted as a TAIS pass, produces AdvBench refusal 0.839 over 700 AdvBench completions with 95% Wilson CI [0.809, 0.864]. We make no claim about sampling temperatures, untested frameworks, untested model families, or tree-speculation variants such as EAGLE and Medusa.",
+        "canonical_id": "arXiv:2606.25097",
+        "arxiv_id": "2606.25097",
+        "authors": [
+          "Sahil Kadadekar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04446",
+      "identity_tokens": [
+        "id:arXiv:2606.04446",
+        "title:d2sd accelerating speculative decoding with dual diffusion draft models",
+        "url:https://www.semanticscholar.org/paper/94ffb9a0b41915326a8831094a5331a282eb190d"
+      ],
+      "record": {
+        "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+        "source_url": "https://www.semanticscholar.org/paper/94ffb9a0b41915326a8831094a5331a282eb190d",
+        "year": 2026,
+        "published": "2026-06-03",
+        "abstract": "Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D^2SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D^2SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.",
+        "canonical_id": "arXiv:2606.04446",
+        "arxiv_id": "2606.04446",
+        "authors": [
+          "Liyuan Zhang",
+          "Jiarui Zhang",
+          "Jinwei Yao",
+          "Ran Yan",
+          "Yuchen Yang",
+          "Jiahao Zhang",
+          "Tong-Kai Yang",
+          "Yi Wu",
+          "Binhang Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00535",
+      "identity_tokens": [
+        "id:arXiv:2606.00535",
+        "title:dreams speculative decoding with searchable drafting and targetaware refinement for multimodal generation",
+        "url:https://www.semanticscholar.org/paper/2f536b589f323eaf441f098093a9206221861504"
+      ],
+      "record": {
+        "title": "DREAM-S: Speculative Decoding with Searchable Drafting and Target-Aware Refinement for Multimodal Generation",
+        "source_url": "https://www.semanticscholar.org/paper/2f536b589f323eaf441f098093a9206221861504",
+        "year": 2026,
+        "published": "2026-05-30",
+        "abstract": "Speculative decoding (SD) has proven to be an effective technique for accelerating autoregressive generation in large language models (LLMs) however, its application to vision-language models (VLMs) remains relatively unexplored. We propose~\\textit{DREAM-S}, a novel SD framework designed specifically for fast and efficient decoding in VLMs. DREAM-S leverages a neural architecture search (NAS) framework with target-aware supernet training to automatically identify both the optimal interaction strategy between the draft and target models, and the most suitable draft model architecture for the underlying hardware implementation platform. DREAM-S additionally incorporates adaptive intermediate feature distillation, guided by attention entropy, to enable efficient draft training. Experiments on a range of well-established VLMs show that DREAM-S achieves up to a $3.85\\times$ speedup compared to standard decoding approaches and significantly outperforms existing SD baselines. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM-S .",
+        "canonical_id": "arXiv:2606.00535",
+        "arxiv_id": "2606.00535",
+        "authors": [
+          "Zining Liu",
+          "Yunhai Hu",
+          "Tian-Hua Xia",
+          "Bo Bao",
+          "E. Sather",
+          "Vithursan Thangarasa",
+          "Sai-Qian Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29727",
+      "identity_tokens": [
+        "id:arXiv:2605.29727",
+        "title:bastion budgetaware speculative decoding with treestructured block diffusion drafting",
+        "url:https://www.semanticscholar.org/paper/ef86789aa7662b87dfd498da51de6d9135c45326"
+      ],
+      "record": {
+        "title": "Bastion: Budget-Aware Speculative Decoding with Tree-structured Block Diffusion Drafting",
+        "source_url": "https://www.semanticscholar.org/paper/ef86789aa7662b87dfd498da51de6d9135c45326",
+        "year": 2026,
+        "published": "2026-05-28",
+        "abstract": "Block-diffusion drafters have recently emerged as a powerful alternative for speculative decoding by predicting multiple future-token distributions in a single parallel step. However, since these parallel predictions are sampled from position-wise marginals rather than fully conditioned sequences, committing to a single greedy path often fails to capture the target model's preferred trajectory. To address this, we propose BASTION, a budget-aware speculative decoding framework with tree-based diffusion drafting. Unlike existing methods that rely on static tree topologies, BASTION dynamically constructs query-dependent trees by balancing draft quality against hardware constraints. Our framework integrates three synergistic components: (1) an acceptance surrogate that estimates expected accepted length via path confidence, (2) an online latency estimator that calibrates a hardware-aware roofline model, and (3) an adaptive best-first expansion that grows the tree until marginal gains no longer justify incremental verification costs. BASTION is training-free, preserves the target model's distribution, and requires no per-setting tuning. Across diverse benchmarks and GPU architectures, BASTION achieves up to a 6.61x speedup over standard autoregressive decoding, outperforming state-of-the-art block-diffusion baselines by 39%.",
+        "canonical_id": "arXiv:2605.29727",
+        "arxiv_id": "2605.29727",
+        "authors": [
+          "Soowon Oh",
+          "Nam Cao",
+          "Yujin Kim",
+          "Hojung Jung",
+          "Huzama Ahmad",
+          "Sangmin Bae",
+          "SeYoung Yun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28678",
+      "identity_tokens": [
+        "id:arXiv:2605.28678",
+        "title:dreamr multimodal speculative reasoning with rlbased refined drafting precise verification and fully parallel execution",
+        "url:https://www.semanticscholar.org/paper/8cdc77d49d7f7a267b1c1511bd70c28741d39973"
+      ],
+      "record": {
+        "title": "DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution",
+        "source_url": "https://www.semanticscholar.org/paper/8cdc77d49d7f7a267b1c1511bd70c28741d39973",
+        "year": 2026,
+        "published": "2026-05-27",
+        "abstract": "Speculative reasoning has recently been proposed as a means to accelerate reasoning-intensive generation in large multimodal models, but its effectiveness is often constrained by misalignment between speculative drafts and target-verified reasoning. In this work, we introduce DREAM-R, a framework that substantially improves the performance of speculative reasoning. At its core, DREAM-R employs Speculative Alignment Policy Optimization (SAPO), a reinforcement-learning objective that trains draft models to generate reasoning steps that are both faithful to target trajectories and concise. We further propose a Threshold-based Verification Mechanism (TBVM) that uses a ratio-based criterion to provide stable and interpretable acceptance of speculative steps only when positive evidence clearly dominates, thereby preventing error propagation. Building on these components, we develop a Fully Parallel Speculative Reasoning (FPSR) framework that parallelizes draft generation, target-side reasoning, and verification across multi-step reasoning, enabling early stopping and clean fallback. Experiments on reasoning-heavy benchmarks demonstrate up to speedup while preserving target-model accuracy, yielding substantial efficiency gains without compromising reasoning quality.",
+        "canonical_id": "arXiv:2605.28678",
+        "arxiv_id": "2605.28678",
+        "authors": [
+          "Yunhai Hu",
+          "Zining Liu",
+          "Xiang Yin",
+          "Tian-Hua Xia",
+          "Bo Bao",
+          "E. Sather",
+          "Vithursan Thangarasa",
+          "Sai-Qian Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12001",
+      "identity_tokens": [
+        "id:arXiv:2605.12001",
+        "title:cr2 costaware riskcontrolled routing for wireless deviceedge llm inference",
+        "url:https://www.semanticscholar.org/paper/5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3"
+      ],
+      "record": {
+        "title": "CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "As large language models (LLMs) move from centralized clouds to mobile edge environments, efficient serving must balance latency, energy consumption, and accuracy under constrained device-edge resources. Query-level routing between lightweight on-device models and stronger edge models provides a flexible mechanism to navigate this trade-off. However, existing routers are designed for centralized cloud settings and optimize token-level costs, failing to capture the dynamic latency and energy overheads in wireless edge deployments. In this paper, we formulate mobile edge LLM routing as a deployment-constrained, cost-aware decision problem, and propose CR^2, a two-stage device-edge routing framework. CR^2 decouples a lightweight on-device margin gate from an edge-side utility selector for deferred queries. The margin gate operates on frozen query embeddings and a user-specified cost weight to predict whether local execution is utility-optimal relative to the best edge alternative under the target operating point. We further introduce a conformal risk control (CRC) calibration procedure that maps each operating point to an acceptance threshold, enabling explicit control of the marginal false-acceptance risk under the full-information utility reference. Experiments on the routing task show that CR^2 closely matches a full-information reference router using only device-side signals before deferral. Compared with strong query-level baselines, CR^2 consistently improves the deployable accuracy-cost Pareto frontier and reduces normalized deployment cost by up to 16.9% at matched accuracy.",
+        "canonical_id": "arXiv:2605.12001",
+        "arxiv_id": "2605.12001",
+        "authors": [
+          "Nan Xue",
+          "Shengkang Chen",
+          "Zhi-Yong Chen",
+          "Jiangchao Yao",
+          "Yaping Sun",
+          "Zixia Hu",
+          "Mei-Xia Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.27747",
+      "identity_tokens": [
+        "id:arXiv:2604.27747",
+        "title:positionaware drafting for inference acceleration in llmbased generative listwise recommendation",
+        "url:https://www.semanticscholar.org/paper/503c12e34ed44acb851e62cb32f217599b7968c0"
+      ],
+      "record": {
+        "title": "Position-Aware Drafting for Inference Acceleration in LLM-Based Generative List-Wise Recommendation",
+        "source_url": "https://www.semanticscholar.org/paper/503c12e34ed44acb851e62cb32f217599b7968c0",
+        "year": 2026,
+        "published": "2026-04-30",
+        "abstract": "Large language model (LLM)-based generative list-wise recommendation has advanced rapidly, but decoding remains sequential and thus latency-prone. To accelerate inference without changing the target distribution, speculative decoding (SD) uses a small draft model to propose several next tokens at once and a target LLM to verify and accept the longest prefix, skipping multiple steps per round. In generative recommendation, however, each item is represented by multiple semantic-ID tokens, often with separators, and current drafts typically treat these tokens uniformly. This overlooks two practical facts: (i) a token's semantics depend on its within-item slot, and (ii) uncertainty tends to increase with speculation depth. Without modeling these effects, SD's speedups can be limited. We introduce PAD-Rec, Position-Aware Drafting for generative Recommendation, a lightweight module that augments the draft model with two complementary signals. Item position embeddings explicitly encode the within-item slot of each token, strengthening structural awareness. Step position embeddings encode the draft step, allowing the model to adapt to depth-dependent uncertainty and improve proposal quality. To harmonize these signals with base features, we add simple gates: a learnable coefficient for item slots and a context-driven gate for draft steps. The module is trainable, easy to integrate with standard draft models, and adds negligible inference overhead. Extensive experiments on four real-world datasets show up to 3.1x wall-clock speedup and about 5% average wall-clock speedup gain over strong SD baselines, while largely preserving recommendation quality.",
+        "canonical_id": "arXiv:2604.27747",
+        "arxiv_id": "2604.27747",
+        "authors": [
+          "Jiaju Chen",
+          "Chongming Gao",
+          "Chenxiao Fan",
+          "Haoyan Liu",
+          "Qing-Peng Cai",
+          "Peng Jiang",
+          "Xiangnan He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15244",
+      "identity_tokens": [
+        "id:arXiv:2604.15244",
+        "title:from tokens to steps verificationaware speculative decoding for efficient multistep reasoning",
+        "url:https://www.semanticscholar.org/paper/93ee8977d9a7412df81f6e48a1008443b76722d8"
+      ],
+      "record": {
+        "title": "From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/93ee8977d9a7412df81f6e48a1008443b76722d8",
+        "year": 2026,
+        "published": "2026-04-16",
+        "abstract": "Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard, a verification-aware speculative decoding framework that performs step-level verification using only model-internal signals. At each step, SpecGuard samples multiple draft candidates and selects the most consistent step, which is then validated using an ensemble of two lightweight model-internal signals: (i) an attention-based grounding score that measures attribution to the input and previously accepted steps, and (ii) a log-probability-based score that captures token-level confidence. These signals jointly determine whether a step is accepted or recomputed using the target, allocating compute selectively. Experiments across a range of reasoning benchmarks show that SpecGuard improves accuracy by 3.6% while reducing latency by ~11%, outperforming both SD and reward-guided SD.",
+        "canonical_id": "arXiv:2604.15244",
+        "arxiv_id": "2604.15244",
+        "authors": [
+          "Kiran Purohit",
+          "Ramasuri Narayanam",
+          "Soumyabrata Pal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.13634",
+      "identity_tokens": [
+        "id:arXiv:2604.13634",
+        "title:calibrated speculative decoding frequencyguided candidate selection for efficient inference",
+        "url:https://www.semanticscholar.org/paper/b93e282fb0b0a2746cd9514fae8ed2ec2301340d"
+      ],
+      "record": {
+        "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
+        "source_url": "https://www.semanticscholar.org/paper/b93e282fb0b0a2746cd9514fae8ed2ec2301340d",
+        "year": 2026,
+        "published": "2026-04-15",
+        "abstract": "Speculative decoding accelerates autoregressive generation by letting draft tokens bypass full verification, but conventional frameworks suffer from frequent false rejections, particularly when draft models produce semantically correct but lexically divergent outputs. In this paper, we present Calibrated Speculative Decoding (CSD), a training-free framework that recovers valid tokens discarded by standard verification. Guided by the principle of\"Frequency-Guided Candidate Selection and Probability-Guarded Acceptance,\"CSD incorporates two lightweight modules: Online Correction Memory, which aggregates historical rejections to propose recurring divergence patterns as rescue candidates, and Semantic Consistency Gating, which verifies candidate admissibility using probability ratios instead of exact token matching. Our evaluation across diverse large language models demonstrates that CSD outperforms existing methods, achieving a peak throughput speedup of 2.33x. CSD preserves model accuracy across all tasks while further boosting performance on complex reasoning datasets. These results establish CSD as a highly effective, lightweight solution for practical LLM deployments.",
+        "canonical_id": "arXiv:2604.13634",
+        "arxiv_id": "2604.13634",
+        "authors": [
+          "Xuwen Zhou",
+          "Fangxin Liu",
+          "Chao Wang",
+          "Xiaoyun Zheng",
+          "Hao Zheng",
+          "Ming He",
+          "Li Jiang",
+          "Haibing Guan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00021",
+      "identity_tokens": [
+        "id:arXiv:2606.00021",
+        "title:sense semantic embedding navigation with softgated evaluation for retrievalbased speculative decoding",
+        "url:https://www.semanticscholar.org/paper/25a69145c46da12196ad562a0b30d7e3edd3af0e"
+      ],
+      "record": {
+        "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/25a69145c46da12196ad562a0b30d7e3edd3af0e",
+        "year": 2026,
+        "published": "2026-04-14",
+        "abstract": "Speculative Decoding (SD) accelerates Large Language Model (LLM) inference by employing a lightweight draft model to propose candidate tokens, which are verified in parallel by the target model, without compromising generation quality. While Retrieval-based Speculative Decoding (RSD) is favored for its plug-and-play versatility, its potential is impeded by rigid lexical dependencies, rendering both retrieval and verification brittle to surface-level variations. To address this, we propose SENSE (Semantic Embedding Navigation with Soft-gated Evaluation). By anchoring retrieval on the hidden states of the target model, SENSE establishes robust semantic alignment, which empowers the Soft-gated Evaluation module to validate semantic equivalence rather than surface forms. To ensure rigorous benchmarking, we deconstruct existing methods into atomic primitives within a unified framework, facilitating granular, component-level comparison. Extensive experiments across diverse domains demonstrate that SENSE outperforms multiple baselines on the LLaMA and Qwen families, attaining up to 4.09 mean acceptance length and 3.26x speedup, while preserving generation quality. Our code will be released upon publication.",
+        "canonical_id": "arXiv:2606.00021",
+        "arxiv_id": "2606.00021",
+        "authors": [
+          "Shao-Wen Chen",
+          "Zhicheng Liao",
+          "Hongwei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.25925",
+      "identity_tokens": [
+        "id:arXiv:2604.25925",
+        "title:spectrgbv multidraft block verification accelerating speculative decoding",
+        "url:https://www.semanticscholar.org/paper/99041da4ebbc8a288bb910b09275cd6401e197b4"
+      ],
+      "record": {
+        "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/99041da4ebbc8a288bb910b09275cd6401e197b4",
+        "year": 2026,
+        "published": "2026-04-01",
+        "abstract": "Autoregressive language models suffer from high inference latency due to their sequential decoding nature. Speculative decoding (SD) mitigates this by employing a lightweight draft model to propose candidate tokens, which are selectively verified by a larger target model. While existing methods either adopt multi-draft strategies to increase acceptance rates or block verification techniques to jointly verify multiple tokens, they remain limited by treating these improvements in isolation. In this work, we propose SpecTr-GBV, a novel SD method that unifies multi-draft and greedy block verification (GBV) into a single framework. By formulating the verification step as an optimal transport problem over draft and target token blocks, SpecTr-GBV improves both theoretical efficiency and empirical performance. We theoretically prove that SpecTr-GBV achieves the optimal expected acceptance length physically attainable within the framework of i.i.d. draft generation, and this bound improves as the number of drafts increases. Empirically, we evaluate SpecTr-GBV across five datasets and four baselines. Our method achieves superior speedup and significantly higher block efficiency while preserving output quality. In addition, we perform comprehensive ablation studies to evaluate the impact of various hyperparameters in the model.",
+        "canonical_id": "arXiv:2604.25925",
+        "arxiv_id": "2604.25925",
+        "authors": [
+          "Yi-Jun Lin",
+          "Jinhao Sheng",
+          "Qingyu Cai",
+          "Feng Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.16994",
+      "identity_tokens": [
+        "id:arXiv:2602.16994",
+        "title:dynamic delayed tree expansion for improved multipath speculative decoding",
+        "url:https://www.semanticscholar.org/paper/0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4"
+      ],
+      "record": {
+        "title": "Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4",
+        "year": 2026,
+        "published": "2026-02-19",
+        "abstract": "Multi-path speculative decoding accelerates lossless sampling from a target model by using a cheaper draft model to generate a draft tree of tokens, and then applies a verification algorithm that accepts a subset of these. While prior work has proposed various verification algorithms for i.i.d rollouts, their relative performance under matched settings remains unclear. In this work, we firstly present a systematic evaluation of verification strategies across model families, tasks, and sampling regimes, and find that Traversal Verification dominates consistently, with OT-based methods lagging far behind. Our analysis uncovers that this occurs because OT-based methods achieve high multi-token acceptance near the root of the draft tree, while multi-token gains are most impactful deeper in the draft tree, where draft and target distributions diverge. Based on this insight, we propose delayed tree expansion, which drafts a partial single path, delaying the i.i.d. branching point. We show that delayed tree expansion preserves the target distribution and improves on root-node i.i.d rollouts. Further, we develop a dynamic neural selector that estimates the expected block efficiency of optimal-transport-based verification methods from draft and target features, enabling context-dependent expansion decisions. Our neural selector allows OT-based methods like SpecInfer to outperform Traversal Verification for the first time, achieving 5% higher average throughput across a wide range of models, datasets, and sampling settings.",
+        "canonical_id": "arXiv:2602.16994",
+        "arxiv_id": "2602.16994",
+        "authors": [
+          "R. Thomas",
+          "Teo Kitanovski",
+          "Micah Goldblum",
+          "Arka Pal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05774",
+      "identity_tokens": [
+        "id:arXiv:2602.05774",
+        "title:variational speculative decoding rethinking draft training from token likelihood to sequence acceptance",
+        "url:https://www.semanticscholar.org/paper/b9aafc2ad1d4249865782e1570ea4f658086ed95"
+      ],
+      "record": {
+        "title": "Variational Speculative Decoding: Rethinking Draft Training from Token Likelihood to Sequence Acceptance",
+        "source_url": "https://www.semanticscholar.org/paper/b9aafc2ad1d4249865782e1570ea4f658086ed95",
+        "year": 2026,
+        "published": "2026-02-05",
+        "abstract": "Speculative decoding accelerates inference for (M)LLMs, yet a training-decoding discrepancy persists: while existing methods optimize single greedy trajectories, decoding involves verifying and ranking multiple sampled draft paths. We propose Variational Speculative Decoding (VSD), formulating draft training as variational inference over latent proposals (draft paths). VSD maximizes the marginal probability of target-model acceptance, yielding an ELBO that promotes high-quality latent proposals while minimizing divergence from the target distribution. To enhance quality and reduce variance, we incorporate a path-level utility and optimize via an Expectation-Maximization procedure. The E-step draws Monte Carlo samples from an oracle-filtered posterior, while the M-step maximizes weighted likelihood using Adaptive Rejection Weighting (ARW) and Confidence-Aware Regularization (CAR). Theoretical analysis confirms that VSD increases expected acceptance length and speedup. Extensive experiments across LLMs and MLLMs show that VSD achieves up to a 9.6% speedup over EAGLE-3 and 7.9% over ViSpec, significantly improving decoding efficiency.",
+        "canonical_id": "arXiv:2602.05774",
+        "arxiv_id": "2602.05774",
+        "authors": [
+          "Xiandong Zou",
+          "Jian-Shu Li",
+          "Jing Huang",
+          "Pan Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/s26041101",
+      "identity_tokens": [
+        "id:DOI:10.3390/s26041101",
+        "title:dynamic microbatch and tokenbudget scheduling for iotscale pipelineparallel llm inference",
+        "url:https://www.semanticscholar.org/paper/4156ff1bee3fdff0c526dadb0afefd62ce562a87"
+      ],
+      "record": {
+        "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4156ff1bee3fdff0c526dadb0afefd62ce562a87",
+        "year": 2026,
+        "published": "2026-02-01",
+        "abstract": "Large language models in IoT–edge–cloud settings face bursty, heterogeneous requests that make pipeline-parallel inference prone to micro-batch imbalance and communication stalls, causing GPU idle time and SLO violations. We propose a runtime-adaptive scheduler that jointly tunes token budgets and micro-batch counts to balance prefill/decode workloads and minimize pipeline bubbles under changing compute and network conditions. On a four-node pipeline-parallel cluster across Llama-2-13b and Qwen2.5-14b at 100/1000 Mbps, our method outperforms vLLM and SGLang, reducing GPU idle time by up to 55% and improving throughput by up to 1.61 × while improving TTFT/ITL SLO satisfaction. These results show that dynamic scheduling is essential for scalable, latency-stable LLM inference in IoT–edge–cloud environments.",
+        "canonical_id": "DOI:10.3390/s26041101",
+        "doi": "10.3390/s26041101",
+        "authors": [
+          "Juncheol Ahn",
+          "Yubin Son",
+          "Daemin Kim",
+          "Sejin Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.15498",
+      "identity_tokens": [
+        "id:arXiv:2601.15498",
+        "title:mars unleashing the power of speculative decoding via marginaware verification",
+        "url:https://www.semanticscholar.org/paper/46295f0ac974a620ac50d17e160dd3523817e69a"
+      ],
+      "record": {
+        "title": "MARS: Unleashing the Power of Speculative Decoding via Margin-Aware Verification",
+        "source_url": "https://www.semanticscholar.org/paper/46295f0ac974a620ac50d17e160dd3523817e69a",
+        "year": 2026,
+        "published": "2026-01-21",
+        "abstract": "Speculative Decoding (SD) accelerates autoregressive large language model (LLM) inference by decoupling generation and verification. While recent methods improve draft quality by tightly coupling the drafter with the target model, the verification mechanism itself remains largely unchanged, relying on strict token-level rejection sampling. In practice, modern LLMs frequently operate in low-margin regimes where the target model exhibits weak preference among top candidates. In such cases, rejecting plausible runner-up tokens yields negligible information gain while incurring substantial rollback cost, leading to a fundamental inefficiency in verification. We propose Margin-Aware Speculative Verification, a training-free and domain-agnostic verification strategy that adapts to the target model's local decisiveness. Our method conditions verification on decision stability measured directly from the target logits and relaxes rejection only when strict verification provides minimal benefit. Importantly, the approach modifies only the verification rule and is fully compatible with existing target-coupled speculative decoding frameworks. Extensive experiments across model scales ranging from 8B to 235B demonstrate that our method delivers consistent and significant inference speedups over state-of-the-art baselines while preserving generation quality across diverse benchmarks. The code is available at https://github.com/5SSjw/MARS.",
+        "canonical_id": "arXiv:2601.15498",
+        "arxiv_id": "2601.15498",
+        "authors": [
+          "Jing-Wei Song",
+          "Xinyu Wang",
+          "Hanbin Wang",
+          "Xiaoxuan Lei",
+          "Bill Shi",
+          "Shixin Han",
+          "Eric Yang",
+          "Xiao-Wen Chang",
+          "Lynn Ai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.07353",
+      "identity_tokens": [
+        "id:arXiv:2601.07353",
+        "title:talon confidenceaware speculative decoding with adaptive token trees",
+        "url:https://www.semanticscholar.org/paper/c37d87b414a1cf830547eb6311f9e4f3e28d4182"
+      ],
+      "record": {
+        "title": "TALON: Confidence-Aware Speculative Decoding with Adaptive Token Trees",
+        "source_url": "https://www.semanticscholar.org/paper/c37d87b414a1cf830547eb6311f9e4f3e28d4182",
+        "year": 2026,
+        "published": "2026-01-12",
+        "abstract": "Speculative decoding (SD) has become a standard technique for accelerating LLM inference without sacrificing output quality. Recent advances in speculative decoding have shifted from sequential chain-based drafting to tree-structured generation, where the draft model constructs a tree of candidate tokens to explore multiple possible drafts in parallel. However, existing tree-based SD methods typically build a fixed-width, fixed-depth draft tree, which fails to adapt to the varying difficulty of tokens and contexts. As a result, the draft model cannot dynamically adjust the tree structure to early stop on difficult tokens and extend generation for simple ones. To address these challenges, we introduce TALON, a training-free, budget-driven adaptive tree expansion framework that can be plugged into existing tree-based methods. Unlike static methods, TALON constructs the draft tree iteratively until a fixed token budget is met, using a hybrid expansion strategy that adaptively allocates the node budget to each layer of the draft tree. This framework naturally shapes the draft tree into a\"deep-and-narrow\"form for deterministic contexts and a\"shallow-and-wide\"form for uncertain branches, effectively optimizing the trade-off between exploration width and generation depth under a given budget. Extensive experiments across 5 models and 6 datasets demonstrate that TALON consistently outperforms state-of-the-art EAGLE-3, achieving up to 5.16x end-to-end speedup over auto-regressive decoding.",
+        "canonical_id": "arXiv:2601.07353",
+        "arxiv_id": "2601.07353",
+        "authors": [
+          "Tianyu Liu",
+          "Qitan Lv",
+          "Yuhao Shen",
+          "Xiao Sun",
+          "Xiao-Yan Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.23858",
+      "identity_tokens": [
+        "id:arXiv:2512.23858",
+        "title:yggdrasil bridging dynamic speculation and static runtime for latencyoptimal treebased llm decoding",
+        "url:https://www.semanticscholar.org/paper/16523bc05355049bea8f4e20e7f17ef32ca9f295"
+      ],
+      "record": {
+        "title": "Yggdrasil: Bridging Dynamic Speculation and Static Runtime for Latency-Optimal Tree-Based LLM Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/16523bc05355049bea8f4e20e7f17ef32ca9f295",
+        "year": 2025,
+        "published": "2025-12-29",
+        "abstract": "Speculative decoding improves LLM inference by generating and verifying multiple tokens in parallel, but existing systems suffer from suboptimal performance due to a mismatch between dynamic speculation and static runtime assumptions. We present Yggdrasil, a co-designed system that enables latency-optimal speculative decoding through context-aware tree drafting and compiler-friendly execution. Yggdrasil introduces an equal-growth tree structure for static graph compatibility, a latency-aware optimization objective for draft selection, and stage-based scheduling to reduce overhead. Yggdrasil supports unmodified LLMs and achieves up to $3.98\\times$ speedup over state-of-the-art baselines across multiple hardware setups.",
+        "canonical_id": "arXiv:2512.23858",
+        "arxiv_id": "2512.23858",
+        "authors": [
+          "Yue Guan",
+          "Changming Yu",
+          "Shihan Fang",
+          "Weiming Hu",
+          "Zai-Feng Pan",
+          "Zheng Wang",
+          "Zihan Liu",
+          "Yangjie Zhou",
+          "Yu-Fei Ding",
+          "Minyi Guo",
+          "Jingwen Leng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/globecom59602.2025.11432593",
+      "identity_tokens": [
+        "id:DOI:10.1109/globecom59602.2025.11432593",
+        "title:deviceserver collaborative speculative decoding for realtime llm streaming",
+        "url:https://www.semanticscholar.org/paper/1c8ccd0914b691d8ac33006eeed0b37b8af0f36d"
+      ],
+      "record": {
+        "title": "Device-Server Collaborative Speculative Decoding for Real-Time LLM Streaming",
+        "source_url": "https://www.semanticscholar.org/paper/1c8ccd0914b691d8ac33006eeed0b37b8af0f36d",
+        "year": 2025,
+        "published": "2025-12-08",
+        "abstract": "This paper addresses the challenge of real-time text streaming with large language models (LLMs) over unstable networks and server contention. To mitigate delays from packet loss and computational bottlenecks, we propose an adaptive framework that integrates speculative decoding with network-aware optimization. A lightweight draft model runs on the user’s edge device to generate tokens autoregressively, while a larger target model on the server periodically verifies them. We explicitly model end-to-end latency with respect to verification acceptance rates and packet loss, and optimize the verification ratio under latency constraints. Experiments show improved resilience to high packet loss and server contention, achieving over 4× lower rebuffering and 60% higher verification ratios compared to baselines.",
+        "canonical_id": "DOI:10.1109/GLOBECOM59602.2025.11432593",
+        "doi": "10.1109/GLOBECOM59602.2025.11432593",
+        "authors": [
+          "Bishakha Rani Biswas",
+          "Yongjie Guan",
+          "Mingrui Yin",
+          "Tao Han",
+          "Xueyu Hou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.12031",
+      "identity_tokens": [
+        "id:arXiv:2511.12031",
+        "title:striking the right balance between compute and copy improving llm inferencing under speculative decoding",
+        "url:https://www.semanticscholar.org/paper/61110b18baed2ba8f16ba66943ec48b40077767f"
+      ],
+      "record": {
+        "title": "Striking the Right Balance between Compute and Copy: Improving LLM Inferencing Under Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/61110b18baed2ba8f16ba66943ec48b40077767f",
+        "year": 2025,
+        "published": "2025-11-15",
+        "abstract": "With the skyrocketing costs of GPUs and their virtual instances in the cloud, there is a significant desire to use CPUs for large language model (LLM) inference. KV cache update, often implemented as allocation, copying, and in-place strided update for each generated token, incurs significant overhead. As the sequence length increases, the allocation and copy overheads dominate the performance. Alternate approaches may allocate large KV tensors upfront to enable in-place updates, but these matrices (with zero-padded rows) cause redundant computations. In this work, we propose a new KV cache allocation mechanism called Balancing Memory and Compute (BMC). BMC allocates, once every r iterations, KV tensors with r redundant rows, allowing in-place update without copy overhead for those iterations, but at the expense of a small amount of redundant computation. Second, we make an interesting observation that the extra rows allocated in the KV tensors and the resulting redundant computation can be repurposed for Speculative Decoding (SD) that improves token generation efficiency. Last, BMC represents a spectrum of design points with different values of r. To identify the best-performing design point(s), we derive a simple analytical model for BMC. The proposed BMC method achieves an average throughput acceleration of up to 3.2x over baseline HuggingFace (without SD). Importantly when we apply BMC with SD, it results in an additional speedup of up to 1.39x, over and above the speedup offered by SD. Further, BMC achieves a throughput acceleration of up to 1.36x and 2.29x over state-of-the-art inference servers vLLM and DeepSpeed, respectively. Although the BMC technique is evaluated extensively across different classes of CPUs (desktop and server class), we also evaluate the scheme with GPUs and demonstrate that it works well for GPUs.",
+        "canonical_id": "arXiv:2511.12031",
+        "arxiv_id": "2511.12031",
+        "authors": [
+          "A. Ramachandran",
+          "R. Govindarajan",
+          "Murali Annavaram",
+          "P. Raghavendra",
+          "Hossein Entezari Zarch",
+          "Lei Gao",
+          "Chaoyi Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icitda68167.2025.11332498",
+      "identity_tokens": [
+        "id:DOI:10.1109/icitda68167.2025.11332498",
+        "title:leveraging deepseek ai for bridging educational gaps a study of perceived learning impact among xyz university student",
+        "url:https://www.semanticscholar.org/paper/055c44f1688da5e59cc9118fbd427659b5f32f5d"
+      ],
+      "record": {
+        "title": "Leveraging DeepSeek AI for Bridging Educational Gaps: A Study of Perceived Learning Impact Among XYZ University Student",
+        "source_url": "https://www.semanticscholar.org/paper/055c44f1688da5e59cc9118fbd427659b5f32f5d",
+        "year": 2025,
+        "published": "2025-11-06",
+        "abstract": "Indonesian students’ usage of AI is still facing a number of difficulties, including not sufficient AI literacy and a tendency to use it spontaneous without critical understanding. The purpose of this study is to examine the role of artificial intelligence (AI) for university students in the digital age, specifically its impact on the learning experience. We use the DeepSeek AI platform as a case study to evaluate the relationship between AI quality, AI literacy, user satisfaction, and the perceived impact on learning. Quantitative approaches were used, with data collected through questionnaire. The data was examined using structural equation modeling (SEM) to assess construct validity and the strength of variable correlations. The results reveal that AI quality and literacy have a major impact on user satisfaction, which molds positive impressions of AI’s impact on learning. The technical component sub variable received a score of 3.904, emphasizing the need for increased system stability, data security, and reaction speed. This study contributes to the restricted empirical research on AI use in Indonesian higher education and gives practical insights by recommending technological advancements including hybrid routing, semantic caching, and differential privacy.",
+        "canonical_id": "DOI:10.1109/ICITDA68167.2025.11332498",
+        "doi": "10.1109/ICITDA68167.2025.11332498",
+        "authors": [
+          "Aileen Cresentia Levina Thendy",
+          "Vaneina Ayeisha Nizar",
+          "Duhita Anindya Nismara",
+          "S. Hartono"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b0b70b6bf5d145a1313a11c9371bcf554cb8c25596b97f98cfa1d5fd7ccec05a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
