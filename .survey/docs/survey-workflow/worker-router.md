@@ -31,8 +31,8 @@ Scheduled Chat / WorkワーカーがGitHub本文書込みを拒否された場�
 各実行（run）の開始時に最新 `main` HEADを取得し、同じHEADで次を読む。
 
 - `.survey/work-queue/hot-dispatch.json`（存在する場合。ゼロ待ち開始用の再構築可能index）
-- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json`（専用200件index）と `.survey/work-queue/WORKLIST-00.md`
-- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json`（専用200件index）と `.survey/work-queue/WORKLIST-30.md`
+- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json`（Research / Audit最大200件・Discovery最大500件の専用index）と `.survey/work-queue/WORKLIST-00.md`
+- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json`（Research / Audit最大200件・Discovery最大500件の専用index）と `.survey/work-queue/WORKLIST-30.md`
 - `.survey/work-queue/next-jobs.json`
 - `.survey/work-queue/maintenance-cycle.json`
 - `.survey/work-queue/discovery-state.json`
@@ -91,9 +91,19 @@ handoff guard、platform/context limit、GitHub正本の読取不能などのhar
 - `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json` / 人間向け `.survey/work-queue/WORKLIST-00.md`
 - `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json` / 人間向け `.survey/work-queue/WORKLIST-30.md`
 
-各専用ページは、Research / Audit候補を最大200件、リスト入り判定待ちDiscovery候補を最大200件持つ。生成時に同一の正規候補列を決定的なround-robinで二分し、十分な候補在庫がある限り`:00`と`:30`の割当は重複させない。**「共有ページの先頭／末尾」という概念は使わない。** 各workerは自分専用の200件だけを処理候補として扱う。
+各専用ページは、Research / Audit候補を最大200件、リスト入り判定待ちDiscovery候補を最大500件持つ。Research / Auditの提示数は現行200件を維持し、Discoveryだけを500件へ拡張する。生成時に同一の正規候補列を決定的なround-robinで二分し、十分な候補在庫がある限り`:00`と`:30`の割当は重複させない。**「共有ページの先頭／末尾」という概念は使わない。** 各workerは自分専用のResearch / Audit最大200件、Discovery最大500件だけを処理候補として扱う。
 
 worklistはjob / claim / paper実体 / relevance ledgerから再構築されるindexであり、それらの正本を置き換えない。Library-first runでは処理直前に最新mainの正本状態を再確認し、すでに処理済み・active claim済み・対象外となった行をskipする。同じpaper identityまたは探索candidate identityの完成成果がChatGPT Libraryへすでに耐久保存され、GitHub反映待ちになっている場合もskipして同じ専用ページの次候補へ進む。
+
+**Library-first Discoveryのaccept判定は、`:00` / `:30` の両workerで同じ厳格基準を使う。** worklist行、タイトル、要旨だけではacceptしてはならない。候補の一次資料本文を可能な範囲で読み、少なくとも次を確認してから収録候補とする。
+
+- 現行サーベイの対象範囲へ直接入ること。LLM推論・配信・学習システム、メモリ階層、MoE、並列化、量子化、KV管理、投機、カーネル／ランタイム、評価基盤等への実質的な寄与が必要で、単なるモデル発表・一般応用・評価だけの論文は原則除外する。
+- 既存収録論文と実質同一の寄与でないこと。新しい手法、システム設計、測定知見、理論、再現可能な比較軸のいずれかで、一覧へ独立して残す価値があること。
+- 本文中の手法・実装・評価を読み、タイトルや要旨の強い表現だけでなく、実際に何を変更し、何を比較し、どの条件で有効かを確認できること。
+- サーベイの主対象から外れる境界論文は、将来のResearch件数を埋める目的でacceptしない。関連性が間接的、既存研究の再説明に近い、またはシステム上の新規知見が乏しい場合はrejectする。
+- accept時の一文要約は本文確認後に書き、本文から確認できた固有の寄与または代表的結果を含める。要旨の言い換えだけを収録理由にしない。
+
+本文全文へアクセスできず、収録適否を十分に判断できない候補はacceptへ数えず、取得不能としてskipまたは保留し、次候補へ進む。Discoveryの最低ノルマを満たすために判定基準を緩めない。
 
 専用worklistが欠損・古い・該当レーン空の場合だけ既存の正規job/reference poolから直接選ぶ。その場合も可能な限りもう一方の固定Scheduled workerが処理中・Library保存済みのidentityを避ける。claim、重複排除、relevance判定、submissionなどGitHub正規経路を使うrunでは、それぞれの正規安全規則を省略しない。Library-first runでは完成内容をGitHub本文へ直接反映せず、タスク本文で指定されたLibrary保存規則を優先する。
 
