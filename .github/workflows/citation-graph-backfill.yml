@@ -75,7 +75,7 @@ jobs:
           for publish_attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/backfill_paper_metadata.py --repo-root . --missing-only
+            python .survey/scripts/backfill_paper_metadata.py --repo-root . --missing-only --metadata-cache /tmp/arxiv-metadata-cache.json
             python .survey/scripts/survey.py --root .survey build
             git add README.md papers .survey/survey-state/paper-identity-index.json
             if git diff --cached --quiet; then
