@@ -15,14 +15,14 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-サーベイ論文：**13本**。
+サーベイ論文：**14本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-kv-cache-optimization](01-kv-cache-optimization/README.md) | 1 |
 | [01-kv-cache-systems](01-kv-cache-systems/README.md) | 1 |
 | [02-diffusion-llm-inference](02-diffusion-llm-inference/README.md) | 1 |
-| [03-inference-engines](03-inference-engines/README.md) | 2 |
+| [03-inference-engines](03-inference-engines/README.md) | 3 |
 | [04-distributed-training-systems](04-distributed-training-systems/README.md) | 1 |
 | [05-moe-inference-optimization](05-moe-inference-optimization/README.md) | 1 |
 | [06-long-context-serving](06-long-context-serving/README.md) | 1 |

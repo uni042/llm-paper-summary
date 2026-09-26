@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（2本）
+## 自動生成の論文一覧（3本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -21,4 +21,10 @@
 - **2025-05 · [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md)**  
   実装：[✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) ・ リポジトリ内被引用：1  
   LLM推論エンジン25基盤を機能・対応モデル・ハードウェア・導入性・遅延・処理量で比較し、21基盤の導入検証と13基盤の実機測定から用途別の選択条件と失敗限界を示す総説。
+
+### 3年前（2023-10〜2024-09）
+
+- **2024-02 · [LLM Inference Unveiled: Survey and Roofline Model Insights](2024-2402.16363-llm-inference-unveiled.md)**  
+  実装：[✓](https://github.com/hahnyuan/LLM-Viewer) ・ リポジトリ内被引用：17  
+  LLM推論の各種最適化をroofline モデルで横断整理し、モデル構成・要求条件・ハードウェアから計算量、データ転送量、律速資源を見積もる枠組みを示すサーベイ。
 <!-- survey:auto:end -->
