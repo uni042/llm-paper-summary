@@ -231,6 +231,36 @@
       ],
       "created_at": "2026-09-24T00:00:00+00:00",
       "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "19-inference-evaluation-benchmarking",
+      "title": "Inference Benchmarking / Workload Diagnosis",
+      "description": "LLM推論・サービングの性能評価に用いるワークロード、トレース縮約・再生、ボトルネック診断、測定プロトコルを設計し、少ない再実行で信頼できる評価証拠を得る研究をまとめる。",
+      "distinctness_reason": "Serving系統は本番要求処理を最適化し、Simulation系統は実機の代替モデルで結果を予測する。本系統は実測による評価用データと診断方法を主成果とし、サービングポリシー自体もシミュレータ自体も変更しない。",
+      "boundary_rule": "主貢献がLLM推論ワークロード・ベンチマーク・トレース選定再生・性能診断・実測評価プロトコルである研究を含む。実トラフィックのserving最適化、実機代替のsimulation/emulation、学習工程の高速化は含めない。",
+      "scope_includes": [
+        "LLM serving向けbenchmarkおよびワークロード生成",
+        "トレース縮約・選定・再生と代表性評価",
+        "構成要素別のボトルネック診断および測定信頼性"
+      ],
+      "scope_excludes": [
+        "本番servingの要求スケジューリング最適化",
+        "simulation / emulationによる性能予測",
+        "学習・訓練工程の高速化"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "15-inference-simulation-emulation",
+        "09-kernel-runtime-compilation"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.00423",
+        "arXiv:2609.18123",
+        "arXiv:2604.09557",
+        "arXiv:2608.13573"
+      ],
+      "created_at": "2026-09-26T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
     }
   ]
 }
