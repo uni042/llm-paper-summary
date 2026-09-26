@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-26 09:53:56 JST**
+> 自動生成: **2026-09-26 09:58:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **363** |
-| 未claim Research job | **220** |
+| 未claim Research job | **219** |
 | 直近24hの検証済みResearch収録 | **1** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-26 04:45:42 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（49時間18分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（49時間22分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **143** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **25** |
-| 合計 | **8** | **9** | **8** | **0** | **143** | **0** | **25** |
+| 合計 | **8** | **9** | **8** | **0** | **144** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -181,7 +181,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- `arXiv:2605.11678` — OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models / worker `shared-preload-pool`
+  - claim: **09-26 09:58:14 JST** / heartbeat: **—** / lease expiry: **09-26 21:58:14 JST**
+  - evidence: `.survey/work-queue/claims/job-research-fdafca4898d02e70.json`
 - `arXiv:2609.29160` — Cross-Model Autoscaling for Shared LLM Serving / worker `shared-preload-pool`
   - claim: **09-26 08:58:27 JST** / heartbeat: **—** / lease expiry: **09-26 20:58:27 JST**
   - evidence: `.survey/work-queue/claims/job-research-6159ba9a55bd9185.json`
@@ -209,9 +212,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2512.21835` — Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices / worker `scheduled-chat-00`
   - claim: **09-26 08:58:26 JST** / heartbeat: **09-26 08:58:26 JST** / lease expiry: **09-26 10:28:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-5c9711465b85e7cf.json`
-- `DOI:10.1109/2575-8411.2026.00033` — Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing / worker `scheduled-chat-00`
-  - claim: **09-26 08:58:26 JST** / heartbeat: **09-26 08:58:26 JST** / lease expiry: **09-26 10:28:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-65c097d84dfa8adf.json`
 
 #### Audit
 
