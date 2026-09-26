@@ -174,12 +174,18 @@ def record_identifiers(record: dict[str, Any]) -> set[str]:
     return ids
 
 
-def identity_tokens(record: dict[str, Any]) -> set[str]:
+def stable_identity_tokens(record: dict[str, Any]) -> set[str]:
+    """Return identity aliases that are stable enough for exact paper resolution."""
     tokens = {"id:" + ident for ident in record_identifiers(record)}
     for field in URL_FIELDS:
         normalized = norm_url(record.get(field))
         if normalized:
             tokens.add("url:" + normalized)
+    return tokens
+
+
+def identity_tokens(record: dict[str, Any]) -> set[str]:
+    tokens = stable_identity_tokens(record)
     title = norm_title(record.get("title"))
     if title:
         tokens.add("title:" + title)
@@ -240,7 +246,7 @@ def _record_year(record: dict[str, Any]) -> int | None:
 
 
 def _resolver_aliases(record: dict[str, Any]) -> set[str]:
-    aliases = {token for token in identity_tokens(record) if not token.startswith("title:")}
+    aliases = stable_identity_tokens(record)
     title_hash = normalized_title_hash(record.get("title"))
     if title_hash:
         aliases.add("title-hash:" + title_hash)
@@ -367,7 +373,7 @@ def match_represented_paper(
     alias_to_paper = resolver.get("alias_to_paper") if isinstance(resolver.get("alias_to_paper"), dict) else {}
     title_hash_to_paper = resolver.get("title_hash_to_paper") if isinstance(resolver.get("title_hash_to_paper"), dict) else {}
 
-    stable_aliases = sorted(token for token in identity_tokens(record) if not token.startswith("title:"))
+    stable_aliases = sorted(stable_identity_tokens(record))
     for alias in stable_aliases:
         paper_key = alias_to_paper.get(alias)
         if paper_key in papers:
