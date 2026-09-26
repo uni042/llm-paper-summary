@@ -11,6 +11,7 @@ Rules:
 from __future__ import annotations
 
 import argparse
+import json
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -487,6 +488,11 @@ def main() -> int:
         action="store_true",
         help="Process only papers with incomplete canonical metadata.",
     )
+    parser.add_argument(
+        "--metadata-cache",
+        type=Path,
+        help="Optional JSON cache for fetched arXiv metadata across publish retries.",
+    )
     args = parser.parse_args()
     root = Path(args.repo_root).resolve()
     paths = paper_paths(root)
@@ -497,7 +503,27 @@ def main() -> int:
             if metadata_needs_backfill(*parse_frontmatter(path))
         ]
     ids = arxiv_ids(paths)
-    arxiv = {} if args.no_network else fetch_arxiv(ids)
+    arxiv: dict[str, dict[str, Any]] = {}
+    if args.metadata_cache and args.metadata_cache.exists():
+        try:
+            cached = json.loads(args.metadata_cache.read_text(encoding="utf-8"))
+            if isinstance(cached, dict):
+                arxiv.update({
+                    str(key): value
+                    for key, value in cached.items()
+                    if isinstance(value, dict)
+                })
+        except Exception as exc:
+            print(f"WARNING ignoring unreadable metadata cache: {exc}", file=sys.stderr)
+    missing_ids = [aid for aid in ids if aid not in arxiv]
+    if missing_ids and not args.no_network:
+        arxiv.update(fetch_arxiv(missing_ids))
+    if args.metadata_cache:
+        args.metadata_cache.parent.mkdir(parents=True, exist_ok=True)
+        args.metadata_cache.write_text(
+            json.dumps(arxiv, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
     checked = datetime.now(timezone.utc).date().isoformat()
 
     changed_count = 0
