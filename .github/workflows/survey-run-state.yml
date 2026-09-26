@@ -10,6 +10,7 @@ on:
       - '.survey/scripts/apply_worker_control.py'
       - '.survey/scripts/apply_transport_health_probe.py'
       - '.survey/scripts/derive_worker_run_state.py'
+      - '.survey/scripts/repair_run_state_requests.py'
       - '.survey/scripts/worker_run_state_cache.py'
       - '.survey/scripts/auto_discovery_from_run_state.py'
   workflow_dispatch:
@@ -60,6 +61,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            python .survey/scripts/repair_run_state_requests.py --repo-root . --apply
             python .survey/scripts/apply_worker_control.py --repo-root . \
               | tee /tmp/worker-control-result.json
             python .survey/scripts/apply_transport_health_probe.py --repo-root . \
