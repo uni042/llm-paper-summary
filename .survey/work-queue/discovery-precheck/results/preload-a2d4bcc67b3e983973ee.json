@@ -1,0 +1,1101 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-a2d4bcc67b3e983973ee",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-a2d4bcc67b3e983973ee",
+  "axis": "recent KV cache offload disaggregation remote memory LLM inference systems",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20KV%20cache%20offload%20disaggregation%20remote%20memory&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1662eff13fd87da48e45e402a542d6286eca32df",
+  "raw_search_result_count": 65,
+  "retrieval_duplicate_filtered_count": 33,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 11,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T06:36:07.980241+00:00",
+  "preload_id": "preload-a2d4bcc67b3e983973ee",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 4,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "source_url": "https://arxiv.org/abs/2607.24653",
+      "year": 2026,
+      "published": "2026-07-27",
+      "canonical_id": "arXiv:2607.24653",
+      "arxiv_id": "2607.24653",
+      "authors": [
+        "Kimi Team",
+        "Tongtong Bai",
+        "Yifan Bai",
+        "Yiping Bao",
+        "M. C.",
+        "Jianfeng Cai",
+        "Xinyuan Cai",
+        "Peizhou Cao",
+        "Yuxuan Cao",
+        "Ziwei Chai",
+        "Y. Charles",
+        "H. S. Che",
+        "Guanduo Chen",
+        "Guangyu Chen",
+        "Guanzheng Chen",
+        "Huarong Chen",
+        "Jia Chen",
+        "Jianlong Chen",
+        "Jun Chen",
+        "Kexin Chen",
+        "Peng Chen",
+        "Ruijue Chen",
+        "Wentao Chen",
+        "Xin Chen",
+        "Yang Chen",
+        "Yanru Chen",
+        "Yifei Chen",
+        "Yingjiang Chen",
+        "Yuankun Chen",
+        "Yujie Chen",
+        "Yutian Chen",
+        "Zhirong Chen",
+        "Dazhi Cheng",
+        "Yean Cheng",
+        "Jialei Cui",
+        "Jingbing Cui",
+        "Anqi Dai",
+        "Jiaqi Deng",
+        "Hao Ding",
+        "Rui Ding",
+        "Shaofeng Ding",
+        "Mengfan Dong",
+        "Mengnan Dong",
+        "Yuhao Dong",
+        "Yuxin Dong",
+        "Angang Du",
+        "Chenzhuang Du",
+        "Dikang Du",
+        "J. Du",
+        "Yulun Du",
+        "Yu Fan",
+        "Jing Feng",
+        "Qiulin Feng",
+        "Yichen Feng",
+        "Kelin Fu",
+        "Qiang Fu",
+        "高甫瑄",
+        "Hongcheng Gao",
+        "Jingyue Gao",
+        "Tong Gao",
+        "Weijia Gao",
+        "Shangyi Geng",
+        "Jie Gong",
+        "功 林戸",
+        "Shengao Gong",
+        "Xiaochen Gong",
+        "Qizheng Gu",
+        "Yicheng Gu",
+        "Shuhao Guan",
+        "Haiqing Guo",
+        "Shiqi Guo",
+        "Xiang Guo",
+        "Zhengyan Guo",
+        "Beixi Hao",
+        "Wenxin Hao",
+        "Xiaoru Hao",
+        "Dailan He",
+        "Haotian He",
+        "Lehan He",
+        "Qi He",
+        "Weiran He",
+        "Xinran He",
+        "Xinyi He",
+        "Yibo He",
+        "Yi He",
+        "Chao Hong",
+        "Tiange Hong",
+        "Hao Hu",
+        "Jiaxi Hu",
+        "Ruikun Hu",
+        "Weiming Hu",
+        "Yangyang Hu",
+        "Zhenxing Hu",
+        "Liang Hua",
+        "Jinbin Huang",
+        "Ke Huang",
+        "Ruiyuan Huang",
+        "Siying Huang",
+        "Weixiao Huang",
+        "Yan Huang"
+      ]
+    },
+    {
+      "title": "Bifrost: Hybrid TEE-FHE Inference for Privacy-Preserving Transformer and LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.17421",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "arXiv:2606.17421",
+      "arxiv_id": "2606.17421",
+      "authors": [
+        "Chenghao Chen",
+        "Kailun Qin",
+        "Xiaolin Zhang",
+        "Chi Zhang",
+        "Dawu Gu"
+      ]
+    },
+    {
+      "title": "HetCCL: Enabling Collective Communication For Mixed-Vendor Heterogeneous Clusters",
+      "source_url": "https://arxiv.org/abs/2605.31000",
+      "year": 2026,
+      "published": "2026-05-29",
+      "canonical_id": "arXiv:2605.31000",
+      "arxiv_id": "2605.31000",
+      "authors": [
+        "Yuejie Wang",
+        "Tao Chang",
+        "Yuanyuan Zhao",
+        "Yulong Ao",
+        "Zeyu Gu",
+        "Zhiyu Li",
+        "Yanmin Jia",
+        "Yan Zhang",
+        "Mingjun Zhang",
+        "He Liu",
+        "Yongzhe He",
+        "Yonghua Lin",
+        "Guyue Liu"
+      ]
+    },
+    {
+      "title": "Building Open Source Inference Serving Systems",
+      "source_url": "https://escholarship.org/uc/item/67d7q7df",
+      "year": 2026,
+      "published": "2026-05-01",
+      "canonical_id": "OpenAlex:W7213474877",
+      "authors": [
+        "Xiangxi Mo"
+      ]
+    },
+    {
+      "title": "A survey on edge multimodal large models: Compression, inference acceleration, and applications",
+      "source_url": "https://www.nso-journal.org/10.1360/nso/20260016/pdf",
+      "year": 2026,
+      "published": "2026-04-29",
+      "canonical_id": "DOI:10.1360/nso/20260016/pdf",
+      "doi": "10.1360/nso/20260016/pdf",
+      "authors": [
+        "Siru Chen",
+        "Yuanchao Shu",
+        "Cong Wang",
+        "Jiming Chen"
+      ]
+    },
+    {
+      "title": "JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training",
+      "source_url": "https://arxiv.org/abs/2604.23838",
+      "year": 2026,
+      "published": "2026-04-26",
+      "canonical_id": "arXiv:2604.23838",
+      "arxiv_id": "2604.23838",
+      "authors": [
+        "Zhengding Hu",
+        "Hehua Ouyang",
+        "Chang Chen",
+        "Zaifeng Pan",
+        "Yue Guan",
+        "Zhongkai Yu",
+        "Zhen Wang",
+        "Steven Swanson",
+        "Yufei Ding"
+      ]
+    },
+    {
+      "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+      "source_url": "https://arxiv.org/abs/2604.02442",
+      "year": 2026,
+      "published": "2026-04-02",
+      "canonical_id": "arXiv:2604.02442",
+      "arxiv_id": "2604.02442",
+      "authors": [
+        "Yanpeng Hu",
+        "Yiwei Yang",
+        "Yusheng Zheng",
+        "Estabon Ramos",
+        "Jianchang Su",
+        "Andi Quinn",
+        "Wei Zhang"
+      ]
+    },
+    {
+      "title": "Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning",
+      "source_url": "http://arxiv.org/abs/2602.09578",
+      "year": 2026,
+      "published": "2026-02-10",
+      "canonical_id": "arXiv:2602.09578",
+      "arxiv_id": "2602.09578",
+      "authors": [
+        "Zhida Jiang",
+        "Zhaolong Xing",
+        "Jiawei Lu",
+        "Yipei Niu",
+        "Qingyuan Sang",
+        "Liangxu Zhang",
+        "Wenquan Dai",
+        "Junhua Shu",
+        "Jiaxing Wang",
+        "Qiangyu Pei",
+        "Qiong Chen",
+        "Xinyu Liu",
+        "Fangming Liu",
+        "Han Ai",
+        "Zhen Chen",
+        "Ke Zhang"
+      ]
+    },
+    {
+      "title": "RollArt: Disaggregated Multi-Task Agentic RL Training at Scale",
+      "source_url": "https://arxiv.org/abs/2512.22560",
+      "year": 2025,
+      "published": "2025-12-27",
+      "canonical_id": "arXiv:2512.22560",
+      "arxiv_id": "2512.22560",
+      "authors": [
+        "Wei Gao",
+        "Yuheng Zhao",
+        "Tianyuan Wu",
+        "Shaopan Xiong",
+        "Weixun Wang",
+        "Dakai An",
+        "Lunxi Cao",
+        "Dilxat Muhtar",
+        "Zichen Liu",
+        "Haizhou Zhao",
+        "Ju Huang",
+        "Siran Yang",
+        "Yongbin Li",
+        "Wenbo Su",
+        "Jiamang Wang",
+        "Qu Lin",
+        "Bo Zheng",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Your network doesn't end at the NIC",
+      "source_url": "https://doi.org/10.1145/3772356.3772415",
+      "year": 2025,
+      "published": "2025-11-17",
+      "canonical_id": "DOI:10.1145/3772356.3772415",
+      "doi": "10.1145/3772356.3772415",
+      "authors": [
+        "Raj Joshi",
+        "Saksham Agarwal",
+        "ChonLam Lao",
+        "Minlan Yu"
+      ]
+    },
+    {
+      "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
+      "source_url": "https://arxiv.org/abs/2510.27656",
+      "year": 2025,
+      "published": "2025-10-31",
+      "canonical_id": "arXiv:2510.27656",
+      "arxiv_id": "2510.27656",
+      "authors": [
+        "Nandor Licker",
+        "K. H. Hu",
+        "Vladimir Zaytsev",
+        "Lequn Chen"
+      ]
+    },
+    {
+      "title": "CoSense-LLM: Semantics at the Edge with Cost- and Uncertainty-Aware Cloud-Edge Cooperation",
+      "source_url": "http://arxiv.org/abs/2510.19670",
+      "year": 2025,
+      "published": "2025-10-22",
+      "canonical_id": "arXiv:2510.19670",
+      "arxiv_id": "2510.19670",
+      "authors": [
+        "Hasan Akgül",
+        "Mari Eplik",
+        "Javier Rojas",
+        "Abdullah, Aina Binti",
+        "Pieter van der Merwe"
+      ]
+    },
+    {
+      "title": "Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures",
+      "source_url": "https://doi.org/10.1145/3695053.3731412",
+      "year": 2025,
+      "published": "2025-06-20",
+      "canonical_id": "arXiv:2505.09343",
+      "arxiv_id": "2505.09343",
+      "authors": [
+        "Chenggang Zhao",
+        "Chengqi Deng",
+        "Chong Ruan",
+        "Damai Dai",
+        "Huazuo Gao",
+        "Jiashi Li",
+        "Liyue Zhang",
+        "Panpan Huang",
+        "Shangyan Zhou",
+        "Shu-Chao Ma",
+        "Wenfeng Liang",
+        "Ying He",
+        "Yuqing Wang",
+        "Yuxuan Liu",
+        "Yen-Hsin Wei"
+      ]
+    },
+    {
+      "title": "Towards ML System Extensibility",
+      "source_url": "https://doi.org/10.1145/3713082.3730392",
+      "year": 2025,
+      "published": "2025-05-14",
+      "canonical_id": "DOI:10.1145/3713082.3730392",
+      "doi": "10.1145/3713082.3730392",
+      "authors": [
+        "Weixin Deng",
+        "Andy Ruan",
+        "Megan Frisella",
+        "Kai-Hsun Chen",
+        "SangBin Cho",
+        "Jack Tigar Humphries",
+        "Rui Qiao",
+        "Stephanie Wang"
+      ]
+    },
+    {
+      "title": "EcoServe: Designing Carbon-Aware AI Inference Systems",
+      "source_url": "http://arxiv.org/abs/2502.05043",
+      "year": 2025,
+      "published": "2025-02-07",
+      "canonical_id": "arXiv:2502.05043",
+      "arxiv_id": "2502.05043",
+      "authors": [
+        "Yueying",
+        "Zhanqiu Hu",
+        "Esha Choukse",
+        "Rodrigo Fonseca",
+        "G. Edward Suh",
+        "Udit Gupta"
+      ]
+    },
+    {
+      "title": "Disruptive Memory Technologies (Dagstuhl Seminar 25151)",
+      "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "DOI:10.4230/dagrep.15.4.1",
+      "doi": "10.4230/dagrep.15.4.1",
+      "authors": [
+        "Chen, Haibo",
+        "Gavrilovska, Ada",
+        "Giceva, Jana",
+        "Spinczyk, Olaf"
+      ]
+    },
+    {
+      "title": "BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching",
+      "source_url": "http://arxiv.org/abs/2412.17246",
+      "year": 2024,
+      "published": "2024-12-23",
+      "canonical_id": "arXiv:2412.17246",
+      "arxiv_id": "2412.17246",
+      "authors": [
+        "D.L. Zhang",
+        "Haotian Wang",
+        "Liu Yang",
+        "Wei, Xingda",
+        "Yizhou Shan",
+        "Rong Chen",
+        "Haibo Chen"
+      ]
+    },
+    {
+      "title": "SYMPHONY: Improving Memory Management for LLM Inference Workloads",
+      "source_url": "http://arxiv.org/abs/2412.16434",
+      "year": 2024,
+      "published": "2024-12-21",
+      "canonical_id": "arXiv:2412.16434",
+      "arxiv_id": "2412.16434",
+      "authors": [
+        "Saurabh Agarwal",
+        "Anyong Mao",
+        "Aditya Akella",
+        "Shivaram Venkataraman"
+      ]
+    },
+    {
+      "title": "Deploying Foundation Model Powered Agent Services: A Survey",
+      "source_url": "http://arxiv.org/abs/2412.13437",
+      "year": 2024,
+      "published": "2024-12-18",
+      "canonical_id": "arXiv:2412.13437",
+      "arxiv_id": "2412.13437",
+      "authors": [
+        "Wenchao Xu",
+        "Chen, Jinyu",
+        "Peirong Zheng",
+        "Xianfeng Yi",
+        "Tianyi Tian",
+        "Wenhui Zhu",
+        "Quan Wan",
+        "Haozhao Wang",
+        "Fan, Yunfeng",
+        "Qinliang Su",
+        "Shen, Xuemin"
+      ]
+    },
+    {
+      "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption",
+      "source_url": "http://arxiv.org/abs/2405.14209",
+      "year": 2024,
+      "published": "2024-05-23",
+      "canonical_id": "arXiv:2405.14209",
+      "arxiv_id": "2405.14209",
+      "authors": [
+        "Xi Wang",
+        "Jie Liu",
+        "Jianbo Wu",
+        "Shuangyan Yang",
+        "Jie Ren",
+        "Bhanu Shankar",
+        "Dong Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.24653",
+      "identity_tokens": [
+        "id:arXiv:2607.24653",
+        "title:kimi k3 open frontier intelligence",
+        "url:https://arxiv.org/abs/2607.24653"
+      ],
+      "record": {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "source_url": "https://arxiv.org/abs/2607.24653",
+        "year": 2026,
+        "published": "2026-07-27",
+        "canonical_id": "arXiv:2607.24653",
+        "arxiv_id": "2607.24653",
+        "authors": [
+          "Kimi Team",
+          "Tongtong Bai",
+          "Yifan Bai",
+          "Yiping Bao",
+          "M. C.",
+          "Jianfeng Cai",
+          "Xinyuan Cai",
+          "Peizhou Cao",
+          "Yuxuan Cao",
+          "Ziwei Chai",
+          "Y. Charles",
+          "H. S. Che",
+          "Guanduo Chen",
+          "Guangyu Chen",
+          "Guanzheng Chen",
+          "Huarong Chen",
+          "Jia Chen",
+          "Jianlong Chen",
+          "Jun Chen",
+          "Kexin Chen",
+          "Peng Chen",
+          "Ruijue Chen",
+          "Wentao Chen",
+          "Xin Chen",
+          "Yang Chen",
+          "Yanru Chen",
+          "Yifei Chen",
+          "Yingjiang Chen",
+          "Yuankun Chen",
+          "Yujie Chen",
+          "Yutian Chen",
+          "Zhirong Chen",
+          "Dazhi Cheng",
+          "Yean Cheng",
+          "Jialei Cui",
+          "Jingbing Cui",
+          "Anqi Dai",
+          "Jiaqi Deng",
+          "Hao Ding",
+          "Rui Ding",
+          "Shaofeng Ding",
+          "Mengfan Dong",
+          "Mengnan Dong",
+          "Yuhao Dong",
+          "Yuxin Dong",
+          "Angang Du",
+          "Chenzhuang Du",
+          "Dikang Du",
+          "J. Du",
+          "Yulun Du",
+          "Yu Fan",
+          "Jing Feng",
+          "Qiulin Feng",
+          "Yichen Feng",
+          "Kelin Fu",
+          "Qiang Fu",
+          "高甫瑄",
+          "Hongcheng Gao",
+          "Jingyue Gao",
+          "Tong Gao",
+          "Weijia Gao",
+          "Shangyi Geng",
+          "Jie Gong",
+          "功 林戸",
+          "Shengao Gong",
+          "Xiaochen Gong",
+          "Qizheng Gu",
+          "Yicheng Gu",
+          "Shuhao Guan",
+          "Haiqing Guo",
+          "Shiqi Guo",
+          "Xiang Guo",
+          "Zhengyan Guo",
+          "Beixi Hao",
+          "Wenxin Hao",
+          "Xiaoru Hao",
+          "Dailan He",
+          "Haotian He",
+          "Lehan He",
+          "Qi He",
+          "Weiran He",
+          "Xinran He",
+          "Xinyi He",
+          "Yibo He",
+          "Yi He",
+          "Chao Hong",
+          "Tiange Hong",
+          "Hao Hu",
+          "Jiaxi Hu",
+          "Ruikun Hu",
+          "Weiming Hu",
+          "Yangyang Hu",
+          "Zhenxing Hu",
+          "Liang Hua",
+          "Jinbin Huang",
+          "Ke Huang",
+          "Ruiyuan Huang",
+          "Siying Huang",
+          "Weixiao Huang",
+          "Yan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17421",
+      "identity_tokens": [
+        "id:arXiv:2606.17421",
+        "title:bifrost hybrid teefhe inference for privacypreserving transformer and llm serving",
+        "url:https://arxiv.org/abs/2606.17421"
+      ],
+      "record": {
+        "title": "Bifrost: Hybrid TEE-FHE Inference for Privacy-Preserving Transformer and LLM Serving",
+        "source_url": "https://arxiv.org/abs/2606.17421",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "arXiv:2606.17421",
+        "arxiv_id": "2606.17421",
+        "authors": [
+          "Chenghao Chen",
+          "Kailun Qin",
+          "Xiaolin Zhang",
+          "Chi Zhang",
+          "Dawu Gu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31000",
+      "identity_tokens": [
+        "id:arXiv:2605.31000",
+        "title:hetccl enabling collective communication for mixedvendor heterogeneous clusters",
+        "url:https://arxiv.org/abs/2605.31000"
+      ],
+      "record": {
+        "title": "HetCCL: Enabling Collective Communication For Mixed-Vendor Heterogeneous Clusters",
+        "source_url": "https://arxiv.org/abs/2605.31000",
+        "year": 2026,
+        "published": "2026-05-29",
+        "canonical_id": "arXiv:2605.31000",
+        "arxiv_id": "2605.31000",
+        "authors": [
+          "Yuejie Wang",
+          "Tao Chang",
+          "Yuanyuan Zhao",
+          "Yulong Ao",
+          "Zeyu Gu",
+          "Zhiyu Li",
+          "Yanmin Jia",
+          "Yan Zhang",
+          "Mingjun Zhang",
+          "He Liu",
+          "Yongzhe He",
+          "Yonghua Lin",
+          "Guyue Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7213474877",
+      "identity_tokens": [
+        "id:OpenAlex:W7213474877",
+        "title:building open source inference serving systems",
+        "url:https://escholarship.org/uc/item/67d7q7df"
+      ],
+      "record": {
+        "title": "Building Open Source Inference Serving Systems",
+        "source_url": "https://escholarship.org/uc/item/67d7q7df",
+        "year": 2026,
+        "published": "2026-05-01",
+        "canonical_id": "OpenAlex:W7213474877",
+        "authors": [
+          "Xiangxi Mo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1360/nso/20260016/pdf",
+      "identity_tokens": [
+        "id:DOI:10.1360/nso/20260016/pdf",
+        "title:a survey on edge multimodal large models compression inference acceleration and applications",
+        "url:https://www.nso-journal.org/10.1360/nso/20260016/pdf"
+      ],
+      "record": {
+        "title": "A survey on edge multimodal large models: Compression, inference acceleration, and applications",
+        "source_url": "https://www.nso-journal.org/10.1360/nso/20260016/pdf",
+        "year": 2026,
+        "published": "2026-04-29",
+        "canonical_id": "DOI:10.1360/nso/20260016/pdf",
+        "doi": "10.1360/nso/20260016/pdf",
+        "authors": [
+          "Siru Chen",
+          "Yuanchao Shu",
+          "Cong Wang",
+          "Jiming Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23838",
+      "identity_tokens": [
+        "id:arXiv:2604.23838",
+        "title:jigsawrl assembling rl pipelines for efficient llm posttraining",
+        "url:https://arxiv.org/abs/2604.23838"
+      ],
+      "record": {
+        "title": "JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training",
+        "source_url": "https://arxiv.org/abs/2604.23838",
+        "year": 2026,
+        "published": "2026-04-26",
+        "canonical_id": "arXiv:2604.23838",
+        "arxiv_id": "2604.23838",
+        "authors": [
+          "Zhengding Hu",
+          "Hehua Ouyang",
+          "Chang Chen",
+          "Zaifeng Pan",
+          "Yue Guan",
+          "Zhongkai Yu",
+          "Zhen Wang",
+          "Steven Swanson",
+          "Yufei Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02442",
+      "identity_tokens": [
+        "id:arXiv:2604.02442",
+        "title:reflux reversible compute placement for cxlenabled storage",
+        "url:https://arxiv.org/abs/2604.02442"
+      ],
+      "record": {
+        "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+        "source_url": "https://arxiv.org/abs/2604.02442",
+        "year": 2026,
+        "published": "2026-04-02",
+        "canonical_id": "arXiv:2604.02442",
+        "arxiv_id": "2604.02442",
+        "authors": [
+          "Yanpeng Hu",
+          "Yiwei Yang",
+          "Yusheng Zheng",
+          "Estabon Ramos",
+          "Jianchang Su",
+          "Andi Quinn",
+          "Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.09578",
+      "identity_tokens": [
+        "id:arXiv:2602.09578",
+        "title:rollouttraining codesign for efficient llmbased multiagent reinforcement learning",
+        "url:http://arxiv.org/abs/2602.09578"
+      ],
+      "record": {
+        "title": "Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning",
+        "source_url": "http://arxiv.org/abs/2602.09578",
+        "year": 2026,
+        "published": "2026-02-10",
+        "canonical_id": "arXiv:2602.09578",
+        "arxiv_id": "2602.09578",
+        "authors": [
+          "Zhida Jiang",
+          "Zhaolong Xing",
+          "Jiawei Lu",
+          "Yipei Niu",
+          "Qingyuan Sang",
+          "Liangxu Zhang",
+          "Wenquan Dai",
+          "Junhua Shu",
+          "Jiaxing Wang",
+          "Qiangyu Pei",
+          "Qiong Chen",
+          "Xinyu Liu",
+          "Fangming Liu",
+          "Han Ai",
+          "Zhen Chen",
+          "Ke Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.22560",
+      "identity_tokens": [
+        "id:arXiv:2512.22560",
+        "title:rollart disaggregated multitask agentic rl training at scale",
+        "url:https://arxiv.org/abs/2512.22560"
+      ],
+      "record": {
+        "title": "RollArt: Disaggregated Multi-Task Agentic RL Training at Scale",
+        "source_url": "https://arxiv.org/abs/2512.22560",
+        "year": 2025,
+        "published": "2025-12-27",
+        "canonical_id": "arXiv:2512.22560",
+        "arxiv_id": "2512.22560",
+        "authors": [
+          "Wei Gao",
+          "Yuheng Zhao",
+          "Tianyuan Wu",
+          "Shaopan Xiong",
+          "Weixun Wang",
+          "Dakai An",
+          "Lunxi Cao",
+          "Dilxat Muhtar",
+          "Zichen Liu",
+          "Haizhou Zhao",
+          "Ju Huang",
+          "Siran Yang",
+          "Yongbin Li",
+          "Wenbo Su",
+          "Jiamang Wang",
+          "Qu Lin",
+          "Bo Zheng",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3772356.3772415",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772356.3772415",
+        "title:your network doesnt end at the nic",
+        "url:https://doi.org/10.1145/3772356.3772415"
+      ],
+      "record": {
+        "title": "Your network doesn't end at the NIC",
+        "source_url": "https://doi.org/10.1145/3772356.3772415",
+        "year": 2025,
+        "published": "2025-11-17",
+        "canonical_id": "DOI:10.1145/3772356.3772415",
+        "doi": "10.1145/3772356.3772415",
+        "authors": [
+          "Raj Joshi",
+          "Saksham Agarwal",
+          "ChonLam Lao",
+          "Minlan Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.27656",
+      "identity_tokens": [
+        "id:arXiv:2510.27656",
+        "title:fabriclib rdma pointtopoint communication for llm systems",
+        "url:https://arxiv.org/abs/2510.27656"
+      ],
+      "record": {
+        "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
+        "source_url": "https://arxiv.org/abs/2510.27656",
+        "year": 2025,
+        "published": "2025-10-31",
+        "canonical_id": "arXiv:2510.27656",
+        "arxiv_id": "2510.27656",
+        "authors": [
+          "Nandor Licker",
+          "K. H. Hu",
+          "Vladimir Zaytsev",
+          "Lequn Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.19670",
+      "identity_tokens": [
+        "id:arXiv:2510.19670",
+        "title:cosensellm semantics at the edge with cost and uncertaintyaware cloudedge cooperation",
+        "url:http://arxiv.org/abs/2510.19670"
+      ],
+      "record": {
+        "title": "CoSense-LLM: Semantics at the Edge with Cost- and Uncertainty-Aware Cloud-Edge Cooperation",
+        "source_url": "http://arxiv.org/abs/2510.19670",
+        "year": 2025,
+        "published": "2025-10-22",
+        "canonical_id": "arXiv:2510.19670",
+        "arxiv_id": "2510.19670",
+        "authors": [
+          "Hasan Akgül",
+          "Mari Eplik",
+          "Javier Rojas",
+          "Abdullah, Aina Binti",
+          "Pieter van der Merwe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.09343",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3731412",
+        "id:arXiv:2505.09343",
+        "title:insights into deepseekv3 scaling challenges and reflections on hardware for ai architectures",
+        "url:https://doi.org/10.1145/3695053.3731412"
+      ],
+      "record": {
+        "title": "Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures",
+        "source_url": "https://doi.org/10.1145/3695053.3731412",
+        "year": 2025,
+        "published": "2025-06-20",
+        "canonical_id": "arXiv:2505.09343",
+        "arxiv_id": "2505.09343",
+        "authors": [
+          "Chenggang Zhao",
+          "Chengqi Deng",
+          "Chong Ruan",
+          "Damai Dai",
+          "Huazuo Gao",
+          "Jiashi Li",
+          "Liyue Zhang",
+          "Panpan Huang",
+          "Shangyan Zhou",
+          "Shu-Chao Ma",
+          "Wenfeng Liang",
+          "Ying He",
+          "Yuqing Wang",
+          "Yuxuan Liu",
+          "Yen-Hsin Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3713082.3730392",
+      "identity_tokens": [
+        "id:DOI:10.1145/3713082.3730392",
+        "title:towards ml system extensibility",
+        "url:https://doi.org/10.1145/3713082.3730392"
+      ],
+      "record": {
+        "title": "Towards ML System Extensibility",
+        "source_url": "https://doi.org/10.1145/3713082.3730392",
+        "year": 2025,
+        "published": "2025-05-14",
+        "canonical_id": "DOI:10.1145/3713082.3730392",
+        "doi": "10.1145/3713082.3730392",
+        "authors": [
+          "Weixin Deng",
+          "Andy Ruan",
+          "Megan Frisella",
+          "Kai-Hsun Chen",
+          "SangBin Cho",
+          "Jack Tigar Humphries",
+          "Rui Qiao",
+          "Stephanie Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.05043",
+      "identity_tokens": [
+        "id:arXiv:2502.05043",
+        "title:ecoserve designing carbonaware ai inference systems",
+        "url:http://arxiv.org/abs/2502.05043"
+      ],
+      "record": {
+        "title": "EcoServe: Designing Carbon-Aware AI Inference Systems",
+        "source_url": "http://arxiv.org/abs/2502.05043",
+        "year": 2025,
+        "published": "2025-02-07",
+        "canonical_id": "arXiv:2502.05043",
+        "arxiv_id": "2502.05043",
+        "authors": [
+          "Yueying",
+          "Zhanqiu Hu",
+          "Esha Choukse",
+          "Rodrigo Fonseca",
+          "G. Edward Suh",
+          "Udit Gupta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4230/dagrep.15.4.1",
+      "identity_tokens": [
+        "id:DOI:10.4230/dagrep.15.4.1",
+        "title:disruptive memory technologies dagstuhl seminar 25151",
+        "url:https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1"
+      ],
+      "record": {
+        "title": "Disruptive Memory Technologies (Dagstuhl Seminar 25151)",
+        "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "DOI:10.4230/dagrep.15.4.1",
+        "doi": "10.4230/dagrep.15.4.1",
+        "authors": [
+          "Chen, Haibo",
+          "Gavrilovska, Ada",
+          "Giceva, Jana",
+          "Spinczyk, Olaf"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.17246",
+      "identity_tokens": [
+        "id:arXiv:2412.17246",
+        "title:blitzscale fast and live large model autoscaling with o1 host caching",
+        "url:http://arxiv.org/abs/2412.17246"
+      ],
+      "record": {
+        "title": "BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching",
+        "source_url": "http://arxiv.org/abs/2412.17246",
+        "year": 2024,
+        "published": "2024-12-23",
+        "canonical_id": "arXiv:2412.17246",
+        "arxiv_id": "2412.17246",
+        "authors": [
+          "D.L. Zhang",
+          "Haotian Wang",
+          "Liu Yang",
+          "Wei, Xingda",
+          "Yizhou Shan",
+          "Rong Chen",
+          "Haibo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.16434",
+      "identity_tokens": [
+        "id:arXiv:2412.16434",
+        "title:symphony improving memory management for llm inference workloads",
+        "url:http://arxiv.org/abs/2412.16434"
+      ],
+      "record": {
+        "title": "SYMPHONY: Improving Memory Management for LLM Inference Workloads",
+        "source_url": "http://arxiv.org/abs/2412.16434",
+        "year": 2024,
+        "published": "2024-12-21",
+        "canonical_id": "arXiv:2412.16434",
+        "arxiv_id": "2412.16434",
+        "authors": [
+          "Saurabh Agarwal",
+          "Anyong Mao",
+          "Aditya Akella",
+          "Shivaram Venkataraman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.13437",
+      "identity_tokens": [
+        "id:arXiv:2412.13437",
+        "title:deploying foundation model powered agent services a survey",
+        "url:http://arxiv.org/abs/2412.13437"
+      ],
+      "record": {
+        "title": "Deploying Foundation Model Powered Agent Services: A Survey",
+        "source_url": "http://arxiv.org/abs/2412.13437",
+        "year": 2024,
+        "published": "2024-12-18",
+        "canonical_id": "arXiv:2412.13437",
+        "arxiv_id": "2412.13437",
+        "authors": [
+          "Wenchao Xu",
+          "Chen, Jinyu",
+          "Peirong Zheng",
+          "Xianfeng Yi",
+          "Tianyi Tian",
+          "Wenhui Zhu",
+          "Quan Wan",
+          "Haozhao Wang",
+          "Fan, Yunfeng",
+          "Qinliang Su",
+          "Shen, Xuemin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14209",
+      "identity_tokens": [
+        "id:arXiv:2405.14209",
+        "title:exploring and evaluating realworld cxl use cases and system adoption",
+        "url:http://arxiv.org/abs/2405.14209"
+      ],
+      "record": {
+        "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption",
+        "source_url": "http://arxiv.org/abs/2405.14209",
+        "year": 2024,
+        "published": "2024-05-23",
+        "canonical_id": "arXiv:2405.14209",
+        "arxiv_id": "2405.14209",
+        "authors": [
+          "Xi Wang",
+          "Jie Liu",
+          "Jianbo Wu",
+          "Shuangyan Yang",
+          "Jie Ren",
+          "Bhanu Shankar",
+          "Dong Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c666b7ff98b4a20100547f15af6fdfc6503f4dfadcc133678b9dde47dce69aea",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

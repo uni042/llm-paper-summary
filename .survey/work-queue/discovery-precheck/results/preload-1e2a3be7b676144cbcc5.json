@@ -1,0 +1,826 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-1e2a3be7b676144cbcc5",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-1e2a3be7b676144cbcc5",
+  "axis": "forward citations of H2O KV cache eviction and efficient inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "60",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1662eff13fd87da48e45e402a542d6286eca32df",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 39,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T06:36:23.025069+00:00",
+  "preload_id": "preload-1e2a3be7b676144cbcc5",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/62fcc3bb6dd7b2e32480a294dae7c3d0af474c8e",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+      "canonical_id": "arXiv:2609.28870",
+      "arxiv_id": "2609.28870",
+      "authors": [
+        "Yi-Yu Liu",
+        "Min-Lan Yu",
+        "Jun-Cheng Yang"
+      ]
+    },
+    {
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "source_url": "https://www.semanticscholar.org/paper/e841dbae23749051b146f3bcaefcfa814054adb9",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+      "canonical_id": "arXiv:2609.29913",
+      "arxiv_id": "2609.29913",
+      "authors": [
+        "You-Peng Zhao",
+        "Tian Tan",
+        "Li-Qian Peng",
+        "Jun Wang",
+        "Alec Go"
+      ]
+    },
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://www.semanticscholar.org/paper/97415bd104fa65efa04311bef0cae046f5d79849",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, \\textsc{FlashLoop} delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "authors": [
+        "Wan-Qi Yang",
+        "Shi-Wei Liu"
+      ]
+    },
+    {
+      "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+      "source_url": "https://www.semanticscholar.org/paper/ee2abeac59a13fcd3ae65ef0929a4a51f4de7bf0",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long horizon language model agents continually accumulate reasoning history, increasing context length and inference cost even after earlier decisions have been executed and observed. Unlike static Chain of Thought compression, removing historical reasoning can change future actions and the resulting interaction trajectory. We study when such reasoning can be safely forgotten. We propose Interaction Aware Compression for Long Horizon Reasoning (ICLR), a training free online method that ranks reasoning blocks using frozen proxy entropy while preserving actions, tool calls, and observations. On 260 WorkBuddyBench tasks, ICLR improves average reward from 0.699 to 0.718, while reducing input, output, and cache read tokens by 25.5%, 14.4%, and 33.3%, respectively. Ablations reveal trajectory amplification, where local reasoning deletion produces nonlinear changes in total computation by altering subsequent interaction. Representation probing, activation patching, and controlled trajectory analyses further suggest that historical reasoning becomes more replaceable once task relevant derived state has been reliably externalized into code, files, tool outputs, or environmental feedback. These results characterize agent reasoning as dynamic working state rather than permanent interaction history.",
+      "canonical_id": "arXiv:2609.29875",
+      "arxiv_id": "2609.29875",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Fei Luo",
+        "Bo Wang",
+        "Guo-Run Yao",
+        "Ying-Long Guo",
+        "Chao Ning",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ]
+    },
+    {
+      "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+      "source_url": "https://www.semanticscholar.org/paper/f13b63106225f74ab252503f44d7b84eb6d4d2eb",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+      "canonical_id": "arXiv:2609.27276",
+      "arxiv_id": "2609.27276",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Bo Wang",
+        "Fei Luo",
+        "Guo-Run Yao",
+        "Chao Ning",
+        "Ying-Long Guo",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ]
+    },
+    {
+      "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+      "source_url": "https://www.semanticscholar.org/paper/2d139ad26a47df5c417812774161eba65924ceb0",
+      "year": 2026,
+      "published": "2026-09-20",
+      "abstract": "Long-context language models interface with external knowledge through raw natural language. In retrieval-augmented systems, this creates a persistent index-payload schism: dense vectors enable searchable routing, but models must re-ingest lengthy text payloads for reasoning at O(N^2) attention cost. Existing compression methods further produce private states tied to specific architectures. We introduce Machine-Interpretable Information (MII), the first agent-to-agent (A2A) document-to-state protocol. A dual-timescale state-space Writer compiles documents into a canonical, fixed-bandwidth state (56 tokens), and a lightweight Translator maps it into any frozen Reader's embedding space, reducing query-time cost to O(K). The resulting .mii artifact unifies Retrieval (searchable geometry), Reasoning (global memory), and Reconstruction (grounded details) in a single transferable medium. We demonstrate strong cross-model interoperability across heterogeneous LLMs (e.g., Llama, Qwen, Mistral) -- despite the Writer using a legacy GPT-2 vocabulary, forcing genuine semantic translation rather than token-level memorization. Mechanistic probes reveal modular latent structure: entity representations can be causally traced and zero-shot transplanted between unrelated document states while remaining decodable. To address lexical reconstruction under fixed bandwidth, we propose Residual-MII, a cache hierarchy combining compiled global memory with sparse local evidence. On HotpotQA (7,405 queries), Residual-MII exceeds full-context Exact Match at approximately 7% of the attention FLOPs, suggesting a paradigm shift toward compiled, transferable neural document formats.",
+      "canonical_id": "arXiv:2609.23371",
+      "arxiv_id": "2609.23371",
+      "authors": [
+        "Yi-Fan Wang",
+        "De-Jing Dou"
+      ]
+    },
+    {
+      "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+      "source_url": "https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+      "canonical_id": "arXiv:2609.20068",
+      "arxiv_id": "2609.20068",
+      "authors": [
+        "Caroline Gans Combe"
+      ]
+    },
+    {
+      "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+      "source_url": "https://www.semanticscholar.org/paper/4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "KV-cache eviction perturbs the conditional token distributions governing autoregressive generation. We investigate how first-divergence timing and subsequent token mismatch determine cumulative disagreement. We derive an exact decomposition under a specified stepwise maximal coupling: the expected mismatch fraction equals a first-mismatch contribution plus post-divergence exposure multiplied by its mismatch rate. An explicit construction over unrestricted autoregressive kernel pairs realizes the sharp interval of risks compatible with a finite divergence-aligned observation window. Residual-branch conditional Monte Carlo provides unbiased joint estimates of occurrence, occupation, and window/tail contributions, with per-replicate variance dominance for total token loss. Complete trajectories from Meta-Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct show that SnapKV at 50% retention enters divergence later and less often than SnapKV-512 or recent-token retention with the same 50% prompt-cache budget, while post-divergence total variation (TV) remains high. In an exploratory analysis of 288 documents, post-divergence exposure accounts for 85-90% of four aggregate mismatch gaps. On 288 independent documents at 90% retention, prespecified comparisons show higher branch-aligned TV in the late than in the early window in both models.",
+      "canonical_id": "arXiv:2609.16617",
+      "arxiv_id": "2609.16617",
+      "authors": [
+        "Xin-Yue Luo",
+        "Fei Yu"
+      ]
+    },
+    {
+      "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/9e9c29525e334d6bf0c120f4d4b7413d18d26d24",
+      "year": 2026,
+      "published": "2026-09-13",
+      "abstract": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+      "canonical_id": "arXiv:2609.14258",
+      "arxiv_id": "2609.14258",
+      "authors": [
+        "Mohd. Azfar",
+        "I. Khan"
+      ]
+    },
+    {
+      "title": "State of Thought Enables Endogenous Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/7204d16bef08b14333af7a6094a713fe287858fe",
+      "year": 2026,
+      "published": "2026-09-13",
+      "abstract": "Test-time compute has emerged as a major approach to improving the capabilities of Large Language Models (LLMs). However, existing test-time reasoning paradigms rely heavily on externally imposed control, either through fixed reasoning programs or through costly expansion in constrained search spaces, limiting both generalization and efficiency. We propose State of Thought (SoT), a new reasoning paradigm that enables endogenous reasoning in LLMs, with the model's internal reasoning state governing how reasoning unfolds. Concretely, SoT extracts a compact dynamics-geometric state from the model's internal information transfer and uses a 582-parameter controller on frozen backbones to selectively activate historical reasoning support useful under the current reasoning state, framing reasoning as a state-conditioned process over evidence rather than an externally prescribed token chain. Across quantitative (1.34x), general (1.62x), symbolic-and-code (1.76x), and long-context (2.51x) reasoning on 3 LLMs and 16 datasets, SoT consistently improves mean-baseline accuracy while reducing generated tokens by 62.6% and end-to-end latency by 44.6%. Across 2 VLM scales and 3 reasoning tasks, it improves mean accuracy by 3.8 points over reasoning baselines, with 74.9% fewer completion tokens and 73.5% lower latency than search-based methods. Under constrained access, SoT retains 38.2%/36.5% mean accuracy gains in training-free/embedding-only settings, while trajectory-only judging reaches 84.1% agreement across 3 API models. Together, endogenous state-driven reasoning provides a generalizable and efficient alternative.",
+      "canonical_id": "arXiv:2609.16055",
+      "arxiv_id": "2609.16055",
+      "authors": [
+        "Z. Gong",
+        "Yi-Kun Hou",
+        "Zi-Hao Zeng",
+        "Ming-Gan Xiao",
+        "Chau Yuen",
+        "Wei Yang Bryan Lim"
+      ]
+    },
+    {
+      "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+      "source_url": "https://www.semanticscholar.org/paper/fe450d7b24fdcf92c1cb68c69df72ca24cbceb9a",
+      "year": 2026,
+      "published": "2026-09-06",
+      "abstract": "An assistant can stop repeating a deleted statement while its recurrent memory still carries that statement's influence. We examine this distinction by saving the state difference immediately after a record, transporting this receipt through later updates, and comparing the correction with the state built from the same conversation with the record omitted. Unrolling the recurrence gives an exact criterion: transport reaches this never-stored state if and only if the additional differences created by later updates cancel after transport. We connect this criterion to eleven conditions on 40 prospectively selected synthetic Kimi Linear contexts, with 40 separate calibration contexts and paired whole-record uncertainty estimates. Attention masking removed all 40 exact greedy target answers, yet a fixed three-query candidate-scoring attack attained AUC 0.740 (95% interval 0.695--0.809); the measured false-positive rate was 7.5%. Prompt-only forgetting still returned 33 of the 40 targets. Checkpoint replay matched the complete declared active state and audit logits in all 80 contexts, while preserving all 120 retained answers in the evaluation cohort. An independent Qwen cohort and matched original-bf16/8-bit Kimi controls confirmed native transport mismatch above their empirical arithmetic floors. Replay also supported record replacement and sequential deletion with an intervening admission. These results provide a practical audit of both the requested memory change and the assistant's remaining behavior, with replay work determined by the surviving suffix.",
+      "canonical_id": "arXiv:2609.06872",
+      "arxiv_id": "2609.06872",
+      "authors": [
+        "V. Ramesh"
+      ]
+    },
+    {
+      "title": "Compression Remembers the Detour: How Context Compression Amplifies Off-Task Content and Derails LLM Agents",
+      "source_url": "https://www.semanticscholar.org/paper/5e933664c24804004fb23a191907c8c8f1a8516c",
+      "year": 2026,
+      "published": "2026-09-05",
+      "abstract": "Long-horizon LLM agents rely on context compression to keep growing histories within a finite window [1][2]. These mechanisms are goal-agnostic—retention follows volume, recurrence, and generic salience rather than task relevance—and we show they systematically amplify off-task content, inducing Compression-Induced Goal Drift (CIGD). We formalize CIGD via the drift amplification ratio (DAR), evaluate six compression strategies on a controlled injection benchmark ( per cell), and propose Goal-Anchored Compression (GAC): a pinned goal anchor, a negation ledger, status-aware retention scoring, and drift re-anchoring. Volume- and recurrence-based compressors amplify detours monotonically with repetition (attention-scored eviction reaches  at twelve-fold repetition), while query-conditioned compressors de-amplify. Under severe budgets, summarization and scored eviction lose the user’s negated constraint in  and  of episodes where GAC retains it in ; GAC eliminates residual detour content () with  smaller contexts. Prior work asks what compression forgets [3][4]; we ask what it amplifies.",
+      "canonical_id": "DOI:10.62177/apemr.v3i4.1704",
+      "doi": "10.62177/apemr.v3i4.1704",
+      "authors": [
+        "Zhan Zhang",
+        "Wen-Zhi Zhang"
+      ]
+    },
+    {
+      "title": "RenderFormer-V2: Neural Rendering with Heterogeneous Scene Primitives",
+      "source_url": "https://www.semanticscholar.org/paper/04e5ad44902b155634e709a3245a326ba2da878d",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "We present'RenderFormer-V2', a unified learned transformer-based neural rendering model, complementary to modern physics-based rendering systems, that can handle diverse light-transport effects such as caustics, volumetric scattering, environment lighting, textured and displaced surfaces and out-of-distribution materials without per-scene training or specialized code. RenderFormer-V2 models global light transport as a sequence-to-sequence transformation. Following its predecessor, RenderFormer-V2 also employs a two stage process: a view-independent stage that resolves intra-scene primitive to primitive transport, and a view-dependent stage that transforms the internal neural scene representation into image pixels. Different from RenderFormer, our model employs a novel combined windowed-attention and rendering-informed attention sink in the view-independent stage to improve scalability while maintaining render accuracy. To further improve versatility, RenderFormerV2 supports heterogeneous scene primitives, including environment maps and participating media, and it employs a material encoding independent of the underlying surface reflectance model that encodes material appearance via a novel neural embedding. We demonstrate the versatility of RenderFormer-V2 on a variety of scenes and perform an extensive ablation of the improved attention mechanism.",
+      "canonical_id": "arXiv:2609.05738",
+      "arxiv_id": "2609.05738",
+      "authors": [
+        "Chong Zeng",
+        "Yue Dong",
+        "P. Peers",
+        "Lvmin Zhang",
+        "Maneesh Agrawala"
+      ]
+    },
+    {
+      "title": "ALISTA: Accelerator using LSH-based maximum inner-product search in transformer attention",
+      "source_url": "https://www.semanticscholar.org/paper/6fae1cc278033e7c6031da4ff819c53236638270",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.vlsi.2026.102784",
+      "doi": "10.1016/j.vlsi.2026.102784",
+      "authors": [
+        "Shin Sunny",
+        "Satyajit Das"
+      ]
+    },
+    {
+      "title": "Safin-1: Safety from Within through Memory-Native State Evolution",
+      "source_url": "https://www.semanticscholar.org/paper/2eb05c5cb8f028f498205e7c999db88d8763118c",
+      "year": 2026,
+      "published": "2026-08-31",
+      "abstract": "Long-horizon complex tasks require foundation models to accumulate information, maintain internal states, and adapt over extended interactions. Safety should be an intrinsic property of the model itself, rather than a behavioral constraint relying solely on external safeguards or post-hoc alignment such as supervised fine-tuning. This motivates Safety from Within, where safety-relevant capabilities are represented and invoked through the model's native computation. We present Safin-1, a family of foundation models realizing this principle through memory routing and state evolution. Safin-1 is built on Memory-Anchor Routing across Context History (MARCH), a network architecture that maintains structured memory states and selectively retrieves relevant historical information through content-conditioned routing. It supports test-time adaptation of persistent capability states without repeatedly modifying the backbone, enabling controlled specialization over a shared foundation. We investigate this interface on downstream safety tasks through a Safety State, demonstrating effective state-based adaptation with substantial safety improvements. More broadly, the routed-state interface unifies contextual memory and persistent capability adaptation within the model's native computation, reframing memory from a passive record of prior context into an active substrate for maintaining and evolving model behavior. Evaluations across general capabilities, long-context understanding, retrieval, and efficiency further validate Safin-1. These findings provide a path toward safety as a state-native and adaptively maintainable capability. This work is only an initial architectural exploration of Safety from Within, and substantial further work is needed to realize this broader vision.",
+      "canonical_id": "arXiv:2609.00092",
+      "arxiv_id": "2609.00092",
+      "authors": [
+        "Ming Zhang",
+        "Kai-Sen Yang",
+        "Shu Yu",
+        "Ermo Hua",
+        "Zhe-Kai Chen",
+        "Cheng Jin",
+        "Jing-Nan Zheng",
+        "Yi Zhang",
+        "Zhongtian Ma",
+        "Jia-Wei Zhou",
+        "Sirui Chen",
+        "Qiaosheng Zhang",
+        "Xiang Wang",
+        "Ning Ding",
+        "Xia Hu",
+        "Bowen Zhou",
+        "Youbang Sun",
+        "Chaochao Lu"
+      ]
+    },
+    {
+      "title": "RECAP-Forcing: Retaining Content Appearances for Long Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/fd1a2582d4714287b5f366ea1bcc85d4963eb3cb",
+      "year": 2026,
+      "published": "2026-08-27",
+      "abstract": "Long autoregressive video generation faces a fundamental memory challenge: with a finite attention window, a model must decide which information from an ever-expanding history to retain. Existing methods organize memory temporally, preserving recent frames while compressing or discarding older ones. We instead propose RECAP-Forcing, organizing memory by appearance novelty. A long video is not merely a sequence of frames, but an evolving cast of subjects, objects, and scenes whose identities must remain consistent over time. We organize memory by retaining the KV cache associated with newly appearing content--such as entering subjects, disoccluded regions, and newly introduced scenes--at the moment it first becomes visible, prioritizing novelty over recency. Memory should scale with the amount of newly introduced content, rather than with video length. This appearance-indexed memory makes long-range consistency an explicit property of the memory structure. Our framework unifies two mechanisms under this single principle. At the beginning of a video, when all visible content is novel, an attention sink preserves the initial scene. As the video evolves, an optical-flow-based novelty bank extends the same principle by selectively retaining newly revealed content. As a training-free inference method with no additional learnable parameters, RECAP-Forcing consistently improves visual quality and semantic fidelity across multiple strong baselines and outperforms existing memory methods.",
+      "canonical_id": "arXiv:2608.26671",
+      "arxiv_id": "2608.26671",
+      "authors": [
+        "Haiyang Xu",
+        "Zheng Ding",
+        "Zhuowen Tu"
+      ]
+    },
+    {
+      "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+      "source_url": "https://www.semanticscholar.org/paper/0b60c7a703887f7bccac15f58892a05afc3f7283",
+      "year": 2026,
+      "published": "2026-08-26",
+      "abstract": "Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.",
+      "canonical_id": "arXiv:2608.25479",
+      "arxiv_id": "2608.25479",
+      "authors": [
+        "Shiqian Li",
+        "Chenguo Lin",
+        "Zhi-Guang Liu",
+        "Yu Tang",
+        "Jiarong Ou",
+        "Ruidong Chen",
+        "Yi-Xin Zhu"
+      ]
+    },
+    {
+      "title": "HCC+: Hyperbolic Guarding for Certified Attention Retrieval",
+      "source_url": "https://www.semanticscholar.org/paper/2e41f0895e0690b3317dc1120a60e572ae658bc6",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "We study the Lipschitz stability of attention retrieval in hyperbolic spaces. Existing methods lack deterministic guarantees on attention-weight preservation under finite-precision representations. We introduce HCC+, a theoretical framework exploiting three properties of the Poincar\\'e ball: exponential volume growth enabling query-independent boundary truncation; logarithmic covering radius of hyperbolic 1-centers enabling dimension-independent critical-key identification; and a packing bound with constants independent of the embedding dimension. We prove two deterministic guarantees: for exact retrieval, the per-layer attention deviation is bounded by 10\\% of its ideal value; for soft attention, the total variation distance decays as $O(1/\\sqrt{n})$, the rate of finite-sample variance. As a consequence of the guarding mechanism, the framework achieves a storage reduction factor of $6.1\\times$ relative to FP16. We provide the first deterministic, query-independent retrieval certificate in non-Euclidean geometry.",
+      "canonical_id": "arXiv:2608.24971",
+      "arxiv_id": "2608.24971",
+      "authors": [
+        "Liangchen Ge"
+      ]
+    },
+    {
+      "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/d3a4ed2fb46647db4b41c0f47bbd8e08f09ccae3",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Token compression has become a key technique for reducing the inference cost of large foundation models, with approaches such as token pruning and KV-cache reuse widely adopted in vision-language models and recently explored for embodied agents. In embodied agents, tokens not only support perception and semantic understanding but also directly affect latency-sensitive closed-loop robot action prediction. Existing schemes typically guide compression using redundancy or importance cues, such as visual similarity, attention scores, and saliency. However, these cues only indirectly measure the key factor for safe compression: how much a token can change before causing an unacceptable deviation in downstream actions. This receiver-dependent tolerance is closely related to the principle of just noticeable difference (JND). Classical JND characterizes signal tolerance in the human visual system, while machine-oriented JND extends this concept to downstream machine responses. Building on this progression, we introduce Action-JND, which extends JND modeling to embodied perception by defining noticeability through the language-conditioned action response of a vision-language-action (VLA) policy in closed-loop control. A token change is considered admissible only when the induced action deviation remains within a tolerated margin. To realize this concept, we develop a lightweight token-wise JND estimator in deep visual-feature space to predict the maximum tolerable perturbation while preserving policy responses. The resulting action-tolerance score serves as a plug-and-play criterion for VLA compression paradigms, including stale-KV reuse and token pruning, prioritizing action-tolerant tokens for compression. Experiments on the LIBERO benchmark with OpenVLA and OpenVLA-OFT demonstrate that Action-JND consistently improves compression reliability, especially under aggressive compression ratios.",
+      "canonical_id": "arXiv:2608.21247",
+      "arxiv_id": "2608.21247",
+      "authors": [
+        "Zhuo-Yuan Li",
+        "Rui Zhao",
+        "Jin Wang",
+        "Han-Wei Zhu",
+        "Cong Zhang",
+        "Giuseppe Valenzise",
+        "Weisi Lin",
+        "Kin-Man Lam"
+      ]
+    },
+    {
+      "title": "Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies",
+      "source_url": "https://www.semanticscholar.org/paper/507f76a300dcdd9d38e489ee6e8ca36bb733491a",
+      "year": 2026,
+      "published": "2026-08-19",
+      "abstract": "Vision-Language-Action (VLA) models process long multimodal token sequences, making inference expensive in both memory and computation. Existing efficiency methods mainly reduce visual tokens, but aggressive token pruning becomes fragile because removing a token discards its entire representation. Sub-token compression provides a complementary alternative by retaining more tokens while reducing their value width. However, directly applying sub-token compression to VLA policies is less effective because information important for perception, language understanding, and control is distributed differently across the multimodal representation. We introduce Role-Conditioned Sub-Token Routing (RoleSub), which learns how to compress the value representations of retained tokens. After visual token reduction, RoleSub partitions each retained value representation into groups in an orthogonal space and uses a lightweight router to determine which groups should be preserved. The routing decision is conditioned on the token representation, a learned latent role representation, and language context. The same mechanism can also be applied to language values, allowing visual and language representations to be compressed without removing additional tokens. We evaluate RoleSub on OpenVLA-OFT-7B across the four LIBERO suites. At matched visual-KV budgets, RoleSub outperforms a trained token-only control in 33 of 36 settings, with the largest gains under aggressive compression. Combining visual and language compression reduces total KV to 9.2--11.3% of the original while retaining strong control performance on most tasks. These results show that reducing the representation within retained tokens provides an effective complement to token pruning for aggressive VLA compression.",
+      "canonical_id": "arXiv:2608.18410",
+      "arxiv_id": "2608.18410",
+      "authors": [
+        "Wei Jiang",
+        "Wei Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.28870",
+      "identity_tokens": [
+        "id:arXiv:2609.28870",
+        "title:when fancy eviction fails rethinking cache replacement for llm prefix reuse",
+        "url:https://www.semanticscholar.org/paper/62fcc3bb6dd7b2e32480a294dae7c3d0af474c8e"
+      ],
+      "record": {
+        "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/62fcc3bb6dd7b2e32480a294dae7c3d0af474c8e",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+        "canonical_id": "arXiv:2609.28870",
+        "arxiv_id": "2609.28870",
+        "authors": [
+          "Yi-Yu Liu",
+          "Min-Lan Yu",
+          "Jun-Cheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29913",
+      "identity_tokens": [
+        "id:arXiv:2609.29913",
+        "title:milo efficient manyshot incontext learning with blockwise lowrank compression",
+        "url:https://www.semanticscholar.org/paper/e841dbae23749051b146f3bcaefcfa814054adb9"
+      ],
+      "record": {
+        "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+        "source_url": "https://www.semanticscholar.org/paper/e841dbae23749051b146f3bcaefcfa814054adb9",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+        "canonical_id": "arXiv:2609.29913",
+        "arxiv_id": "2609.29913",
+        "authors": [
+          "You-Peng Zhao",
+          "Tian Tan",
+          "Li-Qian Peng",
+          "Jun Wang",
+          "Alec Go"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29812",
+      "identity_tokens": [
+        "id:arXiv:2609.29812",
+        "title:flashloop fast and memoryefficient looped transformers via lazy updates",
+        "url:https://www.semanticscholar.org/paper/97415bd104fa65efa04311bef0cae046f5d79849"
+      ],
+      "record": {
+        "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+        "source_url": "https://www.semanticscholar.org/paper/97415bd104fa65efa04311bef0cae046f5d79849",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, \\textsc{FlashLoop} delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+        "canonical_id": "arXiv:2609.29812",
+        "arxiv_id": "2609.29812",
+        "authors": [
+          "Wan-Qi Yang",
+          "Shi-Wei Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29875",
+      "identity_tokens": [
+        "id:arXiv:2609.29875",
+        "title:when can agents forget their reasoning iclr for longhorizon agent context compression",
+        "url:https://www.semanticscholar.org/paper/ee2abeac59a13fcd3ae65ef0929a4a51f4de7bf0"
+      ],
+      "record": {
+        "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+        "source_url": "https://www.semanticscholar.org/paper/ee2abeac59a13fcd3ae65ef0929a4a51f4de7bf0",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long horizon language model agents continually accumulate reasoning history, increasing context length and inference cost even after earlier decisions have been executed and observed. Unlike static Chain of Thought compression, removing historical reasoning can change future actions and the resulting interaction trajectory. We study when such reasoning can be safely forgotten. We propose Interaction Aware Compression for Long Horizon Reasoning (ICLR), a training free online method that ranks reasoning blocks using frozen proxy entropy while preserving actions, tool calls, and observations. On 260 WorkBuddyBench tasks, ICLR improves average reward from 0.699 to 0.718, while reducing input, output, and cache read tokens by 25.5%, 14.4%, and 33.3%, respectively. Ablations reveal trajectory amplification, where local reasoning deletion produces nonlinear changes in total computation by altering subsequent interaction. Representation probing, activation patching, and controlled trajectory analyses further suggest that historical reasoning becomes more replaceable once task relevant derived state has been reliably externalized into code, files, tool outputs, or environmental feedback. These results characterize agent reasoning as dynamic working state rather than permanent interaction history.",
+        "canonical_id": "arXiv:2609.29875",
+        "arxiv_id": "2609.29875",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Fei Luo",
+          "Bo Wang",
+          "Guo-Run Yao",
+          "Ying-Long Guo",
+          "Chao Ning",
+          "Hong-Yue Chen",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27276",
+      "identity_tokens": [
+        "id:arXiv:2609.27276",
+        "title:drsr learning setlevel deletion risk for efficient longhorizon agents",
+        "url:https://www.semanticscholar.org/paper/f13b63106225f74ab252503f44d7b84eb6d4d2eb"
+      ],
+      "record": {
+        "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+        "source_url": "https://www.semanticscholar.org/paper/f13b63106225f74ab252503f44d7b84eb6d4d2eb",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+        "canonical_id": "arXiv:2609.27276",
+        "arxiv_id": "2609.27276",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Bo Wang",
+          "Fei Luo",
+          "Guo-Run Yao",
+          "Chao Ning",
+          "Ying-Long Guo",
+          "Hong-Yue Chen",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23371",
+      "identity_tokens": [
+        "id:arXiv:2609.23371",
+        "title:machineinterpretable information compiling documents into searchable and readable protocol states",
+        "url:https://www.semanticscholar.org/paper/2d139ad26a47df5c417812774161eba65924ceb0"
+      ],
+      "record": {
+        "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+        "source_url": "https://www.semanticscholar.org/paper/2d139ad26a47df5c417812774161eba65924ceb0",
+        "year": 2026,
+        "published": "2026-09-20",
+        "abstract": "Long-context language models interface with external knowledge through raw natural language. In retrieval-augmented systems, this creates a persistent index-payload schism: dense vectors enable searchable routing, but models must re-ingest lengthy text payloads for reasoning at O(N^2) attention cost. Existing compression methods further produce private states tied to specific architectures. We introduce Machine-Interpretable Information (MII), the first agent-to-agent (A2A) document-to-state protocol. A dual-timescale state-space Writer compiles documents into a canonical, fixed-bandwidth state (56 tokens), and a lightweight Translator maps it into any frozen Reader's embedding space, reducing query-time cost to O(K). The resulting .mii artifact unifies Retrieval (searchable geometry), Reasoning (global memory), and Reconstruction (grounded details) in a single transferable medium. We demonstrate strong cross-model interoperability across heterogeneous LLMs (e.g., Llama, Qwen, Mistral) -- despite the Writer using a legacy GPT-2 vocabulary, forcing genuine semantic translation rather than token-level memorization. Mechanistic probes reveal modular latent structure: entity representations can be causally traced and zero-shot transplanted between unrelated document states while remaining decodable. To address lexical reconstruction under fixed bandwidth, we propose Residual-MII, a cache hierarchy combining compiled global memory with sparse local evidence. On HotpotQA (7,405 queries), Residual-MII exceeds full-context Exact Match at approximately 7% of the attention FLOPs, suggesting a paradigm shift toward compiled, transferable neural document formats.",
+        "canonical_id": "arXiv:2609.23371",
+        "arxiv_id": "2609.23371",
+        "authors": [
+          "Yi-Fan Wang",
+          "De-Jing Dou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20068",
+      "identity_tokens": [
+        "id:arXiv:2609.20068",
+        "title:marginal utility matrix factorization and the keyvalue kv cache a unified informationeconomic framework for sovereign geomining inference",
+        "url:https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850"
+      ],
+      "record": {
+        "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+        "source_url": "https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+        "canonical_id": "arXiv:2609.20068",
+        "arxiv_id": "2609.20068",
+        "authors": [
+          "Caroline Gans Combe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16617",
+      "identity_tokens": [
+        "id:arXiv:2609.16617",
+        "title:divergence timing and cumulative disagreement under kvcache eviction",
+        "url:https://www.semanticscholar.org/paper/4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4"
+      ],
+      "record": {
+        "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+        "source_url": "https://www.semanticscholar.org/paper/4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "KV-cache eviction perturbs the conditional token distributions governing autoregressive generation. We investigate how first-divergence timing and subsequent token mismatch determine cumulative disagreement. We derive an exact decomposition under a specified stepwise maximal coupling: the expected mismatch fraction equals a first-mismatch contribution plus post-divergence exposure multiplied by its mismatch rate. An explicit construction over unrestricted autoregressive kernel pairs realizes the sharp interval of risks compatible with a finite divergence-aligned observation window. Residual-branch conditional Monte Carlo provides unbiased joint estimates of occurrence, occupation, and window/tail contributions, with per-replicate variance dominance for total token loss. Complete trajectories from Meta-Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct show that SnapKV at 50% retention enters divergence later and less often than SnapKV-512 or recent-token retention with the same 50% prompt-cache budget, while post-divergence total variation (TV) remains high. In an exploratory analysis of 288 documents, post-divergence exposure accounts for 85-90% of four aggregate mismatch gaps. On 288 independent documents at 90% retention, prespecified comparisons show higher branch-aligned TV in the late than in the early window in both models.",
+        "canonical_id": "arXiv:2609.16617",
+        "arxiv_id": "2609.16617",
+        "authors": [
+          "Xin-Yue Luo",
+          "Fei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14258",
+      "identity_tokens": [
+        "id:arXiv:2609.14258",
+        "title:spark representationlevel kv memory alignment for safer visionlanguage models",
+        "url:https://www.semanticscholar.org/paper/9e9c29525e334d6bf0c120f4d4b7413d18d26d24"
+      ],
+      "record": {
+        "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/9e9c29525e334d6bf0c120f4d4b7413d18d26d24",
+        "year": 2026,
+        "published": "2026-09-13",
+        "abstract": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+        "canonical_id": "arXiv:2609.14258",
+        "arxiv_id": "2609.14258",
+        "authors": [
+          "Mohd. Azfar",
+          "I. Khan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16055",
+      "identity_tokens": [
+        "id:arXiv:2609.16055",
+        "title:state of thought enables endogenous reasoning",
+        "url:https://www.semanticscholar.org/paper/7204d16bef08b14333af7a6094a713fe287858fe"
+      ],
+      "record": {
+        "title": "State of Thought Enables Endogenous Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/7204d16bef08b14333af7a6094a713fe287858fe",
+        "year": 2026,
+        "published": "2026-09-13",
+        "abstract": "Test-time compute has emerged as a major approach to improving the capabilities of Large Language Models (LLMs). However, existing test-time reasoning paradigms rely heavily on externally imposed control, either through fixed reasoning programs or through costly expansion in constrained search spaces, limiting both generalization and efficiency. We propose State of Thought (SoT), a new reasoning paradigm that enables endogenous reasoning in LLMs, with the model's internal reasoning state governing how reasoning unfolds. Concretely, SoT extracts a compact dynamics-geometric state from the model's internal information transfer and uses a 582-parameter controller on frozen backbones to selectively activate historical reasoning support useful under the current reasoning state, framing reasoning as a state-conditioned process over evidence rather than an externally prescribed token chain. Across quantitative (1.34x), general (1.62x), symbolic-and-code (1.76x), and long-context (2.51x) reasoning on 3 LLMs and 16 datasets, SoT consistently improves mean-baseline accuracy while reducing generated tokens by 62.6% and end-to-end latency by 44.6%. Across 2 VLM scales and 3 reasoning tasks, it improves mean accuracy by 3.8 points over reasoning baselines, with 74.9% fewer completion tokens and 73.5% lower latency than search-based methods. Under constrained access, SoT retains 38.2%/36.5% mean accuracy gains in training-free/embedding-only settings, while trajectory-only judging reaches 84.1% agreement across 3 API models. Together, endogenous state-driven reasoning provides a generalizable and efficient alternative.",
+        "canonical_id": "arXiv:2609.16055",
+        "arxiv_id": "2609.16055",
+        "authors": [
+          "Z. Gong",
+          "Yi-Kun Hou",
+          "Zi-Hao Zeng",
+          "Ming-Gan Xiao",
+          "Chau Yuen",
+          "Wei Yang Bryan Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06872",
+      "identity_tokens": [
+        "id:arXiv:2609.06872",
+        "title:exact record omission in delta attention a transport criterion its cost and a replay certificate",
+        "url:https://www.semanticscholar.org/paper/fe450d7b24fdcf92c1cb68c69df72ca24cbceb9a"
+      ],
+      "record": {
+        "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+        "source_url": "https://www.semanticscholar.org/paper/fe450d7b24fdcf92c1cb68c69df72ca24cbceb9a",
+        "year": 2026,
+        "published": "2026-09-06",
+        "abstract": "An assistant can stop repeating a deleted statement while its recurrent memory still carries that statement's influence. We examine this distinction by saving the state difference immediately after a record, transporting this receipt through later updates, and comparing the correction with the state built from the same conversation with the record omitted. Unrolling the recurrence gives an exact criterion: transport reaches this never-stored state if and only if the additional differences created by later updates cancel after transport. We connect this criterion to eleven conditions on 40 prospectively selected synthetic Kimi Linear contexts, with 40 separate calibration contexts and paired whole-record uncertainty estimates. Attention masking removed all 40 exact greedy target answers, yet a fixed three-query candidate-scoring attack attained AUC 0.740 (95% interval 0.695--0.809); the measured false-positive rate was 7.5%. Prompt-only forgetting still returned 33 of the 40 targets. Checkpoint replay matched the complete declared active state and audit logits in all 80 contexts, while preserving all 120 retained answers in the evaluation cohort. An independent Qwen cohort and matched original-bf16/8-bit Kimi controls confirmed native transport mismatch above their empirical arithmetic floors. Replay also supported record replacement and sequential deletion with an intervening admission. These results provide a practical audit of both the requested memory change and the assistant's remaining behavior, with replay work determined by the surviving suffix.",
+        "canonical_id": "arXiv:2609.06872",
+        "arxiv_id": "2609.06872",
+        "authors": [
+          "V. Ramesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.62177/apemr.v3i4.1704",
+      "identity_tokens": [
+        "id:DOI:10.62177/apemr.v3i4.1704",
+        "title:compression remembers the detour how context compression amplifies offtask content and derails llm agents",
+        "url:https://www.semanticscholar.org/paper/5e933664c24804004fb23a191907c8c8f1a8516c"
+      ],
+      "record": {
+        "title": "Compression Remembers the Detour: How Context Compression Amplifies Off-Task Content and Derails LLM Agents",
+        "source_url": "https://www.semanticscholar.org/paper/5e933664c24804004fb23a191907c8c8f1a8516c",
+        "year": 2026,
+        "published": "2026-09-05",
+        "abstract": "Long-horizon LLM agents rely on context compression to keep growing histories within a finite window [1][2]. These mechanisms are goal-agnostic—retention follows volume, recurrence, and generic salience rather than task relevance—and we show they systematically amplify off-task content, inducing Compression-Induced Goal Drift (CIGD). We formalize CIGD via the drift amplification ratio (DAR), evaluate six compression strategies on a controlled injection benchmark ( per cell), and propose Goal-Anchored Compression (GAC): a pinned goal anchor, a negation ledger, status-aware retention scoring, and drift re-anchoring. Volume- and recurrence-based compressors amplify detours monotonically with repetition (attention-scored eviction reaches  at twelve-fold repetition), while query-conditioned compressors de-amplify. Under severe budgets, summarization and scored eviction lose the user’s negated constraint in  and  of episodes where GAC retains it in ; GAC eliminates residual detour content () with  smaller contexts. Prior work asks what compression forgets [3][4]; we ask what it amplifies.",
+        "canonical_id": "DOI:10.62177/apemr.v3i4.1704",
+        "doi": "10.62177/apemr.v3i4.1704",
+        "authors": [
+          "Zhan Zhang",
+          "Wen-Zhi Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05738",
+      "identity_tokens": [
+        "id:arXiv:2609.05738",
+        "title:renderformerv2 neural rendering with heterogeneous scene primitives",
+        "url:https://www.semanticscholar.org/paper/04e5ad44902b155634e709a3245a326ba2da878d"
+      ],
+      "record": {
+        "title": "RenderFormer-V2: Neural Rendering with Heterogeneous Scene Primitives",
+        "source_url": "https://www.semanticscholar.org/paper/04e5ad44902b155634e709a3245a326ba2da878d",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "We present'RenderFormer-V2', a unified learned transformer-based neural rendering model, complementary to modern physics-based rendering systems, that can handle diverse light-transport effects such as caustics, volumetric scattering, environment lighting, textured and displaced surfaces and out-of-distribution materials without per-scene training or specialized code. RenderFormer-V2 models global light transport as a sequence-to-sequence transformation. Following its predecessor, RenderFormer-V2 also employs a two stage process: a view-independent stage that resolves intra-scene primitive to primitive transport, and a view-dependent stage that transforms the internal neural scene representation into image pixels. Different from RenderFormer, our model employs a novel combined windowed-attention and rendering-informed attention sink in the view-independent stage to improve scalability while maintaining render accuracy. To further improve versatility, RenderFormerV2 supports heterogeneous scene primitives, including environment maps and participating media, and it employs a material encoding independent of the underlying surface reflectance model that encodes material appearance via a novel neural embedding. We demonstrate the versatility of RenderFormer-V2 on a variety of scenes and perform an extensive ablation of the improved attention mechanism.",
+        "canonical_id": "arXiv:2609.05738",
+        "arxiv_id": "2609.05738",
+        "authors": [
+          "Chong Zeng",
+          "Yue Dong",
+          "P. Peers",
+          "Lvmin Zhang",
+          "Maneesh Agrawala"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.vlsi.2026.102784",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.vlsi.2026.102784",
+        "title:alista accelerator using lshbased maximum innerproduct search in transformer attention",
+        "url:https://www.semanticscholar.org/paper/6fae1cc278033e7c6031da4ff819c53236638270"
+      ],
+      "record": {
+        "title": "ALISTA: Accelerator using LSH-based maximum inner-product search in transformer attention",
+        "source_url": "https://www.semanticscholar.org/paper/6fae1cc278033e7c6031da4ff819c53236638270",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.vlsi.2026.102784",
+        "doi": "10.1016/j.vlsi.2026.102784",
+        "authors": [
+          "Shin Sunny",
+          "Satyajit Das"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00092",
+      "identity_tokens": [
+        "id:arXiv:2609.00092",
+        "title:safin1 safety from within through memorynative state evolution",
+        "url:https://www.semanticscholar.org/paper/2eb05c5cb8f028f498205e7c999db88d8763118c"
+      ],
+      "record": {
+        "title": "Safin-1: Safety from Within through Memory-Native State Evolution",
+        "source_url": "https://www.semanticscholar.org/paper/2eb05c5cb8f028f498205e7c999db88d8763118c",
+        "year": 2026,
+        "published": "2026-08-31",
+        "abstract": "Long-horizon complex tasks require foundation models to accumulate information, maintain internal states, and adapt over extended interactions. Safety should be an intrinsic property of the model itself, rather than a behavioral constraint relying solely on external safeguards or post-hoc alignment such as supervised fine-tuning. This motivates Safety from Within, where safety-relevant capabilities are represented and invoked through the model's native computation. We present Safin-1, a family of foundation models realizing this principle through memory routing and state evolution. Safin-1 is built on Memory-Anchor Routing across Context History (MARCH), a network architecture that maintains structured memory states and selectively retrieves relevant historical information through content-conditioned routing. It supports test-time adaptation of persistent capability states without repeatedly modifying the backbone, enabling controlled specialization over a shared foundation. We investigate this interface on downstream safety tasks through a Safety State, demonstrating effective state-based adaptation with substantial safety improvements. More broadly, the routed-state interface unifies contextual memory and persistent capability adaptation within the model's native computation, reframing memory from a passive record of prior context into an active substrate for maintaining and evolving model behavior. Evaluations across general capabilities, long-context understanding, retrieval, and efficiency further validate Safin-1. These findings provide a path toward safety as a state-native and adaptively maintainable capability. This work is only an initial architectural exploration of Safety from Within, and substantial further work is needed to realize this broader vision.",
+        "canonical_id": "arXiv:2609.00092",
+        "arxiv_id": "2609.00092",
+        "authors": [
+          "Ming Zhang",
+          "Kai-Sen Yang",
+          "Shu Yu",
+          "Ermo Hua",
+          "Zhe-Kai Chen",
+          "Cheng Jin",
+          "Jing-Nan Zheng",
+          "Yi Zhang",
+          "Zhongtian Ma",
+          "Jia-Wei Zhou",
+          "Sirui Chen",
+          "Qiaosheng Zhang",
+          "Xiang Wang",
+          "Ning Ding",
+          "Xia Hu",
+          "Bowen Zhou",
+          "Youbang Sun",
+          "Chaochao Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26671",
+      "identity_tokens": [
+        "id:arXiv:2608.26671",
+        "title:recapforcing retaining content appearances for long video generation",
+        "url:https://www.semanticscholar.org/paper/fd1a2582d4714287b5f366ea1bcc85d4963eb3cb"
+      ],
+      "record": {
+        "title": "RECAP-Forcing: Retaining Content Appearances for Long Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/fd1a2582d4714287b5f366ea1bcc85d4963eb3cb",
+        "year": 2026,
+        "published": "2026-08-27",
+        "abstract": "Long autoregressive video generation faces a fundamental memory challenge: with a finite attention window, a model must decide which information from an ever-expanding history to retain. Existing methods organize memory temporally, preserving recent frames while compressing or discarding older ones. We instead propose RECAP-Forcing, organizing memory by appearance novelty. A long video is not merely a sequence of frames, but an evolving cast of subjects, objects, and scenes whose identities must remain consistent over time. We organize memory by retaining the KV cache associated with newly appearing content--such as entering subjects, disoccluded regions, and newly introduced scenes--at the moment it first becomes visible, prioritizing novelty over recency. Memory should scale with the amount of newly introduced content, rather than with video length. This appearance-indexed memory makes long-range consistency an explicit property of the memory structure. Our framework unifies two mechanisms under this single principle. At the beginning of a video, when all visible content is novel, an attention sink preserves the initial scene. As the video evolves, an optical-flow-based novelty bank extends the same principle by selectively retaining newly revealed content. As a training-free inference method with no additional learnable parameters, RECAP-Forcing consistently improves visual quality and semantic fidelity across multiple strong baselines and outperforms existing memory methods.",
+        "canonical_id": "arXiv:2608.26671",
+        "arxiv_id": "2608.26671",
+        "authors": [
+          "Haiyang Xu",
+          "Zheng Ding",
+          "Zhuowen Tu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25479",
+      "identity_tokens": [
+        "id:arXiv:2608.25479",
+        "title:4dstreamctrl interactive video generation with online 4d control",
+        "url:https://www.semanticscholar.org/paper/0b60c7a703887f7bccac15f58892a05afc3f7283"
+      ],
+      "record": {
+        "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+        "source_url": "https://www.semanticscholar.org/paper/0b60c7a703887f7bccac15f58892a05afc3f7283",
+        "year": 2026,
+        "published": "2026-08-26",
+        "abstract": "Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.",
+        "canonical_id": "arXiv:2608.25479",
+        "arxiv_id": "2608.25479",
+        "authors": [
+          "Shiqian Li",
+          "Chenguo Lin",
+          "Zhi-Guang Liu",
+          "Yu Tang",
+          "Jiarong Ou",
+          "Ruidong Chen",
+          "Yi-Xin Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24971",
+      "identity_tokens": [
+        "id:arXiv:2608.24971",
+        "title:hcc hyperbolic guarding for certified attention retrieval",
+        "url:https://www.semanticscholar.org/paper/2e41f0895e0690b3317dc1120a60e572ae658bc6"
+      ],
+      "record": {
+        "title": "HCC+: Hyperbolic Guarding for Certified Attention Retrieval",
+        "source_url": "https://www.semanticscholar.org/paper/2e41f0895e0690b3317dc1120a60e572ae658bc6",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "We study the Lipschitz stability of attention retrieval in hyperbolic spaces. Existing methods lack deterministic guarantees on attention-weight preservation under finite-precision representations. We introduce HCC+, a theoretical framework exploiting three properties of the Poincar\\'e ball: exponential volume growth enabling query-independent boundary truncation; logarithmic covering radius of hyperbolic 1-centers enabling dimension-independent critical-key identification; and a packing bound with constants independent of the embedding dimension. We prove two deterministic guarantees: for exact retrieval, the per-layer attention deviation is bounded by 10\\% of its ideal value; for soft attention, the total variation distance decays as $O(1/\\sqrt{n})$, the rate of finite-sample variance. As a consequence of the guarding mechanism, the framework achieves a storage reduction factor of $6.1\\times$ relative to FP16. We provide the first deterministic, query-independent retrieval certificate in non-Euclidean geometry.",
+        "canonical_id": "arXiv:2608.24971",
+        "arxiv_id": "2608.24971",
+        "authors": [
+          "Liangchen Ge"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21247",
+      "identity_tokens": [
+        "id:arXiv:2608.21247",
+        "title:just noticeable difference modeling for token compression in visionlanguageaction models",
+        "url:https://www.semanticscholar.org/paper/d3a4ed2fb46647db4b41c0f47bbd8e08f09ccae3"
+      ],
+      "record": {
+        "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/d3a4ed2fb46647db4b41c0f47bbd8e08f09ccae3",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Token compression has become a key technique for reducing the inference cost of large foundation models, with approaches such as token pruning and KV-cache reuse widely adopted in vision-language models and recently explored for embodied agents. In embodied agents, tokens not only support perception and semantic understanding but also directly affect latency-sensitive closed-loop robot action prediction. Existing schemes typically guide compression using redundancy or importance cues, such as visual similarity, attention scores, and saliency. However, these cues only indirectly measure the key factor for safe compression: how much a token can change before causing an unacceptable deviation in downstream actions. This receiver-dependent tolerance is closely related to the principle of just noticeable difference (JND). Classical JND characterizes signal tolerance in the human visual system, while machine-oriented JND extends this concept to downstream machine responses. Building on this progression, we introduce Action-JND, which extends JND modeling to embodied perception by defining noticeability through the language-conditioned action response of a vision-language-action (VLA) policy in closed-loop control. A token change is considered admissible only when the induced action deviation remains within a tolerated margin. To realize this concept, we develop a lightweight token-wise JND estimator in deep visual-feature space to predict the maximum tolerable perturbation while preserving policy responses. The resulting action-tolerance score serves as a plug-and-play criterion for VLA compression paradigms, including stale-KV reuse and token pruning, prioritizing action-tolerant tokens for compression. Experiments on the LIBERO benchmark with OpenVLA and OpenVLA-OFT demonstrate that Action-JND consistently improves compression reliability, especially under aggressive compression ratios.",
+        "canonical_id": "arXiv:2608.21247",
+        "arxiv_id": "2608.21247",
+        "authors": [
+          "Zhuo-Yuan Li",
+          "Rui Zhao",
+          "Jin Wang",
+          "Han-Wei Zhu",
+          "Cong Zhang",
+          "Giuseppe Valenzise",
+          "Weisi Lin",
+          "Kin-Man Lam"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.18410",
+      "identity_tokens": [
+        "id:arXiv:2608.18410",
+        "title:roleconditioned subtoken routing for efficient visionlanguageaction policies",
+        "url:https://www.semanticscholar.org/paper/507f76a300dcdd9d38e489ee6e8ca36bb733491a"
+      ],
+      "record": {
+        "title": "Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies",
+        "source_url": "https://www.semanticscholar.org/paper/507f76a300dcdd9d38e489ee6e8ca36bb733491a",
+        "year": 2026,
+        "published": "2026-08-19",
+        "abstract": "Vision-Language-Action (VLA) models process long multimodal token sequences, making inference expensive in both memory and computation. Existing efficiency methods mainly reduce visual tokens, but aggressive token pruning becomes fragile because removing a token discards its entire representation. Sub-token compression provides a complementary alternative by retaining more tokens while reducing their value width. However, directly applying sub-token compression to VLA policies is less effective because information important for perception, language understanding, and control is distributed differently across the multimodal representation. We introduce Role-Conditioned Sub-Token Routing (RoleSub), which learns how to compress the value representations of retained tokens. After visual token reduction, RoleSub partitions each retained value representation into groups in an orthogonal space and uses a lightweight router to determine which groups should be preserved. The routing decision is conditioned on the token representation, a learned latent role representation, and language context. The same mechanism can also be applied to language values, allowing visual and language representations to be compressed without removing additional tokens. We evaluate RoleSub on OpenVLA-OFT-7B across the four LIBERO suites. At matched visual-KV budgets, RoleSub outperforms a trained token-only control in 33 of 36 settings, with the largest gains under aggressive compression. Combining visual and language compression reduces total KV to 9.2--11.3% of the original while retaining strong control performance on most tasks. These results show that reducing the representation within retained tokens provides an effective complement to token pruning for aggressive VLA compression.",
+        "canonical_id": "arXiv:2608.18410",
+        "arxiv_id": "2608.18410",
+        "authors": [
+          "Wei Jiang",
+          "Wei Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c09fe5ee161924211c54d193c1ad6b81957f1029dbee52bfee00bb7990d10a75",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
