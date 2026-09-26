@@ -19,8 +19,8 @@
   },
   "claiming": {
     "ready_research_audit": 294,
-    "actively_claimed": 143,
-    "claimable": 151
+    "actively_claimed": 144,
+    "claimable": 150
   },
   "next_jobs": [
     {
@@ -122,14 +122,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ec6998c20e15d46d",
+      "job_id": "job-research-49e4dd271f3e368e",
       "type": "research",
       "lane": null,
       "priority": 88,
-      "canonical_id": "arXiv:2512.17073",
-      "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
-      "source_url": "https://arxiv.org/abs/2512.17073",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensation.md",
+      "canonical_id": "arXiv:2407.04656",
+      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2407.04656",
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2407.04656-lazarus-resilient-and-elastic-training-of-mixture-of-experts-models.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-26T16:48:15+00:00"
+  "generated_at": "2026-09-26T18:35:05+00:00"
 }
