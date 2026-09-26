@@ -54,6 +54,5 @@
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 5 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 11 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 9 |
-| [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 186 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 187 |
 <!-- survey:auto:end -->
