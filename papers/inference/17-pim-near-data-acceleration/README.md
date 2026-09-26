@@ -24,16 +24,22 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（11本）
+## 自動生成の論文一覧（13本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
-該当なし。
+- **2025-12 · [KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing](2025-2512.03608-kvnand-dram-free-in-flash-computing.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
+
+- **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フラッシュ内計算向けに整数のみのLLM推論と静的辞書型KV圧縮を共同設計し、品質をほぼ維持したまま動的KV転送を約15分の1へ削減する。
 
 - **2026-09 · [AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding](2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md)**  
   実装：[✓](https://github.com/Miketan1/AMEND_code) ・ リポジトリ内被引用：0  

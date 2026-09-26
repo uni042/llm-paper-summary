@@ -40,6 +40,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：11  
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
 
+- **2025-10 · [CacheClip: Accelerating RAG with Effective KV Cache Reuse](2025-2510.10129-cacheclip-rag-kv-cache-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  問い合わせごとに補助モデルの注意から再計算する文書位置を選び、連結したKVキャッシュのチャンク間情報を回復するRAGプリフィル方式。L20上の16K入力では全注意比3.33倍速く、品質との調整に再計算率を使う。
+
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   TuttiはGPU主導の非同期SSD読込みでKV要求をまとめ、CPU発行の小I/Oを排してGPUへ直接転送し、SSD容量を使いながらKV復元待ちを減らす方式。
@@ -202,10 +206,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントのツール待ち間隔と終了しやすさからセッション単位のKV再利用順位を作り、追い出しとSRAM/HBM間移動を同じ近メモリ制御器で決めることで、再プリフィルと階層アクセス遅延を減らす方式。
 
-- **2026-09 · [The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems](2026-2609.27746-kvset-online-capacity-planning.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LRUのスタック距離をFenwick木でオンライン計算し、一つの要求列から多数のKV容量に対するヒット率と目標達成に必要な最小容量を同時推定して、階層KVストレージの過剰・過少配置を避ける。
-
 - **2026-09 · [SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference](2026-2609.23816-splash-high-bandwidth-flash-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMでは、復号のたびに過去のキー・値（KV）キャッシュを読み直すため、文脈長と同時要求数の増加に伴って容量と帯域の双方が問題になる。CPU DRAM、CXL、SSDへ退避すれば容量は増えるが、HBMとの大きな帯域差が復号を律速する。
@@ -313,7 +313,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：42  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
@@ -325,7 +325,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   独立事前計算した文書チャンクを位置に依存せず再利用し、連結時は各チャンク先頭の少数トークンだけを再計算して注意シンクを修正することで、CacheBlend比で最大8倍の初回トークン時間短縮と7倍のスループットを得る。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
-  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：17  
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
@@ -399,7 +399,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：64  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
