@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-26T12:32:37+00:00",
+  "checked_at": "2026-09-26T16:53:39+00:00",
   "required_fields": [
     "canonical_id",
     "title",
@@ -18,13 +18,25 @@
   ],
   "families": {
     "inference": {
-      "total": 1044,
-      "complete": 1019,
+      "total": 1096,
+      "complete": 1062,
       "incomplete": [
         {
           "path": "papers/inference/01-offload-hierarchical-memory/2026-2607.11586-hcrmap.md",
           "missing": [
             "title"
+          ]
+        },
+        {
+          "path": "papers/inference/01-offload-hierarchical-memory/2026-elastic-memory-remapping-oneiros.md",
+          "missing": [
+            "authors",
+            "publication",
+            "publication_status",
+            "publication_type",
+            "published",
+            "source",
+            "sources"
           ]
         },
         {
@@ -34,9 +46,27 @@
           ]
         },
         {
+          "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.22106-arborkv-structure-aware-kv-cache-management.md",
+          "missing": [
+            "authors:list"
+          ]
+        },
+        {
+          "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md",
+          "missing": [
+            "authors:list"
+          ]
+        },
+        {
           "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
           "missing": [
             "title"
+          ]
+        },
+        {
+          "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md",
+          "missing": [
+            "authors:list"
           ]
         },
         {
@@ -62,10 +92,22 @@
           ]
         },
         {
+          "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md",
+          "missing": [
+            "authors:list"
+          ]
+        },
+        {
           "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md",
           "missing": [
             "summary",
             "title"
+          ]
+        },
+        {
+          "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md",
+          "missing": [
+            "authors:list"
           ]
         },
         {
@@ -75,9 +117,29 @@
           ]
         },
         {
+          "path": "papers/inference/13-sparse-attention/2026-2606.04511-sparda.md",
+          "missing": [
+            "authors:list"
+          ]
+        },
+        {
           "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md",
           "missing": [
             "title"
+          ]
+        },
+        {
+          "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md",
+          "missing": [
+            "authors:list"
+          ]
+        },
+        {
+          "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
+          "missing": [
+            "authors:list",
+            "publication_type",
+            "published"
           ]
         },
         {
@@ -184,14 +246,14 @@
       "incomplete": []
     },
     "survey": {
-      "total": 13,
-      "complete": 13,
+      "total": 14,
+      "complete": 14,
       "incomplete": []
     }
   },
   "summary": {
-    "total": 1082,
-    "complete": 1057,
-    "incomplete": 25
+    "total": 1135,
+    "complete": 1101,
+    "incomplete": 34
   }
 }
