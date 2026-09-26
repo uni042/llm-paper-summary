@@ -1,0 +1,875 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-8b6c1c54e193177e8ee4",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-8b6c1c54e193177e8ee4",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4MzA3MjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjA3NjgwODcyJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "08f38145ab847a14dfc6de7bfc06f64b35c2916b",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 50,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T15:06:20.204057+00:00",
+  "preload_id": "preload-8b6c1c54e193177e8ee4",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "source_url": "https://doi.org/10.1145/3773078.3831864",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "arXiv:2609.08443",
+      "arxiv_id": "2609.08443",
+      "authors": [
+        "Lin Guan",
+        "Jia‐Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ]
+    },
+    {
+      "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+      "source_url": "https://arxiv.org/abs/2609.26368",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26368",
+      "arxiv_id": "2609.26368",
+      "authors": [
+        "Jianyu Wei",
+        "Yizhao Gao",
+        "Qihao Zhang",
+        "Shimao Chen",
+        "Zhengju Tang",
+        "Yu Cheng",
+        "Shengjie Zhou",
+        "Zihan Jiang",
+        "Yifan Song",
+        "Hailin Zhang",
+        "Liang Zhao",
+        "Bo Yang",
+        "Gang Wang",
+        "Shijie Cao",
+        "Fuli Luo"
+      ]
+    },
+    {
+      "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.26708",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26708",
+      "arxiv_id": "2609.26708",
+      "authors": [
+        "Yuanteng Chen",
+        "Zhilei Liu",
+        "Peisong Wang",
+        "Yuantian Shao",
+        "Chuangyi Li",
+        "Weining Wang",
+        "Shuang Qiu",
+        "Gang Li",
+        "Jing Liu",
+        "jian chun Cheng"
+      ]
+    },
+    {
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.26621",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26621",
+      "arxiv_id": "2609.26621",
+      "authors": [
+        "Gaoyuan Du",
+        "Anam Nawaz Khan",
+        "Rex Zhou",
+        "Xiaoyang Liu",
+        "Deepayan Chakrabarti",
+        "Fnu Suya",
+        "Xueping Li"
+      ]
+    },
+    {
+      "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference",
+      "source_url": "https://doi.org/10.4108/eetiot.14884",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2511.22889",
+      "arxiv_id": "2511.22889",
+      "authors": [
+        "Fang Li"
+      ]
+    },
+    {
+      "title": "Intelligence by Appointment",
+      "source_url": "http://arxiv.org/abs/2603.05225",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2603.05225",
+      "arxiv_id": "2603.05225",
+      "authors": [
+        "Brad Pierce"
+      ]
+    },
+    {
+      "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+      "source_url": "https://arxiv.org/abs/2609.24322",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24322",
+      "arxiv_id": "2609.24322",
+      "authors": [
+        "Luca Zhou",
+        "A. Zirilli",
+        "Daniele Solombrino",
+        "Roberto Dessì",
+        "Emanuele Rodolà"
+      ]
+    },
+    {
+      "title": "When Quantization Preserves Accuracy but Not Evidence: Explanation-Aware Post-Training Quantization for Medical LLMs",
+      "source_url": "https://arxiv.org/abs/2609.24799",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.24799",
+      "arxiv_id": "2609.24799",
+      "authors": [
+        "Yeji Kim",
+        "Mi-Young Kim",
+        "Randy Goebel"
+      ]
+    },
+    {
+      "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions",
+      "source_url": "https://arxiv.org/abs/2609.25463",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.25463",
+      "arxiv_id": "2609.25463",
+      "authors": [
+        "Niloofar Gholipour",
+        "Marcos Assunção",
+        "Gursimran Singh",
+        "Timothy Yu",
+        "Rajkumar Buyya",
+        "Julien Gascon-Samson",
+        "Zhenan Fan",
+        "Yong Zhang",
+        "Xiaojie Xu",
+        "Yaqiang Yao",
+        "Xiaolong Bai"
+      ]
+    },
+    {
+      "title": "Lean Pool: An AI-Maintained Archive of Formalized Mathematics",
+      "source_url": "https://arxiv.org/abs/2609.25199",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.25199",
+      "arxiv_id": "2609.25199",
+      "authors": [
+        "Vasily Ilin"
+      ]
+    },
+    {
+      "title": "Cloud, Edge, or Split? Profiling Onboard and Split Vision-Language Model Deployment for Drone AI",
+      "source_url": "https://arxiv.org/abs/2609.25415",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2609.25415",
+      "arxiv_id": "2609.25415",
+      "authors": [
+        "Zoha Azimi",
+        "Reza Farahani",
+        "Schahram Dustdar",
+        "Christian Timmerer"
+      ]
+    },
+    {
+      "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2609.23587",
+      "year": 2026,
+      "published": "2026-09-20",
+      "canonical_id": "arXiv:2609.23587",
+      "arxiv_id": "2609.23587",
+      "authors": [
+        "Yifei Yang",
+        "Zouying Cao",
+        "X. Wang",
+        "Xiao Zhou",
+        "Yuexian Li",
+        "Dongjie Yang",
+        "Hai Zhao"
+      ]
+    },
+    {
+      "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+      "source_url": "https://arxiv.org/abs/2609.23371",
+      "year": 2026,
+      "published": "2026-09-20",
+      "canonical_id": "arXiv:2609.23371",
+      "arxiv_id": "2609.23371",
+      "authors": [
+        "Yifan Wang",
+        "Dejing Dou"
+      ]
+    },
+    {
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "year": 2026,
+      "published": "2026-09-20",
+      "canonical_id": "arXiv:2609.23314",
+      "arxiv_id": "2609.23314",
+      "authors": [
+        "Junyoung Park",
+        "Jungwook Choi",
+        "Mingu Lee"
+      ]
+    },
+    {
+      "title": "Perplexity Cost Understates What Activation Quantisation Breaks",
+      "source_url": "https://arxiv.org/abs/2609.23125",
+      "year": 2026,
+      "published": "2026-09-19",
+      "canonical_id": "arXiv:2609.23125",
+      "arxiv_id": "2609.23125",
+      "authors": [
+        "Anish Sathyanarayanan"
+      ]
+    },
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "Towards Trustworthy and Scalable Agentic Smart Manufacturing: A Roadmap for Generative AI-integrated MAS 2.0",
+      "source_url": "https://doi.org/10.1088/2631-7990/aea9db",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "DOI:10.1088/2631-7990/aea9db",
+      "doi": "10.1088/2631-7990/aea9db",
+      "authors": [
+        "Jiewu Leng",
+        "Gang Wang",
+        "T. J. Zhu",
+        "Jiarui Cao",
+        "Chong Chen",
+        "Hailong Cui",
+        "Yuanfa Dong",
+        "Haisong Huang",
+        "Lucheng Chen",
+        "Xiaoping Lu",
+        "Qiang Liu",
+        "Xin Chen",
+        "Lihui Wang",
+        "Weiming Shen"
+      ]
+    },
+    {
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "source_url": "https://arxiv.org/abs/2609.21712",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2609.21712",
+      "arxiv_id": "2609.21712",
+      "authors": [
+        "Boni Hu",
+        "Xiong Wei",
+        "Haoming Huang",
+        "Yong Huang",
+        "Chenbo Wang",
+        "Yi Yang",
+        "Jiancheng Wang",
+        "Ruicheng Zhu",
+        "Zhimin Yang",
+        "Guanglai Liu",
+        "Qiaowan Jin",
+        "Dongzhuo Wang",
+        "Haiwei Kuang",
+        "Jiajun Fan",
+        "Yue Wu",
+        "Jiaxin Wei",
+        "Hao Sun",
+        "Feihong Yan",
+        "Yuyao Zhou",
+        "Wei Bi",
+        "Kaixuan Wang",
+        "Zichao Guo",
+        "Xiaozhi Chen"
+      ]
+    },
+    {
+      "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation",
+      "source_url": "https://arxiv.org/abs/2609.19729",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "arXiv:2609.19729",
+      "arxiv_id": "2609.19729",
+      "authors": [
+        "Tri Cao",
+        "Hung Nguyen",
+        "Phong Nhu Nguyen",
+        "Khoi Nguyen"
+      ]
+    },
+    {
+      "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+      "source_url": "https://doi.org/10.32388/f2fnb3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.32388/f2fnb3",
+      "doi": "10.32388/f2fnb3",
+      "authors": [
+        "Evgeny V. Arsentyev"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.08443",
+      "identity_tokens": [
+        "id:DOI:10.1145/3773078.3831864",
+        "id:arXiv:2609.08443",
+        "title:sequenceo1 endtoend ultralong 100k sequence modeling in recommendation with lowrank caching",
+        "url:https://doi.org/10.1145/3773078.3831864"
+      ],
+      "record": {
+        "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+        "source_url": "https://doi.org/10.1145/3773078.3831864",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "arXiv:2609.08443",
+        "arxiv_id": "2609.08443",
+        "authors": [
+          "Lin Guan",
+          "Jia‐Qi Yang",
+          "Zhishan Zhao",
+          "Jiaqi Huang",
+          "Hangyu Wang",
+          "Longbin Li",
+          "Beichuan Zhang",
+          "Haonan Jiang",
+          "Jinan Ni",
+          "Xiangyu Fan",
+          "Xiaowen Li",
+          "Ziyao Ren",
+          "Yuhang Qi",
+          "Xiaolong Zhu",
+          "Xuanyuan Luo",
+          "Qiwei Chen",
+          "Yi Cheng",
+          "Lele Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26368",
+      "identity_tokens": [
+        "id:arXiv:2609.26368",
+        "title:hysparse2 hybrid sparse attention with twolevel kv sharing",
+        "url:https://arxiv.org/abs/2609.26368"
+      ],
+      "record": {
+        "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+        "source_url": "https://arxiv.org/abs/2609.26368",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26368",
+        "arxiv_id": "2609.26368",
+        "authors": [
+          "Jianyu Wei",
+          "Yizhao Gao",
+          "Qihao Zhang",
+          "Shimao Chen",
+          "Zhengju Tang",
+          "Yu Cheng",
+          "Shengjie Zhou",
+          "Zihan Jiang",
+          "Yifan Song",
+          "Hailin Zhang",
+          "Liang Zhao",
+          "Bo Yang",
+          "Gang Wang",
+          "Shijie Cao",
+          "Fuli Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26708",
+      "identity_tokens": [
+        "id:arXiv:2609.26708",
+        "title:train where the quantized model goes onpolicy distillation for lowbit reasoning",
+        "url:https://arxiv.org/abs/2609.26708"
+      ],
+      "record": {
+        "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.26708",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26708",
+        "arxiv_id": "2609.26708",
+        "authors": [
+          "Yuanteng Chen",
+          "Zhilei Liu",
+          "Peisong Wang",
+          "Yuantian Shao",
+          "Chuangyi Li",
+          "Weining Wang",
+          "Shuang Qiu",
+          "Gang Li",
+          "Jing Liu",
+          "jian chun Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26621",
+      "identity_tokens": [
+        "id:arXiv:2609.26621",
+        "title:greedy decoding is not precisioninvariant crossprecision output divergence in llm inference",
+        "url:https://arxiv.org/abs/2609.26621"
+      ],
+      "record": {
+        "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.26621",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26621",
+        "arxiv_id": "2609.26621",
+        "authors": [
+          "Gaoyuan Du",
+          "Anam Nawaz Khan",
+          "Rex Zhou",
+          "Xiaoyang Liu",
+          "Deepayan Chakrabarti",
+          "Fnu Suya",
+          "Xueping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.22889",
+      "identity_tokens": [
+        "id:DOI:10.4108/eetiot.14884",
+        "id:arXiv:2511.22889",
+        "title:the immutable tensor architecture a pure dataflow approach for secure energyefficient ai inference",
+        "url:https://doi.org/10.4108/eetiot.14884"
+      ],
+      "record": {
+        "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference",
+        "source_url": "https://doi.org/10.4108/eetiot.14884",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2511.22889",
+        "arxiv_id": "2511.22889",
+        "authors": [
+          "Fang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.05225",
+      "identity_tokens": [
+        "id:arXiv:2603.05225",
+        "title:intelligence by appointment",
+        "url:http://arxiv.org/abs/2603.05225"
+      ],
+      "record": {
+        "title": "Intelligence by Appointment",
+        "source_url": "http://arxiv.org/abs/2603.05225",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2603.05225",
+        "arxiv_id": "2603.05225",
+        "authors": [
+          "Brad Pierce"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24322",
+      "identity_tokens": [
+        "id:arXiv:2609.24322",
+        "title:the undetected damage of quantization on retrieval and how to fix it",
+        "url:https://arxiv.org/abs/2609.24322"
+      ],
+      "record": {
+        "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+        "source_url": "https://arxiv.org/abs/2609.24322",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24322",
+        "arxiv_id": "2609.24322",
+        "authors": [
+          "Luca Zhou",
+          "A. Zirilli",
+          "Daniele Solombrino",
+          "Roberto Dessì",
+          "Emanuele Rodolà"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24799",
+      "identity_tokens": [
+        "id:arXiv:2609.24799",
+        "title:when quantization preserves accuracy but not evidence explanationaware posttraining quantization for medical llms",
+        "url:https://arxiv.org/abs/2609.24799"
+      ],
+      "record": {
+        "title": "When Quantization Preserves Accuracy but Not Evidence: Explanation-Aware Post-Training Quantization for Medical LLMs",
+        "source_url": "https://arxiv.org/abs/2609.24799",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.24799",
+        "arxiv_id": "2609.24799",
+        "authors": [
+          "Yeji Kim",
+          "Mi-Young Kim",
+          "Randy Goebel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25463",
+      "identity_tokens": [
+        "id:arXiv:2609.25463",
+        "title:rollout efficiency in reinforcement learning for reasoning large language models a taxonomy and future directions",
+        "url:https://arxiv.org/abs/2609.25463"
+      ],
+      "record": {
+        "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions",
+        "source_url": "https://arxiv.org/abs/2609.25463",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.25463",
+        "arxiv_id": "2609.25463",
+        "authors": [
+          "Niloofar Gholipour",
+          "Marcos Assunção",
+          "Gursimran Singh",
+          "Timothy Yu",
+          "Rajkumar Buyya",
+          "Julien Gascon-Samson",
+          "Zhenan Fan",
+          "Yong Zhang",
+          "Xiaojie Xu",
+          "Yaqiang Yao",
+          "Xiaolong Bai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25199",
+      "identity_tokens": [
+        "id:arXiv:2609.25199",
+        "title:lean pool an aimaintained archive of formalized mathematics",
+        "url:https://arxiv.org/abs/2609.25199"
+      ],
+      "record": {
+        "title": "Lean Pool: An AI-Maintained Archive of Formalized Mathematics",
+        "source_url": "https://arxiv.org/abs/2609.25199",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.25199",
+        "arxiv_id": "2609.25199",
+        "authors": [
+          "Vasily Ilin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25415",
+      "identity_tokens": [
+        "id:arXiv:2609.25415",
+        "title:cloud edge or split profiling onboard and split visionlanguage model deployment for drone ai",
+        "url:https://arxiv.org/abs/2609.25415"
+      ],
+      "record": {
+        "title": "Cloud, Edge, or Split? Profiling Onboard and Split Vision-Language Model Deployment for Drone AI",
+        "source_url": "https://arxiv.org/abs/2609.25415",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2609.25415",
+        "arxiv_id": "2609.25415",
+        "authors": [
+          "Zoha Azimi",
+          "Reza Farahani",
+          "Schahram Dustdar",
+          "Christian Timmerer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23587",
+      "identity_tokens": [
+        "id:arXiv:2609.23587",
+        "title:on the efficiencysafety dilemma in large reasoning models",
+        "url:https://arxiv.org/abs/2609.23587"
+      ],
+      "record": {
+        "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2609.23587",
+        "year": 2026,
+        "published": "2026-09-20",
+        "canonical_id": "arXiv:2609.23587",
+        "arxiv_id": "2609.23587",
+        "authors": [
+          "Yifei Yang",
+          "Zouying Cao",
+          "X. Wang",
+          "Xiao Zhou",
+          "Yuexian Li",
+          "Dongjie Yang",
+          "Hai Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23371",
+      "identity_tokens": [
+        "id:arXiv:2609.23371",
+        "title:machineinterpretable information compiling documents into searchable and readable protocol states",
+        "url:https://arxiv.org/abs/2609.23371"
+      ],
+      "record": {
+        "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+        "source_url": "https://arxiv.org/abs/2609.23371",
+        "year": 2026,
+        "published": "2026-09-20",
+        "canonical_id": "arXiv:2609.23371",
+        "arxiv_id": "2609.23371",
+        "authors": [
+          "Yifan Wang",
+          "Dejing Dou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23314",
+      "identity_tokens": [
+        "id:arXiv:2609.23314",
+        "title:valuediff valuegeometric kv cache eviction for sinksuppressed llms",
+        "url:https://arxiv.org/abs/2609.23314"
+      ],
+      "record": {
+        "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+        "source_url": "https://arxiv.org/abs/2609.23314",
+        "year": 2026,
+        "published": "2026-09-20",
+        "canonical_id": "arXiv:2609.23314",
+        "arxiv_id": "2609.23314",
+        "authors": [
+          "Junyoung Park",
+          "Jungwook Choi",
+          "Mingu Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23125",
+      "identity_tokens": [
+        "id:arXiv:2609.23125",
+        "title:perplexity cost understates what activation quantisation breaks",
+        "url:https://arxiv.org/abs/2609.23125"
+      ],
+      "record": {
+        "title": "Perplexity Cost Understates What Activation Quantisation Breaks",
+        "source_url": "https://arxiv.org/abs/2609.23125",
+        "year": 2026,
+        "published": "2026-09-19",
+        "canonical_id": "arXiv:2609.23125",
+        "arxiv_id": "2609.23125",
+        "authors": [
+          "Anish Sathyanarayanan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1088/2631-7990/aea9db",
+      "identity_tokens": [
+        "id:DOI:10.1088/2631-7990/aea9db",
+        "title:towards trustworthy and scalable agentic smart manufacturing a roadmap for generative aiintegrated mas 20",
+        "url:https://doi.org/10.1088/2631-7990/aea9db"
+      ],
+      "record": {
+        "title": "Towards Trustworthy and Scalable Agentic Smart Manufacturing: A Roadmap for Generative AI-integrated MAS 2.0",
+        "source_url": "https://doi.org/10.1088/2631-7990/aea9db",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "DOI:10.1088/2631-7990/aea9db",
+        "doi": "10.1088/2631-7990/aea9db",
+        "authors": [
+          "Jiewu Leng",
+          "Gang Wang",
+          "T. J. Zhu",
+          "Jiarui Cao",
+          "Chong Chen",
+          "Hailong Cui",
+          "Yuanfa Dong",
+          "Haisong Huang",
+          "Lucheng Chen",
+          "Xiaoping Lu",
+          "Qiang Liu",
+          "Xin Chen",
+          "Lihui Wang",
+          "Weiming Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21712",
+      "identity_tokens": [
+        "id:arXiv:2609.21712",
+        "title:zytworld a realtime controllable world model for closedloop autonomousdriving simulation",
+        "url:https://arxiv.org/abs/2609.21712"
+      ],
+      "record": {
+        "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+        "source_url": "https://arxiv.org/abs/2609.21712",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2609.21712",
+        "arxiv_id": "2609.21712",
+        "authors": [
+          "Boni Hu",
+          "Xiong Wei",
+          "Haoming Huang",
+          "Yong Huang",
+          "Chenbo Wang",
+          "Yi Yang",
+          "Jiancheng Wang",
+          "Ruicheng Zhu",
+          "Zhimin Yang",
+          "Guanglai Liu",
+          "Qiaowan Jin",
+          "Dongzhuo Wang",
+          "Haiwei Kuang",
+          "Jiajun Fan",
+          "Yue Wu",
+          "Jiaxin Wei",
+          "Hao Sun",
+          "Feihong Yan",
+          "Yuyao Zhou",
+          "Wei Bi",
+          "Kaixuan Wang",
+          "Zichao Guo",
+          "Xiaozhi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19729",
+      "identity_tokens": [
+        "id:arXiv:2609.19729",
+        "title:recency forcing bridging the longhorizon gap in autoregressive video generation",
+        "url:https://arxiv.org/abs/2609.19729"
+      ],
+      "record": {
+        "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation",
+        "source_url": "https://arxiv.org/abs/2609.19729",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "arXiv:2609.19729",
+        "arxiv_id": "2609.19729",
+        "authors": [
+          "Tri Cao",
+          "Hung Nguyen",
+          "Phong Nhu Nguyen",
+          "Khoi Nguyen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.32388/f2fnb3",
+      "identity_tokens": [
+        "id:DOI:10.32388/f2fnb3",
+        "title:review of towards more economical contextaugmented llm generation by reusing stored kv cache",
+        "url:https://doi.org/10.32388/f2fnb3"
+      ],
+      "record": {
+        "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+        "source_url": "https://doi.org/10.32388/f2fnb3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.32388/f2fnb3",
+        "doi": "10.32388/f2fnb3",
+        "authors": [
+          "Evgeny V. Arsentyev"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c275deae0d6f15fc380cd42b4a36ff9eacc72dd62297d31461e49452022c67ef",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
