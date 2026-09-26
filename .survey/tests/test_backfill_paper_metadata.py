@@ -195,5 +195,68 @@ source: "https://arxiv.org/abs/2609.99991"
         self.assertEqual(row["arxiv_categories"]["cross_list"], [])
 
 
+    def test_legacy_arxiv_identity_and_one_line_formats_are_reused(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/test/2026-2603.12645-lightmoe.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                """---
+canonical_id: "arXiv:2603.12645"
+title: "LightMoE"
+primary_url: "https://arxiv.org/abs/2603.12645"
+---
+
+# LightMoE
+
+**一文解説:** 既存本文の一文解説を正規summaryへ再利用する。
+""",
+                encoding="utf-8",
+            )
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(
+                backfill_paper_metadata.infer_arxiv_id(meta, paper),
+                "2603.12645",
+            )
+            changed, _ = backfill_paper_metadata.backfill(
+                paper,
+                {
+                    "2603.12645": {
+                        "authors": ["Example Author"],
+                        "published": "2026-03-01",
+                        "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+                        "abs_url": "https://arxiv.org/abs/2603.12645",
+                        "pdf_url": "https://arxiv.org/pdf/2603.12645",
+                    }
+                },
+                "2026-09-26",
+            )
+            self.assertTrue(changed)
+            meta, _ = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["arxiv_id"], "2603.12645")
+            self.assertEqual(meta["summary"], "既存本文の一文解説を正規summaryへ再利用する。")
+            self.assertEqual(meta["source"], "https://arxiv.org/abs/2603.12645")
+
+    def test_list_summary_heading_and_published_online_are_reused(self) -> None:
+        meta = {
+            "canonical_id": "DOI:10.1000/example",
+            "title": "Journal Paper",
+            "publication": "Journal 1 (2026)",
+            "published_online": "2026-09-11",
+            "doi": "10.1000/example",
+            "source": "https://doi.org/10.1000/example",
+        }
+        body = """# Journal Paper
+
+## 一覧用要約
+
+既存の一覧用要約をsummaryへ昇格する。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_one_line_summary(body),
+            "既存の一覧用要約をsummaryへ昇格する。",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
