@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Build dedicated 200-item worklists for scheduled-chat-00 and scheduled-chat-30.
+"""Build dedicated worklists for scheduled-chat-00 and scheduled-chat-30.
 
-The worklists are rebuildable selection indexes only. Canonical job/claim state,
-paper files, and reference relevance ledgers remain authoritative. The two worker
-pages are deterministically disjoint whenever at least 400 eligible rows exist.
+Research/Audit keeps the existing 200-item per-worker surface. Discovery review
+uses a larger 500-item per-worker surface so full-text suitability screening does
+not starve for candidates. The worklists are rebuildable selection indexes only.
+Canonical job/claim state, paper files, and reference relevance ledgers remain
+authoritative. The two worker pages are deterministically disjoint whenever enough
+eligible rows exist for the requested per-lane limits.
 """
 from __future__ import annotations
 
@@ -18,7 +21,8 @@ import claim_state
 import reference_pool
 import research_job_reconciliation
 
-DEFAULT_LIMIT = 200
+DEFAULT_RESEARCH_LIMIT = 200
+DEFAULT_DISCOVERY_LIMIT = 500
 WORKERS = ("00", "30")
 
 
@@ -152,11 +156,16 @@ def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str
     return assigned
 
 
-def build(root: Path, *, limit: int) -> dict[str, dict[str, Any]]:
+def build(
+    root: Path,
+    *,
+    research_limit: int = DEFAULT_RESEARCH_LIMIT,
+    discovery_limit: int = DEFAULT_DISCOVERY_LIMIT,
+) -> dict[str, dict[str, Any]]:
     research_all, research_ready = _research_candidates(root)
     discovery_all, discovery_pending = _discovery_candidates(root)
-    research = _split(research_all, limit=limit)
-    discovery = _split(discovery_all, limit=limit)
+    research = _split(research_all, limit=research_limit)
+    discovery = _split(discovery_all, limit=discovery_limit)
 
     result: dict[str, dict[str, Any]] = {}
     for worker in WORKERS:
@@ -171,6 +180,7 @@ def build(root: Path, *, limit: int) -> dict[str, dict[str, Any]]:
                 "This is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
+                "Discovery rows are candidates only: read the primary paper body before acceptance; title/abstract-only acceptance is forbidden.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -214,6 +224,7 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
         "- このページに割り当てられた候補だけを使用する。",
         "- Library-first runでは、同じidentityの完成原稿・探索結果がChatGPT Libraryへ保存済みならskipする。",
         "- 最新状態で処理済み・claim済み・対象外ならskipし、同じページ内の次候補へ進む。",
+        "- Discoveryは候補提示面にすぎない。accept前に一次資料本文を読み、対象範囲・既存収録との差分・手法/測定上の収録価値を確認する。タイトル・要旨だけでacceptしない。",
         "",
         "## 未処理 Research / Audit",
         "",
@@ -304,17 +315,41 @@ def write_outputs(root: Path, payloads: dict[str, dict[str, Any]], *, output_dir
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--limit", type=int, default=DEFAULT_LIMIT)
+    parser.add_argument(
+        "--research-limit", type=int, default=DEFAULT_RESEARCH_LIMIT,
+        help="per-worker Research/Audit display limit (default: 200)",
+    )
+    parser.add_argument(
+        "--discovery-limit", type=int, default=DEFAULT_DISCOVERY_LIMIT,
+        help="per-worker Discovery review display limit (default: 500)",
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="legacy compatibility: set both lane limits to the same value",
+    )
     parser.add_argument(
         "--output-dir",
         type=Path,
         default=Path(".survey/work-queue"),
     )
     args = parser.parse_args()
-    if args.limit <= 0:
-        parser.error("--limit must be > 0")
+    research_limit = args.research_limit
+    discovery_limit = args.discovery_limit
+    if args.limit is not None:
+        if args.limit <= 0:
+            parser.error("--limit must be > 0")
+        research_limit = args.limit
+        discovery_limit = args.limit
+    if research_limit <= 0:
+        parser.error("--research-limit must be > 0")
+    if discovery_limit <= 0:
+        parser.error("--discovery-limit must be > 0")
     root = args.repo_root.resolve()
-    payloads = build(root, limit=args.limit)
+    payloads = build(
+        root,
+        research_limit=research_limit,
+        discovery_limit=discovery_limit,
+    )
     final = write_outputs(root, payloads, output_dir=args.output_dir)
     print(
         json.dumps(
