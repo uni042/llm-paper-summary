@@ -11,7 +11,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2025-11 · [Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management](2025-2511.20172-beluga-cxl-memory-kvcache.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   CXL 2.0スイッチでGPU/CPUから共有KVメモリを直接ロード／ストア可能にし、細粒度KV転送・共有メモリRPC・局所性不要の配置をvLLMへ統合してRDMA型プールのコピーと同期を削減する。
 
 - **2026-04 · [FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving](2026-2604.02715-fluxmoe-decoupling-expert-residency.md)**  
@@ -34,6 +34,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/nokia-applied-research/WiSP) ・ リポジトリ内被引用：2  
   WiSPはルーティング履歴から再利用される専門家をGPUワーキングセットとしてLRU保持し、限られたVRAMを専門家とKVキャッシュの限界便益で配分して、PCIe転送とKV不足を抑える。
 
+- **2026-06 · [ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories](2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
+
 - **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ST-MoEは、隣接層と直前トークンのゲート相関から次層専門家を予測してオフチップDRAMから先読みし、誤り時は正しい重みを追加取得してデコードの転送待ちを減らす。
@@ -41,6 +45,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-04 · [SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding](2026-2604.10152-specmoe-self-assisted-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
+
+- **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
 
 - **2026-01 · [FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices](2026-2601.17063-flashmoe-ssd-io-cache-replacement.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -57,10 +65,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Moebiusは低同時実行時のテンソル並列と高同時実行時の専門家並列を実行中に切り替え、再起動せず各要求を継続して、負荷変動で固定方式が不利になる問題を減らす。
-
-- **2026-06 · [ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories](2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
 
 - **2026-05 · [ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling](2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md)**  
   実装：[✓](https://github.com/npnothard/ZipMoE-ICML26) ・ リポジトリ内被引用：1  
@@ -85,10 +89,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-02 · [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DALIは入力ごとの専門家負荷を測ってCPU/GPU配置を各層で動的に変え、残差から次層を先読みし負荷履歴でGPUキャッシュを交換して、ローカルPCのPCIe待ちを減らす。
-
-- **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
 
 - **2025-12 · [SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference](2025-2512.12990-slicemoe-bit-sliced-expert-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -388,13 +388,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：75  
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
+- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：60  
+  活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
+
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：60  
   LLM in a Flashは直近で使ったFFN重みをDRAMに残し、ニューロン単位でFlash上の重みをまとめて必要部分だけ読み出して大規模モデルを限られたメモリで生成する。
-
-- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：59  
-  活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
   実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：58  
@@ -439,7 +439,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-10〜2023-09）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：238  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：245  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 公開時期未分類

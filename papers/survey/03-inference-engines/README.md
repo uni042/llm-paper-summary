@@ -25,6 +25,6 @@
 ### 3年前（2023-10〜2024-09）
 
 - **2024-02 · [LLM Inference Unveiled: Survey and Roofline Model Insights](2024-2402.16363-llm-inference-unveiled.md)**  
-  実装：[✓](https://github.com/hahnyuan/LLM-Viewer) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/hahnyuan/LLM-Viewer) ・ リポジトリ内被引用：18  
   LLM推論の各種最適化をroofline モデルで横断整理し、モデル構成・要求条件・ハードウェアから計算量、データ転送量、律速資源を見積もる枠組みを示すサーベイ。
 <!-- survey:auto:end -->
