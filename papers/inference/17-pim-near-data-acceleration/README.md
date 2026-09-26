@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（9本）
+## 自動生成の論文一覧（10本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -46,6 +46,10 @@
 - **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBMベースダイ上で重みを読み出しながら逆量子化し、GPU側CUDA逆量子化と中間重みの余分なHBM往復を除去する近メモリ推論機構。
+
+- **2026-07 · [Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems](2026-2607.29076-selective-kv-cache-protection-analog-cim-noise-resilient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アナログ計算の雑音で劣化しやすい先頭・直近のKV項目だけをデジタルに保護し、中間項目を一括移行してアナログ計算へ送り、精度と書込み行稼働率を両立する。
 
 - **2026-07 · [D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation](2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
