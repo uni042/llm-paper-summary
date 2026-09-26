@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（22本）
+## 自動生成の論文一覧（23本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -76,6 +76,10 @@
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント推論のJCTをプリフィルとデコードの均衡問題として捉え直し、JCT指向スケジューリングとMTP統合パイプライン並列で64基H800上の360B級MoE処理を高速化する。
+
+- **2026-09 · [Memory Compression for High-Fanout Agent Sandboxes](2026-2609.11294-agentzip-memory-compression-high-fanout-agent-sandboxes.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  AgentZipは共有テンプレートと兄弟サンドボックスの類似性を使ってページを圧縮し、LLM応答待ちに圧縮、再利用前に復元先読みする。16並列ロールアウトでサンドボックス所有メモリを88.55%削減した。
 
 - **2026-09 · [LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents](2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

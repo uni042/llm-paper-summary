@@ -254,6 +254,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   画像符号化をRTX 4090、言語生成をA100へ分離し、KVキャッシュではなく数MB級の画像埋め込みだけをPCIe転送することで、異種GPUを使った低コストなマルチモーダルLLMサービングを実現する。
 
+- **2026-03 · [Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs](2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  異種LLM群で要求難易度、残りワークフロー長、実行中トークン量を同時予測し、モデル選択と待ち行列順序を共同制御して遅延とタスク性能のPareto前線を改善する。
+
 - **2026-02 · [PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving](2026-2602.12029-prefillshare-shared-prefill-multi-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数LLMが同じ文脈を別々にプリフィルする重複を、凍結共有プリフィル＋KV条件付き追加学習でモデル横断共有し、エージェント処理の尾遅延とKVメモリを削減する。
@@ -687,10 +691,6 @@
 - **2026-03 · [GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving](2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md)**  
   実装：[✓](https://github.com/project-ghostserve/26mlsys-AE-GhostServe) ・ リポジトリ内被引用：0  
   KVキャッシュ全体ではなく消失訂正符号パリティをホストメモリへ退避し、長文脈LLMの障害復旧を低メモリ・低遅延化する。
-
-- **2026-03 · [Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs](2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  異種LLM群で要求難易度、残りワークフロー長、実行中トークン量を同時予測し、モデル選択と待ち行列順序を共同制御して遅延とタスク性能のPareto前線を改善する。
 
 - **2026-03 · [CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands](2026-2603.21257-calvo-network-aware-kv-loading-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
