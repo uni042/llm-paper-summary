@@ -18,6 +18,8 @@ code: null
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
 implementation_status: official-code-not-confirmed
 last_checked: '2026-09-26'
+last_audited: null
+audit_version: 0
 ---
 
 # VLMCache — 効率的な端末上視覚言語モデル推論

@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-26T00:15:49.159435+00:00",
-  "status": "passed",
+  "checked_at": "2026-09-26T12:30:14.968362+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 11876,
-  "checked_file_count": 11876,
+  "inventory_file_count": 11865,
+  "checked_file_count": 11865,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,157 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 987,
-  "findings": []
+  "external_url_count": 974,
+  "findings": [
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2607.11586-hcrmap.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "detail": "authors"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "detail": "published"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "detail": "publication"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "detail": "publication_type"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "detail": "publication_status"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md",
+      "detail": "summary"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2608.24411-resispec-enhancing-multi-candidate-speculative-sampling-via-residual-distribution-shaping.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md",
+      "detail": "title"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+      "detail": "title"
+    }
+  ]
 }
