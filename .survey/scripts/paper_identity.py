@@ -7,7 +7,7 @@ import re
 import unicodedata
 from difflib import SequenceMatcher
 from typing import Any
-from urllib.parse import unquote, urlparse, urlunparse
+from urllib.parse import parse_qs, unquote, urlencode, urlparse, urlunparse
 
 import survey
 
@@ -115,6 +115,11 @@ def ids_from_url(value: Any) -> set[str]:
             arxiv_alias = arxiv_alias_from_identifier(normalized)
             if arxiv_alias:
                 out.add(arxiv_alias)
+    if host in {"openreview.net", "www.openreview.net"}:
+        for openreview_id in parse_qs(parsed.query).get("id", []):
+            normalized = safe_norm_id("OpenReview:" + str(openreview_id).strip())
+            if normalized:
+                out.add(normalized)
     return out
 
 
@@ -130,10 +135,19 @@ def norm_url(value: Any) -> str | None:
         return raw.casefold()
     if not parsed.scheme or not parsed.netloc:
         return raw.casefold()
+    host = parsed.netloc.casefold()
+    query = ""
+    if host in {"openreview.net", "www.openreview.net"}:
+        host = "openreview.net"
+        openreview_ids = parse_qs(parsed.query).get("id", [])
+        if openreview_ids:
+            openreview_id = str(openreview_ids[0]).strip()
+            if openreview_id:
+                query = urlencode({"id": openreview_id})
     normalized = parsed._replace(
         scheme=parsed.scheme.casefold(),
-        netloc=parsed.netloc.casefold(),
-        query="",
+        netloc=host,
+        query=query,
         fragment="",
     )
     return urlunparse(normalized).rstrip("/")
