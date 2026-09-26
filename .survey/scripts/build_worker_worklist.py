@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import paper_identity
 import reference_pool
 import research_job_reconciliation
 
@@ -64,7 +65,7 @@ def _jobs(root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
+def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[dict[str, Any]]]:
     jobs = _jobs(root)
     claims = claim_state.current_claims(root)
     paper_index = research_job_reconciliation.build_paper_index(root)
@@ -108,7 +109,7 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
                 "created_at": row.get("created_at"),
             }
         )
-    return out, len(ready)
+    return out, len(ready), [dict(row) for row in ready]
 
 
 def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
@@ -135,6 +136,65 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
             }
         )
     return out, int(pool.get("candidate_count") or len(candidates))
+
+
+def _worklist_identity_tokens(row: dict[str, Any]) -> set[str]:
+    """Return exact paper aliases used to keep both worker surfaces disjoint."""
+    probe = dict(row)
+    aliases: list[str] = []
+    existing = probe.get("identifiers")
+    if isinstance(existing, list):
+        aliases.extend(str(value) for value in existing if value)
+    elif existing:
+        aliases.append(str(existing))
+    extra = probe.get("identity_tokens")
+    if isinstance(extra, list):
+        aliases.extend(str(value) for value in extra if value)
+    elif extra:
+        aliases.append(str(extra))
+    if aliases:
+        probe["identifiers"] = list(dict.fromkeys(aliases))
+
+    tokens = set(paper_identity.stable_identity_tokens(probe))
+    title_hash = paper_identity.normalized_title_hash(probe.get("title"))
+    if title_hash:
+        tokens.add("title-hash:" + title_hash)
+    return tokens
+
+
+def _dedupe_rows_by_identity(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Keep the first ranked row for each paper identity, propagating aliases."""
+    seen: set[str] = set()
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        tokens = _worklist_identity_tokens(row)
+        duplicate = bool(tokens and seen.intersection(tokens))
+        seen.update(tokens)
+        if duplicate:
+            continue
+        out.append(row)
+    return out
+
+
+def _exclude_reserved_identities(
+    rows: list[dict[str, Any]],
+    *,
+    reserved_rows: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Drop Discovery rows already reserved by Research/Audit and dedupe the rest."""
+    seen: set[str] = set()
+    for row in reserved_rows:
+        seen.update(_worklist_identity_tokens(row))
+
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        tokens = _worklist_identity_tokens(row)
+        duplicate_or_reserved = bool(tokens and seen.intersection(tokens))
+        seen.update(tokens)
+        if duplicate_or_reserved:
+            continue
+        out.append(row)
+    return out
 
 
 def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str, Any]]]:
@@ -174,8 +234,19 @@ def build(
     if discovery_limit <= 0:
         raise ValueError("discovery_limit must be > 0")
 
-    research_all, research_ready = _research_candidates(root)
-    discovery_all, discovery_pending = _discovery_candidates(root)
+    research_all, research_ready, research_reserved = _research_candidates(root)
+    discovery_all, _ = _discovery_candidates(root)
+
+    # A paper that already has a ready Research/Audit job must never be offered
+    # again as Discovery work, even if it is claimed by the other scheduled worker
+    # or appears through a DOI/arXiv/URL/title alias. Research/Audit takes precedence.
+    research_all = _dedupe_rows_by_identity(research_all)
+    discovery_all = _exclude_reserved_identities(
+        discovery_all,
+        reserved_rows=research_reserved,
+    )
+    discovery_pending = len(discovery_all)
+
     research = _split(research_all, limit=research_limit)
     discovery = _split(discovery_all, limit=discovery_limit)
 
