@@ -28,6 +28,7 @@
 - [Weight Quantization / Compression](16-weight-quantization-compression/) — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
 - [PIM / Near-Data Acceleration](17-pim-near-data-acceleration/) — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
 - [Pipeline-Native CPU Inference](18-pipeline-native-cpu-inference/) — CPU向け単一トークン推論でモデル依存構造と重み配置・実行スケジュールを共同設計する研究をまとめる。
+- [Inference Benchmarking / Workload Diagnosis](19-inference-evaluation-benchmarking/) — LLM推論・サービングのベンチマーク、トレース選定・再生、ボトルネック診断、測定方法を設計し、少ない実行で信頼できる性能評価を行う研究をまとめる。
 - [Other Inference Systems](99-other-inference-systems/) — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 <!-- survey:auto:start -->
