@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-26T17:47:42+00:00",
-  "record_count": 72,
+  "updated_at": "2026-09-26T17:49:24+00:00",
+  "record_count": 90,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -1028,6 +1028,276 @@
       ],
       "title": "ParetoQ",
       "source_url": "https://arxiv.org/abs/2502.02631"
+    },
+    "arXiv:1701.06538": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1701.06538",
+      "identity_tokens": [
+        "arXiv:1701.06538"
+      ],
+      "reason": "MoEの基礎的モデル／学習手法が中心。分散実装・通信帯域・負荷分散の議論はあるが、LLMシステム最適化への直接寄与は限定的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "source_url": "https://arxiv.org/abs/1701.06538"
+    },
+    "arXiv:2409.02060": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.02060",
+      "identity_tokens": [
+        "arXiv:2409.02060"
+      ],
+      "reason": "公開MoEモデルの学習・ルーティング分析が中心で、主貢献はモデル／学習側。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "OLMoE: Open Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2409.02060"
+    },
+    "arXiv:2101.03961": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2101.03961",
+      "identity_tokens": [
+        "arXiv:2101.03961"
+      ],
+      "reason": "大規模MoEの単純化と学習スケーリングが中心で、推論・配信システム自体は主題ではない。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "source_url": "https://arxiv.org/abs/2101.03961"
+    },
+    "arXiv:2312.10997": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.10997",
+      "identity_tokens": [
+        "arXiv:2312.10997"
+      ],
+      "reason": "RAG全般の手法分類が主眼で、システム効率への直接性は弱い。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "source_url": "https://arxiv.org/abs/2312.10997"
+    },
+    "arXiv:2408.15664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.15664",
+      "identity_tokens": [
+        "arXiv:2408.15664"
+      ],
+      "reason": "MoE負荷分散を改善するが主貢献は学習アルゴリズム側。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Auxiliary-Loss-Free Load Balancing Strategy for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2408.15664"
+    },
+    "arXiv:2501.15383": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.15383",
+      "identity_tokens": [
+        "arXiv:2501.15383"
+      ],
+      "reason": "長文脈推論技術を含むが主貢献は単一モデル技術報告。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Qwen2.5-1M Technical Report",
+      "source_url": "https://arxiv.org/abs/2501.15383"
+    },
+    "arXiv:2310.08560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.08560",
+      "identity_tokens": [
+        "arXiv:2310.08560"
+      ],
+      "reason": "エージェントの階層的文脈管理が主眼で、低レベル推論システム最適化とは距離がある。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "source_url": "https://arxiv.org/abs/2310.08560"
+    },
+    "arXiv:2207.04672": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2207.04672",
+      "identity_tokens": [
+        "arXiv:2207.04672"
+      ],
+      "reason": "大規模MoEを用いるが主貢献は多言語翻訳モデル・データ・学習。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "No Language Left Behind: Scaling Human-Centered Machine Translation",
+      "source_url": "https://arxiv.org/abs/2207.04672"
+    },
+    "arXiv:2402.01739": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.01739",
+      "identity_tokens": [
+        "arXiv:2402.01739"
+      ],
+      "reason": "MoEモデルの公開・学習・ルーティング分析が中心でシステム最適化への直接寄与は限定的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2402.01739"
+    },
+    "arXiv:2404.15574": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.15574",
+      "identity_tokens": [
+        "arXiv:2404.15574"
+      ],
+      "reason": "検索ヘッドの機構と長文脈の事実性の因果関係を分析するが、配信・ランタイム効率を高める手法や評価は提案しない。疎注意／KV選択への示唆はあるものの、システムサーベイへの直接寄与は間接的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "discovery-20260926-2301-scheduled-chat-00.md candidate #37"
+      ],
+      "title": "Retrieval Head Mechanistically Explains Long-Context Factuality",
+      "source_url": "https://arxiv.org/abs/2404.15574"
+    },
+    "arXiv:1706.03762": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1706.03762",
+      "identity_tokens": [
+        "arXiv:1706.03762"
+      ],
+      "reason": "Transformerの基礎論文で並列性の利点は論じるが、現行サーベイが対象とするLLM推論システム最適化そのものではない。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Attention Is All You Need",
+      "source_url": "https://arxiv.org/abs/1706.03762"
+    },
+    "arXiv:2602.15763": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15763",
+      "identity_tokens": [
+        "arXiv:2602.15763"
+      ],
+      "reason": "モデル・エージェント能力の技術報告が中心。効率化記述は含むが、独立した推論基盤手法としての寄与が主題ではない。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+      "source_url": "https://arxiv.org/abs/2602.15763"
+    },
+    "arXiv:2408.00118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.00118",
+      "identity_tokens": [
+        "arXiv:2408.00118"
+      ],
+      "reason": "実用サイズでのモデル設計と学習が中心。局所/大域注意など推論効率に関係する設計はあるが、システム寄与は間接的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+      "source_url": "https://arxiv.org/abs/2408.00118"
+    },
+    "arXiv:2001.04451": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2001.04451",
+      "identity_tokens": [
+        "arXiv:2001.04451"
+      ],
+      "reason": "LSH注意と可逆層で長系列の計算・メモリを削減するが、主眼は汎用Transformerの学習/モデル設計でLLM推論システムへの直接性は弱い。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Reformer: The Efficient Transformer",
+      "source_url": "https://arxiv.org/abs/2001.04451"
+    },
+    "arXiv:2412.06464": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.06464",
+      "identity_tokens": [
+        "arXiv:2412.06464"
+      ],
+      "reason": "線形注意/状態空間系のモデルアーキテクチャ改善が主題。効率性はあるが、推論ランタイム・配信への直接寄与は限定的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+      "source_url": "https://arxiv.org/abs/2412.06464"
+    },
+    "arXiv:2112.10684": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.10684",
+      "identity_tokens": [
+        "arXiv:2112.10684"
+      ],
+      "reason": "MoEの計算効率を大規模に実証するが、主眼は学習・スケーリング特性で、推論システム固有の手法は限定的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Efficient Large Scale Language Modeling with Mixtures of Experts",
+      "source_url": "https://arxiv.org/abs/2112.10684"
+    },
+    "arXiv:2403.19887": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.19887",
+      "identity_tokens": [
+        "arXiv:2403.19887"
+      ],
+      "reason": "Transformer/Mamba/MoEの組合せでメモリとスループットを改善するが、モデルアーキテクチャ報告が中心でシステム寄与は間接的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+      "source_url": "https://arxiv.org/abs/2403.19887"
+    },
+    "arXiv:2604.07144": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07144",
+      "identity_tokens": [
+        "arXiv:2604.07144"
+      ],
+      "reason": "LLM配信を対象とするが、中心的新規性がオンライン方策コード生成にあり、低レベル実行基盤への直接寄与は境界的。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "title": "Autopoiesis: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.07144"
     }
   }
 }
