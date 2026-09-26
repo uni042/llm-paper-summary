@@ -96,10 +96,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU・CPU・SSD間のKV配置政策を比較し、SSDの容量利得とワークロード別の最適配置・遅延境界を定量化する。
 
-- **2026-09 · [VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models](../18-vla-inference-quantization-evaluation/2026-2609.25376-vlaquantbench.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  事後量子化で重みや活性値を低精度化すればメモリと計算を減らせるが、開ループの再構成誤差だけでは実際のタスク成功率を予測しにくい。未校正W4A4のπ0.5では対象を126層から167層へ広げると成功率が7.0%から70.5%へ逆に回復し、単純な「量子化層が少ないほど安全」という直感が破れることを示した。
-
 - **2026-09 · [Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache](2026-2609.15030-validating-hybrid-state-cache-recovery-for-glm-5-3-flash-with-vllm-and-lmcache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GLM-5.3-Flash＋vLLM＋LMCacheの完全キャッシュヒット境界ずれを厳密プレフィックス復旧で修正し、出力同一性を保ったCPUキャッシュ再ロードのTTFT短縮を実証。
@@ -311,6 +307,10 @@
 - **2026-08 · [RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention](2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重み・3ビット鍵値キャッシュ・専門家退避を統合し、圧縮表現のまま注意計算して120B MoEを17.2GB、14.85トークン毎秒で実行する。
+
+- **2026-08 · [Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode](../18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  毎トークン、実際に使う重みを読み込むため、実行順と配置はメモリ帯域を左右する。本論文は、汎用Transformerを実行するランタイムだけを最適化する従来の分離設計を見直し、層間依存関係を変更したモデル構造とCPU推論ランタイムを一緒に設計する独立研究報告である。
 
 - **2026-08 · [Performance Foundations of Parallel & Distributed Reasoning Language Models](2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
