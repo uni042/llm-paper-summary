@@ -1,0 +1,89 @@
+name: Paper metadata reconciliation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'papers/**/*.md'
+      - '.survey/scripts/backfill_paper_metadata.py'
+      - '.survey/tests/test_backfill_paper_metadata.py'
+      - '.github/workflows/paper-metadata-reconciliation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Metadata reconciliation is idempotent and rebuilds from latest main, so a newer
+# trigger should replace an obsolete pending/running reconciliation.
+concurrency:
+  group: paper-metadata-main
+  cancel-in-progress: true
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Configure metadata publisher identity
+        run: |
+          git config user.name 'paper-metadata[bot]'
+          git config user.email 'paper-metadata[bot]@users.noreply.github.com'
+
+      - name: Validate metadata compatibility layer
+        run: |
+          python -m py_compile .survey/scripts/backfill_paper_metadata.py
+          python -m unittest discover -s .survey/tests -p 'test_backfill_paper_metadata.py'
+
+      - name: Reconcile incomplete paper metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          for publish_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python .survey/scripts/backfill_paper_metadata.py               --repo-root .               --missing-only               --metadata-cache /tmp/arxiv-metadata-cache.json
+            python .survey/scripts/survey.py --root .survey build
+
+            git add README.md papers .survey/survey-state/paper-identity-index.json
+            if git diff --cached --quiet; then
+              echo 'No incomplete paper metadata changes to publish.'
+              exit 0
+            fi
+
+            git commit -m 'data: reconcile incomplete paper metadata'
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+            fi
+
+            echo "Metadata publish conflict/race on attempt ${publish_attempt}; recomputing from latest main."
+            sleep $((publish_attempt * 2))
+          done
+
+          echo 'Failed to publish metadata reconciliation after 5 attempts.' >&2
+          exit 1
+
+      - name: Audit metadata coverage
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/audit_metadata_coverage.py             --repo-root .             --json-out /tmp/metadata-coverage.json             --strict
