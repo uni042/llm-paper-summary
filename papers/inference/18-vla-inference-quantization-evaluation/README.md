@@ -1,7 +1,7 @@
-# VLA Inference and Quantization Evaluation
+# Pipeline-Native CPU Inference
 
-視覚・言語・行動を統合するVision-Language-Action (VLA) モデルについて、推論時の量子化や実行品質を閉ループ制御タスクで評価する研究を収録する。LLM一般の重み量子化は `16-weight-quantization-compression`、VLAの行動結果を含む専用ベンチマークは本系統に分類する。
+CPU向け単一トークン推論で、Transformerの層間依存構造、重み配置、実行スケジュールを共同設計する研究を収録する。標準モデルのまま行う量子化やカーネル高速化とは異なり、推論時のデータ移動順序を変えるためにモデル構造そのものを設計する研究を扱う。
 
 ## 収録論文
 
-- [VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models](2026-2609.25376-vlaquantbench.md) — 量子化設定を閉ループのロボットタスク成功率で評価する。
+- [Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode](2026-2608.23841-pipeline-native-transformers.md) — 層間依存を緩めたモデルとCPUタイル型ストリーミングランタイムを共同設計する。
