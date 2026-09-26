@@ -1,4 +1,5 @@
 ---
+canonical_id: "DOI:10.1145/3745756.3809243"
 identity: "DOI:10.1145/3745756.3809243"
 target_lineage: "inference/08-edge-on-device-llm-systems"
 created_at: "2026-09-26T15:40:00+09:00"
