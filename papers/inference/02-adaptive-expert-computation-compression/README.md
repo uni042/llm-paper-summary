@@ -134,6 +134,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/gzyyy0/PCoMoE) ・ リポジトリ内被引用：0  
   MoE専門家を展開側と射影側へ分け、異なる専門家の内部部品を適合度に基づき組み合わせ、共通の展開計算を複数経路で再利用することで、専門家単位の削減より細粒度に計算を減らす方式。
 
+- **2026-09 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
+
 - **2026-09 · [GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models](2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md)**  
   実装：[✓](https://github.com/caichaoxiang/GeMoE) ・ リポジトリ内被引用：0  
   ゲート分布のエントロピーを不確実性指標として各トークンの専門家数を予測し、固定Top-kに近い品質を保ちながら専門家活性化と実測推論時間を削減する動的MoEルーティング。
@@ -417,10 +421,4 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2022-05 · [MoEfication: Transformer Feed-forward Layers are Mixtures of Experts](2021-2110.01786-moefication.md)**  
   実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：10  
   密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。
-
-### 公開時期未分類
-
-- **2026 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
 <!-- survey:auto:end -->

@@ -20,6 +20,9 @@ sources:
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
 implementation_status: official-code-not-confirmed
 last_checked: '2026-09-25'
+published: '2026-09-11'
+publication_type: 査読付き学術論文
+publication_status: published
 ---
 
 # MoEP: Compact and efficient sparsity with modular expert paths
