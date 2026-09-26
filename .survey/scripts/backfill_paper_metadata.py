@@ -76,6 +76,8 @@ def body_one_line_summary(body: str) -> str | None:
     """Reuse an already-authored one-line explanation; never invent prose."""
     patterns = (
         r"##\s+一文解説\s*\n+\s*([^\n]+)",
+        r"##\s+一覧用要約\s*\n+\s*([^\n]+)",
+        r"^\*\*一文解説:\*\*\s*([^\n]+)$",
         r"^>\s*([^\n]+)$",
     )
     for pattern in patterns:
@@ -147,11 +149,34 @@ def official_code_from_text(text: str) -> str | None:
     return None
 
 
+def infer_arxiv_id(meta: dict[str, Any], path: Path | None = None) -> str:
+    aid = str(meta.get("arxiv_id") or "").strip()
+    if aid:
+        return re.sub(r"v\d+$", "", aid)
+
+    canonical = str(meta.get("canonical_id") or "").strip()
+    match = re.fullmatch(r"arXiv:(\d{4}\.\d{4,5})(?:v\d+)?", canonical, re.I)
+    if match:
+        return match.group(1)
+
+    for key in ("source", "source_url", "primary_url", "canonical_url"):
+        value = str(meta.get(key) or "")
+        match = re.search(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})(?:v\d+)?", value, re.I)
+        if match:
+            return match.group(1)
+
+    if path is not None:
+        match = re.search(r"(\d{4}\.\d{4,5})", path.name)
+        if match:
+            return match.group(1)
+    return ""
+
+
 def arxiv_ids(paths: list[Path]) -> list[str]:
     ids: list[str] = []
     for path in paths:
         meta, _ = parse_frontmatter(path)
-        aid = str(meta.get("arxiv_id") or "").strip()
+        aid = infer_arxiv_id(meta, path)
         if aid and aid not in ids:
             ids.append(aid)
     return ids
@@ -414,7 +439,13 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
             meta["code"] = code
             added.append("code(body)")
 
-    aid = str(meta.get("arxiv_id") or "").strip()
+    aid = infer_arxiv_id(meta, path)
+    if aid and set_missing(meta, "arxiv_id", aid):
+        added.append("arxiv_id(inferred)")
+    if set_missing(meta, "source", meta.get("primary_url") or meta.get("source_url")):
+        added.append("source(existing-url)")
+    if set_missing(meta, "published", meta.get("published_online")):
+        added.append("published(published_online)")
     info = arxiv.get(aid) if aid else None
     if info:
         if set_missing(meta, "authors", info.get("authors")):
@@ -437,14 +468,29 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
         if ensure_sources(meta, info.get("abs_url"), info.get("pdf_url")):
             added.append("sources")
 
-    # Non-arXiv legacy conference pages can usually be reconstructed from existing fields.
+    # Non-arXiv legacy conference/journal pages can usually be reconstructed
+    # from explicit publication/DOI fields already present in the paper.
     source = str(meta.get("source") or "")
     if set_missing(meta, "publication", meta.get("publication_status")):
         added.append("publication(publication_status)")
     if ("publication_type" not in meta or empty(meta.get("publication_type"))) and "usenix.org/" in source:
         meta["publication_type"] = "査読付き国際会議論文"
         added.append("publication_type(usenix)")
-    if ensure_sources(meta):
+    if (
+        ("publication_type" not in meta or empty(meta.get("publication_type")))
+        and meta.get("doi")
+        and meta.get("publication")
+    ):
+        meta["publication_type"] = "査読付き学術論文"
+        added.append("publication_type(doi)")
+    if (
+        ("publication_status" not in meta or empty(meta.get("publication_status")))
+        and meta.get("doi")
+        and meta.get("publication")
+    ):
+        meta["publication_status"] = "published"
+        added.append("publication_status(doi)")
+    if ensure_sources(meta, meta.get("primary_url"), meta.get("primary_fulltext")):
         added.append("sources")
 
     # Empty legacy code strings are normalized to explicit null: do not infer a URL.
