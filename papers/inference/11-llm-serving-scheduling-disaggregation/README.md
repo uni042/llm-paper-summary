@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（256本）
+## 自動生成の論文一覧（257本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -391,6 +391,10 @@
 - **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   デコード要求の次トークン期限から残り時間を求め、期限内に入る最大プリフィル塊を反復ごとに二分探索して、固定分割の起動費と一括処理のデコード停止を減らす。
+
+- **2026-09 · [Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving](2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定P/D分離は各段階を専用化できる一方、実運用では未キャッシュ入力と出力の比率が短時間に変動する。大規模フリートでは分単位のピーク対平均比が最大4.7倍、公開エージェント型トレースでは同日内の時間別比率幅が中央値24.5倍だった。
 
 - **2026-09 · [Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving](2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
