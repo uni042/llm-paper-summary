@@ -1,0 +1,64 @@
+name: Identity resolver smoke
+
+on:
+  push:
+    paths:
+      - '.survey/scripts/paper_identity.py'
+      - '.survey/scripts/research_job_reconciliation.py'
+      - '.survey/scripts/resolve_paper_identity.py'
+      - '.survey/scripts/represented_paper_index.py'
+      - '.survey/tests/test_resolve_paper_identity.py'
+      - '.survey/tests/test_discovery_identity_dedup.py'
+      - '.survey/tests/test_research_job_reconciliation.py'
+      - '.survey/tests/test_discovery_precheck_snapshot.py'
+      - '.github/workflows/identity-resolver-smoke.yml'
+  pull_request:
+    paths:
+      - '.survey/scripts/paper_identity.py'
+      - '.survey/scripts/research_job_reconciliation.py'
+      - '.survey/scripts/resolve_paper_identity.py'
+      - '.survey/scripts/represented_paper_index.py'
+      - '.survey/tests/test_resolve_paper_identity.py'
+      - '.survey/tests/test_discovery_identity_dedup.py'
+      - '.survey/tests/test_research_job_reconciliation.py'
+      - '.survey/tests/test_discovery_precheck_snapshot.py'
+      - '.github/workflows/identity-resolver-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: identity-resolver-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Compile identity resolver modules
+        run: |
+          python -m py_compile \
+            .survey/scripts/paper_identity.py \
+            .survey/scripts/research_job_reconciliation.py \
+            .survey/scripts/resolve_paper_identity.py \
+            .survey/scripts/represented_paper_index.py
+
+      - name: Run identity resolver regression tests
+        run: |
+          python -m unittest \
+            .survey/tests/test_resolve_paper_identity.py \
+            .survey/tests/test_discovery_identity_dedup.py \
+            .survey/tests/test_research_job_reconciliation.py \
+            .survey/tests/test_discovery_precheck_snapshot.py
