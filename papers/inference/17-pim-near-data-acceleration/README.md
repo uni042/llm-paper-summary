@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（10本）
+## 自動生成の論文一覧（11本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -42,6 +42,10 @@
 - **2026-08 · [Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM](2026-2608.06989-dual-view-memory-npu-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NPU/PIMで共有する物理配置と各デバイスが見る論理配置を分離し、実行時の演算特性に応じて実行先を切り替えても帯域を落とさない統合メモリ方式。
+
+- **2026-08 · [NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference](2026-2608.22613-nova-technology-architecture-co-design-near-memory-hybrid-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  4F² DRAMと近メモリ演算器を組み合わせ、注意・SSM・MoEごとに実行層を選び並列化して、GPU比較で平均4.5倍のデコードスループットを報告する推論アクセラレータ。
 
 - **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

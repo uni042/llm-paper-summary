@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（258本）
+## 自動生成の論文一覧（259本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -383,6 +383,10 @@
 - **2026-09 · [Efficient Iterative Retrieval with Heterogeneous Batching](2026-2609.25405-orthrus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Orthrusは両者を一つの推論ループへ入れ、異なる計算特性を持つ仕事を同じバッチへ組み合わせる異種バッチ処理を提案する。4基のA100 GPUで、制御ワークロードのスループットを比較構成の1.28〜4.52倍へ高め、反復RAGベンチマークではエンドツーエンドP99遅延を最大55.8%削減した。
+
+- **2026-09 · [DLB: Distributed Load Balancing at Scale for Generative AI Inference](2026-2609.21079-dlb-distributed-load-balancing-at-scale-for-generative-ai-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  セルを相互プローブし、推論負荷から予測する遅延と通信遅延を基に、生成AI要求を地理的に分散したサーバーへ配る本番ロードバランサー。
 
 - **2026-09 · [Disaggregated Quantization: Specializing LLM Prefill and Decode](2026-2609.26333-disaggregated-quantization-prefill-decode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
