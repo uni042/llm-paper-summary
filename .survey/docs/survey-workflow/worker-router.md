@@ -84,7 +84,7 @@ runノルマの正規値は `.survey/scripts/worker_quota_policy.py` に一元�
 handoff guard、platform/context limit、GitHub正本の読取不能などのhard stopはノルマより優先する。ただし、**Research / Auditの内容書込みだけがplatform safetyで拒否され、claim/direct-take等の制御系GitHub writeとGitHub readが生きている場合はrun-wide hard stopへ昇格しない。** 第2.1節の `volatile pending durability` 規則で内容完成とGitHub耐久反映を分離し、既確保standbyの読解を継続する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ### 2.0 Library-first専用ワークリスト
 
-**固定Scheduled Chat (`scheduled-chat-00` / `scheduled-chat-30`) がタスク本文で `Library-first（GitHub read-only）` を指定されている通常runでは、この節のタスクローカル方針を第2節のGitHub書込み型worker向けroute/quotaより優先する。** 現行値は、開始時未処理候補在庫が **500件を超える場合は読解**、**500件以下なら探索**、読解の最低ノルマは **新規完成10件**、探索の最低ノルマは **重複除外後の新規有効候補40件の収録**である。run中に在庫数が境界を跨いでもモードは固定する。第2節の `288件 / Research-Audit 5件 / Discovery 8ラウンド` はGitHub書込み型の正規claim/submission経路用であり、Library-first read-only runのノルマ判定には使わない。
+**固定Scheduled Chat (`scheduled-chat-00` / `scheduled-chat-30`) がタスク本文で `Library-first（GitHub read-only）` を指定されている通常runでは、この節のタスクローカル方針を第2節のGitHub書込み型worker向けroute/quotaより優先する。** 現行値は、開始時未処理候補在庫が **500件を超える場合は読解**、**500件以下なら探索**、読解の最低ノルマは **新規完成10件**である。探索の最低ノルマは、一次資料本文まで確認して最終判定した新規identityを **合計40件** とする。内訳は `accept`（収録候補）、`unrelated`（無関係）、`borderline`（微妙・既定除外だが再検討可能）の合計で数える。重複、既収録、既存relevance ledger収録済み、本文取得不能で判定未完了の候補は40件へ数えない。acceptだけを40件集めるために基準を緩めず、本文を読んだ結果unrelated/borderlineなら正しくその分類へ入れてノルマへ数える。run中に在庫数が境界を跨いでもモードは固定する。第2節の `288件 / Research-Audit 5件 / Discovery 8ラウンド` はGitHub書込み型の正規claim/submission経路用であり、Library-first read-only runのノルマ判定には使わない。
 
 現在の `:00` / `:30` Scheduled Chatが**Library-first運用**を指示されている場合は、workerごとに分離した専用indexを対象選択の第一入口として使う。
 
@@ -104,6 +104,21 @@ worklistはjob / claim / paper実体 / relevance ledgerから再構築されるi
 - accept時の一文要約は本文確認後に書き、本文から確認できた固有の寄与または代表的結果を含める。要旨の言い換えだけを収録理由にしない。
 
 本文全文へアクセスできず、収録適否を十分に判断できない候補はacceptへ数えず、取得不能としてskipまたは保留し、次候補へ進む。Discoveryの最低ノルマを満たすために判定基準を緩めない。
+
+**本文確認後の判定はGitHub正規relevance手順と同じ3分類で保存する。**
+- `accept`: サーベイへ収録する価値があり、後続Research候補として残す。
+- `unrelated`: 現行サーベイの対象外。GitHubの `mark_unrelated` と同じ意味で、原則として恒久除外する。
+- `borderline`: 関連性または期待されるサーベイ価値が微妙。GitHubの `mark_borderline` と同じ意味で、既定では探索から除外するが明示的な再検討は可能とする。
+
+Library-firstではGitHubのrelevance ledgerへwriteしない代わりに、各worker専用のLibrary relevance ledgerへ追記する。競合を避けるため `:00` と `:30` は別ファイルを使い、少なくとも次を正規化して保持する。
+- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-00-unrelated-papers.json`
+- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-00-borderline-papers.json`
+- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-30-unrelated-papers.json`
+- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-30-borderline-papers.json`
+
+各recordはGitHubの `reference_relevance_ledger.py` に合わせ、`classification`, `canonical_id`, `identity_tokens`, `title`, `reason`, `first_checked_at`, `last_checked_at`, `linked_from` を保持し、取得できる場合は `source_url` も残す。同じcanonical identityは新規行を増やさず既存recordを更新する。unrelatedとborderlineの両方に同じidentityを残さず、最新判定側だけを有効とする。判定理由は「無関係」「微妙」だけで済ませず、本文を読んで確認した具体的な対象外理由、既存収録との差不足、システム寄与不足などを短く記録する。
+
+accept候補は従来どおりDiscovery成果ファイルへ保存し、unrelated/borderlineは上記relevance ledgerへ保存する。探索runの最低40件は、この3分類すべてのLibrary耐久保存と保存後再取得確認が完了したidentityだけを数える。relevance ledger更新に失敗した判定はノルマへ数えず、Library自体へ保存できない場合は今回runの判定記録JSON/MarkdownをScheduled Chatへ添付して成果を失わない。
 
 専用worklistが欠損・古い・該当レーン空の場合だけ既存の正規job/reference poolから直接選ぶ。その場合も可能な限りもう一方の固定Scheduled workerが処理中・Library保存済みのidentityを避ける。claim、重複排除、relevance判定、submissionなどGitHub正規経路を使うrunでは、それぞれの正規安全規則を省略しない。Library-first runでは完成内容をGitHub本文へ直接反映せず、タスク本文で指定されたLibrary保存規則を優先する。
 
