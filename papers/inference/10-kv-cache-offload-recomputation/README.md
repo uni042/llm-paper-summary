@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（92本）
+## 自動生成の論文一覧（95本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -258,6 +258,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/YangSteve1223/kvcache-lab) ・ リポジトリ内被引用：0  
   KV転送をトークンの残す/捨てる二値選択ではなくFP16/INT8/INT4の精度配分として扱い、モデル別INT4耐性probeで安全性を切替え、同一転送量でPPL・検索精度を保ちながら転送経路TTFTを50〜62%削減する。
 
+- **2026-06 · [SIFT — 注意不変性を利用したRAG入力処理の選択索引](2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SIFTは、検索拡張生成で同じ文書が異なる問い合わせに繰り返し現れるのに、毎回長い文書全体の注意を再計算する無駄を減らす方式である。索引容量はKVテンソルより最大24,000倍小さく、平均精度を完全再計算から1%以内に保ちながら初回トークン時間を最大1.71倍改善する。
+
 - **2026-06 · [PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression](2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PolyKVは層・プリフィル／デコード段階ごとに追い出し方式と容量を校正評価で選び、感度の高い層へKV予算を再配分して固定規則の品質低下を減らす方式。
@@ -269,6 +273,14 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [Adaptive KV Cache Reuse for Fast Long-Context LLM Serving](2026-2605.24022-cachetune-adaptive-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CacheTuneは文書断片KVを周波数成分で選別し、重要部分だけ全体文脈で再計算、残りをストレージから再利用して、品質と再計算・転送時間を両立する方式。
+
+- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KV Packetは、検索拡張生成で同じ文書を別の問い合わせや別順序の文脈へ再利用するとき、既存のKVキャッシュを修復するための再計算を不要にする方式である。Llama-3.1とQwen2.5を用いた評価では、完全再計算に近いF1を保ちながら文脈準備の演算をほぼ除去し、長文脈条件で初回トークン時間を完全再計算比最大19.45倍短縮したと報告する。
+
+- **2026-04 · [2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、大規模言語モデル推論のKVキャッシュをGPU HBMだけへ閉じ込めず、注意方式に応じた正確な容量計算と六階層メモリへの動的配置を統合する。
 
 - **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

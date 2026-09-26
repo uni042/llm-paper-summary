@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（54本）
+## 自動生成の論文一覧（56本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -110,6 +110,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   Orthrusの無損失投機的復号を独立再現し、BF16では生成軌跡の完全一致が43〜45%に留まる一方、FP32では1,190件すべて一致することを示した再現・評価研究。
 
+- **2026-09 · [ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding](2026-2609.17241-echo-early-layer-collaborative-hierarchical-orchestration-with-bonus-logits-in-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数ベンチマークで平均受理トークン数を増やし、既存方式に対して2.4〜2.9倍の高速化を報告するが、最良の加速には一度の微調整が必要である。
+
 - **2026-09 · [DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding](2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   検証済みだが棄却された後続位置の対象モデル中間表現を次の投機生成回へ再利用し、対象モデルの追加計算なしでブロック拡散型投機的復号の平均受理長を約10〜13%改善する。
@@ -209,6 +213,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-07 · [Online Speculative Decoding](2023-2310.07177-online-speculative-decoding.md)**  
   実装：[✓](https://github.com/LiuXiaoxuanPKU/OSD) ・ リポジトリ内被引用：20  
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
+
+- **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
+  実装：✓ ・ リポジトリ内被引用：20  
+  EAGLE-2は、投機的復号（投機的復号）で使う候補木を固定形状から文脈適応型へ変える方式である。元のEAGLEは軽量ドラフトモデルで複数候補を作り、大規模な対象モデルが一括検証することで自己回帰復号を高速化するが、候補木の形を事前に固定すると、簡単な文脈にも難しい文脈にも同じ計算予算を配ってしまう。
 
 - **2023-11 · [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md)**  
   実装：[✓](https://github.com/FasterDecoding/REST) ・ リポジトリ内被引用：12  

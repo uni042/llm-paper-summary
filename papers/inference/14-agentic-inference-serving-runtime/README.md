@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（20本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -96,6 +96,10 @@
 - **2026-05 · [GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving](2026-2605.22566-graphflow-agent-workflow-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有操作グラフからエージェント手順を動的生成し、操作単位の差分KV状態で約4倍のメモリ削減を狙うエージェント・サービング基盤。
+
+- **2026-05 · [2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来のKVキャッシュ管理は、プロンプト到着後は末尾へトークンが追加され続けるチャット型負荷を暗黙に前提とする。そのため完全一致する接頭辞を再利用する接頭辞キャッシュや、古いKVを前から追い出す方式が成立する。
 
 - **2026-04 · [Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines](2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md)**  
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（104本）
+## 自動生成の論文一覧（106本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -164,6 +164,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   ReXpertは、MoE専門家重みを容量比例帯域のReRAMへ常駐させ、共起する専門家を局所共有して、GPUのHBM重み読出しと小バッチFFNの供給律速を減らす。
 
+- **2026-08 · [Memory-Sovereign Inference: Output-Exact Execution Beyond Full Residency](2026-2608.23805-memory-sovereign-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は表現量、意味的に要求された重み、スケジューラが要求した転送、実際の入出力を別々に記録し、資源を誰が課金するかと、どこまで出力一致を検証したかを明示する。
+
 - **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ExactMoEは全専門家とルータ選択を維持したまま、専門家の射影をW4A16量子化してGPUスロットへ必要分だけ転送し、VRAM容量と量子化復号の負担を抑える。
@@ -199,6 +203,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference](2026-2607.05116-communication-aware-placement-pruning-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CAPはMoEの共活性から専門家を近接配置し、通信量と負荷均衡の配置スペクトルを機械別に選び、通信先を意識した動的枝刈りまで統合して全対全通信を削減する。
+
+- **2026-07 · [2026-2607.11586-hcrmap](2026-2607.11586-hcrmap.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  方式は積層SRAM、ローカルHBM、共有DRAMを階層的な常駐先として扱い、専門家複製を昇格・維持・降格・追い出しする遅い制御と、現在の複製へトークン群を割り当てる速い制御を分離する。
 
 - **2026-06 · [RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference](2026-2606.05511-rh-plus-pim-row-hit-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

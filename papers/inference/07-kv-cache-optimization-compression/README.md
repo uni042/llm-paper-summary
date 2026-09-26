@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（90本）
+## 自動生成の論文一覧（92本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -78,6 +78,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning](2026-lazyeviction.md)**  
   実装：[✓](https://github.com/Halo-949/LazyEviction) ・ リポジトリ内被引用：1  
   一時的に注意が下がって後で再重要化するトークンを最大再帰間隔で予測し、観測窓ごとの遅延削除で長い推論のKVキャッシュを圧縮する方式。
+
+- **2026-07 · [2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning](2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  自己回帰生成では過去トークンのキー・値状態をKVキャッシュへ保持するため、文脈長に比例してメモリ容量と読出し帯域が増える。既存の追い出し方式は累積注意量などの代理指標を使うことが多いが、「今まで重要だったトークン」が今後も重要とは限らず、推論途中で関連性が変わると誤った追い出しが起きる。
 
 - **2026-05 · [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -208,6 +212,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference](2026-2607.01831-lynx-progressive-kv-transfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LynxはKVを上位ビットのAnchorとResidualへ分割し、Anchor到着後に低精度で投機生成、Residual到着後に一括検証して、分離サービングの転送待ちを隠しつつINT8級品質を保つ。
+
+- **2026-07 · [KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems](2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GraphSpec実装では論理プロンプト、モデル重み、学習手順を変えず、4K〜128Kの長文脈質問応答で全文脈方式と同等の回答品質を維持しつつ、128K時の提案段階KVアクセスを元状態の5.5%まで減らした。
 
 - **2026-07 · [InferScale: GPU-Native KV Injection for Personalized LLM Serving](2026-2607.27090-inferscale-gpu-native-kv-injection.md)**  
   実装：[✓](https://github.com/saltsystemslab/InferScale) ・ リポジトリ内被引用：0  

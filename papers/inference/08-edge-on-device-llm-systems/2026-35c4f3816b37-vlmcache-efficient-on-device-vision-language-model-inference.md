@@ -1,15 +1,23 @@
 ---
-canonical_id: "DOI:10.1145/3745756.3809243"
-identity: "DOI:10.1145/3745756.3809243"
-target_lineage: "inference/08-edge-on-device-llm-systems"
-created_at: "2026-09-26T15:40:00+09:00"
-reference_main_sha: "17e83b685db9cacefff633e77949b368f1fa1660"
-intended_github_path: "papers/inference/99-other-inference-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
-completion_status: "complete_library_first"
-title: "視覚言語モデル向け再利用機構 VLMCache"
+canonical_id: DOI:10.1145/3745756.3809243
+identity: DOI:10.1145/3745756.3809243
+target_lineage: inference/08-edge-on-device-llm-systems
+created_at: '2026-09-26T15:40:00+09:00'
+reference_main_sha: 17e83b685db9cacefff633e77949b368f1fa1660
+intended_github_path: papers/inference/99-other-inference-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md
+completion_status: complete_library_first
+title: 視覚言語モデル向け再利用機構 VLMCache
 year: 2026
-primary_url: "https://doi.org/10.1145/3745756.3809243"
-list_summary: "連続画像の安定背景を再利用可能なKV接頭辞へ分離し、動的前景だけを再計算した後に注意相互作用と位置整合性を復元することで、端末上VLM推論を平均精度低下1%未満で1.4〜3.8倍高速化する。"
+primary_url: https://doi.org/10.1145/3745756.3809243
+list_summary: 連続画像の安定背景を再利用可能なKV接頭辞へ分離し、動的前景だけを再計算した後に注意相互作用と位置整合性を復元することで、端末上VLM推論を平均精度低下1%未満で1.4〜3.8倍高速化する。
+summary: 連続画像の安定背景を再利用可能なKV接頭辞へ分離し、動的前景だけを再計算した後に注意相互作用と位置整合性を復元することで、端末上VLM推論を平均精度低下1%未満で1.4〜3.8倍高速化する。
+source: https://doi.org/10.1145/3745756.3809243
+sources:
+- https://doi.org/10.1145/3745756.3809243
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-09-26'
 ---
 
 # VLMCache — 効率的な端末上視覚言語モデル推論

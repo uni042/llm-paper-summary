@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（175本）
+## 自動生成の論文一覧（186本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -29,6 +29,10 @@
 - **2025-11 · [FlexiCache: Leveraging Temporal Stability of Attention Heads for Efficient KV Cache Management](2025-2511.00868-flexicache-leveraging-temporal-stability-of-attention-heads-for-efficient-kv-cache-management.md)**  
   実装：[✓](https://github.com/NazmulTakbir/FlexiCache) ・ リポジトリ内被引用：2  
   重要KVページが時間的に入れ替わりやすい注意ヘッドだけ全KVをGPUへ残し、安定ヘッドは上位ページ以外をCPUへ退避・周期再昇格することで、精度を保ちながらGPUメモリを最大70%削減する。
+
+- **2025-10 · [2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
 
 - **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -216,6 +220,10 @@
   実装：[✓](https://growmtp.github.io/) ・ リポジトリ内被引用：0  
   強化学習ロールアウトの検証信号でドラフトヘッドをその場で育成し、事前ヘッドなしでも投機的デコードによる学習加速を実現する。
 
+- **2026-09 · [GDN Tree-Scan: Served Tree Verification for Recurrent-Hybrid Language Models](2026-2609.23900-gdn-tree-scan-served-tree-verification-for-recurrent-hybrid-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GDN Tree-Scanは、FlashAttention-2による木型注意バイアス、枝ごとのGDN状態走査と再生、GPU上の複数ドラフト確定、受理枝だけの状態公開を統合する。
+
 - **2026-09 · [FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference](2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Top-K自己投機による軽量な早期退出と隠れ状態の持越しでKV整合性を保ち、重みオフロード時に後段層の計算と転送をまとめて省く。
@@ -283,6 +291,10 @@
 - **2026-09 · [ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference](2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/Amir-zsh/ASPIRE) ・ リポジトリ内被引用：0  
   下書き・検証混在順伝播、要求別オンライン制御、下書き内の鍵値文脈更新により長文脈自己投機復号を最大4.58倍高速化する。
+
+- **2026-09 · [2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models](2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の学習後量子化は、量子化前後の差をユークリッド距離で測り、各方向の誤差をほぼ等価に扱う。
 
 - **2026-08 · [TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics](2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -376,6 +388,18 @@
   実装：✓ ・ リポジトリ内被引用：0  
   複数候補方式は候補数を増やせば受理確率が上がるように見えるが、最初の候補が棄却されると対象分布からその候補確率を差し引いた残差分布へ移り、元のドラフト分布と急速にずれる。対象モデルの厳密な出力分布を変えず、既存の最先端複数候補方式に対して最大1.92倍の高速化を報告する。
 
+- **2026-08 · [2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference](2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  外れ値認識量子化では大半の重みを4ビットへ圧縮し、誤差を生みやすい少数の大振幅重みだけを高精度の疎行列として分離する。評価ではBF16のcuBLASに対して2.74〜4.18倍、最も強い非融合外れ値認識比較方式に対して最大1.53倍の高速化を報告する。
+
+- **2026-08 · [2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference](2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  4ビットのMXFP4はブロック単位の共有尺度で低ビット推論を実現するが、すべてのブロックへ同じ要素形式と精度回復方式を適用するため、量子化しやすさの違いを十分に利用できない。3B〜70BモデルでMXFP4が失う精度のうち常識推論で83%、MMLUで82%を回復し、NVFP4に対してもそれぞれ43%、27%の損失を回復する。
+
+- **2026-08 · [2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の重み量子化はトランスフォーマー本体を4ビットへ縮めても、語彙全体へロジットを出す最終言語モデルヘッドをBF16やFP16で残す実装がある。Qwen3-8Bではこの射影だけで約1.18GBになる。
+
 - **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
@@ -424,6 +448,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   CPU内のSMEと通常コアを共有帯域込みのルーフラインで使い分け、タイル分割・注意パイプライン・配置再利用によりLLM推論をllama.cpp比最大3.94倍高速化する。
 
+- **2026-06 · [Omni-Flow: A Unified Workflow Orchestration and Distributed KV Cache Sharing Framework for Multimodal Inference](2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  中心的な発想は、モデル固有コードへ混在していた制御、テンソル転送、KVキャッシュ共有を、制御フロー（Control Flow）、データフロー（Data Flow）、計算フロー（Compute Flow）の三層へ分離することにある。
+
 - **2026-06 · [LiveServe: Interaction-Aware Serving for Real-Time Omni-Modal LLMs](2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声対話の再生進捗・発話・割込みをスケジューリングとKV配置へ反映し、不要な先行生成を抑えながら次ターンのKVを発話中に先読みし、P90初回音声遅延と無駄計算を同時に減らす。
@@ -471,6 +499,10 @@
 - **2026-05 · [Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers](2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低帯域・分散オンチップ記憶のMT-3000向けに演算子、融合注意、三段パイプライン、混合並列を共同設計し、大規模LLM推論を実現。
+
+- **2026-05 · [2026-2606.00946-lodestar-an-online-learning-llm-inference-router](2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  公開クラウドの同種8基A30クラスタと、A30 8基＋V100 8基の異種クラスタで評価し、強い接頭辞・負荷認識ヒューリスティックに対して平均TTFTを平均1.41倍、P99 TTFTを1.47倍改善し、条件によって異種クラスタでは4倍超の改善を示す。
 
 - **2026-04 · [Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM](2026-2604.18655-ondevice-multilora-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -676,6 +708,10 @@
   実装：✓ ・ リポジトリ内被引用：18  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
+- **2024-03 · [2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
+
 - **2024-07 · [2024-2407.04153-mixture-of-a-million-experts](2024-2407.04153-mixture-of-a-million-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
@@ -702,9 +738,17 @@
   実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：93  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
+- **2023-05 · [2023-2305.13245-gqa](2023-2305.13245-gqa.md)**  
+  実装：✓ ・ リポジトリ内被引用：46  
+  標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
+
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：39  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
+
+- **2022-11 · [2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 ### 5年前（2021-10〜2022-09）
 

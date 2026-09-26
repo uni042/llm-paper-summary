@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（20本）
+## 自動生成の論文一覧（23本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -40,6 +40,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   AceSpecは端末–クラウド投機的復号で棄却分岐をWAN待ち中に先回り生成して状態キャッシュへ保存し、棄却後の再下書きと往復通信を減らす方式。
 
+- **2026-08 · [2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving](2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlashDriveは四段階をアルゴリズム・システム協調設計で同時に短縮する。Alpamayo 1.5-10Bでは単一GPUのエンドツーエンド遅延を717ミリ秒から151ミリ秒へ4.7倍短縮し、制御周波数を1.4Hzから6.6Hzへ高めた。
+
 - **2026-07 · [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ATSInferはテンソルごとのGPU常駐価値を実測し、CPU計算・PCIe転送・GPU計算を重ねて、VRAM不足時の転送待ちとCPU律速を減らす方式。
@@ -63,6 +67,10 @@
 - **2026-05 · [CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration](2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の投機的デコード（投機的復号）は、小さなドラフトモデルが候補トークンを先に作り、大きな対象モデルが複数候補を一括検証することで、対象モデルの重み読み出しを複数トークンへ償却する。
+
+- **2026-05 · [2026-2605.16786-lever-speculative-llm-inference-on-smartphones](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フラッシュへ重みを退避すれば容量問題は緩和できるが、自己回帰生成の各ステップで巨大な重みを読み直すと入出力が支配的になる。OnePlus 12など三端末とLlama-3.1-8B、Qwen3系列を使った評価で、フラッシュ退避した通常自己回帰推論に対し平均2.93倍、従来投機的デコードに対し平均1.50倍の高速化を報告する。
 
 - **2026-04 · [SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs](2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -97,4 +105,10 @@
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
   実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：32  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
+
+### 公開時期未分類
+
+- **2026 · [視覚言語モデル向け再利用機構 VLMCache](2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  VLMCacheは、UIエージェントや視覚質問応答のように連続フレームを処理する視覚言語モデルで、毎フレームの視覚入力を最初から入力処理するため初回トークン時間が長くなる問題を扱う。提案法は安定した背景ブロックと変化した前景ブロックを意味的に分離し、背景を再利用可能なKVキャッシュ接頭辞として並べ、前景だけを再計算する。
 <!-- survey:auto:end -->
