@@ -111,12 +111,16 @@ def _inferred_paper_record(path: Path, repo_root: Path) -> dict[str, Any] | None
         normalized = paper_identity.safe_norm_id(canonical)
         if normalized:
             identifiers = [normalized]
-    if not identifiers:
+    stable_tokens = sorted(paper_identity.stable_identity_tokens(record))
+    if not stable_tokens and identifiers:
+        stable_tokens = ["id:" + identifier for identifier in identifiers]
+    if not stable_tokens:
         return None
     return {
-        "canonical_id": canonical or identifiers[0],
+        "canonical_id": canonical or (identifiers[0] if identifiers else None),
         "path": rel,
         "identifiers": identifiers,
+        "stable_identity_tokens": stable_tokens,
         "title": title,
     }
 
@@ -131,7 +135,34 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     by_path: dict[str, dict[str, Any]] = {}
     by_identifier: dict[str, dict[str, Any]] = {}
+    by_token: dict[str, dict[str, Any]] = {}
+    identifier_conflicts: dict[str, list[dict[str, Any]]] = {}
+    token_conflicts: dict[str, list[dict[str, Any]]] = {}
     paper_count = 0
+
+    def add_lookup(
+        lookup: dict[str, dict[str, Any]],
+        conflicts: dict[str, list[dict[str, Any]]],
+        key: str,
+        paper: dict[str, Any],
+    ) -> None:
+        conflict = conflicts.get(key)
+        if conflict is not None:
+            if all(item.get("path") != paper.get("path") for item in conflict):
+                conflict.append(paper)
+                conflict.sort(key=lambda item: str(item.get("path") or ""))
+            return
+        prior = lookup.get(key)
+        if prior is None:
+            lookup[key] = paper
+            return
+        if prior.get("path") == paper.get("path"):
+            return
+        conflicts[key] = sorted(
+            [prior, paper],
+            key=lambda item: str(item.get("path") or ""),
+        )
+        lookup.pop(key, None)
 
     for family in ("inference", "training", "survey"):
         folder = repo_root / "papers" / family
@@ -144,17 +175,21 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
             paper_count += 1
             by_path[paper["path"]] = paper
             for identifier in paper["identifiers"]:
-                prior = by_identifier.get(identifier)
-                if prior is not None and prior.get("path") != paper.get("path"):
-                    raise ValueError(
-                        f"duplicate represented identifier {identifier}: "
-                        f"{prior.get('path')} vs {paper.get('path')}"
-                    )
-                by_identifier[identifier] = paper
+                add_lookup(
+                    by_identifier,
+                    identifier_conflicts,
+                    identifier,
+                    paper,
+                )
+            for token in paper["stable_identity_tokens"]:
+                add_lookup(by_token, token_conflicts, token, paper)
 
     return {
         "by_path": by_path,
         "by_identifier": by_identifier,
+        "by_token": by_token,
+        "identifier_conflicts": identifier_conflicts,
+        "token_conflicts": token_conflicts,
         "paper_count": paper_count,
     }
 
@@ -176,16 +211,23 @@ def match_represented_research_job(
     if paper_path and paper_path in by_path:
         return dict(by_path[paper_path])
 
-    by_identifier = paper_index.get("by_identifier") or {}
+    by_token = paper_index.get("by_token") or {}
+    token_conflicts = paper_index.get("token_conflicts") or {}
     matches: dict[str, dict[str, Any]] = {}
-    for identifier in sorted(paper_identity.record_identifiers(job)):
-        paper = by_identifier.get(identifier)
+    for token in sorted(paper_identity.stable_identity_tokens(job)):
+        conflict = token_conflicts.get(token)
+        if isinstance(conflict, list):
+            for paper in conflict:
+                if isinstance(paper, dict):
+                    matches[str(paper.get("path") or paper.get("canonical_id"))] = paper
+            continue
+        paper = by_token.get(token)
         if isinstance(paper, dict):
             matches[str(paper.get("path") or paper.get("canonical_id"))] = paper
 
     if len(matches) > 1:
         raise ValueError(
-            "Research job identifiers resolve to multiple represented papers: "
+            "Research job identity resolves to multiple represented papers: "
             + ", ".join(sorted(matches))
         )
     return dict(next(iter(matches.values()))) if matches else None
