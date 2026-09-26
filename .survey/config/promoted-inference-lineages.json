@@ -233,6 +233,32 @@
       "created_from_proposal": "current-corpus-curation"
     },
     {
+      "slug": "18-pipeline-native-cpu-inference",
+      "title": "Pipeline-Native CPU Inference",
+      "description": "CPU向け単一トークン推論で、モデルの層間依存構造、重み配置、実行スケジュールを共同設計し、主記憶帯域とI/O待ちを削減する研究をまとめる。",
+      "distinctness_reason": "Kernel / Runtime Compilation系統が既存モデルの演算実装やコンパイルを最適化するのに対し、本系統はCPU帯域律速を緩和するためモデルの層間依存グラフ自体を変更し、その構造に合わせて重みストリーミングと実行順を共同設計する点で境界が異なる。",
+      "boundary_rule": "主要貢献がCPU推論向けにモデル構造と実行ランタイムを共同設計し、層間依存、stage-major実行、重みストリーミング、非同期expert I/Oなどを変える研究を含め、既存モデルの量子化やカーネル最適化だけを主題とする研究は含めない。",
+      "scope_includes": [
+        "CPU帯域律速を対象とするモデル・ランタイム協調設計",
+        "層間依存変更によるstage-major／pipeline-native実行",
+        "CPU向け重みストリーミングとexpert I/O重ね合わせ"
+      ],
+      "scope_excludes": [
+        "既存モデルのweight quantizationだけを主題とする研究",
+        "モデル依存グラフを変えない一般的なCPUカーネル最適化"
+      ],
+      "neighbor_lineages": [
+        "09-kernel-runtime-compilation",
+        "08-edge-on-device-llm-systems",
+        "01-offload-hierarchical-memory"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.23841"
+      ],
+      "created_at": "2026-09-26T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
       "slug": "19-inference-evaluation-benchmarking",
       "title": "Inference Benchmarking / Workload Diagnosis",
       "description": "LLM推論・サービングの性能評価に用いるワークロード、トレース縮約・再生、ボトルネック診断、測定プロトコルを設計し、少ない再実行で信頼できる評価証拠を得る研究をまとめる。",
