@@ -10,6 +10,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import paper_identity  # noqa: E402
 import queue_worker  # noqa: E402
 
 
@@ -154,6 +155,56 @@ summary: Existing paper used for identity-dedup regression coverage.
         research_jobs = list(queue_worker.JOBS.glob("*.json"))
         self.assertEqual(job["result_summary"]["research_jobs_added"], 1)
         self.assertEqual(len(research_jobs), 1)
+
+
+    def test_openreview_url_identity_does_not_collapse_distinct_papers(self) -> None:
+        first_url = "https://openreview.net/forum?id=paper-alpha"
+        second_url = "https://www.openreview.net/forum?id=paper-beta&utm_source=test"
+
+        self.assertEqual(
+            paper_identity.ids_from_url(first_url),
+            {"OpenReview:paper-alpha"},
+        )
+        self.assertEqual(
+            paper_identity.ids_from_url(second_url),
+            {"OpenReview:paper-beta"},
+        )
+        self.assertEqual(
+            paper_identity.norm_url(first_url),
+            "https://openreview.net/forum?id=paper-alpha",
+        )
+        self.assertEqual(
+            paper_identity.norm_url(second_url),
+            "https://openreview.net/forum?id=paper-beta",
+        )
+
+        resolver = paper_identity.build_represented_resolver(
+            [
+                {
+                    "source_url": first_url,
+                    "title": "First OpenReview Paper",
+                    "year": 2026,
+                },
+                {
+                    "source_url": second_url,
+                    "title": "Second OpenReview Paper",
+                    "year": 2026,
+                },
+            ]
+        )
+
+        self.assertEqual(len(resolver["papers"]), 2)
+        first_match = paper_identity.match_represented_paper(
+            {"source_url": "https://openreview.net/pdf?id=paper-alpha"},
+            resolver,
+        )
+        second_match = paper_identity.match_represented_paper(
+            {"source_url": "https://openreview.net/pdf?id=paper-beta"},
+            resolver,
+        )
+        self.assertIsNotNone(first_match)
+        self.assertIsNotNone(second_match)
+        self.assertNotEqual(first_match["paper_key"], second_match["paper_key"])
 
 
 if __name__ == "__main__":
