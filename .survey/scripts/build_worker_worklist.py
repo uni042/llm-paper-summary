@@ -180,7 +180,7 @@ def build(
                 "This is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
-                "Discovery rows are candidates only: read the primary paper body before acceptance; title/abstract-only acceptance is forbidden.",
+                "Discovery rows are candidates only: before counting a row toward the 40-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -224,7 +224,7 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
         "- このページに割り当てられた候補だけを使用する。",
         "- Library-first runでは、同じidentityの完成原稿・探索結果がChatGPT Libraryへ保存済みならskipする。",
         "- 最新状態で処理済み・claim済み・対象外ならskipし、同じページ内の次候補へ進む。",
-        "- Discoveryは候補提示面にすぎない。accept前に一次資料本文を読み、対象範囲・既存収録との差分・手法/測定上の収録価値を確認する。タイトル・要旨だけでacceptしない。",
+        "- Discoveryは候補提示面にすぎない。40件へ数える前にcanonical identityをGitHubとChatGPT Libraryの両方で照合して未処理の新規候補だと確認し、その後に一次資料本文を読み、accept / unrelated / borderline を判定する。既処理・重複が判明した候補は40件から外して補充する。タイトル・要旨だけでacceptしない。",
         "",
         "## 未処理 Research / Audit",
         "",
