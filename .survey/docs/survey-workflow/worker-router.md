@@ -31,8 +31,8 @@ Scheduled Chat / WorkワーカーがGitHub本文書込みを拒否された場�
 各実行（run）の開始時に最新 `main` HEADを取得し、同じHEADで次を読む。
 
 - `.survey/work-queue/hot-dispatch.json`（存在する場合。ゼロ待ち開始用の再構築可能index）
-- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json`（専用100件index）と `.survey/work-queue/WORKLIST-00.md`
-- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json`（専用100件index）と `.survey/work-queue/WORKLIST-30.md`
+- `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json`（専用200件index）と `.survey/work-queue/WORKLIST-00.md`
+- `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json`（専用200件index）と `.survey/work-queue/WORKLIST-30.md`
 - `.survey/work-queue/next-jobs.json`
 - `.survey/work-queue/maintenance-cycle.json`
 - `.survey/work-queue/discovery-state.json`
@@ -89,7 +89,7 @@ handoff guard、platform/context limit、GitHub正本の読取不能などのhar
 - `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json` / 人間向け `.survey/work-queue/WORKLIST-00.md`
 - `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json` / 人間向け `.survey/work-queue/WORKLIST-30.md`
 
-各専用ページは、Research / Audit候補を最大100件、リスト入り判定待ちDiscovery候補を最大100件持つ。生成時に同一の正規候補列を決定的なround-robinで二分し、十分な候補在庫がある限り`:00`と`:30`の割当は重複させない。**「共有ページの先頭／末尾」という概念は使わない。** 各workerは自分専用の100件だけを処理候補として扱う。
+各専用ページは、Research / Audit候補を最大200件、リスト入り判定待ちDiscovery候補を最大200件持つ。生成時に同一の正規候補列を決定的なround-robinで二分し、十分な候補在庫がある限り`:00`と`:30`の割当は重複させない。**「共有ページの先頭／末尾」という概念は使わない。** 各workerは自分専用の200件だけを処理候補として扱う。
 
 worklistはjob / claim / paper実体 / relevance ledgerから再構築されるindexであり、それらの正本を置き換えない。Library-first runでは処理直前に最新mainの正本状態を再確認し、すでに処理済み・active claim済み・対象外となった行をskipする。同じpaper identityまたは探索candidate identityの完成成果がChatGPT Libraryへすでに耐久保存され、GitHub反映待ちになっている場合もskipして同じ専用ページの次候補へ進む。
 
