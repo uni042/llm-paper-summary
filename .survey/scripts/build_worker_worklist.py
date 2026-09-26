@@ -161,7 +161,19 @@ def build(
     *,
     research_limit: int = DEFAULT_RESEARCH_LIMIT,
     discovery_limit: int = DEFAULT_DISCOVERY_LIMIT,
+    limit: int | None = None,
 ) -> dict[str, dict[str, Any]]:
+    """Build both worker lists, retaining the legacy shared-limit API."""
+    if limit is not None:
+        if limit <= 0:
+            raise ValueError("limit must be > 0")
+        research_limit = limit
+        discovery_limit = limit
+    if research_limit <= 0:
+        raise ValueError("research_limit must be > 0")
+    if discovery_limit <= 0:
+        raise ValueError("discovery_limit must be > 0")
+
     research_all, research_ready = _research_candidates(root)
     discovery_all, discovery_pending = _discovery_candidates(root)
     research = _split(research_all, limit=research_limit)
