@@ -8,11 +8,16 @@
   "source_url": "https://arxiv.org/abs/2606.04511",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2606.04511-sparda.md",
   "selection_reason": "Decoupled sparse-attention architecture predicts next-layer KV blocks to overlap CPU-to-GPU prefetch with current execution; reports up to 1.7x decode speedup and 5.3x higher decode throughput than non-offload sparse baseline, with released code.",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T13:07:39+00:00"
+  "created_at": "2026-09-19T13:07:39+00:00",
+  "superseded_at": "2026-09-26T13:08:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2606.04511-sparda.md",
+  "represented_canonical_id": "arXiv:2606.04511",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
