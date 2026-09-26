@@ -33,8 +33,8 @@ def query_record(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def resolve(repo_root: Path, record: dict[str, Any]) -> dict[str, Any]:
-    identifiers = sorted(paper_identity.record_identifiers(record))
-    if not identifiers:
+    stable_tokens = sorted(paper_identity.stable_identity_tokens(record))
+    if not stable_tokens:
         raise ValueError(
             "stable paper identity required: canonical_id/arxiv_id/doi/"
             "openreview_id/source_url"
@@ -42,8 +42,16 @@ def resolve(repo_root: Path, record: dict[str, Any]) -> dict[str, Any]:
 
     index = research_job_reconciliation.build_paper_index(repo_root)
     matches: dict[str, dict[str, Any]] = {}
-    for identifier in identifiers:
-        paper = index["by_identifier"].get(identifier)
+    conflicts = index.get("token_conflicts") or {}
+    by_token = index.get("by_token") or {}
+    for token in stable_tokens:
+        conflict = conflicts.get(token)
+        if isinstance(conflict, list):
+            for paper in conflict:
+                if isinstance(paper, dict):
+                    matches[str(paper["path"])] = paper
+            continue
+        paper = by_token.get(token)
         if paper is not None:
             matches[str(paper["path"])] = paper
 
@@ -57,7 +65,8 @@ def resolve(repo_root: Path, record: dict[str, Any]) -> dict[str, Any]:
     return {
         "schema_version": 1,
         "status": "represented" if paper is not None else "not_found",
-        "query_identifiers": identifiers,
+        "query_identifiers": sorted(paper_identity.record_identifiers(record)),
+        "query_identity_tokens": stable_tokens,
         "paper_path": paper.get("path") if paper else None,
         "canonical_id": paper.get("canonical_id") if paper else None,
         "matched_identifiers": paper.get("identifiers", []) if paper else [],
