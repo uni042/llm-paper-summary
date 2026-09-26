@@ -1,9 +1,13 @@
 ---
-canonical_id: "DOI:10.1145/3830422.3830427"
-title: "Elastic Memory Remapping for Multi-tenant LLM Serving"
-summary: "Oneirosは複数モデルを同居させるLLM配信で、非稼働モデルの重み領域を退避し、その領域を変動するKVキャッシュへ再割当てする。CPUへのキャッシュ退避を避け、末尾遅延と処理量を改善する。"
-list_summary: "複数モデルを同居させるLLM配信で、更新され続けるKVキャッシュをCPUへ退避する代わりに、非稼働モデルの不変な重み領域を一方向に退避してKV領域へ再割当てし、GH200実機で末尾遅延を最大99.3%削減、スループットを最大86.7%改善する。"
-lineage: "01-offload-hierarchical-memory"
+canonical_id: DOI:10.1145/3830422.3830427
+title: Elastic Memory Remapping for Multi-tenant LLM Serving
+summary: Oneirosは複数モデルを同居させるLLM配信で、非稼働モデルの重み領域を退避し、その領域を変動するKVキャッシュへ再割当てする。CPUへのキャッシュ退避を避け、末尾遅延と処理量を改善する。
+list_summary: 複数モデルを同居させるLLM配信で、更新され続けるKVキャッシュをCPUへ退避する代わりに、非稼働モデルの不変な重み領域を一方向に退避してKV領域へ再割当てし、GH200実機で末尾遅延を最大99.3%削減、スループットを最大86.7%改善する。
+lineage: 01-offload-hierarchical-memory
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-09-26'
 ---
 
 papers/inference/99-other-inference-systems/2026-2d443f9ef666-elastic-memory-remapping-for-multi-tenant-llm-serving.md

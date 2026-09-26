@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（106本）
+## 自動生成の論文一覧（108本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -131,6 +131,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution](2026-2609.09800-hbfsim-high-bandwidth-flash-real-gpu-execution.md)**  
   実装：[✓](https://github.com/SlugLab/HBFSim) ・ リポジトリ内被引用：0  
   実GPU上のLLMをPTX計装し、未実機化のHBFについて遅延・容量・熱・保持・リフレッシュを閉ループで差し込むシミュレータ。110GiB論理容量やvLLMの同一出力を実データで検証する。
+
+- **2026-09 · [EMA: Elastic and Performance Transparent Memory Across GPUs](2026-2609.27040-ema.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数GPUサーバでは総メモリ量が十分でも、各GPUへ固定分割されているため局所的な不足が起きる。設計目標は単に遠隔GPUメモリを読めることではなく、借り手と貸し手の双方に性能透過性を与えることである。評価では個々の利用者スループットを最大52%改善し、メモリ容量を2倍に用意した構成の96%のスループットを達成しながら、遅延は静的ローカル基準と同程度に保った。
 
 - **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -441,4 +445,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
   実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：236  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
+
+### 公開時期未分類
+
+- **2026 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル配信では、生成が進むほど鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）が増え、GPUメモリ不足が同時処理数を制約する。従来のCPUメモリへのKV退避は容量を増やせるが、KVは復号中も更新されるため、GPUとCPUの双方向転送と同期が実行経路へ入りやすい。
 <!-- survey:auto:end -->
