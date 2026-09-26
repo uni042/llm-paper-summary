@@ -48,5 +48,17 @@ class PdfCitationFallbackTest(unittest.TestCase):
         self.assertEqual(refs, [{"canonical_id": "arXiv:9999.00001"}])
 
 
+    def test_primary_fulltext_pdf_is_used_directly(self) -> None:
+        meta = {
+            "canonical_id": "DOI:10.1016/j.neunet.2026.109617",
+            "source": "https://doi.org/10.1016/j.neunet.2026.109617",
+            "primary_fulltext": "https://example.edu/paper.pdf",
+            "sources": [],
+        }
+        with patch.object(pdfs, "discover_pdf_urls", return_value=[]):
+            urls = pdfs.candidate_pdf_urls(meta)
+        self.assertIn("https://example.edu/paper.pdf", urls)
+
+
 if __name__ == "__main__":
     unittest.main()
