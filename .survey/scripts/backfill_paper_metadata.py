@@ -104,6 +104,33 @@ def metadata_needs_backfill(meta: dict[str, Any], body: str) -> bool:
     return False
 
 
+def body_arxiv_categories(body: str) -> dict[str, Any] | None:
+    """Recover explicit arXiv category codes already written in bibliography prose."""
+    bibliography = body
+    heading = re.search(r"^##\s+書誌情報\s*$", body, re.MULTILINE)
+    if heading:
+        tail = body[heading.end():]
+        next_heading = re.search(r"^##\s+", tail, re.MULTILINE)
+        bibliography = tail[: next_heading.start()] if next_heading else tail
+
+    primary_match = re.search(
+        r"主分類[^\n。]*?[（(]([A-Za-z][A-Za-z0-9-]*\.[A-Za-z0-9.-]+)[）)]",
+        bibliography,
+    )
+    if not primary_match:
+        return None
+    primary = primary_match.group(1)
+    cross: list[str] = []
+    for match in re.finditer(
+        r"(?:副分類|クロスリスト)[^\n。]*?[（(]([A-Za-z][A-Za-z0-9-]*\.[A-Za-z0-9.-]+)[）)]",
+        bibliography,
+    ):
+        code = match.group(1)
+        if code != primary and code not in cross:
+            cross.append(code)
+    return {"primary": primary, "cross_list": cross}
+
+
 def body_bibliography(body: str) -> dict[str, str]:
     values: dict[str, str] = {}
     labels = {
@@ -414,6 +441,14 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     before = yaml.safe_dump(meta, allow_unicode=True, sort_keys=False)
     bib = body_bibliography(body)
     added: list[str] = []
+
+    authored_categories = body_arxiv_categories(body)
+    categories = meta.get("arxiv_categories")
+    if authored_categories and (
+        not isinstance(categories, dict) or empty(categories.get("primary"))
+    ):
+        meta["arxiv_categories"] = authored_categories
+        added.append("arxiv_categories(body)")
 
     authored_one_line = body_one_line_summary(body)
     if set_missing(meta, "list_summary", authored_one_line):
