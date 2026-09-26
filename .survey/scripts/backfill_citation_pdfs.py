@@ -41,7 +41,12 @@ from citation_graph import (
 
 def primary_source_urls(meta: dict) -> list[str]:
     urls: list[str] = []
-    for value in [meta.get("source"), *(meta.get("sources") or [])]:
+    for value in [
+        meta.get("source"),
+        meta.get("primary_fulltext"),
+        meta.get("primary_url"),
+        *(meta.get("sources") or []),
+    ]:
         if isinstance(value, str) and value.startswith(("http://", "https://")):
             urls.append(value)
     aid = normalize_arxiv(meta.get("arxiv_id")) or normalize_arxiv(meta.get("canonical_id"))
