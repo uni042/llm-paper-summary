@@ -57,8 +57,7 @@ jobs:
 
       - name: Run identity resolver regression tests
         run: |
-          python -m unittest \
-            .survey/tests/test_resolve_paper_identity.py \
-            .survey/tests/test_discovery_identity_dedup.py \
-            .survey/tests/test_research_job_reconciliation.py \
-            .survey/tests/test_discovery_precheck_snapshot.py
+          python .survey/tests/test_resolve_paper_identity.py
+          python .survey/tests/test_discovery_identity_dedup.py
+          python .survey/tests/test_research_job_reconciliation.py
+          python .survey/tests/test_discovery_precheck_snapshot.py
