@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build dedicated 100-item worklists for scheduled-chat-00 and scheduled-chat-30.
+"""Build dedicated 200-item worklists for scheduled-chat-00 and scheduled-chat-30.
 
 The worklists are rebuildable selection indexes only. Canonical job/claim state,
 paper files, and reference relevance ledgers remain authoritative. The two worker
-pages are deterministically disjoint whenever at least 200 eligible rows exist.
+pages are deterministically disjoint whenever at least 400 eligible rows exist.
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ import claim_state
 import reference_pool
 import research_job_reconciliation
 
-DEFAULT_LIMIT = 100
+DEFAULT_LIMIT = 200
 WORKERS = ("00", "30")
 
 
