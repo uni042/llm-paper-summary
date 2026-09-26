@@ -258,5 +258,22 @@ primary_url: "https://arxiv.org/abs/2603.12645"
         )
 
 
+    def test_body_arxiv_categories_recovers_explicit_bibliography_codes(self) -> None:
+        body = """# Example
+
+## 書誌情報
+
+2026年のarXiv論文。主分類は機械学習（cs.LG）、副分類は人工知能（cs.AI）。
+
+## 概要
+
+本文。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_arxiv_categories(body),
+            {"primary": "cs.LG", "cross_list": ["cs.AI"]},
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
