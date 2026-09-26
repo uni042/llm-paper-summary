@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-09-26T18:35:30+00:00`
+Generated: `2026-09-26T23:52:59+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。もう一方のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -95,7 +95,7 @@ ready総数: **294** / 未claim総数: **150** / このworker向け: **75**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **6392** / このworker向け: **500**
+未判定総数: **6366** / このworker向け: **500**
 
 | # | identity | title | year | 関連数 | 系統候補 | source |
 |---:|---|---|---:|---:|---|---|
@@ -374,231 +374,231 @@ ready総数: **294** / 未claim総数: **150** / このworker向け: **75**
 | 273 | arXiv:2306.03314 |  |  | 4 | LLM Serving / Scheduling / Disaggregation, multi-LoRA serving / multi-agent KV cache sharing / low-rank cache representation | [source](https://arxiv.org/abs/2306.03314) |
 | 274 | arXiv:2307.11088 |  |  | 4 | serving-scheduling, オフロード／階層メモリ | [source](https://arxiv.org/abs/2307.11088) |
 | 275 | arXiv:2402.05120 |  |  | 4 | agent serving / KV-cache reuse / latent communication / DAG workflows, speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling | [source](https://arxiv.org/abs/2402.05120) |
-| 276 | arXiv:2402.18013 |  |  | 4 | llm-serving-scheduling-disaggregation, 専門家混合推論・三次元NAND・計算内メモリ・フラッシュ内処理・端末内推論 | [source](https://arxiv.org/abs/2402.18013) |
-| 277 | arXiv:2406.14909 |  |  | 4 | inference/07-kv-cache-optimization-compression, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2406.14909) |
-| 278 | arXiv:2408.11556 |  |  | 4 | KV Cache Offload / Recomputation, LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference | [source](https://arxiv.org/abs/2408.11556) |
-| 279 | arXiv:2409.09086 |  |  | 4 | llm-serving-scheduling-disaggregation, マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング | [source](https://arxiv.org/abs/2409.09086) |
-| 280 | arXiv:2410.11842 |  |  | 4 | adaptive expert computation / null experts / data sparsity / multimodal MoE, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2410.11842) |
-| 281 | arXiv:2502.12216 |  |  | 4 | 07-kv-cache-optimization-compression, オフロード／階層メモリ | [source](https://arxiv.org/abs/2502.12216) |
-| 282 | arXiv:2503.06433 |  |  | 4 | llm-serving-scheduling-disaggregation, オフロード／階層メモリ | [source](https://arxiv.org/abs/2503.06433) |
-| 283 | arXiv:2506.13329 |  |  | 4 | Quantization × MoE × Offload, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2506.13329) |
-| 284 | arXiv:2509.09505 |  |  | 4 | GPUカーネル融合／SwiGLU／LLM推論ランタイム, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2509.09505) |
-| 285 | arXiv:2512.19849 |  |  | 4 | Speculative decoding × MoE, distributed LLM serving / KV cache / latent attention / GPU fabrics | [source](https://arxiv.org/abs/2512.19849) |
-| 286 | arXiv:2603.05451 |  |  | 4 | diffusion LLM inference / KV caching / fused attention / parallel decoding, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2603.05451) |
-| 287 | DOI:10.1109/hpca57654.2024.00078 |  |  | 4 | LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, offload-hierarchical-memory | [source](https://doi.org/10.1109/hpca57654.2024.00078) |
-| 288 | DOI:10.1145/3695053.3731092 |  |  | 4 | CPU推論、行列拡張、異種実行、ルーフライン最適化, block diffusion LLM serving / KV-cache offloading / sparse attention / heterogeneous CPU-GPU memory | [source](https://doi.org/10.1145/3695053.3731092) |
-| 289 | DOI:10.18653/v1/n19-1246 |  |  | 4 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment | [source](https://doi.org/10.18653/v1/n19-1246) |
-| 290 | DOI:10.48550/arxiv.2509.23324 |  |  | 4 | edge-on-device-llm-systems, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://doi.org/10.48550/arxiv.2509.23324) |
-| 291 | arXiv:2404.02852 |  |  | 4 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2404.02852) |
-| 292 | arXiv:2506.08889 |  |  | 4 | 13-sparse-attention | [source](https://arxiv.org/abs/2506.08889) |
-| 293 | DOI:10.48550/arxiv.2502.14866 |  |  | 4 | kv-cache-optimization-compression | [source](https://doi.org/10.48550/arxiv.2502.14866) |
-| 294 | arXiv:1312.4314 |  |  | 3 | Expert Prefetch, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, Quantization × MoE × Offload | [source](https://arxiv.org/abs/1312.4314) |
-| 295 | arXiv:1606.07947 |  |  | 3 | 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用 | [source](https://arxiv.org/abs/1606.07947) |
-| 296 | arXiv:1707.06209 |  |  | 3 | Adaptive computation／cache-aware MoE, adaptive-expert-computation-compression, 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/1707.06209) |
-| 297 | arXiv:1802.05799 |  |  | 3 | distributed attention / sequence parallelism / blockwise attention / long-context transformers, llm-serving-scheduling-disaggregation, survey-distributed-training-systems | [source](https://arxiv.org/abs/1802.05799) |
-| 298 | arXiv:1804.05685 |  |  | 3 | KVキャッシュ制約下のLLMサービング・スケジューリング, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, LLM serving scheduling / chunked prefill / MoE inference | [source](https://arxiv.org/abs/1804.05685) |
-| 299 | arXiv:1903.00161 |  |  | 3 | Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling, adaptive-expert-computation-compression, dynamic top-k MoE routing / load-balanced routing / long-context hybrid attention / physical AI foundation models | [source](https://arxiv.org/abs/1903.00161) |
-| 300 | arXiv:1910.10073 |  |  | 3 | 99-other-inference-systems, Conditional Computation, early-exit-offloading-self-speculative-decoding | [source](https://arxiv.org/abs/1910.10073) |
-| 301 | arXiv:2004.12993 |  |  | 3 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, Mixture-of-Experts / differentiable routing / parameter merging / modular learning, early-exit-offloading-self-speculative-decoding | [source](https://arxiv.org/abs/2004.12993) |
-| 302 | arXiv:2006.10369 |  |  | 3 | multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration, speculative decoding / draft-model design, 分散MoE学習 / ZeRO / CPUオフロード / 多次元並列 | [source](https://arxiv.org/abs/2006.10369) |
-| 303 | arXiv:2010.11934 |  |  | 3 | KV cache offloading / hierarchical storage / lossy KV compression, LLM Serving / Scheduling / Disaggregation, Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2010.11934) |
-| 304 | arXiv:2102.00554 |  |  | 3 | Quantization × MoE × Offload, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2102.00554) |
-| 305 | arXiv:2103.16716 |  |  | 3 | MoE inference / task-specific expert pruning / sparse-to-dense conversion, dense-to-MoE conversion / conditional FFN computation / expert routing, オフロード／階層メモリ | [source](https://arxiv.org/abs/2103.16716) |
-| 306 | arXiv:2109.12948 |  |  | 3 | KV cache quantization / long-context inference / activation compression, adaptive-expert-computation-compression, survey-low-bit-llm | [source](https://arxiv.org/abs/2109.12948) |
-| 307 | arXiv:2112.04426 |  |  | 3 | KV Cache Offload / Recomputation, KVキャッシュ再利用／圧縮／ネットワーク転送, LLM inference surveys、roofline performance analysis | [source](https://arxiv.org/abs/2112.04426) |
-| 308 | arXiv:2203.10244 |  |  | 3 | adaptive expert computation / null experts / data sparsity / multimodal MoE, low-bit VLM inference / microscaling / hardware-software co-design, multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing | [source](https://arxiv.org/abs/2203.10244) |
-| 309 | arXiv:2204.05862 |  |  | 3 | Conditional Computation, Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2204.05862) |
-| 310 | arXiv:2206.04046 |  |  | 3 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, MoE compression / task-agnostic expert pruning / expert merging / representation similarity, multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing | [source](https://arxiv.org/abs/2206.04046) |
-| 311 | arXiv:2211.09085 |  |  | 3 | KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, オフロード／階層メモリ | [source](https://arxiv.org/abs/2211.09085) |
-| 312 | arXiv:2212.09095 |  |  | 3 | 07-kv-cache-optimization-compression, 投機的デコード / 自己投機的デコード / 層スキップ, 端末LLM・ニューロン疎性・階層メモリ推論 | [source](https://arxiv.org/abs/2212.09095) |
-| 313 | arXiv:2302.07863 |  |  | 3 | 05-speculative-decoding-moe, on-device LLM / heterogeneous inference / NPU offloading, 投機的デコード / 知識蒸留 / ドラフトモデル整合 | [source](https://arxiv.org/abs/2302.07863) |
-| 314 | arXiv:2304.02207 |  |  | 3 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2304.02207) |
-| 315 | arXiv:2305.01879 |  |  | 3 | Expert Prefetch, LLM inference surveys、roofline performance analysis, MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2305.01879) |
-| 316 | arXiv:2305.10601 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, fine-grained MoE / expert routing / test-time scaling / inference-time sampling | [source](https://arxiv.org/abs/2305.10601) |
-| 317 | arXiv:2306.11222 |  |  | 3 | Adaptive Expert Computation / Compression, Expert Prefetch, MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2306.11222) |
-| 318 | arXiv:2307.13304 |  |  | 3 | Expert Prefetch, MoE inference / on-device LLM / expert offloading / expert caching, Quantization × MoE × Offload | [source](https://arxiv.org/abs/2307.13304) |
-| 319 | arXiv:2308.00951 |  |  | 3 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, Quantization × MoE × Offload, adaptive expert computation / dynamic MoE routing / gating uncertainty | [source](https://arxiv.org/abs/2308.00951) |
-| 320 | arXiv:2308.12219 |  |  | 3 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2308.12219) |
-| 321 | arXiv:2309.12288 |  |  | 3 | 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2309.12288) |
-| 322 | arXiv:2310.03294 |  |  | 3 | hierarchical-memory, serving-scheduling, survey-distributed-training-systems | [source](https://arxiv.org/abs/2310.03294) |
-| 323 | arXiv:2310.08659 |  |  | 3 | LLM inference surveys、roofline performance analysis, quantization-kernels, survey-low-bit-llm | [source](https://arxiv.org/abs/2310.08659) |
-| 324 | arXiv:2401.03065 |  |  | 3 | Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling, adaptive-expert-computation-compression, kernel-runtime-compilation | [source](https://arxiv.org/abs/2401.03065) |
-| 325 | arXiv:2402.10171 |  |  | 3 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV-cache compression / attention-based token selection / long-context inference, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2402.10171) |
-| 326 | arXiv:2402.14289 |  |  | 3 | LLM inference surveys、roofline performance analysis, llm-serving-scheduling-disaggregation, serving-disaggregation | [source](https://arxiv.org/abs/2402.14289) |
-| 327 | arXiv:2402.18789 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, kv-cache-optimization-compression, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2402.18789) |
-| 328 | arXiv:2403.02181 |  |  | 3 | Conditional Computation, early-exit-offloading-self-speculative-decoding, 投機的デコード／動的LLMサービング／GPU空間多重化 | [source](https://arxiv.org/abs/2403.02181) |
-| 329 | arXiv:2405.08944 |  |  | 3 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, kv-cache, other-inference-systems | [source](https://arxiv.org/abs/2405.08944) |
-| 330 | arXiv:2406.01721 |  |  | 3 | kv-cache-compression-quantization, kv-cache-memory, survey-low-bit-llm | [source](https://arxiv.org/abs/2406.01721) |
-| 331 | arXiv:2406.04692 |  |  | 3 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, agentic serving / workflow-aware scheduling / memory-aware dispatch, multi-model serving / disaggregated serving / cross-model KV reuse | [source](https://arxiv.org/abs/2406.04692) |
-| 332 | arXiv:2406.11235 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, kv-cache-compression-quantization, survey-low-bit-llm | [source](https://arxiv.org/abs/2406.11235) |
-| 333 | arXiv:2406.19314 |  |  | 3 | Offload / Hierarchical Memory, kv-cache-offload-recomputation, ローカル大規模言語モデル推論／Apple Silicon／統合メモリ／推論基盤比較／複数機推論 | [source](https://arxiv.org/abs/2406.19314) |
-| 334 | arXiv:2407.14679 |  |  | 3 | MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next, Speculative Decoding / Draft Model Architecture, speculative decoding / draft-model design | [source](https://arxiv.org/abs/2407.14679) |
-| 335 | arXiv:2409.02908 |  |  | 3 | diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference, diffusion LLM inference / KV caching / fused attention / parallel decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2409.02908) |
-| 336 | arXiv:2410.10781 |  |  | 3 | 14-agentic-inference-serving-runtime, KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2410.10781) |
-| 337 | arXiv:2411.15997 |  |  | 3 | llm-serving-scheduling-disaggregation, serving-scheduling, その他システム研究 | [source](https://arxiv.org/abs/2411.15997) |
-| 338 | arXiv:2412.20993 |  |  | 3 | agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling, kv-cache-offload-recomputation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2412.20993) |
-| 339 | arXiv:2502.15197 |  |  | 3 | 05-speculative-decoding-moe, Speculative decoding × MoE, 投機的デコード／動的候補木／高同時実行LLMサービング | [source](https://arxiv.org/abs/2502.15197) |
-| 340 | arXiv:2503.07137 |  |  | 3 | MoE serving / attention-MoE disaggregation / asynchronous inference, adaptive-expert-computation-compression, fine-grained MoE / atomic experts / product routing / expert-centric GPU scheduling | [source](https://arxiv.org/abs/2503.07137) |
-| 341 | arXiv:2503.13565 |  |  | 3 | MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード, hardware-accelerators, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2503.13565) |
-| 342 | arXiv:2504.03624 |  |  | 3 | 13-sparse-attention, PIM / Near-Data Acceleration, エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系 | [source](https://arxiv.org/abs/2504.03624) |
-| 343 | arXiv:2505.18610 |  |  | 3 | KV Cache Optimization / Compression, KV cache quantization / RoPE-aware compression / packed attention serving, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2505.18610) |
-| 344 | arXiv:2506.07366 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, MoE inference / expert parallelism / expert replication / load balancing, MoE serving / attention-MoE disaggregation / asynchronous inference | [source](https://arxiv.org/abs/2506.07366) |
-| 345 | arXiv:2507.04786 |  |  | 3 | KV Cache Offload / Recomputation, LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference, LLMサービング／スケジューリング／分離実行 | [source](https://arxiv.org/abs/2507.04786) |
-| 346 | arXiv:2508.16646 |  |  | 3 | KV Cache Offload / Recomputation, llm-serving-scheduling-disaggregation, serving-scheduling | [source](https://arxiv.org/abs/2508.16646) |
-| 347 | arXiv:2509.00531 |  |  | 3 | agent-runtime-sandbox-state-management, on-device LLM serving / TEE / TrustZone / mobile NPU isolation, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://arxiv.org/abs/2509.00531) |
-| 348 | arXiv:2509.14279 |  |  | 3 | GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン, LLM serving autotuning / measurement methodology / benchmark auditing, 大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化 | [source](https://arxiv.org/abs/2509.14279) |
-| 349 | arXiv:2509.21271 |  |  | 3 | KV Cache Offload / Recomputation, その他システム研究, オフロード／階層メモリ | [source](https://arxiv.org/abs/2509.21271) |
-| 350 | arXiv:2510.01179 |  |  | 3 | KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り, KVキャッシュ管理 / エージェント型LLM配信 / 接頭辞優先スケジューリング / 予測型追い出し, agent serving / KV-cache reuse / latent communication / DAG workflows | [source](https://arxiv.org/abs/2510.01179) |
-| 351 | arXiv:2510.03243 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, LLM Serving / Scheduling / KV-Constrained Scheduling, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2510.03243) |
-| 352 | arXiv:2510.08666 |  |  | 3 | diffusion LLM inference / KV caching / fused attention / parallel decoding, mixture-of-experts / diffusion LLM inference / expert sharing / memory-traffic reduction, 拡散言語モデルサービング・KVキャッシュ・プリフィル/デコード分離・連続バッチング | [source](https://arxiv.org/abs/2510.08666) |
-| 353 | arXiv:2510.26913 |  |  | 3 | 14-agentic-inference-serving-runtime, LLMサービング／スケジューリング／分離, other-inference-systems | [source](https://arxiv.org/abs/2510.26913) |
-| 354 | arXiv:2511.04805 |  |  | 3 | MoE compression / training-free expert merging / multimodal MoE routing, MoE圧縮 / expert pruning / expert merging / post-compression adjustment, 適応的エキスパート計算・圧縮、エキスパート統合、推薦向け混合エキスパート | [source](https://arxiv.org/abs/2511.04805) |
-| 355 | arXiv:2512.14098 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2512.14098) |
-| 356 | arXiv:2512.24880 |  |  | 3 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3, MoE数値再現性・決定論的推論・実行時互換性 | [source](https://arxiv.org/abs/2512.24880) |
-| 357 | arXiv:2601.05524 |  |  | 3 | 05-speculative-decoding-moe, LLM Serving / Speculative Decoding / Multi-tenant Resource Reuse, 投機的デコード／動的候補木／高同時実行LLMサービング | [source](https://arxiv.org/abs/2601.05524) |
-| 358 | arXiv:2601.12967 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, agentic LLM serving / KV-cache retention and offload / tool-call scheduling / progress-aware systems, agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation | [source](https://arxiv.org/abs/2601.12967) |
-| 359 | arXiv:2602.00269 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系 | [source](https://arxiv.org/abs/2602.00269) |
-| 360 | arXiv:2602.03560 |  |  | 3 | 13-sparse-attention, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, Other Inference Systems | [source](https://arxiv.org/abs/2602.03560) |
-| 361 | arXiv:2602.16284 |  |  | 3 | 07-kv-cache-optimization-compression, KV cache compression / KV eviction / probabilistic inference / importance sampling, offload-hierarchical-memory | [source](https://arxiv.org/abs/2602.16284) |
-| 362 | arXiv:2604.04921 |  |  | 3 | 07-kv-cache-optimization-compression, KV cache quantization / RoPE-aware compression / packed attention serving, agentic serving / KV cache eviction / persistent multi-turn serving | [source](https://arxiv.org/abs/2604.04921) |
-| 363 | DOI:10.1007/s11432-024-4235-6 |  |  | 3 | MoE compression / training-free expert merging / multimodal MoE routing, adaptive expert computation / null experts / data sparsity / multimodal MoE, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1007/s11432-024-4235-6) |
-| 364 | DOI:10.1109/hoti.2015.13 |  |  | 3 | KVキャッシュオフロード・再計算, RAG runtime / distributed orchestration / agentic workflows, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/hoti.2015.13) |
-| 365 | DOI:10.1109/lca.2025.3628325 |  |  | 3 | 12-benchmarking-modeling-emulation, LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, other-inference-systems | [source](https://doi.org/10.1109/lca.2025.3628325) |
-| 366 | DOI:10.1109/sc41405.2020.00024 |  |  | 3 | Adaptive computation／cache-aware MoE, その他システム研究, 学習チェックポイント・GPU-CPU転送・SSD永続化・障害回復 | [source](https://doi.org/10.1109/sc41405.2020.00024) |
-| 367 | DOI:10.1109/tmc.2024.3513457 |  |  | 3 | 05-speculative-decoding-moe, Edge / On-device LLM Systems, hardware-accelerators | [source](https://doi.org/10.1109/tmc.2024.3513457) |
-| 368 | DOI:10.1145/3458864.3467882 |  |  | 3 | Edge／on-device MoE, LLMサービング・スケジューリング・分離実行, other-inference-systems | [source](https://doi.org/10.1145/3458864.3467882) |
-| 369 | DOI:10.1145/3579371.3589038 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, kv-cache-memory, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1145/3579371.3589038) |
-| 370 | DOI:10.1145/3620666.3651379 |  |  | 3 | kernel-runtime-compilation, llm-serving-scheduling-disaggregation, moe-parallelism-communication | [source](https://doi.org/10.1145/3620666.3651379) |
-| 371 | DOI:10.1145/3676641.3716011 |  |  | 3 | LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, MoE serving / attention-MoE disaggregation / asynchronous inference, serving-scheduling | [source](https://doi.org/10.1145/3676641.3716011) |
-| 372 | DOI:10.1145/3725843.3756121 |  |  | 3 | PIM / Near-Data Acceleration, offload-hierarchical-memory, speculative decoding / hybrid-attention serving / recurrent linear attention / SGLang runtime | [source](https://doi.org/10.1145/3725843.3756121) |
-| 373 | DOI:10.1145/3731569.3764813 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, llm-serving-scheduling-disaggregation, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://doi.org/10.1145/3731569.3764813) |
-| 374 | DOI:10.1162/tacl_a_00023 |  |  | 3 | 10-kv-キャッシュ-オフロード-recomputation, KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.1162/tacl_a_00023) |
-| 375 | DOI:10.18653/v1/2021.naacl-main.112 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, offload-hierarchical-memory, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.18653/v1/2021.naacl-main.112) |
-| 376 | DOI:10.18653/v1/2023.findings-acl.824 |  |  | 3 | Adaptive computation／cache-aware MoE, Expert Prefetch, 投機復号・自己投機・ループ型Transformer・推論パイプライン | [source](https://doi.org/10.18653/v1/2023.findings-acl.824) |
-| 377 | DOI:10.18653/v1/2024.acl-long.810 |  |  | 3 | 14-agentic-inference-serving-runtime, LLMサービング・スケジューリング・分離実行, マルチエージェントKVキャッシュ共有／位置非依存キャッシュ／KVキャッシュ圧縮 | [source](https://doi.org/10.18653/v1/2024.acl-long.810) |
-| 378 | DOI:10.18653/v1/2025.acl-long.1211 |  |  | 3 | 13-sparse-attention, 99-other-inference-systems, KV Cache Optimization / Compression | [source](https://doi.org/10.18653/v1/2025.acl-long.1211) |
-| 379 | DOI:10.18653/v1/p19-1285 |  |  | 3 | KVキャッシュ・注意アーキテクチャ, kv-cache-optimization-compression, other-inference-systems | [source](https://doi.org/10.18653/v1/p19-1285) |
-| 380 | DOI:10.48550/arxiv.2306.04640 |  |  | 3 | MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment, survey-moe-inference-optimization | [source](https://doi.org/10.48550/arxiv.2306.04640) |
-| 381 | DOI:10.48550/arxiv.2503.21460 |  |  | 3 | 14-agentic-inference-serving-runtime, CPU推論、行列拡張、異種実行、ルーフライン最適化, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.48550/arxiv.2503.21460) |
-| 382 | DOI:10.48550/arxiv.2511.20975 |  |  | 3 | LLMサービング・スケジューリング・分離実行, agentic workflow serving / workflow physical planning / adaptive serving, kv-cache-offload-recomputation | [source](https://doi.org/10.48550/arxiv.2511.20975) |
-| 383 | DOI:10.52202/079017-1601 |  |  | 3 | agent-runtime-sandbox-state-management, agentic GPU kernel generation / harness engineering / profile-guided optimization, agentic LLM serving / KV-cache retention and offload / tool-call scheduling / progress-aware systems | [source](https://doi.org/10.52202/079017-1601) |
-| 384 | OpenReview:1YDeZU8Lt5 |  |  | 3 | MoE expert pruning / expert clustering / task-specific model compression, MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, MoE量子化 / 混合精度 / 共有スペクトル基底 / 活性依存ビット配分 | [source](https://openreview.net/forum?id=1YDeZU8Lt5) |
-| 385 | OpenReview:c8McWs4Av0 |  |  | 3 | Adaptive Expert Computation / Compression, MoE routing / key expert enhancement / dynamic expert pruning / inference acceleration, Quantization × MoE × Offload | [source](https://openreview.net/forum?id=c8McWs4Av0) |
-| 386 | OpenReview:hmOwOZWzYE |  |  | 3 | KV Cache Optimization / Compression, KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, query-aware sparse attention / KV selection / tail compensation / CPU offload | [source](https://openreview.net/forum?id=hmOwOZWzYE) |
-| 387 | OpenReview:rJl-b3RcF7 |  |  | 3 | MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3, MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation | [source](https://openreview.net/forum?id=rJl-b3RcF7) |
-| 388 | OpenReview:TrjbxzRcnf- |  |  | 3 | KVキャッシュ・注意アーキテクチャ, KVキャッシュ再利用／圧縮／ネットワーク転送, other-inference-systems | [source](https://openreview.net/forum?id=TrjbxzRcnf-) |
-| 389 | OpenReview:YicbFdNTTy |  |  | 3 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation, オフロード／階層メモリ | [source](https://openreview.net/forum?id=YicbFdNTTy) |
-| 390 | arXiv:1508.07909 |  |  | 3 | KV Cache Offload / Recomputation, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/1508.07909) |
-| 391 | arXiv:1910.07467 |  |  | 3 | 13-sparse-attention, on-device LLM inference / mobile inference / Flash offload | [source](https://arxiv.org/abs/1910.07467) |
-| 392 | arXiv:2102.05426 |  |  | 3 | Quantization × MoE × Offload, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2102.05426) |
-| 393 | arXiv:2112.09332 |  |  | 3 | llm-serving-scheduling-disaggregation, survey-long-context-serving | [source](https://arxiv.org/abs/2112.09332) |
-| 394 | arXiv:2209.13258 |  |  | 3 | llm-serving-scheduling-disaggregation, モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング | [source](https://arxiv.org/abs/2209.13258) |
-| 395 | arXiv:2211.01324 |  |  | 3 | MoE inference / expert pruning / language-specific expert specialization, MoE routing / expert offloading / temporal expert persistence | [source](https://arxiv.org/abs/2211.01324) |
-| 396 | arXiv:2302.07842 |  |  | 3 | augmented LLM serving / KV cache management / predictive scheduling / vLLM, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2302.07842) |
-| 397 | arXiv:2305.13144 |  |  | 3 | LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, disaggregated LLM serving / request routing / learned scheduling | [source](https://arxiv.org/abs/2305.13144) |
-| 398 | arXiv:2310.06839 |  |  | 3 | speculative decoding / context compression / agentic LLM inference, survey-long-context-serving | [source](https://arxiv.org/abs/2310.06839) |
-| 399 | arXiv:2312.12148 |  |  | 3 | 02-adaptive-expert-computation-compression, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2312.12148) |
-| 400 | arXiv:2401.10241 |  |  | 3 | adaptive-expert-computation-compression, オフロード／階層メモリ | [source](https://arxiv.org/abs/2401.10241) |
-| 401 | arXiv:2402.11809 |  |  | 3 | Speculative decoding × MoE, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2402.11809) |
-| 402 | arXiv:2403.07714 |  |  | 3 | LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2403.07714) |
-| 403 | arXiv:2403.17297 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference, survey-distributed-training-systems | [source](https://arxiv.org/abs/2403.17297) |
-| 404 | arXiv:2405.14782 |  |  | 3 | foundation-model deployment benchmarking / hardware-aware inference profiling / edge AI, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2405.14782) |
-| 405 | arXiv:2406.04329 |  |  | 3 | diffusion LLM inference / KV caching / fused attention / parallel decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2406.04329) |
-| 406 | arXiv:2406.08413 |  |  | 3 | 17-pim-near-data-acceleration, LLM serving scheduling / chunked prefill / MoE inference | [source](https://arxiv.org/abs/2406.08413) |
-| 407 | arXiv:2407.09486 |  |  | 3 | MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2407.09486) |
-| 408 | arXiv:2408.01803 |  |  | 3 | 16-weight-quantization-compression, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2408.01803) |
-| 409 | arXiv:2409.12517 |  |  | 3 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2409.12517) |
-| 410 | arXiv:2410.10759 |  |  | 3 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, 分離型LLMサービング／予測型スケジューリング／KVメモリ認識型配置 | [source](https://arxiv.org/abs/2410.10759) |
-| 411 | arXiv:2410.17375 |  |  | 3 | Speculative Decoding / Parallel Inference Systems, speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling | [source](https://arxiv.org/abs/2410.17375) |
-| 412 | arXiv:2411.12692 |  |  | 3 | offload-hierarchical-memory, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2411.12692) |
-| 413 | arXiv:2501.11873 |  |  | 3 | MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next, adaptive expert computation / null experts / data sparsity / multimodal MoE | [source](https://arxiv.org/abs/2501.11873) |
-| 414 | arXiv:2502.03805 |  |  | 3 | KV cache eviction / multimodal KV cache compression / diversity-aware token selection, KVキャッシュ圧縮／ヘッド単位予算配分。AdaKV、DuoAttention、HeadKV-R/HeadKV-R2の流れを、失敗挙動まで含む診断へ拡張する。 | [source](https://arxiv.org/abs/2502.03805) |
-| 415 | arXiv:2502.18137 |  |  | 3 | KVキャッシュ退避／長文推論／KV選択／KV量子化, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2502.18137) |
-| 416 | arXiv:2503.00392 |  |  | 3 | KVキャッシュ退避／長文推論／KV選択／KV量子化, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2503.00392) |
-| 417 | arXiv:2504.17577 |  |  | 3 | 13-sparse-attention, GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計 | [source](https://arxiv.org/abs/2504.17577) |
-| 418 | arXiv:2506.02634 |  |  | 3 | HBF / hierarchical memory / KV-cache management / LLM serving, 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ | [source](https://arxiv.org/abs/2506.02634) |
-| 419 | arXiv:2507.09019 |  |  | 3 | LLMサービング／スケジューリング／分離, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2507.09019) |
-| 420 | arXiv:2508.08448 |  |  | 3 | llm-serving-scheduling-disaggregation, 動的LLMサービング／パイプライン並列再構成／KVキャッシュ管理 | [source](https://arxiv.org/abs/2508.08448) |
-| 421 | arXiv:2509.04185 |  |  | 3 | Other Inference Systems / Lossless Parallel Decoding, mixture-of-experts / diffusion LLM inference / expert sharing / memory-traffic reduction | [source](https://arxiv.org/abs/2509.04185) |
-| 422 | arXiv:2509.17396 |  |  | 3 | inference/14-agentic-inference-serving-runtime, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2509.17396) |
-| 423 | arXiv:2509.24663 |  |  | 3 | 13-sparse-attention, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2509.24663) |
-| 424 | arXiv:2510.20171 |  |  | 3 | LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2510.20171) |
-| 425 | arXiv:2511.07427 |  |  | 3 | 10-kv-cache-offload-recomputation, 端末内LLM推論・三次元NAND・フラッシュ内計算・KVキャッシュ配置 | [source](https://arxiv.org/abs/2511.07427) |
-| 426 | arXiv:2601.05109 |  |  | 3 | llm-serving-scheduling-disaggregation, other | [source](https://arxiv.org/abs/2601.05109) |
-| 427 | arXiv:2602.22603 |  |  | 3 | agent context management / virtual memory / demand paging / prompt compression / working-set management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2602.22603) |
-| 428 | arXiv:2603.28458 |  |  | 3 | 13-sparse-attention, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論 | [source](https://arxiv.org/abs/2603.28458) |
-| 429 | arXiv:2604.22312 |  |  | 3 | 07-kv-cache-optimization-compression, long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks | [source](https://arxiv.org/abs/2604.22312) |
-| 430 | arXiv:2605.20104 |  |  | 3 | 05-speculative-decoding-moe, speculative-decoding | [source](https://arxiv.org/abs/2605.20104) |
-| 431 | arXiv:2606.26650 |  |  | 3 | 06-moe-quantization-compression, post-training quantization / ternary LLM / packed inference | [source](https://arxiv.org/abs/2606.26650) |
-| 432 | DOI:10.1109/cgo53902.2022.9741270 |  |  | 3 | kernel-runtime-compilation, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/cgo53902.2022.9741270) |
-| 433 | DOI:10.1109/hpca61900.2025.00103 |  |  | 3 | llm-serving-scheduling-disaggregation, prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS | [source](https://doi.org/10.1109/hpca61900.2025.00103) |
-| 434 | DOI:10.1109/micro61859.2024.00105 |  |  | 3 | LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード | [source](https://doi.org/10.1109/micro61859.2024.00105) |
-| 435 | DOI:10.1145/3419111.3421285 |  |  | 3 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3419111.3421285) |
-| 436 | DOI:10.1145/3600006.3613152 |  |  | 3 | MoE serving resilience / decoupled attention-expert serving / KV checkpointing, 学習チェックポイント・GPU-CPU転送・SSD永続化・障害回復 | [source](https://doi.org/10.1145/3600006.3613152) |
-| 437 | DOI:10.1145/3690624.3709196 |  |  | 3 | Mixture-of-Experts / adaptive expert computation / layer-wise expert allocation / task-conditioned routing, adaptive-expert-computation-compression | [source](https://doi.org/10.1145/3690624.3709196) |
-| 438 | DOI:10.1145/3725273 |  |  | 3 | KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/3725273) |
-| 439 | DOI:10.1145/3731569.3764823 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, kv-cache-offload-recomputation | [source](https://doi.org/10.1145/3731569.3764823) |
-| 440 | DOI:10.1162/tacl%5fa%5f00266 |  |  | 3 | MoE圧縮 / expert pruning / expert merging / post-compression adjustment, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment | [source](https://doi.org/10.1162/tacl%5fa%5f00266) |
-| 441 | DOI:10.18653/v1/2022.acl-long.229 |  |  | 3 | Adaptive computation／cache-aware MoE, MoE圧縮 / expert pruning / expert merging / post-compression adjustment | [source](https://doi.org/10.18653/v1/2022.acl-long.229) |
-| 442 | DOI:10.18653/v1/2023.findings-emnlp.536 |  |  | 3 | 13-sparse-attention, kv-cache-optimization-compression | [source](https://doi.org/10.18653/v1/2023.findings-emnlp.536) |
-| 443 | DOI:10.18653/v1/2025.findings-acl.1035 |  |  | 3 | Mixture-of-Experts / adaptive expert computation / layer-wise expert allocation / task-conditioned routing, adaptive expert computation / expert-neuron pruning / structured MoE compression | [source](https://doi.org/10.18653/v1/2025.findings-acl.1035) |
-| 444 | DOI:10.18653/v1/w18-5446 |  |  | 3 | Adaptive computation／cache-aware MoE, moe-parallelism-communication | [source](https://doi.org/10.18653/v1/w18-5446) |
-| 445 | DOI:10.52202/079017-0722 |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://doi.org/10.52202/079017-0722) |
-| 446 | OpenReview:2jwAjomEDB |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://openreview.net/forum?id=2jwAjomEDB) |
-| 447 | OpenReview:BOfDKxfwt0 |  |  | 3 | KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching, llm-serving-scheduling-disaggregation | [source](https://openreview.net/forum?id=BOfDKxfwt0) |
-| 448 | OpenReview:LKEJPySnlt |  |  | 3 | MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, adaptive expert computation / expert merging / curvature-aware merging / game-theoretic optimization | [source](https://openreview.net/forum?id=LKEJPySnlt) |
-| 449 | OpenReview:uBaFH7aQnC |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://openreview.net/forum?id=uBaFH7aQnC) |
-| 450 | arXiv:2006.16236 |  |  | 3 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2006.16236) |
-| 451 | arXiv:2406.15486 |  |  | 3 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2406.15486) |
-| 452 | arXiv:2412.17246 |  |  | 3 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2412.17246) |
-| 453 | arXiv:2502.08773 |  |  | 3 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2502.08773) |
-| 454 | arXiv:2504.15930 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2504.15930) |
-| 455 | arXiv:2505.13109 |  |  | 3 | KVキャッシュオフロード・再計算 | [source](https://arxiv.org/abs/2505.13109) |
-| 456 | arXiv:2508.11661 |  |  | 3 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2508.11661) |
-| 457 | arXiv:2511.17560 |  |  | 3 | 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ | [source](https://arxiv.org/abs/2511.17560) |
-| 458 | DOI:10.1109/micro61859.2024.00068 |  |  | 3 | moe-parallelism-communication | [source](https://doi.org/10.1109/micro61859.2024.00068) |
-| 459 | DOI:10.1145/3474381 |  |  | 3 | fine-grained MoE inference / expert skipping / expert pruning / serving efficiency | [source](https://doi.org/10.1145/3474381) |
-| 460 | DOI:10.1145/3643757 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://doi.org/10.1145/3643757) |
-| 461 | DOI:10.1145/3714983.3714987 |  |  | 3 | KVキャッシュ圧縮・分離サービング・ネットワーク転送・投機的生成 | [source](https://doi.org/10.1145/3714983.3714987) |
-| 462 | DOI:10.14778/3551793.3551828 |  |  | 3 | その他システム研究 | [source](https://doi.org/10.14778/3551793.3551828) |
-| 463 | DOI:10.48550/arxiv.2507.10524 |  |  | 3 | adaptive-expert-computation-compression | [source](https://doi.org/10.48550/arxiv.2507.10524) |
-| 464 | OpenReview:EQgEMAD4kv |  |  | 3 | KV Cache Optimization / Compression | [source](https://openreview.net/forum?id=EQgEMAD4kv) |
-| 465 | OpenReview:KG6aBfGi6e |  |  | 3 | KV Cache Optimization / Compression | [source](https://openreview.net/forum?id=KG6aBfGi6e) |
-| 466 | arXiv:2503.00979 |  |  | 3 |  | [source](https://arxiv.org/abs/2503.00979) |
-| 467 | arXiv:2506.20187 |  |  | 3 |  | [source](https://arxiv.org/abs/2506.20187) |
-| 468 | arXiv:1409.1556 |  |  | 2 | LLM serving scheduling / hybrid QoS / KV cache management, MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM | [source](https://arxiv.org/abs/1409.1556) |
-| 469 | arXiv:1609.03499 |  |  | 2 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/1609.03499) |
-| 470 | arXiv:1802.04799 |  |  | 2 | GPUカーネル融合／SwiGLU／LLM推論ランタイム, kernel-runtime-compilation | [source](https://arxiv.org/abs/1802.04799) |
-| 471 | arXiv:1807.02037 |  |  | 2 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, その他システム研究 | [source](https://arxiv.org/abs/1807.02037) |
-| 472 | arXiv:1809.02839 |  |  | 2 | その他システム研究, オフロード／階層メモリ | [source](https://arxiv.org/abs/1809.02839) |
-| 473 | arXiv:1902.01718 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1902.01718) |
-| 474 | arXiv:1903.12136 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, 投機的デコード / 自己投機的デコード / 層スキップ | [source](https://arxiv.org/abs/1903.12136) |
-| 475 | arXiv:1905.05460 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1905.05460) |
-| 476 | arXiv:1906.02243 |  |  | 2 | LLM Serving / Scheduling / Disaggregation, MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/1906.02243) |
-| 477 | arXiv:1908.08962 |  |  | 2 | LLM Serving / Scheduling / KV-Constrained Scheduling, MoE inference / task-specific expert pruning / sparse-to-dense conversion | [source](https://arxiv.org/abs/1908.08962) |
-| 478 | arXiv:1909.11942 |  |  | 2 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/1909.11942) |
-| 479 | arXiv:1912.03413 |  |  | 2 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 端末内LLM・処理内メモリ・LPDDR-PIM・重み配置・実行時並べ替え | [source](https://arxiv.org/abs/1912.03413) |
-| 480 | arXiv:2002.12418 |  |  | 2 | on-device LLM / heterogeneous inference / NPU offloading, on-device LLM inference / mobile inference / Flash offload | [source](https://arxiv.org/abs/2002.12418) |
-| 481 | arXiv:2004.02178 |  |  | 2 | Conditional Computation, Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2004.02178) |
-| 482 | arXiv:2004.08249 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2004.08249) |
-| 483 | arXiv:2004.13336 |  |  | 2 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation, survey-distributed-training-systems | [source](https://arxiv.org/abs/2004.13336) |
-| 484 | arXiv:2006.09503 |  |  | 2 | Training Offload / Memory Systems, オフロード／階層メモリ | [source](https://arxiv.org/abs/2006.09503) |
-| 485 | arXiv:2007.01282 |  |  | 2 | KV Cache Offload / Recomputation, 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/2007.01282) |
-| 486 | arXiv:2009.10297 |  |  | 2 | KV cache offloading / hierarchical storage / lossy KV compression, adaptive expert computation / expert pruning / depth-aware MoE compression | [source](https://arxiv.org/abs/2009.10297) |
-| 487 | arXiv:2010.06891 |  |  | 2 | LLM inference surveys、roofline performance analysis, survey-long-context-serving | [source](https://arxiv.org/abs/2010.06891) |
-| 488 | arXiv:2012.14913 |  |  | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, 分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散 | [source](https://arxiv.org/abs/2012.14913) |
-| 489 | arXiv:2101.06804 |  |  | 2 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding | [source](https://arxiv.org/abs/2101.06804) |
-| 490 | arXiv:2104.08696 |  |  | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, dense-to-MoE conversion / conditional FFN computation / expert routing | [source](https://arxiv.org/abs/2104.08696) |
-| 491 | arXiv:2105.14103 |  |  | 2 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2105.14103) |
-| 492 | arXiv:2107.07511 |  |  | 2 | MoE quantization / heterogeneous model-instance routing / quality-aware serving / risk calibration, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2107.07511) |
-| 493 | arXiv:2109.07276 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2109.07276) |
-| 494 | arXiv:2110.08207 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2110.08207) |
-| 495 | arXiv:2110.14895 |  |  | 2 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2110.14895) |
-| 496 | arXiv:2111.09832 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, MoE圧縮 / expert pruning / expert merging / post-compression adjustment | [source](https://arxiv.org/abs/2111.09832) |
-| 497 | arXiv:2201.10890 |  |  | 2 | MoE inference / task-specific expert pruning / sparse-to-dense conversion, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2201.10890) |
-| 498 | arXiv:2202.01306 |  |  | 2 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2202.01306) |
-| 499 | arXiv:2205.05638 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2205.05638) |
-| 500 | arXiv:2206.02713 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2206.02713) |
+| 276 | arXiv:2406.14909 |  |  | 4 | inference/07-kv-cache-optimization-compression, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2406.14909) |
+| 277 | arXiv:2408.11556 |  |  | 4 | KV Cache Offload / Recomputation, LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference | [source](https://arxiv.org/abs/2408.11556) |
+| 278 | arXiv:2409.09086 |  |  | 4 | llm-serving-scheduling-disaggregation, マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング | [source](https://arxiv.org/abs/2409.09086) |
+| 279 | arXiv:2410.11842 |  |  | 4 | adaptive expert computation / null experts / data sparsity / multimodal MoE, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2410.11842) |
+| 280 | arXiv:2502.12216 |  |  | 4 | 07-kv-cache-optimization-compression, オフロード／階層メモリ | [source](https://arxiv.org/abs/2502.12216) |
+| 281 | arXiv:2503.06433 |  |  | 4 | llm-serving-scheduling-disaggregation, オフロード／階層メモリ | [source](https://arxiv.org/abs/2503.06433) |
+| 282 | arXiv:2506.13329 |  |  | 4 | Quantization × MoE × Offload, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2506.13329) |
+| 283 | arXiv:2509.09505 |  |  | 4 | GPUカーネル融合／SwiGLU／LLM推論ランタイム, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2509.09505) |
+| 284 | arXiv:2601.07891 |  |  | 4 | KV Cache Optimization / Compression, KVキャッシュ退避／長文推論／KV選択／KV量子化 | [source](https://arxiv.org/abs/2601.07891) |
+| 285 | arXiv:2604.16007 |  |  | 4 | 10-kv-cache-offload-recomputation, flash-capacity-tier-inference | [source](https://arxiv.org/abs/2604.16007) |
+| 286 | DOI:10.1109/lca.2024.3406038 |  |  | 4 | llm-serving-scheduling-disaggregation, prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS | [source](https://doi.org/10.1109/lca.2024.3406038) |
+| 287 | DOI:10.1145/3774904.3792218 |  |  | 4 | hardware-accelerators, モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング | [source](https://doi.org/10.1145/3774904.3792218) |
+| 288 | DOI:10.48550/arxiv.2509.23324 |  |  | 4 | edge-on-device-llm-systems, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://doi.org/10.48550/arxiv.2509.23324) |
+| 289 | arXiv:2404.02852 |  |  | 4 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2404.02852) |
+| 290 | arXiv:2506.08889 |  |  | 4 | 13-sparse-attention | [source](https://arxiv.org/abs/2506.08889) |
+| 291 | DOI:10.48550/arxiv.2502.14866 |  |  | 4 | kv-cache-optimization-compression | [source](https://doi.org/10.48550/arxiv.2502.14866) |
+| 292 | arXiv:1312.4314 |  |  | 3 | Expert Prefetch, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, Quantization × MoE × Offload | [source](https://arxiv.org/abs/1312.4314) |
+| 293 | arXiv:1707.06209 |  |  | 3 | Adaptive computation／cache-aware MoE, adaptive-expert-computation-compression, 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/1707.06209) |
+| 294 | arXiv:1804.05685 |  |  | 3 | KVキャッシュ制約下のLLMサービング・スケジューリング, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, LLM serving scheduling / chunked prefill / MoE inference | [source](https://arxiv.org/abs/1804.05685) |
+| 295 | arXiv:1910.10073 |  |  | 3 | 99-other-inference-systems, Conditional Computation, early-exit-offloading-self-speculative-decoding | [source](https://arxiv.org/abs/1910.10073) |
+| 296 | arXiv:2006.10369 |  |  | 3 | multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration, speculative decoding / draft-model design, 分散MoE学習 / ZeRO / CPUオフロード / 多次元並列 | [source](https://arxiv.org/abs/2006.10369) |
+| 297 | arXiv:2102.00554 |  |  | 3 | Quantization × MoE × Offload, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2102.00554) |
+| 298 | arXiv:2109.12948 |  |  | 3 | KV cache quantization / long-context inference / activation compression, adaptive-expert-computation-compression, survey-low-bit-llm | [source](https://arxiv.org/abs/2109.12948) |
+| 299 | arXiv:2112.04426 |  |  | 3 | KV Cache Offload / Recomputation, KVキャッシュ再利用／圧縮／ネットワーク転送, LLM inference surveys、roofline performance analysis | [source](https://arxiv.org/abs/2112.04426) |
+| 300 | arXiv:2203.10244 |  |  | 3 | adaptive expert computation / null experts / data sparsity / multimodal MoE, low-bit VLM inference / microscaling / hardware-software co-design, multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing | [source](https://arxiv.org/abs/2203.10244) |
+| 301 | arXiv:2205.10350 |  |  | 3 | speculative-decoding, survey-speculative-decoding, 投機的デコード / 知識蒸留 / ドラフトモデル整合 | [source](https://arxiv.org/abs/2205.10350) |
+| 302 | arXiv:2211.09085 |  |  | 3 | KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, オフロード／階層メモリ | [source](https://arxiv.org/abs/2211.09085) |
+| 303 | arXiv:2302.07863 |  |  | 3 | 05-speculative-decoding-moe, on-device LLM / heterogeneous inference / NPU offloading, 投機的デコード / 知識蒸留 / ドラフトモデル整合 | [source](https://arxiv.org/abs/2302.07863) |
+| 304 | arXiv:2305.01879 |  |  | 3 | Expert Prefetch, LLM inference surveys、roofline performance analysis, MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2305.01879) |
+| 305 | arXiv:2306.11222 |  |  | 3 | Adaptive Expert Computation / Compression, Expert Prefetch, MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2306.11222) |
+| 306 | arXiv:2307.15337 |  |  | 3 | Expert Prefetch, MoE inference / on-device LLM / expert offloading / expert caching, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2307.15337) |
+| 307 | arXiv:2308.12219 |  |  | 3 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2308.12219) |
+| 308 | arXiv:2309.12288 |  |  | 3 | 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2309.12288) |
+| 309 | arXiv:2310.03294 |  |  | 3 | hierarchical-memory, serving-scheduling, survey-distributed-training-systems | [source](https://arxiv.org/abs/2310.03294) |
+| 310 | arXiv:2310.08659 |  |  | 3 | LLM inference surveys、roofline performance analysis, quantization-kernels, survey-low-bit-llm | [source](https://arxiv.org/abs/2310.08659) |
+| 311 | arXiv:2401.03065 |  |  | 3 | Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling, adaptive-expert-computation-compression, kernel-runtime-compilation | [source](https://arxiv.org/abs/2401.03065) |
+| 312 | arXiv:2402.10171 |  |  | 3 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV-cache compression / attention-based token selection / long-context inference, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2402.10171) |
+| 313 | arXiv:2402.14289 |  |  | 3 | LLM inference surveys、roofline performance analysis, llm-serving-scheduling-disaggregation, serving-disaggregation | [source](https://arxiv.org/abs/2402.14289) |
+| 314 | arXiv:2402.18789 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, kv-cache-optimization-compression, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2402.18789) |
+| 315 | arXiv:2403.02181 |  |  | 3 | Conditional Computation, early-exit-offloading-self-speculative-decoding, 投機的デコード／動的LLMサービング／GPU空間多重化 | [source](https://arxiv.org/abs/2403.02181) |
+| 316 | arXiv:2405.08944 |  |  | 3 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, kv-cache, other-inference-systems | [source](https://arxiv.org/abs/2405.08944) |
+| 317 | arXiv:2406.01721 |  |  | 3 | kv-cache-compression-quantization, kv-cache-memory, survey-low-bit-llm | [source](https://arxiv.org/abs/2406.01721) |
+| 318 | arXiv:2406.04692 |  |  | 3 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, agentic serving / workflow-aware scheduling / memory-aware dispatch, multi-model serving / disaggregated serving / cross-model KV reuse | [source](https://arxiv.org/abs/2406.04692) |
+| 319 | arXiv:2406.11235 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, kv-cache-compression-quantization, survey-low-bit-llm | [source](https://arxiv.org/abs/2406.11235) |
+| 320 | arXiv:2406.19314 |  |  | 3 | Offload / Hierarchical Memory, kv-cache-offload-recomputation, ローカル大規模言語モデル推論／Apple Silicon／統合メモリ／推論基盤比較／複数機推論 | [source](https://arxiv.org/abs/2406.19314) |
+| 321 | arXiv:2407.14679 |  |  | 3 | MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next, Speculative Decoding / Draft Model Architecture, speculative decoding / draft-model design | [source](https://arxiv.org/abs/2407.14679) |
+| 322 | arXiv:2409.02908 |  |  | 3 | diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference, diffusion LLM inference / KV caching / fused attention / parallel decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2409.02908) |
+| 323 | arXiv:2410.10781 |  |  | 3 | 14-agentic-inference-serving-runtime, KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2410.10781) |
+| 324 | arXiv:2411.15997 |  |  | 3 | llm-serving-scheduling-disaggregation, serving-scheduling, その他システム研究 | [source](https://arxiv.org/abs/2411.15997) |
+| 325 | arXiv:2412.20993 |  |  | 3 | agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling, kv-cache-offload-recomputation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2412.20993) |
+| 326 | arXiv:2502.15197 |  |  | 3 | 05-speculative-decoding-moe, Speculative decoding × MoE, 投機的デコード／動的候補木／高同時実行LLMサービング | [source](https://arxiv.org/abs/2502.15197) |
+| 327 | arXiv:2503.07137 |  |  | 3 | MoE serving / attention-MoE disaggregation / asynchronous inference, adaptive-expert-computation-compression, fine-grained MoE / atomic experts / product routing / expert-centric GPU scheduling | [source](https://arxiv.org/abs/2503.07137) |
+| 328 | arXiv:2503.13565 |  |  | 3 | MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード, hardware-accelerators, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2503.13565) |
+| 329 | arXiv:2504.03624 |  |  | 3 | 13-sparse-attention, PIM / Near-Data Acceleration, エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系 | [source](https://arxiv.org/abs/2504.03624) |
+| 330 | arXiv:2505.18610 |  |  | 3 | KV Cache Optimization / Compression, KV cache quantization / RoPE-aware compression / packed attention serving, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2505.18610) |
+| 331 | arXiv:2506.07366 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, MoE inference / expert parallelism / expert replication / load balancing, MoE serving / attention-MoE disaggregation / asynchronous inference | [source](https://arxiv.org/abs/2506.07366) |
+| 332 | arXiv:2507.04786 |  |  | 3 | KV Cache Offload / Recomputation, LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference, LLMサービング／スケジューリング／分離実行 | [source](https://arxiv.org/abs/2507.04786) |
+| 333 | arXiv:2508.16646 |  |  | 3 | KV Cache Offload / Recomputation, llm-serving-scheduling-disaggregation, serving-scheduling | [source](https://arxiv.org/abs/2508.16646) |
+| 334 | arXiv:2509.00531 |  |  | 3 | agent-runtime-sandbox-state-management, on-device LLM serving / TEE / TrustZone / mobile NPU isolation, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://arxiv.org/abs/2509.00531) |
+| 335 | arXiv:2509.14279 |  |  | 3 | GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン, LLM serving autotuning / measurement methodology / benchmark auditing, 大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化 | [source](https://arxiv.org/abs/2509.14279) |
+| 336 | arXiv:2509.21271 |  |  | 3 | KV Cache Offload / Recomputation, その他システム研究, オフロード／階層メモリ | [source](https://arxiv.org/abs/2509.21271) |
+| 337 | arXiv:2510.01179 |  |  | 3 | KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り, KVキャッシュ管理 / エージェント型LLM配信 / 接頭辞優先スケジューリング / 予測型追い出し, agent serving / KV-cache reuse / latent communication / DAG workflows | [source](https://arxiv.org/abs/2510.01179) |
+| 338 | arXiv:2510.03243 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, LLM Serving / Scheduling / KV-Constrained Scheduling, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2510.03243) |
+| 339 | arXiv:2510.08666 |  |  | 3 | diffusion LLM inference / KV caching / fused attention / parallel decoding, mixture-of-experts / diffusion LLM inference / expert sharing / memory-traffic reduction, 拡散言語モデルサービング・KVキャッシュ・プリフィル/デコード分離・連続バッチング | [source](https://arxiv.org/abs/2510.08666) |
+| 340 | arXiv:2510.26913 |  |  | 3 | 14-agentic-inference-serving-runtime, LLMサービング／スケジューリング／分離, other-inference-systems | [source](https://arxiv.org/abs/2510.26913) |
+| 341 | arXiv:2511.04805 |  |  | 3 | MoE compression / training-free expert merging / multimodal MoE routing, MoE圧縮 / expert pruning / expert merging / post-compression adjustment, 適応的エキスパート計算・圧縮、エキスパート統合、推薦向け混合エキスパート | [source](https://arxiv.org/abs/2511.04805) |
+| 342 | arXiv:2512.14098 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2512.14098) |
+| 343 | arXiv:2512.24880 |  |  | 3 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3, MoE数値再現性・決定論的推論・実行時互換性 | [source](https://arxiv.org/abs/2512.24880) |
+| 344 | arXiv:2601.05524 |  |  | 3 | 05-speculative-decoding-moe, LLM Serving / Speculative Decoding / Multi-tenant Resource Reuse, 投機的デコード／動的候補木／高同時実行LLMサービング | [source](https://arxiv.org/abs/2601.05524) |
+| 345 | arXiv:2601.12967 |  |  | 3 | LLM Serving / Scheduling / Disaggregation, agentic LLM serving / KV-cache retention and offload / tool-call scheduling / progress-aware systems, agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation | [source](https://arxiv.org/abs/2601.12967) |
+| 346 | arXiv:2602.00269 |  |  | 3 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系 | [source](https://arxiv.org/abs/2602.00269) |
+| 347 | arXiv:2602.03560 |  |  | 3 | 13-sparse-attention, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, Other Inference Systems | [source](https://arxiv.org/abs/2602.03560) |
+| 348 | arXiv:2602.16284 |  |  | 3 | 07-kv-cache-optimization-compression, KV cache compression / KV eviction / probabilistic inference / importance sampling, offload-hierarchical-memory | [source](https://arxiv.org/abs/2602.16284) |
+| 349 | arXiv:2604.04921 |  |  | 3 | 07-kv-cache-optimization-compression, KV cache quantization / RoPE-aware compression / packed attention serving, agentic serving / KV cache eviction / persistent multi-turn serving | [source](https://arxiv.org/abs/2604.04921) |
+| 350 | DOI:10.1007/s11432-024-4235-6 |  |  | 3 | MoE compression / training-free expert merging / multimodal MoE routing, adaptive expert computation / null experts / data sparsity / multimodal MoE, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1007/s11432-024-4235-6) |
+| 351 | DOI:10.1109/hoti.2015.13 |  |  | 3 | KVキャッシュオフロード・再計算, RAG runtime / distributed orchestration / agentic workflows, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/hoti.2015.13) |
+| 352 | DOI:10.1109/lca.2025.3628325 |  |  | 3 | 12-benchmarking-modeling-emulation, LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, other-inference-systems | [source](https://doi.org/10.1109/lca.2025.3628325) |
+| 353 | DOI:10.1109/sc41405.2020.00024 |  |  | 3 | Adaptive computation／cache-aware MoE, その他システム研究, 学習チェックポイント・GPU-CPU転送・SSD永続化・障害回復 | [source](https://doi.org/10.1109/sc41405.2020.00024) |
+| 354 | DOI:10.1109/tmc.2024.3513457 |  |  | 3 | 05-speculative-decoding-moe, Edge / On-device LLM Systems, hardware-accelerators | [source](https://doi.org/10.1109/tmc.2024.3513457) |
+| 355 | DOI:10.1145/3458864.3467882 |  |  | 3 | Edge／on-device MoE, LLMサービング・スケジューリング・分離実行, other-inference-systems | [source](https://doi.org/10.1145/3458864.3467882) |
+| 356 | DOI:10.1145/3579371.3589038 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, kv-cache-memory, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1145/3579371.3589038) |
+| 357 | DOI:10.1145/3620666.3651379 |  |  | 3 | kernel-runtime-compilation, llm-serving-scheduling-disaggregation, moe-parallelism-communication | [source](https://doi.org/10.1145/3620666.3651379) |
+| 358 | DOI:10.1145/3676641.3716011 |  |  | 3 | LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, MoE serving / attention-MoE disaggregation / asynchronous inference, serving-scheduling | [source](https://doi.org/10.1145/3676641.3716011) |
+| 359 | DOI:10.1145/3725843.3756121 |  |  | 3 | PIM / Near-Data Acceleration, offload-hierarchical-memory, speculative decoding / hybrid-attention serving / recurrent linear attention / SGLang runtime | [source](https://doi.org/10.1145/3725843.3756121) |
+| 360 | DOI:10.1145/3731569.3764813 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, llm-serving-scheduling-disaggregation, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://doi.org/10.1145/3731569.3764813) |
+| 361 | DOI:10.1162/tacl_a_00023 |  |  | 3 | 10-kv-キャッシュ-オフロード-recomputation, KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.1162/tacl_a_00023) |
+| 362 | DOI:10.18653/v1/2021.naacl-main.112 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, offload-hierarchical-memory, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.18653/v1/2021.naacl-main.112) |
+| 363 | DOI:10.18653/v1/2023.findings-acl.824 |  |  | 3 | Adaptive computation／cache-aware MoE, Expert Prefetch, 投機復号・自己投機・ループ型Transformer・推論パイプライン | [source](https://doi.org/10.18653/v1/2023.findings-acl.824) |
+| 364 | DOI:10.18653/v1/2024.acl-long.810 |  |  | 3 | 14-agentic-inference-serving-runtime, LLMサービング・スケジューリング・分離実行, マルチエージェントKVキャッシュ共有／位置非依存キャッシュ／KVキャッシュ圧縮 | [source](https://doi.org/10.18653/v1/2024.acl-long.810) |
+| 365 | DOI:10.18653/v1/2025.acl-long.1211 |  |  | 3 | 13-sparse-attention, 99-other-inference-systems, KV Cache Optimization / Compression | [source](https://doi.org/10.18653/v1/2025.acl-long.1211) |
+| 366 | DOI:10.18653/v1/p19-1285 |  |  | 3 | KVキャッシュ・注意アーキテクチャ, kv-cache-optimization-compression, other-inference-systems | [source](https://doi.org/10.18653/v1/p19-1285) |
+| 367 | DOI:10.48550/arxiv.2306.04640 |  |  | 3 | MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment, survey-moe-inference-optimization | [source](https://doi.org/10.48550/arxiv.2306.04640) |
+| 368 | DOI:10.48550/arxiv.2503.21460 |  |  | 3 | 14-agentic-inference-serving-runtime, CPU推論、行列拡張、異種実行、ルーフライン最適化, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.48550/arxiv.2503.21460) |
+| 369 | DOI:10.48550/arxiv.2511.20975 |  |  | 3 | LLMサービング・スケジューリング・分離実行, agentic workflow serving / workflow physical planning / adaptive serving, kv-cache-offload-recomputation | [source](https://doi.org/10.48550/arxiv.2511.20975) |
+| 370 | DOI:10.52202/079017-1601 |  |  | 3 | agent-runtime-sandbox-state-management, agentic GPU kernel generation / harness engineering / profile-guided optimization, agentic LLM serving / KV-cache retention and offload / tool-call scheduling / progress-aware systems | [source](https://doi.org/10.52202/079017-1601) |
+| 371 | OpenReview:1YDeZU8Lt5 |  |  | 3 | MoE expert pruning / expert clustering / task-specific model compression, MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, MoE量子化 / 混合精度 / 共有スペクトル基底 / 活性依存ビット配分 | [source](https://openreview.net/forum?id=1YDeZU8Lt5) |
+| 372 | OpenReview:c8McWs4Av0 |  |  | 3 | Adaptive Expert Computation / Compression, MoE routing / key expert enhancement / dynamic expert pruning / inference acceleration, Quantization × MoE × Offload | [source](https://openreview.net/forum?id=c8McWs4Av0) |
+| 373 | OpenReview:hmOwOZWzYE |  |  | 3 | KV Cache Optimization / Compression, KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, query-aware sparse attention / KV selection / tail compensation / CPU offload | [source](https://openreview.net/forum?id=hmOwOZWzYE) |
+| 374 | OpenReview:rJl-b3RcF7 |  |  | 3 | MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3, MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation | [source](https://openreview.net/forum?id=rJl-b3RcF7) |
+| 375 | OpenReview:TrjbxzRcnf- |  |  | 3 | KVキャッシュ・注意アーキテクチャ, KVキャッシュ再利用／圧縮／ネットワーク転送, other-inference-systems | [source](https://openreview.net/forum?id=TrjbxzRcnf-) |
+| 376 | OpenReview:YicbFdNTTy |  |  | 3 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation, オフロード／階層メモリ | [source](https://openreview.net/forum?id=YicbFdNTTy) |
+| 377 | arXiv:1508.07909 |  |  | 3 | KV Cache Offload / Recomputation, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/1508.07909) |
+| 378 | arXiv:1910.07467 |  |  | 3 | 13-sparse-attention, on-device LLM inference / mobile inference / Flash offload | [source](https://arxiv.org/abs/1910.07467) |
+| 379 | arXiv:2102.05426 |  |  | 3 | Quantization × MoE × Offload, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2102.05426) |
+| 380 | arXiv:2112.09332 |  |  | 3 | llm-serving-scheduling-disaggregation, survey-long-context-serving | [source](https://arxiv.org/abs/2112.09332) |
+| 381 | arXiv:2209.13258 |  |  | 3 | llm-serving-scheduling-disaggregation, モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング | [source](https://arxiv.org/abs/2209.13258) |
+| 382 | arXiv:2211.01324 |  |  | 3 | MoE inference / expert pruning / language-specific expert specialization, MoE routing / expert offloading / temporal expert persistence | [source](https://arxiv.org/abs/2211.01324) |
+| 383 | arXiv:2302.07842 |  |  | 3 | augmented LLM serving / KV cache management / predictive scheduling / vLLM, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2302.07842) |
+| 384 | arXiv:2305.13144 |  |  | 3 | LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance, disaggregated LLM serving / request routing / learned scheduling | [source](https://arxiv.org/abs/2305.13144) |
+| 385 | arXiv:2310.06839 |  |  | 3 | speculative decoding / context compression / agentic LLM inference, survey-long-context-serving | [source](https://arxiv.org/abs/2310.06839) |
+| 386 | arXiv:2312.12148 |  |  | 3 | 02-adaptive-expert-computation-compression, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2312.12148) |
+| 387 | arXiv:2401.10241 |  |  | 3 | adaptive-expert-computation-compression, オフロード／階層メモリ | [source](https://arxiv.org/abs/2401.10241) |
+| 388 | arXiv:2402.11809 |  |  | 3 | Speculative decoding × MoE, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2402.11809) |
+| 389 | arXiv:2403.07714 |  |  | 3 | LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2403.07714) |
+| 390 | arXiv:2403.17297 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference, survey-distributed-training-systems | [source](https://arxiv.org/abs/2403.17297) |
+| 391 | arXiv:2405.14782 |  |  | 3 | foundation-model deployment benchmarking / hardware-aware inference profiling / edge AI, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2405.14782) |
+| 392 | arXiv:2406.04329 |  |  | 3 | diffusion LLM inference / KV caching / fused attention / parallel decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2406.04329) |
+| 393 | arXiv:2406.08413 |  |  | 3 | 17-pim-near-data-acceleration, LLM serving scheduling / chunked prefill / MoE inference | [source](https://arxiv.org/abs/2406.08413) |
+| 394 | arXiv:2407.09486 |  |  | 3 | MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2407.09486) |
+| 395 | arXiv:2408.01803 |  |  | 3 | 16-weight-quantization-compression, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2408.01803) |
+| 396 | arXiv:2409.12517 |  |  | 3 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/2409.12517) |
+| 397 | arXiv:2410.10759 |  |  | 3 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, 分離型LLMサービング／予測型スケジューリング／KVメモリ認識型配置 | [source](https://arxiv.org/abs/2410.10759) |
+| 398 | arXiv:2410.17375 |  |  | 3 | Speculative Decoding / Parallel Inference Systems, speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling | [source](https://arxiv.org/abs/2410.17375) |
+| 399 | arXiv:2411.12692 |  |  | 3 | offload-hierarchical-memory, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2411.12692) |
+| 400 | arXiv:2501.11873 |  |  | 3 | MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next, adaptive expert computation / null experts / data sparsity / multimodal MoE | [source](https://arxiv.org/abs/2501.11873) |
+| 401 | arXiv:2502.03805 |  |  | 3 | KV cache eviction / multimodal KV cache compression / diversity-aware token selection, KVキャッシュ圧縮／ヘッド単位予算配分。AdaKV、DuoAttention、HeadKV-R/HeadKV-R2の流れを、失敗挙動まで含む診断へ拡張する。 | [source](https://arxiv.org/abs/2502.03805) |
+| 402 | arXiv:2502.18137 |  |  | 3 | KVキャッシュ退避／長文推論／KV選択／KV量子化, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2502.18137) |
+| 403 | arXiv:2503.00392 |  |  | 3 | KVキャッシュ退避／長文推論／KV選択／KV量子化, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2503.00392) |
+| 404 | arXiv:2504.17577 |  |  | 3 | 13-sparse-attention, GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計 | [source](https://arxiv.org/abs/2504.17577) |
+| 405 | arXiv:2506.02634 |  |  | 3 | HBF / hierarchical memory / KV-cache management / LLM serving, 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ | [source](https://arxiv.org/abs/2506.02634) |
+| 406 | arXiv:2507.09019 |  |  | 3 | LLMサービング／スケジューリング／分離, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2507.09019) |
+| 407 | arXiv:2508.08448 |  |  | 3 | llm-serving-scheduling-disaggregation, 動的LLMサービング／パイプライン並列再構成／KVキャッシュ管理 | [source](https://arxiv.org/abs/2508.08448) |
+| 408 | arXiv:2509.04185 |  |  | 3 | Other Inference Systems / Lossless Parallel Decoding, mixture-of-experts / diffusion LLM inference / expert sharing / memory-traffic reduction | [source](https://arxiv.org/abs/2509.04185) |
+| 409 | arXiv:2509.17396 |  |  | 3 | inference/14-agentic-inference-serving-runtime, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2509.17396) |
+| 410 | arXiv:2509.24663 |  |  | 3 | 13-sparse-attention, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2509.24663) |
+| 411 | arXiv:2510.20171 |  |  | 3 | LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2510.20171) |
+| 412 | arXiv:2511.07427 |  |  | 3 | 10-kv-cache-offload-recomputation, 端末内LLM推論・三次元NAND・フラッシュ内計算・KVキャッシュ配置 | [source](https://arxiv.org/abs/2511.07427) |
+| 413 | arXiv:2601.05109 |  |  | 3 | llm-serving-scheduling-disaggregation, other | [source](https://arxiv.org/abs/2601.05109) |
+| 414 | arXiv:2602.22603 |  |  | 3 | agent context management / virtual memory / demand paging / prompt compression / working-set management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2602.22603) |
+| 415 | arXiv:2603.28458 |  |  | 3 | 13-sparse-attention, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論 | [source](https://arxiv.org/abs/2603.28458) |
+| 416 | arXiv:2604.22312 |  |  | 3 | 07-kv-cache-optimization-compression, long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks | [source](https://arxiv.org/abs/2604.22312) |
+| 417 | arXiv:2605.20104 |  |  | 3 | 05-speculative-decoding-moe, speculative-decoding | [source](https://arxiv.org/abs/2605.20104) |
+| 418 | arXiv:2606.26650 |  |  | 3 | 06-moe-quantization-compression, post-training quantization / ternary LLM / packed inference | [source](https://arxiv.org/abs/2606.26650) |
+| 419 | DOI:10.1109/cgo53902.2022.9741270 |  |  | 3 | kernel-runtime-compilation, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/cgo53902.2022.9741270) |
+| 420 | DOI:10.1109/hpca61900.2025.00103 |  |  | 3 | llm-serving-scheduling-disaggregation, prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS | [source](https://doi.org/10.1109/hpca61900.2025.00103) |
+| 421 | DOI:10.1109/micro61859.2024.00105 |  |  | 3 | LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード | [source](https://doi.org/10.1109/micro61859.2024.00105) |
+| 422 | DOI:10.1145/3419111.3421285 |  |  | 3 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3419111.3421285) |
+| 423 | DOI:10.1145/3600006.3613152 |  |  | 3 | MoE serving resilience / decoupled attention-expert serving / KV checkpointing, 学習チェックポイント・GPU-CPU転送・SSD永続化・障害回復 | [source](https://doi.org/10.1145/3600006.3613152) |
+| 424 | DOI:10.1145/3690624.3709196 |  |  | 3 | Mixture-of-Experts / adaptive expert computation / layer-wise expert allocation / task-conditioned routing, adaptive-expert-computation-compression | [source](https://doi.org/10.1145/3690624.3709196) |
+| 425 | DOI:10.1145/3725273 |  |  | 3 | KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/3725273) |
+| 426 | DOI:10.1145/3731569.3764823 |  |  | 3 | Prefill/Decode Disaggregation / Selective KV Transfer, kv-cache-offload-recomputation | [source](https://doi.org/10.1145/3731569.3764823) |
+| 427 | DOI:10.1162/tacl%5fa%5f00266 |  |  | 3 | MoE圧縮 / expert pruning / expert merging / post-compression adjustment, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment | [source](https://doi.org/10.1162/tacl%5fa%5f00266) |
+| 428 | DOI:10.18653/v1/2022.acl-long.229 |  |  | 3 | Adaptive computation／cache-aware MoE, MoE圧縮 / expert pruning / expert merging / post-compression adjustment | [source](https://doi.org/10.18653/v1/2022.acl-long.229) |
+| 429 | DOI:10.18653/v1/2023.findings-emnlp.536 |  |  | 3 | 13-sparse-attention, kv-cache-optimization-compression | [source](https://doi.org/10.18653/v1/2023.findings-emnlp.536) |
+| 430 | DOI:10.18653/v1/2025.findings-acl.1035 |  |  | 3 | Mixture-of-Experts / adaptive expert computation / layer-wise expert allocation / task-conditioned routing, adaptive expert computation / expert-neuron pruning / structured MoE compression | [source](https://doi.org/10.18653/v1/2025.findings-acl.1035) |
+| 431 | DOI:10.18653/v1/w18-5446 |  |  | 3 | Adaptive computation／cache-aware MoE, moe-parallelism-communication | [source](https://doi.org/10.18653/v1/w18-5446) |
+| 432 | DOI:10.52202/079017-0722 |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://doi.org/10.52202/079017-0722) |
+| 433 | OpenReview:2jwAjomEDB |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://openreview.net/forum?id=2jwAjomEDB) |
+| 434 | OpenReview:BOfDKxfwt0 |  |  | 3 | KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching, llm-serving-scheduling-disaggregation | [source](https://openreview.net/forum?id=BOfDKxfwt0) |
+| 435 | OpenReview:LKEJPySnlt |  |  | 3 | MoE推論・エキスパートオフロード・エキスパートキャッシュ・ルーティング局所性, adaptive expert computation / expert merging / curvature-aware merging / game-theoretic optimization | [source](https://openreview.net/forum?id=LKEJPySnlt) |
+| 436 | OpenReview:uBaFH7aQnC |  |  | 3 | KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://openreview.net/forum?id=uBaFH7aQnC) |
+| 437 | arXiv:2006.16236 |  |  | 3 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2006.16236) |
+| 438 | arXiv:2406.15486 |  |  | 3 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2406.15486) |
+| 439 | arXiv:2412.17246 |  |  | 3 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2412.17246) |
+| 440 | arXiv:2502.08773 |  |  | 3 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2502.08773) |
+| 441 | arXiv:2504.15930 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2504.15930) |
+| 442 | arXiv:2505.13109 |  |  | 3 | KVキャッシュオフロード・再計算 | [source](https://arxiv.org/abs/2505.13109) |
+| 443 | arXiv:2508.11661 |  |  | 3 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2508.11661) |
+| 444 | arXiv:2511.17560 |  |  | 3 | 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ | [source](https://arxiv.org/abs/2511.17560) |
+| 445 | DOI:10.1109/micro61859.2024.00068 |  |  | 3 | moe-parallelism-communication | [source](https://doi.org/10.1109/micro61859.2024.00068) |
+| 446 | DOI:10.1145/3474381 |  |  | 3 | fine-grained MoE inference / expert skipping / expert pruning / serving efficiency | [source](https://doi.org/10.1145/3474381) |
+| 447 | DOI:10.1145/3643757 |  |  | 3 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://doi.org/10.1145/3643757) |
+| 448 | DOI:10.1145/3714983.3714987 |  |  | 3 | KVキャッシュ圧縮・分離サービング・ネットワーク転送・投機的生成 | [source](https://doi.org/10.1145/3714983.3714987) |
+| 449 | DOI:10.14778/3551793.3551828 |  |  | 3 | その他システム研究 | [source](https://doi.org/10.14778/3551793.3551828) |
+| 450 | DOI:10.48550/arxiv.2507.10524 |  |  | 3 | adaptive-expert-computation-compression | [source](https://doi.org/10.48550/arxiv.2507.10524) |
+| 451 | OpenReview:EQgEMAD4kv |  |  | 3 | KV Cache Optimization / Compression | [source](https://openreview.net/forum?id=EQgEMAD4kv) |
+| 452 | OpenReview:KG6aBfGi6e |  |  | 3 | KV Cache Optimization / Compression | [source](https://openreview.net/forum?id=KG6aBfGi6e) |
+| 453 | arXiv:2503.00979 |  |  | 3 |  | [source](https://arxiv.org/abs/2503.00979) |
+| 454 | arXiv:2506.20187 |  |  | 3 |  | [source](https://arxiv.org/abs/2506.20187) |
+| 455 | arXiv:1409.1556 |  |  | 2 | LLM serving scheduling / hybrid QoS / KV cache management, MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM | [source](https://arxiv.org/abs/1409.1556) |
+| 456 | arXiv:1609.03499 |  |  | 2 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/1609.03499) |
+| 457 | arXiv:1802.04799 |  |  | 2 | GPUカーネル融合／SwiGLU／LLM推論ランタイム, kernel-runtime-compilation | [source](https://arxiv.org/abs/1802.04799) |
+| 458 | arXiv:1807.02037 |  |  | 2 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, その他システム研究 | [source](https://arxiv.org/abs/1807.02037) |
+| 459 | arXiv:1809.02839 |  |  | 2 | その他システム研究, オフロード／階層メモリ | [source](https://arxiv.org/abs/1809.02839) |
+| 460 | arXiv:1902.01718 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1902.01718) |
+| 461 | arXiv:1903.12136 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, 投機的デコード / 自己投機的デコード / 層スキップ | [source](https://arxiv.org/abs/1903.12136) |
+| 462 | arXiv:1905.05460 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1905.05460) |
+| 463 | arXiv:1906.02243 |  |  | 2 | LLM Serving / Scheduling / Disaggregation, MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/1906.02243) |
+| 464 | arXiv:1908.08962 |  |  | 2 | LLM Serving / Scheduling / KV-Constrained Scheduling, MoE inference / task-specific expert pruning / sparse-to-dense conversion | [source](https://arxiv.org/abs/1908.08962) |
+| 465 | arXiv:1909.11942 |  |  | 2 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, adaptive-expert-computation-compression | [source](https://arxiv.org/abs/1909.11942) |
+| 466 | arXiv:1912.03413 |  |  | 2 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 端末内LLM・処理内メモリ・LPDDR-PIM・重み配置・実行時並べ替え | [source](https://arxiv.org/abs/1912.03413) |
+| 467 | arXiv:2002.12418 |  |  | 2 | on-device LLM / heterogeneous inference / NPU offloading, on-device LLM inference / mobile inference / Flash offload | [source](https://arxiv.org/abs/2002.12418) |
+| 468 | arXiv:2004.02178 |  |  | 2 | Conditional Computation, Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2004.02178) |
+| 469 | arXiv:2004.08249 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2004.08249) |
+| 470 | arXiv:2004.13336 |  |  | 2 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation, survey-distributed-training-systems | [source](https://arxiv.org/abs/2004.13336) |
+| 471 | arXiv:2006.09503 |  |  | 2 | Training Offload / Memory Systems, オフロード／階層メモリ | [source](https://arxiv.org/abs/2006.09503) |
+| 472 | arXiv:2007.01282 |  |  | 2 | KV Cache Offload / Recomputation, 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/2007.01282) |
+| 473 | arXiv:2009.10297 |  |  | 2 | KV cache offloading / hierarchical storage / lossy KV compression, adaptive expert computation / expert pruning / depth-aware MoE compression | [source](https://arxiv.org/abs/2009.10297) |
+| 474 | arXiv:2010.06891 |  |  | 2 | LLM inference surveys、roofline performance analysis, survey-long-context-serving | [source](https://arxiv.org/abs/2010.06891) |
+| 475 | arXiv:2012.14913 |  |  | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, 分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散 | [source](https://arxiv.org/abs/2012.14913) |
+| 476 | arXiv:2101.06804 |  |  | 2 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding | [source](https://arxiv.org/abs/2101.06804) |
+| 477 | arXiv:2104.08696 |  |  | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, dense-to-MoE conversion / conditional FFN computation / expert routing | [source](https://arxiv.org/abs/2104.08696) |
+| 478 | arXiv:2105.14103 |  |  | 2 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2105.14103) |
+| 479 | arXiv:2107.07511 |  |  | 2 | MoE quantization / heterogeneous model-instance routing / quality-aware serving / risk calibration, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2107.07511) |
+| 480 | arXiv:2109.07276 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2109.07276) |
+| 481 | arXiv:2110.08207 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2110.08207) |
+| 482 | arXiv:2110.14895 |  |  | 2 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2110.14895) |
+| 483 | arXiv:2111.09832 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, MoE圧縮 / expert pruning / expert merging / post-compression adjustment | [source](https://arxiv.org/abs/2111.09832) |
+| 484 | arXiv:2201.10890 |  |  | 2 | MoE inference / task-specific expert pruning / sparse-to-dense conversion, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2201.10890) |
+| 485 | arXiv:2202.01306 |  |  | 2 | LLM学習／階層メモリ／CPU退避／勾配チェックポイント／自動構成探索, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2202.01306) |
+| 486 | arXiv:2205.05638 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2205.05638) |
+| 487 | arXiv:2206.02713 |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2206.02713) |
+| 488 | arXiv:2207.14484 |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2207.14484) |
+| 489 | arXiv:2210.07558 |  |  | 2 | LLM inference surveys、roofline performance analysis, その他システム研究 | [source](https://arxiv.org/abs/2210.07558) |
+| 490 | arXiv:2212.01378 |  |  | 2 | Adaptive Expert Computation / Compression, Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2212.01378) |
+| 491 | arXiv:2212.04089 |  |  | 2 | Adaptive Expert Computation / Compression, 適応的エキスパート計算・圧縮、エキスパート統合、推薦向け混合エキスパート | [source](https://arxiv.org/abs/2212.04089) |
+| 492 | arXiv:2212.10670 |  |  | 2 | LLM inference surveys、roofline performance analysis, MoE専門家オフロード / 混合精度 / 専門家キャッシュ | [source](https://arxiv.org/abs/2212.10670) |
+| 493 | arXiv:2301.11913 |  |  | 2 | Offload / Hierarchical Memory, 異種GPUサービング・分散推論・パイプライン並列・動的ルーティング | [source](https://arxiv.org/abs/2301.11913) |
+| 494 | arXiv:2303.03378 |  |  | 2 | 低ビット疎推論／GPUカーネル／エッジ推論, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2303.03378) |
+| 495 | arXiv:2303.10845 |  |  | 2 | Prefill/Decode Disaggregation / Production LLM Serving, その他システム研究 | [source](https://arxiv.org/abs/2303.10845) |
+| 496 | arXiv:2304.01373 |  |  | 2 | オフロード／階層メモリ, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2304.01373) |
+| 497 | arXiv:2305.03053 |  |  | 2 | Adaptive Expert Computation / Compression, MoE compression / expert merging / output approximation / least-squares compression | [source](https://arxiv.org/abs/2305.03053) |
+| 498 | arXiv:2305.05252 |  |  | 2 | Expert Prefetch, MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2305.05252) |
+| 499 | arXiv:2305.11186 |  |  | 2 | Conditional Computation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://arxiv.org/abs/2305.11186) |
+| 500 | arXiv:2305.18290 |  |  | 2 | 11-llm-serving-scheduling-disaggregation, reasoning-model compression / post-training pruning / calibration-data selection / causal intervention | [source](https://arxiv.org/abs/2305.18290) |
 
 ## Machine-readable
 

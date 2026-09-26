@@ -2,7 +2,7 @@
   "assignment_policy": "deterministic_disjoint_round_robin",
   "discovery_review": {
     "displayed": 500,
-    "pending_total": 6392,
+    "pending_total": 6366,
     "rows": [
       {
         "assigned_worker": "scheduled-chat-30",
@@ -8451,51 +8451,26 @@
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2402.07871",
+        "canonical_id": "arXiv:2402.18013",
         "identity_tokens": [
-          "arXiv:2402.07871"
+          "arXiv:2402.18013"
         ],
         "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
-          "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md",
-          "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+          "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md",
+          "papers/inference/17-pim-near-data-acceleration/2026-2605.23294-nasic-3d-nand-based-cam-selected-multibit-cim-architecture-for-efficient-on-device-mixture-of-experts-llm-inference.md"
         ],
         "linked_from_lineages": [
-          "Quantization × MoE × Offload",
-          "adaptive expert computation / compression; end-side sparse MoE"
+          "llm-serving-scheduling-disaggregation",
+          "専門家混合推論・三次元NAND・計算内メモリ・フラッシュ内処理・端末内推論"
         ],
         "published": null,
         "rank": 275,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
         "source_rank": 609,
-        "source_url": "https://arxiv.org/abs/2402.07871",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2404.16130",
-        "identity_tokens": [
-          "arXiv:2404.16130"
-        ],
-        "linked_from": [
-          "papers/inference/07-kv-cache-optimization-compression/2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
-          "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md",
-          "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
-        ],
-        "linked_from_lineages": [
-          "survey-edge-llm",
-          "エージェントメモリ、動的ベクトル検索、ANNインデックス、マルチエージェント基盤、CPU-GPU階層メモリ"
-        ],
-        "published": null,
-        "rank": 276,
-        "relation_count": 4,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 611,
-        "source_url": "https://arxiv.org/abs/2404.16130",
+        "source_url": "https://arxiv.org/abs/2402.18013",
         "title": null,
         "year": null
       },
@@ -8516,10 +8491,10 @@
           "長時間推論向けKVキャッシュ削除"
         ],
         "published": null,
-        "rank": 277,
+        "rank": 276,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 613,
+        "source_rank": 611,
         "source_url": "https://arxiv.org/abs/2408.03675",
         "title": null,
         "year": null
@@ -8541,10 +8516,10 @@
           "投機的デコード／動的候補木／高同時実行LLMサービング"
         ],
         "published": null,
-        "rank": 278,
+        "rank": 277,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 615,
+        "source_rank": 613,
         "source_url": "https://arxiv.org/abs/2409.00142",
         "title": null,
         "year": null
@@ -8566,10 +8541,10 @@
           "鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論"
         ],
         "published": null,
-        "rank": 279,
+        "rank": 278,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 617,
+        "source_rank": 615,
         "source_url": "https://arxiv.org/abs/2409.15355",
         "title": null,
         "year": null
@@ -8591,10 +8566,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 280,
+        "rank": 279,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 619,
+        "source_rank": 617,
         "source_url": "https://arxiv.org/abs/2411.01783",
         "title": null,
         "year": null
@@ -8616,10 +8591,10 @@
           "KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論"
         ],
         "published": null,
-        "rank": 281,
+        "rank": 280,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 621,
+        "source_rank": 619,
         "source_url": "https://arxiv.org/abs/2502.14051",
         "title": null,
         "year": null
@@ -8641,10 +8616,10 @@
           "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
         ],
         "published": null,
-        "rank": 282,
+        "rank": 281,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 623,
+        "source_rank": 621,
         "source_url": "https://arxiv.org/abs/2504.07491",
         "title": null,
         "year": null
@@ -8667,163 +8642,136 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 283,
+        "rank": 282,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 625,
+        "source_rank": 623,
         "source_url": "https://arxiv.org/abs/2507.12000",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2509.24389",
+        "canonical_id": "arXiv:2512.19849",
         "identity_tokens": [
-          "arXiv:2509.24389"
+          "arXiv:2512.19849"
         ],
         "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2026-2602.00879-dynamic-expert-sharing.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
-          "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md"
+          "papers/inference/01-offload-hierarchical-memory/2026-2606.26607-moebius-runtime-parallelism-switch.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+          "papers/inference/12-moe-parallelism-communication/2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md",
+          "papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md"
         ],
         "linked_from_lineages": [
-          "diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference",
-          "mixture-of-experts / diffusion LLM inference / expert sharing / memory-traffic reduction"
+          "Speculative decoding × MoE",
+          "distributed LLM serving / KV cache / latent attention / GPU fabrics"
         ],
         "published": null,
-        "rank": 284,
+        "rank": 283,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 627,
-        "source_url": "https://arxiv.org/abs/2509.24389",
+        "source_rank": 626,
+        "source_url": "https://arxiv.org/abs/2512.19849",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2601.07891",
+        "canonical_id": "arXiv:2603.05451",
         "identity_tokens": [
-          "arXiv:2601.07891"
+          "arXiv:2603.05451"
         ],
         "linked_from": [
-          "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
-          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md",
-          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
-          "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+          "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md",
+          "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md",
+          "papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md"
         ],
         "linked_from_lineages": [
-          "KV Cache Optimization / Compression",
-          "KVキャッシュ退避／長文推論／KV選択／KV量子化"
+          "diffusion LLM inference / KV caching / fused attention / parallel decoding",
+          "kv-cache-optimization-compression"
+        ],
+        "published": null,
+        "rank": 284,
+        "relation_count": 4,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 628,
+        "source_url": "https://arxiv.org/abs/2603.05451",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "DOI:10.1109/hpca57654.2024.00078",
+        "identity_tokens": [
+          "DOI:10.1109/hpca57654.2024.00078"
+        ],
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+          "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+          "papers/inference/15-inference-simulation-emulation/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md"
+        ],
+        "linked_from_lineages": [
+          "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+          "offload-hierarchical-memory"
         ],
         "published": null,
         "rank": 285,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
         "source_rank": 630,
-        "source_url": "https://arxiv.org/abs/2601.07891",
+        "source_url": "https://doi.org/10.1109/hpca57654.2024.00078",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2604.16007",
+        "canonical_id": "DOI:10.1145/3695053.3731092",
         "identity_tokens": [
-          "DOI:10.48550/arxiv.2604.16007",
-          "arXiv:2604.16007"
+          "DOI:10.1145/3695053.3731092"
         ],
         "linked_from": [
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md",
           "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
-          "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.03741-heteropanacea.md",
-          "papers/inference/99-other-inference-systems/2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md"
+          "papers/inference/99-other-inference-systems/2026-2606.16332-smepilot-characterizing-and-optimizing-llm-inference-with-scalable-matrix-extensions.md",
+          "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
         ],
         "linked_from_lineages": [
-          "10-kv-cache-offload-recomputation",
-          "flash-capacity-tier-inference"
+          "CPU推論、行列拡張、異種実行、ルーフライン最適化",
+          "block diffusion LLM serving / KV-cache offloading / sparse attention / heterogeneous CPU-GPU memory"
         ],
         "published": null,
         "rank": 286,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 632,
-        "source_url": "https://arxiv.org/abs/2604.16007",
+        "source_rank": 633,
+        "source_url": "https://doi.org/10.1145/3695053.3731092",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "DOI:10.1109/lca.2024.3406038",
+        "canonical_id": "DOI:10.18653/v1/n19-1246",
         "identity_tokens": [
-          "DOI:10.1109/lca.2024.3406038"
+          "DOI:10.18653/v1/n19-1246"
         ],
         "linked_from": [
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-phase-aware-placement-dvfs.md",
-          "papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md"
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
         ],
         "linked_from_lineages": [
-          "llm-serving-scheduling-disaggregation",
-          "prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS"
+          "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+          "mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment"
         ],
         "published": null,
         "rank": 287,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 634,
-        "source_url": "https://doi.org/10.1109/lca.2024.3406038",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "DOI:10.1145/3774904.3792218",
-        "identity_tokens": [
-          "DOI:10.1145/3774904.3792218"
-        ],
-        "linked_from": [
-          "papers/inference/05-speculative-decoding-moe/2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md",
-          "papers/inference/05-speculative-decoding-moe/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
-          "papers/inference/99-other-inference-systems/2026-2608.05303-edgexpert-moe-speculative-decoding.md",
-          "papers/inference/99-other-inference-systems/2609.14643.md"
-        ],
-        "linked_from_lineages": [
-          "hardware-accelerators",
-          "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング"
-        ],
-        "published": null,
-        "rank": 288,
-        "relation_count": 4,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 637,
-        "source_url": "https://doi.org/10.1145/3774904.3792218",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "DOI:10.48550/arxiv.2405.14209",
-        "identity_tokens": [
-          "DOI:10.48550/arxiv.2405.14209",
-          "arXiv:2405.14209"
-        ],
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
-          "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md",
-          "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-kv-cache.md",
-          "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md"
-        ],
-        "linked_from_lineages": [
-          "CXL memory pooling / KV cache offload / disaggregated memory",
-          "offload-hierarchical-memory"
-        ],
-        "published": null,
-        "rank": 289,
-        "relation_count": 4,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 639,
-        "source_url": "https://doi.org/10.48550/arxiv.2405.14209",
+        "source_rank": 635,
+        "source_url": "https://doi.org/10.18653/v1/n19-1246",
         "title": null,
         "year": null
       },
@@ -8844,10 +8792,10 @@
           "MoE量子化 / 混合精度 / 共有スペクトル基底 / 活性依存ビット配分"
         ],
         "published": null,
-        "rank": 290,
+        "rank": 288,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 641,
+        "source_rank": 637,
         "source_url": "https://openreview.net/forum?id=ziezViPoN1",
         "title": null,
         "year": null
@@ -8869,10 +8817,10 @@
           "Quantization × MoE × Offload"
         ],
         "published": null,
-        "rank": 291,
+        "rank": 289,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 643,
+        "source_rank": 639,
         "source_url": "https://arxiv.org/abs/2504.02658",
         "title": null,
         "year": null
@@ -8893,10 +8841,10 @@
           "MoE serving / Attention-FFN disaggregation / analytical provisioning / hardware-aware deployment search"
         ],
         "published": null,
-        "rank": 292,
+        "rank": 290,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 645,
+        "source_rank": 641,
         "source_url": "https://arxiv.org/abs/2508.02520",
         "title": null,
         "year": null
@@ -8917,313 +8865,161 @@
           "KV Cache Optimization / Compression"
         ],
         "published": null,
-        "rank": 293,
+        "rank": 291,
         "relation_count": 4,
         "source_kind": "reference_review_candidate",
-        "source_rank": 647,
+        "source_rank": 643,
         "source_url": "https://openreview.net/forum?id=HzBfoUdjHt",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1409.0473",
+        "canonical_id": "arXiv:1606.07947",
         "identity_tokens": [
-          "arXiv:1409.0473"
+          "arXiv:1606.07947"
         ],
         "linked_from": [
-          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
-          "papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md",
-          "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+          "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
         ],
         "linked_from_lineages": [
-          "Expert Prefetch",
-          "other-inference-systems",
-          "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+          "投機的デコード / 分布保存型デコード高速化",
+          "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+        ],
+        "published": null,
+        "rank": 292,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 645,
+        "source_url": "https://arxiv.org/abs/1606.07947",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:1802.05799",
+        "identity_tokens": [
+          "arXiv:1802.05799"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md",
+          "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+          "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+        ],
+        "linked_from_lineages": [
+          "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+          "llm-serving-scheduling-disaggregation",
+          "survey-distributed-training-systems"
+        ],
+        "published": null,
+        "rank": 293,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 647,
+        "source_url": "https://arxiv.org/abs/1802.05799",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:1903.00161",
+        "identity_tokens": [
+          "arXiv:1903.00161"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md"
+        ],
+        "linked_from_lineages": [
+          "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling",
+          "adaptive-expert-computation-compression",
+          "dynamic top-k MoE routing / load-balanced routing / long-context hybrid attention / physical AI foundation models"
         ],
         "published": null,
         "rank": 294,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
         "source_rank": 649,
-        "source_url": "https://arxiv.org/abs/1409.0473",
+        "source_url": "https://arxiv.org/abs/1903.00161",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1611.06440",
+        "canonical_id": "arXiv:2004.12993",
         "identity_tokens": [
-          "arXiv:1611.06440"
+          "arXiv:2004.12993"
         ],
         "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
-          "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
-          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
         ],
         "linked_from_lineages": [
-          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
-          "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction",
-          "投機的デコード / 自己投機的デコード / 層スキップ"
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+          "early-exit-offloading-self-speculative-decoding"
         ],
         "published": null,
         "rank": 295,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
         "source_rank": 651,
-        "source_url": "https://arxiv.org/abs/1611.06440",
+        "source_url": "https://arxiv.org/abs/2004.12993",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1710.05941",
+        "canonical_id": "arXiv:2010.11934",
         "identity_tokens": [
-          "arXiv:1710.05941"
+          "arXiv:2010.11934"
         ],
         "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
-          "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
-          "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
         ],
         "linked_from_lineages": [
-          "CPUオフロード / 活性化疎性 / 階層メモリ",
-          "cpu-offload",
-          "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+          "KV cache offloading / hierarchical storage / lossy KV compression",
+          "LLM Serving / Scheduling / Disaggregation",
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning"
         ],
         "published": null,
         "rank": 296,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
         "source_rank": 653,
-        "source_url": "https://arxiv.org/abs/1710.05941",
+        "source_url": "https://arxiv.org/abs/2010.11934",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1803.08375",
+        "canonical_id": "arXiv:2103.16716",
         "identity_tokens": [
-          "arXiv:1803.08375"
+          "arXiv:2103.16716"
         ],
         "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md",
-          "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+          "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md"
         ],
         "linked_from_lineages": [
-          "CPUオフロード / 活性化疎性 / 階層メモリ",
-          "llm-serving-scheduling-disaggregation",
-          "推論エンジン／推論基盤"
+          "MoE inference / task-specific expert pruning / sparse-to-dense conversion",
+          "dense-to-MoE conversion / conditional FFN computation / expert routing",
+          "オフロード／階層メモリ"
         ],
         "published": null,
         "rank": 297,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
         "source_rank": 655,
-        "source_url": "https://arxiv.org/abs/1803.08375",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1902.08153",
-        "identity_tokens": [
-          "arXiv:1902.08153"
-        ],
-        "linked_from": [
-          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
-          "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md",
-          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
-        ],
-        "linked_from_lineages": [
-          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
-          "llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル",
-          "重み専用量子化 / 推論カーネル"
-        ],
-        "published": null,
-        "rank": 298,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 657,
-        "source_url": "https://arxiv.org/abs/1902.08153",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:1904.09728",
-        "identity_tokens": [
-          "arXiv:1904.09728"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md"
-        ],
-        "linked_from_lineages": [
-          "Adaptive Expert Computation / Compression",
-          "adaptive-expert-computation-compression",
-          "mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment"
-        ],
-        "published": null,
-        "rank": 299,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 659,
-        "source_url": "https://arxiv.org/abs/1904.09728",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2004.08483",
-        "identity_tokens": [
-          "arXiv:2004.08483"
-        ],
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2024-2405.02842-iceformer.md",
-          "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
-          "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-        ],
-        "linked_from_lineages": [
-          "CPU長文推論・近似注意",
-          "LLM inference surveys、roofline performance analysis",
-          "疎注意／長文脈学習"
-        ],
-        "published": null,
-        "rank": 300,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 661,
-        "source_url": "https://arxiv.org/abs/2004.08483",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2006.03654",
-        "identity_tokens": [
-          "DOI:10.48550/arxiv.2006.03654",
-          "arXiv:2006.03654"
-        ],
-        "linked_from": [
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.10907-routerwise-resource-allocation-routing.md",
-          "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
-          "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md"
-        ],
-        "linked_from_lineages": [
-          "LLM routing、hybrid inference、quality-aware model selection",
-          "multi-model LLM serving / prompt routing / resource allocation",
-          "multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration"
-        ],
-        "published": null,
-        "rank": 301,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 663,
-        "source_url": "https://arxiv.org/abs/2006.03654",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2009.06732",
-        "identity_tokens": [
-          "arXiv:2009.06732"
-        ],
-        "linked_from": [
-          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
-          "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
-          "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
-        ],
-        "linked_from_lineages": [
-          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
-          "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
-          "疎注意／長文脈学習"
-        ],
-        "published": null,
-        "rank": 302,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 665,
-        "source_url": "https://arxiv.org/abs/2009.06732",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2012.14682",
-        "identity_tokens": [
-          "arXiv:2012.14682"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
-          "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
-          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
-        ],
-        "linked_from_lineages": [
-          "Conditional Computation",
-          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
-          "dense-to-MoE conversion / conditional FFN computation / expert routing"
-        ],
-        "published": null,
-        "rank": 303,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 667,
-        "source_url": "https://arxiv.org/abs/2012.14682",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2102.04010",
-        "identity_tokens": [
-          "arXiv:2102.04010"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md"
-        ],
-        "linked_from_lineages": [
-          "Adaptive Expert Computation / Compression",
-          "Adaptive computation／cache-aware MoE",
-          "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction"
-        ],
-        "published": null,
-        "rank": 304,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 669,
-        "source_url": "https://arxiv.org/abs/2102.04010",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2104.10350",
-        "identity_tokens": [
-          "DOI:10.48550/arxiv.2104.10350",
-          "arXiv:2104.10350"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md"
-        ],
-        "linked_from_lineages": [
-          "LLM Serving / Scheduling / Disaggregation",
-          "MoE inference / expert pruning / language-specific expert specialization",
-          "llm-serving-scheduling-disaggregation"
-        ],
-        "published": null,
-        "rank": 305,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 671,
-        "source_url": "https://arxiv.org/abs/2104.10350",
+        "source_url": "https://arxiv.org/abs/2103.16716",
         "title": null,
         "year": null
       },
@@ -9244,10 +9040,10 @@
           "survey-distributed-training-systems"
         ],
         "published": null,
-        "rank": 306,
+        "rank": 298,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 673,
+        "source_rank": 657,
         "source_url": "https://arxiv.org/abs/2110.15032",
         "title": null,
         "year": null
@@ -9269,313 +9065,186 @@
           "post-training quantization / second-order compression / weight-only LLM inference"
         ],
         "published": null,
-        "rank": 307,
+        "rank": 299,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 675,
+        "source_rank": 659,
         "source_url": "https://arxiv.org/abs/2201.12023",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2204.03044",
+        "canonical_id": "arXiv:2204.05862",
         "identity_tokens": [
-          "arXiv:2204.03044"
+          "arXiv:2204.05862"
         ],
         "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.14436-mergemoe-output-merging.md"
-        ],
-        "linked_from_lineages": [
-          "Adaptive Expert Computation / Compression",
-          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
-          "MoE compression / expert merging / output approximation / least-squares compression"
-        ],
-        "published": null,
-        "rank": 308,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 677,
-        "source_url": "https://arxiv.org/abs/2204.03044",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2205.10350",
-        "identity_tokens": [
-          "DOI:10.48550/arxiv.2205.10350",
-          "arXiv:2205.10350"
-        ],
-        "linked_from": [
-          "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
-          "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
-          "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
-        ],
-        "linked_from_lineages": [
-          "speculative-decoding",
-          "survey-speculative-decoding",
-          "投機的デコード / 知識蒸留 / ドラフトモデル整合"
-        ],
-        "published": null,
-        "rank": 309,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 679,
-        "source_url": "https://arxiv.org/abs/2205.10350",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2209.04836",
-        "identity_tokens": [
-          "arXiv:2209.04836"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
-        ],
-        "linked_from_lineages": [
-          "Adaptive Expert Computation / Compression",
-          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
-          "MoE compression / expert pruning / neuron-level recombination / expert reconstruction"
-        ],
-        "published": null,
-        "rank": 310,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 681,
-        "source_url": "https://arxiv.org/abs/2209.04836",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2212.08073",
-        "identity_tokens": [
-          "arXiv:2212.08073"
-        ],
-        "linked_from": [
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
-          "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
-          "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
-        ],
-        "linked_from_lineages": [
-          "Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference",
-          "llm-serving-scheduling-disaggregation",
-          "大規模分散学習・整合学習基盤"
-        ],
-        "published": null,
-        "rank": 311,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 683,
-        "source_url": "https://arxiv.org/abs/2212.08073",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2301.13848",
-        "identity_tokens": [
-          "DOI:10.48550/arxiv.2301.13848",
-          "arXiv:2301.13848"
-        ],
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
-          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
-          "papers/inference/13-sparse-attention/2026-2604.16864-hierasparse.md"
-        ],
-        "linked_from_lineages": [
-          "13-sparse-attention",
-          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
-          "Offload / Hierarchical Memory"
-        ],
-        "published": null,
-        "rank": 312,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 685,
-        "source_url": "https://arxiv.org/abs/2301.13848",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2302.14017",
-        "identity_tokens": [
-          "arXiv:2302.14017"
-        ],
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
-          "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
-          "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md"
+          "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md",
+          "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
         ],
         "linked_from_lineages": [
           "Conditional Computation",
-          "KV cache quantization / long-context inference / activation compression",
-          "端末内LLM推論／フラッシュ計算／チップレット／重み退避"
-        ],
-        "published": null,
-        "rank": 313,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 687,
-        "source_url": "https://arxiv.org/abs/2302.14017",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2304.14402",
-        "identity_tokens": [
-          "arXiv:2304.14402"
-        ],
-        "linked_from": [
-          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
-          "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
-          "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-        ],
-        "linked_from_lineages": [
-          "Expert Prefetch",
-          "LLM inference surveys、roofline performance analysis",
-          "MoE inference / on-device LLM / expert offloading / expert caching"
-        ],
-        "published": null,
-        "rank": 314,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 689,
-        "source_url": "https://arxiv.org/abs/2304.14402",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2305.02301",
-        "identity_tokens": [
-          "arXiv:2305.02301"
-        ],
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
-          "papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md",
-          "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-        ],
-        "linked_from_lineages": [
-          "LLM inference surveys、roofline performance analysis",
-          "offload-hierarchical-memory",
-          "speculative decoding / LLM serving / adaptive scheduling"
-        ],
-        "published": null,
-        "rank": 315,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 691,
-        "source_url": "https://arxiv.org/abs/2305.02301",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2305.14788",
-        "identity_tokens": [
-          "arXiv:2305.14788"
-        ],
-        "linked_from": [
-          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
-          "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
-          "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
-        ],
-        "linked_from_lineages": [
-          "Expert Prefetch",
-          "MoE inference / on-device LLM / expert offloading / expert caching",
-          "survey-long-context-serving"
-        ],
-        "published": null,
-        "rank": 316,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 693,
-        "source_url": "https://arxiv.org/abs/2305.14788",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2306.13394",
-        "identity_tokens": [
-          "arXiv:2306.13394"
-        ],
-        "linked_from": [
-          "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md",
-          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
-        ],
-        "linked_from_lineages": [
-          "adaptive expert computation / null experts / data sparsity / multimodal MoE",
-          "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング",
-          "重み専用量子化 / 推論カーネル"
-        ],
-        "published": null,
-        "rank": 317,
-        "relation_count": 3,
-        "source_kind": "reference_review_candidate",
-        "source_rank": 695,
-        "source_url": "https://arxiv.org/abs/2306.13394",
-        "title": null,
-        "year": null
-      },
-      {
-        "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2307.15337",
-        "identity_tokens": [
-          "arXiv:2307.15337"
-        ],
-        "linked_from": [
-          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
-          "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06914-taper-regulating-branch-parallelism.md"
-        ],
-        "linked_from_lineages": [
-          "Expert Prefetch",
-          "MoE inference / on-device LLM / expert offloading / expert caching",
+          "Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference",
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 318,
+        "rank": 300,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 697,
-        "source_url": "https://arxiv.org/abs/2307.15337",
+        "source_rank": 661,
+        "source_url": "https://arxiv.org/abs/2204.05862",
         "title": null,
         "year": null
       },
       {
         "assigned_worker": "scheduled-chat-30",
-        "canonical_id": "arXiv:2308.10792",
+        "canonical_id": "arXiv:2206.04046",
         "identity_tokens": [
-          "arXiv:2308.10792"
+          "arXiv:2206.04046"
         ],
         "linked_from": [
-          "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
-          "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
-          "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md"
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md"
         ],
         "linked_from_lineages": [
-          "survey-distributed-training-systems",
-          "その他システム研究",
-          "推論エンジン／推論基盤"
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+          "MoE compression / task-agnostic expert pruning / expert merging / representation similarity",
+          "multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing"
         ],
         "published": null,
-        "rank": 319,
+        "rank": 301,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 699,
-        "source_url": "https://arxiv.org/abs/2308.10792",
+        "source_rank": 663,
+        "source_url": "https://arxiv.org/abs/2206.04046",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2212.09095",
+        "identity_tokens": [
+          "arXiv:2212.09095"
+        ],
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md",
+          "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+          "papers/inference/99-other-inference-systems/2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md"
+        ],
+        "linked_from_lineages": [
+          "07-kv-cache-optimization-compression",
+          "投機的デコード / 自己投機的デコード / 層スキップ",
+          "端末LLM・ニューロン疎性・階層メモリ推論"
+        ],
+        "published": null,
+        "rank": 302,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 665,
+        "source_url": "https://arxiv.org/abs/2212.09095",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2304.02207",
+        "identity_tokens": [
+          "arXiv:2304.02207"
+        ],
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+          "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+        ],
+        "linked_from_lineages": [
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計",
+          "kv-cache-optimization-compression"
+        ],
+        "published": null,
+        "rank": 303,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 667,
+        "source_url": "https://arxiv.org/abs/2304.02207",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.10601",
+        "identity_tokens": [
+          "arXiv:2305.10601"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
+        ],
+        "linked_from_lineages": [
+          "11-llm-serving-scheduling-disaggregation",
+          "LLM Serving / Scheduling / Disaggregation",
+          "fine-grained MoE / expert routing / test-time scaling / inference-time sampling"
+        ],
+        "published": null,
+        "rank": 304,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 669,
+        "source_url": "https://arxiv.org/abs/2305.10601",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2307.13304",
+        "identity_tokens": [
+          "arXiv:2307.13304"
+        ],
+        "linked_from": [
+          "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+          "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+          "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+        ],
+        "linked_from_lineages": [
+          "Expert Prefetch",
+          "MoE inference / on-device LLM / expert offloading / expert caching",
+          "Quantization × MoE × Offload"
+        ],
+        "published": null,
+        "rank": 305,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 671,
+        "source_url": "https://arxiv.org/abs/2307.13304",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2308.00951",
+        "identity_tokens": [
+          "arXiv:2308.00951"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md",
+          "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md"
+        ],
+        "linked_from_lineages": [
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+          "Quantization × MoE × Offload",
+          "adaptive expert computation / dynamic MoE routing / gating uncertainty"
+        ],
+        "published": null,
+        "rank": 306,
+        "relation_count": 3,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 673,
+        "source_url": "https://arxiv.org/abs/2308.00951",
         "title": null,
         "year": null
       },
@@ -9596,10 +9265,10 @@
           "survey-moe-inference-optimization"
         ],
         "published": null,
-        "rank": 320,
+        "rank": 307,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 701,
+        "source_rank": 675,
         "source_url": "https://arxiv.org/abs/2309.12284",
         "title": null,
         "year": null
@@ -9621,10 +9290,10 @@
           "大規模分散学習・整合学習基盤"
         ],
         "published": null,
-        "rank": 321,
+        "rank": 308,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 703,
+        "source_rank": 677,
         "source_url": "https://arxiv.org/abs/2310.01377",
         "title": null,
         "year": null
@@ -9646,10 +9315,10 @@
           "other-inference-systems"
         ],
         "published": null,
-        "rank": 322,
+        "rank": 309,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 705,
+        "source_rank": 679,
         "source_url": "https://arxiv.org/abs/2310.04406",
         "title": null,
         "year": null
@@ -9671,10 +9340,10 @@
           "survey-distributed-training-systems"
         ],
         "published": null,
-        "rank": 323,
+        "rank": 310,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 707,
+        "source_rank": 681,
         "source_url": "https://arxiv.org/abs/2311.12351",
         "title": null,
         "year": null
@@ -9696,10 +9365,10 @@
           "MoE専門家オフロード / 混合精度 / 専門家キャッシュ"
         ],
         "published": null,
-        "rank": 324,
+        "rank": 311,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 709,
+        "source_rank": 683,
         "source_url": "https://arxiv.org/abs/2402.03766",
         "title": null,
         "year": null
@@ -9721,10 +9390,10 @@
           "kernel-runtime-compilation"
         ],
         "published": null,
-        "rank": 325,
+        "rank": 312,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 711,
+        "source_rank": 685,
         "source_url": "https://arxiv.org/abs/2402.11187",
         "title": null,
         "year": null
@@ -9747,10 +9416,10 @@
           "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング"
         ],
         "published": null,
-        "rank": 326,
+        "rank": 313,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 713,
+        "source_rank": 687,
         "source_url": "https://arxiv.org/abs/2402.16840",
         "title": null,
         "year": null
@@ -9772,10 +9441,10 @@
           "位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ"
         ],
         "published": null,
-        "rank": 327,
+        "rank": 314,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 715,
+        "source_rank": 689,
         "source_url": "https://arxiv.org/abs/2402.19473",
         "title": null,
         "year": null
@@ -9797,10 +9466,10 @@
           "attention kernel / heterogeneous batched inference / KV-cache layout"
         ],
         "published": null,
-        "rank": 328,
+        "rank": 315,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 717,
+        "source_rank": 691,
         "source_url": "https://arxiv.org/abs/2404.09529",
         "title": null,
         "year": null
@@ -9823,10 +9492,10 @@
           "kernel-runtime-compilation"
         ],
         "published": null,
-        "rank": 329,
+        "rank": 316,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 719,
+        "source_rank": 693,
         "source_url": "https://arxiv.org/abs/2405.10480",
         "title": null,
         "year": null
@@ -9848,10 +9517,10 @@
           "other-inference-systems"
         ],
         "published": null,
-        "rank": 330,
+        "rank": 317,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 721,
+        "source_rank": 695,
         "source_url": "https://arxiv.org/abs/2406.03482",
         "title": null,
         "year": null
@@ -9873,10 +9542,10 @@
           "hybrid linear attention serving / recurrent-state prefix caching / cache compression / tensor parallelism"
         ],
         "published": null,
-        "rank": 331,
+        "rank": 318,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 723,
+        "source_rank": 697,
         "source_url": "https://arxiv.org/abs/2406.07522",
         "title": null,
         "year": null
@@ -9898,10 +9567,10 @@
           "大規模分散学習・整合学習基盤"
         ],
         "published": null,
-        "rank": 332,
+        "rank": 319,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 725,
+        "source_rank": 699,
         "source_url": "https://arxiv.org/abs/2406.11704",
         "title": null,
         "year": null
@@ -9924,10 +9593,10 @@
           "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング"
         ],
         "published": null,
-        "rank": 333,
+        "rank": 320,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 727,
+        "source_rank": 701,
         "source_url": "https://arxiv.org/abs/2407.07895",
         "title": null,
         "year": null
@@ -9949,10 +9618,10 @@
           "推論エンジン／推論基盤"
         ],
         "published": null,
-        "rank": 334,
+        "rank": 321,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 729,
+        "source_rank": 703,
         "source_url": "https://arxiv.org/abs/2407.19825",
         "title": null,
         "year": null
@@ -9974,10 +9643,10 @@
           "投機的デコード／動的LLMサービング／GPU空間多重化"
         ],
         "published": null,
-        "rank": 335,
+        "rank": 322,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 731,
+        "source_rank": 705,
         "source_url": "https://arxiv.org/abs/2410.06916",
         "title": null,
         "year": null
@@ -9999,10 +9668,10 @@
           "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御"
         ],
         "published": null,
-        "rank": 336,
+        "rank": 323,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 733,
+        "source_rank": 707,
         "source_url": "https://arxiv.org/abs/2410.18514",
         "title": null,
         "year": null
@@ -10024,10 +9693,10 @@
           "prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS"
         ],
         "published": null,
-        "rank": 337,
+        "rank": 324,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 735,
+        "source_rank": 709,
         "source_url": "https://arxiv.org/abs/2412.20322",
         "title": null,
         "year": null
@@ -10049,10 +9718,10 @@
           "推論エンジン／推論基盤"
         ],
         "published": null,
-        "rank": 338,
+        "rank": 325,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 737,
+        "source_rank": 711,
         "source_url": "https://arxiv.org/abs/2501.10868",
         "title": null,
         "year": null
@@ -10075,10 +9744,10 @@
           "先頭共有・鍵値キャッシュ・検索拡張生成・要求処理順・組合せ最適化"
         ],
         "published": null,
-        "rank": 339,
+        "rank": 326,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 739,
+        "source_rank": 713,
         "source_url": "https://arxiv.org/abs/2502.15734",
         "title": null,
         "year": null
@@ -10100,10 +9769,10 @@
           "multi-tenant LLM serving / latency attribution / fractional GPU sharing"
         ],
         "published": null,
-        "rank": 340,
+        "rank": 327,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 741,
+        "source_rank": 715,
         "source_url": "https://arxiv.org/abs/2503.09516",
         "title": null,
         "year": null
@@ -10125,10 +9794,10 @@
           "cross-layer LLM serving / SLO-aware scheduling / predictive routing / heterogeneous inference"
         ],
         "published": null,
-        "rank": 341,
+        "rank": 328,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 743,
+        "source_rank": 717,
         "source_url": "https://arxiv.org/abs/2503.22562",
         "title": null,
         "year": null
@@ -10150,10 +9819,10 @@
           "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
         ],
         "published": null,
-        "rank": 342,
+        "rank": 329,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 745,
+        "source_rank": 719,
         "source_url": "https://arxiv.org/abs/2505.15809",
         "title": null,
         "year": null
@@ -10175,10 +9844,10 @@
           "その他システム研究"
         ],
         "published": null,
-        "rank": 343,
+        "rank": 330,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 747,
+        "source_rank": 721,
         "source_url": "https://arxiv.org/abs/2505.22323",
         "title": null,
         "year": null
@@ -10200,10 +9869,10 @@
           "適応的エキスパート計算・圧縮、エキスパート統合、推薦向け混合エキスパート"
         ],
         "published": null,
-        "rank": 344,
+        "rank": 331,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 749,
+        "source_rank": 723,
         "source_url": "https://arxiv.org/abs/2507.00390",
         "title": null,
         "year": null
@@ -10225,10 +9894,10 @@
           "moe-parallelism-communication"
         ],
         "published": null,
-        "rank": 345,
+        "rank": 332,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 751,
+        "source_rank": 725,
         "source_url": "https://arxiv.org/abs/2507.15465",
         "title": null,
         "year": null
@@ -10251,10 +9920,10 @@
           "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
         ],
         "published": null,
-        "rank": 346,
+        "rank": 333,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 753,
+        "source_rank": 727,
         "source_url": "https://arxiv.org/abs/2508.18265",
         "title": null,
         "year": null
@@ -10276,10 +9945,10 @@
           "kernel-runtime-compilation"
         ],
         "published": null,
-        "rank": 347,
+        "rank": 334,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 755,
+        "source_rank": 729,
         "source_url": "https://arxiv.org/abs/2509.07506",
         "title": null,
         "year": null
@@ -10301,10 +9970,10 @@
           "post-training quantization / ternary LLM / packed inference"
         ],
         "published": null,
-        "rank": 348,
+        "rank": 335,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 757,
+        "source_rank": 731,
         "source_url": "https://arxiv.org/abs/2509.16989",
         "title": null,
         "year": null
@@ -10326,10 +9995,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 349,
+        "rank": 336,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 759,
+        "source_rank": 733,
         "source_url": "https://arxiv.org/abs/2510.00615",
         "title": null,
         "year": null
@@ -10352,10 +10021,10 @@
           "Prefill/Decode Disaggregation / Selective KV Transfer"
         ],
         "published": null,
-        "rank": 350,
+        "rank": 337,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 761,
+        "source_rank": 735,
         "source_url": "https://arxiv.org/abs/2510.02758",
         "title": null,
         "year": null
@@ -10378,10 +10047,10 @@
           "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング"
         ],
         "published": null,
-        "rank": 351,
+        "rank": 338,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 763,
+        "source_rank": 737,
         "source_url": "https://arxiv.org/abs/2510.04371",
         "title": null,
         "year": null
@@ -10403,10 +10072,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 352,
+        "rank": 339,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 765,
+        "source_rank": 739,
         "source_url": "https://arxiv.org/abs/2510.08731",
         "title": null,
         "year": null
@@ -10428,10 +10097,10 @@
           "agentic serving workload characterization / KV-cache / inference benchmarking"
         ],
         "published": null,
-        "rank": 353,
+        "rank": 340,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 767,
+        "source_rank": 741,
         "source_url": "https://arxiv.org/abs/2511.00739",
         "title": null,
         "year": null
@@ -10453,10 +10122,10 @@
           "speculative decoding / parallel drafting / diffusion-inspired language modeling"
         ],
         "published": null,
-        "rank": 354,
+        "rank": 341,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 769,
+        "source_rank": 743,
         "source_url": "https://arxiv.org/abs/2512.13961",
         "title": null,
         "year": null
@@ -10478,10 +10147,10 @@
           "投機的デコード／動的LLMサービング／GPU空間多重化"
         ],
         "published": null,
-        "rank": 355,
+        "rank": 342,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 771,
+        "source_rank": 745,
         "source_url": "https://arxiv.org/abs/2512.22420",
         "title": null,
         "year": null
@@ -10503,10 +10172,10 @@
           "投機的復号 / LLMサービング・ベンチマーク"
         ],
         "published": null,
-        "rank": 356,
+        "rank": 343,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 773,
+        "source_rank": 747,
         "source_url": "https://arxiv.org/abs/2601.02780",
         "title": null,
         "year": null
@@ -10529,10 +10198,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 357,
+        "rank": 344,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 775,
+        "source_rank": 749,
         "source_url": "https://arxiv.org/abs/2601.07372",
         "title": null,
         "year": null
@@ -10554,10 +10223,10 @@
           "マルチエージェントKVキャッシュ共有／位置非依存キャッシュ／KVキャッシュ圧縮"
         ],
         "published": null,
-        "rank": 358,
+        "rank": 345,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 778,
+        "source_rank": 752,
         "source_url": "https://arxiv.org/abs/2601.21473",
         "title": null,
         "year": null
@@ -10579,10 +10248,10 @@
           "inference/07-kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 359,
+        "rank": 346,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 780,
+        "source_rank": 754,
         "source_url": "https://arxiv.org/abs/2602.02579",
         "title": null,
         "year": null
@@ -10604,10 +10273,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 360,
+        "rank": 347,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 782,
+        "source_rank": 756,
         "source_url": "https://arxiv.org/abs/2602.09721",
         "title": null,
         "year": null
@@ -10629,10 +10298,10 @@
           "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
         ],
         "published": null,
-        "rank": 361,
+        "rank": 348,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 784,
+        "source_rank": 758,
         "source_url": "https://arxiv.org/abs/2603.00729",
         "title": null,
         "year": null
@@ -10654,10 +10323,10 @@
           "拡散言語モデルサービング・KVキャッシュ・プリフィル/デコード分離・連続バッチング"
         ],
         "published": null,
-        "rank": 362,
+        "rank": 349,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 786,
+        "source_rank": 760,
         "source_url": "https://arxiv.org/abs/2604.11035",
         "title": null,
         "year": null
@@ -10679,10 +10348,10 @@
           "other"
         ],
         "published": null,
-        "rank": 363,
+        "rank": 350,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 788,
+        "source_rank": 762,
         "source_url": "https://doi.org/10.1007/s11704-024-40231-1",
         "title": null,
         "year": null
@@ -10704,10 +10373,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 364,
+        "rank": 351,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 790,
+        "source_rank": 764,
         "source_url": "https://doi.org/10.1109/lca.2023.3333759",
         "title": null,
         "year": null
@@ -10729,10 +10398,10 @@
           "オフロード／階層メモリ"
         ],
         "published": null,
-        "rank": 365,
+        "rank": 352,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 792,
+        "source_rank": 766,
         "source_url": "https://doi.org/10.1109/lca.2026.3705817",
         "title": null,
         "year": null
@@ -10754,10 +10423,10 @@
           "moe-parallelism-communication"
         ],
         "published": null,
-        "rank": 366,
+        "rank": 353,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 794,
+        "source_rank": 768,
         "source_url": "https://doi.org/10.1109/sc41406.2024.00094",
         "title": null,
         "year": null
@@ -10779,10 +10448,10 @@
           "オフロード／階層メモリ"
         ],
         "published": null,
-        "rank": 367,
+        "rank": 354,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 796,
+        "source_rank": 770,
         "source_url": "https://doi.org/10.1145/1534530.1534544",
         "title": null,
         "year": null
@@ -10804,10 +10473,10 @@
           "端末内LLM推論・三次元NAND・フラッシュ内計算・KVキャッシュ配置"
         ],
         "published": null,
-        "rank": 368,
+        "rank": 355,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 798,
+        "source_rank": 772,
         "source_url": "https://doi.org/10.1145/3489517.3530428",
         "title": null,
         "year": null
@@ -10829,10 +10498,10 @@
           "speculative decoding / hybrid-attention serving / recurrent linear attention / SGLang runtime"
         ],
         "published": null,
-        "rank": 369,
+        "rank": 356,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 800,
+        "source_rank": 774,
         "source_url": "https://doi.org/10.1145/3620666.3651352",
         "title": null,
         "year": null
@@ -10854,10 +10523,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 370,
+        "rank": 357,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 802,
+        "source_rank": 776,
         "source_url": "https://doi.org/10.1145/3630106.3658542",
         "title": null,
         "year": null
@@ -10879,10 +10548,10 @@
           "hardware-accelerators"
         ],
         "published": null,
-        "rank": 371,
+        "rank": 358,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 804,
+        "source_rank": 778,
         "source_url": "https://doi.org/10.1145/3695053.3731101",
         "title": null,
         "year": null
@@ -10904,10 +10573,10 @@
           "モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化"
         ],
         "published": null,
-        "rank": 372,
+        "rank": 359,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 806,
+        "source_rank": 780,
         "source_url": "https://doi.org/10.1145/3731569.3764808",
         "title": null,
         "year": null
@@ -10929,10 +10598,10 @@
           "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング"
         ],
         "published": null,
-        "rank": 373,
+        "rank": 360,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 808,
+        "source_rank": 782,
         "source_url": "https://doi.org/10.1145/3779212.3790187",
         "title": null,
         "year": null
@@ -10954,10 +10623,10 @@
           "adaptive-expert-computation-compression"
         ],
         "published": null,
-        "rank": 374,
+        "rank": 361,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 810,
+        "source_rank": 784,
         "source_url": "https://doi.org/10.18653/v1/2021.emnlp-main.98",
         "title": null,
         "year": null
@@ -10979,10 +10648,10 @@
           "fine-grained MoE / expert routing / test-time scaling / inference-time sampling"
         ],
         "published": null,
-        "rank": 375,
+        "rank": 362,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 812,
+        "source_rank": 786,
         "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.804",
         "title": null,
         "year": null
@@ -11004,10 +10673,10 @@
           "投機的デコード／メモリ制約推論／分散・バッチ投機実行"
         ],
         "published": null,
-        "rank": 376,
+        "rank": 363,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 814,
+        "source_rank": 788,
         "source_url": "https://doi.org/10.18653/v1/2024.acl-long.401",
         "title": null,
         "year": null
@@ -11029,10 +10698,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 377,
+        "rank": 364,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 816,
+        "source_rank": 790,
         "source_url": "https://doi.org/10.18653/v1/2024.acl-long.859",
         "title": null,
         "year": null
@@ -11054,10 +10723,10 @@
           "Quantization × MoE × Offload"
         ],
         "published": null,
-        "rank": 378,
+        "rank": 365,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 818,
+        "source_rank": 792,
         "source_url": "https://doi.org/10.18653/v1/n19-1245",
         "title": null,
         "year": null
@@ -11080,10 +10749,10 @@
           "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
         ],
         "published": null,
-        "rank": 379,
+        "rank": 366,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 820,
+        "source_rank": 794,
         "source_url": "https://doi.org/10.48550/arxiv.1804.06826",
         "title": null,
         "year": null
@@ -11106,10 +10775,10 @@
           "dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE"
         ],
         "published": null,
-        "rank": 380,
+        "rank": 367,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 822,
+        "source_rank": 796,
         "source_url": "https://doi.org/10.48550/arxiv.2411.15708",
         "title": null,
         "year": null
@@ -11132,10 +10801,10 @@
           "拡散LLM推論／動的復号粒度／配信スケジューリング／KVキャッシュ／GPU飽和制御"
         ],
         "published": null,
-        "rank": 381,
+        "rank": 368,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 824,
+        "source_rank": 798,
         "source_url": "https://doi.org/10.48550/arxiv.2507.17702",
         "title": null,
         "year": null
@@ -11157,10 +10826,10 @@
           "other-inference-systems"
         ],
         "published": null,
-        "rank": 382,
+        "rank": 369,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 826,
+        "source_rank": 800,
         "source_url": "https://doi.org/10.52202/075280-2279",
         "title": null,
         "year": null
@@ -11182,10 +10851,10 @@
           "sparse attention / learned context ranking / long-context LLM inference"
         ],
         "published": null,
-        "rank": 383,
+        "rank": 370,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 828,
+        "source_rank": 802,
         "source_url": "https://openreview.net/forum?id=1qvx610Cu7",
         "title": null,
         "year": null
@@ -11207,10 +10876,10 @@
           "query-aware sparse attention / KV selection / tail compensation / CPU offload"
         ],
         "published": null,
-        "rank": 384,
+        "rank": 371,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 830,
+        "source_rank": 804,
         "source_url": "https://openreview.net/forum?id=5Qe7AGO3Eq",
         "title": null,
         "year": null
@@ -11232,10 +10901,10 @@
           "自己投機的復号・長文脈推論・疎注意・連続バッチ処理"
         ],
         "published": null,
-        "rank": 385,
+        "rank": 372,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 832,
+        "source_rank": 806,
         "source_url": "https://openreview.net/forum?id=CS2JWaziYr",
         "title": null,
         "year": null
@@ -11257,10 +10926,10 @@
           "KVキャッシュ退避／長文推論／KV選択／KV量子化"
         ],
         "published": null,
-        "rank": 386,
+        "rank": 373,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 834,
+        "source_rank": 808,
         "source_url": "https://openreview.net/forum?id=LywifFNXV5",
         "title": null,
         "year": null
@@ -11282,10 +10951,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 387,
+        "rank": 374,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 836,
+        "source_rank": 810,
         "source_url": "https://openreview.net/forum?id=tO3ASKZlok",
         "title": null,
         "year": null
@@ -11307,10 +10976,10 @@
           "agentic workflow serving / workflow physical planning / adaptive serving"
         ],
         "published": null,
-        "rank": 388,
+        "rank": 375,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 838,
+        "source_rank": 812,
         "source_url": "https://openreview.net/forum?id=VtmBAGCN7o",
         "title": null,
         "year": null
@@ -11332,10 +11001,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 389,
+        "rank": 376,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 840,
+        "source_rank": 814,
         "source_url": "https://openreview.net/forum?id=z3JZzu9EA3",
         "title": null,
         "year": null
@@ -11356,10 +11025,10 @@
           "adaptive-expert-computation-compression"
         ],
         "published": null,
-        "rank": 390,
+        "rank": 377,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 842,
+        "source_rank": 816,
         "source_url": "https://arxiv.org/abs/1807.03819",
         "title": null,
         "year": null
@@ -11380,10 +11049,10 @@
           "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
         ],
         "published": null,
-        "rank": 391,
+        "rank": 378,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 844,
+        "source_rank": 818,
         "source_url": "https://arxiv.org/abs/2101.05615",
         "title": null,
         "year": null
@@ -11404,10 +11073,10 @@
           "その他システム研究"
         ],
         "published": null,
-        "rank": 392,
+        "rank": 379,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 847,
+        "source_rank": 821,
         "source_url": "https://arxiv.org/abs/2105.15082",
         "title": null,
         "year": null
@@ -11428,10 +11097,10 @@
           "hardware-accelerators"
         ],
         "published": null,
-        "rank": 393,
+        "rank": 380,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 849,
+        "source_rank": 823,
         "source_url": "https://arxiv.org/abs/2112.10752",
         "title": null,
         "year": null
@@ -11452,10 +11121,10 @@
           "重み専用量子化 / 推論カーネル"
         ],
         "published": null,
-        "rank": 394,
+        "rank": 381,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 851,
+        "source_rank": 825,
         "source_url": "https://arxiv.org/abs/2209.13325",
         "title": null,
         "year": null
@@ -11476,10 +11145,10 @@
           "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
         ],
         "published": null,
-        "rank": 395,
+        "rank": 382,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 853,
+        "source_rank": 827,
         "source_url": "https://arxiv.org/abs/2211.15029",
         "title": null,
         "year": null
@@ -11500,10 +11169,10 @@
           "speculative-decoding"
         ],
         "published": null,
-        "rank": 396,
+        "rank": 383,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 855,
+        "source_rank": 829,
         "source_url": "https://arxiv.org/abs/2304.03277",
         "title": null,
         "year": null
@@ -11524,10 +11193,10 @@
           "重み専用量子化 / 推論カーネル"
         ],
         "published": null,
-        "rank": 397,
+        "rank": 384,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 857,
+        "source_rank": 831,
         "source_url": "https://arxiv.org/abs/2307.16125",
         "title": null,
         "year": null
@@ -11548,10 +11217,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 398,
+        "rank": 385,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 859,
+        "source_rank": 833,
         "source_url": "https://arxiv.org/abs/2310.11511",
         "title": null,
         "year": null
@@ -11573,10 +11242,10 @@
           "端末内LLM推論・三次元NAND・フラッシュ内計算・KVキャッシュ配置"
         ],
         "published": null,
-        "rank": 399,
+        "rank": 386,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 861,
+        "source_rank": 835,
         "source_url": "https://arxiv.org/abs/2401.01325",
         "title": null,
         "year": null
@@ -11597,10 +11266,10 @@
           "System-aware KV cache"
         ],
         "published": null,
-        "rank": 400,
+        "rank": 387,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 863,
+        "source_rank": 837,
         "source_url": "https://arxiv.org/abs/2402.06262",
         "title": null,
         "year": null
@@ -11621,10 +11290,10 @@
           "Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling"
         ],
         "published": null,
-        "rank": 401,
+        "rank": 388,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 865,
+        "source_rank": 839,
         "source_url": "https://arxiv.org/abs/2402.14008",
         "title": null,
         "year": null
@@ -11645,10 +11314,10 @@
           "鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論"
         ],
         "published": null,
-        "rank": 402,
+        "rank": 389,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 867,
+        "source_rank": 841,
         "source_url": "https://arxiv.org/abs/2403.12968",
         "title": null,
         "year": null
@@ -11670,10 +11339,10 @@
           "KVキャッシュ動的メモリ管理／PagedAttention代替"
         ],
         "published": null,
-        "rank": 403,
+        "rank": 390,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 869,
+        "source_rank": 843,
         "source_url": "https://arxiv.org/abs/2405.05751",
         "title": null,
         "year": null
@@ -11695,10 +11364,10 @@
           "CPU推論、行列拡張、異種実行、ルーフライン最適化"
         ],
         "published": null,
-        "rank": 404,
+        "rank": 391,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 871,
+        "source_rank": 845,
         "source_url": "https://arxiv.org/abs/2406.01698",
         "title": null,
         "year": null
@@ -11719,10 +11388,10 @@
           "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
         ],
         "published": null,
-        "rank": 405,
+        "rank": 392,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 873,
+        "source_rank": 847,
         "source_url": "https://arxiv.org/abs/2406.07524",
         "title": null,
         "year": null
@@ -11743,10 +11412,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 406,
+        "rank": 393,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 875,
+        "source_rank": 849,
         "source_url": "https://arxiv.org/abs/2406.17419",
         "title": null,
         "year": null
@@ -11768,10 +11437,10 @@
           "adaptive expert computation / null experts / data sparsity / multimodal MoE"
         ],
         "published": null,
-        "rank": 407,
+        "rank": 394,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 877,
+        "source_rank": 851,
         "source_url": "https://arxiv.org/abs/2407.21770",
         "title": null,
         "year": null
@@ -11792,10 +11461,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 408,
+        "rank": 395,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 879,
+        "source_rank": 853,
         "source_url": "https://arxiv.org/abs/2409.11402",
         "title": null,
         "year": null
@@ -11816,10 +11485,10 @@
           "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
         ],
         "published": null,
-        "rank": 409,
+        "rank": 396,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 881,
+        "source_rank": 855,
         "source_url": "https://arxiv.org/abs/2409.20370",
         "title": null,
         "year": null
@@ -11840,10 +11509,10 @@
           "08-edge-on-device-llm-systems"
         ],
         "published": null,
-        "rank": 410,
+        "rank": 397,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 883,
+        "source_rank": 857,
         "source_url": "https://arxiv.org/abs/2410.11744",
         "title": null,
         "year": null
@@ -11865,10 +11534,10 @@
           "推論エンジン／推論基盤"
         ],
         "published": null,
-        "rank": 411,
+        "rank": 398,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 885,
+        "source_rank": 859,
         "source_url": "https://arxiv.org/abs/2411.09510",
         "title": null,
         "year": null
@@ -11889,10 +11558,10 @@
           "推論エンジン／推論基盤"
         ],
         "published": null,
-        "rank": 412,
+        "rank": 399,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 887,
+        "source_rank": 861,
         "source_url": "https://arxiv.org/abs/2412.15803",
         "title": null,
         "year": null
@@ -11913,10 +11582,10 @@
           "端末MoE推論、エキスパートオフロード、無損失圧縮、階層キャッシュ、異種資源スケジューリング"
         ],
         "published": null,
-        "rank": 413,
+        "rank": 400,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 889,
+        "source_rank": 863,
         "source_url": "https://arxiv.org/abs/2502.00922",
         "title": null,
         "year": null
@@ -11937,10 +11606,10 @@
           "投機的デコード／メモリ制約推論／分散・バッチ投機実行"
         ],
         "published": null,
-        "rank": 414,
+        "rank": 401,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 891,
+        "source_rank": 865,
         "source_url": "https://arxiv.org/abs/2502.17421",
         "title": null,
         "year": null
@@ -11961,10 +11630,10 @@
           "エージェントメモリ、動的ベクトル検索、ANNインデックス、マルチエージェント基盤、CPU-GPU階層メモリ"
         ],
         "published": null,
-        "rank": 415,
+        "rank": 402,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 893,
+        "source_rank": 867,
         "source_url": "https://arxiv.org/abs/2502.20969",
         "title": null,
         "year": null
@@ -11985,10 +11654,10 @@
           "wireless distributed MoE / adaptive expert selection / expert replacement and skipping / communication-aware inference"
         ],
         "published": null,
-        "rank": 416,
+        "rank": 403,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 895,
+        "source_rank": 869,
         "source_url": "https://arxiv.org/abs/2503.13421",
         "title": null,
         "year": null
@@ -12011,10 +11680,10 @@
           "speculative-decoding-moe"
         ],
         "published": null,
-        "rank": 417,
+        "rank": 404,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 897,
+        "source_rank": 871,
         "source_url": "https://arxiv.org/abs/2505.21594",
         "title": null,
         "year": null
@@ -12035,10 +11704,10 @@
           "sparse attention / learned context ranking / long-context LLM inference"
         ],
         "published": null,
-        "rank": 418,
+        "rank": 405,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 899,
+        "source_rank": 873,
         "source_url": "https://arxiv.org/abs/2506.07900",
         "title": null,
         "year": null
@@ -12059,10 +11728,10 @@
           "speculative-decoding-sparse-verification-kv-selection"
         ],
         "published": null,
-        "rank": 419,
+        "rank": 406,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 901,
+        "source_rank": 875,
         "source_url": "https://arxiv.org/abs/2508.02401",
         "title": null,
         "year": null
@@ -12083,10 +11752,10 @@
           "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御"
         ],
         "published": null,
-        "rank": 420,
+        "rank": 407,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 903,
+        "source_rank": 877,
         "source_url": "https://arxiv.org/abs/2508.19982",
         "title": null,
         "year": null
@@ -12107,10 +11776,10 @@
           "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング"
         ],
         "published": null,
-        "rank": 421,
+        "rank": 408,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 905,
+        "source_rank": 879,
         "source_url": "https://arxiv.org/abs/2509.15940",
         "title": null,
         "year": null
@@ -12131,10 +11800,10 @@
           "speculative-decoding"
         ],
         "published": null,
-        "rank": 422,
+        "rank": 409,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 907,
+        "source_rank": 881,
         "source_url": "https://arxiv.org/abs/2509.18362",
         "title": null,
         "year": null
@@ -12155,10 +11824,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 423,
+        "rank": 410,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 909,
+        "source_rank": 883,
         "source_url": "https://arxiv.org/abs/2510.13602",
         "title": null,
         "year": null
@@ -12179,10 +11848,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 424,
+        "rank": 411,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 911,
+        "source_rank": 885,
         "source_url": "https://arxiv.org/abs/2510.24821",
         "title": null,
         "year": null
@@ -12203,10 +11872,10 @@
           "distributed LLM serving / KV cache / latent attention / GPU fabrics"
         ],
         "published": null,
-        "rank": 425,
+        "rank": 412,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 915,
+        "source_rank": 889,
         "source_url": "https://arxiv.org/abs/2511.15076",
         "title": null,
         "year": null
@@ -12227,10 +11896,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 426,
+        "rank": 413,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 918,
+        "source_rank": 892,
         "source_url": "https://arxiv.org/abs/2602.11192",
         "title": null,
         "year": null
@@ -12251,10 +11920,10 @@
           "adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection"
         ],
         "published": null,
-        "rank": 427,
+        "rank": 414,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 920,
+        "source_rank": 894,
         "source_url": "https://arxiv.org/abs/2603.18492",
         "title": null,
         "year": null
@@ -12275,10 +11944,10 @@
           "投機的復号・ターゲット隠れ状態再利用・並列ブロックドラフト"
         ],
         "published": null,
-        "rank": 428,
+        "rank": 415,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 922,
+        "source_rank": 896,
         "source_url": "https://arxiv.org/abs/2604.12989",
         "title": null,
         "year": null
@@ -12299,10 +11968,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 429,
+        "rank": 416,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 924,
+        "source_rank": 898,
         "source_url": "https://arxiv.org/abs/2604.26256",
         "title": null,
         "year": null
@@ -12323,10 +11992,10 @@
           "post-training quantization / ternary LLM / packed inference"
         ],
         "published": null,
-        "rank": 430,
+        "rank": 417,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 926,
+        "source_rank": 900,
         "source_url": "https://arxiv.org/abs/2606.13054",
         "title": null,
         "year": null
@@ -12347,10 +12016,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 431,
+        "rank": 418,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 928,
+        "source_rank": 902,
         "source_url": "https://doi.org/10.1016/s0166-218x",
         "title": null,
         "year": null
@@ -12371,10 +12040,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 432,
+        "rank": 419,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 930,
+        "source_rank": 904,
         "source_url": "https://doi.org/10.1109/hcs59251.2023.10254711",
         "title": null,
         "year": null
@@ -12395,10 +12064,10 @@
           "端末内LLM・処理内メモリ・LPDDR-PIM・重み配置・実行時並べ替え"
         ],
         "published": null,
-        "rank": 433,
+        "rank": 420,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 932,
+        "source_rank": 906,
         "source_url": "https://doi.org/10.1109/hpca61900.2025.00126",
         "title": null,
         "year": null
@@ -12419,10 +12088,10 @@
           "端末内LLM・処理内メモリ・LPDDR-PIM・重み配置・実行時並べ替え"
         ],
         "published": null,
-        "rank": 434,
+        "rank": 421,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 934,
+        "source_rank": 908,
         "source_url": "https://doi.org/10.1109/mm.2024.3375352",
         "title": null,
         "year": null
@@ -12443,10 +12112,10 @@
           "その他システム研究"
         ],
         "published": null,
-        "rank": 435,
+        "rank": 422,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 936,
+        "source_rank": 910,
         "source_url": "https://doi.org/10.1145/3577193.3593704",
         "title": null,
         "year": null
@@ -12467,10 +12136,10 @@
           "serving-scheduling"
         ],
         "published": null,
-        "rank": 436,
+        "rank": 423,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 938,
+        "source_rank": 912,
         "source_url": "https://doi.org/10.1145/3620665.3640383",
         "title": null,
         "year": null
@@ -12491,10 +12160,10 @@
           "KV Cache Offload / Recomputation"
         ],
         "published": null,
-        "rank": 437,
+        "rank": 424,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 940,
+        "source_rank": 914,
         "source_url": "https://doi.org/10.1145/3719330.3721230",
         "title": null,
         "year": null
@@ -12515,10 +12184,10 @@
           "KV Cache Optimization / Compression"
         ],
         "published": null,
-        "rank": 438,
+        "rank": 425,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 942,
+        "source_rank": 916,
         "source_url": "https://doi.org/10.1145/3731569.3764810",
         "title": null,
         "year": null
@@ -12539,10 +12208,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 439,
+        "rank": 426,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 944,
+        "source_rank": 918,
         "source_url": "https://doi.org/10.1145/3779212.3790226",
         "title": null,
         "year": null
@@ -12563,10 +12232,10 @@
           "検索拡張生成・三次元NAND・記憶内検索・ベクトル検索・計算ストレージ"
         ],
         "published": null,
-        "rank": 440,
+        "rank": 427,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 946,
+        "source_rank": 920,
         "source_url": "https://doi.org/10.1162/tacl%5fa%5f00276",
         "title": null,
         "year": null
@@ -12587,10 +12256,10 @@
           "adaptive-expert-computation-compression"
         ],
         "published": null,
-        "rank": 441,
+        "rank": 428,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 949,
+        "source_rank": 923,
         "source_url": "https://doi.org/10.18653/v1/2023.emnlp-main.825",
         "title": null,
         "year": null
@@ -12611,10 +12280,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 442,
+        "rank": 429,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 951,
+        "source_rank": 925,
         "source_url": "https://doi.org/10.18653/v1/2024.acl-long.814",
         "title": null,
         "year": null
@@ -12635,10 +12304,10 @@
           "adaptive-expert-computation-compression"
         ],
         "published": null,
-        "rank": 443,
+        "rank": 430,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 953,
+        "source_rank": 927,
         "source_url": "https://doi.org/10.18653/v1/w17-4413",
         "title": null,
         "year": null
@@ -12660,10 +12329,10 @@
           "survey-moe-inference-optimization"
         ],
         "published": null,
-        "rank": 444,
+        "rank": 431,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 955,
+        "source_rank": 929,
         "source_url": "https://doi.org/10.48550/arxiv.2409.12136",
         "title": null,
         "year": null
@@ -12684,10 +12353,10 @@
           "adaptive-expert-computation-compression"
         ],
         "published": null,
-        "rank": 445,
+        "rank": 432,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 958,
+        "source_rank": 932,
         "source_url": "https://doi.org/10.57967/hf/2497",
         "title": null,
         "year": null
@@ -12708,10 +12377,10 @@
           "KV cache compression / KV eviction / probabilistic inference / importance sampling"
         ],
         "published": null,
-        "rank": 446,
+        "rank": 433,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 960,
+        "source_rank": 934,
         "source_url": "https://openreview.net/forum?id=ayi7qezU87",
         "title": null,
         "year": null
@@ -12732,10 +12401,10 @@
           "adaptive expert computation / expert merging / curvature-aware merging / game-theoretic optimization"
         ],
         "published": null,
-        "rank": 447,
+        "rank": 434,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 962,
+        "source_rank": 936,
         "source_url": "https://openreview.net/forum?id=jxpsAj7ltE",
         "title": null,
         "year": null
@@ -12756,10 +12425,10 @@
           "dense-to-MoE conversion / conditional FFN computation / expert routing"
         ],
         "published": null,
-        "rank": 448,
+        "rank": 435,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 964,
+        "source_rank": 938,
         "source_url": "https://openreview.net/forum?id=rJ4km2R5t7",
         "title": null,
         "year": null
@@ -12780,10 +12449,10 @@
           "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード"
         ],
         "published": null,
-        "rank": 449,
+        "rank": 436,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 966,
+        "source_rank": 940,
         "source_url": "https://openreview.net/forum?id=ul4W26KEKz",
         "title": null,
         "year": null
@@ -12803,10 +12472,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 450,
+        "rank": 437,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 968,
+        "source_rank": 942,
         "source_url": "https://arxiv.org/abs/2311.11514",
         "title": null,
         "year": null
@@ -12826,10 +12495,10 @@
           "survey-edge-llm"
         ],
         "published": null,
-        "rank": 451,
+        "rank": 438,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 970,
+        "source_rank": 944,
         "source_url": "https://arxiv.org/abs/2407.18921",
         "title": null,
         "year": null
@@ -12850,10 +12519,10 @@
           "Quantization × MoE × Offload"
         ],
         "published": null,
-        "rank": 452,
+        "rank": 439,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 972,
+        "source_rank": 946,
         "source_url": "https://arxiv.org/abs/2502.04420",
         "title": null,
         "year": null
@@ -12873,10 +12542,10 @@
           "agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement"
         ],
         "published": null,
-        "rank": 453,
+        "rank": 440,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 974,
+        "source_rank": 948,
         "source_url": "https://arxiv.org/abs/2504.15720",
         "title": null,
         "year": null
@@ -12896,10 +12565,10 @@
           "moe-parallelism-communication"
         ],
         "published": null,
-        "rank": 454,
+        "rank": 441,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 976,
+        "source_rank": 950,
         "source_url": "https://arxiv.org/abs/2504.19519",
         "title": null,
         "year": null
@@ -12919,10 +12588,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 455,
+        "rank": 442,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 978,
+        "source_rank": 952,
         "source_url": "https://arxiv.org/abs/2506.24045",
         "title": null,
         "year": null
@@ -12942,10 +12611,10 @@
           "offload-hierarchical-memory"
         ],
         "published": null,
-        "rank": 456,
+        "rank": 443,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 980,
+        "source_rank": 954,
         "source_url": "https://arxiv.org/abs/2509.09420",
         "title": null,
         "year": null
@@ -12965,10 +12634,10 @@
           "kv-cache-optimization-compression"
         ],
         "published": null,
-        "rank": 457,
+        "rank": 444,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 982,
+        "source_rank": 956,
         "source_url": "https://arxiv.org/abs/2601.17668",
         "title": null,
         "year": null
@@ -12988,10 +12657,10 @@
           "kernel-runtime-compilation"
         ],
         "published": null,
-        "rank": 458,
+        "rank": 445,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 984,
+        "source_rank": 958,
         "source_url": "https://doi.org/10.1145/3341301.3359630",
         "title": null,
         "year": null
@@ -13011,10 +12680,10 @@
           "CXL memory pooling / KV cache offload / disaggregated memory"
         ],
         "published": null,
-        "rank": 459,
+        "rank": 446,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 986,
+        "source_rank": 960,
         "source_url": "https://doi.org/10.1145/3575693.3578835",
         "title": null,
         "year": null
@@ -13034,10 +12703,10 @@
           "Prefill/Decode Disaggregation / Selective KV Transfer"
         ],
         "published": null,
-        "rank": 460,
+        "rank": 447,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 988,
+        "source_rank": 962,
         "source_url": "https://doi.org/10.1145/3689031.3696072",
         "title": null,
         "year": null
@@ -13057,10 +12726,10 @@
           "survey-low-bit-llm"
         ],
         "published": null,
-        "rank": 461,
+        "rank": 448,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 990,
+        "source_rank": 964,
         "source_url": "https://doi.org/10.13140/rg.2.2.28167.37282",
         "title": null,
         "year": null
@@ -13081,10 +12750,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 462,
+        "rank": 449,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 992,
+        "source_rank": 966,
         "source_url": "https://doi.org/10.48550/arxiv.2411.04975",
         "title": null,
         "year": null
@@ -13104,10 +12773,10 @@
           "agentic serving / KV cache eviction / persistent multi-turn serving"
         ],
         "published": null,
-        "rank": 463,
+        "rank": 450,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 994,
+        "source_rank": 968,
         "source_url": "https://openreview.net/forum?id=dHng2O0Jjr",
         "title": null,
         "year": null
@@ -13127,10 +12796,10 @@
           "MoE圧縮 / expert pruning / expert merging / post-compression adjustment"
         ],
         "published": null,
-        "rank": 464,
+        "rank": 451,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 996,
+        "source_rank": 970,
         "source_url": "https://openreview.net/forum?id=hslOzRxzXL",
         "title": null,
         "year": null
@@ -13149,10 +12818,10 @@
         ],
         "linked_from_lineages": [],
         "published": null,
-        "rank": 465,
+        "rank": 452,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 998,
+        "source_rank": 972,
         "source_url": "https://arxiv.org/abs/2402.13720",
         "title": null,
         "year": null
@@ -13170,10 +12839,10 @@
         ],
         "linked_from_lineages": [],
         "published": null,
-        "rank": 466,
+        "rank": 453,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1000,
+        "source_rank": 974,
         "source_url": "https://arxiv.org/abs/2503.16428",
         "title": null,
         "year": null
@@ -13191,10 +12860,10 @@
         ],
         "linked_from_lineages": [],
         "published": null,
-        "rank": 467,
+        "rank": 454,
         "relation_count": 3,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1002,
+        "source_rank": 976,
         "source_url": "https://doi.org/10.3390/app11146421",
         "title": null,
         "year": null
@@ -13214,10 +12883,10 @@
           "MoE inference / expert sharding / tensor parallelism / load balancing"
         ],
         "published": null,
-        "rank": 468,
+        "rank": 455,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1004,
+        "source_rank": 978,
         "source_url": "https://arxiv.org/abs/1506.06724",
         "title": null,
         "year": null
@@ -13237,10 +12906,10 @@
           "cpu-offload"
         ],
         "published": null,
-        "rank": 469,
+        "rank": 456,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1006,
+        "source_rank": 980,
         "source_url": "https://arxiv.org/abs/1702.03118",
         "title": null,
         "year": null
@@ -13260,10 +12929,10 @@
           "post-training quantization / second-order compression / weight-only LLM inference"
         ],
         "published": null,
-        "rank": 470,
+        "rank": 457,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1009,
+        "source_rank": 983,
         "source_url": "https://arxiv.org/abs/1806.00358",
         "title": null,
         "year": null
@@ -13284,10 +12953,10 @@
           "serving-disaggregation"
         ],
         "published": null,
-        "rank": 471,
+        "rank": 458,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1011,
+        "source_rank": 985,
         "source_url": "https://arxiv.org/abs/1807.03748",
         "title": null,
         "year": null
@@ -13307,10 +12976,10 @@
           "投機的デコード / 自己投機的デコード / 層スキップ"
         ],
         "published": null,
-        "rank": 472,
+        "rank": 459,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1013,
+        "source_rank": 987,
         "source_url": "https://arxiv.org/abs/1810.05270",
         "title": null,
         "year": null
@@ -13330,10 +12999,10 @@
           "Speculative Decoding"
         ],
         "published": null,
-        "rank": 473,
+        "rank": 460,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1015,
+        "source_rank": 989,
         "source_url": "https://arxiv.org/abs/1902.09243",
         "title": null,
         "year": null
@@ -13353,10 +13022,10 @@
           "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング"
         ],
         "published": null,
-        "rank": 474,
+        "rank": 461,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1017,
+        "source_rank": 991,
         "source_url": "https://arxiv.org/abs/1904.08920",
         "title": null,
         "year": null
@@ -13376,10 +13045,10 @@
           "Speculative Decoding"
         ],
         "published": null,
-        "rank": 475,
+        "rank": 462,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1019,
+        "source_rank": 993,
         "source_url": "https://arxiv.org/abs/1905.09418",
         "title": null,
         "year": null
@@ -13399,10 +13068,10 @@
           "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization"
         ],
         "published": null,
-        "rank": 476,
+        "rank": 463,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1021,
+        "source_rank": 995,
         "source_url": "https://arxiv.org/abs/1908.03265",
         "title": null,
         "year": null
@@ -13422,10 +13091,10 @@
           "投機的復号・オンライン適応・知識蒸留"
         ],
         "published": null,
-        "rank": 477,
+        "rank": 464,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1023,
+        "source_rank": 997,
         "source_url": "https://arxiv.org/abs/1909.09436",
         "title": null,
         "year": null
@@ -13445,10 +13114,10 @@
           "疎注意／長文脈学習"
         ],
         "published": null,
-        "rank": 478,
+        "rank": 465,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1025,
+        "source_rank": 999,
         "source_url": "https://arxiv.org/abs/1911.02972",
         "title": null,
         "year": null
@@ -13468,10 +13137,10 @@
           "Speculative Decoding / Draft Model Architecture"
         ],
         "published": null,
-        "rank": 479,
+        "rank": 466,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1027,
+        "source_rank": 1001,
         "source_url": "https://arxiv.org/abs/2002.09402",
         "title": null,
         "year": null
@@ -13491,10 +13160,10 @@
           "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency"
         ],
         "published": null,
-        "rank": 480,
+        "rank": 467,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1029,
+        "source_rank": 1003,
         "source_url": "https://arxiv.org/abs/2003.05997",
         "title": null,
         "year": null
@@ -13514,10 +13183,10 @@
           "その他システム研究"
         ],
         "published": null,
-        "rank": 481,
+        "rank": 468,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1031,
+        "source_rank": 1005,
         "source_url": "https://arxiv.org/abs/2004.04906",
         "title": null,
         "year": null
@@ -13537,10 +13206,10 @@
           "分散推論／集団通信圧縮／量子化AllReduce／XLA・TPU"
         ],
         "published": null,
-        "rank": 482,
+        "rank": 469,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1033,
+        "source_rank": 1007,
         "source_url": "https://arxiv.org/abs/2004.09602",
         "title": null,
         "year": null
@@ -13560,10 +13229,10 @@
           "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
         ],
         "published": null,
-        "rank": 483,
+        "rank": 470,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1035,
+        "source_rank": 1009,
         "source_url": "https://arxiv.org/abs/2005.07683",
         "title": null,
         "year": null
@@ -13583,10 +13252,10 @@
           "survey-distributed-training-systems"
         ],
         "published": null,
-        "rank": 484,
+        "rank": 471,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1037,
+        "source_rank": 1011,
         "source_url": "https://arxiv.org/abs/2006.09616",
         "title": null,
         "year": null
@@ -13606,10 +13275,10 @@
           "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization"
         ],
         "published": null,
-        "rank": 485,
+        "rank": 472,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1039,
+        "source_rank": 1013,
         "source_url": "https://arxiv.org/abs/2008.07772",
         "title": null,
         "year": null
@@ -13629,10 +13298,10 @@
           "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling"
         ],
         "published": null,
-        "rank": 486,
+        "rank": 473,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1041,
+        "source_rank": 1015,
         "source_url": "https://arxiv.org/abs/2009.13081",
         "title": null,
         "year": null
@@ -13652,10 +13321,10 @@
           "その他システム研究"
         ],
         "published": null,
-        "rank": 487,
+        "rank": 474,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1043,
+        "source_rank": 1017,
         "source_url": "https://arxiv.org/abs/2012.13255",
         "title": null,
         "year": null
@@ -13675,10 +13344,10 @@
           "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization"
         ],
         "published": null,
-        "rank": 488,
+        "rank": 475,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1045,
+        "source_rank": 1019,
         "source_url": "https://arxiv.org/abs/2012.15355",
         "title": null,
         "year": null
@@ -13698,10 +13367,10 @@
           "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization"
         ],
         "published": null,
-        "rank": 489,
+        "rank": 476,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1047,
+        "source_rank": 1021,
         "source_url": "https://arxiv.org/abs/2102.11402",
         "title": null,
         "year": null
@@ -13721,10 +13390,10 @@
           "KVキャッシュ低ランク圧縮／適応ランク選択／KV量子化／注意カーネル高速化"
         ],
         "published": null,
-        "rank": 490,
+        "rank": 477,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1049,
+        "source_rank": 1023,
         "source_url": "https://arxiv.org/abs/2104.08758",
         "title": null,
         "year": null
@@ -13744,10 +13413,10 @@
           "dense-to-MoE conversion / conditional FFN computation / expert routing"
         ],
         "published": null,
-        "rank": 491,
+        "rank": 478,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1051,
+        "source_rank": 1025,
         "source_url": "https://arxiv.org/abs/2106.04426",
         "title": null,
         "year": null
@@ -13767,10 +13436,10 @@
           "llm-serving-scheduling-disaggregation"
         ],
         "published": null,
-        "rank": 492,
+        "rank": 479,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1053,
+        "source_rank": 1027,
         "source_url": "https://arxiv.org/abs/2109.01611",
         "title": null,
         "year": null
@@ -13790,10 +13459,10 @@
           "Quantization × MoE × Offload"
         ],
         "published": null,
-        "rank": 493,
+        "rank": 480,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1055,
+        "source_rank": 1029,
         "source_url": "https://arxiv.org/abs/2110.03888",
         "title": null,
         "year": null
@@ -13813,10 +13482,10 @@
           "MoE inference / task-specific expert pruning / sparse-to-dense conversion"
         ],
         "published": null,
-        "rank": 494,
+        "rank": 481,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1057,
+        "source_rank": 1031,
         "source_url": "https://arxiv.org/abs/2110.08246",
         "title": null,
         "year": null
@@ -13836,10 +13505,10 @@
           "鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論"
         ],
         "published": null,
-        "rank": 495,
+        "rank": 482,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1059,
+        "source_rank": 1033,
         "source_url": "https://arxiv.org/abs/2111.00230",
         "title": null,
         "year": null
@@ -13859,10 +13528,10 @@
           "鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論"
         ],
         "published": null,
-        "rank": 496,
+        "rank": 483,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1061,
+        "source_rank": 1035,
         "source_url": "https://arxiv.org/abs/2112.09118",
         "title": null,
         "year": null
@@ -13882,10 +13551,10 @@
           "Offload / Hierarchical Memory"
         ],
         "published": null,
-        "rank": 497,
+        "rank": 484,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1063,
+        "source_rank": 1037,
         "source_url": "https://arxiv.org/abs/2202.01169",
         "title": null,
         "year": null
@@ -13905,10 +13574,10 @@
           "投機的デコード / 自己投機的デコード / 層スキップ"
         ],
         "published": null,
-        "rank": 498,
+        "rank": 485,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1065,
+        "source_rank": 1039,
         "source_url": "https://arxiv.org/abs/2202.12837",
         "title": null,
         "year": null
@@ -13928,10 +13597,10 @@
           "Mixture-of-Experts / differentiable routing / parameter merging / modular learning"
         ],
         "published": null,
-        "rank": 499,
+        "rank": 486,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
-        "source_rank": 1067,
+        "source_rank": 1041,
         "source_url": "https://arxiv.org/abs/2205.12399",
         "title": null,
         "year": null
@@ -13951,17 +13620,316 @@
           "adaptive expert computation / null experts / data sparsity / multimodal MoE"
         ],
         "published": null,
+        "rank": 487,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1043,
+        "source_url": "https://arxiv.org/abs/2206.02770",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2208.01313",
+        "identity_tokens": [
+          "arXiv:2208.01313"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+        ],
+        "linked_from_lineages": [
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization"
+        ],
+        "published": null,
+        "rank": 488,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1045,
+        "source_url": "https://arxiv.org/abs/2208.01313",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2210.15257",
+        "identity_tokens": [
+          "arXiv:2210.15257"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
+        ],
+        "linked_from_lineages": [
+          "MoE inference / expert pruning / language-specific expert specialization",
+          "MoE routing / expert offloading / temporal expert persistence"
+        ],
+        "published": null,
+        "rank": 489,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1047,
+        "source_url": "https://arxiv.org/abs/2210.15257",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2212.03533",
+        "identity_tokens": [
+          "arXiv:2212.03533"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation",
+          "エージェントメモリ、動的ベクトル検索、ANNインデックス、マルチエージェント基盤、CPU-GPU階層メモリ"
+        ],
+        "published": null,
+        "rank": 490,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1049,
+        "source_url": "https://arxiv.org/abs/2212.03533",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2212.09849",
+        "identity_tokens": [
+          "arXiv:2212.09849"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+        ],
+        "linked_from_lineages": [
+          "Adaptive Expert Computation / Compression",
+          "Mixture-of-Experts / differentiable routing / parameter merging / modular learning"
+        ],
+        "published": null,
+        "rank": 491,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1051,
+        "source_url": "https://arxiv.org/abs/2212.09849",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2301.00234",
+        "identity_tokens": [
+          "arXiv:2301.00234"
+        ],
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+        ],
+        "linked_from_lineages": [
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "オフロード／階層メモリ"
+        ],
+        "published": null,
+        "rank": 492,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1053,
+        "source_url": "https://arxiv.org/abs/2301.00234",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2301.12597",
+        "identity_tokens": [
+          "arXiv:2301.12597"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md",
+          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+        ],
+        "linked_from_lineages": [
+          "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング",
+          "重み専用量子化 / 推論カーネル"
+        ],
+        "published": null,
+        "rank": 493,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1055,
+        "source_url": "https://arxiv.org/abs/2301.12597",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2303.09752",
+        "identity_tokens": [
+          "arXiv:2303.09752"
+        ],
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+        ],
+        "linked_from_lineages": [
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "疎注意／長文脈学習"
+        ],
+        "published": null,
+        "rank": 494,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1057,
+        "source_url": "https://arxiv.org/abs/2303.09752",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2303.17760",
+        "identity_tokens": [
+          "arXiv:2303.17760"
+        ],
+        "linked_from": [
+          "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md"
+        ],
+        "linked_from_lineages": [
+          "Offload / Hierarchical Memory",
+          "llm-serving-scheduling-disaggregation"
+        ],
+        "published": null,
+        "rank": 495,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1059,
+        "source_url": "https://arxiv.org/abs/2303.17760",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.01210",
+        "identity_tokens": [
+          "arXiv:2305.01210"
+        ],
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md"
+        ],
+        "linked_from_lineages": [
+          "MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next",
+          "agentic workflow serving / workflow physical planning / adaptive serving"
+        ],
+        "published": null,
+        "rank": 496,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1061,
+        "source_url": "https://arxiv.org/abs/2305.01210",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.04091",
+        "identity_tokens": [
+          "arXiv:2305.04091"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md",
+          "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+        ],
+        "linked_from_lineages": [
+          "multi-model serving / disaggregated serving / cross-model KV reuse",
+          "serving-scheduling"
+        ],
+        "published": null,
+        "rank": 497,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1063,
+        "source_url": "https://arxiv.org/abs/2305.04091",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.10355",
+        "identity_tokens": [
+          "arXiv:2305.10355"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md",
+          "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+        ],
+        "linked_from_lineages": [
+          "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング",
+          "重み専用量子化 / 推論カーネル"
+        ],
+        "published": null,
+        "rank": 498,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1065,
+        "source_url": "https://arxiv.org/abs/2305.10355",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.15805",
+        "identity_tokens": [
+          "arXiv:2305.15805"
+        ],
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+          "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+        ],
+        "linked_from_lineages": [
+          "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+          "KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計"
+        ],
+        "published": null,
+        "rank": 499,
+        "relation_count": 2,
+        "source_kind": "reference_review_candidate",
+        "source_rank": 1067,
+        "source_url": "https://arxiv.org/abs/2305.15805",
+        "title": null,
+        "year": null
+      },
+      {
+        "assigned_worker": "scheduled-chat-30",
+        "canonical_id": "arXiv:2305.19370",
+        "identity_tokens": [
+          "arXiv:2305.19370"
+        ],
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
+          "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+        ],
+        "linked_from_lineages": [
+          "serving-scheduling",
+          "疎注意／長文脈学習"
+        ],
+        "published": null,
         "rank": 500,
         "relation_count": 2,
         "source_kind": "reference_review_candidate",
         "source_rank": 1069,
-        "source_url": "https://arxiv.org/abs/2206.02770",
+        "source_url": "https://arxiv.org/abs/2305.19370",
         "title": null,
         "year": null
       }
     ]
   },
-  "generated_at": "2026-09-26T18:35:30+00:00",
+  "generated_at": "2026-09-26T23:52:59+00:00",
   "purpose": "dedicated-scheduled-worker-selection-surface",
   "research_audit": {
     "claimable_total": 150,
