@@ -42,6 +42,10 @@ class PaperTaxonomyTests(unittest.TestCase):
             canonical_lineage("inference", "05-pim-near-memory"),
             "17-pim-near-data-acceleration",
         )
+        self.assertEqual(
+            canonical_lineage("inference", "18-pipeline-native-cpu-inference"),
+            "18-pipeline-native-cpu-inference",
+        )
 
     def test_unknown_inference_lineage_falls_back_without_creating_another_taxonomy(self) -> None:
         self.assertEqual(
