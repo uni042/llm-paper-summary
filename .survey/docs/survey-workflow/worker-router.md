@@ -95,6 +95,8 @@ worklistはjob / claim / paper実体 / relevance ledgerから再構築されるi
 
 専用worklistが欠損・古い・該当レーン空の場合だけ既存の正規job/reference poolから直接選ぶ。その場合も可能な限りもう一方の固定Scheduled workerが処理中・Library保存済みのidentityを避ける。claim、重複排除、relevance判定、submissionなどGitHub正規経路を使うrunでは、それぞれの正規安全規則を省略しない。Library-first runでは完成内容をGitHub本文へ直接反映せず、タスク本文で指定されたLibrary保存規則を優先する。
 
+**Library-first の Research / Audit 完成成果でも、正規テンプレート `.survey/templates/paper.md` の要約契約を省略しない。** 1論文1ファイルの同一Markdown内に、少なくとも frontmatter の `summary`、`list_summary`、および本文の `## 概要` をすべて含める。別の要約専用ファイルへ分割しない。`summary` は手順書・テンプレートに従って論文全体を説明する単体ページ用の要約材料としてワーカー自身が一次資料から作成し、空欄のまま完成扱いにしない。`list_summary` は一覧専用の45〜180文字程度の独立した一文解説とし、`summary` や `## 概要` の機械的な切り出し・短縮で代用しない。`## 概要` は代表結果を含め、何が問題で、何を変え、どの条件で何が改善したかが単独で分かる内容にする。Library保存直前のセルフレビューでは、この3要素が同一ファイルに存在し内容が役割どおりであることを確認する。
+
 ### 2.0.1 ゼロ待ちhot dispatch（Research / Discovery共通）
 
 通常runでは、`.survey/work-queue/hot-dispatch.json` が存在し、`direct_start_allowed=true` なら、**Actions resultを待ってから最初の内容作業を始めてはならない。** このindexは共有Research preload FIFOとDiscovery PRECHECKED preloadを1 readで公開する再構築可能な加速面である。`candidate_inventory` / `research_discovery_threshold` / `suggested_work_mode` を今回runの開始値として固定し、同時に通常のrun-state requestをmainへ保存するが、そのrequestには次の4項目も付けて**run-state Actionsは非同期の整合確認へ回す**。
