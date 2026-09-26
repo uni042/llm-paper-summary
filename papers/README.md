@@ -1,12 +1,12 @@
 # 論文カタログ
 
-収録論文: **1101本**。
+収録論文: **1102本**。
 
 論文は **Inference（推論）**、**Training（学習）**、**Survey（サーベイ／レビュー）** の3系統に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。Survey側は個別の新規手法ではなく、複数研究を横断整理するsurvey / review論文を収録する。
 
 各研究系統ディレクトリのREADMEにある論文一覧は、公開年月ベースの **直近12か月** → **それ以前でリポジトリ内の別論文から引用されている論文** → **その他** の順に、重複なしで自動分類する。一覧には公開年月、明示的な実装有無、リポジトリ内被引用数、一文要約を表示する。
 
-## Inference / 推論 — 1063本
+## Inference / 推論 — 1064本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 108本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 100本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
@@ -23,7 +23,7 @@
 - [Sparse Attention](inference/13-sparse-attention/) — 10本 — attention対象を疎に選択して長文脈推論の計算量と帯域を削減する。
 - [Agentic Inference / Serving Runtime](inference/14-agentic-inference-serving-runtime/) — 21本 — ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。
 - [Inference Simulation / Emulation](inference/15-inference-simulation-emulation/) — 5本 — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
-- [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 9本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
+- [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 10本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
 - [PIM / Near-Data Acceleration](inference/17-pim-near-data-acceleration/) — 8本 — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
 - [Other Inference Systems](inference/99-other-inference-systems/) — 187本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
@@ -42,5 +42,5 @@
 → [Survey一覧](survey/)
 
 <!-- survey:auto:start -->
-推論：**1063本** ／ 学習：**25本** ／ サーベイ：**13本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
+推論：**1064本** ／ 学習：**25本** ／ サーベイ：**13本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->
