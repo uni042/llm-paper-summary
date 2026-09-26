@@ -1,0 +1,916 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-ddc3b2dba06fd2dacae7",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-ddc3b2dba06fd2dacae7",
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1662eff13fd87da48e45e402a542d6286eca32df",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 11,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-26T11:43:54.338280+00:00",
+  "preload_id": "preload-ddc3b2dba06fd2dacae7",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+      "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+      "doi": "10.1016/j.cosrev.2026.101037",
+      "authors": [
+        "Habib Khan",
+        "F. Alqahtani",
+        "Weiwei Jiang",
+        "M. Ali",
+        "Sareer Ul Amin",
+        "Jakeoung Koo"
+      ]
+    },
+    {
+      "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+      "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+      "doi": "10.1016/j.engappai.2026.115976",
+      "authors": [
+        "Yumin Zhang",
+        "Xiaowen Ling",
+        "Zhiqiang Li",
+        "Liang-Liang Song",
+        "Yifan Jia",
+        "Yan-Bin Wang",
+        "Zhuhong You"
+      ]
+    },
+    {
+      "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+      "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+      "doi": "10.1016/j.istruc.2026.112910",
+      "authors": [
+        "X. Song",
+        "Senna Wang",
+        "Xiaowei Cheng",
+        "Haoyou Zhang",
+        "Ruijie Guo",
+        "Yi Li"
+      ]
+    },
+    {
+      "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+      "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+      "canonical_id": "DOI:10.1145/3832810.3832836",
+      "doi": "10.1145/3832810.3832836",
+      "authors": [
+        "Yao Liu",
+        "Ye-Wen Li",
+        "Zhonghai Zhang",
+        "Erlin Yao",
+        "Guangming Tan",
+        "Wei-Le Jia"
+      ]
+    },
+    {
+      "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+      "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+      "canonical_id": "DOI:10.1145/3832810.3832855",
+      "doi": "10.1145/3832810.3832855",
+      "authors": [
+        "Xiao Yan",
+        "Haodong Bian",
+        "Xiao-Ying Wang",
+        "Teng-Fei Cao",
+        "Jianqiang Huang"
+      ]
+    },
+    {
+      "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+      "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+      "canonical_id": "DOI:10.1145/3832810.3832874",
+      "doi": "10.1145/3832810.3832874",
+      "authors": [
+        "Hao-Dong Deng",
+        "Jia-Nuo Sheng",
+        "Wen-Hao Dai",
+        "Fangxin Liu",
+        "Qing-Xiao Sun"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "Repeated-Token Diagnostics for Transformer Cache Traces",
+      "source_url": "https://www.semanticscholar.org/paper/495c8d3f894dc4ba0d719b5f3e50fbc17124d090",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Long-context inference in decoder-only transformers is increasingly limited by key–value (KV) cache memory. This work investigates a complementary empirical question: when the same token ID recurs, do its hidden-state and KV traces exhibit coherent structure with low-dimensional variation? We present a repeated-token diagnostic study of Transformer cache traces. We collect hidden-state, pre-RoPE key, and value traces, and compare token-only, token+local-context, and token+position grouping within fixed layer–head slices. On LongBench-v1 traces from Qwen2.5-7B-Instruct and Mistral-7B-Instruct-v0.3, duplicate token IDs account for 96.2–97.8% of hidden-state occurrences. Local-context buckets raise hidden-state centroid cosine to 0.90–0.94, and token+local-context groups have stable rank near 2 and top-4 spectral energy near 0.89–0.95 across hidden, pre-RoPE key, and value traces. These results show that repeated tokens expose context-conditioned, slice-local similarity in Transformer cache traces, providing an empirical foundation for future repeated-token-aware KV-cache optimization and clarifying representation constraints for such optimizations.",
+      "canonical_id": "DOI:10.1145/3816891.3834844",
+      "doi": "10.1145/3816891.3834844",
+      "authors": [
+        "Mu-Lin Li",
+        "Chen Wang"
+      ]
+    },
+    {
+      "title": "LLM KV-cache: To Restore or To Recompute, That Is the Question",
+      "source_url": "https://www.semanticscholar.org/paper/54013045e517f3e5be61a15d667b956449e571e3",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Key-Value (KV)-caches are essential to modern Large Language Model (LLM) inference, transforming inference from a computationally prohibitive task into a practical one. However, the limited capacity of GPU High Bandwidth Memory (HBM) is often insufficient to retain KV-cache data for all active requests, especially when large models and long contexts are served. To address this limitation, modern inference systems support offloading KV-cache data from HBM to CPU DRAM, local, or remote storage. A known issue is the trade-off between restoring offloaded KV-cache data versus recomputing; the right policy is non-trivial and depends on dynamic factors such as storage bandwidth, interconnect performance, workload characteristics, context length, and service-level objectives (SLOs). In this paper, we first investigate the challenges of the restoration-recomputation trade-off and quantify its impact on inference performance when left unaddressed. We then present an I/O-aware KV-cache management policy that dynamically navigates this trade-off. Our approach maximizes inference throughput while satisfying service-level objectives by either restoring or recomputing KV-cache blocks based on the performance characteristics of the GPU and storage tiers. Initial theoretical results show a 10 × improvement in performance over simplistic static policies while maintaining SLO compliance.",
+      "canonical_id": "DOI:10.1145/3837053.3837336",
+      "doi": "10.1145/3837053.3837336",
+      "authors": [
+        "Amirhossein Najafizadeh",
+        "Vasily Tarasov",
+        "Alex Merenstein",
+        "Yue Zhu",
+        "Erez Zadok"
+      ]
+    },
+    {
+      "title": "KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/fc3422eaeb7bc0d0cbd951a793acf560e5d511e3",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Deep learning inference and training performance depends critically on GPU kernel efficiency. Modern compilers such as PyTorch Inductor automatically generate GPU kernels from high-level model code, but frequently underperform expert-written implementations by wide margins. Recent LLM-assisted kernel optimizers can close this gap for standalone kernels, yet treat compiled models as black boxes, generally optimizing individual standalone kernels without respecting the compiler's structural decisions or verifying the model end-to-end. We present KernelOPT, a multi-agent system that treats compiled models as structured artifacts. It preserves vendor library calls (cuBLAS, cuDNN) and exclusively targets generated Triton sub-kernels using five profiling-guided LLM agents. A four-gate verification cascade of static validation, multi-seed correctness, model-level float64-fallback verification, and performance gating filters candidates during optimization and verifies the re-stitched model end-to-end. If no candidate passes all four gates, the system preserves the compiler baseline. The system accepts PyTorch nn.Modules, standalone Triton kernels, and Helion kernels. Evaluated on 250 KernelBench problems, KernelOPT achieves geometric mean speedups over \\texttt{torch.compile} of 1.40$\\times$ (Level 1: 51/100), 1.15$\\times$ (Level 2: 31/100), and 1.07$\\times$ (Level 3: 12/50) across all problems.",
+      "canonical_id": "arXiv:2609.30059",
+      "arxiv_id": "2609.30059",
+      "authors": [
+        "Aheli Poddar",
+        "Sanskar Prasad",
+        "Arindam Samanta",
+        "Subha Chakraborty",
+        "Vishal Goyal",
+        "Rohit Singh Rathaur"
+      ]
+    },
+    {
+      "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
+      "source_url": "https://www.semanticscholar.org/paper/2c7ac604a130f59e8a1b84a9bac69d50ff9392cf",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We present KREX, a runtime for concurrent kernel agent benchmarking with region-granular exclusivity. KREX lets agents mark critical regions involving timing-sensitive operations within a benchmarking command. The runtime then enforces exclusivity within marked regions and allows concurrent execution outside them, achieving high throughput while preserving measurement fidelity. To enforce in-region exclusivity, KREX blocks new competing GPU submissions and drains outstanding work before freezing sibling processes and isolating CPU cores, protecting both GPU execution and the host threads that drive measurements. To maximize off-region concurrency, KREX reuses GPU contexts in persistent context processes to avoid repeated, node-wide serialized context creation. We evaluate KREX on NVIDIA and AMD GPUs. Compared with command-granular exclusivity baselines, KREX delivers up to $3.4\\times$ the benchmarking throughput with a negligible p95 timing inflation of $0.30\\%$, $1.58\\%$, and $3.90\\%$ for kernels longer than 10 ms, 1 ms, and 0.1 ms, respectively.",
+      "canonical_id": "arXiv:2609.30057",
+      "arxiv_id": "2609.30057",
+      "authors": [
+        "Tian-Yu Feng",
+        "Hao-Xuan Yu",
+        "Tian-Yuan Wu",
+        "Ling-Yun Yang",
+        "Dao-Cheng Ying",
+        "Yu-Xiao Wang",
+        "Rui-Bo Fan",
+        "Ying-Hao Yu",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+      "source_url": "https://www.semanticscholar.org/paper/58338982a60ab9d607219dc14048e038cb64bdb2",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
+      "canonical_id": "arXiv:2609.30258",
+      "arxiv_id": "2609.30258",
+      "authors": [
+        "Sudip Bhujel",
+        "Shang-Hao Shi",
+        "Rui-Quan Huang",
+        "Ning Zhang",
+        "Yang Xiao"
+      ]
+    },
+    {
+      "title": "Large Knowledge Model: From Papers to a Scientific Reasoning Landscape",
+      "source_url": "https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Accumulated scientific knowledge advances inquiry when prior findings help researchers choose new questions, design investigations, and interpret results. Realizing this value at scale requires access to the reasoning that connects research problems, scientific procedures, conclusions, and evidence. We introduce the Large Knowledge Model (LKM), a scientific knowledge infrastructure that transforms the literature into a shared, computationally accessible reasoning resource. LKM represents papers as source-grounded reasoning graphs, couples structural traversal with semantic retrieval over the same objects, and aligns related questions, claims, and reasoning chains across papers. This representation forms a Scientific Reasoning Landscape with three connected views: a Question Landscape that organizes research problems and open directions, a Workflow Landscape that exposes reusable scientific procedures, and an Evidence Landscape that connects conclusions to their support, disagreement, and conditions. The unified substrate supports reasoning-aware scientific search, evidence-grounded question answering, comparative evidence analysis, and research planning. Researchers and agents can retrieve relevant work through its scientific intent, synthesize answers with inspectable supporting arguments, and develop research plans informed by established workflows and unresolved evidence. We describe a corpus-scale system and evaluate scientific retrieval and knowledge-intensive question answering. With the answering model fixed, LKM retrieval improves accuracy by 9.30%, 4.20%, and 14.69% on ChemBench, PubMedQA, and SciBench, respectively. By connecting knowledge access to scientific reasoning and action, LKM provides a common foundation for discovering relevant research, reusing scientific knowledge, and coordinating cumulative inquiry across researchers, agents, and research cycles.",
+      "canonical_id": "arXiv:2609.27297",
+      "arxiv_id": "2609.27297",
+      "authors": [
+        "Yuan Huang",
+        "Si-Han Hu",
+        "Hong-Yu Gu",
+        "Chao Ma",
+        "Jia-Xing Zhang",
+        "Zhi-Yong Zou",
+        "Cai-Yun Fan",
+        "Yan Xiao",
+        "Ming-Jun Xu",
+        "Chen-Yu Xie",
+        "Ming-Zhen Ju",
+        "Zhe-Hao Ma",
+        "Qi Zhang",
+        "Bao-Zong Wang",
+        "Yu Li",
+        "Zhi-Yuan Yao",
+        "Ruo-Tong Liao",
+        "Xin-Yu Li",
+        "Lin-Feng Zhang",
+        "Kun Chen",
+        "E. Weinan"
+      ]
+    },
+    {
+      "title": "Shared Global KV with Layer-Specific Local History",
+      "source_url": "https://www.semanticscholar.org/paper/e1e8c96272e6f8f47d5b5bcc60955dda3a5e890a",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Decoder-only Transformer language models cache keys and values (KV) to reuse past computation during generation. Sharing KV across layers saves storage but reduces the diversity of representations available across depth. We study what local memory should retain alongside shared global KV, separating historical content from the input source used to form it. At 126M parameters and 2K context, an eight-seed study finds about 1.4% lower held-out test perplexity with local history than with a current-token local branch. Capacity, entry-count and training-compute controls support the value of historical content. In a two-seed comparison, this value persists when adjacent layers share local inputs while retaining independent projections; source sharing also shortens exact cache-construction dependencies. Against GQA and adjacent-layer KV sharing, equal bounded learning-rate searches and new-seed confirmation yield better same-source likelihood with larger caches and higher long-request latency. The ordering against adjacent-layer sharing persists after equal-token adaptation to 8K, with a short-context cost. The eight-seed external-book history effect remains uncertain, and downstream outcomes vary by task. We derive a sufficient suffix schedule that reduces upper-layer construction work while preserving the complete cache in exact arithmetic.",
+      "canonical_id": "arXiv:2609.28006",
+      "arxiv_id": "2609.28006",
+      "authors": [
+        "Xing-Lang Xian"
+      ]
+    },
+    {
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+      "source_url": "https://www.semanticscholar.org/paper/38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Modern GPU kernels fuse increasingly more work into a single kernel, and intra-kernel tracing has become the mainstream method to profile them. Tracing inserts probes into the kernel to record its runtime states, and the fidelity of the trace determines the efficiency of performance optimization. Unfortunately, existing tools insert probes before compilation. These tools interfere with the compiler's optimizations, so they trace a different binary from the one the GPU executes. They also add significant runtime overhead. Xtrace is the first GPU kernel tracing system with near-zero compile-time interference and minimized runtime overhead. Xtrace inserts probes directly into the compiled kernel binary. It reuses only the registers that hold dead values at the insertion address and resolves all hazards with the compiler's hazard tables. It further schedules the instruction order, register allocation, and control bits to minimize the runtime overhead the probe introduces. Xtrace supports 19 NVIDIA and AMD GPU architectures, and is publicly available for use at https://g-watch.github.io. We evaluate Xtrace on major production large language model (LLM) kernels against the state-of-the-art tracers Neutrino and IKET from NVIDIA. On H100, B300, and MI300X GPUs, Xtrace preserves 94-98% of the instructions of the kernel, while existing tools preserve only 8-48%. Xtrace adds only 0.9-2.8% overhead, while existing tools add 3.8-75.6%. Xtrace guides a coding agent to reach the same FlashAttention-3 performance with 3.9x fewer iterations than existing traces do. Thanks to our binary-level instrumentation, Xtrace also traces the faster closed-source cuDNN kernel, which guides the agent to lift the open-source FlashAttention-4 by 5.2-13.3% in throughput.",
+      "canonical_id": "arXiv:2609.28769",
+      "arxiv_id": "2609.28769",
+      "authors": [
+        "Zhuo-Bin Huang",
+        "Kai Zhang",
+        "Wei-Hao Cui",
+        "Hong-Shi Tan",
+        "Liang Luo",
+        "Christopher Dewan",
+        "Shen Li",
+        "Bing-Sheng He"
+      ]
+    },
+    {
+      "title": "OneTrans-V2: Unifying Retrieval, Pre-rank, and Fine-rank with One Transformer in Industrial Recommender",
+      "source_url": "https://www.semanticscholar.org/paper/8d159f166f843897550d568224394a4de118a843",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Industrial recommendation systems typically operate as a \\emph{cascade} of retrieval, pre-rank, and fine-rank, but these stages are usually trained and served as separate models, causing repeated user-sequence encoding, isolated optimization, and duplicated engineering effort. Building on OneTrans'model-level unification, we present OneTrans-V2, one Transformer that unifies the entire cascade. It encodes the user behavior sequence once as a shared context while preserving stage-specific candidate features and computation. Joint training lets the three stages reinforce one another and enables in-model knowledge distillation from fine-rank to pre-rank. We scale the shared backbone with sparse mixture-of-experts (MoE), which increases capacity with bounded activated computation, and stabilize scaling with $\\mu$P-style parameterization. To consolidate objective-specific retrieval channels, we introduce Decision-Conditioned Generative Retrieval (DCGR). DCGR predicts a decision prefix describing the upcoming interaction and generates items conditioned on it, allowing business objectives to steer a single generative process. Finally, Sequence-Native Training (SNT) organizes training around each user's lifelong behavior sequence and amortizes its encoding across exposures. Deployed across all three stages of a large-scale industrial recommendation system, OneTrans-V2 improves gross merchandise value (GMV) by 9.74\\% and, with a co-designed serving stack, delivers $3.2\\times$ the throughput of the cascade it replaces under the same hardware budget.",
+      "canonical_id": "arXiv:2609.28589",
+      "arxiv_id": "2609.28589",
+      "authors": [
+        "Han-Nan Cao",
+        "Jun Guo",
+        "Hao-Lei Pei",
+        "Zhao-Qi Zhang",
+        "Tian-Yu Wang",
+        "Zi-Yang Wang",
+        "You-Chen Sun",
+        "Yu-Kai Xue",
+        "Yu-Cheng Mao",
+        "Lin-Tao Yan",
+        "Yu-Fei Feng",
+        "Shao-Wei Liu",
+        "Rong-Kun Xing",
+        "Fei-Ling Gong",
+        "Xinyu Chenli",
+        "Cong Xu",
+        "Ming-Ge Zhang",
+        "Yun-Jia Zhu",
+        "Ya-Jing Zhang",
+        "Peng-Fei Ren",
+        "Yue Lin"
+      ]
+    },
+    {
+      "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+      "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+      "canonical_id": "arXiv:2609.25845",
+      "arxiv_id": "2609.25845",
+      "authors": [
+        "Guan-Xu Yu",
+        "Yu-Hang Yao"
+      ]
+    },
+    {
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+      "canonical_id": "arXiv:2609.26621",
+      "arxiv_id": "2609.26621",
+      "authors": [
+        "Gao-Yuan Du",
+        "A. Khan",
+        "Rex Zhou",
+        "Xiao-Yang Liu",
+        "Deepayan Chakrabarti",
+        "Fnu Suya",
+        "Xue-Ping Li"
+      ]
+    },
+    {
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "source_url": "https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+      "canonical_id": "arXiv:2609.26779",
+      "arxiv_id": "2609.26779",
+      "authors": [
+        "Trang Nguyen",
+        "Eulrang Cho",
+        "Bing-Qing Chen",
+        "Tim Dettmers"
+      ]
+    },
+    {
+      "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention",
+      "source_url": "https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Transformer models built on the attention mechanism have become a central building block in modern deep learning, yet softmax attention remains a major bottleneck for long-context workloads. While FlashAttention makes the forward and first backward passes I/O-efficient, it does not support backward-over-backward (BoB), which enables exact differentiation through the backward pass for applications such as second-order optimization, test-time training, gradient-based memory, and meta-learning. Existing BoB implementations either materialize large intermediate tensors or exhaust GPU memory at long sequence lengths. We present FlashBoB, an exact, I/O-efficient algorithm for BoB in softmax attention that keeps computation within on-chip tiles and avoids all $N \\times N$ intermediate tensors, where $N$ is the sequence length. The key insight is a hierarchical affine structure in the softmax double backward: two row-wise scalars determine all outputs through affine transformations. This yields a two-pass schedule with bounded on-chip static random-access memory (SRAM) usage and minimal off-chip high-bandwidth memory (HBM) traffic. FlashBoB achieves $\\Theta(N^2 d^2/M)$ HBM traffic ($d$ is the head dimension and $M$ is the memory size) and, within the standard FlashAttention-style score-recomputation model, matches the inherited large-cache lower bound for exact forward attention. Empirically, it scales exact attention BoB to $N=262\\text{K}$ on a single A100 80GB GPU, where prior PyTorch exact baselines fail by $N=16\\text{K}$, and is up to $6.3\\times$ faster than FlashBack. These results make exact second-order attention practical at long-context sequence lengths where prior implementations cannot run efficiently.",
+      "canonical_id": "arXiv:2609.24089",
+      "arxiv_id": "2609.24089",
+      "authors": [
+        "Anthony Givans",
+        "M. Crawshaw",
+        "Ming-Rui Liu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101037",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101037",
+        "title:inside the black box a comprehensive survey of explainable ai benchmarks protocols technical analysis and open gaps",
+        "url:https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5"
+      ],
+      "record": {
+        "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+        "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+        "doi": "10.1016/j.cosrev.2026.101037",
+        "authors": [
+          "Habib Khan",
+          "F. Alqahtani",
+          "Weiwei Jiang",
+          "M. Ali",
+          "Sareer Ul Amin",
+          "Jakeoung Koo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115976",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115976",
+        "title:transformers in protein informatics a survey of structure prediction function annotation interactions and drug discovery",
+        "url:https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d"
+      ],
+      "record": {
+        "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+        "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+        "doi": "10.1016/j.engappai.2026.115976",
+        "authors": [
+          "Yumin Zhang",
+          "Xiaowen Ling",
+          "Zhiqiang Li",
+          "Liang-Liang Song",
+          "Yifan Jia",
+          "Yan-Bin Wang",
+          "Zhuhong You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.istruc.2026.112910",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.istruc.2026.112910",
+        "title:rapid displacement time history prediction for urban reinforced concrete frames using gated reparameterized temporal fusion and structural similaritybased extrapolation networks",
+        "url:https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990"
+      ],
+      "record": {
+        "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+        "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+        "doi": "10.1016/j.istruc.2026.112910",
+        "authors": [
+          "X. Song",
+          "Senna Wang",
+          "Xiaowei Cheng",
+          "Haoyou Zhang",
+          "Ruijie Guo",
+          "Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832836",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832836",
+        "title:bag faster matrix multiplication on a single gpu",
+        "url:https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f"
+      ],
+      "record": {
+        "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+        "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+        "canonical_id": "DOI:10.1145/3832810.3832836",
+        "doi": "10.1145/3832810.3832836",
+        "authors": [
+          "Yao Liu",
+          "Ye-Wen Li",
+          "Zhonghai Zhang",
+          "Erlin Yao",
+          "Guangming Tan",
+          "Wei-Le Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832855",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832855",
+        "title:tfs tileaware spmmgemm fusion for accelerating gnn inference on intel amx",
+        "url:https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698"
+      ],
+      "record": {
+        "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+        "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+        "canonical_id": "DOI:10.1145/3832810.3832855",
+        "doi": "10.1145/3832810.3832855",
+        "authors": [
+          "Xiao Yan",
+          "Haodong Bian",
+          "Xiao-Ying Wang",
+          "Teng-Fei Cao",
+          "Jianqiang Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832874",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832874",
+        "title:magsat memoryaccessguided fusion and shapeadaptive autotuning for dynamic tensor programs",
+        "url:https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb"
+      ],
+      "record": {
+        "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+        "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+        "canonical_id": "DOI:10.1145/3832810.3832874",
+        "doi": "10.1145/3832810.3832874",
+        "authors": [
+          "Hao-Dong Deng",
+          "Jia-Nuo Sheng",
+          "Wen-Hao Dai",
+          "Fangxin Liu",
+          "Qing-Xiao Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816891.3834844",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816891.3834844",
+        "title:repeatedtoken diagnostics for transformer cache traces",
+        "url:https://www.semanticscholar.org/paper/495c8d3f894dc4ba0d719b5f3e50fbc17124d090"
+      ],
+      "record": {
+        "title": "Repeated-Token Diagnostics for Transformer Cache Traces",
+        "source_url": "https://www.semanticscholar.org/paper/495c8d3f894dc4ba0d719b5f3e50fbc17124d090",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Long-context inference in decoder-only transformers is increasingly limited by key–value (KV) cache memory. This work investigates a complementary empirical question: when the same token ID recurs, do its hidden-state and KV traces exhibit coherent structure with low-dimensional variation? We present a repeated-token diagnostic study of Transformer cache traces. We collect hidden-state, pre-RoPE key, and value traces, and compare token-only, token+local-context, and token+position grouping within fixed layer–head slices. On LongBench-v1 traces from Qwen2.5-7B-Instruct and Mistral-7B-Instruct-v0.3, duplicate token IDs account for 96.2–97.8% of hidden-state occurrences. Local-context buckets raise hidden-state centroid cosine to 0.90–0.94, and token+local-context groups have stable rank near 2 and top-4 spectral energy near 0.89–0.95 across hidden, pre-RoPE key, and value traces. These results show that repeated tokens expose context-conditioned, slice-local similarity in Transformer cache traces, providing an empirical foundation for future repeated-token-aware KV-cache optimization and clarifying representation constraints for such optimizations.",
+        "canonical_id": "DOI:10.1145/3816891.3834844",
+        "doi": "10.1145/3816891.3834844",
+        "authors": [
+          "Mu-Lin Li",
+          "Chen Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3837053.3837336",
+      "identity_tokens": [
+        "id:DOI:10.1145/3837053.3837336",
+        "title:llm kvcache to restore or to recompute that is the question",
+        "url:https://www.semanticscholar.org/paper/54013045e517f3e5be61a15d667b956449e571e3"
+      ],
+      "record": {
+        "title": "LLM KV-cache: To Restore or To Recompute, That Is the Question",
+        "source_url": "https://www.semanticscholar.org/paper/54013045e517f3e5be61a15d667b956449e571e3",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Key-Value (KV)-caches are essential to modern Large Language Model (LLM) inference, transforming inference from a computationally prohibitive task into a practical one. However, the limited capacity of GPU High Bandwidth Memory (HBM) is often insufficient to retain KV-cache data for all active requests, especially when large models and long contexts are served. To address this limitation, modern inference systems support offloading KV-cache data from HBM to CPU DRAM, local, or remote storage. A known issue is the trade-off between restoring offloaded KV-cache data versus recomputing; the right policy is non-trivial and depends on dynamic factors such as storage bandwidth, interconnect performance, workload characteristics, context length, and service-level objectives (SLOs). In this paper, we first investigate the challenges of the restoration-recomputation trade-off and quantify its impact on inference performance when left unaddressed. We then present an I/O-aware KV-cache management policy that dynamically navigates this trade-off. Our approach maximizes inference throughput while satisfying service-level objectives by either restoring or recomputing KV-cache blocks based on the performance characteristics of the GPU and storage tiers. Initial theoretical results show a 10 × improvement in performance over simplistic static policies while maintaining SLO compliance.",
+        "canonical_id": "DOI:10.1145/3837053.3837336",
+        "doi": "10.1145/3837053.3837336",
+        "authors": [
+          "Amirhossein Najafizadeh",
+          "Vasily Tarasov",
+          "Alex Merenstein",
+          "Yue Zhu",
+          "Erez Zadok"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30059",
+      "identity_tokens": [
+        "id:arXiv:2609.30059",
+        "title:kernelopt dispatchaware agentic search for gpu kernel optimization",
+        "url:https://www.semanticscholar.org/paper/fc3422eaeb7bc0d0cbd951a793acf560e5d511e3"
+      ],
+      "record": {
+        "title": "KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/fc3422eaeb7bc0d0cbd951a793acf560e5d511e3",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Deep learning inference and training performance depends critically on GPU kernel efficiency. Modern compilers such as PyTorch Inductor automatically generate GPU kernels from high-level model code, but frequently underperform expert-written implementations by wide margins. Recent LLM-assisted kernel optimizers can close this gap for standalone kernels, yet treat compiled models as black boxes, generally optimizing individual standalone kernels without respecting the compiler's structural decisions or verifying the model end-to-end. We present KernelOPT, a multi-agent system that treats compiled models as structured artifacts. It preserves vendor library calls (cuBLAS, cuDNN) and exclusively targets generated Triton sub-kernels using five profiling-guided LLM agents. A four-gate verification cascade of static validation, multi-seed correctness, model-level float64-fallback verification, and performance gating filters candidates during optimization and verifies the re-stitched model end-to-end. If no candidate passes all four gates, the system preserves the compiler baseline. The system accepts PyTorch nn.Modules, standalone Triton kernels, and Helion kernels. Evaluated on 250 KernelBench problems, KernelOPT achieves geometric mean speedups over \\texttt{torch.compile} of 1.40$\\times$ (Level 1: 51/100), 1.15$\\times$ (Level 2: 31/100), and 1.07$\\times$ (Level 3: 12/50) across all problems.",
+        "canonical_id": "arXiv:2609.30059",
+        "arxiv_id": "2609.30059",
+        "authors": [
+          "Aheli Poddar",
+          "Sanskar Prasad",
+          "Arindam Samanta",
+          "Subha Chakraborty",
+          "Vishal Goyal",
+          "Rohit Singh Rathaur"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30057",
+      "identity_tokens": [
+        "id:arXiv:2609.30057",
+        "title:krex concurrent kernel benchmarking on shared gpus via regiongranular exclusivity",
+        "url:https://www.semanticscholar.org/paper/2c7ac604a130f59e8a1b84a9bac69d50ff9392cf"
+      ],
+      "record": {
+        "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
+        "source_url": "https://www.semanticscholar.org/paper/2c7ac604a130f59e8a1b84a9bac69d50ff9392cf",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We present KREX, a runtime for concurrent kernel agent benchmarking with region-granular exclusivity. KREX lets agents mark critical regions involving timing-sensitive operations within a benchmarking command. The runtime then enforces exclusivity within marked regions and allows concurrent execution outside them, achieving high throughput while preserving measurement fidelity. To enforce in-region exclusivity, KREX blocks new competing GPU submissions and drains outstanding work before freezing sibling processes and isolating CPU cores, protecting both GPU execution and the host threads that drive measurements. To maximize off-region concurrency, KREX reuses GPU contexts in persistent context processes to avoid repeated, node-wide serialized context creation. We evaluate KREX on NVIDIA and AMD GPUs. Compared with command-granular exclusivity baselines, KREX delivers up to $3.4\\times$ the benchmarking throughput with a negligible p95 timing inflation of $0.30\\%$, $1.58\\%$, and $3.90\\%$ for kernels longer than 10 ms, 1 ms, and 0.1 ms, respectively.",
+        "canonical_id": "arXiv:2609.30057",
+        "arxiv_id": "2609.30057",
+        "authors": [
+          "Tian-Yu Feng",
+          "Hao-Xuan Yu",
+          "Tian-Yuan Wu",
+          "Ling-Yun Yang",
+          "Dao-Cheng Ying",
+          "Yu-Xiao Wang",
+          "Rui-Bo Fan",
+          "Ying-Hao Yu",
+          "Guo-Dong Yang",
+          "Li-Ping Zhang",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30258",
+      "identity_tokens": [
+        "id:arXiv:2609.30258",
+        "title:temporal gradient inversion for private trajectory reconstruction in embodied reinforcement learning",
+        "url:https://www.semanticscholar.org/paper/58338982a60ab9d607219dc14048e038cb64bdb2"
+      ],
+      "record": {
+        "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+        "source_url": "https://www.semanticscholar.org/paper/58338982a60ab9d607219dc14048e038cb64bdb2",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
+        "canonical_id": "arXiv:2609.30258",
+        "arxiv_id": "2609.30258",
+        "authors": [
+          "Sudip Bhujel",
+          "Shang-Hao Shi",
+          "Rui-Quan Huang",
+          "Ning Zhang",
+          "Yang Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27297",
+      "identity_tokens": [
+        "id:arXiv:2609.27297",
+        "title:large knowledge model from papers to a scientific reasoning landscape",
+        "url:https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483"
+      ],
+      "record": {
+        "title": "Large Knowledge Model: From Papers to a Scientific Reasoning Landscape",
+        "source_url": "https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Accumulated scientific knowledge advances inquiry when prior findings help researchers choose new questions, design investigations, and interpret results. Realizing this value at scale requires access to the reasoning that connects research problems, scientific procedures, conclusions, and evidence. We introduce the Large Knowledge Model (LKM), a scientific knowledge infrastructure that transforms the literature into a shared, computationally accessible reasoning resource. LKM represents papers as source-grounded reasoning graphs, couples structural traversal with semantic retrieval over the same objects, and aligns related questions, claims, and reasoning chains across papers. This representation forms a Scientific Reasoning Landscape with three connected views: a Question Landscape that organizes research problems and open directions, a Workflow Landscape that exposes reusable scientific procedures, and an Evidence Landscape that connects conclusions to their support, disagreement, and conditions. The unified substrate supports reasoning-aware scientific search, evidence-grounded question answering, comparative evidence analysis, and research planning. Researchers and agents can retrieve relevant work through its scientific intent, synthesize answers with inspectable supporting arguments, and develop research plans informed by established workflows and unresolved evidence. We describe a corpus-scale system and evaluate scientific retrieval and knowledge-intensive question answering. With the answering model fixed, LKM retrieval improves accuracy by 9.30%, 4.20%, and 14.69% on ChemBench, PubMedQA, and SciBench, respectively. By connecting knowledge access to scientific reasoning and action, LKM provides a common foundation for discovering relevant research, reusing scientific knowledge, and coordinating cumulative inquiry across researchers, agents, and research cycles.",
+        "canonical_id": "arXiv:2609.27297",
+        "arxiv_id": "2609.27297",
+        "authors": [
+          "Yuan Huang",
+          "Si-Han Hu",
+          "Hong-Yu Gu",
+          "Chao Ma",
+          "Jia-Xing Zhang",
+          "Zhi-Yong Zou",
+          "Cai-Yun Fan",
+          "Yan Xiao",
+          "Ming-Jun Xu",
+          "Chen-Yu Xie",
+          "Ming-Zhen Ju",
+          "Zhe-Hao Ma",
+          "Qi Zhang",
+          "Bao-Zong Wang",
+          "Yu Li",
+          "Zhi-Yuan Yao",
+          "Ruo-Tong Liao",
+          "Xin-Yu Li",
+          "Lin-Feng Zhang",
+          "Kun Chen",
+          "E. Weinan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28006",
+      "identity_tokens": [
+        "id:arXiv:2609.28006",
+        "title:shared global kv with layerspecific local history",
+        "url:https://www.semanticscholar.org/paper/e1e8c96272e6f8f47d5b5bcc60955dda3a5e890a"
+      ],
+      "record": {
+        "title": "Shared Global KV with Layer-Specific Local History",
+        "source_url": "https://www.semanticscholar.org/paper/e1e8c96272e6f8f47d5b5bcc60955dda3a5e890a",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Decoder-only Transformer language models cache keys and values (KV) to reuse past computation during generation. Sharing KV across layers saves storage but reduces the diversity of representations available across depth. We study what local memory should retain alongside shared global KV, separating historical content from the input source used to form it. At 126M parameters and 2K context, an eight-seed study finds about 1.4% lower held-out test perplexity with local history than with a current-token local branch. Capacity, entry-count and training-compute controls support the value of historical content. In a two-seed comparison, this value persists when adjacent layers share local inputs while retaining independent projections; source sharing also shortens exact cache-construction dependencies. Against GQA and adjacent-layer KV sharing, equal bounded learning-rate searches and new-seed confirmation yield better same-source likelihood with larger caches and higher long-request latency. The ordering against adjacent-layer sharing persists after equal-token adaptation to 8K, with a short-context cost. The eight-seed external-book history effect remains uncertain, and downstream outcomes vary by task. We derive a sufficient suffix schedule that reduces upper-layer construction work while preserving the complete cache in exact arithmetic.",
+        "canonical_id": "arXiv:2609.28006",
+        "arxiv_id": "2609.28006",
+        "authors": [
+          "Xing-Lang Xian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28769",
+      "identity_tokens": [
+        "id:arXiv:2609.28769",
+        "title:xtrace highfidelity gpu intrakernel tracing via binarylevel instruction splicing",
+        "url:https://www.semanticscholar.org/paper/38524352e34b0fe2c6d2fa2cb460dadbd69f0afa"
+      ],
+      "record": {
+        "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+        "source_url": "https://www.semanticscholar.org/paper/38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Modern GPU kernels fuse increasingly more work into a single kernel, and intra-kernel tracing has become the mainstream method to profile them. Tracing inserts probes into the kernel to record its runtime states, and the fidelity of the trace determines the efficiency of performance optimization. Unfortunately, existing tools insert probes before compilation. These tools interfere with the compiler's optimizations, so they trace a different binary from the one the GPU executes. They also add significant runtime overhead. Xtrace is the first GPU kernel tracing system with near-zero compile-time interference and minimized runtime overhead. Xtrace inserts probes directly into the compiled kernel binary. It reuses only the registers that hold dead values at the insertion address and resolves all hazards with the compiler's hazard tables. It further schedules the instruction order, register allocation, and control bits to minimize the runtime overhead the probe introduces. Xtrace supports 19 NVIDIA and AMD GPU architectures, and is publicly available for use at https://g-watch.github.io. We evaluate Xtrace on major production large language model (LLM) kernels against the state-of-the-art tracers Neutrino and IKET from NVIDIA. On H100, B300, and MI300X GPUs, Xtrace preserves 94-98% of the instructions of the kernel, while existing tools preserve only 8-48%. Xtrace adds only 0.9-2.8% overhead, while existing tools add 3.8-75.6%. Xtrace guides a coding agent to reach the same FlashAttention-3 performance with 3.9x fewer iterations than existing traces do. Thanks to our binary-level instrumentation, Xtrace also traces the faster closed-source cuDNN kernel, which guides the agent to lift the open-source FlashAttention-4 by 5.2-13.3% in throughput.",
+        "canonical_id": "arXiv:2609.28769",
+        "arxiv_id": "2609.28769",
+        "authors": [
+          "Zhuo-Bin Huang",
+          "Kai Zhang",
+          "Wei-Hao Cui",
+          "Hong-Shi Tan",
+          "Liang Luo",
+          "Christopher Dewan",
+          "Shen Li",
+          "Bing-Sheng He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28589",
+      "identity_tokens": [
+        "id:arXiv:2609.28589",
+        "title:onetransv2 unifying retrieval prerank and finerank with one transformer in industrial recommender",
+        "url:https://www.semanticscholar.org/paper/8d159f166f843897550d568224394a4de118a843"
+      ],
+      "record": {
+        "title": "OneTrans-V2: Unifying Retrieval, Pre-rank, and Fine-rank with One Transformer in Industrial Recommender",
+        "source_url": "https://www.semanticscholar.org/paper/8d159f166f843897550d568224394a4de118a843",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Industrial recommendation systems typically operate as a \\emph{cascade} of retrieval, pre-rank, and fine-rank, but these stages are usually trained and served as separate models, causing repeated user-sequence encoding, isolated optimization, and duplicated engineering effort. Building on OneTrans'model-level unification, we present OneTrans-V2, one Transformer that unifies the entire cascade. It encodes the user behavior sequence once as a shared context while preserving stage-specific candidate features and computation. Joint training lets the three stages reinforce one another and enables in-model knowledge distillation from fine-rank to pre-rank. We scale the shared backbone with sparse mixture-of-experts (MoE), which increases capacity with bounded activated computation, and stabilize scaling with $\\mu$P-style parameterization. To consolidate objective-specific retrieval channels, we introduce Decision-Conditioned Generative Retrieval (DCGR). DCGR predicts a decision prefix describing the upcoming interaction and generates items conditioned on it, allowing business objectives to steer a single generative process. Finally, Sequence-Native Training (SNT) organizes training around each user's lifelong behavior sequence and amortizes its encoding across exposures. Deployed across all three stages of a large-scale industrial recommendation system, OneTrans-V2 improves gross merchandise value (GMV) by 9.74\\% and, with a co-designed serving stack, delivers $3.2\\times$ the throughput of the cascade it replaces under the same hardware budget.",
+        "canonical_id": "arXiv:2609.28589",
+        "arxiv_id": "2609.28589",
+        "authors": [
+          "Han-Nan Cao",
+          "Jun Guo",
+          "Hao-Lei Pei",
+          "Zhao-Qi Zhang",
+          "Tian-Yu Wang",
+          "Zi-Yang Wang",
+          "You-Chen Sun",
+          "Yu-Kai Xue",
+          "Yu-Cheng Mao",
+          "Lin-Tao Yan",
+          "Yu-Fei Feng",
+          "Shao-Wei Liu",
+          "Rong-Kun Xing",
+          "Fei-Ling Gong",
+          "Xinyu Chenli",
+          "Cong Xu",
+          "Ming-Ge Zhang",
+          "Yun-Jia Zhu",
+          "Ya-Jing Zhang",
+          "Peng-Fei Ren",
+          "Yue Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25845",
+      "identity_tokens": [
+        "id:arXiv:2609.25845",
+        "title:visual jev accurate and efficient decisions from shared visual context",
+        "url:https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1"
+      ],
+      "record": {
+        "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+        "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+        "canonical_id": "arXiv:2609.25845",
+        "arxiv_id": "2609.25845",
+        "authors": [
+          "Guan-Xu Yu",
+          "Yu-Hang Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26621",
+      "identity_tokens": [
+        "id:arXiv:2609.26621",
+        "title:greedy decoding is not precisioninvariant crossprecision output divergence in llm inference",
+        "url:https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e"
+      ],
+      "record": {
+        "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+        "canonical_id": "arXiv:2609.26621",
+        "arxiv_id": "2609.26621",
+        "authors": [
+          "Gao-Yuan Du",
+          "A. Khan",
+          "Rex Zhou",
+          "Xiao-Yang Liu",
+          "Deepayan Chakrabarti",
+          "Fnu Suya",
+          "Xue-Ping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26779",
+      "identity_tokens": [
+        "id:arXiv:2609.26779",
+        "title:cliffcompaction costefficient compaction for longhorizon coding agents",
+        "url:https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027"
+      ],
+      "record": {
+        "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+        "source_url": "https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+        "canonical_id": "arXiv:2609.26779",
+        "arxiv_id": "2609.26779",
+        "authors": [
+          "Trang Nguyen",
+          "Eulrang Cho",
+          "Bing-Qing Chen",
+          "Tim Dettmers"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24089",
+      "identity_tokens": [
+        "id:arXiv:2609.24089",
+        "title:flashbob ioefficient exact backwardoverbackward for softmax attention",
+        "url:https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5"
+      ],
+      "record": {
+        "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention",
+        "source_url": "https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Transformer models built on the attention mechanism have become a central building block in modern deep learning, yet softmax attention remains a major bottleneck for long-context workloads. While FlashAttention makes the forward and first backward passes I/O-efficient, it does not support backward-over-backward (BoB), which enables exact differentiation through the backward pass for applications such as second-order optimization, test-time training, gradient-based memory, and meta-learning. Existing BoB implementations either materialize large intermediate tensors or exhaust GPU memory at long sequence lengths. We present FlashBoB, an exact, I/O-efficient algorithm for BoB in softmax attention that keeps computation within on-chip tiles and avoids all $N \\times N$ intermediate tensors, where $N$ is the sequence length. The key insight is a hierarchical affine structure in the softmax double backward: two row-wise scalars determine all outputs through affine transformations. This yields a two-pass schedule with bounded on-chip static random-access memory (SRAM) usage and minimal off-chip high-bandwidth memory (HBM) traffic. FlashBoB achieves $\\Theta(N^2 d^2/M)$ HBM traffic ($d$ is the head dimension and $M$ is the memory size) and, within the standard FlashAttention-style score-recomputation model, matches the inherited large-cache lower bound for exact forward attention. Empirically, it scales exact attention BoB to $N=262\\text{K}$ on a single A100 80GB GPU, where prior PyTorch exact baselines fail by $N=16\\text{K}$, and is up to $6.3\\times$ faster than FlashBack. These results make exact second-order attention practical at long-context sequence lengths where prior implementations cannot run efficiently.",
+        "canonical_id": "arXiv:2609.24089",
+        "arxiv_id": "2609.24089",
+        "authors": [
+          "Anthony Givans",
+          "M. Crawshaw",
+          "Ming-Rui Liu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:369d5ddb6cbde4b72b15df34ea72d2ecf27a3effcc23d1e2959e6ef74e0e25e3",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
