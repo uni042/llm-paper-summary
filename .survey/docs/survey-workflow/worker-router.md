@@ -1,4 +1,4 @@
-# Worker router — workflow v10.21
+# Worker router — workflow v10.22
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -83,6 +83,8 @@ runノルマの正規値は `.survey/scripts/worker_quota_policy.py` に一元�
 
 handoff guard、platform/context limit、GitHub正本の読取不能などのhard stopはノルマより優先する。ただし、**Research / Auditの内容書込みだけがplatform safetyで拒否され、claim/direct-take等の制御系GitHub writeとGitHub readが生きている場合はrun-wide hard stopへ昇格しない。** 第2.1節の `volatile pending durability` 規則で内容完成とGitHub耐久反映を分離し、既確保standbyの読解を継続する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ### 2.0 Library-first専用ワークリスト
+
+**固定Scheduled Chat (`scheduled-chat-00` / `scheduled-chat-30`) がタスク本文で `Library-first（GitHub read-only）` を指定されている通常runでは、この節のタスクローカル方針を第2節のGitHub書込み型worker向けroute/quotaより優先する。** 現行値は、開始時未処理候補在庫が **500件を超える場合は読解**、**500件以下なら探索**、読解の最低ノルマは **新規完成10件**、探索の最低ノルマは **重複除外後の新規有効候補40件の収録**である。run中に在庫数が境界を跨いでもモードは固定する。第2節の `288件 / Research-Audit 5件 / Discovery 8ラウンド` はGitHub書込み型の正規claim/submission経路用であり、Library-first read-only runのノルマ判定には使わない。
 
 現在の `:00` / `:30` Scheduled Chatが**Library-first運用**を指示されている場合は、workerごとに分離した専用indexを対象選択の第一入口として使う。
 
