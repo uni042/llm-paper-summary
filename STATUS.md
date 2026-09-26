@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-26 11:31:54 JST**
+> 自動生成: **2026-09-26 14:34:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **362** |
-| 未claim Research job | **219** |
+| 収録候補論文 | **361** |
+| 未claim Research job | **240** |
 | 直近24hの検証済みResearch収録 | **0** |
 | 最終検証済みResearch収録 | **09-25 11:14:16 JST** |
 | 最終検証済みDiscovery探索 | **09-26 04:45:42 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **362** |
+| canonical_id確認済みの一意な候補論文 | **361** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **362** |
+| 非終端Research job合計 | **361** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（50時間56分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（53時間59分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **143** | **63** | — |
+| Research | **0** | **1** | **0** | **0** | **121** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **8** | **8** | **0** | **0** | **0** | **25** |
-| 合計 | **0** | **9** | **8** | **0** | **143** | **63** | **25** |
+| 合計 | **0** | **9** | **8** | **0** | **121** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,7 +150,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **63件**
+- 未失効かつ非terminal jobのclaim: **121件** / 直近15分heartbeat: **0件**
+- `arXiv:2606.10935` — CLP: Collocation-Length Prediction for Zero-Loss Adaptive Multi-Token Inference / worker `shared-preload-pool`
+  - claim: **09-26 12:03:45 JST** / heartbeat: **—** / lease expiry: **09-27 00:03:45 JST**
+  - evidence: `.survey/work-queue/claims/job-research-433fa17f5b3c0324.json`
 - `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
   - claim: **09-25 00:26:58 JST** / heartbeat: **09-26 11:29:19 JST** / lease expiry: **09-26 23:29:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
@@ -163,9 +166,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2604.17701` — WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference / worker `shared-preload-pool`
   - claim: **09-25 07:40:58 JST** / heartbeat: **09-26 11:29:19 JST** / lease expiry: **09-26 23:29:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-0b37f63c9c1b5db3.json`
-- `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
-  - claim: **09-25 07:29:58 JST** / heartbeat: **09-26 11:29:19 JST** / lease expiry: **09-26 23:29:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
 - `arXiv:2608.12435` — MARCH: Scaling Recurrent Memory with Content-Routed State Anchors / worker `shared-preload-pool`
   - claim: **09-25 07:40:58 JST** / heartbeat: **09-26 11:29:19 JST** / lease expiry: **09-26 23:29:19 JST**
   - evidence: `.survey/work-queue/claims/job-research-17b6142b52e58156.json`
@@ -200,7 +200,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **362** |
+| ready | **361** |
 
 ### 候補の重複・識別情報欠損
 
