@@ -27,6 +27,7 @@
 - [Inference Simulation / Emulation](15-inference-simulation-emulation/) — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
 - [Weight Quantization / Compression](16-weight-quantization-compression/) — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
 - [PIM / Near-Data Acceleration](17-pim-near-data-acceleration/) — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
+- [VLA Inference / Quantization Evaluation](18-vla-inference-quantization-evaluation/) — 視覚・言語・行動モデルの推論量子化を、閉ループ制御タスクの成功率や実行挙動まで含めて評価する研究をまとめる。
 - [Other Inference Systems](99-other-inference-systems/) — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 <!-- survey:auto:start -->
