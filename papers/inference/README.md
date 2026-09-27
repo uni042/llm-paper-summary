@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1144本**。
+収録論文: **1150本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1144本**。
+推論論文：**1150本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -44,16 +44,16 @@
 | [04-conditional-computation](04-conditional-computation/README.md) | 10 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 65 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 18 |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 109 |
-| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 25 |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 110 |
+| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 26 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 23 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 98 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 272 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 273 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 25 |
 | [13-sparse-attention](13-sparse-attention/README.md) | 16 |
-| [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 25 |
+| [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 26 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 6 |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 15 |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 17 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 13 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 7 |
