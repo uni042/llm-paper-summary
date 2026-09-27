@@ -123,6 +123,9 @@ def metadata_needs_backfill(meta: dict[str, Any], body: str) -> bool:
     sources = meta.get("sources")
     if not isinstance(sources, list) or not sources:
         return True
+    published = meta.get("published")
+    if not isinstance(published, str) or not re.fullmatch(r"\\d{4}-\\d{2}(?:-\\d{2})?", published):
+        return True
     if meta.get("arxiv_id"):
         categories = meta.get("arxiv_categories")
         if not isinstance(categories, dict) or not categories.get("primary"):
@@ -573,8 +576,13 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     # Non-arXiv legacy conference/journal pages can usually be reconstructed
     # from explicit publication/DOI fields already present in the paper.
     source = str(meta.get("source") or "")
-    if set_missing(meta, "published", meta.get("published_year") or meta.get("year")):
-        added.append("published(year)")
+    legacy_published = meta.get("published_year")
+    if (
+        isinstance(legacy_published, str)
+        and re.fullmatch(r"\\d{4}-\\d{2}(?:-\\d{2})?", legacy_published)
+        and set_missing(meta, "published", legacy_published)
+    ):
+        added.append("published(legacy-date)")
     if set_missing(meta, "publication", meta.get("publication_status")):
         added.append("publication(publication_status)")
     if ("publication_type" not in meta or empty(meta.get("publication_type"))) and "usenix.org/" in source:
