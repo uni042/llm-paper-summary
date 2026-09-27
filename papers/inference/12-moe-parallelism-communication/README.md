@@ -140,8 +140,8 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   専門家単位にトークンをhorizontal splitし、負荷別GEMM選択とSM制限で全対全通信を計算へ重畳するMoE向け専門家 パイプライン スケジューラ。
 
 - **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  専門家並列MoEで過負荷専門家が全体を待たせる遅延尾を、超過トークンの破棄または空き専門家への再経路化で抑え、Mixtral-8×7B-Instructで平均性能+0.2%と1.94倍高速化を両立する。
+  実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：4  
+  専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
 
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

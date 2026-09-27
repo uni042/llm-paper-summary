@@ -302,7 +302,7 @@
 
 - **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
   実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：0  
-  WISEは初期段階で注意の作業集合を特定し、その後は選択済みブロックへ計算を絞る推論時方式である。再学習なしで深い再帰実行を保ち、4K文脈の注意計算を最大1.76倍、32段全体を1.36倍高速化したと報告する。
+  再帰型言語モデルは、同じネットワークブロックを何度も通して潜在表現を更新することで、固定パラメータ数のまま推論時計算量を増やせる。4K文脈では、後半20段の注意をネイティブFlashAttention比で1.758倍、探索段を含む32段の注意軌跡全体でも1.355倍高速化した。
 
 - **2026-09 · [ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference](2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/Amir-zsh/ASPIRE) ・ リポジトリ内被引用：0  
