@@ -237,6 +237,66 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "commit", "-qm", "enable repository reference pool first"], cwd=self.repo, check=True)
         queue_worker._POST_MARKER_SUBMISSION_CACHE.clear()
 
+    def _enable_citation_first(self) -> None:
+        marker = self.queue / "discovery-precheck" / "CITATION_FIRST_ENFORCED"
+        marker.write_text("citation first\n", encoding="utf-8")
+        subprocess.run(["git", "add", marker.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "enable citation first"], cwd=self.repo, check=True)
+        queue_worker._POST_MARKER_SUBMISSION_CACHE.clear()
+
+    def _commit_candidate_id_result(
+        self,
+        *,
+        author_email: str = "survey-discovery-precheck[bot]@users.noreply.github.com",
+        request_id: str = "candidate-id-req",
+        receipt: str = "sha256:candidate-id-receipt",
+        candidate_id: str = "arXiv:2609.99999",
+    ) -> Path:
+        path = self.results / f"{request_id}.json"
+        record = {"canonical_id": candidate_id, "arxiv_id": candidate_id.split(":", 1)[1], "title": "Candidate ID paper"}
+        payload = {
+            "schema_version": 3,
+            "operation": "precheck_discovery_candidates",
+            "ok": True,
+            "request_id": request_id,
+            "collector_id": "candidate-id-test",
+            "run_key": "candidate-id-run",
+            "axis": "library-candidate-intake",
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "mode": "explicit_identifiers",
+            "candidate_statuses": [{"requested_id": candidate_id, "status": "allowed", "lookup_route": "semantic_scholar_single"}],
+            "evaluation_allowed": True,
+            "decision": "READY_FOR_EVALUATION",
+            "allowed_records": [{
+                "primary_identity": "id:" + candidate_id,
+                "identity_tokens": ["id:" + candidate_id],
+                "record": record,
+            }],
+            "receipt": receipt,
+        }
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        subprocess.run(["git", "add", path.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        env = dict(os.environ)
+        env["GIT_AUTHOR_NAME"] = "survey-discovery-precheck[bot]"
+        env["GIT_AUTHOR_EMAIL"] = author_email
+        subprocess.run(["git", "commit", "-qm", "candidate ID precheck result"], cwd=self.repo, check=True, env=env)
+        return path
+
+    def _candidate_id_submission(self, *, candidate_id: str = "arXiv:2609.99999") -> dict:
+        sub = self._base_sub()
+        sub["candidates"] = [{"canonical_id": candidate_id, "title": "Candidate ID paper"}]
+        sub["discovery_stats"].update({
+            "run_key": "candidate-id-run",
+            "axis": "library-candidate-intake",
+            "trigger": "explicit_user_request",
+        })
+        sub["user_directed_request"] = {
+            "request_id": "current-user-instruction-2026-09-27",
+            "summary": "Upload the existing verified accept candidates through the standard research path.",
+        }
+        return sub
+
     def _commit_reference_pool_result(
         self,
         *,
@@ -427,6 +487,71 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         }
         result = queue_worker.validate_discovery_precheck(sub)
         self.assertEqual(result["request_id"], "req-1")
+
+    def test_workflow_candidate_id_result_passes_standard_gate_for_explicit_request(self) -> None:
+        self._enable_citation_first()
+        self._commit_candidate_id_result()
+        sub = self._candidate_id_submission()
+        sub["_file"] = self._commit_submission("candidate-id-round.json")
+        sub["discovery_precheck"] = {
+            "request_id": "candidate-id-req",
+            "result_path": ".survey/work-queue/discovery-precheck/results/candidate-id-req.json",
+            "receipt": "sha256:candidate-id-receipt",
+        }
+        result = queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(result["provider"], "candidate_id_lookup")
+
+    def test_candidate_id_gate_rejects_identity_missing_from_allowed_records(self) -> None:
+        self._commit_candidate_id_result()
+        sub = self._candidate_id_submission(candidate_id="arXiv:2609.88888")
+        sub["_file"] = self._commit_submission("candidate-id-bypass.json")
+        sub["discovery_precheck"] = {
+            "request_id": "candidate-id-req",
+            "result_path": ".survey/work-queue/discovery-precheck/results/candidate-id-req.json",
+            "receipt": "sha256:candidate-id-receipt",
+        }
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertIn("not emitted", str(ctx.exception))
+
+    def test_candidate_id_gate_rejects_changed_receipt_and_wrong_request_id(self) -> None:
+        self._commit_candidate_id_result()
+        for proof in (
+            {
+                "request_id": "candidate-id-req",
+                "result_path": ".survey/work-queue/discovery-precheck/results/candidate-id-req.json",
+                "receipt": "sha256:changed",
+            },
+            {
+                "request_id": "wrong-request",
+                "result_path": ".survey/work-queue/discovery-precheck/results/candidate-id-req.json",
+                "receipt": "sha256:candidate-id-receipt",
+            },
+        ):
+            with self.subTest(proof=proof):
+                sub = self._candidate_id_submission()
+                sub["_file"] = self._commit_submission(f"candidate-id-proof-{proof['request_id']}.json")
+                sub["discovery_precheck"] = proof
+                with self.assertRaises(queue_worker.DiscoveryPrecheckError):
+                    queue_worker.validate_discovery_precheck(sub)
+
+    def test_candidate_id_gate_rejects_wrong_result_path_and_hand_authored_result(self) -> None:
+        self._commit_candidate_id_result(author_email="worker@example.com")
+        for result_path in (
+            ".survey/work-queue/discovery-precheck/results/missing.json",
+            "../results/candidate-id-req.json",
+            ".survey/work-queue/discovery-precheck/results/candidate-id-req.json",
+        ):
+            with self.subTest(result_path=result_path):
+                sub = self._candidate_id_submission()
+                sub["_file"] = self._commit_submission(f"candidate-id-path-{len(result_path)}.json")
+                sub["discovery_precheck"] = {
+                    "request_id": "candidate-id-req",
+                    "result_path": result_path,
+                    "receipt": "sha256:candidate-id-receipt",
+                }
+                with self.assertRaises(queue_worker.DiscoveryPrecheckError):
+                    queue_worker.validate_discovery_precheck(sub)
 
     def test_schema_v1_result_cannot_authorize_post_iterative_submission(self) -> None:
         self._commit_result(schema_version=1)

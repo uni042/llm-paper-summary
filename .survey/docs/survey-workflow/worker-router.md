@@ -351,6 +351,33 @@ axis: <探索軸>
 target_unseen: 20
 ```
 
+
+### 通常チャット専用: Library候補のID照合・取り込み
+
+この経路は、ユーザーが既存Library候補のGitHub取り込みを明示した通常チャットだけが使う。Scheduled Chat / Workの自律探索には適用せず、通常の固定ソース探索、引用優先順、run状態を変更しない。
+
+1回のリクエストは安定IDだけを1〜100件含める。題名、要約、著者、手入力レコード、任意URLは加えない。`provider` と `source_url` は固定値を使う。
+
+```yaml
+schema_version: 3
+operation: precheck_discovery_candidates
+request_id: <unique request ID>
+collector_id: library-candidate-intake
+run_key: <same ID used by its submissions>
+axis: library-candidate-intake
+provider: candidate_id_lookup
+source_url: identifier://approved-public-apis
+identifiers:
+  - arXiv:2407.21018
+  - DOI:10.48550/arxiv.2407.21018
+```
+
+ID照合はarXiv / DOIを公式Semantic Scholar APIの複数ID経路から行い、失敗・一部未解決時だけ同APIの単独ID経路へ切り替える。OpenReview IDはOpenReview公式Notes APIを使う。要求IDと返却レコードのIDが一致しない結果は許可しない。一次資料確認はメタデータAPIとは別に行い、arXivは公式概要・HTML・PDF、DOIは解決先の出版社ページ、OpenReviewは公式forum/noteを確認する。正常なpushで専用precheck workflowを起動し、push後も結果が始まらないと確認できた場合だけ、同じ要求パスを `workflow_dispatch` に指定する。in-flightの同一要求がないことを先に確認し、結果はworkflow botがmainへ保存したものだけ使う。
+
+結果の `candidate_statuses[]` は各IDを `allowed`、`filtered_by_snapshot`、`provider_unresolved`、`provider_error`、`intra_batch_duplicate` に分ける。通常提出に使えるのはworkflow結果の `allowed_records` に存在する候補だけで、1提出あたり0〜5件とする。提出にはその結果の `request_id` / `result_path` / `receipt` を添え、明示ユーザー依頼の印を設定する。
+
+`filtered_by_snapshot` は既存論文、進行中job、却下履歴を個別に調べる。重複完了にできるのは、同一IDの正規本文をmainから取得して品質基準を満たすと確認できた場合だけ。`provider_unresolved` は公式一次資料経路も確認し、一時障害と区別できた場合だけ候補記載を除く。`provider_error`、active job、一時障害、確認中のIDは候補ファイルに残す。metadata APIの応答だけで一次資料を確認済みと扱わない。
+
 ### 4.0 探索の事前装填待ち行列（Discovery preload queue）
 
 **Discovery hot take:** 初回・2回目以降を問わず、selector方向にPRECHECKED preloadがある場合は第2.0.1節のcreate-only direct takeを優先する。claim create成功直後からpreloadの20件を評価し、run固有の正式schema v3再フィルタは同時に後段Actionsで走らせる。従来のrun-state内 `auto_initial_discovery` はhot-dispatchを使えない場合だけのfallbackであり、`route_source=hot_dispatch_direct_start` のrunでは二重precheckを避けるため自動発行しない。

@@ -14,9 +14,10 @@ import time
 from pathlib import Path
 from typing import Any, Callable
 from urllib.error import HTTPError
-from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qs, quote, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
+import paper_identity
 import reference_pool
 
 DEFAULT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
@@ -25,6 +26,11 @@ S2_WEB_HOSTS = {"www.semanticscholar.org", "semanticscholar.org"}
 S2_MAX_RATE_LIMIT_RETRIES = 4
 S2_RATE_LIMIT_BASE_SECONDS = 2.0
 S2_RATE_LIMIT_MAX_SECONDS = 30.0
+S2_PAPER_BATCH_URL = "https://api.semanticscholar.org/graph/v1/paper/batch"
+S2_EXPLICIT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
+OPENREVIEW_NOTES_URL = "https://api2.openreview.net/notes"
+EXPLICIT_ID_MAX_ITEMS = 100
+EXPLICIT_ID_NETWORK_RETRIES = 2
 
 
 class DiscoveryProviderError(RuntimeError):
@@ -45,16 +51,18 @@ def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
         "published": paper.get("publicationDate") or None,
         "abstract": paper.get("abstract") or None,
     }
-    arxiv = external.get("ArXiv")
-    doi = external.get("DOI")
+    arxiv = str(external.get("ArXiv") or "").strip() or None
+    doi = str(external.get("DOI") or "").strip() or None
     if arxiv:
-        record["canonical_id"] = f"arXiv:{str(arxiv).strip()}"
-        record["arxiv_id"] = str(arxiv).strip()
-        record["source_url"] = record["source_url"] or f"https://arxiv.org/abs/{str(arxiv).strip()}"
-    elif doi:
-        record["canonical_id"] = f"DOI:{str(doi).strip()}"
-        record["doi"] = str(doi).strip()
-    elif paper.get("paperId"):
+        record["canonical_id"] = f"arXiv:{arxiv}"
+        record["arxiv_id"] = arxiv
+        record["source_url"] = f"https://arxiv.org/abs/{arxiv}"
+    if doi:
+        record["doi"] = doi
+        if not arxiv:
+            record["canonical_id"] = f"DOI:{doi}"
+            record["source_url"] = f"https://doi.org/{doi}"
+    if not record.get("canonical_id") and paper.get("paperId"):
         record["canonical_id"] = "SemanticScholar:" + str(paper["paperId"]).strip()
     authors = paper.get("authors")
     if isinstance(authors, list):
@@ -66,6 +74,253 @@ def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
             record["authors"] = names
     return record
 
+
+
+def _explicit_identifier(value: Any) -> tuple[str, str]:
+    raw = str(value or "").strip()
+    normalized = paper_identity.safe_norm_id(raw)
+    if not normalized:
+        raise DiscoveryProviderError("candidate identifier must be non-empty")
+    if normalized.startswith("arXiv:"):
+        suffix = normalized.split(":", 1)[1]
+        if not re.fullmatch(r"(?:\d{4}\.\d{4,5}|[a-z.-]+/\d{7})", suffix, re.I):
+            raise DiscoveryProviderError(f"unsupported arXiv identifier: {raw!r}")
+        return normalized, "semantic_scholar"
+    if normalized.startswith("DOI:"):
+        suffix = normalized.split(":", 1)[1]
+        if not re.fullmatch(r"10\.\d{4,9}/\S+", suffix, re.I):
+            raise DiscoveryProviderError(f"unsupported DOI identifier: {raw!r}")
+        return normalized, "semantic_scholar"
+    if normalized.startswith("OpenReview:"):
+        suffix = normalized.split(":", 1)[1]
+        if not re.fullmatch(r"[A-Za-z0-9]{10}", suffix):
+            raise DiscoveryProviderError(f"unsupported OpenReview identifier: {raw!r}")
+        return normalized, "openreview"
+    raise DiscoveryProviderError(f"unsupported candidate identifier: {raw!r}")
+
+
+def _semantic_scholar_id(normalized: str) -> str:
+    prefix, suffix = normalized.split(":", 1)
+    if prefix == "arXiv":
+        return "ARXIV:" + suffix
+    return "DOI:" + suffix
+
+
+def _explicit_json_request(
+    request: Request,
+    *,
+    timeout: int,
+    opener: Callable[..., Any],
+    sleeper: Callable[[float], Any],
+    not_found_is_empty: bool = False,
+) -> Any:
+    network_attempt = 0
+    rate_attempt = 0
+    while True:
+        try:
+            with opener(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except HTTPError as exc:
+            if exc.code == 429 and rate_attempt < S2_MAX_RATE_LIMIT_RETRIES:
+                sleeper(_semantic_scholar_retry_delay(exc, rate_attempt))
+                rate_attempt += 1
+                continue
+            if not_found_is_empty and exc.code == 404:
+                return None
+            raise DiscoveryProviderError(
+                f"explicit identifier lookup failed: {exc}",
+                status_code=exc.code,
+            ) from exc
+        except (TimeoutError, ConnectionError, OSError) as exc:
+            if network_attempt < EXPLICIT_ID_NETWORK_RETRIES:
+                sleeper(min(1.0 * (2 ** network_attempt), S2_RATE_LIMIT_MAX_SECONDS))
+                network_attempt += 1
+                continue
+            raise DiscoveryProviderError(f"explicit identifier lookup network error: {exc}") from exc
+        except Exception as exc:
+            raise DiscoveryProviderError(f"explicit identifier lookup failed: {exc}") from exc
+
+
+def _identifier_matches_record(requested_id: str, record: dict[str, Any]) -> bool:
+    return requested_id in paper_identity.record_identifiers(record)
+
+
+def _openreview_record(note: Any, requested_id: str) -> dict[str, Any] | None:
+    if not isinstance(note, dict):
+        return None
+    note_id = str(note.get("id") or "").strip()
+    if paper_identity.safe_norm_id("OpenReview:" + note_id) != requested_id:
+        return None
+    content = note.get("content") if isinstance(note.get("content"), dict) else {}
+
+    def value(name: str) -> Any:
+        raw = content.get(name)
+        return raw.get("value") if isinstance(raw, dict) and "value" in raw else raw
+
+    title = str(value("title") or "").strip()
+    if not title:
+        return None
+    record: dict[str, Any] = {
+        "canonical_id": requested_id,
+        "openreview_id": note_id,
+        "title": title,
+        "source_url": "https://openreview.net/forum?" + urlencode({"id": note_id}),
+        "abstract": value("abstract") or None,
+        "year": value("year"),
+    }
+    authors = value("authors") or value("author")
+    if isinstance(authors, str):
+        record["authors"] = [authors] if authors else []
+    elif isinstance(authors, list):
+        record["authors"] = [str(author) for author in authors if author]
+    doi = value("doi") or value("DOI")
+    if doi:
+        record["doi"] = str(doi).strip()
+    arxiv = value("arxiv_id") or value("arxiv")
+    if arxiv:
+        record["arxiv_id"] = str(arxiv).strip()
+    return record
+
+
+def lookup_identifiers(
+    identifiers: list[str],
+    *,
+    timeout: int = 30,
+    opener: Callable[..., Any] = urlopen,
+    sleeper: Callable[[float], Any] = time.sleep,
+) -> list[dict[str, Any]]:
+    """Resolve a bounded list of stable paper IDs through fixed official APIs.
+
+    Results remain in request order. Each row has requested_id, status (found,
+    unresolved, or error), record, lookup_route, and an error message when useful.
+    """
+    if not isinstance(identifiers, list) or not 1 <= len(identifiers) <= EXPLICIT_ID_MAX_ITEMS:
+        raise DiscoveryProviderError(f"identifiers must be a list of 1 to {EXPLICIT_ID_MAX_ITEMS} IDs")
+    normalized: list[tuple[str, str]] = [_explicit_identifier(value) for value in identifiers]
+    ids = [item[0] for item in normalized]
+    if len(set(ids)) != len(ids):
+        raise DiscoveryProviderError("duplicate candidate identifiers are not allowed")
+
+    outcomes: dict[str, dict[str, Any]] = {}
+    s2_ids = [identifier for identifier, provider in normalized if provider == "semantic_scholar"]
+    if s2_ids:
+        s2_api_ids = [_semantic_scholar_id(identifier) for identifier in s2_ids]
+        batch_rows: list[Any] = []
+        batch_error: str | None = None
+        try:
+            request = Request(
+                S2_PAPER_BATCH_URL + "?" + urlencode({"fields": S2_EXPLICIT_FIELDS}),
+                data=json.dumps({"ids": s2_api_ids}).encode("utf-8"),
+                headers={
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "User-Agent": "llm-paper-summary-discovery/1.0",
+                },
+                method="POST",
+            )
+            payload = _explicit_json_request(
+                request, timeout=timeout, opener=opener, sleeper=sleeper
+            )
+            if not isinstance(payload, list):
+                raise DiscoveryProviderError("Semantic Scholar batch response must be a list")
+            batch_rows = payload
+        except Exception as exc:
+            batch_error = str(exc)
+
+        for index, requested_id in enumerate(s2_ids):
+            row = batch_rows[index] if index < len(batch_rows) else None
+            record = _paper_record(row) if isinstance(row, dict) else None
+            if record and _identifier_matches_record(requested_id, record):
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "found",
+                    "record": record,
+                    "lookup_route": "semantic_scholar_batch",
+                    "error": None,
+                }
+                continue
+
+            api_id = _semantic_scholar_id(requested_id)
+            single_error = batch_error
+            try:
+                encoded_id = quote(api_id, safe="")
+                single_request = Request(
+                    "https://api.semanticscholar.org/graph/v1/paper/" + encoded_id + "?" + urlencode({"fields": S2_EXPLICIT_FIELDS}),
+                    headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
+                )
+                single_payload = _explicit_json_request(
+                    single_request, timeout=timeout, opener=opener, sleeper=sleeper,
+                    not_found_is_empty=True,
+                )
+                single_record = _paper_record(single_payload) if isinstance(single_payload, dict) else None
+                if single_record and _identifier_matches_record(requested_id, single_record):
+                    outcomes[requested_id] = {
+                        "requested_id": requested_id,
+                        "status": "found",
+                        "record": single_record,
+                        "lookup_route": "semantic_scholar_single",
+                        "error": None,
+                    }
+                    continue
+                mismatch = bool(single_record)
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "unresolved",
+                    "record": None,
+                    "lookup_route": "semantic_scholar_single",
+                    "error": "provider identifier mismatch: returned a different paper" if mismatch else None,
+                }
+            except Exception as exc:
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "error",
+                    "record": None,
+                    "lookup_route": "semantic_scholar_single",
+                    "error": str(exc) or single_error,
+                }
+
+    for requested_id, provider in normalized:
+        if provider != "openreview":
+            continue
+        note_id = requested_id.split(":", 1)[1]
+        request = Request(
+            OPENREVIEW_NOTES_URL + "?" + urlencode({"id": note_id}),
+            headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
+        )
+        try:
+            payload = _explicit_json_request(
+                request, timeout=timeout, opener=opener, sleeper=sleeper,
+                not_found_is_empty=True,
+            )
+            notes = payload.get("notes") if isinstance(payload, dict) else None
+            note = next((item for item in notes or [] if isinstance(item, dict) and item.get("id") == note_id), None)
+            record = _openreview_record(note, requested_id)
+            if record and _identifier_matches_record(requested_id, record):
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "found",
+                    "record": record,
+                    "lookup_route": "openreview_notes",
+                    "error": None,
+                }
+            else:
+                mismatch = bool(notes)
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "unresolved",
+                    "record": None,
+                    "lookup_route": "openreview_notes",
+                    "error": "provider identifier mismatch: returned a different paper" if mismatch else None,
+                }
+        except Exception as exc:
+            outcomes[requested_id] = {
+                "requested_id": requested_id,
+                "status": "error",
+                "record": None,
+                "lookup_route": "openreview_notes",
+                "error": str(exc),
+            }
+    return [outcomes[identifier] for identifier in ids]
 
 def _normalize_semantic_scholar_source(source_url: str) -> str:
     parsed = urlparse(source_url)
