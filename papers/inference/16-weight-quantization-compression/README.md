@@ -112,7 +112,7 @@
 
 - **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  重みと活性値をともに4ビット浮動小数点へ事後量子化し、チャネル別活性値スケールを重み側へ再パラメータ化して低ビット推論を成立させる。LLaMA-13Bで平均63.1点を維持し従来最良を12.7点上回る。
+  4ビット浮動小数点（floating point; FP）の指数部構成とクリップ範囲を層ごとに探索し、活性値の大きなチャネル間分散はチャネル別指数バイアスを重みへ事前吸収して処理する。LLaMA-13Bの埋め込み・重み・活性値を4/4/4ビットにして、6つの常識推論タスク平均63.1を維持する。
 
 - **2024-07 · [Compact Language Models via Pruning and Knowledge Distillation](2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
