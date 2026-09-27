@@ -1141,8 +1141,8 @@
   入力長・アプリ・利用者特徴から生成長を予測し、近い長さを適応バッチ化してHRRNで順序付けするMagnusにより、スループット最大234%向上・応答時間最大89.7%削減を達成する。
 
 - **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  長さの異なるプロンプトを個別パディングせずビン詰めで連結し、独立注意マスクと位置番号再開で各KVキャッシュを正しく計算して、プリフィルを最大6倍高速化し最大16倍大きいバッチを収容する。
+  実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：3  
+  可変長プロンプトを最長系列へそろえてパディングする代わりに、長さを見て複数プロンプトを同じ固定長コンテナへビン詰めし、ブロック対角の注意マスクとプロンプトごとに再開する位置番号で独立したKVキャッシュを一回のプリフィルから作る。
 
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
