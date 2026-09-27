@@ -79,13 +79,11 @@ def render_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> str:
         record[slot] = data
         total_bytes += raw_size
 
-    record = assemble.normalize_preferred_terms(record)
-    assemble.ensure_explanatory_summary(record)
+    # Publication must preserve worker-authored scientific prose.  The GitHub
+    # path validates structure only; it does not rewrite terminology or expand
+    # summaries after the reading context is gone.
     assemble.validate_record(record, collect_all=True)
-    markdown = assemble.render_paper(record)
-    if len(markdown.strip()) < 500:
-        raise ValueError("rendered research artifact is unexpectedly short")
-    return markdown
+    return assemble.render_paper(record)
 
 
 def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> bool:
