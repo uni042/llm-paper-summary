@@ -368,8 +368,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVキャッシュを加算型ベクトル量子化で圧縮し、回転位置埋め込みと交換可能な符号帳を学習することで復号を注意計算へ統合する。2ビットでFP16比87.5%容量を削減し、1ビットでもLLaMA-3.1 8Bの128K文脈を単一RTX 4090で実行可能にする。
 
 - **2025-05 · [ReCalKV: Low-Rank KV Cache Compression via Head Reordering and Offline Calibration](2025-2505.24357-recalkv-low-rank-kv-cache-compression-via-head-reordering.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  キーと値で異なる低ランク圧縮を使い、キーは類似ヘッドを並べ替えて群ごとに特異値分解し、値はオフライン較正後に復元行列を出力射影へ融合することで、50%のKVキャッシュ圧縮でもLLaMA-2-7Bの6課題平均精度を64.99%から63.64%に抑える。
+  実装：[✓](https://github.com/XIANGLONGYAN/ReCalKV) ・ リポジトリ内被引用：4  
+  KeyとValueは注意機構で同じ役割ではない。ReCalKVは、Keyには「似たヘッドをまとめて低ランク化」、Valueには「データで低ランク因子を補正して復元行列を次の射影へ融合」という別々の圧縮を割り当て、高圧縮時の品質と実行時オーバーヘッドを両方抑える。
 
 - **2025-01 · [RotateKV: Accurate and Robust 2-Bit KV Cache Quantization for LLMs via Outlier-Aware Adaptive Rotations](2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

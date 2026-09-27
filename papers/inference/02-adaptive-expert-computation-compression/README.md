@@ -89,8 +89,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   系列全体で同じ総エキスパート予算を保ちながら、容易なトークンから難しいトークンへ計算を再配分し、高スパースMoEの品質を改善するSeqTopKを提案。
 
 - **2026-06 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  混合専門家（Mixture-of-Experts; MoE）モデルは各トークンで一部の専門家だけを活性化するため演算量を抑えられる一方、端末側では全専門家重みを高速メモリへ常駐できないことがある。隣接トークンが別々の専門家を選ぶと、低速な主記憶やストレージから重みを繰り返し入れ替える必要が生じ、疎な計算という利点がメモリ転送で相殺される。
+  実装：[✓](https://github.com/alikayyam/sticky_moe) ・ リポジトリ内被引用：1  
+  混合専門家モデルの隣接トークンで専門家が頻繁に切り替わる問題を、学習時の経路一貫性損失で直接抑え、最大59%の切替削減と最大3.92倍のキャッシュミス削減を示した研究である。
 
 - **2026-05 · [SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training](2026-2605.08738-slimqwen-pruning-distillation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
