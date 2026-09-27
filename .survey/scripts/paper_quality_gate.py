@@ -56,5 +56,5 @@ def inspect_rendered_paper(repo_root: Path, paper_path: str, content: str) -> qu
 def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
     result = inspect_rendered_paper(repo_root, paper_path, content)
     if result.status == "FAIL":
-        raise ValueError("paper publication integrity gate failed: " + "; ".join(result.failures))
+        raise ValueError("paper quality gate failed (publication integrity/Japanese ratio): " + "; ".join(result.failures))
     return result
