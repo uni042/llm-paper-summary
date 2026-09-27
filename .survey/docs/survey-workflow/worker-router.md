@@ -143,7 +143,7 @@ Research本文は1論文1Markdownとし、最新templateと`PAPER-QUALITY-GUIDE.
 - 限界
 - 一次資料
 
-可能なら最新`audit_paper_quality.py`と`japanese_style.py`を使う。軽微な形式崩れは内容を変えない範囲で修正し、再利用できる注意点はLibrary worker手順書へ逐次共有する。
+Research読解ワーカーは**機械的な品質チェックを実行しない**。文字数・段落数・手法節数・主要機構数・日本語率などを自分で数えて合否判定する必要はない。その代わり、一次資料を読んだ文脈を使って、問題設定、提案手法、機構間の流れ、評価条件、代表結果、既存研究との差、限界、推測混入の有無などを意味ベースでセルフレビューし、不十分ならLibrary保存前に自分で修正する。
 
 本文取得で単一経路が失敗しても、別の一次資料経路を探す。arXiv HTML / PDF、OpenReview、出版社・会議、著者・研究機関の正式配布版など、materially distinctな一次資料経路を使う。検索断片や第三者要約を本文根拠にしない。
 
@@ -188,11 +188,11 @@ GitHub反映はSurvey GitHub ImportのWorkタスクが担当する。Workタス�
 ### 8.2 Research取り込み
 
 1. Libraryの完成原稿を取得する。
-2. 最新mainの本書、対象系統README、template、resolver、quality audit、Japanese styleを確認する。
-3. 一次資料とcanonical identityを照合する。
+2. 最新mainの本書、対象系統README、template、resolver、公開完全性監査、日本語率規則を確認する。
+3. Library成果のcanonical identityを最新mainと照合する。内容品質のために一次資料を読み直さない。
 4. repository全体でidentityを解決する。
 5. `represented`なら既存paperを正規update先にし、`not_found`のときだけ新規pathを作る。
-6. 軽微なformat崩れはWork側で修正してよい。内容修正は一次資料で裏付けられる範囲に限る。
+6. 軽微なformat崩れと日本語率不足はWork側で修正してよい。日本語率修正は意味・数値・比較条件を変えず、裸の英語表現を自然な日本語・カタカナへ置換する範囲に限る。論文を読み直さないと判断できない内容不足はWork側のFAIL条件にせず、読解ワーカーのセルフレビュー責任とする。
 7. GitHubへ1件ずつ反映する。同一pathへのwriteを並列化しない。
 8. write後は最新mainから同じpathを再取得し、identity・本文・commitを確認する。
 9. 再取得確認できた後だけ対応Library原本を削除する。
