@@ -307,8 +307,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE系ドラフトの学習時／復号時の文脈差と蒸留目的のずれをTop-K蒸留＋multi-step context alignmentで揃えるHASS。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  投機的復号のドラフト生成を垂直・水平の二種類のカスケードで高速化し、対象モデルと同じ出力分布を保ちながら通常の投機的復号から最大約81%の追加高速化を報告する。
+  実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：4  
+  下書きモデル自身をさらに投機するVertical Cascadeと、後方トークンほど小さい下書きへ切替えるHorizontal Cascadeで投機的復号の下書き費用を削る。
 
 - **2023-10 · [SPEED: Speculative Pipelined Execution for Efficient Decoding](2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

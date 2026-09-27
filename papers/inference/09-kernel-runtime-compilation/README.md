@@ -135,8 +135,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   多様な注意機構を高水準PyTorch記述から融合GPUカーネルへコンパイルする。スコア修正とマスク修正を分離し、BlockMaskでブロック疎性を利用して手書きカーネルに近い性能と合成可能性を両立する。
 
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  堅牢なCUDAカーネル評価基盤と、LLMによる変換・検証・進化的最適化を連結し、正しさを保ちながら低水準カーネルを自動改善する。
+  実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：3  
+  固定入力などを悪用した「高速だが一般化しないCUDA」を弾くrobust-kbenchと、翻訳・LLM検証・進化的最適化を統合したエージェントを提案し、KernelBenchの見かけの平均3.13倍高速化が堅牢化後1.49倍へ下がることを示す。
 
 - **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
