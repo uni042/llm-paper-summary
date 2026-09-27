@@ -45,6 +45,48 @@ class DiscoveryPrecheckSchemaContractTests(unittest.TestCase):
             precheck._validate_request(request(4))
         self.assertIn("exactly 3", str(ctx.exception))
 
+    def test_fixed_candidate_id_request_is_normalized(self) -> None:
+        payload = request(3)
+        payload.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018", "DOI:10.48550/arxiv.2407.21018"],
+        })
+        normalized = precheck._validate_request(payload)
+        self.assertEqual(normalized["mode"], "explicit_identifiers")
+        self.assertEqual(normalized["identifiers"], payload["identifiers"])
+        self.assertEqual(normalized["target_unseen"], 2)
+
+    def test_candidate_id_request_rejects_untrusted_records_metadata_and_source(self) -> None:
+        base = request(3)
+        base.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018"],
+        })
+        for extra in (
+            {"records": []},
+            {"title": "worker-supplied title"},
+            {"abstract": "worker-supplied abstract"},
+            {"source_url": "https://attacker.example/papers"},
+            {"provider": "custom_provider"},
+        ):
+            with self.subTest(extra=extra):
+                payload = {**base, **extra}
+                with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+                    precheck._validate_request(payload)
+
+    def test_candidate_id_request_rejects_invalid_or_oversized_identifier_lists(self) -> None:
+        base = request(3)
+        base.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+        })
+        for identifiers in ([], ["https://arxiv.org/abs/2407.21018"], ["garbage:123"], ["arXiv:2407.21018"] * 101):
+            with self.subTest(count=len(identifiers)):
+                with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+                    precheck._validate_request({**base, "identifiers": identifiers})
+
 
 if __name__ == "__main__":
     unittest.main()
