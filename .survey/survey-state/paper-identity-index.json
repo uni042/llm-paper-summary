@@ -1,7 +1,15 @@
 {
   "schema_version": 3,
-  "active_count": 1151,
+  "active_count": 1155,
   "papers": {
+    "arXiv:2205.10034": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2205.10034",
+        "arXiv:2205.10034"
+      ],
+      "source_hash": "4292a8946541a003e5db4b7a278f5466ab173e75d6e71068d6db2bfd929a9420"
+    },
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
       "identifiers": [
@@ -2391,6 +2399,14 @@
       ],
       "source_hash": "cc9c448f5c4c75dcde47deb355c0dc9f0433b83d7879ab7b029e325237b6ed9c"
     },
+    "arXiv:2402.06262": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2402.06262",
+        "arXiv:2402.06262"
+      ],
+      "source_hash": "9be829902d40f68343208b5ca92753c0be869315c28d7c15a19c887bed7c718f"
+    },
     "arXiv:2403.17312": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
       "identifiers": [
@@ -3157,6 +3173,14 @@
       ],
       "source_hash": "9bf1879be116a113e5a7729c9db8ac7eb09e46d2e096b9813ff66fca1e08323d"
     },
+    "arXiv:2503.13421": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2503.13421",
+        "arXiv:2503.13421"
+      ],
+      "source_hash": "d841cdae08aa1f758a60a9838e44c914d2d81f510981a70d4cdb4e05c592d924"
+    },
     "arXiv:2504.15299": {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
       "identifiers": [
@@ -3310,6 +3334,14 @@
         "arXiv:2504.19442"
       ],
       "source_hash": "fc08c9bea7935050a3b1b72a38837a4dc43d58b677a02170713ac4687dab831b"
+    },
+    "arXiv:2506.04667": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2506.04667",
+        "arXiv:2506.04667"
+      ],
+      "source_hash": "309ad98b445d5ce23eaccebd381214b16fb43f014214b07511125264b8c06f20"
     },
     "arXiv:2512.22219": {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
@@ -8760,6 +8792,8 @@
     }
   },
   "identifier_to_canonical": {
+    "DOI:10.48550/arxiv.2205.10034": "arXiv:2205.10034",
+    "arXiv:2205.10034": "arXiv:2205.10034",
     "arXiv:2303.06865": "arXiv:2303.06865",
     "arXiv:2312.11514": "arXiv:2312.11514",
     "DOI:10.1145/3694715.3695964": "arXiv:2312.12456",
@@ -9265,6 +9299,8 @@
     "DOI:10.48550/arxiv.2402.02750": "arXiv:2402.02750",
     "arXiv:2402.02750": "arXiv:2402.02750",
     "arXiv:2402.05099": "arXiv:2402.05099",
+    "DOI:10.48550/arxiv.2402.06262": "arXiv:2402.06262",
+    "arXiv:2402.06262": "arXiv:2402.06262",
     "DOI:10.1109/isca59077.2024.00077": "arXiv:2403.17312",
     "arXiv:2403.17312": "arXiv:2403.17312",
     "arXiv:2404.14469": "arXiv:2404.14469",
@@ -9425,6 +9461,8 @@
     "DOI:10.18653/v1/2024.acl-long.363": "arXiv:2308.15030",
     "arXiv:2308.15030": "arXiv:2308.15030",
     "arXiv:2406.06282": "arXiv:2406.06282",
+    "DOI:10.48550/arxiv.2503.13421": "arXiv:2503.13421",
+    "arXiv:2503.13421": "arXiv:2503.13421",
     "arXiv:2504.15299": "arXiv:2504.15299",
     "DOI:10.48550/arxiv.2510.11331": "arXiv:2510.11331",
     "arXiv:2510.11331": "arXiv:2510.11331",
@@ -9453,6 +9491,8 @@
     "DOI:10.1145/3745756.3809243": "DOI:10.1145/3745756.3809243",
     "DOI:10.48550/arxiv.2504.19442": "arXiv:2504.19442",
     "arXiv:2504.19442": "arXiv:2504.19442",
+    "DOI:10.48550/arxiv.2506.04667": "arXiv:2506.04667",
+    "arXiv:2506.04667": "arXiv:2506.04667",
     "DOI:10.48550/arxiv.2512.22219": "arXiv:2512.22219",
     "arXiv:2512.22219": "arXiv:2512.22219",
     "DOI:10.1145/3676641.3715996": "DOI:10.1145/3676641.3715996",
