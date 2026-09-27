@@ -115,8 +115,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  分散MoEはCPU管理のスケジューリング、ホスト起点通信、多数のカーネル起動によりGPUが待ちやすい。8基のH100、最大128専門家、16Kトークンの評価で、比較方式よりGPU利用率最大9倍、遅延最大6分の1、スループット最大5.7倍、重畳効率最大4倍を報告する。
+  実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：5  
+  分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
 
 - **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：5  

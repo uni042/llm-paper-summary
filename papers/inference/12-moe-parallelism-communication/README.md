@@ -149,7 +149,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  テンソル並列の部分活性値を集合通信前に細粒度量子化し、3.5〜4.5倍小さくして、低帯域なGPU間接続で先頭トークンまでの時間を最大2倍短縮する。
+  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
