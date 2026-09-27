@@ -1,157 +1,190 @@
 ---
-canonical_id: DOI:10.1145/3620665.3640422
-title: AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference
-summary: 自己回帰生成では全結合層はバッチ化で行列積としてGPU計算器を使いやすくなる一方、注意は各要求ごとに増え続けるKVキャッシュを読む行列ベクトル積中心で、バッチを増やしてもメモリ帯域律速が残る。AttAccはHBM内のbank/bank-group/buffer-die近傍へGEMV・softmax・集約器を配置して注意を処理内メモリへ移し、全結合層はGPU/xPUへ残す異種システムを設計する。GPT-3 175Bでは同一メモリ容量のGPU系に対し最大2.81倍の性能、2.67倍のエネルギー効率を報告する。
-list_summary: バッチ化で計算密度が上がる全結合層はGPU、KV読出しで帯域律速が残る注意はHBM内PIMへ分担し、GPT-3 175Bで同容量GPU系比最大2.81倍高速・2.67倍高エネルギー効率を実現する。
-publication: ASPLOS 2024, pp.103-119
-publication_status: Published
-lineage: inference-systems
-topics:
-- LLM推論
-- PIM
-- 異種アクセラレーション
-source: https://doi.org/10.1145/3620665.3640422
+canonical_id: "DOI:10.1145/3620665.3640422"
+doi: "10.1145/3620665.3640422"
+last_audited: "2026-09-28"
+audit_version: 2
+title: "AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference"
+summary: "バッチ推論では全結合層（Fully Connected layer; FC）は重み再利用でGPU利用率を上げられる一方、生成段階の注意は各要求固有のKVキャッシュを毎トークン読み、バッチを増やしても低い演算/バイト比が残る。AttAccはこの非対称性に合わせ、FCをxPU、注意をHBMベースのメモリ内処理（Processing-In-Memory; PIM）へ分担する異種システムを設計する。PIMではGEMV演算器をDRAM bank近傍、softmaxをbuffer dieへ置き、head-level pipelineとFFN co-processingでxPU/PIMの空きを重ねる。Ramulator系シミュレータと実GPU検証を組み合わせたASPLOS 2024評価では、同一1280GB容量の従来GPU系に対し175Bモデルで最大2.81倍の性能、2.67倍のエネルギー効率を報告する。"
+list_summary: "GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level pipeline、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。"
+authors:
+- Jaehyun Park
+- Jaewan Choi
+- Kwanhee Kyung
+- Michael Jaemin Kim
+- Yongsuk Kwon
+- Nam Sung Kim
+- Jung Ho Ahn
+published: "2024-04-27"
+publication: "ASPLOS 2024, pp. 103-119"
+publication_type: "peer-reviewed-conference"
+publication_status: "Published"
+lineage: "inference-systems"
+topics: ["PIM","HBM","KVキャッシュ","注意高速化","異種推論"]
+source: "https://doi.org/10.1145/3620665.3640422"
 sources:
-- https://doi.org/10.1145/3620665.3640422
-- https://www.asplos-conference.org/asplos2024/main-program/abstracts/
-last_checked: '2026-09-28'
-doi: 10.1145/3620665.3640422
-publication_type: 査読付き国際会議論文
-code: https://github.com/scale-snu/attacc_simulator
-implementation: 公式AttAccシミュレータが公開されている。GPU/xPU側の性能・エネルギーモデルと、Ramulator 2.0を拡張したHBM3 PIMモデルを組み合わせ、bank、bank-group、buffer-dieの3配置、電力制約、全結合並列化、パイプライン最適化を評価できる。
-implementation_status: official-code
+- "https://doi.org/10.1145/3620665.3640422"
+- "https://github.com/scale-snu/attacc_simulator"
+last_checked: "2026-09-28"
+code: "https://github.com/scale-snu/attacc_simulator"
+implementation: "xPU側のGPUシミュレータと、Ramulator 2.0を拡張したHBM3-PIMシミュレータを公開。bank、bank-group、buffer-dieの3配置、電力制約、head-level pipeline、FFN co-processingを切り替えて評価できる。"
+implementation_status: "official-public-simulator"
+hardware_evaluation: "simulation-with-real-GPU-validation"
+hardware_details: "DGX A100を基準とするシミュレーション。HBM3 5.2Gbps/pin、DGXBase 640GB、DGXLargeおよびDGX+AttAccは1280GB級容量で比較。PIM算術器はASAP7 7nmで合成し、DRAM側面積は1z-nmプロセスへ換算。シミュレータはOPT-66Bの実DGX A100結果で検証。"
+quality_effect: "モデル演算を近似・量子化しないFP16主評価では生成品質を変えない。別途INT8感度評価も行うが、中心主張は実行配置の変更である。"
+evidence_locations: ["§2","§3","§4-6","Figures 7-13","§7.1-7.5","Figures 14-17"]
 ---
 
 # AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference
 
-> バッチ化で計算密度が上がる全結合層はGPU、KV読出しで帯域律速が残る注意はHBM内PIMへ分担し、GPT-3 175Bで同容量GPU系比最大2.81倍高速・2.67倍高エネルギー効率を実現する。
+> GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level pipeline、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 ## 概要
 
-Transformer生成モデルの自己回帰推論では、入力プロンプトをまとめて処理する要約段階（summarization / prefill）と、1トークンずつ反復する生成段階（generation / decode）でハードウェア特性が大きく異なる。特に生成段階では、全結合層（Fully Connected layer; FC）と注意層の両方を何度も実行するが、この二つは同じGPU資源を同じように使うわけではない。
+大規模言語モデル（Large Language Model; LLM）の生成では、事前充填に相当する要約段階（summarization stage）と、1トークンずつ繰り返す生成段階（generation stage）で計算特性が異なる。生成段階では、全結合層（Fully Connected layer; FC）がモデル重みを読む一方、注意層は要求ごとに異なる鍵・値キャッシュ（Key-Value cache; KVキャッシュ）を毎トークン読み直す。
 
-FC層は大きなモデル重みを読むものの、複数要求をバッチ化すると行列ベクトル積が行列積へ近づき、同じ重みを多数トークンで再利用できる。算術強度が上がるため、GPUの大規模な行列演算器を比較的活用しやすい。対して注意層では、各要求が自分のKVキャッシュ全体を読み、現在のクエリとの積を計算する。要求ごとのKVは共有できず、系列長とともに読み出し量が増えるため、バッチを増やしてもメモリ帯域律速が強く残る。
+通常、バッチサイズを増やすとFCは同じ重みを複数要求で再利用できるため、行列–ベクトル積に近かった処理を行列–行列積へ近づけ、GPUの演算器を使いやすくできる。しかし注意層では、各要求のKVキャッシュが別物なのでデータ自体を共有できない。バッチを増やしても演算/バイト比が低いままで、GPU計算利用率を上げても高帯域メモリ（High Bandwidth Memory; HBM）からKVを読む時間が残る。
 
-AttAccはこの非対称性を出発点にする。注意を高速化するためHBMの内部または近傍へ積和演算器、softmax、集約器を配置する処理内メモリ（Processing-In-Memory; PIM）アクセラレータを設計し、KVを外部GPUへ往復させずメモリ側で行列ベクトル積を進める。一方、計算密度の高いFCをPIMへ無理に移すのではなく、GPUなど従来のxPUに残す。
+AttAccはこの非対称性を前提に、**計算密度の高いFCはGPU/TPUのようなxPUへ残し、メモリ帯域律速の注意だけをHBM内部のメモリ内処理（Processing-In-Memory; PIM）へ移す**。PIM側ではKVをDRAM bank近傍に保持したまま行列–ベクトル積（General Matrix-Vector Multiplication; GEMV）を行い、巨大なKV全体をGPUへ運ばない。
 
-したがって論文の本体は「PIMでLLM全部を計算する」ことではなく、**層ごとの律速に合わせてGPU/xPUとPIMを使い分ける異種システム**である。HBM内の演算配置、DRAM電力制約、GPUとPIM間のデータ移動、FC並列化、層間パイプラインまで同時に設計し、単体注意アクセラレータの帯域利得をエンドツーエンド生成性能へ変換する。
-
-ASPLOS 2024の評価ではLLaMA-65B、GPT-3 175B、MT-NLG 530Bなどを含む大規模生成モデルを対象とし、AttAccのHBM3 PIMを詳細シミュレーションする。代表的なGPT-3 175Bでは、同じ総メモリ容量を持つ従来GPU構成に対してエンドツーエンド性能を最大2.81倍、エネルギー効率を最大2.67倍改善すると報告する。
-
-## 背景: なぜバッチを増やしても注意だけは速くなりにくいか
-
-生成段階のFCでは、1要求だけなら重み行列と1本のベクトルの積になり、モデル重みをメモリから読む費用に対して演算量が少ない。ところがバッチを増やすと複数要求の隠れ状態をまとめられ、同じ重み行列を使って複数列を同時に処理できる。重み1バイト当たりの演算量が増え、GPUのTensor Core等へ仕事を集めやすくなる。
-
-注意では事情が異なる。各要求のキー・値は、その要求がそれまで生成したトークンから作られた固有データであり、別要求と共有できない。現在クエリ $q$ に対して過去キー行列 $K$ との $qK^\top$、softmax、値行列 $V$ との重み付き和を計算するが、デコード時はクエリがほぼ1トークン分なので大規模GEMMではなく行列ベクトル積（General Matrix-Vector multiplication; GEMV）に近い。
-
-GEMVは演算回数に対して読み出すデータが多く、GPUの演算ピークよりHBM帯域で速度が決まりやすい。さらに系列長が伸びるほどK/Vの読み出し量は増える。バッチを増やしても各要求のKVは別物なのでFCほどデータ再利用が増えず、注意のGPU利用率が伸びにくい。
-
-この観察から、FCを高速計算器に置き、注意を高内部帯域のメモリ側へ置くという分業が自然に導かれる。
+最終ASPLOS 2024版はさらに、PIM演算器の配置、softmax配置、xPU–PIM間の実行プロトコル、head-level pipeline、FFN co-processingまで共同設計する。評価は製造済みAttAccチップの実測ではなく、実DGX A100で検証したシミュレータと論理合成に基づく。同一1280GB級メモリ容量の従来GPU系と比べ、175B生成モデルで最大2.81倍の性能、2.67倍のエネルギー効率を報告する。
 
 ## 問題設定
 
-PIMはデータをDRAM外へ出さずに計算できるため、帯域律速のGEMVと相性がよい。しかし「HBMへ積和器を置けば終わり」ではない。注意にはGEMVだけでなくsoftmax、部分和の集約、複数注意ヘッドの処理があり、HBM内部のどの階層へ演算器を置くかで利用可能帯域、並列度、回路面積、DRAM行活性化費用、消費電力が変わる。
+### バッチ化でFCは速くなるが注意は速くなりにくい
 
-またPIMはGPUのような大規模汎用行列演算には向かない。FCまでPIMへ移すと、重み読み出しは近くても演算器数や柔軟性不足で総時間が悪化し得る。逆に注意だけPIMへ移しても、GPUとの境界で毎層大きな中間状態を往復させれば転送が新たな律速になる。
+生成段階のFCでは、1要求だけならベクトル×巨大重み行列となり、重み読出しが支配的になる。複数要求を同時に処理すれば同じ重みをバッチ内で共有でき、1回読んだ重みに対してより多くの積和演算を行える。このためバッチサイズを上げるほどGPUの計算利用率が改善する。
 
-したがってAttAccは、1) PIM内部の注意データフロー、2) PIM演算器の配置粒度、3) GPU/xPUとの層分担、4) 両者の並列・パイプライン、を一つのエンドツーエンド設計問題として扱う。
+一方、注意で読むKVキャッシュは要求ごとに異なる。各ヘッドでは現在トークンの小さなQベクトルと、過去全トークンのK/V行列を掛けるため、入力・出力に対して読まなければならないKVが非常に大きい。論文はGPT-3 175Bを例に、注意GEMVで外部へ出入りするデータ量が内部で読むKV量より桁違いに小さいことを示し、計算をメモリ側へ置けば外部帯域を節約できるとする。
+
+さらに長い文脈ではKV容量そのものが最大バッチを制限する。バッチが小さくなるとFCの重み再利用も落ちるため、注意の容量・帯域問題が間接的にFC性能まで悪化させる。
+
+### PIMへ全部移せばよいわけではない
+
+PIMはメモリ内部帯域を使える一方、GPUほど高い汎用演算性能を持たない。FCまでPIMへ全面移行すると、計算密度の高い部分でGPUの強みを捨てることになる。
+
+AttAccの設計原理は、層ごとの律速に合わせて資源を分けることである。GPU/xPUはFCを担当し、AttAccはKVを大量に読む注意を担当する。そのうえで両装置の待機時間をpipelineとco-processingで重ねる。
+
+## AttAccの処理全体
+
+1. 初期化時にホストがモデル構成と要求情報をAttAcc controllerへ登録する。
+2. 要約段階はxPUで実行し、各decoderで生成したK/Vをその都度AttAccのHBMへ転送する。
+3. 生成段階ではxPUがQ/K/V射影を計算する。
+4. 新しいK/VベクトルをAttAcc側の既存KVへ追記し、QベクトルもGEMV bufferへ送る。
+5. AttAccが各headのscore GEMV、softmax、context GEMVをKVの近傍で実行する。
+6. attention出力だけをxPUへ戻し、projectionや残るFCをxPU側で実行する。
+7. head-level pipelineとFFN co-processingでxPUとAttAccの空き時間を減らす。
+8. 要求が終了するとcontrollerのrequest stateを更新し、残存要求の系列長を次生成段階へ進める。
+
+外部interconnectを通るのはQ/K/Vの小さな新規ベクトルとattention出力が中心で、過去全KVを毎反復GPUへ読み戻す必要がない。
 
 ## 手法
 
-### 1. KVキャッシュをHBMに置いたままGEMVを実行する
+### 1. GEMV演算器をどこまでDRAMへ近づけるか
 
-AttAccでは注意のK/VをHBM内に保持し、クエリベクトルだけを演算対象へ配る。各メモリ領域は自分が保持するKの部分とクエリの積を計算し、$qK^\top$ の部分結果を作る。これにより巨大なK行列をGPU演算器へ読み出す必要がなくなる。
+論文は三つのPIM配置を比較する。
 
-softmaxで得た注意重みを用いる第二GEMVも同様に、Vをメモリ内から読みながら部分加算する。最終的には複数メモリ領域の部分結果だけを集約すればよいため、HBM外へ運ぶデータ量はKV本体よりはるかに小さい。
+| 構成 | GEMV演算器の位置 | 特徴 |
+|---|---|---|
+| AttAcc-buffer | HBM buffer dieのpseudo-channel単位 | 実装しやすいが内部帯域の利用度が低い |
+| AttAcc-BG | DRAM dieのbank-group単位 | より高い内部帯域、電力・面積費用も増える |
+| AttAcc-bank | 各DRAM bank近傍 | 最大のbank並列性と短いデータ移動距離、最も細粒度 |
 
-この機構が効くのは、演算を減らしたからではなく、**データが置かれている場所で演算することで外部HBM帯域を節約する**からである。
+bank側へ近づけるほどKVを外へ動かさず並列GEMVできるが、演算器数、DRAMプロセス上の面積、同時動作電力が増える。AttAcc-bankではHBM3の電力制約下でもpseudo-channel当たり複数bankのGEMVを並列化し、総合的なエネルギー–遅延–面積積（Energy-Delay-Area Product; EDAP）が最良となるため最終構成に選ぶ。
 
-### 2. buffer / bank-group / bank の3粒度でPIM配置を比較する
+論文評価ではbank-level構成の面積増加をおおむね10%以内に抑えている。つまり無限に演算器を足すのではなく、HBM電力制約を満たす同時動作数に制限する。
 
-HBMは複数pseudo-channel、bank group、bankから成る階層構造を持つ。AttAccは積和演算器（GEMV unit）をどこへ置くかについて三設計を比較する。
+### 2. softmaxはbuffer dieへ置く
 
-AttAcc-bufferはHBMのbuffer die側、pseudo-channel単位に演算器を置く。論理プロセスを使いやすく複雑な回路を実装しやすいが、DRAM bankが持つ総内部帯域を最も細かく引き出せるわけではない。
+attentionではscore GEMVの後にsoftmax、その後context GEMVが続く。softmaxは各head全体の値を集約するため、bankごとに複製すると演算器数とSRAMが過剰になる。
 
-AttAcc-BGはbank groupごと、AttAcc-bankはさらに各bank近傍へGEMV unitを置く。bank側へ近づくほど多数の演算器を並列化し、内部帯域を利用しやすい一方、DRAMプロセス上の回路面積と電力制約が厳しくなる。特にbank配置は行のactivate/precharge待ちの影響も強くなる。
+そこでGEMVはbank近傍、softmaxはHBM buffer dieへ分離する。bankから集約したscoreをbuffer dieでsoftmaxし、その結果をcontext GEMVへ送り返す。GEMVほど大きな帯域を要求しないsoftmaxを浅い層へ置くことで、内部帯域と実装面積を両立する。
 
-論文はこの三案について性能だけでなくピーク電力、回路面積、エネルギー・遅延・面積積（Energy-Delay-Area Product; EDAP）まで比較して設計点を選ぶ。
+### 3. head-level pipelineでxPUとAttAccを重ねる
 
-### 3. softmaxと集約は階層的に処理する
+素朴に「FCを全部終えてからattention」「attention全部を終えてから次のFC」とすると、xPUとPIMが交互に待つ。AttAccはattention head単位で処理できることを利用し、あるheadをPIMで処理している間にxPUが別headのQKV生成やprojectionを進める。
 
-attention scoreは複数bankへ分散して計算されるため、softmaxには全要素の最大値・指数和に相当するグローバル情報が必要になる。AttAccは部分結果を階層的に集約し、bank内で局所計算したデータをbank group、buffer die側へまとめる。
+PIM内部でも、あるheadのsoftmaxをbuffer dieで処理している間に別headのGEMVをDRAM側で進めるattention-level pipelineを使う。これにより異なる演算資源の空きを重ねる。
 
-softmax回路はGEMVより複雑で、大きな中間バッファも必要になる。このため全bankへ同じ複雑回路を複製するのではなく、HBMの上位階層に置く。論文はGEMVに必要な帯域とsoftmax側の帯域を分析し、buffer dieがsoftmax処理に十分な帯域を持つことを利用する。
+論文ではhead-level pipelineだけで素朴なDGX+AttAccに対し最大1.15倍の追加改善を報告する。一方、バッチを二分してpipelineする方式はFC側の有効バッチを減らし重み再利用を悪化させるため、評価条件では逆効果と判断している。
 
-この非対称配置により、単純に「各bankへGPUの小型版を置く」のではなく、注意演算の各段階をHBM階層へ対応付ける。
+### 4. FFN co-processingでPIMの空き時間を再利用する
 
-### 4. FCはGPU/xPUへ残す
+multi-head attentionとFFNの間にはlayer normalizationがあり、FFNを単純にattentionと完全重畳できない。その結果、attention終了後にPIM側が空く時間が生じる。
 
-FC層はバッチが大きくなるとGEMMとして計算密度が上がり、GPUの強力な演算器が有利になる。AttAccはPIMへ全モデル重みを押し込んでFCまで処理するのではなく、FC重みと演算をxPU側へ置く。
+AttAccはFFN重みの一部をPIM側にも複製し、GPUとPIMでFF1/FF2を分担する。FF1はcolumn-wise、FF2はrow-wiseに分割し、GELUを挟んでも不要な装置間転送が増えないようにする。バッチや系列長で最適offload量が変わるため、xPU側とAttAcc側の両方へ一部重みを複製して柔軟に分担する。
 
-1 Transformer層の生成処理では、xPUがFCや射影計算を担当し、注意が必要なところでAttAccがKVを使って処理し、必要最小限の隠れベクトルだけを装置間で受け渡す。この役割分担が、PIM単体の低演算密度とGPU単体の低GEMV帯域を相互補完する。
-
-### 5. FC並列化と層間パイプラインで装置待ちを隠す
-
-注意をPIMへ外出ししても、xPUとPIMを逐次に「GPU計算→PIM待ち→GPU計算」と並べるだけでは片方が遊ぶ時間が生まれる。AttAccのシステム側最適化では、FC並列化とパイプラインを用い、異なる要求や処理区間をxPUとPIMへ重ねて投入する。
-
-公式シミュレータにも \`ffopt\` と \`pipeopt\` が明示的なオプションとして残っており、単体PIMカーネルだけでなく異種システムのエンドツーエンドスケジューリングを評価対象にしていることが分かる。
-
-この重畳によってPIM注意の高速化をGPU待ち時間へ埋没させず、全体スループットへ変換する。
+このco-processingはhead-level pipelineに加えて最大約1.10倍の改善を与える。重要なのは、PIMを「注意専用固定回路」として放置せず、attention外のidle区間にも帯域型FC処理を割り当てる点である。
 
 ## 評価
 
-### 代表的な評価条件
+### 評価条件
 
 | 項目 | 条件 |
-| --- | --- |
-| 論文 | ASPLOS 2024 |
-| モデル例 | LLaMA-65B、GPT-3 175B、MT-NLG 530B |
-| 代表データ型 | FP16 |
-| PIMメモリ | HBM3 |
-| PIM配置 | AttAcc-buffer、AttAcc-BG、AttAcc-bank |
-| システム比較 | 従来GPU/xPU、GPU/xPU + AttAcc、PIM側設計比較 |
-| PIM評価 | Ramulator 2.0を拡張した詳細メモリシミュレーション |
-| 公式シミュレータの標準例 | A100系8 GPU、GPT-175B、入力2048、出力128、batch 1 |
-| 主指標 | エンドツーエンド性能、エネルギー効率、PIM throughput、peak power、area、EDAP |
+|---|---|
+| 評価形態 | 自作シミュレータ＋Ramulator系PIMモデル＋論理合成。AttAcc実チップではない |
+| 検証 | OPT-66Bを実NVIDIA DGX A100で実行しGPU側シミュレーションを較正 |
+| GPU基準 | DGX A100相当 |
+| メモリ | HBM3、5.2 Gbps/pin |
+| DGXBase | 640GB |
+| DGXLarge | 1280GB |
+| DGX+AttAcc | 1280GB級でDGX側とAttAcc側へ容量分担 |
+| AttAcc内部帯域 | 電力制約下で最大約242 TB/s、DGXBase集約帯域の約9倍 |
+| PIM論理 | GEMV/softmax等をVerilogで設計しASAP7 7nmで合成、DRAM側面積へ換算 |
+| モデル | LLaMA 65B、GPT-3 175B、MT-NLG 530B。公開simulatorではOPT-66B等も対応 |
+| 精度 | 主にFP16、別途INT8感度評価 |
+| ワークロード | 複数の入力長・出力長、10,000要求の処理、SLO制約あり/なし |
+| 主指標 | execution time、throughput、energy/token、energy efficiency、area、EDAP |
 
-### 代表的な評価結果
+### 代表的な結果
 
-| 条件 | 指標 | 比較対象 | AttAcc異種系 | 改善・意味 |
-| --- | --- | --- | --- | --- |
-| GPT-3 175B | エンドツーエンド性能 | 同じメモリ容量の従来GPU系 | 最大2.81倍 | 注意の帯域壁をPIMへ逃がす効果が全体速度へ残る |
-| GPT-3 175B | エネルギー効率 | 同じメモリ容量の従来GPU系 | 最大2.67倍 | 大量KV転送の削減が性能だけでなくエネルギーにも効く |
-| PIM単体設計 | throughput / power / area | buffer・BG・bank配置 | 配置ごとに交換条件 | bankへ近いほど帯域並列度は増すが電力・面積制約が強まる |
-| バッチ増加 | attention vs FC | GPUのみ | attention側の帯域壁が相対的に残る | 「バッチで全層が同様に効率化する」という前提が崩れる |
-| 異種最適化 | エンドツーエンド | 単純な逐次GPU↔PIM | FC並列化・pipelineで改善 | PIMカーネル単体速度だけでなく装置重畳が必要 |
+| 比較 | 結果 | 解釈 |
+|---|---|---|
+| 175B、同容量従来GPU系 | 最大2.81倍の性能 | 抽象に掲げる同容量比較のheadline |
+| 175B、同容量従来GPU系 | 最大2.67倍のエネルギー効率 | KVをPIM内部で読む効果 |
+| 素朴なDGX+AttAcc → head-level pipeline | 最大1.15倍追加改善 | xPU/PIM待ちを重畳 |
+| pipeline後 → FFN co-processing追加 | 最大1.10倍追加改善 | PIM idle時間をFCへ利用 |
+| FP16→INT8感度 | DGXBase比最大3.47倍、DGXLarge比最大2.59倍 | 低ビットでGPU側バッチも増えてもPIM利得が残る |
+| AttAcc-bank | 面積増加約10%以内 | bank-level PIMの費用を明示 |
 
-最大2.81倍/2.67倍はAttAccのGEMVカーネル単体倍率ではなく、同容量の従来GPUシステムと比較した**異種システム全体**の結果である。したがって現在のGPUへ「PIMメモリを一枚追加すれば2.81倍」と解釈してはいけない。
+最終構成はモデルと系列長によって改善率が変わる。LLaMA 65B、GPT-3 175B、MT-NLG 530Bの個別条件では、DGXBaseに対する倍率と、同容量DGXLargeに対する倍率に大きな差がある。これはAttAccの利得の一部が「PIM帯域」だけでなく、追加KV容量によって大きなバッチを載せられることから生じるためである。
 
-またこの論文は実チップを製造して測定したものではない。xPU側の性能・電力モデルと、RamulatorベースのHBM3 PIMシミュレーションを統合した設計評価である。公式シミュレータは後にA100/H100、複数モデル、bank/BG/buffer配置を再現できる形で公開されている。
+したがって公平な読み方では、640GB DGXBaseに対する大きな倍率と、1280GB DGXLargeに対する同容量比較を分離する必要がある。論文の175B headline 2.81倍は後者を含む条件での最大値として扱う。
+
+### なぜ長文脈・大バッチで効き方が変わるか
+
+系列長が長いほどKVキャッシュが大きくなり、attention時間と容量圧力が増えるためPIMの内部帯域が効きやすい。一方、KVが大きすぎて最大バッチが小さくなるとFCの重み再利用が低下するため、追加容量によってバッチを増やせる効果も大きい。
+
+SLOが厳しい場合は「容量上は載る最大バッチ」より前に遅延制約がバッチ上限を決める。この領域では単にHBM容量を倍増したDGXLargeでもバッチを増やせないのに、attention自体を短縮するAttAccは上限を押し広げられる。論文がSLO別評価を行う理由はここにある。
 
 ## 既存研究との差
 
-GPUだけで注意とFCを実行する方式はプログラミングが単純だが、GEMV的な注意で演算器を余らせたままHBM外部帯域を消費する。AttAccはKVをメモリ側に留め、外へ出すデータを部分結果へ縮める。
+従来のPIM型Transformerアクセラレータには、モデルの大部分をメモリ側へ移す設計もある。しかしFCはバッチ化により演算密度を高められ、GPU/xPUの行列演算器が得意である。AttAccはPIMを万能アクセラレータとせず、**バッチ化しても低演算密度のまま残るKV attentionへ集中させる**。
 
-既存HBM-PIMのような汎用PIMはメモリ内積和演算を提供するが、AttAccは注意に必要なsoftmax、階層集約、KV配置まで含めた専用データフローを設計する。単なるGEMVアクセラレータではなく、注意層を一まとまりとして処理する点が異なる。
+通常のGPU最適化はattentionカーネルを融合してHBM往復を減らすが、decodeでは過去KVそのものを読む必要がある。AttAccはKVの保存位置と演算位置を一致させ、GPUの外部HBM帯域を経由しない点で異なる。
 
-PIM-only方式に対しては、FCまでPIMへ移さないことが重要である。FCは高い算術強度を持ち、GPU/xPUの行列演算器を使う方が効率的であるため、AttAccは異種実行を選ぶ。これは「全演算を一種類の最強アクセラレータへ置く」のではなく、演算特性ごとに資源を割り当てるシステム共同設計である。
+また単純なGPU＋PIM分業に加えて、head-level pipelineとFFN co-processingまで含める。異種装置を導入しただけでは片側の待ち時間が増えるため、処理粒度をhead単位まで細かくして重畳することがエンドツーエンド改善に必要になる。
 
 ## 限界・実装状況
 
-最大の制約は、評価がシミュレーション中心である点である。HBM3内部へ積和演算器・softmax・集約器を配置するにはメモリベンダの設計変更が必要で、既存A100/H100へソフトウェアだけで導入できる方式ではない。
+最大の制約は、AttAccが製造済みPIMシステムではなくシミュレーション評価であることだ。GPU側は実DGX A100結果で検証し、PIM演算器は論理合成、メモリはRamulator系モデルを用いるが、実HBM-PIM製品でcontroller、熱、歩留まり、実interconnectを含めて測った結果ではない。
 
-AttAcc-bankのように演算器を細粒度へ配置すると内部帯域は増えるが、DRAMプロセス上の面積効率、電力、熱、activate/prechargeタイミングが制約になる。論文は電力制約をモデル化するが、実チップでの熱・歩留まり・製造コストまで実証したものではない。
+また主モデルはLLaMA 65B、GPT-3 175B、MT-NLG 530B世代で、現在一般的なグループ化問い合わせ注意（Grouped-Query Attention; GQA）、マルチ問い合わせ注意（Multi-Query Attention; MQA）、KV量子化、ページ化KV管理との組合せは主評価ではない。これらはKV帯域・容量を下げるためAttAccの相対利得を変え得る。
 
-利得は長いKVを何度も読む生成段階ほど大きくなる。短い系列や小モデル、FCが支配的な条件では注意PIMの比率が小さく、最大倍率には届きにくい。また現代のGrouped Query Attention（GQA）、Multi-Query Attention（MQA）、KV量子化・圧縮はKV帯域自体を減らすため、AttAccの相対価値を変える。
+追加HBM-PIMはコストと実装複雑性を伴う。特にbank-level演算器はDRAM dieへロジックを追加し、電力制約下で同時動作数を制御する必要がある。面積増加が約10%以内でも、商用DRAMへ統合できることを直接実証したわけではない。
 
-一方、これらのソフトウェア圧縮とPIMは原理的には排他的ではない。圧縮後のKVをPIM側で保持・展開できればさらに帯域を下げられる可能性があるが、量子化形式や復号回路を含む新しい共同設計が必要になる。
+xPUとAttAcc間にもQ/K/V更新、attention出力、制御命令の転送が残る。KV全体を運ぶより小さいが、interconnectが遅い環境や小モデル・短文脈では固定費が相対的に大きくなる。
+
+## 一般的な実装上の含意
+
+異種アクセラレータでは、演算子を「Transformerだから同じ装置」とまとめるのではなく、実際の演算/バイト比とデータ再利用性で分けるべきである。AttAccでは、同じdecoder内でもFCはバッチで再利用できる重み中心、attentionは要求固有KV中心であり、最適装置が異なる。
+
+またPIMを導入するときは内部帯域の最大値だけでなく、DRAM電力制約、演算器配置、softmaxの集約位置、装置間pipelineまで評価する必要がある。理論帯域が高くても、同時bank動作や転送待ちで使えなければエンドツーエンド利得にはならない。
 
 ## 一次資料
 
 - DOI: https://doi.org/10.1145/3620665.3640422
-- ASPLOS 2024: https://www.asplos-conference.org/asplos2024/main-program/abstracts/
 - 公式シミュレータ: https://github.com/scale-snu/attacc_simulator
 
 ## 修正履歴
 
-- 2026-09-28（修正済み）: 新しい品質ガイドに合わせ、汎用的な「状態観測・削減・品質保護」テンプレート文を削除。バッチ化でFCと注意の律速が分かれる理由、KVをPIM内に残すGEMV、buffer/BG/bankの配置差、softmax階層集約、GPU/xPUとの役割分担、FC並列化・パイプラインを因果関係で説明した。モデル・HBM3・シミュレーション条件の評価表と、GPT-3 175Bで最大2.81倍性能・2.67倍エネルギー効率というエンドツーエンド結果を追加し、公式シミュレータURLも反映した。
+- 2026-09-28（修正済み）: 最新品質ガイドに合わせ、バッチ化でFCの演算密度は上がる一方、要求固有KVを読むattentionは帯域律速のまま残る因果背景を追加。AttAcc-buffer/BG/bankの配置比較、bank-level PIMとbuffer-die softmax、実行時KV転送、head-level pipeline、FFN co-processingを具体化した。シミュレーション条件、同容量比較、175Bで最大2.81倍性能・2.67倍エネルギー効率、面積・INT8感度、実PIM未評価という限界を表で整理し、公式シミュレータも追記した。
