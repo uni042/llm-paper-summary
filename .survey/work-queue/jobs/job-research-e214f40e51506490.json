@@ -13,7 +13,7 @@
   "source_url": "https://arxiv.org/abs/2510.26913",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md",
   "selection_reason": "LLMワークフローを演算子化して重複排除・バッチ化・異種GPU配置を統合し、コスト最大3.8倍削減を報告する。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -24,5 +24,10 @@
     "source": "chatgpt_library",
     "source_file": "discovery-20260927-0802-scheduled-chat-00.json",
     "imported_at": "2026-09-27T05:05:08+00:00"
-  }
+  },
+  "superseded_at": "2026-09-27T17:14:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md",
+  "represented_canonical_id": "arXiv:2510.26913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -11,7 +11,7 @@
   "source_url": "https://arxiv.org/abs/2201.10890",
   "paper_path": "papers/inference/99-other-inference-systems/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
   "selection_reason": "本文の方法・評価を確認し、One Student Knows All Experts Know: From Sparse to Dense はLLM推論の計算量、KVキャッシュ、配信、適応計算または実推論配置を直接改善するため収録候補と判定。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -22,5 +22,10 @@
     "source": "chatgpt_library",
     "source_file": "discovery-20260927-0457-scheduled-chat-00.json",
     "imported_at": "2026-09-27T05:03:56+00:00"
-  }
+  },
+  "superseded_at": "2026-09-27T17:14:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+  "represented_canonical_id": "arXiv:2201.10890",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
