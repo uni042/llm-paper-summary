@@ -139,8 +139,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   固定入力などを悪用した「高速だが一般化しないCUDA」を弾くrobust-kbenchと、翻訳・LLM検証・進化的最適化を統合したエージェントを提案し、KernelBenchの見かけの平均3.13倍高速化が堅牢化後1.49倍へ下がることを示す。
 
 - **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  既存SGLang CUDAカーネルを対象に、計画・実装・試験・プロファイルを分担する複数LLMエージェントが反復最適化し、正しさを保ちながら平均1.32倍高速化する。
+  実装：[✓](https://github.com/Anjiang-Wei/Astra) ・ リポジトリ内被引用：3  
+  高水準PyTorchからCUDAを一から生成するのではなく、SGLangに既に存在する正しいCUDAカーネルを出発点にし、試験・プロファイル・計画・実装を別々の大規模言語モデル（Large Language モデル; LLM）エージェントへ分担する。
 
 ### 3年前（2023-10〜2024-09）
 
