@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-unrelated-arxiv-2406-16937",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.16937",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.16937",
+    "identity_tokens": [
+      "arXiv:2406.16937"
+    ],
+    "reason": "チャットボット全般を広く整理するサーベイで、推論システムの資源効率化・配信・メモリ最適化を主題としない。",
+    "first_checked_at": "2026-09-27T21:48:56+00:00",
+    "last_checked_at": "2026-09-27T21:48:56+00:00",
+    "linked_from": [
+      "LLM-paper-summary-library-first legacy MD-only Discovery"
+    ],
+    "title": "A Complete Survey on LLM-based AI Chatbots"
+  },
+  "processed_at": "2026-09-27T21:48:56+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928-cleanup",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

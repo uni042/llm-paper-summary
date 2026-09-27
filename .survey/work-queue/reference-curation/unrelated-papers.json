@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T21:25:34+00:00",
-  "record_count": 297,
+  "updated_at": "2026-09-27T21:48:56+00:00",
+  "record_count": 298,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4475,6 +4475,20 @@
         ".survey/work-queue/worker-worklist-30.json#rank-491"
       ],
       "title": "DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents"
+    },
+    "arXiv:2406.16937": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16937",
+      "identity_tokens": [
+        "arXiv:2406.16937"
+      ],
+      "reason": "チャットボット全般を広く整理するサーベイで、推論システムの資源効率化・配信・メモリ最適化を主題としない。",
+      "first_checked_at": "2026-09-27T21:48:56+00:00",
+      "last_checked_at": "2026-09-27T21:48:56+00:00",
+      "linked_from": [
+        "LLM-paper-summary-library-first legacy MD-only Discovery"
+      ],
+      "title": "A Complete Survey on LLM-based AI Chatbots"
     }
   }
 }

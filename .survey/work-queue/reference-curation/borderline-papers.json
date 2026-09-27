@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T21:25:34+00:00",
-  "record_count": 303,
+  "updated_at": "2026-09-27T21:48:56+00:00",
+  "record_count": 305,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4535,6 +4535,35 @@
         ".survey/work-queue/worker-worklist-30.json#rank-462"
       ],
       "title": "Human-inspired Episodic Memory for Infinite Context LLMs"
+    },
+    "arXiv:2401.08092": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.08092",
+      "identity_tokens": [
+        "arXiv:2401.08092"
+      ],
+      "reason": "資源効率化を広く扱う有用なサーベイだが、新規の推論システム手法を提案する一次研究ではないため境界的とする。",
+      "first_checked_at": "2026-09-27T21:48:56+00:00",
+      "last_checked_at": "2026-09-27T21:48:56+00:00",
+      "linked_from": [
+        "LLM-paper-summary-library-first legacy MD-only Discovery"
+      ],
+      "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    },
+    "arXiv:2501.12948": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.12948",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-09422-z",
+        "arXiv:2501.12948"
+      ],
+      "reason": "主貢献は強化学習による推論能力・モデル設計であり、インフラ記述はあるが推論システム最適化として独立評価されていないため境界的とする。",
+      "first_checked_at": "2026-09-27T21:48:56+00:00",
+      "last_checked_at": "2026-09-27T21:48:56+00:00",
+      "linked_from": [
+        "LLM-paper-summary-library-first legacy MD-only Discovery"
+      ],
+      "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning"
     }
   }
 }
