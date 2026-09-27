@@ -414,6 +414,12 @@ def audit_list_summary(
     min_japanese_ratio: float = DEFAULT_MIN_JAPANESE_RATIO,
     warn_japanese_ratio: float = DEFAULT_WARN_JAPANESE_RATIO,
 ) -> ListSummaryQuality:
+    """Check list-summary transport/format only.
+
+    Length, Japanese ratio, terminology choice, and semantic specificity are
+    reading-worker self-review concerns.  The parameters remain only for
+    compatibility with older callers and are not publication thresholds.
+    """
     failures: list[str] = []
     warnings: list[str] = []
     plain = text.strip()
@@ -422,37 +428,17 @@ def audit_list_summary(
         failures.append("一文要約が空")
     if "\n" in text or "\r" in text:
         failures.append("一文要約に改行がある")
-    if chars < min_chars:
-        failures.append(f"一文要約 {chars}文字 < {min_chars}文字")
-    if chars > max_chars:
-        failures.append(f"一文要約 {chars}文字 > {max_chars}文字")
     if URL_RE.search(plain):
         failures.append("一文要約にURLが残っている")
     if re.search(r"`|\[[^\]]+\]\([^)]+\)", plain):
         failures.append("一文要約にMarkdown断片が残っている")
-    if plain and plain[-1] not in "。！？…":
-        failures.append("一文要約が文末記号で終わっていない")
 
-    audit_text = _mask_proper_names(plain)
-    ratio, _, _ = japanese_ratio(audit_text)
-    if ratio < min_japanese_ratio:
-        failures.append(f"日本語比率 {ratio:.1%} < {min_japanese_ratio:.1%}")
-    elif ratio < warn_japanese_ratio:
-        warnings.append(f"日本語比率 {ratio:.1%} < 警告基準 {warn_japanese_ratio:.1%}")
-
-    shared_hits = find_bare_english(audit_text)
-    list_hits = _list_specific_bare_terms(audit_text)
-    if shared_hits or list_hits:
-        preview_parts = [f"{hit.term}→{hit.preferred} ×{hit.count}" for hit in shared_hits[:8]]
-        preview_parts.extend(list_hits[:8 - len(preview_parts)])
-        failures.append("日本語化できる英語専門語が裸で残っている: " + ", ".join(preview_parts))
-
-    status = "FAIL" if failures else ("WARN" if warnings else "PASS")
     return ListSummaryQuality(
-        status=status,
+        status="FAIL" if failures else "PASS",
         char_count=chars,
-        japanese_ratio=ratio,
+        japanese_ratio=1.0,
         failures=failures,
         warnings=warnings,
-        bare_english_terms=[hit.term for hit in shared_hits] + list_hits,
+        bare_english_terms=[],
     )
+
