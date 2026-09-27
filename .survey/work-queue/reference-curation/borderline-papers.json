@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T21:22:11+00:00",
-  "record_count": 291,
+  "updated_at": "2026-09-27T21:23:11+00:00",
+  "record_count": 293,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4358,6 +4358,34 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "AReaL-Hex: Accommodating Asynchronous RL Training over Heterogeneous GPUs"
+    },
+    "arXiv:2508.18265": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.18265",
+      "identity_tokens": [
+        "arXiv:2508.18265"
+      ],
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 366"
+      ],
+      "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency"
+    },
+    "arXiv:2604.11035": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11035",
+      "identity_tokens": [
+        "arXiv:2604.11035"
+      ],
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 382"
+      ],
+      "title": "Introspective Diffusion Language Models"
     }
   }
 }

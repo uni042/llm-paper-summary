@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T21:22:11+00:00",
-  "record_count": 282,
+  "updated_at": "2026-09-27T21:23:11+00:00",
+  "record_count": 292,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4265,6 +4265,146 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "ShareChat: A Dataset of Chatbot Conversations in the Wild"
+    },
+    "arXiv:2304.11414": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.11414",
+      "identity_tokens": [
+        "arXiv:2304.11414"
+      ],
+      "reason": "MoE training通信とparallel architectureが主題で評価もtraining throughputである。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Pipeline MoE: A Flexible MoE Implementation with Pipeline Parallelism"
+    },
+    "arXiv:2307.15818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15818",
+      "identity_tokens": [
+        "arXiv:2307.15818"
+      ],
+      "reason": "robotic VLAのgeneralizationが主題でLLM serving効率手法ではない。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
+    },
+    "arXiv:2310.09762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09762",
+      "identity_tokens": [
+        "arXiv:2310.09762"
+      ],
+      "reason": "MoE表現多様性を改善するtraining手法で推論runtimeを対象としない。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Diversifying the Mixture-of-Experts Representation for Language Models with Orthogonal Optimizer"
+    },
+    "arXiv:2310.18313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.18313",
+      "identity_tokens": [
+        "arXiv:2310.18313"
+      ],
+      "reason": "FP8 gradient/optimizerによるpretraining高速化で凍結対象のtraining工程である。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "FP8-LM: Training FP8 Large Language Models"
+    },
+    "arXiv:2312.02120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.02120",
+      "identity_tokens": [
+        "arXiv:2312.02120"
+      ],
+      "reason": "synthetic instruction dataによるcode LLM trainingで推論runtime効率を扱わない。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Magicoder: Empowering Code Generation with OSS-Instruct"
+    },
+    "arXiv:2402.05147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05147",
+      "identity_tokens": [
+        "arXiv:2402.05147"
+      ],
+      "reason": "2-bit量子化後のLoRA fine-tuning精度改善で凍結対象のtraining工程である。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ApiQ: Finetuning of 2-Bit Quantized Large Language Model"
+    },
+    "arXiv:2403.13372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.13372",
+      "identity_tokens": [
+        "arXiv:2403.13372"
+      ],
+      "reason": "parameter-efficient fine-tuning frameworkで凍結対象のtraining工程である。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models"
+    },
+    "arXiv:2404.00971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00971",
+      "identity_tokens": [
+        "arXiv:2404.00971"
+      ],
+      "reason": "code hallucinationのtaxonomyとmitigationが主題でsystem性能効率を扱わない。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Beyond Functional Correctness: Exploring Hallucinations in LLM-Generated Code"
+    },
+    "arXiv:2406.11794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11794",
+      "identity_tokens": [
+        "arXiv:2406.11794"
+      ],
+      "reason": "pretraining dataset curationが主題で凍結対象のtraining側研究である。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "DataComp-LM: In search of the next generation of training sets for language models"
+    },
+    "arXiv:2506.02281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02281",
+      "identity_tokens": [
+        "arXiv:2506.02281"
+      ],
+      "reason": "data選択でRFT学習を高速化する凍結対象のtraining研究である。",
+      "first_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Angles Don’t Lie: Unlocking Training-Efficient RL Through the Model’s Own Signals"
     }
   }
 }
