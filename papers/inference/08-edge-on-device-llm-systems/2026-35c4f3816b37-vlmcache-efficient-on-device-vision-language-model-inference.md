@@ -6,7 +6,19 @@ created_at: '2026-09-26T15:40:00+09:00'
 reference_main_sha: 17e83b685db9cacefff633e77949b368f1fa1660
 intended_github_path: papers/inference/99-other-inference-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md
 completion_status: complete_library_first
-title: 視覚言語モデル向け再利用機構 VLMCache
+title: 'VLMCache: Efficient On-Device Vision-Language Model Inference'
+authors:
+- Yinyuan Zhang
+- Daliang Xu
+- Zhiyang Chen
+- Chenghua Wang
+- Ying Zhang
+- Mengwei Xu
+- Gang Huang
+published: '2026-06-20'
+publication: "MobiSys '26: Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services, 854-867"
+publication_type: 査読付き国際会議論文
+publication_status: published
 year: 2026
 primary_url: https://doi.org/10.1145/3745756.3809243
 list_summary: 連続画像の安定背景を再利用可能なKV接頭辞へ分離し、動的前景だけを再計算した後に注意相互作用と位置整合性を復元することで、端末上VLM推論を平均精度低下1%未満で1.4〜3.8倍高速化する。
