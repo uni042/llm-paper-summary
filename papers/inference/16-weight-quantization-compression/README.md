@@ -92,7 +92,7 @@
 
 - **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  重要重みが構造的に偏る性質を利用し、グループごとにビット幅を割り当てつつ重要度を量子化器校正にも反映する。LLaMA-7Bの2ビット化でメモリを約6分の1にし、従来勾配不要方式よりパープレキシティを48%改善。
+  要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
