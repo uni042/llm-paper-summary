@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection",
+      "source_url": "https://arxiv.org/abs/2411.08982",
+      "year": 2024,
+      "published": "2024-11-13",
+      "abstract": "Selective parameter activation provided by Mixture-of-Expert (MoE) models have made them a popular choice in modern foundational models. However, MoEs face a fundamental tension when employed for serving. Batching, critical for performance in serving, forces the activation of all experts, thereby negating MoEs'benefits and exacerbating memory bandwidth bottlenecks. Existing work on efficient MoE inference are unable to resolve this tension even with extensive workload-specific tuning. We present LYNX, a system that enables efficient MoE inference in a workload-agnostic fashion. LYNX leverages a key property of MoE training: load-balancing losses introduce batch-level expert activation skews and redundancy, which it exploits by remapping low-affinity token-to-expert assignments within each batch using a novel AffinityBinning technique that reduces the total experts invoked. Our evaluation of LYNX on four state-of-the-art model families across nine benchmarks shows that it achieves up to 1.30x improvement in throughput while maintaining accuracy loss of less than 1% points across tasks. Further, LYNX is complementary to existing techniques where it additionally boosts their performance by up to 1.38x.",
+      "canonical_id": "arXiv:2411.08982",
+      "arxiv_id": "2411.08982",
+      "doi": "10.48550/arXiv.2411.08982",
+      "authors": [
+        "Vima Gupta",
+        "J. Ju",
+        "Kartik Sinha",
+        "Ada Gavrilovska",
+        "A. Iyer"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure",
+      "source_url": "https://arxiv.org/abs/2504.03648",
+      "year": 2025,
+      "published": "2025-02-22",
+      "abstract": "We introduce AIBrix, a cloud-native, open-source framework designed to optimize and simplify large-scale LLM deployment in cloud environments. Unlike traditional cloud-native stacks, AIBrix follows a co-design philosophy, ensuring every layer of the infrastructure is purpose-built for seamless integration with inference engines like vLLM. AIBrix introduces several key innovations to reduce inference costs and enhance performance including high-density LoRA management for dynamic adapter scheduling, LLM-specific autoscalers, and prefix-aware, load-aware routing. To further improve efficiency, AIBrix incorporates a distributed KV cache, boosting token reuse across nodes, leading to a 50% increase in throughput and a 70% reduction in inference latency. AIBrix also supports unified AI runtime which streamlines model management while maintaining vendor-agnostic engine compatibility. For large-scale multi-node inference, AIBrix employs hybrid orchestration -- leveraging Kubernetes for coarse-grained scheduling and Ray for fine-grained execution -- to balance efficiency and flexibility. Additionally, an SLO-driven GPU optimizer dynamically adjusts resource allocations, optimizing heterogeneous serving to maximize cost efficiency while maintaining service guarantees. Finally, AIBrix enhances system reliability with AI accelerator diagnostic tools, enabling automated failure detection and mock-up testing to improve fault resilience. AIBrix is available at https://github.com/vllm-project/aibrix.",
+      "canonical_id": "arXiv:2504.03648",
+      "arxiv_id": "2504.03648",
+      "doi": "10.48550/arXiv.2504.03648",
+      "authors": [
+        "Jiaxin Shan",
+        "Varun Gupta",
+        "Le Xu",
+        "Haiyang Shi",
+        "Jingyuan Zhang",
+        "Ning Wang",
+        "Linhui Xu",
+        "Rong Kang",
+        "Tongping Liu",
+        "Yifei Zhang",
+        "Yiqing Zhu",
+        "Shuowei Jin",
+        "Gangmuk Lim",
+        "Binbin Chen",
+        "Zuzhi Chen",
+        "Xiao Liu",
+        "Xin Chen",
+        "Kante Yin",
+        "C. Chung",
+        "Chenyu Jiang",
+        "Yichen Lu",
+        "Jianjun Chen",
+        "Caixue Lin",
+        "Wu Xiang",
+        "Rui Shi",
+        "Liguang Xie"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2410.00428",
+      "year": 2024,
+      "published": "2024-10-01",
+      "abstract": "The expanding context windows in large language models (LLMs) have greatly enhanced their capabilities in various applications, but they also introduce significant challenges in maintaining low latency, particularly in Time to First Token (TTFT). This paper identifies that the sharp rise in TTFT as context length increases is predominantly driven by queuing delays, which are caused by the growing demands for GPU Key-Value (KV) cache allocation clashing with the limited availability of KV cache blocks. To address this issue, we propose LayerKV, a simple yet effective plug-in method that effectively reduces TTFT without requiring additional hardware or compromising output performance, while seamlessly integrating with existing parallelism strategies and scheduling techniques. Specifically, LayerKV introduces layer-wise KV block allocation, management, and offloading for fine-grained control over system memory, coupled with an SLO-aware scheduler to optimize overall Service Level Objectives (SLOs). Comprehensive evaluations on representative models, ranging from 7B to 70B parameters, across various GPU configurations, demonstrate that LayerKV improves TTFT latency up to 69x and reduces SLO violation rates by 28.7%, significantly enhancing the user experience.",
+      "canonical_id": "arXiv:2410.00428",
+      "arxiv_id": "2410.00428",
+      "doi": "10.48550/arXiv.2410.00428",
+      "authors": [
+        "Yi Xiong",
+        "Hao Wu",
+        "Chang-Xu Shao",
+        "Ziqing Wang",
+        "Rui Zhang",
+        "Yuhong Guo",
+        "Junping Zhao",
+        "Ke Zhang",
+        "Zhenxuan Pan"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Flash-LLM: Enabling Low-Cost and Highly-Efficient Large Generative Model Inference With Unstructured Sparsity",
+      "source_url": "https://arxiv.org/abs/2309.10285",
+      "year": 2023,
+      "published": "2023-09-19",
+      "abstract": "\n With the fast growth of parameter size, it becomes increasingly challenging to deploy large generative models as they typically require large GPU memory consumption and massive computation. Unstructured model pruning has been a common approach to reduce both GPU memory footprint and the overall computation while retaining good model accuracy. However, the existing solutions do not provide an efficient support for handling unstructured sparsity on modern GPUs, especially on the highly-structured tensor core hardware. Therefore, we propose Flash-LLM for enabling low-cost and highly efficient large generative model inference with the sophisticated support of unstructured sparsity on high-performance but highly restrictive tensor cores. Based on our key observation that the main bottleneck of generative model inference is the several skinny matrix multiplications for which tensor cores would be significantly under-utilized due to low computational intensity, we propose a general\n Load-as-Sparse and Compute-as-Dense\n methodology for unstructured sparse matrix multiplication (SpMM). The basic insight is to address the significant memory bandwidth bottleneck while tolerating redundant computations that are not critical for end-to-end performance on tensor cores. Based on this, we design an effective software framework for tensor core based unstructured SpMM, leveraging on-chip resources for efficient sparse data extraction and computation/memory-access overlapping. Extensive evaluations demonstrate that (1) at SpMM kernel level, Flash-LLM significantly outperforms the state-of-the-art library, i.e., Sputnik and SparTA by an average of 2.9X and 1.5X, respectively.(2) At end-to-end framework level on OPT-30B/66B/175B models, for\n tokens per GPU-second\n , Flash-LLM achieves up to 3.8X and 3.6X improvement over DeepSpeed and FasterTransformer, respectively, with significantly lower inference cost.\n",
+      "canonical_id": "arXiv:2309.10285",
+      "arxiv_id": "2309.10285",
+      "doi": "10.14778/3626292.3626303",
+      "authors": [
+        "Haojun Xia",
+        "Zhen Zheng",
+        "Yuchao Li",
+        "Donglin Zhuang",
+        "Zhong-Zhu Zhou",
+        "Xiafei Qiu",
+        "Yong Li",
+        "Wei Lin",
+        "S. Song"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Efficiently Serving Large Multimodal Models Using EPD Disaggregation",
+      "source_url": "https://arxiv.org/abs/2501.05460",
+      "year": 2024,
+      "published": "2024-12-25",
+      "abstract": "Large Multimodal Models (LMMs) extend Large Language Models (LLMs) by handling diverse inputs such as images, audio, and video, but at the cost of adding a multimodal encoding stage that increases both computational and memory overhead. This step negatively affects key Service Level Objectives (SLOs), such as time to first token (TTFT) and time per output token (TPOT). We introduce Encode-Prefill-Decode (EPD) Disaggregation, a novel framework that separates the encoding, prefill, and decode stages onto dedicated resources. Unlike current systems, which bundle encoding and prefill together, our approach decouples these steps, unlocking new opportunities and optimizations. These include a mechanism to cache multimedia tokens for efficient transfer, a novel way to parallelize the encoding load within a request, a module for optimal resource allocation for disaggregated serving, and a novel role-switching method to handle changing workload characteristics. Experimental evaluations with popular LMMs show substantial gains in memory efficiency (up to 15x lower peak memory utilization), batch sizes (up to 22x larger), 10x more images per request, and 2.2x larger KV caches. Furthermore, it leads to significant improvements in SLO attainment (up to 90-100% improvement) and TTFT (up to 71% reduction), compared to systems that do not disaggregate. The code is available at https://github.com/vbdi/epdserve.",
+      "canonical_id": "arXiv:2501.05460",
+      "arxiv_id": "2501.05460",
+      "authors": [
+        "Gursimran Singh",
+        "Xing-Lu Wang",
+        "Yifan Hu",
+        "T. Yu",
+        "Linzi Xing",
+        "Wei Jiang",
+        "Zhe-Feng Wang",
+        "Xiao-Long Bai",
+        "Yi Li",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-legacy-md",
+    "round": "library-import-legacy-md-accept-20260928-003",
+    "axis": "explicit-library-legacy-md-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "旧Library Discovery MDから現行スコープで有効なaccept成果を正規Research候補へ取り込む。",
+    "candidate_count": 33,
+    "round_submission_index": 2,
+    "round_submission_count": 7
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-legacy-md-accept-20260928-003",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-legacy-md-accept-20260928-003.json",
+    "receipt": "sha256:9b017d7a2639a46cf84be70b8e680a69d91ce55685a778e209d14bc3093b2dd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-legacy-md",
+    "summary": "Library上の旧Discovery成果を現行スコープへ再仕分けし、有効なaccept成果をGitHubへ反映する。"
+  }
+}

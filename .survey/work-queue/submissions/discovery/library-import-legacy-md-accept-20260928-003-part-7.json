@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution",
+      "source_url": "https://arxiv.org/abs/2510.00636",
+      "year": 2025,
+      "published": "2025-10-01",
+      "abstract": "Memory consumption of the Key-Value (KV) cache represents a major bottleneck for efficient large language model inference. While attention-score-based KV cache pruning shows promise, it faces critical practical limitations: attention scores from future tokens are unavailable during compression, and modern implementations like Flash Attention do not materialize the full attention matrix, making past scores inaccessible. To overcome these challenges, we introduce $\\textbf{Expected Attention, a training-free compression method}$ that estimates KV pairs importance by predicting how future queries will attend to them. Our approach leverages the distributional properties of LLM activations to compute expected attention scores in closed form for each KV pair. These scores enable principled ranking and pruning of KV pairs with minimal impact on the residual stream, achieving effective compression without performance degradation. Importantly, our method operates seamlessly across both prefilling and decoding phases, consistently outperforming state-of-the-art baselines in both scenarios. Finally, $\\textbf{we release KVPress, a comprehensive library to enable researchers to implement and benchmark KV cache compression methods, already including more than 20 techniques}$.",
+      "canonical_id": "arXiv:2510.00636",
+      "arxiv_id": "2510.00636",
+      "doi": "10.48550/arXiv.2510.00636",
+      "authors": [
+        "Alessio Devoto",
+        "Maximilian Jeblick",
+        "Simon J'egou"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "MiniLLM: On-Policy Distillation of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2306.08543",
+      "year": 2023,
+      "published": "2023-06-14",
+      "abstract": "Knowledge Distillation (KD) is a promising technique for reducing the high computational demand of large language models (LLMs). However, previous KD methods are primarily applied to white-box classification models or training small models to imitate black-box model APIs like ChatGPT. How to effectively distill the knowledge of white-box LLMs into small models is still under-explored, which becomes more important with the prosperity of open-source LLMs. In this work, we propose a KD approach that distills LLMs into smaller language models. We first replace the forward Kullback-Leibler divergence (KLD) objective in the standard KD approaches with reverse KLD, which is more suitable for KD on generative language models, to prevent the student model from overestimating the low-probability regions of the teacher distribution. Then, we derive an effective on-policy optimization approach to learn this objective. The student models are named MiniLLM. Extensive experiments in the instruction-following setting show that MiniLLM generates more precise responses with higher overall quality, lower exposure bias, better calibration, and higher long-text generation performance than the baselines. Our method is scalable for different model families with 120M to 13B parameters. Our code, data, and model checkpoints can be found in https://github.com/microsoft/LMOps/tree/main/minillm.",
+      "canonical_id": "arXiv:2306.08543",
+      "arxiv_id": "2306.08543",
+      "authors": [
+        "Yu-Xian Gu",
+        "Li Dong",
+        "Furu Wei",
+        "Minlie Huang"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Atom: Low-bit Quantization for Efficient and Accurate LLM Serving",
+      "source_url": "https://arxiv.org/abs/2310.19102",
+      "year": 2023,
+      "published": "2023-10-29",
+      "abstract": "The growing demand for Large Language Models (LLMs) in applications such as content generation, intelligent chatbots, and sentiment analysis poses considerable challenges for LLM service providers. To efficiently use GPU resources and boost throughput, batching multiple requests has emerged as a popular paradigm; to further speed up batching, LLM quantization techniques reduce memory consumption and increase computing capacity. However, prevalent quantization schemes (e.g., 8-bit weight-activation quantization) cannot fully leverage the capabilities of modern GPUs, such as 4-bit integer operators, resulting in sub-optimal performance. To maximize LLMs' serving throughput, we introduce Atom, a low-bit quantization method that achieves high throughput improvements with negligible accuracy loss. Atom significantly boosts serving throughput by using low-bit operators and considerably reduces memory consumption via low-bit quantization. It attains high accuracy by applying a novel mixed-precision and fine-grained quantization process. We evaluate Atom on 4-bit weight-activation quantization setups in the serving context. Atom improves end-to-end throughput by up to $7.73\\times$ compared to the FP16 and by $2.53\\times$ compared to INT8 quantization, while maintaining the same latency target.",
+      "canonical_id": "arXiv:2310.19102",
+      "arxiv_id": "2310.19102",
+      "doi": "10.48550/arXiv.2310.19102",
+      "authors": [
+        "Yilong Zhao",
+        "Chien-Yu Lin",
+        "Kan Zhu",
+        "Zihao Ye",
+        "Lequn Chen",
+        "Size Zheng",
+        "Luis Ceze",
+        "Arvind Krishnamurthy",
+        "Tian-Qi Chen",
+        "Baris Kasikci"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-legacy-md",
+    "round": "library-import-legacy-md-accept-20260928-003",
+    "axis": "explicit-library-legacy-md-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "旧Library Discovery MDから現行スコープで有効なaccept成果を正規Research候補へ取り込む。",
+    "candidate_count": 33,
+    "round_submission_index": 7,
+    "round_submission_count": 7
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-legacy-md-accept-20260928-003",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-legacy-md-accept-20260928-003.json",
+    "receipt": "sha256:9b017d7a2639a46cf84be70b8e680a69d91ce55685a778e209d14bc3093b2dd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-legacy-md",
+    "summary": "Library上の旧Discovery成果を現行スコープへ再仕分けし、有効なaccept成果をGitHubへ反映する。"
+  }
+}
