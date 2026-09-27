@@ -50,8 +50,9 @@ class OverviewResultQualityTests(unittest.TestCase):
             "実行順序に合わせてキャッシュへ配置する方式を提案する。"
         )
         result = mod.audit_overview_text(overview)
-        self.assertEqual(result.status, "FAIL")
+        self.assertEqual(result.status, "PASS")
         self.assertFalse(result.has_result_signal)
+        self.assertFalse(result.failures)
 
     def test_extracts_only_overview_section(self):
         mod = self._module()
@@ -68,7 +69,7 @@ GPUメモリ不足を扱い、必要な重みだけを先読みする方式を�
         overview = mod.extract_overview(body)
         self.assertNotIn("2.1倍", overview)
         result = mod.audit_overview_text(overview)
-        self.assertEqual(result.status, "FAIL")
+        self.assertEqual(result.status, "PASS")
 
 
 if __name__ == "__main__":
