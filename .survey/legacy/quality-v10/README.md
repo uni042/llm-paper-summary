@@ -23,7 +23,15 @@ The retired gate enforced, among other things:
 - overview representative-result detection
 - structured-record semantic depth requirements
 
-These criteria were retired from the GitHub publication/upload side because a GitHub uploader cannot safely repair semantic failures without rereading the paper, and some measurements are not reliably available to Scheduled Chat workers.
+The v10 bundle as a whole was retired from the active publication path.  Most
+quantity/depth/semantic gates are no longer active because an uploader cannot
+safely repair them without rereading the paper, and Scheduled Chat workers are
+not required to run mechanical measurements.
+
+The Japanese-ratio rule is the intentional exception: v11 reuses the same
+70% FAIL / 80% WARN thresholds on the uploader/GitHub side because wording can
+be repaired from the finished manuscript without rereading the source paper.
+Keeping this file does not mean that rule itself is retired.
 
 ## Restoration
 
@@ -42,3 +50,8 @@ Source snapshot:
 - `.survey/scripts/research_quality_selfcheck.py` — blob `b7a0c107d6252123c2abb35ad64ac3a7bd89bfe1`
 - `.survey/scripts/research_quality_preflight.py` — blob `a6cc27456b9ee6dced6a83b9279910ee996e96cf`
 - `.github/workflows/paper-quality-audit.yml` — blob `f7c7c8f7e0aae2b85ddc7ce9c8f81707ba92dedc`
+- `.survey/templates/paper.md` — exact pre-split template preserved as `paper.md.legacy`
+
+
+Library-side worker guide snapshot:
+- `/LLM-paper-summary-library-first/legacy/PAPER-QUALITY-GUIDE-v10-legacy.md`
