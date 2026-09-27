@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（20本）
+## 自動生成の論文一覧（21本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -63,6 +63,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference](2026-2608.01536-celty-dual-sparse-gpu-kernel.md)**  
   実装：[✓](https://github.com/RuokaiYin/Celty) ・ リポジトリ内被引用：0  
   重み疎性と実行時活性疎性の交差を疎行列×疎ベクトルとして扱い、走長圧縮形式、ワープ割当、レジスタ部分和、専用復号器を共同設計して低バッチLLMデコードを高速化する。
+
+- **2026-08 · [A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation](2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md)**  
+  実装：[✓](https://github.com/SJTU-ReArch-Group/GTSim/) ・ リポジトリ内被引用：0  
+  FIBERはスレッドとレジスタの結び付きを外し、SM内共有レジスタと細粒度依存管理でテンソル Core周辺の固定並列度・データ移動を抑えるGPU設計で、LLM配信をシミュレータ上で世代別に最大2.25倍高速化する。
 
 - **2026-07 · [Harness Engineering for LLM-Driven GPU Kernel Generation](2026-2607.17979-harness-engineering-llm-gpu-kernels.md)**  
   実装：[✓](https://github.com/syhya/mlsys26-flashinfer-contest) ・ リポジトリ内被引用：0  
