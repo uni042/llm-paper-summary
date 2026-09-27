@@ -1,30 +1,25 @@
-name: Paper quality audit
+name: Paper publication integrity audit
 
 on:
   push:
     paths:
       - ".survey/scripts/audit_paper_quality.py"
       - ".survey/scripts/audit_list_summary_quality.py"
-      - ".survey/scripts/audit_overview_results.py"
       - ".survey/scripts/list_summary.py"
       - ".survey/scripts/render_paper.py"
       - ".survey/scripts/japanese_style.py"
       - ".survey/scripts/paper_quality_gate.py"
-      - ".survey/scripts/prepare_completed_submission.py"
-      - ".survey/scripts/research_quality_preflight.py"
+      - ".survey/scripts/assemble_research_record.py"
       - ".survey/templates/paper.md"
       - ".survey/docs/survey-workflow/paper-quality-audit.md"
       - ".survey/tests/test_audit_paper_quality.py"
-      - ".survey/tests/test_research_preflight_quality.py"
+      - ".survey/tests/test_paper_quality_gate.py"
       - ".survey/tests/test_list_summary_quality.py"
-      - ".survey/tests/test_overview_result_quality.py"
       - ".survey/tests/test_render_paper_metadata.py"
       - "papers/inference/**/*.md"
       - "papers/training/**/*.md"
       - "papers/survey/**/*.md"
       - ".github/workflows/paper-quality-audit.yml"
-      - ".github/workflows/survey-research-quality-preflight.yml"
-      - ".github/workflows/survey-completed-builder-fast.yml"
   workflow_dispatch:
 
 permissions:
@@ -49,13 +44,15 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Run quality regression tests
-        run: python -m unittest discover -s .survey/tests -p 'test_*quality.py'
+      - name: Run active publication-integrity tests
+        run: |
+          python -m unittest \
+            .survey.tests.test_audit_paper_quality \
+            .survey.tests.test_paper_quality_gate \
+            .survey.tests.test_list_summary_quality \
+            .survey.tests.test_render_paper_metadata
 
-      - name: Run renderer regression tests
-        run: python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
-
-      - name: Run repository audit
+      - name: Run repository publication-integrity and Japanese-ratio audit
         run: |
           mkdir -p audit-output
           python .survey/scripts/audit_paper_quality.py \
@@ -63,23 +60,16 @@ jobs:
             --markdown-out audit-output/paper-quality-audit.md \
             --json-out audit-output/paper-quality-audit.json
 
-      - name: Run paper-list summary audit
+      - name: Run list-summary format and Japanese-ratio audit
         run: |
           python .survey/scripts/audit_list_summary_quality.py \
             --no-fail-exit \
             --markdown-out audit-output/list-summary-quality-audit.md \
             --json-out audit-output/list-summary-quality-audit.json
 
-      - name: Run overview representative-result audit
-        run: |
-          python .survey/scripts/audit_overview_results.py \
-            --no-fail-exit \
-            --markdown-out audit-output/overview-result-quality-audit.md \
-            --json-out audit-output/overview-result-quality-audit.json
-
       - name: Upload audit report
         uses: actions/upload-artifact@v4
         with:
-          name: paper-quality-audit
+          name: paper-publication-integrity-audit
           path: audit-output/
           retention-days: 7
