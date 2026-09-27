@@ -285,8 +285,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   ExpertFlowは数層先の専門家利用を予測し、同じ経路のトークンをまとめ、層ごとのGPUキャッシュ容量も再配分してCPUからの重み転送待ちを隠す。
 
 - **2024-11 · [MoE-I²: Compressing Mixture of Experts Models through Inter-Expert Pruning and Intra-Expert Low-Rank Decomposition](2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  層ごとの非一様な専門家枝刈りと残存専門家内部の低ランク分解を二段階で適用し、Qwen1.5-MoE、DeepSeek-V2-Lite、Mixtralで性能を保ちながらMoEの配置容量と計算を減らす。
+  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：15  
+  MoEの冗長性を「専門家どうし」と「専門家内部」の二段階で削る。層ごとの感度に応じて削除数を変え、遺伝探索（Genetic Search）とブロック横断探索で削除専門家を選んだ後、残存専門家へ重要度に応じた低ランク分解を適用する。
 
 - **2024-10 · [Retraining-Free Merging of Sparse MoE via Hierarchical Clustering](2024-2410.08589-hc-smoe-retraining-free-merging.md)**  
   実装：[✓](https://github.com/wazenmai/HC-SMoE) ・ リポジトリ内被引用：13  
@@ -311,6 +311,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。
+
+- **2025-04 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  
+  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：4  
+  少数のドメイン内例だけで、その領域で繰り返し使われる専門家集合を同定し、ゲート値だけでなく専門家出力の大きさとトークン表現の変化量まで使って枝刈りするEASY-EP。DeepSeek-R1で256専門家のうち128個だけを残し、平均性能67.20→66.55を保ちながら、同一メモリ予算で2.99倍のスループットを報告する。
 
 - **2025-09 · [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](2025-2509.16105-diep-differentiable-expert-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -393,10 +397,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2024-07 · [Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts](2024-2407.09590-task-agnostic-expert-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   共有入力上の専門家知識類似度で冗長専門家をグループ化し、専門家とルータを同時統合することで、タスク非依存にMoEのメモリと推論時間を削減する。
-
-- **2024-01 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  少数のドメイン例から安定して使われるMoE専門家を特定し、出力寄与を考慮して不要専門家を削るEASY-EPを提案する。DeepSeek-R1/V3で専門家を半減し、同一メモリ予算下で全モデル比2.99倍のスループットを示す。
 
 ### 4年前（2022-10〜2023-09）
 

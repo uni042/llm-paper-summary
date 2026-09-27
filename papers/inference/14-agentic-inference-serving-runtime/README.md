@@ -149,9 +149,9 @@
 
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  長期エージェントでは会話と業務データが継続的に更新され、静的文書検索だけでは時間関係や過去状態を扱いにくい。深層記憶検索ではMemGPTの93.4%に対して94.8%、LongMemEvalでは基準方式に対し精度を最大18.5%改善しながら応答遅延を90%削減した。
+  長期エージェントの記憶を、単なる「過去文書の検索」ではなく「時間とともに変わる事実の履歴」として扱う。LongMemEvalsではgpt-4oの全履歴投入60.2%に対して71.2%へ精度を上げつつ、平均文脈長を115k→1.6kトークン、応答遅延を28.9→2.58秒へ削減した。
 
 - **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  多数のエージェント問い合わせを独立実行せず、共通するモデル呼出し・道具処理・中間結果をバッチ内で共有する実行計画へ変換し、エージェント基盤の重複計算を削減する。
+  実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：4  
+  Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
 <!-- survey:auto:end -->

@@ -153,12 +153,12 @@
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation](2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  重みを低ランク成分と構造化疎成分の和として表し、共有情報と低ランクだけでは失う多様な情報を分担して、単独の枝刈りや低ランク近似より高い圧縮品質を得る。
+  実装：[✓](https://github.com/yxli2123/LoSparse) ・ リポジトリ内被引用：3  
+  各重み行列を「全ニューロンに共有される低ランク成分」と「ニューロン固有の残差成分」に分け、残差側だけを構造枝刈りする。低ランク近似が表現力のある共通基底を守るため、高い枝刈り率でも通常の反復構造枝刈りより品質を落としにくい。
 
 ### 公開時期未分類
 
 - **2023 · [OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization](2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  外れ値と隣接する重要度の低い値を対にして固定幅へ符号化し、外れ値専用の疎経路をなくす。専用加速器評価でGOBO比4.5倍高速化、4.0倍のエネルギー削減を報告する。
+  実装：[✓](https://github.com/clevercool/ANT-Quantization) ・ リポジトリ内被引用：3  
+  外れ値を別の疎データ構造へ逃がすのではなく、隣接する低重要度の通常値を「犠牲値（victim）」として使い、外れ値を同じ固定幅ペアの中へ埋め込む。これにより外れ値対応量子化で問題になる座標リストと別演算経路をなくし、4ビットの整列アクセスをテンソルコアやシストリック配列へ直接載せる。
 <!-- survey:auto:end -->
