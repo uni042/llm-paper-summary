@@ -96,7 +96,7 @@
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  重みを多次元ベクトルとして量子化し、ヘッセ行列に基づく誤差補償とデータ依存コードブック学習を組み合わせ、低ビット時のサイズ・精度交換条件を改善する。
+  複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
 
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
