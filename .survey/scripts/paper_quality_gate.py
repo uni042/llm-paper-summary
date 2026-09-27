@@ -13,8 +13,20 @@ import audit_paper_quality as quality
 
 
 def _default_args() -> argparse.Namespace:
-    """Compatibility shim for old callers; no semantic thresholds are active."""
-    return argparse.Namespace()
+    """Compatibility namespace for callers.
+
+    Only the Japanese-ratio thresholds are active quality thresholds.  The
+    retired quantity/depth thresholds are neutral zeros.
+    """
+    return argparse.Namespace(
+        min_bytes=quality.DEFAULT_MIN_BYTES,
+        min_prose_chars=quality.DEFAULT_MIN_PROSE_CHARS,
+        min_paragraphs=quality.DEFAULT_MIN_PARAGRAPHS,
+        min_method_paragraphs=quality.DEFAULT_MIN_METHOD_PARAGRAPHS,
+        min_component_paragraphs=quality.DEFAULT_MIN_COMPONENT_PARAGRAPHS,
+        min_japanese_ratio=quality.DEFAULT_MIN_JAPANESE_RATIO,
+        warn_japanese_ratio=quality.DEFAULT_WARN_JAPANESE_RATIO,
+    )
 
 
 def inspect_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
