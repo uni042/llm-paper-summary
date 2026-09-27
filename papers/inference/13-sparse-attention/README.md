@@ -105,8 +105,8 @@
   検索拡張生成の取得文書を独立ブロックとして事前計算し、位置を再符号化してKV状態を要求間で再利用する。32K入力では最初のトークンまでの時間を3638msから45msへ削減し、FLOPsを99.8%削減する。
 
 - **2024-06 · [Mixture of Attention Spans: Optimizing LLM Inference Efficiency with Heterogeneous Sliding-Window Lengths](2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  層・ヘッドごとに異なる注意範囲と入力長への伸び方を探索して窓長を割り当て、同じ平均窓長で有効文脈を3.9倍にする。
+  実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：4  
+  headごとの局所性と入力長への伸び方を勾配で測り、異種sliding-window規則を自動探索して静的KV maskへ落とすMoA。
 
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
