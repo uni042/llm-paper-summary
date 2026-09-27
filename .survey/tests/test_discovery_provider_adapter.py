@@ -467,5 +467,39 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertIn("network", rows[1]["error"].lower())
 
 
+
+    def test_acl_anthology_doi_uses_official_record_when_semantic_scholar_misses(self) -> None:
+        calls = []
+
+        def opener(request, timeout=30):
+            calls.append(request.full_url)
+            if request.get_method() == "POST":
+                return _Response([None])
+            if request.full_url.startswith("https://api.semanticscholar.org/"):
+                raise HTTPError(request.full_url, 404, "Not Found", {}, None)
+            self.assertEqual(request.full_url, "https://aclanthology.org/2023.emnlp-main.298/")
+            return _HtmlResponse(
+                '<html><head>'
+                '<meta name="citation_title" content="GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints">'
+                '<meta name="citation_author" content="Joshua Ainslie">'
+                '<meta name="citation_author" content="James Lee-Thorp">'
+                '<meta name="citation_abstract" content="Multi-query attention speeds up decoder inference; grouped-query attention generalizes it.">'
+                '<meta name="citation_publication_date" content="2023/12">'
+                '<meta name="citation_doi" content="10.18653/v1/2023.emnlp-main.298">'
+                '</head></html>'
+            )
+
+        rows = self._lookup_ids(["DOI:10.18653/v1/2023.emnlp-main.298"], opener=opener)
+
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(rows[0]["status"], "found")
+        self.assertEqual(rows[0]["lookup_route"], "acl_anthology_record")
+        self.assertEqual(rows[0]["record"]["canonical_id"], "DOI:10.18653/v1/2023.emnlp-main.298")
+        self.assertEqual(rows[0]["record"]["doi"], "10.18653/v1/2023.emnlp-main.298")
+        self.assertEqual(rows[0]["record"]["source_url"], "https://aclanthology.org/2023.emnlp-main.298/")
+        self.assertEqual(rows[0]["record"]["title"], "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints")
+        self.assertEqual(rows[0]["record"]["authors"], ["Joshua Ainslie", "James Lee-Thorp"])
+        self.assertEqual(rows[0]["record"]["year"], 2023)
+
 if __name__ == "__main__":
     unittest.main()
