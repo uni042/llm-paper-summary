@@ -412,6 +412,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/VITA-Group/Random-MoE-as-Dropout) ・ リポジトリ内被引用：6  
   固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。
 
+- **2023-05 · [One Student Knows All Experts Know: From Sparse to Dense](2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  MoE 専門家群の重みをTop-KG/SVD-KGなどで単一dense FFNへ集約し、teacher MoEから蒸留してルーティングを除去する。NLPでMoE利得88.2%を保持し、TPU v3-8で3.7倍高速化する。
+
 ### 5年前（2021-10〜2022-09）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
@@ -429,8 +433,4 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2022-05 · [MoEfication: Transformer Feed-forward Layers are Mixtures of Experts](2021-2110.01786-moefication.md)**  
   実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：10  
   密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。
-
-- **2022-01 · [One Student Knows All Experts Know: From Sparse to Dense](2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  複数専門家の知識を集約して単一の密な学生モデルへ蒸留し、疎MoEの配備上の不規則性を除く。NLP課題でMoEの利得の88.2%を保持し、MoE比3.7倍の推論高速化を報告する。
 <!-- survey:auto:end -->
