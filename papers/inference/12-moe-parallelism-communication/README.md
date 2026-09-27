@@ -133,7 +133,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2025-09 · [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  専門家のグループ化・動的複製と局所性認識ルーティングで通信と負荷偏りを共同最適化し、分散MoE推論を最大3.79倍高速化する。
+  共活性に基づく階層専門家配置、動的複製、局所性・負荷認識ルーティング、階層疎通信を組み合わせ、分散MoE推論を最大4.66倍高速化するGRACE-MoE。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

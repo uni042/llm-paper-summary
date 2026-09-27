@@ -103,8 +103,8 @@
   Transformerの計算不変性を利用して隠れ次元を回転し、重要度の低い行・列を丸ごと削って小さな密行列へ変換する。LLaMA2-70B等で最大25%のパラメータを削り、追加の疎行列カーネルなしでGPU数と計算量を減らす。
 
 - **2024-06 · [LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference](2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  量子化方式、混合精度探索、融合CUDAカーネル、NCCL同期を統一実行系へまとめ、単一GPUから複数ノードまで低ビット推論を扱う。
+  実装：[✓](https://github.com/NoakLiu/LLMEasyQuant) ・ リポジトリ内被引用：4  
+  量子化アルゴリズムだけでなく、尺度推定、CUDA融合、実行時再校正、GPU間同期、書出しまでを同じ実行系にまとめる。現行arXiv v6ではLLaMA-7Bで2,156 トークン/sを報告する。
 
 - **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
