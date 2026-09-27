@@ -370,7 +370,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [2024-2405.04434-deepseek-v2-mla](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：114  
+  実装：✓ ・ リポジトリ内被引用：115  
   長文脈LLMでは注意のキー・値キャッシュが系列長に比例して増え、巨大モデルの同時処理数と生成速度を制約する。DeepSeek-V2はキーと値をそのまま全ヘッド分保存せず、入力隠れ状態を低次元潜在ベクトルへ圧縮して保存し、注意計算時に必要な表現へ復元するMLAを導入する。
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  

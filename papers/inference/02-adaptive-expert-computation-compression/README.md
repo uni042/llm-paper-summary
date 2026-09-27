@@ -68,6 +68,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：2  
   層間で異なる専門家冗長性を全体最適化し、エントロピー制約付き貪欲統合で枝刈り予算を非一様配分して同一圧縮率の精度保持を改善する。
 
+- **2026-03 · [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](2026-2603.11535-expert-threshold-routing.md)**  
+  実装：[✓](https://github.com/MasterGodzilla/Expert-Threshold-Routing) ・ リポジトリ内被引用：2  
+  専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
+
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
   実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：2  
   バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
@@ -104,13 +108,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：1  
   エキスパートの機能類似度から置換・スキップ時の誤差上界を求め、無線路状態・遅延・精度制約を同時に扱う最適化で、分散MoE推論の通信エネルギーをTop-K系手法より削減する。
 
-- **2026-03 · [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](2026-2603.11535-expert-threshold-routing.md)**  
-  実装：[✓](https://github.com/MasterGodzilla/Expert-Threshold-Routing) ・ リポジトリ内被引用：1  
-  専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
-
 - **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
+
+- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
 - **2026-01 · [Improving MoE Compute Efficiency by Composing Weight and Data Sparsity](2026-2601.15370-composing-weight-data-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -249,10 +253,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale](2026-2602.05711-omnimoe-atomic-experts.md)**  
   実装：[✓](https://github.com/HKUSTDial/omni-moe) ・ リポジトリ内被引用：0  
   ベクトル単位Atomic エキスパート、直積ルータ、専門家中心スケジューリングを統合し、PEER比10.9倍高速で7ベンチ平均50.9%を達成する細粒度MoE。
-
-- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
 - **2026-01 · [ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation](2026-2601.21420-conceptmoe-token-concept-compression.md)**  
   実装：[✓](https://github.com/ZihaoHuang-notabot/ConceptMoE) ・ リポジトリ内被引用：0  
