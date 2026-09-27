@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "library-candidate-intake",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2203.16487",
+      "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation",
+      "source_url": "https://arxiv.org/abs/2203.16487",
+      "priority": 50,
+      "reason": "専用Spec-Drafterと並列verificationによりTransformer生成で約5倍の高速化を報告する直接的な投機的復号研究。",
+      "identifiers": [
+        "DOI:10.18653/v1/2023.findings-emnlp.257"
+      ],
+      "arxiv_id": "2203.16487",
+      "doi": "10.18653/v1/2023.findings-emnlp.257",
+      "abstract": "We propose Speculative Decoding (SpecDec), for the first time ever, to formally study exploiting the idea of speculative execution to accelerate autoregressive (AR) decoding. Speculative Decoding has two innovations: Spec-Drafter -- an independent model specially optimized for efficient and accurate drafting -- and Spec-Verification -- a reliable method for verifying the drafted tokens efficiently in the decoding paradigm. Experimental results on various seq2seq tasks including machine translation and abstractive summarization show our approach can achieve around $5\\times$ speedup for the popular Transformer architectures with comparable generation quality to beam search decoding, refreshing the impression that the draft-then-verify paradigm introduces only $1.4\\times$$\\sim$$2\\times$ speedup. In addition to the remarkable speedup, we also demonstrate 3 additional advantages of SpecDec, revealing its practical value for accelerating generative models in real-world applications. Our models and codes are available at https://github.com/hemingkx/SpecDec.",
+      "year": 2022,
+      "published": "2022-03-30",
+      "authors": [
+        "Heming Xia",
+        "Tao Ge",
+        "Peiyi Wang",
+        "Si-Qing Chen",
+        "Furu Wei",
+        "Zhifang Sui"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2412.18169",
+      "title": "KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2412.18169",
+      "priority": 50,
+      "reason": "KV過負荷時にパラメータ配置を調整してHBMを捻出しpipeline協調実行、tail TTFTを最大72.2倍改善するLLM配信メモリ管理。",
+      "identifiers": [
+        "arXiv:2412.18169"
+      ],
+      "arxiv_id": "2412.18169",
+      "doi": "10.1145/3767295.3769348",
+      "abstract": "Serving LLMs with a cluster of GPUs is common nowadays, where the serving system must meet strict latency SLOs required by applications. However, the stateful nature of LLM serving requires maintaining huge states (i.e., KVCache) in limited GPU memory. Under spikes in real-world workloads, GPU memory can be easily overloaded, leading to orders of magnitude higher response latency due to queuing introduced by waiting for KVCache to be reclaimed. Prior KVCachecentric approaches handle overloading by dropping, migrating, or swapping KVCache. These methods fail to release sufficient memory quickly with requests still queued. This paper proposes the first parameter-centric approach to handling overloading by selectively dropping replicated parameters to instantly free memory for requests, based on an unnoticed observation that model parameters are commonly replicated across GPUs for serving LLMs. With additional memory, all requests can be served with a larger batch without queuing. To make the parameter-centric approach correct and efficient, we cooperatively execute requests on GPUs with a complete copy of parameters using pipeline parallelism, and derive an appropriate drop plan without unnecessary cooperation. We also design techniques to minimize the performance overhead due to pipeline parallelism with the execution patterns of requests under drop. Evaluations show that Kun-Serve reduces the tail TTFT of requests under overloading by up to 72.2 × compared to the state-of-the-art systems including Llumnix, vLLM and InferCept.",
+      "year": 2024,
+      "published": "2024-12-24",
+      "authors": [
+        "Rongxin Cheng",
+        "Yuxin Lai",
+        "Xingda Wei",
+        "Rong Chen",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2408.14690",
+      "title": "Training-Free Activation Sparsity in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.14690",
+      "priority": 50,
+      "reason": "TEALで学習なし40–50% activation sparsityを実現し、改良sparse kernelでdecode最大1.53–1.8倍高速化。",
+      "identifiers": [
+        "arXiv:2408.14690"
+      ],
+      "arxiv_id": "2408.14690",
+      "doi": "10.48550/arXiv.2408.14690",
+      "abstract": "Activation sparsity can enable practical inference speedups in large language models (LLMs) by reducing the compute and memory-movement required for matrix multiplications during the forward pass. However, existing methods face limitations that inhibit widespread adoption. Some approaches are tailored towards older models with ReLU-based sparsity, while others require extensive continued pre-training on up to hundreds of billions of tokens. This paper describes TEAL, a simple training-free method that applies magnitude-based activation sparsity to hidden states throughout the entire model. TEAL achieves 40-50% model-wide sparsity with minimal performance degradation across Llama-2, Llama-3, and Mistral families, with sizes varying from 7B to 70B. We improve existing sparse kernels and demonstrate wall-clock decoding speed-ups of up to 1.53$\\times$ and 1.8$\\times$ at 40% and 50% model-wide sparsity. TEAL is compatible with weight quantization, enabling further efficiency gains.",
+      "year": 2024,
+      "published": "2024-08-26",
+      "authors": [
+        "James Liu",
+        "Pragaash Ponnusamy",
+        "Tian-Le Cai",
+        "Han Guo",
+        "Yoon Kim",
+        "Ben Athiwaratkun"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.19715",
+      "title": "SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths",
+      "source_url": "https://arxiv.org/abs/2405.19715",
+      "priority": 50,
+      "reason": "受理確率予測でdraft長を動的制御し、Llama-2 7B/70Bで最大2.26倍の実測生成高速化。",
+      "identifiers": [
+        "arXiv:2405.19715"
+      ],
+      "arxiv_id": "2405.19715",
+      "doi": "10.48550/arXiv.2405.19715",
+      "abstract": "Speculative decoding reduces the inference latency of a target large language model via utilizing a smaller and faster draft model. Its performance depends on a hyperparameter K -- the candidate length, i.e., the number of candidate tokens for the target model to verify in each round. However, previous methods often use simple heuristics to choose K, which may result in sub-optimal performance. We study the choice of the candidate length K and formulate it as a Markov Decision Process. We theoretically show that the optimal policy of this Markov decision process takes the form of a threshold policy, i.e., the current speculation should stop and be verified when the probability of getting a rejection exceeds a threshold value. Motivated by this theory, we propose SpecDec++, an enhanced version of speculative decoding that adaptively determines the candidate length on the fly. We augment the draft model with a trained acceptance prediction head to predict the conditional acceptance probability of the candidate tokens. SpecDec++ will stop the current speculation when the predicted probability that at least one token gets rejected exceeds a threshold. We implement SpecDec++ and apply it to the llama-2-chat 7B&70B model pair. Our adaptive method achieves a 2.04x speedup on the Alpaca dataset (7.2% improvement over the baseline speculative decoding). On the GSM8K and HumanEval datasets, our method achieves a 2.26x speedup (9.4% improvement) and 2.23x speedup (11.1% improvement), respectively. The code of this paper is available at https://github.com/Kaffaljidhmah2/SpecDec_pp.",
+      "year": 2024,
+      "published": "2024-05-29",
+      "authors": [
+        "Kai-Xuan Huang",
+        "Xu Guo",
+        "Mengdi Wang"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2510.02358",
+      "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2510.02358",
+      "priority": 50,
+      "reason": "拡散LMを並列drafterとして使いcausal path探索と適応draft長を組み合わせ、最大約3倍のwall-clock高速化。",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2510.02358"
+      ],
+      "arxiv_id": "2510.02358",
+      "doi": "10.48550/arXiv.2510.02358",
+      "abstract": "As large language models (LLMs) scale up, accuracy improves, but the autoregressive (AR) nature of decoding increases latency since each token requires a serial forward pass. Speculative decoding addresses this by employing a fast drafter to propose multi-token drafts, which are then verified in parallel by the target model. However, many deployments still rely on AR drafters, where sequential passes limit wall-clock gains. We revisit the drafting stage and present DiffuSpec, a training-free drop-in framework that uses a pretrained diffusion language model (DLM) to produce multi-token drafts in a single forward pass, while remaining compatible with standard AR verifiers. Because DLM drafts are generated under bidirectional conditioning, parallel per-position candidates form a token lattice in which the locally highest-probability token at each position need not form a causal left-to-right path. Moreover, DLM drafting requires pre-specifying a draft length, inducing a speed-quality trade-off. To address these challenges, we introduce two practical components: (i) a causal-consistency path search (CPS) over this lattice that extracts a left-to-right path aligned with AR verification; and (ii) an adaptive draft-length (ADL) controller that adjusts next proposal size based on recent acceptance feedback and realized generated length. Across benchmarks, DiffuSpec yields up to 3x wall-clock speedup, establishing diffusion-based drafting as a robust alternative to autoregressive drafters for speculative decoding.",
+      "year": 2025,
+      "published": "2025-09-28",
+      "authors": [
+        "Guanghao Li",
+        "Zhihui Fu",
+        "Min Fang",
+        "Qibin Zhao",
+        "Ming Tang",
+        "Chun Yuan",
+        "Jun Wang"
+      ]
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "lib-candidate-20260927-001",
+    "result_path": ".survey/work-queue/discovery-precheck/results/lib-candidate-20260927-001.json",
+    "receipt": "sha256:c1931b053510eed205634bed7ce59b5d2db224b9d3ebead72187e5506e37a31f"
+  },
+  "discovery_stats": {
+    "run_key": "lib-candidate-20260927-001",
+    "round": "lib-candidate-20260927-001",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 99,
+    "duplicate_filtered_count": 80,
+    "accepted_canonical_ids": [
+      "arXiv:2203.16487",
+      "arXiv:2412.18169",
+      "arXiv:2408.14690",
+      "arXiv:2405.19715",
+      "arXiv:2510.02358"
+    ],
+    "round_submission_index": 2,
+    "round_submission_count": 4
+  },
+  "user_directed_request": {
+    "request_id": "current-user-instruction-2026-09-27",
+    "summary": "Upload the remaining candidates in accept-candidates.json through the normal Research/Discovery queue; remove only verified duplicates or entries whose primary source cannot be confirmed."
+  }
+}
