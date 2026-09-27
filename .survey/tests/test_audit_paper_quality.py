@@ -15,131 +15,85 @@ sys.modules[SPEC.name] = AUDIT
 SPEC.loader.exec_module(AUDIT)
 
 
-class PaperTargetDetectionTests(unittest.TestCase):
+class PaperIntegrityAuditTests(unittest.TestCase):
     def _write(self, root: Path, name: str, text: str) -> Path:
         path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8")
         return path
 
-    def test_readme_is_excluded(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(Path(tmp), "README.md", "# Index\n")
-            self.assertFalse(AUDIT.is_paper_summary(path))
+    def _valid(self) -> str:
+        return """---
+canonical_id: arXiv:2601.00001
+title: Example
+source: https://arxiv.org/abs/2601.00001
+summary: 日本語で研究内容を説明する要約である。
+list_summary: 本研究は限られたメモリ環境で転送待ちを減らすために配置を調整する方式を提案する。
+---
 
-    def test_comparison_page_is_excluded(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(Path(tmp), "comparison.md", "# 推論研究の横断比較\n")
-            self.assertFalse(AUDIT.is_paper_summary(path))
-
-    def test_plain_moved_stub_is_excluded(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(Path(tmp), "old.md", "# Moved\n\nSee new path.\n")
-            self.assertFalse(AUDIT.is_paper_summary(path))
-
-    def test_moved_stub_with_frontmatter_is_excluded(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(
-                Path(tmp),
-                "old.md",
-                "---\ncanonical_id: arXiv:1234.56789\n---\n\n# Moved\n\nSee new path.\n",
-            )
-            self.assertFalse(AUDIT.is_paper_summary(path))
-
-    def test_real_paper_without_canonical_id_is_still_audited(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(
-                Path(tmp),
-                "paper.md",
-                "---\ntitle: Example\n---\n\n# Example\n\n## 概要\n\n本文。\n",
-            )
-            self.assertTrue(AUDIT.is_paper_summary(path))
-
-    def test_real_paper_without_frontmatter_is_still_audited(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            path = self._write(
-                Path(tmp),
-                "paper.md",
-                "# Example\n\n## 概要\n\n本文。\n",
-            )
-            self.assertTrue(AUDIT.is_paper_summary(path))
-
-
-class MethodHeadingCompatibilityTests(unittest.TestCase):
-    def test_legacy_method_overview_heading_counts_as_method(self) -> None:
-        lines = """# Example
-
-## 手法のあらまし
-
-### 1. 第一機構
-
-第一機構では入力を観測して処理対象を決める。ここでは十分な長さの説明文を置く。
-
-決定した対象を計算機へ配置し、不要な転送を減らす。これも独立した説明段落である。
-
-### 2. 第二機構
-
-第二機構では前段の結果を受け取り、次に必要な状態を選ぶ。ここも十分な長さにする。
-
-選択結果が外れた場合は通常経路へ戻し、正しさを保つ。この段落も手法説明として数える。
-""".splitlines()
-        _, method_blocks, method_components = AUDIT.prose_blocks(lines)
-        self.assertEqual(len(method_blocks), 4)
-        self.assertEqual(sorted(len(v) for v in method_components.values()), [2, 2])
-
-    def test_method_heading_variants(self) -> None:
-        self.assertTrue(AUDIT.is_method_heading("提案手法"))
-        self.assertTrue(AUDIT.is_method_heading("手法のあらまし"))
-        self.assertTrue(AUDIT.is_method_heading("手法：全体像"))
-        self.assertTrue(AUDIT.is_method_heading("手法1: シナリオごとのグループ"))
-        self.assertFalse(AUDIT.is_method_heading("評価手法"))
-
-    def test_structured_method_equivalent_accepts_detailed_multi_section_summary(self) -> None:
-        paragraph = (
-            "入力状態を観測して処理対象を決め、その判断結果に応じて配置を変更する。"
-            "判断には現在の負荷、利用可能なメモリ量、転送に必要な時間を使い、次に実行する処理を選択する。"
-            "失敗時は通常経路へ戻し、正しさを保ったまま余分な転送だけが増えるようにする。"
-        )
-        parts = ["# Example", "", "## 背景", "", paragraph]
-        for title in ["大粒度チャンクへまとめる", "層単位で先読みする", "動的に配置を変更する"]:
-            parts += ["", f"## {title}", ""]
-            for _ in range(15):
-                parts += [paragraph, ""]
-        lines = parts
-        blocks, _, _ = AUDIT.prose_blocks(lines)
-        prose_chars = sum(len(x) for x in blocks)
-        self.assertGreaterEqual(prose_chars, AUDIT.STRUCTURED_METHOD_MIN_PROSE_CHARS)
-        self.assertGreaterEqual(len(blocks), AUDIT.STRUCTURED_METHOD_MIN_PARAGRAPHS)
-        self.assertTrue(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
-
-    def test_short_summary_without_method_is_not_structured_equivalent(self) -> None:
-        lines = """# Example
-
-## 背景
-
-短い説明文だけがあり、手法を十分には説明していない。
-
-## 評価
-
-結果だけを書く。
-""".splitlines()
-        blocks, _, _ = AUDIT.prose_blocks(lines)
-        prose_chars = sum(len(x) for x in blocks)
-        self.assertFalse(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
-
-
-class LanguageRatioScopeTests(unittest.TestCase):
-    def test_bibliographic_section_is_excluded_from_language_ratio(self) -> None:
-        lines = """# Example
-
-## 書誌情報
-- **著者・所属**: Institute of Computing Technology, Example University
+# Example
 
 ## 概要
-本文は日本語で手法の目的と処理内容を説明する。
-""".splitlines()
-        prose = AUDIT.prose_text_for_ratio(lines)
-        self.assertNotIn("Institute of Computing Technology", prose)
-        self.assertIn("本文は日本語", prose)
+
+本研究は限られたメモリ環境で発生する転送待ちを減らす方式を扱う。
+提案手法は実行状態に応じて配置を調整し、不要な転送を減らす。
+"""
+
+    def test_readme_is_excluded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = self._write(Path(td), "README.md", "# Index\n")
+            self.assertFalse(AUDIT.is_paper_summary(path))
+
+    def test_moved_stub_is_excluded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = self._write(Path(td), "old.md", "# Moved\n\nSee new path.\n")
+            self.assertFalse(AUDIT.is_paper_summary(path))
+
+    def test_valid_publication_integrity_passes(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            path = self._write(root, "paper.md", self._valid())
+            result = AUDIT.audit_file(path, root)
+            self.assertNotEqual(result.status, "FAIL")
+
+    def test_missing_required_frontmatter_key_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            path = self._write(root, "paper.md", self._valid().replace("summary: 日本語で研究内容を説明する要約である。\n", ""))
+            result = AUDIT.audit_file(path, root)
+            self.assertEqual(result.status, "FAIL")
+            self.assertTrue(any("frontmatter.summary" in x for x in result.failures))
+
+    def test_unbalanced_fence_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            path = self._write(root, "paper.md", self._valid() + "\n\x60\x60\x60python\nprint('x')\n")
+            result = AUDIT.audit_file(path, root)
+            self.assertEqual(result.status, "FAIL")
+            self.assertTrue(any("コードフェンス" in x for x in result.failures))
+
+    def test_old_quantity_thresholds_are_retired(self) -> None:
+        self.assertEqual(AUDIT.DEFAULT_MIN_BYTES, 0)
+        self.assertEqual(AUDIT.DEFAULT_MIN_PROSE_CHARS, 0)
+        self.assertEqual(AUDIT.DEFAULT_MIN_PARAGRAPHS, 0)
+        self.assertEqual(AUDIT.DEFAULT_MIN_METHOD_PARAGRAPHS, 0)
+        self.assertEqual(AUDIT.DEFAULT_MIN_COMPONENT_PARAGRAPHS, 0)
+
+    def test_japanese_ratio_threshold_is_retained(self) -> None:
+        self.assertEqual(AUDIT.DEFAULT_MIN_JAPANESE_RATIO, 0.70)
+        self.assertEqual(AUDIT.DEFAULT_WARN_JAPANESE_RATIO, 0.80)
+
+    def test_english_heavy_prose_fails_japanese_ratio(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            text = self._valid().replace(
+                "本研究は限られたメモリ環境で発生する転送待ちを減らす方式を扱う。\n提案手法は実行状態に応じて配置を調整し、不要な転送を減らす。",
+                "This method schedules requests dynamically and moves cache between memory tiers while reducing latency and throughput overhead."
+            )
+            path = self._write(root, "paper.md", text)
+            result = AUDIT.audit_file(path, root)
+            self.assertEqual(result.status, "FAIL")
+            self.assertTrue(any("日本語比率" in x for x in result.failures))
 
 
 if __name__ == "__main__":
