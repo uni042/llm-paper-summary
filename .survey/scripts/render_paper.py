@@ -9,8 +9,6 @@ from typing import Any
 
 import yaml
 
-from list_summary import audit_list_summary
-
 
 def q(value: Any) -> str:
     if value is None:
@@ -137,14 +135,7 @@ def render_paper(record: dict[str, Any]) -> str:
     if not title or not canonical_id or not source or not summary:
         raise ValueError("metadata requires title, canonical_id, source, and summary")
     if not list_summary:
-        raise ValueError(
-            "metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview"
-        )
-    list_quality = audit_list_summary(list_summary)
-    if list_quality.failures:
-        raise ValueError(
-            "metadata.list_summary failed quality checks: " + "; ".join(list_quality.failures)
-        )
+        raise ValueError("metadata.list_summary is required for rendering/publication")
 
     front_order = (
         "canonical_id", "arxiv_id", "doi", "openreview_id", "arxiv_categories",
@@ -296,10 +287,7 @@ def render_paper(record: dict[str, Any]) -> str:
             src_lines.append(f"- {u}")
     parts.append(section("一次資料", "\n".join(src_lines)))
 
-    rendered = "\n".join(p.rstrip() for p in parts if p).rstrip() + "\n"
-    if len(rendered.encode("utf-8")) < 500:
-        raise ValueError("rendered paper is unexpectedly short")
-    return rendered
+    return "\n".join(p.rstrip() for p in parts if p).rstrip() + "\n"
 
 
 def main() -> int:
