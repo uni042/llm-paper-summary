@@ -286,5 +286,147 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
             )
 
 
+    def _lookup_ids(self, identifiers, *, opener, sleeper=lambda seconds: None):
+        lookup = getattr(discovery_provider_adapter, "lookup_identifiers", None)
+        if not callable(lookup):
+            return [{"requested_id": value, "status": "missing_adapter", "record": None} for value in identifiers]
+        return lookup(identifiers, opener=opener, sleeper=sleeper)
+
+    def test_lookup_identifiers_batches_arxiv_and_doi_and_matches_exact_ids(self) -> None:
+        calls = []
+
+        def opener(request, timeout=30):
+            calls.append(request)
+            self.assertEqual(request.get_method(), "POST")
+            parsed = urlparse(request.full_url)
+            self.assertEqual(parsed.netloc, "api.semanticscholar.org")
+            self.assertEqual(parsed.path, "/graph/v1/paper/batch")
+            qs = parse_qs(parsed.query)
+            self.assertIn("title", qs["fields"][0])
+            self.assertIn("externalIds", qs["fields"][0])
+            body = json.loads(request.data.decode("utf-8"))
+            self.assertEqual(body["ids"], ["ARXIV:2609.10001", "DOI:10.1000/batch"])
+            return _Response([
+                {
+                    "paperId": "a" * 40,
+                    "title": "arXiv item",
+                    "externalIds": {"ArXiv": "2609.10001", "DOI": "10.1000/batch"},
+                    "url": "https://www.semanticscholar.org/paper/" + "a" * 40,
+                },
+                {
+                    "paperId": "b" * 40,
+                    "title": "DOI item",
+                    "externalIds": {"DOI": "10.1000/batch"},
+                    "url": "https://www.semanticscholar.org/paper/" + "b" * 40,
+                },
+            ])
+
+        rows = self._lookup_ids(["arXiv:2609.10001", "DOI:10.1000/BATCH"], opener=opener)
+
+        self.assertEqual(len(calls), 1)
+        self.assertEqual([row["status"] for row in rows], ["found", "found"])
+        self.assertEqual(rows[0]["requested_id"], "arXiv:2609.10001")
+        self.assertEqual(rows[0]["record"]["canonical_id"], "arXiv:2609.10001")
+        self.assertEqual(rows[0]["record"]["doi"], "10.1000/batch")
+        self.assertEqual(rows[1]["record"]["canonical_id"], "DOI:10.1000/batch")
+        self.assertEqual(rows[0]["lookup_route"], "semantic_scholar_batch")
+
+    def test_lookup_identifiers_falls_back_to_single_id_after_batch_rejection(self) -> None:
+        methods = []
+
+        def opener(request, timeout=30):
+            method = request.get_method()
+            methods.append(method)
+            if method == "POST":
+                raise HTTPError(request.full_url, 405, "Method Not Allowed", {}, None)
+            return _Response({
+                "paperId": "c" * 40,
+                "title": "Recovered by direct ID",
+                "externalIds": {"ArXiv": "2609.10002"},
+                "url": "https://www.semanticscholar.org/paper/" + "c" * 40,
+            })
+
+        rows = self._lookup_ids(["arXiv:2609.10002"], opener=opener)
+
+        self.assertEqual(methods, ["POST", "GET"])
+        self.assertEqual(rows[0]["status"], "found")
+        self.assertEqual(rows[0]["lookup_route"], "semantic_scholar_single")
+        self.assertEqual(rows[0]["record"]["canonical_id"], "arXiv:2609.10002")
+
+    def test_lookup_identifiers_reads_openreview_note_by_exact_id(self) -> None:
+        note_id = "Ab12Cd34Ef"
+        calls = []
+
+        def opener(request, timeout=30):
+            calls.append(request.full_url)
+            parsed = urlparse(request.full_url)
+            self.assertEqual(parsed.netloc, "api2.openreview.net")
+            self.assertEqual(parsed.path, "/notes")
+            self.assertEqual(parse_qs(parsed.query), {"id": [note_id]})
+            return _Response({
+                "notes": [{
+                    "id": note_id,
+                    "tcdate": 1780000000000,
+                    "content": {
+                        "title": {"value": "OpenReview exact match"},
+                        "abstract": {"value": "Full abstract."},
+                        "authors": {"value": ["A. Author", "B. Author"]},
+                    },
+                }]
+            })
+
+        rows = self._lookup_ids(["OpenReview:" + note_id], opener=opener)
+
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(rows[0]["status"], "found")
+        self.assertEqual(rows[0]["lookup_route"], "openreview_notes")
+        self.assertEqual(rows[0]["record"]["canonical_id"], "OpenReview:" + note_id)
+        self.assertEqual(rows[0]["record"]["source_url"], "https://openreview.net/forum?id=" + note_id)
+        self.assertEqual(rows[0]["record"]["title"], "OpenReview exact match")
+        self.assertEqual(rows[0]["record"]["authors"], ["A. Author", "B. Author"])
+
+    def test_lookup_identifiers_rejects_returned_id_mismatch(self) -> None:
+        def opener(request, timeout=30):
+            if request.get_method() == "POST":
+                return _Response([{
+                    "paperId": "d" * 40,
+                    "title": "Wrong arXiv record",
+                    "externalIds": {"ArXiv": "2609.99999"},
+                }])
+            return _Response({
+                "paperId": "d" * 40,
+                "title": "Wrong arXiv record",
+                "externalIds": {"ArXiv": "2609.99999"},
+            })
+
+        rows = self._lookup_ids(["arXiv:2609.10003"], opener=opener)
+
+        self.assertEqual(rows[0]["status"], "unresolved")
+        self.assertIsNone(rows[0]["record"])
+        self.assertIn("mismatch", rows[0]["error"].lower())
+
+    def test_lookup_identifiers_isolates_one_direct_lookup_error(self) -> None:
+        def opener(request, timeout=30):
+            if request.get_method() == "POST":
+                return _Response([None, None])
+            if "2609.10004" in request.full_url:
+                return _Response({
+                    "paperId": "e" * 40,
+                    "title": "Recovered first ID",
+                    "externalIds": {"ArXiv": "2609.10004"},
+                })
+            raise OSError("temporary network outage")
+
+        rows = self._lookup_ids(
+            ["arXiv:2609.10004", "arXiv:2609.10005"],
+            opener=opener,
+        )
+
+        self.assertEqual([row["status"] for row in rows], ["found", "error"])
+        self.assertEqual(rows[0]["record"]["canonical_id"], "arXiv:2609.10004")
+        self.assertIsNone(rows[1]["record"])
+        self.assertIn("network", rows[1]["error"].lower())
+
+
 if __name__ == "__main__":
     unittest.main()
