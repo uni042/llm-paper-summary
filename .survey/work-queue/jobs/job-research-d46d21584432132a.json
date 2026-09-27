@@ -1,0 +1,26 @@
+{
+  "job_id": "job-research-d46d21584432132a",
+  "type": "research",
+  "parent_job_id": "job-e11a0a6dd33a7992",
+  "priority": 50,
+  "canonical_id": "arXiv:2407.21018",
+  "arxiv_id": "2407.21018",
+  "doi": "10.48550/arXiv.2407.21018",
+  "openreview_id": null,
+  "identifiers": [
+    "arXiv:2407.21018"
+  ],
+  "title": "ThinK: Thinner Key Cache by Query-Driven Pruning",
+  "source_url": "https://arxiv.org/abs/2407.21018",
+  "paper_path": "papers/inference/99-other-inference-systems/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+  "lineage": null,
+  "selection_reason": "query依存のチャネル剪定でKVキャッシュを圧縮し、KIVI併用でピークメモリ2.8倍削減・単一GPUバッチ最大5倍を報告する直接的な推論メモリ最適化。",
+  "priority_breakdown": null,
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-27T14:45:32+00:00"
+}
