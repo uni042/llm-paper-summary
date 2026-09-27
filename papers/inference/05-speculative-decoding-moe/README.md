@@ -303,8 +303,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号でドラフト生成とターゲット検証を枝分かれ並列化し、ロールバックを見越した適応ドラフト長で待ち時間を減らす。自己回帰生成比1.8〜4.5倍の高速化と、不整合なモデル対でロールバックトークン50%削減を報告。
 
 - **2024-08 · [Learning Harmonized Representations for Speculative Sampling](2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  学習時と復号時の文脈・目的関数のずれを整合させるHASSでドラフト表現を改善し、追加推論費用なしに2.81〜4.05倍高速化する。
+  実装：[✓](https://github.com/HArmonizedSS/HASS) ・ リポジトリ内被引用：4  
+  EAGLE系ドラフトの学習時／復号時の文脈差と蒸留目的のずれをTop-K蒸留＋multi-step context alignmentで揃えるHASS。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
