@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20260927-u-arxiv-2105-13120",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2105.13120",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2105.13120",
+    "identity_tokens": [
+      "arXiv:2105.13120"
+    ],
+    "reason": "sequence dimensionをGPU間分割して長系列trainingを可能にする4D並列学習システムで、最終用途が学習。",
+    "first_checked_at": "2026-09-27T05:26:49+00:00",
+    "last_checked_at": "2026-09-27T05:26:49+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Sequence Parallelism: Long Sequence Training from System Perspective"
+  },
+  "processed_at": "2026-09-27T05:26:49+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

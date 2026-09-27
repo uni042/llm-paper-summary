@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T05:10:57+00:00",
-  "record_count": 271,
+  "updated_at": "2026-09-27T05:26:49+00:00",
+  "record_count": 278,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4111,6 +4111,104 @@
       ],
       "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
       "source_url": "https://arxiv.org/abs/2609.19441"
+    },
+    "arXiv:1606.08415": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.08415",
+      "identity_tokens": [
+        "arXiv:1606.08415"
+      ],
+      "reason": "活性化関数GELUの提案と精度評価が主題で、LLM推論・配信システムの効率化研究ではない。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Gaussian Error Linear Units (GELUs)"
+    },
+    "arXiv:1707.06347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.06347",
+      "identity_tokens": [
+        "arXiv:1707.06347"
+      ],
+      "reason": "強化学習最適化アルゴリズムPPOの提案で、LLM推論システム効率化とは無関係。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Proximal Policy Optimization Algorithms"
+    },
+    "arXiv:2105.13120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.13120",
+      "identity_tokens": [
+        "arXiv:2105.13120"
+      ],
+      "reason": "sequence dimensionをGPU間分割して長系列trainingを可能にする4D並列学習システムで、最終用途が学習。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Sequence Parallelism: Long Sequence Training from System Perspective"
+    },
+    "arXiv:2201.08239": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.08239",
+      "identity_tokens": [
+        "arXiv:2201.08239"
+      ],
+      "reason": "137B対話モデルの学習・安全性・事実性・能力が主題で、推論システム効率化の一次研究ではない。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LaMDA: Language Models for Dialog Applications"
+    },
+    "arXiv:2212.05055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.05055",
+      "identity_tokens": [
+        "arXiv:2212.05055"
+      ],
+      "reason": "dense checkpointをMoEへupcycleして学習コストを再利用する手法で、中心はMoE training efficiency。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints"
+    },
+    "arXiv:2405.11143": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.11143",
+      "identity_tokens": [
+        "arXiv:2405.11143"
+      ],
+      "reason": "Ray/vLLM/DeepSpeedを用いたRLHF/RLVR学習基盤で、主評価はtraining throughput。現行方針では学習高速化を除外。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework"
+    },
+    "DOI:10.18653/v1/p16-1144": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p16-1144",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p16-1144"
+      ],
+      "reason": "広い文脈理解能力を測る言語モデル評価データセットで、システム性能・推論効率の評価基盤ではない。",
+      "first_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "The LAMBADA dataset: Word prediction requiring a broad discourse context"
     }
   }
 }
