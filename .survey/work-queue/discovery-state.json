@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-27T14:49:13+00:00",
+  "updated_at": "2026-09-27T14:50:19+00:00",
   "last_run_key": "lib-candidate-20260927-001",
   "last_round": "lib-candidate-20260927-001",
   "paper_stock_zero_count": 3,
@@ -10319,7 +10319,7 @@
       "candidate_count": 99,
       "duplicate_filtered_count": 80,
       "final_duplicate_filtered_count": 0,
-      "accepted_count": 15,
+      "accepted_count": 19,
       "accepted_canonical_ids": [
         "arXiv:2407.21018",
         "arXiv:2405.14256",
@@ -10335,7 +10335,11 @@
         "DOI:10.1145/3695053.3730999",
         "arXiv:2403.09919",
         "arXiv:2402.04291",
-        "arXiv:2506.05508"
+        "arXiv:2506.05508",
+        "arXiv:2012.09852",
+        "arXiv:2406.02542",
+        "arXiv:2310.07188",
+        "arXiv:2504.19874"
       ],
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
@@ -10343,20 +10347,22 @@
       "source_submissions": [
         "work-queue/submissions/lib-candidate-20260927-001-part-1.json",
         "work-queue/submissions/lib-candidate-20260927-001-part-2.json",
-        "work-queue/submissions/lib-candidate-20260927-001-part-3.json"
+        "work-queue/submissions/lib-candidate-20260927-001-part-3.json",
+        "work-queue/submissions/lib-candidate-20260927-001-part-4.json"
       ],
       "round_submission_indices": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "round_submission_count": 4,
-      "round_accounted": false,
+      "round_accounted": true,
       "novel_candidate_count": 19,
       "post_final_dedupe_count": 19,
       "duplicate_ratio": 0.8080808080808081,
       "final_duplicate_ratio": 0.0,
-      "round_complete": false
+      "round_complete": true
     }
   ],
   "axes": {
@@ -18726,6 +18732,19 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
+    },
+    "library-candidate-intake": {
+      "last_run_key": "lib-candidate-20260927-001",
+      "rounds": 1,
+      "candidate_count": 99,
+      "duplicate_filtered_count": 80,
+      "novel_candidate_count": 19,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 19,
+      "accepted_count": 19,
+      "duplicate_ratio": 0.8080808080808081,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
