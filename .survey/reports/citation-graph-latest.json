@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T15:33:23+00:00",
+  "generated_at": "2026-09-27T15:50:30+00:00",
   "paper_count": 1151,
-  "edge_count": 10177,
+  "edge_count": 10191,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 257,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 62,
@@ -311,7 +311,7 @@
     "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md": 0,
     "papers/inference/06-moe-quantization-compression/2026-2609.04453-expert-pruning-over-dispersed-moe.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md": 62,
-    "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md": 20,
+    "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md": 22,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md": 118,
     "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md": 155,
     "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md": 44,
@@ -892,11 +892,11 @@
     "papers/inference/15-inference-simulation-emulation/2026-2605.00616-llm-emu-native-runtime-emulation.md": 1,
     "papers/inference/15-inference-simulation-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md": 3,
     "papers/inference/15-inference-simulation-emulation/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md": 1,
-    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md": 28,
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md": 30,
     "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md": 112,
     "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md": 41,
     "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md": 25,
-    "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md": 18,
+    "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md": 19,
     "papers/inference/16-weight-quantization-compression/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md": 3,
     "papers/inference/16-weight-quantization-compression/2026-2606.11244-spear-error-adaptive-low-bit-serving.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2608.15567-schurquant.md": 0,
@@ -928,9 +928,9 @@
     "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md": 36,
     "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md": 0,
     "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md": 146,
-    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": 16,
+    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": 20,
     "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md": 51,
-    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": 20,
+    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": 25,
     "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md": 59,
     "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md": 109,
     "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md": 22,
@@ -5513,7 +5513,8 @@
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
       "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
       "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
-      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
@@ -6568,6 +6569,7 @@
     "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
       "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
@@ -6585,6 +6587,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15555-service-induced-congestion-memory-constrained-serving.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
     ],
     "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md": [
@@ -10966,6 +10969,7 @@
     ],
     "papers/inference/14-agentic-inference-serving-runtime/2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md": [
       "papers/inference/01-offload-hierarchical-memory/2025-2504.11765-shared-disk-kv-cache-rag.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
@@ -11577,6 +11581,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
       "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
     ],
     "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md": [
@@ -11697,7 +11702,9 @@
       "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
       "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
       "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
-      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2025-2504.06419-spire-throughput-speculative-decoding.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
@@ -12371,7 +12378,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
-      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -12480,12 +12488,17 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
-      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
-      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md": [
       "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
@@ -12554,7 +12567,8 @@
     "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
-      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
