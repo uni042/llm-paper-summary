@@ -73,8 +73,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   並列投機ドラフタで、受理接頭辞長への位置別寄与から交差エントロピー重みを毎例動的に計算し、固定位置減衰より受理長と実測高速化を改善する。
 
 - **2026-04 · [Accelerating Speculative Decoding with Block Diffusion Draft Trees](2026-2604.12989-accelerating-speculative-decoding-with-block-diffusion-draft-trees.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  ブロック拡散ドラフトの各位置分布から固定候補予算内で高確率な継続を優先する拡散ドラフト木を構築し、単一軌跡だけを検証するDFlashの受理長を伸ばす。
+  実装：[✓](https://github.com/liranringel/ddtree) ・ リポジトリ内被引用：3  
+  DFlashが1回で得た位置別確率分布から高確率な複数接頭辞をDDTreeとして組み、1回の対象モデル検証で複数経路を試して単一路径投機より受理長と速度を高める。
 
 - **2026-07 · [AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding](2026-2607.25852-angelspec.md)**  
   実装：[✓](https://github.com/Tencent/AngelSpec) ・ リポジトリ内被引用：2  
@@ -238,7 +238,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-10 · [DySpec: Faster Speculative Decoding with Dynamic Token Tree Structure](2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  ドラフト確率と対象モデル受理率の相関を利用し、実行時に高確率枝から投機木を動的拡張して、Llama2-70Bの低温度設定で処理量最大9.1倍・遅延最大9.4倍改善する。
+  ドラフト確率を対象モデルの受理確率の代理にして投機木を実行時に動的構築し、限られた検証予算を高確率枝へ集中して固定木より長い受理系列と低遅延を狙う。
 
 - **2025-09 · [Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding](2025-2509.04576-communication-efficient-distributed-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
