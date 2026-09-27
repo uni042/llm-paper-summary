@@ -52,6 +52,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：4  
   高同時実行時の投機的デコードを固定検証予算の配分問題として扱い、信頼度の高い深さだけで候補木を伸縮し、バッチ内要求間で予算を再配分するSGLang統合方式。
 
+- **2026-04 · [Self-Speculative Decoding for On-device MoE Acceleration](2025-self-speculative-decoding-for-on-device-moe-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  少数の経路選択専門家だけで同じMoE自身をドラフト化し、GPUを専門家キャッシュとして生成・検証間で再利用することで、CPU退避を伴う端末MoE復号を最大3.72倍高速化する。
+
 - **2026-02 · [MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios](2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md)**  
   実装：[✓](https://github.com/lshAlgorithm/MoE-SpAc) ・ リポジトリ内被引用：4  
   MoE-SpAcは、投機的復号で先に見える専門家需要を集計し、VRAMに残す専門家・先読みする重み・CPUで計算する専門家を制約付きで同時に配置して、端末の転送待ちを減らす。
@@ -343,10 +347,4 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2023-02 · [Speculative Decoding with Big Little Decoder](2023-2302.07863-speculative-decoding-with-big-little-decoder.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   小型モデルを通常実行し信頼度低下時だけ大型モデルでまとめて検証・修正し、NVIDIA T4上で最大2.12倍高速化する。
-
-### 公開時期未分類
-
-- **2049-04 · [Self-Speculative Decoding for On-device MoE Acceleration](2025-self-speculative-decoding-for-on-device-moe-acceleration.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  GPUメモリを専門家キャッシュとして扱い、一部専門家だけでドラフト生成して自己検証することで、CPU退避を伴う端末MoE推論を高速化する。
 <!-- survey:auto:end -->

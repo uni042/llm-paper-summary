@@ -960,7 +960,7 @@
 
 - **2024-11 · [Ensuring Fair LLM Serving Amid Diverse Applications](2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  複数利用者・複数アプリが同じLLM配信基盤を共有すると、要求数だけを基準にした公平制御ではトークン長や一処理中の複数LLM呼出しを扱えない。Microsoft Copilotの数百万要求・数千利用者の実トレースを分析し、既存の公平方式がアプリ差を捉えられないことを確認したうえで、実トレース評価で最先端方式より公平性を改善した。
+  アプリごとの要求特性と「一つの最終応答を作るまでの複数LLM呼出し」を公平性の単位へ取り込み、過負荷時だけ制限するOITと、受益量を重み付きで数えるWSCを組み合わせることで、単純な要求数制限や均等トークン配分の弱点を埋めるLLM配信方式。
 
 - **2025-09 · [FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving](2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
