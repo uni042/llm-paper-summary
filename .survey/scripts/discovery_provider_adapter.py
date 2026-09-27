@@ -33,6 +33,7 @@ OPENREVIEW_NOTES_URL = "https://api2.openreview.net/notes"
 EXPLICIT_ID_MAX_ITEMS = 100
 EXPLICIT_ID_NETWORK_RETRIES = 2
 ARXIV_ABS_URL = "https://arxiv.org/abs/"
+ACL_ANTHOLOGY_URL = "https://aclanthology.org/"
 
 
 class DiscoveryProviderError(RuntimeError):
@@ -140,6 +141,86 @@ def _fetch_arxiv_abs_record(
         except Exception as exc:
             return None, f"official arXiv page lookup failed: {exc}"
 
+
+def _acl_anthology_record(requested_id: str, html: str, anthology_id: str) -> dict[str, Any] | None:
+    parser = _ArxivMetaParser()
+    parser.feed(html)
+    title_values = parser.values.get("citation_title") or parser.values.get("dc.title") or []
+    title = title_values[0].strip() if title_values else ""
+    if not title:
+        return None
+
+    doi_values = parser.values.get("citation_doi") or []
+    doi = doi_values[0].strip() if doi_values else requested_id.split(":", 1)[1]
+    if paper_identity.safe_norm_id("DOI:" + doi) != requested_id:
+        return None
+    record: dict[str, Any] = {
+        "canonical_id": requested_id,
+        "doi": doi,
+        "identifiers": [requested_id],
+        "title": title,
+        "source_url": ACL_ANTHOLOGY_URL + anthology_id + "/",
+    }
+    authors = parser.values.get("citation_author") or parser.values.get("dc.creator") or []
+    if authors:
+        record["authors"] = authors
+    abstract_values = parser.values.get("citation_abstract") or parser.values.get("dc.description") or []
+    if abstract_values:
+        record["abstract"] = abstract_values[0]
+    date_values = parser.values.get("citation_publication_date") or parser.values.get("citation_date") or []
+    if date_values:
+        record["published"] = date_values[0]
+    year_match = re.search(r"\b(19|20)\d{2}\b", date_values[0] if date_values else anthology_id)
+    if year_match:
+        record["year"] = int(year_match.group(0))
+    return record
+
+
+def _fetch_acl_anthology_record(
+    requested_id: str,
+    *,
+    timeout: int,
+    opener: Callable[..., Any],
+    sleeper: Callable[[float], Any],
+) -> tuple[dict[str, Any] | None, str | None]:
+    match = re.fullmatch(r"DOI:10\.18653/v1/([A-Za-z0-9][A-Za-z0-9._-]{1,79})", requested_id, re.I)
+    if not match:
+        return None, None
+    anthology_id = match.group(1)
+    request = Request(
+        ACL_ANTHOLOGY_URL + quote(anthology_id, safe="._-") + "/",
+        headers={
+            "Accept": "text/html",
+            "User-Agent": "llm-paper-summary-discovery/1.0",
+        },
+    )
+    network_attempt = 0
+    rate_attempt = 0
+    while True:
+        try:
+            with opener(request, timeout=timeout) as response:
+                html = response.read().decode("utf-8", errors="replace")
+            return _acl_anthology_record(requested_id, html, anthology_id), None
+        except HTTPError as exc:
+            if exc.code == 404:
+                return None, None
+            if exc.code == 429 and rate_attempt < S2_MAX_RATE_LIMIT_RETRIES:
+                sleeper(_semantic_scholar_retry_delay(exc, rate_attempt))
+                rate_attempt += 1
+                continue
+            if 500 <= exc.code <= 599 and network_attempt < EXPLICIT_ID_NETWORK_RETRIES:
+                sleeper(min(1.0 * (2 ** network_attempt), S2_RATE_LIMIT_MAX_SECONDS))
+                network_attempt += 1
+                continue
+            return None, f"official ACL Anthology page lookup failed: {exc}"
+        except (TimeoutError, ConnectionError, OSError) as exc:
+            if network_attempt < EXPLICIT_ID_NETWORK_RETRIES:
+                sleeper(min(1.0 * (2 ** network_attempt), S2_RATE_LIMIT_MAX_SECONDS))
+                network_attempt += 1
+                continue
+            return None, f"official ACL Anthology page lookup network error: {exc}"
+        except Exception as exc:
+            return None, f"official ACL Anthology page lookup failed: {exc}"
 
 def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
     if not isinstance(paper, dict):
@@ -408,6 +489,34 @@ def lookup_identifiers(
                 "status": "error" if error else "unresolved",
                 "record": None,
                 "lookup_route": "arxiv_abs_html",
+                "error": error,
+            }
+
+    for requested_id, provider in normalized:
+        if provider != "semantic_scholar" or not re.fullmatch(
+            r"DOI:10\.18653/v1/[A-Za-z0-9][A-Za-z0-9._-]{1,79}", requested_id, re.I
+        ):
+            continue
+        previous = outcomes.get(requested_id)
+        if previous and previous.get("status") == "found":
+            continue
+        record, error = _fetch_acl_anthology_record(
+            requested_id, timeout=timeout, opener=opener, sleeper=sleeper
+        )
+        if record and _identifier_matches_record(requested_id, record):
+            outcomes[requested_id] = {
+                "requested_id": requested_id,
+                "status": "found",
+                "record": record,
+                "lookup_route": "acl_anthology_record",
+                "error": None,
+            }
+        else:
+            outcomes[requested_id] = {
+                "requested_id": requested_id,
+                "status": "error" if error else "unresolved",
+                "record": None,
+                "lookup_route": "acl_anthology_record",
                 "error": error,
             }
 
