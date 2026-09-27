@@ -209,8 +209,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号が密モデルだけでなく疎な混合専門家モデルで特に有効になる条件を解析し、受理率だけでは捉えられない対象モデル効率を指標化する。Qwen2-57B-A14Bの中程度バッチで最大2.29倍高速化を示す。
 
 - **2025-04 · [PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation](2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  モデル系列で共有できる並列ドラフトを条件付きトークン欠落学習で低コスト適応し、複数将来トークンを一度に予測してLLaMA3.1-8Bを最大3.67倍高速化する。
+  実装：[✓](https://github.com/AMD-AIG-AIMA/PARD) ・ リポジトリ内被引用：4  
+  小型AR 下書きをmask-トークン型の並列下書きへ変換し、KV整合性を保つConditional Dropで学習費を抑えつつモデル family内で再利用するPARD。
 
 - **2025-09 · [Set Block Decoding is a Language Model Inference Accelerator](2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -218,7 +218,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-05 · [Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits](2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  端末の小型ドラフトとクラウド大型対象モデルを協調させ、対象モデルの早期出口から検証途中に次候補を先行生成して端末・クラウドの遊休時間を重ね、クラウド逐次復号比で遅延を最大35%削減する。
+  Cloud targetの早期出口から暫定トークンを返し、edge 下書きを最終検証と並行して先行生成することで待ち時間を隠し、Jetson Nano＋A100でpre-drafting単体最大11%級の追加改善を示す。
 
 - **2025-04 · [Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion](2025-speculative-diffusion-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

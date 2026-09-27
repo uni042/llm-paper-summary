@@ -450,5 +450,5 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2022-05 · [MoESys: A Distributed and Efficient Mixture-of-Experts Training and Inference System for Internet Services](2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
-  混合専門家モデル（Mixture of エキスパート; MoE）の訓練と推論を階層メモリ上で統合し、訓練では二次元先読み、推論ではCPU・GPUメモリを環状に使うオフロードで、DeepSpeed比の推論スループットを13%改善する。
+  MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 <!-- survey:auto:end -->

@@ -32,8 +32,8 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  NCCL 2.28へGPUカーネルから直接ネットワーク操作を起動する装置側APIを導入し、直接GPU-NIC経路とCPU代理経路を同じ意味論で提供してDeepEPのMoE通信でNVSHMEM相当の性能を実現する。
+  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：3  
+  NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
 
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
