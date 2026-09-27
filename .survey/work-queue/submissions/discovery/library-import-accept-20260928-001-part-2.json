@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+      "source_url": "https://arxiv.org/abs/2506.07530",
+      "year": 2025,
+      "published": "2025-06-09",
+      "abstract": "Deploying powerful Vision-Language-Action (VLA) models on edge devices is limited by their massive size. In this paper, we take a deployment-oriented view of VLA training: we target efficiency through model design and optimization, rather than relying solely on post-hoc compression. Thus, we propose BitVLA, a fully native 1-bit VLA model for robotic manipulation, where every parameters is ternary, i.e., {-1,0,1}. BitVLA is built on the publicly available 1-bit LLM BitNet b1.58 2B4T, and is trained as a vision-language-action policy that inherits the compactness of 1-bit pretraining while retaining strong task performance. To further reduce the memory footprint of the vision backbone, we introduce Quantize-then-Distill, a post-training quantization-aware training strategy that compresses a full-precision vision encoder to 1.58-bit weights, while a full-precision teacher guides representation alignment during training. Across simulation benchmarks and real-world tasks, BitVLA matches the performance of the full-precision OpenVLA-OFT baseline, while reducing model memory by 11.0x and end-to-end latency by 4.4x. These results suggest a practical path toward training-time efficiency-accuracy co-design for embodied policies, enabling competitive manipulation capability on memory-constrained edge robotic platforms. We release the code in https://github.com/ustcwhy/BitVLA, model weights in https://huggingface.co/lxsy/bitvla-bf16.",
+      "canonical_id": "arXiv:2506.07530",
+      "arxiv_id": "2506.07530",
+      "doi": "10.48550/arXiv.2506.07530",
+      "authors": [
+        "Hongyu Wang",
+        "Chuyan Xiong",
+        "Rui-Ping Wang",
+        "Xi-Lin Chen"
+      ],
+      "reason": "端末配備を狙い、VLAモデル全体を低ビット化してメモリと実測遅延を削減する推論効率研究である。",
+      "priority": 50
+    },
+    {
+      "title": "FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2505.20225",
+      "year": 2025,
+      "published": "2025-05-26",
+      "abstract": "Recent large language models such as Gemini-1.5, DeepSeek-V3, and Llama-4 increasingly adopt Mixture-of-Experts (MoE) architectures, which offer strong efficiency-performance trade-offs by activating only a fraction of the model per token. Yet academic researchers still lack a fully open, end-to-end MoE platform for investigating scaling, routing, and expert behavior. We release FLAME-MoE, a completely open-source research suite composed of seven decoder-only models, ranging from 38M to 1.7B active parameters, whose architecture--64 experts with top-8 gating and 2 shared experts--closely reflects modern production LLMs. All training data pipelines, scripts, logs, and checkpoints are publicly available to enable reproducible experimentation. Across six evaluation tasks, FLAME-MoE improves average accuracy by up to 3.4 points over dense baselines trained with identical FLOPs. Leveraging full training trace transparency, we present initial analyses showing that (i) experts increasingly specialize on distinct token subsets, (ii) co-activation matrices remain sparse, reflecting diverse expert usage, and (iii) routing behavior stabilizes early in training. All code, training logs, and model checkpoints are available at https://github.com/cmu-flame/FLAME-MoE.",
+      "canonical_id": "arXiv:2505.20225",
+      "arxiv_id": "2505.20225",
+      "doi": "10.48550/arXiv.2505.20225",
+      "authors": [
+        "Hao Kang",
+        "Zichun Yu",
+        "Chenyan Xiong"
+      ],
+      "reason": "MoEの学習・ルーティング・専門家挙動を再現可能に調べる公開エンドツーエンド研究基盤である。",
+      "priority": 50
+    },
+    {
+      "title": "Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately",
+      "source_url": "https://arxiv.org/abs/2505.13326",
+      "year": 2025,
+      "published": "2025-05-19",
+      "abstract": "Recent advances in test-time scaling suggest that Large Language Models (LLMs) can gain better capabilities by generating Chain-of-Thought reasoning (analogous to human thinking) to respond a given request, and meanwhile exploring more reasoning branches (i.e., generating multiple responses and ensembling them) can improve the final output quality. However, when incorporating the two scaling dimensions, we find that the system efficiency is dampened significantly for two reasons. Firstly, the time cost to generate the final output increases substantially as many reasoning branches would be trapped in the over-thinking dilemma, producing excessively long responses. Secondly, generating multiple reasoning branches for each request increases memory consumption, which is unsuitable for LLM serving since we can only batch a limited number of requests to process simultaneously. To address this, we present SART, a serving framework for efficient and accurate LLM reasoning. The essential idea is to manage the thinking to be short and right, rather than long. For one thing, we devise a redundant sampling with early stopping approach based on empirical observations and theoretic analysis, which increases the likelihood of obtaining short-thinking responses when sampling reasoning branches. For another, we propose to dynamically prune low-quality branches so that only right-thinking branches are maintained, reducing the memory consumption and allowing us to batch more requests. Experimental results demonstrate that SART not only improves the accuracy of LLM reasoning but also enhances the serving efficiency, outperforming existing methods by up to 28.2 times and on average 15.7 times in terms of efficiency when achieving the same level of accuracy.",
+      "canonical_id": "arXiv:2505.13326",
+      "arxiv_id": "2505.13326",
+      "doi": "10.48550/arXiv.2505.13326",
+      "authors": [
+        "Yu-Hang Wang",
+        "You-He Jiang",
+        "Bin Cui",
+        "Fang-Cheng Fu"
+      ],
+      "reason": "推論分岐の早期停止と低品質分岐の動的枝刈りで、推論時スケーリングの配信効率を改善する。",
+      "priority": 50
+    },
+    {
+      "title": "Scaling Laws for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.07858",
+      "year": 2025,
+      "published": "2025-05-08",
+      "abstract": "The escalating demand for efficient decoding in large language models (LLMs) is particularly critical for reasoning-intensive architectures like OpenAI-o3 and DeepSeek-R1, which depend on extended chain-of-thought reasoning. This study investigates speculative decoding techniques through dense LLM architectures to establish foundational insights for accelerating reasoning tasks. While speculative decoding methods leveraging parallel draft-verification cycles have emerged as promising acceleration techniques, the scaling laws governing decoding efficiency remain under-explored compared to conventional backbone LLMs developed through Pretraining->SFT->RLHF training paradigms. In this work, we discover Log-linear Scaling Laws (Theorem 1.1, 1.2 and 1.3) governing draft model acceptance rate (or decoding speed) across three dimensions: pretraining token volume, draft model capacity, and decoding batch size. Building on these laws, we achieve Scylla, which coordinates multi-dimensional scaling for popular LLMs (Llama2/3, Qwen2.5). Empirical validation shows Scylla achieves 1.5-2.2 higher acceptance rate than EAGLE2 and 0.3 higher than EAGLE3 at temperature T = 0, with peak performance gains on summarization and QA tasks (Figure 2). Industrial inference engine deployments demonstrate 2X decoding throughput improvements over EAGLE2 (Table 5), validating the transformative potential of systematic scaling for efficient LLM inference. Code will be released later.",
+      "canonical_id": "arXiv:2505.07858",
+      "arxiv_id": "2505.07858",
+      "doi": "10.48550/arXiv.2505.07858",
+      "authors": [
+        "Siyuan Yan",
+        "Mo Zhu",
+        "Guo-qing Jiang",
+        "Jianfei Wang",
+        "Jiaxing Chen",
+        "Wentai Zhang",
+        "Xiang Liao",
+        "Xiao Cui",
+        "Chen Zhang",
+        "Zhuoran Song",
+        "Ran Zhu"
+      ],
+      "reason": "ドラフト規模・事前学習量・バッチ量と投機受理率の関係を定量化し、配信スループットを改善する。",
+      "priority": 50
+    },
+    {
+      "title": "Activated LoRA: Fine-tuned LLMs for Intrinsics",
+      "source_url": "https://arxiv.org/abs/2504.12397",
+      "year": 2025,
+      "published": "2025-04-16",
+      "abstract": "Low-Rank Adaptation (LoRA) has emerged as a highly efficient framework for finetuning the weights of large foundation models, and has become the go-to method for data-driven customization of LLMs. Despite the promise of highly customized behaviors and capabilities, switching between relevant LoRAs in a multiturn setting is inefficient, as the key-value (KV) cache of the entire turn history must be recomputed with the LoRA weights before generation can begin. To address this problem, we propose Activated LoRA (aLoRA), an adapter architecture which modifies the LoRA framework to only adapt weights for the tokens in the sequence after the aLoRA is invoked. This change crucially allows aLoRA to accept the base model's KV cache of the input string, meaning that aLoRA can be instantly activated whenever needed in a chain without recomputing the prior keys and values. This enables building what we call intrinsics, i.e. specialized models invoked to perform well-defined operations on portions of an input chain or conversation that otherwise uses the base model by default. We train a set of aLoRA-based intrinsics models, demonstrating competitive accuracy with standard LoRA while significantly improving inference efficiency. We contributed our Activated LoRA implementation to the Huggingface PEFT library https://github.com/huggingface/peft.",
+      "canonical_id": "arXiv:2504.12397",
+      "arxiv_id": "2504.12397",
+      "doi": "10.48550/arXiv.2504.12397",
+      "authors": [
+        "K. Greenewald",
+        "Luis A. Lastras",
+        "Thomas Parnell",
+        "Vraj Shah",
+        "Lucian Popa",
+        "Giulio Zizzo",
+        "Chulaka Gunasekara",
+        "Ambrish Rawat",
+        "David Cox"
+      ],
+      "reason": "会話途中から有効化するLoRAが基盤モデルの既存KVキャッシュを再利用し、再計算を避ける。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928",
+    "round": "library-import-accept-20260928-001",
+    "axis": "explicit-library-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "Libraryでaccept済みのDiscovery成果を正規Research候補へ取り込む。",
+    "candidate_count": 24,
+    "round_submission_index": 2,
+    "round_submission_count": 5
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-accept-20260928-001",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-accept-20260928-001.json",
+    "receipt": "sha256:66bb7d7842b6e932365464bc2d0543a9441255589c0181700af31415476ff3cb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928",
+    "summary": "Library上のaccept済みDiscovery成果をGitHubの正規Research候補へ反映する。"
+  }
+}
