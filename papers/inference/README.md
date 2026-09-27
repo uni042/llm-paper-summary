@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1257本**。
+収録論文: **1263本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,26 +34,26 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1257本**。
+推論論文：**1263本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 108 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 103 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
-| [04-conditional-computation](04-conditional-computation/README.md) | 15 |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 81 |
+| [04-conditional-computation](04-conditional-computation/README.md) | 16 |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 82 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 120 |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 121 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 28 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 31 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 101 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 291 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 292 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 31 |
-| [13-sparse-attention](13-sparse-attention/README.md) | 21 |
+| [13-sparse-attention](13-sparse-attention/README.md) | 22 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 30 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 7 |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 29 |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 30 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 16 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 9 |
