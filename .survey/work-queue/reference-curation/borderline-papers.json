@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T05:26:26+00:00",
-  "record_count": 283,
+  "updated_at": "2026-09-27T05:27:19+00:00",
+  "record_count": 284,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4246,6 +4246,20 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges"
+    },
+    "arXiv:2506.02153": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02153",
+      "identity_tokens": [
+        "arXiv:2506.02153"
+      ],
+      "reason": "agentic workloadをSLMへ移す運用・経済的議論と移行枠組みが中心で、具体的な新規ランタイム実装・システム評価は限定的。",
+      "first_checked_at": "2026-09-27T05:27:19+00:00",
+      "last_checked_at": "2026-09-27T05:27:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Small Language Models are the Future of Agentic AI"
     }
   }
 }

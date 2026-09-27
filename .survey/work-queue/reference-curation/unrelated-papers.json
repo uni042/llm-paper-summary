@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T05:26:49+00:00",
-  "record_count": 278,
+  "updated_at": "2026-09-27T05:27:19+00:00",
+  "record_count": 279,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4209,6 +4209,20 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "The LAMBADA dataset: Word prediction requiring a broad discourse context"
+    },
+    "arXiv:2406.06563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06563",
+      "identity_tokens": [
+        "arXiv:2406.06563"
+      ],
+      "reason": "146B MoEのupcyclingや学習安定化などtraining techniqueが主題で、推論ランタイムの新規機構ではない。",
+      "first_checked_at": "2026-09-27T05:27:19+00:00",
+      "last_checked_at": "2026-09-27T05:27:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models"
     }
   }
 }
