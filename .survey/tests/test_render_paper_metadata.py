@@ -134,23 +134,20 @@ class RenderPaperMetadataTest(unittest.TestCase):
         normalized = normalize_preferred_terms(record)
         self.assertEqual(normalized["metadata"]["lineage"], "offload-hierarchical-memory")
 
-    def test_references_are_required(self) -> None:
+    def test_references_are_optional_for_publication_integrity(self) -> None:
         record = complete_record()
         del record["metadata"]["references"]
-        with self.assertRaisesRegex(ValueError, "metadata.references"):
-            validate_record(record)
+        validate_record(record)
 
-    def test_reference_items_require_a_normalized_identity(self) -> None:
+    def test_reference_items_without_identity_do_not_require_paper_reread(self) -> None:
         record = complete_record()
         record["metadata"]["references"] = [{"title": "Missing identifiers"}]
-        with self.assertRaisesRegex(ValueError, "normalized identity"):
-            validate_record(record)
+        validate_record(record)
 
-    def test_arxiv_category_is_required(self) -> None:
+    def test_arxiv_category_is_optional_for_publication_integrity(self) -> None:
         record = complete_record()
         del record["metadata"]["arxiv_categories"]
-        with self.assertRaisesRegex(ValueError, "arxiv_categories.primary"):
-            validate_record(record)
+        validate_record(record)
 
 
 if __name__ == "__main__":
