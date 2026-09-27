@@ -112,12 +112,11 @@ class ListSummaryTests(unittest.TestCase):
         self.assertNotEqual(result.status, "FAIL")
         self.assertFalse(any("日本語比率" in x for x in result.failures))
 
-    def test_quality_rejects_bare_english_term(self):
+    def test_bare_english_is_not_an_independent_publication_failure(self):
         mod = self._module()
         text = "本研究はrequest処理の待ち時間を減らすため、要求順序を変更してGPU利用率を高める方式を提案し、複数条件で効果を評価する。"
         result = mod.audit_list_summary(text)
-        self.assertEqual(result.status, "FAIL")
-        self.assertTrue(any("英語専門語" in x for x in result.failures))
+        self.assertFalse(any("英語専門語" in x for x in result.failures))
 
     def test_quality_accepts_clean_single_line_summary(self):
         mod = self._module()
