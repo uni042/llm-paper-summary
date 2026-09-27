@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（8本）
+## 自動生成の論文一覧（9本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -45,4 +45,8 @@
 - **2024-01 · [BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems](2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md)**  
   実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：20  
   BurstGPTはAzure OpenAI GPTの1031万件・213日分の実トレースを公開し、到着の集中、会話間隔、応答長、失敗を含む現実的な評価負荷を提供する。
+
+- **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  MoEのスケーリング則へ推論コストを加え、損失最適だけでなく配信効率まで含めて専門家数・モデル規模・学習トークン数の配分を選ぶ。
 <!-- survey:auto:end -->

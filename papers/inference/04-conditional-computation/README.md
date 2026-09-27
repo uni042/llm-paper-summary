@@ -5,7 +5,7 @@
 MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり、この系統では主にTransformer本体の実行深度や処理対象tokenを動的に変える。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（15本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -21,6 +21,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   各層の局所状態だけでなく過去のゲート選択と残差変化を線形注意メモリへ蓄積し、Llama 3.1-8Bで26.87%のパラメータ計算を回避しつつ密モデル比100.24%の性能を保つ動的FFNルーティング。
 
 ### 2年前（2024-10〜2025-09）
+
+- **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ReLU化LLMの入力と重みの符号ビットだけを比較してゼロ活性行を学習なしで予測し、保守度を実行時調整できる軽量予測器で補助予測器の学習とメモリを削減する。
 
 - **2025-04 · [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)**  
   実装：[✓](https://github.com/iie-ycx/DEER) ・ リポジトリ内被引用：2  
@@ -69,6 +73,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2023-07 · [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   Skipデコードは生成位置が後ろへ進むほど実行するTransformer層数を段階的に減らし、同じ位置ではバッチ全体で同じ深度を使って、バッチ処理とKVキャッシュを保ちながら計算を減らす。
+
+- **2023-03 · [CoLT5: Faster Long-Range Transformers with Conditional Computation](2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  学習したルータが重要トークンだけを高容量経路へ送り、長文入力の全位置へ高価な計算を適用せず長距離Transformerを効率化する。
 
 ### 5年前（2021-10〜2022-09）
 

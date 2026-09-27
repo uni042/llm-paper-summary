@@ -1,15 +1,23 @@
 ---
-canonical_id: "DOI:10.1145/3620665.3640422"
-title: "AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference"
-summary: "生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。"
-list_summary: "生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。"
-publication: "ASPLOS 2024, pp.103-119"
-publication_status: "Published/Preprint as primary source"
-lineage: "inference-systems"
-topics: ["LLM推論", "システム効率"]
-source: "https://doi.org/10.1145/3620665.3640422"
-sources: ["https://doi.org/10.1145/3620665.3640422"]
-last_checked: "2026-09-27"
+canonical_id: DOI:10.1145/3620665.3640422
+title: AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference
+summary: 生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。
+list_summary: 生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。
+publication: ASPLOS 2024, pp.103-119
+publication_status: Published/Preprint as primary source
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+source: https://doi.org/10.1145/3620665.3640422
+sources:
+- https://doi.org/10.1145/3620665.3640422
+last_checked: '2026-09-27'
+doi: 10.1145/3620665.3640422
+publication_type: 査読付き学術論文
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
 ---
 
 # AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference

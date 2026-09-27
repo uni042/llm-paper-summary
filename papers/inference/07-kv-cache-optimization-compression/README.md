@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（120本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -359,6 +359,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：5  
   層間で支配的な特異ベクトルが整列する性質を利用して複数層のKVキャッシュを共有低ランク部分空間へ圧縮し、最大8倍圧縮と選択的再構成による最大4.23倍のエンドツーエンド高速化を示す。
 
+- **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  KVキャッシュを重要度別に管理し、並列圧縮と専用注意カーネルを組み合わせて長文脈推論の容量と実行時間を削減する。
+
 - **2025-06 · [CommVQ: Commutative Vector Quantization for KV Cache Compression](2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KVキャッシュを加算型ベクトル量子化で圧縮し、回転位置埋め込みと交換可能な符号帳を学習することで復号を注意計算へ統合する。2ビットでFP16比87.5%容量を削減し、1ビットでもLLaMA-3.1 8Bの128K文脈を単一RTX 4090で実行可能にする。
@@ -371,6 +375,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：4  
   外れ値分布を適応回転で平滑化し2ビットKV量子化を安定化して、ピークメモリ3.97倍削減、最大バッチ5.75倍、デコード2.32倍高速化を報告する。
 
+- **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  長い思考連鎖で増大するKVキャッシュを、段階的な低ビット化・層別ビット配分・位置補間校正で圧縮し、同じメモリ予算の既存方式より推論精度を最大8%改善する。
+
 - **2025-04 · [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md)**  
   実装：[✓](https://github.com/alibaba/vllm_xformers_prefetch) ・ リポジトリ内被引用：3  
   非同期KV先読みは、現在の注意ブロック計算中に次のKVをHBMからL2へ運び、Hopper GPUのメモリ待ちを隠して、注意カーネルとE2Eデコードを速める。
@@ -378,6 +386,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-03 · [Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization](2025-2503.18599-oaken-hybrid-kv-cache-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   KV外れ値の境界だけをオフライン学習し、オンライン3群量子化と専用DMA量子化・メモリ管理器を共同設計して、大規模バッチのKV帯域・容量を同時に削減する。
+
+- **2025-02 · [CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective](2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  注意重みだけでKV重要度を決めず、値状態と出力射影重みまで含む最悪出力摂動の上界を最小化する選択器を既存追い出し法へ追加し、3モデル・29データセットで圧縮損失を平均半分超削減する。
 
 - **2025-09 · [d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching](2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md)**  
   実装：[✓](https://github.com/Kamichanw/d2Cache) ・ リポジトリ内被引用：2  
@@ -464,6 +476,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-08 · [NACL: A General and Effective KV Cache Eviction Framework for LLMs at Inference Time](2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   より信頼できる代理トークンの注意統計と多様化したランダム追い出しを組み合わせ、エンコード時の一回のKV削減で注意バイアスを緩和し、KVを大幅に減らしながら長文性能を維持する。
+
+- **2024-05 · [SKVQ: Sliding-window Key and Value Cache Quantization for Large Language Models](2024-2405.06219-skvq-sliding-window-key-and-value-cache-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  KVキャッシュのチャネル並べ替え、群単位クリップ付き動的量子化、直近窓の高精度保持を組み合わせ、極低ビットKV量子化を実用化する。
 
 - **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

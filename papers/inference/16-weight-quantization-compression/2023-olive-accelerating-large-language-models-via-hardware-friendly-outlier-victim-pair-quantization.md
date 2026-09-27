@@ -1,11 +1,16 @@
 ---
-canonical_id: "DOI:10.1145/3579371.3589038"
-title: "OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization"
-summary: "低ビット量子化では重要な外れ値を別の疎形式で保持すると索引管理や別演算経路が必要になり、ハードウェア効率を損なう。 外れ値近傍の通常値を犠牲値として捨て、その格納位置を外れ値の追加ビットへ使う。外れ値と通常値をメモリ整列された形式のまま保持し、シストリック配列やテンソルコア型データ経路へ統合する。 外れ値対応加速器GOBOに対し4.5倍高速化、4.0倍エネルギー削減を示し、モデル精度もより良く維持する。"
-list_summary: "外れ値と隣接する重要度の低い値を対にして固定幅へ符号化し、外れ値専用の疎経路をなくす。専用加速器評価でGOBO比4.5倍高速化、4.0倍のエネルギー削減を報告する。"
-source: "https://doi.org/10.1145/3579371.3589038"
-sources: ["https://doi.org/10.1145/3579371.3589038"]
-last_checked: "2026-09-27"
+canonical_id: DOI:10.1145/3579371.3589038
+title: 'OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization'
+summary: 低ビット量子化では重要な外れ値を別の疎形式で保持すると索引管理や別演算経路が必要になり、ハードウェア効率を損なう。 外れ値近傍の通常値を犠牲値として捨て、その格納位置を外れ値の追加ビットへ使う。外れ値と通常値をメモリ整列された形式のまま保持し、シストリック配列やテンソルコア型データ経路へ統合する。 外れ値対応加速器GOBOに対し4.5倍高速化、4.0倍エネルギー削減を示し、モデル精度もより良く維持する。
+list_summary: 外れ値と隣接する重要度の低い値を対にして固定幅へ符号化し、外れ値専用の疎経路をなくす。専用加速器評価でGOBO比4.5倍高速化、4.0倍のエネルギー削減を報告する。
+source: https://doi.org/10.1145/3579371.3589038
+sources:
+- https://doi.org/10.1145/3579371.3589038
+last_checked: '2026-09-27'
+doi: 10.1145/3579371.3589038
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
 ---
 
 # OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization

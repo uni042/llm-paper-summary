@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（99本）
+## 自動生成の論文一覧（101本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -63,6 +63,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KVDriveはHBM・DRAM・NVMeの三層でKVを管理し、再利用度に応じた選択・転送・注意計算を小バッチで重ね、SSDから必要ブロックだけを読み長文I/Oを減らす方式。
+
+- **2025-11 · [SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs](2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  蒸留モデルと元LLMの情報注目の類似を利用し軽量検索ヘッドで重要KVを先読みする。非同期プリフェッチ、差分転送、適応メモリ管理によりクラウド最大24.89倍、エッジ最大10.06倍を報告する。
 
 - **2025-11 · [KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference](2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -429,4 +433,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2024-09 · [Do Large Language Models Need a Content Delivery Network?](2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   知識文書のKVキャッシュを再利用可能な配信単位として保存・転送・合成する知識配信網を構想し、検索知識のプリフィル再計算とモデル再学習を避ける設計空間を示す。
+
+### 公開時期未分類
+
+- **2025 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  複数ターン対話で過去KVを再計算する無駄と長いプリフィルによる先頭待ちを、GPU・CPU・SSDの多段KVキャッシュと公平な要求並べ替えで抑える。OPT-30BとLlama-2-70BでvLLM比1.63倍・2.85倍のスループットを報告する。
 <!-- survey:auto:end -->

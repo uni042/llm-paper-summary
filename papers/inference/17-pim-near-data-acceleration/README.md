@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（16本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -83,7 +83,21 @@
   実装：✓ ・ リポジトリ内被引用：5  
   LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
 
+- **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  長文脈エージェント推論の帯域・容量の二重メモリ壁を対象に、非対称量子化、FlashAttention対応の平坦化シストリック配列、コンパイラと設計空間探索を統合したPLENAを設計し、シミュレーションでA100比2.24倍、TPU v6e比3.85倍のスループットを報告する。
+
 - **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
+
+### 公開時期未分類
+
+- **2024 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。
+
+- **2025 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  モノリシック3D積層DRAMと近メモリ処理をGPUへ統合し、話題別専門家配置でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍を示す。
 <!-- survey:auto:end -->

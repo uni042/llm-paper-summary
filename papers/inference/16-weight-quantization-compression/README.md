@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（25本）
+## 自動生成の論文一覧（29本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -76,6 +76,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   重みを2枚の三値平面と連続尺度へ分解し、乗算を加算中心へ変える超低ビット事後量子化を提案する。1.58ビット級の学習時量子化に匹敵しつつ量子化を約1時間で行い、FP16比最大4.63倍の推論高速化を報告する。
 
+- **2025-02 · [Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference](2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  LLM重みを記憶装置・主記憶・オンチップ緩衝まで一貫して可逆圧縮し、品質を変えず重み転送帯域・容量・推論エネルギーを削減する。
+
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
@@ -94,6 +98,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   Transformerの計算不変性を利用して隠れ次元を回転し、重要度の低い行・列を丸ごと削って小さな密行列へ変換する。LLaMA2-70B等で最大25%のパラメータを削り、追加の疎行列カーネルなしでGPU数と計算量を減らす。
 
+- **2024-06 · [LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference](2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  量子化方式、混合精度探索、融合CUDAカーネル、NCCL同期を統一実行系へまとめ、単一GPUから複数ノードまで低ビット推論を扱う。
+
 - **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   等価なアフィン変換を直接最適化して量子化しやすい分布へ移し、LLaMA2-7BのW4A4でC4パープレキシティ15.76を達成してOmniQuantの18.02を改善する。
@@ -109,6 +117,10 @@
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重みを非コヒーレント変換で均質化した後、格子状の有限状態量子器でブロックを高密度に符号化し、2〜4ビット級の重み量子化で低い誤差と実用的な復号を両立する。
+
+- **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  巨大外れ値をブロック回転とジグザグ置換で複数チャネルへ分散し、4ビット重み・活性量子化でも従来方式より精度を保つ。
 
 ### 4年前（2022-10〜2023-09）
 
@@ -139,4 +151,10 @@
 - **2023-06 · [LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation](2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重みを低ランク成分と構造化疎成分の和として表し、共有情報と低ランクだけでは失う多様な情報を分担して、単独の枝刈りや低ランク近似より高い圧縮品質を得る。
+
+### 公開時期未分類
+
+- **2023 · [OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization](2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  外れ値と隣接する重要度の低い値を対にして固定幅へ符号化し、外れ値専用の疎経路をなくす。専用加速器評価でGOBO比4.5倍高速化、4.0倍のエネルギー削減を報告する。
 <!-- survey:auto:end -->

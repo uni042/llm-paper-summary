@@ -1,15 +1,23 @@
 ---
-canonical_id: "DOI:10.1145/3725843.3756043"
-title: "Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving"
-summary: "MoEは一部専門家しか使わなくても全専門家の巨大重み容量と転送が必要で、復号ではメモリ帯域が支配的になる。 8段階の内部DRAM階層と近メモリ処理器を設計し、67Mパラメータの話題分類器と事前測定した専門家利用率で高頻度専門家を高速層へ配置する。 OLMoE、Mixtral、Qwen2.5、Llama-4でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍。"
-list_summary: "モノリシック3D積層DRAMと近メモリ処理をGPUへ統合し、話題別専門家配置でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍を示す。"
-publication_type: "paper"
-publication_status: "Published/Preprint"
-lineage: "inference-systems"
-topics: ["LLM推論", "システム効率化"]
-source: "https://doi.org/10.1145/3725843.3756043"
-sources: ["https://doi.org/10.1145/3725843.3756043"]
-last_checked: "2026-09-27"
+canonical_id: DOI:10.1145/3725843.3756043
+title: 'Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving'
+summary: MoEは一部専門家しか使わなくても全専門家の巨大重み容量と転送が必要で、復号ではメモリ帯域が支配的になる。 8段階の内部DRAM階層と近メモリ処理器を設計し、67Mパラメータの話題分類器と事前測定した専門家利用率で高頻度専門家を高速層へ配置する。 OLMoE、Mixtral、Qwen2.5、Llama-4でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍。
+list_summary: モノリシック3D積層DRAMと近メモリ処理をGPUへ統合し、話題別専門家配置でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍を示す。
+publication_type: paper
+publication_status: Published/Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率化
+source: https://doi.org/10.1145/3725843.3756043
+sources:
+- https://doi.org/10.1145/3725843.3756043
+last_checked: '2026-09-27'
+doi: 10.1145/3725843.3756043
+publication: Published/Preprint
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
 ---
 
 # Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving

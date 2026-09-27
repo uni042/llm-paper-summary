@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（282本）
+## 自動生成の論文一覧（291本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -69,6 +69,10 @@
 - **2025-11 · [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   TBT違反が予測される時だけ単一GPUのSMをプリフィル/デコードへ動的分割し、集約方式のスループットと分離方式のisolationを両立する。
+
+- **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  実行中のLLMパイプラインを再分割し、キャッシュ整合性を保ったまま断片GPUへ再配置して82 GPU群で資源効率を最大8.5倍改善する。
 
 - **2026-07 · [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -886,6 +890,10 @@
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：6  
   モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
 
+- **2025-09 · [VoltanaLLM: Feedback-Driven Frequency Control and State-Space Routing for Energy-Efficient LLM Serving](2025-2509.04827-voltanallm-feedback-driven-frequency-control-and-state-space-routing-for-energy-efficient-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  プリフィルとデコードを分離した配信系でGPU周波数を帰還制御し、状態空間ルーティングと組み合わせてSLOをほぼ維持しながら最大36.3%省エネする。
+
 - **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   プリフィルとデコードを同一GPU内で空間多重化し、競合を見込む遅延推定とSLO対応配車で資源を動的配分して、SLO保証下の有効スループットを平均2.20倍に高める。
@@ -910,6 +918,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   RTのTTFT/TPOT締切を動的優先度にした反復単位スケジューリングと、RT/BEが同じKVブロックを逆方向から共有する双方向KV管理で、混在負荷の遅延と処理量を両立する。
 
+- **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  プリフィルとデコードで最適な並列化が異なることを利用し、段階切替時にモデルを動的再シャーディングする。階層KVバッファと遷移最小化スケジューリングでvLLM比最大1.78倍、平均1.36倍のスループットを達成する。
+
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   プリフィルとデコードを統一ブロック疎注意で扱い、vLLM比プリフィル最大2.9倍、デコード平均1.3〜2.1倍を長文精度維持で達成する。
@@ -918,6 +930,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   応答長そのものではなくプロンプト対の相対的な長短をBERTで順位学習し、短い要求を先にvLLMへ投入するPARSにより、先着順の先頭待ちを抑えて要求遅延を最大15.7倍改善する。
 
+- **2025-08 · [Equinox: Holistic Fair Scheduling in Serving Large Language Models](2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  利用者公平性と資源公平性を予測して統一スコアで先回りスケジューリングし、VTC比で最大1.3倍処理量、TTFT 60%削減、94%GPU利用率を達成する。
+
 - **2025-05 · [SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs](2025-2505.17052-specedge-edge-assisted-speculative-serving.md)**  
   実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：3  
   消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
@@ -925,6 +941,10 @@
 - **2025-03 · [Niyama: Breaking the Silos of LLM Inference Serving](2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   対話・バッチを別クラスタへ固定せず、細粒度のサービス品質目標を持つ要求を共有GPU上で動的チャンク化・優先制御する。サイロ型配備より配信容量を32%増やし、極端な高負荷ではSLO違反を約1桁削減する。
+
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  候補LLMを代表プロンプト上の予測誤差ベクトルで表し、プロンプト側クラスタと組み合わせるUniRouteにより、学習時に存在しなかった30超のLLMを含む動的モデル群でも再学習なしに品質・費用ルーティングを行う。
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1112,6 +1132,14 @@
   実装：✓ ・ リポジトリ内被引用：4  
   要求配置と計算資源の拡縮を共同決定し、同一サービス品質目標を満たす条件で基準方式より単一モデルの配信コストを最大71%削減する。
 
+- **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  生成長を入力長・アプリケーション・利用者の意味特徴から予測するMagnusで、近い生成長の要求をまとめて適応バッチ化する。比較対象よりスループット最大234%向上、応答時間最大89.7%削減を報告する。
+
+- **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  長さの異なるプロンプトを個別パディングせずビン詰めで連結し、独立注意マスクと位置番号再開で各KVキャッシュを正しく計算して、プリフィルを最大6倍高速化し最大16倍大きいバッチを収容する。
+
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   推論とパラメータ効率微調整を同一GPU反復へトークン単位で混載し、活性値GPUメモリを最大8倍、微調整全体のGPUメモリを最大36%削減しながら重い推論負荷でもピーク微調整スループットの80%以上を維持する。
@@ -1142,9 +1170,19 @@
   実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：87  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
+- **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LLM自身で応答長を低費用予測し、近い長さの要求を同じマイクロバッチへまとめてパディングと早期終了による遊休を減らし、実命令データで推論処理量を86%改善する。
+
 ### 5年前（2021-10〜2022-09）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：322  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
+
+### 公開時期未分類
+
+- **2024 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  反復単位のGPU動的電圧・周波数制御（DVFS）で、自己回帰生成中の残りSLO余裕に合わせて周波数を調整し、既存配信系を変更せずエネルギーを削減する。
 <!-- survey:auto:end -->

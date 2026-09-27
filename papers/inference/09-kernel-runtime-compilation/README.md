@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（27本）
+## 自動生成の論文一覧（31本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -126,9 +126,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：5  
   DRAMとSRAM間のタイル移動と演算というデータ流を直接記述し、スレッド束縛・配置・テンソル化・パイプライン化を注釈として分離するTileLangにより、LLMを含むAIカーネルを短い記述で実装しつつ手書き最適化に競合する性能を狙う。
 
+- **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  分散演算をタイル単位の計算と通信へ分解する中間表現から融合カーネルを生成し、非重畳実行比1.17〜20.76倍を達成する。
+
 - **2024-12 · [FlexAttention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   多様な注意機構を高水準PyTorch記述から融合GPUカーネルへコンパイルする。スコア修正とマスク修正を分離し、BlockMaskでブロック疎性を利用して手書きカーネルに近い性能と合成可能性を両立する。
+
+- **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  堅牢なCUDAカーネル評価基盤と、LLMによる変換・検証・進化的最適化を連結し、正しさを保ちながら低水準カーネルを自動改善する。
 
 - **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -143,4 +151,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-05 · [Lean Attention: Hardware-Aware Scalable Attention Mechanism for the Decode-Phase of Transformers](2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   復号時の長文脈注意をオンラインソフトマックスの結合則に基づく縮約へ変換し、文脈方向の並列度を増やすことで、FlashAttention-2比で平均2.6倍、512K文脈では最大8.33倍の注意カーネル高速化を示す。
+
+### 4年前（2022-10〜2023-09）
+
+- **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  自己注意とフィードフォワード網をブロック単位で融合実行し、中間活性を全系列分保持しないことで長文脈のメモリ使用量を削減する。
+
+### 公開時期未分類
+
+- **2055-08 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  タイルを第一級抽象としてテンソル計算を記述する言語・中間表現とタイル単位最適化を導入し、専門家がCUDAを手書きせず高性能GPUカーネルを生成できるようにする。
 <!-- survey:auto:end -->

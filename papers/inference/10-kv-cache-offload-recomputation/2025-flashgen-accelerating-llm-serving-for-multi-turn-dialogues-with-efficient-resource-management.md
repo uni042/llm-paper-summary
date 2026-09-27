@@ -1,11 +1,16 @@
 ---
-canonical_id: "DOI:10.1145/3676641.3716245"
-title: "Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management"
-summary: "チャットでは過去会話を毎ターン含むため同じ注意キー・値を再計算しやすく、長いプリフィルが先着順で後続要求を止める。 過去ターンKVをGPU、CPU DRAM、SSDに保持して低コストで復元し、再計算を避ける。GPUメモリ占有と要求長を考慮して要求順を入れ替え、先頭待ちを抑えつつ公平性を維持する。 ShareGPT上のOPT-30BとLlama-2-70Bで、同程度の遅延境界においてvLLMより1.63倍、2.85倍のスループットを達成する。"
-list_summary: "複数ターン対話で過去KVを再計算する無駄と長いプリフィルによる先頭待ちを、GPU・CPU・SSDの多段KVキャッシュと公平な要求並べ替えで抑える。OPT-30BとLlama-2-70BでvLLM比1.63倍・2.85倍のスループットを報告する。"
-source: "https://doi.org/10.1145/3676641.3716245"
-sources: ["https://doi.org/10.1145/3676641.3716245"]
-last_checked: "2026-09-27"
+canonical_id: DOI:10.1145/3676641.3716245
+title: Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management
+summary: チャットでは過去会話を毎ターン含むため同じ注意キー・値を再計算しやすく、長いプリフィルが先着順で後続要求を止める。 過去ターンKVをGPU、CPU DRAM、SSDに保持して低コストで復元し、再計算を避ける。GPUメモリ占有と要求長を考慮して要求順を入れ替え、先頭待ちを抑えつつ公平性を維持する。 ShareGPT上のOPT-30BとLlama-2-70Bで、同程度の遅延境界においてvLLMより1.63倍、2.85倍のスループットを達成する。
+list_summary: 複数ターン対話で過去KVを再計算する無駄と長いプリフィルによる先頭待ちを、GPU・CPU・SSDの多段KVキャッシュと公平な要求並べ替えで抑える。OPT-30BとLlama-2-70BでvLLM比1.63倍・2.85倍のスループットを報告する。
+source: https://doi.org/10.1145/3676641.3716245
+sources:
+- https://doi.org/10.1145/3676641.3716245
+last_checked: '2026-09-27'
+doi: 10.1145/3676641.3716245
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
 ---
 
 # Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management

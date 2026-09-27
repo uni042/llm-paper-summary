@@ -1,15 +1,23 @@
 ---
-canonical_id: "DOI:10.1109/lca.2024.3406038"
-title: "SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving"
-summary: "反復単位のGPU動的電圧・周波数制御（DVFS）で、自己回帰生成中の残りSLO余裕に合わせて周波数を調整し、既存配信系を変更せずエネルギーを削減する。"
-list_summary: "反復単位のGPU動的電圧・周波数制御（DVFS）で、自己回帰生成中の残りSLO余裕に合わせて周波数を調整し、既存配信系を変更せずエネルギーを削減する。"
-publication: "IEEE Computer Architecture Letters 23(2), 150-153, 2024"
-publication_status: "Published/Preprint as primary source"
-lineage: "inference-systems"
-topics: ["LLM推論", "システム効率"]
-source: "https://doi.org/10.1109/lca.2024.3406038"
-sources: ["https://doi.org/10.1109/lca.2024.3406038"]
-last_checked: "2026-09-27"
+canonical_id: DOI:10.1109/lca.2024.3406038
+title: SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving
+summary: 反復単位のGPU動的電圧・周波数制御（DVFS）で、自己回帰生成中の残りSLO余裕に合わせて周波数を調整し、既存配信系を変更せずエネルギーを削減する。
+list_summary: 反復単位のGPU動的電圧・周波数制御（DVFS）で、自己回帰生成中の残りSLO余裕に合わせて周波数を調整し、既存配信系を変更せずエネルギーを削減する。
+publication: IEEE Computer Architecture Letters 23(2), 150-153, 2024
+publication_status: Published/Preprint as primary source
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+source: https://doi.org/10.1109/lca.2024.3406038
+sources:
+- https://doi.org/10.1109/lca.2024.3406038
+last_checked: '2026-09-27'
+doi: 10.1109/lca.2024.3406038
+publication_type: 査読付き学術論文
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
 ---
 
 # SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving

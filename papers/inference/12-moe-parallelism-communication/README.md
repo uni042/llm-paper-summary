@@ -24,12 +24,16 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（26本）
+## 自動生成の論文一覧（31本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+
+- **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  NCCL 2.28へGPUカーネルから直接ネットワーク操作を起動する装置側APIを導入し、直接GPU-NIC経路とCPU代理経路を同じ意味論で提供してDeepEPのMoE通信でNVSHMEM相当の性能を実現する。
 
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -127,9 +131,25 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：8  
   トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。
 
+- **2025-09 · [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  専門家のグループ化・動的複製と局所性認識ルーティングで通信と負荷偏りを共同最適化し、分散MoE推論を最大3.79倍高速化する。
+
+- **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  専門家混合（MoE）の負荷に応じて行列積カーネルと並列方式を切り替え、専門家単位のパイプラインで通信と計算を重ね、プリフィル処理量を最大52.4%改善する。
+
+- **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  専門家並列MoEで過負荷専門家が全体を待たせる遅延尾を、超過トークンの破棄または空き専門家への再経路化で抑え、Mixtral-8×7B-Instructで平均性能+0.2%と1.94倍高速化を両立する。
+
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
+
+- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  テンソル並列の部分活性値を集合通信前に細粒度量子化し、3.5〜4.5倍小さくして、低帯域なGPU間接続で先頭トークンまでの時間を最大2倍短縮する。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
