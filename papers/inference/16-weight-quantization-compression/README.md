@@ -47,8 +47,8 @@
   事後量子化で重みや活性値を低精度化すればメモリと計算を減らせるが、開ループの再構成誤差だけでは実際のタスク成功率を予測しにくい。未校正W4A4のπ0.5では対象を126層から167層へ広げると成功率が7.0%から70.5%へ逆に回復し、単純な「量子化層が少ないほど安全」という直感が破れることを示した。
 
 - **2026-09 · [Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models](2026-2609.19441-prede-quantization-task-degradation-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  世界行動モデルの多数の量子化候補を全て実ロボットで閉ループ評価する代わりに、固定ログ上の行動偏差を少数の閉ループ基準で較正し、受理・棄却・保留へ分類するPreDEを提案する。
+  実装：[✓](https://github.com/jiuyixu25/PreDE) ・ リポジトリ内被引用：0  
+  固定ログ上の行動偏差を少数の閉ループ結果で方策別に較正し、量子化候補を受理・棄却・保留へ分けて実機試験を絞るPreDE。
 
 - **2026-09 · [All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs](2026-2609.06161-all-for-1-bit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
