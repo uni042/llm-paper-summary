@@ -256,7 +256,7 @@ def markdown_report(results: list[PaperResult]) -> str:
     if failed:
         lines += ["## FAIL", ""]
         for item in failed:
-            lines.append(f"### \`{item.path}\`")
+            lines.append(f"### `{item.path}`")
             for reason in item.failures:
                 lines.append(f"- {reason}")
             lines.append("")
