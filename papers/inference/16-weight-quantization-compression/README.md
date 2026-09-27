@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（19本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -85,6 +85,10 @@
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   Transformerの計算不変性を利用して隠れ次元を回転し、重要度の低い行・列を丸ごと削って小さな密行列へ変換する。LLaMA2-70B等で最大25%のパラメータを削り、追加の疎行列カーネルなしでGPU数と計算量を減らす。
+
+- **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  重みと活性値をともに4ビット浮動小数点へ事後量子化し、チャネル別活性値スケールを重み側へ再パラメータ化して低ビット推論を成立させる。LLaMA-13Bで平均63.1点を維持し従来最良を12.7点上回る。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

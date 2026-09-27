@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（68本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -261,6 +261,14 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   ドラフト確率分布から各投機反復の継続可否を軽量分類器で判断してドラフト長を動的化し、生成文を変えず最良固定長比で平均10.3%高速化する。
+
+- **2024-04 · [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md)**  
+  実装：[✓](https://github.com/Equationliu/Kangaroo) ・ リポジトリ内被引用：5  
+  ターゲットLLMの浅い層を自己ドラフト化し、小型アダプタと信頼度による二重早期終了で別ドラフトモデルを不要にして、Spec-Benchで最大1.68倍高速化する。
+
+- **2024-01 · [SpecBranch: Speculative Decoding via Hybrid Drafting and Rollback-Aware Branch Parallelism](2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  投機的復号でドラフト生成とターゲット検証を枝分かれ並列化し、ロールバックを見越した適応ドラフト長で待ち時間を減らす。自己回帰生成比1.8〜4.5倍の高速化と、不整合なモデル対でロールバックトークン50%削減を報告。
 
 - **2024-04 · [BASS: Batched Attention-optimized Speculative Sampling](2024-2404.15778-bass.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

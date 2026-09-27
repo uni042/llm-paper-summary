@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（193本）
+## 自動生成の論文一覧（195本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -748,6 +748,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。
 
+- **2024-01 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  局所注意と圧縮長期メモリを同一Transformerブロックへ組み込み、文脈長に比例して増えない有界メモリで超長文を逐次処理する。1Mトークンの検索課題と500K長の書籍要約を1B/8Bモデルで実証。
+
 - **2024-06 · [ProTrain: Efficient LLM Training via Memory-Aware Techniques](2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   モデル状態と活性値の階層管理を費用モデルで自動調整し、限られたGPUメモリで学習容量とスループットを高める。
@@ -777,6 +781,10 @@
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   正規表現や文脈自由文法で出力形式を強制する生成では、各ステップで語彙全体を検査すると制約処理が重い。モデル非依存で制約付き生成の構造保証を行いながら、トークン生成への追加負荷を小さく抑え、当時の既存制約生成方式を大幅に上回る性能を報告する。
+
+- **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  指示調整時の注意マスクで長いプロンプトを再利用可能な少数の要旨トークンへ圧縮し、最大26倍のプロンプト圧縮と40%のFLOPs削減を実現する。
 
 ### 5年前（2021-10〜2022-09）
 
