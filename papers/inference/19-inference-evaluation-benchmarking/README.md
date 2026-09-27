@@ -34,5 +34,5 @@
 
 - **2024-01 · [BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems](2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md)**  
   実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：21  
-  BurstGPTはAzure OpenAI GPTの10.31 million要求・213日分の実トレースを公開し、到着の集中、会話間隔、応答長、失敗を含む現実的な評価負荷を提供する。
+  BurstGPTはAzure OpenAI GPTの1031万件・213日分の実トレースを公開し、到着の集中、会話間隔、応答長、失敗を含む現実的な評価負荷を提供する。
 <!-- survey:auto:end -->
