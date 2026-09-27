@@ -492,7 +492,7 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     if set_missing(meta, "list_summary", authored_one_line):
         added.append("list_summary(body)")
     if set_missing(meta, "summary", meta.get("list_summary") or authored_summary):
-        added.append("summary(existing-body)")
+        added.append("summary(existing-one-line)" if authored_one_line else "summary(existing-body)")
 
     existing_authors = meta.get("authors")
     if isinstance(existing_authors, str) and existing_authors.strip():
