@@ -100,7 +100,7 @@
 
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  Transformerの計算不変性を利用して隠れ次元を回転し、重要度の低い行・列を丸ごと削って小さな密行列へ変換する。LLaMA2-70B等で最大25%のパラメータを削り、追加の疎行列カーネルなしでGPU数と計算量を減らす。
+  Transformerの隠れ表現を直交回転して主成分基底へ移し、情報量の小さい埋め込み次元を重み行列の行・列ごと物理的に削除する。疎行列を作らず小さい密行列へ変換するため、LLaMA-2 70Bの25%削減ではA100上の1トークン時間を125 msから110 msへ、必要GPU数を4台から3台へ減らす。
 
 - **2024-06 · [LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference](2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md)**  
   実装：[✓](https://github.com/NoakLiu/LLMEasyQuant) ・ リポジトリ内被引用：4  

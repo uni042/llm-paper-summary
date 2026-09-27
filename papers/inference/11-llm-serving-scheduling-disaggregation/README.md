@@ -954,9 +954,9 @@
   実装：✓ ・ リポジトリ内被引用：3  
   「古いGPUは遅いからLLM配信には使えない」と一括りにせず、処理段階・モデルサイズ・要求率ごとにエネルギー効率を測る。A100が必要な重い部分だけを新GPUへ残し、T4/V100でもSLOを守れる部分を旧GPUへ移すことで、運用時電力だけでなく新GPU製造に伴う体現炭素も含めた総排出量を減らす。
 
-- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  推論時思考アルゴリズムは複数解を生成するほど精度を上げられる一方、答えが既に安定した後もトークンを生成し続ける。実ワークロードで精度を落とさず計算量を最大50%削減し、オンライン配信では要求処理率を最大3.3倍に高めると報告する。
+- **2024-12 · [Efficiently Serving LLM Reasoning Programs with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：3  
+  Certaindexで途中回答の収束度を測り、Dynasorが簡単な推論を早く止めて難問へ計算を再配分し、固定予算の推論プログラムを問い合わせ単位・配信単位で動的化する。
 
 - **2024-11 · [Ensuring Fair LLM Serving Amid Diverse Applications](2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

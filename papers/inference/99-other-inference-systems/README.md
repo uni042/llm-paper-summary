@@ -795,8 +795,8 @@
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  正規表現や文脈自由文法で出力形式を強制する生成では、各ステップで語彙全体を検査すると制約処理が重い。モデル非依存で制約付き生成の構造保証を行いながら、トークン生成への追加負荷を小さく抑え、当時の既存制約生成方式を大幅に上回る性能を報告する。
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：4  
+  正規表現のFSM状態ごとに「次に許されるLLM語彙」を事前索引化し、毎トークンの全語彙走査を平均O(1)参照へ置き換え、さらにLALR(1)構文解析へ拡張して構造化出力を高速化する。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
