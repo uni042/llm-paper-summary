@@ -1138,7 +1138,7 @@
 
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  生成長を入力長・アプリケーション・利用者の意味特徴から予測するMagnusで、近い生成長の要求をまとめて適応バッチ化する。比較対象よりスループット最大234%向上、応答時間最大89.7%削減を報告する。
+  入力長・アプリ・利用者特徴から生成長を予測し、近い長さを適応バッチ化してHRRNで順序付けするMagnusにより、スループット最大234%向上・応答時間最大89.7%削減を達成する。
 
 - **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

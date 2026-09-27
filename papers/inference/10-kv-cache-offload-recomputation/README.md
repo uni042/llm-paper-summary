@@ -437,6 +437,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 公開時期未分類
 
 - **2025 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
-  実装：[✓](https://github.com/Sys-KU/LMServe) ・ リポジトリ内被引用：5  
-  複数ターン対話の過去KVをGPU・DRAM・SSDへ階層保持し、SSD転送と再計算を動的に選択、空きGPUメモリへ収まる要求を飢餓なしで並べ替えるFlashGen。vLLM比で最大2.85倍のスループットを報告する。
+  実装：✓ ・ リポジトリ内被引用：5  
+  多輪会話の履歴KV再計算と長プロンプトによるFCFS head-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のスループットを報告する。
 <!-- survey:auto:end -->

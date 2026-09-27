@@ -38,13 +38,13 @@
 
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  同じモデルを貪欲復号しても、GPU数・GPU種類・バッチサイズが変わると浮動小数点演算の順序が変わり、有限精度の丸め誤差が初期トークンの選択差へ増幅される。DeepSeek-R1-Distill-Qwen-7Bではbfloat16条件で構成差だけにより精度が最大9ポイント、応答長が最大9,000トークン変化した。
+  「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
 
 ### 3年前（2023-10〜2024-09）
 
 - **2024-01 · [BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems](2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md)**  
   実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：20  
-  BurstGPTはAzure OpenAI GPTの1031万件・213日分の実トレースを公開し、到着の集中、会話間隔、応答長、失敗を含む現実的な評価負荷を提供する。
+  Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
