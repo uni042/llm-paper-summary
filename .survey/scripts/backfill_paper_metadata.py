@@ -74,19 +74,19 @@ def set_missing(meta: dict[str, Any], key: str, value: Any) -> bool:
 
 def body_h1_title(body: str) -> str | None:
     """Reuse the first authored H1 as the canonical title fallback."""
-    match = re.search(r"^#\\s+(.+?)\\s*$", body, re.MULTILINE)
+    match = re.search(r"^#\s+(.+?)\s*$", body, re.MULTILINE)
     return match.group(1).strip() if match else None
 
 
 def body_section_summary(body: str) -> str | None:
     """Reuse the first paragraph of an authored overview/summary section."""
-    match = re.search(r"^##\\s+(?:概要|要約)\\s*$", body, re.MULTILINE)
+    match = re.search(r"^##\s+(?:概要|要約)\s*$", body, re.MULTILINE)
     if not match:
         return None
     tail = body[match.end():].lstrip()
     if not tail:
         return None
-    parts = re.split(r"\\n\\s*\\n|(?m)^##\\s+", tail, maxsplit=1)
+    parts = re.split(r"\n\s*\n|^##\s+", tail, maxsplit=1, flags=re.MULTILINE)
     paragraph = " ".join(parts[0].split())
     return paragraph or None
 
