@@ -1,0 +1,26 @@
+{
+  "job_id": "job-research-9a61bb2d4144dc5e",
+  "type": "research",
+  "priority": 50,
+  "canonical_id": "arXiv:2404.07143",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention",
+  "source_url": "https://arxiv.org/abs/2404.07143",
+  "paper_path": "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+  "selection_reason": "圧縮長期メモリと局所注意を統合し、固定メモリ／計算で長文脈ストリーミング推論を可能にする効率注意機構。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-27T05:06:15+00:00",
+  "import_provenance": {
+    "source": "chatgpt_library",
+    "source_file": "discovery-20260927-0958-scheduled-chat-00.json",
+    "imported_at": "2026-09-27T05:06:15+00:00"
+  }
+}
