@@ -222,16 +222,7 @@ def arxiv_ids(paths: list[Path]) -> list[str]:
     ids: list[str] = []
     for path in paths:
         meta, _ = parse_frontmatter(path)
-        canonical = str(meta.get("canonical_id") or "").strip()
-    doi_match = re.fullmatch(r"DOI:(.+)", canonical, re.I)
-    if doi_match:
-        doi = doi_match.group(1).strip()
-        if set_missing(meta, "doi", doi):
-            added.append("doi(canonical-id)")
-        if set_missing(meta, "source", f"https://doi.org/{doi}"):
-            added.append("source(doi)")
-
-    aid = infer_arxiv_id(meta, path)
+        aid = infer_arxiv_id(meta, path)
         if aid and aid not in ids:
             ids.append(aid)
     return ids
@@ -527,6 +518,15 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
         if code:
             meta["code"] = code
             added.append("code(body)")
+
+    canonical = str(meta.get("canonical_id") or "").strip()
+    doi_match = re.fullmatch(r"DOI:(.+)", canonical, re.I)
+    if doi_match:
+        doi = doi_match.group(1).strip()
+        if set_missing(meta, "doi", doi):
+            added.append("doi(canonical-id)")
+        if set_missing(meta, "source", f"https://doi.org/{doi}"):
+            added.append("source(doi)")
 
     aid = infer_arxiv_id(meta, path)
     if aid and set_missing(meta, "arxiv_id", aid):
