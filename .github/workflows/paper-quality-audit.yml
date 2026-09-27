@@ -46,11 +46,8 @@ jobs:
 
       - name: Run active publication-integrity tests
         run: |
-          python -m unittest \
-            .survey.tests.test_audit_paper_quality \
-            .survey.tests.test_paper_quality_gate \
-            .survey.tests.test_list_summary_quality \
-            .survey.tests.test_render_paper_metadata
+          python -m unittest discover -s .survey/tests -p 'test_*quality.py'
+          python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
 
       - name: Run repository publication-integrity and Japanese-ratio audit
         run: |
