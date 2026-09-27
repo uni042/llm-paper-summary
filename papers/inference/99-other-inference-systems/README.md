@@ -366,7 +366,7 @@
 
 - **2026-08 · [FAMPWQ: Fisher Information-based Adaptive Mixed Precision Weight Quantization for Effective LLM Inference](2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  低ビット重み量子化はGPUメモリと重み転送量を減らせるが、全層を同じビット数へ落とすと敏感な層の誤差がモデル品質を大きく壊す。7モデル・5ベンチマーク・7比較方式で、困惑度を最大3.39小さく、精度を最大6.87ポイント高くし、LLM判定比較では最大76%の勝率を報告する。
+  実量子化ノイズでFisher情報の層別感度を測り、PPOで全体ビット予算を層へ配分して、3〜4bit域の品質劣化を一様量子化より抑える。
 
 - **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：0  

@@ -119,8 +119,8 @@
   15Bモデルから構造枝刈りと知識蒸留で8B/4Bを作り、派生モデルの学習トークン最大40分の1、モデル群全体の計算費用1.8倍削減を示す。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  重みを非コヒーレント変換で均質化した後、格子状の有限状態量子器でブロックを高密度に符号化し、2〜4ビット級の重み量子化で低い誤差と実用的な復号を両立する。
+  実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：3  
+  ベクトル量子化（Vector Quantization, VQ）は複数重みをまとめて符号化するほど量子化効率が上がる一方、通常の符号帳は次元に対して指数的に巨大化する。QTIPは、符号帳を列挙せず有限状態の「トレリス」を使うことで、この次元の壁を外し、2bit級でも256次元の高次元量子化を実用的な復号コストで実現する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
   実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：3  

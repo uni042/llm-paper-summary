@@ -287,8 +287,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   RAMオフロードでは「対象モデルを1トークン通す時間」と「数百〜数千トークンをまとめて通す時間」の差が小さくなる。SpecExecはその余剰バッチ幅で将来分布を事前計算し、70B級モデルを消費者GPUでも数トークン/sで対話可能にする。
 
 - **2024-06 · [OPT-Tree: Speculative Decoding with Adaptive Draft Tree Structure](2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  固定形状の候補木ではなく、ドラフト確率から対象モデルに受理されるトークン数の期待値を最大化する木を動的に構築し、同じ検証予算で投機的復号の受理長を伸ばす。
+  実装：[✓](https://github.com/Jikai0Wang/OPT-Tree) ・ リポジトリ内被引用：5  
+  木型投機的復号では、候補数が同じでも「一本道に深く使うか」「複数枝へ広く使うか」で受理トークン数が変わる。OPT-Treeはその形を手作業で固定せず、ドラフト確率から期待受理長を計算し、入力ごとに価値の高い候補だけで木を組み直す。
 
 - **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
