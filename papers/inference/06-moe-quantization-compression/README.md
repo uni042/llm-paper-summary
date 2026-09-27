@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（17本）
+## 自動生成の論文一覧（18本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -55,6 +55,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
   実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：6  
   MoEQuantは、較正例を低頻度専門家へ補い、ルータ寄与の大きいトークンを重く量子化評価して、同じ低ビットでも専門家出力の品質劣化を抑える。
+
+- **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  MoE専門家を共有基底と専門家固有差分へ分解し、差分を低ランク化、基底を静的・動的冗長性で構造枝刈りするD²-MoEにより、再学習なしの40〜60%圧縮で既存圧縮法より13%以上高い性能を報告する。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

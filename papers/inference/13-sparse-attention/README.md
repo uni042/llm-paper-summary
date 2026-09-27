@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（15本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -70,6 +70,10 @@
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：13  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
+- **2025-06 · [SeerAttention-R: Sparse Attention Adaptation for Long Reasoning](2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  長い推論デコード向けに自己蒸留ゲートでブロック疎注意を学び、元モデル重みを変えず軽量ゲートだけを追加するSeerAttention-Rは、4Kトークン予算でAIME精度をほぼ維持し、H100・90%疎性でFlashAttention-3比最大9倍の疎デコードカーネル高速化を示す。
+
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：0  
   listsummary と同じ一覧専用解説。Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとのtop-k整列を避けて計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1にし、条件により品質を保つ。
@@ -89,4 +93,10 @@
 - **2021-06 · [Memory-efficient Transformers via Top-k Attention](2021-2106.06899-top-k-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   通常注意は系列長をLとするとL×Lのスコア行列を作るため、長系列ではメモリ使用量が二次的に増える。Top-k 注意機構は、各クエリについて全キーとのスコアから上位k個だけを残し、クエリをチャンク単位で処理することでピークメモリを系列長に対して線形へ近づける。
+
+### 7年前（2019-10〜2020-09）
+
+- **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  オンラインk平均法で内容の近いトークンを同じクラスタへ経路付けし、各トークンの注意先を同クラスタへ限定するルーティング Transformerにより、注意計算を二乗からO(n^1.5 d)へ減らし、8192長のPG-19でテスト困惑度33.2を達成する。
 <!-- survey:auto:end -->
