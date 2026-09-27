@@ -23,8 +23,8 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [MoH: Multi-Head Attention as Mixture-of-Head Attention](2024-2410.11842-moh-mixture-of-head-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  注意ヘッドを専門家のように扱ってトークンごとに必要なヘッドだけを選択し、LLaMA3-8Bでは75%のヘッド利用で14評価平均64.0%、元モデルより2.4ポイント高い精度を得る。
+  実装：[✓](https://github.com/SkyworkAI/MoH) ・ リポジトリ内被引用：4  
+  注意ヘッドを共有ヘッドとTop-Kルーティングヘッドに分け、トークンごとに必要なヘッドだけ使うMoH。LLaMA3-8Bで75%利用・14評価平均64.0%を達成。
 
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
