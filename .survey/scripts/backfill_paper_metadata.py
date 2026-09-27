@@ -3,8 +3,9 @@
 
 Rules:
 - Never overwrite a non-empty existing frontmatter value.
-- Reuse already researched bibliographic/implementation details from the Markdown body.
-- Use arXiv API only for stable bibliographic facts (authors, dates, categories, abs URL).
+- Reuse already researched titles, summaries, and bibliographic/implementation details from the Markdown body.
+- Normalize legacy scalar metadata containers (for example authors) before strict auditing.
+- Use arXiv API only for stable bibliographic facts (title, abstract, authors, dates, categories, abs URL).
 - Keep code=null when no official code URL is evidenced in the repository content.
 - Derive implementation status only from existing code/evaluation metadata; do not invent a code URL.
 """
