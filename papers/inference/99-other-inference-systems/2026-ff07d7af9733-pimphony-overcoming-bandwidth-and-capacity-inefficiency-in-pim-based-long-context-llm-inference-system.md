@@ -61,7 +61,7 @@ topics:
 - KVキャッシュ
 - メモリ容量管理
 importance: 長文脈デコードのPIM効率低下を、演算配置、コマンド発行、KVキャッシュ割当という別々の原因へ分け、ソフトウェアとPIM制御器を一体で変えることで同時に改善できると示す。
-hardware_evaluation: 'PIMのみのCENT（1モジュール16GB・16TB/s、7Bは8モジュール128GB、72Bは32モジュール512GB）と、xPU+PIMのNeuPIMs（1モジュール32GB・32TB/s、7Bは4モジュール128GB、72Bは16モジュール512GB）をサイクル精度シミュレータ上で評価。Ramulator系モデルへAiMX構成を組み込む。GPU比較ではA100 80GBを7Bに2基、72Bに8基使う同容量条件を置く。'
+hardware_evaluation: PIMのみのCENT（1モジュール16GB・16TB/s、7Bは8モジュール128GB、72Bは32モジュール512GB）と、xPU+PIMのNeuPIMs（1モジュール32GB・32TB/s、7Bは4モジュール128GB、72Bは16モジュール512GB）をサイクル精度シミュレータ上で評価。Ramulator系モデルへAiMX構成を組み込む。GPU比較ではA100 80GBを7Bに2基、72Bに8基使う同容量条件を置く。
 quality_effect: モデルの重み、KV値、出力を量子化・近似しない。品質・精度指標は測定対象ではなく、評価はスループット、演算器利用率、KV容量利用率、エネルギー内訳と面積・電力見積もりを扱う。
 source: https://doi.org/10.1109/HPCA68181.2026.11408592
 sources:
@@ -71,13 +71,108 @@ sources:
 - https://arxiv.org/html/2412.20166
 - https://arxiv.org/pdf/2412.20166
 code: null
-implementation: 'MLIRを拡張したコンパイラ、IREEランタイム拡張、既存NeuPIMs/CENTシミュレータの変更を記載。論文本文で公式コード公開先を確認できなかった。'
+implementation: MLIRを拡張したコンパイラ、IREEランタイム拡張、既存NeuPIMs/CENTシミュレータの変更を記載。論文本文で公式コード公開先を確認できなかった。
 last_checked: '2026-09-27'
 references:
 - canonical_id: arXiv:2305.13245
   arxiv_id: '2305.13245'
+- canonical_id: DOI:10.1016/j.memori.2022.100022
+  doi: 10.1016/j.memori.2022.100022
+- canonical_id: arXiv:2309.16609
+  arxiv_id: '2309.16609'
 - canonical_id: arXiv:2308.14508
   arxiv_id: '2308.14508'
+- canonical_id: DOI:10.1145/3085572
+  doi: 10.1145/3085572
+- canonical_id: arXiv:2507.06261
+  arxiv_id: '2507.06261'
+- canonical_id: DOI:10.1145/3622781.3674180
+  doi: 10.1145/3622781.3674180
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: DOI:10.1145/3489048.3522661
+  doi: 10.1145/3489048.3522661
+- canonical_id: DOI:10.1109/access.2022.3174101
+  doi: 10.1109/access.2022.3174101
+- canonical_id: arXiv:2502.07578
+- canonical_id: arXiv:2403.11421
+  arxiv_id: '2403.11421'
+- canonical_id: DOI:10.1145/3676641.3716009
+  doi: 10.1145/3676641.3716009
+- canonical_id: DOI:10.1109/micro56248.2022.00051
+  doi: 10.1109/micro56248.2022.00051
+- canonical_id: DOI:10.48550/arxiv.2308.00846
+  doi: 10.48550/arxiv.2308.00846
+- canonical_id: DOI:10.1109/tcad.2024.3410842
+  doi: 10.1109/tcad.2024.3410842
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: DOI:10.1109/mm.2024.3375352
+  doi: 10.1109/mm.2024.3375352
+- canonical_id: DOI:10.1109/tcad.2025.3571857
+  doi: 10.1109/tcad.2025.3571857
+- canonical_id: DOI:10.1109/hcs61935.2024.10664793
+  doi: 10.1109/hcs61935.2024.10664793
+- canonical_id: DOI:10.1109/jssc.2022.3200718
+  doi: 10.1109/jssc.2022.3200718
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/hcs59251.2023.10254717
+  doi: 10.1109/hcs59251.2023.10254717
+- canonical_id: DOI:10.1109/hcs55958.2022.9895629
+  doi: 10.1109/hcs55958.2022.9895629
+- canonical_id: arXiv:2409.06204
+  arxiv_id: '2409.06204'
+- canonical_id: DOI:10.1109/isscc42614.2022.9731711
+  doi: 10.1109/isscc42614.2022.9731711
+- canonical_id: DOI:10.1109/isca52012.2021.00013
+  doi: 10.1109/isca52012.2021.00013
+- canonical_id: DOI:10.1145/3620665.3640376
+  doi: 10.1145/3620665.3640376
+- canonical_id: DOI:10.1145/3620666.3651352
+  doi: 10.1145/3620666.3651352
+- canonical_id: arXiv:2505.03745
+  arxiv_id: '2505.03745'
+- canonical_id: arXiv:2306.03091
+  arxiv_id: '2306.03091'
+- canonical_id: DOI:10.1145/3695053.3731051
+  doi: 10.1145/3695053.3731051
+- canonical_id: DOI:10.48550/arxiv.2012.03112
+  doi: 10.48550/arxiv.2012.03112
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: DOI:10.1109/isca59077.2024.00079
+  doi: 10.1109/isca59077.2024.00079
+- canonical_id: arXiv:2503.08311
+  arxiv_id: '2503.08311'
+- canonical_id: DOI:10.1109/access.2025.3550414
+  doi: 10.1109/access.2025.3550414
+- canonical_id: DOI:10.1145/3620666.3651324
+  doi: 10.1145/3620666.3651324
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: DOI:10.1109/hpca61900.2025.00116
+  doi: 10.1109/hpca61900.2025.00116
+- canonical_id: DOI:10.1145/3446804.3446845
+  doi: 10.1145/3446804.3446845
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: DOI:10.1109/iccd56317.2022.00062
+  doi: 10.1109/iccd56317.2022.00062
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.18653/v1/2021.naacl-main.472
+  doi: 10.18653/v1/2021.naacl-main.472
+- canonical_id: DOI:10.1109/hpca53966.2022.00082
+  doi: 10.1109/hpca53966.2022.00082
+references_checked_at: '2026-09-27'
+references_source: arxiv-html-reference-section
+references_total: 75
 ---
 
 # PIMphony: 長文脈LLM推論向けPIMの帯域・容量非効率を克服するシステム
