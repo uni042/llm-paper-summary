@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-unrelated-arxiv-2506-01939",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.01939",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.01939",
+    "identity_tokens": [
+      "arXiv:2506.01939"
+    ],
+    "reason": "高エントロピートークンへ学習更新を集中する推論能力向けアルゴリズムで、システム基盤の貢献ではない。",
+    "first_checked_at": "2026-09-27T21:25:34+00:00",
+    "last_checked_at": "2026-09-27T21:25:34+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json#rank-489"
+    ],
+    "title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning"
+  },
+  "processed_at": "2026-09-27T21:25:34+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

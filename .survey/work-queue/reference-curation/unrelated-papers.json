@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T21:23:11+00:00",
-  "record_count": 292,
+  "updated_at": "2026-09-27T21:25:34+00:00",
+  "record_count": 297,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4405,6 +4405,76 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Angles Don’t Lie: Unlocking Training-Efficient RL Through the Model’s Own Signals"
+    },
+    "arXiv:2502.03373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03373",
+      "identity_tokens": [
+        "arXiv:2502.03373"
+      ],
+      "reason": "長い思考連鎖を生じさせる学習条件の分析であり、推論・学習基盤の実装最適化を直接扱わない。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-477"
+      ],
+      "title": "Demystifying Long Chain-of-Thought Reasoning in LLMs"
+    },
+    "arXiv:2504.01943": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.01943",
+      "identity_tokens": [
+        "arXiv:2504.01943"
+      ],
+      "reason": "競技プログラミング向けデータ蒸留とモデル能力が主題で、システム効率の研究ではない。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-481"
+      ],
+      "title": "OpenCodeReasoning: Advancing Data Distillation for Competitive Coding"
+    },
+    "arXiv:2504.21798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21798",
+      "identity_tokens": [
+        "arXiv:2504.21798"
+      ],
+      "reason": "ソフトウェア工学エージェント向け訓練データ生成が主題で、LLM基盤の計算・メモリ・配信最適化ではない。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-484"
+      ],
+      "title": "SWE-smith: Scaling Data for Software Engineering Agents"
+    },
+    "arXiv:2506.01939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01939",
+      "identity_tokens": [
+        "arXiv:2506.01939"
+      ],
+      "reason": "高エントロピートークンへ学習更新を集中する推論能力向けアルゴリズムで、システム基盤の貢献ではない。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-489"
+      ],
+      "title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning"
+    },
+    "arXiv:2506.11763": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11763",
+      "identity_tokens": [
+        "arXiv:2506.11763"
+      ],
+      "reason": "研究エージェントの回答品質・引用精度ベンチマークが主題で、LLM推論・学習システムの資源機構を直接扱わない。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-491"
+      ],
+      "title": "DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents"
     }
   }
 }

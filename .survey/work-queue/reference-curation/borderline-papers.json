@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T21:24:11+00:00",
-  "record_count": 302,
+  "updated_at": "2026-09-27T21:25:34+00:00",
+  "record_count": 303,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4521,6 +4521,20 @@
         ".survey/work-queue/worker-worklist-30.json#rank-496"
       ],
       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model"
+    },
+    "arXiv:2407.09450": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09450",
+      "identity_tokens": [
+        "arXiv:2407.09450"
+      ],
+      "reason": "オンライン分割・検索で長文脈を扱うが、主貢献は認知着想の記憶アルゴリズムで、基盤実装の評価は限定的である。",
+      "first_checked_at": "2026-09-27T21:25:34+00:00",
+      "last_checked_at": "2026-09-27T21:25:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-462"
+      ],
+      "title": "Human-inspired Episodic Memory for Infinite Context LLMs"
     }
   }
 }
