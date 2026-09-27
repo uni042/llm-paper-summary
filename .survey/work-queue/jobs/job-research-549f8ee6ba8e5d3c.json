@@ -1,0 +1,28 @@
+{
+  "job_id": "job-research-549f8ee6ba8e5d3c",
+  "type": "research",
+  "priority": 50,
+  "canonical_id": "arXiv:2507.12000",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [
+    "DOI:10.48550/arxiv.2507.12000"
+  ],
+  "title": "DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding",
+  "source_url": "https://arxiv.org/abs/2507.12000",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference-via-distributed-split-speculative-decoding.md",
+  "selection_reason": "一次資料PDF本文を確認し、推論・配信・分散学習・メモリ・通信・量子化の実行効率へ直接的なシステム寄与を確認。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-27T05:03:56+00:00",
+  "import_provenance": {
+    "source": "chatgpt_library",
+    "source_file": "discovery-20260927-0731-scheduled-chat-30.json",
+    "imported_at": "2026-09-27T05:03:56+00:00"
+  }
+}
