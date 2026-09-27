@@ -1188,5 +1188,5 @@
 
 - **2024 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  要求到着率とGPU周波数から裾遅延を予測し、生成中にSLOを満たす最小周波数へ約25反復ごとに調整するDVFS制御で、A100/A30上のGPT-J-6B配信エネルギーを22.8〜45.5%削減する。
+  RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
 <!-- survey:auto:end -->

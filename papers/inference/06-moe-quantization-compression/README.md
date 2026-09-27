@@ -88,7 +88,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
-  事前学習からルーターのL2ノルム変化が小さい専門家を優先して削除するMoE枝刈り法を提案し、簡略理論とV-MoE・E3-MoEの画像分類で検証する。
+  事前学習からファインチューニングまでのルーター変化を専門家重要度として使い、視覚MoEで専門家を大きく削減しながら精度を保つ、理論付きの専門家枝刈り法を示す。
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
