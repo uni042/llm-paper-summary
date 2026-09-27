@@ -34,6 +34,13 @@ SCHEMA_VERSION = 3
 DEFAULT_TARGET_UNSEEN = discovery_search_filter.DEFAULT_PREFETCH_UNSEEN
 MAX_TARGET_UNSEEN = 100
 MAX_PAGES = 100
+CANDIDATE_ID_PROVIDER = "candidate_id_lookup"
+CANDIDATE_ID_SOURCE = "identifier://approved-public-apis"
+CANDIDATE_ID_MAX_ITEMS = 100
+_CANDIDATE_ID_REQUEST_KEYS = {
+    "schema_version", "operation", "request_id", "collector_id", "run_key", "axis",
+    "target_unseen", "provider", "source_url", "identifiers",
+}
 
 # Batch precheck threads may share one checkout. Preload adoption mutates claim/bank
 # sidecars, so serialize only that short critical section while provider retrieval
@@ -92,6 +99,9 @@ def _base_fields(request: dict[str, Any]) -> dict[str, Any]:
 
 
 def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
+    if "identifiers" in request or request.get("provider") == CANDIDATE_ID_PROVIDER or request.get("source_url") == CANDIDATE_ID_SOURCE:
+        return _validate_candidate_id_request(request)
+
     out = _base_fields(request)
     provider = str(request.get("provider") or "").strip()
     source_url = str(request.get("source_url") or "").strip()
@@ -143,6 +153,46 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def _validate_candidate_id_request(request: dict[str, Any]) -> dict[str, Any]:
+    unexpected = set(request) - _CANDIDATE_ID_REQUEST_KEYS
+    if unexpected:
+        raise DiscoveryPrecheckRequestError(
+            "candidate-ID request contains unsupported fields: " + ", ".join(sorted(unexpected))
+        )
+    out = _base_fields(request)
+    if request.get("provider") != CANDIDATE_ID_PROVIDER:
+        raise DiscoveryPrecheckRequestError(f"candidate-ID provider must be {CANDIDATE_ID_PROVIDER!r}")
+    if request.get("source_url") != CANDIDATE_ID_SOURCE:
+        raise DiscoveryPrecheckRequestError(f"candidate-ID source_url must be {CANDIDATE_ID_SOURCE!r}")
+    identifiers = request.get("identifiers")
+    if not isinstance(identifiers, list) or not 1 <= len(identifiers) <= CANDIDATE_ID_MAX_ITEMS:
+        raise DiscoveryPrecheckRequestError(
+            f"identifiers must be a list of 1 to {CANDIDATE_ID_MAX_ITEMS} stable IDs"
+        )
+    normalized: list[str] = []
+    for value in identifiers:
+        if not isinstance(value, str) or not value.strip():
+            raise DiscoveryPrecheckRequestError("identifiers must contain only normalized stable ID strings")
+        try:
+            canonical, _provider = discovery_provider_adapter._explicit_identifier(value)
+        except discovery_provider_adapter.DiscoveryProviderError as exc:
+            raise DiscoveryPrecheckRequestError(str(exc)) from exc
+        if value.strip() != canonical:
+            raise DiscoveryPrecheckRequestError(f"identifier must use its normalized form: {canonical}")
+        normalized.append(canonical)
+    if len(set(normalized)) != len(normalized):
+        raise DiscoveryPrecheckRequestError("identifiers must not contain duplicates")
+    out.update({
+        "schema_version": SCHEMA_VERSION,
+        "mode": "explicit_identifiers",
+        "provider": CANDIDATE_ID_PROVIDER,
+        "source_url": CANDIDATE_ID_SOURCE,
+        "identifiers": normalized,
+        "target_unseen": len(normalized),
+    })
+    return out
+
+
 def _validate_request(request: dict[str, Any]) -> dict[str, Any]:
     version = request.get("schema_version")
     if version != SCHEMA_VERSION:
@@ -174,6 +224,113 @@ def _allowed_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def _receipt(payload: dict[str, Any]) -> str:
     encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return "sha256:" + hashlib.sha256(encoded).hexdigest()
+
+
+def _process_explicit_identifiers(
+    request: dict[str, Any],
+    *,
+    snapshot_dir: Path,
+    rejection_ledger_path: Path,
+) -> dict[str, Any]:
+    lookups = discovery_provider_adapter.lookup_identifiers(request["identifiers"])
+    classified = discovery_search_filter.classify_explicit_identifier_lookups(
+        lookups,
+        snapshot_dir=snapshot_dir,
+        rejection_ledger_path=rejection_ledger_path,
+    )
+    candidate_statuses = []
+    results = []
+    for outcome in classified:
+        status_row = {
+            key: outcome[key]
+            for key in (
+                "requested_id", "status", "lookup_route", "error", "filter_reason",
+                "matched_token", "matched_paper_key", "match_type",
+            )
+            if key in outcome
+        }
+        candidate_statuses.append(status_row)
+        if outcome.get("status") == "allowed" and isinstance(outcome.get("record"), dict):
+            results.append(outcome["record"])
+
+    allowed = _allowed_records(results)
+    source_commit = _manifest_source_commit(Path(snapshot_dir))
+    status_counts = {
+        status: sum(1 for row in candidate_statuses if row.get("status") == status)
+        for status in (
+            "allowed", "filtered_by_snapshot", "provider_unresolved", "provider_error",
+            "intra_batch_duplicate",
+        )
+    }
+    receipt = _receipt({
+        "schema_version": SCHEMA_VERSION,
+        "mode": "explicit_identifiers",
+        "request_id": request["request_id"],
+        "collector_id": request["collector_id"],
+        "run_key": request["run_key"],
+        "axis": request["axis"],
+        "provider": request["provider"],
+        "source_url": request["source_url"],
+        "candidate_ids": request["identifiers"],
+        "candidate_statuses": candidate_statuses,
+        "allowed_records": allowed,
+        "snapshot_source_commit": source_commit,
+    })
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "operation": OPERATION,
+        "ok": True,
+        "request_id": request["request_id"],
+        "collector_id": request["collector_id"],
+        "run_key": request["run_key"],
+        "axis": request["axis"],
+        "provider": request["provider"],
+        "source_url": request["source_url"],
+        "mode": "explicit_identifiers",
+        "identifiers": request["identifiers"],
+        "target_unseen": request["target_unseen"],
+        "page_size": None,
+        "pages_fetched": 1,
+        "next_cursor": None,
+        "target_reached": status_counts["allowed"] == len(request["identifiers"]),
+        "provider_exhausted": True,
+        "max_pages_reached": False,
+        "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+        "evaluation_allowed": True,
+        "decision": "READY_FOR_EVALUATION",
+        "snapshot_source_commit": source_commit,
+        "raw_search_result_count": sum(1 for row in classified if row.get("requested_id") and row.get("record")),
+        "retrieval_duplicate_filtered_count": status_counts["filtered_by_snapshot"],
+        "represented_paper_match_filtered_count": sum(
+            1 for row in candidate_statuses if row.get("filter_reason") == "represented_paper_match"
+        ),
+        "rejection_ledger_filtered_count": sum(
+            1 for row in candidate_statuses if row.get("filter_reason") == "rejection_ledger"
+        ),
+        "intra_batch_duplicate_filtered_count": status_counts["intra_batch_duplicate"],
+        "unresolved_identity_count": 0,
+        "unseen_result_count": len(results),
+        "provider_progress": {
+            "requested_count": len(request["identifiers"]),
+            "status_counts": status_counts,
+            "lookup_routes": sorted({str(row.get("lookup_route")) for row in candidate_statuses if row.get("lookup_route")}),
+        },
+        "progress_observed_at": datetime.now(timezone.utc).isoformat(),
+        "preload_id": None,
+        "preload_seed": False,
+        "preload_cache_used": False,
+        "preload_cached_pages_used": 0,
+        "preload_live_pages_fetched": 0,
+        "preload_source_request_id": None,
+        "candidate_statuses": candidate_statuses,
+        "results": results,
+        "allowed_records": allowed,
+        "receipt": receipt,
+        "next_action": (
+            "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. "
+            "Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+        ),
+    }
 
 
 def _process_v3(
@@ -357,6 +514,12 @@ def process_request(
     request = _validate_request(_read_object(request_path))
     snapshot_dir = Path(snapshot_dir)
     rejection_ledger_path = Path(rejection_ledger_path)
+    if request.get("mode") == "explicit_identifiers":
+        return _process_explicit_identifiers(
+            request,
+            snapshot_dir=snapshot_dir,
+            rejection_ledger_path=rejection_ledger_path,
+        )
     return _process_v3(
         request,
         snapshot_dir=snapshot_dir,
