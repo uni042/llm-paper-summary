@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit whether each paper overview states a representative research result."""
+"""Diagnostic-only overview result-signal report; never a publication quality gate."""
 from __future__ import annotations
 
 import argparse
@@ -139,7 +139,7 @@ def markdown_report(results: list[FileAudit]) -> str:
     qualitative = [r for r in results if r.has_result_signal and not r.has_quantitative_signal]
     missing_signal = [r for r in results if not r.has_result_signal]
     lines = [
-        "# 概要・代表結果の品質監査",
+        "# 概要・代表結果シグナル診断",
         "",
         f"- 生成日時: {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
         f"- 対象: {len(results)}件（Inference / Training / Survey）",
