@@ -296,7 +296,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-03 · [Block Verification Accelerates Speculative Decoding](2024-2403.10444-block-verification-accelerates-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  投機的復号の候補をブロック全体として共同検証し、出力分布を変えず反復当たりの受理量を最適化して実時間を5〜8%短縮する。
+  投機的復号の候補接頭辞をブロック単位で共同検証し、出力分布を変えず期待生成量を理論最適化。PaLM-2評価で標準検証よりブロック効率平均8.30%、実時間平均6.49%改善する。
 
 - **2024-01 · [SpecBranch: Speculative Decoding via Hybrid Drafting and Rollback-Aware Branch Parallelism](2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -312,7 +312,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2023-10 · [SPEED: Speculative Pipelined Execution for Efficient Decoding](2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  パラメータ共有Transformerの早い層から将来トークンを予測してパイプライン実行し、同じ重み読出しを共有してメモリ帯域律速を緩和する。
+  周期パラメータ共有モデルの早い層から将来トークンを予測して同じ共有層へ並行投入し、重み読出しを償却することで、浅いT5に近い遅延のまま深いモデルの精度を得る。
 
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

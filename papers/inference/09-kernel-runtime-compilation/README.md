@@ -127,8 +127,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   DRAMとSRAM間のタイル移動と演算というデータ流を直接記述し、スレッド束縛・配置・テンソル化・パイプライン化を注釈として分離するTileLangにより、LLMを含むAIカーネルを短い記述で実装しつつ手書き最適化に競合する性能を狙う。
 
 - **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  分散演算をタイル単位の計算と通信へ分解する中間表現から融合カーネルを生成し、非重畳実行比1.17〜20.76倍を達成する。
+  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：4  
+  タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
 
 - **2024-12 · [FlexAttention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

@@ -80,7 +80,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2023-03 · [CoLT5: Faster Long-Range Transformers with Conditional Computation](2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  学習したルータが重要トークンだけを高容量経路へ送り、長文入力の全位置へ高価な計算を適用せず長距離Transformerを効率化する。
+  軽量経路を全トークン、高容量の注意・MLPを学習ルータが選ぶ少数トークンだけへ適用し、16k入力でLongT5比35〜75%の学習高速化・50〜100%の推論高速化を示す。
 
 ### 5年前（2021-10〜2022-09）
 

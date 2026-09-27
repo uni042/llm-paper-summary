@@ -123,8 +123,8 @@
   重みを非コヒーレント変換で均質化した後、格子状の有限状態量子器でブロックを高密度に符号化し、2〜4ビット級の重み量子化で低い誤差と実用的な復号を両立する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  巨大外れ値をブロック回転とジグザグ置換で複数チャネルへ分散し、4ビット重み・活性量子化でも従来方式より精度を保つ。
+  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：3  
+  巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 ### 4年前（2022-10〜2023-09）
 

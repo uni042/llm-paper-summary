@@ -475,7 +475,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-09 · [Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU](2024-2409.09086-inf-mllm-efficient-streaming-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  最近・関連トークンだけを固定容量KVへ残し注意バイアスで長期依存を補い、単一GPUで400万トークンや1時間動画を扱いH2O比2倍高速化する。
+  注意機構 saddlesを追跡して最新・重要トークンだけを固定KVへ残し、注意機構 biasで長期ストリーム中の注意移動にも追随するInf-MLLM。
 
 - **2024-08 · [NACL: A General and Effective KV Cache Eviction Framework for LLMs at Inference Time](2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
