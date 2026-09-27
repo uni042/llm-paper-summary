@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WINA: Weight Informed Neuron Activation for Accelerating Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2505.19427",
+      "year": 2025,
+      "published": "2025-05-26",
+      "abstract": "The growing computational demands of large language models (LLMs) make efficient inference and activation strategies increasingly critical. While recent approaches, such as Mixture-of-Experts (MoE), leverage selective activation but require specialized training, training-free sparse activation methods offer broader applicability and superior resource efficiency through their plug-and-play design. However, many existing methods rely solely on hidden state magnitudes to determine activation, resulting in high approximation errors and suboptimal inference accuracy. To address these limitations, we propose WINA (Weight Informed Neuron Activation), a novel, simple, and training-free sparse activation framework that jointly considers hidden state magnitudes and the column-wise $\\ell_2$-norms of weight matrices. We show that this leads to a sparsification strategy that obtains optimal approximation error bounds with theoretical guarantees tighter than existing techniques. Empirically, WINA also outperforms state-of-the-art methods (e.g., TEAL) by up to $2.94\\%$ in average performance at the same sparsity levels, across a diverse set of LLM architectures and datasets. These results position WINA as a new performance frontier for training-free sparse activation in LLM inference, advancing training-free sparse activation methods and setting a robust baseline for efficient inference. The source code is available at https://github.com/microsoft/wina.",
+      "canonical_id": "arXiv:2505.19427",
+      "arxiv_id": "2505.19427",
+      "doi": "10.48550/arXiv.2505.19427",
+      "authors": [
+        "Sihan Chen",
+        "Dan Zhao",
+        "Jongwoo Ko",
+        "Colby R. Banbury",
+        "Huiping Zhuang",
+        "Luming Liang",
+        "Pashmina Cameron",
+        "Tianyi Chen"
+      ],
+      "reason": "weight情報付きtraining-free sparse activationでLLM inference計算を削減する。",
+      "priority": 50
+    },
+    {
+      "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
+      "source_url": "https://arxiv.org/abs/2405.19325",
+      "year": 2024,
+      "published": "2024-05-29",
+      "abstract": "Large language models (LLMs) often hallucinate and lack the ability to provide attribution for their generations. Semi-parametric LMs, such as kNN-LM, approach these limitations by refining the output of an LM for a given prompt using its nearest neighbor matches in a non-parametric data store. However, these models often exhibit slow inference speeds and produce non-fluent texts. In this paper, we introduce Nearest Neighbor Speculative Decoding (NEST), a novel semi-parametric language modeling approach that is capable of incorporating real-world text spans of arbitrary length into the LM generations and providing attribution to their sources. NEST performs token-level retrieval at each inference step to compute a semi-parametric mixture distribution and identify promising span continuations in a corpus. It then uses an approximate speculative decoding procedure that accepts a prefix of the retrieved span or generates a new token. NEST significantly enhances the generation quality and attribution rate of the base LM across a variety of knowledge-intensive tasks, surpassing the conventional kNN-LM method and performing competitively with in-context retrieval augmentation. In addition, NEST substantially improves the generation speed, achieving a 1.8x speedup in inference time when applied to Llama-2-Chat 70B. Code will be released at https://github.com/facebookresearch/NEST/tree/main.",
+      "canonical_id": "arXiv:2405.19325",
+      "arxiv_id": "2405.19325",
+      "doi": "10.48550/arXiv.2405.19325",
+      "authors": [
+        "Minghan Li",
+        "Xilun Chen",
+        "Ari Holtzman",
+        "Beidi Chen",
+        "Jimmy Lin",
+        "Wen-tau Yih",
+        "X. Lin"
+      ],
+      "reason": "retrieved spanをspeculative decodingで受理しattribution付き生成を高速化する。",
+      "priority": 50
+    },
+    {
+      "title": "CLLMs: Consistency Large Language Models",
+      "source_url": "https://arxiv.org/abs/2403.00835",
+      "year": 2024,
+      "published": "2024-02-28",
+      "abstract": "Parallel decoding methods such as Jacobi decoding show promise for more efficient LLM inference as it breaks the sequential nature of the LLM decoding process and transforms it into parallelizable computation. However, in practice, it achieves little speedup compared to traditional autoregressive (AR) decoding, primarily because Jacobi decoding seldom accurately predicts more than one token in a single fixed-point iteration step. To address this, we develop a new approach aimed at realizing fast convergence from any state to the fixed point on a Jacobi trajectory. This is accomplished by refining the target LLM to consistently predict the fixed point given any state as input. Extensive experiments demonstrate the effectiveness of our method, showing 2.4$\\times$ to 3.4$\\times$ improvements in generation speed while preserving generation quality across both domain-specific and open-domain benchmarks.",
+      "canonical_id": "arXiv:2403.00835",
+      "arxiv_id": "2403.00835",
+      "doi": "10.48550/arXiv.2403.00835",
+      "authors": [
+        "Siqi Kou",
+        "Lanxiang Hu",
+        "Zhe He",
+        "Zhijie Deng",
+        "Hao Zhang"
+      ],
+      "reason": "Jacobi fixed point予測でparallel decodingを実用的に高速化する。",
+      "priority": 50
+    },
+    {
+      "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2401.04658",
+      "year": 2024,
+      "published": "2024-01-09",
+      "abstract": "Linear attention is an efficient attention mechanism that has recently emerged as a promising alternative to conventional softmax attention. With its ability to process tokens in linear computational complexities, linear attention, in theory, can handle sequences of unlimited length without sacrificing speed, i.e., maintaining a constant training speed for various sequence lengths with a fixed memory consumption. However, due to the issue with cumulative summation (cumsum), current linear attention algorithms cannot demonstrate their theoretical advantage in a causal setting. In this paper, we present Lightning Attention-2, the first linear attention implementation that enables linear attention to realize its theoretical computational benefits. To achieve this, we leverage the thought of tiling, separately handling the intra-block and inter-block components in linear attention calculation. Specifically, we utilize the conventional attention computation mechanism for the intra-blocks and apply linear attention kernel tricks for the inter-blocks. A tiling technique is adopted through both forward and backward procedures to take full advantage of the GPU hardware. We implement our algorithm in Triton to make it IO-aware and hardware-friendly. Various experiments are conducted on different model sizes and sequence lengths. Lightning Attention-2 retains consistent training and inference speed regardless of input sequence length and is significantly faster than other attention mechanisms. The source code is available at https://github.com/OpenNLPLab/lightning-attention.",
+      "canonical_id": "arXiv:2401.04658",
+      "arxiv_id": "2401.04658",
+      "doi": "10.48550/arXiv.2401.04658",
+      "authors": [
+        "Zhen Qin",
+        "Wei-Gao Sun",
+        "Dong Li",
+        "Xuyang Shen",
+        "Weixuan Sun",
+        "Yi-Ran Zhong"
+      ],
+      "reason": "tilingとTriton kernelでlinear attentionを長系列向けに高速・省memory化する。",
+      "priority": 50
+    },
+    {
+      "title": "Compressing Context to Enhance Inference Efficiency of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.06201",
+      "year": 2023,
+      "published": "2023-10-09",
+      "abstract": "Large language models (LLMs) achieved remarkable performance across various tasks. However, they face challenges in managing long documents and extended conversations, due to significantly increased computational requirements, both in memory and inference time, and potential context truncation when the input exceeds the LLM's fixed context length. This paper proposes a method called Selective Context that enhances the inference efficiency of LLMs by identifying and pruning redundancy in the input context to make the input more compact. We test our approach using common data sources requiring long context processing: arXiv papers, news articles, and long conversations, on tasks of summarisation, question answering, and response generation. Experimental results show that Selective Context significantly reduces memory cost and decreases generation latency while maintaining comparable performance compared to that achieved when full context is used. Specifically, we achieve a 50\\% reduction in context cost, resulting in a 36\\% reduction in inference memory usage and a 32\\% reduction in inference time, while observing only a minor drop of .023 in BERTscore and .038 in faithfulness on four downstream applications, indicating that our method strikes a good balance between efficiency and performance.",
+      "canonical_id": "arXiv:2310.06201",
+      "arxiv_id": "2310.06201",
+      "doi": "10.48550/arXiv.2310.06201",
+      "authors": [
+        "Yucheng Li",
+        "Bo Dong",
+        "Chenghua Lin",
+        "Frank Guerin"
+      ],
+      "reason": "self-informationでcontextをpruneしLLM inference memory/latencyを削減する。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-late",
+    "round": "library-import-late-accept-20260928-002",
+    "axis": "explicit-library-late-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "最新Library Discovery runでaccept済みだが未反映の候補を正規Research候補へ取り込む。",
+    "candidate_count": 20,
+    "round_submission_index": 4,
+    "round_submission_count": 4
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-late-accept-20260928-002",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-late-accept-20260928-002.json",
+    "receipt": "sha256:b0a7ee39453a3295a330eae5c9acd64e432021875575f2313f16886993b96950"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-late",
+    "summary": "Library上の未反映accept成果をGitHubの正規Research候補へ反映する。"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
+      "source_url": "https://arxiv.org/abs/2603.11504",
+      "year": 2026,
+      "published": "2026-03-12",
+      "abstract": "Recent reasoning models such as OpenAI-o1 and DeepSeek-R1 have shown strong performance on complex tasks including mathematical reasoning and code generation. However, this performance gain comes with substantially longer output sequences, leading to significantly increased deployment costs. In particular, long outputs require large KV caches, resulting in high memory consumption and severe bandwidth pressure during attention computation. Most existing KV cache optimization methods are designed for long-input, short-output scenarios and are ineffective for the long-output setting of reasoning models. Moreover, importance estimation in prior work is computationally expensive and becomes prohibitive when continuous re-evaluation is required during long generation. To address these challenges, we propose LongFlow, a KV cache compression method with an efficient importance estimation metric derived from an intermediate result of attention computation using only the current query. This design introduces negligible computational overhead and requires no auxiliary storage. We further develop a custom kernel that fuses FlashAttention, importance estimation, and token eviction into a single optimized operator, improving system-level efficiency. Experiments show that LongFlow achieves up to an 11.8 times throughput improvement with 80% KV cache compression with minimal impact on model accuracy.",
+      "canonical_id": "arXiv:2603.11504",
+      "arxiv_id": "2603.11504",
+      "doi": "10.48550/arXiv.2603.11504",
+      "authors": [
+        "Yi Su",
+        "Zhenxu Tian",
+        "Dan Qiao",
+        "Yuechi Zhou",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "reason": "query-aware KV圧縮とfused Triton kernelで長いreasoning出力を高速化する。",
+      "priority": 50
+    },
+    {
+      "title": "Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2601.17111",
+      "year": 2026,
+      "published": "2026-01-23",
+      "abstract": "Mixture-of-Experts (MoE) models are typically pre-trained with explicit load-balancing constraints to ensure statistically balanced expert routing. Despite this, we observe that even well-trained MoE models exhibit significantly imbalanced routing. This behavior is arguably natural-and even desirable - as imbalanced routing allows models to concentrate domain-specific knowledge within a subset of experts. Expert parallelism (EP) is designed to scale MoE models by distributing experts across multiple devices, but with a less-discussed assumption of balanced routing. Under extreme imbalance, EP can funnel a disproportionate number of tokens to a small number of experts, leading to compute- and memory-bound failures on overloaded devices during post-training or inference, where explicit load balancing is often inapplicable. We propose Least-Loaded Expert Parallelism (LLEP), a novel EP algorithm that dynamically reroutes excess tokens and associated expert parameters from overloaded devices to underutilized ones. This ensures that all devices complete their workloads within the minimum collective latency while respecting memory constraints. Across different model scales, LLEP achieves up to 5x speedup and 4x reduction in peak memory usage compared to standard EP. This enables faster and higher-throughput post-training and inference, with ~1.9x faster for gpt-oss-120b. We support our method with extensive theoretical analysis and comprehensive empirical evaluations, including ablation studies. These results illuminate key trade-offs and enable a principled framework for hardware-specific hyper-parameter tuning to achieve optimal performance.",
+      "canonical_id": "arXiv:2601.17111",
+      "arxiv_id": "2601.17111",
+      "doi": "10.48550/arXiv.2601.17111",
+      "authors": [
+        "Xuan-Phi Nguyen",
+        "Shrey Pandit",
+        "Austin Xu",
+        "Caiming Xiong",
+        "Shafiq Joty"
+      ],
+      "reason": "tokenとexpert parameterを低負荷deviceへ動的再配置しMoE推論の偏りを抑える。",
+      "priority": 50
+    },
+    {
+      "title": "Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens",
+      "source_url": "https://arxiv.org/abs/2512.09277",
+      "year": 2025,
+      "published": "2025-12-10",
+      "abstract": "Expert Parallelism (EP) permits Mixture of Experts (MoE) models to scale beyond a single GPU. To address load imbalance across GPUs in EP, existing approaches aim to balance the number of tokens each GPU processes. Surprisingly, we find that this objective degrades performance rather than improving it when processing is memory-bound - a common occurrence in MoE serving, especially in the decode phase. Our analysis reveals that balancing the number of tokens processed per GPU increases the number of activated experts, exacerbating memory pressure in the memory-bound regime. We propose Minimum Expert Token ROuting, a novel token-routing algorithm for high-performance expert-parallel MoE serving in the memory-bound regime that balances the number of activated experts per GPU rather than token counts. METRO achieves near-optimal routing quality with minimal computational overhead by jointly optimizing algorithmic efficiency and leveraging the GPU's parallel processing power. To guarantee routing quality, METRO also employs a novel allGather scheme to gather global top-k knowledge, which has minimal overhead compared to conventional allToAll. Our evaluation of METRO against EPLB on both real systems (vLLM over 8 A100 GPUs) and a proprietary simulator (8-16 B200 GPUs) shows that METRO reduces decode latency by 11 - 22%, and total token throughput by 3 - 21% for Qwen3 and DeepSeek-V3 serving, where prefill and decode phases are co-deployed. In addition, by trading latency headroom for throughput, METRO improves decode throughput by up to 4.11x over EPLB at a fixed decode SLO.",
+      "canonical_id": "arXiv:2512.09277",
+      "arxiv_id": "2512.09277",
+      "doi": "10.48550/arXiv.2512.09277",
+      "authors": [
+        "Yanpeng Yu",
+        "Haiyue Ma",
+        "Krish Agarwal",
+        "Nicolai Oswald",
+        "Qi-Jing Huang",
+        "Hugo Linsenmaier",
+        "Chun-Hui Mei",
+        "Ritchie Zhao",
+        "Ritika Borkar",
+        "B. Rouhani",
+        "David Nellans",
+        "Ronny Krashinsky",
+        "Anurag Khandelwal"
+      ],
+      "reason": "activated expert数を均衡化しmemory-bound MoE servingの通信とmemory accessを削減する。",
+      "priority": 50
+    },
+    {
+      "title": "TiDAR: Think in Diffusion, Talk in Autoregression",
+      "source_url": "https://arxiv.org/abs/2511.08923",
+      "year": 2025,
+      "published": "2025-11-12",
+      "abstract": "Diffusion language models hold the promise of fast parallel generation, while autoregressive (AR) models typically excel in quality due to their causal structure aligning naturally with language modeling. This raises a fundamental question: can we achieve a synergy with high throughput, higher GPU utilization, and AR level quality? Existing methods fail to effectively balance these two aspects, either prioritizing AR using a weaker model for sequential drafting (speculative decoding), leading to lower drafting efficiency, or using some form of left-to-right (AR-like) decoding logic for diffusion, which still suffers from quality degradation and forfeits its potential parallelizability. We introduce TiDAR, a sequence-level hybrid architecture that drafts tokens (Thinking) in Diffusion and samples final outputs (Talking) AutoRegressively - all within a single forward pass using specially designed structured attention masks. This design exploits the free GPU compute density, achieving a strong balance between drafting and verification capacity. Moreover, TiDAR is designed to be serving-friendly (low overhead) as a standalone model. We extensively evaluate TiDAR against AR models, speculative decoding, and diffusion variants across generative and likelihood tasks at 1.5B and 8B scales. Thanks to the parallel drafting and sampling as well as exact KV cache support, TiDAR outperforms speculative decoding in measured throughput and surpasses diffusion models like Dream and Llada in both efficiency and quality. Most notably, TiDAR is the first architecture to close the quality gap with AR models while delivering 4.71x to 5.91x more tokens per second.",
+      "canonical_id": "arXiv:2511.08923",
+      "arxiv_id": "2511.08923",
+      "doi": "10.48550/arXiv.2511.08923",
+      "authors": [
+        "Jingyu Liu",
+        "Xin Dong",
+        "Zhi-Fan Ye",
+        "Rishabh Mehta",
+        "Yonggan Fu",
+        "Vartika Singh",
+        "Jan Kautz",
+        "Ce Zhang",
+        "Pavlo Molchanov"
+      ],
+      "reason": "diffusion draftとAR samplingを単一forward passへ統合しgeneration throughputを高める。",
+      "priority": 50
+    },
+    {
+      "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
+      "source_url": "https://arxiv.org/abs/2510.27656",
+      "year": 2025,
+      "published": "2025-10-31",
+      "abstract": "Emerging Large Language Model (LLM) system patterns, such as disaggregated inference, Mixture-of-Experts (MoE) routing, and asynchronous reinforcement fine-tuning, require flexible point-to-point communication beyond simple collectives. Existing implementations are locked to specific Network Interface Controllers (NICs), hindering integration into inference engines and portability across hardware providers. We present fabric-lib, which bridges the functionality of common NICs to expose a uniform interface. fabric-lib exposes one-sided WriteImm operations with a ImmCounter primitive for completion notification, without ordering assumptions of network transport, transparently managing multiple NICs per GPU. We demonstrate peak throughput of 400 Gbps on both NVIDIA ConnectX-7 and AWS Elastic Fabric Adapter (EFA). We showcase fabric-lib through three production systems: (1) KvCache transfer for disaggregated inference with dynamic scaling, (2) RL weight updates achieving 1.3 seconds for trillion-parameter models, and (3) MoE dispatch/combine implementation exceeding DeepEP decode latency on ConnectX-7, with the first viable latencies on EFA. We demonstrate that our portable point-to-point communication complements collectives while avoiding lock-in. fabric-lib is open-sourced at https://github.com/perplexityai/pplx-garden/",
+      "canonical_id": "arXiv:2510.27656",
+      "arxiv_id": "2510.27656",
+      "authors": [
+        "N. Licker",
+        "K. Hu",
+        "V. Zaytsev",
+        "Lequn Chen"
+      ],
+      "reason": "複数NICを統一する通信抽象でdisaggregated KV transferとMoE dispatchを高速化する。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-late",
+    "round": "library-import-late-accept-20260928-002",
+    "axis": "explicit-library-late-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "最新Library Discovery runでaccept済みだが未反映の候補を正規Research候補へ取り込む。",
+    "candidate_count": 20,
+    "round_submission_index": 1,
+    "round_submission_count": 4
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-late-accept-20260928-002",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-late-accept-20260928-002.json",
+    "receipt": "sha256:b0a7ee39453a3295a330eae5c9acd64e432021875575f2313f16886993b96950"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-late",
+    "summary": "Library上の未反映accept成果をGitHubの正規Research候補へ反映する。"
+  }
+}

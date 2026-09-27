@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BlockBPE: Parallel BPE Tokenization",
+      "source_url": "https://arxiv.org/abs/2507.11941",
+      "year": 2025,
+      "published": "2025-07-16",
+      "abstract": "Tokenization is a critical preprocessing step in large language model pipelines, yet widely-used implementations remain CPU-bound and suboptimal for batch inference workflows on GPU. We present BlockBPE, a parallel GPU implementation of byte-pair encoding (BPE) that achieves near linear-time complexity under realistic assumptions and is optimized for high-throughput, batch inference. Unlike existing Rust-based tokenizers such as HuggingFace Tokenizers or OpenAI's tiktoken-whose runtimes are dominated by Regex pre-tokenization and exhibit $O(n \\log n)$ runtime-BlockBPE eliminates the Regex pre-tokenization which leads to small loss in generation quality, but enables highly parallelized token merges within thread blocks, reducing overall complexity to $O(nd)$ where $d \\ll n$. On high-batch inference workloads, BlockBPE achieves up to 2x higher throughput than tiktoken and 2.5x over HuggingFace Tokenizers.",
+      "canonical_id": "arXiv:2507.11941",
+      "arxiv_id": "2507.11941",
+      "doi": "10.48550/arXiv.2507.11941",
+      "authors": [
+        "Amos You"
+      ],
+      "reason": "BPEをGPU block並列化し高batch LLM inferenceの前処理bottleneckを削減する。",
+      "priority": 50
+    },
+    {
+      "title": "Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores",
+      "source_url": "https://arxiv.org/abs/2507.08143",
+      "year": 2025,
+      "published": "2025-07-10",
+      "abstract": "Modern Large Language Models (LLMs) are increasingly trained to support very large context windows. We present Compactor, a training-free, query-agnostic KV compression strategy that uses approximate leverage scores to determine token importance. We show that Compactor can achieve the same performance as competing methods while retaining 20% fewer tokens in both synthetic and real-world context tasks, while being more task-robust. We further introduce a procedure for context-calibrated compression: inferring the maximum compression a given context supports before significant performance loss. Using context-calibrated compression, we show that Compactor achieves full KV performance on Longbench while reducing the KV memory burden by 68%, on average. To demonstrate the efficacy and generalizability of our approach, we apply Compactor to 27 synthetic and real-world tasks from RULER and Longbench, with models from both the Qwen 2.5 and Llama 3.1 families. Finally, we release compactor-vllm, an inference engine and suite of optimized Triton kernels designed to efficiently support the sparse, non-contiguous memory access patterns inherent to compressed KV caches. This work demonstrates that Compactor offers a practical, high-performance solution for alleviating the memory bottleneck in modern LLM deployment.",
+      "canonical_id": "arXiv:2507.08143",
+      "arxiv_id": "2507.08143",
+      "doi": "10.48550/arXiv.2507.08143",
+      "authors": [
+        "Vivek Chari",
+        "Benjamin Van Durme"
+      ],
+      "reason": "approximate leverage scoreとTriton kernelで長文脈KV memoryを削減する。",
+      "priority": 50
+    },
+    {
+      "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2507.00605",
+      "year": 2025,
+      "published": "2025-07-01",
+      "abstract": "In edge-cloud speculative decoding (SD), edge devices equipped with small language models (SLMs) generate draft tokens that are verified by large language models (LLMs) in the cloud. A key bottleneck in such systems is the limited communication bandwidth between edge and cloud, which necessitates quantization of the information transmitted about generated tokens. In this work, we introduce a novel quantize-sample (Q-S) strategy that provably preserves the output distribution of the cloud-based model, ensuring that the verified tokens match the distribution of those that would have been generated directly by the LLM. We develop a throughput model for edge-cloud SD that explicitly accounts for communication latency. Leveraging this model, we propose an adaptive mechanism that optimizes token throughput by dynamically adjusting the draft length and quantization precision in response to both semantic uncertainty and channel conditions. Simulations demonstrate that the proposed Q-S approach significantly improves decoding efficiency in realistic edge-cloud deployment scenarios.",
+      "canonical_id": "arXiv:2507.00605",
+      "arxiv_id": "2507.00605",
+      "doi": "10.1109/LCOMM.2026.3651580",
+      "authors": [
+        "Guangyi Zhang",
+        "Yun-Long Cai",
+        "Guan-Ding Yu",
+        "P. Popovski",
+        "Osvaldo Simeone"
+      ],
+      "reason": "edge-cloud SDで量子化とdraft長を適応させoutput distributionを保ってthroughputを上げる。",
+      "priority": 50
+    },
+    {
+      "title": "TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference",
+      "source_url": "https://arxiv.org/abs/2506.10470",
+      "year": 2025,
+      "published": "2025-06-12",
+      "abstract": "As the model size continuously increases, pipeline parallelism shows great promise in throughput-oriented LLM inference due to its low demand on communications. However, imbalanced pipeline workloads and complex data dependencies in the prefill and decode phases result in massive pipeline bubbles and further severe performance reduction. To better exploit the pipeline parallelism for high-throughput LLM inference, we propose TD-Pipe, with the key idea lies in the temporally-disaggregated pipeline parallelism architecture. Specifically, this architecture disaggregates the prefill and decode phases in the temporal dimension, so as to eliminate pipeline bubbles caused by the phase switching. TD-Pipe identifies potential issues of exploiting the novel architecture and provides solutions. First, a hierarchy-controller structure is used to better coordinate devices in pipeline parallelism by decoupling the scheduling from execution. Second, the AI-based greedy prefill approach aggressively performs more prefills by predicting the output length and simulating the memory usage. Third, the inter-batch work stealing approach dynamically balances decode phase workloads between different batches to reduce bubbles. Forth, the spatial-temporal intensity comparison approach determines the optimal switch from decode to prefill by comparing the performance drop from reduced computational intensity with that from phase switching bubbles. Extensive experiments show that TD-Pipe effectively increases the throughput of LLM inference by up to 1.91 × over the existing tensor parallel approach and 2.73 × over the existing pipeline parallel approach on GPU nodes with only PCIe interconnection.",
+      "canonical_id": "arXiv:2506.10470",
+      "arxiv_id": "2506.10470",
+      "doi": "10.1145/3754598.3754621",
+      "authors": [
+        "Hongbin Zhang",
+        "Taosheng Wei",
+        "Zhen-Yi Zheng",
+        "Jiangsu Du",
+        "Zhi-Guang Chen",
+        "Yu-Tong Lu"
+      ],
+      "reason": "prefill/decode時間分離とwork stealingでpipeline bubbleを削減する。",
+      "priority": 50
+    },
+    {
+      "title": "Speeding up Model Loading with Fastsafetensors",
+      "source_url": "https://arxiv.org/abs/2505.23072",
+      "year": 2025,
+      "published": "2025-05-29",
+      "abstract": "The rapid increases in model parameter sizes introduces new challenges in pre-trained model loading. Currently, machine learning code often deserializes each parameter as a tensor object in host memory before copying it to device memory. We found that this approach underutilized storage throughput and significantly slowed down loading large models with a widely-used model file formats, safetensors. In this work, we present fastsafetensors, a Python library designed to optimize the deserialization of tensors in safetensors files. Our approach first copies groups of on-disk parameters to device memory, where they are directly instantiated as tensor objects. This design enables further optimization in low-level I/O and high-level tensor preprocessing, including parallelized copying, peer-to-peer DMA, and GPU offloading. Experimental results show performance improvements of 4.8x to 7.5x in loading models such as Llama (7, 13, and 70 billion parameters), Falcon (40 billion parameters), and the Bloom (176 billion parameters).",
+      "canonical_id": "arXiv:2505.23072",
+      "arxiv_id": "2505.23072",
+      "doi": "10.1109/CLOUD67622.2025.00026",
+      "authors": [
+        "Takeshi Yoshimura",
+        "Tatsuhiro Chiba",
+        "Manish Sethi",
+        "Daniel G. Waddington",
+        "S. Sundararaman"
+      ],
+      "reason": "parameter群をstorageからdeviceへ直接転送しmodel load/cold-startを短縮する。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-late",
+    "round": "library-import-late-accept-20260928-002",
+    "axis": "explicit-library-late-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "最新Library Discovery runでaccept済みだが未反映の候補を正規Research候補へ取り込む。",
+    "candidate_count": 20,
+    "round_submission_index": 3,
+    "round_submission_count": 4
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-late-accept-20260928-002",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-late-accept-20260928-002.json",
+    "receipt": "sha256:b0a7ee39453a3295a330eae5c9acd64e432021875575f2313f16886993b96950"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-late",
+    "summary": "Library上の未反映accept成果をGitHubの正規Research候補へ反映する。"
+  }
+}
