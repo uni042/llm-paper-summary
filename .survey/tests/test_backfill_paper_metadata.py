@@ -311,7 +311,7 @@ last_checked: '2026-09-26'
             self.assertEqual(meta["title"], "Predictive Multi-Tier Memory Management")
             self.assertEqual(meta["summary"], "既存本文の概要を正規メタデータへ再利用する。")
 
-    def test_scalar_authors_are_normalized_and_doi_year_fields_are_reused(self) -> None:
+    def test_scalar_authors_are_normalized_and_valid_legacy_date_is_reused(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             paper = Path(td) / "paper.md"
             paper.write_text(
@@ -320,7 +320,7 @@ canonical_id: DOI:10.1145/example
 title: Example
 summary: Example summary.
 authors: Alice Example; Bob Example
-published_year: 2026
+published_year: '2026-08'
 publication: Conference
 publication_status: Conference
 implementation: 実装済み。
@@ -338,7 +338,7 @@ last_checked: '2026-09-26'
             self.assertTrue(changed)
             meta, body = backfill_paper_metadata.parse_frontmatter(paper)
             self.assertEqual(meta["authors"], ["Alice Example", "Bob Example"])
-            self.assertEqual(meta["published"], 2026)
+            self.assertEqual(meta["published"], "2026-08")
             self.assertEqual(meta["source"], "https://doi.org/10.1145/example")
             self.assertEqual(meta["sources"], ["https://doi.org/10.1145/example"])
             self.assertEqual(meta["publication_type"], "査読付き国際会議論文")
