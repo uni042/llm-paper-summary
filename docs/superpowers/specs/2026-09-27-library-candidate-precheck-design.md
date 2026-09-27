@@ -27,6 +27,18 @@ Libraryの共有 `accept-candidates.json` にある候補を、正式な事前�
 
 Semantic Scholarの公式APIには複数論文IDの照合経路があり、公開仕様の例にarXiv IDが含まれる。<https://api.semanticscholar.org/api-docs/snippets>
 
+### 接続経路と代替経路
+
+| 用途 | 第一経路 | 代替経路 | 切替条件 |
+|---|---|---|---|
+| arXiv / DOIのメタデータ照合 | Semantic Scholarの複数ID取得API | 同APIの単一ID取得を順に実行 | 一括POSTが利用できない、または一部IDだけが失敗 |
+| arXiv一次資料 | arXivの公式概要・PDF | arXiv公式APIのID照会後、概要・PDFを取得 | HTML/PDFの片方が利用できない |
+| DOI一次資料 | DOIを出版社へ解決 | 取得済み公式メタデータが示す出版社ページ | DOIリダイレクトだけでは題名・IDを確認できない |
+| OpenReview候補 | `GET /notes?id=<note-id>` | OpenReview公式フォーラムページ | API認証・公開取得条件により片方が使えない |
+| 事前検査の起動 | 要求JSONのGitHub pushで自動起動 | 既存workflowの `workflow_dispatch` に要求パスを指定 | push後に該当runが始まらないと確認できた場合 |
+
+一つ目の通信経路が失敗したら、同じ要求IDと同じ候補集合を保って代替経路を試す。成功した経路・切替理由を結果と作業報告へ残す。前の実行が継続中か確認する前に重複要求を作らない。
+
 ### 不採用：題名の通常検索
 
 検索順位や表記揺れに左右され、同名・類似題名の誤一致を確実に排除しにくい。390件の既知候補を再照合する経路としては再現性が不足する。
@@ -50,10 +62,10 @@ Semantic Scholarの公式APIには複数論文IDの照合経路があり、公�
 結果には各入力IDの状態を含める。
 
 - `allowed`: ID一致、正規化済み候補として評価可能
-- `repository_duplicate`: 既存の正規本文で同一性を確認
-- `already_queued`: 同一IDの処理が進行中
-- `source_unverified`: 一次資料または正規IDを確認できない
+- `filtered_by_snapshot`: 既存本文、処理中job、過去の判定などにより標準フィルターで除外。自動的に重複完了とは見なさず、正規本文・Research job・却下記録を別々に照合する
+- `provider_unresolved`: 公式取得元が入力IDに対応する記録を返さない
 - `provider_error`: 一時的な取得障害で判定未完了
+- `intra_batch_duplicate`: 同じ要求内で同一identityとして統合
 
 成功した検査結果は従来どおり専用ワークフローが保存し、`allowed_records` と `receipt` を生成する。レシートは入力ID、個別状態、許可レコード、既存スナップショットのコミットを含む結果を対象に計算する。
 
@@ -61,7 +73,7 @@ Semantic Scholarの公式APIには複数論文IDの照合経路があり、公�
 
 事前検査の `allowed_records` だけを使い、通常のDiscovery提出を0〜5件単位で作成する。各提出はワークフロー結果の `request_id`、`result_path`、`receipt` を参照する。提出後は既存のqueue workerにResearch処理を任せ、候補一覧だけで完了扱いにしない。
 
-`already_queued` は重複アップロードと見なして削除せず、既存処理の結果を確認する。GitHubに同じ正規本文がある場合は本文と品質を監査し、品質不足なら同じ正規パスを補完する。品質基準を満たした本文をmainから再取得できた後に限り候補一覧から除く。
+`filtered_by_snapshot` の候補は正規本文、処理中Research job、過去の却下記録を個別に照合する。処理中jobがあれば結果確定まで候補を残す。却下記録は重複ではないため、既存の再評価規則に沿って処理できない限り候補を保留する。GitHubに同じ正規本文がある場合は本文と品質を監査し、品質不足なら同じ正規パスを補完する。品質基準を満たした本文をmainから再取得できた後に限り候補一覧から除く。
 
 ### 4. 一次資料の確認と候補整理
 
@@ -86,8 +98,9 @@ Libraryの3ファイルのうち変更するのは処理が確定した `accept-
 ## 変更対象
 
 - `.survey/scripts/discovery_provider_adapter.py`: 安定ID取得元とID照合。
+- `.survey/scripts/discovery_search_filter.py`: 候補IDごとに既存スナップショットによる除外理由を対応付ける。
 - `.survey/scripts/process_discovery_precheck.py`: リクエスト検証、個別状態、結果・レシート生成。
-- `.survey/tests/test_discovery_provider_adapter.py` と事前検査・提出検証テスト: 正常系、ID不一致、未知ID、一部失敗、重複、レシート検証。
+- `.survey/tests/test_discovery_provider_adapter.py` と事前検査・提出検証テスト: 正常系、ID不一致、未知ID、一部失敗、スナップショット理由対応、重複、レシート検証。
 - `.survey/docs/survey-workflow/worker-router.md`: 通常チャットによる候補取り込み経路を明記し、Scheduled workerの既存ルールとの境界を記す。
 - Libraryの `github-import-procedure.md`: 実装後、実際に成功・再取得検証できた手順と代替経路だけを追記する。
 - `.github/workflows/discovery-precheck.yml`: 既存の要求監視で動作する限り変更しない。
