@@ -3,6 +3,21 @@ canonical_id: DOI:10.1145/3830422.3830427
 title: Elastic Memory Remapping for Multi-tenant LLM Serving
 summary: Oneirosは複数モデルを同居させるLLM配信で、非稼働モデルの重み領域を退避し、その領域を変動するKVキャッシュへ再割当てする。CPUへのキャッシュ退避を避け、末尾遅延と処理量を改善する。
 list_summary: 複数モデルを同居させるLLM配信で、更新され続けるKVキャッシュをCPUへ退避する代わりに、非稼働モデルの不変な重み領域を一方向に退避してKV領域へ再割当てし、GH200実機で末尾遅延を最大99.3%削減、スループットを最大86.7%改善する。
+authors:
+- Ruihao Li
+- Shagnik Pal
+- Vineeth Narayan Pullu
+- Prasoon Sinha
+- Jeeho Ryoo
+- Lizy K. John
+- Neeraja J. Yadwadkar
+published: '2026-07'
+publication: ACM SIGOPS Operating Systems Review 60(1), 41-49
+publication_type: 学術誌論文
+publication_status: published
+source: https://doi.org/10.1145/3830422.3830427
+sources:
+- https://doi.org/10.1145/3830422.3830427
 lineage: 01-offload-hierarchical-memory
 code: null
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
