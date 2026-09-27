@@ -51,7 +51,9 @@ def is_paper(path: Path, body: str) -> bool:
 
 def audit_file(path: Path, repo_root: Path) -> Result:
     meta, body = front(path)
-    summary = compact_list_summary(body, str(meta.get("summary") or ""))
+    # Audit the worker-authored publication value as-is.  Do not synthesize or
+    # shorten prose in the uploader-side quality path.
+    summary = str(meta.get("list_summary") or "").strip()
     quality = audit_list_summary(summary)
     return Result(
         path=path.relative_to(repo_root).as_posix(),
@@ -74,10 +76,11 @@ def markdown_report(results: list[Result]) -> str:
         f"- 生成日時: {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
         f"- 対象: {len(results)}件（Inference / Training / Survey）",
         f"- 合格: {len(passed)}件 / 警告: {len(warned)}件 / 不合格: {len(failed)}件",
-        f"- 長さ: {DEFAULT_MIN_CHARS}〜{DEFAULT_MAX_CHARS}文字",
+        "- 文字数は診断表示のみで、長さによるFAILは設けない",
         "- 日本語比率: 70%未満は不合格、80%未満は警告",
-        "- 日本語化できる英語専門語、改行、URL、Markdown断片は不合格",
-        "- 正規経路ではresearch workerが作成したタイトル直下の一覧専用解説を使用し、専用解説がない既存ページだけ概要から互換生成",
+        "- 空欄、改行、URL、Markdown断片は形式不備として不合格",
+        "- 裸の英語専門語は独立FAILにしない。日本語率の修正時に意味を変えない範囲で表記を整える",
+        "- Research workerが作成した frontmatter の list_summary をそのまま検査し、自動生成・短縮しない",
         "",
         "## 基準未達",
         "",
