@@ -1,97 +1,115 @@
 ---
-canonical_id: DOI:10.1145/3676641.3716245
-title: Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management
-summary: FlashGenは、複数ターン対話で過去会話のKVキャッシュを毎ターン再計算する無駄と、長いプロンプトが先着順スケジューリングで後続要求を塞ぐ先頭待ちを同時に扱う。FlashGen-Cacheは過去ターンKVをGPU、ホストDRAM、NVMe SSDの3階層へ保持し、GPU命中なら即利用、DRAM命中ならGPUへ転送、SSD命中なら待ち要求の実行中にDRAMへ先行転送する。SSD転送を隠せない場合は、低帯域SSDから読むよりGPUでKVを再計算する経路へ切り替える。FlashGen-Schedは現在の空きGPUメモリに収まる短い要求を先に実行してメモリ断片を埋めつつ、古い要求が飢餓しないよう昇格とプリエンプションを行う。2×A100 80GB、224GBのホストKV領域、RAID-0 NVMe SSD、ShareGPT上で、OPT-30BはvLLM比1.63倍、Llama-2-70Bは2.85倍のスループットを同程度の遅延境界で達成し、代表条件ではP95初回トークン時間を92〜93%短縮する。
-list_summary: 複数ターン対話の過去KVをGPU・DRAM・SSDへ階層保持し、SSD転送と再計算を動的に選択、空きGPUメモリへ収まる要求を飢餓なしで並べ替えるFlashGen。vLLM比で最大2.85倍のスループットを報告する。
-source: https://doi.org/10.1145/3676641.3716245
-sources:
-- https://doi.org/10.1145/3676641.3716245
-- https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf
-last_checked: '2026-09-28'
-doi: 10.1145/3676641.3716245
-publication: ASPLOS 2025
-publication_type: conference-paper
-publication_status: Published
+canonical_id: "DOI:10.1145/3676641.3716245"
+doi: "10.1145/3676641.3716245"
+last_audited: "2026-09-28"
+audit_version: 2
+title: "Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management"
+summary: "多輪対話では各ターンのpromptに過去会話が再び含まれるため、通常のLLM配信基盤は同じ履歴トークンの鍵・値キャッシュ（Key-Value cache; KVキャッシュ）を毎回再計算しやすい。同時に、履歴の累積でprompt長がばらつき、先着順（First-Come-First-Served; FCFS）では巨大promptが先頭にいるだけで、残りGPUメモリへ収まる短い要求まで待たせるhead-of-line blockingが起こる。FlashGenはGPUメモリ・host DRAM・NVMe SSDの多段KVキャッシュFlashGen-Cacheと、メモリへ収まる要求を先に差し込みつつ飢餓を防ぐFlashGen-Schedを組み合わせる。2×A100 80GB、224GB host cache、RAID-0 NVMe SSD、ShareGPTでOPT/Llama-2を評価し、同程度のlatency boundaryでOPT-30BはvLLM比1.63倍、Llama-2 70Bは2.85倍のthroughputを報告する。"
+list_summary: "多輪会話の履歴KV再計算と長promptによるFCFS head-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のthroughputを報告する。"
 authors:
 - Jinwoo Jeong
 - Jeongseob Ahn
-code: https://github.com/Sys-KU/LMServe
-implementation: 著者らのLMServeには、本論文の主要機構であるGPU・ホストDRAM・SSDの多段KVキャッシュと要求並べ替えが含まれる。論文評価はvLLMを基準に、Azure A100環境で実施。
-implementation_status: official-code-confirmed
-lineage: inference-systems
-topics:
-- 複数ターン対話
-- KVキャッシュ階層化
-- KVキャッシュオフロード
-- LLMサービング
-- 要求スケジューリング
+published: "2025"
+publication: "ASPLOS 2025, pp. 1-15"
+publication_type: "peer-reviewed-conference"
+publication_status: "Published"
+lineage: "inference-systems"
+topics: ["多輪対話","KVキャッシュ","階層メモリ","SSD","LLM配信スケジューリング"]
+source: "https://doi.org/10.1145/3676641.3716245"
+sources:
+- "https://doi.org/10.1145/3676641.3716245"
+- "https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf"
+last_checked: "2026-09-28"
+code: null
+implementation: "vLLMを基盤に、GPU/host DRAM/SSDの多段KV cache managerと要求reordering schedulerを追加。storageからの復元が待ち時間に隠せない場合は再計算へ切り替える。"
+implementation_status: "paper-and-author-materials-confirmed; official-code-url-not-recorded-here"
+hardware_evaluation: "real-hardware-serving"
+hardware_details: "Azure Standard_NC48ads_A100_v4、NVIDIA A100 80GB×2、DRAM 440GB中224GBをKV cacheへ使用、NVMe SSD 960GB×2をRAID-0。"
+quality_effect: "KV値やモデル計算を近似しないため出力品質は変えない。主な交換条件はKV復元I/O、GPUメモリ占有、要求公平性、tail latency。"
+evidence_locations: ["motivation","FlashGen-Cache","FlashGen-Sched","evaluation","author ASPLOS 2025 slides"]
 ---
 
 # Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management
 
-> 複数ターン対話の過去KVをGPU・DRAM・SSDへ階層保持し、SSD転送と再計算を動的に選択、空きGPUメモリへ収まる要求を飢餓なしで並べ替えるFlashGen。vLLM比で最大2.85倍のスループットを報告する。
+> 多輪会話の履歴KV再計算と長promptによるFCFS head-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のthroughputを報告する。
 
 ## 概要
 
-チャット型LLMでは、第2ターン以降のプロンプトにそれ以前の会話履歴が再び含まれる。通常のサービング系が各ターンを独立した要求として処理すると、過去ターンのトークンについて注意機構のキー・値（Key-Value; KV）を再計算する。会話が続くほど「今回新しく追加された文」より「過去に一度計算した文」の割合が増えるため、プリフィル処理のかなりの部分が重複計算になる。
+多輪対話では、第2ターン以降のpromptに「過去のuser発話＋assistant応答＋今回の質問」が繰り返し含まれる。通常の大規模言語モデル（Large Language Model; LLM）配信基盤が前回ターンの内部状態を保持していなければ、すでに一度処理した履歴トークンについて鍵・値キャッシュ（Key-Value cache; KVキャッシュ）を再計算してから今回の新規promptへ進む。
 
-履歴KVをGPUへ残せばこの再計算は避けられるが、GPU高帯域メモリ（High Bandwidth Memory; HBM）はモデル重み、現在実行中のKV、履歴KVで競合する。FlashGenの予備評価では、OPT-30B、A100 80GB、ホストメモリ224GB、ShareGPTという条件でも、同時利用者が増えるとGPUとホストDRAMだけでは履歴KVの命中率が急速に低下する。そこでFlashGenはSSDまでを履歴KVの容量層として使うが、SSDはDRAMよりはるかに遅いため「SSDにあれば必ず読む」という設計にはしない。
+履歴が長くなるほど、この再計算は初回トークン遅延（Time To First Token; TTFT）を押し上げる。しかし全sessionのKVをGPUへ永久保存することはできない。GPUメモリから追い出したKVをhost DRAMへ置いても、高並列時にはhost側も埋まる。SSDまで使えば容量は増えるが、GPUへ戻すI/Oが再計算より遅い場合がある。
 
-もう一つの問題は、複数ターンでプロンプトが長くなると必要KVメモリも増えることである。先着順（First-Come, First-Served; FCFS）でキュー先頭の長い要求が現在の空きGPUメモリに収まらないと、後ろに実行可能な短い要求があっても投入できない。これが先頭待ち（Head-of-Line blocking）であり、論文のShareGPT観測では利用可能GPUメモリの約18%が使われない例を示している。
+もう一つの問題はスケジューリングである。多輪対話ではsessionごとに履歴長が大きく異なる。先着順（First-Come-First-Served; FCFS）でqueue先頭に巨大promptがあり、その要求全体を載せるだけのGPU KV容量が空いていないと、後ろに「今の空き領域だけで処理できる短い要求」があっても待つ。これがhead-of-line blockingで、GPUメモリの空きとbatching機会を同時に浪費する。
 
-FlashGenはこの2問題を、履歴KVの三階層キャッシュで解くFlashGen-Cacheと、空きメモリへ収まる要求を並べ替えるFlashGen-Schedに分離して設計する。重要なのは、SSD利用、要求並べ替えとも「常に行えばよい」とせず、転送が隠せるか、古い要求を過度に待たせないかまで実行時に判断する点である。
+FlashGenはこの二つを分けて扱う。FlashGen-CacheはGPUメモリ、host DRAM、SSDへ過去ターンKVを階層保持し、復元が有利なときだけ再利用する。FlashGen-Schedはqueue順を安全に入れ替え、現在のGPU空きへ収まる要求を先に処理しながら、古い大要求が永遠に後回しにならない飢餓防止機構を入れる。
+
+2枚のA100 80GB、224GBのhost KV cache、2台のNVMe SSDをRAID-0にしたAzure環境で、ShareGPTを使いOPT-13B/30BとLlama-2 13B/70Bを評価する。OPT-30BではvLLM比1.63倍、Llama-2 70Bでは2.85倍のthroughputを同程度のlatency boundaryで報告し、p95 TTFTも代表条件で90%以上短縮する。
 
 ## 問題設定
 
-### 複数ターン対話では「履歴を覚えること」が計算と容量の両方を圧迫する
+### 多輪対話は「同じ履歴を何度もprefillする」負荷になる
 
-自己回帰LLMはプリフィル時に各入力トークンのKVを作り、デコード中はそれをKVキャッシュから読む。単一ターンなら要求終了後にKVを破棄してもよい。しかしチャットでは次ターンの入力が「以前のプロンプト + 以前の回答 + 新しい質問」になるため、直前ターンのKVは次ターンでも再利用可能である。
+1ターン目で計算した過去トークンのK/Vは、次ターンでも同じ値である。それでも配信基盤がsession終了時にKVを破棄すると、第2ターンの長いpromptを先頭から再度prefillしなければならない。
 
-vLLMやTensorRT-LLMの通常経路で履歴KVを保持しなければ、次ターンのプリフィルで同じ履歴をもう一度前向き計算する。FlashGenの動機実験ではOPT-13B、A100 80GB、現在プロンプト256トークンの条件で、履歴長が増えるほど再計算の遅延が急増し、GPUまたはホストからKVを復元する方が安い領域が広がる。
+著者のOPT-13B＋A100 80GBの動機実験では、履歴長が伸びるにつれて再計算latencyが急増し、GPUまたはhostにKVを残した場合との差が拡大する。したがって多輪対話では「新規promptを速く計算する」だけでなく、「前回までに計算済みのKVをどこまで安価に保持・復元できるか」が重要になる。
 
-ただし履歴KVは会話数と履歴長に比例して増える。GPUだけに残せば実行中要求のバッチ数を圧迫し、DRAMまで拡張しても高負荷では容量不足になる。SSDは容量を増やせる一方、低帯域のため無条件復元するとプリフィル再計算より遅くなる場合がある。したがって「容量階層を増やすこと」と「復元が本当に得かを判断すること」の両方が必要になる。
+### host DRAMだけでも高並列では足りない
 
-### 長いプロンプトはFCFSの先頭待ちを強める
+GPU cache miss時にhost DRAMからKVを戻す方式は、GPUより容量が大きいが有限である。ShareGPT＋OPT-30Bの例ではclient数を増やすとGPU＋hostのKV hit rateが低下する。長時間生きる多数sessionの全履歴をDRAMだけへ置くことは難しい。
 
-連続バッチ処理では、デコード途中の要求を保持したまま新しいプリフィル要求を追加できる。しかし新要求にはプロンプトKVを置くメモリが必要であり、キュー先頭の要求が大きすぎると空き領域へ入らないことがある。
+SSDを第3tierにすれば容量は大幅に増える。ただしSSD→DRAM→GPU転送は遅いため、何でもSSDから復元すると低負荷時には「GPUでKVを再計算する方が速い」という逆転が起こる。FlashGenはSSDを容量tierとして利用しつつ、復元を待ち時間へ隠せるかで再利用/再計算を選ぶ。
 
-FCFSを厳密に守ると、その要求が入るまで後続要求も止めるため、小さな空き領域が遊ぶ。逆に常に短い要求だけを追い越させると、長い要求が永久に実行されない飢餓が生じる。FlashGen-Schedはこの二律背反を、空き領域利用のための並べ替えと、待ち時間を制限する昇格・プリエンプションに分けて扱う。
+### 長promptがFCFS queueを塞ぐ
+
+GPUにはある程度free memoryが残っていても、queue先頭要求が必要とするKV容量より小さければFCFS schedulerはその要求をdispatchできない。その後ろに小要求があっても待たせれば、空きメモリが遊ぶ。
+
+多輪化でprompt長分散が広がるほどこの問題が増える。著者資料ではShareGPTでFCFSによる未使用GPU memoryが生じることを示し、request reorderingを独立した第2の最適化対象にしている。
+
+## FlashGenの処理全体
+
+1. あるsessionのturnが完了したら、その履歴KVをGPUだけでなく下位tierへ保持できる状態にする。
+2. 次のturnが到着した際、GPUに履歴KVがあればそのまま再利用する。
+3. host DRAMにあればGPUへ復元するために必要な領域を確保し、既存GPU KVを必要に応じてevictする。
+4. SSDにしかない場合は、要求が実行される前にSSD→hostへstagingしてI/Oをqueue待ちへ重ねる。
+5. stagingを隠す待ち要求がないなど、SSD復元がcritical pathになる場合はKVを読み戻さずGPUで履歴を再計算する。
+6. schedulerは現在のfree GPU memoryへ収まる要求をqueue後方から探し、FCFSを一時的に越えてdispatchする。
+7. 後回し要求が長く待つとpromotion対象とし、必要なら先に差し込んだ要求をpreemptして領域を作り、飢餓を防ぐ。
+8. CacheとSchedを同時に使い、KV再計算削減とGPU memory利用率向上を組み合わせる。
 
 ## 手法
 
-### 1. FlashGen-Cache: GPU・ホストDRAM・SSDの三階層で履歴KVを保持する
+### 1. FlashGen-Cache: GPU–DRAM–SSDの多段KV cache
 
-FlashGenはチャットセッション単位で過去ターンのKVを識別し、GPU、ホストDRAM、SSDの順にキャッシュする。新しいターンが来るとKV管理器が履歴の所在を確認する。
+cache hitの位置で処理経路が変わる。
 
-GPU命中なら転送も再計算もなく、そのKVをそのまま現在ターンへ接続して実行する。これは最も低コストな経路である。GPUに無くホストDRAMにある場合は、必要な履歴KVをGPUへ転送する。GPU側に十分な空きがなければ、別セッションの履歴KVを下位層へ追い出して領域を確保する。
+| KVの所在 | 処理 |
+|---|---|
+| GPU | 履歴KVをそのまま使って即時実行 |
+| host DRAM | GPU側に領域を作りKVを転送してから実行 |
+| SSD | まずhost DRAMへstagingし、その後GPUへ復元 |
+| どこにも有効なcacheがない/復元が不利 | 履歴tokenを再prefillしてKVを再計算 |
 
-GPUにもDRAMにも無くSSDにある場合は、直ちに同期読み出しして要求を止めるのではなく、まずSSDからホストDRAMへのステージングを開始する。実行中または先行する待ち要求が存在すれば、そのGPU計算とSSD転送を重ね、対象要求がスケジュールされるまでに履歴KVをDRAMへ持ち上げる。これがSSDの低帯域を隠すための中心機構である。
+SSDは単なるswap領域ではない。要求がqueueで待っている間にhostへ先読みすることで、低帯域I/Oをcritical pathから外すことを狙う。
 
-### 2. SSD転送を隠せない場合は「キャッシュ命中」でも再計算を選ぶ
+またKVのGPU復元には既存KVのevictionが伴うため、cache managerはsession単位の所在とGPU free spaceを追跡する。多段化の目的は「常に最下位tierから読む」ことではなく、再計算より安いtier hitを増やすことにある。
 
-ストレージに履歴KVがあることと、そのKVを読むことが速いことは同義ではない。SSD→DRAM転送を他要求の実行時間で隠せない、典型的には先に処理できる待ち要求が無い場合、FlashGenはSSDからの復元を待たず、GPUで履歴KVを再計算する。
+### 2. SSD復元が隠せないときは再計算する
 
-この選択は、多段キャッシュでありがちな「下位層に存在すれば必ず取得する」という方針と異なる。FlashGenにとってSSDは容量を増やす保険だが、復元レイテンシが顕在化する条件では計算資源の方が速い。したがって入力はKVの所在と現在の待ち行列状態、処理はステージング可能性の判定、出力は「SSDから復元」または「GPUで再計算」という経路選択になる。
+SSD bandwidthはGPU計算に比べて遅く、低負荷でqueueが空いているとprefetch時間を他要求処理へ重ねられない。FlashGenはこの場合、SSD stagingを待つより履歴promptを再計算する経路へ切り替える。
 
-この機構の利得は、十分な別要求がありI/OとGPU計算を重ねられるほど大きい。低負荷で待ち要求が無い場合にはSSD利用の価値が下がり、再計算へ戻る。この負の条件を設計に組み込んでいるため、SSD容量を増やしたこと自体を性能向上とみなしていない。
+これは重要な負の条件である。階層cache方式の性能は「cache hit率」だけでは決まらず、hitしたtierからの復元latencyが再計算latencyより短いか、またはI/Oを他処理で隠せるかで決まる。
 
-### 3. FlashGen-Sched: 現在の空きGPUメモリへ入る要求を先に送る
+### 3. FlashGen-Sched: free GPU memoryを埋めるrequest reordering
 
-FlashGen-SchedはFCFSキューをそのまま実行せず、現在GPU上で空いているKV領域へ収まる要求を後方から探して繰り上げる。例えばキュー先頭のR3が大きくて入らない一方、後続R4が小さければR4を先に投入する。これにより細かく余ったGPUメモリを埋め、同時バッチ数を増やせる。
+FCFSで先頭要求が入らない場合、FlashGen-Schedは後ろの要求から現在のfree memoryへ収まるものを探してdispatchする。短いhistoryのsessionや必要KVがGPUへ既にあるsessionを先に走らせれば、空いていたGPU memoryをbatchに使える。
 
-実測ではFlashGen-Schedにより平均GPUメモリ利用率が、OPT-13Bで90.44%→96.99%、OPT-30Bで88.80%→95.71%、Llama-2-13Bで91.67%→98.43%、Llama-2-70Bで91.70%→95.21%へ上がった。平均バッチ要求数もモデルに応じて1.06〜1.15倍増える。したがって並べ替えの目的は単に短い要求の待ち時間を縮めることではなく、KVメモリの空洞を埋めてGPUへより多くの要求を載せることにある。
+著者の評価では、平均GPU memory utilizationがvLLMの90.65%から96.58%へ増えた。モデル別ではFlashGen-Schedによって平均batch request数が1.06〜1.15倍増える。ここがthroughput改善へつながる。
 
-### 4. 昇格とプリエンプションで飢餓を防ぐ
+### 4. reorderingによる飢餓をpreemptionで防ぐ
 
-短い要求に追い越され続けると、長い古い要求が飢餓する。そこでFlashGen-Schedは待ち続ける要求を優先対象へ昇格する。昇格された要求がまだ現在の空き領域へ入らない場合、先に繰り上げて実行していた要求をプリエンプトし、そのKV領域と残り空き領域を合わせて古い要求を投入する。
+短い要求ばかりを先に選ぶと、巨大promptが永遠に待つ可能性がある。そこで後回し要求をpromotionし、その要求をdispatchするのに必要なmemoryが足りなければ、先にreorderして入れた要求をpreemptする。
 
-つまり通常時は「空きに収まるものを先に入れる」ことで利用率を稼ぎ、待ち時間が長くなった時だけ「並べ替えで得た優先順位を取り消す」方向へ戻す。この二段構えにより、FCFSの公平性を完全に捨てずに先頭待ちを緩和する。
-
-### 5. 1セッションの処理経路
-
-新しいチャットターンが到着すると、まずFlashGen-Cacheがセッション履歴KVの所在を確認する。GPUなら即再利用、DRAMならGPUへ復元、SSDなら先行要求と重ねてDRAMへステージングできるかを確認し、隠せなければ再計算へ切り替える。
-
-同時にFlashGen-Schedは、その要求が現在のGPU空き領域へ入るかを判定する。入らない場合でも後続要求が入るならそちらを先に処理する。ただし待ち時間が閾値を越えた要求は昇格され、必要なら繰り上げ要求をプリエンプトする。このためキャッシュ階層とスケジューラは独立機能ではなく、どちらも「今GPUに載せるKV量」を通じて相互作用する。
+つまりFlashGen-Schedはshortest-first schedulerではない。「空きmemoryを一時的に有効利用する」ことと「古い要求の順番を最終的には守る」ことを両立する設計である。
 
 ## 評価
 
@@ -99,64 +117,60 @@ FlashGen-SchedはFCFSキューをそのまま実行せず、現在GPU上で空�
 
 | 項目 | 条件 |
 |---|---|
-| 実行環境 | Azure `Standard_NC48ads_A100_v4` |
+| 環境 | Azure Standard_NC48ads_A100_v4 |
 | GPU | NVIDIA A100 80GB ×2 |
-| ホストDRAM | 440GB中224GBを履歴KVキャッシュに使用 |
-| ストレージ | 960GB NVMe SSD ×2、RAID-0 |
-| データセット | ShareGPT |
-| モデル | OPT-13B / 30B、Llama-2-13B / 70B |
-| 比較対象 | vLLM、CachedAttention、FlashGen-Sched単体、FlashGen-Cache単体、FlashGen |
-| 主指標 | スループット、正規化遅延、P95初回トークン時間、GPUメモリ利用率、平均バッチ数 |
-| 対象負荷 | 複数ターン会話。負荷増加によりGPU・DRAM・SSDの各階層を使用 |
+| host DRAM | 440GB中224GBをKV cachingへ使用 |
+| storage | NVMe SSD 960GB ×2、RAID-0 |
+| dataset | ShareGPT |
+| models | OPT-13B、OPT-30B、Llama-2 13B、Llama-2 70B |
+| baselines | vLLM、CachedAttention |
+| ablation | FlashGen-Schedのみ、FlashGen-Cacheのみ、両方 |
+| 主指標 | end-to-end latency、throughput、p95 TTFT、GPU memory utilization、平均batch size |
 
-### 主要結果
+### 代表的な評価結果
 
-| 観点 | 条件・比較 | 結果 | 読み取れること |
-|---|---|---|---|
-| スループット | OPT-30B、2×A100、vLLM比、同程度の遅延境界 | 1.63倍 | 履歴再利用と要求並べ替えを組み合わせると、長い複数ターン負荷でも処理量が増える |
-| スループット | Llama-2-70B、vLLM比 | 2.85倍 | 大型モデルほど履歴再計算回避の価値が大きい代表例 |
-| P95初回トークン時間（TTFT） | OPT-30B | vLLM 16.87秒 → FlashGen 1.29秒、約92%短縮 | 長い履歴プリフィルの再計算を避けることが応答開始へ直接効く |
-| P95初回トークン時間（TTFT） | Llama-2-13B | vLLM 6.96秒 → FlashGen 0.51秒、約93%短縮 | キャッシュとスケジューリングの両方を使う構成が最小 |
-| GPUメモリ利用率 | 4モデル平均 | vLLM相当の90.65% → FlashGen-Sched 96.58% | 空き領域へ収まる要求の繰り上げが実際にメモリの穴を埋める |
-| 平均バッチ要求数 | FlashGen-Sched | 1.06〜1.15倍 | メモリ利用率向上が同時処理数へ変換される |
-| SSD利用 | 高負荷側 | 評価曲線の一部でSSD階層が関与してもvLLMより良好 | 容量不足時にSSDへ落ちても、ステージングを隠せる範囲では利得が残る |
+| 条件 | vLLM/比較対象 | FlashGen | 改善 |
+|---|---:|---:|---:|
+| OPT-30B、ShareGPT | vLLM | — | 同程度latency boundaryでthroughput 1.63倍 |
+| Llama-2 70B、ShareGPT | vLLM | — | throughput 2.85倍 |
+| OPT-30B p95 TTFT代表点 | 16.87 s | 1.29 s | 約92%短縮 |
+| Llama-2 13B p95 TTFT代表点 | 6.96 s | 0.51 s | 約93%短縮 |
+| 4モデル平均GPU memory utilization | 90.65% | FlashGen-Sched 96.58% | 約5.9ポイント増 |
+| 平均batch request数 | vLLM相当 | FlashGen-Sched | モデル別1.06〜1.15倍 |
 
-P95初回トークン時間（Time To First Token; TTFT）は、要求到着から最初の生成トークンが返るまでの95パーセンタイル値で、複数ターン対話では履歴プリフィルの待ち時間を強く反映する。OPT-30BではFlashGen-Cache単体が3.82秒、FlashGen-Sched単体が14.2秒なのに対して統合FlashGenは1.29秒であり、キャッシュだけ・並べ替えだけより両方を組み合わせる意義が見える。
+p95 TTFTのablationでは、OPT-30BでCachedAttention 7.79秒、Schedのみ14.2秒、Cacheのみ3.82秒、両方のFlashGen 1.29秒である。Llama-2 13Bでは順に2.58秒、3.46秒、2.37秒、0.51秒となる。Cacheが履歴prefillを削り、Schedがmemory空きを埋めるため、両者の組合せで最も大きくなる。
 
-Llama-2-13BでもvLLM 6.96秒、CachedAttention 2.58秒、FlashGen-Sched 3.46秒、FlashGen-Cache 2.37秒、統合FlashGen 0.51秒となる。したがってこの論文の主張は「SSDを足せば高速になる」でも「短い要求を先にすればよい」でもなく、履歴再利用とGPUメモリ効率を同時に制御することである。
-
-### 負荷が高いほど下位キャッシュが必要になる
-
-OPT-30B、A100 80GB、ホスト224GBの動機実験では、同時クライアント数が20から70へ増えるにつれて、GPU内の履歴KV命中率が先に低下し、さらにGPU+ホストを合わせた命中率も約100%から30%前後まで落ちる。これがSSDを第三階層として置く理由である。
-
-一方でSSDは性能上の万能層ではない。待ち要求が無くステージングを隠せない場合、FlashGen自身がSSD取得をやめて再計算する。そのためSSD容量を増やした場合の利得は、要求並行性、SSD帯域、履歴長の分布に依存する。
+throughputのheadlineはモデル依存である。著者発表資料の全体結論ではFlashGenを1.63倍改善として要約している一方、論文abstractではLlama-2 70Bについて2.85倍を報告する。したがって「常に2.85倍」ではなく、モデルサイズ・KV圧力・loadに応じて利得が変わる。
 
 ## 既存研究との差
 
-vLLMはPagedAttentionと連続バッチ処理によってGPU内のKVメモリを効率良く管理するが、FlashGenが中心に据えるのは「次ターンでも使う過去セッションのKVを要求完了後も階層的に残すこと」である。通常の要求内KV管理より長い時間軸でキャッシュする。
+vLLMのページ化注意（PagedAttention）はGPU memory内のKV fragmentationを減らすが、session間隔が長い多輪対話についてGPU–DRAM–SSD全体へhistory KVを永続化することが主眼ではない。
 
-CachedAttentionも複数ターン会話の履歴KV再利用を対象にする。FlashGenはさらにGPU・DRAMだけで収まらない高負荷をSSDまで拡張し、SSD転送を隠せない時は再計算へ戻す。また履歴KV容量の増加がサービングの先頭待ちを悪化させる点をFlashGen-Schedで同時に扱う。
+CachedAttentionはmulti-turnのKV reuseを扱うが、FlashGenはGPU/host/storageの三tierと、「storage復元が遅ければrecompute」という選択を加える。またcacheだけでなく、long promptによるFCFS head-of-line blockingをscheduler側でも解く。
 
-要求並べ替えだけの短要求優先方式とも異なり、FlashGen-SchedはGPUメモリに実際に収まるかを判断軸にし、さらに昇格とプリエンプションで飢餓を防ぐ。したがってレイテンシ最小化だけを狙う順序付けではなく、KVメモリ利用率と公平性の両立を目的とする。
+FlashGenの特徴は、KV cache容量問題とrequest scheduling問題を別々の機構に分け、同時に使う点である。cacheだけではGPU memoryの空きを十分埋められず、schedulerだけではhistory再計算を消せない。
 
 ## 限界・実装状況
 
-評価は主にA100 80GB、ホストDRAM224GB、RAID-0 NVMe SSDという比較的豊富な単一サーバ構成で行われている。PCIe帯域、SSD帯域、DRAM容量が異なる環境では「転送と再計算のどちらが安いか」の境界が変わる。
+評価はA100 80GB×2と特定のhost DRAM/NVMe構成に依存する。PCIe帯域、SSD帯域、CPU memory容量が変われば「復元か再計算か」の境界も変わる。CXLやGrace HopperのようにCPU–GPU memory接続が異なる環境では再評価が必要である。
 
-SSDからのステージングを隠すには、先にGPUで処理できる別要求が必要である。低負荷や単一セッション中心の環境では重畳機会が減り、SSD階層の容量上の利点をそのまま速度へ変換できない。
+モデルはOPTとLlama-2世代であり、グループ化問い合わせ注意（Grouped-Query Attention; GQA）、KV量子化、prefix sharingが標準化した新しいモデルでは1session当たりKV容量が変わる。KVが小さくなればSSD tierの必要性やschedulerのmemory pressureも変わる。
 
-FlashGen-Schedは要求の並べ替えとプリエンプションを行うため、現在のGPUメモリ占有量と各要求の必要KV量を追跡できる実行系が前提になる。別のサービング基盤へ導入する場合、既存の連続バッチ処理、接頭辞キャッシュ、プリフィル分割などとの相互作用を再評価する必要がある。
+ShareGPTは実会話のturn構造を持つが、実productionでのsession再来間隔、client数、SSD耐久性、failure recoveryを完全には再現しない。特にSSDへKVを継続保存する場合、書込量とdevice寿命は運用上の追加評価点になる。
 
-評価モデルはOPTとLlama-2であり、GQA/MQAによってKV量が小さい現代モデルでは履歴KV容量の相対的な圧力が変わる。また論文の最大倍率を、異なるモデル・SSD・ネットワーク越しストレージへそのまま外挿することはできない。
+reorderingは公平性機構を持つが、preemption自体にもstate移動・再schedule費用がある。短要求を優先しすぎるとtail latencyへ跳ね返るため、throughputだけでなくper-session latency distributionを見る必要がある。
 
-著者らは後続の研究用サービング基盤LMServeで、GPU・ホストDRAM・SSDの多段KVキャッシュ、要求並べ替え、接頭辞KV共有などを公開している。ただしリポジトリには本論文後の機能も含まれるため、現在のLMServe全体をASPLOS 2025時点のFlashGen実装そのものと同一視しない。
+## 一般的な実装上の含意
+
+多輪対話では、KV cacheを「1回のrequest中だけ生きる一時状態」ではなく「sessionをまたいで再利用できる中間成果物」として扱う価値がある。再計算コストが高い履歴ほど、下位memory tierへ保存する意味が大きい。
+
+ただし階層memoryでは、capacityだけでなくrestoration latencyと隠蔽可能性をschedulerと同時に見る必要がある。FlashGenがSSD hitでも再計算へ戻る経路を持つのは、storage利用を目的化せずend-to-end latencyで選択しているためである。
 
 ## 一次資料
 
 - DOI: https://doi.org/10.1145/3676641.3716245
-- ASPLOS 2025発表スライド: https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf
-- 著者研究用実装: https://github.com/Sys-KU/LMServe
+- 著者ASPLOS 2025発表資料: https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf
 
 ## 修正履歴
 
-- 2026-09-28: 汎用的な推論最適化テンプレートを削除。複数ターンで履歴KV再計算と先頭待ちが生じる因果、GPU・DRAM・SSDの三階層復元経路、SSDステージングを隠せない場合の再計算切替、空きGPUメモリに基づく要求並べ替え、飢餓防止の昇格・プリエンプションを論文固有の処理順で再構成。評価条件表と結果表を追加し、P95 TTFT、GPUメモリ利用率、バッチ数、SSDが効く条件と効きにくい条件まで反映。
+- 2026-09-28（修正済み）: 最新品質ガイドに合わせ、多輪対話で同じhistory KVを再計算する問題と、長promptがFCFS queueを塞いでGPU memoryを遊ばせる問題を分離して因果的に説明。FlashGen-CacheのGPU/DRAM/SSD hit経路、SSD stagingを隠せない場合のrecompute fallback、FlashGen-Schedのreorderingとstarvation-free preemptionを具体化した。2×A100実機条件、OPT/Llama-2のthroughput、p95 TTFT、GPU memory utilization、batch sizeの結果を表で追加した。
