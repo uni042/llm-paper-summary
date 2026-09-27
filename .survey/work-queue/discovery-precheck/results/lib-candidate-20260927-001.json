@@ -1,0 +1,1680 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "lib-candidate-20260927-001",
+  "collector_id": "library-accept-candidates",
+  "run_key": "lib-candidate-20260927-001",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2407.21018",
+    "arXiv:2405.14256",
+    "DOI:10.1145/3768628",
+    "arXiv:2404.05019",
+    "arXiv:2310.09832",
+    "arXiv:2307.05908",
+    "DOI:10.18653/v1/2023.findings-emnlp.257",
+    "arXiv:2412.18169",
+    "DOI:10.1145/3711896.3737413",
+    "arXiv:2408.14690",
+    "arXiv:2405.19715",
+    "DOI:10.48550/arxiv.2510.02358",
+    "DOI:10.18653/v1/2024.acl-long.696",
+    "DOI:10.1145/3695053.3730999",
+    "arXiv:2403.09919",
+    "arXiv:2402.04291",
+    "arXiv:2506.05508",
+    "arXiv:2012.09852",
+    "arXiv:2406.02542",
+    "arXiv:2310.07188",
+    "arXiv:2504.19874",
+    "arXiv:2506.01979",
+    "arXiv:2404.18911",
+    "arXiv:2401.15024",
+    "arXiv:2310.00034",
+    "DOI:10.1145/3676641.3716009",
+    "arXiv:2403.05821",
+    "arXiv:2402.15319",
+    "arXiv:2502.20766",
+    "arXiv:2408.13510",
+    "arXiv:2405.14917",
+    "arXiv:2403.09636",
+    "arXiv:2402.11131",
+    "arXiv:2310.16836",
+    "arXiv:2307.06945",
+    "arXiv:2304.08467",
+    "arXiv:2505.05286",
+    "arXiv:2206.03382",
+    "DOI:10.48550/arxiv.2406.13035",
+    "DOI:10.1145/3676641.3716245",
+    "arXiv:2509.04827",
+    "arXiv:2507.17769",
+    "arXiv:2505.19645",
+    "arXiv:2504.14489",
+    "arXiv:2412.10319",
+    "arXiv:2411.18424",
+    "arXiv:2405.04304",
+    "arXiv:2312.06635",
+    "DOI:10.1145/3731569.3764843",
+    "arXiv:2604.22312",
+    "arXiv:2603.28458",
+    "arXiv:2602.22603",
+    "arXiv:2601.05109",
+    "arXiv:2508.08448",
+    "arXiv:2507.09019",
+    "arXiv:2506.02634",
+    "arXiv:2503.00392",
+    "arXiv:2502.18137",
+    "DOI:10.48550/arxiv.2511.20975",
+    "DOI:10.1145/3579371.3589038",
+    "arXiv:2604.16682",
+    "arXiv:2509.02121",
+    "arXiv:2507.19635",
+    "arXiv:2507.08771",
+    "arXiv:2506.18879",
+    "arXiv:2504.06792",
+    "arXiv:2503.18989",
+    "arXiv:2412.05496",
+    "arXiv:2410.18517",
+    "DOI:10.1145/3779212.3790224",
+    "DOI:10.1145/3725843.3756043",
+    "DOI:10.1145/3669940.3707285",
+    "DOI:10.1109/iiswc63097.2024.00012",
+    "arXiv:2512.14080",
+    "arXiv:2505.24298",
+    "arXiv:2504.18583",
+    "arXiv:2503.18893",
+    "arXiv:2502.17298",
+    "arXiv:2501.16383",
+    "arXiv:2409.13761",
+    "arXiv:2408.15766",
+    "arXiv:2406.04785",
+    "arXiv:2404.07143",
+    "arXiv:2402.09398",
+    "arXiv:2401.00134",
+    "arXiv:2312.11462",
+    "arXiv:2310.12072",
+    "arXiv:2307.09702",
+    "arXiv:2104.04473",
+    "arXiv:2403.02181",
+    "arXiv:2402.18789",
+    "arXiv:2307.15337",
+    "arXiv:2306.11222",
+    "arXiv:2302.07863",
+    "DOI:10.48550/arxiv.2502.14866",
+    "arXiv:2506.08889",
+    "arXiv:2404.02852",
+    "DOI:10.48550/arxiv.2509.23324",
+    "DOI:10.1145/3774904.3792218",
+    "DOI:10.1109/lca.2024.3406038"
+  ],
+  "target_unseen": 100,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "12a1fdd5c0819995ee0edfc1fc76353862ac9265",
+  "raw_search_result_count": 99,
+  "retrieval_duplicate_filtered_count": 80,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 19,
+  "provider_progress": {
+    "requested_count": 100,
+    "status_counts": {
+      "allowed": 19,
+      "filtered_by_snapshot": 80,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-09-27T14:19:06.199877+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2407.21018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.14256",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3768628",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.12457"
+    },
+    {
+      "requested_id": "arXiv:2404.05019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.09832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.05908",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2023.findings-emnlp.257",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.18169",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3711896.3737413",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.17644"
+    },
+    {
+      "requested_id": "arXiv:2408.14690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.19715",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.48550/arxiv.2510.02358",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2024.acl-long.696",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3695053.3730999",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.09919",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.04291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.05508",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2012.09852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.02542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.07188",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.19874",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.01979",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2506.01979"
+    },
+    {
+      "requested_id": "arXiv:2404.18911",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.18911"
+    },
+    {
+      "requested_id": "arXiv:2401.15024",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.15024"
+    },
+    {
+      "requested_id": "arXiv:2310.00034",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2310.00034"
+    },
+    {
+      "requested_id": "DOI:10.1145/3676641.3716009",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3676641.3716009"
+    },
+    {
+      "requested_id": "arXiv:2403.05821",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2403.05821"
+    },
+    {
+      "requested_id": "arXiv:2402.15319",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.15319"
+    },
+    {
+      "requested_id": "arXiv:2502.20766",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2502.20766"
+    },
+    {
+      "requested_id": "arXiv:2408.13510",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2408.13510"
+    },
+    {
+      "requested_id": "arXiv:2405.14917",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.14917"
+    },
+    {
+      "requested_id": "arXiv:2403.09636",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2403.09636"
+    },
+    {
+      "requested_id": "arXiv:2402.11131",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.11131"
+    },
+    {
+      "requested_id": "arXiv:2310.16836",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2310.16836"
+    },
+    {
+      "requested_id": "arXiv:2307.06945",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2307.06945"
+    },
+    {
+      "requested_id": "arXiv:2304.08467",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2304.08467"
+    },
+    {
+      "requested_id": "arXiv:2505.05286",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2505.05286"
+    },
+    {
+      "requested_id": "arXiv:2206.03382",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2206.03382"
+    },
+    {
+      "requested_id": "DOI:10.48550/arxiv.2406.13035",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2406.13035"
+    },
+    {
+      "requested_id": "DOI:10.1145/3676641.3716245",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3676641.3716245"
+    },
+    {
+      "requested_id": "arXiv:2509.04827",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2509.04827"
+    },
+    {
+      "requested_id": "arXiv:2507.17769",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2507.17769"
+    },
+    {
+      "requested_id": "arXiv:2505.19645",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2505.19645"
+    },
+    {
+      "requested_id": "arXiv:2504.14489",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2504.14489"
+    },
+    {
+      "requested_id": "arXiv:2412.10319",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2412.10319"
+    },
+    {
+      "requested_id": "arXiv:2411.18424",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2411.18424"
+    },
+    {
+      "requested_id": "arXiv:2405.04304",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.04304"
+    },
+    {
+      "requested_id": "arXiv:2312.06635",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2312.06635"
+    },
+    {
+      "requested_id": "DOI:10.1145/3731569.3764843",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3731569.3764843"
+    },
+    {
+      "requested_id": "arXiv:2604.22312",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.22312"
+    },
+    {
+      "requested_id": "arXiv:2603.28458",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.28458"
+    },
+    {
+      "requested_id": "arXiv:2602.22603",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.22603"
+    },
+    {
+      "requested_id": "arXiv:2601.05109",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.05109"
+    },
+    {
+      "requested_id": "arXiv:2508.08448",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.08448"
+    },
+    {
+      "requested_id": "arXiv:2507.09019",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.09019"
+    },
+    {
+      "requested_id": "arXiv:2506.02634",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.02634"
+    },
+    {
+      "requested_id": "arXiv:2503.00392",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.00392"
+    },
+    {
+      "requested_id": "arXiv:2502.18137",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2502.18137"
+    },
+    {
+      "requested_id": "DOI:10.48550/arxiv.2511.20975",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.20975"
+    },
+    {
+      "requested_id": "DOI:10.1145/3579371.3589038",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3579371.3589038"
+    },
+    {
+      "requested_id": "arXiv:2604.16682",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.16682"
+    },
+    {
+      "requested_id": "arXiv:2509.02121",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2509.02121"
+    },
+    {
+      "requested_id": "arXiv:2507.19635",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.19635"
+    },
+    {
+      "requested_id": "arXiv:2507.08771",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.08771"
+    },
+    {
+      "requested_id": "arXiv:2506.18879",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.18879"
+    },
+    {
+      "requested_id": "arXiv:2504.06792",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.06792"
+    },
+    {
+      "requested_id": "arXiv:2503.18989",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2503.18989"
+    },
+    {
+      "requested_id": "arXiv:2412.05496",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2412.05496"
+    },
+    {
+      "requested_id": "arXiv:2410.18517",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2410.18517"
+    },
+    {
+      "requested_id": "DOI:10.1145/3779212.3790224",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3779212.3790224"
+    },
+    {
+      "requested_id": "DOI:10.1145/3725843.3756043",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3725843.3756043"
+    },
+    {
+      "requested_id": "DOI:10.1145/3669940.3707285",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3669940.3707285"
+    },
+    {
+      "requested_id": "DOI:10.1109/iiswc63097.2024.00012",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/iiswc63097.2024.00012"
+    },
+    {
+      "requested_id": "arXiv:2512.14080",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.14080"
+    },
+    {
+      "requested_id": "arXiv:2505.24298",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.24298"
+    },
+    {
+      "requested_id": "arXiv:2504.18583",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.18583"
+    },
+    {
+      "requested_id": "arXiv:2503.18893",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2503.18893"
+    },
+    {
+      "requested_id": "arXiv:2502.17298",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.17298"
+    },
+    {
+      "requested_id": "arXiv:2501.16383",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2501.16383"
+    },
+    {
+      "requested_id": "arXiv:2409.13761",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2409.13761"
+    },
+    {
+      "requested_id": "arXiv:2408.15766",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2408.15766"
+    },
+    {
+      "requested_id": "arXiv:2406.04785",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2406.04785"
+    },
+    {
+      "requested_id": "arXiv:2404.07143",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.07143"
+    },
+    {
+      "requested_id": "arXiv:2402.09398",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.09398"
+    },
+    {
+      "requested_id": "arXiv:2401.00134",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2401.00134"
+    },
+    {
+      "requested_id": "arXiv:2312.11462",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2312.11462"
+    },
+    {
+      "requested_id": "arXiv:2310.12072",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.12072"
+    },
+    {
+      "requested_id": "arXiv:2307.09702",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2307.09702"
+    },
+    {
+      "requested_id": "arXiv:2104.04473",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2104.04473"
+    },
+    {
+      "requested_id": "arXiv:2403.02181",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2403.02181"
+    },
+    {
+      "requested_id": "arXiv:2402.18789",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.18789"
+    },
+    {
+      "requested_id": "arXiv:2307.15337",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2307.15337"
+    },
+    {
+      "requested_id": "arXiv:2306.11222",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2306.11222"
+    },
+    {
+      "requested_id": "arXiv:2302.07863",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2302.07863"
+    },
+    {
+      "requested_id": "DOI:10.48550/arxiv.2502.14866",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.14866"
+    },
+    {
+      "requested_id": "arXiv:2506.08889",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2506.08889"
+    },
+    {
+      "requested_id": "arXiv:2404.02852",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.02852"
+    },
+    {
+      "requested_id": "DOI:10.48550/arxiv.2509.23324",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "DOI:10.1145/3774904.3792218",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3774904.3792218"
+    },
+    {
+      "requested_id": "DOI:10.1109/lca.2024.3406038",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/lca.2024.3406038"
+    }
+  ],
+  "results": [
+    {
+      "title": "ThinK: Thinner Key Cache by Query-Driven Pruning",
+      "source_url": "https://arxiv.org/abs/2407.21018",
+      "year": 2024,
+      "published": "2024-07-30",
+      "abstract": "Large Language Models (LLMs) have revolutionized the field of natural language processing, achieving unprecedented performance across a variety of applications. However, their increased computational and memory demands present significant challenges, especially when handling long sequences. This paper focuses on the long-context scenario, addressing the inefficiencies in KV cache memory consumption during inference. Unlike existing approaches that optimize the memory based on the sequence length, we identify substantial redundancy in the channel dimension of the KV cache, as indicated by an uneven magnitude distribution and a low-rank structure in the attention weights. In response, we propose ThinK, a novel query-dependent KV cache pruning method designed to minimize attention weight loss while selectively pruning the least significant channels. Our approach not only maintains or enhances model accuracy but also achieves a reduction in KV cache memory costs by over 20% compared with vanilla KV cache eviction and quantization methods. For instance, ThinK integrated with KIVI can achieve a 2.8x reduction in peak memory usage while maintaining nearly the same quality, enabling up to a 5x increase in batch size when using a single GPU. Extensive evaluations on the LLaMA and Mistral models across various long-sequence datasets verified the efficiency of ThinK, establishing a new baseline algorithm for efficient LLM deployment without compromising performance. Our code has been made available at https://github.com/SalesforceAIResearch/ThinK.",
+      "canonical_id": "arXiv:2407.21018",
+      "arxiv_id": "2407.21018",
+      "doi": "10.48550/arXiv.2407.21018",
+      "authors": [
+        "Yuhui Xu",
+        "Zhanming Jie",
+        "Hanze Dong",
+        "Lei Wang",
+        "Xudong Lu",
+        "Aojun Zhou",
+        "Amrita Saha",
+        "Caiming Xiong",
+        "Doyen Sahoo"
+      ]
+    },
+    {
+      "title": "ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification",
+      "source_url": "https://arxiv.org/abs/2405.14256",
+      "year": 2024,
+      "published": "2024-05-23",
+      "abstract": "KV cache stores key and value states from previous tokens to avoid re-computation, yet it demands substantial storage space, especially for long sequences. Adaptive KV cache compression seeks to discern the saliency of tokens, preserving vital information while aggressively compressing those of less importance. However, previous methods of this approach exhibit significant performance degradation at high compression ratios due to inaccuracies in identifying salient tokens. In this paper, we present ZipCache, an accurate and efficient KV cache quantization method for LLMs. First, we construct a strong baseline for quantizing KV cache. Through the proposed channel-separable tokenwise quantization scheme, the memory overhead of quantization parameters are substantially reduced compared to fine-grained groupwise quantization. To enhance the compression ratio, we propose normalized attention score as an effective metric for identifying salient tokens by considering the lower triangle characteristics of the attention matrix. Moreover, we develop an efficient approximation method that decouples the saliency metric from full attention scores, enabling compatibility with fast attention implementations like FlashAttention. Extensive experiments demonstrate that ZipCache achieves superior compression ratios, fast generation speed and minimal performance losses compared with previous KV cache compression methods. For instance, when evaluating Mistral-7B model on GSM8k dataset, ZipCache is capable of compressing the KV cache by $4.98\\times$, with only a $0.38\\%$ drop in accuracy. In terms of efficiency, ZipCache also showcases a $37.3\\%$ reduction in prefill-phase latency, a $56.9\\%$ reduction in decoding-phase latency, and a $19.8\\%$ reduction in GPU memory usage when evaluating LLaMA3-8B model with a input length of $4096$.",
+      "canonical_id": "arXiv:2405.14256",
+      "arxiv_id": "2405.14256",
+      "doi": "10.48550/arXiv.2405.14256",
+      "authors": [
+        "Ye-Fei He",
+        "Luo-Ming Zhang",
+        "Weijia Wu",
+        "Jing Liu",
+        "Hong Zhou",
+        "Bo-Han Zhuang"
+      ]
+    },
+    {
+      "title": "Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2404.05019",
+      "year": 2024,
+      "published": "2024-04-07",
+      "abstract": "Expert parallelism has emerged as a key strategy for distributing the computational workload of sparsely-gated mixture-of-experts (MoE) models across multiple devices, enabling the processing of increasingly large-scale models. However, the All-to-All communication inherent to expert parallelism poses a significant bottleneck, limiting the efficiency of MoE models. Although existing optimization methods partially mitigate this issue, they remain constrained by the sequential dependency between communication and computation operations. To address this challenge, we propose ScMoE, a novel shortcut-connected MoE architecture integrated with an overlapping parallelization strategy. ScMoE decouples communication from its conventional sequential ordering, enabling up to 100% overlap with computation. Compared to the prevalent top-2 MoE baseline, ScMoE achieves speedups of 1.49 times in training and 1.82 times in inference. Moreover, our experiments and analyses indicate that ScMoE not only achieves comparable but in some instances surpasses the model quality of existing approaches.",
+      "canonical_id": "arXiv:2404.05019",
+      "arxiv_id": "2404.05019",
+      "doi": "10.48550/arXiv.2404.05019",
+      "authors": [
+        "Weilin Cai",
+        "Juyong Jiang",
+        "Le Qin",
+        "Junwei Cui",
+        "Sunghun Kim",
+        "Jiayi Huang"
+      ]
+    },
+    {
+      "title": "Merging Experts into One: Improving Computational Efficiency of Mixture of Experts",
+      "source_url": "https://arxiv.org/abs/2310.09832",
+      "year": 2023,
+      "published": "2023-10-15",
+      "abstract": "Scaling the size of language models usually leads to remarkable advancements in NLP tasks. But it often comes with a price of growing computational cost. Although a sparse Mixture of Experts (MoE) can reduce the cost by activating a small subset of parameters (e.g., one expert) for each input, its computation escalates significantly if increasing the number of activated experts, limiting its practical utility. Can we retain the advantages of adding more experts without substantially increasing the computational costs? In this paper, we first demonstrate the superiority of selecting multiple experts and then propose a computation-efficient approach called \\textbf{\\texttt{Merging Experts into One}} (MEO), which reduces the computation cost to that of a single expert. Extensive experiments show that MEO significantly improves computational efficiency, e.g., FLOPS drops from 72.0G of vanilla MoE to 28.6G (MEO). Moreover, we propose a token-level attention block that further enhances the efficiency and performance of token-level MEO, e.g., 83.3\\% (MEO) vs. 82.6\\% (vanilla MoE) average score on the GLUE benchmark. Our code will be released upon acceptance. Code will be released at: \\url{https://github.com/Shwai-He/MEO}.",
+      "canonical_id": "arXiv:2310.09832",
+      "arxiv_id": "2310.09832",
+      "doi": "10.48550/arXiv.2310.09832",
+      "authors": [
+        "Shwai He",
+        "Run-Ze Fan",
+        "Liang Ding",
+        "Li Shen",
+        "Tianyi Zhou",
+        "D. Tao"
+      ]
+    },
+    {
+      "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2307.05908",
+      "year": 2023,
+      "published": "2023-07-12",
+      "abstract": "This paper presents\"Predictive Pipelined Decoding (PPD),\"an approach that speeds up greedy decoding in Large Language Models (LLMs) while maintaining the exact same output as the original decoding. Unlike conventional strategies, PPD employs additional compute resources to parallelize the initiation of subsequent token decoding during the current token decoding. This method reduces decoding latency and reshapes the understanding of trade-offs in LLM decoding strategies. We have developed a theoretical framework that allows us to analyze the trade-off between computation and latency. Using this framework, we can analytically estimate the potential reduction in latency associated with our proposed method, achieved through the assessment of the match rate, represented as p_correct. The results demonstrate that the use of extra computational resources has the potential to accelerate LLM decoding. Additionally, we implement PPD and conduct preliminary experiments to empirically validate its efficacy, addressing potential practical overheads not covered by theoretical analysis.",
+      "canonical_id": "arXiv:2307.05908",
+      "arxiv_id": "2307.05908",
+      "doi": "10.48550/arXiv.2307.05908",
+      "authors": [
+        "Seongjun Yang",
+        "Gibbeum Lee",
+        "Jaewoong Cho",
+        "Dimitris Papailiopoulos",
+        "Kangwook Lee"
+      ]
+    },
+    {
+      "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation",
+      "source_url": "https://arxiv.org/abs/2203.16487",
+      "year": 2022,
+      "published": "2022-03-30",
+      "abstract": "We propose Speculative Decoding (SpecDec), for the first time ever, to formally study exploiting the idea of speculative execution to accelerate autoregressive (AR) decoding. Speculative Decoding has two innovations: Spec-Drafter -- an independent model specially optimized for efficient and accurate drafting -- and Spec-Verification -- a reliable method for verifying the drafted tokens efficiently in the decoding paradigm. Experimental results on various seq2seq tasks including machine translation and abstractive summarization show our approach can achieve around $5\\times$ speedup for the popular Transformer architectures with comparable generation quality to beam search decoding, refreshing the impression that the draft-then-verify paradigm introduces only $1.4\\times$$\\sim$$2\\times$ speedup. In addition to the remarkable speedup, we also demonstrate 3 additional advantages of SpecDec, revealing its practical value for accelerating generative models in real-world applications. Our models and codes are available at https://github.com/hemingkx/SpecDec.",
+      "canonical_id": "arXiv:2203.16487",
+      "arxiv_id": "2203.16487",
+      "doi": "10.18653/v1/2023.findings-emnlp.257",
+      "authors": [
+        "Heming Xia",
+        "Tao Ge",
+        "Peiyi Wang",
+        "Si-Qing Chen",
+        "Furu Wei",
+        "Zhifang Sui"
+      ]
+    },
+    {
+      "title": "KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2412.18169",
+      "year": 2024,
+      "published": "2024-12-24",
+      "abstract": "Serving LLMs with a cluster of GPUs is common nowadays, where the serving system must meet strict latency SLOs required by applications. However, the stateful nature of LLM serving requires maintaining huge states (i.e., KVCache) in limited GPU memory. Under spikes in real-world workloads, GPU memory can be easily overloaded, leading to orders of magnitude higher response latency due to queuing introduced by waiting for KVCache to be reclaimed. Prior KVCachecentric approaches handle overloading by dropping, migrating, or swapping KVCache. These methods fail to release sufficient memory quickly with requests still queued. This paper proposes the first parameter-centric approach to handling overloading by selectively dropping replicated parameters to instantly free memory for requests, based on an unnoticed observation that model parameters are commonly replicated across GPUs for serving LLMs. With additional memory, all requests can be served with a larger batch without queuing. To make the parameter-centric approach correct and efficient, we cooperatively execute requests on GPUs with a complete copy of parameters using pipeline parallelism, and derive an appropriate drop plan without unnecessary cooperation. We also design techniques to minimize the performance overhead due to pipeline parallelism with the execution patterns of requests under drop. Evaluations show that Kun-Serve reduces the tail TTFT of requests under overloading by up to 72.2 × compared to the state-of-the-art systems including Llumnix, vLLM and InferCept.",
+      "canonical_id": "arXiv:2412.18169",
+      "arxiv_id": "2412.18169",
+      "doi": "10.1145/3767295.3769348",
+      "authors": [
+        "Rongxin Cheng",
+        "Yuxin Lai",
+        "Xingda Wei",
+        "Rong Chen",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "title": "Training-Free Activation Sparsity in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.14690",
+      "year": 2024,
+      "published": "2024-08-26",
+      "abstract": "Activation sparsity can enable practical inference speedups in large language models (LLMs) by reducing the compute and memory-movement required for matrix multiplications during the forward pass. However, existing methods face limitations that inhibit widespread adoption. Some approaches are tailored towards older models with ReLU-based sparsity, while others require extensive continued pre-training on up to hundreds of billions of tokens. This paper describes TEAL, a simple training-free method that applies magnitude-based activation sparsity to hidden states throughout the entire model. TEAL achieves 40-50% model-wide sparsity with minimal performance degradation across Llama-2, Llama-3, and Mistral families, with sizes varying from 7B to 70B. We improve existing sparse kernels and demonstrate wall-clock decoding speed-ups of up to 1.53$\\times$ and 1.8$\\times$ at 40% and 50% model-wide sparsity. TEAL is compatible with weight quantization, enabling further efficiency gains.",
+      "canonical_id": "arXiv:2408.14690",
+      "arxiv_id": "2408.14690",
+      "doi": "10.48550/arXiv.2408.14690",
+      "authors": [
+        "James Liu",
+        "Pragaash Ponnusamy",
+        "Tian-Le Cai",
+        "Han Guo",
+        "Yoon Kim",
+        "Ben Athiwaratkun"
+      ]
+    },
+    {
+      "title": "SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths",
+      "source_url": "https://arxiv.org/abs/2405.19715",
+      "year": 2024,
+      "published": "2024-05-29",
+      "abstract": "Speculative decoding reduces the inference latency of a target large language model via utilizing a smaller and faster draft model. Its performance depends on a hyperparameter K -- the candidate length, i.e., the number of candidate tokens for the target model to verify in each round. However, previous methods often use simple heuristics to choose K, which may result in sub-optimal performance. We study the choice of the candidate length K and formulate it as a Markov Decision Process. We theoretically show that the optimal policy of this Markov decision process takes the form of a threshold policy, i.e., the current speculation should stop and be verified when the probability of getting a rejection exceeds a threshold value. Motivated by this theory, we propose SpecDec++, an enhanced version of speculative decoding that adaptively determines the candidate length on the fly. We augment the draft model with a trained acceptance prediction head to predict the conditional acceptance probability of the candidate tokens. SpecDec++ will stop the current speculation when the predicted probability that at least one token gets rejected exceeds a threshold. We implement SpecDec++ and apply it to the llama-2-chat 7B&70B model pair. Our adaptive method achieves a 2.04x speedup on the Alpaca dataset (7.2% improvement over the baseline speculative decoding). On the GSM8K and HumanEval datasets, our method achieves a 2.26x speedup (9.4% improvement) and 2.23x speedup (11.1% improvement), respectively. The code of this paper is available at https://github.com/Kaffaljidhmah2/SpecDec_pp.",
+      "canonical_id": "arXiv:2405.19715",
+      "arxiv_id": "2405.19715",
+      "doi": "10.48550/arXiv.2405.19715",
+      "authors": [
+        "Kai-Xuan Huang",
+        "Xu Guo",
+        "Mengdi Wang"
+      ]
+    },
+    {
+      "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2510.02358",
+      "year": 2025,
+      "published": "2025-09-28",
+      "abstract": "As large language models (LLMs) scale up, accuracy improves, but the autoregressive (AR) nature of decoding increases latency since each token requires a serial forward pass. Speculative decoding addresses this by employing a fast drafter to propose multi-token drafts, which are then verified in parallel by the target model. However, many deployments still rely on AR drafters, where sequential passes limit wall-clock gains. We revisit the drafting stage and present DiffuSpec, a training-free drop-in framework that uses a pretrained diffusion language model (DLM) to produce multi-token drafts in a single forward pass, while remaining compatible with standard AR verifiers. Because DLM drafts are generated under bidirectional conditioning, parallel per-position candidates form a token lattice in which the locally highest-probability token at each position need not form a causal left-to-right path. Moreover, DLM drafting requires pre-specifying a draft length, inducing a speed-quality trade-off. To address these challenges, we introduce two practical components: (i) a causal-consistency path search (CPS) over this lattice that extracts a left-to-right path aligned with AR verification; and (ii) an adaptive draft-length (ADL) controller that adjusts next proposal size based on recent acceptance feedback and realized generated length. Across benchmarks, DiffuSpec yields up to 3x wall-clock speedup, establishing diffusion-based drafting as a robust alternative to autoregressive drafters for speculative decoding.",
+      "canonical_id": "arXiv:2510.02358",
+      "arxiv_id": "2510.02358",
+      "doi": "10.48550/arXiv.2510.02358",
+      "authors": [
+        "Guanghao Li",
+        "Zhihui Fu",
+        "Min Fang",
+        "Qibin Zhao",
+        "Ming Tang",
+        "Chun Yuan",
+        "Jun Wang"
+      ]
+    },
+    {
+      "title": "Harder Task Needs More Experts: Dynamic Routing in MoE Models",
+      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.696",
+      "year": 2024,
+      "published": null,
+      "abstract": "In this paper, we introduce a novel dynamic expert selection framework for Mixture of Experts (MoE) models, aiming to enhance computational efficiency and model performance by adjusting the number of activated experts based on input difficulty. Unlike existing MoE approaches that rely on fixed TopK Routing, which activates a predetermined number of experts regardless of the input’s complexity, our method dynamically allocates experts based on the confidence level in expert selection for each input. This allows for more efficient utilization of computational resources, activating more experts for complex tasks requiring advanced reasoning and fewer for simpler tasks. Through extensive evaluations, our dynamic routing method demonstrates substantial improvements over Top2 Routing across various benchmarks, achieving an average improvement of 0.7% with less than 90% activated parameters. Further analysis shows our model dispatches more experts to tasks requiring complex reasoning skills, like BBH, confirming its ability to dynamically allocate computational resources in alignment with the input’s complexity. Our findings also highlight a variation in the number of experts needed across different layers of the transformer model, offering insights into the potential for designing heterogeneous MoE frameworks. The code and models are available at https://github.com/ZhenweiAn/Dynamic_MoE.",
+      "doi": "10.18653/v1/2024.acl-long.696",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.696",
+      "authors": [
+        "Quzhe Huang",
+        "Zhenwei An",
+        "Nan Zhuang",
+        "Mingxu Tao",
+        "Chen Zhang",
+        "Yang Jin",
+        "Kun Xu",
+        "Liwei Chen",
+        "Songfang Huang",
+        "Yansong Feng"
+      ]
+    },
+    {
+      "title": "WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling",
+      "source_url": "https://doi.org/10.1145/3695053.3730999",
+      "year": 2025,
+      "published": "2025-06-20",
+      "abstract": "Existing large language model (LLM) serving systems typically batch the compute-bound prefill and I/O-bound decoding phases together. This co-location approach not only leads to significant interference between the two phases but also limits resource allocation and placements. To address these limitations, recent work proposes disaggregating the prefill and decoding phases to enhance performance. However, these works often rely on coarse-grained static scheduling strategies, resulting in imbalanced and insufficient resource utilization. For instance, compute resources for the prefill phase may be overloaded while those for the decoding phase remain idle, resulting in performance bottlenecks. In this paper, we propose WindServe, an efficient phase dis-aggregated LLM serving system that leverages stream-based, fine-grained dynamic scheduling to enhance resource utilization and performance. WindServe features a global scheduler that monitors compute and memory resource usage to dynamically orchestrate cross-phase jobs, effectively reducing queuing delay and KV cache swapping overhead. We also introduce a stall-free rescheduling strategy to saturate the memory resources while minimizing the scheduling overhead from KV cache transfers. Furthermore, we design a stream-based approach to mitigate interference between prefill and decoding jobs. Our evaluation demonstrates that WindServe achieves remarkable stability and SLO attainment under high-load scenarios, outperforming state-of-the-art phase-disaggregated LLM serving systems by delivering a 4.28 × improvement in TTFT median latency and a 1.5 × reduction in TPOT P99 latency.",
+      "doi": "10.1145/3695053.3730999",
+      "canonical_id": "DOI:10.1145/3695053.3730999",
+      "authors": [
+        "Jingqi Feng",
+        "Yukai Huang",
+        "Rui Zhang",
+        "Sicheng Liang",
+        "Ming Yan",
+        "Jie Wu"
+      ]
+    },
+    {
+      "title": "Recurrent Drafter for Fast Speculative Decoding in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2403.09919",
+      "year": 2024,
+      "published": "2024-03-14",
+      "abstract": "We present Recurrent Drafter (ReDrafter), an advanced speculative decoding approach that achieves state-of-the-art speedup for large language models (LLMs) inference. The performance gains are driven by three key aspects: (1) leveraging a recurrent neural network (RNN) as the draft model conditioning on LLM's hidden states, (2) applying a dynamic tree attention algorithm over beam search results to eliminate duplicated prefixes in candidate sequences, and (3) training through knowledge distillation from the LLM. ReDrafter accelerates Vicuna inference in MT-Bench by up to 2.8x with a PyTorch implementation on Nvidia H100 GPUs. To demonstrate its practicality in real environments, we also validated its effectiveness for on-device applications by implementing the approach in MLX and benchmarking performance on Metal GPUs in Apple Silicon chips, achieving up to 2.3x speedup.",
+      "canonical_id": "arXiv:2403.09919",
+      "arxiv_id": "2403.09919",
+      "doi": "10.48550/arXiv.2403.09919",
+      "authors": [
+        "Aonan Zhang",
+        "Chong Wang",
+        "Yi Wang",
+        "Xuanyu Zhang",
+        "Yunfei Cheng"
+      ]
+    },
+    {
+      "title": "BiLLM: Pushing the Limit of Post-Training Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2402.04291",
+      "year": 2024,
+      "published": "2024-02-06",
+      "abstract": "Pretrained large language models (LLMs) exhibit exceptional general language processing capabilities but come with significant demands on memory and computational resources. As a powerful compression technology, binarization can extremely reduce model weights to a mere 1 bit, lowering the expensive computation and memory requirements. However, existing quantization techniques fall short of maintaining LLM performance under ultra-low bit-widths. In response to this challenge, we present BiLLM, a groundbreaking 1-bit post-training quantization scheme tailored for pretrained LLMs. Based on the weight distribution of LLMs, BiLLM first identifies and structurally selects salient weights, and minimizes the compression loss through an effective binary residual approximation strategy. Moreover, considering the bell-shaped distribution of the non-salient weights, we propose an optimal splitting search to group and binarize them accurately. BiLLM achieving for the first time high-accuracy inference (e.g. 8.41 perplexity on LLaMA2-70B) with only 1.08-bit weights across various LLMs families and evaluation metrics, outperforms SOTA quantization methods of LLM by significant margins. Moreover, BiLLM enables the binarization process of the LLM with 7 billion weights within 0.5 hours on a single GPU, demonstrating satisfactory time efficiency. Our code is available at https://github.com/Aaronhuang-778/BiLLM.",
+      "canonical_id": "arXiv:2402.04291",
+      "arxiv_id": "2402.04291",
+      "doi": "10.48550/arXiv.2402.04291",
+      "authors": [
+        "Wei Huang",
+        "Yangdong Liu",
+        "Haotong Qin",
+        "Ying Li",
+        "Shi-Ming Zhang",
+        "Xianglong Liu",
+        "Michele Magno",
+        "Xiaojuan Qi"
+      ]
+    },
+    {
+      "title": "Beyond the Buzz: A Pragmatic Take on Inference Disaggregation",
+      "source_url": "https://arxiv.org/abs/2506.05508",
+      "year": 2025,
+      "published": "2025-06-05",
+      "abstract": "As inference scales to multi-node deployments, disaggregation - splitting inference into distinct phases - offers a promising path to improving the throughput-interactivity Pareto frontier. Despite growing enthusiasm and a surge of open-source efforts, practical deployment of disaggregated serving remains limited due to the complexity of the optimization search space and system-level coordination. In this paper, we present the first systematic study of disaggregated inference at scale, evaluating hundreds of thousands of design points across diverse workloads and hardware configurations. We find that disaggregation is most effective for prefill-heavy traffic patterns and larger models. Our results highlight the critical role of dynamic rate matching and elastic scaling in achieving Pareto-optimal performance. Our findings offer actionable insights for efficient disaggregated deployments to navigate the trade-off between system throughput and interactivity.",
+      "canonical_id": "arXiv:2506.05508",
+      "arxiv_id": "2506.05508",
+      "doi": "10.48550/arXiv.2506.05508",
+      "authors": [
+        "Tiyasa Mitra",
+        "Ritika Borkar",
+        "Nidhi Bhatia",
+        "Ramon Matas",
+        "Shivam Raj",
+        "Dheevatsa Mudigere",
+        "Ritchie Zhao",
+        "Maximilian Golub",
+        "Arpan Dutta",
+        "S. Madduri",
+        "Dharmesh Jani",
+        "Brian Pharris",
+        "B. Rouhani"
+      ]
+    },
+    {
+      "title": "SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning",
+      "source_url": "https://arxiv.org/abs/2012.09852",
+      "year": 2020,
+      "published": "2020-12-17",
+      "abstract": "The attention mechanism is becoming increasingly popular in Natural Language Processing (NLP) applications, showing superior performance than convolutional and recurrent architectures. However, general-purpose platforms such as CPUs and GPUs are inefficient when performing attention inference due to complicated data movement and low arithmetic intensity. Moreover, existing NN accelerators mainly focus on optimizing convolutional or recurrent models, and cannot efficiently support attention. In this paper, we present SpAtten, an efficient algorithm-architecture co-design that leverages token sparsity, head sparsity, and quantization opportunities to reduce the attention computation and memory access. Inspired by the high redundancy of human languages, we propose the novel cascade token pruning to prune away unimportant tokens in the sentence. We also propose cascade head pruning to remove unessential heads. Cascade pruning is fundamentally different from weight pruning since there is no trainable weight in the attention mechanism, and the pruned tokens and heads are selected on the fly. To efficiently support them on hardware, we design a novel top-k engine to rank token and head importance scores with high throughput. Furthermore, we propose progressive quantization that first fetches MSBs only and performs the computation; if the confidence is low, it fetches LSBs and recomputes the attention outputs, trading computation for memory reduction.Extensive experiments on 30 benchmarks show that, on average, SpAtten reduces DRAM access by 10.0× with no accuracy loss, and achieves 1.6×, 3.0×, 162×, 347× speedup, and 1.4×, 3.2×, 1193×, 4059× energy savings over A3 accelerator, MNNFast accelerator, TITAN Xp GPU, Xeon CPU, respectively.",
+      "canonical_id": "arXiv:2012.09852",
+      "arxiv_id": "2012.09852",
+      "doi": "10.1109/HPCA51647.2021.00018",
+      "authors": [
+        "Hanrui Wang",
+        "Zhe-Kai Zhang",
+        "Song Han"
+      ]
+    },
+    {
+      "title": "Loki: Low-Rank Keys for Efficient Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2406.02542",
+      "year": 2024,
+      "published": "2024-06-04",
+      "abstract": "Inference on large language models (LLMs) can be expensive in terms of the compute and memory costs involved, especially when long sequence lengths are used. In particular, the self-attention mechanism used in LLM inference contributes significantly to these costs, which has sparked an interest in approximating the self-attention computation to reduce such costs. In this work, we propose to approximate self-attention by focusing on the dimensionality of key vectors computed in the attention block. Our analysis reveals that key vectors lie in a significantly lower-dimensional space, consistently across several datasets and models. Exploiting this observation, we propose Loki, a novel sparse attention method that ranks and selects tokens in the KV-cache based on attention scores computed in low-dimensional space. Our evaluations show that Loki is able to speed up the attention computation due to reduced data movement (load/store) and compute costs while maintaining the efficacy of the models better than other popular approximation methods.",
+      "canonical_id": "arXiv:2406.02542",
+      "arxiv_id": "2406.02542",
+      "doi": "10.48550/arXiv.2406.02542",
+      "authors": [
+        "Prajwal Singhania",
+        "Siddharth Singh",
+        "Shwai He",
+        "S. Feizi",
+        "A. Bhatele"
+      ]
+    },
+    {
+      "title": "Adaptive Gating in Mixture-of-Experts based Language Models",
+      "source_url": "https://arxiv.org/abs/2310.07188",
+      "year": 2023,
+      "published": "2023-10-11",
+      "abstract": "Large language models, such as OpenAI's ChatGPT, have demonstrated exceptional language understanding capabilities in various NLP tasks. Sparsely activated mixture-of-experts (MoE) has emerged as a promising solution for scaling models while maintaining a constant number of computational operations. Existing MoE model adopts a fixed gating network where each token is computed by the same number of experts. However, this approach contradicts our intuition that the tokens in each sequence vary in terms of their linguistic complexity and, consequently, require different computational costs. Little is discussed in prior research on the trade-off between computation per token and model performance. This paper introduces adaptive gating in MoE, a flexible training strategy that allows tokens to be processed by a variable number of experts based on expert probability distribution. The proposed framework preserves sparsity while improving training efficiency. Additionally, curriculum learning is leveraged to further reduce training time. Extensive experiments on diverse NLP tasks show that adaptive gating reduces at most 22.5% training time while maintaining inference quality. Moreover, we conduct a comprehensive analysis of the routing decisions and present our insights when adaptive gating is used.",
+      "canonical_id": "arXiv:2310.07188",
+      "arxiv_id": "2310.07188",
+      "doi": "10.48550/arXiv.2310.07188",
+      "authors": [
+        "Jiamin Li",
+        "Qiang Su",
+        "Yitao Yang",
+        "Yi-Min Jiang",
+        "Cong Wang",
+        "Hong-Yu Xu"
+      ]
+    },
+    {
+      "title": "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate",
+      "source_url": "https://arxiv.org/abs/2504.19874",
+      "year": 2025,
+      "published": "2025-04-28",
+      "abstract": "Vector quantization, a problem rooted in Shannon's source coding theory, aims to quantize high-dimensional Euclidean vectors while minimizing distortion in their geometric structure. We propose TurboQuant to address both mean-squared error (MSE) and inner product distortion, overcoming limitations of existing methods that fail to achieve optimal distortion rates. Our data-oblivious algorithms, suitable for online applications, achieve near-optimal distortion rates (within a small constant factor) across all bit-widths and dimensions. TurboQuant achieves this by randomly rotating input vectors, inducing a concentrated Beta distribution on coordinates, and leveraging the near-independence property of distinct coordinates in high dimensions to simply apply optimal scalar quantizers per each coordinate. Recognizing that MSE-optimal quantizers introduce bias in inner product estimation, we propose a two-stage approach: applying an MSE quantizer followed by a 1-bit Quantized JL (QJL) transform on the residual, resulting in an unbiased inner product quantizer. We also provide a formal proof of the information-theoretic lower bounds on best achievable distortion rate by any vector quantizer, demonstrating that TurboQuant closely matches these bounds, differing only by a small constant ($\\approx 2.7$) factor. Experimental results validate our theoretical findings, showing that for KV cache quantization, we achieve absolute quality neutrality with 3.5 bits per channel and marginal quality degradation with 2.5 bits per channel. Furthermore, in nearest neighbor search tasks, our method outperforms existing product quantization techniques in recall while reducing indexing time to virtually zero.",
+      "canonical_id": "arXiv:2504.19874",
+      "arxiv_id": "2504.19874",
+      "doi": "10.48550/arXiv.2504.19874",
+      "authors": [
+        "A. Zandieh",
+        "Majid Daliri",
+        "Majid Hadian",
+        "V. Mirrokni"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2407.21018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.21018",
+        "id:arXiv:2407.21018",
+        "title:think thinner key cache by querydriven pruning",
+        "url:https://arxiv.org/abs/2407.21018"
+      ],
+      "record": {
+        "title": "ThinK: Thinner Key Cache by Query-Driven Pruning",
+        "source_url": "https://arxiv.org/abs/2407.21018",
+        "year": 2024,
+        "published": "2024-07-30",
+        "abstract": "Large Language Models (LLMs) have revolutionized the field of natural language processing, achieving unprecedented performance across a variety of applications. However, their increased computational and memory demands present significant challenges, especially when handling long sequences. This paper focuses on the long-context scenario, addressing the inefficiencies in KV cache memory consumption during inference. Unlike existing approaches that optimize the memory based on the sequence length, we identify substantial redundancy in the channel dimension of the KV cache, as indicated by an uneven magnitude distribution and a low-rank structure in the attention weights. In response, we propose ThinK, a novel query-dependent KV cache pruning method designed to minimize attention weight loss while selectively pruning the least significant channels. Our approach not only maintains or enhances model accuracy but also achieves a reduction in KV cache memory costs by over 20% compared with vanilla KV cache eviction and quantization methods. For instance, ThinK integrated with KIVI can achieve a 2.8x reduction in peak memory usage while maintaining nearly the same quality, enabling up to a 5x increase in batch size when using a single GPU. Extensive evaluations on the LLaMA and Mistral models across various long-sequence datasets verified the efficiency of ThinK, establishing a new baseline algorithm for efficient LLM deployment without compromising performance. Our code has been made available at https://github.com/SalesforceAIResearch/ThinK.",
+        "canonical_id": "arXiv:2407.21018",
+        "arxiv_id": "2407.21018",
+        "doi": "10.48550/arXiv.2407.21018",
+        "authors": [
+          "Yuhui Xu",
+          "Zhanming Jie",
+          "Hanze Dong",
+          "Lei Wang",
+          "Xudong Lu",
+          "Aojun Zhou",
+          "Amrita Saha",
+          "Caiming Xiong",
+          "Doyen Sahoo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14256",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.14256",
+        "id:arXiv:2405.14256",
+        "title:zipcache accurate and efficient kv cache quantization with salient token identification",
+        "url:https://arxiv.org/abs/2405.14256"
+      ],
+      "record": {
+        "title": "ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification",
+        "source_url": "https://arxiv.org/abs/2405.14256",
+        "year": 2024,
+        "published": "2024-05-23",
+        "abstract": "KV cache stores key and value states from previous tokens to avoid re-computation, yet it demands substantial storage space, especially for long sequences. Adaptive KV cache compression seeks to discern the saliency of tokens, preserving vital information while aggressively compressing those of less importance. However, previous methods of this approach exhibit significant performance degradation at high compression ratios due to inaccuracies in identifying salient tokens. In this paper, we present ZipCache, an accurate and efficient KV cache quantization method for LLMs. First, we construct a strong baseline for quantizing KV cache. Through the proposed channel-separable tokenwise quantization scheme, the memory overhead of quantization parameters are substantially reduced compared to fine-grained groupwise quantization. To enhance the compression ratio, we propose normalized attention score as an effective metric for identifying salient tokens by considering the lower triangle characteristics of the attention matrix. Moreover, we develop an efficient approximation method that decouples the saliency metric from full attention scores, enabling compatibility with fast attention implementations like FlashAttention. Extensive experiments demonstrate that ZipCache achieves superior compression ratios, fast generation speed and minimal performance losses compared with previous KV cache compression methods. For instance, when evaluating Mistral-7B model on GSM8k dataset, ZipCache is capable of compressing the KV cache by $4.98\\times$, with only a $0.38\\%$ drop in accuracy. In terms of efficiency, ZipCache also showcases a $37.3\\%$ reduction in prefill-phase latency, a $56.9\\%$ reduction in decoding-phase latency, and a $19.8\\%$ reduction in GPU memory usage when evaluating LLaMA3-8B model with a input length of $4096$.",
+        "canonical_id": "arXiv:2405.14256",
+        "arxiv_id": "2405.14256",
+        "doi": "10.48550/arXiv.2405.14256",
+        "authors": [
+          "Ye-Fei He",
+          "Luo-Ming Zhang",
+          "Weijia Wu",
+          "Jing Liu",
+          "Hong Zhou",
+          "Bo-Han Zhuang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.05019",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.05019",
+        "id:arXiv:2404.05019",
+        "title:shortcutconnected expert parallelism for accelerating mixtureofexperts",
+        "url:https://arxiv.org/abs/2404.05019"
+      ],
+      "record": {
+        "title": "Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2404.05019",
+        "year": 2024,
+        "published": "2024-04-07",
+        "abstract": "Expert parallelism has emerged as a key strategy for distributing the computational workload of sparsely-gated mixture-of-experts (MoE) models across multiple devices, enabling the processing of increasingly large-scale models. However, the All-to-All communication inherent to expert parallelism poses a significant bottleneck, limiting the efficiency of MoE models. Although existing optimization methods partially mitigate this issue, they remain constrained by the sequential dependency between communication and computation operations. To address this challenge, we propose ScMoE, a novel shortcut-connected MoE architecture integrated with an overlapping parallelization strategy. ScMoE decouples communication from its conventional sequential ordering, enabling up to 100% overlap with computation. Compared to the prevalent top-2 MoE baseline, ScMoE achieves speedups of 1.49 times in training and 1.82 times in inference. Moreover, our experiments and analyses indicate that ScMoE not only achieves comparable but in some instances surpasses the model quality of existing approaches.",
+        "canonical_id": "arXiv:2404.05019",
+        "arxiv_id": "2404.05019",
+        "doi": "10.48550/arXiv.2404.05019",
+        "authors": [
+          "Weilin Cai",
+          "Juyong Jiang",
+          "Le Qin",
+          "Junwei Cui",
+          "Sunghun Kim",
+          "Jiayi Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.09832",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.09832",
+        "id:arXiv:2310.09832",
+        "title:merging experts into one improving computational efficiency of mixture of experts",
+        "url:https://arxiv.org/abs/2310.09832"
+      ],
+      "record": {
+        "title": "Merging Experts into One: Improving Computational Efficiency of Mixture of Experts",
+        "source_url": "https://arxiv.org/abs/2310.09832",
+        "year": 2023,
+        "published": "2023-10-15",
+        "abstract": "Scaling the size of language models usually leads to remarkable advancements in NLP tasks. But it often comes with a price of growing computational cost. Although a sparse Mixture of Experts (MoE) can reduce the cost by activating a small subset of parameters (e.g., one expert) for each input, its computation escalates significantly if increasing the number of activated experts, limiting its practical utility. Can we retain the advantages of adding more experts without substantially increasing the computational costs? In this paper, we first demonstrate the superiority of selecting multiple experts and then propose a computation-efficient approach called \\textbf{\\texttt{Merging Experts into One}} (MEO), which reduces the computation cost to that of a single expert. Extensive experiments show that MEO significantly improves computational efficiency, e.g., FLOPS drops from 72.0G of vanilla MoE to 28.6G (MEO). Moreover, we propose a token-level attention block that further enhances the efficiency and performance of token-level MEO, e.g., 83.3\\% (MEO) vs. 82.6\\% (vanilla MoE) average score on the GLUE benchmark. Our code will be released upon acceptance. Code will be released at: \\url{https://github.com/Shwai-He/MEO}.",
+        "canonical_id": "arXiv:2310.09832",
+        "arxiv_id": "2310.09832",
+        "doi": "10.48550/arXiv.2310.09832",
+        "authors": [
+          "Shwai He",
+          "Run-Ze Fan",
+          "Liang Ding",
+          "Li Shen",
+          "Tianyi Zhou",
+          "D. Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.05908",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2307.05908",
+        "id:arXiv:2307.05908",
+        "title:predictive pipelined decoding a computelatency tradeoff for exact llm decoding",
+        "url:https://arxiv.org/abs/2307.05908"
+      ],
+      "record": {
+        "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2307.05908",
+        "year": 2023,
+        "published": "2023-07-12",
+        "abstract": "This paper presents\"Predictive Pipelined Decoding (PPD),\"an approach that speeds up greedy decoding in Large Language Models (LLMs) while maintaining the exact same output as the original decoding. Unlike conventional strategies, PPD employs additional compute resources to parallelize the initiation of subsequent token decoding during the current token decoding. This method reduces decoding latency and reshapes the understanding of trade-offs in LLM decoding strategies. We have developed a theoretical framework that allows us to analyze the trade-off between computation and latency. Using this framework, we can analytically estimate the potential reduction in latency associated with our proposed method, achieved through the assessment of the match rate, represented as p_correct. The results demonstrate that the use of extra computational resources has the potential to accelerate LLM decoding. Additionally, we implement PPD and conduct preliminary experiments to empirically validate its efficacy, addressing potential practical overheads not covered by theoretical analysis.",
+        "canonical_id": "arXiv:2307.05908",
+        "arxiv_id": "2307.05908",
+        "doi": "10.48550/arXiv.2307.05908",
+        "authors": [
+          "Seongjun Yang",
+          "Gibbeum Lee",
+          "Jaewoong Cho",
+          "Dimitris Papailiopoulos",
+          "Kangwook Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.16487",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2023.findings-emnlp.257",
+        "id:arXiv:2203.16487",
+        "title:speculative decoding exploiting speculative execution for accelerating seq2seq generation",
+        "url:https://arxiv.org/abs/2203.16487"
+      ],
+      "record": {
+        "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation",
+        "source_url": "https://arxiv.org/abs/2203.16487",
+        "year": 2022,
+        "published": "2022-03-30",
+        "abstract": "We propose Speculative Decoding (SpecDec), for the first time ever, to formally study exploiting the idea of speculative execution to accelerate autoregressive (AR) decoding. Speculative Decoding has two innovations: Spec-Drafter -- an independent model specially optimized for efficient and accurate drafting -- and Spec-Verification -- a reliable method for verifying the drafted tokens efficiently in the decoding paradigm. Experimental results on various seq2seq tasks including machine translation and abstractive summarization show our approach can achieve around $5\\times$ speedup for the popular Transformer architectures with comparable generation quality to beam search decoding, refreshing the impression that the draft-then-verify paradigm introduces only $1.4\\times$$\\sim$$2\\times$ speedup. In addition to the remarkable speedup, we also demonstrate 3 additional advantages of SpecDec, revealing its practical value for accelerating generative models in real-world applications. Our models and codes are available at https://github.com/hemingkx/SpecDec.",
+        "canonical_id": "arXiv:2203.16487",
+        "arxiv_id": "2203.16487",
+        "doi": "10.18653/v1/2023.findings-emnlp.257",
+        "authors": [
+          "Heming Xia",
+          "Tao Ge",
+          "Peiyi Wang",
+          "Si-Qing Chen",
+          "Furu Wei",
+          "Zhifang Sui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.18169",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767295.3769348",
+        "id:arXiv:2412.18169",
+        "title:kunserve parametercentric memory management for efficient memory overloading handling in llm serving",
+        "url:https://arxiv.org/abs/2412.18169"
+      ],
+      "record": {
+        "title": "KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2412.18169",
+        "year": 2024,
+        "published": "2024-12-24",
+        "abstract": "Serving LLMs with a cluster of GPUs is common nowadays, where the serving system must meet strict latency SLOs required by applications. However, the stateful nature of LLM serving requires maintaining huge states (i.e., KVCache) in limited GPU memory. Under spikes in real-world workloads, GPU memory can be easily overloaded, leading to orders of magnitude higher response latency due to queuing introduced by waiting for KVCache to be reclaimed. Prior KVCachecentric approaches handle overloading by dropping, migrating, or swapping KVCache. These methods fail to release sufficient memory quickly with requests still queued. This paper proposes the first parameter-centric approach to handling overloading by selectively dropping replicated parameters to instantly free memory for requests, based on an unnoticed observation that model parameters are commonly replicated across GPUs for serving LLMs. With additional memory, all requests can be served with a larger batch without queuing. To make the parameter-centric approach correct and efficient, we cooperatively execute requests on GPUs with a complete copy of parameters using pipeline parallelism, and derive an appropriate drop plan without unnecessary cooperation. We also design techniques to minimize the performance overhead due to pipeline parallelism with the execution patterns of requests under drop. Evaluations show that Kun-Serve reduces the tail TTFT of requests under overloading by up to 72.2 × compared to the state-of-the-art systems including Llumnix, vLLM and InferCept.",
+        "canonical_id": "arXiv:2412.18169",
+        "arxiv_id": "2412.18169",
+        "doi": "10.1145/3767295.3769348",
+        "authors": [
+          "Rongxin Cheng",
+          "Yuxin Lai",
+          "Xingda Wei",
+          "Rong Chen",
+          "Hai-Bo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.14690",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.14690",
+        "id:arXiv:2408.14690",
+        "title:trainingfree activation sparsity in large language models",
+        "url:https://arxiv.org/abs/2408.14690"
+      ],
+      "record": {
+        "title": "Training-Free Activation Sparsity in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2408.14690",
+        "year": 2024,
+        "published": "2024-08-26",
+        "abstract": "Activation sparsity can enable practical inference speedups in large language models (LLMs) by reducing the compute and memory-movement required for matrix multiplications during the forward pass. However, existing methods face limitations that inhibit widespread adoption. Some approaches are tailored towards older models with ReLU-based sparsity, while others require extensive continued pre-training on up to hundreds of billions of tokens. This paper describes TEAL, a simple training-free method that applies magnitude-based activation sparsity to hidden states throughout the entire model. TEAL achieves 40-50% model-wide sparsity with minimal performance degradation across Llama-2, Llama-3, and Mistral families, with sizes varying from 7B to 70B. We improve existing sparse kernels and demonstrate wall-clock decoding speed-ups of up to 1.53$\\times$ and 1.8$\\times$ at 40% and 50% model-wide sparsity. TEAL is compatible with weight quantization, enabling further efficiency gains.",
+        "canonical_id": "arXiv:2408.14690",
+        "arxiv_id": "2408.14690",
+        "doi": "10.48550/arXiv.2408.14690",
+        "authors": [
+          "James Liu",
+          "Pragaash Ponnusamy",
+          "Tian-Le Cai",
+          "Han Guo",
+          "Yoon Kim",
+          "Ben Athiwaratkun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.19715",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.19715",
+        "id:arXiv:2405.19715",
+        "title:specdec boosting speculative decoding via adaptive candidate lengths",
+        "url:https://arxiv.org/abs/2405.19715"
+      ],
+      "record": {
+        "title": "SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths",
+        "source_url": "https://arxiv.org/abs/2405.19715",
+        "year": 2024,
+        "published": "2024-05-29",
+        "abstract": "Speculative decoding reduces the inference latency of a target large language model via utilizing a smaller and faster draft model. Its performance depends on a hyperparameter K -- the candidate length, i.e., the number of candidate tokens for the target model to verify in each round. However, previous methods often use simple heuristics to choose K, which may result in sub-optimal performance. We study the choice of the candidate length K and formulate it as a Markov Decision Process. We theoretically show that the optimal policy of this Markov decision process takes the form of a threshold policy, i.e., the current speculation should stop and be verified when the probability of getting a rejection exceeds a threshold value. Motivated by this theory, we propose SpecDec++, an enhanced version of speculative decoding that adaptively determines the candidate length on the fly. We augment the draft model with a trained acceptance prediction head to predict the conditional acceptance probability of the candidate tokens. SpecDec++ will stop the current speculation when the predicted probability that at least one token gets rejected exceeds a threshold. We implement SpecDec++ and apply it to the llama-2-chat 7B&70B model pair. Our adaptive method achieves a 2.04x speedup on the Alpaca dataset (7.2% improvement over the baseline speculative decoding). On the GSM8K and HumanEval datasets, our method achieves a 2.26x speedup (9.4% improvement) and 2.23x speedup (11.1% improvement), respectively. The code of this paper is available at https://github.com/Kaffaljidhmah2/SpecDec_pp.",
+        "canonical_id": "arXiv:2405.19715",
+        "arxiv_id": "2405.19715",
+        "doi": "10.48550/arXiv.2405.19715",
+        "authors": [
+          "Kai-Xuan Huang",
+          "Xu Guo",
+          "Mengdi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02358",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02358",
+        "id:arXiv:2510.02358",
+        "title:diffuspec unlocking diffusion language models for speculative decoding",
+        "url:https://arxiv.org/abs/2510.02358"
+      ],
+      "record": {
+        "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2510.02358",
+        "year": 2025,
+        "published": "2025-09-28",
+        "abstract": "As large language models (LLMs) scale up, accuracy improves, but the autoregressive (AR) nature of decoding increases latency since each token requires a serial forward pass. Speculative decoding addresses this by employing a fast drafter to propose multi-token drafts, which are then verified in parallel by the target model. However, many deployments still rely on AR drafters, where sequential passes limit wall-clock gains. We revisit the drafting stage and present DiffuSpec, a training-free drop-in framework that uses a pretrained diffusion language model (DLM) to produce multi-token drafts in a single forward pass, while remaining compatible with standard AR verifiers. Because DLM drafts are generated under bidirectional conditioning, parallel per-position candidates form a token lattice in which the locally highest-probability token at each position need not form a causal left-to-right path. Moreover, DLM drafting requires pre-specifying a draft length, inducing a speed-quality trade-off. To address these challenges, we introduce two practical components: (i) a causal-consistency path search (CPS) over this lattice that extracts a left-to-right path aligned with AR verification; and (ii) an adaptive draft-length (ADL) controller that adjusts next proposal size based on recent acceptance feedback and realized generated length. Across benchmarks, DiffuSpec yields up to 3x wall-clock speedup, establishing diffusion-based drafting as a robust alternative to autoregressive drafters for speculative decoding.",
+        "canonical_id": "arXiv:2510.02358",
+        "arxiv_id": "2510.02358",
+        "doi": "10.48550/arXiv.2510.02358",
+        "authors": [
+          "Guanghao Li",
+          "Zhihui Fu",
+          "Min Fang",
+          "Qibin Zhao",
+          "Ming Tang",
+          "Chun Yuan",
+          "Jun Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2024.acl-long.696",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.acl-long.696",
+        "title:harder task needs more experts dynamic routing in moe models",
+        "url:https://doi.org/10.18653/v1/2024.acl-long.696"
+      ],
+      "record": {
+        "title": "Harder Task Needs More Experts: Dynamic Routing in MoE Models",
+        "source_url": "https://doi.org/10.18653/v1/2024.acl-long.696",
+        "year": 2024,
+        "published": null,
+        "abstract": "In this paper, we introduce a novel dynamic expert selection framework for Mixture of Experts (MoE) models, aiming to enhance computational efficiency and model performance by adjusting the number of activated experts based on input difficulty. Unlike existing MoE approaches that rely on fixed TopK Routing, which activates a predetermined number of experts regardless of the input’s complexity, our method dynamically allocates experts based on the confidence level in expert selection for each input. This allows for more efficient utilization of computational resources, activating more experts for complex tasks requiring advanced reasoning and fewer for simpler tasks. Through extensive evaluations, our dynamic routing method demonstrates substantial improvements over Top2 Routing across various benchmarks, achieving an average improvement of 0.7% with less than 90% activated parameters. Further analysis shows our model dispatches more experts to tasks requiring complex reasoning skills, like BBH, confirming its ability to dynamically allocate computational resources in alignment with the input’s complexity. Our findings also highlight a variation in the number of experts needed across different layers of the transformer model, offering insights into the potential for designing heterogeneous MoE frameworks. The code and models are available at https://github.com/ZhenweiAn/Dynamic_MoE.",
+        "doi": "10.18653/v1/2024.acl-long.696",
+        "canonical_id": "DOI:10.18653/v1/2024.acl-long.696",
+        "authors": [
+          "Quzhe Huang",
+          "Zhenwei An",
+          "Nan Zhuang",
+          "Mingxu Tao",
+          "Chen Zhang",
+          "Yang Jin",
+          "Kun Xu",
+          "Liwei Chen",
+          "Songfang Huang",
+          "Yansong Feng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3695053.3730999",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3730999",
+        "title:windserve efficient phasedisaggregated llm serving with streambased dynamic scheduling",
+        "url:https://doi.org/10.1145/3695053.3730999"
+      ],
+      "record": {
+        "title": "WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling",
+        "source_url": "https://doi.org/10.1145/3695053.3730999",
+        "year": 2025,
+        "published": "2025-06-20",
+        "abstract": "Existing large language model (LLM) serving systems typically batch the compute-bound prefill and I/O-bound decoding phases together. This co-location approach not only leads to significant interference between the two phases but also limits resource allocation and placements. To address these limitations, recent work proposes disaggregating the prefill and decoding phases to enhance performance. However, these works often rely on coarse-grained static scheduling strategies, resulting in imbalanced and insufficient resource utilization. For instance, compute resources for the prefill phase may be overloaded while those for the decoding phase remain idle, resulting in performance bottlenecks. In this paper, we propose WindServe, an efficient phase dis-aggregated LLM serving system that leverages stream-based, fine-grained dynamic scheduling to enhance resource utilization and performance. WindServe features a global scheduler that monitors compute and memory resource usage to dynamically orchestrate cross-phase jobs, effectively reducing queuing delay and KV cache swapping overhead. We also introduce a stall-free rescheduling strategy to saturate the memory resources while minimizing the scheduling overhead from KV cache transfers. Furthermore, we design a stream-based approach to mitigate interference between prefill and decoding jobs. Our evaluation demonstrates that WindServe achieves remarkable stability and SLO attainment under high-load scenarios, outperforming state-of-the-art phase-disaggregated LLM serving systems by delivering a 4.28 × improvement in TTFT median latency and a 1.5 × reduction in TPOT P99 latency.",
+        "doi": "10.1145/3695053.3730999",
+        "canonical_id": "DOI:10.1145/3695053.3730999",
+        "authors": [
+          "Jingqi Feng",
+          "Yukai Huang",
+          "Rui Zhang",
+          "Sicheng Liang",
+          "Ming Yan",
+          "Jie Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.09919",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.09919",
+        "id:arXiv:2403.09919",
+        "title:recurrent drafter for fast speculative decoding in large language models",
+        "url:https://arxiv.org/abs/2403.09919"
+      ],
+      "record": {
+        "title": "Recurrent Drafter for Fast Speculative Decoding in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2403.09919",
+        "year": 2024,
+        "published": "2024-03-14",
+        "abstract": "We present Recurrent Drafter (ReDrafter), an advanced speculative decoding approach that achieves state-of-the-art speedup for large language models (LLMs) inference. The performance gains are driven by three key aspects: (1) leveraging a recurrent neural network (RNN) as the draft model conditioning on LLM's hidden states, (2) applying a dynamic tree attention algorithm over beam search results to eliminate duplicated prefixes in candidate sequences, and (3) training through knowledge distillation from the LLM. ReDrafter accelerates Vicuna inference in MT-Bench by up to 2.8x with a PyTorch implementation on Nvidia H100 GPUs. To demonstrate its practicality in real environments, we also validated its effectiveness for on-device applications by implementing the approach in MLX and benchmarking performance on Metal GPUs in Apple Silicon chips, achieving up to 2.3x speedup.",
+        "canonical_id": "arXiv:2403.09919",
+        "arxiv_id": "2403.09919",
+        "doi": "10.48550/arXiv.2403.09919",
+        "authors": [
+          "Aonan Zhang",
+          "Chong Wang",
+          "Yi Wang",
+          "Xuanyu Zhang",
+          "Yunfei Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.04291",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.04291",
+        "id:arXiv:2402.04291",
+        "title:billm pushing the limit of posttraining quantization for llms",
+        "url:https://arxiv.org/abs/2402.04291"
+      ],
+      "record": {
+        "title": "BiLLM: Pushing the Limit of Post-Training Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2402.04291",
+        "year": 2024,
+        "published": "2024-02-06",
+        "abstract": "Pretrained large language models (LLMs) exhibit exceptional general language processing capabilities but come with significant demands on memory and computational resources. As a powerful compression technology, binarization can extremely reduce model weights to a mere 1 bit, lowering the expensive computation and memory requirements. However, existing quantization techniques fall short of maintaining LLM performance under ultra-low bit-widths. In response to this challenge, we present BiLLM, a groundbreaking 1-bit post-training quantization scheme tailored for pretrained LLMs. Based on the weight distribution of LLMs, BiLLM first identifies and structurally selects salient weights, and minimizes the compression loss through an effective binary residual approximation strategy. Moreover, considering the bell-shaped distribution of the non-salient weights, we propose an optimal splitting search to group and binarize them accurately. BiLLM achieving for the first time high-accuracy inference (e.g. 8.41 perplexity on LLaMA2-70B) with only 1.08-bit weights across various LLMs families and evaluation metrics, outperforms SOTA quantization methods of LLM by significant margins. Moreover, BiLLM enables the binarization process of the LLM with 7 billion weights within 0.5 hours on a single GPU, demonstrating satisfactory time efficiency. Our code is available at https://github.com/Aaronhuang-778/BiLLM.",
+        "canonical_id": "arXiv:2402.04291",
+        "arxiv_id": "2402.04291",
+        "doi": "10.48550/arXiv.2402.04291",
+        "authors": [
+          "Wei Huang",
+          "Yangdong Liu",
+          "Haotong Qin",
+          "Ying Li",
+          "Shi-Ming Zhang",
+          "Xianglong Liu",
+          "Michele Magno",
+          "Xiaojuan Qi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.05508",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.05508",
+        "id:arXiv:2506.05508",
+        "title:beyond the buzz a pragmatic take on inference disaggregation",
+        "url:https://arxiv.org/abs/2506.05508"
+      ],
+      "record": {
+        "title": "Beyond the Buzz: A Pragmatic Take on Inference Disaggregation",
+        "source_url": "https://arxiv.org/abs/2506.05508",
+        "year": 2025,
+        "published": "2025-06-05",
+        "abstract": "As inference scales to multi-node deployments, disaggregation - splitting inference into distinct phases - offers a promising path to improving the throughput-interactivity Pareto frontier. Despite growing enthusiasm and a surge of open-source efforts, practical deployment of disaggregated serving remains limited due to the complexity of the optimization search space and system-level coordination. In this paper, we present the first systematic study of disaggregated inference at scale, evaluating hundreds of thousands of design points across diverse workloads and hardware configurations. We find that disaggregation is most effective for prefill-heavy traffic patterns and larger models. Our results highlight the critical role of dynamic rate matching and elastic scaling in achieving Pareto-optimal performance. Our findings offer actionable insights for efficient disaggregated deployments to navigate the trade-off between system throughput and interactivity.",
+        "canonical_id": "arXiv:2506.05508",
+        "arxiv_id": "2506.05508",
+        "doi": "10.48550/arXiv.2506.05508",
+        "authors": [
+          "Tiyasa Mitra",
+          "Ritika Borkar",
+          "Nidhi Bhatia",
+          "Ramon Matas",
+          "Shivam Raj",
+          "Dheevatsa Mudigere",
+          "Ritchie Zhao",
+          "Maximilian Golub",
+          "Arpan Dutta",
+          "S. Madduri",
+          "Dharmesh Jani",
+          "Brian Pharris",
+          "B. Rouhani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2012.09852",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca51647.2021.00018",
+        "id:arXiv:2012.09852",
+        "title:spatten efficient sparse attention architecture with cascade token and head pruning",
+        "url:https://arxiv.org/abs/2012.09852"
+      ],
+      "record": {
+        "title": "SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning",
+        "source_url": "https://arxiv.org/abs/2012.09852",
+        "year": 2020,
+        "published": "2020-12-17",
+        "abstract": "The attention mechanism is becoming increasingly popular in Natural Language Processing (NLP) applications, showing superior performance than convolutional and recurrent architectures. However, general-purpose platforms such as CPUs and GPUs are inefficient when performing attention inference due to complicated data movement and low arithmetic intensity. Moreover, existing NN accelerators mainly focus on optimizing convolutional or recurrent models, and cannot efficiently support attention. In this paper, we present SpAtten, an efficient algorithm-architecture co-design that leverages token sparsity, head sparsity, and quantization opportunities to reduce the attention computation and memory access. Inspired by the high redundancy of human languages, we propose the novel cascade token pruning to prune away unimportant tokens in the sentence. We also propose cascade head pruning to remove unessential heads. Cascade pruning is fundamentally different from weight pruning since there is no trainable weight in the attention mechanism, and the pruned tokens and heads are selected on the fly. To efficiently support them on hardware, we design a novel top-k engine to rank token and head importance scores with high throughput. Furthermore, we propose progressive quantization that first fetches MSBs only and performs the computation; if the confidence is low, it fetches LSBs and recomputes the attention outputs, trading computation for memory reduction.Extensive experiments on 30 benchmarks show that, on average, SpAtten reduces DRAM access by 10.0× with no accuracy loss, and achieves 1.6×, 3.0×, 162×, 347× speedup, and 1.4×, 3.2×, 1193×, 4059× energy savings over A3 accelerator, MNNFast accelerator, TITAN Xp GPU, Xeon CPU, respectively.",
+        "canonical_id": "arXiv:2012.09852",
+        "arxiv_id": "2012.09852",
+        "doi": "10.1109/HPCA51647.2021.00018",
+        "authors": [
+          "Hanrui Wang",
+          "Zhe-Kai Zhang",
+          "Song Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.02542",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.02542",
+        "id:arXiv:2406.02542",
+        "title:loki lowrank keys for efficient sparse attention",
+        "url:https://arxiv.org/abs/2406.02542"
+      ],
+      "record": {
+        "title": "Loki: Low-Rank Keys for Efficient Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2406.02542",
+        "year": 2024,
+        "published": "2024-06-04",
+        "abstract": "Inference on large language models (LLMs) can be expensive in terms of the compute and memory costs involved, especially when long sequence lengths are used. In particular, the self-attention mechanism used in LLM inference contributes significantly to these costs, which has sparked an interest in approximating the self-attention computation to reduce such costs. In this work, we propose to approximate self-attention by focusing on the dimensionality of key vectors computed in the attention block. Our analysis reveals that key vectors lie in a significantly lower-dimensional space, consistently across several datasets and models. Exploiting this observation, we propose Loki, a novel sparse attention method that ranks and selects tokens in the KV-cache based on attention scores computed in low-dimensional space. Our evaluations show that Loki is able to speed up the attention computation due to reduced data movement (load/store) and compute costs while maintaining the efficacy of the models better than other popular approximation methods.",
+        "canonical_id": "arXiv:2406.02542",
+        "arxiv_id": "2406.02542",
+        "doi": "10.48550/arXiv.2406.02542",
+        "authors": [
+          "Prajwal Singhania",
+          "Siddharth Singh",
+          "Shwai He",
+          "S. Feizi",
+          "A. Bhatele"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07188",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07188",
+        "id:arXiv:2310.07188",
+        "title:adaptive gating in mixtureofexperts based language models",
+        "url:https://arxiv.org/abs/2310.07188"
+      ],
+      "record": {
+        "title": "Adaptive Gating in Mixture-of-Experts based Language Models",
+        "source_url": "https://arxiv.org/abs/2310.07188",
+        "year": 2023,
+        "published": "2023-10-11",
+        "abstract": "Large language models, such as OpenAI's ChatGPT, have demonstrated exceptional language understanding capabilities in various NLP tasks. Sparsely activated mixture-of-experts (MoE) has emerged as a promising solution for scaling models while maintaining a constant number of computational operations. Existing MoE model adopts a fixed gating network where each token is computed by the same number of experts. However, this approach contradicts our intuition that the tokens in each sequence vary in terms of their linguistic complexity and, consequently, require different computational costs. Little is discussed in prior research on the trade-off between computation per token and model performance. This paper introduces adaptive gating in MoE, a flexible training strategy that allows tokens to be processed by a variable number of experts based on expert probability distribution. The proposed framework preserves sparsity while improving training efficiency. Additionally, curriculum learning is leveraged to further reduce training time. Extensive experiments on diverse NLP tasks show that adaptive gating reduces at most 22.5% training time while maintaining inference quality. Moreover, we conduct a comprehensive analysis of the routing decisions and present our insights when adaptive gating is used.",
+        "canonical_id": "arXiv:2310.07188",
+        "arxiv_id": "2310.07188",
+        "doi": "10.48550/arXiv.2310.07188",
+        "authors": [
+          "Jiamin Li",
+          "Qiang Su",
+          "Yitao Yang",
+          "Yi-Min Jiang",
+          "Cong Wang",
+          "Hong-Yu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.19874",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.19874",
+        "id:arXiv:2504.19874",
+        "title:turboquant online vector quantization with nearoptimal distortion rate",
+        "url:https://arxiv.org/abs/2504.19874"
+      ],
+      "record": {
+        "title": "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate",
+        "source_url": "https://arxiv.org/abs/2504.19874",
+        "year": 2025,
+        "published": "2025-04-28",
+        "abstract": "Vector quantization, a problem rooted in Shannon's source coding theory, aims to quantize high-dimensional Euclidean vectors while minimizing distortion in their geometric structure. We propose TurboQuant to address both mean-squared error (MSE) and inner product distortion, overcoming limitations of existing methods that fail to achieve optimal distortion rates. Our data-oblivious algorithms, suitable for online applications, achieve near-optimal distortion rates (within a small constant factor) across all bit-widths and dimensions. TurboQuant achieves this by randomly rotating input vectors, inducing a concentrated Beta distribution on coordinates, and leveraging the near-independence property of distinct coordinates in high dimensions to simply apply optimal scalar quantizers per each coordinate. Recognizing that MSE-optimal quantizers introduce bias in inner product estimation, we propose a two-stage approach: applying an MSE quantizer followed by a 1-bit Quantized JL (QJL) transform on the residual, resulting in an unbiased inner product quantizer. We also provide a formal proof of the information-theoretic lower bounds on best achievable distortion rate by any vector quantizer, demonstrating that TurboQuant closely matches these bounds, differing only by a small constant ($\\approx 2.7$) factor. Experimental results validate our theoretical findings, showing that for KV cache quantization, we achieve absolute quality neutrality with 3.5 bits per channel and marginal quality degradation with 2.5 bits per channel. Furthermore, in nearest neighbor search tasks, our method outperforms existing product quantization techniques in recall while reducing indexing time to virtually zero.",
+        "canonical_id": "arXiv:2504.19874",
+        "arxiv_id": "2504.19874",
+        "doi": "10.48550/arXiv.2504.19874",
+        "authors": [
+          "A. Zandieh",
+          "Majid Daliri",
+          "Majid Hadian",
+          "V. Mirrokni"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c1931b053510eed205634bed7ce59b5d2db224b9d3ebead72187e5506e37a31f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
