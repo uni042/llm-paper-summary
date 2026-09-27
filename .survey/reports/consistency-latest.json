@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-27T15:57:28.957765+00:00",
-  "status": "issues_found",
+  "checked_at": "2026-09-27T16:03:09.874219+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
   "inventory_file_count": 12275,
   "checked_file_count": 12275,
@@ -26,11 +26,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 2072,
-  "findings": [
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    }
-  ]
+  "findings": []
 }
