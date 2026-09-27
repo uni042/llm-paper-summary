@@ -332,6 +332,8 @@ last_checked: '2026-09-26'
 """,
                 encoding="utf-8",
             )
+            meta_before, body_before = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta_before, body_before))
             changed, _ = backfill_paper_metadata.backfill(paper, {}, "2026-09-28")
             self.assertTrue(changed)
             meta, body = backfill_paper_metadata.parse_frontmatter(paper)
