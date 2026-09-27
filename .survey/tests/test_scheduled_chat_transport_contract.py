@@ -7,79 +7,34 @@ ROUTER = ROOT / ".survey" / "docs" / "survey-workflow" / "worker-router.md"
 
 
 class ScheduledChatTransportContractTests(unittest.TestCase):
-    def test_direct_github_connector_remains_canonical_transport(self):
+    def test_scheduled_worker_is_library_first_and_github_read_only(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn(
-            "このGitHub connector直結方式をScheduled Chatの既定・継続transportとする。",
-            text,
-        )
-        self.assertIn(
-            "通常のGitHub file create/update → GitHub Actions fast lane → result読取",
-            text,
-        )
-        self.assertIn(
-            "明示的なユーザー指示がない限り、正規transportの変更ではなく既存経路の修復を優先する。",
-            text,
-        )
+        self.assertIn("Scheduled workerがGitHubをread-onlyで参照", text)
+        self.assertIn("GitHub writeを試してLibrary失敗を回避することは禁止する。", text)
+        self.assertIn("Survey GitHub ImportのWorkタスク", text)
+        self.assertIn("GitHubへのclaim", text)
 
-    def test_transport_stop_requires_health_probe_contract(self):
+    def test_current_inventory_and_quota_contract(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn(
-            ".survey/work-queue/transport/health-probe.json",
-            text,
-        )
-        self.assertIn(
-            "transport_health_probe_attempted=true",
-            text,
-        )
-        self.assertIn(
-            "transport_health_probe_succeeded=false",
-            text,
-        )
-        self.assertIn(
-            "既存GitHub file updateだけ",
-            text,
-        )
-        self.assertIn(
-            "新しいrun-state requestのcreateを要求しない",
-            text,
-        )
+        self.assertIn("E = G + D - R", text)
+        self.assertIn("E > 500", text)
+        self.assertIn("E <= 500", text)
+        self.assertIn("完成論文を10件", text)
+        self.assertIn("新規canonical identity 40件", text)
 
-    def test_status_only_rejection_uses_worker_control_before_health_probe(self):
+    def test_worklist_order_is_tail_first(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn(
-            ".survey/work-queue/transport/worker-control/<worker_id>.json",
-            text,
-        )
-        self.assertIn(
-            "status-only createが1回拒否されたら、同じcreateを連打せずこのupdate-only第2経路を試す。",
-            text,
-        )
-        self.assertIn(
-            "worker-control update自体もplatform safetyで拒否された場合だけ、第3経路として従来のhealth-probe update-only quarantineへ進む。",
-            text,
-        )
-        self.assertIn("foreground_guard", text)
+        self.assertIn("専用リストの末尾から上方向", text)
 
-    def test_completed_submission_cannot_bypass_preflight(self):
+    def test_work_task_verifies_before_library_cleanup(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn(
-            "completed immutable descriptor writeも行わず",
-            text,
-        )
-        self.assertIn(
-            "preflight_result",
-            text,
-        )
-        self.assertIn(
-            "submission processorが拒否する",
-            text,
-        )
+        self.assertIn("再取得確認できた後だけ対応Library原本を削除する", text)
+        self.assertIn("1件の失敗で他の独立成果を止めない", text)
 
-    def test_scheduled_chat_specific_relay_is_not_the_default(self):
+    def test_legacy_direct_transport_is_archived_not_active(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("Scheduled Chat固有の別transportを設けない。", text)
-        self.assertIn("Library fallback", text)
+        self.assertIn("worker-router-legacy-v10.22-direct-github.md", text)
+        self.assertIn("新規Scheduled worker runの実行手順として旧資料を補完利用しない", text)
 
 
 if __name__ == "__main__":
