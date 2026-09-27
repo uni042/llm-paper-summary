@@ -137,7 +137,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  専門家混合（MoE）の負荷に応じて行列積カーネルと並列方式を切り替え、専門家単位のパイプラインで通信と計算を重ね、プリフィル処理量を最大52.4%改善する。
+  専門家単位にトークンをhorizontal splitし、負荷別GEMM選択とSM制限で全対全通信を計算へ重畳するMoE向け専門家 パイプライン スケジューラ。
 
 - **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

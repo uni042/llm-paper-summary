@@ -31,6 +31,10 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
+- **2026-08 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
+  実装：[✓](https://github.com/AICrossSim/PLENA_Simulator) ・ リポジトリ内被引用：4  
+  PLENAは長文脈推論の帯域・容量の二重メモリ wallを、flattened systolic array、W/A/KV別の低精度化、native FlashAttentionの3経路で同時に攻め、シミュレーションでA100比最大2.23倍のスループットを示す。
+
 - **2025-12 · [KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing](2025-2512.03608-kvnand-dram-free-in-flash-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
@@ -82,10 +86,6 @@
 - **2025-06 · [AiF: Accelerating On-Device LLM Inference Using In-Flash Processing](2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
-
-- **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  長文脈エージェント推論の帯域・容量の二重メモリ壁を対象に、非対称量子化、FlashAttention対応の平坦化シストリック配列、コンパイラと設計空間探索を統合したPLENAを設計し、シミュレーションでA100比2.24倍、TPU v6e比3.85倍のスループットを報告する。
 
 - **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
