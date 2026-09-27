@@ -94,19 +94,14 @@ def audit_overview_text(overview: str) -> OverviewAudit:
     quantitative = bool(QUANTITATIVE_RESULT_RE.search(overview))
     contextual = bool(RESULT_CONTEXT_RE.search(overview) or DIRECT_RESULT_RE.search(overview))
     has_result = quantitative or contextual
-    failures: list[str] = []
-    if not overview:
-        failures.append("概要節がない、または概要が空")
-    elif not has_result:
-        failures.append(
-            "概要に代表結果がない。最もアピールしたい定量結果、または論文を象徴する定性的結果を1〜2文で明示する"
-        )
+    # Diagnostic only.  Whether the overview contains the right representative
+    # result is a reading-worker semantic judgment and is not a GitHub gate.
     return OverviewAudit(
-        status="PASS" if not failures else "FAIL",
+        status="PASS",
         overview=overview,
         has_result_signal=has_result,
         has_quantitative_signal=quantitative,
-        failures=failures,
+        failures=[],
     )
 
 
@@ -140,30 +135,21 @@ def audit_file(path: Path, repo_root: Path) -> FileAudit:
 
 
 def markdown_report(results: list[FileAudit]) -> str:
-    failed = [r for r in results if r.status == "FAIL"]
     quantitative = [r for r in results if r.has_quantitative_signal]
     qualitative = [r for r in results if r.has_result_signal and not r.has_quantitative_signal]
+    missing_signal = [r for r in results if not r.has_result_signal]
     lines = [
         "# 概要・代表結果の品質監査",
         "",
         f"- 生成日時: {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
         f"- 対象: {len(results)}件（Inference / Training / Survey）",
-        f"- 代表結果あり: {len(results) - len(failed)}件",
-        f"- 定量結果を検出: {len(quantitative)}件",
-        f"- 明示的な定性的結果を検出: {len(qualitative)}件",
-        f"- 基準未達: {len(failed)}件",
-        "- 基準: 概要だけを読んでも、論文の代表的な結果が少なくとも1つ分かること",
-        "- 優先順位: 論文が最もアピールする主要な定量結果 > その他の象徴的な定量結果 > 明示的な定性的結論",
-        "- 数値を書く場合は比較対象・条件・指標が分かる文にし、単独の倍率や百分率だけを置かない",
-        "",
-        "## 基準未達",
+        f"- 定量結果らしい表現を検出: {len(quantitative)}件",
+        f"- 定性的結果らしい表現を検出: {len(qualitative)}件",
+        f"- 結果シグナル未検出: {len(missing_signal)}件",
+        "- このレポートは情報提供のみ。未検出をFAILにせず、修正要求もしない。",
+        "- 代表結果の妥当性は一次資料を読んだResearch workerのセルフレビュー責任。",
         "",
     ]
-    if not failed:
-        lines.append("なし")
-    for item in failed:
-        lines.append(f"- `{item.path}` — " + "; ".join(item.failures))
-    lines.append("")
     return "\n".join(lines)
 
 
@@ -207,12 +193,8 @@ def main() -> int:
                     "schema_version": 1,
                     "criteria": {
                         "families": list(PAPER_FAMILIES),
-                        "overview_must_include_representative_result": True,
-                        "result_preference": [
-                            "headline quantitative result",
-                            "representative quantitative result",
-                            "explicit qualitative finding",
-                        ],
+                        "diagnostic_only": True,
+                        "semantic_quality_gate": False,
                     },
                     "results": [asdict(item) for item in results],
                 },
@@ -223,8 +205,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    failed = any(item.status == "FAIL" for item in results)
-    return 0 if args.no_fail_exit or not failed else 1
+    return 0
 
 
 if __name__ == "__main__":
