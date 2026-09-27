@@ -28,6 +28,8 @@ HTML_TAG_RE = re.compile(r"<[^>]+>")
 EXCLUDED_LANGUAGE_SECTIONS = {
     "書誌情報", "一次資料", "参考文献", "References", "更新履歴", "監査メモ"
 }
+# Compatibility alias for callers/tests that previously referenced this name.
+EXCLUDED_SECTIONS = EXCLUDED_LANGUAGE_SECTIONS
 
 # Retired v10 thresholds are preserved under .survey/legacy/quality-v10/.
 # They remain defined as neutral compatibility values for old callers only.
