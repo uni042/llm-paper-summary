@@ -21,6 +21,7 @@ title:scaleqlora codeinvariant adapter merging for native 4bit microscaling llms
 title:scaling attention beyond gpus for llm inference
 title:scaling graph chainofthought reasoning a multiagent framework with efficient llm serving
 title:scaling inference prefill with highradix photonic interconnects
+title:scaling llm testtime compute with mobile npu on smartphones
 title:scaling multinode mixtureofexperts inference using expert activation patterns
 title:scaling posttraining ternarisation to qwen38b capability retention reproduction lossless packing and packed execution
 title:scattered mixtureofexperts implementation
@@ -32,11 +33,14 @@ title:scorpio serving right requests at the right time for heterogeneous slos in
 title:scoutattention efficient kv cache offloading via layerahead cpu precomputation for llm inference
 title:seallm serviceaware and latencyoptimized resource sharing for large language model inference
 title:seerattention learning intrinsic sparse attention in your llms
+title:seerattentionr sparse attention adaptation for long reasoning
+title:seesaw highthroughput llm inference via model resharding
 title:sekv resolutionadaptive kv cache with hierarchical semantic memory for longcontext llm inference
 title:selectinfer selective neuron loading and computation for ondevice llms
 title:selective kv cache protection for noiseresilient llm inference on analog computeinmemory systems
 title:selfattention does not need on² memory
 title:selforchestrating language models leveraging semantic dependence for efficient inference
+title:selfspeculative decoding for ondevice moe acceleration
 title:semantic parallelism redefining efficient moe inference via modeldata coscheduling
 title:semantickv a semanticsdriven kv cache eviction framework for efficient long prompt llm inference
 title:sembridge compiling consumer observations into crossstack communication plans
@@ -70,6 +74,7 @@ title:share first route what remains a unified framework for tokenadaptive moe c
 title:shared disk kv cache management for efficient multiinstance inference in ragpowered llms
 title:shared kv caching for replicated 27b inference correctness failures and performance boundaries
 title:sharedprefix kv reuse across standard lora adapters quality and serving tradeoffs
+title:sherlock reliable and efficient agentic workflow execution
 title:shield a segmented hierarchical memory architecture for energyefficient llm inference on edge npus
 title:shortgpt layers in large language models are more redundant than you expect
 title:shuntserve costefficient llm serving on heterogeneous spot gpu clusters
@@ -87,12 +92,15 @@ title:siliconbench speed memory and fidelity for llm serving on unifiedmemory de
 title:simthesizer an agentdriven simulation framework for llm serving systems
 title:skeletonofthought prompting llms for efficient parallel generation
 title:skipdecode autoregressive skip decoding with batching and caching for efficient llm inference
+title:skvq slidingwindow key and value cache quantization for large language models
 title:skywalker a localityaware crossregion load balancer for llm inference
 title:slicemoe bitsliced expert caching under missrate constraints for efficient moe inference
 title:slidingwindow beats linear attention
 title:slim a heterogeneous accelerator for edge inference of sparse large language model via adaptive thresholding
 title:slimqwen exploring the pruning and distillation in large moe model pretraining
+title:sloaware gpu dvfs for energyefficient llm inference serving
 title:sloaware gpu frequency scaling for energy efficient llm inference serving
+title:sloaware scheduling for large language model inferences
 title:slosserve optimized serving of multislo llms
 title:smartbatchllm an efficient adaptive hybrid batching strategy for large language model serving
 title:smartgen seamless disaggregated llm inference with selective kv cache transfer
@@ -105,6 +113,7 @@ title:smoothquant accurate and efficient posttraining quantization for large lan
 title:snapkv llm knows what you are looking for before generation
 title:soft merging of experts with adaptive routing
 title:solyx ai grid hardwaretelemetryaware routing across geographically distributed gpu clusters an empirical study of multisite llm inference
+title:sonicmoe accelerating moe with io and tileaware optimizations
 title:sparda sparse decoupled attention for efficient longcontext llm inference
 title:spargeattention accurate and trainingfree sparse attention accelerating any model inference
 title:sparkv overheadaware kv cache loading for efficient ondevice llm inference
@@ -124,12 +133,14 @@ title:specbox speculative sandbox scheduling for efficient llm agent serving
 title:speccache speculative kv cache reuse for efficient rag serving
 title:specdiff2 scaling diffusion drafter alignment for faster speculative decoding
 title:specedge scalable edgeassisted serving framework for interactive llms
+title:specexec massively parallel speculative decoding for interactive llm inference on consumer devices
 title:specextend a dropin enhancement for speculative decoding of long sequences
 title:specfed accelerating federated llm inference with speculative decoding and compressed transmission
 title:specinfer accelerating generative large language model serving with treebased speculative inference and verification
 title:specmemo speculative decoding is in your pocket
 title:specmoe a fast and efficient mixtureofexperts inference via selfassisted speculative decoding
 title:specoffload unlocking latent gpu capacity for llm inference on resourceconstrained devices
+title:specontext enabling efficient longcontext reasoning with speculative context sparsity in llms
 title:specprefetch parameterefficient expert prefetching for sparse moe foundation models
 title:specsa bridging speculative decoding and sparse attention for efficient llm inference
 title:spectre hybrid ordinaryparallel speculative serving for resourceefficient llm inference
@@ -137,10 +148,12 @@ title:spectrumkv pertoken mixedprecision kv cache transfer for prefilldecode dis
 title:speculating experts accelerates inference for mixtureofexperts
 title:speculative actions a lossless framework for faster agentic systems
 title:speculative decoding performance or illusion
+title:speculative decoding with big little decoder
 title:speculative diffusion decoding accelerating language generation through diffusion
 title:speculative macro commit for faster toolusing agents
 title:speculative speculative decoding
 title:specvlm enhancing speculative decoding of video llms via verifierguided token pruning
+title:speed speculative pipelined execution for efficient decoding
 title:speedbench a unified and diverse benchmark for speculative decoding
 title:spend bits where queries look kv cache vector quantization with attentionpreserving transforms
 title:spice speculative prefetching with lowrank expert surrogates and heterogeneous orchestration for moe inference acceleration
@@ -171,6 +184,7 @@ title:step3 is large yet affordable modelsystem codesign for costeffective decod
 title:sticky routing training moe models for memoryefficient inference
 title:stmoe
 title:storellm energy efficient large language model inference with permanently prestored attention matrices
+title:stratum systemhardware codesign with tiered monolithic 3dstackable dram for efficient moe serving
 title:streamdq nearmemory weight dequantization in custom hbm for scalable ai inference acceleration
 title:streamserve adaptive speculative flows for lowlatency disaggregated llm serving
 title:striped attention faster ring attention for causal transformers
