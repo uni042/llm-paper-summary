@@ -155,8 +155,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-10〜2023-09）
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  自己注意とフィードフォワード網をブロック単位で融合実行し、中間活性を全系列分保持しないことで長文脈のメモリ使用量を削減する。
+  実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：2  
+  注意だけでなくFFNまで系列ブロック内で融合して学習時活性を保持しないBPT。A100/TPU v4でメモリ効率型注意より2〜4倍長い文脈を学習可能にし、1B・16Kでは通常Transformer比1.20倍の学習スループットを示す。
 
 ### 公開時期未分類
 
