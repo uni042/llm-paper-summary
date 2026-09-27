@@ -108,7 +108,7 @@
 
 - **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  等価なアフィン変換を直接最適化して量子化しやすい分布へ移し、LLaMA2-7BのW4A4でC4パープレキシティ15.76を達成してOmniQuantの18.02を改善する。
+  スカラーの拡大縮小や平行移動に限られていた等価変換を、可逆な行列によるアフィン変換へ拡張する。変換を量子化前の重みへ掛け、逆変換を活性値側へ入れることで元の線形演算を保ったまま量子化しやすい座標系を学習し、LLaMA2-7BのW4A4でC4パープレキシティをOmniQuantの18.02から15.76へ改善する。
 
 - **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
