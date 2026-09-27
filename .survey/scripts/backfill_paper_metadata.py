@@ -72,6 +72,25 @@ def set_missing(meta: dict[str, Any], key: str, value: Any) -> bool:
     return False
 
 
+def body_h1_title(body: str) -> str | None:
+    """Reuse the first authored H1 as the canonical title fallback."""
+    match = re.search(r"^#\\s+(.+?)\\s*$", body, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def body_section_summary(body: str) -> str | None:
+    """Reuse the first paragraph of an authored overview/summary section."""
+    match = re.search(r"^##\\s+(?:概要|要約)\\s*$", body, re.MULTILINE)
+    if not match:
+        return None
+    tail = body[match.end():].lstrip()
+    if not tail:
+        return None
+    parts = re.split(r"\\n\\s*\\n|(?m)^##\\s+", tail, maxsplit=1)
+    paragraph = " ".join(parts[0].split())
+    return paragraph or None
+
+
 def body_one_line_summary(body: str) -> str | None:
     """Reuse an already-authored one-line explanation; never invent prose."""
     patterns = (
@@ -203,7 +222,16 @@ def arxiv_ids(paths: list[Path]) -> list[str]:
     ids: list[str] = []
     for path in paths:
         meta, _ = parse_frontmatter(path)
-        aid = infer_arxiv_id(meta, path)
+        canonical = str(meta.get("canonical_id") or "").strip()
+    doi_match = re.fullmatch(r"DOI:(.+)", canonical, re.I)
+    if doi_match:
+        doi = doi_match.group(1).strip()
+        if set_missing(meta, "doi", doi):
+            added.append("doi(canonical-id)")
+        if set_missing(meta, "source", f"https://doi.org/{doi}"):
+            added.append("source(doi)")
+
+    aid = infer_arxiv_id(meta, path)
         if aid and aid not in ids:
             ids.append(aid)
     return ids
@@ -226,7 +254,7 @@ class _ArxivMetaParser(HTMLParser):
 
         if tag.lower() != "meta":
             return
-        name = amap.get("name", "").lower()
+        name = (amap.get("name") or amap.get("property") or "").lower()
         content = amap.get("content", "").strip()
         if name and content:
             self.values.setdefault(name, []).append(content)
@@ -245,6 +273,14 @@ def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | No
     parser.feed(raw.decode("utf-8", errors="replace"))
     meta = parser.values
     authors = [x.strip() for x in meta.get("citation_author", []) if x.strip()]
+    titles = meta.get("citation_title", []) or meta.get("og:title", [])
+    title = " ".join(titles[0].split()) if titles else ""
+    summaries = (
+        meta.get("citation_abstract", [])
+        or meta.get("description", [])
+        or meta.get("og:description", [])
+    )
+    summary = " ".join(summaries[0].split()) if summaries else ""
     dates = meta.get("citation_date", []) or meta.get("citation_publication_date", [])
     published = ""
     if dates:
@@ -261,10 +297,12 @@ def _parse_arxiv_html_metadata(arxiv_id: str, raw: bytes) -> dict[str, Any] | No
         for code in re.findall(r"\b([A-Za-z][A-Za-z0-9-]*\.[A-Za-z0-9.-]+)\b", value):
             if code not in category_codes:
                 category_codes.append(code)
-    if not authors and not published and not category_codes:
+    if not authors and not title and not summary and not published and not category_codes:
         return None
     primary = category_codes[0] if category_codes else ""
     return {
+        "title": title,
+        "summary": summary,
         "authors": authors,
         "published": published,
         "arxiv_categories": (
@@ -362,6 +400,8 @@ def fetch_arxiv(ids: list[str], batch_size: int = 25) -> dict[str, dict[str, Any
                 raw_id = re.sub(r"v\d+$", "", raw_id)
                 if not raw_id:
                     continue
+                title = " ".join((entry.findtext(ATOM + "title") or "").split())
+                summary = " ".join((entry.findtext(ATOM + "summary") or "").split())
                 authors = [
                     (a.findtext(ATOM + "name") or "").strip()
                     for a in entry.findall(ATOM + "author")
@@ -377,6 +417,8 @@ def fetch_arxiv(ids: list[str], batch_size: int = 25) -> dict[str, dict[str, Any
                 ]
                 cross = [cat for cat in categories if cat != primary]
                 result[raw_id] = {
+                    "title": title,
+                    "summary": summary,
                     "authors": authors,
                     "published": published[:10] if published else "",
                     "arxiv_categories": {"primary": primary, "cross_list": cross} if primary else None,
@@ -450,11 +492,23 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
         meta["arxiv_categories"] = authored_categories
         added.append("arxiv_categories(body)")
 
+    authored_title = body_h1_title(body)
+    if set_missing(meta, "title", authored_title):
+        added.append("title(body-h1)")
+
     authored_one_line = body_one_line_summary(body)
+    authored_summary = authored_one_line or body_section_summary(body)
     if set_missing(meta, "list_summary", authored_one_line):
         added.append("list_summary(body)")
-    if set_missing(meta, "summary", meta.get("list_summary") or authored_one_line):
-        added.append("summary(existing-one-line)")
+    if set_missing(meta, "summary", meta.get("list_summary") or authored_summary):
+        added.append("summary(existing-body)")
+
+    existing_authors = meta.get("authors")
+    if isinstance(existing_authors, str) and existing_authors.strip():
+        normalized_authors = split_authors(existing_authors)
+        if normalized_authors:
+            meta["authors"] = normalized_authors
+            added.append("authors(normalized-list)")
 
     if "authors" in bib and set_missing(meta, "authors", split_authors(bib["authors"])):
         added.append("authors(body)")
@@ -483,6 +537,10 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
         added.append("published(published_online)")
     info = arxiv.get(aid) if aid else None
     if info:
+        if set_missing(meta, "title", info.get("title")):
+            added.append("title(arxiv)")
+        if set_missing(meta, "summary", info.get("summary")):
+            added.append("summary(arxiv)")
         if set_missing(meta, "authors", info.get("authors")):
             added.append("authors(arxiv)")
         if set_missing(meta, "published", info.get("published")):
@@ -506,11 +564,23 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     # Non-arXiv legacy conference/journal pages can usually be reconstructed
     # from explicit publication/DOI fields already present in the paper.
     source = str(meta.get("source") or "")
+    if set_missing(meta, "published", meta.get("published_year") or meta.get("year")):
+        added.append("published(year)")
     if set_missing(meta, "publication", meta.get("publication_status")):
         added.append("publication(publication_status)")
     if ("publication_type" not in meta or empty(meta.get("publication_type"))) and "usenix.org/" in source:
         meta["publication_type"] = "査読付き国際会議論文"
         added.append("publication_type(usenix)")
+    publication_text = " ".join(
+        str(meta.get(key) or "") for key in ("publication", "publication_status")
+    ).lower()
+    if (
+        ("publication_type" not in meta or empty(meta.get("publication_type")))
+        and meta.get("doi")
+        and "conference" in publication_text
+    ):
+        meta["publication_type"] = "査読付き国際会議論文"
+        added.append("publication_type(conference)")
     if (
         ("publication_type" not in meta or empty(meta.get("publication_type")))
         and meta.get("doi")
