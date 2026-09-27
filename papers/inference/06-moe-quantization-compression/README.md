@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（16本）
+## 自動生成の論文一覧（17本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -59,6 +59,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   DynaMoは、データ集合ごとの専門家重要度に応じてINT2〜8のビット幅を切替え、変化に敏感なチャネルだけを更新して、全モデル再量子化なしに品質を保つ。
+
+- **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MoE専門家群からワッサースタイン重心となる共通専門家を抽出し、各専門家との差分だけを近似保存することで、再学習やデータなしに専門家パラメータを最大75%削減する。
 
 ### 3年前（2023-10〜2024-09）
 

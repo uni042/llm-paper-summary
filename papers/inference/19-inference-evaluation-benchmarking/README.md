@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（6本）
+## 自動生成の論文一覧（7本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -29,6 +29,12 @@
 - **2026-04 · [Comparative Characterization of KV Cache Management Strategies for LLM Inference](2026-2604.05012-comparative-characterization-kv-cache-management-strategies-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   vLLM、H2O、InfiniGenをH100実機で比較し、GPUメモリを最大約70%減らすH2O、初期事実を保ちやすいInfiniGen、速度に優れるvLLMの条件別の使い分けを明らかにする。
+
+### 2年前（2024-10〜2025-09）
+
+- **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  同じモデルを貪欲復号しても、GPU数・GPU種類・バッチサイズが変わると浮動小数点演算の順序が変わり、有限精度の丸め誤差が初期トークンの選択差へ増幅される。DeepSeek-R1-Distill-Qwen-7Bではbfloat16条件で構成差だけにより精度が最大9ポイント、応答長が最大9,000トークン変化した。
 
 ### 3年前（2023-10〜2024-09）
 

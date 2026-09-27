@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（191本）
+## 自動生成の論文一覧（193本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -630,6 +630,10 @@
   実装：[✓](https://github.com/EfficientMoE/MoE-Gen) ・ リポジトリ内被引用：3  
   MoEの注意機構とエキスパートを別々にバッチ化し、ホストメモリでトークンを蓄積して大バッチ化することで、単一GPUオフロード推論のGPU利用率とスループットを改善する。
 
+- **2025-02 · [TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval](2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  RAG生成中に次の検索で必要になる索引データを予測してCPUからGPUへ先読みし、検索用GPUメモリを抑えながらデータ移動とLLM生成を重ねてエンドツーエンド遅延を平均最大1.72倍改善する。
+
 - **2025-02 · [Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies](2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md)**  
   実装：[✓](https://github.com/keyboardAnt/hf-bench) ・ リポジトリ内被引用：3  
   対象モデルと提案モデルの語彙が異なっても損失なし投機的復号を可能にし、既製モデルの自由な組合せで自己回帰復号比最大2.8倍高速化する。
@@ -769,6 +773,10 @@
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
+
+- **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  正規表現や文脈自由文法で出力形式を強制する生成では、各ステップで語彙全体を検査すると制約処理が重い。モデル非依存で制約付き生成の構造保証を行いながら、トークン生成への追加負荷を小さく抑え、当時の既存制約生成方式を大幅に上回る性能を報告する。
 
 ### 5年前（2021-10〜2022-09）
 
