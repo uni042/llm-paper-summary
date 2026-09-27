@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-unrelated-arxiv-2512-17843",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.17843",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.17843",
+    "identity_tokens": [
+      "arXiv:2512.17843"
+    ],
+    "reason": "実利用chatbot会話のdatasetと分析が主題で、推論runtimeの効率化手法を提案しない。",
+    "first_checked_at": "2026-09-27T21:22:11+00:00",
+    "last_checked_at": "2026-09-27T21:22:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "ShareChat: A Dataset of Chatbot Conversations in the Wild"
+  },
+  "processed_at": "2026-09-27T21:22:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

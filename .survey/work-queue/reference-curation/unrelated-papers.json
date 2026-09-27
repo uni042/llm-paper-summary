@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T05:27:19+00:00",
-  "record_count": 279,
+  "updated_at": "2026-09-27T21:22:11+00:00",
+  "record_count": 282,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4223,6 +4223,48 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models"
+    },
+    "arXiv:2506.13497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13497",
+      "identity_tokens": [
+        "arXiv:2506.13497"
+      ],
+      "reason": "text-to-video diffusion servingが主題で言語生成LLM/VLM runtimeを対象としない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "DDiT: Dynamic Resource Allocation for Diffusion Transformer Model Serving"
+    },
+    "arXiv:2508.00083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.00083",
+      "identity_tokens": [
+        "arXiv:2508.00083"
+      ],
+      "reason": "code generation agentのsurveyで推論systems効率の新規手法を提示しない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Survey on Code Generation with LLM-based Agents"
+    },
+    "arXiv:2512.17843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.17843",
+      "identity_tokens": [
+        "arXiv:2512.17843"
+      ],
+      "reason": "実利用chatbot会話のdatasetと分析が主題で、推論runtimeの効率化手法を提案しない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ShareChat: A Dataset of Chatbot Conversations in the Wild"
     }
   }
 }

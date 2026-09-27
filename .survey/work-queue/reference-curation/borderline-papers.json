@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T17:15:51+00:00",
-  "record_count": 285,
+  "updated_at": "2026-09-27T21:22:11+00:00",
+  "record_count": 291,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4274,6 +4274,90 @@
         "/LLM-paper-summary-library-first/research/2502.12110-a-mem-agentic-memory-for-llm-agents.md"
       ],
       "title": "A-MEM: Agentic Memory for LLM Agents"
+    },
+    "arXiv:2402.12656": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12656",
+      "identity_tokens": [
+        "arXiv:2402.12656"
+      ],
+      "reason": "未選択expert知識を補うが主目的はtask accuracyでsystems efficiency評価が弱い。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "HyperMoE: Towards Better Mixture of Experts via Transferring Among Experts"
+    },
+    "arXiv:2404.14047": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.14047",
+      "identity_tokens": [
+        "arXiv:2404.14047"
+      ],
+      "reason": "低bit比較知見は有用だが既存10手法の精度評価が主眼で新規runtime手法ではない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "An Empirical Study of LLaMA3 Quantization: From LLMs to MLLMs"
+    },
+    "arXiv:2505.09598": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.09598",
+      "identity_tokens": [
+        "arXiv:2505.09598"
+      ],
+      "reason": "環境footprint評価として関連するがruntime最適化手法は提案しない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference"
+    },
+    "arXiv:2505.16839": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16839",
+      "identity_tokens": [
+        "arXiv:2505.16839"
+      ],
+      "reason": "parallel decodingとKV cacheは関連するが主眼はmultimodal model architectureと品質である。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LaViDa: A Large Diffusion Language Model for Multimodal Understanding"
+    },
+    "arXiv:2510.00202": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.00202",
+      "identity_tokens": [
+        "arXiv:2510.00202"
+      ],
+      "reason": "routingのaccuracy・cost比較基盤だがserving runtime自体の新規最適化ではない。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "RouterArena: An Open Platform for Comprehensive Comparison of LLM Routers"
+    },
+    "arXiv:2511.00796": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00796",
+      "identity_tokens": [
+        "arXiv:2511.00796"
+      ],
+      "reason": "rollout配置は参考になるが最終適用先は凍結対象のLLM強化学習workflowである。",
+      "first_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "AReaL-Hex: Accommodating Asynchronous RL Training over Heterogeneous GPUs"
     }
   }
 }
