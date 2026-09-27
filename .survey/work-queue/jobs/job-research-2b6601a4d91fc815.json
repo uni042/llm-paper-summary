@@ -1,0 +1,28 @@
+{
+  "job_id": "job-research-2b6601a4d91fc815",
+  "type": "research",
+  "priority": 50,
+  "canonical_id": "arXiv:2603.28458",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [
+    "DOI:10.48550/arxiv.2603.28458"
+  ],
+  "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
+  "source_url": "https://arxiv.org/abs/2603.28458",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md",
+  "selection_reason": "細粒度疎注意の索引探索を階層化して長文脈LLMのattention実行を高速化するシステム手法で、推論計算量・メモリアクセスへ直接寄与。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-27T05:02:06+00:00",
+  "import_provenance": {
+    "source": "chatgpt_library",
+    "source_file": "discovery-20260927-1100-scheduled-chat-00.json",
+    "imported_at": "2026-09-27T05:02:06+00:00"
+  }
+}
