@@ -948,7 +948,7 @@
 
 - **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  候補LLMを代表プロンプト上の予測誤差ベクトルで表し、プロンプト側クラスタと組み合わせるUniRouteにより、学習時に存在しなかった30超のLLMを含む動的モデル群でも再学習なしに品質・費用ルーティングを行う。
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1153,8 +1153,8 @@
   異種GPUと不均一ネットワーク上でテンソル並列・パイプライン並列を非対称に割り当て、制約最適化で配置を探索することで、同一予算の均質構成より最大2.3倍厳しい遅延目標、または最大4倍の要求率を処理する。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  将来のKVキャッシュ量とバッチサイズを予測し、機械学習モデルで各反復の必要性能を見積もってGPU周波数とインスタンス構成を下げるthrottLL’eMにより、サービス品質目標を守りながらTriton比で最大43.8%のエネルギーを削減する。
+  実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：2  
+  推論中に変動するバッチサイズとKVキャッシュ量から次の必要性能を予測し、サービス品質目標（service-level objective, SLO）を破らない範囲までGPU周波数を下げる。さらに負荷に合わせてテンソル並列度の異なるエンジンを切り替え、LLM配信の「使っていない性能余裕」をエネルギー削減へ変える。
 
 ### 4年前（2022-10〜2023-09）
 

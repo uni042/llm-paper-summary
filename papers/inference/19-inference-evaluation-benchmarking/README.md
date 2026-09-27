@@ -12,7 +12,7 @@
 
 - **2026-09 · [PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving](2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21725505) ・ リポジトリ内被引用：0  
-  単一H100 NVLでvLLMとTensorRT-LLMを同一負荷比較し、接頭辞再利用が容量内でTTFTを5〜6.5倍減らす一方、バーストか固定到着かでランタイムの優劣が反転し、差の主因はキャッシュより上位のスケジューリングにあると示す。
+  単一H100 NVL上でvLLMとTensorRT-LLMへ同じ要求列を送り、接頭辞キャッシュそのものの効果、容量超過、要求スケジューリングの差を切り分ける実測ベンチマーク。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  

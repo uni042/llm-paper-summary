@@ -123,8 +123,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   OpenSHMEM通信をTritonへ統合し、計算・通信・メモリアクセスをPythonから細粒度に重ね合わせ、8〜64 GPUで分散カーネルを高速化するコンパイラ拡張。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  DRAMとSRAM間のタイル移動と演算というデータ流を直接記述し、スレッド束縛・配置・テンソル化・パイプライン化を注釈として分離するTileLangにより、LLMを含むAIカーネルを短い記述で実装しつつ手書き最適化に競合する性能を狙う。
+  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：5  
+  GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：4  

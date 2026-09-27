@@ -66,7 +66,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2025-11 · [SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs](2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  蒸留モデルと元LLMの情報注目の類似を利用し軽量検索ヘッドで重要KVを先読みする。非同期プリフェッチ、差分転送、適応メモリ管理によりクラウド最大24.89倍、エッジ最大10.06倍を報告する。
+  蒸留言語モデルの注意分布を「本体LLMがどの過去トークンを見るか」の安価な予測器として使い、重要KVを推論前に選択する。これによりKV検索とCPU-GPU転送を本体計算から切り離し、非同期先読み・差分更新・適応オフロードまで一体化する。
 
 - **2025-11 · [KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference](2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
