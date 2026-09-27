@@ -28,6 +28,11 @@ class _Response:
         return json.dumps(self.payload).encode("utf-8")
 
 
+class _HtmlResponse(_Response):
+    def read(self):
+        return self.payload.encode("utf-8")
+
+
 class DiscoveryProviderAdapterTest(unittest.TestCase):
     def test_semantic_scholar_search_url_uses_offset_pagination(self) -> None:
         calls = []
@@ -352,6 +357,40 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual(rows[0]["status"], "found")
         self.assertEqual(rows[0]["lookup_route"], "semantic_scholar_single")
         self.assertEqual(rows[0]["record"]["canonical_id"], "arXiv:2609.10002")
+
+    def test_arxiv_doi_uses_official_abs_page_when_semantic_scholar_misses(self) -> None:
+        calls = []
+
+        def opener(request, timeout=30):
+            calls.append(request.full_url)
+            if request.get_method() == "POST":
+                return _Response([None])
+            if request.full_url.startswith("https://api.semanticscholar.org/"):
+                raise HTTPError(request.full_url, 404, "Not Found", {}, None)
+            self.assertEqual(request.full_url, "https://arxiv.org/abs/2509.23324")
+            self.assertEqual(request.get_header("User-agent"), "llm-paper-summary-discovery/1.0")
+            return _HtmlResponse(
+                '<html><head>'
+                '<meta name="citation_title" content="Scaling LLM Test-Time Compute with Mobile NPU on Smartphones">'
+                '<meta name="citation_author" content="A. Researcher">'
+                '<meta name="citation_author" content="B. Researcher">'
+                '<meta name="citation_abstract" content="A verified abstract.">'
+                '<meta name="citation_date" content="2025/09/27">'
+                '</head></html>'
+            )
+
+        rows = self._lookup_ids(["DOI:10.48550/arXiv.2509.23324"], opener=opener)
+
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(rows[0]["status"], "found")
+        self.assertEqual(rows[0]["lookup_route"], "arxiv_abs_html")
+        self.assertEqual(rows[0]["record"]["canonical_id"], "arXiv:2509.23324")
+        self.assertEqual(rows[0]["record"]["identifiers"], ["DOI:10.48550/arxiv.2509.23324"])
+        self.assertEqual(rows[0]["record"]["source_url"], "https://arxiv.org/abs/2509.23324")
+        self.assertEqual(rows[0]["record"]["title"], "Scaling LLM Test-Time Compute with Mobile NPU on Smartphones")
+        self.assertEqual(rows[0]["record"]["authors"], ["A. Researcher", "B. Researcher"])
+        self.assertEqual(rows[0]["record"]["abstract"], "A verified abstract.")
+        self.assertEqual(rows[0]["record"]["year"], 2025)
 
     def test_lookup_identifiers_reads_openreview_note_by_exact_id(self) -> None:
         note_id = "Ab12Cd34Ef"
