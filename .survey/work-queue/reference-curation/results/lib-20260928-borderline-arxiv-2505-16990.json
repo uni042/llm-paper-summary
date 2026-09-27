@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-borderline-arxiv-2505-16990",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.16990",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.16990",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.16990",
+      "arXiv:2505.16990"
+    ],
+    "reason": "並列デコード高速化を含むが、中心は拡散型マルチモーダルモデルの学習・能力設計である。",
+    "first_checked_at": "2026-09-27T21:24:11+00:00",
+    "last_checked_at": "2026-09-27T21:24:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json#rank-487"
+    ],
+    "title": "Dimple: Discrete Diffusion Multimodal Large Language Model with Parallel Decoding"
+  },
+  "processed_at": "2026-09-27T21:24:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

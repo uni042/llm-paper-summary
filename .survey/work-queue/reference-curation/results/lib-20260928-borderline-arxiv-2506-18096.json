@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-borderline-arxiv-2506-18096",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.18096",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.18096",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.18096",
+      "arXiv:2506.18096"
+    ],
+    "reason": "取得・ツール・計画・エージェント構成を広く整理するが、システム最適化サーベイとしては範囲が広すぎる。",
+    "first_checked_at": "2026-09-27T21:24:11+00:00",
+    "last_checked_at": "2026-09-27T21:24:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json#rank-492"
+    ],
+    "title": "Deep Research Agents: A Systematic Examination And Roadmap"
+  },
+  "processed_at": "2026-09-27T21:24:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

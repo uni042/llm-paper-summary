@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T21:23:11+00:00",
-  "record_count": 293,
+  "updated_at": "2026-09-27T21:24:11+00:00",
+  "record_count": 302,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4386,6 +4386,141 @@
         "worker-worklist-30 discovery_review rank 382"
       ],
       "title": "Introspective Diffusion Language Models"
+    },
+    "arXiv:2407.13126": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.13126",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.13126",
+        "arXiv:2407.13126"
+      ],
+      "reason": "GPU再構成は関連するが、対象は継続学習一般でありLLM固有の学習・推論基盤ではない。",
+      "first_checked_at": "2026-09-27T21:24:10+00:00",
+      "last_checked_at": "2026-09-27T21:24:10+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-463"
+      ],
+      "title": "Improving GPU Multi-Tenancy Through Dynamic Multi-Instance GPU Reconfiguration"
+    },
+    "arXiv:2410.13284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.13284",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.13284",
+        "arXiv:2410.13284"
+      ],
+      "reason": "信頼度トークンで別モデルへ回送できるが、主貢献は信頼度学習であり、配信スケジューラや資源配置の検証は限定的である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-468"
+      ],
+      "title": "Learning to Route LLMs with Confidence Tokens"
+    },
+    "arXiv:2501.00656": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.00656",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.00656",
+        "arXiv:2501.00656"
+      ],
+      "reason": "学習安定性と計算効率を扱うものの、主にモデル系列・データ混合・学習レシピの技術報告である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-475"
+      ],
+      "title": "2 OLMo 2 Furious"
+    },
+    "arXiv:2503.14456": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.14456",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.14456",
+        "arXiv:2503.14456"
+      ],
+      "reason": "定数メモリ・定数時間推論を持つ構造だが、主眼は新しい系列モデルと学習データ・能力実証である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-480"
+      ],
+      "title": "RWKV-7 \"Goose\" with Expressive Dynamic State Evolution"
+    },
+    "arXiv:2505.16990": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16990",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.16990",
+        "arXiv:2505.16990"
+      ],
+      "reason": "並列デコード高速化を含むが、中心は拡散型マルチモーダルモデルの学習・能力設計である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-487"
+      ],
+      "title": "Dimple: Discrete Diffusion Multimodal Large Language Model with Parallel Decoding"
+    },
+    "arXiv:2506.18096": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18096",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.18096",
+        "arXiv:2506.18096"
+      ],
+      "reason": "取得・ツール・計画・エージェント構成を広く整理するが、システム最適化サーベイとしては範囲が広すぎる。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-492"
+      ],
+      "title": "Deep Research Agents: A Systematic Examination And Roadmap"
+    },
+    "arXiv:2507.02259": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.02259",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.02259",
+        "arXiv:2507.02259"
+      ],
+      "reason": "長文脈を分割読込する記憶エージェントだが、主貢献は学習済みエージェント方式で、配信基盤の資源機構は限定的である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-493"
+      ],
+      "title": "MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent"
+    },
+    "arXiv:2507.13334": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.13334",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.13334",
+        "arXiv:2507.13334"
+      ],
+      "reason": "文脈管理を広く扱うが、推論基盤の資源管理だけでなくRAG・ツール利用・マルチエージェント全般を主対象にする。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-495"
+      ],
+      "title": "A Survey of Context Engineering for Large Language Models"
+    },
+    "arXiv:2508.14444": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14444",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.14444",
+        "arXiv:2508.14444"
+      ],
+      "reason": "推論スループットの実測はあるが、主貢献はモデル設計・学習レシピ・モデル公開で、基盤研究としての比重が境界的である。",
+      "first_checked_at": "2026-09-27T21:24:11+00:00",
+      "last_checked_at": "2026-09-27T21:24:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-496"
+      ],
+      "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model"
     }
   }
 }
