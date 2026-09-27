@@ -13,7 +13,7 @@
   "source_url": "https://arxiv.org/abs/2507.08771",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts-with-chunk-level-activation-sparsity.md",
   "selection_reason": "端末推論向けにchunk単位activation sparsityを持つMoE/FFNを設計し、実デバイスでの推論高速化を直接狙う。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -24,5 +24,10 @@
     "source": "chatgpt_library",
     "source_file": "discovery-20260927-1100-scheduled-chat-00.json",
     "imported_at": "2026-09-27T05:06:15+00:00"
-  }
+  },
+  "superseded_at": "2026-09-27T16:57:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md",
+  "represented_canonical_id": "arXiv:2507.08771",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

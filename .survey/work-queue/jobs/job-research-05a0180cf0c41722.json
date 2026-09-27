@@ -13,7 +13,7 @@
   "source_url": "https://arxiv.org/abs/2501.13956",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
   "selection_reason": "時間認識知識グラフをエージェント記憶層として実装し、動的知識統合・検索と応答遅延を実運用観点で評価する。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -24,5 +24,10 @@
     "source": "chatgpt_library",
     "source_file": "discovery-20260927-1028-scheduled-chat-30.json",
     "imported_at": "2026-09-27T05:05:08+00:00"
-  }
+  },
+  "superseded_at": "2026-09-27T16:57:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+  "represented_canonical_id": "arXiv:2501.13956",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
