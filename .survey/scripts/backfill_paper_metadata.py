@@ -124,7 +124,7 @@ def metadata_needs_backfill(meta: dict[str, Any], body: str) -> bool:
     if not isinstance(sources, list) or not sources:
         return True
     published = meta.get("published")
-    if not isinstance(published, str) or not re.fullmatch(r"\\d{4}-\\d{2}(?:-\\d{2})?", published):
+    if not isinstance(published, str) or not re.fullmatch(r"\d{4}-\d{2}(?:-\d{2})?", published):
         return True
     if meta.get("arxiv_id"):
         categories = meta.get("arxiv_categories")
@@ -579,7 +579,7 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
     legacy_published = meta.get("published_year")
     if (
         isinstance(legacy_published, str)
-        and re.fullmatch(r"\\d{4}-\\d{2}(?:-\\d{2})?", legacy_published)
+        and re.fullmatch(r"\d{4}-\d{2}(?:-\d{2})?", legacy_published)
         and set_missing(meta, "published", legacy_published)
     ):
         added.append("published(legacy-date)")
