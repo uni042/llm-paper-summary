@@ -376,8 +376,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   外れ値分布を適応回転で平滑化し2ビットKV量子化を安定化して、ピークメモリ3.97倍削減、最大バッチ5.75倍、デコード2.32倍高速化を報告する。
 
 - **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  長い思考連鎖で増大するKVキャッシュを、段階的な低ビット化・層別ビット配分・位置補間校正で圧縮し、同じメモリ予算の既存方式より推論精度を最大8%改善する。
+  実装：[✓](https://github.com/thu-nics/PM-KVQ) ・ リポジトリ内被引用：3  
+  KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
 
 - **2025-04 · [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md)**  
   実装：[✓](https://github.com/alibaba/vllm_xformers_prefetch) ・ リポジトリ内被引用：3  
