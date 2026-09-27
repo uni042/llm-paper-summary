@@ -69,8 +69,8 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   DynaMoは、データ集合ごとの専門家重要度に応じてINT2〜8のビット幅を切替え、変化に敏感なチャネルだけを更新して、全モデル再量子化なしに品質を保つ。
 
 - **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoE専門家群からワッサースタイン重心となる共通専門家を抽出し、各専門家との差分だけを近似保存することで、再学習やデータなしに専門家パラメータを最大75%削減する。
+  実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：0  
+  専門家群の共有成分をワッサースタイン重心へ集約し、各専門家固有の差分だけを圧縮・実行時復元することで、専門家を消す方式より個性を残しつつ約75%の容量削減を狙う。
 
 ### 3年前（2023-10〜2024-09）
 
