@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-27T05:07:26+00:00",
-  "record_count": 273,
+  "updated_at": "2026-09-27T05:26:26+00:00",
+  "record_count": 283,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -3624,38 +3624,6 @@
       "title": "Compress, Then Prompt: Improving Accuracy-Efficiency Trade-off of LLM Inference with Transferable Prompt",
       "source_url": "https://arxiv.org/abs/2305.11186"
     },
-    "arXiv:2503.21460": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2503.21460",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2503.21460",
-        "arXiv:2503.21460"
-      ],
-      "reason": "LLM agentの方法・応用・課題を広く整理するsurveyで、agent servingの背景価値はあるが新規推論システム手法ではない。",
-      "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
-      "source_url": "https://arxiv.org/abs/2503.21460"
-    },
-    "arXiv:2306.04640": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2306.04640",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2306.04640",
-        "arXiv:2306.04640"
-      ],
-      "reason": "MoEのmodularityとexpert構成を扱い効率面の含意はあるが、主貢献はモデル構造・学習で、servingランタイムの直接的評価は弱い。",
-      "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "ModuleFormer: Modularity Emerges from Mixture-of-Experts",
-      "source_url": "https://arxiv.org/abs/2306.04640"
-    },
     "DOI:10.18653/v1/2021.naacl-main.112": {
       "classification": "borderline",
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.112",
@@ -4108,6 +4076,176 @@
       ],
       "title": "A Survey on Diffusion Language Models",
       "source_url": "https://arxiv.org/abs/2508.10875"
+    },
+    "arXiv:1705.03551": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1705.03551",
+      "identity_tokens": [
+        "arXiv:1705.03551"
+      ],
+      "reason": "疎MoE/条件付き計算の基礎研究として重要だが、現代LLM inference runtimeの直接的なシステム寄与ではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Sparsely-Gated Mixture-of-Experts Reference arXiv:1705.03551"
+    },
+    "arXiv:1901.02860": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1901.02860",
+      "identity_tokens": [
+        "arXiv:1901.02860"
+      ],
+      "reason": "segment-level recurrenceとrelative positionで長文脈を効率化する基礎アーキテクチャ。重要な先行研究だがLLM servingシステムではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context"
+    },
+    "arXiv:1911.02549": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.02549",
+      "identity_tokens": [
+        "arXiv:1911.02549"
+      ],
+      "reason": "推論システム評価の標準基盤として重要だがLLM以前の汎用ML推論ベンチマークで、LLM固有の新規システム手法ではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "MLPerf Inference Benchmark"
+    },
+    "arXiv:1911.05507": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.05507",
+      "identity_tokens": [
+        "arXiv:1911.05507"
+      ],
+      "reason": "過去memoryを圧縮して長距離依存を扱うモデルアーキテクチャ研究。長文脈効率の基礎だが現代LLM配信システムではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Compressive Transformers for Long-Range Sequence Modelling"
+    },
+    "arXiv:2204.08396": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.08396",
+      "identity_tokens": [
+        "arXiv:2204.08396"
+      ],
+      "reason": "推論時のexpert選択安定性には関係するが、主貢献は二段階学習とrouter蒸留によるMoE学習安定化・収束改善。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "StableMoE: Stable Routing Strategy for Mixture of Experts"
+    },
+    "arXiv:2305.08322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.08322",
+      "identity_tokens": [
+        "arXiv:2305.08322"
+      ],
+      "reason": "大規模言語モデルのモデル設計・能力側の寄与が中心で、現行サーベイが重視する配信・メモリ・カーネルの独立したシステム寄与は限定的。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Large Language Model Reference arXiv:2305.08322"
+    },
+    "arXiv:2306.15595": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.15595",
+      "identity_tokens": [
+        "arXiv:2306.15595"
+      ],
+      "reason": "RoPE位置補間でLLaMAを32Kへ拡張するモデル手法で、長文脈推論に関係するがランタイム最適化ではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Extending Context Window of Large Language Models via Positional Interpolation"
+    },
+    "arXiv:2308.01320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.01320",
+      "identity_tokens": [
+        "arXiv:2308.01320"
+      ],
+      "reason": "大規模モデルの分散実行・並列化に関連するが、今回確認した本文では現行LLM推論サーベイへ直接収録する固有の配信機構の差分が限定的。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Distributed Large-Model Systems Reference arXiv:2308.01320"
+    },
+    "arXiv:2402.13753": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.13753",
+      "identity_tokens": [
+        "arXiv:2402.13753"
+      ],
+      "reason": "位置補間と短時間fine-tuningで2M contextへ拡張するモデル手法。長文脈推論には重要だがシステム実行基盤の新規性は弱い。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens"
+    },
+    "arXiv:2407.06204": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.06204",
+      "identity_tokens": [
+        "arXiv:2407.06204"
+      ],
+      "reason": "MoEのalgorithm/system両面を整理する直接関連サーベイだが、新規一次システム手法ではない。",
+      "first_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Survey on Mixture of Experts in Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2306.04640": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2306.04640",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.04640",
+        "arXiv:2306.04640"
+      ],
+      "reason": "MoEのmodularityとexpert構成を扱い効率面の含意はあるが、主貢献はモデル構造・学習で、servingランタイムの直接的評価は弱い。",
+      "first_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ModuleFormer: Modularity Emerges from Mixture-of-Experts"
+    },
+    "DOI:10.48550/arxiv.2503.21460": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2503.21460",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.21460",
+        "arXiv:2503.21460"
+      ],
+      "reason": "LLM agentの方法・応用・課題を広く整理するsurveyで、agent servingの背景価値はあるが新規推論システム手法ではない。",
+      "first_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges"
     }
   }
 }
