@@ -357,7 +357,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-10 · [LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy](2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  トークンを追い出すのではなくキー・値射影行列自体を低ランク近似し、深い層ほど誤差蓄積を考慮して圧縮率を段階的に調整することで、再学習や課題別プロファイルなしにLLaMA 8B〜70BのKVキャッシュ容量を削減する。
+  KVキャッシュから「どのトークンを捨てるか」を決めるのではなく、キー・値を作る射影行列そのものを低ランク化する。さらに、浅い層の近似誤差ほど後段で増幅されやすいことを利用し、浅層は保守的、深層は積極的に圧縮する。
 
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

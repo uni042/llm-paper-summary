@@ -1176,7 +1176,7 @@
 
 - **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  LLM自身で応答長を低費用予測し、近い長さの要求を同じマイクロバッチへまとめてパディングと早期終了による遊休を減らし、実命令データで推論処理量を86%改善する。
+  Vicuna自身を軽量な応答長予測器として使い、生成前に要求を長さ別へ並べ替える。予測外れを失敗回収・再計算で隔離し、短い要求には大きなバッチを使うことで、可変長生成に特有のバッチ内遊休を減らす。
 
 ### 5年前（2021-10〜2022-09）
 
