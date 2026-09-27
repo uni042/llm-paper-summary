@@ -414,11 +414,10 @@ def audit_list_summary(
     min_japanese_ratio: float = DEFAULT_MIN_JAPANESE_RATIO,
     warn_japanese_ratio: float = DEFAULT_WARN_JAPANESE_RATIO,
 ) -> ListSummaryQuality:
-    """Check list-summary transport/format only.
+    """Check transport format plus Japanese ratio.
 
-    Length, Japanese ratio, terminology choice, and semantic specificity are
-    reading-worker self-review concerns.  The parameters remain only for
-    compatibility with older callers and are not publication thresholds.
+    Length, terminology choice, and semantic specificity are reading-worker
+    self-review concerns. Japanese ratio remains an uploader-fixable style gate.
     """
     failures: list[str] = []
     warnings: list[str] = []
@@ -433,10 +432,17 @@ def audit_list_summary(
     if re.search(r"`|\[[^\]]+\]\([^)]+\)", plain):
         failures.append("一文要約にMarkdown断片が残っている")
 
+    audit_text = _mask_proper_names(plain)
+    ratio, _, _ = japanese_ratio(audit_text)
+    if ratio < min_japanese_ratio:
+        failures.append(f"日本語比率 {ratio:.1%} < {min_japanese_ratio:.1%}")
+    elif ratio < warn_japanese_ratio:
+        warnings.append(f"日本語比率 {ratio:.1%} < 警告基準 {warn_japanese_ratio:.1%}")
+
     return ListSummaryQuality(
-        status="FAIL" if failures else "PASS",
+        status="FAIL" if failures else ("WARN" if warnings else "PASS"),
         char_count=chars,
-        japanese_ratio=1.0,
+        japanese_ratio=ratio,
         failures=failures,
         warnings=warnings,
         bare_english_terms=[],
