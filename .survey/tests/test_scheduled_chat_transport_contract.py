@@ -12,7 +12,7 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         self.assertIn("Scheduled workerがGitHubをread-onlyで参照", text)
         self.assertIn("GitHub writeを試してLibrary失敗を回避することは禁止する。", text)
         self.assertIn("Survey GitHub ImportのWorkタスク", text)
-        self.assertIn("GitHubへのclaim", text)
+        self.assertIn("Scheduled workerはGitHubへの `write`、`claim`", text)
 
     def test_current_inventory_and_quota_contract(self):
         text = ROUTER.read_text(encoding="utf-8")
