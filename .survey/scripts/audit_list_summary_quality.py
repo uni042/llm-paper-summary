@@ -11,12 +11,7 @@ from pathlib import Path
 
 import yaml
 
-from list_summary import (
-    DEFAULT_MAX_CHARS,
-    DEFAULT_MIN_CHARS,
-    audit_list_summary,
-    compact_list_summary,
-)
+from list_summary import audit_list_summary
 
 PAPER_FAMILIES = ("inference", "training", "survey")
 MOVED_RE = re.compile(r"^#\s+Moved(?:\s|$)", re.I | re.M)
