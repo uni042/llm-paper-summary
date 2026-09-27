@@ -31,6 +31,10 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
+- **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-tier化、話題別のhot 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
+
 - **2025-12 · [KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing](2025-2512.03608-kvnand-dram-free-in-flash-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
@@ -96,8 +100,4 @@
 - **2024 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   生成段階の注意を高帯域PIMへ、全結合層をGPU/xPUへ分担する異種アーキテクチャで、バッチ推論のメモリ帯域律速を解消する。
-
-- **2025 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  モノリシック3D積層DRAMと近メモリ処理をGPUへ統合し、話題別専門家配置でGPU比復号スループット最大8.29倍、エネルギー効率最大7.66倍を示す。
 <!-- survey:auto:end -->

@@ -169,8 +169,8 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   ReXpertは、MoE専門家重みを容量比例帯域のReRAMへ常駐させ、共起する専門家を局所共有して、GPUのHBM重み読出しと小バッチFFNの供給律速を減らす。
 
 - **2026-08 · [Memory-Sovereign Inference: Output-Exact Execution Beyond Full Residency](2026-2608.23805-memory-sovereign-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は表現量、意味的に要求された重み、スケジューラが要求した転送、実際の入出力を別々に記録し、資源を誰が課金するかと、どこまで出力一致を検証したかを明示する。
+  実装：[✓](https://github.com/gustavgauge/memory-sovereign-inference-artifact) ・ リポジトリ内被引用：0  
+  ストレージ支援推論の「全重みを常駐させない実行」を、表現量・意味的要求量・資源上限・出力完全一致・再利用遷移に分解して証明する枠組み。Qwen3-Nextで43.59 GiBの意味的要求を34 GiB枠内で64出力完全一致させる。
 
 - **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

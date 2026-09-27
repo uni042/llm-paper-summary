@@ -61,6 +61,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-10〜2024-09）
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  GenZ解析器でDense・GQA・MoE・Mambaと量子化・投機・分散構成を横断し、計算・容量・帯域・通信要件を推定してLLM基盤設計を定量化する。
+  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：3  
+  operator-level rooflineとcollective通信モデルでLLM構造・serving最適化・分散方式からcompute/メモリ/network要件を逆算するGenZ。
 <!-- survey:auto:end -->

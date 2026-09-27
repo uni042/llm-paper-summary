@@ -28,7 +28,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  ReLU化LLMの入力と重みの符号ビットだけを比較してゼロ活性行を学習なしで予測し、保守度を実行時調整できる軽量予測器で補助予測器の学習とメモリを削減する。
+  ReLU化FFNのzero行を入力・重みの符号bit XORだけで学習なし予測し、行単位GEMV skipへつなぐSparseInfer。
 
 - **2025-04 · [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)**  
   実装：[✓](https://github.com/iie-ycx/DEER) ・ リポジトリ内被引用：2  
@@ -53,7 +53,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 3年前（2023-10〜2024-09）
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：32  
   LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。
 
 - **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  

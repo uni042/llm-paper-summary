@@ -46,6 +46,9 @@ evidence_locations:
 - figure 16
 - figure 17
 - table 4
+arxiv_categories:
+  primary: cs.AR
+  cross_list: []
 ---
 
 # Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving

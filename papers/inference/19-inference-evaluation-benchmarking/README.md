@@ -48,5 +48,5 @@
 
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  MoEのスケーリング則へ推論コストを加え、損失最適だけでなく配信効率まで含めて専門家数・モデル規模・学習トークン数の配分を選ぶ。
+  MoEのスケーリング則へ推論費用を組み込み、専門家数を増やした「損失最適」構成より、小さなMoEを多くのデータで学習する構成が配信費用まで含めて有利になる領域を示す。
 <!-- survey:auto:end -->
