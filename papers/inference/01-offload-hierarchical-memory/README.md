@@ -200,6 +200,14 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
 
+- **2026-07 · [HCRMap：3.5D MoEチップレット向け圧力認識型ホット専門家配置](2026-2607.11586-hcrmap.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  方式は積層SRAM、ローカルHBM、共有DRAMを階層的な常駐先として扱い、専門家複製を昇格・維持・降格・追い出しする遅い制御と、現在の複製へトークン群を割り当てる速い制御を分離する。
+
+- **2026-07 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル配信では、生成が進むほど鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）が増え、GPUメモリ不足が同時処理数を制約する。従来のCPUメモリへのKV退避は容量を増やせるが、KVは復号中も更新されるため、GPUとCPUの双方向転送と同期が実行経路へ入りやすい。
+
 - **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。
@@ -207,10 +215,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference](2026-2607.05116-communication-aware-placement-pruning-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CAPはMoEの共活性から専門家を近接配置し、通信量と負荷均衡の配置スペクトルを機械別に選び、通信先を意識した動的枝刈りまで統合して全対全通信を削減する。
-
-- **2026-07 · [2026-2607.11586-hcrmap](2026-2607.11586-hcrmap.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  方式は積層SRAM、ローカルHBM、共有DRAMを階層的な常駐先として扱い、専門家複製を昇格・維持・降格・追い出しする遅い制御と、現在の複製へトークン群を割り当てる速い制御を分離する。
 
 - **2026-06 · [RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference](2026-2606.05511-rh-plus-pim-row-hit-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -441,10 +445,4 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
   実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：257  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
-
-### 公開時期未分類
-
-- **2026 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデル配信では、生成が進むほど鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）が増え、GPUメモリ不足が同時処理数を制約する。従来のCPUメモリへのKV退避は容量を増やせるが、KVは復号中も更新されるため、GPUとCPUの双方向転送と同期が実行経路へ入りやすい。
 <!-- survey:auto:end -->

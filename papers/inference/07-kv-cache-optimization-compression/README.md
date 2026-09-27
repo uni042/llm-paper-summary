@@ -83,6 +83,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/yonseicasl/REAL) ・ リポジトリ内被引用：1  
   成功例だけでなく偏り・注意散漫を含む4種の注意挙動を測り、推論に重要なヘッドへKV予算を重点配分することで、長文脈の精度を保ちながらキャッシュを圧縮する。
 
+- **2026-07 · [KVpop：将来注意を用いた予測型オンラインKVキャッシュ枝刈り](2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  自己回帰生成では過去トークンのキー・値状態をKVキャッシュへ保持するため、文脈長に比例してメモリ容量と読出し帯域が増える。既存の追い出し方式は累積注意量などの代理指標を使うことが多いが、「今まで重要だったトークン」が今後も重要とは限らず、推論途中で関連性が変わると誤った追い出しが起きる。
+
 - **2026-07 · [HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching](2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   線形注意区間の累積遷移演算子とゼロ始動状態を保存して位置非依存に合成し、完全注意層は境界窓だけ再計算、未保存区間は複数実体で並列処理することで、ハイブリッド注意言語モデルの初トークン待ち時間を平均3.25倍短縮する。
@@ -90,10 +94,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [HiKV: Hierarchical Importance-Aware KV Cache with Hardware Acceleration for LLM Decoding](2026-2607.22389-hikv.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HiKVは、長文脈デコードでKVキャッシュが外部メモリアクセスの大部分を占める問題に対し、トークン単位と要素単位という二つの独立した冗長性を順番に削るアルゴリズム・ハードウェア協調設計である。1%以内の精度低下という同一条件で外部メモリアクセスを平均7.17倍削減し、注意計算を平均5.70倍、最大7.95倍高速化し、エネルギーを80〜90%削減する。
-
-- **2026-07 · [2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning](2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  自己回帰生成では過去トークンのキー・値状態をKVキャッシュへ保持するため、文脈長に比例してメモリ容量と読出し帯域が増える。既存の追い出し方式は累積注意量などの代理指標を使うことが多いが、「今まで重要だったトークン」が今後も重要とは限らず、推論途中で関連性が変わると誤った追い出しが起きる。
 
 - **2026-06 · [RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention](2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -377,7 +377,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ### 3年前（2023-10〜2024-09）
 
-- **2024-05 · [2024-2405.04434-deepseek-v2-mla](2024-2405.04434-deepseek-v2-mla.md)**  
+- **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
   実装：✓ ・ リポジトリ内被引用：116  
   長文脈LLMでは注意のキー・値キャッシュが系列長に比例して増え、巨大モデルの同時処理数と生成速度を制約する。DeepSeek-V2はキーと値をそのまま全ヘッド分保存せず、入力隠れ状態を低次元潜在ベクトルへ圧縮して保存し、注意計算時に必要な表現へ復元するMLAを導入する。
 

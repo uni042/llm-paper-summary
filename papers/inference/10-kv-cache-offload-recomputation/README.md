@@ -282,13 +282,13 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   CacheTuneは文書断片KVを周波数成分で選別し、重要部分だけ全体文脈で再計算、残りをストレージから再利用して、品質と再計算・転送時間を両立する方式。
 
+- **2026-04 · [Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、大規模言語モデル推論のKVキャッシュをGPU HBMだけへ閉じ込めず、注意方式に応じた正確な容量計算と六階層メモリへの動的配置を統合する。
+
 - **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KV Packetは、検索拡張生成で同じ文書を別の問い合わせや別順序の文脈へ再利用するとき、既存のKVキャッシュを修復するための再計算を不要にする方式である。Llama-3.1とQwen2.5を用いた評価では、完全再計算に近いF1を保ちながら文脈準備の演算をほぼ除去し、長文脈条件で初回トークン時間を完全再計算比最大19.45倍短縮したと報告する。
-
-- **2026-04 · [2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は、大規模言語モデル推論のKVキャッシュをGPU HBMだけへ閉じ込めず、注意方式に応じた正確な容量計算と六階層メモリへの動的配置を統合する。
 
 - **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
