@@ -11,6 +11,7 @@ import json
 import re
 import sys
 import time
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Callable
 from urllib.error import HTTPError
@@ -31,10 +32,113 @@ S2_EXPLICIT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstrac
 OPENREVIEW_NOTES_URL = "https://api2.openreview.net/notes"
 EXPLICIT_ID_MAX_ITEMS = 100
 EXPLICIT_ID_NETWORK_RETRIES = 2
+ARXIV_ABS_URL = "https://arxiv.org/abs/"
 
 
 class DiscoveryProviderError(RuntimeError):
     pass
+
+
+class _ArxivMetaParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.values: dict[str, list[str]] = {}
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.casefold() != "meta":
+            return
+        values = {key.casefold(): value for key, value in attrs if value is not None}
+        name = str(values.get("name") or values.get("property") or "").strip().casefold()
+        content = str(values.get("content") or "").strip()
+        if name and content:
+            self.values.setdefault(name, []).append(content)
+
+
+def _arxiv_abs_record(requested_id: str, html: str) -> dict[str, Any] | None:
+    match = re.fullmatch(r"DOI:10\.48550/arxiv\.(\d{4}\.\d{4,5})", requested_id, re.I)
+    if not match:
+        return None
+    arxiv_id = match.group(1)
+    parser = _ArxivMetaParser()
+    parser.feed(html)
+    title_values = parser.values.get("citation_title") or parser.values.get("dc.title") or []
+    title = title_values[0].strip() if title_values else ""
+    if not title:
+        return None
+    cited_ids = parser.values.get("citation_arxiv_id") or []
+    if cited_ids and all(value.casefold() != arxiv_id.casefold() for value in cited_ids):
+        return None
+
+    record: dict[str, Any] = {
+        "canonical_id": "arXiv:" + arxiv_id,
+        "arxiv_id": arxiv_id,
+        "identifiers": [requested_id],
+        "title": title,
+        "source_url": ARXIV_ABS_URL + arxiv_id,
+    }
+    authors = parser.values.get("citation_author") or parser.values.get("dc.creator") or []
+    if authors:
+        record["authors"] = authors
+    abstract_values = parser.values.get("citation_abstract") or parser.values.get("dc.description") or []
+    if abstract_values:
+        record["abstract"] = abstract_values[0]
+    date_values = parser.values.get("citation_date") or parser.values.get("citation_publication_date") or []
+    if date_values:
+        record["published"] = date_values[0]
+        year = re.search(r"\b(19|20)\d{2}\b", date_values[0])
+        if year:
+            record["year"] = int(year.group(0))
+    doi_values = parser.values.get("citation_doi") or []
+    if doi_values:
+        record["doi"] = doi_values[0]
+    return record
+
+
+def _fetch_arxiv_abs_record(
+    requested_id: str,
+    *,
+    timeout: int,
+    opener: Callable[..., Any],
+    sleeper: Callable[[float], Any],
+) -> tuple[dict[str, Any] | None, str | None]:
+    match = re.fullmatch(r"DOI:10\.48550/arxiv\.(\d{4}\.\d{4,5})", requested_id, re.I)
+    if not match:
+        return None, None
+    arxiv_id = match.group(1)
+    request = Request(
+        ARXIV_ABS_URL + arxiv_id,
+        headers={
+            "Accept": "text/html",
+            "User-Agent": "llm-paper-summary-discovery/1.0",
+        },
+    )
+    network_attempt = 0
+    rate_attempt = 0
+    while True:
+        try:
+            with opener(request, timeout=timeout) as response:
+                html = response.read().decode("utf-8", errors="replace")
+            return _arxiv_abs_record(requested_id, html), None
+        except HTTPError as exc:
+            if exc.code == 404:
+                return None, None
+            if exc.code == 429 and rate_attempt < S2_MAX_RATE_LIMIT_RETRIES:
+                sleeper(_semantic_scholar_retry_delay(exc, rate_attempt))
+                rate_attempt += 1
+                continue
+            if 500 <= exc.code <= 599 and network_attempt < EXPLICIT_ID_NETWORK_RETRIES:
+                sleeper(min(1.0 * (2 ** network_attempt), S2_RATE_LIMIT_MAX_SECONDS))
+                network_attempt += 1
+                continue
+            return None, f"official arXiv page lookup failed: {exc}"
+        except (TimeoutError, ConnectionError, OSError) as exc:
+            if network_attempt < EXPLICIT_ID_NETWORK_RETRIES:
+                sleeper(min(1.0 * (2 ** network_attempt), S2_RATE_LIMIT_MAX_SECONDS))
+                network_attempt += 1
+                continue
+            return None, f"official arXiv page lookup network error: {exc}"
+        except Exception as exc:
+            return None, f"official arXiv page lookup failed: {exc}"
 
 
 def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
@@ -278,6 +382,34 @@ def lookup_identifiers(
                     "lookup_route": "semantic_scholar_single",
                     "error": str(exc) or single_error,
                 }
+
+    for requested_id, provider in normalized:
+        if provider != "semantic_scholar" or not re.fullmatch(
+            r"DOI:10\.48550/arxiv\.\d{4}\.\d{4,5}", requested_id, re.I
+        ):
+            continue
+        previous = outcomes.get(requested_id)
+        if previous and previous.get("status") == "found":
+            continue
+        record, error = _fetch_arxiv_abs_record(
+            requested_id, timeout=timeout, opener=opener, sleeper=sleeper
+        )
+        if record and _identifier_matches_record(requested_id, record):
+            outcomes[requested_id] = {
+                "requested_id": requested_id,
+                "status": "found",
+                "record": record,
+                "lookup_route": "arxiv_abs_html",
+                "error": None,
+            }
+        else:
+            outcomes[requested_id] = {
+                "requested_id": requested_id,
+                "status": "error" if error else "unresolved",
+                "record": None,
+                "lookup_route": "arxiv_abs_html",
+                "error": error,
+            }
 
     for requested_id, provider in normalized:
         if provider != "openreview":
