@@ -817,8 +817,8 @@
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  層正規化の実行時統計計算を避けつつ学習安定性を保つ統一正規化を設計し、線形演算への融合で推論を高速化する。
+  実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
+  UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応的 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
 
 ### 8年前（2018-10〜2019-09）
 
