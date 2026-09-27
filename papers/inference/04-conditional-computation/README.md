@@ -70,7 +70,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-03 · [Not All Layers of LLMs Are Necessary During Inference](2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  入力ごとに中間層の予測が最終層と一致しそうな位置を統計特徴と古典分類器で推定して早期終了し、Llama2とOPTで平均17.8%、感情分析で最大43%の層を省き、性能低下を1%未満に抑える。
+  「簡単な入力にも全層を使う」固定深さをやめ、中間層の出力が最終層と一致しそうならそこで止める。平均17.8%の層を省ける一方、壁時計高速化は最大1.30倍であり、層削減率と実時間短縮を分けて読む必要がある。
 
 ### 4年前（2022-10〜2023-09）
 
@@ -86,5 +86,5 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2021-10 · [Magic Pyramid: Accelerating Inference with Early Exiting and Token Pruning](2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  重要でないトークンを層途中で削る幅方向の条件計算と、十分確信できた入力を途中層で終了する深さ方向の条件計算を統合する。精度低下0.5%未満で最大70%のGFLOPs削減、分類課題で平均8.06倍高速化を報告する。
+  BERT系推論で「何個のトークンを後段へ残すか」と「何層まで進むか」を同時に削る。トークン枝刈りは長文、早期終了は短く容易な入力で効きやすいという相補性を使い、片方だけの方式より広い入力長で計算量を落とす。
 <!-- survey:auto:end -->
