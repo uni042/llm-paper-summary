@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（23本）
+## 自動生成の論文一覧（27本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -125,4 +125,22 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   DRAMとSRAM間のタイル移動と演算というデータ流を直接記述し、スレッド束縛・配置・テンソル化・パイプライン化を注釈として分離するTileLangにより、LLMを含むAIカーネルを短い記述で実装しつつ手書き最適化に競合する性能を狙う。
+
+- **2024-12 · [FlexAttention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  多様な注意機構を高水準PyTorch記述から融合GPUカーネルへコンパイルする。スコア修正とマスク修正を分離し、BlockMaskでブロック疎性を利用して手書きカーネルに近い性能と合成可能性を両立する。
+
+- **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  既存SGLang CUDAカーネルを対象に、計画・実装・試験・プロファイルを分担する複数LLMエージェントが反復最適化し、正しさを保ちながら平均1.32倍高速化する。
+
+### 3年前（2023-10〜2024-09）
+
+- **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  GPUのカーネル・スレッドブロック・スレッド階層を統一したμGraphで表し、代数変換・スケジュール変換・新規融合カーネルを同時探索することで、既存の高度最適化済み深層学習処理でも最大3.3倍高速化する。
+
+- **2024-05 · [Lean Attention: Hardware-Aware Scalable Attention Mechanism for the Decode-Phase of Transformers](2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  復号時の長文脈注意をオンラインソフトマックスの結合則に基づく縮約へ変換し、文脈方向の並列度を増やすことで、FlashAttention-2比で平均2.6倍、512K文脈では最大8.33倍の注意カーネル高速化を示す。
 <!-- survey:auto:end -->

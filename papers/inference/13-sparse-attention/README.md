@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（17本）
+## 自動生成の論文一覧（20本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -33,6 +33,10 @@
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
+
+- **2025-12 · [Kascade: A Practical Sparse Attention Method for Long-Context LLM Inference](2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  少数のアンカー層で正確な上位kキーを選び近接層で索引を再利用し、H100上でFlashAttention-3比デコード注意4.1倍、プリフィル注意2.2倍高速化する。
 
 - **2026-07 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](2026-delta.md)**  
   実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：2  
@@ -95,6 +99,16 @@
 - **2024-09 · [Block-Attention for Efficient Prefilling](2024-2409.15355-block-attention-for-efficient-prefilling.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   検索拡張生成の取得文書を独立ブロックとして事前計算し、位置を再符号化してKV状態を要求間で再利用する。32K入力では最初のトークンまでの時間を3638msから45msへ削減し、FLOPsを99.8%削減する。
+
+- **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  大きな注意要素を局所性鋭敏ハッシュで抽出し残りをサンプリング近似して、ChatGLM2の32K文脈で推論時間50%短縮、131Kの単一注意層で5倍高速化する。
+
+### 4年前（2022-10〜2023-09）
+
+- **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  生成途中で不要な過去トークンを動的削除し、最大80%の文脈を大きな品質低下なく削減、最大2倍の推論スループットを報告する。
 
 ### 6年前（2020-10〜2021-09）
 

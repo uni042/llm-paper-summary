@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（195本）
+## 自動生成の論文一覧（198本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -614,6 +614,10 @@
   実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：6  
   GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
+- **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  拡散言語モデルで安定したKV射影を再利用するFreeCacheと小型自己回帰モデルによる誘導拡散を組み合わせ、学習不要で平均12.14倍のエンドツーエンド高速化を達成する。
+
 - **2025-04 · [KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments](2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
@@ -752,6 +756,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   局所注意と圧縮長期メモリを同一Transformerブロックへ組み込み、文脈長に比例して増えない有界メモリで超長文を逐次処理する。1Mトークンの検索課題と500K長の書籍要約を1B/8Bモデルで実証。
 
+- **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  選択的状態空間モデルと局所注意を交互に組み合わせ、固定サイズの再帰状態と局所窓で長距離情報と精密な近傍参照を分担し、学習時より大幅に長い文脈へ外挿できるハイブリッド言語モデルを構成する。
+
 - **2024-06 · [ProTrain: Efficient LLM Training via Memory-Aware Techniques](2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   モデル状態と活性値の階層管理を費用モデルで自動調整し、限られたGPUメモリで学習容量とスループットを高める。
@@ -785,6 +793,10 @@
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   指示調整時の注意マスクで長いプロンプトを再利用可能な少数の要旨トークンへ圧縮し、最大26倍のプロンプト圧縮と40%のFLOPs削減を実現する。
+
+- **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  最初に回答の骨格だけを生成し、その各項目を独立した詳細化要求として並列生成することで、モデル重みを変えずに自己回帰回答の直列依存を部分的に外し、複数LLMで応答時間を短縮する。
 
 ### 5年前（2021-10〜2022-09）
 

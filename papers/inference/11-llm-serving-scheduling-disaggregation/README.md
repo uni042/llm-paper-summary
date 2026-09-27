@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（274本）
+## 自動生成の論文一覧（282本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -93,6 +93,10 @@
 - **2026-01 · [LLM-42: Enabling Determinism in LLM Inference with Verified Speculation](2026-2601.17768-llm42-verified-speculation-deterministic-inference.md)**  
   実装：[✓](https://github.com/microsoft/llm-42) ・ リポジトリ内被引用：3  
   動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。
+
+- **2025-12 · [Cornserve: Efficiently Serving Any-to-Any Multimodal Models](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  任意入力・任意出力のマルチモーダルモデルを計算グラフとして記述し、構成要素の分離配置と実行計画を自動探索して最大3.81倍のスループット、最大5.79倍の裾遅延短縮を示す。
 
 - **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -882,6 +886,10 @@
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：6  
   モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
 
+- **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  プリフィルとデコードを同一GPU内で空間多重化し、競合を見込む遅延推定とSLO対応配車で資源を動的配分して、SLO保証下の有効スループットを平均2.20倍に高める。
+
 - **2024-10 · [Fast Inference for Augmented Large Language Models](2024-2410.18248-lamps.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   API待機時のKV処理方式を予測してメモリ時間積で要求を順位付けし、拡張LLM推論の遅延をINFERCEPT比27〜85%削減する。
@@ -894,9 +902,21 @@
   実装：✓ ・ リポジトリ内被引用：4  
   系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。
 
+- **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  要求ごとのサービス品質目標、入力長、予想出力長を使い焼きなまし法で順序を探索し、SLO達成率最大5倍、平均遅延31.6%改善を報告する。
+
 - **2025-04 · [Efficient LLM Serving on Hybrid Real-time and Best-effort Requests](2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   RTのTTFT/TPOT締切を動的優先度にした反復単位スケジューリングと、RT/BEが同じKVブロックを逆方向から共有する双方向KV管理で、混在負荷の遅延と処理量を両立する。
+
+- **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  プリフィルとデコードを統一ブロック疎注意で扱い、vLLM比プリフィル最大2.9倍、デコード平均1.3〜2.1倍を長文精度維持で達成する。
+
+- **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  応答長そのものではなくプロンプト対の相対的な長短をBERTで順位学習し、短い要求を先にvLLMへ投入するPARSにより、先着順の先頭待ちを抑えて要求遅延を最大15.7倍改善する。
 
 - **2025-05 · [SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs](2025-2505.17052-specedge-edge-assisted-speculative-serving.md)**  
   実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：3  
@@ -1087,6 +1107,18 @@
 - **2024-01 · [Intelligent Router for LLM Workloads: Improving Performance Through Workload-Aware Load Balancing](2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   入力長・予測出力長とプリフィル／デコードの性質を使って複数LLMインスタンスへ要求を振り分ける学習型ルータを提案し、公開混合負荷で11%以上、実クラウド負荷で7.8%のエンドツーエンド遅延削減を示す。
+
+- **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  要求配置と計算資源の拡縮を共同決定し、同一サービス品質目標を満たす条件で基準方式より単一モデルの配信コストを最大71%削減する。
+
+- **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  推論とパラメータ効率微調整を同一GPU反復へトークン単位で混載し、活性値GPUメモリを最大8倍、微調整全体のGPUメモリを最大36%削減しながら重い推論負荷でもピーク微調整スループットの80%以上を維持する。
+
+- **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  異種GPUと不均一ネットワーク上でテンソル並列・パイプライン並列を非対称に割り当て、制約最適化で配置を探索することで、同一予算の均質構成より最大2.3倍厳しい遅延目標、または最大4倍の要求率を処理する。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

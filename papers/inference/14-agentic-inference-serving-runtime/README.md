@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（26本）
+## 自動生成の論文一覧（27本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -134,6 +134,10 @@
 - **2025-06 · [The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective](2025-2506.04301-cost-dynamic-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   この構造は能力を上げる一方、通常の単一ターン推論を前提に設計されたGPUサービングでは、長い逐次依存、外部ツール待ち、繰り返しプリフィル、可変長生成を生み、平均利用率だけでは実コストを捉えにくい。代表結果では、HotpotQAやMATHのCPU・外部ツール待ちが実行時間の最大54.5%を占める条件があり、LLM実行中も復号がGPU時間の74.1%を占める。
+
+- **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  長期エージェントでは会話と業務データが継続的に更新され、静的文書検索だけでは時間関係や過去状態を扱いにくい。深層記憶検索ではMemGPTの93.4%に対して94.8%、LongMemEvalでは基準方式に対し精度を最大18.5%改善しながら応答遅延を90%削減した。
 
 - **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

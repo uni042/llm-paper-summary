@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（25本）
+## 自動生成の論文一覧（26本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -134,4 +134,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
   共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。
+
+### 4年前（2022-10〜2023-09）
+
+- **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：14  
+  動的ゲーティング、CPUへ冷たい専門家を置く専門家バッファ、負荷分散を組み合わせ、言語モデルの最大スループットを6.21〜11.23倍、静的メモリ割当を最大1.47倍改善する。
 <!-- survey:auto:end -->

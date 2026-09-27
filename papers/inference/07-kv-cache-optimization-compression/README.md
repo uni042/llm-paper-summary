@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（111本）
+## 自動生成の論文一覧（116本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -46,6 +46,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving](2026-2605.13734-kvserve-service-aware-kv-cache-compression.md)**  
   実装：[✓](https://github.com/hpdps-group/KVServe) ・ リポジトリ内被引用：3  
   KVServeは、実効帯域・負荷・品質制約からKV圧縮プロファイルか無圧縮を選び、分離型LLMの通信待ちと圧縮処理費を同時に抑える。
+
+- **2026-04 · [TriAttention: Efficient Long Reasoning with Trigonometric KV Compression](2026-2604.04921-triattention-efficient-long-reasoning-with-trigonometric-kv-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  位置回転前のクエリ・キーが固定中心へ集中する性質から将来の距離別注意傾向を三角級数で推定し、AIME25の同等精度で完全注意比2.5倍のスループットまたは10.7倍のKV削減を実現する。
 
 - **2026-01 · [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -351,9 +355,21 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：6  
   トークンを追い出すのではなくキー・値射影行列自体を低ランク近似し、深い層ほど誤差蓄積を考慮して圧縮率を段階的に調整することで、再学習や課題別プロファイルなしにLLaMA 8B〜70BのKVキャッシュ容量を削減する。
 
+- **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  層間で支配的な特異ベクトルが整列する性質を利用して複数層のKVキャッシュを共有低ランク部分空間へ圧縮し、最大8倍圧縮と選択的再構成による最大4.23倍のエンドツーエンド高速化を示す。
+
+- **2025-06 · [CommVQ: Commutative Vector Quantization for KV Cache Compression](2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  KVキャッシュを加算型ベクトル量子化で圧縮し、回転位置埋め込みと交換可能な符号帳を学習することで復号を注意計算へ統合する。2ビットでFP16比87.5%容量を削減し、1ビットでもLLaMA-3.1 8Bの128K文脈を単一RTX 4090で実行可能にする。
+
 - **2025-05 · [ReCalKV: Low-Rank KV Cache Compression via Head Reordering and Offline Calibration](2025-2505.24357-recalkv-low-rank-kv-cache-compression-via-head-reordering.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   キーと値で異なる低ランク圧縮を使い、キーは類似ヘッドを並べ替えて群ごとに特異値分解し、値はオフライン較正後に復元行列を出力射影へ融合することで、50%のKVキャッシュ圧縮でもLLaMA-2-7Bの6課題平均精度を64.99%から63.64%に抑える。
+
+- **2025-01 · [RotateKV: Accurate and Robust 2-Bit KV Cache Quantization for LLMs via Outlier-Aware Adaptive Rotations](2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  外れ値分布を適応回転で平滑化し2ビットKV量子化を安定化して、ピークメモリ3.97倍削減、最大バッチ5.75倍、デコード2.32倍高速化を報告する。
 
 - **2025-04 · [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md)**  
   実装：[✓](https://github.com/alibaba/vllm_xformers_prefetch) ・ リポジトリ内被引用：3  
@@ -444,6 +460,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-06 · [A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression](2024-2406.11430-l2-kv-compression.md)**  
   実装：[✓](https://github.com/alessiodevoto/l2compress) ・ リポジトリ内被引用：6  
   キーのL2ノルムと注意重みの逆相関を利用し、注意重みを計算せず重要KVを残す学習不要の圧縮法。FlashAttention互換のまま、長文検索では50〜90%のKV削減でも高精度を維持する。
+
+- **2024-08 · [NACL: A General and Effective KV Cache Eviction Framework for LLMs at Inference Time](2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  より信頼できる代理トークンの注意統計と多様化したランダム追い出しを組み合わせ、エンコード時の一回のKV削減で注意バイアスを緩和し、KVを大幅に減らしながら長文性能を維持する。
 
 - **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

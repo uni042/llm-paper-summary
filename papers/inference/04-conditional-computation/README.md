@@ -5,7 +5,7 @@
 MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり、この系統では主にTransformer本体の実行深度や処理対象tokenを動的に変える。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（11本）
+## 自動生成の論文一覧（13本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -55,6 +55,14 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2024-01 · [D2O: Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models](2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   層ごとの注意密度に応じてKV保持量を変え、捨てたトークンも類似度で再判定して必要なら復帰・統合する二段階KV圧縮を提案する。長文品質を維持しながら推論スループットを3倍超へ高める。
+
+- **2024-06 · [Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters](2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  二重ReLU系活性化と再学習用データ混合でMistral/Mixtralを疎化し、2〜5倍のデコード高速化、携帯端末で毎秒11トークンを報告する。
+
+- **2024-03 · [Not All Layers of LLMs Are Necessary During Inference](2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  入力ごとに中間層の予測が最終層と一致しそうな位置を統計特徴と古典分類器で推定して早期終了し、Llama2とOPTで平均17.8%、感情分析で最大43%の層を省き、性能低下を1%未満に抑える。
 
 ### 4年前（2022-10〜2023-09）
 

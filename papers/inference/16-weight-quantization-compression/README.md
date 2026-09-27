@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（25本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -68,6 +68,10 @@
 
 ### 2年前（2024-10〜2025-09）
 
+- **2025-08 · [Efficient Mixed-Precision Large Language Model Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  混合精度の重み・活性値・KVキャッシュをハードウェア階層に合わせて処理し、16モデル・4 GPU世代で既存方式より配信遅延を最大61%削減、スループットを最大156%向上させる。
+
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重みを2枚の三値平面と連続尺度へ分解し、乗算を加算中心へ変える超低ビット事後量子化を提案する。1.58ビット級の学習時量子化に匹敵しつつ量子化を約1時間で行い、FP16比最大4.63倍の推論高速化を報告する。
@@ -82,13 +86,25 @@
   実装：✓ ・ リポジトリ内被引用：6  
   重要重みが構造的に偏る性質を利用し、グループごとにビット幅を割り当てつつ重要度を量子化器校正にも反映する。LLaMA-7Bの2ビット化でメモリを約6分の1にし、従来勾配不要方式よりパープレキシティを48%改善。
 
+- **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  重みを多次元ベクトルとして量子化し、ヘッセ行列に基づく誤差補償とデータ依存コードブック学習を組み合わせ、低ビット時のサイズ・精度交換条件を改善する。
+
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   Transformerの計算不変性を利用して隠れ次元を回転し、重要度の低い行・列を丸ごと削って小さな密行列へ変換する。LLaMA2-70B等で最大25%のパラメータを削り、追加の疎行列カーネルなしでGPU数と計算量を減らす。
 
+- **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  等価なアフィン変換を直接最適化して量子化しやすい分布へ移し、LLaMA2-7BのW4A4でC4パープレキシティ15.76を達成してOmniQuantの18.02を改善する。
+
 - **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   重みと活性値をともに4ビット浮動小数点へ事後量子化し、チャネル別活性値スケールを重み側へ再パラメータ化して低ビット推論を成立させる。LLaMA-13Bで平均63.1点を維持し従来最良を12.7点上回る。
+
+- **2024-07 · [Compact Language Models via Pruning and Knowledge Distillation](2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  15Bモデルから構造枝刈りと知識蒸留で8B/4Bを作り、派生モデルの学習トークン最大40分の1、モデル群全体の計算費用1.8倍削減を示す。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -115,4 +131,12 @@
 - **2023-09 · [PB-LLM: Partially Binarized Large Language Models](2023-2310.00034-pb-llm-partially-binarized-large-language-models.md)**  
   実装：[✓](https://github.com/hahnyuan/BinaryLLM) ・ リポジトリ内被引用：5  
   顕著重みだけを高精度で保持し残りを二値化し、ヘッセ行列による再構成と量子化対応学習を組み合わせて、単純二値化で崩れるLLMの推論能力を極低ビット領域で回復する。
+
+- **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  重みとヘッセ行列をランダム直交変換で非整合化してから適応丸めし、2ビット重みでも実用的なLLM品質を示す。
+
+- **2023-06 · [LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation](2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  重みを低ランク成分と構造化疎成分の和として表し、共有情報と低ランクだけでは失う多様な情報を分担して、単独の枝刈りや低ランク近似より高い圧縮品質を得る。
 <!-- survey:auto:end -->
