@@ -943,8 +943,8 @@
   消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
 
 - **2025-03 · [Niyama: Breaking the Silos of LLM Inference Serving](2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  対話・バッチを別クラスタへ固定せず、細粒度のサービス品質目標を持つ要求を共有GPU上で動的チャンク化・優先制御する。サイロ型配備より配信容量を32%増やし、極端な高負荷ではSLO違反を約1桁削減する。
+  実装：[✓](https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026) ・ リポジトリ内被引用：3  
+  対話・コード補完・要約などを「対話型」「バッチ型」の別GPU群へ固定せず、要求ごとの細かなサービス品質（Quality of Service; QoS）期限を同じGPUプールで扱う配信系。Niyamaはデコード要求の締切余裕を見ながらプリフィルの分割サイズを動的に変え、期限優先と残り仕事量優先を混ぜ、過負荷時には少数要求だけを低優先度へ降格する。
 
 - **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
