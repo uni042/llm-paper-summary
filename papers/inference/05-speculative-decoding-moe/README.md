@@ -13,8 +13,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2026-02 · [DFlash: Block Diffusion for Flash Speculative Decoding](2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  対象LLMの隠れ表現で条件付けした軽量ブロック拡散ドラフトが候補列を一回で並列生成し、損失なし投機的復号を最大6.1倍へ高速化する。
+  実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：14  
+  target hidden featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機下書き自身の逐次待ちを除くDFlash。
 
 - **2025-11 · [MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts](2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md)**  
   実装：✓ ・ リポジトリ内被引用：10  

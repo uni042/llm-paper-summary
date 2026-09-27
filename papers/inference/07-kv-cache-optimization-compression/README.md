@@ -494,8 +494,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   追い出すKVを捨て切らず定数サイズの低ランク再帰状態へ畳み込み、疎KV注意と合成して過去全体への弱い参照経路を残し、完全キャッシュ比で最大1.3倍低遅延・1.7倍高スループットを得る。
 
 - **2024-02 · [On the Efficacy of Eviction Policy for Key-Value Constrained Generative Language Model Inference](2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  KVキャッシュ容量を制限する既存の追い出し方式は、重要度スコアの計算方法と追い出し対象範囲の設計に弱点がある。プリフィルと自己回帰デコードの双方を含む広範な実験で既存のKV追い出し方式を上回る品質を示し、容量制約付き生成を扱うEasyKV実装も公開した。
+  実装：[✓](https://github.com/DRSY/EasyKV) ・ リポジトリ内被引用：3  
+  RoCoはKV トークンの重要度を累積注意機構ではなく平均注意機構で測り、注意機構標準偏差で追い出し候補を動的に選び、固定window依存を減らしながらfull-キャッシュに近い生成品質を保つ。
 
 ### 4年前（2022-10〜2023-09）
 
