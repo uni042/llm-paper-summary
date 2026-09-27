@@ -275,5 +275,84 @@ primary_url: "https://arxiv.org/abs/2603.12645"
         )
 
 
+    def test_body_heading_and_overview_fill_missing_title_and_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            paper = Path(td) / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: arXiv:2604.26968
+authors:
+- Example Author
+published: '2026-04-19'
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+source: https://arxiv.org/abs/2604.26968
+sources:
+- https://arxiv.org/abs/2604.26968
+implementation: 実装済み。
+code: null
+last_checked: '2026-09-26'
+---
+
+# Predictive Multi-Tier Memory Management
+
+## 概要
+
+既存本文の概要を正規メタデータへ再利用する。
+""",
+                encoding="utf-8",
+            )
+            changed, added = backfill_paper_metadata.backfill(paper, {}, "2026-09-28")
+            self.assertTrue(changed)
+            self.assertIn("title(body-h1)", added)
+            self.assertIn("summary(existing-body)", added)
+            meta, _ = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["title"], "Predictive Multi-Tier Memory Management")
+            self.assertEqual(meta["summary"], "既存本文の概要を正規メタデータへ再利用する。")
+
+    def test_scalar_authors_are_normalized_and_doi_year_fields_are_reused(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            paper = Path(td) / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: DOI:10.1145/example
+title: Example
+summary: Example summary.
+authors: Alice Example; Bob Example
+published_year: 2026
+publication: Conference
+publication_status: Conference
+implementation: 実装済み。
+code: null
+last_checked: '2026-09-26'
+---
+
+# Example
+""",
+                encoding="utf-8",
+            )
+            changed, _ = backfill_paper_metadata.backfill(paper, {}, "2026-09-28")
+            self.assertTrue(changed)
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["authors"], ["Alice Example", "Bob Example"])
+            self.assertEqual(meta["published"], 2026)
+            self.assertEqual(meta["source"], "https://doi.org/10.1145/example")
+            self.assertEqual(meta["sources"], ["https://doi.org/10.1145/example"])
+            self.assertEqual(meta["publication_type"], "査読付き国際会議論文")
+            self.assertFalse(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+    def test_html_metadata_recovers_title_without_atom_api(self) -> None:
+        html = b"""<html><head>
+<meta name="citation_title" content="Recovered arXiv Title">
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026/09/01">
+<meta name="citation_keywords" content="Machine Learning (cs.LG)">
+</head><body></body></html>"""
+        row = backfill_paper_metadata._parse_arxiv_html_metadata("2609.99991", html)
+        self.assertIsNotNone(row)
+        self.assertEqual(row["title"], "Recovered arXiv Title")
+
+
 if __name__ == "__main__":
     unittest.main()
