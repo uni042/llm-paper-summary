@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T05:07:26+00:00",
-  "record_count": 270,
+  "updated_at": "2026-09-27T05:10:57+00:00",
+  "record_count": 271,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4095,6 +4095,22 @@
       ],
       "title": "FasterMoE: modeling and optimizing training of large-scale dynamic pre-trained models",
       "source_url": "https://doi.org/10.1145/3503221.3508418"
+    },
+    "arXiv:2609.19441": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19441",
+      "identity_tokens": [
+        "arXiv:2609.19441",
+        "DOI:10.48550/arxiv.2609.19441"
+      ],
+      "reason": "World Action Model/robotics deployment paper. Quantization evaluation is technically relevant to deployment, but the primary contribution is offline prediction of robot-task degradation rather than LLM inference/training systems.",
+      "first_checked_at": "2026-09-27T00:00:00+00:00",
+      "last_checked_at": "2026-09-27T05:10:57+00:00",
+      "linked_from": [
+        "ChatGPT Library research artifact prede.md"
+      ],
+      "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+      "source_url": "https://arxiv.org/abs/2609.19441"
     }
   }
 }
