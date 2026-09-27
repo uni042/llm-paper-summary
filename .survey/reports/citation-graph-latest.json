@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T06:16:16+00:00",
-  "paper_count": 1148,
-  "edge_count": 10144,
+  "generated_at": "2026-09-27T06:38:08+00:00",
+  "paper_count": 1149,
+  "edge_count": 10147,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 257,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 62,
@@ -227,7 +227,7 @@
     "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md": 0,
     "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md": 0,
     "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md": 7,
-    "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md": 6,
+    "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md": 7,
     "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md": 2,
     "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md": 33,
     "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md": 0,
@@ -1107,6 +1107,7 @@
     "papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md": 0,
     "papers/inference/99-other-inference-systems/2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md": 0,
     "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md": 0,
+    "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md": 2,
     "papers/inference/99-other-inference-systems/2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md": 0,
     "papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md": 1,
     "papers/inference/99-other-inference-systems/2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md": 0,
@@ -10231,7 +10232,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
-      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md"
     ],
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
@@ -11919,7 +11921,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
-      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md"
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md",
+      "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -13113,6 +13116,9 @@
     ],
     "papers/inference/99-other-inference-systems/2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md": [],
     "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md": [],
+    "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md": [
+      "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+    ],
     "papers/inference/99-other-inference-systems/2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md": [
       "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
