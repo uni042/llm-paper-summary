@@ -53,6 +53,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   4F² DRAMと近メモリ演算器を組み合わせ、注意・SSM・MoEごとに実行層を選び並列化して、GPU比較で平均4.5倍のデコードスループットを報告する推論アクセラレータ。
 
+- **2026-08 · [H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU](2026-h3-attn.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  H3-Attnは混成ヘッド並列と階層特殊関数ユニットを導入し、各種LLMで注意デコードを基準処理比1.54〜3.84倍高速化し、特殊関数ユニットの計算密度を従来設計比3.20倍へ高めた。
+
 - **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBMベースダイ上で重みを読み出しながら逆量子化し、GPU側CUDA逆量子化と中間重みの余分なHBM往復を除去する近メモリ推論機構。
@@ -82,10 +86,4 @@
 - **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
-
-### 公開時期未分類
-
-- **2026 · [H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU](2026-h3-attn.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  H3-Attnは混成ヘッド並列と階層特殊関数ユニットを導入し、各種LLMで注意デコードを基準処理比1.54〜3.84倍高速化し、特殊関数ユニットの計算密度を従来設計比3.20倍へ高めた。
 <!-- survey:auto:end -->
