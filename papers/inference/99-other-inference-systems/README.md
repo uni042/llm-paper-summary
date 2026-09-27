@@ -720,7 +720,7 @@
 
 - **2025-03 · [PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices](2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  重みをGPUへ全て保持できない場合、層ごとにCPUから転送して実行すれば容量問題は解ける。PIPOはオフロードをより細かい単位へ分解し、データ転送とGPU計算を同時進行させる。RTX 3060 Laptop GPU 6GBという小容量環境で、比較方式では40%未満だったGPU利用率を90%超へ引き上げ、最大3.1倍の処理量を報告する。
+  CPU/NVMeオフロードを計算・重み読込・KV読込/保存の細粒度タスクへ分解し、転送パイプラインとINT4 CUDAカーネルで6GB RTX 3060上のGPU利用率を90%超へ高める。
 
 - **2025-02 · [AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs](2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

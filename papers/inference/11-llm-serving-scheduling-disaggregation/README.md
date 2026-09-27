@@ -952,7 +952,7 @@
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  異種GPU群で事前入力処理と復号を分離し、性能と電力・炭素効率の異なるGPUへ段階別に要求を配置することで、サービス品質を維持しながらLLM配信の運用炭素排出を削減する。
+  「古いGPUは遅いからLLM配信には使えない」と一括りにせず、処理段階・モデルサイズ・要求率ごとにエネルギー効率を測る。A100が必要な重い部分だけを新GPUへ残し、T4/V100でもSLOを守れる部分を旧GPUへ移すことで、運用時電力だけでなく新GPU製造に伴う体現炭素も含めた総排出量を減らす。
 
 - **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
