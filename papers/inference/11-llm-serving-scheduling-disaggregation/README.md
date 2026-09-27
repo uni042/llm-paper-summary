@@ -928,7 +928,7 @@
 
 - **2025-02 · [EcoServe: Designing Carbon-Aware AI Inference Systems](2025-2502.05043-ecoserve-carbon-aware-ai-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  運用電力と装置製造由来炭素を合わせ、削減・再利用・適正化・再循環の四原則でLLM配信を構成し総炭素排出を最大47%削減する。
+  運用時炭素と製造由来炭素を同時最適化し、4Rと整数線形計画でLLM配信の総炭素をSLO維持のまま最大47%削減するEcoServe。
 
 - **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
