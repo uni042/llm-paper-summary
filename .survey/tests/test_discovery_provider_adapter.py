@@ -424,6 +424,21 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual(rows[0]["record"]["title"], "OpenReview exact match")
         self.assertEqual(rows[0]["record"]["authors"], ["A. Author", "B. Author"])
 
+    def test_openreview_http_error_preserves_status_code(self) -> None:
+        note_id = "EQgEMAD4kv"
+        calls = []
+
+        def opener(request, timeout=30):
+            calls.append(request.full_url)
+            raise HTTPError(request.full_url, 403, "Forbidden", {}, None)
+
+        rows = self._lookup_ids(["OpenReview:" + note_id], opener=opener)
+
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(rows[0]["status"], "error")
+        self.assertIn("403", rows[0]["error"])
+        self.assertIn("Forbidden", rows[0]["error"])
+
     def test_lookup_identifiers_rejects_returned_id_mismatch(self) -> None:
         def opener(request, timeout=30):
             if request.get_method() == "POST":
