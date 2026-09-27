@@ -148,6 +148,7 @@ def filter_search_batch(
     target_unseen: int = 0,
     provider_has_more: bool = False,
     unseen_before_batch: int = 0,
+    include_record_outcomes: bool = False,
 ) -> dict[str, Any]:
     """Filter one provider result page before candidate evaluation.
 
@@ -177,8 +178,9 @@ def filter_search_batch(
     intra_batch_alias_duplicate_filtered_count = 0
     seen_batch_tokens: set[str] = set()
     seen_batch_records: list[dict[str, Any]] = []
+    record_outcomes: list[dict[str, Any]] = []
 
-    for record in records:
+    for record_index, record in enumerate(records):
         tokens = paper_identity.identity_tokens(record)
         if not tokens:
             unresolved_identity_count += 1
@@ -190,37 +192,72 @@ def filter_search_batch(
         )
         if matched:
             duplicate_tokens.append(matched)
+            record_outcomes.append({
+                "record_index": record_index,
+                "status": "filtered_by_snapshot",
+                "filter_reason": "identity_token",
+                "matched_token": matched,
+            })
             continue
 
         represented_match = paper_identity.match_represented_paper(record, resolver) if resolver else None
         if represented_match:
-            represented_paper_keys.append(str(represented_match["paper_key"]))
-            represented_match_types.append(str(represented_match["match_type"]))
+            paper_key = str(represented_match["paper_key"])
+            match_type = str(represented_match["match_type"])
+            represented_paper_keys.append(paper_key)
+            represented_match_types.append(match_type)
+            record_outcomes.append({
+                "record_index": record_index,
+                "status": "filtered_by_snapshot",
+                "filter_reason": "represented_paper_match",
+                "matched_paper_key": paper_key,
+                "match_type": match_type,
+            })
             continue
 
         rejected_match = next(iter(sorted(tokens & rejection_tokens)), None)
         if rejected_match:
             rejection_filtered_tokens.append(rejected_match)
+            record_outcomes.append({
+                "record_index": record_index,
+                "status": "filtered_by_snapshot",
+                "filter_reason": "rejection_ledger",
+                "matched_token": rejected_match,
+            })
             continue
 
         primary = paper_identity.primary_identity_key(record)
         if primary and primary in seen_batch_tokens:
             intra_batch_duplicate_filtered_count += 1
+            record_outcomes.append({
+                "record_index": record_index,
+                "status": "intra_batch_duplicate",
+                "filter_reason": "primary_identity_repeat",
+            })
             continue
         if seen_batch_records:
             batch_resolver = paper_identity.build_represented_resolver(seen_batch_records)
-            if paper_identity.match_represented_paper(record, batch_resolver):
+            batch_match = paper_identity.match_represented_paper(record, batch_resolver)
+            if batch_match:
                 intra_batch_duplicate_filtered_count += 1
                 intra_batch_alias_duplicate_filtered_count += 1
+                record_outcomes.append({
+                    "record_index": record_index,
+                    "status": "intra_batch_duplicate",
+                    "filter_reason": "represented_paper_alias_within_batch",
+                    "matched_paper_key": str(batch_match["paper_key"]),
+                    "match_type": str(batch_match["match_type"]),
+                })
                 continue
         if primary:
             seen_batch_tokens.add(primary)
         seen_batch_records.append(record)
         unseen.append(record)
+        record_outcomes.append({"record_index": record_index, "status": "allowed"})
 
     unseen_accumulated_count = unseen_before_batch + len(unseen)
     needs_more = target_unseen > 0 and unseen_accumulated_count < target_unseen
-    return {
+    result = {
         "results": unseen,
         "raw_search_result_count": len(records),
         "retrieval_duplicate_filtered_count": len(duplicate_tokens),
@@ -239,6 +276,75 @@ def filter_search_batch(
         "continue_search": bool(needs_more and provider_has_more),
         "switch_axis": bool(needs_more and not provider_has_more),
     }
+    if include_record_outcomes:
+        result["record_outcomes"] = record_outcomes
+    return result
+
+
+def classify_explicit_identifier_lookups(
+    lookup_rows: list[dict[str, Any]],
+    *,
+    snapshot_dir: Path,
+    rejection_ledger_path: Path | None = None,
+) -> list[dict[str, Any]]:
+    """Apply the current authoritative exclusion sources to exact-ID lookup rows.
+
+    Every input ID is returned in the same order. Only records that match the
+    requested stable identity are passed to the snapshot filter.
+    """
+    if not isinstance(lookup_rows, list) or any(not isinstance(row, dict) for row in lookup_rows):
+        raise TypeError("lookup_rows must be a list of objects")
+
+    output: list[dict[str, Any] | None] = [None] * len(lookup_rows)
+    filter_records: list[dict[str, Any]] = []
+    filter_positions: list[int] = []
+    seen_ids: set[str] = set()
+    for index, row in enumerate(lookup_rows):
+        requested_id = paper_identity.safe_norm_id(row.get("requested_id"))
+        if not requested_id:
+            raise ValueError(f"lookup row {index} is missing requested_id")
+        if requested_id in seen_ids:
+            raise ValueError(f"duplicate lookup identifier: {requested_id}")
+        seen_ids.add(requested_id)
+        base = {"requested_id": requested_id}
+        if row.get("lookup_route"):
+            base["lookup_route"] = row["lookup_route"]
+        status = row.get("status")
+        record = row.get("record")
+        if status != "found" or not isinstance(record, dict):
+            mapped = "provider_error" if status == "error" else "provider_unresolved"
+            base["status"] = mapped
+            if row.get("error"):
+                base["error"] = str(row["error"])
+            output[index] = base
+            continue
+        if requested_id not in paper_identity.record_identifiers(record):
+            base.update({
+                "status": "provider_unresolved",
+                "error": "provider identifier mismatch: returned record does not match the requested ID",
+            })
+            output[index] = base
+            continue
+        filter_records.append(record)
+        filter_positions.append(index)
+        base["record"] = record
+        output[index] = base
+
+    if filter_records:
+        filtered = filter_search_batch(
+            filter_records,
+            snapshot_dir=snapshot_dir,
+            rejection_ledger_path=rejection_ledger_path,
+            include_record_outcomes=True,
+        )
+        for record_outcome in filtered["record_outcomes"]:
+            index = filter_positions[record_outcome["record_index"]]
+            output[index]["status"] = record_outcome["status"]
+            for field in ("filter_reason", "matched_token", "matched_paper_key", "match_type"):
+                if field in record_outcome:
+                    output[index][field] = record_outcome[field]
+
+    return [row for row in output if row is not None]
 
 
 def collect_until_unseen(
