@@ -79,8 +79,8 @@
   クエリ分布の差から注意パターンを入力・ヘッド単位で切り替え、累積注意量を満たすブロックだけを計算することで、固定疎パターンより品質を保ちながら長文プリフィルを高速化する。
 
 - **2025-06 · [SeerAttention-R: Sparse Attention Adaptation for Long Reasoning](2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  長い推論デコード向けに自己蒸留ゲートでブロック疎注意を学び、元モデル重みを変えず軽量ゲートだけを追加するSeerAttention-Rは、4Kトークン予算でAIME精度をほぼ維持し、H100・90%疎性でFlashAttention-3比最大9倍の疎デコードカーネル高速化を示す。
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：4  
+  思考連鎖が1万トークンを超える推論モデルでは、1トークン生成するたび全過去KVを読む注意が重くなる。SeerAttention-Rは、元モデルを変えずに小さなゲートだけを学習し、「今回のクエリが見るべきKVブロック」を予測してデコード注意を疎化する。
 
 - **2025-02 · [Tactic: Adaptive Sparse Attention with Clustering and Distribution Fitting for Long-Context LLMs](2025-2502.12216-tactic-adaptive-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

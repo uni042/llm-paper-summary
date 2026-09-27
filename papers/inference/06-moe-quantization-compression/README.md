@@ -61,8 +61,8 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoE特有の活性外れ値、量子化後のルータ選択ずれ、低頻度専門家の校正不足を別々に処理し、W4A4からW2A4までで既存方式より平均1.15〜13.81ポイント高い精度を得る。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  MoE専門家を共有基底と専門家固有差分へ分解し、差分を低ランク化、基底を静的・動的冗長性で構造枝刈りするD²-MoEにより、再学習なしの40〜60%圧縮で既存圧縮法より13%以上高い性能を報告する。
+  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：4  
+  MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
