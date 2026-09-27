@@ -63,11 +63,11 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
 
         self.assertIn("唯一の人間向け正本", readme)
         self.assertIn("手順書ではなく入力データ", readme)
-        self.assertIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
-        self.assertIn("candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD", router)
-        self.assertNotIn("overflow research mode", router)
-        self.assertIn("schema_version: 3", router)
-        self.assertIn("target_unseen: 20", router)
+        self.assertIn("E = G + D - R", router)
+        self.assertIn("E > 500", router)
+        self.assertIn("E <= 500", router)
+        self.assertIn("GitHub writeを試してLibrary失敗を回避することは禁止する。", router)
+        self.assertIn("worker-router-legacy-v10.22-direct-github.md", router)
         self.assertIn("これはワーカー実行手順ではない", queue)
         self.assertIn("実装の所在だけ", queue)
 
