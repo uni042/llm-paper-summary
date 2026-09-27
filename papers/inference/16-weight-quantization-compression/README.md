@@ -82,7 +82,7 @@
 
 - **2025-02 · [Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference](2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  LLM重みを記憶装置・主記憶・オンチップ緩衝まで一貫して可逆圧縮し、品質を変えず重み転送帯域・容量・推論エネルギーを削減する。
+  FP16/BF16重みを小bit群へ分割Huffman圧縮し、1cycle decoderを演算器直前へ置いて損失なしのまま容量・帯域・遅延を減らすHuff-LLM。
 
 ### 3年前（2023-10〜2024-09）
 

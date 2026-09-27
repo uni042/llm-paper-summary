@@ -104,7 +104,7 @@
 
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  無線端末へ専門家を分散配置するMoEでは、課題に適した専門家ほど通信路が悪い場合があり、精度だけまたは通信だけの選択では非効率になる。数値実験で精度と通信・計算エネルギーの交換条件を改善し、Top-k型の選択に近い性能を保ちながら条件によってエネルギーを大きく削減できることを示す。
+  無線edge上の分散MoEでtask relevanceとchannel/energyを同時に考え、DESで専門家、JESAで専門家＋OFDMA subcarrierを共同選択し、Top-kに近い性能で最大約50%のenergy削減を示す。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
