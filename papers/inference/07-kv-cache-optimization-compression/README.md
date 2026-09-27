@@ -343,6 +343,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/horseee/dKV-Cache) ・ リポジトリ内被引用：10  
   DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。
 
+- **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
+  実装：[✓](https://github.com/zyqCSL/DiffKV) ・ リポジトリ内被引用：8  
+  鍵・値・トークン・注意ヘッドを異なる粒度で圧縮し、不規則な空き容量をGPU内で並列コンパクションするDiffKV。KVを2.7〜5.7倍圧縮しスループットを1.9〜5.4倍改善する。
+
 - **2025-03 · [Jenga: Effective Memory Management for Serving LLM with Heterogeneity](2025-2503.18292-jenga-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   異なる大きさ・依存関係のKV/視覚/Mamba状態を、LCM大ページと層別キャッシュAPIで統合管理し、vLLM比でスループット最大4.92倍、GPUメモリ利用を最大79.6%改善する。
@@ -358,10 +362,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   層間で支配的な特異ベクトルが整列する性質を利用して複数層のKVキャッシュを共有低ランク部分空間へ圧縮し、最大8倍圧縮と選択的再構成による最大4.23倍のエンドツーエンド高速化を示す。
-
-- **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  KVキャッシュを重要度別に管理し、並列圧縮と専用注意カーネルを組み合わせて長文脈推論の容量と実行時間を削減する。
 
 - **2025-06 · [CommVQ: Commutative Vector Quantization for KV Cache Compression](2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

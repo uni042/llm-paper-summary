@@ -280,7 +280,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-06 · [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  重みをRAMやSSDへ退避する環境で、一度の重み読出しに多数候補をまとめて評価する大規模並列投機復号により対話生成を高速化する。
+  RAMオフロードでは「対象モデルを1トークン通す時間」と「数百〜数千トークンをまとめて通す時間」の差が小さくなる。SpecExecはその余剰バッチ幅で将来分布を事前計算し、70B級モデルを消費者GPUでも数トークン/sで対話可能にする。
 
 - **2024-06 · [OPT-Tree: Speculative Decoding with Adaptive Draft Tree Structure](2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

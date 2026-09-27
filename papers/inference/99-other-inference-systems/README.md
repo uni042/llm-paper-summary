@@ -620,7 +620,7 @@
 
 - **2025-06 · [Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles](2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  拡散言語モデルの復号を探索的な低速段階と確信度の高い高速段階へ動的に切り替え、キャッシュ併用でLLaDAを最大34.22倍高速化する。
+  拡散復号を「慎重に安定区間を探す段階」と「安定区間を一気に確定する段階」に分ける。LLaDA 8BのGPQAでは1.60から25.00 トークン/sへ15.63倍、dLLM-キャッシュ併用では最大54.75 トークン/s・34.22倍を報告する。
 
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
