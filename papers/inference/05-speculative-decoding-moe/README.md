@@ -319,8 +319,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   周期パラメータ共有モデルの早い層から将来トークンを予測して同じ共有層へ並行投入し、重み読出しを償却することで、浅いT5に近い遅延のまま深いモデルの精度を得る。
 
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  半自己回帰微調整で単一LLMに複数トークン同時予測能力を与え、同じ呼び出し内で生成と検証を行うSPACEによりHumanEval-Xで品質を保ち2.7〜4.0倍高速化する。
+  実装：[✓](https://github.com/cteant/SPACE) ・ リポジトリ内被引用：3  
+  SPACE（Smart Parallel Auto-Correct デコード）は、通常は1位置しか予測しない自己回帰LLMを半自己回帰教師あり微調整で「複数位置を同時予測できるモデル」へ変え、候補生成と検証を1回のモデル呼出しに同居させる。HumanEval-Xで出力品質を保ちながら2.7〜4.0倍の推論高速化を報告する。
 
 - **2024-04 · [BASS: Batched Attention-optimized Speculative Sampling](2024-2404.15778-bass.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -345,6 +345,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-02 · [Speculative Decoding with Big Little Decoder](2023-2302.07863-speculative-decoding-with-big-little-decoder.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  小型モデルを通常実行し信頼度低下時だけ大型モデルでまとめて検証・修正し、NVIDIA T4上で最大2.12倍高速化する。
+  実装：[✓](https://github.com/kssteven418/BigLittleDecoder) ・ リポジトリ内被引用：3  
+  Big Little Decoder（BiLD）は、小型モデルに自己回帰生成を任せ、予測が難しいときだけ大型モデルへフォールバックする。大型モデルは小型モデルが直前まで作った区間をまとめて評価し、不一致が大きい位置までロールバックして修正する。mT5/T5の翻訳・要約でNVIDIA T4上最大2.12倍高速化する。
 <!-- survey:auto:end -->
