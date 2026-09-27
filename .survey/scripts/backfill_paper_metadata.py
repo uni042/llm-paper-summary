@@ -116,9 +116,17 @@ def metadata_needs_backfill(meta: dict[str, Any], body: str) -> bool:
             continue
         if key not in meta or empty(meta.get(key)):
             return True
+    authors = meta.get("authors")
+    if not isinstance(authors, list) or not authors:
+        return True
+    sources = meta.get("sources")
+    if not isinstance(sources, list) or not sources:
+        return True
     if meta.get("arxiv_id"):
         categories = meta.get("arxiv_categories")
         if not isinstance(categories, dict) or not categories.get("primary"):
+            return True
+        if not isinstance(categories.get("cross_list", []), list):
             return True
     return False
 
