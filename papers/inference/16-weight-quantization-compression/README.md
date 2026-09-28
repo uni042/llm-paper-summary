@@ -115,8 +115,8 @@
   4ビット浮動小数点（floating point; FP）の指数部構成とクリップ範囲を層ごとに探索し、活性値の大きなチャネル間分散はチャネル別指数バイアスを重みへ事前吸収して処理する。LLaMA-13Bの埋め込み・重み・活性値を4/4/4ビットにして、6つの常識推論タスク平均63.1を維持する。
 
 - **2024-07 · [Compact Language Models via Pruning and Knowledge Distillation](2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  15Bモデルから構造枝刈りと知識蒸留で8B/4Bを作り、派生モデルの学習トークン最大40分の1、モデル群全体の計算費用1.8倍削減を示す。
+  実装：[✓](https://github.com/NVlabs/Minitron) ・ リポジトリ内被引用：3  
+  15Bを学習した後に8B・4Bを別々にゼロから学習する代わりに、Nemotron-4 15Bから注意ヘッド、MLP中間次元、埋め込み幅、必要に応じて層を構造枝刈りし、元15Bのロジットを教師にして短期間だけ知識蒸留（Knowledge Distillation; KD）する。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
   実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：3  

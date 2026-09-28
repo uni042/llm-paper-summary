@@ -74,7 +74,7 @@
 
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  フラッシュへ重みを退避すれば容量問題は緩和できるが、自己回帰生成の各ステップで巨大な重みを読み直すと入出力が支配的になる。OnePlus 12など三端末とLlama-3.1-8B、Qwen3系列を使った評価で、フラッシュ退避した通常自己回帰推論に対し平均2.93倍、従来投機的デコードに対し平均1.50倍の高速化を報告する。
+  OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
 
 - **2026-05 · [CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration](2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
