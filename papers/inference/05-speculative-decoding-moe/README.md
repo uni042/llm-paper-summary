@@ -304,7 +304,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-01 · [SpecBranch: Speculative Decoding via Hybrid Drafting and Rollback-Aware Branch Parallelism](2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  投機的復号でドラフト生成とターゲット検証を枝分かれ並列化し、ロールバックを見越した適応ドラフト長で待ち時間を減らす。自己回帰生成比1.8〜4.5倍の高速化と、不整合なモデル対でロールバックトークン50%削減を報告。
+  SpecBranchは投機的復号（投機的復号; SD）の「ドラフト→対象モデル検証→却下ならやり直し」という直列依存を、分岐予測に似た並列枝で隠す。単一の長い候補列へ賭けず、却下されそうな位置から複数候補を先回りして生成し、対象モデルが一方を拒否しても別枝へ継続できるようにする。
 
 - **2024-08 · [Learning Harmonized Representations for Speculative Sampling](2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/HArmonizedSS/HASS) ・ リポジトリ内被引用：4  

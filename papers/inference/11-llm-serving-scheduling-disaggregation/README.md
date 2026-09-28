@@ -896,7 +896,7 @@
 
 - **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  プリフィルとデコードを同一GPU内で空間多重化し、競合を見込む遅延推定とSLO対応配車で資源を動的配分して、SLO保証下の有効スループットを平均2.20倍に高める。
+  MuxWiseはプリフィル（プリフィル）とデコード（デコード）を別GPUへ固定分離せず、同一GPUのストリーミングマルチプロセッサ（Streaming Multiprocessor; SM）を空間分割して同時実行する。
 
 - **2024-10 · [Fast Inference for Augmented Large Language Models](2024-2410.18248-lamps.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1150,7 +1150,7 @@
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  異種GPUと不均一ネットワーク上でテンソル並列・パイプライン並列を非対称に割り当て、制約最適化で配置を探索することで、同一予算の均質構成より最大2.3倍厳しい遅延目標、または最大4倍の要求率を処理する。
+  HexGenは、異種GPUを「同じ速さのワーカー」とみなさず、各GPUの計算性能・メモリ容量とリンク帯域に応じてテンソル並列（テンソル Parallelism; TP）とパイプライン並列（パイプライン Parallelism; PP）の仕事量を非対称に割り当てる。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：2  

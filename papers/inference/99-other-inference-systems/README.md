@@ -766,7 +766,7 @@
 
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  選択的状態空間モデルと局所注意を交互に組み合わせ、固定サイズの再帰状態と局所窓で長距離情報と精密な近傍参照を分担し、学習時より大幅に長い文脈へ外挿できるハイブリッド言語モデルを構成する。
+  Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
 
 - **2024-06 · [ProTrain: Efficient LLM Training via Memory-Aware Techniques](2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
