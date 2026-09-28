@@ -219,15 +219,19 @@ GitHub writeをLibrary失敗回避手段として使わない。
 
 ## 9. Survey GitHub Import
 
-Survey GitHub Importは内容取込者ではなく**転送者**である。
+Survey GitHub ImportはLibrary成果をGitHub受信箱へ転送するアップロードワーカーである。Researchについては、転送前に完成Markdown全文を読み、現行品質ガイドを**明らかに満たさない原稿をGitHubへ流さない**責務も持つ。一次論文本体を再読して補完・書き直す役割ではない。
 
-### 9.1 Research転送
+### 9.1 Research品質確認と転送
 
-Library \`research/*.md\` を1件ずつ読み、内容を変更せず:
+Library `research/*.md` は1件ずつ先頭から末尾まで全文を読む。タイトル・概要だけで判定しない。問題設定、主要機構、入力→処理→出力、評価条件、比較対象、主要結果、限界、既存研究との差が論文固有に記述されているかを確認する。
 
-\`.survey/import-inbox/pending/research/<unique>.md\`
+汎用テンプレート文が本文の中心、論文名や方式名だけを差し替えれば別論文にも成立する長文、主要機構の具体説明欠落、headline結果だけで評価条件なし、プレースホルダー・未完全文、極端に薄い本文など、現行品質ガイドを明らかに満たさない原稿はアップロードワーカー自身の判断でrejectし、GitHubへ転送せずLibraryから削除する。判断が微妙なものは削除せずLibraryに保留し、転送もしない。
 
-へcreate-onlyでコピーする。
+品質確認を通ったResearchだけを内容変更せず:
+
+`.survey/import-inbox/pending/research/<unique>.md`
+
+へcreate-onlyでコピーする。GitHub側でも `paper_quality_gate.py` が長文散文段落の再利用を含む機械ゲートを実行し、FAILはblockedへ送る。
 
 ### 9.2 Discovery転送
 
