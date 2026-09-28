@@ -34,7 +34,7 @@
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  「次世代GPUならLLMは何トークン/秒まで速くなるか」を、現在のソフトウェア実装に依存したベンチマークから切り離して考えるための解析モデル。LIMINALはLLMの各演算子を演算量・読み書きバイト数・同期回数へ落とし、ハードウェア側の演算性能、メモリ容量・帯域、集合通信遅延を組み合わせてデコードの上限を推定する。
+  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

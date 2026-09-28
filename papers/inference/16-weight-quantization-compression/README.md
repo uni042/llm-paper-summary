@@ -77,8 +77,8 @@
   混合精度の重み・活性値・KVキャッシュをハードウェア階層に合わせて処理し、16モデル・4 GPU世代で既存方式より配信遅延を最大61%削減、スループットを最大156%向上させる。
 
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  重みを2枚の三値平面と連続尺度へ分解し、乗算を加算中心へ変える超低ビット事後量子化を提案する。1.58ビット級の学習時量子化に匹敵しつつ量子化を約1時間で行い、FP16比最大4.63倍の推論高速化を報告する。
+  実装：[✓](https://github.com/HeXiao-55/PTQTP) ・ リポジトリ内被引用：3  
+  PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
 
 - **2025-02 · [Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference](2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
