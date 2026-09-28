@@ -142,7 +142,7 @@ v12以降のDiscovery通常runは、**1 run = 1 immutable JSON**だけを正規�
 
 ## 6. Research / Audit
 
-Research runでは新規完成Research Markdownを3件Libraryへ保存する。
+Research runでは新規完成Research Markdownを5件Libraryへ保存する。
 
 保存先:
 
