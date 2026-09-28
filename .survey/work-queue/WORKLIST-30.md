@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-09-28T06:21:52+00:00`
+Generated: `2026-09-28T06:44:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。もう一方のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-09-28T06:21:52+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **497** / 未claim総数: **350** / このworker向け: **175**
+ready総数: **496** / 未claim総数: **349** / このworker向け: **174**
 
 | # | 種別 | identity | title | source | 想定配置先 |
 |---:|---|---|---|---|---|
@@ -190,8 +190,7 @@ ready総数: **497** / 未claim総数: **350** / このworker向け: **175**
 | 171 | research | arXiv:2308.04623 | Accelerating LLM Inference with Staged Speculative Decoding | [primary](https://arxiv.org/abs/2308.04623) | `papers/inference/99-other-inference-systems/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md` |
 | 172 | research | arXiv:2308.16137 | LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models | [primary](https://arxiv.org/abs/2308.16137) | `papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-models.md` |
 | 173 | research | arXiv:2508.18572 | Strata: Hierarchical Context Caching for Long Context Language Model Serving | [primary](https://arxiv.org/abs/2508.18572) | `papers/inference/99-other-inference-systems/2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serving.md` |
-| 174 | research | arXiv:2306.07629 | SqueezeLLM: Dense-and-Sparse Quantization | [primary](https://arxiv.org/abs/2306.07629) | `papers/inference/99-other-inference-systems/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md` |
-| 175 | research | arXiv:2306.08543 | MiniLLM: On-Policy Distillation of Large Language Models | [primary](https://arxiv.org/abs/2306.08543) | `papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md` |
+| 174 | research | arXiv:2510.00636 | Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution | [primary](https://arxiv.org/abs/2510.00636) | `papers/inference/99-other-inference-systems/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-future-queries-distribution.md` |
 
 ## リスト入り判定待ち Discovery候補
 

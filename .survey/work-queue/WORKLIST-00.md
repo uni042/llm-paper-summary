@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-09-28T06:21:51+00:00`
+Generated: `2026-09-28T06:44:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。もう一方のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-09-28T06:21:51+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **497** / 未claim総数: **350** / このworker向け: **175**
+ready総数: **496** / 未claim総数: **349** / このworker向け: **175**
 
 | # | 種別 | identity | title | source | 想定配置先 |
 |---:|---|---|---|---|---|
@@ -191,7 +191,7 @@ ready総数: **497** / 未claim総数: **350** / このworker向け: **175**
 | 172 | research | arXiv:2406.12335 | Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters | [primary](https://arxiv.org/abs/2406.12335) | `papers/inference/99-other-inference-systems/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv-cache-reduction-value-also-matters.md` |
 | 173 | research | arXiv:2311.03285 | S-LoRA: Serving Thousands of Concurrent LoRA Adapters | [primary](https://arxiv.org/abs/2311.03285) | `papers/inference/99-other-inference-systems/2023-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md` |
 | 174 | research | arXiv:2502.11089 | Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention | [primary](https://arxiv.org/abs/2502.11089) | `papers/inference/99-other-inference-systems/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-attention.md` |
-| 175 | research | arXiv:2510.00636 | Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution | [primary](https://arxiv.org/abs/2510.00636) | `papers/inference/99-other-inference-systems/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-future-queries-distribution.md` |
+| 175 | research | arXiv:2306.08543 | MiniLLM: On-Policy Distillation of Large Language Models | [primary](https://arxiv.org/abs/2306.08543) | `papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md` |
 
 ## リスト入り判定待ち Discovery候補
 
