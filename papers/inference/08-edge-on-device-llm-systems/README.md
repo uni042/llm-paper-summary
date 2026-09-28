@@ -99,8 +99,8 @@
   Hexagon NPUの復号時に遊休しやすい行列演算器を、並列テスト時計算へ転用する。4ビット細粒度タイル量子化とルックアップテーブル（Lookup Table; LUT）演算により、混合精度GEMM最大19.0倍、Softmax最大2.2倍を報告する。
 
 - **2025-07 · [DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding](2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  端末の小型モデルとエッジの大型モデルを使う投機的復号で、検証処理自体も端末・エッジへ分割する。複数の語彙分布を上り通信する代わりに単一の下り通信へ変え、品質を保ちながら通信遅延を削減する。
+  実装：[✓](https://github.com/JasonNing96/DSSD-Efficient-Edge-Computing) ・ リポジトリ内被引用：4  
+  分散分割投機的復号（Distributed Split 投機的復号; DSSD）は、端末の小型言語モデル（Small Language モデル; SLM）が候補を生成し、基地局・エッジの大規模言語モデル（Large Language モデル; LLM）が検証する協調推論で、検証に必要な計算自体も端末とエッジへ分割する。
 
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
