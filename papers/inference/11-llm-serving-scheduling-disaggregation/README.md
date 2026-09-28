@@ -972,7 +972,7 @@
 
 - **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  出力が1トークンだけの判別型LLM要求に特化し、不要な全層KV保持を廃止するとともに完了時間を事前予測して短い要求を優先する。平均・P99遅延を増やさず毎秒クエリ数を最大4倍にする。
+  PrefillOnlyは、推薦・信用審査・ラベル付けのように「長い入力を読むが出力は1トークンだけ」というプリフィル専用（プリフィル-only）要求へ通常の生成エンジンをそのまま使う無駄を取り除く。後続デコードで再利用しないキー・バリュー（Key-Value; KV）キャッシュを全層分保持せず、固定出力長から完了時間を予測して要求を並べ替える。
 
 - **2025-04 · [Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving](2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md)**  
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：2  

@@ -115,8 +115,8 @@
 ### 4年前（2022-10〜2023-09）
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  生成途中で不要な過去トークンを動的削除し、最大80%の文脈を大きな品質低下なく削減、最大2倍の推論スループットを報告する。
+  実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：2  
+  動的 Context 枝刈りは、生成の途中で「今後のトークンが参照する価値が低い」と学習した過去トークンを、注意対象とキー・バリュー（Key-Value; KV）キャッシュから動的に削除する。固定窓のように距離だけで落とさず、層ごとの学習可能な相互作用スコアで削除時点を決める。
 
 ### 6年前（2020-10〜2021-09）
 
