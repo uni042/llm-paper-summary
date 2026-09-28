@@ -89,13 +89,13 @@ run中に在庫が変化してもモードは固定する。
 
 ### 5.1 ノルマ
 
-新規canonical identity 40件を本文確認まで行い、各件を次のどれかへ最終分類する。
+新規canonical identity 10件を本文確認まで行い、各件を次のどれかへ最終分類する。
 
 - \`accept\`
 - \`unrelated\`
 - \`borderline\`
 
-タイトル・要旨だけで確定しない。本文取得不能で判定未完了の候補は40件へ数えず補充する。acceptだけを40件集めるために基準を緩めない。
+タイトル・要旨だけで確定しない。本文取得不能で判定未完了の候補は10件へ数えず補充する。acceptだけを10件集めるために基準を緩めない。
 
 ### 5.2 Library保存形式
 
@@ -105,7 +105,7 @@ v12以降のDiscovery通常runは、**1 run = 1 immutable JSON**だけを正規�
 
 \`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>.json\`
 
-1ファイルにそのrunの40件すべてを \`records[]\` として含める。accept / unrelated / borderlineを別Library台帳へ分割しない。
+1ファイルにそのrunの10件すべてを \`records[]\` として含める。accept / unrelated / borderlineを別Library台帳へ分割しない。
 
 必須top-level:
 
@@ -138,11 +138,11 @@ v12以降のDiscovery通常runは、**1 run = 1 immutable JSON**だけを正規�
 
 同run内重複とLibrary内の明白な重複だけを除く。GitHub最新mainに同一identityが存在するかの最終判定はここで必須にしない。GitHub側precheckへ委譲する。
 
-保存後はLibraryから再取得し、JSON parse、\`record_count == len(records)\`、40件のidentity一意性を確認する。
+保存後はLibraryから再取得し、JSON parse、\`record_count == len(records)\`、10件のidentity一意性を確認する。
 
 ## 6. Research / Audit
 
-Research runでは新規完成Research Markdownを10件Libraryへ保存する。
+Research runでは新規完成Research Markdownを3件Libraryへ保存する。
 
 保存先:
 
@@ -177,7 +177,7 @@ GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全
 Library保存不能でも完成成果を破棄しない。
 
 - Research: 完成MarkdownをScheduled Chatへ完全添付
-- Discovery: 40件全件を含む完成JSONをScheduled Chatへ完全添付
+- Discovery: 10件全件を含む完成JSONをScheduled Chatへ完全添付
 
 後続runでLibraryへ回収できたら正規pathへ保存し、再取得確認後に退避コピーを重複扱いにする。
 
@@ -330,7 +330,7 @@ Scheduled worker:
 - Library-first / GitHub read-only
 - 確認main SHA
 - モードと在庫判定根拠
-- Research完成件数、またはDiscovery 40件内訳
+- Research完成件数、またはDiscovery 10件内訳
 - Library保存結果
 - run終了時掃除内容
 - 退避・未完了
