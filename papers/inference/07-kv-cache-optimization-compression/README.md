@@ -515,5 +515,5 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：62  
-  クエリの複数ヘッドは維持しつつキーと値だけを全ヘッドで共有する複数クエリ注意を導入し、増分復号のKV読込み量をヘッド数分削減して、TPUv2上の復号を46µs/トークンから3.8µsへ短縮する。
+  複数クエリ注意（Multi-Query 注意機構; MQA）は、通常の複数ヘッド注意（Multi-Head 注意機構; MHA）が各ヘッドごとに持つキー（Key; K）とバリュー（Value; V）を1組だけに共有し、クエリ（Query; Q）は複数ヘッドのまま残す。
 <!-- survey:auto:end -->

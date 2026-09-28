@@ -623,8 +623,8 @@
   拡散復号を「慎重に安定区間を探す段階」と「安定区間を一気に確定する段階」に分ける。LLaDA 8BのGPQAでは1.60から25.00 トークン/sへ15.63倍、dLLM-キャッシュ併用では最大54.75 トークン/s・34.22倍を報告する。
 
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  拡散言語モデルで安定したKV射影を再利用するFreeCacheと小型自己回帰モデルによる誘導拡散を組み合わせ、学習不要で平均12.14倍のエンドツーエンド高速化を達成する。
+  実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：4  
+  FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
 
 - **2025-04 · [KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments](2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

@@ -100,7 +100,7 @@
 
 - **2025-12 · [Cornserve: Efficiently Serving Any-to-Any Multimodal Models](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
   実装：[✓](https://github.com/cornserve-ai/cornserve) ・ リポジトリ内被引用：3  
-  Cornserveが解くのは「大きなモデルを何GPUに置くか」だけではない。Any-to-Anyモデルでは、要求の入力・出力モダリティごとに通る計算グラフが違い、同じモデル内部でも構成要素ごとにGPUの増やし方への反応が違う。
+  Cornserveは、テキスト・画像・動画・音声を入力にも出力にも持つAny-to-Anyマルチモーダルモデルで、要求種別ごとに異なる計算経路と構成要素ごとのスケーリング特性を明示し、モノリシック配置・分離配置・混合配置を自動探索する配信システムである。
 
 - **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

@@ -110,7 +110,7 @@
 
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
   実装：[✓](https://github.com/insuhan/hyper-attn) ・ リポジトリ内被引用：4  
-  HyperAttentionは「注意行列の全要素を近似的に同じ扱いにする」のではなく、大きく効く要素と、それ以外の多数の小さい要素を分けて推定する。大きなQK内積は局所性鋭敏ハッシュで探し、小さい残差はランダムサンプリングでまとめて推定する。この重い成分/軽い成分分解によって、全n²要素を列挙せずにsoftmax注意を近似する。
+  HyperAttentionは、softmax注意行列を全要素計算する代わりに、局所性鋭敏ハッシュ（Locality-Sensitive Hashing; LSH）で非常に大きな注意要素を先に見つけ、残りをサンプリングして近似する。
 
 ### 4年前（2022-10〜2023-09）
 
