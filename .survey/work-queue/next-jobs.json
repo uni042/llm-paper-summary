@@ -10,19 +10,33 @@
     },
     "research": {
       "completed": 397,
-      "blocked": 111,
-      "ready": 498,
+      "blocked": 110,
+      "ready": 499,
       "superseded": 272,
       "deferred": 8,
       "rejected": 5
     }
   },
   "claiming": {
-    "ready_research_audit": 498,
+    "ready_research_audit": 499,
     "actively_claimed": 144,
-    "claimable": 354
+    "claimable": 355
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-bfb106674c4d8bfe",
+      "type": "research",
+      "lane": null,
+      "priority": 104,
+      "canonical_id": "arXiv:2608.08878",
+      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-llm-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-69e7666b88522bc6",
       "type": "research",
@@ -122,20 +136,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d5278ec0af97bd4e",
-      "type": "research",
-      "lane": null,
-      "priority": 93,
-      "canonical_id": "arXiv:2110.02861",
-      "title": "8-bit Optimizers via Block-wise Quantization",
-      "source_url": "https://arxiv.org/abs/2110.02861",
-      "paper_path": "papers/training/01-training-offload-memory-systems/2021-2110.02861-8-bit-optimizers.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-28T15:35:07+00:00"
+  "generated_at": "2026-09-28T21:22:23+00:00"
 }
