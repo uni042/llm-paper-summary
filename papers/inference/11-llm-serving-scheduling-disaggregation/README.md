@@ -662,7 +662,7 @@
 
 - **2026-05 · [Human-Less LLM Serving: Quantifying the Human Tax on Throughput](2026-2606.20577-human-less-llm-serving-human-tax-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  エージェント型の連続LLM呼出しでは対話遅延制約が不要な場合があり、本研究はそのスループット損失を条件別に測定し、メモリ安全上限を残して遅延制約を外すHlServeでQwen-2.5-32B配信をSGLang比5.3%改善する。
+  人間が逐次トークン表示を待たないエージェント処理に、対話向けの先頭トークン遅延（Time to First Token; TTFT）・出力トークン間隔（Time Per Output Token; TPOT）制約をそのまま課すと、長文脈・高並列ではGPUを小さな処理単位へ分割する費用が大きくなる。
 
 - **2026-05 · [HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling](2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
