@@ -49,7 +49,7 @@ def _normalize_prose_paragraphs(text: str) -> list[str]:
             return
         raw = " ".join(part.strip() for part in current if part.strip())
         current.clear()
-        normalized = re.sub(r"\\s+", " ", raw).strip()
+        normalized = re.sub(r"\s+", " ", raw).strip()
         if len(normalized) >= REUSE_MIN_PARAGRAPH_CHARS:
             paragraphs.append(normalized)
 
