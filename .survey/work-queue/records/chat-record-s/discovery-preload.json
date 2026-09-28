@@ -1,14 +1,14 @@
 {
   "data": {
-    "axis": "forward citations of Splitwise for disaggregated LLM serving",
-    "citation_direction": "forward",
-    "created_at": "2026-09-27T20:08:24.066143+00:00",
-    "precheck_request_id": "preload-9f64ec8d068eb4d401ad",
-    "provider": "semantic_scholar",
+    "axis": "OpenAlex recent KV cache compression offload serving",
+    "citation_direction": "normal",
+    "created_at": "2026-09-28T07:15:34.806088+00:00",
+    "precheck_request_id": "preload-23be5d4041b3cbcd9375",
+    "provider": "openalex",
     "seed_canonical_id": null,
-    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100"
+    "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20offload%20serving&sort=publication_date:desc&per-page=100"
   },
-  "preload_id": "preload-9f64ec8d068eb4d401ad",
+  "preload_id": "preload-23be5d4041b3cbcd9375",
   "schema_version": 1,
   "slot": "discovery-preload",
   "transport_version": 10
