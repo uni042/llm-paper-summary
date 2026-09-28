@@ -931,8 +931,8 @@
   運用時炭素と製造由来炭素を同時最適化し、4Rと整数線形計画でLLM配信の総炭素をSLO維持のまま最大47%削減するEcoServe。
 
 - **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  応答長そのものではなくプロンプト対の相対的な長短をBERTで順位学習し、短い要求を先にvLLMへ投入するPARSにより、先着順の先頭待ちを抑えて要求遅延を最大15.7倍改善する。
+  実装：[✓](https://github.com/SPEAR-UIC/PARS) ・ リポジトリ内被引用：3  
+  PARSの要点は「出力長を正確に当てる」ことではない。SJF型スケジューリングに必要なのは、待機中の要求についてどちらを先に流すべきかという相対順序である。絶対長回帰を捨て、長さ差が十分ある要求対だけから順位を学ぶことで、生成長のノイズを避けながらHOL blockingを減らす。
 
 - **2025-08 · [Equinox: Holistic Fair Scheduling in Serving Large Language Models](2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
