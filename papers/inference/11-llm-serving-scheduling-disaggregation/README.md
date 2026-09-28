@@ -1145,8 +1145,8 @@
   可変長プロンプトを最長系列へそろえてパディングする代わりに、長さを見て複数プロンプトを同じ固定長コンテナへビン詰めし、ブロック対角の注意マスクとプロンプトごとに再開する位置番号で独立したKVキャッシュを一回のプリフィルから作る。
 
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  推論とパラメータ効率微調整を同一GPU反復へトークン単位で混載し、活性値GPUメモリを最大8倍、微調整全体のGPUメモリを最大36%削減しながら重い推論負荷でもピーク微調整スループットの80%以上を維持する。
+  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：3  
+  FlexLLMは、推論とパラメータ効率微調整（パラメータ-Efficient 微調整; PEFT）を別クラスタへ分離せず、同じGPU反復の中へトークン単位で混載する。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

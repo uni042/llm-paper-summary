@@ -360,8 +360,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVキャッシュから「どのトークンを捨てるか」を決めるのではなく、キー・値を作る射影行列そのものを低ランク化する。さらに、浅い層の近似誤差ほど後段で増幅されやすいことを利用し、浅層は保守的、深層は積極的に圧縮する。
 
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  層間で支配的な特異ベクトルが整列する性質を利用して複数層のKVキャッシュを共有低ランク部分空間へ圧縮し、最大8倍圧縮と選択的再構成による最大4.23倍のエンドツーエンド高速化を示す。
+  実装：[✓](https://github.com/abdelfattah-lab/xKV) ・ リポジトリ内被引用：5  
+  xKVは、隣接層のキー・バリュー（Key-Value; KV）キャッシュをトークンごとに直接似ているとみなすのではなく、複数層が共有する支配的な特異ベクトルをまとめて抽出する。プリフィル時に複数層を横連結して共有低ランク基底へ因子分解し、デコード時はクエリに重要なトークンだけを選択的に再構成する。
 
 - **2025-06 · [CommVQ: Commutative Vector Quantization for KV Cache Compression](2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
