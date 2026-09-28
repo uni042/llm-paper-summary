@@ -170,6 +170,12 @@ def source_token(path: Path) -> str:
     return f"{stem}-{digest[:12]}"
 
 
+def result_filename(path: Path) -> str:
+    """Stable result name derived from the uploader's unique inbox filename."""
+    stem = SAFE_ID_RE.sub("-", path.stem).strip("-.")[:160] or "artifact"
+    return stem + ".json"
+
+
 def parse_frontmatter(text: str) -> dict[str, Any]:
     if not text.startswith("---\n"):
         raise ValueError("Research Markdown requires YAML frontmatter")
@@ -226,7 +232,7 @@ def process_research(repo_root: Path) -> tuple[int, int]:
 
     for source in sorted(PENDING_RESEARCH.glob("*.md")):
         token = source_token(source)
-        result_path = RESULT_RESEARCH / f"{token}.json"
+        result_path = RESULT_RESEARCH / result_filename(source)
         raw = source.read_text(encoding="utf-8")
         payload_hash = sha256_bytes(raw.encode("utf-8"))
 
@@ -543,7 +549,7 @@ def terminalize_discovery(
     *,
     blocked: bool,
 ) -> None:
-    result_path = repo_root / RESULT_DISCOVERY / f"{token}.json"
+    result_path = repo_root / RESULT_DISCOVERY / result_filename(source)
     source_ref: str | None = None
     if blocked:
         blocked_path = block_payload(source, repo_root / BLOCKED_DISCOVERY)
