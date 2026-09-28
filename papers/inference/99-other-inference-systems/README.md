@@ -803,8 +803,8 @@
   指示調整時の注意マスクで長いプロンプトを再利用可能な少数の要旨トークンへ圧縮し、最大26倍のプロンプト圧縮と40%のFLOPs削減を実現する。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  最初に回答の骨格だけを生成し、その各項目を独立した詳細化要求として並列生成することで、モデル重みを変えずに自己回帰回答の直列依存を部分的に外し、複数LLMで応答時間を短縮する。
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：3  
+  Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 ### 5年前（2021-10〜2022-09）
 
