@@ -99,8 +99,8 @@
   動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。
 
 - **2025-12 · [Cornserve: Efficiently Serving Any-to-Any Multimodal Models](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  任意入力・任意出力のマルチモーダルモデルを計算グラフとして記述し、構成要素の分離配置と実行計画を自動探索して最大3.81倍のスループット、最大5.79倍の裾遅延短縮を示す。
+  実装：[✓](https://github.com/cornserve-ai/cornserve) ・ リポジトリ内被引用：3  
+  Cornserveが解くのは「大きなモデルを何GPUに置くか」だけではない。Any-to-Anyモデルでは、要求の入力・出力モダリティごとに通る計算グラフが違い、同じモデル内部でも構成要素ごとにGPUの増やし方への反応が違う。
 
 - **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
