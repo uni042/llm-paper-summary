@@ -1,0 +1,18 @@
+{
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "collector_id": "discovery-preload-forward",
+  "discovery_bank": "t",
+  "discovery_slot_path": ".survey/work-queue/records/chat-record-t/discovery-preload.json",
+  "initial_cursor": null,
+  "max_pages": 25,
+  "operation": "precheck_discovery_candidates",
+  "page_size": 20,
+  "preload_id": "preload-b6504fcee778b2925f0b",
+  "preload_seed": true,
+  "provider": "semantic_scholar",
+  "request_id": "preload-b6504fcee778b2925f0b",
+  "run_key": "preload:preload-b6504fcee778b2925f0b",
+  "schema_version": 3,
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20
+}
