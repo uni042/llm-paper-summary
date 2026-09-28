@@ -1,0 +1,690 @@
+{
+  "schema_version": "12",
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260928-1925-scheduled-chat-30",
+  "reference_main_sha": "90191b55ea6aac1e66a7242dbecdac319f7eb152",
+  "record_count": 40,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "arXiv:2601.06123"
+      ],
+      "title": "Latent Space Communication via K-V Cache Alignment",
+      "reason": "異なるLLM間でKVキャッシュを共有潜在空間へ変換し、再エンコードなしのモデル協調・部分計算再利用を可能にするため推論基盤に直接関連。",
+      "source_url": "https://arxiv.org/abs/2601.06123",
+      "body_check": "本文のMethodology、実験設定、shared KV latent spaceとtranslator構成、prefix KV転送実験まで確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models",
+      "reason": "推論スループット・メモリ効率を強く意識したreasoning model群だが、主貢献はモデル設計・学習レシピも大きく、純粋な推論システム研究との境界。",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "body_check": "本文のモデル構成、推論時reasoning制御、FP8 inference generation、評価節まで確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "reason": "MoEによる計算効率化だが主対象は画像生成用Diffusion Transformerで、LLM推論サーベイの直接対象外。",
+      "source_url": "https://arxiv.org/abs/2503.14487",
+      "body_check": "本文のdynamic token selection、MoE routing、ImageNet/text-to-image評価まで確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18351",
+      "identity_tokens": [
+        "arXiv:2410.18351"
+      ],
+      "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
+      "reason": "投機的復号のdraft長を受理確率下界で早期停止し、無駄なdraft計算を削減するLLM推論高速化。",
+      "source_url": "https://arxiv.org/abs/2410.18351",
+      "body_check": "本文のentropy-based lower bound、early draft stopping、speculative decoding評価節まで確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098"
+      ],
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "reason": "対象は画像生成Diffusion TransformerのMoE拡張で、LLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2410.02098",
+      "body_check": "本文のexpert-choice routing、Diffusion Transformer構成、画像生成評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "arXiv:2409.12941"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "reason": "RAG能力の評価体系が主題で、推論runtime・配信・メモリ最適化の手法ではない。",
+      "source_url": "https://arxiv.org/abs/2409.12941",
+      "body_check": "本文のRAG evaluation taxonomy、benchmark設計、モデル比較節を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents",
+      "reason": "LLM agentの構成・応用を整理するサーベイで、推論基盤効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2308.11432",
+      "body_check": "本文のagent architecture、planning/memory/tool use、applications分類を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.13392",
+      "identity_tokens": [
+        "arXiv:2606.13392"
+      ],
+      "title": "MiniMax Sparse Attention",
+      "reason": "GQA単位のblock sparse attentionとGPU kernelを協調設計し、長文脈prefill/decodeを実時間で高速化する。",
+      "source_url": "https://arxiv.org/abs/2606.13392",
+      "body_check": "本文のIndex/Main Branch、Top-k kernel、sparse attention kernel、109B MoE評価を確認。1M contextで14.2x prefill・7.6x decode speedupを報告。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.16957",
+      "identity_tokens": [
+        "arXiv:2604.16957"
+      ],
+      "title": "Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon",
+      "reason": "Apple Silicon上で圧縮領域attentionを融合し、長文脈LLM推論のメモリ帯域と遅延を削減する。",
+      "source_url": "https://arxiv.org/abs/2604.16957",
+      "body_check": "本文のcompressed-domain attention、Metal kernel融合、Apple Silicon実機評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.13606",
+      "identity_tokens": [
+        "arXiv:2603.13606"
+      ],
+      "title": "NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL",
+      "reason": "MoE expert parallelismのall-to-all通信をNCCL APIとして最適化する推論・学習共通の通信基盤で、MoE推論に直接有用。",
+      "source_url": "https://arxiv.org/abs/2603.13606",
+      "body_check": "本文のEP communication API、dispatch/combine、GPU通信kernelと性能評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23808",
+      "identity_tokens": [
+        "arXiv:2512.23808"
+      ],
+      "title": "MiMo-Audio: Audio Language Models are Few-Shot Learners",
+      "reason": "音声言語モデルの能力・学習・few-shot性能が主題で、推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2512.23808",
+      "body_check": "本文のaudio LM architecture、training recipe、audio benchmark評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.20639",
+      "identity_tokens": [
+        "arXiv:2511.20639"
+      ],
+      "title": "Latent Collaboration in Multi-Agent Systems",
+      "reason": "テキスト通信を潜在表現共有へ置換し、multi-agent LLMの出力tokenとend-to-end推論時間を大幅削減する。",
+      "source_url": "https://arxiv.org/abs/2511.20639",
+      "body_check": "本文のLatentMAS、shared latent working memory、9 benchmark評価を確認。token使用70.8–83.7%削減、4–4.3x高速化を報告。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00088",
+      "identity_tokens": [
+        "arXiv:2511.00088"
+      ],
+      "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail",
+      "reason": "自動運転VLAのreasoning/action性能が主題で、LLM推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2511.00088",
+      "body_check": "本文のdriving architecture、RL post-training、closed-loop/on-vehicle評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.23649",
+      "identity_tokens": [
+        "arXiv:2510.23649"
+      ],
+      "title": "Efficient Low Rank Attention for Long-Context Inference in Large Language Models",
+      "reason": "低rank近似とGPU-CPU混合KV cacheで長文脈attentionのメモリ・転送を削減する。",
+      "source_url": "https://arxiv.org/abs/2510.23649",
+      "body_check": "本文のLRQK、top-k token selection、mixed GPU-CPU cache、RULER/LongBench評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.11651",
+      "identity_tokens": [
+        "arXiv:2504.11651"
+      ],
+      "title": "70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)",
+      "reason": "BF16重みをlossless圧縮してGPU常駐容量と生成throughputを改善する推論圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2504.11651",
+      "body_check": "本文のDFloat11符号化・decompression kernelとGPU評価を確認。CPU offload比2.3–46.2x throughputを報告。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 440
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16893",
+      "identity_tokens": [
+        "arXiv:2503.16893"
+      ],
+      "title": "Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation",
+      "reason": "複数LLMを組み合わせるoffline inferenceで出力長分布をsampling/simulationし、配置・実行計画を最適化する。",
+      "source_url": "https://arxiv.org/abs/2503.16893",
+      "body_check": "本文のsampling、simulation、multi-LLM schedulingとend-to-end効率評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.01743",
+      "identity_tokens": [
+        "arXiv:2503.01743"
+      ],
+      "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+      "reason": "GQAやMixture-of-LoRAsで効率的な小型モデルを構成するが、主貢献はモデル・学習レシピと能力評価で推論systemsとの境界。",
+      "source_url": "https://arxiv.org/abs/2503.01743",
+      "body_check": "本文のPhi-4-Mini/Multimodal architecture、GQA、LoRA router、学習・評価節を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.10132",
+      "identity_tokens": [
+        "arXiv:2501.10132"
+      ],
+      "title": "ComplexFuncBench: Exploring Multi-Step and Constrained Function Calling under Long-Context Scenario",
+      "reason": "function calling能力を測るbenchmarkが主題で、agent serving/runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2501.10132",
+      "body_check": "本文のbenchmark construction、multi-step constrained function calling、評価protocolを確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.21187",
+      "identity_tokens": [
+        "arXiv:2412.21187"
+      ],
+      "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs",
+      "reason": "reasoning時の冗長tokenを削減して推論計算を減らす手法で、MATH500ではtoken出力48.6%削減を報告する。",
+      "source_url": "https://arxiv.org/abs/2412.21187",
+      "body_check": "本文のefficiency metrics、self-trainingによるresponse streamlining、複数reasoning benchmark評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.00876",
+      "identity_tokens": [
+        "arXiv:2412.00876"
+      ],
+      "title": "Dynamic-LLaVA: Efficient Multimodal Large Language Models via Dynamic Vision-language Context Sparsification",
+      "reason": "視覚・言語contextを動的に疎化し、MLLM推論の計算量とKV cacheメモリを削減する。",
+      "source_url": "https://arxiv.org/abs/2412.00876",
+      "body_check": "本文のvision/language context sparsification、dynamic token selection、推論効率・精度評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.00841",
+      "identity_tokens": [
+        "arXiv:2411.00841"
+      ],
+      "title": "A Theoretical Perspective for Speculative Decoding Algorithm",
+      "reason": "投機的復号の受理・棄却とbatch化を理論化し、推論costと品質のPareto境界を扱う。",
+      "source_url": "https://arxiv.org/abs/2411.00841",
+      "body_check": "本文のrejection-based formulation、unbiased optimality、batch speculative decoding、cost-quality解析を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10813",
+      "identity_tokens": [
+        "arXiv:2410.10813"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "reason": "長期会話memoryのbenchmarkとretrieval評価が主題で、推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2410.10813",
+      "body_check": "本文のbenchmark construction、memory systems評価、retrieval/indexing分析を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19256",
+      "identity_tokens": [
+        "arXiv:2409.19256"
+      ],
+      "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
+      "reason": "RLHF学習の分散dataflow・resharding効率化が最終適用先で、凍結中のtraining高速化に該当する。",
+      "source_url": "https://arxiv.org/abs/2409.19256",
+      "body_check": "本文のPPO/RLHF dataflow、parallelism、training frameworkと性能評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.05636",
+      "identity_tokens": [
+        "arXiv:2408.05636"
+      ],
+      "title": "Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion",
+      "reason": "離散diffusion modelをdrafterに使い、speculative decodingのdraft品質と生成効率を改善する。",
+      "source_url": "https://arxiv.org/abs/2408.05636",
+      "body_check": "本文のdiffusion drafter、verification、generation efficiency評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.10759",
+      "identity_tokens": [
+        "arXiv:2407.10759"
+      ],
+      "title": "Qwen2-Audio Technical Report",
+      "reason": "音声言語モデルの学習・能力評価が主題で、推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2407.10759",
+      "body_check": "本文のaudio encoder、pretraining/SFT/DPO、AIR-Bench等の評価まで確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.18219",
+      "identity_tokens": [
+        "arXiv:2406.18219"
+      ],
+      "title": "A Closer Look into Mixture-of-Experts in Large Language Models",
+      "reason": "MoE expert相関・routing挙動の分析はexpert圧縮や推論設計に有用だが、直接の推論高速化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2406.18219",
+      "body_check": "本文のexpert similarity、routing norm、layer-wise expert分析とMixtral/DeepSeekMoE/Grok評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.14852",
+      "identity_tokens": [
+        "arXiv:2405.14852"
+      ],
+      "title": "PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression",
+      "reason": "1–2bit級LLM圧縮の量子化aware fine-tuningを改善し、resource-constrained inferenceを可能にする圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2405.14852",
+      "body_check": "本文のPV-Tuning、STE比較、QuIP#/AQLM等との圧縮・精度評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.00242",
+      "identity_tokens": [
+        "arXiv:2404.00242"
+      ],
+      "title": "DeFT: Decoding with Flash Tree-Attention for Efficient Tree-structured LLM Inference",
+      "reason": "共有prefixを持つtree構造LLM推論でKV IO再利用とload balanceを改善するFlash Tree-Attention。",
+      "source_url": "https://arxiv.org/abs/2404.00242",
+      "body_check": "本文のKV-Guided Grouping、tree KV partition、GPU kernelと推論性能評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.18668",
+      "identity_tokens": [
+        "arXiv:2402.18668"
+      ],
+      "title": "Simple linear attention language models balance the recall-throughput tradeoff",
+      "reason": "linear attentionとIO-aware implementationで長系列言語モデルのrecall-throughput tradeoffを改善する。",
+      "source_url": "https://arxiv.org/abs/2402.18668",
+      "body_check": "本文のBased/linear attention、recurrent update、prefill/next-token microbenchmarkとLM評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 426
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.08281",
+      "identity_tokens": [
+        "arXiv:2401.08281"
+      ],
+      "title": "The Faiss Library",
+      "reason": "高速ANN検索基盤でRAG/agent memoryのretrievalに重要だが、LLM推論そのものを対象にした研究ではない。",
+      "source_url": "https://arxiv.org/abs/2401.08281",
+      "body_check": "本文のCPU/GPU Faiss、index構造、text retrieval、外部storage連携と性能設計を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.15436",
+      "identity_tokens": [
+        "arXiv:2311.15436"
+      ],
+      "title": "Learning to Skip for Language Modeling",
+      "reason": "入力に応じてTransformer層をskipするSkipLayerで条件付き計算を実現し、言語モデル推論計算を削減する。",
+      "source_url": "https://arxiv.org/abs/2311.15436",
+      "body_check": "本文のrouter、SkipLayer、efficient implementation、language modeling評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08825",
+      "identity_tokens": [
+        "arXiv:2310.08825"
+      ],
+      "title": "From CLIP to DINO: Visual Encoders Shout in Multi-modal Large Language Models",
+      "reason": "MLLMのvisual encoder特徴とfusionによる能力改善が主題で、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.08825",
+      "body_check": "本文のCLIP/DINO feature分析、fusion module、MLLM能力評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04671",
+      "identity_tokens": [
+        "arXiv:2303.04671"
+      ],
+      "title": "Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models",
+      "reason": "複数visual foundation modelをChatGPTから呼ぶ能力統合が主題で、serving/runtime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2303.04671",
+      "body_check": "本文のPrompt Manager、22 VFM連携、zero-shot case評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.17432",
+      "identity_tokens": [
+        "arXiv:2210.17432"
+      ],
+      "title": "Ssd-LM: Semi-autoregressive Simplex-based Diffusion Language Model for Text Generation and Modular Control",
+      "reason": "semi-autoregressive diffusion text generationは生成並列性に関係するが、主貢献は生成モデル方式・制御でsystems高速化の実証が中心ではない。",
+      "source_url": "https://arxiv.org/abs/2210.17432",
+      "body_check": "本文のsimplex diffusion、semi-autoregressive generation、text generation/control評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 420
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.03858",
+      "identity_tokens": [
+        "arXiv:2210.03858"
+      ],
+      "title": "AlphaTuning: Quantization-Aware Parameter-Efficient Adaptation of Large-Scale Pre-Trained Language Models",
+      "reason": "4bit量子化モデルのparameter-efficient adaptationでdeployment容量に関係するが、中心は適応学習手法。",
+      "source_url": "https://arxiv.org/abs/2210.03858",
+      "body_check": "本文のPTQ後scaling factor学習、4-bit評価、parameter-efficient adaptationを確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.09734",
+      "identity_tokens": [
+        "arXiv:2111.09734"
+      ],
+      "title": "ClipCap: CLIP Prefix for Image Captioning",
+      "reason": "画像captioning手法と学習効率が主題で、LLM推論systemの高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2111.09734",
+      "body_check": "本文のCLIP prefix mapping、captioning training、COCO/nocaps評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2105.09613",
+      "identity_tokens": [
+        "arXiv:2105.09613"
+      ],
+      "title": "FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search",
+      "reason": "SSDを用いたstreaming ANN indexはRAG/agent memory基盤に応用できるが、LLM固有の推論研究ではない。",
+      "source_url": "https://arxiv.org/abs/2105.09613",
+      "body_check": "本文のgraph ANN、SSD index更新、streaming similarity searchのlatency/recall評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.02112",
+      "identity_tokens": [
+        "arXiv:2104.02112"
+      ],
+      "title": "Efficient Attentions for Long Document Summarization",
+      "reason": "複数のefficient attentionと提案Heposで長文処理計算を削減するが、対象は要約モデルで現代LLM servingへの直接性は中程度。",
+      "source_url": "https://arxiv.org/abs/2104.02112",
+      "body_check": "本文のsliding/global/random/low-rank attention比較、Hepos、計算量と長文要約評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2007.14062",
+      "identity_tokens": [
+        "arXiv:2007.14062"
+      ],
+      "title": "Big Bird: Transformers for Longer Sequences",
+      "reason": "block sparse attentionで二乗attentionを線形化し、長系列Transformerの計算・メモリを削減する基礎的手法。",
+      "source_url": "https://arxiv.org/abs/2007.14062",
+      "body_check": "本文のrandom/global/window sparse attention、GPU/TPU sparsity、長文NLP評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.04070",
+      "identity_tokens": [
+        "arXiv:1911.04070"
+      ],
+      "title": "BP-Transformer: Modelling Long-Range Context via Binary Partitioning",
+      "reason": "binary partitionによるhierarchical attentionで長距離context計算を削減するが、LLM以前の一般Transformer研究で直接性は中程度。",
+      "source_url": "https://arxiv.org/abs/1911.04070",
+      "body_check": "本文のbinary partition、hierarchical attention、長距離sequence評価を確認。",
+      "first_checked_at": "2026-09-28T19:25:20+09:00",
+      "last_checked_at": "2026-09-28T19:25:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 413
+    }
+  ]
+}
