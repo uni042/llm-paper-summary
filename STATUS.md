@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-29 00:49:17 JST**
+> 自動生成: **2026-09-29 04:07:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（112時間13分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（115時間31分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -152,34 +152,34 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
-  - claim: **09-25 00:26:58 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-25 00:26:58 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
 - `arXiv:2609.04724` — FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators / worker `shared-preload-pool`
-  - claim: **09-24 15:33:22 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-24 15:33:22 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-04cf5cb095abe08f.json`
 - `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
-  - claim: **09-26 00:34:05 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-26 00:34:05 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
 - `arXiv:2609.25451` — Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo / worker `shared-preload-pool`
-  - claim: **09-26 15:01:17 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-26 15:01:17 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-05fc71d26e12a3ee.json`
 - `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
-  - claim: **09-25 11:29:37 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-25 11:29:37 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
 - `arXiv:2609.20723` — PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving / worker `shared-preload-pool`
-  - claim: **09-26 11:29:19 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-26 11:29:19 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-0a075cc7610bb0c4.json`
 - `arXiv:2604.17701` — WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-25 07:40:58 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-0b37f63c9c1b5db3.json`
 - `SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b` — Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers / worker `shared-preload-pool`
-  - claim: **09-25 11:07:04 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-25 11:07:04 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-0e6a646bc0e365e6.json`
 - `arXiv:2402.12374` — Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding / worker `shared-preload-pool`
-  - claim: **09-26 00:34:05 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-26 00:34:05 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-0f8cc0c93811431b.json`
 - `DOI:10.1109/cloud67622.2025.00028` — ZipNN: Lossless Compression for AI Models / worker `shared-preload-pool`
-  - claim: **09-26 15:01:17 JST** / heartbeat: **09-28 17:40:15 JST** / lease expiry: **09-29 05:40:15 JST**
+  - claim: **09-26 15:01:17 JST** / heartbeat: **09-29 02:02:15 JST** / lease expiry: **09-29 14:02:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-14b72fcf4a8168cf.json`
 
 #### Audit
