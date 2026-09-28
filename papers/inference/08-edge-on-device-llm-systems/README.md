@@ -121,8 +121,8 @@
   SwapMoEは、全専門家をメモリに置けない問題に対し、層ごとの仮想枠へ入力で選ばれた専門家重みを入れ替え、メモリ容量と重み転送を抑える方式。
 
 - **2024-01 · [BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity](2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  トークン単位だけでなく連続トークン塊でも同じFFNブロックが疎に活性化するBlockFFNを設計し、端末でまとめて計算を省けるようにする。80%以上のトークン疎性、8トークン塊で70%の疎性、密モデル比最大3.67倍を報告。
+  実装：[✓](https://github.com/thunlp/BlockFFN) ・ リポジトリ内被引用：4  
+  要点: BlockFFNは、混合専門家（Mixture-of-Experts; MoE）の「1トークン当たりは疎でも、複数トークンをまとめるとほぼ全専門家が必要になる」という弱点を狙う。
 
 ### 4年前（2022-10〜2023-09）
 
