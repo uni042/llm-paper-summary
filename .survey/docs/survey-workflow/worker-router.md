@@ -241,9 +241,9 @@ unique名は \`<library_file_id>--<original-basename>\` 等、衝突しない値
 
 ### 9.3 転送完了条件
 
-GitHub create応答だけでLibrary原本を削除しない。同じpending pathをGitHubから再取得し、**byte/hash一致**を確認する。
+GitHub create応答だけでLibrary原本を削除しない。まず同じpending pathをGitHubから再取得し、**byte/hash一致**を確認する。processorが先に進んでpendingが消えていた場合は、同名のwaiting/blocked payloadを確認し、それも既に終端済みなら `results/<type>/<pending-stem>.json` の `source_sha256` とLibrary原本のSHA-256を照合する。
 
-一致確認後はGitHubが耐久原本を所有するため、そのLibrary成果を削除してよい。最終paper/candidate処理の完了をLibrary側で待たない。
+pending / waiting / blocked の同一bytes、またはresult receiptの同一 `source_sha256` を確認できた後はGitHubが耐久原本を所有するため、そのLibrary成果を削除してよい。最終paper/candidate処理の完了をLibrary側で待たない。
 
 既存pathに別bytesがある場合は上書きせず別unique名で再送する。
 
@@ -289,9 +289,9 @@ Researchの既定操作は **insert-if-absent**。既収録本文の更新は通
 次をすべて満たす成果だけLibraryから削除する。
 
 1. GitHub pending inboxへcreate済み
-2. 同じGitHub pathを再取得済み
-3. Library原本とGitHub copyのbytes/hashが一致
-4. GitHub側copyがpendingまたはGitHub所有のwaiting/blockedへ移ったことを確認できる、または転送直後ならpending確認済み
+2. pendingが残っていれば同pathのbytes/hash一致を確認済み
+3. pendingが既に進んでいれば同名waiting/blockedのbytes一致、または `results/<type>/<pending-stem>.json` の `source_sha256` 一致を確認済み
+4. 転送対象のLibrary成果identityを取り違えていない
 
 最終paper/candidateへの反映完了は削除条件ではない。
 
