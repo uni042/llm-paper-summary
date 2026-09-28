@@ -1,0 +1,650 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260928-2136-scheduled-chat-30",
+  "reference_main_sha": "6126f1027bcd8e8974c9ce06617e4e5fc6a81735",
+  "record_count": 40,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27746",
+      "identity_tokens": [
+        "arXiv:2609.27746"
+      ],
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "reason": "KV prefix cacheの目標hit率に必要なworking setをオンライン推定する容量計画研究。",
+      "source_url": "https://arxiv.org/abs/2609.27746",
+      "body_check": "Mattson stack algorithmとLRU stack distanceを用いるKVSETを一次資料で確認。production traceと実cache deploymentで検証。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15359",
+      "identity_tokens": [
+        "arXiv:2609.15359"
+      ],
+      "title": "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving",
+      "reason": "出力長不確実性を考慮してPD分離サービングのKVメモリとqueueを予測scheduleする。",
+      "source_url": "https://arxiv.org/abs/2609.15359",
+      "body_check": "本文3–4節を確認。端末側length prediction、conformal calibration、global/local schedulingをvLLM/Mooncakeで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09225",
+      "identity_tokens": [
+        "arXiv:2608.09225"
+      ],
+      "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference",
+      "reason": "KV prefix cache設計に直接関係するが主目的はマルチテナントsecurity。",
+      "source_url": "https://arxiv.org/abs/2608.09225",
+      "body_check": "本文を確認。principal別HMAC salt、boundary salting、vLLM/A100とllama.cpp/Metalのtiming channel評価を確認。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03036",
+      "identity_tokens": [
+        "arXiv:2608.03036"
+      ],
+      "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+      "reason": "LLM serving frameworkの実利用分析で直接有用だが、新規推論高速化方式ではない。",
+      "source_url": "https://arxiv.org/abs/2608.03036",
+      "body_check": "本文methodology/resultsを確認。vLLM/SGLang/TensorRT-LLM/LMDeploy/FlashInfer等のOSS採用を分析。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.16892",
+      "identity_tokens": [
+        "arXiv:2607.16892"
+      ],
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "reason": "KV予約・routing・prefix cachingを出力長不確実性下で共同最適化。",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "body_check": "本文を確認。Wasserstein distributionally robust optimizationとblock coordinate descent、production trace評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02043",
+      "identity_tokens": [
+        "arXiv:2607.02043"
+      ],
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "reason": "prefill過負荷時にdecode nodeへchunked prefillを逃がすPD分離scheduler。",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "body_check": "本文を確認。TTFT推定とTBT SLO制約でdeflectionし、vLLM/DeepSeek-V2-Liteで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.00466",
+      "identity_tokens": [
+        "arXiv:2607.00466"
+      ],
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "reason": "MoE expert localityを考慮するPD分離decode routing。",
+      "source_url": "https://arxiv.org/abs/2607.00466",
+      "body_check": "本文を確認。prefill activationからexpert signatureを作り、balanced K-means/locality-band routingを最大40 GPUで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.29986",
+      "identity_tokens": [
+        "arXiv:2606.29986"
+      ],
+      "title": "HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators",
+      "reason": "GDDR prefillerとHBM decoder間のKV形式・転送を最適化するPDサービング。",
+      "source_url": "https://arxiv.org/abs/2606.29986",
+      "body_check": "本文を確認。phase-wise quantization、compute-transfer pipeline、deferred dequantizationを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24506",
+      "identity_tokens": [
+        "arXiv:2606.24506"
+      ],
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "reason": "cold MoEのFFN重みとKV cacheを別GPU poolへ分離するmulti-LLM serving。",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "body_check": "本文を確認。weight/KV pool、KV planner、layer-wise pipeline、persistent kernelsを確認。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24467",
+      "identity_tokens": [
+        "arXiv:2606.24467"
+      ],
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+      "reason": "semantic retrieval headを用いる長文脈KV cache圧縮。",
+      "source_url": "https://arxiv.org/abs/2606.24467",
+      "body_check": "本文を確認。Semantic Retrieval Headsとlayer-wise eviction-error budgetをLongBench/NIAHで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16135",
+      "identity_tokens": [
+        "arXiv:2606.16135"
+      ],
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "reason": "異種model間で余剰HBM/NVLinkを使いprefix KV cacheを共有。",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "body_check": "本文を確認。idle GPU memoryへのcross-model cache sharingとactive-layer-local KVを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15177",
+      "identity_tokens": [
+        "arXiv:2606.15177"
+      ],
+      "title": "Coordinated Scheduling for MoE LLM Serving",
+      "reason": "request routingとexpert placementを協調するMoE serving。",
+      "source_url": "https://arxiv.org/abs/2606.15177",
+      "body_check": "本文を確認。KV/prefill/queue/expert pressureを使うDP schedulerとsource-aware expert placementを統合。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03375",
+      "identity_tokens": [
+        "arXiv:2605.03375"
+      ],
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "reason": "NVMe SSD退避KVをGPU主導I/Oで扱う長文脈serving。",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "body_check": "本文を確認。GPU-native object、GPU io_uring、slack-aware I/O schedulingをvLLMへ統合。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.21257",
+      "identity_tokens": [
+        "arXiv:2603.21257"
+      ],
+      "title": "CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands",
+      "reason": "KV loadingとGPU computeを非同期stage化するnetwork-intensive serving。",
+      "source_url": "https://arxiv.org/abs/2603.21257",
+      "body_check": "本文を確認。KV loading delayをservice costへ組み込みlong-context workloadで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.20397",
+      "identity_tokens": [
+        "arXiv:2603.20397"
+      ],
+      "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+      "reason": "KV eviction/compression/hybrid memory/attention等を体系化する推論サーベイ。",
+      "source_url": "https://arxiv.org/abs/2603.20397",
+      "body_check": "本文を確認。5系統のKV最適化と7 deployment scenariosのtrade-offを整理。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.06350",
+      "identity_tokens": [
+        "arXiv:2603.06350"
+      ],
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "reason": "serverless expertでMoE hotspotを弾力処理する推論serving。",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "body_check": "本文を確認。layer-aware expert load predictorとscaling/placementをMegatron-LM 8 GPUで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18755",
+      "identity_tokens": [
+        "arXiv:2602.18755"
+      ],
+      "title": "DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS",
+      "reason": "PD servingでplacementとDVFSを協調しSLO下のenergyを削減。",
+      "source_url": "https://arxiv.org/abs/2602.18755",
+      "body_check": "本文を確認。coarse placement/frequencyとfine-grained phase-aware DVFSを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.14516",
+      "identity_tokens": [
+        "arXiv:2602.14516"
+      ],
+      "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+      "reason": "agent/RAG等multi-round inferenceのPD servingを最適化。",
+      "source_url": "https://arxiv.org/abs/2602.14516",
+      "body_check": "本文を確認。incremental prefillのplacement/schedulingとresource planningを行うAMPD。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.03927",
+      "identity_tokens": [
+        "arXiv:2512.03927"
+      ],
+      "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+      "reason": "expert cacheなしで必要expertをjust-in-time loadするedge MoE推論。",
+      "source_url": "https://arxiv.org/abs/2512.03927",
+      "body_check": "本文を確認。distributed loading/computationとmulti-layer-ahead activation predictorを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models",
+      "reason": "推論効率も扱うが中心はNAS・蒸留・継続事前学習・post-trainingによるモデル構築。",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "body_check": "一次資料を確認。主たる新規性はmodel familyとtraining/post-training pipeline。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "reason": "画像生成Diffusion TransformerのMoE architecture/trainingでLLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/2503.14487",
+      "body_check": "一次資料を確認。global token poolとcapacity predictorを学習し画像生成で評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18351",
+      "identity_tokens": [
+        "arXiv:2410.18351"
+      ],
+      "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
+      "reason": "draft logits entropyで投機的デコードのdraft長を動的早期停止。",
+      "source_url": "https://arxiv.org/abs/2410.18351",
+      "body_check": "本文を確認。acceptance probability下限を近似するtraining-free基準をstatic draft length等と比較。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098"
+      ],
+      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "reason": "text-to-image Diffusion TransformerのMoE scaling/trainingでLLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/2410.02098",
+      "body_check": "本文を確認。expert-choice routingとadaptive compute allocationを画像生成で評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "arXiv:2409.12941"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "reason": "RAG能力のdataset/benchmarkで推論基盤効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2409.12941",
+      "body_check": "本文を確認。FRAMES multi-hop QA benchmarkとretrieval pipelineのaccuracy評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents",
+      "reason": "LLM agent構築・応用・評価のsurveyで推論効率/serving基盤が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2308.11432",
+      "body_check": "本文を確認。agent framework、applications、evaluation strategiesを体系化。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.06180",
+      "identity_tokens": [
+        "arXiv:2309.06180"
+      ],
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "reason": "PagedAttentionで動的KV cache断片化を抑え高throughput servingを実現。",
+      "source_url": "https://arxiv.org/abs/2309.06180",
+      "body_check": "一次資料を確認。virtual-memory型pagingとKV sharingをvLLMに実装しFasterTransformer/Orca等と評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2303.06865",
+      "identity_tokens": [
+        "arXiv:2303.06865"
+      ],
+      "title": "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+      "reason": "GPU/CPU/diskの階層memoryを線形計画で配置し単一GPUで大規模LLM推論。",
+      "source_url": "https://arxiv.org/abs/2303.06865",
+      "body_check": "一次資料を確認。tensor placement/access pattern探索と4-bit weight/attention-cache compressionを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.07104",
+      "identity_tokens": [
+        "arXiv:2312.07104"
+      ],
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "reason": "RadixAttentionによるKV再利用とstructured decodingを備えるLLM runtime。",
+      "source_url": "https://arxiv.org/abs/2312.07104",
+      "body_check": "一次資料を確認。frontend/runtime、RadixAttention、compressed FSMを複数LLM workloadで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.09670",
+      "identity_tokens": [
+        "arXiv:2401.09670"
+      ],
+      "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+      "reason": "prefill/decodeを別GPUへ分離してphase interferenceを抑えるserving。",
+      "source_url": "https://arxiv.org/abs/2401.09670",
+      "body_check": "一次資料を確認。PD disaggregationとresource allocationをSLO goodput中心に評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00079",
+      "identity_tokens": [
+        "arXiv:2407.00079"
+      ],
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "reason": "KV cacheを中心にprefill/decodeとmemory資源を分離するserving architecture。",
+      "source_url": "https://arxiv.org/abs/2407.00079",
+      "body_check": "一次資料を確認。distributed KV cache poolとtransfer/scheduling設計を大規模serving向けに評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.07240",
+      "identity_tokens": [
+        "arXiv:2310.07240"
+      ],
+      "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving",
+      "reason": "KV cacheを圧縮streamingして再利用時のnetwork/storage転送を削減。",
+      "source_url": "https://arxiv.org/abs/2310.07240",
+      "body_check": "一次資料を確認。KV tensorの圧縮・streamingとTTFT改善を評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01164",
+      "identity_tokens": [
+        "arXiv:2403.01164"
+      ],
+      "title": "HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+      "reason": "CPU/GPU異種並列と非同期overlapでoffloading I/Oを隠す低資源LLM推論。",
+      "source_url": "https://arxiv.org/abs/2403.01164",
+      "body_check": "一次資料を確認。heterogeneous module scheduler、async parameter manager等を実機評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00023",
+      "identity_tokens": [
+        "arXiv:2407.00023"
+      ],
+      "title": "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+      "reason": "共有prefix再利用とload balanceを共同最適化するdistributed serving scheduler。",
+      "source_url": "https://arxiv.org/abs/2407.00023",
+      "body_check": "一次資料を確認。prefix treeのstateful schedulingを2–8 GPUのreal workloadで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.01869",
+      "identity_tokens": [
+        "arXiv:2402.01869"
+      ],
+      "title": "InferCept: Efficient Intercept Support for Augmented Large Language Model Inference",
+      "reason": "tool/human待ちで中断するLLM requestのKVをpreserve/swap/discardしてmemory wasteを削減。",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "body_check": "一次資料を確認。interception-aware scheduling、chunked recomputation、swappingをvLLM上で評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.18677",
+      "identity_tokens": [
+        "arXiv:2311.18677"
+      ],
+      "title": "Splitwise: Efficient generative LLM inference using phase splitting",
+      "reason": "prefillとdecodeのhardware特性差を利用してphaseを分離配置するLLM inference。",
+      "source_url": "https://arxiv.org/abs/2311.18677",
+      "body_check": "一次資料を確認。phase splittingとcluster resource provisioningを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.02310",
+      "identity_tokens": [
+        "arXiv:2403.02310"
+      ],
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+      "reason": "chunked prefillとstall-free batchingでprefill/decode干渉を抑えるserving。",
+      "source_url": "https://arxiv.org/abs/2403.02310",
+      "body_check": "一次資料を確認。chunked-prefill schedulingでthroughput-latency trade-offを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.18547",
+      "identity_tokens": [
+        "arXiv:2310.18547"
+      ],
+      "title": "Punica: Multi-Tenant LoRA Serving",
+      "reason": "多数LoRAを単一基盤モデル上で動的batch処理するmulti-tenant serving。",
+      "source_url": "https://arxiv.org/abs/2310.18547",
+      "body_check": "一次資料を確認。LoRA-aware kernelとmemory/serving設計を評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.12456",
+      "identity_tokens": [
+        "arXiv:2312.12456"
+      ],
+      "title": "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+      "reason": "activation localityを利用してhot neuronをGPU、cold neuronをCPUへ置くconsumer GPU推論。",
+      "source_url": "https://arxiv.org/abs/2312.12456",
+      "body_check": "一次資料を確認。CPU/GPU hybrid inferenceとactivation sparsity-aware placementを評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.08147",
+      "identity_tokens": [
+        "arXiv:2408.08147"
+      ],
+      "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+      "reason": "大規模商用環境向けのfine-grained PD organizationとKV transferを扱う。",
+      "source_url": "https://arxiv.org/abs/2408.08147",
+      "body_check": "一次資料を確認。dynamic P/D adjustment、request forwarding、block-free KV transferを大規模配備で評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16163",
+      "identity_tokens": [
+        "arXiv:2503.16163"
+      ],
+      "title": "SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs",
+      "reason": "完全KVをCPUへoffloadしlow-bit GPU copyで重要KVを予測prefetchする。",
+      "source_url": "https://arxiv.org/abs/2503.16163",
+      "body_check": "一次資料を確認。CPU-GPU KV prefetchと10x cache圧縮相当のVRAM削減をLongBench/NIAHで評価。",
+      "first_checked_at": "2026-09-28T21:36:32+09:00",
+      "last_checked_at": "2026-09-28T21:36:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ]
+    }
+  ]
+}
