@@ -35,6 +35,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import audit_paper_quality  # noqa: E402
+import paper_quality_gate  # noqa: E402
 import paper_identity  # noqa: E402
 import paper_taxonomy  # noqa: E402
 import research_job_reconciliation  # noqa: E402
@@ -238,7 +239,11 @@ def process_research(repo_root: Path) -> tuple[int, int]:
 
         try:
             meta = parse_frontmatter(raw)
-            audit = audit_paper_quality.audit_file(source, repo_root)
+            audit = paper_quality_gate.inspect_rendered_paper(
+                repo_root,
+                source.relative_to(repo_root).as_posix(),
+                raw,
+            )
             if audit.status == "FAIL":
                 blocked_path = block_payload(source, BLOCKED_RESEARCH)
                 replace_json(
