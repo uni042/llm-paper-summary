@@ -140,7 +140,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-09 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  固定総パラメータ予算のまま縮小次元の並列Transformerブロックをトークン単位で選ぶ層レベル疎経路を導入し、小規模では一部改善を得る一方、1B規模では密モデルより遅くメモリも増える限界まで実測した。
+  MoEPの重要点は「層全体を専門家化すれば、FFNだけを専門家化するMoEよりさらに計算を省ける」という単純な主張ではない。自己注意まで含む低次元Transformer経路をトークンごとに選ぶことで固定パラメータ予算内の表現多様性を増やせる一方、注意の系列依存性によって未選択経路の計算を物理的に省きにくくなり、1B規模では密モデルより遅く・大きくなる。
 
 - **2026-09 · [GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models](2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md)**  
   実装：[✓](https://github.com/caichaoxiang/GeMoE) ・ リポジトリ内被引用：0  
