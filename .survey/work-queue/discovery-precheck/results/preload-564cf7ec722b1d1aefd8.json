@@ -1,0 +1,889 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-564cf7ec722b1d1aefd8",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-564cf7ec722b1d1aefd8",
+  "axis": "forward citations of SGLang structured generation serving runtime",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 13,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-28T15:30:07.024772+00:00",
+  "preload_id": "preload-564cf7ec722b1d1aefd8",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Adaptive GPU Sharing for Real-time LLM Serving with Best-effort Workloads",
+      "source_url": "https://doi.org/10.1145/3816891.3834895",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in latency-sensitive applications, where real-time serving must satisfy stringent service-level objectives (SLOs). However, request intensities fluctuate over time, and under low load LLM services leave a substantial fraction of GPU task idle. A promising approach to reclaim this capacity is co-locating best-effort workloads with LLM serving via GPU sharing. In this study, we propose AdMix, a scheduling system that enables adaptive GPU sharing between real-time LLM serving and best-effort non-LLM deep learning (DL) inference. AdMix dynamically regulates the best-effort workload’s resource allocation using NVIDIA Multi-Process Service (MPS), guided by real-time monitoring of LLM performance and a lightweight latency estimator. By real-world LLM serving traces, experiments on LLaMA-7B and Qwen-14B paired with representative DL workloads demonstrate that AdMix improves best-effort throughput by 1.3–5 × over MPS baseline while preserving LLM SLO attainment.",
+      "doi": "10.1145/3816891.3834895",
+      "canonical_id": "DOI:10.1145/3816891.3834895",
+      "authors": [
+        "Shu-Xin Li",
+        "Toshihiro Hanawa",
+        "Yohei Miki"
+      ]
+    },
+    {
+      "title": "LLM KV-cache: To Restore or To Recompute, That Is the Question",
+      "source_url": "https://doi.org/10.1145/3837053.3837336",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Key-Value (KV)-caches are essential to modern Large Language Model (LLM) inference, transforming inference from a computationally prohibitive task into a practical one. However, the limited capacity of GPU High Bandwidth Memory (HBM) is often insufficient to retain KV-cache data for all active requests, especially when large models and long contexts are served. To address this limitation, modern inference systems support offloading KV-cache data from HBM to CPU DRAM, local, or remote storage. A known issue is the trade-off between restoring offloaded KV-cache data versus recomputing; the right policy is non-trivial and depends on dynamic factors such as storage bandwidth, interconnect performance, workload characteristics, context length, and service-level objectives (SLOs). In this paper, we first investigate the challenges of the restoration-recomputation trade-off and quantify its impact on inference performance when left unaddressed. We then present an I/O-aware KV-cache management policy that dynamically navigates this trade-off. Our approach maximizes inference throughput while satisfying service-level objectives by either restoring or recomputing KV-cache blocks based on the performance characteristics of the GPU and storage tiers. Initial theoretical results show a 10 × improvement in performance over simplistic static policies while maintaining SLO compliance.",
+      "doi": "10.1145/3837053.3837336",
+      "canonical_id": "DOI:10.1145/3837053.3837336",
+      "authors": [
+        "Amirhossein Najafizadeh",
+        "Vasily Tarasov",
+        "Alex Merenstein",
+        "Yue Zhu",
+        "Erez Zadok"
+      ]
+    },
+    {
+      "title": "The KV Cache Is the New Memory Wall",
+      "source_url": "https://arxiv.org/abs/2609.30854",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+      "canonical_id": "arXiv:2609.30854",
+      "arxiv_id": "2609.30854",
+      "authors": [
+        "Tejinder Singh"
+      ]
+    },
+    {
+      "title": "ToolSearcher: Optimizing Tool Selection at Scale via Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2609.30906",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Large language models (LLMs) excel at natural language processing but struggle to interact with external environments. Tool learning provides a promising way to extend LLMs into actionable agents, where tool selection is a critical prerequisite for successful tool use. Existing work often assumes a small or predefined set of tools, leaving large-scale tool selection underexplored. Real-world repositories contain a vast and diverse array of tools, making it difficult for LLMs to effectively search, distinguish, and compose tools under context-length constraints. We identify large-scale tool selection as a new challenge for agentic reinforcement learning, highlighting that existing RL methods for knowledge-based question answering are inadequate for selecting tools while considering compatibility. To address this challenge, we propose ToolSearcher, a novel RL framework for effective multi-turn search and fine-grained optimization in large-scale tool selection. Specifically, we introduce category-constrained tool discrimination to improve the model's ability to distinguish functionally similar tools, event-level search modeling to explicitly optimize the discovery of target tools during multi-turn search, and trajectory-aligned credit allocation to provide fine-grained reward signals for different stages of the search-selection process. Extensive experiments on large-scale tool selection benchmarks demonstrate that ToolSearcher consistently outperforms a set of strong baselines in challenging settings involving iterative search and complex tool composition.",
+      "canonical_id": "arXiv:2609.30906",
+      "arxiv_id": "2609.30906",
+      "authors": [
+        "Zhen-Long Dai",
+        "Xu-Jie Song",
+        "Zi-Tong Wang",
+        "Tong Niu",
+        "Jian Liu",
+        "Wei-Qiang Wang",
+        "Xiu Tang",
+        "Sai Wu",
+        "Chang Yao",
+        "Jing-Yuan Chen"
+      ]
+    },
+    {
+      "title": "DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.31047",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Agentic LLM workflows decide their execution paths at runtime. Downstream computation may be predictable, or may have run before, yet it cannot begin until the model or the user resolves the branch. We call this serialization the branch-resolution barrier. Caching alone does not hide it: the key that identifies a reusable result is not known until then. In this paper, we propose DynBranch, which makes an unresolved branch addressable before it resolves. Its stable coordinate lets candidate subgraphs run during resolution and completed subgraph results be reused across later requests. A two-level controller admits this work when its expected benefit exceeds the load price. DynBranch sits at the model-API boundary and requires no changes to agent harnesses or model execution engines. Across four agentic workloads with Qwen3-32B on 4x H200 GPUs, DynBranch reduces mean latency by up to 32% over each workload's strongest prior system and by 46-66% against a no-reuse floor, while preserving workflow results. The benefit persists across backbone families and on a commodity Qwen3-8B/RTX 4090 deployment.",
+      "canonical_id": "arXiv:2609.31047",
+      "arxiv_id": "2609.31047",
+      "authors": [
+        "Jun-Yi Shen",
+        "Noppanat Wadlom",
+        "Zheng-Yuan Su",
+        "Yao Lu"
+      ]
+    },
+    {
+      "title": "WeEnv: The Environment for Agentic Reinforcement Learning at WeChat",
+      "source_url": "https://arxiv.org/abs/2609.30766",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Agentic reinforcement learning (RL) differs from conventional RL in that every task executes inside a complex environment, e.g., a virtual machine or a container. We find that agentic RL pays a heavy environment tax: a large share of the iteration time goes to the environment rather than to learning. The root cause is the lack of a full-lifecycle solution to environment management. We present WeEnv, which manages environments across packaging, initialization, and provisioning. WeEnv packages components as independently published layer groups and composes them at initialization, so that updating a component republishes one small group rather than every artifact containing it. To speed up environment initialization, WeEnv launches environments instantly and fetches contents on demand. During task execution, WeEnv provisions CPU and memory elastically, adjusting each environment's quota from its observed usage to fit the varying demands. WeEnv reduces the initialization by 5.6-14.2x over E2B, Docker, and AgentENV, cutting its share of the iteration time from up to 53.4% to 9.1%. WeEnv is deployed for agentic RL at WeChat.",
+      "canonical_id": "arXiv:2609.30766",
+      "arxiv_id": "2609.30766",
+      "authors": [
+        "Yang Yu",
+        "Jing Lei",
+        "Shao-Xun Zeng",
+        "Xin-Yu Gao",
+        "Jin-Di Shi",
+        "Ci Lei",
+        "Jun-Jie Zhang"
+      ]
+    },
+    {
+      "title": "CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters",
+      "source_url": "https://arxiv.org/abs/2609.30884",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Large language models rely on KV caching to reduce repeated prefill computation in long context and interactive applications. As lightweight adapters evolve, cached states reflect earlier versions, so stale reuse distorts current model outputs, while complete affected suffix recomputation restores fidelity at substantial cost. We seek minimal recomputation that recovers current adapter behavior. Existing systems track token, context, or stable adapter identity, but neither represent caches from earlier adapter versions nor distinguish update propagation from the recomputation required for behavioral recovery. To address these gaps, we introduce CacheReforge, which represents stale KV caches as layerwise mixed-version objects. It combines per-layer adapter anchors, calibrated sensitivity, accumulated drift, and executable restart boundaries to select direct reuse, bounded recomputation, or complete affected-suffix recovery. We distinguish dependency depth from the functional recomputation horizon and use cumulative tail influence to characterize when bounded recovery preserves current-model behavior. We evaluate CacheReforge on Qwen2.5-1.5B and Qwen2.5-7B with continual LoRA updates, including 16K HotpotQA and 2WikiMQA workloads. CacheReforge reduces mean KL divergence by 92.4% relative to stale reuse, while recomputing only 5.44% of layers and reducing cache-maintenance time by 93.2% relative to fresh full prefill. These results show that version-aware recovery preserves model fidelity and most KV caching gains.",
+      "canonical_id": "arXiv:2609.30884",
+      "arxiv_id": "2609.30884",
+      "authors": [
+        "Yu-Hang Cao",
+        "Yan-Zhou Mu",
+        "Chun-Rong Fang",
+        "Zhen-Yu Chen"
+      ]
+    },
+    {
+      "title": "ActKV: Efficient LLM Agents through Action-Guided KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2609.31395",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Agentic LLM inference accumulates long KV caches across iterative observation-reasoning-action loops, imposing substantial memory overhead and limiting serving throughput. Existing compression methods emphasize overall output quality, overlooking the asymmetric importance of actions in driving task progress. Our key idea is to establish a compression criterion that values KV entries by their contribution to action generation and prioritizes action quality. However, iterative execution, dynamic memory demands, and scattered action-critical entries pose challenges to eviction policies, budget allocation, and paged memory integration. To this end, we propose ActKV, the first KV cache compression framework tailored for agentic LLM inference. (i) Action-oriented KV cache eviction exploits stable action access patterns to retain entries critical to future actions, supporting reliable task progress under compression. (ii) Confidence-driven adaptive budget allocation uses LLM's intrinsic confidence to adapt the budget to evolving action-critical memory demands. (iii) Page-aware compression management standardizes compression into three primitives with customized kernels, realizing practical throughput gains. On long-trace tasks, ActKV retains an average of 98.53% of FullKV's accuracy with only 25.98% of its peak KV cache memory. It also achieves 3.97 times and 3.58 times FullKV's token and task throughput, delivering state-of-the-art performance.",
+      "canonical_id": "arXiv:2609.31395",
+      "arxiv_id": "2609.31395",
+      "authors": [
+        "Zi-Han Wang",
+        "Cheng Tang",
+        "Lei Gong",
+        "Chao Wang",
+        "Wenqi Lou",
+        "Teng Wang",
+        "Xue-Hai Zhou"
+      ]
+    },
+    {
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "source_url": "https://arxiv.org/abs/2609.31568",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+      "canonical_id": "arXiv:2609.31568",
+      "arxiv_id": "2609.31568",
+      "authors": [
+        "Quang Nguyen",
+        "Hieu Nguyen",
+        "H. Hoàng",
+        "Toan Pham",
+        "Cong Tran",
+        "Nam Vu"
+      ]
+    },
+    {
+      "title": "Evaluating the accuracy of KV cache reuse techniques",
+      "source_url": "https://arxiv.org/abs/2609.31415",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Position-independent KV cache reuse aims to reduce latency in retrieval-augmented generation by reusing chunk-level KV caches across prompts. We show that current evaluations of KV cache reuse techniques rely on measurements that fail to faithfully capture the loss of accuracy attributable to reuse, often artificially inflating the reported effectiveness. We also show that existing datasets do not exhibit the reuse dynamics needed to thoroughly evaluate such techniques. To address these issues, we propose an evaluation methodology that measures this accuracy loss without ambiguity and we introduce Boxoffice, a tool that programmatically generates evaluation datasets that exercise challenging KV cache reuse patterns.",
+      "canonical_id": "arXiv:2609.31415",
+      "arxiv_id": "2609.31415",
+      "authors": [
+        "Samuel Cestola",
+        "Tian Xia",
+        "Peng-Fei Zheng",
+        "Wei-Yan Zheng",
+        "Bo Wang",
+        "Yi Zhao",
+        "Diego Didona"
+      ]
+    },
+    {
+      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.31551",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+      "canonical_id": "arXiv:2609.31551",
+      "arxiv_id": "2609.31551",
+      "doi": "10.1145/3838684.3846886",
+      "authors": [
+        "Kun-Xiong Zhu",
+        "Zhi-Hao Shu",
+        "Hang-Yu Zheng",
+        "Ming-Hai Qin",
+        "Miao Yin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ]
+    },
+    {
+      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.28870",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+      "canonical_id": "arXiv:2609.28870",
+      "arxiv_id": "2609.28870",
+      "authors": [
+        "Yi-Yu Liu",
+        "Min-Lan Yu",
+        "Jun-Cheng Yang"
+      ]
+    },
+    {
+      "title": "Rufus-Air: An Open LLM Post-Training Recipe",
+      "source_url": "https://arxiv.org/abs/2609.29421",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source components and public data, much of it used as released, without new human annotation or an in-house distillation teacher. Our main findings are that (i) diverse, high-quality SFT establishes a strong capability floor; (ii) difficulty filtering keeps RL prompts within a productive learning range; (iii) reward reliability provides a practical principle for ordering stages; and (iv) infrastructure and engineering choices are part of the recipe, not just an implementation detail. Rufus-Air improves over the official GLM-4.5-Air post-trained release and is competitive with similarly sized open models.",
+      "canonical_id": "arXiv:2609.29421",
+      "arxiv_id": "2609.29421",
+      "authors": [
+        "Chia-yuan Chang",
+        "Ren-Yuan Cheng",
+        "Rui Feng",
+        "Xiao-Tian Han",
+        "Yuan He",
+        "Hong-Ye Jin",
+        "Lin-Wei Li",
+        "Shi-Yang Li",
+        "Feng-Lin Liu",
+        "Xin Liu",
+        "Priyanka Nigam",
+        "Hao-Yang Wen",
+        "Zhenghao Xu",
+        "Zhuo-Chen Xu",
+        "Bing Yin",
+        "Qing-Yu Yin",
+        "Chao Zhang",
+        "Rong-Zhi Zhang",
+        "Zhi-Han Zhang",
+        "Zi-Xuan Zhang",
+        "Tuo Zhao"
+      ]
+    },
+    {
+      "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search",
+      "source_url": "https://arxiv.org/abs/2609.30177",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Query understanding (QU) plays a critical role in production search systems, translating raw user queries into search execution plans that drive downstream retrieval and ranking. While large language models (LLMs) have enabled QU to be framed as a structured multi-task generation problem (e.g., intent classification, query expansion), optimizing such models to produce search-engine-coupled outputs remains challenging: static, label-based supervision fails to capture how each component actually interacts with the underlying search pipeline to affect downstream performance. We present a search-aware reinforcement learning (RL) framework for QU based on a distill-then-RL paradigm. Teacher-student supervised fine-tuning (SFT) first yields a well-formed, schema-compliant policy initialization. The RL stage then optimizes each QU component with rewards derived from live interaction with the search engine, tailored to that component's operational role, rather than a single reward tied to the final search outcome. Experiments on Roblox search show that this component-specific optimization improves both per-component utility and downstream search quality, raising NDCG@20 by 8.9 points over the SFT policy and by 3.5 points over training with a single end-to-end reward.",
+      "canonical_id": "arXiv:2609.30177",
+      "arxiv_id": "2609.30177",
+      "authors": [
+        "Nayoung Choi",
+        "Sheng-Jian Chen",
+        "Xiao-Kai Wei",
+        "Wen-Zheng Zhang",
+        "Dai-Yao Yi",
+        "Rachit Pareek",
+        "Vincent Su",
+        "Michelle Gong",
+        "Jin-Ho D. Choi"
+      ]
+    },
+    {
+      "title": "Canopy: Exploiting Piecewise Smooth Tree Priors for Multi-Fidelity Bandits",
+      "source_url": "https://arxiv.org/abs/2609.30017",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Many LLM inference problems, including model routing, prefix-cache management, prompt trimming, and test-time search, can be viewed as optimization over a tree. This structure arises naturally from autoregressive generation: every prefix defines a node, and its continuations form a subtree below it. Internal nodes of the tree provide cheap but biased estimates of a region's value, while leaf evaluations are expensive but accurate. Hierarchical bandit methods can exploit this structure, but typically require a specific smoothness schedule to be specified in advance, even though real objectives are often only piecewise smooth and their optima may lie near sharp boundaries. We introduce CANOPY, a multi-fidelity tree bandit that learns where the smoothness prior is valid rather than assuming it globally. CANOPY uses cheap random-path probes to construct an online certificate of local aggregation bias, then directs expensive leaf evaluations toward cells where the certificate detects a smoothness violation. We prove fixed-budget and regret guarantees whose additional cost is additive in the number of discontinuities, recovering the smooth-tree rate when no violations are present and approaching structure-blind search as violations become dense. Across routing, top-$k$ identification, test-time search, caching, and prompt trimming, CANOPY consistently improves matched-budget performance, including $2.9\\times$ higher top-10 recall on a 1000-model pool, $1.6\\times$ more SWE-bench Verified issues resolved than best-of-$N$, and $3.6\\times$ lower median time-to-first-token with prefix caching.",
+      "canonical_id": "arXiv:2609.30017",
+      "arxiv_id": "2609.30017",
+      "authors": [
+        "Michael M. Jerge",
+        "Suman Jana"
+      ]
+    },
+    {
+      "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.26638",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+      "canonical_id": "arXiv:2609.26638",
+      "arxiv_id": "2609.26638",
+      "authors": [
+        "Dohyun Kim",
+        "Sung-Jun Han",
+        "Hyun-geun Kim",
+        "Yusik Kim",
+        "Jamin Shin",
+        "Paul Hongsuck Seo",
+        "Hongjoon Ahn"
+      ]
+    },
+    {
+      "title": "Scaling of Capability and Efficiency at Inference Time in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2609.27166",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Capability and efficiency are two key dimensions of reasoning in large language models (LLMs). Capability refers to the ability to solve a given problem correctly, whereas efficiency refers to the ability to do so with limited resources. When LLMs use Chain-of-Thought (CoT) reasoning to solve problems of controlled hardness, both the number of problems solved correctly and the number of tokens required to reach a correct answer depend on problem hardness and model size. However, how these factors jointly shape capability and efficiency remains poorly understood. Here, we use hierarchical Bayesian models to evaluate the capability and efficiency of LLMs from the DeepSeek-R1-Distill model family across four classes of arithmetic and algorithmic reasoning problems. At a fixed model size, the probability of correctly solving an instance decays approximately exponentially with instance size, our proxy for problem hardness. The decay scale grows sublinearly with model size, indicating that larger models are more capable, but that capability gains diminish with scale. Output length grows as a power law with instance size, which serves as a proxy for difficulty. However, the parameters of this power law do not vary systematically with model size, suggesting that larger models do not become more efficient. Together, these findings reveal potential limitations of naive scaling as a strategy for developing more capable AI systems: capability improves with diminishing returns, while efficiency shows little to no improvement.",
+      "canonical_id": "arXiv:2609.27166",
+      "arxiv_id": "2609.27166",
+      "authors": [
+        "Moritz Laber",
+        "Zohair Shafi",
+        "Germans Savcisens",
+        "Brennan Klein",
+        "Matteo Chinazzi",
+        "Samuel V. Scarpino",
+        "A. Barabási",
+        "Alessandro Vespignani",
+        "Tina Eliassi-Rad"
+      ]
+    },
+    {
+      "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+      "source_url": "https://arxiv.org/abs/2609.25845",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+      "canonical_id": "arXiv:2609.25845",
+      "arxiv_id": "2609.25845",
+      "authors": [
+        "Guan-Xu Yu",
+        "Yu-Hang Yao"
+      ]
+    },
+    {
+      "title": "ClusterFewshot: Improving Few-shot Optimization for LLMs workflow",
+      "source_url": "https://arxiv.org/abs/2609.25939",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "The performance of large language model (LLM) workflows often depends on selecting a small set of in-context demonstrations to guide model behavior on new tasks. Recent methods improve this process by augmenting prompts with successful reasoning paths. However, their demonstration selection relies on random sampling or metric-based rankings, overlooking the semantic structure of the task. We propose ClusterFewshot, a strategy that combines semantic structuring with utility-aware scoring to construct representative and effective few-shot demonstration sets. Evaluated within DSPy-based pipelines, ClusterFewshot substantially reduces optimization cost across multiple benchmarks, while consistently improving accuracy relative to prior bootstrap-based methods in both standalone prompt tuning and hybrid prompt-weight optimization.",
+      "canonical_id": "arXiv:2609.25939",
+      "arxiv_id": "2609.25939",
+      "authors": [
+        "O. Haim",
+        "Shahar Katz",
+        "Lior Wolf"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816891.3834895",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816891.3834895",
+        "title:adaptive gpu sharing for realtime llm serving with besteffort workloads",
+        "url:https://doi.org/10.1145/3816891.3834895"
+      ],
+      "record": {
+        "title": "Adaptive GPU Sharing for Real-time LLM Serving with Best-effort Workloads",
+        "source_url": "https://doi.org/10.1145/3816891.3834895",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in latency-sensitive applications, where real-time serving must satisfy stringent service-level objectives (SLOs). However, request intensities fluctuate over time, and under low load LLM services leave a substantial fraction of GPU task idle. A promising approach to reclaim this capacity is co-locating best-effort workloads with LLM serving via GPU sharing. In this study, we propose AdMix, a scheduling system that enables adaptive GPU sharing between real-time LLM serving and best-effort non-LLM deep learning (DL) inference. AdMix dynamically regulates the best-effort workload’s resource allocation using NVIDIA Multi-Process Service (MPS), guided by real-time monitoring of LLM performance and a lightweight latency estimator. By real-world LLM serving traces, experiments on LLaMA-7B and Qwen-14B paired with representative DL workloads demonstrate that AdMix improves best-effort throughput by 1.3–5 × over MPS baseline while preserving LLM SLO attainment.",
+        "doi": "10.1145/3816891.3834895",
+        "canonical_id": "DOI:10.1145/3816891.3834895",
+        "authors": [
+          "Shu-Xin Li",
+          "Toshihiro Hanawa",
+          "Yohei Miki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3837053.3837336",
+      "identity_tokens": [
+        "id:DOI:10.1145/3837053.3837336",
+        "title:llm kvcache to restore or to recompute that is the question",
+        "url:https://doi.org/10.1145/3837053.3837336"
+      ],
+      "record": {
+        "title": "LLM KV-cache: To Restore or To Recompute, That Is the Question",
+        "source_url": "https://doi.org/10.1145/3837053.3837336",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Key-Value (KV)-caches are essential to modern Large Language Model (LLM) inference, transforming inference from a computationally prohibitive task into a practical one. However, the limited capacity of GPU High Bandwidth Memory (HBM) is often insufficient to retain KV-cache data for all active requests, especially when large models and long contexts are served. To address this limitation, modern inference systems support offloading KV-cache data from HBM to CPU DRAM, local, or remote storage. A known issue is the trade-off between restoring offloaded KV-cache data versus recomputing; the right policy is non-trivial and depends on dynamic factors such as storage bandwidth, interconnect performance, workload characteristics, context length, and service-level objectives (SLOs). In this paper, we first investigate the challenges of the restoration-recomputation trade-off and quantify its impact on inference performance when left unaddressed. We then present an I/O-aware KV-cache management policy that dynamically navigates this trade-off. Our approach maximizes inference throughput while satisfying service-level objectives by either restoring or recomputing KV-cache blocks based on the performance characteristics of the GPU and storage tiers. Initial theoretical results show a 10 × improvement in performance over simplistic static policies while maintaining SLO compliance.",
+        "doi": "10.1145/3837053.3837336",
+        "canonical_id": "DOI:10.1145/3837053.3837336",
+        "authors": [
+          "Amirhossein Najafizadeh",
+          "Vasily Tarasov",
+          "Alex Merenstein",
+          "Yue Zhu",
+          "Erez Zadok"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30854",
+      "identity_tokens": [
+        "id:arXiv:2609.30854",
+        "title:the kv cache is the new memory wall",
+        "url:https://arxiv.org/abs/2609.30854"
+      ],
+      "record": {
+        "title": "The KV Cache Is the New Memory Wall",
+        "source_url": "https://arxiv.org/abs/2609.30854",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+        "canonical_id": "arXiv:2609.30854",
+        "arxiv_id": "2609.30854",
+        "authors": [
+          "Tejinder Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30906",
+      "identity_tokens": [
+        "id:arXiv:2609.30906",
+        "title:toolsearcher optimizing tool selection at scale via reinforcement learning",
+        "url:https://arxiv.org/abs/2609.30906"
+      ],
+      "record": {
+        "title": "ToolSearcher: Optimizing Tool Selection at Scale via Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2609.30906",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Large language models (LLMs) excel at natural language processing but struggle to interact with external environments. Tool learning provides a promising way to extend LLMs into actionable agents, where tool selection is a critical prerequisite for successful tool use. Existing work often assumes a small or predefined set of tools, leaving large-scale tool selection underexplored. Real-world repositories contain a vast and diverse array of tools, making it difficult for LLMs to effectively search, distinguish, and compose tools under context-length constraints. We identify large-scale tool selection as a new challenge for agentic reinforcement learning, highlighting that existing RL methods for knowledge-based question answering are inadequate for selecting tools while considering compatibility. To address this challenge, we propose ToolSearcher, a novel RL framework for effective multi-turn search and fine-grained optimization in large-scale tool selection. Specifically, we introduce category-constrained tool discrimination to improve the model's ability to distinguish functionally similar tools, event-level search modeling to explicitly optimize the discovery of target tools during multi-turn search, and trajectory-aligned credit allocation to provide fine-grained reward signals for different stages of the search-selection process. Extensive experiments on large-scale tool selection benchmarks demonstrate that ToolSearcher consistently outperforms a set of strong baselines in challenging settings involving iterative search and complex tool composition.",
+        "canonical_id": "arXiv:2609.30906",
+        "arxiv_id": "2609.30906",
+        "authors": [
+          "Zhen-Long Dai",
+          "Xu-Jie Song",
+          "Zi-Tong Wang",
+          "Tong Niu",
+          "Jian Liu",
+          "Wei-Qiang Wang",
+          "Xiu Tang",
+          "Sai Wu",
+          "Chang Yao",
+          "Jing-Yuan Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31047",
+      "identity_tokens": [
+        "id:arXiv:2609.31047",
+        "title:dynbranch speculative subgraph reuse for dynamic agentic llm serving",
+        "url:https://arxiv.org/abs/2609.31047"
+      ],
+      "record": {
+        "title": "DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.31047",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Agentic LLM workflows decide their execution paths at runtime. Downstream computation may be predictable, or may have run before, yet it cannot begin until the model or the user resolves the branch. We call this serialization the branch-resolution barrier. Caching alone does not hide it: the key that identifies a reusable result is not known until then. In this paper, we propose DynBranch, which makes an unresolved branch addressable before it resolves. Its stable coordinate lets candidate subgraphs run during resolution and completed subgraph results be reused across later requests. A two-level controller admits this work when its expected benefit exceeds the load price. DynBranch sits at the model-API boundary and requires no changes to agent harnesses or model execution engines. Across four agentic workloads with Qwen3-32B on 4x H200 GPUs, DynBranch reduces mean latency by up to 32% over each workload's strongest prior system and by 46-66% against a no-reuse floor, while preserving workflow results. The benefit persists across backbone families and on a commodity Qwen3-8B/RTX 4090 deployment.",
+        "canonical_id": "arXiv:2609.31047",
+        "arxiv_id": "2609.31047",
+        "authors": [
+          "Jun-Yi Shen",
+          "Noppanat Wadlom",
+          "Zheng-Yuan Su",
+          "Yao Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30766",
+      "identity_tokens": [
+        "id:arXiv:2609.30766",
+        "title:weenv the environment for agentic reinforcement learning at wechat",
+        "url:https://arxiv.org/abs/2609.30766"
+      ],
+      "record": {
+        "title": "WeEnv: The Environment for Agentic Reinforcement Learning at WeChat",
+        "source_url": "https://arxiv.org/abs/2609.30766",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Agentic reinforcement learning (RL) differs from conventional RL in that every task executes inside a complex environment, e.g., a virtual machine or a container. We find that agentic RL pays a heavy environment tax: a large share of the iteration time goes to the environment rather than to learning. The root cause is the lack of a full-lifecycle solution to environment management. We present WeEnv, which manages environments across packaging, initialization, and provisioning. WeEnv packages components as independently published layer groups and composes them at initialization, so that updating a component republishes one small group rather than every artifact containing it. To speed up environment initialization, WeEnv launches environments instantly and fetches contents on demand. During task execution, WeEnv provisions CPU and memory elastically, adjusting each environment's quota from its observed usage to fit the varying demands. WeEnv reduces the initialization by 5.6-14.2x over E2B, Docker, and AgentENV, cutting its share of the iteration time from up to 53.4% to 9.1%. WeEnv is deployed for agentic RL at WeChat.",
+        "canonical_id": "arXiv:2609.30766",
+        "arxiv_id": "2609.30766",
+        "authors": [
+          "Yang Yu",
+          "Jing Lei",
+          "Shao-Xun Zeng",
+          "Xin-Yu Gao",
+          "Jin-Di Shi",
+          "Ci Lei",
+          "Jun-Jie Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30884",
+      "identity_tokens": [
+        "id:arXiv:2609.30884",
+        "title:cachereforge bounded recovery for stale kv caches under evolving adapters",
+        "url:https://arxiv.org/abs/2609.30884"
+      ],
+      "record": {
+        "title": "CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters",
+        "source_url": "https://arxiv.org/abs/2609.30884",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Large language models rely on KV caching to reduce repeated prefill computation in long context and interactive applications. As lightweight adapters evolve, cached states reflect earlier versions, so stale reuse distorts current model outputs, while complete affected suffix recomputation restores fidelity at substantial cost. We seek minimal recomputation that recovers current adapter behavior. Existing systems track token, context, or stable adapter identity, but neither represent caches from earlier adapter versions nor distinguish update propagation from the recomputation required for behavioral recovery. To address these gaps, we introduce CacheReforge, which represents stale KV caches as layerwise mixed-version objects. It combines per-layer adapter anchors, calibrated sensitivity, accumulated drift, and executable restart boundaries to select direct reuse, bounded recomputation, or complete affected-suffix recovery. We distinguish dependency depth from the functional recomputation horizon and use cumulative tail influence to characterize when bounded recovery preserves current-model behavior. We evaluate CacheReforge on Qwen2.5-1.5B and Qwen2.5-7B with continual LoRA updates, including 16K HotpotQA and 2WikiMQA workloads. CacheReforge reduces mean KL divergence by 92.4% relative to stale reuse, while recomputing only 5.44% of layers and reducing cache-maintenance time by 93.2% relative to fresh full prefill. These results show that version-aware recovery preserves model fidelity and most KV caching gains.",
+        "canonical_id": "arXiv:2609.30884",
+        "arxiv_id": "2609.30884",
+        "authors": [
+          "Yu-Hang Cao",
+          "Yan-Zhou Mu",
+          "Chun-Rong Fang",
+          "Zhen-Yu Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31395",
+      "identity_tokens": [
+        "id:arXiv:2609.31395",
+        "title:actkv efficient llm agents through actionguided kv cache management",
+        "url:https://arxiv.org/abs/2609.31395"
+      ],
+      "record": {
+        "title": "ActKV: Efficient LLM Agents through Action-Guided KV Cache Management",
+        "source_url": "https://arxiv.org/abs/2609.31395",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Agentic LLM inference accumulates long KV caches across iterative observation-reasoning-action loops, imposing substantial memory overhead and limiting serving throughput. Existing compression methods emphasize overall output quality, overlooking the asymmetric importance of actions in driving task progress. Our key idea is to establish a compression criterion that values KV entries by their contribution to action generation and prioritizes action quality. However, iterative execution, dynamic memory demands, and scattered action-critical entries pose challenges to eviction policies, budget allocation, and paged memory integration. To this end, we propose ActKV, the first KV cache compression framework tailored for agentic LLM inference. (i) Action-oriented KV cache eviction exploits stable action access patterns to retain entries critical to future actions, supporting reliable task progress under compression. (ii) Confidence-driven adaptive budget allocation uses LLM's intrinsic confidence to adapt the budget to evolving action-critical memory demands. (iii) Page-aware compression management standardizes compression into three primitives with customized kernels, realizing practical throughput gains. On long-trace tasks, ActKV retains an average of 98.53% of FullKV's accuracy with only 25.98% of its peak KV cache memory. It also achieves 3.97 times and 3.58 times FullKV's token and task throughput, delivering state-of-the-art performance.",
+        "canonical_id": "arXiv:2609.31395",
+        "arxiv_id": "2609.31395",
+        "authors": [
+          "Zi-Han Wang",
+          "Cheng Tang",
+          "Lei Gong",
+          "Chao Wang",
+          "Wenqi Lou",
+          "Teng Wang",
+          "Xue-Hai Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31568",
+      "identity_tokens": [
+        "id:arXiv:2609.31568",
+        "title:deepeduv1 efficient and scalable agentic llms for vietnamese education",
+        "url:https://arxiv.org/abs/2609.31568"
+      ],
+      "record": {
+        "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+        "source_url": "https://arxiv.org/abs/2609.31568",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+        "canonical_id": "arXiv:2609.31568",
+        "arxiv_id": "2609.31568",
+        "authors": [
+          "Quang Nguyen",
+          "Hieu Nguyen",
+          "H. Hoàng",
+          "Toan Pham",
+          "Cong Tran",
+          "Nam Vu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31415",
+      "identity_tokens": [
+        "id:arXiv:2609.31415",
+        "title:evaluating the accuracy of kv cache reuse techniques",
+        "url:https://arxiv.org/abs/2609.31415"
+      ],
+      "record": {
+        "title": "Evaluating the accuracy of KV cache reuse techniques",
+        "source_url": "https://arxiv.org/abs/2609.31415",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Position-independent KV cache reuse aims to reduce latency in retrieval-augmented generation by reusing chunk-level KV caches across prompts. We show that current evaluations of KV cache reuse techniques rely on measurements that fail to faithfully capture the loss of accuracy attributable to reuse, often artificially inflating the reported effectiveness. We also show that existing datasets do not exhibit the reuse dynamics needed to thoroughly evaluate such techniques. To address these issues, we propose an evaluation methodology that measures this accuracy loss without ambiguity and we introduce Boxoffice, a tool that programmatically generates evaluation datasets that exercise challenging KV cache reuse patterns.",
+        "canonical_id": "arXiv:2609.31415",
+        "arxiv_id": "2609.31415",
+        "authors": [
+          "Samuel Cestola",
+          "Tian Xia",
+          "Peng-Fei Zheng",
+          "Wei-Yan Zheng",
+          "Bo Wang",
+          "Yi Zhao",
+          "Diego Didona"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31551",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838684.3846886",
+        "id:arXiv:2609.31551",
+        "title:easerve encodeaware disaggregated serving for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.31551"
+      ],
+      "record": {
+        "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.31551",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+        "canonical_id": "arXiv:2609.31551",
+        "arxiv_id": "2609.31551",
+        "doi": "10.1145/3838684.3846886",
+        "authors": [
+          "Kun-Xiong Zhu",
+          "Zhi-Hao Shu",
+          "Hang-Yu Zheng",
+          "Ming-Hai Qin",
+          "Miao Yin",
+          "Gagan Agrawal",
+          "Wei Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28870",
+      "identity_tokens": [
+        "id:arXiv:2609.28870",
+        "title:when fancy eviction fails rethinking cache replacement for llm prefix reuse",
+        "url:https://arxiv.org/abs/2609.28870"
+      ],
+      "record": {
+        "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.28870",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+        "canonical_id": "arXiv:2609.28870",
+        "arxiv_id": "2609.28870",
+        "authors": [
+          "Yi-Yu Liu",
+          "Min-Lan Yu",
+          "Jun-Cheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29421",
+      "identity_tokens": [
+        "id:arXiv:2609.29421",
+        "title:rufusair an open llm posttraining recipe",
+        "url:https://arxiv.org/abs/2609.29421"
+      ],
+      "record": {
+        "title": "Rufus-Air: An Open LLM Post-Training Recipe",
+        "source_url": "https://arxiv.org/abs/2609.29421",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source components and public data, much of it used as released, without new human annotation or an in-house distillation teacher. Our main findings are that (i) diverse, high-quality SFT establishes a strong capability floor; (ii) difficulty filtering keeps RL prompts within a productive learning range; (iii) reward reliability provides a practical principle for ordering stages; and (iv) infrastructure and engineering choices are part of the recipe, not just an implementation detail. Rufus-Air improves over the official GLM-4.5-Air post-trained release and is competitive with similarly sized open models.",
+        "canonical_id": "arXiv:2609.29421",
+        "arxiv_id": "2609.29421",
+        "authors": [
+          "Chia-yuan Chang",
+          "Ren-Yuan Cheng",
+          "Rui Feng",
+          "Xiao-Tian Han",
+          "Yuan He",
+          "Hong-Ye Jin",
+          "Lin-Wei Li",
+          "Shi-Yang Li",
+          "Feng-Lin Liu",
+          "Xin Liu",
+          "Priyanka Nigam",
+          "Hao-Yang Wen",
+          "Zhenghao Xu",
+          "Zhuo-Chen Xu",
+          "Bing Yin",
+          "Qing-Yu Yin",
+          "Chao Zhang",
+          "Rong-Zhi Zhang",
+          "Zhi-Han Zhang",
+          "Zi-Xuan Zhang",
+          "Tuo Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30177",
+      "identity_tokens": [
+        "id:arXiv:2609.30177",
+        "title:searchaware reinforcement learning for multicomponent query understanding in roblox game search",
+        "url:https://arxiv.org/abs/2609.30177"
+      ],
+      "record": {
+        "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search",
+        "source_url": "https://arxiv.org/abs/2609.30177",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Query understanding (QU) plays a critical role in production search systems, translating raw user queries into search execution plans that drive downstream retrieval and ranking. While large language models (LLMs) have enabled QU to be framed as a structured multi-task generation problem (e.g., intent classification, query expansion), optimizing such models to produce search-engine-coupled outputs remains challenging: static, label-based supervision fails to capture how each component actually interacts with the underlying search pipeline to affect downstream performance. We present a search-aware reinforcement learning (RL) framework for QU based on a distill-then-RL paradigm. Teacher-student supervised fine-tuning (SFT) first yields a well-formed, schema-compliant policy initialization. The RL stage then optimizes each QU component with rewards derived from live interaction with the search engine, tailored to that component's operational role, rather than a single reward tied to the final search outcome. Experiments on Roblox search show that this component-specific optimization improves both per-component utility and downstream search quality, raising NDCG@20 by 8.9 points over the SFT policy and by 3.5 points over training with a single end-to-end reward.",
+        "canonical_id": "arXiv:2609.30177",
+        "arxiv_id": "2609.30177",
+        "authors": [
+          "Nayoung Choi",
+          "Sheng-Jian Chen",
+          "Xiao-Kai Wei",
+          "Wen-Zheng Zhang",
+          "Dai-Yao Yi",
+          "Rachit Pareek",
+          "Vincent Su",
+          "Michelle Gong",
+          "Jin-Ho D. Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30017",
+      "identity_tokens": [
+        "id:arXiv:2609.30017",
+        "title:canopy exploiting piecewise smooth tree priors for multifidelity bandits",
+        "url:https://arxiv.org/abs/2609.30017"
+      ],
+      "record": {
+        "title": "Canopy: Exploiting Piecewise Smooth Tree Priors for Multi-Fidelity Bandits",
+        "source_url": "https://arxiv.org/abs/2609.30017",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Many LLM inference problems, including model routing, prefix-cache management, prompt trimming, and test-time search, can be viewed as optimization over a tree. This structure arises naturally from autoregressive generation: every prefix defines a node, and its continuations form a subtree below it. Internal nodes of the tree provide cheap but biased estimates of a region's value, while leaf evaluations are expensive but accurate. Hierarchical bandit methods can exploit this structure, but typically require a specific smoothness schedule to be specified in advance, even though real objectives are often only piecewise smooth and their optima may lie near sharp boundaries. We introduce CANOPY, a multi-fidelity tree bandit that learns where the smoothness prior is valid rather than assuming it globally. CANOPY uses cheap random-path probes to construct an online certificate of local aggregation bias, then directs expensive leaf evaluations toward cells where the certificate detects a smoothness violation. We prove fixed-budget and regret guarantees whose additional cost is additive in the number of discontinuities, recovering the smooth-tree rate when no violations are present and approaching structure-blind search as violations become dense. Across routing, top-$k$ identification, test-time search, caching, and prompt trimming, CANOPY consistently improves matched-budget performance, including $2.9\\times$ higher top-10 recall on a 1000-model pool, $1.6\\times$ more SWE-bench Verified issues resolved than best-of-$N$, and $3.6\\times$ lower median time-to-first-token with prefix caching.",
+        "canonical_id": "arXiv:2609.30017",
+        "arxiv_id": "2609.30017",
+        "authors": [
+          "Michael M. Jerge",
+          "Suman Jana"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26638",
+      "identity_tokens": [
+        "id:arXiv:2609.26638",
+        "title:diffusion drafts ar verifies accelerating document ocr with selfspeculative decoding",
+        "url:https://arxiv.org/abs/2609.26638"
+      ],
+      "record": {
+        "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.26638",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+        "canonical_id": "arXiv:2609.26638",
+        "arxiv_id": "2609.26638",
+        "authors": [
+          "Dohyun Kim",
+          "Sung-Jun Han",
+          "Hyun-geun Kim",
+          "Yusik Kim",
+          "Jamin Shin",
+          "Paul Hongsuck Seo",
+          "Hongjoon Ahn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27166",
+      "identity_tokens": [
+        "id:arXiv:2609.27166",
+        "title:scaling of capability and efficiency at inference time in large reasoning models",
+        "url:https://arxiv.org/abs/2609.27166"
+      ],
+      "record": {
+        "title": "Scaling of Capability and Efficiency at Inference Time in Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2609.27166",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Capability and efficiency are two key dimensions of reasoning in large language models (LLMs). Capability refers to the ability to solve a given problem correctly, whereas efficiency refers to the ability to do so with limited resources. When LLMs use Chain-of-Thought (CoT) reasoning to solve problems of controlled hardness, both the number of problems solved correctly and the number of tokens required to reach a correct answer depend on problem hardness and model size. However, how these factors jointly shape capability and efficiency remains poorly understood. Here, we use hierarchical Bayesian models to evaluate the capability and efficiency of LLMs from the DeepSeek-R1-Distill model family across four classes of arithmetic and algorithmic reasoning problems. At a fixed model size, the probability of correctly solving an instance decays approximately exponentially with instance size, our proxy for problem hardness. The decay scale grows sublinearly with model size, indicating that larger models are more capable, but that capability gains diminish with scale. Output length grows as a power law with instance size, which serves as a proxy for difficulty. However, the parameters of this power law do not vary systematically with model size, suggesting that larger models do not become more efficient. Together, these findings reveal potential limitations of naive scaling as a strategy for developing more capable AI systems: capability improves with diminishing returns, while efficiency shows little to no improvement.",
+        "canonical_id": "arXiv:2609.27166",
+        "arxiv_id": "2609.27166",
+        "authors": [
+          "Moritz Laber",
+          "Zohair Shafi",
+          "Germans Savcisens",
+          "Brennan Klein",
+          "Matteo Chinazzi",
+          "Samuel V. Scarpino",
+          "A. Barabási",
+          "Alessandro Vespignani",
+          "Tina Eliassi-Rad"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25845",
+      "identity_tokens": [
+        "id:arXiv:2609.25845",
+        "title:visual jev accurate and efficient decisions from shared visual context",
+        "url:https://arxiv.org/abs/2609.25845"
+      ],
+      "record": {
+        "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+        "source_url": "https://arxiv.org/abs/2609.25845",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+        "canonical_id": "arXiv:2609.25845",
+        "arxiv_id": "2609.25845",
+        "authors": [
+          "Guan-Xu Yu",
+          "Yu-Hang Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25939",
+      "identity_tokens": [
+        "id:arXiv:2609.25939",
+        "title:clusterfewshot improving fewshot optimization for llms workflow",
+        "url:https://arxiv.org/abs/2609.25939"
+      ],
+      "record": {
+        "title": "ClusterFewshot: Improving Few-shot Optimization for LLMs workflow",
+        "source_url": "https://arxiv.org/abs/2609.25939",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "The performance of large language model (LLM) workflows often depends on selecting a small set of in-context demonstrations to guide model behavior on new tasks. Recent methods improve this process by augmenting prompts with successful reasoning paths. However, their demonstration selection relies on random sampling or metric-based rankings, overlooking the semantic structure of the task. We propose ClusterFewshot, a strategy that combines semantic structuring with utility-aware scoring to construct representative and effective few-shot demonstration sets. Evaluated within DSPy-based pipelines, ClusterFewshot substantially reduces optimization cost across multiple benchmarks, while consistently improving accuracy relative to prior bootstrap-based methods in both standalone prompt tuning and hybrid prompt-weight optimization.",
+        "canonical_id": "arXiv:2609.25939",
+        "arxiv_id": "2609.25939",
+        "authors": [
+          "O. Haim",
+          "Shahar Katz",
+          "Lior Wolf"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6e71b658279d4fa920268094b63052b763cc8548c626fd508b878fd7f866071d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
