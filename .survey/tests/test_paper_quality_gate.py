@@ -70,5 +70,57 @@ class PaperQualityGateTests(unittest.TestCase):
             self.assertTrue(any("長文定型文の再利用を検出" in item for item in result.failures))
 
 
+    def test_rejects_reused_long_prose_across_papers(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            existing = root / "papers/inference/existing.md"
+            existing.parent.mkdir(parents=True)
+            repeated_a = "これは論文固有でない長い定型段落です。" * 20
+            repeated_b = "評価条件や主要結果の説明も別論文へそのまま貼れる定型文です。" * 20
+            existing.write_text(
+                "# 既存論文\n\n" + repeated_a + "\n\n" + repeated_b + "\n",
+                encoding="utf-8",
+            )
+            candidate = (
+                "# 候補論文\n\n"
+                + repeated_a
+                + "\n\n"
+                + repeated_b
+                + "\n\n"
+                + ("この論文だけの固有説明です。" * 20)
+                + "\n"
+            )
+            result = gate.inspect_rendered_paper(
+                root,
+                "papers/inference/candidate.md",
+                candidate,
+            )
+            self.assertEqual(result.status, "FAIL")
+            self.assertTrue(any("長文定型文の再利用を検出" in x for x in result.failures))
+
+    def test_ignores_shared_headings_tables_and_short_phrases(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            existing = root / "papers/inference/existing.md"
+            existing.parent.mkdir(parents=True)
+            existing.write_text(
+                "# 既存論文\n\n## 評価\n\n| 項目 | 値 |\n|---|---|\n| GPU | A100 |\n\n"
+                + ("既存論文だけの固有説明です。" * 20)
+                + "\n",
+                encoding="utf-8",
+            )
+            candidate = (
+                "# 候補論文\n\n## 評価\n\n| 項目 | 値 |\n|---|---|\n| GPU | H100 |\n\n"
+                + ("候補論文だけの別の固有説明です。" * 20)
+                + "\n"
+            )
+            result = gate.inspect_rendered_paper(
+                root,
+                "papers/inference/candidate.md",
+                candidate,
+            )
+            self.assertFalse(any("長文定型文の再利用を検出" in x for x in result.failures))
+
+
 if __name__ == "__main__":
     unittest.main()
