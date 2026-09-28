@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-0730-scheduled-chat-30",
+  "reference_main_sha": "14c66ba715c66e9af7c267ea71038d0af0441c26",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/71.963420",
+      "identity_tokens": [
+        "DOI:10.1109/71.963420"
+      ],
+      "title": "The Power of Two Choices in Randomized Load Balancing",
+      "reason": "多数サーバからd個を無作為に選び最短待ち行列へ投入するsupermarket modelの理論解析で、LLM推論・モデル実行・推論基盤を対象としないため対象外。",
+      "source_url": "https://doi.org/10.1109/71.963420",
+      "body_check": "本文内容としてPoisson到着率λn、指数サービス時間、FIFO、n→∞の決定論的極限モデルを解析し、d=2がd=1に対して待ち時間を指数的に改善しd=3の追加利得は定数倍であることを確認。LLM固有の推論機構はない。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+        "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.09192",
+      "identity_tokens": [
+        "arXiv:2508.09192"
+      ],
+      "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+      "reason": "拡散LLMの復号をブロック自己回帰化し、ブロック間を並列復号してKVキャッシュ利用と並列生成を両立する推論高速化が主題。",
+      "source_url": "https://arxiv.org/abs/2508.09192",
+      "body_check": "本文でDiscrete Diffusion Forcingがblock-wise autoregressive generation、未完了の前ブロックを待たないfollowing-token prediction、asymmetric distillation、pipelined parallel decodingを組み合わせることを確認。GSM8KでLLaMA3/Qwen2.5比2.5倍超、LLaDA/Dream比50倍超の推論高速化を報告。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.16083",
+      "identity_tokens": [
+        "arXiv:2504.16083"
+      ],
+      "title": "MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention",
+      "reason": "長文脈VLMの事前充填を動的疎注意とGPUカーネルで高速化する、明確な推論最適化。",
+      "source_url": "https://arxiv.org/abs/2504.16083",
+      "body_check": "本文で動画の時空間局所性からGrid sparse patternを同定し、modality-aware permutation、head別offline pattern search、入力依存のdynamic sparse index、最適化GPU kernelを組み合わせることを確認。1M tokenでFlashAttention-2比最大8.3倍、V-NIAH 6k frameで97.7%対full attention 98.3%。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.20399",
+      "identity_tokens": [
+        "arXiv:2410.20399"
+      ],
+      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+      "reason": "GPU階層に対応した抽象化でAI/LLM関連カーネルを高性能化するkernel-runtime系研究で、推論基盤の実装最適化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2410.20399",
+      "body_check": "本文でwarp-level 16×16 tile、thread-block levelの非同期warp重畳、grid-levelのlaunch/teardown・memory cost隠蔽という3階層抽象化を確認。GEMM/attention inferenceでcuBLAS・FlashAttention-3相当、attention backward 10–40%、state-space model 8倍、linear attention 14倍の結果を報告。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.26074-dak-direct-access-gpu-memory-offloading.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04199",
+      "identity_tokens": [
+        "arXiv:2410.04199"
+      ],
+      "title": "LongGenBench: Long-context Generation Benchmark",
+      "reason": "長文出力能力を測る評価ベンチマークであり、推論速度・メモリ・サービング・カーネル等を改善する方式そのものではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2410.04199",
+      "body_check": "本文で複数質問を単一の長い回答へ再構成するLongGenBenchを定義し、API/OSSモデルで長文生成時1.2–47.1%の性能低下、後半質問ほど精度低下する傾向、長入力短出力では低下が小さいことを分析。主貢献は評価法と失敗分析。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.01518",
+      "identity_tokens": [
+        "arXiv:2410.01518"
+      ],
+      "title": "InfiniPot: Infinite Context Processing on Memory-Constrained LLMs",
+      "reason": "固定メモリ容量内でKVキャッシュを継続圧縮し、追加学習なしに長文脈を処理するKVキャッシュ管理方式で対象。",
+      "source_url": "https://arxiv.org/abs/2410.01518",
+      "body_check": "本文でContinual Context Distillationが固定容量potを満たすたびcontextを圧縮し、新tokenと再結合するconsume-and-compress処理を確認。Novelty under CompressionとCatalyst Promptという過去・将来関連性の重要度を組み合わせ、full contextを保持せず定容量で逐次処理する。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+        "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.13511",
+      "identity_tokens": [
+        "arXiv:2406.13511"
+      ],
+      "title": "Slice-Level Scheduling for High Throughput and Load Balanced LLM Serving",
+      "reason": "生成長の不確実性をsliceで区切り、メモリ使用量と処理時間を予測可能にしてバッチング・オフロード・負荷分散を改善するLLMサービング研究。",
+      "source_url": "https://arxiv.org/abs/2406.13511",
+      "body_check": "本文で最大生成長を複数sliceに分割しbatchをslice単位で処理するSCLSを確認。sequence-level/iteration-level schedulingのOOM制約とinstance間load imbalanceを対象に、batching/offloading algorithmと組み合わせ、SLS/ILS比でthroughput最大315.8%改善を報告。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:sY5N0zY5Od",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+      "reason": "LMパイプラインのprompt/デモ最適化を宣言的に行うプログラミングモデルが主題で、推論実行系の速度・メモリ・サービング最適化を主目的としないため対象外。",
+      "source_url": "https://openreview.net/forum?id=sY5N0zY5Od",
+      "body_check": "本文ではLM呼出しをsignature/moduleとして宣言し、teleprompter/optimizerがpromptやfew-shot demonstrationを自動探索してタスク品質を改善する。RAG等の複合LMパイプライン構築が中心で、GPU推論・KV管理・decode schedulingの研究ではない。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:RlqYCpTu1P",
+      "identity_tokens": [
+        "OpenReview:RlqYCpTu1P"
+      ],
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "reason": "注意をblock単位の混合専門家として動的選択し、長文脈の二次計算量を削減する疎注意方式で推論効率化に直接関係する。",
+      "source_url": "https://openreview.net/forum?id=RlqYCpTu1P",
+      "body_check": "本文でcontextをblock分割しqueryを関連KV blockへ動的routingするMixture of Block Attentionを確認。固定sink/window biasを避け、full/sparse attention間を切替可能。最大10M token級で最大16倍の効率改善を報告し、実production long-context workloadにも展開。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:r8H7xhYPwz",
+      "identity_tokens": [
+        "OpenReview:r8H7xhYPwz"
+      ],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+      "reason": "線形注意の状態更新にgatingとdelta ruleを統合し長文脈を線形時間で扱えるため推論効率との関連は強いが、主貢献は新しいsequence-model architectureと学習アルゴリズムであり、既存LLM推論基盤の最適化そのものではないためborderline。",
+      "source_url": "https://openreview.net/forum?id=r8H7xhYPwz",
+      "body_check": "本文でgatingによる高速なmemory erasureとdelta ruleによるtargeted updateを統合したGated DeltaNet、現代GPU向けparallel training algorithm、sliding-window attention/Mamba2とのhybrid architectureを確認。LM・常識推論・in-context retrieval・length extrapolation・long-contextでMamba2/DeltaNetを上回るが、研究中心はモデル構造。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "worklist_rank": 487
+    }
+  ]
+}
