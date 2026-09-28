@@ -292,11 +292,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  ドラフト確率分布から各投機反復の継続可否を軽量分類器で判断してドラフト長を動的化し、生成文を変えず最良固定長比で平均10.3%高速化する。
+  DISCOは投機的復号（投機的復号; SD）の先読み長（Speculation Lookahead; SL）をラウンドごとに変える。次トークンが簡単な区間では長くドラフトし、難しく拒否されやすい区間では早く対象モデル検証へ移ることで、「固定kでは長過ぎるか短過ぎる」という問題を避ける。
 
 - **2024-04 · [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md)**  
   実装：[✓](https://github.com/Equationliu/Kangaroo) ・ リポジトリ内被引用：5  
-  ターゲットLLMの浅い層を自己ドラフト化し、小型アダプタと信頼度による二重早期終了で別ドラフトモデルを不要にして、Spec-Benchで最大1.68倍高速化する。
+  Kangarooは別のドラフトモデルを持たず、対象LLMの浅い前半層を自己ドラフトとして使う。浅い表現を補正する小型アダプタと、低確信度になった時点でドラフト生成自体を打ち切る「二重の早期終了」により、追加パラメータと無駄なドラフト計算を同時に抑える。
 
 - **2024-03 · [Block Verification Accelerates Speculative Decoding](2024-2403.10444-block-verification-accelerates-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

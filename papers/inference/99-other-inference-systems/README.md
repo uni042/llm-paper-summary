@@ -762,7 +762,7 @@
 
 - **2024-01 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  局所注意と圧縮長期メモリを同一Transformerブロックへ組み込み、文脈長に比例して増えない有界メモリで超長文を逐次処理する。1Mトークンの検索課題と500K長の書籍要約を1B/8Bモデルで実証。
+  Infini-注意機構は長文を固定長セグメントへ分け、現在セグメントには通常の局所注意、過去セグメントには固定サイズの圧縮メモリを使う。古い全KVを保存するのではなく、キーと値の外積を再帰的に累積した長期メモリへ問い合わせることで、文脈長が伸びてもメモリ量を一定に保つ。
 
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -800,7 +800,7 @@
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  指示調整時の注意マスクで長いプロンプトを再利用可能な少数の要旨トークンへ圧縮し、最大26倍のプロンプト圧縮と40%のFLOPs削減を実現する。
+  Gistingは、毎要求で長い指示文を再エンコードする代わりに、その指示を少数の「gistトークン」へ圧縮し、後続入力がその圧縮表現だけを参照するよう学習する。モデルごとの新しいアダプタを保存するのではなく、タスク指示を通常のキー・値キャッシュ（Key-Value Cache; KVキャッシュ）として再利用可能な短い状態へ変換する。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
   実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：3  
