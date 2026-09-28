@@ -34,7 +34,7 @@
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  復号の計算、メモリ容量、帯域、集合通信を統一する解析性能モデルを実機との平均絶対誤差7.6%で検証し、毎秒1万トークン超の大幅向上にはハードウェア進化だけでなくアルゴリズム変更も必要と分析する。
+  「次世代GPUならLLMは何トークン/秒まで速くなるか」を、現在のソフトウェア実装に依存したベンチマークから切り離して考えるための解析モデル。LIMINALはLLMの各演算子を演算量・読み書きバイト数・同期回数へ落とし、ハードウェア側の演算性能、メモリ容量・帯域、集合通信遅延を組み合わせてデコードの上限を推定する。
 
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
