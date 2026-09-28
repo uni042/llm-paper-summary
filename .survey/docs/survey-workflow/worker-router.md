@@ -1,294 +1,351 @@
-# Worker router — Library-first workflow v11
+# Worker router — Library-first workflow v12
 
-この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む**唯一の人間向け実行正本**である。2026-09-28以降の通常運用は、**Scheduled workerがGitHubをread-onlyで参照して成果をChatGPT Libraryへ保存し、GitHub反映はSurvey GitHub ImportのWorkタスクが行う**二段構成とする。
+この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v12では責務を次の3段に分離する。
 
-旧direct-GitHub worker運用は `worker-router-legacy-v10.22-direct-github.md` に退避した。履歴確認以外では参照せず、旧claim / reservation / submission / run-state / health-probe / worker-control経路をScheduled workerの新規runへ復活させない。
+1. Scheduled workerは探索・読解・分類を行い、完成成果をChatGPT Libraryへ保存する。
+2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。
+3. GitHub側の受信箱プロセッサが、最新mainでidentity解決、重複排除、正規配置、precheck、relevance反映を行う。
 
-## 0. 正本順位と責務分離
+旧direct-GitHub worker運用は履歴資料であり、新規通常runへ復活させない。
 
-正本順位は次の通り。
+## 0. 正本順位と責務
+
+正本順位:
 
 1. そのrunに対するユーザーの明示指示
 2. 同一HEADの本書
-3. Libraryの用途別正本
-   - `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md`
-   - `/LLM-paper-summary-library-first/PAPER-QUALITY-GUIDE.md`
-   - Survey GitHub Import用 `github-import-procedure.md`
-4. Scheduled Task / Work task本文のブートストラップ記述
-5. 退役資料・履歴互換資料
-
-通常のScheduled workerとGitHub反映者の責務を混ぜない。
+3. Library用途別正本
+   - \`/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md\`
+   - \`/LLM-paper-summary-library-first/PAPER-QUALITY-GUIDE.md\`
+   - Survey GitHub Import用 \`github-import-procedure.md\`
+4. Scheduled Task / Work task本文のブートストラップ
+5. 退役資料
 
 | 実行主体 | GitHub | Library | 主責務 |
 |---|---|---|---|
-| `scheduled-chat-00` / `scheduled-chat-30` | **read-only** | read/write | 探索・読解・分類・完成成果の耐久保存 |
-| Survey GitHub ImportのWorkタスク | read/write | read/write | Library成果の検証・正規化・GitHub反映・反映済み原本整理 |
-| 通常チャット | 原則read-only | read/write | ユーザーが明示した回収・監査。GitHub反映はWorkタスクを優先 |
+| \`scheduled-chat-00\` / \`scheduled-chat-30\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
+| Survey GitHub Import | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、転送確認後にLibrary原本を整理 |
+| GitHub import inbox processor | Actions内read/write | なし | 最新mainでidentity解決、Research配置、Discovery precheck/relevance/submission、GitHub側掃除 |
+| 通常チャット | 原則read-only | read/write | 明示された監査・回収・保守 |
 
-Scheduled workerはGitHubへの `write`、`claim`、`reservation`、`submission`、`result`、`handoff`、`health-probe`、`worker-control`、制御ファイル更新を試みない。GitHubは候補・既処理・最新テンプレート・系統・重複の確認に使う。
+Scheduled workerはGitHubへのclaim、reservation、submission、result、handoff、health-probe、worker-control、制御ファイル更新を行わない。Survey GitHub Importも論文内容や候補の意味判定を行わず、受信箱への転送だけを担当する。
 
-GitHub反映が必要な成果をScheduled workerが見つけても、自分でGitHubへ送らずLibraryへ保存する。GitHub側の旧transportが実装として残っていても、Scheduled workerの通常経路ではない。
+## 1. 固定identityと開始時読取
 
-## 1. run開始時に読むもの
+### :00
+- \`worker_id=scheduled-chat-00\`
+- \`scheduled_slot=00\`
+- worklist: \`.survey/work-queue/worker-worklist-00.json\`
 
-各runの開始時に最新`main` HEADを取得し、同じHEADで次を読む。
+### :30
+- \`worker_id=scheduled-chat-30\`
+- 通常 \`scheduled_slot=30\`
+- worklist: \`.survey/work-queue/worker-worklist-30.json\`
+- 08:30 JSTはmaintenance専用run
 
-- 本書
-- 自分のworklist
-  - `scheduled-chat-00`: `.survey/work-queue/worker-worklist-00.json` / `WORKLIST-00.md`
-  - `scheduled-chat-30`: `.survey/work-queue/worker-worklist-30.json` / `WORKLIST-30.md`
-- 必要な対象系統README
-- Research本文を作るときだけ `.survey/templates/paper.md`
-- Library `WORKER-LIBRARY-PROCEDURES.md`
-- Research本文を作る直前に Library `PAPER-QUALITY-GUIDE.md`
-
-固定identityは次を使う。
-
-- :00 → `worker_id=scheduled-chat-00`, `scheduled_slot=00`
-- :30 → `worker_id=scheduled-chat-30`, 通常 `scheduled_slot=30`
-- :30の08:30 JST → maintenance専用run
+各通常runは最新main HEADを取得し、同じHEADから本書、自分のworklist、必要な系統READMEを読む。Research本文作成時だけ最新templateとLibraryの品質ガイドを読む。
 
 ユーザーの明示指示なしにScheduled Taskを停止・無効化・削除せず、schedule・通知設定も変更しない。
 
-## 2. worklistと処理順
+## 2. 候補順序
 
-Research / Audit候補は各worker最大200件を入口として扱う。Discovery側はLibrary手順書で指定された候補集合を使う。
+Research / Audit候補はworker専用worklistを入口にする。候補はリスト末尾から上方向、すなわちrankの大きいものから処理する。skip、重複、既処理、取得不能があってもその位置から上方向の次候補へ進む。
 
-候補は**専用リストの末尾から上方向**へ処理する。rank / # の大きいものから小さいものへ進み、skip・重複・既処理・取得不能があっても、その位置から上方向の次候補へ進む。
+専用worklistが欠損・古い・空の場合だけ最新mainの正規poolをread-onlyで参照する。
 
-専用worklistが欠損・古い・空の場合だけ、最新mainの正規poolをread-onlyで参照して代替候補を選ぶ。GitHub側のqueueやjobをScheduled worker自身が更新して補充しない。
+## 3. identityの責務
 
-## 3. canonical identityと重複排除
-
-候補ごとにcanonical identityを優先順で確定する。
+候補を読む際のcanonical identityは次の優先順で使う。
 
 1. arXiv ID
 2. DOI
 3. OpenReview ID
-4. 正規化された一次資料URL
+4. 正規化一次資料URL
 
-GitHubとLibraryの両方を確認し、同一canonical identityの重複を除外する。
+Scheduled workerは、無駄な再読解を避けるためGitHub/Libraryの既知状態をread-onlyで参照してよい。ただし、**「最新mainに同一identityがあるためGitHubへ新規createしてよい／いけない」という最終判断はScheduled workerもSurvey GitHub Importも行わない。**
 
-GitHub側では既収録paper、既存候補、unrelated / borderline ledger、active job等を確認する。Library側では完成Research、Discovery成果、worker別relevance ledger、保存失敗時のScheduled Chat完全退避を確認する。
+最終identity判断はGitHub受信箱プロセッサが、処理直前の最新mainに対して \`.survey/scripts/resolve_paper_identity.py\` と既存Discovery precheckを用いて行う。
 
-同一identityが別pathにあるだけで新規論文を作らない。GitHub反映時の最終identity解決はWorkタスクが最新mainのresolverで行う。
+したがって、Library保存済み成果は「保存時点では未収録だった」ことを証明する必要はない。転送後にmainで既収録と判定された場合はGitHub側で安全にno-op/filteredとして終端する。
 
 ## 4. モード判定
 
-GitHubだけの候補在庫をそのまま使わない。Library取り込み待ちを補正して開始時候補在庫を求める。
+開始時の実効候補在庫を次で扱う。
 
-- `G`: 最新main上の未処理候補在庫
-- `D`: Libraryの未反映Discovery `accept` のうち、GitHubでまだ候補・既収録・既処理として表現されず、Libraryに完成Researchもないcanonical identity数
-- `R`: Libraryに完成Researchがあり、GitHubの`G`ではまだ未処理Research候補として数えられているcanonical identity数
-- `E = G + D - R`
+- \`G\`: 最新main上の未処理候補在庫
+- \`D\`: Libraryに未転送のDiscovery acceptで、明らかにまだResearch化していない件数
+- \`R\`: Libraryに完成Researchがあり、G側にまだ未処理候補として残る件数
+- \`E = G + D - R\`
 
-ファイル数ではなくcanonical identityで重複排除して数える。GitHub取り込み済みidentityは次runで`D` / `R`補正から外す。
+500件の閾値から明らかに離れている場合は厳密全件照合をしない。
 
-モードはrun開始時の`E`で固定する。
+- \`E > 500\` → Research
+- \`E <= 500\` → Discovery
+- 概算でも境界が曖昧ならDiscovery
 
-- `E > 500` → Research
-- `E <= 500` → Discovery
-
-run中に在庫が変化してもモードは切り替えない。次run開始時に再計算する。
-
-Libraryを十分読めず`D` / `R`を確定できない場合、0件と仮定しない。別のLibrary読取経路を試し、それでも補正不能なら`G`による暫定判定であることを最終報告に明記する。
+run中に在庫が変化してもモードは固定する。
 
 ## 5. Discovery
 
 ### 5.1 ノルマ
 
-Discovery runでは**新規canonical identity 40件を本文確認まで行い、最終分類を耐久保存する**。
+新規canonical identity 40件を本文確認まで行い、各件を次のどれかへ最終分類する。
 
-分類は次の3つだけ。
+- \`accept\`
+- \`unrelated\`
+- \`borderline\`
 
-- `accept`: サーベイ候補として残す
-- `unrelated`: 現行対象外。恒久除外台帳へ送る
-- `borderline`: 関連性・重要性・期待知見が弱い既定除外。明示的再検討時のみ復帰可能
+タイトル・要旨だけで確定しない。本文取得不能で判定未完了の候補は40件へ数えず補充する。acceptだけを40件集めるために基準を緩めない。
 
-タイトル・要旨だけで確定せず、可能な限り一次資料本文を確認する。本文取得不能で分類未完了の候補は40件に数えず、リスト末尾側から次候補で補充する。
+### 5.2 Library保存形式
 
-### 5.2 保存先
+v12以降のDiscovery通常runは、**1 run = 1 immutable JSON**だけを正規成果として保存する。
 
-`accept` はrun単位のDiscovery成果JSON / Markdownへ保存する。
+推奨path:
 
-`unrelated` / `borderline` はworker別Library ledgerだけへ保存する。
+\`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>.json\`
 
-- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-00-unrelated-papers.json`
-- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-00-borderline-papers.json`
-- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-30-unrelated-papers.json`
-- `/LLM-paper-summary-library-first/discovery-relevance/scheduled-chat-30-borderline-papers.json`
+1ファイルにそのrunの40件すべてを \`records[]\` として含める。accept / unrelated / borderlineを別Library台帳へ分割しない。
 
-旧 `discovery-classification/{accept,unrelated,borderline}-candidates.json` は新規worker出力先にしない。残存recordはSurvey GitHub Import Workタスクが整理する。
+必須top-level:
 
-Discovery recordは、少なくとも `classification`、`canonical_id`、`identity_tokens`、正式`title`、具体的`reason`、一次資料`source_url`、本文確認内容`body_check`、確認時刻、`linked_from`、`source_run_file` を保持する。GitHub取込側が再判定しやすい形式を優先する。
+- \`schema_version\`
+- \`artifact_type: "discovery_run"\`
+- \`worker_id\`
+- \`run_key\`
+- \`reference_main_sha\`
+- \`record_count\`
+- \`records[]\`
 
-保存直前に最新Library状態を再取得し、同identityの既処理・別worker保存済み成果・完成Researchを再照合する。保存後は再取得し、JSON parse、record_count、identity、分類を確認する。
+各recordの必須項目:
+
+- \`classification\`
+- \`canonical_id\`
+- \`identity_tokens\`
+- \`title\`
+- \`reason\`
+- \`source_url\`
+- \`body_check\`
+- \`first_checked_at\`
+- \`last_checked_at\`
+- \`linked_from\`
+
+取得できる場合は \`worklist_rank\` 等を追加してよい。
+
+**共有3分類JSONやworker別relevance台帳へ新規追記しない。** 既存の旧形式ファイルは移行対象として残し、別途ユーザーが依頼した移行作業でv12形式へ変換する。
+
+### 5.3 保存直前
+
+同run内重複とLibrary内の明白な重複だけを除く。GitHub最新mainに同一identityが存在するかの最終判定はここで必須にしない。GitHub側precheckへ委譲する。
+
+保存後はLibraryから再取得し、JSON parse、\`record_count == len(records)\`、40件のidentity一意性を確認する。
 
 ## 6. Research / Audit
 
-Research runでは**新規canonical identityの完成論文を10件**Libraryへ耐久保存する。
+Research runでは新規完成Research Markdownを10件Libraryへ保存する。
 
-Research本文は1論文1Markdownとし、最新templateと`PAPER-QUALITY-GUIDE.md`に従う。少なくとも次を含める。
+保存先:
+
+\`/LLM-paper-summary-library-first/research/<paper>.md\`
+
+1論文1Markdownとし、最新templateと \`PAPER-QUALITY-GUIDE.md\` に従う。
+
+必須内容:
 
 - canonical identity
-- `summary`
-- `list_summary`
-- `## 概要`
-- 書誌情報
+- \`summary\`
+- \`list_summary\`
+- 書誌
+- \`## 概要\`
 - 問題設定
 - 手法
-- 評価
-- 主要結果
+- 評価条件・主要結果
 - 既存研究との差
 - 限界
 - 一次資料
 
-Research本文の作成は、**一次資料読解 → 論文固有事実の抽出 → 本文執筆 → 固有性セルフレビュー → Library保存**の順で行う。一次資料を読んだ直後に汎用テンプレート文を展開して完成原稿を作らない。
+一次資料読解 → 固有事実抽出 → 執筆 → 固有性セルフレビュー → Library保存の順を守る。
 
-固有事実抽出では、少なくとも次を確認する。
+Research worker自身は厳密な機械監査をノルマにしない。ただし、極端に短い原稿、汎用テンプレート文、比較条件のない数値、主要機構の説明不足を完成扱いにしない。
 
-- 問題と既存方式の具体的不足。
-- 主要機構の固有名称、変数、行列、キャッシュ、スコア、アルゴリズム。
-- 各主要機構の入力・処理・出力と機構間の接続。
-- 効く理由、追加費用、失敗条件・適用範囲。
-- 評価環境、比較対象、絶対値・相対値、感度、構成要素除去実験、内部指標、worst case、負の結果、未評価事項。
+GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全性・日本語率の機械監査を行う。FAILした原稿はGitHub側blockedへ保全される。
 
-各主要機構は、一次資料に記載された範囲で「役割・入力・処理・出力・効く理由・失敗条件／追加費用」を説明する。論文名を別の論文へ置き換えても成立する一般段落、複数機構へ同一文を反復した段落、論文固有情報を含まない汎用三段階／四段階説明を主要説明として残さない。
+最終適用先が学習工程そのものの高速化・省メモリ化で凍結対象なら新規Researchへ回さない。
 
-保存直前には置換テストを行い、他論文にもそのまま貼れる段落を固有事実で具体化するか短縮・削除する。評価は可能な範囲で「機構 → 条件 → 指標 → 結果 → 読み取れること」を対応付け、論文にない評価軸は一般論で補わない。
+## 7. Library保存失敗時
 
-Research読解ワーカーは**機械的な品質チェックを実行しない**。監査スクリプトを回したり、文字数・段落数・手法節数・主要機構数・日本語率などを厳密に計測してPASS/FAIL判定する必要はない。
+Library保存不能でも完成成果を破棄しない。
 
-ただし、GitHub公開ゲートから撤廃した旧v10条件も**読解ワーカー自身の執筆・セルフレビュー条件として維持する**。完成前に一次資料を読んだ文脈で、旧基準相当の十分な説明になっているかを確認する。
+- Research: 完成MarkdownをScheduled Chatへ完全添付
+- Discovery: 40件全件を含む完成JSONをScheduled Chatへ完全添付
 
-- 成果Markdownは旧4,500 bytes以上相当の十分な情報量を目安にし、極端に短い原稿を完成扱いしない。
-- 説明本文は旧2,200文字以上相当の十分な説明量を目安にする。
-- 全体は旧10段落以上、手法説明は旧4段落以上相当の厚みを目安にする。
-- 主要機構が3個以上ある場合、各主要機構を旧2段落以上相当の密度で、役割・入力・処理・出力・効く理由・制約まで説明する。
-- `list_summary` は旧45〜180文字程度を目安にし、一文だけで他論文と主な貢献を区別できる内容にする。
-- 日本語・カタカナへ自然に置換できる裸の英語専門語は残さない方向でセルフレビューする。
-- `## 概要` には代表的な定量結果、または定量化が自然でない研究なら主要な定性的発見を含める。
-- 問題設定、新規性、手法、評価、主要結果、限界、既存研究との差を、それぞれ内容上不足しないよう確認する。
-- 定量結果を書く場合は、比較対象・条件・指標・意味を取り違えない。
-- 負の結果、品質影響、失敗条件、トレードオフが一次資料にある場合は落とさない。
-- 評価はMoE-Infinityのお手本と同程度の密度を目指し、一次資料に複数の評価軸がある場合はheadline結果1件だけで終えない。
-- 評価環境、比較対象、絶対性能、相対改善、資源・品質との交換条件、感度／スケーリング、構成要素別効果、ウォームアップ／内部指標、worst case・一般化限界のうち、論文が報告しているものを可能な限り拾う。
-- 主要な評価条件は「ハードウェア、モデル、ランタイム、ワークロード、バッチ／系列長等」を代表設定として表にまとめる。
-- 主要な評価結果も「条件、指標、比較対象、提案手法、改善・差、読み取れること」を代表結果表にまとめ、headline値だけでなく重要な感度・worst case・資源／品質結果も可能な範囲で含める。
-- abstractの総括倍率と個別モデル／条件の数値を区別し、論文で未評価の軸は推測で埋めない。
+後続runでLibraryへ回収できたら正規pathへ保存し、再取得確認後に退避コピーを重複扱いにする。
 
-これらは**セルフレビュー用の目安・内容条件**であり、Researchワーカーが文字数カウンタ等で厳密に検査する義務はない。数値だけを満たすための水増し・同義反復は禁止する。最終判断は、一次資料を読んだワーカーが「未読者が仕組み・結果・限界を追えるか」で行い、不十分ならLibrary保存前に修正する。
+GitHub writeをLibrary失敗回避手段として使わない。
 
-本文取得で単一経路が失敗しても、別の一次資料経路を探す。arXiv HTML / PDF、OpenReview、出版社・会議、著者・研究機関の正式配布版など、materially distinctな一次資料経路を使う。検索断片や第三者要約を本文根拠にしない。
+## 8. 毎時Scheduled workerのLibrary掃除
 
-`blocked` は一時状態であり、duplicate / unrelated / permanent rejectionへ読み替えない。現行GitHubのblocked retry規則をread-onlyで参照し、通常は7日後に再試行、異なるblocked eventが5回以上かつ最初のblockから28日以上続いた場合は定期再試行を休止するだけとする。`blocked_permanent`へ自動昇格しない。
+各通常runの最後に、自分が扱った範囲だけを掃除する。目的は「未転送完成成果だけが残る」状態へ近づけることであり、他workerの未確認成果を消すことではない。
 
-最終的な適用先が学習工程の高速化・省メモリ化で、現在凍結中の範囲に該当する論文はResearch新規収録へ回さず、除外理由を保持してWork側の整理対象に渡す。
+### 常時保持
 
-## 7. Library保存と失敗時の保全
+- \`WORKER-LIBRARY-PROCEDURES.md\`
+- \`PAPER-QUALITY-GUIDE.md\`
+- \`github-import-procedure.md\`
+- 未転送の完成Research Markdown
+- 未転送のv12 Discovery run JSON
+- GitHub反映とは無関係なユーザー資料
 
-通常runの耐久保存先はChatGPT Libraryである。
+### run終了時に消してよいもの
 
-重要作業を単一実行経路へ固定しない。Library読取・保存・固定ファイル更新・一次資料取得について、現在の環境で利用できる複数経路を使い分ける。ただし正本、identity、read-only制約、version競合保護を崩す経路は使わない。
+自分のrunについて以下の条件が確認できたものだけ。
 
-Library保存不能時も完成成果を破棄しない。
+- 正規Library成果へ統合済みの一時コピー
+- 同一bytes / 同一canonical identityの重複退避
+- 本文抽出用に作った一時PDF・HTML・画像キャッシュ
+- 中間JSON、下書き、品質確認用一時ファイル
+- 正規Library保存後に残ったScheduled Chat回収用コピーをLibraryへ二重保存したもの
+- 空になった自分専用の一時folder
 
-- Research: 完成MarkdownをScheduled Chatへ完全添付する。
-- Discovery: 40件全件のclassificationとprovenanceを含むJSON / Markdownを完全添付する。
-- 後続runでconversation file IDからLibraryへ回収できる場合は回収し、Libraryから再取得して検証する。
+### 消してはいけないもの
 
-一部だけ保存できた場合、成功分を巻き戻さず失敗分だけ再試行・退避する。同じ失敗経路を連打しない。
+- GitHubへまだ転送されていない完成Research / Discovery
+- 保存成否が不明な成果
+- 他workerが作った未確認成果
+- 手順書・品質ガイド
+- 既存legacy成果。v12移行が明示されるまで自動変換・自動削除しない
 
-GitHub writeを試してLibrary失敗を回避することは禁止する。
+掃除前後で対象folderを再listし、完成成果件数と削除対象を確認する。
 
-## 8. Survey GitHub Import Workタスク
+## 9. Survey GitHub Import
 
-GitHub反映はSurvey GitHub ImportのWorkタスクが担当する。Workタスクは毎回Libraryの`github-import-procedure.md`を読み、最新mainと本書に照らして処理する。
+Survey GitHub Importは内容取込者ではなく**転送者**である。
 
-### 8.1 取り込み対象
+### 9.1 Research転送
 
-少なくとも次を確認する。
+Library \`research/*.md\` を1件ずつ読み、内容を変更せず:
 
-- `/LLM-paper-summary-library-first/research/` の完成Research
-- `/LLM-paper-summary-library-first/discovery/` のDiscovery成果
-- worker別`discovery-relevance/`
-- 旧共有`discovery-classification/`に残るrecord
-- `/LLM-survey-outbox/pending/` 等の過去attempt成果
-- 08:30 maintenance成果
-- Library保存失敗から回収された完全添付
+\`.survey/import-inbox/pending/research/<unique>.md\`
 
-運用手順書、品質ガイド、制御用固定ファイルは成果として削除しない。
+へcreate-onlyでコピーする。
 
-### 8.2 Research取り込み
+### 9.2 Discovery転送
 
-1. Libraryの完成原稿を取得する。
-2. 最新mainの本書、対象系統README、template、resolver、公開完全性監査、日本語率規則を確認する。
-3. Library成果のcanonical identityを最新mainと照合する。内容品質のために一次資料を読み直さない。
-4. repository全体でidentityを解決する。
-5. `represented`なら既存paperを正規update先にし、`not_found`のときだけ新規pathを作る。
-6. 軽微なformat崩れと日本語率不足はWork側で修正してよい。日本語率修正は意味・数値・比較条件を変えず、裸の英語表現を自然な日本語・カタカナへ置換する範囲に限る。論文を読み直さないと判断できない内容不足はWork側のFAIL条件にせず、読解ワーカーのセルフレビュー責任とする。
-7. GitHubへ1件ずつ反映する。同一pathへのwriteを並列化しない。
-8. write後は最新mainから同じpathを再取得し、identity・本文・commitを確認する。
-9. 再取得確認できた後だけ対応Library原本を削除する。
+v12 Discovery run JSONを内容変更せず:
 
-同一identityの完全な正規本文がすでに存在する場合は、重複として再取得確認した後にLibrary原本を削除する。既存本文が不完全なら重複扱いにせず正規paperを補完する。
+\`.survey/import-inbox/pending/discovery/<unique>.json\`
 
-### 8.3 Discovery取り込み
+へcreate-onlyでコピーする。
 
-`accept` はLibrary recordだけでResearch候補登録済みとみなさない。最新mainのDiscovery正規経路に沿って、必要な固定ソース事前検査（precheck）とidentity照合を行い、正規候補へ反映する。
+unique名は \`<library_file_id>--<original-basename>\` 等、衝突しない値を使う。
 
-`unrelated` / `borderline` は最新mainのrelevance ledger経路へ反映する。`borderline`を`unrelated`と混同しない。
+### 9.3 転送完了条件
 
-旧共有3分類ファイルは残存recordの回収用にだけ読み、新規worker出力先にしない。
+GitHub create応答だけでLibrary原本を削除しない。同じpending pathをGitHubから再取得し、**byte/hash一致**を確認する。
 
-GitHub反映または既存正規状態との重複を再取得確認できたcanonical identityだけLibrary側から除く。複数recordのファイルは処理済みrecordだけ除き、未処理recordを保持する。
+一致確認後はGitHubが耐久原本を所有するため、そのLibrary成果を削除してよい。最終paper/candidate処理の完了をLibrary側で待たない。
 
-### 8.4 Libraryを空に近づける原則
+既存pathに別bytesがある場合は上書きせず別unique名で再送する。
 
-GitHub反映対象のLibrary成果は、**致命的なGitHub書込み不能・identity不明・一次資料不足などで安全に終端できないものを除き、Workタスクが「GitHubへ反映」または「既存正規成果との重複確認後に原本整理」のどちらかまで進める。**
+## 10. GitHub import inbox processor
 
-1件の失敗で他の独立成果を止めない。処理可能な残件を続け、Libraryの反映待ち成果を可能な限り空にする。
+正本仕様は \`.survey/import-inbox/README.md\`。
 
-`unrelated` / `borderline` / `blocked` の扱いは本書の定義とGitHub正規状態に従う。単に取り込みにくいことを理由に分類を変更しない。
+### Research
 
-## 9. GitHub write経路
+GitHub Actionは毎回最新mainから処理を再計算する。
 
-Workタスクは環境ごとに利用可能な経路が異なるため、複数の正規経路を保持する。
+1. Markdown機械監査
+2. repository-wide identity resolver
+3. represented → \`already_represented\`、既存本文を上書きしない
+4. not_found → canonical inference lineageへ新規配置
+5. post-write identity再確認
+6. survey view再生成
+7. ready Research job reconciliation
+8. 成功pending削除、失敗は \`blocked/research/\` 保全
 
-第一候補はGitHub connectorによるfile create/update。別経路を使う場合も、最新mainの同一HEADから始め、dirtyな作業領域や別変更を混ぜず、反映後にGitHubから再取得して検証する。
+Researchの既定操作は **insert-if-absent**。既収録本文の更新は通常importとは別の明示保守タスクで行う。
 
-結果不明のwriteは二重送信しない。まず最新mainと対象pathを読み、反映済みか確認する。
+### Discovery accept
 
-安全検査や権限制約を回避するための低レベル迂回を作らない。利用可能な正規write経路がすべて失敗した場合はLibrary原本を保持し、失敗段階を報告する。
+1. Library recordから安定IDを取り出す
+2. schema-v3 \`candidate_id_lookup\` precheck requestを作成
+3. 専用precheck workflowが最新snapshotで既収録・既候補・既却下を判定
+4. workflowの \`allowed_records\` だけを0〜5件の通常Discovery submissionへ送る
+5. queue側の最終重複排除を通す
 
-## 10. 08:30 maintenance
+これにより「最新mainに同一識別子があるか」はGitHub側へ完全委譲される。
 
-`scheduled-chat-30` の08:30 JST runは通常Research / Discoveryへ置換せず、フレームワーク更新、主要LLM / モデル更新、maintenance状態、未完了事項を確認する。
+### Discovery unrelated / borderline
 
-結果はLibraryの`0830-updates/`へMarkdownで保存し、GitHub反映が必要な変更成果はSurvey GitHub Import Workタスクが取り込む。
+既存 \`reference-curation/requests/\` 経路へ送り、正規relevance ledger processorに処理させる。
 
-## 11. 終了条件と報告
+## 11. Survey GitHub ImportのLibrary掃除
 
-Scheduled workerはGitHub write待ちを終了条件にしない。Libraryへ成果を保存し、ノルマ到達または実際の取得・保存上限まで独立作業を続ける。
+アップロードワーカーは毎回Library転送後に掃除を行う。
 
-通常runの報告には少なくとも次を含める。
+### 削除条件
 
-- 実行経路: Library-first（GitHub read-only）
-- GitHub読取成否と確認main SHA
-- `G / D / R / E`
-- 選択モード
-- Research完成件数、またはDiscovery 40件の達成状況
-- accept / unrelated / borderline内訳
-- 重複・既処理skip数
+次をすべて満たす成果だけLibraryから削除する。
+
+1. GitHub pending inboxへcreate済み
+2. 同じGitHub pathを再取得済み
+3. Library原本とGitHub copyのbytes/hashが一致
+4. GitHub側copyがpendingまたはGitHub所有のwaiting/blockedへ移ったことを確認できる、または転送直後ならpending確認済み
+
+最終paper/candidateへの反映完了は削除条件ではない。
+
+### 掃除対象
+
+- 転送確認済みResearch原本
+- 転送確認済みv12 Discovery JSON
+- 転送済み成果の不要な二重コピー
+- 移行作業で完全変換・転送確認済みとなったlegacy成果
+- 空になった旧成果folder
+
+### 常時保持
+
+- 3本の運用正本
+- 転送未確認成果
+- 転送失敗成果
+- 変換未実施のlegacy成果
+- 別用途のLibrary資料
+
+一つの成果の転送失敗で他の独立成果を止めない。
+
+## 12. legacy移行
+
+現時点でLibraryに存在する共有3分類ファイル、worker別relevance台帳、旧run成果等は自動削除しない。
+
+別途移行を依頼されたとき、canonical identityで重複排除し、v12のimmutable Discovery JSONへ変換してから受信箱へ転送する。変換元は、GitHub pending copyのhash一致確認後にだけ削除する。
+
+## 13. 08:30 maintenance
+
+08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、maintenance専用runとする。GitHub反映が必要な完成変更はLibraryへ耐久保存し、Survey GitHub Importへ渡す。
+
+## 14. 報告
+
+Scheduled worker:
+
+- Library-first / GitHub read-only
+- 確認main SHA
+- モードと在庫判定根拠
+- Research完成件数、またはDiscovery 40件内訳
 - Library保存結果
-- Scheduled Chat完全退避の有無
-- 未完了事項と終了理由
-- GitHub writeを試みていないこと
+- run終了時掃除内容
+- 退避・未完了
 
-Survey GitHub Import Workタスクの報告には、GitHub新規作成・更新・重複確認・relevance記録・Library原本整理・保留件数、最終main SHAを分けて示す。
+Survey GitHub Import:
 
-## 12. 退役資料
+- Research/Discovery転送数
+- GitHub pending再取得・hash一致数
+- Library削除数
+- 転送失敗・競合数
+- legacy未移行件数
+- 最終確認main SHA
 
-旧direct-GitHub worker手順は `worker-router-legacy-v10.22-direct-github.md` に保存する。旧手順にあるclaim、record bank、preflight fast lane、submission result、run-state、worker-control、health-probe、fallback-inbox等は、既存コードや履歴データの解釈に必要な場合だけ参照する。
+GitHub Actionの最終状態は \`.survey/import-inbox/results/\` とblocked payloadを正本とする。
 
-**新規Scheduled worker runの実行手順として旧資料を補完利用しない。**
+## 15. 退役資料
+
+旧direct-GitHub worker、旧共有3分類台帳への新規追記、Library側でのprecheck receipt生成、Library側でのlatest-main create/update判定は新規通常runでは使わない。
