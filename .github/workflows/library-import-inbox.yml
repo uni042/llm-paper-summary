@@ -6,9 +6,6 @@ on:
     paths:
       - '.survey/import-inbox/pending/**'
       - '.survey/import-inbox/waiting/**'
-      - '.survey/work-queue/discovery-precheck/results/**'
-      - '.survey/work-queue/reference-curation/results/**'
-      - '.survey/work-queue/results/**'
   workflow_dispatch:
   schedule:
     - cron: '17,47 * * * *'
@@ -23,6 +20,7 @@ concurrency:
 jobs:
   process:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,38 +28,160 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
 
-      - name: Install Python dependency
-        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Install Python dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
-      - name: Process against latest main and push atomically
+      - name: Process Library inbox and canonical downstream lanes
         shell: bash
         run: |
           set -euo pipefail
-          git config user.name "survey-library-import[bot]"
-          git config user.email "survey-library-import[bot]@users.noreply.github.com"
+
+          commit_if_needed() {
+            local name="$1"
+            local email="$2"
+            local message="$3"
+            shift 3
+            git add -- "$@"
+            if git diff --cached --quiet; then
+              return 0
+            fi
+            git -c user.name="$name" -c user.email="$email" commit -m "$message"
+          }
 
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            git clean -fd
 
             python .survey/scripts/process_library_import_inbox.py --repo-root .
+            commit_if_needed \
+              'survey-library-import[bot]' \
+              'survey-library-import[bot]@users.noreply.github.com' \
+              'Process Library import inbox' \
+              .survey/import-inbox \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/reference-curation/requests \
+              .survey/work-queue/jobs \
+              .survey/work-queue/next-jobs.json \
+              .survey/work-queue/state.json \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md
 
-            if git diff --quiet && git diff --cached --quiet; then
-              echo "No import-inbox changes to commit."
-              exit 0
+            : > /tmp/library-import-prechecks.txt
+            while IFS= read -r request; do
+              [ -n "$request" ] || continue
+              result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
+              if [ ! -f "$result" ]; then
+                printf '%s\n' "$request" >> /tmp/library-import-prechecks.txt
+              fi
+            done < <(
+              find .survey/work-queue/discovery-precheck/requests \
+                -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null | sort
+            )
+
+            if [ -s /tmp/library-import-prechecks.txt ]; then
+              rm -rf /tmp/library-import-identities
+              rm -f /tmp/library-import-rejections.json
+              python .survey/scripts/build_discovery_identity_snapshot.py \
+                --root .survey \
+                --output /tmp/library-import-identities \
+                --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py \
+                --root .survey \
+                --output /tmp/library-import-rejections.json
+
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file /tmp/library-import-prechecks.txt \
+                --snapshot-dir /tmp/library-import-identities \
+                --rejection-ledger /tmp/library-import-rejections.json \
+                --parallelism 4
+              precheck_rc=$?
+              set -e
+              if [ "$precheck_rc" -gt 1 ]; then
+                echo 'Fatal Library-import precheck batch failure.' >&2
+                exit "$precheck_rc"
+              fi
+
+              commit_if_needed \
+                'survey-discovery-precheck[bot]' \
+                'survey-discovery-precheck[bot]@users.noreply.github.com' \
+                'survey: publish Library import precheck results' \
+                .survey/work-queue/discovery-precheck/results
             fi
 
-            git add -A
-            git commit -m "Process Library import inbox"
+            set +e
+            python .survey/scripts/process_reference_relevance_requests.py --repo-root .
+            relevance_rc=$?
+            set -e
+            commit_if_needed \
+              'survey-reference-relevance[bot]' \
+              'survey-reference-relevance[bot]@users.noreply.github.com' \
+              'survey: process Library import relevance requests' \
+              .survey/work-queue/reference-curation
+            if [ "$relevance_rc" -ne 0 ]; then
+              echo 'One or more relevance requests failed; inbox will retain the source as blocked.' >&2
+            fi
+
+            python .survey/scripts/process_library_import_inbox.py --repo-root .
+            commit_if_needed \
+              'survey-library-import[bot]' \
+              'survey-library-import[bot]@users.noreply.github.com' \
+              'Advance Library import inbox' \
+              .survey/import-inbox \
+              .survey/work-queue/submissions \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/reference-curation/requests \
+              .survey/work-queue/jobs \
+              .survey/work-queue/next-jobs.json \
+              .survey/work-queue/state.json \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md
+
+            python .survey/scripts/queue_worker.py --root .survey
+            commit_if_needed \
+              'survey-queue[bot]' \
+              'survey-queue[bot]@users.noreply.github.com' \
+              'survey: process Library import submissions' \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md
+
+            python .survey/scripts/process_library_import_inbox.py --repo-root .
+            commit_if_needed \
+              'survey-library-import[bot]' \
+              'survey-library-import[bot]@users.noreply.github.com' \
+              'Settle Library import inbox' \
+              .survey/import-inbox \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md
+
+            if git rev-parse --verify origin/main >/dev/null 2>&1 \
+              && [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
+              echo 'No Library import changes to publish.'
+              exit 0
+            fi
 
             if git push origin HEAD:main; then
               exit 0
             fi
 
-            echo "main advanced while processing; recomputing against the new main." >&2
+            echo "main advanced while processing; recomputing from latest main (attempt ${attempt}/3)." >&2
           done
 
-          echo "Failed to push after recomputing three times." >&2
+          echo 'Failed to publish Library import changes after three recomputations.' >&2
           exit 1
