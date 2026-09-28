@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20260929-0401-scheduled-chat-00",
+  "reference_main_sha": "c39f5e681d6194ac150c521b1de91e2e631a19a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:Yacmpz84TH",
+      "identity_tokens": [
+        "OpenReview:Yacmpz84TH",
+        "arXiv:2302.04761"
+      ],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "reason": "外部APIをいつ・どう呼ぶかを自己教師ありで学習させる言語モデル学習法であり、推論サービング、メモリ階層、推論カーネル、推論時圧縮・スケジューリングの高速化が最終適用先ではない。",
+      "source_url": "https://openreview.net/forum?id=Yacmpz84TH",
+      "body_check": "一次資料本文を確認。API呼出し候補をサンプリングし、ツール結果を挿入した場合の言語モデル損失低下で呼出しをフィルタし、その自己生成データでモデルを微調整する方式。計算機、質問応答、検索、翻訳、カレンダーで下流精度を評価しており、推論基盤の速度・メモリ・スループット最適化は主題ではない。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:uYLFoz1vlAC",
+      "identity_tokens": [
+        "OpenReview:uYLFoz1vlAC",
+        "arXiv:2111.00396"
+      ],
+      "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+      "reason": "構造化状態空間モデル（S4）の汎用系列モデリング研究で高速生成も示すが、LLM推論システムを対象とした研究ではなく、非LLM中心の基盤アーキテクチャ研究に当たる。",
+      "source_url": "https://openreview.net/forum?id=uYLFoz1vlAC",
+      "body_check": "一次資料本文のS4手法、計算量、実験節を確認。HiPPO状態行列をnormal-plus-low-rankに分解し、生成関数・Woodbury恒等式・Cauchy kernelで系列計算を高速化する。LRA、音声、CIFAR、WikiText-103等を評価しWikiTextで高速自己回帰生成も示すが、現代LLMの推論配信・KV・MoE等を最終対象にした研究ではない。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tVConYid20",
+      "identity_tokens": [
+        "OpenReview:tVConYid20",
+        "arXiv:2407.08608"
+      ],
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "reason": "Hopper GPUのTensor Coreとテンソルメモリアクセラレータを使い、注意カーネルの計算・データ移動・softmaxを非同期化し、FP8も利用する直接的なLLM推論カーネル最適化。",
+      "source_url": "https://openreview.net/forum?id=tVConYid20",
+      "body_check": "一次資料本文のアルゴリズムと性能評価を確認。warp specializationでTensor Core演算とTMA転送を重ね、block-wise matmulとsoftmaxをinterleaveし、FP8ではblock quantizationとincoherent processingを導入。H100でFP16最大740 TFLOPs/s（約75%利用率）、FlashAttention-2比1.5〜2.0倍、FP8は約1.2 PFLOPs/sかつ基準FP8 attentionより数値誤差2.6倍低減を報告。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tcisuhGsQZ",
+      "identity_tokens": [
+        "OpenReview:tcisuhGsQZ",
+        "arXiv:2407.11550"
+      ],
+      "title": "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+      "reason": "注意ヘッドごとの集中度に応じて鍵・値キャッシュ（KV cache）の保持予算を再配分し、同一総予算で枝刈り損失を減らす推論時KV圧縮研究。",
+      "source_url": "https://openreview.net/forum?id=tcisuhGsQZ",
+      "body_check": "一次資料本文の§3–4を確認。全headのattention weightから総予算B個のtop値を選び、headごとの選択頻度をB_iとして予算を適応配分する。SnapKV/Pyramidへ統合し、safeguard αも導入。RULER 13 datasetとLongBench 16 datasetをquestion-aware/agnostic双方で評価し、CUDA実装による計算効率も検証している。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:sY5N0zY5Od",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od",
+        "arXiv:2310.03714"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+      "reason": "宣言的な言語モデルパイプラインをデモや評価指標から自動最適化するプログラミング／コンパイル枠組みであり、LLM推論ランタイムの計算・メモリ・サービング高速化が主題ではない。",
+      "source_url": "https://openreview.net/forum?id=sY5N0zY5Od",
+      "body_check": "一次資料本文を確認。signatureとmoduleでLM呼出しを宣言し、teleprompter/compilerがデモ生成やprompt最適化を行う。RAG、multi-hop QA、agent等でタスク品質とprompt最適化を評価する研究で、GPU推論、KV cache、batch scheduling、kernel latencyの最適化方式は提案していない。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:RlqYCpTu1P",
+      "identity_tokens": [
+        "OpenReview:RlqYCpTu1P",
+        "arXiv:2502.13189"
+      ],
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "reason": "長文脈をblockへ分割し、queryごとに関連KV blockをtop-k routingするblock-sparse attentionで注意計算を削減するLLM推論効率化研究。",
+      "source_url": "https://openreview.net/forum?id=RlqYCpTu1P",
+      "body_check": "一次資料本文§2–3を確認。block平均keyとqueryのaffinityからtop-k blockを選び、current blockは因果mask付きで常時保持し、historical blockと別々にFlashAttention varlenで計算してonline softmaxで統合する。32Kで75% sparsityのblock粒度ablation、full-attentionとのscaling law、長文脈評価と効率・scalabilityを実施し、Kimiの長文脈要求への実運用も記載。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:r8H7xhYPwz",
+      "identity_tokens": [
+        "OpenReview:r8H7xhYPwz",
+        "arXiv:2412.06464"
+      ],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+      "reason": "線形時間系列処理により長文脈効率へつながるアーキテクチャだが、論文の中心はgated delta ruleのモデル設計・並列学習と品質評価で、既存LLMの推論ランタイム高速化を直接扱う研究ではない。",
+      "source_url": "https://openreview.net/forum?id=r8H7xhYPwz",
+      "body_check": "一次資料本文を確認。忘却用gatingとtargeted update用delta ruleを統合し、hardware-awareなchunkwise parallel algorithmを構築。Mamba2/DeltaNet等とlanguage modeling、retrieval、LongBench、length extrapolationを比較し、H100上のthroughput評価は主にtraining throughputである。推論効率への関連は強いが、最終実証が推論サービング最適化中心ではないためborderline。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:pZiyCaVuti",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti",
+        "arXiv:2410.10813"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "reason": "長期対話メモリ能力の評価ベンチマークと検索・読解設計の分析が主題であり、LLM推論の速度・GPUメモリ・サービング最適化手法ではない。",
+      "source_url": "https://openreview.net/forum?id=pZiyCaVuti",
+      "body_check": "一次資料本文を確認。500問を長期user-assistant履歴へ埋め込み、情報抽出、複数session推論、時間推論、knowledge update、abstentionを評価。indexing/retrieval/readingの設計を分解し、session decomposition、fact-augmented key、time-aware query expansionを検証するが、KV cacheや推論ランタイムの資源効率化は扱わない。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:P0GOk5wslg",
+      "identity_tokens": [
+        "OpenReview:P0GOk5wslg",
+        "arXiv:2510.04371"
+      ],
+      "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems",
+      "reason": "LLMエージェントの逐次API待ちを、軽量speculatorによる次action予測と並列先行実行で隠すagentic inference runtime高速化研究で、追跡対象のagentic serving/runtimeに直接該当する。",
+      "source_url": "https://openreview.net/forum?id=P0GOk5wslg",
+      "body_check": "一次資料本文を確認。遅いauthoritative actorの処理中に高速speculatorが将来actionを予測してAPIを先行実行し、actor結果と一致した枝だけcommitすることでlossless semanticsを保つ。gaming、e-commerce、web searchで評価し、OS設定ではlossy extensionも検討。top-K、多段speculation、uncertainty-aware選択による遅延・追加costのtrade-offまで評価している。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:KnqiC0znVF",
+      "identity_tokens": [
+        "OpenReview:KnqiC0znVF",
+        "arXiv:2502.09992"
+      ],
+      "title": "Large Language Diffusion Models",
+      "reason": "LLaDAという拡散型大規模言語モデルを事前学習から構築し、生成原理・scaling・能力を示すモデル研究で、推論高速化方式そのものは提案していない。",
+      "source_url": "https://openreview.net/forum?id=KnqiC0znVF",
+      "body_check": "一次資料本文を確認。forward maskingとreverse masked-token predictionからなるmasked diffusion modelを8Bまで事前学習し、SFT後のinstruction following、in-context learning、数学・コード、reversal task等を自己構築AR baselineや既存LLMと比較する。拡散LLMの生成方式自体が主題で、KV caching、parallel decoding、serving scheduler等の推論高速化は後続研究の対象であり本論文の主貢献ではない。",
+      "first_checked_at": "2026-09-29T04:01:12+09:00",
+      "last_checked_at": "2026-09-29T04:01:12+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 485
+    }
+  ]
+}
