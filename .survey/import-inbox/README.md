@@ -62,10 +62,18 @@ GitHub.
 
 ## Ownership and cleanup
 
-Once the uploader has created the exact pending file on GitHub and re-fetched it
-to verify byte/hash equality, GitHub owns the durable copy. The uploader may
-delete the corresponding Library source immediately; it does not wait for final
-paper/candidate ingestion.
+Once the uploader has created the exact pending file on GitHub and verified the
+handoff, GitHub owns the durable copy. Prefer re-fetching the pending file and
+checking byte/hash equality immediately. The processor may advance faster than
+the uploader, so a missing pending path is not by itself a failed handoff:
+
+1. check the same filename under \`waiting/\` or \`blocked/\` and compare bytes;
+2. otherwise read the predictable \`results/<type>/<pending-stem>.json\` receipt
+   and compare its \`source_sha256\` with the Library source SHA-256.
+
+Only one of those verified GitHub-owned representations is needed. After that
+the uploader may delete the corresponding Library source without waiting for
+final paper/candidate ingestion.
 
 GitHub keeps blocked payloads because the Library copy may already be gone.
 Successful pending/waiting payloads are deleted by the processor. Small terminal
