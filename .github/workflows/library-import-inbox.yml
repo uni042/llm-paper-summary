@@ -1,0 +1,67 @@
+name: Library import inbox
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/import-inbox/pending/**'
+      - '.survey/import-inbox/waiting/**'
+      - '.survey/work-queue/discovery-precheck/results/**'
+      - '.survey/work-queue/reference-curation/results/**'
+      - '.survey/work-queue/results/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: library-import-inbox-main
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Process against latest main and push atomically
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "survey-library-import[bot]"
+          git config user.email "survey-library-import[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python .survey/scripts/process_library_import_inbox.py --repo-root .
+
+            if git diff --quiet && git diff --cached --quiet; then
+              echo "No import-inbox changes to commit."
+              exit 0
+            fi
+
+            git add -A
+            git commit -m "Process Library import inbox"
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "main advanced while processing; recomputing against the new main." >&2
+          done
+
+          echo "Failed to push after recomputing three times." >&2
+          exit 1
