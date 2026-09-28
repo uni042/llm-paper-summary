@@ -145,8 +145,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  GPUのカーネル・スレッドブロック・スレッド階層を統一したμGraphで表し、代数変換・スケジュール変換・新規融合カーネルを同時探索することで、既存の高度最適化済み深層学習処理でも最大3.3倍高速化する。
+  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：3  
+  Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
 
 - **2024-05 · [Lean Attention: Hardware-Aware Scalable Attention Mechanism for the Decode-Phase of Transformers](2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
