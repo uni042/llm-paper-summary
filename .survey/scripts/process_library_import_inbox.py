@@ -62,6 +62,65 @@ SAFE_ID_RE = re.compile(r"[^A-Za-z0-9._-]+")
 SAFE_SLUG_RE = re.compile(r"[^a-z0-9]+")
 CLASSIFICATIONS = {"accept", "unrelated", "borderline"}
 
+# Library Research frontmatter may contain a human-readable lineage name rather
+# than the repository slug. Path selection is a GitHub-side responsibility, so
+# map strong topic signals to the current canonical taxonomy here.
+LINEAGE_KEYWORDS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("13-sparse-attention", ("sparse attention", "疎注意", "疎attention", "block sparse attention")),
+    ("10-kv-cache-offload-recomputation", ("kv cache offload", "kv offload", "kv cache退避", "kv退避", "kv recomputation")),
+    ("07-kv-cache-optimization-compression", ("kv cache", "kv-cache", "kv圧縮", "kv cache compression", "kv cache optimization")),
+    ("03-expert-prefetch", ("expert prefetch", "expert-prefetch", "エキスパート先読み", "専門家先読み")),
+    ("05-speculative-decoding-moe", ("speculative decoding", "speculative decode", "投機的デコード", "投機デコード")),
+    ("12-moe-parallelism-communication", ("expert parallel", "all-to-all", "moe communication", "moe並列", "専門家並列")),
+    ("06-moe-quantization-compression", ("moe quantization", "expert quantization", "expert compression", "moe量子化", "エキスパート量子化")),
+    ("16-weight-quantization-compression", ("weight quantization", "weight compression", "weight-only", "重み量子化", "重み圧縮")),
+    ("17-pim-near-data-acceleration", ("pim", "near-data", "near memory", "near-memory", "in-storage", "メモリ内処理", "メモリ近傍")),
+    ("15-inference-simulation-emulation", ("simulation", "simulator", "emulation", "emulator", "シミュレーション", "エミュレーション")),
+    ("19-inference-evaluation-benchmarking", ("benchmark", "workload diagnosis", "trace replay", "ベンチマーク", "性能診断")),
+    ("14-agentic-inference-serving-runtime", ("agentic", "multi-agent", "agent serving", "エージェント推論", "エージェントサービング")),
+    ("09-kernel-runtime-compilation", ("kernel", "compiler", "compilation", "jit", "カーネル", "コンパイラ")),
+    ("11-llm-serving-scheduling-disaggregation", ("serving", "scheduler", "scheduling", "disaggregation", "サービング", "スケジューリング", "分離型")),
+    ("08-edge-on-device-llm-systems", ("on-device", "edge device", "mobile", "オンデバイス", "エッジ")),
+    ("02-adaptive-expert-computation-compression", ("expert pruning", "expert merging", "adaptive expert", "専門家枝刈り", "エキスパート枝刈り")),
+    ("04-conditional-computation", ("conditional computation", "dynamic computation", "条件付き計算")),
+    ("01-offload-hierarchical-memory", ("offload", "hierarchical memory", "tiered memory", "expert cache", "オフロード", "階層メモリ")),
+)
+
+
+def infer_inference_lineage(meta: dict[str, Any], repo_root: Path) -> str:
+    """Resolve a Library paper's human or slug lineage to current GitHub taxonomy."""
+    requested = str(meta.get("lineage") or "").strip()
+    valid = set(paper_taxonomy.canonical_inference_lineages(repo_root))
+    if requested in valid:
+        return requested
+
+    # Historical slug aliases are handled by the taxonomy helper.
+    direct = paper_taxonomy.canonical_lineage(
+        "inference",
+        requested or paper_taxonomy.DEFAULT_INFERENCE_LINEAGE,
+        repo_root=repo_root,
+    )
+    if requested and direct != paper_taxonomy.DEFAULT_INFERENCE_LINEAGE and direct in valid:
+        return direct
+
+    topics = meta.get("topics")
+    if isinstance(topics, list):
+        topic_text = " ".join(str(item) for item in topics)
+    else:
+        topic_text = str(topics or "")
+    haystack = " ".join(
+        [
+            requested,
+            str(meta.get("title") or ""),
+            str(meta.get("summary") or ""),
+            topic_text,
+        ]
+    ).casefold()
+    for lineage, needles in LINEAGE_KEYWORDS:
+        if lineage in valid and any(needle.casefold() in haystack for needle in needles):
+            return lineage
+    return paper_taxonomy.DEFAULT_INFERENCE_LINEAGE
+
 
 def now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
@@ -212,15 +271,7 @@ def process_research(repo_root: Path) -> tuple[int, int]:
                 terminal += 1
                 continue
 
-            requested_lineage = str(meta.get("lineage") or "").strip()
-            lineage = paper_taxonomy.canonical_lineage(
-                "inference",
-                requested_lineage or paper_taxonomy.DEFAULT_INFERENCE_LINEAGE,
-                repo_root=repo_root,
-            )
-            valid_lineages = set(paper_taxonomy.canonical_inference_lineages(repo_root))
-            if lineage not in valid_lineages:
-                lineage = paper_taxonomy.DEFAULT_INFERENCE_LINEAGE
+            lineage = infer_inference_lineage(meta, repo_root)
 
             target_dir = repo_root / "papers" / "inference" / lineage
             target_dir.mkdir(parents=True, exist_ok=True)
