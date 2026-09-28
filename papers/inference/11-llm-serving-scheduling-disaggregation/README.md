@@ -878,6 +878,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   異種GPUの遅い機種を密演算経路から外し、デコード注意をヘッド単位で動的分配してKVキャッシュも部分移行することで、計算・通信・メモリの不均衡を同時に抑えるLLMサービング方式。
 
+- **2025-07 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  PolyServeは、すべての対話要求を同じ低遅延クラスとして扱わず、出力1トークン当たり時間（Time Per Output Token; TPOT）のサービス品質目標（Service Level Objective; SLO）ごとに要求を階層化する。
+
 - **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
@@ -1123,10 +1127,6 @@
 - **2024-08 · [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
-
-- **2024-01 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  複数のトークン遅延目標を持つ要求をSLO別に区分し、達成可能な中で最も高負荷のサーバへ寄せて自動拡縮しやすい負荷勾配を作る。既存方策比1.23倍の有効スループット、最適値の最大92.5%を達成。
 
 - **2024-01 · [Intelligent Router for LLM Workloads: Improving Performance Through Workload-Aware Load Balancing](2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
