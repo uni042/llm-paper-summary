@@ -88,7 +88,7 @@
 
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：0  
-  listsummary と同じ一覧専用解説。Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとのtop-k整列を避けて計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1にし、条件により品質を保つ。
+  Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
 
 ### 3年前（2023-10〜2024-09）
 
