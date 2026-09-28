@@ -1134,7 +1134,7 @@
 
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  要求配置と計算資源の拡縮を共同決定し、同一サービス品質目標を満たす条件で基準方式より単一モデルの配信コストを最大71%削減する。
+  Aladdinは、大規模言語モデル（Large Language モデル; LLM）配信で「各要求をどのワーカーへ置くか」と「何台・どの構成のワーカーを用意するか」を別々に決めず、サービス品質目標（Service-Level Objective; SLO）を満たす最小資源として共同最適化するクラスタスケジューラである。
 
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

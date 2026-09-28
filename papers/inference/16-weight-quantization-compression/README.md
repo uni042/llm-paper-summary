@@ -73,8 +73,8 @@
 ### 2年前（2024-10〜2025-09）
 
 - **2025-08 · [Efficient Mixed-Precision Large Language Model Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  混合精度の重み・活性値・KVキャッシュをハードウェア階層に合わせて処理し、16モデル・4 GPU世代で既存方式より配信遅延を最大61%削減、スループットを最大156%向上させる。
+  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：5  
+  TurboMindは、重み・活性値・キー・バリュー（Key-Value; KV）キャッシュの精度が混在するLLM推論を、単に低ビットカーネルへ置き換えるのではなく、GPUメモリ階層とテンソルコア命令に合わせて二つのパイプラインへ再設計する。
 
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
   実装：[✓](https://github.com/HeXiao-55/PTQTP) ・ リポジトリ内被引用：3  
