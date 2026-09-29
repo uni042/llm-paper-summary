@@ -1,0 +1,379 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-92b19a6790b00bed-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-92b19a6790b0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2009.14794",
+    "arXiv:2312.05821",
+    "arXiv:2402.12065",
+    "arXiv:2403.04643",
+    "arXiv:2404.19737",
+    "arXiv:2502.02770"
+  ],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6260f3f0eab2fa3af55ec8bdc71808aec0433546",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-29T22:32:12.439854+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2009.14794",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2312.05821",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.12065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.04643",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.19737",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.02770",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Rethinking Attention with Performers",
+      "source_url": "https://arxiv.org/abs/2009.14794",
+      "year": 2020,
+      "published": "2020-09-30",
+      "abstract": "We introduce Performers, Transformer architectures which can estimate regular (softmax) full-rank-attention Transformers with provable accuracy, but using only linear (as opposed to quadratic) space and time complexity, without relying on any priors such as sparsity or low-rankness. To approximate softmax attention-kernels, Performers use a novel Fast Attention Via positive Orthogonal Random features approach (FAVOR+), which may be of independent interest for scalable kernel methods. FAVOR+ can be also used to efficiently model kernelizable attention mechanisms beyond softmax. This representational power is crucial to accurately compare softmax with other kernels for the first time on large-scale tasks, beyond the reach of regular Transformers, and investigate optimal attention-kernels. Performers are linear architectures fully compatible with regular Transformers and with strong theoretical guarantees: unbiased or nearly-unbiased estimation of the attention matrix, uniform convergence and low estimation variance. We tested Performers on a rich set of tasks stretching from pixel-prediction through text models to protein sequence modeling. We demonstrate competitive results with other examined efficient sparse and dense attention methods, showcasing effectiveness of the novel attention-learning paradigm leveraged by Performers.",
+      "canonical_id": "arXiv:2009.14794",
+      "arxiv_id": "2009.14794",
+      "authors": [
+        "K. Choromanski",
+        "Valerii Likhosherstov",
+        "David Dohan",
+        "Xing-You Song",
+        "Andreea Gane",
+        "Tamás Sarlós",
+        "Peter G. Hawkins",
+        "Jared Davis",
+        "Afroz Mohiuddin",
+        "Lukasz Kaiser",
+        "David Belanger",
+        "Lucy J. Colwell",
+        "Adrian Weller"
+      ]
+    },
+    {
+      "title": "ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models",
+      "source_url": "https://arxiv.org/abs/2312.05821",
+      "year": 2023,
+      "published": "2023-12-10",
+      "abstract": "In this paper, we introduce a new post-training compression paradigm for Large Language Models (LLMs) to facilitate their wider adoption. We delve into LLM weight low-rank decomposition, and find that the challenges of this task stem from (1) the distribution variance in the LLM activations and (2) the sensitivity difference among various kinds of layers. To address these issues, we propose a training-free approach called Activation-aware Singular Value Decomposition (ASVD). Specifically, ASVD manages activation outliers by transforming the weight matrix based on the activation distribution. This transformation allows the outliers in the activation matrix to be absorbed into the transformed weight matrix, thereby enhancing decomposition accuracy. Additionally, we propose an efficient iterative calibration process to optimize layer-specific decomposition by addressing the varying sensitivity of different LLM layers. In this way, ASVD can compress a network by 10%-30%. Based on the success of the low-rank decomposition of projection matrices in the self-attention module, we further introduce ASVD to compress the KV cache. By reducing the channel dimension of KV activations, memory requirements for KV cache can be largely reduced. ASVD can further achieve 50% KV cache reductions without performance drop in a training-free manner.",
+      "canonical_id": "arXiv:2312.05821",
+      "arxiv_id": "2312.05821",
+      "doi": "10.48550/arXiv.2312.05821",
+      "authors": [
+        "Zhihang Yuan",
+        "Yuzhang Shang",
+        "Yue Song",
+        "Da-Wei Yang",
+        "Qiang Wu",
+        "Yan Yan",
+        "Guangyu Sun"
+      ]
+    },
+    {
+      "title": "WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More",
+      "source_url": "https://arxiv.org/abs/2402.12065",
+      "year": 2024,
+      "published": "2024-02-19",
+      "abstract": "Large Language Models (LLMs) face significant deployment challenges due to their substantial memory requirements and the computational demands of auto-regressive text generation process. This paper addresses these challenges by focusing on the quantization of LLMs, a technique that reduces memory consumption by converting model parameters and activations into low-bit integers. We critically analyze the existing quantization approaches, identifying their limitations in balancing the accuracy and efficiency of the quantized LLMs. To advance beyond these limitations, we propose WKVQuant, a PTQ framework especially designed for quantizing weights and the key/value (KV) cache of LLMs. Specifically, we incorporates past-only quantization to improve the computation of attention. Additionally, we introduce two-dimensional quantization strategy to handle the distribution of KV cache, along with a cross-block reconstruction regularization for parameter optimization. Experiments show that WKVQuant achieves almost comparable memory savings to weight-activation quantization, while also approaching the performance of weight-only quantization.",
+      "canonical_id": "arXiv:2402.12065",
+      "arxiv_id": "2402.12065",
+      "doi": "10.48550/arXiv.2402.12065",
+      "authors": [
+        "Yuxuan Yue",
+        "Zhihang Yuan",
+        "Haojie Duanmu",
+        "Sifan Zhou",
+        "Jianlong Wu",
+        "Liqiang Nie"
+      ]
+    },
+    {
+      "title": "QAQ: Quality Adaptive Quantization for LLM KV Cache",
+      "source_url": "https://arxiv.org/abs/2403.04643",
+      "year": 2024,
+      "published": "2024-03-07",
+      "abstract": "The emergence of LLMs has ignited a fresh surge of break-throughs in NLP applications, particularly in domains such as question-answering systems and text generation. As the need for longer context grows, a significant bottleneck in model deployment emerges due to the linear expansion of the Key-Value (KV) cache with the context length. Existing methods primarily rely on various hypotheses, such as sorting the KV cache based on attention scores for replacement or eviction, to compress the KV cache and improve model throughput. However, heuristics used by these strategies may wrongly evict essential KV cache, which can significantly degrade model performance. In this paper, we propose QAQ, a Quality Adaptive Quantization scheme for the KV cache. We theoretically demonstrate that key cache and value cache exhibit distinct sensitivities to quantization, leading to the formulation of separate quantization strategies for their non-uniform quantization. Through the integration of dedicated outlier handling, as well as an improved attention-aware approach, QAQ achieves up to 10× the compression ratio of the KV cache size with a negligible impact on model performance. QAQ significantly reduces the practical hurdles of deploying LLMs, opening up new possibilities for longer-context applications. We make our code publicly available11Code is available at: https://github.com/ClubieDong/QAQ-KVCacheQuantization to support reproducibility and promote broader awareness within the community.",
+      "canonical_id": "arXiv:2403.04643",
+      "arxiv_id": "2403.04643",
+      "doi": "10.1109/ICCVW69036.2025.00267",
+      "authors": [
+        "Wenfang Cheng",
+        "Shichen Dong",
+        "Jiayu Qin",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Better & Faster Large Language Models via Multi-token Prediction",
+      "source_url": "https://arxiv.org/abs/2404.19737",
+      "year": 2024,
+      "published": "2024-04-30",
+      "abstract": "Large language models such as GPT and Llama are trained with a next-token prediction loss. In this work, we suggest that training language models to predict multiple future tokens at once results in higher sample efficiency. More specifically, at each position in the training corpus, we ask the model to predict the following n tokens using n independent output heads, operating on top of a shared model trunk. Considering multi-token prediction as an auxiliary training task, we measure improved downstream capabilities with no overhead in training time for both code and natural language models. The method is increasingly useful for larger model sizes, and keeps its appeal when training for multiple epochs. Gains are especially pronounced on generative benchmarks like coding, where our models consistently outperform strong baselines by several percentage points. Our 13B parameter models solves 12 % more problems on HumanEval and 17 % more on MBPP than comparable next-token models. Experiments on small algorithmic tasks demonstrate that multi-token prediction is favorable for the development of induction heads and algorithmic reasoning capabilities. As an additional benefit, models trained with 4-token prediction are up to 3 times faster at inference, even with large batch sizes.",
+      "canonical_id": "arXiv:2404.19737",
+      "arxiv_id": "2404.19737",
+      "doi": "10.48550/arXiv.2404.19737",
+      "authors": [
+        "Fabian Gloeckle",
+        "Badr Youbi Idrissi",
+        "Baptiste Rozière",
+        "David Lopez-Paz",
+        "Gabriel Synnaeve"
+      ]
+    },
+    {
+      "title": "Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning",
+      "source_url": "https://arxiv.org/abs/2502.02770",
+      "year": 2025,
+      "published": "2025-02-04",
+      "abstract": "Leveraging attention sparsity to accelerate long-context large language models (LLMs) has been a hot research topic. However, current algorithms such as sparse attention or key-value (KV) cache compression tend to use a fixed budget, which presents a significant challenge during deployment because it fails to account for the dynamic nature of real-world scenarios, where the optimal balance between accuracy and efficiency can vary greatly. In this paper, we find that borrowing top-$p$ sampling (nucleus sampling) to sparse attention can surprisingly achieve adaptive budgeting. Based on this, we propose Twilight, a framework to bring adaptive sparsity to any existing sparse attention algorithm without sacrificing their accuracy. Empirical results show that Twilight can adaptively prune at most 98% of redundant tokens, leading to $15.4\\times$ acceleration in self-attention operations and $3.9\\times$ acceleration in end-to-end per token latency in long context LLM decoding.",
+      "canonical_id": "arXiv:2502.02770",
+      "arxiv_id": "2502.02770",
+      "doi": "10.48550/arXiv.2502.02770",
+      "authors": [
+        "Chaofan Lin",
+        "Jiaming Tang",
+        "Shuo Yang",
+        "HanShuo Wang",
+        "Tian Tang",
+        "Boyu Tian",
+        "Ion Stoica",
+        "Song Han",
+        "Mingyu Gao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2009.14794",
+      "identity_tokens": [
+        "id:arXiv:2009.14794",
+        "title:rethinking attention with performers",
+        "url:https://arxiv.org/abs/2009.14794"
+      ],
+      "record": {
+        "title": "Rethinking Attention with Performers",
+        "source_url": "https://arxiv.org/abs/2009.14794",
+        "year": 2020,
+        "published": "2020-09-30",
+        "abstract": "We introduce Performers, Transformer architectures which can estimate regular (softmax) full-rank-attention Transformers with provable accuracy, but using only linear (as opposed to quadratic) space and time complexity, without relying on any priors such as sparsity or low-rankness. To approximate softmax attention-kernels, Performers use a novel Fast Attention Via positive Orthogonal Random features approach (FAVOR+), which may be of independent interest for scalable kernel methods. FAVOR+ can be also used to efficiently model kernelizable attention mechanisms beyond softmax. This representational power is crucial to accurately compare softmax with other kernels for the first time on large-scale tasks, beyond the reach of regular Transformers, and investigate optimal attention-kernels. Performers are linear architectures fully compatible with regular Transformers and with strong theoretical guarantees: unbiased or nearly-unbiased estimation of the attention matrix, uniform convergence and low estimation variance. We tested Performers on a rich set of tasks stretching from pixel-prediction through text models to protein sequence modeling. We demonstrate competitive results with other examined efficient sparse and dense attention methods, showcasing effectiveness of the novel attention-learning paradigm leveraged by Performers.",
+        "canonical_id": "arXiv:2009.14794",
+        "arxiv_id": "2009.14794",
+        "authors": [
+          "K. Choromanski",
+          "Valerii Likhosherstov",
+          "David Dohan",
+          "Xing-You Song",
+          "Andreea Gane",
+          "Tamás Sarlós",
+          "Peter G. Hawkins",
+          "Jared Davis",
+          "Afroz Mohiuddin",
+          "Lukasz Kaiser",
+          "David Belanger",
+          "Lucy J. Colwell",
+          "Adrian Weller"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.05821",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.05821",
+        "id:arXiv:2312.05821",
+        "title:asvd activationaware singular value decomposition for compressing large language models",
+        "url:https://arxiv.org/abs/2312.05821"
+      ],
+      "record": {
+        "title": "ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models",
+        "source_url": "https://arxiv.org/abs/2312.05821",
+        "year": 2023,
+        "published": "2023-12-10",
+        "abstract": "In this paper, we introduce a new post-training compression paradigm for Large Language Models (LLMs) to facilitate their wider adoption. We delve into LLM weight low-rank decomposition, and find that the challenges of this task stem from (1) the distribution variance in the LLM activations and (2) the sensitivity difference among various kinds of layers. To address these issues, we propose a training-free approach called Activation-aware Singular Value Decomposition (ASVD). Specifically, ASVD manages activation outliers by transforming the weight matrix based on the activation distribution. This transformation allows the outliers in the activation matrix to be absorbed into the transformed weight matrix, thereby enhancing decomposition accuracy. Additionally, we propose an efficient iterative calibration process to optimize layer-specific decomposition by addressing the varying sensitivity of different LLM layers. In this way, ASVD can compress a network by 10%-30%. Based on the success of the low-rank decomposition of projection matrices in the self-attention module, we further introduce ASVD to compress the KV cache. By reducing the channel dimension of KV activations, memory requirements for KV cache can be largely reduced. ASVD can further achieve 50% KV cache reductions without performance drop in a training-free manner.",
+        "canonical_id": "arXiv:2312.05821",
+        "arxiv_id": "2312.05821",
+        "doi": "10.48550/arXiv.2312.05821",
+        "authors": [
+          "Zhihang Yuan",
+          "Yuzhang Shang",
+          "Yue Song",
+          "Da-Wei Yang",
+          "Qiang Wu",
+          "Yan Yan",
+          "Guangyu Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.12065",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.12065",
+        "id:arXiv:2402.12065",
+        "title:wkvquant quantizing weight and keyvalue cache for large language models gains more",
+        "url:https://arxiv.org/abs/2402.12065"
+      ],
+      "record": {
+        "title": "WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More",
+        "source_url": "https://arxiv.org/abs/2402.12065",
+        "year": 2024,
+        "published": "2024-02-19",
+        "abstract": "Large Language Models (LLMs) face significant deployment challenges due to their substantial memory requirements and the computational demands of auto-regressive text generation process. This paper addresses these challenges by focusing on the quantization of LLMs, a technique that reduces memory consumption by converting model parameters and activations into low-bit integers. We critically analyze the existing quantization approaches, identifying their limitations in balancing the accuracy and efficiency of the quantized LLMs. To advance beyond these limitations, we propose WKVQuant, a PTQ framework especially designed for quantizing weights and the key/value (KV) cache of LLMs. Specifically, we incorporates past-only quantization to improve the computation of attention. Additionally, we introduce two-dimensional quantization strategy to handle the distribution of KV cache, along with a cross-block reconstruction regularization for parameter optimization. Experiments show that WKVQuant achieves almost comparable memory savings to weight-activation quantization, while also approaching the performance of weight-only quantization.",
+        "canonical_id": "arXiv:2402.12065",
+        "arxiv_id": "2402.12065",
+        "doi": "10.48550/arXiv.2402.12065",
+        "authors": [
+          "Yuxuan Yue",
+          "Zhihang Yuan",
+          "Haojie Duanmu",
+          "Sifan Zhou",
+          "Jianlong Wu",
+          "Liqiang Nie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.04643",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccvw69036.2025.00267",
+        "id:arXiv:2403.04643",
+        "title:qaq quality adaptive quantization for llm kv cache",
+        "url:https://arxiv.org/abs/2403.04643"
+      ],
+      "record": {
+        "title": "QAQ: Quality Adaptive Quantization for LLM KV Cache",
+        "source_url": "https://arxiv.org/abs/2403.04643",
+        "year": 2024,
+        "published": "2024-03-07",
+        "abstract": "The emergence of LLMs has ignited a fresh surge of break-throughs in NLP applications, particularly in domains such as question-answering systems and text generation. As the need for longer context grows, a significant bottleneck in model deployment emerges due to the linear expansion of the Key-Value (KV) cache with the context length. Existing methods primarily rely on various hypotheses, such as sorting the KV cache based on attention scores for replacement or eviction, to compress the KV cache and improve model throughput. However, heuristics used by these strategies may wrongly evict essential KV cache, which can significantly degrade model performance. In this paper, we propose QAQ, a Quality Adaptive Quantization scheme for the KV cache. We theoretically demonstrate that key cache and value cache exhibit distinct sensitivities to quantization, leading to the formulation of separate quantization strategies for their non-uniform quantization. Through the integration of dedicated outlier handling, as well as an improved attention-aware approach, QAQ achieves up to 10× the compression ratio of the KV cache size with a negligible impact on model performance. QAQ significantly reduces the practical hurdles of deploying LLMs, opening up new possibilities for longer-context applications. We make our code publicly available11Code is available at: https://github.com/ClubieDong/QAQ-KVCacheQuantization to support reproducibility and promote broader awareness within the community.",
+        "canonical_id": "arXiv:2403.04643",
+        "arxiv_id": "2403.04643",
+        "doi": "10.1109/ICCVW69036.2025.00267",
+        "authors": [
+          "Wenfang Cheng",
+          "Shichen Dong",
+          "Jiayu Qin",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.19737",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.19737",
+        "id:arXiv:2404.19737",
+        "title:better faster large language models via multitoken prediction",
+        "url:https://arxiv.org/abs/2404.19737"
+      ],
+      "record": {
+        "title": "Better & Faster Large Language Models via Multi-token Prediction",
+        "source_url": "https://arxiv.org/abs/2404.19737",
+        "year": 2024,
+        "published": "2024-04-30",
+        "abstract": "Large language models such as GPT and Llama are trained with a next-token prediction loss. In this work, we suggest that training language models to predict multiple future tokens at once results in higher sample efficiency. More specifically, at each position in the training corpus, we ask the model to predict the following n tokens using n independent output heads, operating on top of a shared model trunk. Considering multi-token prediction as an auxiliary training task, we measure improved downstream capabilities with no overhead in training time for both code and natural language models. The method is increasingly useful for larger model sizes, and keeps its appeal when training for multiple epochs. Gains are especially pronounced on generative benchmarks like coding, where our models consistently outperform strong baselines by several percentage points. Our 13B parameter models solves 12 % more problems on HumanEval and 17 % more on MBPP than comparable next-token models. Experiments on small algorithmic tasks demonstrate that multi-token prediction is favorable for the development of induction heads and algorithmic reasoning capabilities. As an additional benefit, models trained with 4-token prediction are up to 3 times faster at inference, even with large batch sizes.",
+        "canonical_id": "arXiv:2404.19737",
+        "arxiv_id": "2404.19737",
+        "doi": "10.48550/arXiv.2404.19737",
+        "authors": [
+          "Fabian Gloeckle",
+          "Badr Youbi Idrissi",
+          "Baptiste Rozière",
+          "David Lopez-Paz",
+          "Gabriel Synnaeve"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.02770",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.02770",
+        "id:arXiv:2502.02770",
+        "title:twilight adaptive attention sparsity with hierarchical topp pruning",
+        "url:https://arxiv.org/abs/2502.02770"
+      ],
+      "record": {
+        "title": "Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning",
+        "source_url": "https://arxiv.org/abs/2502.02770",
+        "year": 2025,
+        "published": "2025-02-04",
+        "abstract": "Leveraging attention sparsity to accelerate long-context large language models (LLMs) has been a hot research topic. However, current algorithms such as sparse attention or key-value (KV) cache compression tend to use a fixed budget, which presents a significant challenge during deployment because it fails to account for the dynamic nature of real-world scenarios, where the optimal balance between accuracy and efficiency can vary greatly. In this paper, we find that borrowing top-$p$ sampling (nucleus sampling) to sparse attention can surprisingly achieve adaptive budgeting. Based on this, we propose Twilight, a framework to bring adaptive sparsity to any existing sparse attention algorithm without sacrificing their accuracy. Empirical results show that Twilight can adaptively prune at most 98% of redundant tokens, leading to $15.4\\times$ acceleration in self-attention operations and $3.9\\times$ acceleration in end-to-end per token latency in long context LLM decoding.",
+        "canonical_id": "arXiv:2502.02770",
+        "arxiv_id": "2502.02770",
+        "doi": "10.48550/arXiv.2502.02770",
+        "authors": [
+          "Chaofan Lin",
+          "Jiaming Tang",
+          "Shuo Yang",
+          "HanShuo Wang",
+          "Tian Tang",
+          "Boyu Tian",
+          "Ion Stoica",
+          "Song Han",
+          "Mingyu Gao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:7a49f4985b25a63705682e1eaa464e85483b7dd796928f7906431e1fe4b5fc14",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
