@@ -262,7 +262,9 @@ pending / waiting / blocked の同一bytes、またはresult receiptの同一 `s
 
 ## 10. GitHub import inbox processor
 
-正本仕様は \`.survey/import-inbox/README.md\`。
+正本仕様は \`.survey/import-inbox/README.md\`。実行workflowは \`.github/workflows/library-import.yml\` の1本だけとする。
+
+受信箱は10分周期で最新mainから再計算し、アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
 
 ### Research
 
