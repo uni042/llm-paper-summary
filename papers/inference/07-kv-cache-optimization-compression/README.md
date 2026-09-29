@@ -16,12 +16,16 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（123本）
+## 自動生成の論文一覧（125本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+
+- **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
+  実装：— ・ リポジトリ内被引用：14  
+  未来クエリの分布から各KV対が受ける期待注意量を閉形式で推定し、FlashAttentionのように注意行列を保持しない実装でも学習なしでKVを順位付け・削除する。プリフィルとデコードの双方へ適用し、LongBench、RULER、Needle-in-a-Haystack、AIME25、MATH-500でTOVA、SnapKV、KeyDiff等を上回る。
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
   実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：5  
@@ -248,6 +252,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [Entropy-Constrained Adaptive Stochastic Quantization](2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   listsummary と同じ一覧専用解説。ECASQは値ごとに適応する不偏確率量子化で、誤差と後段のエントロピー符号化後の平均ビット量を共同最適化する。実モデルのKVテンソルでも比較し、近似法は厳密法に近い誤差を保ちながら解法処理を高速化する。
+
+- **2026-08 · [DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference](2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-l.md)**  
+  実装：— ・ リポジトリ内被引用：0  
+  自己回帰型LLMは過去トークンの鍵・値をKVキャッシュへ保持することで再計算を避けるが、キャッシュ容量は文脈長に比例して増える。Mistral-7B-Instruct-v0.3では25%キャッシュ予算でLongBench 39.1、完全キャッシュ41.5に対して94.2%を維持する。
 
 - **2026-08 · [CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG](2026-2608.07458-coinrag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

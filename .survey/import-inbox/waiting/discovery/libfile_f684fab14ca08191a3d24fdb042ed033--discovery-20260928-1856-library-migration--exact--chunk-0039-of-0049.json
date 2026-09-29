@@ -1,0 +1,580 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0039-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.09436",
+      "identity_tokens": [
+        "arXiv:1909.09436"
+      ],
+      "title": "CodeSearchNet Challenge Evaluating the State of Semantic Code Search",
+      "reason": "意味的コード検索のデータセット・ベンチマーク・評価が主題で、LLMシステム最適化を扱わない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 477"
+      ],
+      "source_url": "https://arxiv.org/abs/1909.09436",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 477,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.11942",
+      "identity_tokens": [
+        "arXiv:1909.11942"
+      ],
+      "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
+      "reason": "本文を確認し、ALBERT: A Lite BERT for Self-supervised Learning of Language Representations は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/1909.11942",
+      "worklist_rank": 478,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.04906",
+      "identity_tokens": [
+        "arXiv:2004.04906"
+      ],
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "reason": "質問応答向け密検索器の学習・検索精度が主題で、LLM実行システム最適化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 481"
+      ],
+      "source_url": "https://arxiv.org/abs/2004.04906",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 481,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.08249",
+      "identity_tokens": [
+        "arXiv:2004.08249"
+      ],
+      "title": "Understanding the Difficulty of Training Transformers",
+      "reason": "本文を確認し、Understanding the Difficulty of Training Transformers は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2004.08249",
+      "worklist_rank": 482,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.13336",
+      "identity_tokens": [
+        "arXiv:2004.13336"
+      ],
+      "title": "Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training",
+      "reason": "本文を確認し、Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2004.13336",
+      "worklist_rank": 483,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.11401",
+      "identity_tokens": [
+        "arXiv:2005.11401"
+      ],
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "reason": "RAGの基礎モデル・学習と知識集約タスク品質が主題で、現行の推論・配信システム最適化を直接扱わない。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 272"
+      ],
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 272,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.03654",
+      "identity_tokens": [
+        "arXiv:2006.03654",
+        "DOI:10.48550/arxiv.2006.03654"
+      ],
+      "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+      "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T22:31:21+00:00",
+      "last_checked_at": "2026-09-26T22:31:21+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 301"
+      ],
+      "source_url": "https://arxiv.org/abs/2006.03654",
+      "reference_main_sha": "f3dd83050774796b8c8e7d8ca47fa99779e5ca9f",
+      "body_check": "arXiv一次資料PDF本文を取得・確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+      "worklist_rank": 301,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+        "discovery-20260927-0731-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.09503",
+      "identity_tokens": [
+        "arXiv:2006.09503"
+      ],
+      "title": "Memory-Efficient Pipeline-Parallel DNN Training",
+      "reason": "本文を確認し、Memory-Efficient Pipeline-Parallel DNN Training は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2006.09503",
+      "worklist_rank": 484,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.01282",
+      "identity_tokens": [
+        "arXiv:2007.01282"
+      ],
+      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+      "reason": "本文を確認し、Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2007.01282",
+      "worklist_rank": 485,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.10297",
+      "identity_tokens": [
+        "arXiv:2009.10297"
+      ],
+      "title": "CodeBLEU: a Method for Automatic Evaluation of Code Synthesis",
+      "reason": "本文を確認し、CodeBLEU: a Method for Automatic Evaluation of Code Synthesis は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2009.10297",
+      "worklist_rank": 486,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.13081",
+      "identity_tokens": [
+        "arXiv:2009.13081",
+        "DOI:10.3390/app11146421"
+      ],
+      "title": "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams",
+      "reason": "医療試験由来の質問応答データセットと評価が主題で、LLMシステム効率化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T18:00:00+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 486"
+      ],
+      "source_url": "https://arxiv.org/abs/2009.13081",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 486,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0402-scheduled-chat-00.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11929",
+      "identity_tokens": [
+        "arXiv:2010.11929"
+      ],
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "reason": "Vision Transformerの画像認識研究でLLM推論システム効率化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2010.11929",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11934",
+      "identity_tokens": [
+        "arXiv:2010.11934",
+        "DOI:10.48550/arxiv.2010.11934"
+      ],
+      "title": "mT5: A massively multilingual pre-trained text-to-text transformer",
+      "reason": "多言語事前学習モデルと能力評価が主貢献で、実行システム最適化ではない。",
+      "first_checked_at": "2026-09-27T04:32:58+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2010.11934",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.13255",
+      "identity_tokens": [
+        "arXiv:2012.13255"
+      ],
+      "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+      "reason": "言語モデル微調整の内在次元を分析する研究で、推論・配信・学習システム基盤への直接寄与がない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 487"
+      ],
+      "source_url": "https://arxiv.org/abs/2012.13255",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 487,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.15355",
+      "identity_tokens": [
+        "arXiv:2012.15355"
+      ],
+      "title": "Optimizing Deeper Transformers on Small Datasets",
+      "reason": "小規模データ上の深いTransformerの最適化・正則化が主題で、実行システムやメモリ・通信最適化を扱わない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 488"
+      ],
+      "source_url": "https://arxiv.org/abs/2012.15355",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 488,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.00027",
+      "title": "The Pile",
+      "reason": "5. **The Pile** — `arXiv:2101.00027` ([paper](https://arxiv.org/abs/2101.00027)). Pretraining dataset contribution, no efficiency method.",
+      "source_url": "https://arxiv.org/abs/2101.00027",
+      "identity_tokens": [
+        "arXiv:2101.00027"
+      ],
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "first_checked_at": "2026-09-26T15:01:48+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+        "discovery-20260927-0001-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.06804",
+      "identity_tokens": [
+        "arXiv:2101.06804"
+      ],
+      "title": "What Makes Good In-Context Examples for GPT-3?",
+      "reason": "本文を確認し、What Makes Good In-Context Examples for GPT-3? は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2101.06804",
+      "worklist_rank": 489,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.11402",
+      "identity_tokens": [
+        "arXiv:2102.11402"
+      ],
+      "title": "MixUp Training Leads to Reduced Overfitting and Improved Calibration for the Transformer Architecture",
+      "reason": "Transformer微調整へMixUpを適用して汎化・較正を改善する学習手法で、システム効率化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 489"
+      ],
+      "source_url": "https://arxiv.org/abs/2102.11402",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 489,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.11943",
+      "identity_tokens": [
+        "arXiv:2103.11943"
+      ],
+      "title": "BERT: A Review of Applications in Natural Language Processing and Understanding",
+      "reason": "BERT応用のreviewであり、推論基盤・runtime最適化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2103.11943",
+      "body_check": "本文のBERT機構、NLP応用、比較reviewを確認。推論効率化の固有system提案なし。",
+      "first_checked_at": "2026-09-28T09:05:42+00:00",
+      "last_checked_at": "2026-09-28T09:05:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 415,
+      "reference_main_sha": "7c28bf66509beed99b52aea63a680d5cca1a041b",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json",
+      "migration_source_files": [
+        "scheduled-chat-00-unrelated-papers.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.13262",
+      "identity_tokens": [
+        "arXiv:2103.13262"
+      ],
+      "title": "FastMoE: A Fast Mixture-of-Expert Training System",
+      "reason": "分散MoEの学習高速化が主題で、現在凍結中の学習高速化系統に該当する。",
+      "first_checked_at": "2026-09-26T14:29:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2103.13262",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 39,
+  "chunk_count": 49,
+  "source_record_count": 970
+}

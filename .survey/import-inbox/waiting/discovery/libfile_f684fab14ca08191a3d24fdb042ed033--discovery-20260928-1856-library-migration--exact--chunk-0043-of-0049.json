@@ -1,0 +1,595 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0043-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.04091",
+      "identity_tokens": [
+        "arXiv:2305.04091",
+        "DOI:10.48550/arxiv.2305.04091"
+      ],
+      "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+      "reason": "推論品質を改善するプロンプト方式が主題で、システム実行効率の一次研究ではない。",
+      "first_checked_at": "2026-09-27T02:32:01+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 497",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.04091",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06161",
+      "identity_tokens": [
+        "arXiv:2305.06161",
+        "DOI:10.48550/arxiv.2305.06161"
+      ],
+      "title": "StarCoder: may the source be with you!",
+      "reason": "コードLLMのデータ・学習・能力評価が中心で、システム効率化の一次研究ではない。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.06161",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10355",
+      "identity_tokens": [
+        "arXiv:2305.10355",
+        "DOI:10.48550/arxiv.2305.10355"
+      ],
+      "title": "Evaluating Object Hallucination in Large Vision-Language Models",
+      "reason": "LVLMの物体幻覚評価とPOPEベンチマークが主貢献で、実行基盤・メモリ・配信効率の研究ではない。",
+      "first_checked_at": "2026-09-27T02:32:01+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 498",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.10355",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10403",
+      "identity_tokens": [
+        "arXiv:2305.10403"
+      ],
+      "title": "PaLM 2 Technical Report",
+      "reason": "PaLM 2のモデル・学習・多言語/推論能力報告が主題で、独立した推論システム効率化研究ではない。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.10403",
+      "worklist_rank": 139,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10601",
+      "identity_tokens": [
+        "arXiv:2305.10601",
+        "DOI:10.48550/arxiv.2305.10601"
+      ],
+      "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "reason": "推論探索方略による問題解決能力向上が主題で、LLM実行システム効率化ではない。",
+      "first_checked_at": "2026-09-26T23:02:37+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.10601",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14233",
+      "identity_tokens": [
+        "arXiv:2305.14233"
+      ],
+      "title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
+      "reason": "指示対話データによる学習・能力向上が主題で推論システム効率化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.14233",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14314",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 3. **QLoRA: Efficient Finetuning of Quantized LLMs** — `arXiv:2305.14314` ([paper](https://arxiv.org/abs/2305.14314)). NF4, double quantization and paged optimizers enable 65B fine-tuning below 48 GB versus over 780 GB for full fine-tuning. Included as memory-efficient LLM training.",
+      "source_url": "https://arxiv.org/abs/2305.14314",
+      "identity_tokens": [
+        "arXiv:2305.14314"
+      ],
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "first_checked_at": "2026-09-26T15:01:48+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+        "discovery-20260927-0001-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.15334",
+      "identity_tokens": [
+        "arXiv:2305.15334"
+      ],
+      "title": "Gorilla: Large Language Model Connected with Massive APIs",
+      "reason": "API利用能力を持つモデルのfine-tuning・tool-use能力が主題で、推論配信効率化ではない。",
+      "first_checked_at": "2026-09-27T03:02:15+00:00",
+      "last_checked_at": "2026-09-27T03:02:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.15334",
+      "worklist_rank": 176,
+      "reference_main_sha": "da35a4053c3243a05d91214ff4a2a6e15bf2685a",
+      "body_check": "一次資料本文または一次出版社の全文/詳細本文を可能な範囲で確認。本文取得不能候補は母数から除外し補充。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+        "discovery-20260927-1202-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18290",
+      "identity_tokens": [
+        "arXiv:2305.18290",
+        "DOI:10.48550/arxiv.2305.18290"
+      ],
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "reason": "本文ではDPOをRLHFの代替となる選好学習アルゴリズムとして導出・評価しており、主目的は学習・アラインメント手順の簡素化で、推論ランタイム効率化ではない。",
+      "first_checked_at": "2026-09-27T02:00:23+00:00",
+      "last_checked_at": "2026-09-27T02:00:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.18290",
+      "worklist_rank": 500,
+      "reference_main_sha": "da35a4053c3243a05d91214ff4a2a6e15bf2685a",
+      "body_check": "一次資料本文を可能な範囲で確認。本文HTML/公開全文が取得できない候補は40件の母数から除外し、下位rankから補充。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1100-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1100-scheduled-chat-00.json",
+        "discovery-20260927-1100-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.20050",
+      "identity_tokens": [
+        "arXiv:2305.20050"
+      ],
+      "title": "Let's Verify Step by Step",
+      "reason": "プロセス監督による数学推論能力向上が主題でランタイム・配信・メモリ最適化ではない。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2305.20050",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.01116",
+      "identity_tokens": [
+        "arXiv:2306.01116"
+      ],
+      "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+      "reason": "Webデータの収集・filteringと学習品質が主題で、実行システム最適化への直接寄与がない。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 237"
+      ],
+      "source_url": "https://arxiv.org/abs/2306.01116",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 237,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.08568",
+      "identity_tokens": [
+        "arXiv:2306.08568",
+        "DOI:10.48550/arxiv.2306.08568"
+      ],
+      "title": "WizardCoder: Empowering Code Large Language Models with Evol-Instruct",
+      "reason": "コード指示データ生成と微調整による能力向上が主題で、実行システム最適化ではない。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2306.08568",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.10209",
+      "identity_tokens": [
+        "arXiv:2306.10209"
+      ],
+      "title": "ZeRO++: Extremely Efficient Collective Communication for Giant Model Training",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 量子化・階層通信等でZeRO系大規模学習のcollective communication量を削減する直接的な分散学習システム研究。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 238"
+      ],
+      "source_url": "https://arxiv.org/abs/2306.10209",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 238,
+      "migration_source_files": [
+        "old-accept-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_previous_classifications": [
+        "accept",
+        "unrelated"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.13394",
+      "identity_tokens": [
+        "arXiv:2306.13394",
+        "DOI:10.48550/arxiv.2306.13394"
+      ],
+      "title": "MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models",
+      "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T22:31:21+00:00",
+      "last_checked_at": "2026-09-26T22:31:21+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 317"
+      ],
+      "source_url": "https://arxiv.org/abs/2306.13394",
+      "reference_main_sha": "f3dd83050774796b8c8e7d8ca47fa99779e5ca9f",
+      "body_check": "arXiv一次資料PDF本文を取得・確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+      "worklist_rank": 317,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+        "discovery-20260927-0731-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.14050",
+      "identity_tokens": [
+        "arXiv:2306.14050",
+        "DOI:10.48550/arxiv.2306.14050"
+      ],
+      "title": "Symbolic Chain-of-Thought Distillation: Small Models Can Also \"Think\" Step-by-Step",
+      "reason": "推論過程の蒸留による小型モデル能力向上が主題で、システム実行基盤の研究ではない。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2306.14050",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.07924",
+      "identity_tokens": [
+        "arXiv:2307.07924",
+        "DOI:10.18653/v1/2024.acl-long.810",
+        "DOI:10.48550/arxiv.2307.07924"
+      ],
+      "title": "ChatDev: Communicative Agents for Software Development",
+      "reason": "複数LLMエージェントの会話によるソフトウェア開発能力が主題で、エージェント実行基盤の効率化を扱わない。",
+      "first_checked_at": "2026-09-26T22:00:57+00:00",
+      "last_checked_at": "2026-09-27T01:28:09+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 157"
+      ],
+      "source_url": "https://arxiv.org/abs/2307.07924",
+      "reference_main_sha": "7f5afb2a0569b536b8e0e723cfd07773cf83855f",
+      "body_check": "arXiv一次資料HTML本文を取得し、本文セクションまで確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+      "worklist_rank": 157,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+        "discovery-20260927-0700-scheduled-chat-00.json",
+        "discovery-20260927-1028-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.11088",
+      "identity_tokens": [
+        "arXiv:2307.11088"
+      ],
+      "title": "L-Eval: Instituting Standardized Evaluation for Long Context Language Models",
+      "reason": "長文脈言語モデルの標準化評価ベンチマークが主題で、推論効率化手法を提案しない。",
+      "first_checked_at": "2026-09-27T00:01:29+00:00",
+      "last_checked_at": "2026-09-27T00:01:29+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2307.11088",
+      "worklist_rank": 274,
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文を可能な範囲で確認。arXiv HTML/PDF利用可能時は本文まで確認し、出版社本文が取得困難な場合は一次出版社の公開本文・詳細抄録を確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+        "discovery-20260927-0901-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15780",
+      "identity_tokens": [
+        "arXiv:2307.15780",
+        "DOI:10.48550/arxiv.2307.15780"
+      ],
+      "title": "LLM-Rec: Personalized Recommendation via Prompting Large Language Models",
+      "reason": "LLMによる推薦用テキスト拡張と推薦品質が主題で、LLMシステム最適化への直接寄与がない。",
+      "first_checked_at": "2026-09-27T01:28:09+00:00",
+      "last_checked_at": "2026-09-27T01:28:09+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 204"
+      ],
+      "source_url": "https://arxiv.org/abs/2307.15780",
+      "reference_main_sha": "7f5afb2a0569b536b8e0e723cfd07773cf83855f",
+      "body_check": "arXiv一次資料HTML本文を取得し、本文セクションまで確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+      "worklist_rank": 204,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+        "discovery-20260927-1028-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15818",
+      "identity_tokens": [
+        "arXiv:2307.15818"
+      ],
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "reason": "robotic VLAのgeneralizationが主題でLLM serving効率手法ではない。",
+      "first_checked_at": "2026-09-27T17:33:43+00:00",
+      "last_checked_at": "2026-09-27T17:33:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2307.15818",
+      "worklist_rank": 438,
+      "reference_main_sha": "e621e7591ad17b51d55c04f049c37c1a6f4b7eea",
+      "body_check": "VLA training、約6000 real-world trial、限界を確認した。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json",
+      "migration_source_files": [
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.16125",
+      "identity_tokens": [
+        "arXiv:2307.16125",
+        "DOI:10.48550/arxiv.2307.16125"
+      ],
+      "title": "SEED-Bench: Benchmarking Multimodal LLMs with Generative Comprehension",
+      "reason": "マルチモーダルLLMの理解能力ベンチマークで、システム効率・配信性能の評価基盤ではない。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 417",
+        "worker-worklist-30 discovery_review rank 384",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2307.16125",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 43,
+  "chunk_count": 49,
+  "source_record_count": 970
+}

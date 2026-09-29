@@ -1,0 +1,587 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0028-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2105.14103",
+      "identity_tokens": [
+        "arXiv:2105.14103"
+      ],
+      "title": "An Attention Free Transformer",
+      "reason": "本文を確認し、An Attention Free Transformer は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2105.14103",
+      "worklist_rank": 491,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2105.15082",
+      "identity_tokens": [
+        "arXiv:2105.15082"
+      ],
+      "title": "M6-T: Exploring Sparse Expert Models and Beyond",
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-26T18:31:44+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 412"
+      ],
+      "source_url": "https://arxiv.org/abs/2105.15082",
+      "reference_main_sha": "a955f5e8423b6282cbf38cc3c9f7df9043e0974f",
+      "body_check": "一次資料PDF本文を取得し、本文抽出結果を確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+      "worklist_rank": 412,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+        "discovery-20260927-0331-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.04426",
+      "identity_tokens": [
+        "arXiv:2106.04426"
+      ],
+      "title": "Hash Layers For Large Sparse Models",
+      "reason": "学習不要のハッシュルーティングで大規模疎モデルを単純化するが、主貢献はMoEモデル／学習アルゴリズムであり実行基盤への直接性は限定的。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 491"
+      ],
+      "source_url": "https://arxiv.org/abs/2106.04426",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 491,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.04970",
+      "identity_tokens": [
+        "arXiv:2106.04970"
+      ],
+      "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding",
+      "reason": "並列aggressive decodingでseq2seq推論を高速化するがGEC特化・pre-LLM世代で現行LLMシステムへの直接性は境界的。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 233"
+      ],
+      "source_url": "https://arxiv.org/abs/2106.04970",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 233,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2109.12948",
+      "identity_tokens": [
+        "arXiv:2109.12948"
+      ],
+      "title": "Understanding and Overcoming the Challenges of Efficient Transformer Quantization",
+      "reason": "Transformer量子化の外れ値問題とPTQ/QAT対策は推論効率に関係するが、現代LLM固有の配信システム研究ではない。",
+      "first_checked_at": "2026-09-27T00:01:29+00:00",
+      "last_checked_at": "2026-09-27T00:01:29+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2109.12948",
+      "worklist_rank": 298,
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文を可能な範囲で確認。arXiv HTML/PDF利用可能時は本文まで確認し、出版社本文が取得困難な場合は一次出版社の公開本文・詳細抄録を確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+        "discovery-20260927-0901-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.08246",
+      "identity_tokens": [
+        "arXiv:2110.08246"
+      ],
+      "title": "Tricks for Training Sparse Translation Models",
+      "reason": "疎な翻訳向けMoEの安定学習・ルーティング手法が中心で、システム実行・通信・メモリ管理の直接的な新規機構は主題ではない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 494"
+      ],
+      "source_url": "https://arxiv.org/abs/2110.08246",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 494,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.04426",
+      "identity_tokens": [
+        "arXiv:2112.04426"
+      ],
+      "title": "Improving language models by retrieving from trillions of tokens",
+      "reason": "RETROは外部検索でパラメータ効率を高める重要なモデル設計だが、配信・キャッシュ・実行時最適化が主題ではない。",
+      "first_checked_at": "2026-09-27T00:01:29+00:00",
+      "last_checked_at": "2026-09-27T00:01:29+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2112.04426",
+      "worklist_rank": 299,
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文を可能な範囲で確認。arXiv HTML/PDF利用可能時は本文まで確認し、出版社本文が取得困難な場合は一次出版社の公開本文・詳細抄録を確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+        "discovery-20260927-0901-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.05682",
+      "identity_tokens": [
+        "arXiv:2112.05682"
+      ],
+      "title": "Self-attention Does Not Need O(n²) Memory",
+      "reason": "注意計算のメモリ複雑度を下げるが主用途は学習時メモリ節約でLLM配信への直接評価は限定的。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2112.05682",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.01110",
+      "identity_tokens": [
+        "arXiv:2202.01110"
+      ],
+      "title": "A Survey on Retrieval-Augmented Text Generation",
+      "reason": "retrieval-augmented generationの体系化は関連するが、主貢献は生成手法サーベイで推論system最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2202.01110",
+      "body_check": "本文のretrieval-augmented generation分類、retriever/generator統合、応用節を確認。",
+      "first_checked_at": "2026-09-28T09:05:42+00:00",
+      "last_checked_at": "2026-09-28T09:05:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 418,
+      "reference_main_sha": "7c28bf66509beed99b52aea63a680d5cca1a041b",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json",
+      "migration_source_files": [
+        "scheduled-chat-00-borderline-papers.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.01169",
+      "identity_tokens": [
+        "arXiv:2202.01169"
+      ],
+      "title": "Unified Scaling Laws for Routed Language Models",
+      "reason": "疎ルーティング言語モデルのパラメータ数・専門家数・計算量のスケーリング則が主題で、システム実装・配信機構の提案ではない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 497"
+      ],
+      "source_url": "https://arxiv.org/abs/2202.01169",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 497,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.15556",
+      "title": "Training Compute-Optimal Large Language Models",
+      "reason": "2. **Training Compute-Optimal Large Language Models** — `arXiv:2203.15556` ([paper](https://arxiv.org/abs/2203.15556)). Establishes compute-optimal model/token scaling with training compute; efficiency relevance is to training allocation rather than runtime systems.",
+      "source_url": "https://arxiv.org/abs/2203.15556",
+      "identity_tokens": [
+        "arXiv:2203.15556"
+      ],
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "first_checked_at": "2026-09-26T15:01:48+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-unrelated-reconstructed.json"
+      ],
+      "migration_previous_classifications": [
+        "borderline",
+        "unrelated"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+        "discovery-20260927-0001-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.06745",
+      "identity_tokens": [
+        "arXiv:2204.06745",
+        "DOI:10.48550/arxiv.2204.06745"
+      ],
+      "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
+      "reason": "モデル公開と学習技術報告で分散学習実装を含むが、主貢献はモデルそのもの。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2204.06745",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.08396",
+      "identity_tokens": [
+        "arXiv:2204.08396"
+      ],
+      "title": "StableMoE: Stable Routing Strategy for Mixture of Experts",
+      "reason": "推論時のexpert選択安定性には関係するが、主貢献は二段階学習とrouter蒸留によるMoE学習安定化・収束改善。",
+      "first_checked_at": "2026-09-27T05:00:45+00:00",
+      "last_checked_at": "2026-09-27T05:00:45+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2204.08396",
+      "worklist_rank": 121,
+      "reference_main_sha": "26238eb8ce8b63d4ebb9a19c26c334986c854c4e",
+      "body_check": "一次資料本文または一次出版社の本文・詳細ページを可能な範囲で確認。本文取得不能のOpenReview候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1400-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1400-scheduled-chat-00.json",
+        "discovery-20260927-1400-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.10350",
+      "identity_tokens": [
+        "arXiv:2205.10350",
+        "DOI:10.48550/arxiv.2205.10350"
+      ],
+      "title": "Lossless Acceleration for Seq2seq Generation with Aggressive Decoding",
+      "reason": "並列draft/verifyによる生成高速化は投機的復号の先行技術だが、主対象は一般seq2seq/機械翻訳。",
+      "first_checked_at": "2026-09-26T22:31:21+00:00",
+      "last_checked_at": "2026-09-27T00:01:29+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 309",
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2205.10350",
+      "worklist_rank": 301,
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文を可能な範囲で確認。arXiv HTML/PDF利用可能時は本文まで確認し、出版社本文が取得困難な場合は一次出版社の公開本文・詳細抄録を確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0901-scheduled-chat-00.json",
+        "discovery-20260927-0901-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.12399",
+      "identity_tokens": [
+        "arXiv:2205.12399"
+      ],
+      "title": "Sparse Mixers: Combining MoE and Mixing to build a more efficient BERT",
+      "reason": "MoEと線形ミキシングを組み合わせ推論61–98%高速化を示すが、中心はBERT系モデル構造の効率化で、実行基盤そのものの新規性は弱い。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 499"
+      ],
+      "source_url": "https://arxiv.org/abs/2205.12399",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 499,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.12410",
+      "identity_tokens": [
+        "arXiv:2205.12410"
+      ],
+      "title": "AdaMix: Mixture-of-Adaptations for Parameter-efficient Model Tuning",
+      "reason": "parameter-efficient tuningのmixture設計が中心で、学習効率には関係するがシステム基盤の一次研究ではない。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 235"
+      ],
+      "source_url": "https://arxiv.org/abs/2205.12410",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 235,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.02770",
+      "identity_tokens": [
+        "arXiv:2206.02770"
+      ],
+      "title": "Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts",
+      "reason": "マルチモーダルMoEのルーティング安定化と専門家利用を詳しく扱うが、主貢献はモデル／学習設計で、推論・配信システムの直接的な新規機構ではない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 500"
+      ],
+      "source_url": "https://arxiv.org/abs/2206.02770",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 500,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.11580",
+      "identity_tokens": [
+        "arXiv:2208.11580"
+      ],
+      "title": "Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning",
+      "reason": "学習後量子化・剪定の一般DNN圧縮基盤で推論効率に関係するが、LLM固有の配信／ランタイム研究ではない。",
+      "first_checked_at": "2026-09-27T03:02:15+00:00",
+      "last_checked_at": "2026-09-27T03:02:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2208.11580",
+      "worklist_rank": 201,
+      "reference_main_sha": "da35a4053c3243a05d91214ff4a2a6e15bf2685a",
+      "body_check": "一次資料本文または一次出版社の全文/詳細本文を可能な範囲で確認。本文取得不能候補は母数から除外し補充。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+        "discovery-20260927-1202-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.04836",
+      "identity_tokens": [
+        "arXiv:2209.04836",
+        "DOI:10.48550/arxiv.2209.04836"
+      ],
+      "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries",
+      "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
+      "first_checked_at": "2026-09-26T22:31:21+00:00",
+      "last_checked_at": "2026-09-26T22:31:21+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 310"
+      ],
+      "source_url": "https://arxiv.org/abs/2209.04836",
+      "reference_main_sha": "f3dd83050774796b8c8e7d8ca47fa99779e5ca9f",
+      "body_check": "arXiv一次資料PDF本文を取得・確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+      "worklist_rank": 310,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0731-scheduled-chat-30.json",
+        "discovery-20260927-0731-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.13325",
+      "identity_tokens": [
+        "arXiv:2209.13325",
+        "DOI:10.48550/arxiv.2209.13325"
+      ],
+      "title": "arXiv:2209.13325",
+      "reason": "一次資料を確認したが、現行LLMシステムサーベイへの直接的な実行基盤寄与は限定的。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 414",
+        "worker-worklist-30 discovery_review rank 381",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2209.13325",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 28,
+  "chunk_count": 49,
+  "source_record_count": 970
+}

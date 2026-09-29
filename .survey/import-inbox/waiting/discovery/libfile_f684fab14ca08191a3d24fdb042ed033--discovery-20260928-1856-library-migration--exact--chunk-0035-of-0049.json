@@ -1,0 +1,569 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0035-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.22115",
+      "identity_tokens": [
+        "arXiv:2510.22115"
+      ],
+      "title": "1T General Reasoner",
+      "reason": "関連する効率化要素はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ／立場論文で、現行サーベイへの直接性が境界的。",
+      "first_checked_at": "2026-09-26T17:28:40+00:00",
+      "last_checked_at": "2026-09-26T17:28:40+00:00",
+      "linked_from": [
+        "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2510.22115",
+      "body_check": "一次資料本文導線を確認し取得可能な本文情報で判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0228-scheduled-chat-30.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0228-scheduled-chat-30.json",
+        "discovery-20260927-0228-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.24821",
+      "identity_tokens": [
+        "arXiv:2510.24821"
+      ],
+      "title": "Ming-Flash-Omni: A Sparse, Unified Architecture for Multimodal Perception and Generation",
+      "reason": "疎MoEで計算効率を高めた統合マルチモーダルモデルだが、主貢献はモデル設計・能力で推論システム機構は中心ではない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 424"
+      ],
+      "source_url": "https://arxiv.org/abs/2510.24821",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 424,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00279",
+      "identity_tokens": [
+        "arXiv:2511.00279",
+        "DOI:10.48550/arxiv.2511.00279"
+      ],
+      "title": "LongCat-Flash-Omni Technical Report",
+      "reason": "マルチモーダルモデルの技術報告で効率化要素を含むが、独立した推論・配信システム機構が主貢献ではない。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T04:32:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2511.00279",
+      "reference_main_sha": "daf58838053f20b7f852f8ca4cdc72c5fccbd948",
+      "body_check": "arXiv一次資料ページから本文リンクを確認し、利用可能な一次資料本文を可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1332-scheduled-chat-30.json",
+        "discovery-20260927-1332-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00796",
+      "identity_tokens": [
+        "arXiv:2511.00796"
+      ],
+      "title": "AReaL-Hex: Accommodating Asynchronous RL Training over Heterogeneous GPUs",
+      "reason": "rollout配置は参考になるが最終適用先は凍結対象のLLM強化学習workflowである。",
+      "first_checked_at": "2026-09-27T17:33:43+00:00",
+      "last_checked_at": "2026-09-27T17:33:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2511.00796",
+      "worklist_rank": 494,
+      "reference_main_sha": "e621e7591ad17b51d55c04f049c37c1a6f4b7eea",
+      "body_check": "H20/H800向け二段schedulerとend-to-end RL training評価を確認した。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13961",
+      "identity_tokens": [
+        "arXiv:2512.13961"
+      ],
+      "title": "Olmo 3",
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-26T18:31:44+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 374"
+      ],
+      "source_url": "https://arxiv.org/abs/2512.13961",
+      "reference_main_sha": "a955f5e8423b6282cbf38cc3c9f7df9043e0974f",
+      "body_check": "一次資料PDF本文を取得し、本文抽出結果を確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+      "worklist_rank": 374,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+        "discovery-20260927-0331-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02780",
+      "identity_tokens": [
+        "arXiv:2601.02780"
+      ],
+      "title": "MiMo-V2-Flash Technical Report",
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-26T18:31:44+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 376"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.02780",
+      "reference_main_sha": "a955f5e8423b6282cbf38cc3c9f7df9043e0974f",
+      "body_check": "一次資料PDF本文を取得し、本文抽出結果を確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+      "worklist_rank": 376,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+        "discovery-20260927-0331-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05047",
+      "identity_tokens": [
+        "arXiv:2601.05047"
+      ],
+      "title": "Challenges and Research Directions for Large Language Model Inference Hardware",
+      "reason": "LLM推論のメモリ・相互接続ボトルネックとHBF/PIM/3D積層を整理する展望論文。推論システムへの直接性は高いが、新規実装・評価手法の提案ではない。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.05047",
+      "worklist_rank": 168,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07372",
+      "identity_tokens": [
+        "arXiv:2601.07372"
+      ],
+      "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+      "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-26T18:31:44+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 377"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.07372",
+      "reference_main_sha": "a955f5e8423b6282cbf38cc3c9f7df9043e0974f",
+      "body_check": "一次資料PDF本文を取得し、本文抽出結果を確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+      "worklist_rank": 377,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0331-scheduled-chat-30.json",
+        "discovery-20260927-0331-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00269",
+      "identity_tokens": [
+        "arXiv:2602.00269"
+      ],
+      "title": "VoxServe: Streaming-Centric Serving System for Speech Language Models",
+      "reason": "一次資料本文を確認し、VoxServe: Streaming-Centric Serving System for Speech Language Models は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
+      "first_checked_at": "2026-09-26T22:00:57+00:00",
+      "last_checked_at": "2026-09-26T22:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2602.00269",
+      "worklist_rank": 359,
+      "reference_main_sha": "f70e45c766cfbff91cb50c9b2078f02af4df535a",
+      "body_check": "一次資料本文（arXiv HTMLまたはACL Anthology一次資料）を可能な範囲で確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+        "discovery-20260927-0700-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00729",
+      "identity_tokens": [
+        "arXiv:2603.00729"
+      ],
+      "title": "Qwen3-Coder-Next Technical Report",
+      "reason": "疎モデルで推論効率は高いが中心はコーディングモデルの学習レシピと能力評価。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-26T21:31:09+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 381",
+        "worker-worklist-30 discovery_review rank 361"
+      ],
+      "source_url": "https://arxiv.org/abs/2603.00729",
+      "reference_main_sha": "b79b5723c60a56cc7b8c189038fb4c4ea91857d1",
+      "body_check": "一次資料本文または全文展開可能な論文ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0631-scheduled-chat-30.json",
+      "worklist_rank": 361,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0631-scheduled-chat-30.json",
+        "discovery-20260927-0631-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18492",
+      "identity_tokens": [
+        "arXiv:2603.18492"
+      ],
+      "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+      "reason": "較正データ不要の専門家重要度指標でMoEを枝刈りし保存量を減らすが、主貢献は圧縮アルゴリズムでランタイム機構ではない。",
+      "first_checked_at": "2026-09-26T19:28:31+00:00",
+      "last_checked_at": "2026-09-26T19:28:31+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 427"
+      ],
+      "source_url": "https://arxiv.org/abs/2603.18492",
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文（arXiv HTML全文を優先し、利用可能な本文を確認）",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+      "worklist_rank": 427,
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0428-scheduled-chat-30.json",
+        "discovery-20260927-0428-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18567",
+      "identity_tokens": [
+        "arXiv:2603.18567"
+      ],
+      "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
+      "reason": "投機的復号用drafterの学習を統一・効率化するフレームワークで、投機推論に密接だが主たる新規性はdraftモデル学習基盤。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2603.18567",
+      "worklist_rank": 125,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07144",
+      "identity_tokens": [
+        "arXiv:2604.07144"
+      ],
+      "title": "Autopoiesis: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "reason": "LLM配信を対象とするが、中心的新規性がオンライン方策コード生成にあり、低レベル実行基盤への直接寄与は境界的。",
+      "first_checked_at": "2026-09-26T15:29:06+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "source_url": "https://arxiv.org/abs/2604.07144",
+      "reference_main_sha": "f8fb17b8e2a9f5efdb43a42187766d6234e262f5",
+      "body_check": "一次資料PDF全文を取得して本文を確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+        "discovery-20260927-0029-scheduled-chat-30-partial.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.01280",
+      "identity_tokens": [
+        "arXiv:2605.01280"
+      ],
+      "title": "LLM Serving Position Paper",
+      "reason": "関連する効率化要素はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ／立場論文で、現行サーベイへの直接性が境界的。",
+      "first_checked_at": "2026-09-26T17:28:40+00:00",
+      "last_checked_at": "2026-09-26T17:28:40+00:00",
+      "linked_from": [
+        "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2605.01280",
+      "body_check": "一次資料本文導線を確認し取得可能な本文情報で判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0228-scheduled-chat-30.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0228-scheduled-chat-30.json",
+        "discovery-20260927-0228-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.24653",
+      "identity_tokens": [
+        "arXiv:2607.24653"
+      ],
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "reason": "モデル能力・学習・エージェント性中心の技術報告で独立した推論システム寄与は弱い。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2607.24653",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41586-025-09422-z",
+      "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning",
+      "reason": "7. **DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning** — `DOI:10.1038/s41586-025-09422-z` (same work as `arXiv:2501.12948`; [Nature](https://doi.org/10.1038/s41586-025-09422-z), [arXiv](https://arxiv.org/abs/2501.12948)). Primarily an RL reasoning/model paper; infrastructure is mentioned but not evaluated as a systems contribution. Alias checked; no GitHub exact-ID hit.",
+      "source_url": "https://doi.org/10.1038/s41586-025-09422-z",
+      "first_checked_at": "2026-09-26T15:10:00+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-09422-z"
+      ],
+      "body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "linked_from": [],
+      "migration_source_files": [
+        "borderline-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca52012.2021.00013",
+      "identity_tokens": [
+        "DOI:10.1109/isca52012.2021.00013"
+      ],
+      "title": "Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology: Industrial Product",
+      "reason": "商用DRAMベースPIMのhardware/software stackで階層メモリ研究の基盤価値は高いが、LLM固有の推論システムではない。",
+      "first_checked_at": "2026-09-27T03:02:15+00:00",
+      "last_checked_at": "2026-09-27T03:02:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://doi.org/10.1109/isca52012.2021.00013",
+      "worklist_rank": 169,
+      "reference_main_sha": "da35a4053c3243a05d91214ff4a2a6e15bf2685a",
+      "body_check": "一次資料本文または一次出版社の全文/詳細本文を可能な範囲で確認。本文取得不能候補は母数から除外し補充。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+        "discovery-20260927-1202-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/micro61859.2024.00068",
+      "identity_tokens": [
+        "DOI:10.1109/micro61859.2024.00068"
+      ],
+      "title": "TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Machine Learning",
+      "reason": "本文を確認し、TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Machine Learning は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
+      "first_checked_at": "2026-09-26T19:57:30+00:00",
+      "last_checked_at": "2026-09-26T19:57:30+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://doi.org/10.1109/micro61859.2024.00068",
+      "worklist_rank": 458,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または一次資料相当の公開全文を可能な範囲で確認。タイトル・要旨のみでは判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0457-scheduled-chat-00.json",
+        "discovery-20260927-0457-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1498765.1498785",
+      "identity_tokens": [
+        "DOI:10.1145/1498765.1498785"
+      ],
+      "title": "Roofline: an insightful visual performance model for multicore architectures",
+      "reason": "一般性能モデルとして有用だがLLM固有の推論最適化ではない。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://doi.org/10.1145/1498765.1498785",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3341301.3359630",
+      "identity_tokens": [
+        "DOI:10.1145/3341301.3359630"
+      ],
+      "title": "TASO: Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions",
+      "reason": "DNN計算グラフ最適化として関連するがLLM推論固有ではない。",
+      "first_checked_at": "2026-09-26T18:00:00+00:00",
+      "last_checked_at": "2026-09-26T19:02:01+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://doi.org/10.1145/3341301.3359630",
+      "worklist_rank": 484,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または本文相当の一次公開ページを可能な範囲で確認し、手法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0402-scheduled-chat-00.json",
+      "migration_source_files": [
+        "borderline-candidates.json",
+        "old-borderline-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0402-scheduled-chat-00.json",
+        "discovery-20260927-0402-scheduled-chat-00.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 35,
+  "chunk_count": 49,
+  "source_record_count": 970
+}

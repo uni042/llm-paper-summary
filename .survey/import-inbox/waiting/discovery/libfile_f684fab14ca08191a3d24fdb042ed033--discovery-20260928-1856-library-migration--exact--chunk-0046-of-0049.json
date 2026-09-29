@@ -1,0 +1,584 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0046-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04329",
+      "identity_tokens": [
+        "arXiv:2406.04329"
+      ],
+      "title": "Simplified and Generalized Masked Diffusion for Discrete Data",
+      "reason": "一次資料本文を確認し、Simplified and Generalized Masked Diffusion for Discrete Data は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
+      "first_checked_at": "2026-09-26T22:00:57+00:00",
+      "last_checked_at": "2026-09-26T22:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.04329",
+      "worklist_rank": 405,
+      "reference_main_sha": "f70e45c766cfbff91cb50c9b2078f02af4df535a",
+      "body_check": "一次資料本文（arXiv HTMLまたはACL Anthology一次資料）を可能な範囲で確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+        "discovery-20260927-0700-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04692",
+      "identity_tokens": [
+        "arXiv:2406.04692",
+        "DOI:10.48550/arxiv.2406.04692"
+      ],
+      "title": "Mixture-of-Agents Enhances Large Language Model Capabilities",
+      "reason": "複数LLMエージェントの回答統合で能力を高める推論方式だが、servingの速度・メモリ・資源効率を改善するシステム研究ではない。",
+      "first_checked_at": "2026-09-26T23:02:37+00:00",
+      "last_checked_at": "2026-09-26T23:02:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.04692",
+      "worklist_rank": 331,
+      "reference_main_sha": "13467b0020b41bb281ab1fd278996228da31b4df",
+      "body_check": "一次資料本文を取得可能な範囲で確認。arXiv HTMLが取得できない場合は一次資料PDF/本文導線および公開本文相当資料まで確認し、要旨単独では判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+        "discovery-20260927-0802-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06563",
+      "identity_tokens": [
+        "arXiv:2406.06563"
+      ],
+      "title": "Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models",
+      "reason": "146B MoEのupcyclingや学習安定化などtraining techniqueが主題で、推論ランタイムの新規機構ではない。",
+      "first_checked_at": "2026-09-27T05:00:45+00:00",
+      "last_checked_at": "2026-09-27T05:00:45+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.06563",
+      "worklist_rank": 110,
+      "reference_main_sha": "26238eb8ce8b63d4ebb9a19c26c334986c854c4e",
+      "body_check": "一次資料本文または一次出版社の本文・詳細ページを可能な範囲で確認。本文取得不能のOpenReview候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1400-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1400-scheduled-chat-00.json",
+        "discovery-20260927-1400-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08464",
+      "identity_tokens": [
+        "arXiv:2406.08464",
+        "DOI:10.48550/arxiv.2406.08464"
+      ],
+      "title": "Magpie: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing",
+      "reason": "アラインメント用指示データ合成とSFT品質が主題で、推論・配信・メモリ・分散学習システムの効率化を扱わない。",
+      "first_checked_at": "2026-09-27T01:28:09+00:00",
+      "last_checked_at": "2026-09-27T01:28:09+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 213"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.08464",
+      "reference_main_sha": "7f5afb2a0569b536b8e0e723cfd07773cf83855f",
+      "body_check": "arXiv一次資料HTML本文を取得し、本文セクションまで確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+      "worklist_rank": 213,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1028-scheduled-chat-30.json",
+        "discovery-20260927-1028-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10707",
+      "identity_tokens": [
+        "arXiv:2406.10707"
+      ],
+      "title": "DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models",
+      "reason": "主目的がLLM学習中のチェックポイント高速化・耐障害性で、最終適用先が凍結中の学習工程。",
+      "source_url": "https://arxiv.org/abs/2406.10707",
+      "body_check": "一次資料PDF本文を確認。forward/backward/update中のモデル・optimizer stateを利用した非同期checkpointが中心で、推論配信研究ではないことを確認。",
+      "linked_from": [
+        "discovery web search"
+      ],
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-30/discovery-20260928-1633-scheduled-chat-30.json",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "migration_source_files": [
+        "scheduled-chat-30-unrelated-papers.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/scheduled-chat-30/discovery-20260928-1633-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11794",
+      "identity_tokens": [
+        "arXiv:2406.11794"
+      ],
+      "title": "DataComp-LM: In search of the next generation of training sets for language models",
+      "reason": "pretraining dataset curationが主題で凍結対象のtraining側研究である。",
+      "first_checked_at": "2026-09-27T17:33:43+00:00",
+      "last_checked_at": "2026-09-27T17:33:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.11794",
+      "worklist_rank": 451,
+      "reference_main_sha": "e621e7591ad17b51d55c04f049c37c1a6f4b7eea",
+      "body_check": "DCLM benchmark、filtering、7B training結果、限界を確認した。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json",
+      "migration_source_files": [
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.15877",
+      "identity_tokens": [
+        "arXiv:2406.15877"
+      ],
+      "title": "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions",
+      "reason": "コード生成・ツール呼出し能力のベンチマークであり、推論ランタイム効率化手法ではない。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T00:58:33+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.15877",
+      "worklist_rank": 248,
+      "reference_main_sha": "e2c9911669aa11a1581d13bde95bfc1ce72066d3",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認し、方法・評価・最終適用先で判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0958-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0958-scheduled-chat-00.json",
+        "discovery-20260927-0958-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16937",
+      "title": "A Complete Survey on LLM-based AI Chatbots",
+      "reason": "11. **A Complete Survey on LLM-based AI Chatbots** — `arXiv:2406.16937` ([paper](https://arxiv.org/abs/2406.16937)). Broad chatbot survey without a focused resource-efficiency/system contribution.",
+      "source_url": "https://arxiv.org/abs/2406.16937",
+      "first_checked_at": "2026-09-26T15:10:00+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "identity_tokens": [
+        "arXiv:2406.16937"
+      ],
+      "body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "linked_from": [],
+      "migration_source_files": [
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17419",
+      "identity_tokens": [
+        "arXiv:2406.17419",
+        "DOI:10.48550/arxiv.2406.17419"
+      ],
+      "title": "Leave No Document Behind: Benchmarking Long-Context LLMs with Extended Multi-Doc QA",
+      "reason": "Loong長文脈理解ベンチマークが主貢献で、長文脈推論システムの性能・資源評価基盤ではない。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 426",
+        "worker-worklist-30 discovery_review rank 393",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.17419",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19314",
+      "identity_tokens": [
+        "arXiv:2406.19314",
+        "DOI:10.48550/arxiv.2406.19314"
+      ],
+      "title": "LiveBench: A Challenging, Contamination-Limited LLM Benchmark",
+      "reason": "LLM能力評価の汚染耐性benchmarkが主目的で、推論システムの速度・メモリ・配信効率を評価するbenchmarkではない。",
+      "first_checked_at": "2026-09-26T23:02:37+00:00",
+      "last_checked_at": "2026-09-26T23:02:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.19314",
+      "worklist_rank": 333,
+      "reference_main_sha": "13467b0020b41bb281ab1fd278996228da31b4df",
+      "body_check": "一次資料本文を取得可能な範囲で確認。arXiv HTMLが取得できない場合は一次資料PDF/本文導線および公開本文相当資料まで確認し、要旨単独では判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+        "discovery-20260927-0802-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.07895",
+      "identity_tokens": [
+        "arXiv:2407.07895"
+      ],
+      "title": "LLaVA-NeXT-Interleave: Tackling Multi-image, Video, and 3D in Large Multimodal Models",
+      "reason": "マルチ画像・動画・3Dの視覚言語モデルとデータ／評価が中心で実行システム効率化への直接寄与がない。",
+      "first_checked_at": "2026-09-26T21:31:09+00:00",
+      "last_checked_at": "2026-09-26T21:31:09+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 333"
+      ],
+      "source_url": "https://arxiv.org/abs/2407.07895",
+      "reference_main_sha": "b79b5723c60a56cc7b8c189038fb4c4ea91857d1",
+      "body_check": "一次資料本文または全文展開可能な論文ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0631-scheduled-chat-30.json",
+      "worklist_rank": 333,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0631-scheduled-chat-30.json",
+        "discovery-20260927-0631-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07055",
+      "identity_tokens": [
+        "arXiv:2408.07055"
+      ],
+      "title": "LongWriter: Unleashing 10,000+ Word Generation from Long Context LLMs",
+      "reason": "長出力SFTデータとAgentWriteによる能力拡張が中心で、生成ランタイムや資源管理のシステム寄与ではない。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 249"
+      ],
+      "source_url": "https://arxiv.org/abs/2408.07055",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 249,
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01143",
+      "identity_tokens": [
+        "arXiv:2409.01143"
+      ],
+      "title": "HexiScale: Facilitating Large Language Model Training over Heterogeneous Hardware",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 異種GPU上でdata/pipeline/tensor parallelismの非対称分割を自動配置し、LLM学習throughputを直接改善する。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 250"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.01143",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 250,
+      "migration_source_files": [
+        "old-accept-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_previous_classifications": [
+        "accept",
+        "unrelated"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02076",
+      "identity_tokens": [
+        "arXiv:2409.02076"
+      ],
+      "title": "LongGenBench: Benchmarking Long-Form Generation in Long Context LLMs",
+      "reason": "長文脈からの長文生成能力を測る評価ベンチマークで、推論システム効率化は主貢献ではない。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.02076",
+      "worklist_rank": 164,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1258-scheduled-chat-00.json",
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02908",
+      "identity_tokens": [
+        "arXiv:2409.02908",
+        "DOI:10.48550/arxiv.2409.02908"
+      ],
+      "title": "Masked Diffusion Models are Secretly Time-Agnostic Masked Models and Exploit Inaccurate Categorical Sampling",
+      "reason": "masked diffusionの理論・sampling挙動解析が主目的で、推論ランタイムや配信効率化のシステム寄与ではない。",
+      "first_checked_at": "2026-09-26T23:02:37+00:00",
+      "last_checked_at": "2026-09-26T23:02:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.02908",
+      "worklist_rank": 335,
+      "reference_main_sha": "13467b0020b41bb281ab1fd278996228da31b4df",
+      "body_check": "一次資料本文を取得可能な範囲で確認。arXiv HTMLが取得できない場合は一次資料PDF/本文導線および公開本文相当資料まで確認し、要旨単独では判定していない。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0802-scheduled-chat-00.json",
+        "discovery-20260927-0802-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12191",
+      "identity_tokens": [
+        "arXiv:2409.12191"
+      ],
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "reason": "視覚言語モデルの設計・学習・能力評価が中心で推論システム効率化が主目的ではない。",
+      "first_checked_at": "2026-09-26T17:00:00+00:00",
+      "last_checked_at": "2026-09-26T17:00:00+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.12191",
+      "reference_main_sha": "c9967dcf77f2251fe30bd4be1aac11c7ff19bf87",
+      "body_check": "一次資料の全文または本文相当の一次公開ページを可能な範囲で確認し、方法・評価・最終適用先を基準に判定。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0200-scheduled-chat-00.json",
+        "discovery-20260927-0200-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12517",
+      "identity_tokens": [
+        "arXiv:2409.12517"
+      ],
+      "title": "Scaling FP8 training to trillion-token LLMs",
+      "reason": "一次資料本文を確認し、Scaling FP8 training to trillion-token LLMs は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
+      "first_checked_at": "2026-09-26T22:00:57+00:00",
+      "last_checked_at": "2026-09-26T22:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.12517",
+      "worklist_rank": 409,
+      "reference_main_sha": "f70e45c766cfbff91cb50c9b2078f02af4df535a",
+      "body_check": "一次資料本文（arXiv HTMLまたはACL Anthology一次資料）を可能な範囲で確認。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0700-scheduled-chat-00.json",
+        "discovery-20260927-0700-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19256",
+      "identity_tokens": [
+        "arXiv:2409.19256",
+        "DOI:10.48550/arxiv.2409.19256"
+      ],
+      "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
+      "reason": "RLHFの分散学習・生成間再シャーディングを効率化する学習システムで、最終適用先が学習工程の高速化に当たるため現行サーベイでは除外。",
+      "source_url": "https://arxiv.org/abs/2409.19256",
+      "first_checked_at": "2026-09-27T15:27:15+00:00",
+      "last_checked_at": "2026-09-27T15:27:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json#rank-466"
+      ],
+      "worklist_rank": 466,
+      "reference_main_sha": "6e943814fa0df99c34d316889057ce043b938c89",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery-classification/accept-candidates.json",
+      "body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "migration_source_files": [
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery-classification/accept-candidates.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.20370",
+      "identity_tokens": [
+        "arXiv:2409.20370",
+        "DOI:10.48550/arxiv.2409.20370"
+      ],
+      "title": "The Perfect Blend: Redefining RLHF with Mixture of Judges",
+      "reason": "複数judgeによるRLHF品質改善が主題で、学習システム基盤や推論ランタイムの効率化ではない。",
+      "first_checked_at": "2026-09-26T18:31:44+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 429",
+        "worker-worklist-30 discovery_review rank 396",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.20370",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+      "migration_source_files": [
+        "old-unrelated-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1229-scheduled-chat-30.json",
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01288",
+      "identity_tokens": [
+        "arXiv:2411.01288"
+      ],
+      "title": "Hexa-MoE: Efficient and Heterogeneous-aware Training for Mixture-of-Experts",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: expert-specific operatorと異種GPU向けworkload allocationを持つMoE training frameworkで通信・計算効率を直接改善する。",
+      "first_checked_at": "2026-09-27T00:28:42+00:00",
+      "last_checked_at": "2026-09-27T00:28:42+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 251"
+      ],
+      "source_url": "https://arxiv.org/abs/2411.01288",
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認して判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+      "worklist_rank": 251,
+      "migration_source_files": [
+        "old-accept-reconstructed.json",
+        "unrelated-candidates.json"
+      ],
+      "migration_previous_classifications": [
+        "accept",
+        "unrelated"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0928-scheduled-chat-30.json",
+        "discovery-20260927-0928-scheduled-chat-30.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 46,
+  "chunk_count": 49,
+  "source_record_count": 970
+}
