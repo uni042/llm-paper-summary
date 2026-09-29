@@ -159,10 +159,11 @@ jobs:
               STATUS.md
 
             python .survey/scripts/process_library_import_inbox.py --repo-root .
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             commit_if_needed \
               'survey-library-import[bot]' \
               'survey-library-import[bot]@users.noreply.github.com' \
-              'Settle Library import inbox' \
+              'Settle Library import inbox and refresh STATUS' \
               .survey/import-inbox \
               .survey/work-queue \
               .survey/survey-state \
