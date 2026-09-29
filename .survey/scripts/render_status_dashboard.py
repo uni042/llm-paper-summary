@@ -391,6 +391,16 @@ def _library_first_status(repo_root: Path, now=None) -> str:
     last_research = max((row["completed_at"] for row in verified_research), default=None)
     last_discovery = max((stamp for stamp, _ in discovery_events), default=None)
 
+    research_7d = sum(row[1] for row in daily)
+    discovery_7d = sum(row[2] for row in daily)
+    research_daily_avg = research_7d / 7.0
+    discovery_daily_avg = discovery_7d / 7.0
+    ref_remaining = int(reference_progress.get("remaining") or 0) if reference_progress.get("available") is True else 0
+    # Discovery classifications are the unit that consumes structured-reference
+    # candidates in the current workflow; use their 7-day mean as the observed
+    # processing rate. This is an estimate, not a deadline.
+    ref_days_remaining = (ref_remaining / discovery_daily_avg) if discovery_daily_avg > 0 else None
+
     lines = [
         "# LLM論文サーベイ STATUS",
         "",
@@ -408,6 +418,9 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         f"| 直近24時間のDiscovery本文確認・分類 | **{discovery_24h}** |",
         f"| 最終Research完了 | **{_core.evidence._fmt_time(last_research)}** |",
         f"| 最終Discovery完了 | **{_core.evidence._fmt_time(last_discovery)}** |",
+        f"| Research 7日平均 | **{research_daily_avg:.1f}件/日** |",
+        f"| Discovery 7日平均 | **{discovery_daily_avg:.1f}件/日** |",
+        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
         "",
         "Researchは完成成果がGitHubへ正規収録され、現行の耐久証拠で照合できる論文を数えます。"
         "Discoveryはimmutable成果に記録された本文確認・最終分類済み候補数を数えます。",
@@ -435,7 +448,8 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         "## 集計方針",
         "",
         "- STATUSは表示のたびに現在の正規paper実体・Discovery耐久成果・構造化referencesから再計算します。",
-        "- Libraryに未転送の成果はGitHub側STATUSにはまだ現れません。Survey GitHub Import後に反映されます。",
+        "- GitHubへ転送済みの成果は正規paper/Discovery耐久成果から、未転送成果はLibrary側の同形式成果から集計します。二重計上はcanonical identityで除外します。",
+        "- references推定残日数は、現在の未処理referencesを直近7日のDiscovery平均処理件数で割った参考値です。",
         "- Scheduled workerの生存推定、claim数、heartbeat、旧queue内部状態など、現行Library-first手順の進捗判断に不要な値は表示しません。",
         "",
         "---",
