@@ -7,6 +7,9 @@ on:
       - '.survey/work-queue/claim-requests/*.json'
       - '.survey/work-queue/direct-takes/research/*.json'
       - '.github/workflows/survey-claim-fast.yml'
+      - '.survey/scripts/queue_worker.py'
+      - '.survey/scripts/process_reference_relevance_requests.py'
+      - '.survey/scripts/process_library_import_inbox.py'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
