@@ -1,25 +1,6 @@
-failed_at=2026-09-29T22:18:42Z
+failed_at=2026-09-29T22:25:21Z
 exit_code=1
-Traceback (most recent call last):
-  File "/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/process_library_import_inbox.py", line 247, in process_research
-    source.relative_to(repo_root).as_posix(),
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 682, in relative_to
-    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
-ValueError: '.survey/import-inbox/pending/research/libfile_01279e8bda6c8191b1ee70b2c0a2bea4--2026-2603.11504-longflow.md' is not in the subpath of '/home/runner/work/llm-paper-summary/llm-paper-summary'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/process_library_import_inbox.py", line 734, in <module>
-    raise SystemExit(main())
-                     ^^^^^^
-  File "/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/process_library_import_inbox.py", line 715, in main
-    research_imported, research_terminal = process_research(repo_root, args.max_research)
-                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/process_library_import_inbox.py", line 339, in process_research
-    "blocked_path": blocked_path.relative_to(repo_root).as_posix(),
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 682, in relative_to
-    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
-ValueError: '.survey/import-inbox/blocked/research/libfile_01279e8bda6c8191b1ee70b2c0a2bea4--2026-2603.11504-longflow.md' is not in the subpath of '/home/runner/work/llm-paper-summary/llm-paper-summary'
+  File "/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/process_library_import_inbox.py", line 688
+    def process_discovery(\n    repo_root: Path,\n    max_items: int | None = None,\n    max_records: int | None = None,\n) -> tuple[int, int]:
+                           ^
+SyntaxError: unexpected character after line continuation character
