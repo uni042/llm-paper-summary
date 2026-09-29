@@ -76,3 +76,126 @@ jobs:
 
           echo 'Failed to publish claim results after 12 retries.' >&2
           exit 1
+
+
+  library_import_drain:
+    needs: claim
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install survey dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Compile Library import helpers
+        run: |
+          python -m py_compile             .survey/scripts/process_library_import_inbox.py             .survey/scripts/process_discovery_precheck_batch.py             .survey/scripts/process_reference_relevance_requests.py             .survey/scripts/queue_worker.py             .survey/scripts/render_status_dashboard.py
+
+      - name: Drain bounded Library import work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-library-drain[bot]'
+          git config user.email 'survey-library-drain[bot]@users.noreply.github.com'
+
+          publish_stage() {
+            local message="$1"
+            shift
+            git add -A -- "$@"
+            if git diff --cached --quiet; then
+              return 0
+            fi
+            git commit -m "$message"
+            git push origin HEAD:main
+          }
+
+          # Stage 1: consume only a small bounded unit. Discovery is capped by
+          # records, not files; oversized immutable runs are deterministically
+          # split into <=20-record work chunks while retaining the original.
+          stage1_ok=0
+          for attempt in $(seq 1 6); do
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+
+            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 5               --max-discovery-records 20
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+
+            git add -A --               .survey/import-inbox               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation               .survey/work-queue/jobs               .survey/work-queue/next-jobs.json               .survey/work-queue/state.json               .survey/survey-state               papers README.md STATUS.md
+
+            if git diff --cached --quiet; then
+              stage1_ok=1
+              break
+            fi
+            git commit -m 'library-import-drain: checkpoint bounded intake'
+            if git push origin HEAD:main; then
+              stage1_ok=1
+              break
+            fi
+            echo "Library intake push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage1_ok" -eq 1 ] || { echo 'Library intake checkpoint failed.' >&2; exit 1; }
+
+          # Stage 2: process at most four Library-import precheck requests.
+          git fetch origin main
+          git reset --hard origin/main
+          : > /tmp/library-import-prechecks.txt
+          find .survey/work-queue/discovery-precheck/requests             -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null             | sort             | while IFS= read -r request; do
+                result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
+                [ -f "$result" ] || printf '%s\n' "$request"
+              done             | head -n 4 > /tmp/library-import-prechecks.txt
+
+          if [ -s /tmp/library-import-prechecks.txt ]; then
+            rm -rf /tmp/library-import-identities
+            rm -f /tmp/library-import-rejections.json
+            python .survey/scripts/build_discovery_identity_snapshot.py               --root .survey               --output /tmp/library-import-identities               --source-commit "$(git rev-parse HEAD)"
+            python .survey/scripts/build_discovery_rejection_ledger.py               --root .survey               --output /tmp/library-import-rejections.json
+
+            set +e
+            python .survey/scripts/process_discovery_precheck_batch.py               --repo-root .               --requests-file /tmp/library-import-prechecks.txt               --snapshot-dir /tmp/library-import-identities               --rejection-ledger /tmp/library-import-rejections.json               --parallelism 2
+            precheck_rc=$?
+            set -e
+            [ "$precheck_rc" -le 1 ] || exit "$precheck_rc"
+          fi
+
+          set +e
+          python .survey/scripts/process_reference_relevance_requests.py             --repo-root .             --max-requests 20
+          relevance_rc=$?
+          set -e
+
+          publish_stage             'library-import-drain: publish bounded downstream checks'             .survey/work-queue/discovery-precheck             .survey/work-queue/reference-curation
+
+          # Stage 3: convert resolved work to submissions, still capped to
+          # <=20 Discovery records for this workflow invocation.
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/process_library_import_inbox.py             --repo-root .             --skip-research             --max-discovery-records 20
+          publish_stage             'library-import-drain: advance bounded Discovery work'             .survey/import-inbox             .survey/work-queue/submissions             .survey/work-queue/discovery-precheck             .survey/work-queue/reference-curation
+
+          # Stage 4: do not drain an unbounded historical queue in one run.
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/queue_worker.py             --root .survey             --max-submissions 8
+          publish_stage             'library-import-drain: process bounded submissions'             .survey/work-queue             .survey/survey-state             papers README.md STATUS.md
+
+          # Stage 5: terminalize whatever completed and refresh STATUS.
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/process_library_import_inbox.py             --repo-root .             --skip-research             --max-discovery-records 20
+          python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+          publish_stage             'library-import-drain: settle bounded work and refresh STATUS'             .survey/import-inbox             .survey/work-queue             .survey/survey-state             papers README.md STATUS.md
+
+          if [ "$relevance_rc" -ne 0 ]; then
+            echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
+          fi
