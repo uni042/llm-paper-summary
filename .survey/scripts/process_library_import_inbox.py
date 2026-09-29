@@ -226,12 +226,15 @@ def block_payload(source: Path, target_dir: Path) -> Path:
     return target
 
 
-def process_research(repo_root: Path) -> tuple[int, int]:
+def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     imported = 0
     terminal = 0
     PENDING_RESEARCH.mkdir(parents=True, exist_ok=True)
 
-    for source in sorted(PENDING_RESEARCH.glob("*.md")):
+    sources = sorted(PENDING_RESEARCH.glob("*.md"))
+    if max_items is not None:
+        sources = sources[:max(0, max_items)]
+    for source in sources:
         token = source_token(source)
         result_path = RESULT_RESEARCH / result_filename(source)
         raw = source.read_text(encoding="utf-8")
@@ -687,10 +690,11 @@ def process_discovery(repo_root: Path) -> tuple[int, int]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--max-research", type=int, default=None)
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
-    research_imported, research_terminal = process_research(repo_root)
+    research_imported, research_terminal = process_research(repo_root, args.max_research)
     discovery_advanced, discovery_terminal = process_discovery(repo_root)
 
     summary = {
