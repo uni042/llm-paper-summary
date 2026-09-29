@@ -6,6 +6,7 @@ on:
     paths:
       - '.survey/work-queue/claim-requests/*.json'
       - '.survey/work-queue/direct-takes/research/*.json'
+      - '.github/workflows/survey-claim-fast.yml'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
