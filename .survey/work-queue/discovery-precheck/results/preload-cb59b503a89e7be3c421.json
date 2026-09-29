@@ -1,0 +1,792 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-cb59b503a89e7be3c421",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-cb59b503a89e7be3c421",
+  "axis": "forward citations of H2O KV cache eviction and efficient inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "60",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 35,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T13:20:27.665536+00:00",
+  "preload_id": "preload-cb59b503a89e7be3c421",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "The KV Cache Is the New Memory Wall",
+      "source_url": "https://arxiv.org/abs/2609.30854",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+      "canonical_id": "arXiv:2609.30854",
+      "arxiv_id": "2609.30854",
+      "authors": [
+        "Tejinder Singh"
+      ]
+    },
+    {
+      "title": "HasMem: Hard-Origin Adaptively Softened Memory for Long-Term LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.30797",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Text-based memory and context compression support reuse of past interactions. Resizing continuous memory changes the input to a frozen LLM, coupling capacity allocation with readout. We propose Hard-Origin Adaptively Softened Memory (HasMem). Frozen hard-prompt embeddings provide a verifiable initial state. A controller adjusts memory widths, a Writer re-encodes resized entries, and Reader and Global provide readout adaptation and cross-turn state. On all $535$ questions in a reconstruction probe derived from the Multi-Session Chat (MSC) development split, the main configuration achieves lexical F1 of $95.3$ ($+4.4$ percentage points) at $93.6\\%$ of the hard reference's framed memory positions. With approximately matched per-question target body budgets, six configurations at mean per-entry retention around $0.83$--$0.91$ exceed rule-based re-encoding by $8.0$--$23.6$ exact-match (EM) percentage points. With fixed model parameters and rule target width ratio $0.75$, Global's EM gain passes a user-level exact paired test with Bonferroni correction over eight comparisons. On all $500$ LongMemEval-S questions, local lexical F1 rises from the hard reference's $3.4$ to $8.9$, and answer negative log-likelihood (NLL) falls from $12.257$ to $5.274$. F1 gains accompany lower EM on both evaluations.",
+      "canonical_id": "arXiv:2609.30797",
+      "arxiv_id": "2609.30797",
+      "authors": [
+        "Zi-Hong He",
+        "Jun-Xiao Shen",
+        "Chen Liang",
+        "Hai-Ning Liang"
+      ]
+    },
+    {
+      "title": "Beyond Mean Attention: Diversity-Aware, Layer-Wise Scoring for KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2609.30738",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "KV cache eviction methods such as SnapKV and PyramidKV rank tokens solely by mean attention over a small observation window. We study a unified score, $\\mu_i+\\lambda_1\\sigma_i+\\lambda_2\\mathrm{corr}(i,S)$, adding attention dispersion across window queries and redundancy relative to selected tokens. For $\\lambda_2<0$, the score penalizes similarity to selected tokens as in maximal marginal relevance (MMR), without extra forward passes. To test whether this relevance-diversity balance should vary with depth, we compare fixed global coefficients with three-segment and quadratic profiles. Only these depth profiles are searched on a development split under a $\\sinh$ reparameterization. On all 16 English LongBench datasets with Mistral-7B at a budget of 64 entries per layer, a single global diversification constant improves 13 of 16 datasets (macro +1.1); the gain holds at budget 32 and narrows at 128. Per-dataset search finds no detectable layer structure on most datasets; on passage retrieval it finds a large one: a mid-layer sign flip that rewards similarity and is worth +9.6 over the baseline at budget 64 and, without re-tuning, +13.2 over the global constant at budget 128. Ablations attribute the gain to the redundancy term; replaying every accepted search state on the held-out test set separates genuine structure from tuning noise.",
+      "canonical_id": "arXiv:2609.30738",
+      "arxiv_id": "2609.30738",
+      "authors": [
+        "Tian-Fang Xie",
+        "Wei Zhu"
+      ]
+    },
+    {
+      "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+      "source_url": "https://arxiv.org/abs/2609.31224",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+      "canonical_id": "arXiv:2609.31224",
+      "arxiv_id": "2609.31224",
+      "authors": [
+        "Ye-Jin Lee",
+        "Seungbeom Kim",
+        "Yong-Ha Lee",
+        "Kyuhong Shim"
+      ]
+    },
+    {
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "source_url": "https://arxiv.org/abs/2609.31568",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+      "canonical_id": "arXiv:2609.31568",
+      "arxiv_id": "2609.31568",
+      "authors": [
+        "Q. Nguyen",
+        "H. Nguyễn",
+        "H. Hoàng",
+        "T. Pham",
+        "Cong Tran",
+        "Nam Vu"
+      ]
+    },
+    {
+      "title": "Receiver-Conditioned Latent Communication gives 94% CacheBack",
+      "source_url": "https://arxiv.org/abs/2609.32046",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Multi-agent systems distribute large contexts across agents that communicate to solve a task. Text messages are compact but require decoding and may omit evidence the receiving agent needs. Recent latent communication instead transfers KV caches. This avoids text generation and can improve accuracy and latency. However, a full KV cache grows linearly with both the context an individual agent processes, and the number of agents that coordinate together. This raises memory and context costs, often far exceeding available GPU resources and context window sizes. Our key observation is that agents need only send what the receiving agent requires for its local task -- which we call receiver-conditioned communication. The receiver agent passes the sender a small description of its information needs, which serves to filter and compress the sender agent's KV cache. CacheBack is a simple, robust, training-free instance of receiver conditioning based on the sender's attention weights. On FanOutQA, CacheBack with Qwen 3 removes 75% of the state the agent would otherwise receive, improving accuracy by 14.7 percentage points and reducing median task-completion latency by 3.2x relative to text communication. We show comparable improvements across model families that span dense Transformers, Mamba-attention hybrids, and sliding-window attention.",
+      "canonical_id": "arXiv:2609.32046",
+      "arxiv_id": "2609.32046",
+      "authors": [
+        "M. Rossi",
+        "Prajwal Raghunath",
+        "Hao-Qing Xuan",
+        "Yu-Sen Zhang",
+        "Eugene Wu"
+      ]
+    },
+    {
+      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.28870",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+      "canonical_id": "arXiv:2609.28870",
+      "arxiv_id": "2609.28870",
+      "authors": [
+        "Yi-Yu Liu",
+        "Min-Lan Yu",
+        "Jun-Cheng Yang"
+      ]
+    },
+    {
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "source_url": "https://arxiv.org/abs/2609.29913",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+      "canonical_id": "arXiv:2609.29913",
+      "arxiv_id": "2609.29913",
+      "authors": [
+        "You-Peng Zhao",
+        "Tian Tan",
+        "Li-Qian Peng",
+        "Jun Wang",
+        "Alec Go"
+      ]
+    },
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, \\textsc{FlashLoop} delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "authors": [
+        "Wan-Qi Yang",
+        "Shi-Wei Liu"
+      ]
+    },
+    {
+      "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+      "source_url": "https://arxiv.org/abs/2609.29875",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long horizon language model agents continually accumulate reasoning history, increasing context length and inference cost even after earlier decisions have been executed and observed. Unlike static Chain of Thought compression, removing historical reasoning can change future actions and the resulting interaction trajectory. We study when such reasoning can be safely forgotten. We propose Interaction Aware Compression for Long Horizon Reasoning (ICLR), a training free online method that ranks reasoning blocks using frozen proxy entropy while preserving actions, tool calls, and observations. On 260 WorkBuddyBench tasks, ICLR improves average reward from 0.699 to 0.718, while reducing input, output, and cache read tokens by 25.5%, 14.4%, and 33.3%, respectively. Ablations reveal trajectory amplification, where local reasoning deletion produces nonlinear changes in total computation by altering subsequent interaction. Representation probing, activation patching, and controlled trajectory analyses further suggest that historical reasoning becomes more replaceable once task relevant derived state has been reliably externalized into code, files, tool outputs, or environmental feedback. These results characterize agent reasoning as dynamic working state rather than permanent interaction history.",
+      "canonical_id": "arXiv:2609.29875",
+      "arxiv_id": "2609.29875",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Fei Luo",
+        "Bo Wang",
+        "Guo-Run Yao",
+        "Ying-Long Guo",
+        "Chao Ning",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ]
+    },
+    {
+      "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2609.27276",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+      "canonical_id": "arXiv:2609.27276",
+      "arxiv_id": "2609.27276",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Bo Wang",
+        "Fei Luo",
+        "Guo-Run Yao",
+        "Chao Ning",
+        "Ying-Long Guo",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ]
+    },
+    {
+      "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+      "source_url": "https://arxiv.org/abs/2609.23371",
+      "year": 2026,
+      "published": "2026-09-20",
+      "abstract": "Long-context language models interface with external knowledge through raw natural language. In retrieval-augmented systems, this creates a persistent index-payload schism: dense vectors enable searchable routing, but models must re-ingest lengthy text payloads for reasoning at O(N^2) attention cost. Existing compression methods further produce private states tied to specific architectures. We introduce Machine-Interpretable Information (MII), the first agent-to-agent (A2A) document-to-state protocol. A dual-timescale state-space Writer compiles documents into a canonical, fixed-bandwidth state (56 tokens), and a lightweight Translator maps it into any frozen Reader's embedding space, reducing query-time cost to O(K). The resulting .mii artifact unifies Retrieval (searchable geometry), Reasoning (global memory), and Reconstruction (grounded details) in a single transferable medium. We demonstrate strong cross-model interoperability across heterogeneous LLMs (e.g., Llama, Qwen, Mistral) -- despite the Writer using a legacy GPT-2 vocabulary, forcing genuine semantic translation rather than token-level memorization. Mechanistic probes reveal modular latent structure: entity representations can be causally traced and zero-shot transplanted between unrelated document states while remaining decodable. To address lexical reconstruction under fixed bandwidth, we propose Residual-MII, a cache hierarchy combining compiled global memory with sparse local evidence. On HotpotQA (7,405 queries), Residual-MII exceeds full-context Exact Match at approximately 7% of the attention FLOPs, suggesting a paradigm shift toward compiled, transferable neural document formats.",
+      "canonical_id": "arXiv:2609.23371",
+      "arxiv_id": "2609.23371",
+      "authors": [
+        "Yi-Fan Wang",
+        "De-Jing Dou"
+      ]
+    },
+    {
+      "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+      "source_url": "https://arxiv.org/abs/2609.20068",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+      "canonical_id": "arXiv:2609.20068",
+      "arxiv_id": "2609.20068",
+      "authors": [
+        "Caroline Gans Combe"
+      ]
+    },
+    {
+      "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2609.16617",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "KV-cache eviction perturbs the conditional token distributions governing autoregressive generation. We investigate how first-divergence timing and subsequent token mismatch determine cumulative disagreement. We derive an exact decomposition under a specified stepwise maximal coupling: the expected mismatch fraction equals a first-mismatch contribution plus post-divergence exposure multiplied by its mismatch rate. An explicit construction over unrestricted autoregressive kernel pairs realizes the sharp interval of risks compatible with a finite divergence-aligned observation window. Residual-branch conditional Monte Carlo provides unbiased joint estimates of occurrence, occupation, and window/tail contributions, with per-replicate variance dominance for total token loss. Complete trajectories from Meta-Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct show that SnapKV at 50% retention enters divergence later and less often than SnapKV-512 or recent-token retention with the same 50% prompt-cache budget, while post-divergence total variation (TV) remains high. In an exploratory analysis of 288 documents, post-divergence exposure accounts for 85-90% of four aggregate mismatch gaps. On 288 independent documents at 90% retention, prespecified comparisons show higher branch-aligned TV in the late than in the early window in both models.",
+      "canonical_id": "arXiv:2609.16617",
+      "arxiv_id": "2609.16617",
+      "authors": [
+        "Xin-Yue Luo",
+        "Fei Yu"
+      ]
+    },
+    {
+      "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.14258",
+      "year": 2026,
+      "published": "2026-09-13",
+      "abstract": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+      "canonical_id": "arXiv:2609.14258",
+      "arxiv_id": "2609.14258",
+      "authors": [
+        "Mohd. Azfar",
+        "I. Khan"
+      ]
+    },
+    {
+      "title": "State of Thought Enables Endogenous Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.16055",
+      "year": 2026,
+      "published": "2026-09-13",
+      "abstract": "Test-time compute has emerged as a major approach to improving the capabilities of Large Language Models (LLMs). However, existing test-time reasoning paradigms rely heavily on externally imposed control, either through fixed reasoning programs or through costly expansion in constrained search spaces, limiting both generalization and efficiency. We propose State of Thought (SoT), a new reasoning paradigm that enables endogenous reasoning in LLMs, with the model's internal reasoning state governing how reasoning unfolds. Concretely, SoT extracts a compact dynamics-geometric state from the model's internal information transfer and uses a 582-parameter controller on frozen backbones to selectively activate historical reasoning support useful under the current reasoning state, framing reasoning as a state-conditioned process over evidence rather than an externally prescribed token chain. Across quantitative (1.34x), general (1.62x), symbolic-and-code (1.76x), and long-context (2.51x) reasoning on 3 LLMs and 16 datasets, SoT consistently improves mean-baseline accuracy while reducing generated tokens by 62.6% and end-to-end latency by 44.6%. Across 2 VLM scales and 3 reasoning tasks, it improves mean accuracy by 3.8 points over reasoning baselines, with 74.9% fewer completion tokens and 73.5% lower latency than search-based methods. Under constrained access, SoT retains 38.2%/36.5% mean accuracy gains in training-free/embedding-only settings, while trajectory-only judging reaches 84.1% agreement across 3 API models. Together, endogenous state-driven reasoning provides a generalizable and efficient alternative.",
+      "canonical_id": "arXiv:2609.16055",
+      "arxiv_id": "2609.16055",
+      "authors": [
+        "Z. Gong",
+        "Yi-Kun Hou",
+        "Zi-Hao Zeng",
+        "Ming-Gan Xiao",
+        "Chau Yuen",
+        "Wei Yang Bryan Lim"
+      ]
+    },
+    {
+      "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+      "source_url": "https://arxiv.org/abs/2609.06872",
+      "year": 2026,
+      "published": "2026-09-06",
+      "abstract": "An assistant can stop repeating a deleted statement while its recurrent memory still carries that statement's influence. We examine this distinction by saving the state difference immediately after a record, carrying this saved difference, or receipt, through later updates, and comparing the corrected state with the state built from the same conversation with the record omitted. Unrolling the recurrence gives an exact criterion: transport reaches this never-stored state if and only if the additional differences created by later updates cancel after transport. We evaluate eleven conditions using 40 prospectively selected synthetic Kimi Linear contexts, with 40 separate calibration contexts and paired uncertainty estimates computed across complete records. Attention masking removed all 40 exact greedy target answers, yet a fixed three-query candidate-scoring attack with known candidate values and log-probability access attained AUC 0.740 (95% interval 0.695--0.809); the measured false-positive rate was 7.5%. Prompt-only forgetting still returned 33 of the 40 targets. Checkpoint replay matched the complete declared active state and audit logits in all 80 contexts, while preserving all 120 retained answers in the evaluation cohort. An independent Qwen cohort and matched original-bf16/8-bit Kimi controls confirmed native transport mismatch beyond the numerical error measured in matched controls. Replay also supported record replacement and successive deletions with a new record added between them. These results provide a practical audit of both the requested memory change and the assistant's remaining behavior, with replay work determined by the surviving suffix.",
+      "canonical_id": "arXiv:2609.06872",
+      "arxiv_id": "2609.06872",
+      "authors": [
+        "V. Ramesh"
+      ]
+    },
+    {
+      "title": "Compression Remembers the Detour: How Context Compression Amplifies Off-Task Content and Derails LLM Agents",
+      "source_url": "https://doi.org/10.62177/apemr.v3i4.1704",
+      "year": 2026,
+      "published": "2026-09-05",
+      "abstract": "Long-horizon LLM agents rely on context compression to keep growing histories within a finite window [1][2]. These mechanisms are goal-agnostic—retention follows volume, recurrence, and generic salience rather than task relevance—and we show they systematically amplify off-task content, inducing Compression-Induced Goal Drift (CIGD). We formalize CIGD via the drift amplification ratio (DAR), evaluate six compression strategies on a controlled injection benchmark ( per cell), and propose Goal-Anchored Compression (GAC): a pinned goal anchor, a negation ledger, status-aware retention scoring, and drift re-anchoring. Volume- and recurrence-based compressors amplify detours monotonically with repetition (attention-scored eviction reaches  at twelve-fold repetition), while query-conditioned compressors de-amplify. Under severe budgets, summarization and scored eviction lose the user’s negated constraint in  and  of episodes where GAC retains it in ; GAC eliminates residual detour content () with  smaller contexts. Prior work asks what compression forgets [3][4]; we ask what it amplifies.",
+      "doi": "10.62177/apemr.v3i4.1704",
+      "canonical_id": "DOI:10.62177/apemr.v3i4.1704",
+      "authors": [
+        "Zhan Zhang",
+        "Wen-Zhi Zhang"
+      ]
+    },
+    {
+      "title": "RenderFormer-V2: Neural Rendering with Heterogeneous Scene Primitives",
+      "source_url": "https://arxiv.org/abs/2609.05738",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "We present'RenderFormer-V2', a unified learned transformer-based neural rendering model, complementary to modern physics-based rendering systems, that can handle diverse light-transport effects such as caustics, volumetric scattering, environment lighting, textured and displaced surfaces and out-of-distribution materials without per-scene training or specialized code. RenderFormer-V2 models global light transport as a sequence-to-sequence transformation. Following its predecessor, RenderFormer-V2 also employs a two stage process: a view-independent stage that resolves intra-scene primitive to primitive transport, and a view-dependent stage that transforms the internal neural scene representation into image pixels. Different from RenderFormer, our model employs a novel combined windowed-attention and rendering-informed attention sink in the view-independent stage to improve scalability while maintaining render accuracy. To further improve versatility, RenderFormerV2 supports heterogeneous scene primitives, including environment maps and participating media, and it employs a material encoding independent of the underlying surface reflectance model that encodes material appearance via a novel neural embedding. We demonstrate the versatility of RenderFormer-V2 on a variety of scenes and perform an extensive ablation of the improved attention mechanism.",
+      "canonical_id": "arXiv:2609.05738",
+      "arxiv_id": "2609.05738",
+      "authors": [
+        "Chong Zeng",
+        "Yue Dong",
+        "P. Peers",
+        "Lvmin Zhang",
+        "Maneesh Agrawala"
+      ]
+    },
+    {
+      "title": "ALISTA: Accelerator using LSH-based maximum inner-product search in transformer attention",
+      "source_url": "https://doi.org/10.1016/j.vlsi.2026.102784",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "doi": "10.1016/j.vlsi.2026.102784",
+      "canonical_id": "DOI:10.1016/j.vlsi.2026.102784",
+      "authors": [
+        "Shin Sunny",
+        "Satyajit Das"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.30854",
+      "identity_tokens": [
+        "id:arXiv:2609.30854",
+        "title:the kv cache is the new memory wall",
+        "url:https://arxiv.org/abs/2609.30854"
+      ],
+      "record": {
+        "title": "The KV Cache Is the New Memory Wall",
+        "source_url": "https://arxiv.org/abs/2609.30854",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+        "canonical_id": "arXiv:2609.30854",
+        "arxiv_id": "2609.30854",
+        "authors": [
+          "Tejinder Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30797",
+      "identity_tokens": [
+        "id:arXiv:2609.30797",
+        "title:hasmem hardorigin adaptively softened memory for longterm llm agents",
+        "url:https://arxiv.org/abs/2609.30797"
+      ],
+      "record": {
+        "title": "HasMem: Hard-Origin Adaptively Softened Memory for Long-Term LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.30797",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Text-based memory and context compression support reuse of past interactions. Resizing continuous memory changes the input to a frozen LLM, coupling capacity allocation with readout. We propose Hard-Origin Adaptively Softened Memory (HasMem). Frozen hard-prompt embeddings provide a verifiable initial state. A controller adjusts memory widths, a Writer re-encodes resized entries, and Reader and Global provide readout adaptation and cross-turn state. On all $535$ questions in a reconstruction probe derived from the Multi-Session Chat (MSC) development split, the main configuration achieves lexical F1 of $95.3$ ($+4.4$ percentage points) at $93.6\\%$ of the hard reference's framed memory positions. With approximately matched per-question target body budgets, six configurations at mean per-entry retention around $0.83$--$0.91$ exceed rule-based re-encoding by $8.0$--$23.6$ exact-match (EM) percentage points. With fixed model parameters and rule target width ratio $0.75$, Global's EM gain passes a user-level exact paired test with Bonferroni correction over eight comparisons. On all $500$ LongMemEval-S questions, local lexical F1 rises from the hard reference's $3.4$ to $8.9$, and answer negative log-likelihood (NLL) falls from $12.257$ to $5.274$. F1 gains accompany lower EM on both evaluations.",
+        "canonical_id": "arXiv:2609.30797",
+        "arxiv_id": "2609.30797",
+        "authors": [
+          "Zi-Hong He",
+          "Jun-Xiao Shen",
+          "Chen Liang",
+          "Hai-Ning Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30738",
+      "identity_tokens": [
+        "id:arXiv:2609.30738",
+        "title:beyond mean attention diversityaware layerwise scoring for kv cache eviction",
+        "url:https://arxiv.org/abs/2609.30738"
+      ],
+      "record": {
+        "title": "Beyond Mean Attention: Diversity-Aware, Layer-Wise Scoring for KV Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2609.30738",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "KV cache eviction methods such as SnapKV and PyramidKV rank tokens solely by mean attention over a small observation window. We study a unified score, $\\mu_i+\\lambda_1\\sigma_i+\\lambda_2\\mathrm{corr}(i,S)$, adding attention dispersion across window queries and redundancy relative to selected tokens. For $\\lambda_2<0$, the score penalizes similarity to selected tokens as in maximal marginal relevance (MMR), without extra forward passes. To test whether this relevance-diversity balance should vary with depth, we compare fixed global coefficients with three-segment and quadratic profiles. Only these depth profiles are searched on a development split under a $\\sinh$ reparameterization. On all 16 English LongBench datasets with Mistral-7B at a budget of 64 entries per layer, a single global diversification constant improves 13 of 16 datasets (macro +1.1); the gain holds at budget 32 and narrows at 128. Per-dataset search finds no detectable layer structure on most datasets; on passage retrieval it finds a large one: a mid-layer sign flip that rewards similarity and is worth +9.6 over the baseline at budget 64 and, without re-tuning, +13.2 over the global constant at budget 128. Ablations attribute the gain to the redundancy term; replaying every accepted search state on the held-out test set separates genuine structure from tuning noise.",
+        "canonical_id": "arXiv:2609.30738",
+        "arxiv_id": "2609.30738",
+        "authors": [
+          "Tian-Fang Xie",
+          "Wei Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31224",
+      "identity_tokens": [
+        "id:arXiv:2609.31224",
+        "title:acoustictotext kv compression for fullduplex speech models",
+        "url:https://arxiv.org/abs/2609.31224"
+      ],
+      "record": {
+        "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+        "source_url": "https://arxiv.org/abs/2609.31224",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+        "canonical_id": "arXiv:2609.31224",
+        "arxiv_id": "2609.31224",
+        "authors": [
+          "Ye-Jin Lee",
+          "Seungbeom Kim",
+          "Yong-Ha Lee",
+          "Kyuhong Shim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31568",
+      "identity_tokens": [
+        "id:arXiv:2609.31568",
+        "title:deepeduv1 efficient and scalable agentic llms for vietnamese education",
+        "url:https://arxiv.org/abs/2609.31568"
+      ],
+      "record": {
+        "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+        "source_url": "https://arxiv.org/abs/2609.31568",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+        "canonical_id": "arXiv:2609.31568",
+        "arxiv_id": "2609.31568",
+        "authors": [
+          "Q. Nguyen",
+          "H. Nguyễn",
+          "H. Hoàng",
+          "T. Pham",
+          "Cong Tran",
+          "Nam Vu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32046",
+      "identity_tokens": [
+        "id:arXiv:2609.32046",
+        "title:receiverconditioned latent communication gives 94 cacheback",
+        "url:https://arxiv.org/abs/2609.32046"
+      ],
+      "record": {
+        "title": "Receiver-Conditioned Latent Communication gives 94% CacheBack",
+        "source_url": "https://arxiv.org/abs/2609.32046",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Multi-agent systems distribute large contexts across agents that communicate to solve a task. Text messages are compact but require decoding and may omit evidence the receiving agent needs. Recent latent communication instead transfers KV caches. This avoids text generation and can improve accuracy and latency. However, a full KV cache grows linearly with both the context an individual agent processes, and the number of agents that coordinate together. This raises memory and context costs, often far exceeding available GPU resources and context window sizes. Our key observation is that agents need only send what the receiving agent requires for its local task -- which we call receiver-conditioned communication. The receiver agent passes the sender a small description of its information needs, which serves to filter and compress the sender agent's KV cache. CacheBack is a simple, robust, training-free instance of receiver conditioning based on the sender's attention weights. On FanOutQA, CacheBack with Qwen 3 removes 75% of the state the agent would otherwise receive, improving accuracy by 14.7 percentage points and reducing median task-completion latency by 3.2x relative to text communication. We show comparable improvements across model families that span dense Transformers, Mamba-attention hybrids, and sliding-window attention.",
+        "canonical_id": "arXiv:2609.32046",
+        "arxiv_id": "2609.32046",
+        "authors": [
+          "M. Rossi",
+          "Prajwal Raghunath",
+          "Hao-Qing Xuan",
+          "Yu-Sen Zhang",
+          "Eugene Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28870",
+      "identity_tokens": [
+        "id:arXiv:2609.28870",
+        "title:when fancy eviction fails rethinking cache replacement for llm prefix reuse",
+        "url:https://arxiv.org/abs/2609.28870"
+      ],
+      "record": {
+        "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.28870",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+        "canonical_id": "arXiv:2609.28870",
+        "arxiv_id": "2609.28870",
+        "authors": [
+          "Yi-Yu Liu",
+          "Min-Lan Yu",
+          "Jun-Cheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29913",
+      "identity_tokens": [
+        "id:arXiv:2609.29913",
+        "title:milo efficient manyshot incontext learning with blockwise lowrank compression",
+        "url:https://arxiv.org/abs/2609.29913"
+      ],
+      "record": {
+        "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+        "source_url": "https://arxiv.org/abs/2609.29913",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+        "canonical_id": "arXiv:2609.29913",
+        "arxiv_id": "2609.29913",
+        "authors": [
+          "You-Peng Zhao",
+          "Tian Tan",
+          "Li-Qian Peng",
+          "Jun Wang",
+          "Alec Go"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29812",
+      "identity_tokens": [
+        "id:arXiv:2609.29812",
+        "title:flashloop fast and memoryefficient looped transformers via lazy updates",
+        "url:https://arxiv.org/abs/2609.29812"
+      ],
+      "record": {
+        "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+        "source_url": "https://arxiv.org/abs/2609.29812",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, \\textsc{FlashLoop} delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+        "canonical_id": "arXiv:2609.29812",
+        "arxiv_id": "2609.29812",
+        "authors": [
+          "Wan-Qi Yang",
+          "Shi-Wei Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29875",
+      "identity_tokens": [
+        "id:arXiv:2609.29875",
+        "title:when can agents forget their reasoning iclr for longhorizon agent context compression",
+        "url:https://arxiv.org/abs/2609.29875"
+      ],
+      "record": {
+        "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+        "source_url": "https://arxiv.org/abs/2609.29875",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long horizon language model agents continually accumulate reasoning history, increasing context length and inference cost even after earlier decisions have been executed and observed. Unlike static Chain of Thought compression, removing historical reasoning can change future actions and the resulting interaction trajectory. We study when such reasoning can be safely forgotten. We propose Interaction Aware Compression for Long Horizon Reasoning (ICLR), a training free online method that ranks reasoning blocks using frozen proxy entropy while preserving actions, tool calls, and observations. On 260 WorkBuddyBench tasks, ICLR improves average reward from 0.699 to 0.718, while reducing input, output, and cache read tokens by 25.5%, 14.4%, and 33.3%, respectively. Ablations reveal trajectory amplification, where local reasoning deletion produces nonlinear changes in total computation by altering subsequent interaction. Representation probing, activation patching, and controlled trajectory analyses further suggest that historical reasoning becomes more replaceable once task relevant derived state has been reliably externalized into code, files, tool outputs, or environmental feedback. These results characterize agent reasoning as dynamic working state rather than permanent interaction history.",
+        "canonical_id": "arXiv:2609.29875",
+        "arxiv_id": "2609.29875",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Fei Luo",
+          "Bo Wang",
+          "Guo-Run Yao",
+          "Ying-Long Guo",
+          "Chao Ning",
+          "Hong-Yue Chen",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27276",
+      "identity_tokens": [
+        "id:arXiv:2609.27276",
+        "title:drsr learning setlevel deletion risk for efficient longhorizon agents",
+        "url:https://arxiv.org/abs/2609.27276"
+      ],
+      "record": {
+        "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+        "source_url": "https://arxiv.org/abs/2609.27276",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+        "canonical_id": "arXiv:2609.27276",
+        "arxiv_id": "2609.27276",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Bo Wang",
+          "Fei Luo",
+          "Guo-Run Yao",
+          "Chao Ning",
+          "Ying-Long Guo",
+          "Hong-Yue Chen",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23371",
+      "identity_tokens": [
+        "id:arXiv:2609.23371",
+        "title:machineinterpretable information compiling documents into searchable and readable protocol states",
+        "url:https://arxiv.org/abs/2609.23371"
+      ],
+      "record": {
+        "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+        "source_url": "https://arxiv.org/abs/2609.23371",
+        "year": 2026,
+        "published": "2026-09-20",
+        "abstract": "Long-context language models interface with external knowledge through raw natural language. In retrieval-augmented systems, this creates a persistent index-payload schism: dense vectors enable searchable routing, but models must re-ingest lengthy text payloads for reasoning at O(N^2) attention cost. Existing compression methods further produce private states tied to specific architectures. We introduce Machine-Interpretable Information (MII), the first agent-to-agent (A2A) document-to-state protocol. A dual-timescale state-space Writer compiles documents into a canonical, fixed-bandwidth state (56 tokens), and a lightweight Translator maps it into any frozen Reader's embedding space, reducing query-time cost to O(K). The resulting .mii artifact unifies Retrieval (searchable geometry), Reasoning (global memory), and Reconstruction (grounded details) in a single transferable medium. We demonstrate strong cross-model interoperability across heterogeneous LLMs (e.g., Llama, Qwen, Mistral) -- despite the Writer using a legacy GPT-2 vocabulary, forcing genuine semantic translation rather than token-level memorization. Mechanistic probes reveal modular latent structure: entity representations can be causally traced and zero-shot transplanted between unrelated document states while remaining decodable. To address lexical reconstruction under fixed bandwidth, we propose Residual-MII, a cache hierarchy combining compiled global memory with sparse local evidence. On HotpotQA (7,405 queries), Residual-MII exceeds full-context Exact Match at approximately 7% of the attention FLOPs, suggesting a paradigm shift toward compiled, transferable neural document formats.",
+        "canonical_id": "arXiv:2609.23371",
+        "arxiv_id": "2609.23371",
+        "authors": [
+          "Yi-Fan Wang",
+          "De-Jing Dou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20068",
+      "identity_tokens": [
+        "id:arXiv:2609.20068",
+        "title:marginal utility matrix factorization and the keyvalue kv cache a unified informationeconomic framework for sovereign geomining inference",
+        "url:https://arxiv.org/abs/2609.20068"
+      ],
+      "record": {
+        "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+        "source_url": "https://arxiv.org/abs/2609.20068",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+        "canonical_id": "arXiv:2609.20068",
+        "arxiv_id": "2609.20068",
+        "authors": [
+          "Caroline Gans Combe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16617",
+      "identity_tokens": [
+        "id:arXiv:2609.16617",
+        "title:divergence timing and cumulative disagreement under kvcache eviction",
+        "url:https://arxiv.org/abs/2609.16617"
+      ],
+      "record": {
+        "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2609.16617",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "KV-cache eviction perturbs the conditional token distributions governing autoregressive generation. We investigate how first-divergence timing and subsequent token mismatch determine cumulative disagreement. We derive an exact decomposition under a specified stepwise maximal coupling: the expected mismatch fraction equals a first-mismatch contribution plus post-divergence exposure multiplied by its mismatch rate. An explicit construction over unrestricted autoregressive kernel pairs realizes the sharp interval of risks compatible with a finite divergence-aligned observation window. Residual-branch conditional Monte Carlo provides unbiased joint estimates of occurrence, occupation, and window/tail contributions, with per-replicate variance dominance for total token loss. Complete trajectories from Meta-Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct show that SnapKV at 50% retention enters divergence later and less often than SnapKV-512 or recent-token retention with the same 50% prompt-cache budget, while post-divergence total variation (TV) remains high. In an exploratory analysis of 288 documents, post-divergence exposure accounts for 85-90% of four aggregate mismatch gaps. On 288 independent documents at 90% retention, prespecified comparisons show higher branch-aligned TV in the late than in the early window in both models.",
+        "canonical_id": "arXiv:2609.16617",
+        "arxiv_id": "2609.16617",
+        "authors": [
+          "Xin-Yue Luo",
+          "Fei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14258",
+      "identity_tokens": [
+        "id:arXiv:2609.14258",
+        "title:spark representationlevel kv memory alignment for safer visionlanguage models",
+        "url:https://arxiv.org/abs/2609.14258"
+      ],
+      "record": {
+        "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.14258",
+        "year": 2026,
+        "published": "2026-09-13",
+        "abstract": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+        "canonical_id": "arXiv:2609.14258",
+        "arxiv_id": "2609.14258",
+        "authors": [
+          "Mohd. Azfar",
+          "I. Khan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16055",
+      "identity_tokens": [
+        "id:arXiv:2609.16055",
+        "title:state of thought enables endogenous reasoning",
+        "url:https://arxiv.org/abs/2609.16055"
+      ],
+      "record": {
+        "title": "State of Thought Enables Endogenous Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.16055",
+        "year": 2026,
+        "published": "2026-09-13",
+        "abstract": "Test-time compute has emerged as a major approach to improving the capabilities of Large Language Models (LLMs). However, existing test-time reasoning paradigms rely heavily on externally imposed control, either through fixed reasoning programs or through costly expansion in constrained search spaces, limiting both generalization and efficiency. We propose State of Thought (SoT), a new reasoning paradigm that enables endogenous reasoning in LLMs, with the model's internal reasoning state governing how reasoning unfolds. Concretely, SoT extracts a compact dynamics-geometric state from the model's internal information transfer and uses a 582-parameter controller on frozen backbones to selectively activate historical reasoning support useful under the current reasoning state, framing reasoning as a state-conditioned process over evidence rather than an externally prescribed token chain. Across quantitative (1.34x), general (1.62x), symbolic-and-code (1.76x), and long-context (2.51x) reasoning on 3 LLMs and 16 datasets, SoT consistently improves mean-baseline accuracy while reducing generated tokens by 62.6% and end-to-end latency by 44.6%. Across 2 VLM scales and 3 reasoning tasks, it improves mean accuracy by 3.8 points over reasoning baselines, with 74.9% fewer completion tokens and 73.5% lower latency than search-based methods. Under constrained access, SoT retains 38.2%/36.5% mean accuracy gains in training-free/embedding-only settings, while trajectory-only judging reaches 84.1% agreement across 3 API models. Together, endogenous state-driven reasoning provides a generalizable and efficient alternative.",
+        "canonical_id": "arXiv:2609.16055",
+        "arxiv_id": "2609.16055",
+        "authors": [
+          "Z. Gong",
+          "Yi-Kun Hou",
+          "Zi-Hao Zeng",
+          "Ming-Gan Xiao",
+          "Chau Yuen",
+          "Wei Yang Bryan Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06872",
+      "identity_tokens": [
+        "id:arXiv:2609.06872",
+        "title:exact record omission in delta attention a transport criterion its cost and a replay certificate",
+        "url:https://arxiv.org/abs/2609.06872"
+      ],
+      "record": {
+        "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+        "source_url": "https://arxiv.org/abs/2609.06872",
+        "year": 2026,
+        "published": "2026-09-06",
+        "abstract": "An assistant can stop repeating a deleted statement while its recurrent memory still carries that statement's influence. We examine this distinction by saving the state difference immediately after a record, carrying this saved difference, or receipt, through later updates, and comparing the corrected state with the state built from the same conversation with the record omitted. Unrolling the recurrence gives an exact criterion: transport reaches this never-stored state if and only if the additional differences created by later updates cancel after transport. We evaluate eleven conditions using 40 prospectively selected synthetic Kimi Linear contexts, with 40 separate calibration contexts and paired uncertainty estimates computed across complete records. Attention masking removed all 40 exact greedy target answers, yet a fixed three-query candidate-scoring attack with known candidate values and log-probability access attained AUC 0.740 (95% interval 0.695--0.809); the measured false-positive rate was 7.5%. Prompt-only forgetting still returned 33 of the 40 targets. Checkpoint replay matched the complete declared active state and audit logits in all 80 contexts, while preserving all 120 retained answers in the evaluation cohort. An independent Qwen cohort and matched original-bf16/8-bit Kimi controls confirmed native transport mismatch beyond the numerical error measured in matched controls. Replay also supported record replacement and successive deletions with a new record added between them. These results provide a practical audit of both the requested memory change and the assistant's remaining behavior, with replay work determined by the surviving suffix.",
+        "canonical_id": "arXiv:2609.06872",
+        "arxiv_id": "2609.06872",
+        "authors": [
+          "V. Ramesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.62177/apemr.v3i4.1704",
+      "identity_tokens": [
+        "id:DOI:10.62177/apemr.v3i4.1704",
+        "title:compression remembers the detour how context compression amplifies offtask content and derails llm agents",
+        "url:https://doi.org/10.62177/apemr.v3i4.1704"
+      ],
+      "record": {
+        "title": "Compression Remembers the Detour: How Context Compression Amplifies Off-Task Content and Derails LLM Agents",
+        "source_url": "https://doi.org/10.62177/apemr.v3i4.1704",
+        "year": 2026,
+        "published": "2026-09-05",
+        "abstract": "Long-horizon LLM agents rely on context compression to keep growing histories within a finite window [1][2]. These mechanisms are goal-agnostic—retention follows volume, recurrence, and generic salience rather than task relevance—and we show they systematically amplify off-task content, inducing Compression-Induced Goal Drift (CIGD). We formalize CIGD via the drift amplification ratio (DAR), evaluate six compression strategies on a controlled injection benchmark ( per cell), and propose Goal-Anchored Compression (GAC): a pinned goal anchor, a negation ledger, status-aware retention scoring, and drift re-anchoring. Volume- and recurrence-based compressors amplify detours monotonically with repetition (attention-scored eviction reaches  at twelve-fold repetition), while query-conditioned compressors de-amplify. Under severe budgets, summarization and scored eviction lose the user’s negated constraint in  and  of episodes where GAC retains it in ; GAC eliminates residual detour content () with  smaller contexts. Prior work asks what compression forgets [3][4]; we ask what it amplifies.",
+        "doi": "10.62177/apemr.v3i4.1704",
+        "canonical_id": "DOI:10.62177/apemr.v3i4.1704",
+        "authors": [
+          "Zhan Zhang",
+          "Wen-Zhi Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05738",
+      "identity_tokens": [
+        "id:arXiv:2609.05738",
+        "title:renderformerv2 neural rendering with heterogeneous scene primitives",
+        "url:https://arxiv.org/abs/2609.05738"
+      ],
+      "record": {
+        "title": "RenderFormer-V2: Neural Rendering with Heterogeneous Scene Primitives",
+        "source_url": "https://arxiv.org/abs/2609.05738",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "We present'RenderFormer-V2', a unified learned transformer-based neural rendering model, complementary to modern physics-based rendering systems, that can handle diverse light-transport effects such as caustics, volumetric scattering, environment lighting, textured and displaced surfaces and out-of-distribution materials without per-scene training or specialized code. RenderFormer-V2 models global light transport as a sequence-to-sequence transformation. Following its predecessor, RenderFormer-V2 also employs a two stage process: a view-independent stage that resolves intra-scene primitive to primitive transport, and a view-dependent stage that transforms the internal neural scene representation into image pixels. Different from RenderFormer, our model employs a novel combined windowed-attention and rendering-informed attention sink in the view-independent stage to improve scalability while maintaining render accuracy. To further improve versatility, RenderFormerV2 supports heterogeneous scene primitives, including environment maps and participating media, and it employs a material encoding independent of the underlying surface reflectance model that encodes material appearance via a novel neural embedding. We demonstrate the versatility of RenderFormer-V2 on a variety of scenes and perform an extensive ablation of the improved attention mechanism.",
+        "canonical_id": "arXiv:2609.05738",
+        "arxiv_id": "2609.05738",
+        "authors": [
+          "Chong Zeng",
+          "Yue Dong",
+          "P. Peers",
+          "Lvmin Zhang",
+          "Maneesh Agrawala"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.vlsi.2026.102784",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.vlsi.2026.102784",
+        "title:alista accelerator using lshbased maximum innerproduct search in transformer attention",
+        "url:https://doi.org/10.1016/j.vlsi.2026.102784"
+      ],
+      "record": {
+        "title": "ALISTA: Accelerator using LSH-based maximum inner-product search in transformer attention",
+        "source_url": "https://doi.org/10.1016/j.vlsi.2026.102784",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "doi": "10.1016/j.vlsi.2026.102784",
+        "canonical_id": "DOI:10.1016/j.vlsi.2026.102784",
+        "authors": [
+          "Shin Sunny",
+          "Satyajit Das"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c08e2909ad40dd2295739fba8dcef9fb237366870a6c451b48e57be68f4792b8",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

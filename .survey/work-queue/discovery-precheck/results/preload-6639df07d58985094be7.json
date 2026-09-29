@@ -1,0 +1,800 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-6639df07d58985094be7",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-6639df07d58985094be7",
+  "axis": "OpenAlex recent on-device edge LLM inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=on-device%20LLM%20inference%20edge%20GPU%20CPU&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg5MzQ0MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjEzMjc2MjIzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 99,
+  "retrieval_duplicate_filtered_count": 12,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T13:19:10.783891+00:00",
+  "preload_id": "preload-6639df07d58985094be7",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Deep learning based optimization of personalized psychological counseling strategies",
+      "source_url": "https://doi.org/10.1007/s44163-026-01877-x",
+      "year": 2026,
+      "published": "2026-09-26",
+      "canonical_id": "DOI:10.1007/s44163-026-01877-x",
+      "doi": "10.1007/s44163-026-01877-x",
+      "authors": [
+        "Min Zhang"
+      ]
+    },
+    {
+      "title": "ScientistTwo: Pioneering the Human Knowledge Frontier with Autonomous AI",
+      "source_url": "https://doi.org/10.70777/si.v3i3.18734",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "arXiv:2609.19644",
+      "arxiv_id": "2609.19644",
+      "authors": [
+        "Jaehyun Nam",
+        "Jinsung Yoon",
+        "Yanzhou Pan",
+        "Yubo Wang",
+        "Rui Meng",
+        "Parthasarathy Ranganathan",
+        "Tomas Pfister"
+      ]
+    },
+    {
+      "title": "SATIN: a sparse attention application-specific instruction-set processor with custom mixed-precision extensions for energy-efficient edge inference of transformer large language models",
+      "source_url": "https://doi.org/10.1007/s44443-026-01313-1",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "DOI:10.1007/s44443-026-01313-1",
+      "doi": "10.1007/s44443-026-01313-1",
+      "authors": [
+        "Zhaoyu Lu"
+      ]
+    },
+    {
+      "title": "QAQ: Query-Adaptive Quantization for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1007/978-981-92-5693-8_29",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "DOI:10.1007/978-981-92-5693-8_29",
+      "doi": "10.1007/978-981-92-5693-8_29",
+      "authors": [
+        "Shuxing Li",
+        "Shaowei Li",
+        "Tuchao Li",
+        "Zhaoyang Chen",
+        "Yi Yang",
+        "Jiaxing Shen"
+      ]
+    },
+    {
+      "title": "Enabling Agentic AI across the Cloud-Edge Computing Continuum: A Research Roadmap",
+      "source_url": "https://doi.org/10.15439/2026f0210",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "DOI:10.15439/2026f0210",
+      "doi": "10.15439/2026f0210",
+      "authors": [
+        "Radu Prodan",
+        "Hui Song",
+        "Arda Göknil",
+        "Dumitru Roman",
+        "Maria Carolina Fazio",
+        "Massimo Villari",
+        "Massimo Mecella",
+        "Maryam Doborjeh",
+        "Nikola Kirilov Kasabov",
+        "JeongGil Ko",
+        "Hyunwhan Joe",
+        "Hong-Gee Kim",
+        "Thomas Fahringer",
+        "Zahra Najafabadi"
+      ]
+    },
+    {
+      "title": "Enterprise Conversational AI with Retrieval-Augmented Generation: A CRM Case Study",
+      "source_url": "https://doi.org/10.18267/j.aip.320",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "DOI:10.18267/j.aip.320",
+      "doi": "10.18267/j.aip.320",
+      "authors": [
+        "Martin Sasinka",
+        "Martin Kotyrba",
+        "Eva Volná",
+        "Martin Pavlicek"
+      ]
+    },
+    {
+      "title": "Baseline Shape Decides the Verdict: A Controlled Re-Examination of Ternary Language Models at 60K Parameters",
+      "source_url": "https://arxiv.org/abs/2609.29397",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29397",
+      "arxiv_id": "2609.29397",
+      "authors": [
+        "Gautam Veldanda"
+      ]
+    },
+    {
+      "title": "An Empirical Study of VLM Pipelines for Long-Document QA",
+      "source_url": "https://arxiv.org/abs/2609.29933",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29933",
+      "arxiv_id": "2609.29933",
+      "authors": [
+        "Kenan E. Ak",
+        "Jay Mohta",
+        "Gwang Gook Lee",
+        "Yan Xu",
+        "Dimitrios Dimitriadis"
+      ]
+    },
+    {
+      "title": "Dependency- and Layer-Aware Microservice Workflow Offloading and Service Image Caching for Edge Environments",
+      "source_url": "https://arxiv.org/abs/2609.28943",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.28943",
+      "arxiv_id": "2609.28943",
+      "authors": [
+        "Zhongxiao Wang",
+        "Yueshen Xu",
+        "Qingshan Li",
+        "ZHAO Xinkui",
+        "Wei Shao",
+        "Shuiguang Deng",
+        "Rui Li"
+      ]
+    },
+    {
+      "title": "No More Free Lunch: Corpus Task Complexity Matters as Corpora Grow",
+      "source_url": "https://arxiv.org/abs/2609.29245",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29245",
+      "arxiv_id": "2609.29245",
+      "authors": [
+        "Prasann Singhal",
+        "Amanda Bertsch",
+        "Jacob Steinhardt",
+        "Sewon Min"
+      ]
+    },
+    {
+      "title": "TrafficFab: An Autonomic Edge-Cloud Testbed Fabric forAI-Driven Traffic Management",
+      "source_url": "https://arxiv.org/abs/2609.29223",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29223",
+      "arxiv_id": "2609.29223",
+      "authors": [
+        "Mayank Arya",
+        "Pranjal Naman",
+        "Priyanshu Pansari",
+        "Roopkatha Banerjee",
+        "Daksh Mehta",
+        "Manjil Nepal",
+        "Akash Sharma",
+        "Yogesh Simmhan"
+      ]
+    },
+    {
+      "title": "Baszta: Data-Centric Fine-Tuning of a Polish Multi-Label Safety Classifier",
+      "source_url": "https://arxiv.org/abs/2609.29266",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29266",
+      "arxiv_id": "2609.29266",
+      "authors": [
+        "Adam Górski",
+        "Mateusz Jąkalak",
+        "Rafał Jakubowski"
+      ]
+    },
+    {
+      "title": "TokenCom: vision-language model for multimodal and multitask token communications",
+      "source_url": "https://doi.org/10.1007/s11432-026-5166-3",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2603.00482",
+      "arxiv_id": "2603.00482",
+      "authors": [
+        "Feibo Jiang",
+        "Siwei Tu",
+        "Li Dong",
+        "Xiaolong Li",
+        "Kezhi Wang",
+        "Cunhua Pan",
+        "Zhu Han",
+        "Jiangzhou Wang"
+      ]
+    },
+    {
+      "title": "Transition-Aware Short-Term Traffic Congestion Prediction: Efficient Gradient Boosting versus Spatio-Temporal Graph Neural Networks",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10839892/v1",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10839892/v1",
+      "doi": "10.21203/rs.3.rs-10839892/v1",
+      "authors": [
+        "George S. Theodoropoulos",
+        "Yannis Theodoridis"
+      ]
+    },
+    {
+      "title": "Implementation and Evaluation of BitNet Inference on a CGLA by Signed-Int4 Instructions",
+      "source_url": "https://arxiv.org/abs/2609.27453",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27453",
+      "arxiv_id": "2609.27453",
+      "authors": [
+        "Takuto Ando",
+        "Yasuhiko Nakashima"
+      ]
+    },
+    {
+      "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
+      "source_url": "https://arxiv.org/abs/2609.27606",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27606",
+      "arxiv_id": "2609.27606",
+      "authors": [
+        "Qi Liu",
+        "Xiaoyang Yuan",
+        "Yubin Ruan",
+        "Zhuomeng Zhang",
+        "Wenjin Wang",
+        "Di Wu",
+        "Mingye Xu",
+        "Xinyi Mou",
+        "Xingxi Yin",
+        "Ke Feng",
+        "Zixun Sun"
+      ]
+    },
+    {
+      "title": "From PyTorch to the NPU: LLM-Agent-Driven Model Conversion Across Heterogeneous Inference Runtimes",
+      "source_url": "https://arxiv.org/abs/2609.27249",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27249",
+      "arxiv_id": "2609.27249",
+      "authors": [
+        "Jianhao Su",
+        "Zhanwei Wu",
+        "Chia-Heng Tu",
+        "ShengTing Huang"
+      ]
+    },
+    {
+      "title": "MicroQonv: Reshaping Convolution Tensors for Efficient Microscaling in Training and Inference",
+      "source_url": "https://arxiv.org/abs/2609.28358",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.28358",
+      "arxiv_id": "2609.28358",
+      "authors": [
+        "Romain Facq",
+        "Sami Ben Ali",
+        "Olivier Sentieys"
+      ]
+    },
+    {
+      "title": "Forecast Workflow Bench: Evaluating Language-Model Decisions with Budgeted Forecast Tools",
+      "source_url": "https://arxiv.org/abs/2609.27385",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27385",
+      "arxiv_id": "2609.27385",
+      "authors": [
+        "Shunya Nagashima"
+      ]
+    },
+    {
+      "title": "The Canonical Parallel Form as a Substrate for Parallelizing Compilers and Agentic Optimizers",
+      "source_url": "https://arxiv.org/abs/2609.28724",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.28724",
+      "arxiv_id": "2609.28724",
+      "authors": [
+        "Yakup Koray Budanaz",
+        "Pratyai Mazumder",
+        "Alexandru Calotoiu",
+        "Torsten Hoefler"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1007/s44163-026-01877-x",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44163-026-01877-x",
+        "title:deep learning based optimization of personalized psychological counseling strategies",
+        "url:https://doi.org/10.1007/s44163-026-01877-x"
+      ],
+      "record": {
+        "title": "Deep learning based optimization of personalized psychological counseling strategies",
+        "source_url": "https://doi.org/10.1007/s44163-026-01877-x",
+        "year": 2026,
+        "published": "2026-09-26",
+        "canonical_id": "DOI:10.1007/s44163-026-01877-x",
+        "doi": "10.1007/s44163-026-01877-x",
+        "authors": [
+          "Min Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19644",
+      "identity_tokens": [
+        "id:DOI:10.70777/si.v3i3.18734",
+        "id:arXiv:2609.19644",
+        "title:scientisttwo pioneering the human knowledge frontier with autonomous ai",
+        "url:https://doi.org/10.70777/si.v3i3.18734"
+      ],
+      "record": {
+        "title": "ScientistTwo: Pioneering the Human Knowledge Frontier with Autonomous AI",
+        "source_url": "https://doi.org/10.70777/si.v3i3.18734",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "arXiv:2609.19644",
+        "arxiv_id": "2609.19644",
+        "authors": [
+          "Jaehyun Nam",
+          "Jinsung Yoon",
+          "Yanzhou Pan",
+          "Yubo Wang",
+          "Rui Meng",
+          "Parthasarathy Ranganathan",
+          "Tomas Pfister"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44443-026-01313-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44443-026-01313-1",
+        "title:satin a sparse attention applicationspecific instructionset processor with custom mixedprecision extensions for energyefficient edge inference of transformer large language models",
+        "url:https://doi.org/10.1007/s44443-026-01313-1"
+      ],
+      "record": {
+        "title": "SATIN: a sparse attention application-specific instruction-set processor with custom mixed-precision extensions for energy-efficient edge inference of transformer large language models",
+        "source_url": "https://doi.org/10.1007/s44443-026-01313-1",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "DOI:10.1007/s44443-026-01313-1",
+        "doi": "10.1007/s44443-026-01313-1",
+        "authors": [
+          "Zhaoyu Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-981-92-5693-8_29",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-981-92-5693-8_29",
+        "title:qaq queryadaptive quantization for large language model inference",
+        "url:https://doi.org/10.1007/978-981-92-5693-8_29"
+      ],
+      "record": {
+        "title": "QAQ: Query-Adaptive Quantization for Large Language Model Inference",
+        "source_url": "https://doi.org/10.1007/978-981-92-5693-8_29",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "DOI:10.1007/978-981-92-5693-8_29",
+        "doi": "10.1007/978-981-92-5693-8_29",
+        "authors": [
+          "Shuxing Li",
+          "Shaowei Li",
+          "Tuchao Li",
+          "Zhaoyang Chen",
+          "Yi Yang",
+          "Jiaxing Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.15439/2026f0210",
+      "identity_tokens": [
+        "id:DOI:10.15439/2026f0210",
+        "title:enabling agentic ai across the cloudedge computing continuum a research roadmap",
+        "url:https://doi.org/10.15439/2026f0210"
+      ],
+      "record": {
+        "title": "Enabling Agentic AI across the Cloud-Edge Computing Continuum: A Research Roadmap",
+        "source_url": "https://doi.org/10.15439/2026f0210",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "DOI:10.15439/2026f0210",
+        "doi": "10.15439/2026f0210",
+        "authors": [
+          "Radu Prodan",
+          "Hui Song",
+          "Arda Göknil",
+          "Dumitru Roman",
+          "Maria Carolina Fazio",
+          "Massimo Villari",
+          "Massimo Mecella",
+          "Maryam Doborjeh",
+          "Nikola Kirilov Kasabov",
+          "JeongGil Ko",
+          "Hyunwhan Joe",
+          "Hong-Gee Kim",
+          "Thomas Fahringer",
+          "Zahra Najafabadi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18267/j.aip.320",
+      "identity_tokens": [
+        "id:DOI:10.18267/j.aip.320",
+        "title:enterprise conversational ai with retrievalaugmented generation a crm case study",
+        "url:https://doi.org/10.18267/j.aip.320"
+      ],
+      "record": {
+        "title": "Enterprise Conversational AI with Retrieval-Augmented Generation: A CRM Case Study",
+        "source_url": "https://doi.org/10.18267/j.aip.320",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "DOI:10.18267/j.aip.320",
+        "doi": "10.18267/j.aip.320",
+        "authors": [
+          "Martin Sasinka",
+          "Martin Kotyrba",
+          "Eva Volná",
+          "Martin Pavlicek"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29397",
+      "identity_tokens": [
+        "id:arXiv:2609.29397",
+        "title:baseline shape decides the verdict a controlled reexamination of ternary language models at 60k parameters",
+        "url:https://arxiv.org/abs/2609.29397"
+      ],
+      "record": {
+        "title": "Baseline Shape Decides the Verdict: A Controlled Re-Examination of Ternary Language Models at 60K Parameters",
+        "source_url": "https://arxiv.org/abs/2609.29397",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29397",
+        "arxiv_id": "2609.29397",
+        "authors": [
+          "Gautam Veldanda"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29933",
+      "identity_tokens": [
+        "id:arXiv:2609.29933",
+        "title:an empirical study of vlm pipelines for longdocument qa",
+        "url:https://arxiv.org/abs/2609.29933"
+      ],
+      "record": {
+        "title": "An Empirical Study of VLM Pipelines for Long-Document QA",
+        "source_url": "https://arxiv.org/abs/2609.29933",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29933",
+        "arxiv_id": "2609.29933",
+        "authors": [
+          "Kenan E. Ak",
+          "Jay Mohta",
+          "Gwang Gook Lee",
+          "Yan Xu",
+          "Dimitrios Dimitriadis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28943",
+      "identity_tokens": [
+        "id:arXiv:2609.28943",
+        "title:dependency and layeraware microservice workflow offloading and service image caching for edge environments",
+        "url:https://arxiv.org/abs/2609.28943"
+      ],
+      "record": {
+        "title": "Dependency- and Layer-Aware Microservice Workflow Offloading and Service Image Caching for Edge Environments",
+        "source_url": "https://arxiv.org/abs/2609.28943",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.28943",
+        "arxiv_id": "2609.28943",
+        "authors": [
+          "Zhongxiao Wang",
+          "Yueshen Xu",
+          "Qingshan Li",
+          "ZHAO Xinkui",
+          "Wei Shao",
+          "Shuiguang Deng",
+          "Rui Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29245",
+      "identity_tokens": [
+        "id:arXiv:2609.29245",
+        "title:no more free lunch corpus task complexity matters as corpora grow",
+        "url:https://arxiv.org/abs/2609.29245"
+      ],
+      "record": {
+        "title": "No More Free Lunch: Corpus Task Complexity Matters as Corpora Grow",
+        "source_url": "https://arxiv.org/abs/2609.29245",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29245",
+        "arxiv_id": "2609.29245",
+        "authors": [
+          "Prasann Singhal",
+          "Amanda Bertsch",
+          "Jacob Steinhardt",
+          "Sewon Min"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29223",
+      "identity_tokens": [
+        "id:arXiv:2609.29223",
+        "title:trafficfab an autonomic edgecloud testbed fabric foraidriven traffic management",
+        "url:https://arxiv.org/abs/2609.29223"
+      ],
+      "record": {
+        "title": "TrafficFab: An Autonomic Edge-Cloud Testbed Fabric forAI-Driven Traffic Management",
+        "source_url": "https://arxiv.org/abs/2609.29223",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29223",
+        "arxiv_id": "2609.29223",
+        "authors": [
+          "Mayank Arya",
+          "Pranjal Naman",
+          "Priyanshu Pansari",
+          "Roopkatha Banerjee",
+          "Daksh Mehta",
+          "Manjil Nepal",
+          "Akash Sharma",
+          "Yogesh Simmhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29266",
+      "identity_tokens": [
+        "id:arXiv:2609.29266",
+        "title:baszta datacentric finetuning of a polish multilabel safety classifier",
+        "url:https://arxiv.org/abs/2609.29266"
+      ],
+      "record": {
+        "title": "Baszta: Data-Centric Fine-Tuning of a Polish Multi-Label Safety Classifier",
+        "source_url": "https://arxiv.org/abs/2609.29266",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29266",
+        "arxiv_id": "2609.29266",
+        "authors": [
+          "Adam Górski",
+          "Mateusz Jąkalak",
+          "Rafał Jakubowski"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00482",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5166-3",
+        "id:arXiv:2603.00482",
+        "title:tokencom visionlanguage model for multimodal and multitask token communications",
+        "url:https://doi.org/10.1007/s11432-026-5166-3"
+      ],
+      "record": {
+        "title": "TokenCom: vision-language model for multimodal and multitask token communications",
+        "source_url": "https://doi.org/10.1007/s11432-026-5166-3",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2603.00482",
+        "arxiv_id": "2603.00482",
+        "authors": [
+          "Feibo Jiang",
+          "Siwei Tu",
+          "Li Dong",
+          "Xiaolong Li",
+          "Kezhi Wang",
+          "Cunhua Pan",
+          "Zhu Han",
+          "Jiangzhou Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10839892/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10839892/v1",
+        "title:transitionaware shortterm traffic congestion prediction efficient gradient boosting versus spatiotemporal graph neural networks",
+        "url:https://doi.org/10.21203/rs.3.rs-10839892/v1"
+      ],
+      "record": {
+        "title": "Transition-Aware Short-Term Traffic Congestion Prediction: Efficient Gradient Boosting versus Spatio-Temporal Graph Neural Networks",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10839892/v1",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10839892/v1",
+        "doi": "10.21203/rs.3.rs-10839892/v1",
+        "authors": [
+          "George S. Theodoropoulos",
+          "Yannis Theodoridis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27453",
+      "identity_tokens": [
+        "id:arXiv:2609.27453",
+        "title:implementation and evaluation of bitnet inference on a cgla by signedint4 instructions",
+        "url:https://arxiv.org/abs/2609.27453"
+      ],
+      "record": {
+        "title": "Implementation and Evaluation of BitNet Inference on a CGLA by Signed-Int4 Instructions",
+        "source_url": "https://arxiv.org/abs/2609.27453",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27453",
+        "arxiv_id": "2609.27453",
+        "authors": [
+          "Takuto Ando",
+          "Yasuhiko Nakashima"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27606",
+      "identity_tokens": [
+        "id:arXiv:2609.27606",
+        "title:stategrounded conditioning wrapping userfacing llm agents where direction depends on live state",
+        "url:https://arxiv.org/abs/2609.27606"
+      ],
+      "record": {
+        "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
+        "source_url": "https://arxiv.org/abs/2609.27606",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27606",
+        "arxiv_id": "2609.27606",
+        "authors": [
+          "Qi Liu",
+          "Xiaoyang Yuan",
+          "Yubin Ruan",
+          "Zhuomeng Zhang",
+          "Wenjin Wang",
+          "Di Wu",
+          "Mingye Xu",
+          "Xinyi Mou",
+          "Xingxi Yin",
+          "Ke Feng",
+          "Zixun Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27249",
+      "identity_tokens": [
+        "id:arXiv:2609.27249",
+        "title:from pytorch to the npu llmagentdriven model conversion across heterogeneous inference runtimes",
+        "url:https://arxiv.org/abs/2609.27249"
+      ],
+      "record": {
+        "title": "From PyTorch to the NPU: LLM-Agent-Driven Model Conversion Across Heterogeneous Inference Runtimes",
+        "source_url": "https://arxiv.org/abs/2609.27249",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27249",
+        "arxiv_id": "2609.27249",
+        "authors": [
+          "Jianhao Su",
+          "Zhanwei Wu",
+          "Chia-Heng Tu",
+          "ShengTing Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28358",
+      "identity_tokens": [
+        "id:arXiv:2609.28358",
+        "title:microqonv reshaping convolution tensors for efficient microscaling in training and inference",
+        "url:https://arxiv.org/abs/2609.28358"
+      ],
+      "record": {
+        "title": "MicroQonv: Reshaping Convolution Tensors for Efficient Microscaling in Training and Inference",
+        "source_url": "https://arxiv.org/abs/2609.28358",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.28358",
+        "arxiv_id": "2609.28358",
+        "authors": [
+          "Romain Facq",
+          "Sami Ben Ali",
+          "Olivier Sentieys"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27385",
+      "identity_tokens": [
+        "id:arXiv:2609.27385",
+        "title:forecast workflow bench evaluating languagemodel decisions with budgeted forecast tools",
+        "url:https://arxiv.org/abs/2609.27385"
+      ],
+      "record": {
+        "title": "Forecast Workflow Bench: Evaluating Language-Model Decisions with Budgeted Forecast Tools",
+        "source_url": "https://arxiv.org/abs/2609.27385",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27385",
+        "arxiv_id": "2609.27385",
+        "authors": [
+          "Shunya Nagashima"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28724",
+      "identity_tokens": [
+        "id:arXiv:2609.28724",
+        "title:the canonical parallel form as a substrate for parallelizing compilers and agentic optimizers",
+        "url:https://arxiv.org/abs/2609.28724"
+      ],
+      "record": {
+        "title": "The Canonical Parallel Form as a Substrate for Parallelizing Compilers and Agentic Optimizers",
+        "source_url": "https://arxiv.org/abs/2609.28724",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.28724",
+        "arxiv_id": "2609.28724",
+        "authors": [
+          "Yakup Koray Budanaz",
+          "Pratyai Mazumder",
+          "Alexandru Calotoiu",
+          "Torsten Hoefler"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:85b5cd33ccb513e7f9c1d64c1aec0fb30dcbb8e975ef15df5c53f3fdbe60a82d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
