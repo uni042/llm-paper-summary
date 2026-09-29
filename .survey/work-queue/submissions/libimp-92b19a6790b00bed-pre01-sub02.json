@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning",
+      "source_url": "https://arxiv.org/abs/2502.02770",
+      "year": 2025,
+      "published": "2025-02-04",
+      "abstract": "Leveraging attention sparsity to accelerate long-context large language models (LLMs) has been a hot research topic. However, current algorithms such as sparse attention or key-value (KV) cache compression tend to use a fixed budget, which presents a significant challenge during deployment because it fails to account for the dynamic nature of real-world scenarios, where the optimal balance between accuracy and efficiency can vary greatly. In this paper, we find that borrowing top-$p$ sampling (nucleus sampling) to sparse attention can surprisingly achieve adaptive budgeting. Based on this, we propose Twilight, a framework to bring adaptive sparsity to any existing sparse attention algorithm without sacrificing their accuracy. Empirical results show that Twilight can adaptively prune at most 98% of redundant tokens, leading to $15.4\\times$ acceleration in self-attention operations and $3.9\\times$ acceleration in end-to-end per token latency in long context LLM decoding.",
+      "canonical_id": "arXiv:2502.02770",
+      "arxiv_id": "2502.02770",
+      "doi": "10.48550/arXiv.2502.02770",
+      "authors": [
+        "Chaofan Lin",
+        "Jiaming Tang",
+        "Shuo Yang",
+        "HanShuo Wang",
+        "Tian Tang",
+        "Boyu Tian",
+        "Ion Stoica",
+        "Song Han",
+        "Mingyu Gao"
+      ],
+      "reason": "階層的top-p枝刈りで注意の疎度を動的制御し、LLM推論を高速化する。",
+      "library_body_check": "本文のhierarchical pruning、adaptive sparsity、kernel/end-to-end evaluationを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-92b19a6790b0",
+    "round": "libimp-92b19a6790b00bed-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-92b19a6790b00bed-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-92b19a6790b00bed-pre01.json",
+    "receipt": "sha256:7a49f4985b25a63705682e1eaa464e85483b7dd796928f7906431e1fe4b5fc14"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-92b19a6790b0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
