@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: library-import-inbox-main
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   process:
@@ -58,7 +58,7 @@ jobs:
             git reset --hard origin/main
             git clean -fd
 
-            python .survey/scripts/process_library_import_inbox.py --repo-root .
+            python .survey/scripts/process_library_import_inbox.py --repo-root . --max-research 5
             commit_if_needed \
               'survey-library-import[bot]' \
               'survey-library-import[bot]@users.noreply.github.com' \
@@ -144,7 +144,7 @@ jobs:
               echo 'One or more relevance requests failed; inbox will retain the source as blocked.' >&2
             fi
 
-            python .survey/scripts/process_library_import_inbox.py --repo-root .
+            python .survey/scripts/process_library_import_inbox.py --repo-root . --max-research 5
             commit_if_needed \
               'survey-library-import[bot]' \
               'survey-library-import[bot]@users.noreply.github.com' \
@@ -172,7 +172,7 @@ jobs:
               README.md \
               STATUS.md
 
-            python .survey/scripts/process_library_import_inbox.py --repo-root .
+            python .survey/scripts/process_library_import_inbox.py --repo-root . --max-research 5
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             commit_if_needed \
               'survey-library-import[bot]' \
