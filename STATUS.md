@@ -1,37 +1,40 @@
 # LLM論文サーベイ STATUS
 
-> 再構成: **2026-09-29 JST**
+> 自動生成: **2026-09-30 03:47:44 JST**
 
-現行のLibrary-first手順で継続的に得られる成果情報だけを表示します。旧claim / heartbeat / run-ledger / queue snapshot / maintenance内部状態はSTATUSの表示対象にしません。
+GitHubへ到達済みのLibrary-first成果だけから再構成します。ChatGPT Libraryへはアクセスしません。
 
 ## サマリー
 
 | 指標 | 現在値 |
 |---|---:|
 | 収録論文 | **1312** |
-| 直近24時間のResearch完了 | **次回GitHub自動生成で再計算** |
-| 直近24時間のDiscovery本文確認・分類 | **次回GitHub自動生成で再計算** |
-| 最終Research完了 | **09-25 11:14:16 JST** |
-| 最終Discovery完了 | **09-26 04:45:42 JST** |
+| 直近24時間のResearch完了 | **0** |
+| 直近24時間のDiscovery本文確認・分類 | **0** |
+| 最終Research完了 | **—** |
+| 最終Discovery完了 | **—** |
+| Research 7日平均 | **0.0件/日** |
+| Discovery 7日平均 | **0.0件/日** |
+| references推定残日数 | **算出不可** |
 
-Researchは完成成果がGitHubへ正規収録され、現行の耐久証拠で照合できる論文を数えます。Discoveryはimmutable成果に記録された本文確認・最終分類済み候補数を数えます。
+日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。
 
 ## 直近7日の日次進捗
 
-今後はSTATUS生成時に、JSTの日付ごとに **Research完了論文数** と **Discovery本文確認・分類数** を7日分ゼロベース集計して表示します。過去の旧方式の集計値を補間・推定して埋めません。
-
 | 日付 (JST) | Research完了 | Discovery本文確認・分類 |
 |---|---:|---:|
-| 2026-09-29 | **次回再計算** | **次回再計算** |
-| 2026-09-28 | **0** | **0** |
+| 2026-09-24 | **0** | **0** |
+| 2026-09-25 | **0** | **0** |
+| 2026-09-26 | **0** | **0** |
 | 2026-09-27 | **0** | **0** |
-
-9月29日の旧手動値はLibrary未転送分を混ぜていたため撤回しました。次回生成からGitHubへ到達済みのImport成果だけで再計算します。
+| 2026-09-28 | **0** | **0** |
+| 2026-09-29 | **0** | **0** |
+| 2026-09-30 | **0** | **0** |
 
 ## 収録論文
 
 - 現在の論文Markdown実体: **1312件**
-- 対象: `papers/inference/**`、`papers/training/**`、`papers/survey/**`
+- 対象: `papers/inference/**`、`papers/training/**`、`papers/survey/**`。
 - README、comparison系、Movedスタブは除外します。
 
 ## 構造化references探索状況
@@ -46,24 +49,16 @@ Researchは完成成果がGitHubへ正規収録され、現行の耐久証拠で
 | 微妙として除外 | **301** |
 
 - 消化率: **18.7%**
-- 処理済み = 収録済み + 無関係 + 微妙。
-- STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。
-
-## 速度指標
-
-次回自動生成から以下を常時表示します。
-
-- **Research 7日平均（件/日）**
-- **Discovery 7日平均（件/日）**
-- **構造化references推定残日数** = 未処理references ÷ Discovery 7日平均
-
-推定残日数は現在ペースが続くと仮定した参考値で、期限予測ではありません。
+- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
+- STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
 ## 集計方針
 
-- STATUSは表示のたびに現在の正規paper実体・Discovery耐久成果・構造化referencesから再計算します。
-- Libraryに未転送の成果はGitHub側STATUSにはまだ現れません。Survey GitHub Import後に反映されます。
-- Scheduled workerの生存推定、claim数、heartbeat、旧queue内部状態など、現行Library-first手順の進捗判断に不要な値は表示しません。
+- GitHub checkoutだけを入力にし、ChatGPT Library未転送成果は数えません。
+- Discoveryはimmutable runの `run_key` と `record_count` を使用し、同一run_keyを一度だけ数えます。
+- Researchはimport resultの `worker_completed_at` を使用します。旧成果だけ `processed_at` を代用します。
+- Library未転送分は次回Survey GitHub Import後に反映されます。
+- references推定残日数は未処理references ÷ Discovery 7日平均です。
 
 ---
 
