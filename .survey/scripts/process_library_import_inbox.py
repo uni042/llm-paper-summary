@@ -255,6 +255,8 @@ def process_research(repo_root: Path) -> tuple[int, int]:
                         "source_sha256": payload_hash,
                         "blocked_path": blocked_path.relative_to(repo_root).as_posix(),
                         "canonical_id": meta.get("canonical_id"),
+                        "worker_completed_at": meta.get("worker_completed_at"),
+                        "worker_run_key": meta.get("worker_run_key"),
                         "failures": audit.failures,
                         "processed_at": now(),
                     },
@@ -276,6 +278,8 @@ def process_research(repo_root: Path) -> tuple[int, int]:
                         "source_sha256": payload_hash,
                         "canonical_id": meta.get("canonical_id"),
                         "paper_path": resolution.get("paper_path"),
+                        "worker_completed_at": meta.get("worker_completed_at"),
+                        "worker_run_key": meta.get("worker_run_key"),
                         "processed_at": now(),
                     },
                 )
@@ -313,6 +317,8 @@ def process_research(repo_root: Path) -> tuple[int, int]:
                     "paper_path": target.relative_to(repo_root).as_posix(),
                     "lineage": lineage,
                     "audit_status": audit.status,
+                    "worker_completed_at": meta.get("worker_completed_at"),
+                    "worker_run_key": meta.get("worker_run_key"),
                     "processed_at": now(),
                 },
             )
@@ -665,6 +671,8 @@ def process_discovery(repo_root: Path) -> tuple[int, int]:
             "imported",
             {
                 "record_count": len(records),
+                "run_key": payload.get("run_key"),
+                "worker_id": payload.get("worker_id"),
                 "accept_count": len(accepts),
                 "relevance_count": len(relevance),
                 "counts": counts,
