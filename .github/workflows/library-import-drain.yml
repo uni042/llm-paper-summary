@@ -69,7 +69,26 @@ jobs:
           # Stage 1: bounded intake. Research is processed in small batches;
           # all Discovery pending files are durably moved to waiting, while at
           # most three waiting runs are advanced in this invocation.
-          python .survey/scripts/process_library_import_inbox.py             --repo-root .             --max-research 5             --max-discovery 3
+          set +e
+          python .survey/scripts/process_library_import_inbox.py \
+            --repo-root . \
+            --max-research 5 \
+            --max-discovery 3 \
+            > /tmp/library-import-stage1.log 2>&1
+          stage1_rc=$?
+          set -e
+          cat /tmp/library-import-stage1.log
+          if [ "$stage1_rc" -ne 0 ]; then
+            mkdir -p .survey/import-inbox/diagnostics
+            {
+              printf 'failed_at=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              printf 'exit_code=%s\n' "$stage1_rc"
+              tail -n 200 /tmp/library-import-stage1.log
+            } > .survey/import-inbox/diagnostics/latest-stage1-error.log
+            publish 'library-import-drain: record stage1 failure' \
+              .survey/import-inbox
+            exit "$stage1_rc"
+          fi
           python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
           publish 'library-import-drain: checkpoint inbox progress'             .survey/import-inbox             .survey/work-queue/discovery-precheck             .survey/work-queue/reference-curation             .survey/work-queue/jobs             .survey/work-queue/next-jobs.json             .survey/work-queue/state.json             .survey/survey-state             papers README.md STATUS.md
 
