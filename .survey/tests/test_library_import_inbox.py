@@ -80,9 +80,12 @@ class LibraryImportInboxTests(unittest.TestCase):
                         for item in parsed
                     )
                 )
+                selected = inbox.select_discovery_sources(20)
+                self.assertEqual(len(selected), 1)
+                self.assertEqual(selected[0].name, chunks[0].name)
                 self.assertEqual(
-                    inbox.select_discovery_sources(20),
-                    [chunks[0]],
+                    len(inbox.discovery_records(inbox.read_json(selected[0]))),
+                    20,
                 )
             finally:
                 os.chdir(original_cwd)
