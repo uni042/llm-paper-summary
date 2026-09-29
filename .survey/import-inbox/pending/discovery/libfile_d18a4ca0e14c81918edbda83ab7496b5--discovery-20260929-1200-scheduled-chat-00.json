@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20260929-1200-scheduled-chat-00",
+  "reference_main_sha": "8771a26d9b4711db0bf26b27a5bd52be8cfa9d97",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1452",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1452"
+      ],
+      "title": "BERT Rediscovers the Classical NLP Pipeline",
+      "reason": "BERT内部で品詞・構文・固有表現・意味役割・共参照の言語情報がどの層に局在するかを解析する表現分析研究であり、LLM推論の速度・メモリ・サービング最適化ではない。",
+      "source_url": "https://aclanthology.org/P19-1452/",
+      "body_check": "本文ではedge probingを用いてBERT各層の表現を調べ、古典的NLPパイプラインに対応する処理が層の進行に沿って現れることを分析する。推論runtimeやKVキャッシュ、復号の改善機構は提案しない。",
+      "worklist_rank": 476,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-2002",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-2002"
+      ],
+      "title": "Gender Bias in Coreference Resolution",
+      "reason": "Winogender schemasを用いた共参照解析システムの性別バイアス評価が主題で、推論基盤の効率化とは無関係。",
+      "source_url": "https://aclanthology.org/N18-2002/",
+      "body_check": "本文では代名詞の性別だけを変えた最小対文を構築し、3つの公開共参照解析システムで体系的な性別バイアスを測定し、職業統計等との相関を分析する。システム性能は公平性・精度の評価でありLLM実行効率ではない。",
+      "worklist_rank": 475,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.309",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.309"
+      ],
+      "title": "CoLT5: Faster Long-Range Transformers with Conditional Computation",
+      "reason": "重要tokenだけへ重いFFN・attention計算を割り当てて長文入力の学習・推論を高速化するため関連性は高いが、主貢献はLongT5を拡張する新規モデル構造と学習を含むためborderline。",
+      "source_url": "https://aclanthology.org/2023.emnlp-main.309/",
+      "body_check": "本文ではlight branchを全token、heavy branchをrouterで選ばれた重要tokenだけに適用する条件付き計算をFFNとattentionへ導入し、SCROLLS等でLongT5より高速な学習・推論と最大64K入力での改善を評価する。既存LLM serving runtimeへの後付け最適化ではない。",
+      "worklist_rank": 471,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+        "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3749646.3749724",
+      "identity_tokens": [
+        "DOI:10.14778/3749646.3749724"
+      ],
+      "title": "Turbocharging Vector Databases Using Modern SSDs",
+      "reason": "RAGで利用されるSSD常駐ベクトル検索を大幅高速化し推論前段には有用だが、対象はpgvector/HNSWのANN検索エンジンでLLM本体の推論runtimeではないためborderline。",
+      "source_url": "https://doi.org/10.14778/3749646.3749724",
+      "body_check": "本文はio_uringによる並列I/O、空間局所性を考慮した挿入順序、局所性維持配置をpgvectorへ実装し、query throughput最大11.1倍、cache hit ratio 3.23倍、index build time 98.4%削減を報告する。RAG retrievalとの接続は明示されるがLLM decode/prefillは最適化しない。",
+      "worklist_rank": 470,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3786655",
+      "identity_tokens": [
+        "DOI:10.1145/3786655",
+        "arXiv:2601.12904"
+      ],
+      "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
+      "reason": "RAGの取得chunkごとのKVキャッシュ再利用と選択的再計算でLLMの事前充填時間を直接短縮する推論最適化。",
+      "source_url": "https://arxiv.org/abs/2601.12904",
+      "body_check": "本文ではoffline preprocessingで関連chunk間情報を埋め込み、onlineではattention上重要なtokenだけKVを再計算するFusionRAGを提案。15%未満のtoken再計算でbaselineよりnormalized F1を最大70%高めつつ、full attention比TTFTを2.66〜9.39倍短縮する。",
+      "worklist_rank": 469,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3772052.3772264",
+      "identity_tokens": [
+        "DOI:10.1145/3772052.3772264"
+      ],
+      "title": "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment",
+      "reason": "prefillとdecodeを異種GPUへ適応配置し、階層スケジューリングとautoscalingでSLOを維持しながら費用効率を高めるLLMサービング研究。",
+      "source_url": "https://doi.org/10.1145/3772052.3772264",
+      "body_check": "本文では異種GPU構成をGPU Comboとしてモデル化し、prefill/decode pairの費用効率に基づく配置、Combo内opportunistic scheduling、Combo間goodput-weighted round robin、需要急増時のautoscalingを組み合わせる。SLOを維持しTokens/USDを既存方式比最大38.3%改善する。",
+      "worklist_rank": 468,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3725843.3756118",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756118",
+        "arXiv:2510.14557"
+      ],
+      "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+      "reason": "LLMサービング向け4bitマイクロスケーリング形式の外れ値表現を改善し、低bit推論の品質と実行効率を両立する量子化・ハードウェア協調研究。",
+      "source_url": "https://arxiv.org/abs/2510.14557",
+      "body_check": "本文ではblock maximum要素の指数部が冗長になる点を利用し、そのbitを拡張mantissaへ再利用してoutlier精度を高めるMX+を提案。MXFP4より高いモデル品質を僅かなstorage/速度overheadで実現し、LLM prefill/decode向けhardware-aware実装を評価する。",
+      "worklist_rank": 467,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731079",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731079"
+      ],
+      "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign",
+      "reason": "RAG等で使うdense retrievalの高速化は推論系に隣接するが、主対象は検索アクセラレータのアルゴリズム・ハードウェア協調設計でLLM本体の推論ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/3695053.3731079",
+      "body_check": "本文は大規模dense retrievalを対象に、検索精度とハードウェア効率を両立するアルゴリズム・アクセラレータ協調設計を扱う。LLMのKV cache、prefill、decode、MoE routing等は主たる実行対象ではなく、RAG retrieval段の高速化としての関連に留まる。",
+      "worklist_rank": 466,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3694715.3695955",
+      "identity_tokens": [
+        "DOI:10.1145/3694715.3695955",
+        "arXiv:2408.04808"
+      ],
+      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10",
+      "reason": "多数core型AI chip向けの汎用深層学習コンパイラであり、LLM推論を最終適用先とする研究ではない。",
+      "source_url": "https://arxiv.org/abs/2408.04808",
+      "body_check": "本文では分散on-chip memoryと高帯域core間接続をrTensorで抽象化し、compute-shift patternから実行計画を探索してGraphcore IPU上で既存compiler/library比最大3.3倍を報告する。対象は汎用DNN計算で、LLM serving固有機構ではない。",
+      "worklist_rank": 465,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676641.3715987",
+      "identity_tokens": [
+        "DOI:10.1145/3676641.3715987"
+      ],
+      "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale",
+      "reason": "CXLメモリ階層の実測知見はLLM KV/weight offload設計に直接有用だが、論文自体は汎用CXLメモリcharacterizationでLLM推論方式を提案しないためborderline。",
+      "source_url": "https://doi.org/10.1145/3676641.3715987",
+      "body_check": "本文は複数Intel世代・大容量DRAM環境でCXL memoryのlatency/bandwidth/NUMA等を系統評価し、性能特性とscale時の挙動を分析する。LLM固有のcache/offload policyは提案せず、後続LLM階層memory研究の基盤測定としての位置づけ。",
+      "worklist_rank": 464,
+      "first_checked_at": "2026-09-29T12:03:00+09:00",
+      "last_checked_at": "2026-09-29T12:03:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md"
+      ]
+    }
+  ]
+}
