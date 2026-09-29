@@ -1,19 +1,7 @@
-name: Library import drain v2
+name: Library import drain v2 (legacy manual)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/import-inbox/pending/**'
-      - '.survey/import-inbox/waiting/**'
-      - '.survey/scripts/process_library_import_inbox.py'
-      - '.github/workflows/library-import-drain.yml'
-  workflow_run:
-    workflows: ['Survey claim fast lane']
-    types: [completed]
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
