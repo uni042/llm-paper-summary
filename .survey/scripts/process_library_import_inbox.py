@@ -344,9 +344,18 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             terminal += 1
 
     if imported:
+        # These are derived-view refreshes. A stale README/worklist is repairable,
+        # while losing an already validated Library import is not. Keep failures
+        # visible on stderr but do not roll back durable inbox progress.
         survey.ROOT = repo_root / ".survey"
-        survey.render()
-        research_job_reconciliation.reconcile(repo_root)
+        try:
+            survey.render()
+        except Exception as exc:
+            print(f"warning: survey.render failed after durable Research import: {type(exc).__name__}: {exc}", file=sys.stderr)
+        try:
+            research_job_reconciliation.reconcile(repo_root)
+        except Exception as exc:
+            print(f"warning: research reconciliation failed after durable Research import: {type(exc).__name__}: {exc}", file=sys.stderr)
 
     return imported, terminal
 
