@@ -330,65 +330,74 @@ _core._discovery_round_identity = _discovery_round_identity
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
 
-def _library_first_status(repo_root: Path, now=None) -> str:
-    """Render the compact Library-first operational dashboard.
+def _import_progress_events(repo_root: Path, now):
+    """Read only GitHub-resident Library import evidence; never access ChatGPT Library."""
+    research_events = []
+    discovery_events = []
 
-    Only information naturally produced/consumed by the current Library-first
-    workflow is exposed: completed Research, completed Discovery classifications,
-    canonical paper corpus size, and structured-reference coverage.
-    Legacy queue/claim/heartbeat/maintenance internals are intentionally hidden.
-    """
+    # Research terminal results persist after pending payload cleanup.
+    for _, payload in _core.evidence._iter_json(repo_root / ".survey/import-inbox/results/research"):
+        if str(payload.get("status") or "") not in {"imported", "already_represented"}:
+            continue
+        stamp = _core.evidence._parse_dt(payload.get("worker_completed_at"))
+        if stamp is None:
+            stamp = _core.evidence._parse_dt(payload.get("processed_at"))
+        if stamp is not None and stamp <= now:
+            research_events.append(stamp)
+
+    # Discovery: count each immutable Library run once. Active payloads retain
+    # the original run_key; terminal results preserve it for future imports.
+    seen = set()
+    roots = [
+        repo_root / ".survey/import-inbox/pending/discovery",
+        repo_root / ".survey/import-inbox/waiting/discovery",
+        repo_root / ".survey/import-inbox/blocked/discovery",
+        repo_root / ".survey/import-inbox/results/discovery",
+    ]
+    for root in roots:
+        for path, payload in _core.evidence._iter_json(root):
+            run_key = str(payload.get("run_key") or "").strip()
+            stamp = _discovery_run_time_from_key(run_key)
+            count = int(payload.get("record_count") or 0)
+            if not run_key:
+                # Legacy terminal results did not retain run_key. They are still
+                # GitHub evidence, but can only be assigned to import time.
+                stamp = _core.evidence._parse_dt(payload.get("processed_at"))
+                run_key = "legacy:" + str(path)
+            if count <= 0:
+                records = payload.get("records")
+                if isinstance(records, list):
+                    count = len(records)
+            if stamp is None or stamp > now or count <= 0 or run_key in seen:
+                continue
+            seen.add(run_key)
+            discovery_events.append((stamp, count))
+    return research_events, discovery_events
+
+
+def _library_first_status(repo_root: Path, now=None) -> str:
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
     now = now.astimezone(timezone.utc)
 
-    jobs = _core.evidence._collect_jobs(repo_root)
-    submissions = _collect_submissions(repo_root)
-    results = _core.evidence._collect_results(repo_root)
-    verified = _core.evidence._verified_completions(repo_root, jobs, submissions, results)
-    verified_research = [r for r in verified if r["kind"] == "research" and r["completed_at"] <= now]
     reference_progress = _core._structured_reference_progress(repo_root)
     paper_count = len(_core._paper_markdown_files(repo_root))
-
-    # Discovery progress is counted as papers actually inspected/classified, not
-    # runs/rounds. Current Library-first imports preserve candidate/record counts
-    # in immutable discovery submissions.
-    discovery_events = []
-    for row in submissions:
-        payload = row["payload"]
-        if row.get("kind") != "discovery" and not isinstance(payload.get("discovery_stats"), dict):
-            continue
-        stamp = row.get("discovery_run_time") or _explicit_worker_run_time(payload)
-        if stamp is None or stamp > now:
-            continue
-        records = payload.get("records")
-        candidates = payload.get("candidates")
-        stats = payload.get("discovery_stats")
-        if isinstance(records, list):
-            count = len(records)
-        elif isinstance(candidates, list):
-            count = len(candidates)
-        elif isinstance(stats, dict):
-            count = int(stats.get("record_count") or stats.get("classified_count") or stats.get("candidate_count") or 0)
-        else:
-            count = int(payload.get("record_count") or 0)
-        if count > 0:
-            discovery_events.append((stamp, count))
+    research_events, discovery_events = _import_progress_events(repo_root, now)
 
     local_now = now.astimezone(_core.evidence.JST)
     today = local_now.date()
     daily = []
     for days_ago in range(6, -1, -1):
         day = today - timedelta(days=days_ago)
-        research_n = sum(1 for row in verified_research if row["completed_at"].astimezone(_core.evidence.JST).date() == day)
+        research_n = sum(1 for stamp in research_events if stamp.astimezone(_core.evidence.JST).date() == day)
         discovery_n = sum(count for stamp, count in discovery_events if stamp.astimezone(_core.evidence.JST).date() == day)
         daily.append((day, research_n, discovery_n))
 
     cutoff_24h = now - timedelta(hours=24)
-    research_24h = sum(cutoff_24h <= row["completed_at"] <= now for row in verified_research)
+    research_24h = sum(cutoff_24h <= stamp <= now for stamp in research_events)
     discovery_24h = sum(count for stamp, count in discovery_events if cutoff_24h <= stamp <= now)
-    last_research = max((row["completed_at"] for row in verified_research), default=None)
+    last_research = max(research_events, default=None)
     last_discovery = max((stamp for stamp, _ in discovery_events), default=None)
 
     research_7d = sum(row[1] for row in daily)
@@ -396,23 +405,14 @@ def _library_first_status(repo_root: Path, now=None) -> str:
     research_daily_avg = research_7d / 7.0
     discovery_daily_avg = discovery_7d / 7.0
     ref_remaining = int(reference_progress.get("remaining") or 0) if reference_progress.get("available") is True else 0
-    # Discovery classifications are the unit that consumes structured-reference
-    # candidates in the current workflow; use their 7-day mean as the observed
-    # processing rate. This is an estimate, not a deadline.
-    ref_days_remaining = (ref_remaining / discovery_daily_avg) if discovery_daily_avg > 0 else None
+    ref_days_remaining = ref_remaining / discovery_daily_avg if discovery_daily_avg > 0 else None
 
     lines = [
-        "# LLM論文サーベイ STATUS",
-        "",
-        f"> 自動生成: **{local_now.strftime('%Y-%m-%d %H:%M:%S JST')}**",
-        "",
-        "現行のLibrary-first手順で継続的に得られる成果情報だけを表示します。"
-        "旧claim / heartbeat / run-ledger / queue snapshot / maintenance内部状態はSTATUSの表示対象にしません。",
-        "",
-        "## サマリー",
-        "",
-        "| 指標 | 現在値 |",
-        "|---|---:|",
+        "# LLM論文サーベイ STATUS", "",
+        f"> 自動生成: **{local_now.strftime('%Y-%m-%d %H:%M:%S JST')}**", "",
+        "GitHubへ到達済みのLibrary-first成果だけから再構成します。ChatGPT Libraryへはアクセスしません。", "",
+        "## サマリー", "",
+        "| 指標 | 現在値 |", "|---|---:|",
         f"| 収録論文 | **{paper_count}** |",
         f"| 直近24時間のResearch完了 | **{research_24h}** |",
         f"| 直近24時間のDiscovery本文確認・分類 | **{discovery_24h}** |",
@@ -420,45 +420,25 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         f"| 最終Discovery完了 | **{_core.evidence._fmt_time(last_discovery)}** |",
         f"| Research 7日平均 | **{research_daily_avg:.1f}件/日** |",
         f"| Discovery 7日平均 | **{discovery_daily_avg:.1f}件/日** |",
-        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
-        "",
-        "Researchは完成成果がGitHubへ正規収録され、現行の耐久証拠で照合できる論文を数えます。"
-        "Discoveryはimmutable成果に記録された本文確認・最終分類済み候補数を数えます。",
-        "",
-        "## 直近7日の日次進捗",
-        "",
-        "| 日付 (JST) | Research完了 | Discovery本文確認・分類 |",
-        "|---|---:|---:|",
+        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |", "",
+        "日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。", "",
+        "## 直近7日の日次進捗", "",
+        "| 日付 (JST) | Research完了 | Discovery本文確認・分類 |", "|---|---:|---:|",
     ]
     for day, research_n, discovery_n in daily:
         lines.append(f"| {day.isoformat()} | **{research_n}** | **{discovery_n}** |")
-
-    lines += [
-        "",
-        "## 収録論文",
-        "",
-        f"- 現在の論文Markdown実体: **{paper_count}件**",
-        "- 対象: `papers/inference/**`、`papers/training/**`、`papers/survey/**`。",
-        "- README、comparison系、Movedスタブは除外します。",
-        "",
-    ]
-
+    lines += ["", "## 収録論文", "", f"- 現在の論文Markdown実体: **{paper_count}件**",
+              "- 対象: `papers/inference/**`、`papers/training/**`、`papers/survey/**`。",
+              "- README、comparison系、Movedスタブは除外します。", ""]
     lines.extend(_core._render_structured_reference_progress(reference_progress))
-    lines += [
-        "## 集計方針",
-        "",
-        "- STATUSは表示のたびに現在の正規paper実体・Discovery耐久成果・構造化referencesから再計算します。",
-        "- GitHubへ転送済みの成果は正規paper/Discovery耐久成果から、未転送成果はLibrary側の同形式成果から集計します。二重計上はcanonical identityで除外します。",
-        "- references推定残日数は、現在の未処理referencesを直近7日のDiscovery平均処理件数で割った参考値です。",
-        "- Scheduled workerの生存推定、claim数、heartbeat、旧queue内部状態など、現行Library-first手順の進捗判断に不要な値は表示しません。",
-        "",
-        "---",
-        "",
-        "表示生成: `.survey/scripts/render_status_dashboard.py`",
-        "",
-    ]
+    lines += ["## 集計方針", "",
+              "- GitHub checkoutだけを入力にし、ChatGPT Library未転送成果は数えません。",
+              "- Discoveryはimmutable runの `run_key` と `record_count` を使用し、同一run_keyを一度だけ数えます。",
+              "- Researchはimport resultの `worker_completed_at` を使用します。旧成果だけ `processed_at` を代用します。",
+              "- Library未転送分は次回Survey GitHub Import後に反映されます。",
+              "- references推定残日数は未処理references ÷ Discovery 7日平均です。", "",
+              "---", "", "表示生成: `.survey/scripts/render_status_dashboard.py`", ""]
     return "\n".join(lines)
-
 
 build_dashboard = _library_first_status
 
