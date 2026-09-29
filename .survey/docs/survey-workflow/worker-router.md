@@ -229,6 +229,13 @@ Library `research/*.md` は1件ずつ先頭から末尾まで全文を読む。�
 
 汎用テンプレート文が本文の中心、論文名や方式名だけを差し替えれば別論文にも成立する長文、主要機構の具体説明欠落、headline結果だけで評価条件なし、プレースホルダー・未完全文、極端に薄い本文など、現行品質ガイドを明らかに満たさない原稿はアップロードワーカー自身の判断でrejectし、GitHubへ転送せずLibraryから削除する。判断が微妙なものは削除せずLibraryに保留し、転送もしない。
 
+Research MarkdownのYAML frontmatterには、日次進捗をGitHub単独で再構成できるよう次を必須で保持する。
+
+- `worker_completed_at`: Research完成時刻（ISO 8601、タイムゾーン付き）
+- `worker_run_key`: 元Scheduled worker runを一意に示すキー
+
+この2項目は論文の出版日時ではなく、workerが実際にResearchを完了した時刻・runを表す。GitHub import inbox processorは内容を変更せずpaperへ保存し、import resultにも同値を転記する。
+
 品質確認を通ったResearchだけを内容変更せず:
 
 `.survey/import-inbox/pending/research/<unique>.md`
