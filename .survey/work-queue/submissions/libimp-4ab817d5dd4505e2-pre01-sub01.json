@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "source_url": "https://arxiv.org/abs/2305.05176",
+      "year": 2023,
+      "published": "2023-05-09",
+      "abstract": "There is a rapidly growing number of large language models (LLMs) that users can query for a fee. We review the cost associated with querying popular LLM APIs, e.g. GPT-4, ChatGPT, J1-Jumbo, and find that these models have heterogeneous pricing structures, with fees that can differ by two orders of magnitude. In particular, using LLMs on large collections of queries and text can be expensive. Motivated by this, we outline and discuss three types of strategies that users can exploit to reduce the inference cost associated with using LLMs: 1) prompt adaptation, 2) LLM approximation, and 3) LLM cascade. As an example, we propose FrugalGPT, a simple yet flexible instantiation of LLM cascade which learns which combinations of LLMs to use for different queries in order to reduce cost and improve accuracy. Our experiments show that FrugalGPT can match the performance of the best individual LLM (e.g. GPT-4) with up to 98% cost reduction or improve the accuracy over GPT-4 by 4% with the same cost. The ideas and findings presented here lay a foundation for using LLMs sustainably and efficiently.",
+      "canonical_id": "arXiv:2305.05176",
+      "arxiv_id": "2305.05176",
+      "doi": "10.48550/arXiv.2305.05176",
+      "authors": [
+        "Lingjiao Chen",
+        "M. Zaharia",
+        "James Y. Zou"
+      ],
+      "reason": "複数LLMをカスケードして推論コストと品質を最適化する配信・ルーティング研究。",
+      "library_body_check": "本文のLLM cascade設計、予算制約最適化、評価節を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2305.11627",
+      "year": 2023,
+      "published": "2023-05-19",
+      "abstract": "Large language models (LLMs) have shown remarkable capabilities in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges in both the deployment, inference, and training stages. With LLM being a general-purpose task solver, we explore its compression in a task-agnostic manner, which aims to preserve the multi-task solving and language generation ability of the original LLM. One challenge to achieving this is the enormous size of the training corpus of LLM, which makes both data transfer and model post-training over-burdensome. Thus, we tackle the compression of LLMs within the bound of two constraints: being task-agnostic and minimizing the reliance on the original training dataset. Our method, named LLM-Pruner, adopts structural pruning that selectively removes non-critical coupled structures based on gradient information, maximally preserving the majority of the LLM's functionality. To this end, the performance of pruned models can be efficiently recovered through tuning techniques, LoRA, in merely 3 hours, requiring only 50K data. We validate the LLM-Pruner on three LLMs, including LLaMA, Vicuna, and ChatGLM, and demonstrate that the compressed models still exhibit satisfactory capabilities in zero-shot classification and generation. The code is available at: https://github.com/horseee/LLM-Pruner",
+      "canonical_id": "arXiv:2305.11627",
+      "arxiv_id": "2305.11627",
+      "doi": "10.48550/arXiv.2305.11627",
+      "authors": [
+        "Xinyin Ma",
+        "Gongfan Fang",
+        "Xinchao Wang"
+      ],
+      "reason": "構造化枝刈りによりLLMのパラメータ・計算量を削減する推論圧縮研究。",
+      "library_body_check": "本文のdependency-aware pruning、importance estimation、効率評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LongNet: Scaling Transformers to 1, 000, 000, 000 Tokens",
+      "source_url": "https://arxiv.org/abs/2307.02486",
+      "year": 2023,
+      "published": "2023-07-05",
+      "abstract": "Scaling sequence length has become a critical demand in the era of large language models. However, existing methods struggle with either computational complexity or model expressivity, rendering the maximum sequence length restricted. In this work, we introduce LongNet, a Transformer variant that can scale sequence length to more than 1 billion tokens, without sacrificing the performance on shorter sequences. Specifically, we propose dilated attention, which expands the attentive field exponentially as the distance grows. LongNet has significant advantages: 1) it has a linear computation complexity and a logarithm dependency between tokens; 2) it can be served as a distributed trainer for extremely long sequences; 3) its dilated attention is a drop-in replacement for standard attention, which can be seamlessly integrated with the existing Transformer-based optimization. Experiments results demonstrate that LongNet yields strong performance on both long-sequence modeling and general language tasks. Our work opens up new possibilities for modeling very long sequences, e.g., treating a whole corpus or even the entire Internet as a sequence.",
+      "canonical_id": "arXiv:2307.02486",
+      "arxiv_id": "2307.02486",
+      "authors": [
+        "Jiayu Ding",
+        "Shu-Ming Ma",
+        "Li Dong",
+        "Xingxing Zhang",
+        "Shao-Han Huang",
+        "Wen-Hui Wang",
+        "Nan-Ning Zheng",
+        "Furu Wei"
+      ],
+      "reason": "dilated attentionで超長文脈の注意計算を疎化し、計算量を抑える。",
+      "library_body_check": "本文のdilated attention、計算量解析、長文脈評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2307.08621",
+      "year": 2023,
+      "published": "2023-07-17",
+      "abstract": "In this work, we propose Retentive Network (RetNet) as a foundation architecture for large language models, simultaneously achieving training parallelism, low-cost inference, and good performance. We theoretically derive the connection between recurrence and attention. Then we propose the retention mechanism for sequence modeling, which supports three computation paradigms, i.e., parallel, recurrent, and chunkwise recurrent. Specifically, the parallel representation allows for training parallelism. The recurrent representation enables low-cost $O(1)$ inference, which improves decoding throughput, latency, and GPU memory without sacrificing performance. The chunkwise recurrent representation facilitates efficient long-sequence modeling with linear complexity, where each chunk is encoded parallelly while recurrently summarizing the chunks. Experimental results on language modeling show that RetNet achieves favorable scaling results, parallel training, low-cost deployment, and efficient inference. The intriguing properties make RetNet a strong successor to Transformer for large language models. Code will be available at https://aka.ms/retnet.",
+      "canonical_id": "arXiv:2307.08621",
+      "arxiv_id": "2307.08621",
+      "authors": [
+        "Yutao Sun",
+        "Li Dong",
+        "Shao-Han Huang",
+        "Shu-Ming Ma",
+        "Yuqing Xia",
+        "Jilong Xue",
+        "Jianyong Wang",
+        "Furu Wei"
+      ],
+      "reason": "並列学習と再帰推論を両立し、デコード時の計算・メモリ効率を改善するアーキテクチャ。",
+      "library_body_check": "本文のparallel/recurrent/chunkwise retentionと推論評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+      "source_url": "https://arxiv.org/abs/2310.06694",
+      "year": 2023,
+      "published": "2023-10-10",
+      "abstract": "The popularity of LLaMA (Touvron et al., 2023a;b) and other recently emerged moderate-sized large language models (LLMs) highlights the potential of building smaller yet powerful LLMs. Regardless, the cost of training such models from scratch on trillions of tokens remains high. In this work, we study structured pruning as an effective means to develop smaller LLMs from pre-trained, larger models. Our approach employs two key techniques: (1) targeted structured pruning, which prunes a larger model to a specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner, and (2) dynamic batch loading, which dynamically updates the composition of sampled data in each training batch based on varying losses across different domains. We demonstrate the efficacy of our approach by presenting the Sheared-LLaMA series, pruning the LLaMA2-7B model down to 1.3B and 2.7B parameters. Sheared-LLaMA models outperform state-of-the-art open-source models of equivalent sizes, such as Pythia, INCITE, OpenLLaMA and the concurrent TinyLlama models, on a wide range of downstream and instruction tuning evaluations, while requiring only 3% of compute compared to training such models from scratch. This work provides compelling evidence that leveraging existing LLMs with structured pruning is a far more cost-effective approach for building competitive small-scale LLMs",
+      "canonical_id": "arXiv:2310.06694",
+      "arxiv_id": "2310.06694",
+      "doi": "10.48550/arXiv.2310.06694",
+      "authors": [
+        "Mengzhou Xia",
+        "Tianyu Gao",
+        "Zhiyuan Zeng",
+        "Danqi Chen"
+      ],
+      "reason": "構造化枝刈りで小型モデルを得る圧縮研究で、推論時のモデル規模削減にも直接つながる。",
+      "library_body_check": "本文のstructured pruning、dynamic batch loading、評価節を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ab817d5dd45",
+    "round": "libimp-4ab817d5dd4505e2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ab817d5dd4505e2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ab817d5dd4505e2-pre01.json",
+    "receipt": "sha256:4f559a6b7befba3f490ad1384df17ecfaeaac6caad2d079af1cfa0897501caa0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ab817d5dd45",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
