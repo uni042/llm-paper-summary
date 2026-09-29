@@ -1524,14 +1524,18 @@ def apply_artifact(sub: dict, job: dict):
     return {"paper": paper, "identity_delta": p.stdout.strip()}
 
 
-def process_submissions(st: dict):
+def process_submissions(st: dict, max_submissions: int | None = None):
     """Process root-level discovery/control submissions and historical direct results."""
     SUBMISSIONS.mkdir(parents=True, exist_ok=True)
     RESULTS.mkdir(parents=True, exist_ok=True)
+    processed = 0
     for p in sorted(SUBMISSIONS.glob("*.json")):
         rp = RESULTS / p.name
         if rp.exists():
             continue
+        if max_submissions is not None and processed >= max(0, max_submissions):
+            break
+        processed += 1
         result = {"schema_version": 1, "workflow_version": 10, "submission": str(p.relative_to(ROOT)), "ok": False}
         try:
             sub = read_json(p, {})
@@ -1729,6 +1733,7 @@ def main():
     global ROOT, QUEUE, JOBS, SUBMISSIONS, RESULTS, STATE, ARCHIVE, DISCOVERY_STATE
     p = argparse.ArgumentParser()
     p.add_argument("--root", type=Path, default=ROOT)
+    p.add_argument("--max-submissions", type=int, default=None)
     args = p.parse_args()
     ROOT = args.root.resolve()
     QUEUE = ROOT / "work-queue"
@@ -1744,7 +1749,7 @@ def main():
         "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
         "worker_poll_minutes": 10,
     })
-    process_submissions(st)
+    process_submissions(st, args.max_submissions)
     # Keep a discovery lane available even while research/audit work is ready so the
     # specialist worker can replenish the shared candidate buffer independently.
     ensure_discovery_job()
