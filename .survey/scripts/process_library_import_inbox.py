@@ -685,7 +685,11 @@ def terminalize_discovery(
     )
 
 
-def process_discovery(\n    repo_root: Path,\n    max_items: int | None = None,\n    max_records: int | None = None,\n) -> tuple[int, int]:
+def process_discovery(
+    repo_root: Path,
+    max_items: int | None = None,
+    max_records: int | None = None,
+) -> tuple[int, int]:
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
@@ -811,7 +815,9 @@ def main() -> int:
     if args.skip_discovery:
         discovery_advanced, discovery_terminal = 0, 0
     else:
-        discovery_advanced, discovery_terminal = process_discovery(\n            repo_root, args.max_discovery, args.max_discovery_records\n        )
+        discovery_advanced, discovery_terminal = process_discovery(
+            repo_root, args.max_discovery, args.max_discovery_records
+        )
 
     summary = {
         "ok": True,
