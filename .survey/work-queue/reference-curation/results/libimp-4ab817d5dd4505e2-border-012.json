@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ab817d5dd4505e2-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.15745",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.15745",
+    "identity_tokens": [
+      "arXiv:2512.15745"
+    ],
+    "reason": "拡散言語モデルの大規模化が中心だが、生成方式と推論特性は対象領域に関連。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-09-29T23:39:46+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "LLaDA2.0: Scaling Up Diffusion Language Models to 100B"
+  },
+  "processed_at": "2026-09-29T23:39:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ab817d5dd45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

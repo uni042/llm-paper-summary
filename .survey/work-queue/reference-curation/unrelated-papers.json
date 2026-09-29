@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-27T21:48:56+00:00",
-  "record_count": 298,
+  "updated_at": "2026-09-29T23:39:47+00:00",
+  "record_count": 321,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4489,6 +4489,332 @@
         "LLM-paper-summary-library-first legacy MD-only Discovery"
       ],
       "title": "A Complete Survey on LLM-based AI Chatbots"
+    },
+    "arXiv:2309.14509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.14509",
+      "identity_tokens": [
+        "arXiv:2309.14509"
+      ],
+      "reason": "長系列LLMの学習並列化が主目的で、最終適用先が学習高速化。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models"
+    },
+    "arXiv:2108.07258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.07258",
+      "identity_tokens": [
+        "arXiv:2108.07258"
+      ],
+      "reason": "基盤モデル全般の機会・リスクを扱う総説で、推論効率化手法ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "On the Opportunities and Risks of Foundation Models"
+    },
+    "arXiv:2412.15204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15204",
+      "identity_tokens": [
+        "arXiv:2412.15204"
+      ],
+      "reason": "長文脈能力のベンチマークであり、推論システム最適化手法ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LongBench v2: Towards Deeper Understanding and Reasoning on Realistic Long-context Multitasks"
+    },
+    "arXiv:1910.10683": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.10683",
+      "identity_tokens": [
+        "arXiv:1910.10683"
+      ],
+      "reason": "T5の事前学習・転移学習研究で、推論効率化が主題ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+    },
+    "arXiv:2406.12045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12045",
+      "identity_tokens": [
+        "arXiv:2406.12045"
+      ],
+      "reason": "ツール利用エージェント評価ベンチマークで推論効率化ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains"
+    },
+    "arXiv:2506.07982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07982",
+      "identity_tokens": [
+        "arXiv:2506.07982"
+      ],
+      "reason": "会話エージェント評価ベンチマークで推論効率化手法ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "tau2-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
+    },
+    "arXiv:2006.15704": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.15704",
+      "identity_tokens": [
+        "arXiv:2006.15704"
+      ],
+      "reason": "分散データ並列学習の高速化が主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "PyTorch Distributed: Experiences on Accelerating Data Parallel Training"
+    },
+    "arXiv:2306.13649": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.13649",
+      "identity_tokens": [
+        "arXiv:2306.13649"
+      ],
+      "reason": "知識蒸留による学習法が主目的で、学習工程の最適化に該当。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "On-policy Distillation of Language Models: Learning from Self-Generated Mistakes"
+    },
+    "arXiv:2105.04663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.04663",
+      "identity_tokens": [
+        "arXiv:2105.04663"
+      ],
+      "reason": "大規模モデル学習向け自動並列化が中心。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "GSPMD: General and Scalable Parallelization for ML Computation Graphs"
+    },
+    "arXiv:2505.19223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19223",
+      "identity_tokens": [
+        "arXiv:2505.19223"
+      ],
+      "reason": "拡散LLMの選好最適化という学習手法が主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models"
+    },
+    "arXiv:1606.06031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.06031",
+      "identity_tokens": [
+        "arXiv:1606.06031"
+      ],
+      "reason": "言語理解データセット提案で推論効率化とは無関係。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "The LAMBADA dataset: Word prediction requiring a broad discourse context"
+    },
+    "arXiv:2205.09911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.09911",
+      "identity_tokens": [
+        "arXiv:2205.09911"
+      ],
+      "reason": "データラングリングへの基盤モデル適用が主題。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Can Foundation Models Wrangle Your Data?"
+    },
+    "arXiv:2404.06395": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06395",
+      "identity_tokens": [
+        "arXiv:2404.06395"
+      ],
+      "reason": "小型言語モデルの学習戦略とスケーリングが主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies"
+    },
+    "arXiv:2201.11990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.11990",
+      "identity_tokens": [
+        "arXiv:2201.11990"
+      ],
+      "reason": "530Bモデルの大規模分散学習が主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model"
+    },
+    "arXiv:1412.6980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.6980",
+      "identity_tokens": [
+        "arXiv:1412.6980"
+      ],
+      "reason": "最適化アルゴリズムAdamの学習手法論文で推論とは無関係。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Adam: A Method for Stochastic Optimization"
+    },
+    "arXiv:2002.05645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.05645",
+      "identity_tokens": [
+        "arXiv:2002.05645"
+      ],
+      "reason": "定数メモリ学習の実行アルゴリズムが主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Training Large Neural Networks with Constant Memory using a New Execution Algorithm"
+    },
+    "arXiv:2211.13878": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.13878",
+      "identity_tokens": [
+        "arXiv:2211.13878"
+      ],
+      "reason": "Transformer学習の自動並列化が主目的。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Galvatron: Efficient Transformer Training over Multiple GPUs Using Automatic Parallelism"
+    },
+    "arXiv:2402.03300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03300",
+      "identity_tokens": [
+        "arXiv:2402.03300"
+      ],
+      "reason": "数学推論能力向上のデータ・学習法が中心。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+    },
+    "arXiv:2403.04652": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.04652",
+      "identity_tokens": [
+        "arXiv:2403.04652"
+      ],
+      "reason": "基盤モデルの学習・データ・能力報告が中心で推論効率化手法ではない。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Yi: Open Foundation Models by 01.AI"
+    },
+    "DOI:10.1145/3637528.3671470": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3637528.3671470",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671470"
+      ],
+      "reason": "検索拡張生成（RAG）とLLMの手法・分類・課題を整理するサーベイで、推論基盤の速度・メモリ・スケジューリングを改善する新規システムを提案しないため対象外。",
+      "first_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ],
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+    },
+    "DOI:10.1145/3627703.3650085": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627703.3650085",
+      "identity_tokens": [
+        "DOI:10.1145/3627703.3650085"
+      ],
+      "reason": "大規模DL/LLM学習の障害回復用チェックポイント方式が主題で、最終適用先が学習工程そのものの高速化・耐障害化であるため凍結範囲として対象外。",
+      "first_checked_at": "2026-09-29T23:39:47+00:00",
+      "last_checked_at": "2026-09-29T23:39:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+        "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md"
+      ],
+      "title": "Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures"
+    },
+    "DOI:10.1145/3620665.3640423": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620665.3640423",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640423"
+      ],
+      "reason": "GPU仮想メモリを用いた大規模DNN学習のメモリ断片化対策で、主目的と評価が学習メモリ管理に置かれているため凍結対象であり対象外。",
+      "first_checked_at": "2026-09-29T23:39:47+00:00",
+      "last_checked_at": "2026-09-29T23:39:47+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "title": "GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching"
+    },
+    "DOI:10.1145/321738.321743": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/321738.321743",
+      "identity_tokens": [
+        "DOI:10.1145/321738.321743"
+      ],
+      "reason": "1973年の単一プロセッサhard-real-time scheduling理論で、固定優先度とdeadlineベース動的優先度の利用率限界を解析する古典研究。LLM/DL推論システムを対象としないため対象外。",
+      "first_checked_at": "2026-09-29T23:39:47+00:00",
+      "last_checked_at": "2026-09-29T23:39:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
+      ],
+      "title": "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment"
     }
   }
 }

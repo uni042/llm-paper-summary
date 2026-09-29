@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ab817d5dd4505e2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1910.10683",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1910.10683",
+    "identity_tokens": [
+      "arXiv:1910.10683"
+    ],
+    "reason": "T5の事前学習・転移学習研究で、推論効率化が主題ではない。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-09-29T23:39:46+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+  },
+  "processed_at": "2026-09-29T23:39:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ab817d5dd45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

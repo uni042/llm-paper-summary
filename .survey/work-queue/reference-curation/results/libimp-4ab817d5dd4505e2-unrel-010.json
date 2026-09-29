@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ab817d5dd4505e2-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.15704",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.15704",
+    "identity_tokens": [
+      "arXiv:2006.15704"
+    ],
+    "reason": "分散データ並列学習の高速化が主目的。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-09-29T23:39:46+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "PyTorch Distributed: Experiences on Accelerating Data Parallel Training"
+  },
+  "processed_at": "2026-09-29T23:39:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ab817d5dd45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
