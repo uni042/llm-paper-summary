@@ -47,6 +47,7 @@ INBOX = Path(".survey/import-inbox")
 PENDING_RESEARCH = INBOX / "pending/research"
 PENDING_DISCOVERY = INBOX / "pending/discovery"
 WAITING_DISCOVERY = INBOX / "waiting/discovery"
+RETAINED_DISCOVERY_SOURCE = INBOX / "retained/discovery-source"
 BLOCKED_RESEARCH = INBOX / "blocked/research"
 BLOCKED_DISCOVERY = INBOX / "blocked/discovery"
 RESULT_RESEARCH = INBOX / "results/research"
@@ -381,6 +382,97 @@ def discovery_records(payload: dict[str, Any]) -> list[dict[str, Any]]:
     return out
 
 
+def split_oversized_discovery_sources(max_records: int | None) -> int:
+    """Split large immutable Discovery runs into bounded GitHub-side work chunks.
+
+    The original run payload is retained byte-for-byte under retained/discovery-source.
+    Chunk files are deterministic derived work artifacts; they preserve provenance and
+    allow downstream precheck/relevance work to stay within a records-per-invocation cap.
+    """
+    if max_records is None or max_records <= 0:
+        return 0
+    WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
+    RETAINED_DISCOVERY_SOURCE.mkdir(parents=True, exist_ok=True)
+    split_count = 0
+
+    for source in sorted(WAITING_DISCOVERY.glob("*.json")):
+        if "--chunk-" in source.stem:
+            continue
+        try:
+            payload = read_json(source)
+            records = discovery_records(payload)
+        except Exception:
+            continue
+        if len(records) <= max_records:
+            continue
+
+        parent_run_key = str(payload.get("parent_run_key") or payload.get("run_key") or source.stem)
+        chunk_count = (len(records) + max_records - 1) // max_records
+        for index in range(chunk_count):
+            lo = index * max_records
+            hi = min(len(records), lo + max_records)
+            chunk_payload = dict(payload)
+            chunk_payload["records"] = records[lo:hi]
+            chunk_payload["record_count"] = hi - lo
+            chunk_payload["parent_run_key"] = parent_run_key
+            chunk_payload["run_key"] = (
+                f"{parent_run_key}::chunk-{index + 1:04d}-of-{chunk_count:04d}"
+            )
+            chunk_payload["chunk_index"] = index + 1
+            chunk_payload["chunk_count"] = chunk_count
+            chunk_payload["source_record_count"] = len(records)
+            chunk_path = WAITING_DISCOVERY / (
+                f"{source.stem}--chunk-{index + 1:04d}-of-{chunk_count:04d}.json"
+            )
+            write_json_if_absent(chunk_path, chunk_payload)
+
+        retained = RETAINED_DISCOVERY_SOURCE / source.name
+        if retained.exists():
+            if retained.read_bytes() != source.read_bytes():
+                retained = RETAINED_DISCOVERY_SOURCE / (
+                    f"{source.stem}-{sha256_bytes(source.read_bytes())[:12]}{source.suffix}"
+                )
+        retained.parent.mkdir(parents=True, exist_ok=True)
+        if retained.exists():
+            if retained.read_bytes() != source.read_bytes():
+                raise RuntimeError(f"retained Discovery source collision: {retained}")
+            source.unlink(missing_ok=True)
+        else:
+            source.replace(retained)
+        split_count += 1
+
+    return split_count
+
+
+def select_discovery_sources(
+    max_items: int | None,
+    max_records: int | None,
+) -> list[Path]:
+    selected: list[Path] = []
+    used_records = 0
+    for source in sorted(WAITING_DISCOVERY.glob("*.json")):
+        if max_items is not None and len(selected) >= max(0, max_items):
+            break
+        try:
+            count = len(discovery_records(read_json(source)))
+        except Exception:
+            count = 0
+        if max_records is not None and max_records > 0:
+            if selected and used_records + count > max_records:
+                break
+            if not selected and count > max_records:
+                # Oversized valid payloads should already have been split. Select
+                # an invalid/unexpected survivor alone so it can be blocked instead
+                # of permanently starving the FIFO.
+                selected.append(source)
+                break
+        selected.append(source)
+        used_records += count
+        if max_records is not None and max_records > 0 and used_records >= max_records:
+            break
+    return selected
+
+
 def preferred_candidate_id(record: dict[str, Any]) -> str | None:
     identifiers = sorted(paper_identity.record_identifiers(record))
     for prefix in ("arXiv:", "DOI:", "OpenReview:"):
@@ -593,7 +685,7 @@ def terminalize_discovery(
     )
 
 
-def process_discovery(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
+def process_discovery(\n    repo_root: Path,\n    max_items: int | None = None,\n    max_records: int | None = None,\n) -> tuple[int, int]:
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
@@ -610,9 +702,8 @@ def process_discovery(repo_root: Path, max_items: int | None = None) -> tuple[in
         source.replace(target)
         advanced += 1
 
-    waiting_sources = sorted(WAITING_DISCOVERY.glob("*.json"))
-    if max_items is not None:
-        waiting_sources = waiting_sources[:max(0, max_items)]
+    split_oversized_discovery_sources(max_records)
+    waiting_sources = select_discovery_sources(max_items, max_records)
     for source in waiting_sources:
         token = source_token(source)
         raw_bytes = source.read_bytes()
@@ -687,6 +778,9 @@ def process_discovery(repo_root: Path, max_items: int | None = None) -> tuple[in
             {
                 "record_count": len(records),
                 "run_key": payload.get("run_key"),
+                "parent_run_key": payload.get("parent_run_key"),
+                "chunk_index": payload.get("chunk_index"),
+                "chunk_count": payload.get("chunk_count"),
                 "worker_id": payload.get("worker_id"),
                 "accept_count": len(accepts),
                 "relevance_count": len(relevance),
@@ -704,6 +798,7 @@ def main() -> int:
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--max-research", type=int, default=None)
     parser.add_argument("--max-discovery", type=int, default=None)
+    parser.add_argument("--max-discovery-records", type=int, default=None)
     parser.add_argument("--skip-research", action="store_true")
     parser.add_argument("--skip-discovery", action="store_true")
     args = parser.parse_args()
@@ -716,7 +811,7 @@ def main() -> int:
     if args.skip_discovery:
         discovery_advanced, discovery_terminal = 0, 0
     else:
-        discovery_advanced, discovery_terminal = process_discovery(repo_root, args.max_discovery)
+        discovery_advanced, discovery_terminal = process_discovery(\n            repo_root, args.max_discovery, args.max_discovery_records\n        )
 
     summary = {
         "ok": True,
