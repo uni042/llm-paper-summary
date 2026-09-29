@@ -1,15 +1,7 @@
-name: Library import inbox
+name: Library import inbox (legacy manual)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/import-inbox/pending/**'
-      - '.survey/import-inbox/waiting/**'
-      - '.github/workflows/library-import-inbox.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '17,47 * * * *'
 
 permissions:
   contents: write
