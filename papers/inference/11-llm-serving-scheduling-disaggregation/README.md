@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（293本）
+## 自動生成の論文一覧（294本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1159,6 +1159,10 @@
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：2  
   推論中に変動するバッチサイズとKVキャッシュ量から次の必要性能を予測し、サービス品質目標（service-level objective, SLO）を破らない範囲までGPU周波数を下げる。さらに負荷に合わせてテンソル並列度の異なるエンジンを切り替え、LLM配信の「使っていない性能余裕」をエネルギー削減へ変える。
+
+- **2024-06 · [Slice-Level Scheduling for High Throughput and Load Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  系列単位スケジューリング（sequence-level スケジューラ; SLS）は安全側に小さな静的バッチを組むためGPUを遊ばせやすく、反復単位スケジューリング（iteration-level スケジューラ; ILS）は完了要求を随時入れ替えられる一方、メモリ不足を避けるため同時実行数を抑えがちである。
 
 ### 4年前（2022-10〜2023-09）
 
