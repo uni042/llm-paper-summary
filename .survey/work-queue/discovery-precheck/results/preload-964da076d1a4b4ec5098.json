@@ -2,9 +2,9 @@
   "schema_version": 3,
   "operation": "precheck_discovery_candidates",
   "ok": true,
-  "request_id": "preload-d589afd099ac322bad6a",
+  "request_id": "preload-964da076d1a4b4ec5098",
   "collector_id": "discovery-preload-backward",
-  "run_key": "preload:preload-d589afd099ac322bad6a",
+  "run_key": "preload:preload-964da076d1a4b4ec5098",
   "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
   "provider": "semantic_scholar",
   "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
@@ -20,7 +20,7 @@
   "decision": "READY_FOR_EVALUATION",
   "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
   "raw_search_result_count": 7,
-  "retrieval_duplicate_filtered_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
   "represented_paper_match_filtered_count": 0,
   "rejection_ledger_filtered_count": 0,
   "intra_batch_duplicate_filtered_count": 0,
@@ -28,10 +28,10 @@
   "cross_page_duplicate_filtered_count": 0,
   "cross_page_alias_duplicate_filtered_count": 0,
   "unresolved_identity_count": 0,
-  "unseen_result_count": 5,
+  "unseen_result_count": 6,
   "provider_progress": null,
-  "progress_observed_at": "2026-09-28T21:19:08.198190+00:00",
-  "preload_id": "preload-d589afd099ac322bad6a",
+  "progress_observed_at": "2026-09-29T18:40:11.553634+00:00",
+  "preload_id": "preload-964da076d1a4b4ec5098",
   "preload_seed": true,
   "preload_cache_used": false,
   "preload_cached_pages_used": 0,
@@ -72,6 +72,32 @@
       "year": null,
       "published": null,
       "abstract": null
+    },
+    {
+      "title": "This paper is included in the Proceedings of the 16th USENIX Symposium on Operating Systems Design and Implementation.",
+      "source_url": "https://www.semanticscholar.org/paper/1d27a56a8133f947a5a0217b00241d26f585f834",
+      "year": null,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:1d27a56a8133f947a5a0217b00241d26f585f834",
+      "authors": [
+        "Lian-Min Zheng",
+        "Zhuo-Han Li",
+        "UC Hao Zhang",
+        "Yonghao Zhuang",
+        "Zhifeng Chen",
+        "Google Yanping Huang",
+        "Amazon Yida Wang",
+        "Web Services",
+        "Google Yuanzhong Xu",
+        "Dan-Yang Zhuo",
+        "Eric P. Xing",
+        "Joseph E. Gonzalez",
+        "Ion Stoica",
+        "UC Berkeley",
+        "Amazon Web Services",
+        "Google"
+      ]
     }
   ],
   "allowed_records": [
@@ -139,8 +165,42 @@
         "published": null,
         "abstract": null
       }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:1d27a56a8133f947a5a0217b00241d26f585f834",
+      "identity_tokens": [
+        "id:SemanticScholar:1d27a56a8133f947a5a0217b00241d26f585f834",
+        "title:this paper is included in the proceedings of the 16th usenix symposium on operating systems design and implementation",
+        "url:https://www.semanticscholar.org/paper/1d27a56a8133f947a5a0217b00241d26f585f834"
+      ],
+      "record": {
+        "title": "This paper is included in the Proceedings of the 16th USENIX Symposium on Operating Systems Design and Implementation.",
+        "source_url": "https://www.semanticscholar.org/paper/1d27a56a8133f947a5a0217b00241d26f585f834",
+        "year": null,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:1d27a56a8133f947a5a0217b00241d26f585f834",
+        "authors": [
+          "Lian-Min Zheng",
+          "Zhuo-Han Li",
+          "UC Hao Zhang",
+          "Yonghao Zhuang",
+          "Zhifeng Chen",
+          "Google Yanping Huang",
+          "Amazon Yida Wang",
+          "Web Services",
+          "Google Yuanzhong Xu",
+          "Dan-Yang Zhuo",
+          "Eric P. Xing",
+          "Joseph E. Gonzalez",
+          "Ion Stoica",
+          "UC Berkeley",
+          "Amazon Web Services",
+          "Google"
+        ]
+      }
     }
   ],
-  "receipt": "sha256:d46ed2bbd8ed9725ca272bad79f48970ea7de5d6249b556b57e7163e3172a6cb",
+  "receipt": "sha256:bfe03fe5ed6277665ae627ea1e0e2a2436d414142399ce85d3ad9704349cb5b4",
   "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
 }
