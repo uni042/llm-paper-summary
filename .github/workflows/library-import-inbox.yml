@@ -6,6 +6,7 @@ on:
     paths:
       - '.survey/import-inbox/pending/**'
       - '.survey/import-inbox/waiting/**'
+      - '.github/workflows/library-import-inbox.yml'
   workflow_dispatch:
   schedule:
     - cron: '17,47 * * * *'
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   process:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -72,6 +73,19 @@ jobs:
               papers \
               README.md \
               STATUS.md
+
+            # Persist the first durable state transition before slower downstream
+            # precheck/relevance/queue work. If a later stage times out, Research
+            # imports and Discovery pending -> waiting progress are not lost.
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+              if git push origin HEAD:main; then
+                git fetch origin main
+                git reset --hard origin/main
+              else
+                echo "main advanced before Library import checkpoint; recomputing (attempt ${attempt}/3)." >&2
+                continue
+              fi
+            fi
 
             : > /tmp/library-import-prechecks.txt
             while IFS= read -r request; do
