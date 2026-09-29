@@ -1,0 +1,171 @@
+name: Library import processor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '1/10 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/library-import.yml'
+      - '.survey/scripts/process_library_import_inbox.py'
+      - '.survey/tests/test_library_import_inbox.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: library-import-main
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Validate Library import code
+        run: |
+          python -m py_compile             .survey/scripts/process_library_import_inbox.py             .survey/scripts/process_discovery_precheck_batch.py             .survey/scripts/process_reference_relevance_requests.py             .survey/scripts/queue_worker.py             .survey/scripts/render_status_dashboard.py
+          python -m unittest .survey.tests.test_library_import_inbox
+
+      - name: Process bounded Library import work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-library-import[bot]'
+          git config user.email 'survey-library-import[bot]@users.noreply.github.com'
+
+          sync_main() {
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+          }
+
+          publish() {
+            local message="$1"
+            shift
+            git add -A -- "$@"
+            if git diff --cached --quiet; then
+              return 0
+            fi
+            git commit -m "$message"
+            git push origin HEAD:main
+          }
+
+          # Stage 1: intake is bounded by actual work volume, not file count.
+          # Research: at most 5 papers. Discovery: at most 20 records.
+          stage1_ok=0
+          for attempt in $(seq 1 6); do
+            sync_main
+            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 5               --max-discovery-records 20
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+
+            if publish               'library-import: checkpoint bounded intake'               .survey/import-inbox               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation               .survey/work-queue/jobs               .survey/work-queue/next-jobs.json               .survey/work-queue/state.json               .survey/survey-state               papers README.md STATUS.md; then
+              stage1_ok=1
+              break
+            fi
+            echo "Library intake push race on attempt ${attempt}; recomputing from latest main."
+          done
+          [ "$stage1_ok" -eq 1 ] || { echo 'Library intake checkpoint failed.' >&2; exit 1; }
+
+          # Stage 2: resolve only the bounded downstream work created by intake.
+          stage2_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+
+            : > /tmp/library-import-prechecks.txt
+            find .survey/work-queue/discovery-precheck/requests               -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null               | sort               | while IFS= read -r request; do
+                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
+                  [ -f "$result" ] || printf '%s\n' "$request"
+                done               | head -n 4 > /tmp/library-import-prechecks.txt
+
+            if [ -s /tmp/library-import-prechecks.txt ]; then
+              rm -rf /tmp/library-import-identities
+              rm -f /tmp/library-import-rejections.json
+              python .survey/scripts/build_discovery_identity_snapshot.py                 --root .survey                 --output /tmp/library-import-identities                 --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py                 --root .survey                 --output /tmp/library-import-rejections.json
+
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py                 --repo-root .                 --requests-file /tmp/library-import-prechecks.txt                 --snapshot-dir /tmp/library-import-identities                 --rejection-ledger /tmp/library-import-rejections.json                 --parallelism 2
+              precheck_rc=$?
+              set -e
+              [ "$precheck_rc" -le 1 ] || exit "$precheck_rc"
+            fi
+
+            set +e
+            python .survey/scripts/process_reference_relevance_requests.py               --repo-root .               --max-requests 20
+            relevance_rc=$?
+            set -e
+
+            if publish               'library-import: publish bounded downstream checks'               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation; then
+              stage2_ok=1
+              break
+            fi
+            echo "Library downstream-check push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage2_ok" -eq 1 ] || { echo 'Library downstream checkpoint failed.' >&2; exit 1; }
+
+          # Stage 3: re-read current main and advance only the same <=20-record
+          # Discovery window. Research is intentionally disabled after intake.
+          stage3_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 0               --max-discovery-records 20
+
+            if publish               'library-import: advance bounded Discovery work'               .survey/import-inbox               .survey/work-queue/submissions               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation; then
+              stage3_ok=1
+              break
+            fi
+            echo "Library Discovery advance push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage3_ok" -eq 1 ] || { echo 'Library Discovery advance failed.' >&2; exit 1; }
+
+          # Stage 4: keep queue work bounded too; one 20-record Discovery window
+          # creates at most four normal five-candidate submissions.
+          stage4_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+            python .survey/scripts/queue_worker.py               --root .survey               --max-submissions 8
+
+            if publish               'library-import: process bounded submissions'               .survey/work-queue               .survey/survey-state               papers README.md STATUS.md; then
+              stage4_ok=1
+              break
+            fi
+            echo "Library submission push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage4_ok" -eq 1 ] || { echo 'Library submission processing failed.' >&2; exit 1; }
+
+          # Stage 5: terminalize completed chunks and refresh the durable dashboard.
+          stage5_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 0               --max-discovery-records 20
+            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+
+            if publish               'library-import: settle bounded work and refresh STATUS'               .survey/import-inbox               .survey/work-queue               .survey/survey-state               papers README.md STATUS.md; then
+              stage5_ok=1
+              break
+            fi
+            echo "Library settle push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage5_ok" -eq 1 ] || { echo 'Library settle failed.' >&2; exit 1; }
+
+          if [ "${relevance_rc:-0}" -ne 0 ]; then
+            echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
+          fi
