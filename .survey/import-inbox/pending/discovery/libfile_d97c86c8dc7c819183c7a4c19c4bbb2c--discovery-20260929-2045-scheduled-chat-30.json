@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-2045-scheduled-chat-30",
+  "reference_main_sha": "018d1a319ff5e454ee778c01d8997ce52945b1be",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3419111.3421284",
+      "identity_tokens": [
+        "DOI:10.1145/3419111.3421284"
+      ],
+      "title": "GSLICE: Controlled Spatial Sharing of GPUs for a Scalable Inference Platform",
+      "reason": "GPUを推論関数間で空間分割し、サービス水準目標を守りながら資源割当とバッチを動的調整する推論サービング研究。LLM専用ではなく一般DNN推論基盤なので境界扱い。",
+      "source_url": "https://doi.org/10.1145/3419111.3421284",
+      "body_check": "本文の動的GPU資源割当、推論関数ごとの隔離、自己学習型の資源割当・バッチ制御、100µs未満の再割当停止時間を確認。MPS/TensorRT比でGPU利用効率60–800%改善、集約スループット2–13倍を報告するが、KVキャッシュやLLM固有サービングは扱わない。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/321738.321743",
+      "identity_tokens": [
+        "DOI:10.1145/321738.321743"
+      ],
+      "title": "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment",
+      "reason": "単一プロセッサ上の周期的リアルタイムタスクに対する固定優先度・締切駆動スケジューリングの古典理論で、LLMや機械学習推論システムを対象としないため対象外。",
+      "source_url": "https://doi.org/10.1145/321738.321743",
+      "body_check": "本文のrate-monotonic固定優先度とdeadline-driven動的優先度、プロセッサ利用率上界の解析を確認。大規模言語モデル推論、GPU、KVキャッシュ、サービング評価は存在せず、引用上の理論的背景に留まる。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MM.2023.3237491",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2023.3237491"
+      ],
+      "title": "Memory Pooling With CXL",
+      "reason": "CXL.memでホストから遠隔メモリへ直接アクセスするDirectCXLを用い、メモリ分離・階層化の基盤を扱う。LLM推論への直接評価はないが、CPU/CXLメモリへのオフロード基盤と技術的に近いため境界扱い。",
+      "source_url": "https://doi.org/10.1109/MM.2023.3237491",
+      "body_check": "本文情報でCXLによるメモリプーリング、ホストと遠隔メモリをCXL.memで直結するDirectCXL、RDMA型メモリプールとの実機比較を確認。多様な実ワークロードでRDMA方式比およそ7倍の性能を報告する一方、LLM/KV/重みオフロード固有評価はない。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MICRO56248.2022.00095",
+      "identity_tokens": [
+        "DOI:10.1109/MICRO56248.2022.00095"
+      ],
+      "title": "ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization",
+      "reason": "テンソル分布に応じて固定長の数値形式を適応選択し、量子化アクセラレータの速度・エネルギーを改善する。推論効率化には直接関係するが、LLMではなく一般DNNを対象とするため境界扱い。",
+      "source_url": "https://doi.org/10.1109/MICRO56248.2022.00095",
+      "body_check": "本文のflint数値形式、テンソルごとの型選択、統合処理要素への実装を確認。既存量子化アクセラレータ比で約2.8倍の高速化と2.5倍のエネルギー効率改善を報告するが、LLM重み・KVキャッシュ・生成推論は評価対象ではない。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00021",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00021"
+      ],
+      "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale MoE LLM Inference",
+      "reason": "大規模MoE LLMのエキスパート選択・データ移動を解析し、その規則性をエキスパート配置へ利用して推論を高速化する。MoE推論の配置・通信最適化を直接扱うため対象。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00021",
+      "body_check": "本文情報で200B–1000B級MoEのデータ移動解析、wafer-scale GPU向け設計と既存GPU向けprefill-aware expert placementを確認。前者で4モデル平均6.6倍、既存GPUのMoE計算で最大1.25倍の高速化を報告し、エキスパート選択トレースも公開している。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCAD45719.2019.8942149",
+      "identity_tokens": [
+        "DOI:10.1109/ICCAD45719.2019.8942149"
+      ],
+      "title": "Accelergy: An Architecture-Level Energy Estimation Methodology for Accelerator Designs",
+      "reason": "アクセラレータ設計のエネルギー推定手法・ツールであり、LLM推論そのものを高速化・省メモリ化する実行方式ではないため対象外。",
+      "source_url": "https://doi.org/10.1109/ICCAD45719.2019.8942149",
+      "body_check": "本文の高水準compound componentと低水準primitive component、外部エネルギー推定プラグインを組み合わせる設計を確認。Eyerissで95%の推定精度を示すが、成果は設計空間評価用モデリングであり推論ランタイム最適化ではない。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00086",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA61900.2025.00086"
+      ],
+      "title": "M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type",
+      "reason": "LLMのグループ単位重み量子化と動的KVキャッシュ量子化を統合し、専用処理要素でデコード計算と復号を融合する推論向け量子化・ハードウェア協調設計なので対象。",
+      "source_url": "https://doi.org/10.1109/HPCA61900.2025.00086",
+      "body_check": "本文のmathematically adaptive numerical type、グループごとの型割当、KVキャッシュの実時間量子化、専用PEとsystolic arrayへの統合を確認。既存LLMアクセラレータ比で平均2.99倍（最大4.46倍）高速化、平均2.81倍（最大4.10倍）のエネルギー削減を報告する。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132479",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132479"
+      ],
+      "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
+      "reason": "KVキャッシュを意味クラスタ単位で選択・索引化・再呼出しし、長文脈LLMのKV容量とデコードメモリアクセスを削減する推論システムなので対象。",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132479",
+      "body_check": "本文の意味クラスタによるclustering/selection/indexing/cachingと、削除ではなく必要時に再呼出し可能なKV圧縮を確認。32K文脈を1K–2K KV予算でほぼ精度損失なく処理し、最大2倍の遅延高速化と2.5倍のデコードスループット改善を報告する。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.13392",
+      "identity_tokens": [
+        "arXiv:2606.13392"
+      ],
+      "title": "MiniMax Sparse Attention",
+      "reason": "GQAグループごとにIndex BranchがKVブロックを選び、Main Branchが選択ブロックだけへ正確な疎注意を実行する長文脈LLM向け方式で、GPUカーネルまで協調設計しているため対象。",
+      "source_url": "https://arxiv.org/abs/2606.13392",
+      "body_check": "本文情報でblockwise sparse attention、GQA群ごとのTop-k KVブロック選択、exp-free Top-kとKV-outer sparse attentionのGPU実装を確認。109Bモデル・1M文脈で注意計算を28.4倍削減し、H800でprefill 14.2倍、decode 7.6倍の実時間高速化を報告する。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.16957",
+      "identity_tokens": [
+        "arXiv:2604.16957",
+        "DOI:10.48550/arXiv.2604.16957"
+      ],
+      "title": "Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon",
+      "reason": "KVキャッシュをint4へ逐次量子化し、中間逆量子化行列を作らず圧縮表現上で直接注意を計算するMetalカーネルで、端末内長文脈LLM推論を直接高速・省メモリ化するため対象。",
+      "source_url": "https://arxiv.org/abs/2604.16957",
+      "body_check": "本文情報でApple Silicon向けsdpa_int4融合カーネル、KVのon-the-fly int4量子化、圧縮領域での直接attentionを確認。Gemma 4 31BとLlama 3.1 70Bの330実験で128K時にattention 48倍高速化、KV 40GB→12.5GB（3.2倍圧縮）、FP16と同一top-1 tokenを報告する。",
+      "first_checked_at": "2026-09-29T20:45:00+09:00",
+      "last_checked_at": "2026-09-29T20:45:00+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/"
+      ],
+      "worklist_rank": 444
+    }
+  ]
+}
