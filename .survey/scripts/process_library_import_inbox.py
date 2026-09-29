@@ -452,15 +452,10 @@ def split_oversized_discovery_sources(max_records: int | None) -> int:
     return split_count
 
 
-def select_discovery_sources(
-    max_items: int | None,
-    max_records: int | None,
-) -> list[Path]:
+def select_discovery_sources(max_records: int | None) -> list[Path]:
     selected: list[Path] = []
     used_records = 0
     for source in sorted(WAITING_DISCOVERY.glob("*.json")):
-        if max_items is not None and len(selected) >= max(0, max_items):
-            break
         try:
             count = len(discovery_records(read_json(source)))
         except Exception:
@@ -695,7 +690,6 @@ def terminalize_discovery(
 
 def process_discovery(
     repo_root: Path,
-    max_items: int | None = None,
     max_records: int | None = None,
 ) -> tuple[int, int]:
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
@@ -715,7 +709,7 @@ def process_discovery(
         advanced += 1
 
     split_oversized_discovery_sources(max_records)
-    waiting_sources = select_discovery_sources(max_items, max_records)
+    waiting_sources = select_discovery_sources(max_records)
     for source in waiting_sources:
         token = source_token(source)
         raw_bytes = source.read_bytes()
@@ -809,23 +803,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--max-research", type=int, default=None)
-    parser.add_argument("--max-discovery", type=int, default=None)
     parser.add_argument("--max-discovery-records", type=int, default=None)
-    parser.add_argument("--skip-research", action="store_true")
-    parser.add_argument("--skip-discovery", action="store_true")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
-    if args.skip_research:
-        research_imported, research_terminal = 0, 0
-    else:
-        research_imported, research_terminal = process_research(repo_root, args.max_research)
-    if args.skip_discovery:
-        discovery_advanced, discovery_terminal = 0, 0
-    else:
-        discovery_advanced, discovery_terminal = process_discovery(
-            repo_root, args.max_discovery, args.max_discovery_records
-        )
+    research_imported, research_terminal = process_research(repo_root, args.max_research)
+    discovery_advanced, discovery_terminal = process_discovery(
+        repo_root, args.max_discovery_records
+    )
 
     summary = {
         "ok": True,
