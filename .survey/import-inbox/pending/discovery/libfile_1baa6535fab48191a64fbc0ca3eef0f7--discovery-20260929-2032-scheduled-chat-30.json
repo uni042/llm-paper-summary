@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-2032-scheduled-chat-30",
+  "reference_main_sha": "8929f443f66702724dbc86d83a8d3d559f2ee0a0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.897",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.emnlp-main.897"
+      ],
+      "title": "InfiniPot: Infinite Context Processing on Memory-Constrained LLMs",
+      "reason": "メモリ制約下のLLMで長文脈を処理するため、KVキャッシュを有限容量に保ちながら重要情報を保持する推論時メモリ管理を主題とするため対象。",
+      "source_url": "https://aclanthology.org/2024.emnlp-main.897/",
+      "body_check": "本文ページと論文構成を確認し、長文脈処理で増大するKVキャッシュを限られたメモリ予算内に維持する問題設定、重要トークンを選別して継続的に文脈を更新する方式、長文脈ベンチマークでの評価を確認した。学習高速化ではなく推論時の文脈メモリ制約を直接扱う。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv.md"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3777466",
+      "identity_tokens": [
+        "DOI:10.1145/3777466"
+      ],
+      "title": "Kitsune: Enabling Dataflow Execution on GPUs with Spatial Pipelines",
+      "reason": "GPU上の深層学習推論を空間パイプライン化して性能・オフチップ通信を改善する実行基盤研究で推論カーネルに近いが、LLM専用ではなく汎用DL GPUアーキテクチャが主題のため境界扱い。",
+      "source_url": "https://doi.org/10.1145/3777466",
+      "body_check": "本文プレビューで、bulk-synchronous GPU実行の制約に対しspatial pipelineを構成するプリミティブとPyTorch Dynamoベースのコンパイラを導入し、5アプリで推論最大2.8倍、推論オフチップ通信最大99%削減を報告することを確認。LLM固有KV/MoE/servingではない。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3669940.3707251",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707251",
+        "arXiv:2503.05130"
+      ],
+      "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity",
+      "reason": "サーバレスDLサービングのGPU資源割当・QoS・断片化を最適化しLLM需要も動機に含むが、対象はLLMに限定されず学習と推論の双方を扱う汎用DLサービングなので境界扱い。",
+      "source_url": "https://doi.org/10.1145/3669940.3707251",
+      "body_check": "本文でmulti-factor profiling、resource-complementary scheduling、適応的2次元co-scalingを確認。GPU断片化10–46%低減、推論スループット最大1.8倍、学習最大1.1倍、QoS違反率11–71%低減を報告する。LLMサービングへ適用可能だが主対象はserverless DL全般。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3637528.3671470",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671470"
+      ],
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "reason": "検索拡張生成（RAG）とLLMの手法・分類・課題を整理するサーベイで、推論基盤の速度・メモリ・スケジューリングを改善する新規システムを提案しないため対象外。",
+      "source_url": "https://doi.org/10.1145/3637528.3671470",
+      "body_check": "本文情報でRA-LLMを検索、生成、拡張プロセス等の技術観点から体系化し、既存研究・限界・将来方向を整理することを確認。新規KVキャッシュ、オフロード、カーネル、サービング実装の評価は主貢献ではない。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627703.3650085",
+      "identity_tokens": [
+        "DOI:10.1145/3627703.3650085"
+      ],
+      "title": "Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures",
+      "reason": "大規模DL/LLM学習の障害回復用チェックポイント方式が主題で、最終適用先が学習工程そのものの高速化・耐障害化であるため凍結範囲として対象外。",
+      "source_url": "https://doi.org/10.1145/3627703.3650085",
+      "body_check": "本文で障害発生時にjust-in-time checkpointを生成し、全GPUの再実行を単一minibatch程度に抑える設計、定期checkpointとの無駄仕事比較、AIクラスタ実装評価を確認。推論・サービング用途ではなくtraining failure recoveryが中心。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+        "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620665.3640423",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640423"
+      ],
+      "title": "GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching",
+      "reason": "GPU仮想メモリを用いた大規模DNN学習のメモリ断片化対策で、主目的と評価が学習メモリ管理に置かれているため凍結対象であり対象外。",
+      "source_url": "https://doi.org/10.1145/3620665.3640423",
+      "body_check": "本文PDFでvirtual memory stitchingによるGPUメモリ断片化解消、既存モデル/メモリ削減手法への透過性、大規模DNN trainingを対象とする設計と評価を確認。LLM推論時のKV/weight管理やserving最適化ではない。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3579371.3589351",
+      "identity_tokens": [
+        "DOI:10.1145/3579371.3589351",
+        "arXiv:2302.08007"
+      ],
+      "title": "With Shared Microexponents, A Little Shifting Goes a Long Way",
+      "reason": "共有マイクロ指数（MX）という低精度数値形式をハードウェア効率まで含めて設計し、GPT-3級を含む大規模生成モデルの推論で低ビット重み・活性化を検証しており、推論向け量子化・圧縮に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2302.08007",
+      "body_check": "本文でBlock Data Representationsによる設計空間、MX9/MX6/MX4の共有microexponent構成、ハードウェア面積・電力とのPareto評価、GPT-3 175B等を含む生成モデルでの推論評価を確認。MX4/MX6を重み・活性化双方へ適用する低精度推論を扱う。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+        "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3419111.3421284",
+      "identity_tokens": [
+        "DOI:10.1145/3419111.3421284"
+      ],
+      "title": "GSLICE: Controlled Spatial Sharing of GPUs for a Scalable Inference Platform",
+      "reason": "GPU推論サービスの空間分割、動的資源割当、バッチ制御でSLOと利用率を改善するサービング基盤だが、2020年の汎用DNN inference platformでLLM固有ではないため境界扱い。",
+      "source_url": "https://doi.org/10.1145/3419111.3421284",
+      "body_check": "本文でGPU資源をInference Function間に仮想分割し、自己学習型の適応資源割当とbatchingを行い、100µs未満の再割当停止時間、MPS/TensorRT比でGPU利用効率60–800%改善、aggregate throughput 2–13倍を報告することを確認。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/321738.321743",
+      "identity_tokens": [
+        "DOI:10.1145/321738.321743"
+      ],
+      "title": "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment",
+      "reason": "1973年の単一プロセッサhard-real-time scheduling理論で、固定優先度とdeadlineベース動的優先度の利用率限界を解析する古典研究。LLM/DL推論システムを対象としないため対象外。",
+      "source_url": "https://doi.org/10.1145/321738.321743",
+      "body_check": "本文情報でperiodic taskの固定優先度rate-monotonic schedulingと動的deadline schedulingの利用率境界を解析する内容を確認。LLM、GPU、KVキャッシュ、サービングの実装・評価はない。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MM.2023.3237491",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2023.3237491"
+      ],
+      "title": "Memory Pooling With CXL",
+      "reason": "CXL.memによる直接アクセス型メモリ分離（memory disaggregation）を提案し、階層メモリ・オフロード研究の基盤技術として強く関連するが、LLM推論固有のKV/重み配置を対象にしないため境界扱い。",
+      "source_url": "https://doi.org/10.1109/MM.2023.3237491",
+      "body_check": "本文情報でDirectCXLがhost processor complexとremote memoryをCXL.memで直結し、RDMA型memory poolingを回避する設計と実ワークロード評価を確認。RDMAベースmemory pooling比で約7倍の性能を報告するが、LLM推論そのものは評価対象ではない。",
+      "first_checked_at": "2026-09-29T20:32:00+09:00",
+      "last_checked_at": "2026-09-29T20:32:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
+        "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md"
+      ],
+      "worklist_rank": 453
+    }
+  ]
+}
