@@ -41,7 +41,12 @@ jobs:
 
       - name: Validate Library import code
         run: |
-          python -m py_compile             .survey/scripts/process_library_import_inbox.py             .survey/scripts/process_discovery_precheck_batch.py             .survey/scripts/process_reference_relevance_requests.py             .survey/scripts/queue_worker.py             .survey/scripts/render_status_dashboard.py
+          python -m py_compile \
+            .survey/scripts/process_library_import_inbox.py \
+            .survey/scripts/process_discovery_precheck_batch.py \
+            .survey/scripts/process_reference_relevance_requests.py \
+            .survey/scripts/queue_worker.py \
+            .survey/scripts/render_status_dashboard.py
           python -m unittest discover -s .survey/tests -p 'test_library_import_inbox.py'
 
       - name: Process bounded Library import work
@@ -73,99 +78,181 @@ jobs:
           stage1_ok=0
           for attempt in $(seq 1 6); do
             sync_main
-            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 5               --max-discovery-records 20
-            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/process_library_import_inbox.py \
+              --repo-root . \
+              --max-research 5 \
+              --max-discovery-records 20
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
 
-            if publish               'library-import: checkpoint bounded intake'               .survey/import-inbox               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation               .survey/work-queue/jobs               .survey/work-queue/next-jobs.json               .survey/work-queue/state.json               .survey/survey-state               papers README.md STATUS.md; then
+            if publish \
+              'library-import: checkpoint bounded intake' \
+              .survey/import-inbox \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/reference-curation \
+              .survey/work-queue/jobs \
+              .survey/work-queue/next-jobs.json \
+              .survey/work-queue/state.json \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
               stage1_ok=1
               break
             fi
-            echo "Library intake push race on attempt ${attempt}; recomputing from latest main."
+            echo "Library intake push race on attempt \${attempt}; recomputing from latest main."
           done
-          [ "$stage1_ok" -eq 1 ] || { echo 'Library intake checkpoint failed.' >&2; exit 1; }
+          [ "$stage1_ok" -eq 1 ] || {
+            echo 'Library intake checkpoint failed.' >&2
+            exit 1
+          }
 
-          # Stage 2: resolve only the bounded downstream work created by intake.
+          # Stage 2: resolve only bounded downstream work created by intake.
           stage2_ok=0
           for attempt in $(seq 1 4); do
             sync_main
 
             : > /tmp/library-import-prechecks.txt
-            find .survey/work-queue/discovery-precheck/requests               -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null               | sort               | while IFS= read -r request; do
+            find .survey/work-queue/discovery-precheck/requests \
+              -maxdepth 1 \
+              -type f \
+              -name 'libimp-*-pre*.json' \
+              2>/dev/null \
+              | sort \
+              | while IFS= read -r request; do
                   result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
                   [ -f "$result" ] || printf '%s\n' "$request"
-                done               | head -n 4 > /tmp/library-import-prechecks.txt
+                done \
+              | head -n 4 \
+              > /tmp/library-import-prechecks.txt
 
             if [ -s /tmp/library-import-prechecks.txt ]; then
               rm -rf /tmp/library-import-identities
               rm -f /tmp/library-import-rejections.json
-              python .survey/scripts/build_discovery_identity_snapshot.py                 --root .survey                 --output /tmp/library-import-identities                 --source-commit "$(git rev-parse HEAD)"
-              python .survey/scripts/build_discovery_rejection_ledger.py                 --root .survey                 --output /tmp/library-import-rejections.json
+              python .survey/scripts/build_discovery_identity_snapshot.py \
+                --root .survey \
+                --output /tmp/library-import-identities \
+                --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py \
+                --root .survey \
+                --output /tmp/library-import-rejections.json
 
               set +e
-              python .survey/scripts/process_discovery_precheck_batch.py                 --repo-root .                 --requests-file /tmp/library-import-prechecks.txt                 --snapshot-dir /tmp/library-import-identities                 --rejection-ledger /tmp/library-import-rejections.json                 --parallelism 2
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file /tmp/library-import-prechecks.txt \
+                --snapshot-dir /tmp/library-import-identities \
+                --rejection-ledger /tmp/library-import-rejections.json \
+                --parallelism 2
               precheck_rc=$?
               set -e
               [ "$precheck_rc" -le 1 ] || exit "$precheck_rc"
             fi
 
             set +e
-            python .survey/scripts/process_reference_relevance_requests.py               --repo-root .               --max-requests 20
+            python .survey/scripts/process_reference_relevance_requests.py \
+              --repo-root . \
+              --max-requests 20
             relevance_rc=$?
             set -e
 
-            if publish               'library-import: publish bounded downstream checks'               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation; then
+            if publish \
+              'library-import: publish bounded downstream checks' \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/reference-curation; then
               stage2_ok=1
               break
             fi
-            echo "Library downstream-check push race on attempt ${attempt}; recomputing."
+            echo "Library downstream-check push race on attempt \${attempt}; recomputing."
           done
-          [ "$stage2_ok" -eq 1 ] || { echo 'Library downstream checkpoint failed.' >&2; exit 1; }
+          [ "$stage2_ok" -eq 1 ] || {
+            echo 'Library downstream checkpoint failed.' >&2
+            exit 1
+          }
 
           # Stage 3: re-read current main and advance only the same <=20-record
-          # Discovery window. Research is intentionally disabled after intake.
+          # Discovery window. Research is disabled after the intake stage.
           stage3_ok=0
           for attempt in $(seq 1 4); do
             sync_main
-            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 0               --max-discovery-records 20
+            python .survey/scripts/process_library_import_inbox.py \
+              --repo-root . \
+              --max-research 0 \
+              --max-discovery-records 20
 
-            if publish               'library-import: advance bounded Discovery work'               .survey/import-inbox               .survey/work-queue/submissions               .survey/work-queue/discovery-precheck               .survey/work-queue/reference-curation; then
+            if publish \
+              'library-import: advance bounded Discovery work' \
+              .survey/import-inbox \
+              .survey/work-queue/submissions \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/reference-curation; then
               stage3_ok=1
               break
             fi
-            echo "Library Discovery advance push race on attempt ${attempt}; recomputing."
+            echo "Library Discovery advance push race on attempt \${attempt}; recomputing."
           done
-          [ "$stage3_ok" -eq 1 ] || { echo 'Library Discovery advance failed.' >&2; exit 1; }
+          [ "$stage3_ok" -eq 1 ] || {
+            echo 'Library Discovery advance failed.' >&2
+            exit 1
+          }
 
-          # Stage 4: keep queue work bounded too; one 20-record Discovery window
-          # creates at most four normal five-candidate submissions.
+          # Stage 4: a 20-record Discovery window creates at most four normal
+          # five-candidate submissions. Keep extra historical queue work bounded.
           stage4_ok=0
           for attempt in $(seq 1 4); do
             sync_main
-            python .survey/scripts/queue_worker.py               --root .survey               --max-submissions 8
+            python .survey/scripts/queue_worker.py \
+              --root .survey \
+              --max-submissions 8
 
-            if publish               'library-import: process bounded submissions'               .survey/work-queue               .survey/survey-state               papers README.md STATUS.md; then
+            if publish \
+              'library-import: process bounded submissions' \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
               stage4_ok=1
               break
             fi
-            echo "Library submission push race on attempt ${attempt}; recomputing."
+            echo "Library submission push race on attempt \${attempt}; recomputing."
           done
-          [ "$stage4_ok" -eq 1 ] || { echo 'Library submission processing failed.' >&2; exit 1; }
+          [ "$stage4_ok" -eq 1 ] || {
+            echo 'Library submission processing failed.' >&2
+            exit 1
+          }
 
-          # Stage 5: terminalize completed chunks and refresh the durable dashboard.
+          # Stage 5: terminalize completed chunks and refresh STATUS.
           stage5_ok=0
           for attempt in $(seq 1 4); do
             sync_main
-            python .survey/scripts/process_library_import_inbox.py               --repo-root .               --max-research 0               --max-discovery-records 20
-            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/process_library_import_inbox.py \
+              --repo-root . \
+              --max-research 0 \
+              --max-discovery-records 20
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
 
-            if publish               'library-import: settle bounded work and refresh STATUS'               .survey/import-inbox               .survey/work-queue               .survey/survey-state               papers README.md STATUS.md; then
+            if publish \
+              'library-import: settle bounded work and refresh STATUS' \
+              .survey/import-inbox \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
               stage5_ok=1
               break
             fi
-            echo "Library settle push race on attempt ${attempt}; recomputing."
+            echo "Library settle push race on attempt \${attempt}; recomputing."
           done
-          [ "$stage5_ok" -eq 1 ] || { echo 'Library settle failed.' >&2; exit 1; }
+          [ "$stage5_ok" -eq 1 ] || {
+            echo 'Library settle failed.' >&2
+            exit 1
+          }
 
-          if [ "${relevance_rc:-0}" -ne 0 ]; then
+          if [ "\${relevance_rc:-0}" -ne 0 ]; then
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
           fi
