@@ -1,0 +1,904 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-17ab1f7079cb26b3951a",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-17ab1f7079cb26b3951a",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2410.07348/citations",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 18,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:50:36.554167+00:00",
+  "preload_id": "preload-17ab1f7079cb26b3951a",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+      "source_url": "https://arxiv.org/abs/2609.34212",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Mixture-of-Depths (MoD) enables conditional computation across Transformer depth by routing only a subset of tokens through selected layers, but its original one-sparse--one-dense alternation tightly couples total capacity to active capacity and limits sparse-depth scaling. We introduce X-MoD, a scalable sparse-depth architecture that decouples token sparsity from anchor stride, allowing total parameter count to grow while keeping active-equivalent capacity nearly fixed. To make deep sparse routing trainable, X-MoD combines dense anchors with variance-scaled layer-wise gating and depth-wise token balancing. To make this regime analyzable and usable, we formulate sparse-depth routing as a conditional architecture-design problem: given compute, context length, and active-equivalent backbone size, how should the routing configuration be chosen? We develop a practical scaling-law framework by fitting X-MoD relative to FLOP-matched dense baselines, yielding an interpretable law that decomposes performance into sparse-capacity gain, sparse-context correction, and anchor-stride interaction. The law predicts validation loss across routing configurations and reveals how context length, model scale, and anchor stride shape sparse-depth performance. We validate the architecture and law through pretraining sweeps, held-out scaling-law prediction, ablations, downstream evaluations, and comparisons with Dense, MoD, and representative MoE baselines.",
+      "canonical_id": "arXiv:2609.34212",
+      "arxiv_id": "2609.34212",
+      "authors": [
+        "Bo Dong",
+        "Yi-Long Fan",
+        "Teng-Yu Pan",
+        "Yi-Ke Zhang",
+        "Zhen-Yu Li",
+        "Zi-Jian Zhang",
+        "Xue-Wei Li",
+        "Mei Yu",
+        "Jian-Yong Wang"
+      ]
+    },
+    {
+      "title": "M$^2$PFN: End-to-End Disentangled Alignment for Generalizable Multimodal In-Context Learning in Alzheimer's Disease",
+      "source_url": "https://arxiv.org/abs/2609.28836",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "While various multimodal methods combining imaging and tabular data for Alzheimer's disease (AD) diagnosis were proposed, they are often limited in generalization across cohorts. In-context learning (ICL) has demonstrated excellent generalization performances and high flexibility in foundational tabular models such as TabPFN. To extend TabPFN's ICL to multimodal AD analysis, the main obstacle is that TabPFN is meta-trained on synthetic tabular priors that do not naturally match the statistical structure of image-derived features. We propose M$^2$PFN, an end-to-end framework that turns this tabular foundation model into a multimodal AD predictor. M$^2$PFN (i) performs differentiable inference through TabPFN's transformer, back-propagating task gradients into 3D-MRI and tabular encoders; (ii) aligns the two modalities into a shared subspace, via disentanglement and a contrastive objective, matched to the ICL engine's prior; and (iii) folds in a frozen tabular-only prediction through a learnable gated shortcut. Because the ICL engine stays frozen, its in-context mechanism is preserved for test-time generalization, while end-to-end training shapes the encoders into features it can exploit. On ADNI ($n=2240$, three-class CN/MCI/AD), M$^2$PFN attains $65.55\\%$ macro-F1 and $82.21\\%$ macro-AUC, surpassing a comprehensive set of unimodal and multimodal baselines. By swapping only the head for a TabPFN regressor, the same architecture regresses baseline MMSE on a $1250$-subject sub-cohort to test MAE $1.743$, outperforming every multimodal baseline. On two external cohorts (OASIS-3 and SCAN) with no retraining, M$^2$PFN achieves the best AUC and the lowest MMSE MAE across all baselines, and transfers even when the cognitive instrument changes.",
+      "canonical_id": "arXiv:2609.28836",
+      "arxiv_id": "2609.28836",
+      "authors": [
+        "Lu-Jia Zhong",
+        "Shuo Huang",
+        "Jian-Wei Zhang",
+        "Xin-Yu Nie",
+        "Yong-Gang Shi"
+      ]
+    },
+    {
+      "title": "Improving Parameter Utilization by Sharing Neural Experts Across Layers in Transformers",
+      "source_url": "https://arxiv.org/abs/2609.22199",
+      "year": 2026,
+      "published": "2026-08-31",
+      "abstract": "Transformer-based large language models often suffer from inter-layer parameter redundancy, where functional transformations are redundantly learned across network depths. We propose CS-MoE, a novel Transformer architecture featuring cross-layer expert sharing to address this inefficiency. Deviating from the widely used Mixture-of-Experts (MoE) architecture that terminates each Transformer block with layer-isolated experts, CS-MoE combines layer-independent experts with concurrent access to a centralized, globally shared expert pool. This \\textit{Global Experts Sharing} mechanism enables elastic control over token-level parameter activation and computational consumption (FLOPs). Experiments demonstrate that CS-MoE achieves lower perplexity than equal-scale dense Transformers while activating only 55\\% of parameters. Furthermore, its performance scales monotonically with an increased number of activated experts and approaches MoE counterparts that consume more FLOPs by expanding the shared pool with a fixed FLOPs budget. CS-MoE also establishes a flexible Pareto frontier between computational cost and model capacity, offering an efficient alternative for computation-constrained environments.",
+      "canonical_id": "arXiv:2609.22199",
+      "arxiv_id": "2609.22199",
+      "authors": [
+        "Dian Jiao",
+        "Jiaxin Duan",
+        "Shuai Zhao",
+        "Jia-Bing Leng",
+        "Yi-Ran Zhang",
+        "Feng Huang"
+      ]
+    },
+    {
+      "title": "LoGo: Token-Level Dynamic Local-Global Attention",
+      "source_url": "https://arxiv.org/abs/2608.29539",
+      "year": 2026,
+      "published": "2026-08-30",
+      "abstract": "As context lengths scale, attention increasingly becomes a primary computational bottleneck in large language models. Standard Transformers remain powerful but computationally inefficient, as they allocate the same attention budget to every token regardless of its contextual demand. Existing local-global hybrids provide a more efficient alternative by mixing restricted- and full-context attention, but they typically allocate span statically across layers or heads. To address these limitations, we propose LoGo, a token-level dynamic local-global attention mechanism that uses attention span as a direct proxy for attention budget allocation. Each LoGo layer contains coupled local and global branches: all tokens receive efficient local attention over a restricted context window, while a learned gate activates global attention with full-context access only for tokens requiring long-range information. A threshold-based budget controller maintains a target global ratio without auxiliary losses, and a progressive masking schedule stabilizes training before sparse routing takes effect. We further implement query-sparse Triton kernels that convert reduced global-attention computation into practical speedups. Extensive experiments validate LoGo's effectiveness, showing that it preserves the scaling behavior of full-attention Transformers across model sizes. In controlled comparisons, LoGo improves over the full-attention Transformer and matched-budget static local-global hybrids, with clear gains on long-range retrieval. Analysis further shows that LoGo learns interpretable span allocation patterns. These results suggest that learned token-level span allocation is an effective and scalable way to improve the long-context performance-compute trade-off.",
+      "canonical_id": "arXiv:2608.29539",
+      "arxiv_id": "2608.29539",
+      "authors": [
+        "Yu-Qi Pan",
+        "Zheng Li",
+        "Bo-Hao Tang",
+        "Zhen Qin",
+        "Guoqi Li"
+      ]
+    },
+    {
+      "title": "MMOE: Modernizing Diffusion Transformers with Efficient Expert Design",
+      "source_url": "https://arxiv.org/abs/2607.24665",
+      "year": 2026,
+      "published": "2026-07-27",
+      "abstract": "Modern large language models scale successfully by pairing capacity growth with efficiency, keeping per-token and deployment costs under control as capacity grows. AIGC Foundation Models (AFMs), especially diffusion-transformer backbones, have begun to adopt sparse experts, but recent efforts mostly enlarge total parameter counts and sparsity ratios without importing the efficiency mechanisms that made LLM scaling practical, so generation quality is seldom balanced against training and deployment cost. This raises a natural question: can the architectural principles behind efficient LLM scaling be adapted to AFMs in a more balanced way? We introduce ModernMOE (MMOE), a modernization of SiT-style diffusion transformers that systematically adapts routed experts, shared and lightweight experts, gate-residual routing, and attention-residual information reuse to AIGC generation. Rather than treating MoE as a single plug-in replacement, MMOE studies how different modern expert components affect convergence, efficiency, and generation quality when composed inside a diffusion transformer. Every experiment in this paper is trained on a single eight-GPU H100 node with batch size 256 for 400k steps, an accessible single-machine budget. Under matched training and sampling protocols and at this budget, MMOE reaches lower FID at every recorded checkpoint, that is, it converges faster per training step, than dense and intermediate sparse-expert baselines, and among the sparse variants it attains the best quality-cost balance. Routing analysis further shows stable expert specialization across depth, substantial use of lightweight routes, and modest step-to-step routing changes during denoising. These results suggest that AFMs can follow the balanced scaling path of LLMs by importing proven efficiency designs, rather than by simply increasing total parameters and sparsity ratios.",
+      "canonical_id": "arXiv:2607.24665",
+      "arxiv_id": "2607.24665",
+      "doi": "10.48550/arXiv.2607.24665",
+      "authors": [
+        "Yan-Hao Jia",
+        "Jiepeng Wang",
+        "Hai-Bin Huang",
+        "Chi Zhang",
+        "Erik Cambria",
+        "Xue-Long Li"
+      ]
+    },
+    {
+      "title": "MEPA: Multi-Scale Representation Alignment for Visual Autoregressive Modeling with Mixture of Experts",
+      "source_url": "https://arxiv.org/abs/2607.00371",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Visual AutoRegressive modeling (VAR) has pioneered a coarse-to-fine multi-scale autoregressive generative paradigm, demonstrating strong capabilities in image generation. However, VAR still suffers from inherent deficiencies in multi-scale representation learning. Specifically, lower scales primarily capture global semantics, while higher scales focus on fine-grained details. Employing a shared architecture across scales induces optimization conflicts. Moreover, due to the causal autoregressive process, inaccurate semantics at early scales can propagate and significantly degrade the final output. To address these issues, we introduce a scale-aware token-routed Mixture of Experts (MoE) architecture, allowing scale-adaptive expert selection, thereby facilitating decoupled representation learning across scales. In addition, we enhance semantic modeling at early scales by incorporating external self-supervised features. Unlike naive alignment, we analyse and design a residual feature aggregation scheme tailored to the VAR paradigm. Extensive experiments show that our method significantly improves both training efficiency and generation quality. On the ImageNet 256*256 benchmark, our model achieves a superior FID compared to the dense baseline while requiring only half of the default training epochs and a smaller parameter budget, with a merely marginal increase in training cost. Moreover, the performance gap further widens with larger training epochs.",
+      "canonical_id": "arXiv:2607.00371",
+      "arxiv_id": "2607.00371",
+      "doi": "10.48550/arXiv.2607.00371",
+      "authors": [
+        "Nuoyan Zhou",
+        "Zhi-Jun Tu",
+        "Lei Yu",
+        "Kun Cheng",
+        "Jie Hu",
+        "Nannan Wang",
+        "Xinghao Chen"
+      ]
+    },
+    {
+      "title": "Learning cross-modal semantic consistency and complementary fusion for condition recognition in zinc oxide rotary kilns",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134485",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134485",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134485",
+      "authors": [
+        "Chengzhen Ning",
+        "Xiaoxu Han",
+        "Chao-Bo Zhang",
+        "Jing-Hui Zhong",
+        "Yan Liu",
+        "Xiaoming Wang",
+        "Xiao-Jun Liang",
+        "Wei-Hua Gui"
+      ]
+    },
+    {
+      "title": "PithTrain: A Compact and Agent-Native MoE Training System",
+      "source_url": "https://arxiv.org/abs/2605.31463",
+      "year": 2026,
+      "published": "2026-05-29",
+      "abstract": "Mixture-of-Experts (MoE) has become the dominant architecture for frontier language models. To meet this demand, production frameworks have built optimized MoE training stacks over years of engineering effort. Yet evolving these stacks for new architectures and system optimizations remains expensive. With the rise of AI coding agents, they could automate parts of training-framework development and accelerate this evolution. But applying them to these existing frameworks carries hidden costs, invisible to today's throughput-only evaluations. We name this missing dimension agent-task efficiency (ATE): the cost of using coding agents to understand, operate, and extend a framework. Grounded in four agent-native design principles, we build PithTrain, a compact, agent-native MoE training framework. We further introduce ATE-Bench, covering real-world training-framework tasks. Our evaluation shows PithTrain matches the throughput of production frameworks, and on ATE-Bench, PithTrain enables higher agent-task efficiency, with up to 62% fewer Agent Turns and 64% less Active GPU Time.",
+      "canonical_id": "arXiv:2605.31463",
+      "arxiv_id": "2605.31463",
+      "doi": "10.48550/arXiv.2605.31463",
+      "authors": [
+        "Ruihan Lai",
+        "Hao Kang",
+        "Hao Tang",
+        "Akaash R. Parthasarathy",
+        "Zichun Yu",
+        "Junru Shao",
+        "Todd C. Mowry",
+        "Chenyan Xiong",
+        "Tianqi Chen"
+      ]
+    },
+    {
+      "title": "A Data-Efficient Path to Multilingual LLMs: Language Expansion via Post-training PARAMΔ Integration into Upcycled MoE",
+      "source_url": "https://arxiv.org/abs/2605.18083",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Expanding Large Language Models~(LLMs) to new languages is a costly endeavor, demanding extensive Continued Pre-Training~(CPT) and data-intensive alignment. While recent data-free merging techniques attempt to bypass alignment by fusing a multilingual CPT-enhanced model with its instruct counterpart, they are plagued by a critical trade-off: mitigating parameter conflicts to preserve original abilities inevitably dilutes new language acquisition, and vice-versa. To resolve this conflict, we introduce \\method, which upcycles a dense model into a Mixture-of-Experts~(MoE) architecture, allocating different experts to different languages. Alignment ability is then transferred by grafting a MoE-expanded parameter delta~($\\Delta_{\\text{post}}$) to the CPT-enhanced base model, bypassing the complex alignment phase. Experiments demonstrate \\method's superiority even against baselines with similar FLOPs or number of parameters; it improves performance on expanded languages while effectively preserving original capabilities. We further show our approach is highly applicable across different models and Post-training deltas.",
+      "canonical_id": "arXiv:2605.18083",
+      "arxiv_id": "2605.18083",
+      "doi": "10.18653/v1/2026.acl-long.1238",
+      "authors": [
+        "Hao Zhou",
+        "Tianhao Li",
+        "Zhijun Wang",
+        "Shuaijie She",
+        "Linjuan Wu",
+        "Hao-Ran Wei",
+        "Bao-Song Yang",
+        "Jiajun Chen",
+        "Shu-Jian Huang"
+      ]
+    },
+    {
+      "title": "PromptDx: Differentiable Prompt Tuning for Multimodal In-Context Alzheimer's Diagnosis",
+      "source_url": "https://arxiv.org/abs/2605.08585",
+      "year": 2026,
+      "published": "2026-05-09",
+      "abstract": "Deep learning models in medical imaging typically operate as parametric memory, diagnosing patients by recalling fixed knowledge learned during training. This contrasts sharply with clinical practice, where physicians employ analogical reasoning to diagnose new cases by referencing similar records from past exemplars. While In-Context Learning (ICL) frameworks such as Tabular Prior-Fitted Networks (TabPFN) offer a promising diagnosis-by-reference paradigm, they are designed with tabular-specific inductive priors and rely on non-differentiable preprocessing pipelines, leading to manifold mismatch and gradient fracture when applied to heterogeneous multimodal data. To address these limitations, we propose PromptDx, a novel diagnosis-by-reference framework that leverages a pre-trained TabPFN as an ICL engine while enabling seamless integration with multimodal representations. Our core contribution is a Differentiable Prompt Tuning (DPT) mechanism that aligns a Masked Multimodal Modeling module with the pre-trained ICL engine. By training a lightweight adapter as a differentiable surrogate for the engine's non-differentiable preprocessors, we enable an end-to-end optimization of multimodal prompts within the ICL paradigm. We validate our method on the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset using 3D MRI and tabular biomarkers. Experiments demonstrate that our approach outperforms traditional parametric baselines. Notably, our method achieves superior performance using only 1% context samples compared to 30% in standard ICL, demonstrating exceptional manifold condensation ability. We further validate the generalizability of our DPT framework across six tabular datasets with diverse scales. Overall, our method offers a more data-efficient and clinically aligned paradigm for Alzheimer's Disease diagnosis.",
+      "canonical_id": "arXiv:2605.08585",
+      "arxiv_id": "2605.08585",
+      "doi": "10.48550/arXiv.2605.08585",
+      "authors": [
+        "Lu-Jia Zhong",
+        "Yihao Xia",
+        "Shuo Huang",
+        "Jianwei Zhang",
+        "Yong-Gang Shi"
+      ]
+    },
+    {
+      "title": "Multi-Domain Learning with Global Expert Mapping",
+      "source_url": "https://arxiv.org/abs/2604.18842",
+      "year": 2026,
+      "published": "2026-04-20",
+      "abstract": "Human perception generalizes well across different domains, but most vision models struggle beyond their training data. This gap motivates multi-dataset learning, where a single model is trained on diverse datasets to improve robustness under domain shifts. However, unified training remains challenging due to inconsistencies in data distributions and label semantics. Mixture-of-Experts (MoE) models provide a scalable solution by routing inputs to specialized subnetworks (experts). Yet, existing MoEs often fail to specialize effectively, as their load-balancing mechanisms enforce uniform input distribution across experts. This fairness conflicts with domain-aware routing, causing experts to learn redundant representations, and reducing performance especially on rare or out-of-distribution domains. We propose GEM (Global Expert Mapping), a planner-compiler framework that replaces the learned router with a global scheduler. Our planner, based on linear programming relaxation, computes a fractional assignment of datasets to experts, while the compiler applies hierarchical rounding to convert this soft plan into a deterministic, capacity-aware mapping. Unlike prior MoEs, GEM avoids balancing loss, resolves the conflict between fairness and specialization, and produces interpretable routing. Experiments show that GEM-DINO achieves state-of-the-art performance on the UODB benchmark, with notable gains on underrepresented datasets and solves task interference in few-shot adaptation scenarios.",
+      "canonical_id": "arXiv:2604.18842",
+      "arxiv_id": "2604.18842",
+      "doi": "10.48550/arXiv.2604.18842",
+      "authors": [
+        "Pourya Shamsolmoali",
+        "Masoumeh Zareapoor",
+        "Hui-Yu Zhou",
+        "Oscar Mendez",
+        "Da-Cheng Tao",
+        "Xue-Long Li"
+      ]
+    },
+    {
+      "title": "HMR-Net: Hierarchical Modular Routing for Cross-Domain Object Detection in Aerial Images",
+      "source_url": "https://arxiv.org/abs/2604.18866",
+      "year": 2026,
+      "published": "2026-04-20",
+      "abstract": "Despite advances in object detection, aerial imagery remains a challenging domain, as models often fail to generalize across variations in spatial resolution, scene composition, and semantic label coverage. Differences in geographic context, sensor characteristics, and object distributions across datasets limit the capacity of conventional models to learn consistent and transferable representations. Shared methods trained on such data tend to impose a unified representation across fundamentally different domains, resulting in poor performance on region-specific content and less flexibility when dealing with novel object categories. To address this, we propose a novel modular learning framework that enables structured specialization in aerial detection. Our method introduces a hierarchical routing mechanism with two levels of modularity: a domain routing layer that uses latent geographic embeddings to assign inputs to domain-specialized expert modules, and a scene routing mechanism that allocates image subregions to scene-specific expert modules. This allows our method to specialize across datasets and within complex scenes. Additionally, the framework contains a conditional expert module that uses external semantic information (e.g., category names or textual descriptions) to enable detection of novel object categories during inference, without the need for retraining or fine-tuning. By moving beyond monolithic representations, our method provides an adaptive framework for remote sensing object detection. Comprehensive evaluations on four datasets highlight improvements in multi-dataset generalization, region-level specialization, and open-category detection.",
+      "canonical_id": "arXiv:2604.18866",
+      "arxiv_id": "2604.18866",
+      "doi": "10.48550/arXiv.2604.18866",
+      "authors": [
+        "Pourya Shamsolmoali",
+        "Masoumeh Zareapoor",
+        "Michael Felsberg",
+        "Nick Pears",
+        "Hui-Yu Zhou",
+        "Yue Lu"
+      ]
+    },
+    {
+      "title": "Mixture of Predefined Experts: Maximizing Data Usage on Vertical Federated Learning",
+      "source_url": "https://arxiv.org/abs/2602.12708",
+      "year": 2026,
+      "published": "2026-02-13",
+      "abstract": "Vertical Federated Learning (VFL) has emerged as a critical paradigm for collaborative model training in privacy-sensitive domains such as finance and healthcare. However, most existing VFL frameworks rely on the idealized assumption of full sample alignment across participants, a premise that rarely holds in real-world scenarios. To bridge this gap, this work introduces Split-MoPE, a novel framework that integrates Split Learning with a specialized Mixture of Predefined Experts (MoPE) architecture. Unlike standard Mixture of Experts (MoE), where routing is learned dynamically, MoPE uses predefined experts to process specific data alignments, effectively maximizing data usage during both training and inference without requiring full sample overlap. By leveraging pretrained encoders for target data domains, Split-MoPE achieves state-of-the-art performance in a single communication round, significantly reducing the communication footprint compared to multi-round end-to-end training. Furthermore, unlike existing proposals that address sample misalignment, this novel architecture provides inherent robustness against malicious or noisy participants and offers per-sample interpretability by quantifying each collaborator's contribution to each prediction. Extensive evaluations on vision (CIFAR-10/100) and tabular (Breast Cancer Wisconsin) datasets demonstrate that Split-MoPE consistently outperforms state-of-the-art systems such as LASER and Vertical SplitNN, particularly in challenging scenarios with high data missingness.",
+      "canonical_id": "arXiv:2602.12708",
+      "arxiv_id": "2602.12708",
+      "doi": "10.48550/arXiv.2602.12708",
+      "authors": [
+        "Jon Irureta",
+        "Gorka Azkune",
+        "J. Imaz",
+        "A. Lojo",
+        "Javier Fernandez-marques"
+      ]
+    },
+    {
+      "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm",
+      "source_url": "https://arxiv.org/abs/2602.11543",
+      "year": 2026,
+      "published": "2026-02-12",
+      "abstract": "Pretraining large language models (LLMs) typically requires centralized clusters with thousands of high-memory GPUs (e.g., H100/A100). Recent decentralized training methods reduce communication overhead by employing federated optimization; however, they still need to train the entire model on each node, remaining constrained by GPU memory limitations. In this work, we propose SParse Expert Synchronization (SPES), a memory-efficient decentralized framework for pretraining mixture-of-experts (MoE) LLMs. SPES trains only a subset of experts per node, substantially lowering the memory footprint. Each node updates its local experts and periodically synchronizes with other nodes, eliminating full-parameter transmission while ensuring efficient knowledge sharing. To mitigate limited per-expert data utilization under sparse expert updates, we introduce an expert-merging warm-up strategy, where experts exchange knowledge early in training, to rapidly establish foundational capabilities. With SPES, we train a 2B-parameter MoE LLM using 16 standalone 48GB GPUs over internet connections, which achieves competitive performance with centrally trained LLMs under similar computational budgets. We further demonstrate scalability by training a 7B model from scratch and a 9B model upcycled from a dense checkpoint, both of which match prior centralized baselines. Our code is available at https://github.com/zjr2000/SPES.",
+      "canonical_id": "arXiv:2602.11543",
+      "arxiv_id": "2602.11543",
+      "doi": "10.48550/arXiv.2602.11543",
+      "authors": [
+        "Jinrui Zhang",
+        "Chaodong Xiao",
+        "Aoqi Wu",
+        "Xindong Zhang",
+        "Lei Zhang"
+      ]
+    },
+    {
+      "title": "Mixture-of-Models: Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation",
+      "source_url": "https://arxiv.org/abs/2601.16863",
+      "year": 2026,
+      "published": "2026-01-23",
+      "abstract": "This paper introduces the N-Way Self-Evaluating Deliberation (NSED) protocol, a Runtime Mixture-of-Models (MoM) architecture that constructs emergent composite models from a plurality of distinct expert agents. Unlike traditional Mixture-of-Experts (MoE) which rely on static gating networks, NSED employs a Dynamic Expertise Broker - a runtime optimization engine that treats model selection as a variation of the Knapsack Problem, binding heterogeneous checkpoints to functional roles based on live telemetry and cost constraints. At the execution layer, we formalize deliberation as a Macro-Scale Recurrent Neural Network (RNN), where the consensus state loops back through a semantic forget gate to enable iterative refinement without proportional VRAM scaling. Key components include an orchestration fabric for trustless N-to-N peer review, a Quadratic Voting activation function for non-linear consensus, and a feedback-driven state update. Empirical validation on challenging benchmarks (AIME 2025, LiveCodeBench) demonstrates that this topology allows ensembles of small (less than 20B) consumer-grade models to match or exceed the performance of state-of-the-art 100B+ parameter models, establishing a new hardware arbitrage efficiency frontier. Furthermore, testing on the DarkBench safety suite reveals intrinsic alignment properties, with peer-mediated correction reducing sycophancy scores below that of any individual agent.",
+      "canonical_id": "arXiv:2601.16863",
+      "arxiv_id": "2601.16863",
+      "doi": "10.5281/zenodo.18234923",
+      "authors": [
+        "Tims Pečerskis",
+        "Aivars Smirnovs"
+      ]
+    },
+    {
+      "title": "Augmentation-Aware Expert Design for Domain Generalization",
+      "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386129",
+      "year": 2026,
+      "published": "2026-01-18",
+      "abstract": "Deep neural networks often suffer from significant performance degradation when encountering domain shifts not present in their training data. While various domain generalization (DG) methods have been proposed to address this issue, they frequently introduce substantial computational overhead during both training and inference. To overcome this limitation, we propose a novel and efficient architecture inspired by the mixture of experts (MoE) mechanism. Our approach redesigns the initial stem layer of the network to include multiple specialized Batch Normalization (BN) layers, each acting as an expert trained on a specific data augmentation. A lightweight gating network adaptively selects the most appropriate BN expert for a given input at test time, enabling augmentation-aware inference with minimal additional parameters and latency. We evaluated our method on five digit classification datasets using a leave-one-domain-out protocol. Experimental results demonstrate that our approach serves as a powerful universal baseline, achieving an average accuracy improvement of 10.5% over Empirical Risk Minimization, a standard baseline in the field.",
+      "doi": "10.1109/ICEIC69189.2026.11386129",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386129",
+      "authors": [
+        "Jin Shin",
+        "Hyun Kim"
+      ]
+    },
+    {
+      "title": "MixTTE: Multi-Level Mixture-of-Experts for Scalable and Adaptive Travel Time Estimation",
+      "source_url": "https://arxiv.org/abs/2601.02943",
+      "year": 2026,
+      "published": "2026-01-06",
+      "abstract": "Accurate Travel Time Estimation (TTE) is critical for ride-hailing platforms, where errors directly impact user experience and operational efficiency. While existing production systems excel at holistic route-level dependency modeling, they struggle to capture city-scale traffic dynamics and long-tail scenarios, leading to unreliable predictions in large urban networks. In this paper, we propose \\model, a scalable and adaptive framework that synergistically integrates link-level modeling with industrial route-level TTE systems. Specifically, we propose a spatio-temporal external attention module to capture global traffic dynamic dependencies across million-scale road networks efficiently. Moreover, we construct a stabilized graph mixture-of-experts network to handle heterogeneous traffic patterns while maintaining inference efficiency. Furthermore, an asynchronous incremental learning strategy is tailored to enable real-time and stable adaptation to dynamic traffic distribution shifts. Experiments on real-world datasets validate MixTTE significantly reduces prediction errors compared to seven baselines. MixTTE has been deployed in DiDi, substantially improving the accuracy and stability of the TTE service.",
+      "canonical_id": "arXiv:2601.02943",
+      "arxiv_id": "2601.02943",
+      "doi": "10.1145/3770854.3783940",
+      "authors": [
+        "Wenzhao Jiang",
+        "Jindong Han",
+        "Ruiqian Han",
+        "Hao Liu"
+      ]
+    },
+    {
+      "title": "GRF-MMPS: An emotion-driven decision network based on graph residual fusion using multimodal physiological signals",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.115264",
+      "year": 2026,
+      "published": "2026-01-01",
+      "abstract": null,
+      "doi": "10.1016/j.knosys.2026.115264",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115264",
+      "authors": [
+        "Yanyan Zhao",
+        "Danli Wang",
+        "Xuange Gao",
+        "Xinyuan Wang"
+      ]
+    },
+    {
+      "title": "Hybrid Quantum-Classical Mixture of Experts: Unlocking Topological Advantage via Interference-Based Routing",
+      "source_url": "https://arxiv.org/abs/2512.22296",
+      "year": 2025,
+      "published": "2025-12-25",
+      "abstract": "The Mixture-of-Experts (MoE) architecture has emerged as a powerful paradigm for scaling deep learning models, yet it is fundamentally limited by challenges such as expert imbalance and the computational complexity of classical routing mechanisms. This paper investigates the potential of Quantum Machine Learning (QML) to address these limitations through a novel Hybrid Quantum-Classical Mixture of Experts (QMoE) architecture. Specifically, we conduct an ablation study using a Quantum Gating Network (Router) combined with classical experts to isolate the source of quantum advantage. Our central finding validates the Interference Hypothesis: by leveraging quantum feature maps (Angle Embedding) and wave interference, the Quantum Router acts as a high-dimensional kernel method, enabling the modeling of complex, non-linear decision boundaries with superior parameter efficiency compared to its classical counterparts. Experimental results on non-linearly separable data, such as the Two Moons dataset, demonstrate that the Quantum Router achieves a significant topological advantage, effectively\"untangling\"data distributions that linear classical routers fail to separate efficiently. Furthermore, we analyze the architecture's robustness against simulated quantum noise, confirming its feasibility for near-term intermediate-scale quantum (NISQ) hardware. We discuss practical applications in federated learning, privacy-preserving machine learning, and adaptive systems that could benefit from this quantum-enhanced routing paradigm.",
+      "canonical_id": "arXiv:2512.22296",
+      "arxiv_id": "2512.22296",
+      "doi": "10.48550/arXiv.2512.22296",
+      "authors": [
+        "Reda Heddad",
+        "L. Bouanane"
+      ]
+    },
+    {
+      "title": "A Synergistic and Efficient Framework for Real-Time Action Recognition with MLLM and Lightweight Models",
+      "source_url": "https://doi.org/10.1109/ICCBDAI66607.2025.11389035",
+      "year": 2025,
+      "published": "2025-11-21",
+      "abstract": "Human Action Recognition (HAR) faces a trade-off between accuracy and real-time performance. Multimodal Large Language Models (MLLM) provide strong semantic understanding but suffer high latency, while lightweight models enable real-time inference with reduced accuracy. We propose the Synergistic Action-Recognition Framework (SARF), inspired by dual-process cognitive theory, integrating a MLLM as a \"Slow\" pathway for global reasoning and a lightweight model as a \"Fast\" pathway for fine-grained recognition. A dynamic gating network routes inputs adaptively, and knowledge distillation transfers rich contextual knowledge to the lightweight model without extra inference cost. Experiments on few-shot subsets of UCF-101 and Kinetics-100 show that SARF retains 97.8% of the MLLM’s accuracy while reducing latency over 7×, balancing precision and efficiency. Prompt-based few-shot adaptation and multimodal feature fusion further enhance performance in data-scarce scenarios. SARF offers a practical solution for applications requiring both high accuracy and real-time responsiveness, such as automated sports officiating and human–robot interaction.",
+      "doi": "10.1109/ICCBDAI66607.2025.11389035",
+      "canonical_id": "DOI:10.1109/ICCBDAI66607.2025.11389035",
+      "authors": [
+        "Jingxin Wen",
+        "Daqing Zhong",
+        "Qisong Wang",
+        "Dechao Zhou",
+        "Guo Ye",
+        "Xin Wu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.34212",
+      "identity_tokens": [
+        "id:arXiv:2609.34212",
+        "title:xmod practical scaling laws for sparsedepth routing beyond mixtureofdepths",
+        "url:https://arxiv.org/abs/2609.34212"
+      ],
+      "record": {
+        "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+        "source_url": "https://arxiv.org/abs/2609.34212",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Mixture-of-Depths (MoD) enables conditional computation across Transformer depth by routing only a subset of tokens through selected layers, but its original one-sparse--one-dense alternation tightly couples total capacity to active capacity and limits sparse-depth scaling. We introduce X-MoD, a scalable sparse-depth architecture that decouples token sparsity from anchor stride, allowing total parameter count to grow while keeping active-equivalent capacity nearly fixed. To make deep sparse routing trainable, X-MoD combines dense anchors with variance-scaled layer-wise gating and depth-wise token balancing. To make this regime analyzable and usable, we formulate sparse-depth routing as a conditional architecture-design problem: given compute, context length, and active-equivalent backbone size, how should the routing configuration be chosen? We develop a practical scaling-law framework by fitting X-MoD relative to FLOP-matched dense baselines, yielding an interpretable law that decomposes performance into sparse-capacity gain, sparse-context correction, and anchor-stride interaction. The law predicts validation loss across routing configurations and reveals how context length, model scale, and anchor stride shape sparse-depth performance. We validate the architecture and law through pretraining sweeps, held-out scaling-law prediction, ablations, downstream evaluations, and comparisons with Dense, MoD, and representative MoE baselines.",
+        "canonical_id": "arXiv:2609.34212",
+        "arxiv_id": "2609.34212",
+        "authors": [
+          "Bo Dong",
+          "Yi-Long Fan",
+          "Teng-Yu Pan",
+          "Yi-Ke Zhang",
+          "Zhen-Yu Li",
+          "Zi-Jian Zhang",
+          "Xue-Wei Li",
+          "Mei Yu",
+          "Jian-Yong Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28836",
+      "identity_tokens": [
+        "id:arXiv:2609.28836",
+        "title:m2pfn endtoend disentangled alignment for generalizable multimodal incontext learning in alzheimers disease",
+        "url:https://arxiv.org/abs/2609.28836"
+      ],
+      "record": {
+        "title": "M$^2$PFN: End-to-End Disentangled Alignment for Generalizable Multimodal In-Context Learning in Alzheimer's Disease",
+        "source_url": "https://arxiv.org/abs/2609.28836",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "While various multimodal methods combining imaging and tabular data for Alzheimer's disease (AD) diagnosis were proposed, they are often limited in generalization across cohorts. In-context learning (ICL) has demonstrated excellent generalization performances and high flexibility in foundational tabular models such as TabPFN. To extend TabPFN's ICL to multimodal AD analysis, the main obstacle is that TabPFN is meta-trained on synthetic tabular priors that do not naturally match the statistical structure of image-derived features. We propose M$^2$PFN, an end-to-end framework that turns this tabular foundation model into a multimodal AD predictor. M$^2$PFN (i) performs differentiable inference through TabPFN's transformer, back-propagating task gradients into 3D-MRI and tabular encoders; (ii) aligns the two modalities into a shared subspace, via disentanglement and a contrastive objective, matched to the ICL engine's prior; and (iii) folds in a frozen tabular-only prediction through a learnable gated shortcut. Because the ICL engine stays frozen, its in-context mechanism is preserved for test-time generalization, while end-to-end training shapes the encoders into features it can exploit. On ADNI ($n=2240$, three-class CN/MCI/AD), M$^2$PFN attains $65.55\\%$ macro-F1 and $82.21\\%$ macro-AUC, surpassing a comprehensive set of unimodal and multimodal baselines. By swapping only the head for a TabPFN regressor, the same architecture regresses baseline MMSE on a $1250$-subject sub-cohort to test MAE $1.743$, outperforming every multimodal baseline. On two external cohorts (OASIS-3 and SCAN) with no retraining, M$^2$PFN achieves the best AUC and the lowest MMSE MAE across all baselines, and transfers even when the cognitive instrument changes.",
+        "canonical_id": "arXiv:2609.28836",
+        "arxiv_id": "2609.28836",
+        "authors": [
+          "Lu-Jia Zhong",
+          "Shuo Huang",
+          "Jian-Wei Zhang",
+          "Xin-Yu Nie",
+          "Yong-Gang Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22199",
+      "identity_tokens": [
+        "id:arXiv:2609.22199",
+        "title:improving parameter utilization by sharing neural experts across layers in transformers",
+        "url:https://arxiv.org/abs/2609.22199"
+      ],
+      "record": {
+        "title": "Improving Parameter Utilization by Sharing Neural Experts Across Layers in Transformers",
+        "source_url": "https://arxiv.org/abs/2609.22199",
+        "year": 2026,
+        "published": "2026-08-31",
+        "abstract": "Transformer-based large language models often suffer from inter-layer parameter redundancy, where functional transformations are redundantly learned across network depths. We propose CS-MoE, a novel Transformer architecture featuring cross-layer expert sharing to address this inefficiency. Deviating from the widely used Mixture-of-Experts (MoE) architecture that terminates each Transformer block with layer-isolated experts, CS-MoE combines layer-independent experts with concurrent access to a centralized, globally shared expert pool. This \\textit{Global Experts Sharing} mechanism enables elastic control over token-level parameter activation and computational consumption (FLOPs). Experiments demonstrate that CS-MoE achieves lower perplexity than equal-scale dense Transformers while activating only 55\\% of parameters. Furthermore, its performance scales monotonically with an increased number of activated experts and approaches MoE counterparts that consume more FLOPs by expanding the shared pool with a fixed FLOPs budget. CS-MoE also establishes a flexible Pareto frontier between computational cost and model capacity, offering an efficient alternative for computation-constrained environments.",
+        "canonical_id": "arXiv:2609.22199",
+        "arxiv_id": "2609.22199",
+        "authors": [
+          "Dian Jiao",
+          "Jiaxin Duan",
+          "Shuai Zhao",
+          "Jia-Bing Leng",
+          "Yi-Ran Zhang",
+          "Feng Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29539",
+      "identity_tokens": [
+        "id:arXiv:2608.29539",
+        "title:logo tokenlevel dynamic localglobal attention",
+        "url:https://arxiv.org/abs/2608.29539"
+      ],
+      "record": {
+        "title": "LoGo: Token-Level Dynamic Local-Global Attention",
+        "source_url": "https://arxiv.org/abs/2608.29539",
+        "year": 2026,
+        "published": "2026-08-30",
+        "abstract": "As context lengths scale, attention increasingly becomes a primary computational bottleneck in large language models. Standard Transformers remain powerful but computationally inefficient, as they allocate the same attention budget to every token regardless of its contextual demand. Existing local-global hybrids provide a more efficient alternative by mixing restricted- and full-context attention, but they typically allocate span statically across layers or heads. To address these limitations, we propose LoGo, a token-level dynamic local-global attention mechanism that uses attention span as a direct proxy for attention budget allocation. Each LoGo layer contains coupled local and global branches: all tokens receive efficient local attention over a restricted context window, while a learned gate activates global attention with full-context access only for tokens requiring long-range information. A threshold-based budget controller maintains a target global ratio without auxiliary losses, and a progressive masking schedule stabilizes training before sparse routing takes effect. We further implement query-sparse Triton kernels that convert reduced global-attention computation into practical speedups. Extensive experiments validate LoGo's effectiveness, showing that it preserves the scaling behavior of full-attention Transformers across model sizes. In controlled comparisons, LoGo improves over the full-attention Transformer and matched-budget static local-global hybrids, with clear gains on long-range retrieval. Analysis further shows that LoGo learns interpretable span allocation patterns. These results suggest that learned token-level span allocation is an effective and scalable way to improve the long-context performance-compute trade-off.",
+        "canonical_id": "arXiv:2608.29539",
+        "arxiv_id": "2608.29539",
+        "authors": [
+          "Yu-Qi Pan",
+          "Zheng Li",
+          "Bo-Hao Tang",
+          "Zhen Qin",
+          "Guoqi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24665",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.24665",
+        "id:arXiv:2607.24665",
+        "title:mmoe modernizing diffusion transformers with efficient expert design",
+        "url:https://arxiv.org/abs/2607.24665"
+      ],
+      "record": {
+        "title": "MMOE: Modernizing Diffusion Transformers with Efficient Expert Design",
+        "source_url": "https://arxiv.org/abs/2607.24665",
+        "year": 2026,
+        "published": "2026-07-27",
+        "abstract": "Modern large language models scale successfully by pairing capacity growth with efficiency, keeping per-token and deployment costs under control as capacity grows. AIGC Foundation Models (AFMs), especially diffusion-transformer backbones, have begun to adopt sparse experts, but recent efforts mostly enlarge total parameter counts and sparsity ratios without importing the efficiency mechanisms that made LLM scaling practical, so generation quality is seldom balanced against training and deployment cost. This raises a natural question: can the architectural principles behind efficient LLM scaling be adapted to AFMs in a more balanced way? We introduce ModernMOE (MMOE), a modernization of SiT-style diffusion transformers that systematically adapts routed experts, shared and lightweight experts, gate-residual routing, and attention-residual information reuse to AIGC generation. Rather than treating MoE as a single plug-in replacement, MMOE studies how different modern expert components affect convergence, efficiency, and generation quality when composed inside a diffusion transformer. Every experiment in this paper is trained on a single eight-GPU H100 node with batch size 256 for 400k steps, an accessible single-machine budget. Under matched training and sampling protocols and at this budget, MMOE reaches lower FID at every recorded checkpoint, that is, it converges faster per training step, than dense and intermediate sparse-expert baselines, and among the sparse variants it attains the best quality-cost balance. Routing analysis further shows stable expert specialization across depth, substantial use of lightweight routes, and modest step-to-step routing changes during denoising. These results suggest that AFMs can follow the balanced scaling path of LLMs by importing proven efficiency designs, rather than by simply increasing total parameters and sparsity ratios.",
+        "canonical_id": "arXiv:2607.24665",
+        "arxiv_id": "2607.24665",
+        "doi": "10.48550/arXiv.2607.24665",
+        "authors": [
+          "Yan-Hao Jia",
+          "Jiepeng Wang",
+          "Hai-Bin Huang",
+          "Chi Zhang",
+          "Erik Cambria",
+          "Xue-Long Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.00371",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.00371",
+        "id:arXiv:2607.00371",
+        "title:mepa multiscale representation alignment for visual autoregressive modeling with mixture of experts",
+        "url:https://arxiv.org/abs/2607.00371"
+      ],
+      "record": {
+        "title": "MEPA: Multi-Scale Representation Alignment for Visual Autoregressive Modeling with Mixture of Experts",
+        "source_url": "https://arxiv.org/abs/2607.00371",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Visual AutoRegressive modeling (VAR) has pioneered a coarse-to-fine multi-scale autoregressive generative paradigm, demonstrating strong capabilities in image generation. However, VAR still suffers from inherent deficiencies in multi-scale representation learning. Specifically, lower scales primarily capture global semantics, while higher scales focus on fine-grained details. Employing a shared architecture across scales induces optimization conflicts. Moreover, due to the causal autoregressive process, inaccurate semantics at early scales can propagate and significantly degrade the final output. To address these issues, we introduce a scale-aware token-routed Mixture of Experts (MoE) architecture, allowing scale-adaptive expert selection, thereby facilitating decoupled representation learning across scales. In addition, we enhance semantic modeling at early scales by incorporating external self-supervised features. Unlike naive alignment, we analyse and design a residual feature aggregation scheme tailored to the VAR paradigm. Extensive experiments show that our method significantly improves both training efficiency and generation quality. On the ImageNet 256*256 benchmark, our model achieves a superior FID compared to the dense baseline while requiring only half of the default training epochs and a smaller parameter budget, with a merely marginal increase in training cost. Moreover, the performance gap further widens with larger training epochs.",
+        "canonical_id": "arXiv:2607.00371",
+        "arxiv_id": "2607.00371",
+        "doi": "10.48550/arXiv.2607.00371",
+        "authors": [
+          "Nuoyan Zhou",
+          "Zhi-Jun Tu",
+          "Lei Yu",
+          "Kun Cheng",
+          "Jie Hu",
+          "Nannan Wang",
+          "Xinghao Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134485",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134485",
+        "title:learning crossmodal semantic consistency and complementary fusion for condition recognition in zinc oxide rotary kilns",
+        "url:https://doi.org/10.1016/j.neucom.2026.134485"
+      ],
+      "record": {
+        "title": "Learning cross-modal semantic consistency and complementary fusion for condition recognition in zinc oxide rotary kilns",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134485",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134485",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134485",
+        "authors": [
+          "Chengzhen Ning",
+          "Xiaoxu Han",
+          "Chao-Bo Zhang",
+          "Jing-Hui Zhong",
+          "Yan Liu",
+          "Xiaoming Wang",
+          "Xiao-Jun Liang",
+          "Wei-Hua Gui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31463",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31463",
+        "id:arXiv:2605.31463",
+        "title:pithtrain a compact and agentnative moe training system",
+        "url:https://arxiv.org/abs/2605.31463"
+      ],
+      "record": {
+        "title": "PithTrain: A Compact and Agent-Native MoE Training System",
+        "source_url": "https://arxiv.org/abs/2605.31463",
+        "year": 2026,
+        "published": "2026-05-29",
+        "abstract": "Mixture-of-Experts (MoE) has become the dominant architecture for frontier language models. To meet this demand, production frameworks have built optimized MoE training stacks over years of engineering effort. Yet evolving these stacks for new architectures and system optimizations remains expensive. With the rise of AI coding agents, they could automate parts of training-framework development and accelerate this evolution. But applying them to these existing frameworks carries hidden costs, invisible to today's throughput-only evaluations. We name this missing dimension agent-task efficiency (ATE): the cost of using coding agents to understand, operate, and extend a framework. Grounded in four agent-native design principles, we build PithTrain, a compact, agent-native MoE training framework. We further introduce ATE-Bench, covering real-world training-framework tasks. Our evaluation shows PithTrain matches the throughput of production frameworks, and on ATE-Bench, PithTrain enables higher agent-task efficiency, with up to 62% fewer Agent Turns and 64% less Active GPU Time.",
+        "canonical_id": "arXiv:2605.31463",
+        "arxiv_id": "2605.31463",
+        "doi": "10.48550/arXiv.2605.31463",
+        "authors": [
+          "Ruihan Lai",
+          "Hao Kang",
+          "Hao Tang",
+          "Akaash R. Parthasarathy",
+          "Zichun Yu",
+          "Junru Shao",
+          "Todd C. Mowry",
+          "Chenyan Xiong",
+          "Tianqi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18083",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1238",
+        "id:arXiv:2605.18083",
+        "title:a dataefficient path to multilingual llms language expansion via posttraining paramδ integration into upcycled moe",
+        "url:https://arxiv.org/abs/2605.18083"
+      ],
+      "record": {
+        "title": "A Data-Efficient Path to Multilingual LLMs: Language Expansion via Post-training PARAMΔ Integration into Upcycled MoE",
+        "source_url": "https://arxiv.org/abs/2605.18083",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Expanding Large Language Models~(LLMs) to new languages is a costly endeavor, demanding extensive Continued Pre-Training~(CPT) and data-intensive alignment. While recent data-free merging techniques attempt to bypass alignment by fusing a multilingual CPT-enhanced model with its instruct counterpart, they are plagued by a critical trade-off: mitigating parameter conflicts to preserve original abilities inevitably dilutes new language acquisition, and vice-versa. To resolve this conflict, we introduce \\method, which upcycles a dense model into a Mixture-of-Experts~(MoE) architecture, allocating different experts to different languages. Alignment ability is then transferred by grafting a MoE-expanded parameter delta~($\\Delta_{\\text{post}}$) to the CPT-enhanced base model, bypassing the complex alignment phase. Experiments demonstrate \\method's superiority even against baselines with similar FLOPs or number of parameters; it improves performance on expanded languages while effectively preserving original capabilities. We further show our approach is highly applicable across different models and Post-training deltas.",
+        "canonical_id": "arXiv:2605.18083",
+        "arxiv_id": "2605.18083",
+        "doi": "10.18653/v1/2026.acl-long.1238",
+        "authors": [
+          "Hao Zhou",
+          "Tianhao Li",
+          "Zhijun Wang",
+          "Shuaijie She",
+          "Linjuan Wu",
+          "Hao-Ran Wei",
+          "Bao-Song Yang",
+          "Jiajun Chen",
+          "Shu-Jian Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08585",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08585",
+        "id:arXiv:2605.08585",
+        "title:promptdx differentiable prompt tuning for multimodal incontext alzheimers diagnosis",
+        "url:https://arxiv.org/abs/2605.08585"
+      ],
+      "record": {
+        "title": "PromptDx: Differentiable Prompt Tuning for Multimodal In-Context Alzheimer's Diagnosis",
+        "source_url": "https://arxiv.org/abs/2605.08585",
+        "year": 2026,
+        "published": "2026-05-09",
+        "abstract": "Deep learning models in medical imaging typically operate as parametric memory, diagnosing patients by recalling fixed knowledge learned during training. This contrasts sharply with clinical practice, where physicians employ analogical reasoning to diagnose new cases by referencing similar records from past exemplars. While In-Context Learning (ICL) frameworks such as Tabular Prior-Fitted Networks (TabPFN) offer a promising diagnosis-by-reference paradigm, they are designed with tabular-specific inductive priors and rely on non-differentiable preprocessing pipelines, leading to manifold mismatch and gradient fracture when applied to heterogeneous multimodal data. To address these limitations, we propose PromptDx, a novel diagnosis-by-reference framework that leverages a pre-trained TabPFN as an ICL engine while enabling seamless integration with multimodal representations. Our core contribution is a Differentiable Prompt Tuning (DPT) mechanism that aligns a Masked Multimodal Modeling module with the pre-trained ICL engine. By training a lightweight adapter as a differentiable surrogate for the engine's non-differentiable preprocessors, we enable an end-to-end optimization of multimodal prompts within the ICL paradigm. We validate our method on the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset using 3D MRI and tabular biomarkers. Experiments demonstrate that our approach outperforms traditional parametric baselines. Notably, our method achieves superior performance using only 1% context samples compared to 30% in standard ICL, demonstrating exceptional manifold condensation ability. We further validate the generalizability of our DPT framework across six tabular datasets with diverse scales. Overall, our method offers a more data-efficient and clinically aligned paradigm for Alzheimer's Disease diagnosis.",
+        "canonical_id": "arXiv:2605.08585",
+        "arxiv_id": "2605.08585",
+        "doi": "10.48550/arXiv.2605.08585",
+        "authors": [
+          "Lu-Jia Zhong",
+          "Yihao Xia",
+          "Shuo Huang",
+          "Jianwei Zhang",
+          "Yong-Gang Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.18842",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18842",
+        "id:arXiv:2604.18842",
+        "title:multidomain learning with global expert mapping",
+        "url:https://arxiv.org/abs/2604.18842"
+      ],
+      "record": {
+        "title": "Multi-Domain Learning with Global Expert Mapping",
+        "source_url": "https://arxiv.org/abs/2604.18842",
+        "year": 2026,
+        "published": "2026-04-20",
+        "abstract": "Human perception generalizes well across different domains, but most vision models struggle beyond their training data. This gap motivates multi-dataset learning, where a single model is trained on diverse datasets to improve robustness under domain shifts. However, unified training remains challenging due to inconsistencies in data distributions and label semantics. Mixture-of-Experts (MoE) models provide a scalable solution by routing inputs to specialized subnetworks (experts). Yet, existing MoEs often fail to specialize effectively, as their load-balancing mechanisms enforce uniform input distribution across experts. This fairness conflicts with domain-aware routing, causing experts to learn redundant representations, and reducing performance especially on rare or out-of-distribution domains. We propose GEM (Global Expert Mapping), a planner-compiler framework that replaces the learned router with a global scheduler. Our planner, based on linear programming relaxation, computes a fractional assignment of datasets to experts, while the compiler applies hierarchical rounding to convert this soft plan into a deterministic, capacity-aware mapping. Unlike prior MoEs, GEM avoids balancing loss, resolves the conflict between fairness and specialization, and produces interpretable routing. Experiments show that GEM-DINO achieves state-of-the-art performance on the UODB benchmark, with notable gains on underrepresented datasets and solves task interference in few-shot adaptation scenarios.",
+        "canonical_id": "arXiv:2604.18842",
+        "arxiv_id": "2604.18842",
+        "doi": "10.48550/arXiv.2604.18842",
+        "authors": [
+          "Pourya Shamsolmoali",
+          "Masoumeh Zareapoor",
+          "Hui-Yu Zhou",
+          "Oscar Mendez",
+          "Da-Cheng Tao",
+          "Xue-Long Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.18866",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18866",
+        "id:arXiv:2604.18866",
+        "title:hmrnet hierarchical modular routing for crossdomain object detection in aerial images",
+        "url:https://arxiv.org/abs/2604.18866"
+      ],
+      "record": {
+        "title": "HMR-Net: Hierarchical Modular Routing for Cross-Domain Object Detection in Aerial Images",
+        "source_url": "https://arxiv.org/abs/2604.18866",
+        "year": 2026,
+        "published": "2026-04-20",
+        "abstract": "Despite advances in object detection, aerial imagery remains a challenging domain, as models often fail to generalize across variations in spatial resolution, scene composition, and semantic label coverage. Differences in geographic context, sensor characteristics, and object distributions across datasets limit the capacity of conventional models to learn consistent and transferable representations. Shared methods trained on such data tend to impose a unified representation across fundamentally different domains, resulting in poor performance on region-specific content and less flexibility when dealing with novel object categories. To address this, we propose a novel modular learning framework that enables structured specialization in aerial detection. Our method introduces a hierarchical routing mechanism with two levels of modularity: a domain routing layer that uses latent geographic embeddings to assign inputs to domain-specialized expert modules, and a scene routing mechanism that allocates image subregions to scene-specific expert modules. This allows our method to specialize across datasets and within complex scenes. Additionally, the framework contains a conditional expert module that uses external semantic information (e.g., category names or textual descriptions) to enable detection of novel object categories during inference, without the need for retraining or fine-tuning. By moving beyond monolithic representations, our method provides an adaptive framework for remote sensing object detection. Comprehensive evaluations on four datasets highlight improvements in multi-dataset generalization, region-level specialization, and open-category detection.",
+        "canonical_id": "arXiv:2604.18866",
+        "arxiv_id": "2604.18866",
+        "doi": "10.48550/arXiv.2604.18866",
+        "authors": [
+          "Pourya Shamsolmoali",
+          "Masoumeh Zareapoor",
+          "Michael Felsberg",
+          "Nick Pears",
+          "Hui-Yu Zhou",
+          "Yue Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12708",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.12708",
+        "id:arXiv:2602.12708",
+        "title:mixture of predefined experts maximizing data usage on vertical federated learning",
+        "url:https://arxiv.org/abs/2602.12708"
+      ],
+      "record": {
+        "title": "Mixture of Predefined Experts: Maximizing Data Usage on Vertical Federated Learning",
+        "source_url": "https://arxiv.org/abs/2602.12708",
+        "year": 2026,
+        "published": "2026-02-13",
+        "abstract": "Vertical Federated Learning (VFL) has emerged as a critical paradigm for collaborative model training in privacy-sensitive domains such as finance and healthcare. However, most existing VFL frameworks rely on the idealized assumption of full sample alignment across participants, a premise that rarely holds in real-world scenarios. To bridge this gap, this work introduces Split-MoPE, a novel framework that integrates Split Learning with a specialized Mixture of Predefined Experts (MoPE) architecture. Unlike standard Mixture of Experts (MoE), where routing is learned dynamically, MoPE uses predefined experts to process specific data alignments, effectively maximizing data usage during both training and inference without requiring full sample overlap. By leveraging pretrained encoders for target data domains, Split-MoPE achieves state-of-the-art performance in a single communication round, significantly reducing the communication footprint compared to multi-round end-to-end training. Furthermore, unlike existing proposals that address sample misalignment, this novel architecture provides inherent robustness against malicious or noisy participants and offers per-sample interpretability by quantifying each collaborator's contribution to each prediction. Extensive evaluations on vision (CIFAR-10/100) and tabular (Breast Cancer Wisconsin) datasets demonstrate that Split-MoPE consistently outperforms state-of-the-art systems such as LASER and Vertical SplitNN, particularly in challenging scenarios with high data missingness.",
+        "canonical_id": "arXiv:2602.12708",
+        "arxiv_id": "2602.12708",
+        "doi": "10.48550/arXiv.2602.12708",
+        "authors": [
+          "Jon Irureta",
+          "Gorka Azkune",
+          "J. Imaz",
+          "A. Lojo",
+          "Javier Fernandez-marques"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.11543",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11543",
+        "id:arXiv:2602.11543",
+        "title:pretraining a large language model using distributed gpus a memoryefficient decentralized paradigm",
+        "url:https://arxiv.org/abs/2602.11543"
+      ],
+      "record": {
+        "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm",
+        "source_url": "https://arxiv.org/abs/2602.11543",
+        "year": 2026,
+        "published": "2026-02-12",
+        "abstract": "Pretraining large language models (LLMs) typically requires centralized clusters with thousands of high-memory GPUs (e.g., H100/A100). Recent decentralized training methods reduce communication overhead by employing federated optimization; however, they still need to train the entire model on each node, remaining constrained by GPU memory limitations. In this work, we propose SParse Expert Synchronization (SPES), a memory-efficient decentralized framework for pretraining mixture-of-experts (MoE) LLMs. SPES trains only a subset of experts per node, substantially lowering the memory footprint. Each node updates its local experts and periodically synchronizes with other nodes, eliminating full-parameter transmission while ensuring efficient knowledge sharing. To mitigate limited per-expert data utilization under sparse expert updates, we introduce an expert-merging warm-up strategy, where experts exchange knowledge early in training, to rapidly establish foundational capabilities. With SPES, we train a 2B-parameter MoE LLM using 16 standalone 48GB GPUs over internet connections, which achieves competitive performance with centrally trained LLMs under similar computational budgets. We further demonstrate scalability by training a 7B model from scratch and a 9B model upcycled from a dense checkpoint, both of which match prior centralized baselines. Our code is available at https://github.com/zjr2000/SPES.",
+        "canonical_id": "arXiv:2602.11543",
+        "arxiv_id": "2602.11543",
+        "doi": "10.48550/arXiv.2602.11543",
+        "authors": [
+          "Jinrui Zhang",
+          "Chaodong Xiao",
+          "Aoqi Wu",
+          "Xindong Zhang",
+          "Lei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.16863",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.18234923",
+        "id:arXiv:2601.16863",
+        "title:mixtureofmodels unifying heterogeneous agents via nway selfevaluating deliberation",
+        "url:https://arxiv.org/abs/2601.16863"
+      ],
+      "record": {
+        "title": "Mixture-of-Models: Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation",
+        "source_url": "https://arxiv.org/abs/2601.16863",
+        "year": 2026,
+        "published": "2026-01-23",
+        "abstract": "This paper introduces the N-Way Self-Evaluating Deliberation (NSED) protocol, a Runtime Mixture-of-Models (MoM) architecture that constructs emergent composite models from a plurality of distinct expert agents. Unlike traditional Mixture-of-Experts (MoE) which rely on static gating networks, NSED employs a Dynamic Expertise Broker - a runtime optimization engine that treats model selection as a variation of the Knapsack Problem, binding heterogeneous checkpoints to functional roles based on live telemetry and cost constraints. At the execution layer, we formalize deliberation as a Macro-Scale Recurrent Neural Network (RNN), where the consensus state loops back through a semantic forget gate to enable iterative refinement without proportional VRAM scaling. Key components include an orchestration fabric for trustless N-to-N peer review, a Quadratic Voting activation function for non-linear consensus, and a feedback-driven state update. Empirical validation on challenging benchmarks (AIME 2025, LiveCodeBench) demonstrates that this topology allows ensembles of small (less than 20B) consumer-grade models to match or exceed the performance of state-of-the-art 100B+ parameter models, establishing a new hardware arbitrage efficiency frontier. Furthermore, testing on the DarkBench safety suite reveals intrinsic alignment properties, with peer-mediated correction reducing sycophancy scores below that of any individual agent.",
+        "canonical_id": "arXiv:2601.16863",
+        "arxiv_id": "2601.16863",
+        "doi": "10.5281/zenodo.18234923",
+        "authors": [
+          "Tims Pečerskis",
+          "Aivars Smirnovs"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iceic69189.2026.11386129",
+      "identity_tokens": [
+        "id:DOI:10.1109/iceic69189.2026.11386129",
+        "title:augmentationaware expert design for domain generalization",
+        "url:https://doi.org/10.1109/ICEIC69189.2026.11386129"
+      ],
+      "record": {
+        "title": "Augmentation-Aware Expert Design for Domain Generalization",
+        "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386129",
+        "year": 2026,
+        "published": "2026-01-18",
+        "abstract": "Deep neural networks often suffer from significant performance degradation when encountering domain shifts not present in their training data. While various domain generalization (DG) methods have been proposed to address this issue, they frequently introduce substantial computational overhead during both training and inference. To overcome this limitation, we propose a novel and efficient architecture inspired by the mixture of experts (MoE) mechanism. Our approach redesigns the initial stem layer of the network to include multiple specialized Batch Normalization (BN) layers, each acting as an expert trained on a specific data augmentation. A lightweight gating network adaptively selects the most appropriate BN expert for a given input at test time, enabling augmentation-aware inference with minimal additional parameters and latency. We evaluated our method on five digit classification datasets using a leave-one-domain-out protocol. Experimental results demonstrate that our approach serves as a powerful universal baseline, achieving an average accuracy improvement of 10.5% over Empirical Risk Minimization, a standard baseline in the field.",
+        "doi": "10.1109/ICEIC69189.2026.11386129",
+        "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386129",
+        "authors": [
+          "Jin Shin",
+          "Hyun Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.02943",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770854.3783940",
+        "id:arXiv:2601.02943",
+        "title:mixtte multilevel mixtureofexperts for scalable and adaptive travel time estimation",
+        "url:https://arxiv.org/abs/2601.02943"
+      ],
+      "record": {
+        "title": "MixTTE: Multi-Level Mixture-of-Experts for Scalable and Adaptive Travel Time Estimation",
+        "source_url": "https://arxiv.org/abs/2601.02943",
+        "year": 2026,
+        "published": "2026-01-06",
+        "abstract": "Accurate Travel Time Estimation (TTE) is critical for ride-hailing platforms, where errors directly impact user experience and operational efficiency. While existing production systems excel at holistic route-level dependency modeling, they struggle to capture city-scale traffic dynamics and long-tail scenarios, leading to unreliable predictions in large urban networks. In this paper, we propose \\model, a scalable and adaptive framework that synergistically integrates link-level modeling with industrial route-level TTE systems. Specifically, we propose a spatio-temporal external attention module to capture global traffic dynamic dependencies across million-scale road networks efficiently. Moreover, we construct a stabilized graph mixture-of-experts network to handle heterogeneous traffic patterns while maintaining inference efficiency. Furthermore, an asynchronous incremental learning strategy is tailored to enable real-time and stable adaptation to dynamic traffic distribution shifts. Experiments on real-world datasets validate MixTTE significantly reduces prediction errors compared to seven baselines. MixTTE has been deployed in DiDi, substantially improving the accuracy and stability of the TTE service.",
+        "canonical_id": "arXiv:2601.02943",
+        "arxiv_id": "2601.02943",
+        "doi": "10.1145/3770854.3783940",
+        "authors": [
+          "Wenzhao Jiang",
+          "Jindong Han",
+          "Ruiqian Han",
+          "Hao Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.knosys.2026.115264",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.knosys.2026.115264",
+        "title:grfmmps an emotiondriven decision network based on graph residual fusion using multimodal physiological signals",
+        "url:https://doi.org/10.1016/j.knosys.2026.115264"
+      ],
+      "record": {
+        "title": "GRF-MMPS: An emotion-driven decision network based on graph residual fusion using multimodal physiological signals",
+        "source_url": "https://doi.org/10.1016/j.knosys.2026.115264",
+        "year": 2026,
+        "published": "2026-01-01",
+        "abstract": null,
+        "doi": "10.1016/j.knosys.2026.115264",
+        "canonical_id": "DOI:10.1016/j.knosys.2026.115264",
+        "authors": [
+          "Yanyan Zhao",
+          "Danli Wang",
+          "Xuange Gao",
+          "Xinyuan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.22296",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.22296",
+        "id:arXiv:2512.22296",
+        "title:hybrid quantumclassical mixture of experts unlocking topological advantage via interferencebased routing",
+        "url:https://arxiv.org/abs/2512.22296"
+      ],
+      "record": {
+        "title": "Hybrid Quantum-Classical Mixture of Experts: Unlocking Topological Advantage via Interference-Based Routing",
+        "source_url": "https://arxiv.org/abs/2512.22296",
+        "year": 2025,
+        "published": "2025-12-25",
+        "abstract": "The Mixture-of-Experts (MoE) architecture has emerged as a powerful paradigm for scaling deep learning models, yet it is fundamentally limited by challenges such as expert imbalance and the computational complexity of classical routing mechanisms. This paper investigates the potential of Quantum Machine Learning (QML) to address these limitations through a novel Hybrid Quantum-Classical Mixture of Experts (QMoE) architecture. Specifically, we conduct an ablation study using a Quantum Gating Network (Router) combined with classical experts to isolate the source of quantum advantage. Our central finding validates the Interference Hypothesis: by leveraging quantum feature maps (Angle Embedding) and wave interference, the Quantum Router acts as a high-dimensional kernel method, enabling the modeling of complex, non-linear decision boundaries with superior parameter efficiency compared to its classical counterparts. Experimental results on non-linearly separable data, such as the Two Moons dataset, demonstrate that the Quantum Router achieves a significant topological advantage, effectively\"untangling\"data distributions that linear classical routers fail to separate efficiently. Furthermore, we analyze the architecture's robustness against simulated quantum noise, confirming its feasibility for near-term intermediate-scale quantum (NISQ) hardware. We discuss practical applications in federated learning, privacy-preserving machine learning, and adaptive systems that could benefit from this quantum-enhanced routing paradigm.",
+        "canonical_id": "arXiv:2512.22296",
+        "arxiv_id": "2512.22296",
+        "doi": "10.48550/arXiv.2512.22296",
+        "authors": [
+          "Reda Heddad",
+          "L. Bouanane"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccbdai66607.2025.11389035",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccbdai66607.2025.11389035",
+        "title:a synergistic and efficient framework for realtime action recognition with mllm and lightweight models",
+        "url:https://doi.org/10.1109/ICCBDAI66607.2025.11389035"
+      ],
+      "record": {
+        "title": "A Synergistic and Efficient Framework for Real-Time Action Recognition with MLLM and Lightweight Models",
+        "source_url": "https://doi.org/10.1109/ICCBDAI66607.2025.11389035",
+        "year": 2025,
+        "published": "2025-11-21",
+        "abstract": "Human Action Recognition (HAR) faces a trade-off between accuracy and real-time performance. Multimodal Large Language Models (MLLM) provide strong semantic understanding but suffer high latency, while lightweight models enable real-time inference with reduced accuracy. We propose the Synergistic Action-Recognition Framework (SARF), inspired by dual-process cognitive theory, integrating a MLLM as a \"Slow\" pathway for global reasoning and a lightweight model as a \"Fast\" pathway for fine-grained recognition. A dynamic gating network routes inputs adaptively, and knowledge distillation transfers rich contextual knowledge to the lightweight model without extra inference cost. Experiments on few-shot subsets of UCF-101 and Kinetics-100 show that SARF retains 97.8% of the MLLM’s accuracy while reducing latency over 7×, balancing precision and efficiency. Prompt-based few-shot adaptation and multimodal feature fusion further enhance performance in data-scarce scenarios. SARF offers a practical solution for applications requiring both high accuracy and real-time responsiveness, such as automated sports officiating and human–robot interaction.",
+        "doi": "10.1109/ICCBDAI66607.2025.11389035",
+        "canonical_id": "DOI:10.1109/ICCBDAI66607.2025.11389035",
+        "authors": [
+          "Jingxin Wen",
+          "Daqing Zhong",
+          "Qisong Wang",
+          "Dechao Zhou",
+          "Guo Ye",
+          "Xin Wu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:dd1a2264c3307691870779f38d95d8f5e7e3b1479fc1560d3e4c3c2c99120f47",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

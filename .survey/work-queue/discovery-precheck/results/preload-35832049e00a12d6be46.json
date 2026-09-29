@@ -1,0 +1,924 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-35832049e00a12d6be46",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-35832049e00a12d6be46",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 16,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:48:11.874590+00:00",
+  "preload_id": "preload-35832049e00a12d6be46",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+      "source_url": "https://doi.org/10.1145/3830418.3843856",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843856",
+      "canonical_id": "DOI:10.1145/3830418.3843856",
+      "authors": [
+        "Cong-Jie He",
+        "Le Xu",
+        "Zhan Lu",
+        "Ye-Qi Huang",
+        "Hao-Cheng Xiao",
+        "Cheng Deng",
+        "Ling-Xiao Ma",
+        "Zi-Ming Miao",
+        "Fan Yang",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Janus: Multi-LLM Serving at Production Scale",
+      "source_url": "https://doi.org/10.1145/3830418.3843867",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843867",
+      "canonical_id": "DOI:10.1145/3830418.3843867",
+      "authors": [
+        "Tian-Bao Zhou",
+        "Yi Wang",
+        "Yu Zhou",
+        "Zi-Rui Liu",
+        "Zhi-Ming Wang",
+        "Ye-Bo Peng",
+        "Yong-Fu Wang",
+        "Yi Zhang",
+        "Jin-Run Yin",
+        "Ke-Meng Tian",
+        "Fang-Cheng Fu",
+        "Tong-Xuan Liu",
+        "Tao Peng",
+        "Tong Yang",
+        "Bin Cui",
+        "Xupeng Miao",
+        "Ke Zhang"
+      ]
+    },
+    {
+      "title": "Efficient GPU Multitasking with Morphable Kernels",
+      "source_url": "https://doi.org/10.1145/3830418.3843904",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843904",
+      "canonical_id": "DOI:10.1145/3830418.3843904",
+      "authors": [
+        "Ting-Xu Ren",
+        "Ru-Wen Fan",
+        "Hao Guo",
+        "Min-Hui Xie",
+        "Shi-Wei Gao",
+        "Ji-Wu Shu",
+        "You-You Lu"
+      ]
+    },
+    {
+      "title": "Beyond Utilization: Energy-Conscious GPU Sharing for Inference Serving",
+      "source_url": "https://doi.org/10.1145/3830418.3843913",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843913",
+      "canonical_id": "DOI:10.1145/3830418.3843913",
+      "authors": [
+        "Prasoon Sinha",
+        "Dimitrios Liakopoulos",
+        "Nathan Lemma",
+        "N. Yadwadkar"
+      ]
+    },
+    {
+      "title": "StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers",
+      "source_url": "https://doi.org/10.1145/3830418.3843869",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843869",
+      "canonical_id": "DOI:10.1145/3830418.3843869",
+      "authors": [
+        "Yi-Zhuo Liang",
+        "Shao-Yu Wang",
+        "Jaeyong Song",
+        "Yan-Qi Zhou",
+        "Geon-Woo Kim",
+        "Guang-Rong He",
+        "Seo Jin Park"
+      ]
+    },
+    {
+      "title": "Batched in Back: Characterizing and Optimizing Offline LLM Inference in Production with ACDC",
+      "source_url": "https://doi.org/10.1145/3830418.3843877",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843877",
+      "canonical_id": "DOI:10.1145/3830418.3843877",
+      "authors": [
+        "Le-Ping Yang",
+        "Xue Li",
+        "Kun Qian",
+        "Er-Ci Xu",
+        "Ming-Zhe Han",
+        "Hao-Ran Zhu",
+        "Tao He",
+        "Zuo-Long Yin",
+        "En-Nan Zhai",
+        "Wen-Yuan Yu",
+        "Jing-Ren Zhou",
+        "Guang-Tao Xue"
+      ]
+    },
+    {
+      "title": "Taming Inference Workloads at Global Scale: Foundation Model Serving in Amazon Bedrock",
+      "source_url": "https://doi.org/10.1145/3830418.3843855",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843855",
+      "canonical_id": "DOI:10.1145/3830418.3843855",
+      "authors": [
+        "Pratik Pankaj Raichura",
+        "Somu Perianayagam",
+        "Rama Krishna Sandeep Pokkunuri",
+        "Divya Jain"
+      ]
+    },
+    {
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+      "canonical_id": "arXiv:2609.34683",
+      "arxiv_id": "2609.34683",
+      "authors": [
+        "Cheuk H. Lau",
+        "Ze-Yu Cao",
+        "K. Yin",
+        "Yao Lai",
+        "Hao-Ran Wu",
+        "Nicholas D. Lane",
+        "Robert Mullins",
+        "Ilia Shumailov",
+        "Yi-Ren Zhao"
+      ]
+    },
+    {
+      "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+      "source_url": "https://arxiv.org/abs/2609.34653",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+      "canonical_id": "arXiv:2609.34653",
+      "arxiv_id": "2609.34653",
+      "authors": [
+        "Zong-Shang Shen",
+        "Wang-Song Yin",
+        "Da-Liang Xu",
+        "Meng-Wei Xu",
+        "Xuan-Zhe Liu"
+      ]
+    },
+    {
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+      "canonical_id": "arXiv:2609.34555",
+      "arxiv_id": "2609.34555",
+      "authors": [
+        "Qiu-Yang Zhang",
+        "Kai Zhou",
+        "Kai Lu",
+        "Hao-Cheng Lu",
+        "Jian Zhou",
+        "Yuan-Peng Su",
+        "Kun Bao",
+        "Ji-Guang Wan",
+        "Fei Wu"
+      ]
+    },
+    {
+      "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+      "source_url": "https://arxiv.org/abs/2609.35115",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+      "canonical_id": "arXiv:2609.35115",
+      "arxiv_id": "2609.35115",
+      "authors": [
+        "Hai-Xiao Gao",
+        "Yi-Min Zheng",
+        "Lin-You Xiao",
+        "Ze-Ke Xie"
+      ]
+    },
+    {
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "source_url": "https://arxiv.org/abs/2609.34054",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+      "canonical_id": "arXiv:2609.34054",
+      "arxiv_id": "2609.34054",
+      "authors": [
+        "Hyesung Jeon",
+        "Hyeongju Ha",
+        "Jae-Joon Kim"
+      ]
+    },
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ]
+    },
+    {
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.35263",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+      "canonical_id": "arXiv:2609.35263",
+      "arxiv_id": "2609.35263",
+      "authors": [
+        "Aaryam Sharma"
+      ]
+    },
+    {
+      "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.33184",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Speculative decoding reduces sequential Target model calls by verifying multiple tokens from the Draft model in parallel. Yet KV Cache growth limits long-context serving under constrained GPU memory. Offloading KV to CPU memory relieves this pressure. However, existing offloading schemes restore the full KV history before attention and fail to fully exploit the benefits of KV sharing across queries within a verification round. Existing parallel speculative decoding methods also overlook idle GPU compute capacity while memory-bandwidth-bound Target verification waits for historical KV. We present SpecStream, a speculative decoding system that begins verification without waiting for the full KV history to be restored and exploits compute bubbles during KV transfers for concurrent drafting on the same GPUs. It offloads only Target-committed history, keeping candidate rollback local to the GPUs. Each streamed KV chunk serves all queries in the round, with online softmax preserving full attention. Target-priority scheduling controls Draft concurrent execution under resource limits to constrain interference with Target verification. Experiments show that SpecStream maintains task quality close to SGLang speculative decoding while supporting more concurrent requests under limited GPU memory. Across different datasets, it achieves average throughput speedups of 1.41$\\times$ and 1.32$\\times$ over the offloading baseline for Qwen3 and InternLM2.5, respectively. Compared with parallel speculative decoding on separate Target and Draft GPUs, SpecStream improves output throughput per GPU by an average of 55.4%.",
+      "canonical_id": "arXiv:2609.33184",
+      "arxiv_id": "2609.33184",
+      "authors": [
+        "Fei Li",
+        "Song Liu",
+        "Shi-Qiang Nie",
+        "Jin-Yu Wang",
+        "Wei-Guo Wu"
+      ]
+    },
+    {
+      "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33889",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+      "canonical_id": "arXiv:2609.33889",
+      "arxiv_id": "2609.33889",
+      "authors": [
+        "Jungseob Lee",
+        "Seungyoon Lee",
+        "Seongtae Hong",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ]
+    },
+    {
+      "title": "CascadeEP: Asynchronous Expert Execution for MoE Prefill under Attention Imbalance",
+      "source_url": "https://arxiv.org/abs/2609.33252",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Mixture-of-experts (MoE) serving commonly deploys data and expert parallelism (DEP): attention replicas run distinct request batches while routed experts are sharded across an expert-parallel (EP) group. During prefill, attention replicas finish dispatch at different times, but synchronous EP delays expert feed-forward network (FFN) computation until routed inputs from all replicas are ready. Request schedulers seek to balance load while reusing the key-value (KV) cache of shared prompt prefixes to avoid redundant prefill computation. These goals can conflict when a replica holding a matching prefix is already overloaded, leaving residual attention imbalance. We present ASYNCEP, a distributed execution engine for MoE prefill. ASYNCEP proposes three mechanisms. Asynchronous EP allows expert computation to start before tokens from all attention replicas are ready. streamFFN batches ready tokens to balance early execution with FFN computation efficiency. Opportunistic expert weight fetching (OEWF) allows a faster replica to fetch expert weights and execute unstarted work from other GPUs. We evaluate ASYNCEP on DeepSeek-V4-Flash, DeepSeek-V4-Pro, and GLM-5.3, and our results show that ASYNCEP achieves up to 1.48x speedup in p95 time-to-first-token (TTFT) and improves the inference throughput by up to 1.17x.",
+      "canonical_id": "arXiv:2609.33252",
+      "arxiv_id": "2609.33252",
+      "authors": [
+        "Jin Qin",
+        "Tian-Cheng Hu",
+        "Shi-Yan Wang",
+        "Jun-Hao Hu",
+        "Ze-Xin Jian",
+        "Yu-Zheng Wang",
+        "Hao-Yu Li",
+        "Chun-Wei Xia",
+        "Ying Liu",
+        "Pi-Xian Zhan",
+        "Di Wang",
+        "Zhong-Zhe Hu",
+        "Hui-Min Cui",
+        "Tao Xie",
+        "Chen-Xi Wang"
+      ]
+    },
+    {
+      "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32999",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+      "canonical_id": "arXiv:2609.32999",
+      "arxiv_id": "2609.32999",
+      "authors": [
+        "Fei Fang",
+        "Chung-Hsiang Lo",
+        "Yi Liu",
+        "Yi-Fan Hua",
+        "Chen Qian"
+      ]
+    },
+    {
+      "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+      "source_url": "https://arxiv.org/abs/2609.32283",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+      "canonical_id": "arXiv:2609.32283",
+      "arxiv_id": "2609.32283",
+      "authors": [
+        "Zai-Feng Pan",
+        "Michael Wang",
+        "Chris Wu",
+        "Zheng-Ding Hu",
+        "Xin-Wei Qiang",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843856",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843856",
+        "title:meshrt compiletime governed waferscale runtime for lowlatency highthroughput inference",
+        "url:https://doi.org/10.1145/3830418.3843856"
+      ],
+      "record": {
+        "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+        "source_url": "https://doi.org/10.1145/3830418.3843856",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843856",
+        "canonical_id": "DOI:10.1145/3830418.3843856",
+        "authors": [
+          "Cong-Jie He",
+          "Le Xu",
+          "Zhan Lu",
+          "Ye-Qi Huang",
+          "Hao-Cheng Xiao",
+          "Cheng Deng",
+          "Ling-Xiao Ma",
+          "Zi-Ming Miao",
+          "Fan Yang",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843867",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843867",
+        "title:janus multillm serving at production scale",
+        "url:https://doi.org/10.1145/3830418.3843867"
+      ],
+      "record": {
+        "title": "Janus: Multi-LLM Serving at Production Scale",
+        "source_url": "https://doi.org/10.1145/3830418.3843867",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843867",
+        "canonical_id": "DOI:10.1145/3830418.3843867",
+        "authors": [
+          "Tian-Bao Zhou",
+          "Yi Wang",
+          "Yu Zhou",
+          "Zi-Rui Liu",
+          "Zhi-Ming Wang",
+          "Ye-Bo Peng",
+          "Yong-Fu Wang",
+          "Yi Zhang",
+          "Jin-Run Yin",
+          "Ke-Meng Tian",
+          "Fang-Cheng Fu",
+          "Tong-Xuan Liu",
+          "Tao Peng",
+          "Tong Yang",
+          "Bin Cui",
+          "Xupeng Miao",
+          "Ke Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843904",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843904",
+        "title:efficient gpu multitasking with morphable kernels",
+        "url:https://doi.org/10.1145/3830418.3843904"
+      ],
+      "record": {
+        "title": "Efficient GPU Multitasking with Morphable Kernels",
+        "source_url": "https://doi.org/10.1145/3830418.3843904",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843904",
+        "canonical_id": "DOI:10.1145/3830418.3843904",
+        "authors": [
+          "Ting-Xu Ren",
+          "Ru-Wen Fan",
+          "Hao Guo",
+          "Min-Hui Xie",
+          "Shi-Wei Gao",
+          "Ji-Wu Shu",
+          "You-You Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843913",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843913",
+        "title:beyond utilization energyconscious gpu sharing for inference serving",
+        "url:https://doi.org/10.1145/3830418.3843913"
+      ],
+      "record": {
+        "title": "Beyond Utilization: Energy-Conscious GPU Sharing for Inference Serving",
+        "source_url": "https://doi.org/10.1145/3830418.3843913",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843913",
+        "canonical_id": "DOI:10.1145/3830418.3843913",
+        "authors": [
+          "Prasoon Sinha",
+          "Dimitrios Liakopoulos",
+          "Nathan Lemma",
+          "N. Yadwadkar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843869",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843869",
+        "title:streamep stragglertolerant moe decoding without communication barriers",
+        "url:https://doi.org/10.1145/3830418.3843869"
+      ],
+      "record": {
+        "title": "StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers",
+        "source_url": "https://doi.org/10.1145/3830418.3843869",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843869",
+        "canonical_id": "DOI:10.1145/3830418.3843869",
+        "authors": [
+          "Yi-Zhuo Liang",
+          "Shao-Yu Wang",
+          "Jaeyong Song",
+          "Yan-Qi Zhou",
+          "Geon-Woo Kim",
+          "Guang-Rong He",
+          "Seo Jin Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843877",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843877",
+        "title:batched in back characterizing and optimizing offline llm inference in production with acdc",
+        "url:https://doi.org/10.1145/3830418.3843877"
+      ],
+      "record": {
+        "title": "Batched in Back: Characterizing and Optimizing Offline LLM Inference in Production with ACDC",
+        "source_url": "https://doi.org/10.1145/3830418.3843877",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843877",
+        "canonical_id": "DOI:10.1145/3830418.3843877",
+        "authors": [
+          "Le-Ping Yang",
+          "Xue Li",
+          "Kun Qian",
+          "Er-Ci Xu",
+          "Ming-Zhe Han",
+          "Hao-Ran Zhu",
+          "Tao He",
+          "Zuo-Long Yin",
+          "En-Nan Zhai",
+          "Wen-Yuan Yu",
+          "Jing-Ren Zhou",
+          "Guang-Tao Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843855",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843855",
+        "title:taming inference workloads at global scale foundation model serving in amazon bedrock",
+        "url:https://doi.org/10.1145/3830418.3843855"
+      ],
+      "record": {
+        "title": "Taming Inference Workloads at Global Scale: Foundation Model Serving in Amazon Bedrock",
+        "source_url": "https://doi.org/10.1145/3830418.3843855",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843855",
+        "canonical_id": "DOI:10.1145/3830418.3843855",
+        "authors": [
+          "Pratik Pankaj Raichura",
+          "Somu Perianayagam",
+          "Rama Krishna Sandeep Pokkunuri",
+          "Divya Jain"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34683",
+      "identity_tokens": [
+        "id:arXiv:2609.34683",
+        "title:agentperfbench a benchmarking and evaluation suite for inference performance of agentic llms",
+        "url:https://arxiv.org/abs/2609.34683"
+      ],
+      "record": {
+        "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+        "source_url": "https://arxiv.org/abs/2609.34683",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+        "canonical_id": "arXiv:2609.34683",
+        "arxiv_id": "2609.34683",
+        "authors": [
+          "Cheuk H. Lau",
+          "Ze-Yu Cao",
+          "K. Yin",
+          "Yao Lai",
+          "Hao-Ran Wu",
+          "Nicholas D. Lane",
+          "Robert Mullins",
+          "Ilia Shumailov",
+          "Yi-Ren Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34653",
+      "identity_tokens": [
+        "id:arXiv:2609.34653",
+        "title:omnitide codesigning algorithms and systems for efficient ondevice omnillm streaming",
+        "url:https://arxiv.org/abs/2609.34653"
+      ],
+      "record": {
+        "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+        "source_url": "https://arxiv.org/abs/2609.34653",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+        "canonical_id": "arXiv:2609.34653",
+        "arxiv_id": "2609.34653",
+        "authors": [
+          "Zong-Shang Shen",
+          "Wang-Song Yin",
+          "Da-Liang Xu",
+          "Meng-Wei Xu",
+          "Xuan-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34555",
+      "identity_tokens": [
+        "id:arXiv:2609.34555",
+        "title:pulseinfer iocentric sparse kv cache offloading for efficient longcontext llm decoding",
+        "url:https://arxiv.org/abs/2609.34555"
+      ],
+      "record": {
+        "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.34555",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+        "canonical_id": "arXiv:2609.34555",
+        "arxiv_id": "2609.34555",
+        "authors": [
+          "Qiu-Yang Zhang",
+          "Kai Zhou",
+          "Kai Lu",
+          "Hao-Cheng Lu",
+          "Jian Zhou",
+          "Yuan-Peng Su",
+          "Kun Bao",
+          "Ji-Guang Wan",
+          "Fei Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35115",
+      "identity_tokens": [
+        "id:arXiv:2609.35115",
+        "title:duplexcadence exact state and execution from a speech models declared timelines",
+        "url:https://arxiv.org/abs/2609.35115"
+      ],
+      "record": {
+        "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+        "source_url": "https://arxiv.org/abs/2609.35115",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+        "canonical_id": "arXiv:2609.35115",
+        "arxiv_id": "2609.35115",
+        "authors": [
+          "Hai-Xiao Gao",
+          "Yi-Min Zheng",
+          "Lin-You Xiao",
+          "Ze-Ke Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34054",
+      "identity_tokens": [
+        "id:arXiv:2609.34054",
+        "title:precache efficient kv cache sharing for multilora agents via lowrank precomputation and neutral reconstruction",
+        "url:https://arxiv.org/abs/2609.34054"
+      ],
+      "record": {
+        "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+        "source_url": "https://arxiv.org/abs/2609.34054",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+        "canonical_id": "arXiv:2609.34054",
+        "arxiv_id": "2609.34054",
+        "authors": [
+          "Hyesung Jeon",
+          "Hyeongju Ha",
+          "Jae-Joon Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34380",
+      "identity_tokens": [
+        "id:arXiv:2609.34380",
+        "title:dps dualmode precision llm serving with semiunified memory",
+        "url:https://arxiv.org/abs/2609.34380"
+      ],
+      "record": {
+        "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+        "source_url": "https://arxiv.org/abs/2609.34380",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+        "canonical_id": "arXiv:2609.34380",
+        "arxiv_id": "2609.34380",
+        "authors": [
+          "Xuan Truong Nguyen",
+          "Tien Son Pham",
+          "Tuan-Duc Chu",
+          "Wookeun Jung",
+          "Thanh Tuan Dao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35263",
+      "identity_tokens": [
+        "id:arXiv:2609.35263",
+        "title:wavepp highthroughput pipeline parallel llm prefill under prefix reuse",
+        "url:https://arxiv.org/abs/2609.35263"
+      ],
+      "record": {
+        "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.35263",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+        "canonical_id": "arXiv:2609.35263",
+        "arxiv_id": "2609.35263",
+        "authors": [
+          "Aaryam Sharma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33184",
+      "identity_tokens": [
+        "id:arXiv:2609.33184",
+        "title:resourceefficient speculative decoding for longcontext llm serving",
+        "url:https://arxiv.org/abs/2609.33184"
+      ],
+      "record": {
+        "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.33184",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Speculative decoding reduces sequential Target model calls by verifying multiple tokens from the Draft model in parallel. Yet KV Cache growth limits long-context serving under constrained GPU memory. Offloading KV to CPU memory relieves this pressure. However, existing offloading schemes restore the full KV history before attention and fail to fully exploit the benefits of KV sharing across queries within a verification round. Existing parallel speculative decoding methods also overlook idle GPU compute capacity while memory-bandwidth-bound Target verification waits for historical KV. We present SpecStream, a speculative decoding system that begins verification without waiting for the full KV history to be restored and exploits compute bubbles during KV transfers for concurrent drafting on the same GPUs. It offloads only Target-committed history, keeping candidate rollback local to the GPUs. Each streamed KV chunk serves all queries in the round, with online softmax preserving full attention. Target-priority scheduling controls Draft concurrent execution under resource limits to constrain interference with Target verification. Experiments show that SpecStream maintains task quality close to SGLang speculative decoding while supporting more concurrent requests under limited GPU memory. Across different datasets, it achieves average throughput speedups of 1.41$\\times$ and 1.32$\\times$ over the offloading baseline for Qwen3 and InternLM2.5, respectively. Compared with parallel speculative decoding on separate Target and Draft GPUs, SpecStream improves output throughput per GPU by an average of 55.4%.",
+        "canonical_id": "arXiv:2609.33184",
+        "arxiv_id": "2609.33184",
+        "authors": [
+          "Fei Li",
+          "Song Liu",
+          "Shi-Qiang Nie",
+          "Jin-Yu Wang",
+          "Wei-Guo Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33889",
+      "identity_tokens": [
+        "id:arXiv:2609.33889",
+        "title:where activation sparsity and kvcache sparsity cross in llm decoding",
+        "url:https://arxiv.org/abs/2609.33889"
+      ],
+      "record": {
+        "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.33889",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+        "canonical_id": "arXiv:2609.33889",
+        "arxiv_id": "2609.33889",
+        "authors": [
+          "Jungseob Lee",
+          "Seungyoon Lee",
+          "Seongtae Hong",
+          "Sugyeong Eo",
+          "Heuiseok Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33252",
+      "identity_tokens": [
+        "id:arXiv:2609.33252",
+        "title:cascadeep asynchronous expert execution for moe prefill under attention imbalance",
+        "url:https://arxiv.org/abs/2609.33252"
+      ],
+      "record": {
+        "title": "CascadeEP: Asynchronous Expert Execution for MoE Prefill under Attention Imbalance",
+        "source_url": "https://arxiv.org/abs/2609.33252",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Mixture-of-experts (MoE) serving commonly deploys data and expert parallelism (DEP): attention replicas run distinct request batches while routed experts are sharded across an expert-parallel (EP) group. During prefill, attention replicas finish dispatch at different times, but synchronous EP delays expert feed-forward network (FFN) computation until routed inputs from all replicas are ready. Request schedulers seek to balance load while reusing the key-value (KV) cache of shared prompt prefixes to avoid redundant prefill computation. These goals can conflict when a replica holding a matching prefix is already overloaded, leaving residual attention imbalance. We present ASYNCEP, a distributed execution engine for MoE prefill. ASYNCEP proposes three mechanisms. Asynchronous EP allows expert computation to start before tokens from all attention replicas are ready. streamFFN batches ready tokens to balance early execution with FFN computation efficiency. Opportunistic expert weight fetching (OEWF) allows a faster replica to fetch expert weights and execute unstarted work from other GPUs. We evaluate ASYNCEP on DeepSeek-V4-Flash, DeepSeek-V4-Pro, and GLM-5.3, and our results show that ASYNCEP achieves up to 1.48x speedup in p95 time-to-first-token (TTFT) and improves the inference throughput by up to 1.17x.",
+        "canonical_id": "arXiv:2609.33252",
+        "arxiv_id": "2609.33252",
+        "authors": [
+          "Jin Qin",
+          "Tian-Cheng Hu",
+          "Shi-Yan Wang",
+          "Jun-Hao Hu",
+          "Ze-Xin Jian",
+          "Yu-Zheng Wang",
+          "Hao-Yu Li",
+          "Chun-Wei Xia",
+          "Ying Liu",
+          "Pi-Xian Zhan",
+          "Di Wang",
+          "Zhong-Zhe Hu",
+          "Hui-Min Cui",
+          "Tao Xie",
+          "Chen-Xi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32999",
+      "identity_tokens": [
+        "id:arXiv:2609.32999",
+        "title:tessera demanddriven kv cache management for retrievalaugmented llm serving",
+        "url:https://arxiv.org/abs/2609.32999"
+      ],
+      "record": {
+        "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.32999",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+        "canonical_id": "arXiv:2609.32999",
+        "arxiv_id": "2609.32999",
+        "authors": [
+          "Fei Fang",
+          "Chung-Hsiang Lo",
+          "Yi Liu",
+          "Yi-Fan Hua",
+          "Chen Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32283",
+      "identity_tokens": [
+        "id:arXiv:2609.32283",
+        "title:agentreplay tokenwise trace replay is essential for fair serving system performance benchmarking",
+        "url:https://arxiv.org/abs/2609.32283"
+      ],
+      "record": {
+        "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+        "source_url": "https://arxiv.org/abs/2609.32283",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+        "canonical_id": "arXiv:2609.32283",
+        "arxiv_id": "2609.32283",
+        "authors": [
+          "Zai-Feng Pan",
+          "Michael Wang",
+          "Chris Wu",
+          "Zheng-Ding Hu",
+          "Xin-Wei Qiang",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:9c07c0c5b0b39537b1e5eeaa506dddb034cef79596c4d01a4560f44f47d3d24d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

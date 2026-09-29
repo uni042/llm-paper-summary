@@ -1,0 +1,888 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-d780420cd547a612afb0",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-d780420cd547a612afb0",
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:50:05.089928+00:00",
+  "preload_id": "preload-d780420cd547a612afb0",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.101037",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.cosrev.2026.101037",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+      "authors": [
+        "Habib Khan",
+        "F. Alqahtani",
+        "Weiwei Jiang",
+        "M. Ali",
+        "Sareer Ul Amin",
+        "Jakeoung Koo"
+      ]
+    },
+    {
+      "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.115976",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.115976",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+      "authors": [
+        "Yu-Min Zhang",
+        "Xiaowen Ling",
+        "Zhiqiang Li",
+        "Liang-Liang Song",
+        "Yifan Jia",
+        "Yan-Bin Wang",
+        "Zhuhong You"
+      ]
+    },
+    {
+      "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+      "source_url": "https://doi.org/10.1016/j.istruc.2026.112910",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.istruc.2026.112910",
+      "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+      "authors": [
+        "X. Song",
+        "Senna Wang",
+        "Xiao-Wei Cheng",
+        "Haoyou Zhang",
+        "Ruijie Guo",
+        "Yi Li"
+      ]
+    },
+    {
+      "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+      "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+      "doi": "10.1109/MC.2026.3717392",
+      "canonical_id": "DOI:10.1109/MC.2026.3717392",
+      "authors": [
+        "Partha P. Maji",
+        "Timothy M. Jones",
+        "Robert D. Mullins"
+      ]
+    },
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with CrystalLLM",
+      "source_url": "https://doi.org/10.1145/3830418.3843852",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843852",
+      "canonical_id": "DOI:10.1145/3830418.3843852",
+      "authors": [
+        "Shao-Ke Xi",
+        "ChonLam Lao",
+        "Bo-Yi Jia",
+        "Jia-Qi Gao",
+        "Zhi-Peng Zhang",
+        "Jia-Min Cao",
+        "Brian Sutioso",
+        "Er-Ci Xu",
+        "Min-Lan Yu",
+        "Kui Ren",
+        "Yong Li",
+        "Zheng-Ping Qian",
+        "En-Nan Zhai",
+        "Jing-Ren Zhou"
+      ]
+    },
+    {
+      "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+      "source_url": "https://doi.org/10.1145/3830418.3843857",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843857",
+      "canonical_id": "DOI:10.1145/3830418.3843857",
+      "authors": [
+        "Jing-Kai He",
+        "Guang-Da Sun",
+        "Tian-Jian Li",
+        "Dong Du",
+        "Yu-Bin Xia",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training",
+      "source_url": "https://arxiv.org/abs/2609.34272",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "BF16 is now standard in large-scale pretraining, including in fused attention kernels such as FlashAttention, and these kernels are widely trusted. When we used FlashAttention-3 to pretrain a 450M-parameter transformer on 50B tokens, however, we ran into a problem: training was healthy for 25B tokens, then the gradient norm grew a thousandfold and the loss ended 0.2 nats above FP32 attention, without a single NaN. Recomputing the attention backward of just two layers in FP32 removes almost all of the excess gradient. Part of the cause is known: a fused multiply-add in the forward softmax, so far treated as an extreme-input NaN case and never fixed in FlashAttention-3. Repairing it stops the blow-up, but the query gradient is still wrong by more than its own size, and training still drives attention logits to thousands of times their size under accurate gradients. The remaining error comes from a broken conservation law. The softmax score gradient sums to zero along every row, which makes the query gradient blind to where the keys sit as a group; rounding it to BF16 leaves a small nonzero sum that leaks the mean key into the gradient, and the leak grows exactly as late training makes keys large and attention sharp. We introduce GProj (gauge projection), which restores the zero sum after the cast with two rank-one corrections per row. It cuts the remaining median query/key gradient errors from 219%/13% to 0.34%/0.37%, on par with FP32 attention, for 4.7% more time per training step. In matched from-scratch runs it trains to the same loss as FP32 attention, while FlashAttention-3 and key smoothing both destabilize.",
+      "canonical_id": "arXiv:2609.34272",
+      "arxiv_id": "2609.34272",
+      "authors": [
+        "Jun-Lin Chen",
+        "Dai-Ze Dong",
+        "Huan-Wei Di",
+        "Hao-Long Jia",
+        "Jia-Wei Wu",
+        "Hao-Tian Xie",
+        "Ming-Kai Zheng",
+        "Yang Li",
+        "Le-Shang Chen",
+        "Hui-Shu Wang",
+        "E. Xing",
+        "Hong-Yi Wang"
+      ]
+    },
+    {
+      "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+      "source_url": "https://arxiv.org/abs/2609.35115",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+      "canonical_id": "arXiv:2609.35115",
+      "arxiv_id": "2609.35115",
+      "authors": [
+        "Hai-Xiao Gao",
+        "Yi-Min Zheng",
+        "Lin-You Xiao",
+        "Ze-Ke Xie"
+      ]
+    },
+    {
+      "title": "RoPE is Dead, Long Live RoPE: Towards Scalable Data-aware Positional Encodings",
+      "source_url": "https://arxiv.org/abs/2609.34556",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Transformers process tokens without any inherent notion of order, making positional encoding a fundamental requirement rather than an architectural refinement. Rotary Position Embedding (RoPE) has become the default positional encoding in modern language models, yet it is heavily biased toward nearby tokens. Existing alternatives have been evaluated under different settings, leaving the literature fragmented and without a clear replacement. We bring structure to this landscape by examining a specific weakness of RoPE: its slow frequency bands, whose wavelengths exceed the training context and expose models to unseen angles during extrapolation. We therefore introduce Data aware RoPE (DaRoPE), which preserves standard RoPE on the fast bands but replaces absolute position on the slow bands with bounded coordinates learned from contextual representations. Therefore, the slow-band geometry depends on the data rather than only on positional distance. We compare representative encodings under matched conditions across synthetic tasks, symbolic music, genomics, neural signals, and language models spanning 124M to 50B parameters. Across these experiments, DaRoPE leads on non-text benchmarks, mitigates recency bias, while remaining best or on par in language modeling and length extrapolation. Moreover, the learned coordinates also make the mechanism interpretable, revealing how attention layers leverage contextual information beyond token distance. Together, these results support DaRoPE as the best overall default among the evaluated methods, when there is no domain-specific reasons to prefer another.",
+      "canonical_id": "arXiv:2609.34556",
+      "arxiv_id": "2609.34556",
+      "authors": [
+        "Jarod Lévy",
+        "Mathurin Videau",
+        "Jad Yehya",
+        "Jean-Rémi King",
+        "Stéphane d'Ascoli",
+        "Thomas Moreau"
+      ]
+    },
+    {
+      "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+      "source_url": "https://arxiv.org/abs/2609.34653",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+      "canonical_id": "arXiv:2609.34653",
+      "arxiv_id": "2609.34653",
+      "authors": [
+        "Zong-Shang Shen",
+        "Wang-Song Yin",
+        "Da-Liang Xu",
+        "Meng-Wei Xu",
+        "Xuan-Zhe Liu"
+      ]
+    },
+    {
+      "title": "Multilinguality in Hybrid Attention LLMs",
+      "source_url": "https://arxiv.org/abs/2609.35378",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "In response to the growing demand for long sequences in agentic and reasoning use cases, many state-of-the-art LLMs combine multiple variants of attention to mitigate the quadratic complexity of traditional softmax attention. These hybrid attention LLMs aim to balance the strengths and limitations of full attention and alternatives based on recurrence. This work presents a first study of how hybrid attention impacts the multilinguality of LLMs. Beyond the impact on long sequences in poorly tokenized languages, our study is motivated by the possibility that the inductive biases of the recurrent state alter linguistic processing. Our interpretability analysis confirms this, showing that cross-lingual representations in hybrid models develop in patterns tied to the ordering of recurrent and full-attention layers. Across diverse models, we notably observe a pronounced spike in cross-lingual alignment around the first full-attention layer. These findings lead us to question the conventional ordering of attention layers. In distillation experiments on multilingual data, all alternative layer orderings outperform the standard throughout training, learning up to 2.5X faster. These stark, replicable results prompt our theory that multilingual models would benefit from starting with a full-attention layer rather than recurrent layers.",
+      "canonical_id": "arXiv:2609.35378",
+      "arxiv_id": "2609.35378",
+      "authors": [
+        "Lucas Bandarkar",
+        "Jun-Ling Hu",
+        "Chen-Yuan Yang",
+        "Mohsen Fayyaz",
+        "Nan-Yun Peng"
+      ]
+    },
+    {
+      "title": "Pre-registered tests of solid-state-physics-inspired LLM compression: a cluster-level negative result at small-language-model scale",
+      "source_url": "https://arxiv.org/abs/2609.34292",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "We report a three-month autonomous research-agent program testing five solid-state-physics-inspired compression mappings on pretrained language models, with predictions committed to git before any pilot data and a 3-sigma gate deciding PASS or SHELVE. The common anchor -- area-law / Kohn-nearsighted decay of the one-particle density matrix -- has a distance face (P001 Wannier, P002 tight-binding) and a rank face (P003 DMRG-truncated MLPs, P005 Wilson-RG, P011 tensor-train embeddings). P005 was pre-empted at Phase 1; three of four Phase-3 pilots were falsified. On the attention face, GPT-2-medium attention-versus-distance is best fit by a stretched exponential in 12 of 16 median-layer heads once probe padding is excluded, and a tight-binding cutoff costs +96% perplexity (P002); on Pythia-160M the Wannier sparsity 0.054 +/- 0.004 is indistinguishable from PCA, random-Haar and identity baselines (P001). On the rank face, per-token tensor-train bond dimension does not track surprisal (r = 0.016 vs a pre-registered 0.65) and the format inflates rather than compresses (P011). P003 is mixed: its scaling claim shelved (r = -0.434), its MPO premise died at stage-0, and its cross-paper check, r = 0.523 as first written, collapses to 0.047 under the same correction, leaving both cross-paper checks null. The results invert the pre-registered prediction that most attention heads behave like Kohn-nearsighted insulators, pointing instead to critical, glassy or heavy-tailed regimes; the inversion is specific to the<= 350M scale tested, while the rank-face no-gain result held to 7-8B. We contribute the pre-registration + 3-sigma + cluster-framing + append-only-catalogue discipline -- including why our own enforcement gate was designed but not deployed -- four pre-registered negative results with full data release, and the inversion. The catalogue holds eighteen concluded studies, seventeen negative.",
+      "canonical_id": "arXiv:2609.34292",
+      "arxiv_id": "2609.34292",
+      "authors": [
+        "Jun-Qiang Lu"
+      ]
+    },
+    {
+      "title": "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge",
+      "source_url": "https://arxiv.org/abs/2609.35110",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Video diffusion models are rapidly scaling and exhibiting enhanced generation capabilities. Among these recent advancements, MiniMax-H3 stands out as a highly capable, production-level open-source model. However, its 33-billion parameters and multi-step iterative denoising process introduce substantial computational overhead. Consequently, their practical production is hindered by generation latency in the cloud deployment like NVIDIA-GB200, alongside strict memory limits that pose further challenges at the edge device like DGX-Spark. To address these diverse hardware bottlenecks from cloud to edge device, we present a full-stack inference pipeline that integrates efficient algorithmic design with optimized operator implementations. Algorithmically, we introduce a cross-resolution two-stage generation scheduler that exploits the step-wise nature of diffusion: early low-resolution steps rapidly establish the global layout, while later high-resolution steps focus refinements of local and perceptual details. These stages are connected by a learned latent-to-latent mapping module, completely eliminating the computationally expensive VAE decode-reencode cycle for resolution transferring cross different resolutions. For operator implementation, we deploy a Recursive Self-Improvement (RSI) loop that searches kernel fusions and memory layouts, evaluating latency together with numerical agreement. Together, these optimizations deliver up to 30x end-to-end speedup and 20% lower memory: a 5-second 1344x768 video with audio is generated 3.5x faster than real time on an 8xGB200 node, and in under a minute fully memory-resident on a single DGX Spark.",
+      "canonical_id": "arXiv:2609.35110",
+      "arxiv_id": "2609.35110",
+      "authors": [
+        "Yi-Tong Li",
+        "Jin-Cheng Yu",
+        "Jun-Song Chen",
+        "Hao-Peng Li",
+        "Shu-Chen Xue",
+        "Hao-Zhe Liu",
+        "Ping Luo",
+        "Song Han",
+        "En-Ze Xie"
+      ]
+    },
+    {
+      "title": "SlideDP: Scaling Host-Resident LLM Fine-Tuning Across Multiple GPUs",
+      "source_url": "https://arxiv.org/abs/2609.34162",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Host-resident layer streaming enables full-parameter LLM fine-tuning beyond GPU memory, but data-parallel ranks compete for shared host resources. Replicated transfers amplify traffic, while strong scaling can expose host work as computation windows shrink. We present SlideDP, a synchronous data-parallel runtime for shared-host multi-GPU systems. It maintains one authoritative host state, decouples communication routes from state layout, and pipelines parameter delivery, gradient aggregation, and CPU updates across ranks and chunks. An analytical step-time model characterizes resource bottlenecks and pipeline exposure; runtime measurements guide communication, chunking, and activation policies under a GPU memory budget. In matched-batch sweeps, SlideDP achieves geometric-mean throughput ratios of 1.46-2.64$\\times$ over SlideFormer, MegaTrain, and ZeRO-Offload. On four H100s, SlideDP approaches GPU-resident FSDP2 throughput for Qwen3-14B at a smaller batch size. With a larger batch, it processes over 1M tokens per step and exceeds FSDP2's measured peak throughput by 11.2%. Separately, it supports 256K-token sequences for the same model and fine-tunes Qwen2.5-72B on four RTX 4090 GPUs. Project page: https://github.com/RegiaYoung/SlideDP.",
+      "canonical_id": "arXiv:2609.34162",
+      "arxiv_id": "2609.34162",
+      "authors": [
+        "Rui-Jia Yang",
+        "Shi-Yuan Lin",
+        "Yu-Long Ao",
+        "Zhi-Yu Li",
+        "Ying-Li Zhao",
+        "Xian-Duo Li",
+        "Yong-Hua Lin",
+        "Ze-Yi Wen"
+      ]
+    },
+    {
+      "title": "Dual-Stream Simultaneous Translation via 2D Grid Attention",
+      "source_url": "https://arxiv.org/abs/2609.34902",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Simultaneous machine translation must generate target tokens before the source input is complete. Existing approaches address this through post-hoc read-write policies, leaving the attention mechanism unaware of bidirectional stream dependencies. We propose a dual-stream attention framework that represents source and target streams as a two-dimensional grid of hidden states and models their interaction through four structurally distinct attention types merged via joint QK Softmax normalization. Two approximations---broadcast and Hadamard---reduce the per-layer complexity from O(X^2Y+XY^2) to O(X^2+Y^2+XY) with provably decaying error. Training uses a self-guided loop: a per-cell loss heatmap drives dynamic-programming path recovery, which generates read/write decision supervision labels without external alignment. An incremental KV cache with anchored rotary position embeddings enables efficient streaming inference. On Chinese-to-English simultaneous translation, the proposed model outperforms the Wait-k baseline by +5.66 BLEURT and +10.36 COMET at comparable latency, and surpasses the non-streaming reference on COMET at a fraction of the response delay.",
+      "canonical_id": "arXiv:2609.34902",
+      "arxiv_id": "2609.34902",
+      "authors": [
+        "Yu Pu",
+        "Wei-Qiang Zhang"
+      ]
+    },
+    {
+      "title": "AReaL-TIK: Stateful Agentic Optimization of Unified RL Kernels through an Optimization IR",
+      "source_url": "https://arxiv.org/abs/2609.35140",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Reinforcement learning (RL) post-training often uses distinct GPU kernels for rollout and policy update. In synchronous PPO and GRPO, numerical disagreement can perturb ratios between current token probabilities and those assigned during rollout. Recomputing rollout log-probabilities with the policy-update backend avoids this discrepancy but adds a forward pass. Bitwise-consistent unified kernels permit reuse when the policy snapshot and probability processing match the objective. Their optimization must preserve agreement across distinct execution regimes. We present KernelBraid, an agentic framework starting from a hand-tuned, bitwise-consistent implementation. Its optimization intermediate representation (IR) organizes source-code search by linking implementations and modifications to numerical requirements, workload measurements, and derivation history. The agent coordinates changes and retains verified intermediates for further exploration; promotion requires passing correctness checks and improving aggregate latency within per-workload limits. Across 12 end-to-end training configurations on H20, KernelBraid achieves 1.10x average throughput relative to AReaL with log-probability recomputation, and the mean training-reward ratio rounds to 1.00x. Isolated-layer profiling yields 1.40x average speedup in summed phase time across 15 model-GPU pairs. Operator-level evaluation covers correctness and performance for 10 operators on A100, H20, and H200, all passing the prescribed bitwise checks. Unified-attention search achieves 2.52x speedup in summed workload latency over the starting implementation using 7M LLM tokens; ablations assess the contributions of retained evidence and branch exploration to search efficiency and attained performance. Our code is open-sourced at https://github.com/areal-project/AReaL-TIK.",
+      "canonical_id": "arXiv:2609.35140",
+      "arxiv_id": "2609.35140",
+      "authors": [
+        "Ran Yan",
+        "You-He Jiang",
+        "Jia-Yi Nie",
+        "Wen-Shuang Li",
+        "Ying-Qi Peng",
+        "Tai-Yi Wang",
+        "Tong-Kai Yang",
+        "Bin-Hang Yuan"
+      ]
+    },
+    {
+      "title": "When Can Attention Heads Be Statically Defined?",
+      "source_url": "https://arxiv.org/abs/2609.34650",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Some attention heads learn similar patterns across inputs. Reusing these patterns could reduce training cost by avoiding repeated query-key score computation and softmax. Through controlled pretraining comparisons, we identify Selective Attention Freezing (SAF), which selects heads with low attention-pattern variance and replaces their attention weights with fitted post-softmax means halfway through training. We represent these fixed patterns with absolute-position and relative-distance preferences, reducing storage from quadratic to linear in sequence length. A fused kernel reconstructs the patterns and executes ordinary-attention and replaced heads together. At matched training-token budgets, replacing 25% of attention heads gives 1.056x faster post-replacement optimiser updates at 124M parameters and 4K context, with a 0.77% perplexity increase. At 1B and 8K context, post-replacement updates are 1.068x faster on four GPUs including communication, with a 0.51% perplexity increase. The resulting models also accelerate long-input finetuning and causal prefill. After associative-recall adaptation, the 124M model with 25% replacement generalises to more key-value pairs at a fixed length better than ordinary attention and two pruning controls.",
+      "canonical_id": "arXiv:2609.34650",
+      "arxiv_id": "2609.34650",
+      "authors": [
+        "Weixian Waylon Li",
+        "Yin-Tao Tai",
+        "Marcio Fonseca",
+        "Shay B. Cohen"
+      ]
+    },
+    {
+      "title": "CAST: Reconstruction-Coupled Acceleration of Interactive World Models",
+      "source_url": "https://arxiv.org/abs/2609.34144",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Interactive world models must respond quickly to controls while preserving scene consistency. Existing acceleration methods can miss heterogeneous control responses and spatial transport when recovering skipped features. We observe that interaction-induced feature changes correlate with approximation error, while low-frequency interpolation errors are phase-sensitive and show more predictable phase progression. These findings motivate CAST, a reconstruction-coupled inference framework. CAST selects anchors by interaction sensitivity and cross-layer coverage, reconstructs skipped residuals with frequency- and confidence-aware Phase-Aware Reconstruction (PAR), and coordinates historical KV routing according to downstream reconstruction responsibility. On Matrix-Game 3.0 and HY-World 1.5, CAST achieves 2.15x and 3.48x speedups, respectively, while maintaining visual quality close to Native (Figure 1). It also attains the highest VBench scores among compared methods and leads non-native baselines on seven and six of thirteen WorldMark dimensions, demonstrating a balance of generation speed, visual quality, and interactive responsiveness under real-time control. Code is available at https://github.com/lokiniuniu/CAST.",
+      "canonical_id": "arXiv:2609.34144",
+      "arxiv_id": "2609.34144",
+      "authors": [
+        "Le-Yang Chen",
+        "Jun-Yi Wu",
+        "Fan-Qing Kong",
+        "Shao-Qiu Zhang",
+        "Yu-Lun Zhang"
+      ]
+    },
+    {
+      "title": "MegaGraph: Towards Efficient Training of Large-Scale Graph Transformers with Automated Hybrid Parallelism",
+      "source_url": "https://arxiv.org/abs/2609.34420",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Graph Transformers (GTs) offer superior representation capabilities by overcoming the depth limitations and over-smoothing issues of traditional Graph Neural Networks (GNNs). However, scaling GTs to large graphs poses critical bottlenecks. Specifically, the attention score matrix and its associated topology-aware bias matrix jointly incur significant per-layer memory overhead, and heavy graph embedding layers result in severe workload imbalances. These characteristics are unique to GT training and are not addressed by parallelism techniques designed for either conventional GNNs or Transformers, making a dedicated solution necessary. This paper introduces MegaGraph, the first automated hybrid parallelism framework designed for efficient GT training. MegaGraph designs three specialized strategies, namely graph-aware context parallelism, heterogeneous pipeline parallelism, and hybrid data parallelism, to support efficient training on large-scale graphs. However, coordinating these three parallelism strategies yields an exponentially large configuration space. To address this complexity, an automatic search engine leverages precise cost models via a Profile - Model - Search workflow to identify the optimal parallelism configuration. Evaluations demonstrate that MegaGraph enables training on large-scale graphs where state-of-the-art baselines fail due to out-of-memory (OOM) errors. The framework reduces per-device peak memory by up to 77.8\\% and achieves up to 4.51$\\times$ training speedup while maintaining model accuracy.",
+      "canonical_id": "arXiv:2609.34420",
+      "arxiv_id": "2609.34420",
+      "authors": [
+        "Tong Qiao",
+        "Ao Zhou",
+        "Ying-Jie Qi",
+        "Chun-Ming Hu",
+        "Jian-Lei Yang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101037",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101037",
+        "title:inside the black box a comprehensive survey of explainable ai benchmarks protocols technical analysis and open gaps",
+        "url:https://doi.org/10.1016/j.cosrev.2026.101037"
+      ],
+      "record": {
+        "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+        "source_url": "https://doi.org/10.1016/j.cosrev.2026.101037",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.cosrev.2026.101037",
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+        "authors": [
+          "Habib Khan",
+          "F. Alqahtani",
+          "Weiwei Jiang",
+          "M. Ali",
+          "Sareer Ul Amin",
+          "Jakeoung Koo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115976",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115976",
+        "title:transformers in protein informatics a survey of structure prediction function annotation interactions and drug discovery",
+        "url:https://doi.org/10.1016/j.engappai.2026.115976"
+      ],
+      "record": {
+        "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.115976",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.115976",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+        "authors": [
+          "Yu-Min Zhang",
+          "Xiaowen Ling",
+          "Zhiqiang Li",
+          "Liang-Liang Song",
+          "Yifan Jia",
+          "Yan-Bin Wang",
+          "Zhuhong You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.istruc.2026.112910",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.istruc.2026.112910",
+        "title:rapid displacement time history prediction for urban reinforced concrete frames using gated reparameterized temporal fusion and structural similaritybased extrapolation networks",
+        "url:https://doi.org/10.1016/j.istruc.2026.112910"
+      ],
+      "record": {
+        "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+        "source_url": "https://doi.org/10.1016/j.istruc.2026.112910",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.istruc.2026.112910",
+        "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+        "authors": [
+          "X. Song",
+          "Senna Wang",
+          "Xiao-Wei Cheng",
+          "Haoyou Zhang",
+          "Ruijie Guo",
+          "Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3717392",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3717392",
+        "title:the next memory wall why moving data will define the future of ai inference",
+        "url:https://doi.org/10.1109/MC.2026.3717392"
+      ],
+      "record": {
+        "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+        "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+        "doi": "10.1109/MC.2026.3717392",
+        "canonical_id": "DOI:10.1109/MC.2026.3717392",
+        "authors": [
+          "Partha P. Maji",
+          "Timothy M. Jones",
+          "Robert D. Mullins"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843852",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843852",
+        "title:a few gpus a whole lotta scale faithful llm training emulation with crystalllm",
+        "url:https://doi.org/10.1145/3830418.3843852"
+      ],
+      "record": {
+        "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with CrystalLLM",
+        "source_url": "https://doi.org/10.1145/3830418.3843852",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843852",
+        "canonical_id": "DOI:10.1145/3830418.3843852",
+        "authors": [
+          "Shao-Ke Xi",
+          "ChonLam Lao",
+          "Bo-Yi Jia",
+          "Jia-Qi Gao",
+          "Zhi-Peng Zhang",
+          "Jia-Min Cao",
+          "Brian Sutioso",
+          "Er-Ci Xu",
+          "Min-Lan Yu",
+          "Kui Ren",
+          "Yong Li",
+          "Zheng-Ping Qian",
+          "En-Nan Zhai",
+          "Jing-Ren Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843857",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843857",
+        "title:taming dynamism on gpus crosssm kernel fusion via sm cooperation and justintime reduction",
+        "url:https://doi.org/10.1145/3830418.3843857"
+      ],
+      "record": {
+        "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+        "source_url": "https://doi.org/10.1145/3830418.3843857",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843857",
+        "canonical_id": "DOI:10.1145/3830418.3843857",
+        "authors": [
+          "Jing-Kai He",
+          "Guang-Da Sun",
+          "Tian-Jian Li",
+          "Dong Du",
+          "Yu-Bin Xia",
+          "Hai-Bo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34272",
+      "identity_tokens": [
+        "id:arXiv:2609.34272",
+        "title:broken symmetry in bf16 attention why flashattention gradients blow up late in training",
+        "url:https://arxiv.org/abs/2609.34272"
+      ],
+      "record": {
+        "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training",
+        "source_url": "https://arxiv.org/abs/2609.34272",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "BF16 is now standard in large-scale pretraining, including in fused attention kernels such as FlashAttention, and these kernels are widely trusted. When we used FlashAttention-3 to pretrain a 450M-parameter transformer on 50B tokens, however, we ran into a problem: training was healthy for 25B tokens, then the gradient norm grew a thousandfold and the loss ended 0.2 nats above FP32 attention, without a single NaN. Recomputing the attention backward of just two layers in FP32 removes almost all of the excess gradient. Part of the cause is known: a fused multiply-add in the forward softmax, so far treated as an extreme-input NaN case and never fixed in FlashAttention-3. Repairing it stops the blow-up, but the query gradient is still wrong by more than its own size, and training still drives attention logits to thousands of times their size under accurate gradients. The remaining error comes from a broken conservation law. The softmax score gradient sums to zero along every row, which makes the query gradient blind to where the keys sit as a group; rounding it to BF16 leaves a small nonzero sum that leaks the mean key into the gradient, and the leak grows exactly as late training makes keys large and attention sharp. We introduce GProj (gauge projection), which restores the zero sum after the cast with two rank-one corrections per row. It cuts the remaining median query/key gradient errors from 219%/13% to 0.34%/0.37%, on par with FP32 attention, for 4.7% more time per training step. In matched from-scratch runs it trains to the same loss as FP32 attention, while FlashAttention-3 and key smoothing both destabilize.",
+        "canonical_id": "arXiv:2609.34272",
+        "arxiv_id": "2609.34272",
+        "authors": [
+          "Jun-Lin Chen",
+          "Dai-Ze Dong",
+          "Huan-Wei Di",
+          "Hao-Long Jia",
+          "Jia-Wei Wu",
+          "Hao-Tian Xie",
+          "Ming-Kai Zheng",
+          "Yang Li",
+          "Le-Shang Chen",
+          "Hui-Shu Wang",
+          "E. Xing",
+          "Hong-Yi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35115",
+      "identity_tokens": [
+        "id:arXiv:2609.35115",
+        "title:duplexcadence exact state and execution from a speech models declared timelines",
+        "url:https://arxiv.org/abs/2609.35115"
+      ],
+      "record": {
+        "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+        "source_url": "https://arxiv.org/abs/2609.35115",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+        "canonical_id": "arXiv:2609.35115",
+        "arxiv_id": "2609.35115",
+        "authors": [
+          "Hai-Xiao Gao",
+          "Yi-Min Zheng",
+          "Lin-You Xiao",
+          "Ze-Ke Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34556",
+      "identity_tokens": [
+        "id:arXiv:2609.34556",
+        "title:rope is dead long live rope towards scalable dataaware positional encodings",
+        "url:https://arxiv.org/abs/2609.34556"
+      ],
+      "record": {
+        "title": "RoPE is Dead, Long Live RoPE: Towards Scalable Data-aware Positional Encodings",
+        "source_url": "https://arxiv.org/abs/2609.34556",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Transformers process tokens without any inherent notion of order, making positional encoding a fundamental requirement rather than an architectural refinement. Rotary Position Embedding (RoPE) has become the default positional encoding in modern language models, yet it is heavily biased toward nearby tokens. Existing alternatives have been evaluated under different settings, leaving the literature fragmented and without a clear replacement. We bring structure to this landscape by examining a specific weakness of RoPE: its slow frequency bands, whose wavelengths exceed the training context and expose models to unseen angles during extrapolation. We therefore introduce Data aware RoPE (DaRoPE), which preserves standard RoPE on the fast bands but replaces absolute position on the slow bands with bounded coordinates learned from contextual representations. Therefore, the slow-band geometry depends on the data rather than only on positional distance. We compare representative encodings under matched conditions across synthetic tasks, symbolic music, genomics, neural signals, and language models spanning 124M to 50B parameters. Across these experiments, DaRoPE leads on non-text benchmarks, mitigates recency bias, while remaining best or on par in language modeling and length extrapolation. Moreover, the learned coordinates also make the mechanism interpretable, revealing how attention layers leverage contextual information beyond token distance. Together, these results support DaRoPE as the best overall default among the evaluated methods, when there is no domain-specific reasons to prefer another.",
+        "canonical_id": "arXiv:2609.34556",
+        "arxiv_id": "2609.34556",
+        "authors": [
+          "Jarod Lévy",
+          "Mathurin Videau",
+          "Jad Yehya",
+          "Jean-Rémi King",
+          "Stéphane d'Ascoli",
+          "Thomas Moreau"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34653",
+      "identity_tokens": [
+        "id:arXiv:2609.34653",
+        "title:omnitide codesigning algorithms and systems for efficient ondevice omnillm streaming",
+        "url:https://arxiv.org/abs/2609.34653"
+      ],
+      "record": {
+        "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+        "source_url": "https://arxiv.org/abs/2609.34653",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+        "canonical_id": "arXiv:2609.34653",
+        "arxiv_id": "2609.34653",
+        "authors": [
+          "Zong-Shang Shen",
+          "Wang-Song Yin",
+          "Da-Liang Xu",
+          "Meng-Wei Xu",
+          "Xuan-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35378",
+      "identity_tokens": [
+        "id:arXiv:2609.35378",
+        "title:multilinguality in hybrid attention llms",
+        "url:https://arxiv.org/abs/2609.35378"
+      ],
+      "record": {
+        "title": "Multilinguality in Hybrid Attention LLMs",
+        "source_url": "https://arxiv.org/abs/2609.35378",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "In response to the growing demand for long sequences in agentic and reasoning use cases, many state-of-the-art LLMs combine multiple variants of attention to mitigate the quadratic complexity of traditional softmax attention. These hybrid attention LLMs aim to balance the strengths and limitations of full attention and alternatives based on recurrence. This work presents a first study of how hybrid attention impacts the multilinguality of LLMs. Beyond the impact on long sequences in poorly tokenized languages, our study is motivated by the possibility that the inductive biases of the recurrent state alter linguistic processing. Our interpretability analysis confirms this, showing that cross-lingual representations in hybrid models develop in patterns tied to the ordering of recurrent and full-attention layers. Across diverse models, we notably observe a pronounced spike in cross-lingual alignment around the first full-attention layer. These findings lead us to question the conventional ordering of attention layers. In distillation experiments on multilingual data, all alternative layer orderings outperform the standard throughout training, learning up to 2.5X faster. These stark, replicable results prompt our theory that multilingual models would benefit from starting with a full-attention layer rather than recurrent layers.",
+        "canonical_id": "arXiv:2609.35378",
+        "arxiv_id": "2609.35378",
+        "authors": [
+          "Lucas Bandarkar",
+          "Jun-Ling Hu",
+          "Chen-Yuan Yang",
+          "Mohsen Fayyaz",
+          "Nan-Yun Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34292",
+      "identity_tokens": [
+        "id:arXiv:2609.34292",
+        "title:preregistered tests of solidstatephysicsinspired llm compression a clusterlevel negative result at smalllanguagemodel scale",
+        "url:https://arxiv.org/abs/2609.34292"
+      ],
+      "record": {
+        "title": "Pre-registered tests of solid-state-physics-inspired LLM compression: a cluster-level negative result at small-language-model scale",
+        "source_url": "https://arxiv.org/abs/2609.34292",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "We report a three-month autonomous research-agent program testing five solid-state-physics-inspired compression mappings on pretrained language models, with predictions committed to git before any pilot data and a 3-sigma gate deciding PASS or SHELVE. The common anchor -- area-law / Kohn-nearsighted decay of the one-particle density matrix -- has a distance face (P001 Wannier, P002 tight-binding) and a rank face (P003 DMRG-truncated MLPs, P005 Wilson-RG, P011 tensor-train embeddings). P005 was pre-empted at Phase 1; three of four Phase-3 pilots were falsified. On the attention face, GPT-2-medium attention-versus-distance is best fit by a stretched exponential in 12 of 16 median-layer heads once probe padding is excluded, and a tight-binding cutoff costs +96% perplexity (P002); on Pythia-160M the Wannier sparsity 0.054 +/- 0.004 is indistinguishable from PCA, random-Haar and identity baselines (P001). On the rank face, per-token tensor-train bond dimension does not track surprisal (r = 0.016 vs a pre-registered 0.65) and the format inflates rather than compresses (P011). P003 is mixed: its scaling claim shelved (r = -0.434), its MPO premise died at stage-0, and its cross-paper check, r = 0.523 as first written, collapses to 0.047 under the same correction, leaving both cross-paper checks null. The results invert the pre-registered prediction that most attention heads behave like Kohn-nearsighted insulators, pointing instead to critical, glassy or heavy-tailed regimes; the inversion is specific to the<= 350M scale tested, while the rank-face no-gain result held to 7-8B. We contribute the pre-registration + 3-sigma + cluster-framing + append-only-catalogue discipline -- including why our own enforcement gate was designed but not deployed -- four pre-registered negative results with full data release, and the inversion. The catalogue holds eighteen concluded studies, seventeen negative.",
+        "canonical_id": "arXiv:2609.34292",
+        "arxiv_id": "2609.34292",
+        "authors": [
+          "Jun-Qiang Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35110",
+      "identity_tokens": [
+        "id:arXiv:2609.35110",
+        "title:solh3 recursive selfimprovement for minimaxh3 inference acceleration on solengine across cloud and edge",
+        "url:https://arxiv.org/abs/2609.35110"
+      ],
+      "record": {
+        "title": "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge",
+        "source_url": "https://arxiv.org/abs/2609.35110",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Video diffusion models are rapidly scaling and exhibiting enhanced generation capabilities. Among these recent advancements, MiniMax-H3 stands out as a highly capable, production-level open-source model. However, its 33-billion parameters and multi-step iterative denoising process introduce substantial computational overhead. Consequently, their practical production is hindered by generation latency in the cloud deployment like NVIDIA-GB200, alongside strict memory limits that pose further challenges at the edge device like DGX-Spark. To address these diverse hardware bottlenecks from cloud to edge device, we present a full-stack inference pipeline that integrates efficient algorithmic design with optimized operator implementations. Algorithmically, we introduce a cross-resolution two-stage generation scheduler that exploits the step-wise nature of diffusion: early low-resolution steps rapidly establish the global layout, while later high-resolution steps focus refinements of local and perceptual details. These stages are connected by a learned latent-to-latent mapping module, completely eliminating the computationally expensive VAE decode-reencode cycle for resolution transferring cross different resolutions. For operator implementation, we deploy a Recursive Self-Improvement (RSI) loop that searches kernel fusions and memory layouts, evaluating latency together with numerical agreement. Together, these optimizations deliver up to 30x end-to-end speedup and 20% lower memory: a 5-second 1344x768 video with audio is generated 3.5x faster than real time on an 8xGB200 node, and in under a minute fully memory-resident on a single DGX Spark.",
+        "canonical_id": "arXiv:2609.35110",
+        "arxiv_id": "2609.35110",
+        "authors": [
+          "Yi-Tong Li",
+          "Jin-Cheng Yu",
+          "Jun-Song Chen",
+          "Hao-Peng Li",
+          "Shu-Chen Xue",
+          "Hao-Zhe Liu",
+          "Ping Luo",
+          "Song Han",
+          "En-Ze Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34162",
+      "identity_tokens": [
+        "id:arXiv:2609.34162",
+        "title:slidedp scaling hostresident llm finetuning across multiple gpus",
+        "url:https://arxiv.org/abs/2609.34162"
+      ],
+      "record": {
+        "title": "SlideDP: Scaling Host-Resident LLM Fine-Tuning Across Multiple GPUs",
+        "source_url": "https://arxiv.org/abs/2609.34162",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Host-resident layer streaming enables full-parameter LLM fine-tuning beyond GPU memory, but data-parallel ranks compete for shared host resources. Replicated transfers amplify traffic, while strong scaling can expose host work as computation windows shrink. We present SlideDP, a synchronous data-parallel runtime for shared-host multi-GPU systems. It maintains one authoritative host state, decouples communication routes from state layout, and pipelines parameter delivery, gradient aggregation, and CPU updates across ranks and chunks. An analytical step-time model characterizes resource bottlenecks and pipeline exposure; runtime measurements guide communication, chunking, and activation policies under a GPU memory budget. In matched-batch sweeps, SlideDP achieves geometric-mean throughput ratios of 1.46-2.64$\\times$ over SlideFormer, MegaTrain, and ZeRO-Offload. On four H100s, SlideDP approaches GPU-resident FSDP2 throughput for Qwen3-14B at a smaller batch size. With a larger batch, it processes over 1M tokens per step and exceeds FSDP2's measured peak throughput by 11.2%. Separately, it supports 256K-token sequences for the same model and fine-tunes Qwen2.5-72B on four RTX 4090 GPUs. Project page: https://github.com/RegiaYoung/SlideDP.",
+        "canonical_id": "arXiv:2609.34162",
+        "arxiv_id": "2609.34162",
+        "authors": [
+          "Rui-Jia Yang",
+          "Shi-Yuan Lin",
+          "Yu-Long Ao",
+          "Zhi-Yu Li",
+          "Ying-Li Zhao",
+          "Xian-Duo Li",
+          "Yong-Hua Lin",
+          "Ze-Yi Wen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34902",
+      "identity_tokens": [
+        "id:arXiv:2609.34902",
+        "title:dualstream simultaneous translation via 2d grid attention",
+        "url:https://arxiv.org/abs/2609.34902"
+      ],
+      "record": {
+        "title": "Dual-Stream Simultaneous Translation via 2D Grid Attention",
+        "source_url": "https://arxiv.org/abs/2609.34902",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Simultaneous machine translation must generate target tokens before the source input is complete. Existing approaches address this through post-hoc read-write policies, leaving the attention mechanism unaware of bidirectional stream dependencies. We propose a dual-stream attention framework that represents source and target streams as a two-dimensional grid of hidden states and models their interaction through four structurally distinct attention types merged via joint QK Softmax normalization. Two approximations---broadcast and Hadamard---reduce the per-layer complexity from O(X^2Y+XY^2) to O(X^2+Y^2+XY) with provably decaying error. Training uses a self-guided loop: a per-cell loss heatmap drives dynamic-programming path recovery, which generates read/write decision supervision labels without external alignment. An incremental KV cache with anchored rotary position embeddings enables efficient streaming inference. On Chinese-to-English simultaneous translation, the proposed model outperforms the Wait-k baseline by +5.66 BLEURT and +10.36 COMET at comparable latency, and surpasses the non-streaming reference on COMET at a fraction of the response delay.",
+        "canonical_id": "arXiv:2609.34902",
+        "arxiv_id": "2609.34902",
+        "authors": [
+          "Yu Pu",
+          "Wei-Qiang Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35140",
+      "identity_tokens": [
+        "id:arXiv:2609.35140",
+        "title:arealtik stateful agentic optimization of unified rl kernels through an optimization ir",
+        "url:https://arxiv.org/abs/2609.35140"
+      ],
+      "record": {
+        "title": "AReaL-TIK: Stateful Agentic Optimization of Unified RL Kernels through an Optimization IR",
+        "source_url": "https://arxiv.org/abs/2609.35140",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Reinforcement learning (RL) post-training often uses distinct GPU kernels for rollout and policy update. In synchronous PPO and GRPO, numerical disagreement can perturb ratios between current token probabilities and those assigned during rollout. Recomputing rollout log-probabilities with the policy-update backend avoids this discrepancy but adds a forward pass. Bitwise-consistent unified kernels permit reuse when the policy snapshot and probability processing match the objective. Their optimization must preserve agreement across distinct execution regimes. We present KernelBraid, an agentic framework starting from a hand-tuned, bitwise-consistent implementation. Its optimization intermediate representation (IR) organizes source-code search by linking implementations and modifications to numerical requirements, workload measurements, and derivation history. The agent coordinates changes and retains verified intermediates for further exploration; promotion requires passing correctness checks and improving aggregate latency within per-workload limits. Across 12 end-to-end training configurations on H20, KernelBraid achieves 1.10x average throughput relative to AReaL with log-probability recomputation, and the mean training-reward ratio rounds to 1.00x. Isolated-layer profiling yields 1.40x average speedup in summed phase time across 15 model-GPU pairs. Operator-level evaluation covers correctness and performance for 10 operators on A100, H20, and H200, all passing the prescribed bitwise checks. Unified-attention search achieves 2.52x speedup in summed workload latency over the starting implementation using 7M LLM tokens; ablations assess the contributions of retained evidence and branch exploration to search efficiency and attained performance. Our code is open-sourced at https://github.com/areal-project/AReaL-TIK.",
+        "canonical_id": "arXiv:2609.35140",
+        "arxiv_id": "2609.35140",
+        "authors": [
+          "Ran Yan",
+          "You-He Jiang",
+          "Jia-Yi Nie",
+          "Wen-Shuang Li",
+          "Ying-Qi Peng",
+          "Tai-Yi Wang",
+          "Tong-Kai Yang",
+          "Bin-Hang Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34650",
+      "identity_tokens": [
+        "id:arXiv:2609.34650",
+        "title:when can attention heads be statically defined",
+        "url:https://arxiv.org/abs/2609.34650"
+      ],
+      "record": {
+        "title": "When Can Attention Heads Be Statically Defined?",
+        "source_url": "https://arxiv.org/abs/2609.34650",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Some attention heads learn similar patterns across inputs. Reusing these patterns could reduce training cost by avoiding repeated query-key score computation and softmax. Through controlled pretraining comparisons, we identify Selective Attention Freezing (SAF), which selects heads with low attention-pattern variance and replaces their attention weights with fitted post-softmax means halfway through training. We represent these fixed patterns with absolute-position and relative-distance preferences, reducing storage from quadratic to linear in sequence length. A fused kernel reconstructs the patterns and executes ordinary-attention and replaced heads together. At matched training-token budgets, replacing 25% of attention heads gives 1.056x faster post-replacement optimiser updates at 124M parameters and 4K context, with a 0.77% perplexity increase. At 1B and 8K context, post-replacement updates are 1.068x faster on four GPUs including communication, with a 0.51% perplexity increase. The resulting models also accelerate long-input finetuning and causal prefill. After associative-recall adaptation, the 124M model with 25% replacement generalises to more key-value pairs at a fixed length better than ordinary attention and two pruning controls.",
+        "canonical_id": "arXiv:2609.34650",
+        "arxiv_id": "2609.34650",
+        "authors": [
+          "Weixian Waylon Li",
+          "Yin-Tao Tai",
+          "Marcio Fonseca",
+          "Shay B. Cohen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34144",
+      "identity_tokens": [
+        "id:arXiv:2609.34144",
+        "title:cast reconstructioncoupled acceleration of interactive world models",
+        "url:https://arxiv.org/abs/2609.34144"
+      ],
+      "record": {
+        "title": "CAST: Reconstruction-Coupled Acceleration of Interactive World Models",
+        "source_url": "https://arxiv.org/abs/2609.34144",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Interactive world models must respond quickly to controls while preserving scene consistency. Existing acceleration methods can miss heterogeneous control responses and spatial transport when recovering skipped features. We observe that interaction-induced feature changes correlate with approximation error, while low-frequency interpolation errors are phase-sensitive and show more predictable phase progression. These findings motivate CAST, a reconstruction-coupled inference framework. CAST selects anchors by interaction sensitivity and cross-layer coverage, reconstructs skipped residuals with frequency- and confidence-aware Phase-Aware Reconstruction (PAR), and coordinates historical KV routing according to downstream reconstruction responsibility. On Matrix-Game 3.0 and HY-World 1.5, CAST achieves 2.15x and 3.48x speedups, respectively, while maintaining visual quality close to Native (Figure 1). It also attains the highest VBench scores among compared methods and leads non-native baselines on seven and six of thirteen WorldMark dimensions, demonstrating a balance of generation speed, visual quality, and interactive responsiveness under real-time control. Code is available at https://github.com/lokiniuniu/CAST.",
+        "canonical_id": "arXiv:2609.34144",
+        "arxiv_id": "2609.34144",
+        "authors": [
+          "Le-Yang Chen",
+          "Jun-Yi Wu",
+          "Fan-Qing Kong",
+          "Shao-Qiu Zhang",
+          "Yu-Lun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34420",
+      "identity_tokens": [
+        "id:arXiv:2609.34420",
+        "title:megagraph towards efficient training of largescale graph transformers with automated hybrid parallelism",
+        "url:https://arxiv.org/abs/2609.34420"
+      ],
+      "record": {
+        "title": "MegaGraph: Towards Efficient Training of Large-Scale Graph Transformers with Automated Hybrid Parallelism",
+        "source_url": "https://arxiv.org/abs/2609.34420",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Graph Transformers (GTs) offer superior representation capabilities by overcoming the depth limitations and over-smoothing issues of traditional Graph Neural Networks (GNNs). However, scaling GTs to large graphs poses critical bottlenecks. Specifically, the attention score matrix and its associated topology-aware bias matrix jointly incur significant per-layer memory overhead, and heavy graph embedding layers result in severe workload imbalances. These characteristics are unique to GT training and are not addressed by parallelism techniques designed for either conventional GNNs or Transformers, making a dedicated solution necessary. This paper introduces MegaGraph, the first automated hybrid parallelism framework designed for efficient GT training. MegaGraph designs three specialized strategies, namely graph-aware context parallelism, heterogeneous pipeline parallelism, and hybrid data parallelism, to support efficient training on large-scale graphs. However, coordinating these three parallelism strategies yields an exponentially large configuration space. To address this complexity, an automatic search engine leverages precise cost models via a Profile - Model - Search workflow to identify the optimal parallelism configuration. Evaluations demonstrate that MegaGraph enables training on large-scale graphs where state-of-the-art baselines fail due to out-of-memory (OOM) errors. The framework reduces per-device peak memory by up to 77.8\\% and achieves up to 4.51$\\times$ training speedup while maintaining model accuracy.",
+        "canonical_id": "arXiv:2609.34420",
+        "arxiv_id": "2609.34420",
+        "authors": [
+          "Tong Qiao",
+          "Ao Zhou",
+          "Ying-Jie Qi",
+          "Chun-Ming Hu",
+          "Jian-Lei Yang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:002542117d8517fd35ae474a38cd6db8d2b92b84dd220b82468861ba8ca87a68",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

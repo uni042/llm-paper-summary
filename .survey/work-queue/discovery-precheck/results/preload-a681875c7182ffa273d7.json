@@ -1,0 +1,842 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-a681875c7182ffa273d7",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-a681875c7182ffa273d7",
+  "axis": "forward citations of SmoothQuant efficient LLM inference quantization",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2211.10438/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:50:49.878408+00:00",
+  "preload_id": "preload-a681875c7182ffa273d7",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+      "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.compeleceng.2026.111406",
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+      "authors": [
+        "Muhammed Golec",
+        "S. Melhem",
+        "Yaser M. Khamayseh",
+        "Abdulmalik Alwarafy",
+        "N. Al-Dhahir"
+      ]
+    },
+    {
+      "title": "Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models",
+      "source_url": "https://doi.org/10.1109/TCAD.2026.3663251",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Logarithmic number system (LNS) offers a more efficient quantization format than the integer system for data in large language models (LLMs), with inherently simple implementation for multiplication operations. However, the addition operation in LNS is relatively complex and difficult to balance between precision and hardware overhead. In this work, we observe that the input patterns of the computing units in the inference phase of LLMs exhibit highly skewed frequencies, resulting in nonuniform contributions to the final error. Based on this observation, we propose the beyond uniform approximation (BUA) to enhance the efficiency of LNS additions. From the perspective of lookup tables (LUTs), we propose LUT reshaping to efficiently reduce the approximation error, as well as LUT trimming, a heuristic method for simplifying LUTs within a given error budget. From the perspective of the entire LNS adder, we introduce auxiliary circuit approximation (ACA), which further reduces the hardware cost by simplifying computing data paths that are less frequently activated. Together, these techniques enable efficient approximate computing in LNS. Experimental results indicate that, compared to the multiply accumulate (MAC) unit using the naive LNS adder, BUA significantly reduces perplexity across various LLMs while reducing area-delay product (ADP) by 26.7% and power-delay product (PDP) by 30.8%. Compared to the traditional integer MAC unit, LNS with BUA achieves higher zero-shot accuracy while reducing ADP by 35.1% and PDP by 44.0%. Moreover, we also offer additional approximation options that provide greater hardware savings with only minor degradation in accuracy.",
+      "doi": "10.1109/TCAD.2026.3663251",
+      "canonical_id": "DOI:10.1109/TCAD.2026.3663251",
+      "authors": [
+        "Xin-Kuang Geng",
+        "Si-Ting Liu",
+        "Hui Wang",
+        "Lei-Bo Liu",
+        "Jie Han",
+        "Hong-Lan Jiang"
+      ]
+    },
+    {
+      "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.115411",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+      "authors": [
+        "Jing Xu",
+        "Qingqing Yang",
+        "Zhiwei Yang",
+        "Yingying Gao",
+        "Kewei Yang",
+        "Jiang Jiang"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.116054",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+      "authors": [
+        "Meng-Ke Wang",
+        "Min Gan",
+        "Fang Yuan",
+        "Jian-Nan Su"
+      ]
+    },
+    {
+      "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+      "source_url": "https://doi.org/10.1109/lcn67947.2026.11660767",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1109/lcn67947.2026.11660767",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+      "authors": [
+        "Shengzhe Lyu",
+        "Qian-Ren Li",
+        "Wei-Tao Xu",
+        "Chengwen Luo"
+      ]
+    },
+    {
+      "title": "TensorDex: A Compact, Tensor-Centric Storage System for Modern AI Models",
+      "source_url": "https://doi.org/10.1145/3830418.3843872",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843872",
+      "canonical_id": "DOI:10.1145/3830418.3843872",
+      "authors": [
+        "Ting-Feng Lan",
+        "Zi-Rui Wang",
+        "Yun-Jia Zheng",
+        "Zhao-Yuan Su",
+        "Jun-Cheng Yang",
+        "Yue Cheng"
+      ]
+    },
+    {
+      "title": "Continuous Variational Synthesis",
+      "source_url": "https://arxiv.org/abs/2609.35083",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Biological machine learning was long bottlenecked by the ability to synthesize designed DNA. Variational synthesis models control chemical reactions to physically manufacture quadrillions of designed sequences in DNA. However, training these generative models is challenging: constraints on chemical synthesis can force many parameters into a discrete space, limiting the ability to pre-train and fine-tune. In this article we train ``free''variational synthesis models using stochastic gradient descent in continuous space, and then discretize with post-training quantization to impose hardware and wetware constraints. This enables variational synthesis models to satisfy stringent reward criteria, while still synthesizing diverse designs, achieving a strictly dominating quality-diversity Pareto frontier. We demonstrate by training variational synthesis models of enzymes, peptides, antibody CDRH3s, and regulatory DNA elements. In silico performance is maintained in vitro.",
+      "canonical_id": "arXiv:2609.35083",
+      "arxiv_id": "2609.35083",
+      "authors": [
+        "A. N. Amin",
+        "Mattia G. Gollub",
+        "Andrei Slabodkin",
+        "Elizabeth B. Wood",
+        "Eli N. Weinstein"
+      ]
+    },
+    {
+      "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+      "source_url": "https://arxiv.org/abs/2609.34653",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+      "canonical_id": "arXiv:2609.34653",
+      "arxiv_id": "2609.34653",
+      "authors": [
+        "Zong-Shang Shen",
+        "Wang-Song Yin",
+        "Da-Liang Xu",
+        "Meng-Wei Xu",
+        "Xuan-Zhe Liu"
+      ]
+    },
+    {
+      "title": "From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers",
+      "source_url": "https://arxiv.org/abs/2609.34866",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Most post-training quantization pipelines fit each weight matrix to its pretrained counterpart, one matrix at a time. Whether that proxy tracks what an attention block actually computes, or how errors in the Q, K and V projections compound inside the softmax, is rarely checked. We write the objective on the attention output instead, over all three projections at once, and reuse it throughout the pipeline. JAB defines one scalar loss over the joint Q, K, V weights of a block, evaluated against the block's real causally-masked attention output, and uses it twice: to fit the quantized weights (GPTQ warm start, then STE with learnable scales), and to score the block for a multiple-choice knapsack allocation. On attention-only quantization of Mistral-7B this works. At 3 bits JAB recovers 77-90% of the gap between uniform GPTQ and full precision, and its sensitivity estimate tracks an oracle costing 73 forward passes to within a fraction of a point. It stops working once MLP layers enter the allocation. A role-aware offset rule needing no sensitivity estimate at all beats JAB on GPT-2's MLP and on the full Mistral-7B model: with a 3-bit floor it quantizes 96.4% of the weights to 4.5 bits per parameter at 6.933 perplexity, within 4.4% of full precision (6.643) at 3.56x compression, against 7.158 for JAB at the same budget. Which matrix a weight sits in matters more than any sensitivity estimate we computed. Two things came out sideways. Block-local reconstruction is an unreliable proxy for end-to-end perplexity: one run improved a block's own objective 4.6x while perplexity rose 32x, which is why every allocation here is validated end-to-end. And on attention-only quantization, fine-tuning moved weights farther from their pretrained values while pulling attention outputs closer, with net gains. Post-training seems to recover attention behavior, not weights.",
+      "canonical_id": "arXiv:2609.34866",
+      "arxiv_id": "2609.34866",
+      "authors": [
+        "Nafiseh HosseinpourFardi",
+        "Negar Alihadi",
+        "Mahmoudreza Babaei",
+        "M. Hosseini",
+        "Adrian Weller"
+      ]
+    },
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ]
+    },
+    {
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes.",
+      "canonical_id": "arXiv:2609.34680",
+      "arxiv_id": "2609.34680",
+      "authors": [
+        "Qiu-Lin Shang",
+        "Zhou-Tong Wu",
+        "Jie Hu",
+        "Kun Yuan"
+      ]
+    },
+    {
+      "title": "QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34259",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Large language models (LLMs) achieve strong performance across many tasks but rely on dense multiply-accumulate (MAC) operations during inference, resulting in high energy cost. Spiking neural networks (SNNs) offer an event-driven alternative in which synaptic integration uses lightweight accumulation. However, spike-driven LLM inference remains difficult because outlier-heavy activations typically require long firing windows or auxiliary non-spiking paths. We propose QuantaSpike, a short-window spike-driven quantization framework for LLMs built around Logarithmic Ternary Integrate-and-Fire (LTIF) neurons. LTIF uses ternary events with power-of-two membrane-response quanta, improving the information represented by each firing step while retaining shift-ACC-compatible computation. QuantaSpike combines this neuron with group-adaptive gain and selective outlier admission: normal values use residual LTIF steps, whereas admitted outliers receive one additional onset spike before entering the same residual dynamics. Across OPT and Llama-2, QuantaSpike achieves state-of-the-art or competitive perplexity and zero-shot accuracy among spike-driven LLM quantization methods. It also transfers to newer dense LLMs, remaining close to the FP16 reference on Llama-3-8B and Qwen3-8B under the same four-step firing window. Analytical linear-energy projections show that QuantaSpike reduces the energy of one linear transformation by about $80.0\\%$ on OPT models and $67.1\\%$ on Llama-2 models relative to SpikeQuant, providing an accurate and energy-efficient spike-driven path for LLM inference.",
+      "canonical_id": "arXiv:2609.34259",
+      "arxiv_id": "2609.34259",
+      "authors": [
+        "Bang Hu",
+        "Guo-Wei Zhu",
+        "Chang-Ze Lv",
+        "Xiao-Qing Zheng",
+        "Feng-Zhe Zhang",
+        "Fan Zhang",
+        "Wei Cao"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://doi.org/10.1145/3832810.3832854",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "doi": "10.1145/3832810.3832854",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yi-Qi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "BR-MoE: A Memory-Budget-Aware Co-Design Framework for Efficient MoE Inference on Resource-Constrained GPUs",
+      "source_url": "https://doi.org/10.1145/3832810.3832877",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The Mixture-of-Experts (MoE) architecture has become the dominant paradigm for scaling Large Language Models, yet its explosive parameter growth routinely overflows the GPU memory budget. Weight quantization offers a practical way to fit these models into limited GPU memory, but reducing precision below 4 bits causes severe accuracy loss. Existing approaches, mixed-precision quantization and low-rank compensation, have been treated as independent strategies, overlooking the fact that both draw from the same hardware memory budget. Consequently, optimizing either dimension in isolation systematically overshoots on some experts while starving others, leaving the achievable memory–accuracy frontier well below what a joint allocation could reach. We present BR-MoE, a memory-budget-aware co-design framework that treats per-expert bit-width and compensator rank as joint variables under a single memory constraint. Guided by a lightweight layer-wise sensitivity proxy, BR-MoE casts the global allocation task as a Multiple-Choice Knapsack Problem (MCKP) and solves it to optimality via Integer Linear Programming (ILP). To turn memory savings into real inference speedups, BR-MoE further integrates a fused grouped expert GEMM backend that consolidates fragmented per-expert computations into bandwidth-efficient kernels. Evaluated across multiple MoE models on NVIDIA A100 GPUs, BR-MoE establishes a superior memory–accuracy trade-off over state-of-the-art quantization methods, delivers substantial end-to-end inference speedups, and re-derives an optimal allocation for any new memory budget in seconds, making it a deploy-time tunable system rather than a one-shot compression recipe.",
+      "doi": "10.1145/3832810.3832877",
+      "canonical_id": "DOI:10.1145/3832810.3832877",
+      "authors": [
+        "Lei Jiang",
+        "Jing-Wei Sun",
+        "Jun-Qing Lin",
+        "Han Li",
+        "Ming Lu",
+        "Ying-Hua Zhou",
+        "Guang-Zhong Sun"
+      ]
+    },
+    {
+      "title": "PulseQuant: Propagation-Guided Subspace Correction for 4-Bit Video Diffusion Transformers",
+      "source_url": "https://arxiv.org/abs/2609.33384",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Quantization errors in video diffusion transformers can be amplified or attenuated by subsequent denoising updates, making local reconstruction error an incomplete predictor of final impact. We introduce PulseQuant, a 4-bit post-training quantization method that combines trajectory sensitivity with activation geometry to guide offline calibration. Isolated block--step interventions estimate propagation risk, which prioritizes sensitive trajectory states during row-radius selection. With these radii fixed, response-subspace correction uses neighboring-code edits to reduce residual components along dominant activation directions. Both stages preserve the original 4-bit weight representation. Controlled interventions show that short-horizon propagated error predicts final latent error more reliably than immediate block-output error, supporting calibration beyond local reconstruction objectives. Evaluations on Wan models, Self Forcing, and MiniMax-H3 demonstrate improvements in key consistency and dense-reference metrics while remaining competitive on other attributes across model scales and generation paradigms.",
+      "canonical_id": "arXiv:2609.33384",
+      "arxiv_id": "2609.33384",
+      "authors": [
+        "Yu-Tong Wang",
+        "Xing-Tong Ge",
+        "En-Huai Liu",
+        "Yun-Ke Wang",
+        "Tian-Fan Xue",
+        "Xin-Yuan Chen",
+        "Chang Xu"
+      ]
+    },
+    {
+      "title": "Pretraining Transformers with Quantized Softmax in Attention",
+      "source_url": "https://arxiv.org/abs/2609.33591",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Low-precision Transformer systems increasingly quantize attention matrix multiplications, while softmax often remains at higher precision. During pretraining, an approximate softmax changes the gradients that train the model as well as its forward computation. We study this interaction with K-interval attention, which approximates the exponential using K+1 grid values. We vary per-row grid calibration, interpolation versus hard rounding, and the placement of a straight-through surrogate relative to normalization. We derive the corresponding backward rules, including calibration derivatives, and compare these choices in pretraining experiments matched on model, data, and optimizer. Detaching the row extrema leaves the forward computation unchanged but produces a delayed increase in validation loss. With hard rounding at K=4, min-max calibration and a pre-normalization surrogate incur a large loss gap; changing either choice substantially reduces it. At 124M parameters and 2.5B training tokens, fixed-window calibration with a post-normalization surrogate yields a validation loss gap of +0.019 nats relative to softmax at K=4, and with a pre-normalization surrogate yields +0.004 nats at K=16.",
+      "canonical_id": "arXiv:2609.33591",
+      "arxiv_id": "2609.33591",
+      "authors": [
+        "Shang-Zhen Zhu",
+        "Mu-Yan Hu",
+        "Tomasz Kozlowski"
+      ]
+    },
+    {
+      "title": "TerMeZO: Ternary Sparse Zeroth-Order Optimization for Fine-tuning BitNet Models at the Edge",
+      "source_url": "https://arxiv.org/abs/2609.33548",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Fine-tuning anguage models (LLMs) with first-order optimizers requires a memory several times larger than that required for inference. Memory-efficient zeroth-order optimization (MeZO) sidesteps this cost by estimating gradients from forward passes only. However, for BitNet architectures, a family of LLMs with ternary {-1,0,1\\} weights and 8-bit activations, fine-tuning requires updating full-precision latent weights, and thus the memory footprint of MeZO no longer matches that of inference. A promising solution is to finetune only a subset of the latent weights, but existing sparse zeroth-order (ZO) methods either ignore the ternary structure or require first-order gradient information to build a sparse mask, which is at odds with the purpose of ZO fine-tuning. We propose TerMeZO, a sparse MeZO scheme that exploits the geometry of the ternary quantizer itself to identify the latent weights that are more likely to change values during fine-tuning, at no additional data or memory cost. Our convergence analysis shows that TerMeZO can converge faster than full-parameter MeZO, owing to its optimized reduction of the fine-tuning effective dimension. We run extensive experiments on BitNet models ranging from 1B to 3B parameters, spanning classification, instruction-following, and mathematical reasoning tasks. TerMeZO matches or exceeds the performance of full-parameter MeZO while substantially reducing the fine-tuning memory footprint.",
+      "canonical_id": "arXiv:2609.33548",
+      "arxiv_id": "2609.33548",
+      "authors": [
+        "Houssem Sifaou",
+        "Prabodh Katti",
+        "B. Rajendran",
+        "Osvaldo Simeone"
+      ]
+    },
+    {
+      "title": "The Extender: A Log-Structured Transformer",
+      "source_url": "https://arxiv.org/abs/2609.32759",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "We introduce the Extender, a log-structured variant of the standard Transformer architecture. In a standard Transformer, each layer communicates with subsequent layers exclusively via the residual $\\mathbf{h}$, a superposition channel. The Extender adds a concatenation channel $\\mathbf{x}$: each layer $\\ell$ emits both a residual update $\\delta_\\ell$ which is added to $\\mathbf{h}$, and a much smaller extension $\\epsilon_\\ell$ which is appended to $\\mathbf{x}$. While both the FFN and $\\mathbf{q}$ see $\\mathbf{h}$, the attention $\\mathbf{kv}$ projections take only $\\mathbf{x}$ as input. As a result, the fully extended $\\mathbf{x}$ contains the complete input for the $\\mathbf{kv}$ projections of all layers, reducing the persistent attention memory footprint from $2Ld_{model}$ to $\\sum|\\epsilon_\\ell|$. We find that with $|\\epsilon_\\ell|=32$, the Extender matches Transformer accuracy on short-context (CORE) tasks at 199M-924M parameters, and exceeds Transformer accuracy on long-context (RULER) workloads, again at 924M parameters. For our 1664-wide, 924M model, the Extender's persistent attention memory footprint is $104\\times$ smaller than MHA. The memory savings grow with model width.",
+      "canonical_id": "arXiv:2609.32759",
+      "arxiv_id": "2609.32759",
+      "authors": [
+        "Jakob Eriksson"
+      ]
+    },
+    {
+      "title": "Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer",
+      "source_url": "https://arxiv.org/abs/2609.32922",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "Matrix multiplications dominate the inference cost of modern transformer-based vision models, yet existing efficiency techniques such as post-training quantization and mixed-precision inference are largely limited to the small set of fixed-width formats (INT4, INT8, BF16, and FP16) supported by conventional accelerators. We revisit stochastic computing (SC) as a way to lift this constraint: viewed as a dense adaptive quantizer, SC controls precision by bit-stream length L rather than a fixed datapath, while each multiplication reduces to a single AND/XNOR gate. We build a GPU library that emulates SC matrix multiplication at scale, exposes stream lengths as first-class kernel arguments, and evaluates SC end-to-end on image classification, object detection and instance segmentation, class-conditional image generation, and visual world-model planning. On top of this substrate, we develop a dynamic per-row mixed-precision policy that assigns stream length per token or group at matched average budget, requires no retraining, and uses the same SC hardware across schedules. Across tasks, SC remains competitive with fixed-format INT quantization at matched bit budgets, while per-row mixed precision helps maintain accuracy at lower average stream lengths. These results provide software-level feasibility evidence that SC can serve as a dense-precision substrate for fine-grained mixed-precision inference on modern vision transformers.",
+      "canonical_id": "arXiv:2609.32922",
+      "arxiv_id": "2609.32922",
+      "authors": [
+        "Hao-Ran Jin",
+        "Kang-Qi Zhang",
+        "Ji-Rong Yang",
+        "B. Lyu",
+        "Qiu-Yi Ding",
+        "Rui-Jie Gao",
+        "Nathaniel Bleier"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.compeleceng.2026.111406",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.compeleceng.2026.111406",
+        "title:tiny large language models for iot networks potentials and challenges",
+        "url:https://doi.org/10.1016/j.compeleceng.2026.111406"
+      ],
+      "record": {
+        "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+        "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.compeleceng.2026.111406",
+        "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+        "authors": [
+          "Muhammed Golec",
+          "S. Melhem",
+          "Yaser M. Khamayseh",
+          "Abdulmalik Alwarafy",
+          "N. Al-Dhahir"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2026.3663251",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2026.3663251",
+        "title:beyond uniform approximation toward efficient computing in logarithmic number system for large language models",
+        "url:https://doi.org/10.1109/TCAD.2026.3663251"
+      ],
+      "record": {
+        "title": "Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models",
+        "source_url": "https://doi.org/10.1109/TCAD.2026.3663251",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Logarithmic number system (LNS) offers a more efficient quantization format than the integer system for data in large language models (LLMs), with inherently simple implementation for multiplication operations. However, the addition operation in LNS is relatively complex and difficult to balance between precision and hardware overhead. In this work, we observe that the input patterns of the computing units in the inference phase of LLMs exhibit highly skewed frequencies, resulting in nonuniform contributions to the final error. Based on this observation, we propose the beyond uniform approximation (BUA) to enhance the efficiency of LNS additions. From the perspective of lookup tables (LUTs), we propose LUT reshaping to efficiently reduce the approximation error, as well as LUT trimming, a heuristic method for simplifying LUTs within a given error budget. From the perspective of the entire LNS adder, we introduce auxiliary circuit approximation (ACA), which further reduces the hardware cost by simplifying computing data paths that are less frequently activated. Together, these techniques enable efficient approximate computing in LNS. Experimental results indicate that, compared to the multiply accumulate (MAC) unit using the naive LNS adder, BUA significantly reduces perplexity across various LLMs while reducing area-delay product (ADP) by 26.7% and power-delay product (PDP) by 30.8%. Compared to the traditional integer MAC unit, LNS with BUA achieves higher zero-shot accuracy while reducing ADP by 35.1% and PDP by 44.0%. Moreover, we also offer additional approximation options that provide greater hardware savings with only minor degradation in accuracy.",
+        "doi": "10.1109/TCAD.2026.3663251",
+        "canonical_id": "DOI:10.1109/TCAD.2026.3663251",
+        "authors": [
+          "Xin-Kuang Geng",
+          "Si-Ting Liu",
+          "Hui Wang",
+          "Lei-Bo Liu",
+          "Jie Han",
+          "Hong-Lan Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115411",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115411",
+        "title:navigating maritime emergencies with large models a lifecycleoriented review",
+        "url:https://doi.org/10.1016/j.engappai.2026.115411"
+      ],
+      "record": {
+        "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.115411",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+        "authors": [
+          "Jing Xu",
+          "Qingqing Yang",
+          "Zhiwei Yang",
+          "Yingying Gao",
+          "Kewei Yang",
+          "Jiang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116054",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116054",
+        "title:forecastpreserving lowbit quantization for transformerbased timeseries forecasting",
+        "url:https://doi.org/10.1016/j.engappai.2026.116054"
+      ],
+      "record": {
+        "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.116054",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+        "authors": [
+          "Meng-Ke Wang",
+          "Min Gan",
+          "Fang Yuan",
+          "Jian-Nan Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/lcn67947.2026.11660767",
+      "identity_tokens": [
+        "id:DOI:10.1109/lcn67947.2026.11660767",
+        "title:neufas edgeefficient mambabased channel estimation for fluid antenna systems",
+        "url:https://doi.org/10.1109/lcn67947.2026.11660767"
+      ],
+      "record": {
+        "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+        "source_url": "https://doi.org/10.1109/lcn67947.2026.11660767",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1109/lcn67947.2026.11660767",
+        "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+        "authors": [
+          "Shengzhe Lyu",
+          "Qian-Ren Li",
+          "Wei-Tao Xu",
+          "Chengwen Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843872",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843872",
+        "title:tensordex a compact tensorcentric storage system for modern ai models",
+        "url:https://doi.org/10.1145/3830418.3843872"
+      ],
+      "record": {
+        "title": "TensorDex: A Compact, Tensor-Centric Storage System for Modern AI Models",
+        "source_url": "https://doi.org/10.1145/3830418.3843872",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843872",
+        "canonical_id": "DOI:10.1145/3830418.3843872",
+        "authors": [
+          "Ting-Feng Lan",
+          "Zi-Rui Wang",
+          "Yun-Jia Zheng",
+          "Zhao-Yuan Su",
+          "Jun-Cheng Yang",
+          "Yue Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35083",
+      "identity_tokens": [
+        "id:arXiv:2609.35083",
+        "title:continuous variational synthesis",
+        "url:https://arxiv.org/abs/2609.35083"
+      ],
+      "record": {
+        "title": "Continuous Variational Synthesis",
+        "source_url": "https://arxiv.org/abs/2609.35083",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Biological machine learning was long bottlenecked by the ability to synthesize designed DNA. Variational synthesis models control chemical reactions to physically manufacture quadrillions of designed sequences in DNA. However, training these generative models is challenging: constraints on chemical synthesis can force many parameters into a discrete space, limiting the ability to pre-train and fine-tune. In this article we train ``free''variational synthesis models using stochastic gradient descent in continuous space, and then discretize with post-training quantization to impose hardware and wetware constraints. This enables variational synthesis models to satisfy stringent reward criteria, while still synthesizing diverse designs, achieving a strictly dominating quality-diversity Pareto frontier. We demonstrate by training variational synthesis models of enzymes, peptides, antibody CDRH3s, and regulatory DNA elements. In silico performance is maintained in vitro.",
+        "canonical_id": "arXiv:2609.35083",
+        "arxiv_id": "2609.35083",
+        "authors": [
+          "A. N. Amin",
+          "Mattia G. Gollub",
+          "Andrei Slabodkin",
+          "Elizabeth B. Wood",
+          "Eli N. Weinstein"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34653",
+      "identity_tokens": [
+        "id:arXiv:2609.34653",
+        "title:omnitide codesigning algorithms and systems for efficient ondevice omnillm streaming",
+        "url:https://arxiv.org/abs/2609.34653"
+      ],
+      "record": {
+        "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+        "source_url": "https://arxiv.org/abs/2609.34653",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+        "canonical_id": "arXiv:2609.34653",
+        "arxiv_id": "2609.34653",
+        "authors": [
+          "Zong-Shang Shen",
+          "Wang-Song Yin",
+          "Da-Liang Xu",
+          "Meng-Wei Xu",
+          "Xuan-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34866",
+      "identity_tokens": [
+        "id:arXiv:2609.34866",
+        "title:from attention sensitivity to layer role revisiting mixedprecision quantization of transformers",
+        "url:https://arxiv.org/abs/2609.34866"
+      ],
+      "record": {
+        "title": "From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers",
+        "source_url": "https://arxiv.org/abs/2609.34866",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Most post-training quantization pipelines fit each weight matrix to its pretrained counterpart, one matrix at a time. Whether that proxy tracks what an attention block actually computes, or how errors in the Q, K and V projections compound inside the softmax, is rarely checked. We write the objective on the attention output instead, over all three projections at once, and reuse it throughout the pipeline. JAB defines one scalar loss over the joint Q, K, V weights of a block, evaluated against the block's real causally-masked attention output, and uses it twice: to fit the quantized weights (GPTQ warm start, then STE with learnable scales), and to score the block for a multiple-choice knapsack allocation. On attention-only quantization of Mistral-7B this works. At 3 bits JAB recovers 77-90% of the gap between uniform GPTQ and full precision, and its sensitivity estimate tracks an oracle costing 73 forward passes to within a fraction of a point. It stops working once MLP layers enter the allocation. A role-aware offset rule needing no sensitivity estimate at all beats JAB on GPT-2's MLP and on the full Mistral-7B model: with a 3-bit floor it quantizes 96.4% of the weights to 4.5 bits per parameter at 6.933 perplexity, within 4.4% of full precision (6.643) at 3.56x compression, against 7.158 for JAB at the same budget. Which matrix a weight sits in matters more than any sensitivity estimate we computed. Two things came out sideways. Block-local reconstruction is an unreliable proxy for end-to-end perplexity: one run improved a block's own objective 4.6x while perplexity rose 32x, which is why every allocation here is validated end-to-end. And on attention-only quantization, fine-tuning moved weights farther from their pretrained values while pulling attention outputs closer, with net gains. Post-training seems to recover attention behavior, not weights.",
+        "canonical_id": "arXiv:2609.34866",
+        "arxiv_id": "2609.34866",
+        "authors": [
+          "Nafiseh HosseinpourFardi",
+          "Negar Alihadi",
+          "Mahmoudreza Babaei",
+          "M. Hosseini",
+          "Adrian Weller"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34380",
+      "identity_tokens": [
+        "id:arXiv:2609.34380",
+        "title:dps dualmode precision llm serving with semiunified memory",
+        "url:https://arxiv.org/abs/2609.34380"
+      ],
+      "record": {
+        "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+        "source_url": "https://arxiv.org/abs/2609.34380",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+        "canonical_id": "arXiv:2609.34380",
+        "arxiv_id": "2609.34380",
+        "authors": [
+          "Xuan Truong Nguyen",
+          "Tien Son Pham",
+          "Tuan-Duc Chu",
+          "Wookeun Jung",
+          "Thanh Tuan Dao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34680",
+      "identity_tokens": [
+        "id:arXiv:2609.34680",
+        "title:quantforge discovering residual decompositions for mxfp4 posttraining quantization",
+        "url:https://arxiv.org/abs/2609.34680"
+      ],
+      "record": {
+        "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2609.34680",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes.",
+        "canonical_id": "arXiv:2609.34680",
+        "arxiv_id": "2609.34680",
+        "authors": [
+          "Qiu-Lin Shang",
+          "Zhou-Tong Wu",
+          "Jie Hu",
+          "Kun Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34259",
+      "identity_tokens": [
+        "id:arXiv:2609.34259",
+        "title:quantaspike shortwindow spikedriven quantization for large language models",
+        "url:https://arxiv.org/abs/2609.34259"
+      ],
+      "record": {
+        "title": "QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.34259",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Large language models (LLMs) achieve strong performance across many tasks but rely on dense multiply-accumulate (MAC) operations during inference, resulting in high energy cost. Spiking neural networks (SNNs) offer an event-driven alternative in which synaptic integration uses lightweight accumulation. However, spike-driven LLM inference remains difficult because outlier-heavy activations typically require long firing windows or auxiliary non-spiking paths. We propose QuantaSpike, a short-window spike-driven quantization framework for LLMs built around Logarithmic Ternary Integrate-and-Fire (LTIF) neurons. LTIF uses ternary events with power-of-two membrane-response quanta, improving the information represented by each firing step while retaining shift-ACC-compatible computation. QuantaSpike combines this neuron with group-adaptive gain and selective outlier admission: normal values use residual LTIF steps, whereas admitted outliers receive one additional onset spike before entering the same residual dynamics. Across OPT and Llama-2, QuantaSpike achieves state-of-the-art or competitive perplexity and zero-shot accuracy among spike-driven LLM quantization methods. It also transfers to newer dense LLMs, remaining close to the FP16 reference on Llama-3-8B and Qwen3-8B under the same four-step firing window. Analytical linear-energy projections show that QuantaSpike reduces the energy of one linear transformation by about $80.0\\%$ on OPT models and $67.1\\%$ on Llama-2 models relative to SpikeQuant, providing an accurate and energy-efficient spike-driven path for LLM inference.",
+        "canonical_id": "arXiv:2609.34259",
+        "arxiv_id": "2609.34259",
+        "authors": [
+          "Bang Hu",
+          "Guo-Wei Zhu",
+          "Chang-Ze Lv",
+          "Xiao-Qing Zheng",
+          "Feng-Zhe Zhang",
+          "Fan Zhang",
+          "Wei Cao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://doi.org/10.1145/3832810.3832854"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://doi.org/10.1145/3832810.3832854",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "doi": "10.1145/3832810.3832854",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yi-Qi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832877",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832877",
+        "title:brmoe a memorybudgetaware codesign framework for efficient moe inference on resourceconstrained gpus",
+        "url:https://doi.org/10.1145/3832810.3832877"
+      ],
+      "record": {
+        "title": "BR-MoE: A Memory-Budget-Aware Co-Design Framework for Efficient MoE Inference on Resource-Constrained GPUs",
+        "source_url": "https://doi.org/10.1145/3832810.3832877",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The Mixture-of-Experts (MoE) architecture has become the dominant paradigm for scaling Large Language Models, yet its explosive parameter growth routinely overflows the GPU memory budget. Weight quantization offers a practical way to fit these models into limited GPU memory, but reducing precision below 4 bits causes severe accuracy loss. Existing approaches, mixed-precision quantization and low-rank compensation, have been treated as independent strategies, overlooking the fact that both draw from the same hardware memory budget. Consequently, optimizing either dimension in isolation systematically overshoots on some experts while starving others, leaving the achievable memory–accuracy frontier well below what a joint allocation could reach. We present BR-MoE, a memory-budget-aware co-design framework that treats per-expert bit-width and compensator rank as joint variables under a single memory constraint. Guided by a lightweight layer-wise sensitivity proxy, BR-MoE casts the global allocation task as a Multiple-Choice Knapsack Problem (MCKP) and solves it to optimality via Integer Linear Programming (ILP). To turn memory savings into real inference speedups, BR-MoE further integrates a fused grouped expert GEMM backend that consolidates fragmented per-expert computations into bandwidth-efficient kernels. Evaluated across multiple MoE models on NVIDIA A100 GPUs, BR-MoE establishes a superior memory–accuracy trade-off over state-of-the-art quantization methods, delivers substantial end-to-end inference speedups, and re-derives an optimal allocation for any new memory budget in seconds, making it a deploy-time tunable system rather than a one-shot compression recipe.",
+        "doi": "10.1145/3832810.3832877",
+        "canonical_id": "DOI:10.1145/3832810.3832877",
+        "authors": [
+          "Lei Jiang",
+          "Jing-Wei Sun",
+          "Jun-Qing Lin",
+          "Han Li",
+          "Ming Lu",
+          "Ying-Hua Zhou",
+          "Guang-Zhong Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33384",
+      "identity_tokens": [
+        "id:arXiv:2609.33384",
+        "title:pulsequant propagationguided subspace correction for 4bit video diffusion transformers",
+        "url:https://arxiv.org/abs/2609.33384"
+      ],
+      "record": {
+        "title": "PulseQuant: Propagation-Guided Subspace Correction for 4-Bit Video Diffusion Transformers",
+        "source_url": "https://arxiv.org/abs/2609.33384",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Quantization errors in video diffusion transformers can be amplified or attenuated by subsequent denoising updates, making local reconstruction error an incomplete predictor of final impact. We introduce PulseQuant, a 4-bit post-training quantization method that combines trajectory sensitivity with activation geometry to guide offline calibration. Isolated block--step interventions estimate propagation risk, which prioritizes sensitive trajectory states during row-radius selection. With these radii fixed, response-subspace correction uses neighboring-code edits to reduce residual components along dominant activation directions. Both stages preserve the original 4-bit weight representation. Controlled interventions show that short-horizon propagated error predicts final latent error more reliably than immediate block-output error, supporting calibration beyond local reconstruction objectives. Evaluations on Wan models, Self Forcing, and MiniMax-H3 demonstrate improvements in key consistency and dense-reference metrics while remaining competitive on other attributes across model scales and generation paradigms.",
+        "canonical_id": "arXiv:2609.33384",
+        "arxiv_id": "2609.33384",
+        "authors": [
+          "Yu-Tong Wang",
+          "Xing-Tong Ge",
+          "En-Huai Liu",
+          "Yun-Ke Wang",
+          "Tian-Fan Xue",
+          "Xin-Yuan Chen",
+          "Chang Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33591",
+      "identity_tokens": [
+        "id:arXiv:2609.33591",
+        "title:pretraining transformers with quantized softmax in attention",
+        "url:https://arxiv.org/abs/2609.33591"
+      ],
+      "record": {
+        "title": "Pretraining Transformers with Quantized Softmax in Attention",
+        "source_url": "https://arxiv.org/abs/2609.33591",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Low-precision Transformer systems increasingly quantize attention matrix multiplications, while softmax often remains at higher precision. During pretraining, an approximate softmax changes the gradients that train the model as well as its forward computation. We study this interaction with K-interval attention, which approximates the exponential using K+1 grid values. We vary per-row grid calibration, interpolation versus hard rounding, and the placement of a straight-through surrogate relative to normalization. We derive the corresponding backward rules, including calibration derivatives, and compare these choices in pretraining experiments matched on model, data, and optimizer. Detaching the row extrema leaves the forward computation unchanged but produces a delayed increase in validation loss. With hard rounding at K=4, min-max calibration and a pre-normalization surrogate incur a large loss gap; changing either choice substantially reduces it. At 124M parameters and 2.5B training tokens, fixed-window calibration with a post-normalization surrogate yields a validation loss gap of +0.019 nats relative to softmax at K=4, and with a pre-normalization surrogate yields +0.004 nats at K=16.",
+        "canonical_id": "arXiv:2609.33591",
+        "arxiv_id": "2609.33591",
+        "authors": [
+          "Shang-Zhen Zhu",
+          "Mu-Yan Hu",
+          "Tomasz Kozlowski"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33548",
+      "identity_tokens": [
+        "id:arXiv:2609.33548",
+        "title:termezo ternary sparse zerothorder optimization for finetuning bitnet models at the edge",
+        "url:https://arxiv.org/abs/2609.33548"
+      ],
+      "record": {
+        "title": "TerMeZO: Ternary Sparse Zeroth-Order Optimization for Fine-tuning BitNet Models at the Edge",
+        "source_url": "https://arxiv.org/abs/2609.33548",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Fine-tuning anguage models (LLMs) with first-order optimizers requires a memory several times larger than that required for inference. Memory-efficient zeroth-order optimization (MeZO) sidesteps this cost by estimating gradients from forward passes only. However, for BitNet architectures, a family of LLMs with ternary {-1,0,1\\} weights and 8-bit activations, fine-tuning requires updating full-precision latent weights, and thus the memory footprint of MeZO no longer matches that of inference. A promising solution is to finetune only a subset of the latent weights, but existing sparse zeroth-order (ZO) methods either ignore the ternary structure or require first-order gradient information to build a sparse mask, which is at odds with the purpose of ZO fine-tuning. We propose TerMeZO, a sparse MeZO scheme that exploits the geometry of the ternary quantizer itself to identify the latent weights that are more likely to change values during fine-tuning, at no additional data or memory cost. Our convergence analysis shows that TerMeZO can converge faster than full-parameter MeZO, owing to its optimized reduction of the fine-tuning effective dimension. We run extensive experiments on BitNet models ranging from 1B to 3B parameters, spanning classification, instruction-following, and mathematical reasoning tasks. TerMeZO matches or exceeds the performance of full-parameter MeZO while substantially reducing the fine-tuning memory footprint.",
+        "canonical_id": "arXiv:2609.33548",
+        "arxiv_id": "2609.33548",
+        "authors": [
+          "Houssem Sifaou",
+          "Prabodh Katti",
+          "B. Rajendran",
+          "Osvaldo Simeone"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32759",
+      "identity_tokens": [
+        "id:arXiv:2609.32759",
+        "title:the extender a logstructured transformer",
+        "url:https://arxiv.org/abs/2609.32759"
+      ],
+      "record": {
+        "title": "The Extender: A Log-Structured Transformer",
+        "source_url": "https://arxiv.org/abs/2609.32759",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "We introduce the Extender, a log-structured variant of the standard Transformer architecture. In a standard Transformer, each layer communicates with subsequent layers exclusively via the residual $\\mathbf{h}$, a superposition channel. The Extender adds a concatenation channel $\\mathbf{x}$: each layer $\\ell$ emits both a residual update $\\delta_\\ell$ which is added to $\\mathbf{h}$, and a much smaller extension $\\epsilon_\\ell$ which is appended to $\\mathbf{x}$. While both the FFN and $\\mathbf{q}$ see $\\mathbf{h}$, the attention $\\mathbf{kv}$ projections take only $\\mathbf{x}$ as input. As a result, the fully extended $\\mathbf{x}$ contains the complete input for the $\\mathbf{kv}$ projections of all layers, reducing the persistent attention memory footprint from $2Ld_{model}$ to $\\sum|\\epsilon_\\ell|$. We find that with $|\\epsilon_\\ell|=32$, the Extender matches Transformer accuracy on short-context (CORE) tasks at 199M-924M parameters, and exceeds Transformer accuracy on long-context (RULER) workloads, again at 924M parameters. For our 1664-wide, 924M model, the Extender's persistent attention memory footprint is $104\\times$ smaller than MHA. The memory savings grow with model width.",
+        "canonical_id": "arXiv:2609.32759",
+        "arxiv_id": "2609.32759",
+        "authors": [
+          "Jakob Eriksson"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32922",
+      "identity_tokens": [
+        "id:arXiv:2609.32922",
+        "title:precision as you need stochastic computing is a dense adaptive quantizer",
+        "url:https://arxiv.org/abs/2609.32922"
+      ],
+      "record": {
+        "title": "Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer",
+        "source_url": "https://arxiv.org/abs/2609.32922",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "Matrix multiplications dominate the inference cost of modern transformer-based vision models, yet existing efficiency techniques such as post-training quantization and mixed-precision inference are largely limited to the small set of fixed-width formats (INT4, INT8, BF16, and FP16) supported by conventional accelerators. We revisit stochastic computing (SC) as a way to lift this constraint: viewed as a dense adaptive quantizer, SC controls precision by bit-stream length L rather than a fixed datapath, while each multiplication reduces to a single AND/XNOR gate. We build a GPU library that emulates SC matrix multiplication at scale, exposes stream lengths as first-class kernel arguments, and evaluates SC end-to-end on image classification, object detection and instance segmentation, class-conditional image generation, and visual world-model planning. On top of this substrate, we develop a dynamic per-row mixed-precision policy that assigns stream length per token or group at matched average budget, requires no retraining, and uses the same SC hardware across schedules. Across tasks, SC remains competitive with fixed-format INT quantization at matched bit budgets, while per-row mixed precision helps maintain accuracy at lower average stream lengths. These results provide software-level feasibility evidence that SC can serve as a dense-precision substrate for fine-grained mixed-precision inference on modern vision transformers.",
+        "canonical_id": "arXiv:2609.32922",
+        "arxiv_id": "2609.32922",
+        "authors": [
+          "Hao-Ran Jin",
+          "Kang-Qi Zhang",
+          "Ji-Rong Yang",
+          "B. Lyu",
+          "Qiu-Yi Ding",
+          "Rui-Jie Gao",
+          "Nathaniel Bleier"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b6c72f921fb55404066029b85ce6d665326d54d6456a807de7842a5cae2c2fee",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,957 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-8adf76ebf89f26d11be0",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-8adf76ebf89f26d11be0",
+  "axis": "forward-citation-powerinfer",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.12456/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "60",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 33,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:50:47.340622+00:00",
+  "preload_id": "preload-8adf76ebf89f26d11be0",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+      "source_url": "https://arxiv.org/abs/2609.34653",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+      "canonical_id": "arXiv:2609.34653",
+      "arxiv_id": "2609.34653",
+      "authors": [
+        "Zong-Shang Shen",
+        "Wang-Song Yin",
+        "Da-Liang Xu",
+        "Meng-Wei Xu",
+        "Xuan-Zhe Liu"
+      ]
+    },
+    {
+      "title": "RODIS: Accelerating Sparse Matrix Multiplication on GPU via Row-Orchestration and Dynamic Instruction Scheduling",
+      "source_url": "https://doi.org/10.1145/3832810.3832908",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Following the Scaling Law, Deep Neural Networks face immense parameter scales and costs, making high-compression unstructured pruning attractive. Additionally, rising edge-side deployment demands have revived interest in activation sparsity. Consequently, unstructured sparse-dense and sparse-sparse matrix multiplications are becoming prevalent in LLM training and inference. However, as the most common general-purpose AI accelerators, GPUs do not provide efficient support for unstructured sparse matrices. Although existing works have proposed GPU architectural enhancements for unstructured sparsity, they are often limited to optimizing Tensor Core computation patterns through dataflows such as outer-product and row-by-row. These methods fail to adequately resolve the poor load balancing and low Multiply-Accumulate utilization in unstructured sparse workloads, especially lacking targeted optimizations for the latest GPU architectural features. To address these issues, we propose RODIS, a two-level acceleration scheme. It utilizes row-orchestration at the data loading level to achieve inter-block load balancing and employs dynamic instruction scheduling at the underlying computation level to enhance MAC utilization. Experimental results show that with minimal area and power overhead, RODIS achieves an average 1.35 × performance improvement compared to other state-of-the-art sparse Tensor Core schemes.",
+      "doi": "10.1145/3832810.3832908",
+      "canonical_id": "DOI:10.1145/3832810.3832908",
+      "authors": [
+        "Jian-Feng Cui",
+        "Bo Yuan",
+        "Ze-Kun Jiang",
+        "Kai Lu",
+        "Sheng Liu"
+      ]
+    },
+    {
+      "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33889",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+      "canonical_id": "arXiv:2609.33889",
+      "arxiv_id": "2609.33889",
+      "authors": [
+        "Jungseob Lee",
+        "Seungyoon Lee",
+        "Seongtae Hong",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ]
+    },
+    {
+      "title": "Empowering Hybrid Attention Models on NPUs",
+      "source_url": "https://arxiv.org/abs/2609.32114",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "Hybrid attention models have emerged as a crucial architecture for Large Language Models (LLMs) (e.g., the Qwen3.5 and Kimi series). Their memory and computational efficiency make them highly attractive for on-device inference, forming a promising synergy with edge Neural Processing Units (NPUs). However, naive execution of these hybrid models on edge NPUs fails to deliver these benefits, often bottlenecking the prefill stage due to severe memory-system inefficiencies and architectural mismatches within the linear attention (LA) layers. We present HA-NPU, the first system to enable efficient hybrid attention LLM inference on edge NPUs without modifying the underlying algorithms. HA-NPU enhances execution efficiency by reorganizing the dataflow of the LA components across three levels: (1) At the core level, it partitions workloads by the head dimension and fuses dependent operators, eliminating cross-core global memory accesses; (2) At the operator level, it reorders execution to consume intermediate tensors immediately, drastically minimizing local-buffer pressure; (3) At the tensor level, it employs dataflow-aware layout planning to minimize transformation overhead between matrix and vector processing units. Compared to competitive baselines, HA-NPU achieves up to 35.95$\\times$ LA kernel speedup and 36.14$\\times$ energy reduction, delivering up to 2.03$\\times$ faster end-to-end request latency. The source code will be made publicly available at https://github.com/yinyuanzhang/HA-NPU",
+      "canonical_id": "arXiv:2609.32114",
+      "arxiv_id": "2609.32114",
+      "authors": [
+        "Yin-Yuan Zhang",
+        "Da-Liang Xu",
+        "Xiao-Long Huang",
+        "Wang-Song Yin",
+        "Yun Ma",
+        "Meng-Wei Xu",
+        "Gang Huang"
+      ]
+    },
+    {
+      "title": "Model Casting and Low-Parameter Gating: Towards More Sparsely Activated FFNs",
+      "source_url": "https://arxiv.org/abs/2609.31975",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "This paper introduces model casting, a mid-training recipe that drastically sparsifies the activations within the Feed-Forward Network (FFN) layer. With this strategy, at inference time, we first compute the output of the gating matrix and, thanks to its high sparsity, we avoid computations with the two other matrices, reducing the FLOP count by up to 3x. While this theoretical speedup is an upper bound, model casting translates into significant speedups both on CPU and GPU. We then introduce LoPA Gating, a new FFN design that increases the maximum theoretical speedup. It is a low-FLOPs parameterization of the gating matrix that overcomes the 3x cap by allocating fewer FLOPs and parameters to the gating matrix, compared to the two other FFN matrices that are sparsely activated. We consider two cases: (i) we cast a pre-trained model with a sparsity inducing activation; (ii) we train with LoPA from scratch. In all settings, we significantly outperform existing pruning solutions and regular RELU-fication. For instance, at matched quality, we achieve a 3.2x FLOP speedup with LoPA Casting, against 1.6x at best for competing methods top-p and TEAL. Using dedicated kernels, we achieve an actual 3.31x speed-up on GPU at 90% sparsity, past the 3x ceiling of standard gating; RELU-fication, meanwhile, plateaus below 80% sparsity.",
+      "canonical_id": "arXiv:2609.31975",
+      "arxiv_id": "2609.31975",
+      "authors": [
+        "Maria Lomeli",
+        "Antoine Groudiev",
+        "Matthijs Douze",
+        "Loïc Cabannes",
+        "Pierre-Emmanuel Mazaré",
+        "François Fleuret",
+        "Maximilian Beck",
+        "Gergely Szilvasy",
+        "Naila Murray",
+        "Hervé Jégou"
+      ]
+    },
+    {
+      "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2609.25869",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Attention computation makes inference expensive in video diffusion transformers (vDiTs), which generate videos through iterative denoising. Block-sparse attention (BSA) reduces this cost by computing only blocks selected by a logical mask, which specifies attention interactions to compute. However, coupling logical block geometry to execution choices limits adaptation to varying masks and graphics processing units (GPUs), while runtime kernel specialization can incur preparation overhead that outweighs execution time savings. We present Tessera, a specialized runtime for dynamic BSA that decouples logical masks from GPU execution while preserving specified attention interactions. Its physical mapping layer retains, combines, or subdivides logical attention blocks into physical tiles suited to different attention mask shapes and GPU architectures. Its task organization layer groups and schedules tiles within GPU tasks to reuse data, expose parallelism, and overlap data movement with computation. Finally, profile-guided regime selection enables low- overhead execution plan selection through a lookup table constructed from offline profiling. We implement Tessera with specialized CUDA kernels supporting four NVIDIA GPU generations. Evaluated on 2,315 real attention masks and industrial video diffusion models, Tessera achieves up to 6.79x BSA request speedup over baseline systems in the evaluated video diffusion models.",
+      "canonical_id": "arXiv:2609.25869",
+      "arxiv_id": "2609.25869",
+      "authors": [
+        "Shang-Hao Liu",
+        "Xiao-Yun Yu",
+        "Wan-Ting Li",
+        "Wen-Qi Jiang"
+      ]
+    },
+    {
+      "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+      "source_url": "https://doi.org/10.1007/s11432-026-5037-1",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+      "doi": "10.1007/s11432-026-5037-1",
+      "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+      "authors": [
+        "Assia Belbachir",
+        "M. Blake",
+        "Jin-Song Dong",
+        "S. Dustdar",
+        "Christof Ebert",
+        "C. Ghezzi",
+        "David Harel",
+        "S. Helal",
+        "Chun-Min Hu",
+        "Lin-Peng Huang",
+        "Hans-Arno Jacobsen",
+        "Chang-Jun Jiang",
+        "Zhi Jin",
+        "Jia-Lin Li",
+        "Xuan-Zhe Liu",
+        "Jian Lu",
+        "Xiao-Xing Ma",
+        "Assaf Marron",
+        "Hong Mei",
+        "B. Nuseibeh",
+        "Xin Peng",
+        "Yuanchun Shi",
+        "Huai-Min Wang",
+        "Ji Wang",
+        "Jian-Min Wang",
+        "Danny Weyns",
+        "James Woodcock",
+        "Tao Xie",
+        "H. Xu",
+        "Mengfei Yang",
+        "Jian-Wei Yin",
+        "Nai-Jun Zhan"
+      ]
+    },
+    {
+      "title": "CADE: Context-aware dispatch engine for energy-efficient VLM inference on heterogeneous edge with discrete neural processing units",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.104016",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "doi": "10.1016/j.sysarc.2026.104016",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.104016",
+      "authors": [
+        "Se-Jin Yun",
+        "Jeong-Si Kim"
+      ]
+    },
+    {
+      "title": "Scientific applications of quantum computing: challenges and opportunities",
+      "source_url": "https://arxiv.org/abs/2608.16568",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "The predictive simulation of molecules and materials has had a broad and significant impact. It nevertheless remains constrained by the cost of accurately treating electronic correlation, excited states, and complex energy landscapes. Quantum computing offers a fundamentally different computational paradigm in which quantum states are encoded and manipulated directly rather than approximated on classical hardware. Here we discuss where this approach may provide a genuine scientific advantage in chemistry, materials science, and biochemistry. Promising directions include the high-accuracy treatment of correlated active spaces, improved excited-state simulations, and accelerated exploration of combinatorial structure spaces. The central challenge is therefore not qubit scaling alone, but demonstrably chemically meaningful gains in predictive reliability. We argue that near-term value is most likely to come from disciplined workflow integration rather than wholesale replacement of classical methods. Noisy physical devices, error-mitigated utility experiments, early fault-tolerant devices, and fully fault-tolerant quantum computers offer different scientific prospects, and claims of usefulness must be tied to the specific regime being discussed. Quantum computing will become scientifically valuable when it demonstrably reduces uncertainty in computed energies, rates, spectra, or materials stability after the full costs of state preparation, measurement, error handling, and coupling to classical simulation are included.",
+      "canonical_id": "arXiv:2608.16568",
+      "arxiv_id": "2608.16568",
+      "authors": [
+        "Bruno Camino",
+        "C. R. Catlow",
+        "J. Buckeridge",
+        "A. Elena",
+        "Vladimir V. Gusev",
+        "Sarah Harris",
+        "Thomas W. Keal",
+        "Glenn Jones",
+        "Viv Kendon",
+        "Syma Khalid",
+        "P. Lolur",
+        "J. A. Nasir",
+        "M. Rosseinsky",
+        "Chris-Kriton Skylaris",
+        "P. A. Warburton",
+        "S. Woodley"
+      ]
+    },
+    {
+      "title": "ActivationBackdoor: Backdooring Large Language Models in Collaborative Inference via Intermediate Activations",
+      "source_url": "https://doi.org/10.1145/3770855.3818136",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Collaborative inference enables cost-effective deployment of large language models by partitioning layers across multiple participants and forwarding intermediate activations between participants in a pipeline, but these transmitted activations also create a new attack surface: a malicious participant can manipulate intermediate activations during inference. Prior work on collaborative inference attacks has largely focused on privacy leakage, leaving the backdoor threat insufficiently explored. Inspired by recent advances in representation engineering, we propose ActivationBackdoor, an inference-time backdoor attack that composes two activation-level components for trigger detection and backdoor behavior injection. This design achieves the same ''clean inputs behave normally, triggered inputs induce attacker-specified behavior'' property as traditional backdoor attacks, while requiring no access to training data and no model parameter updates. Experiments across classification and open-ended generation tasks show that ActivationBackdoor attains attack success comparable to training-time backdoor baselines while preserving high clean-task accuracy and utility. Overall, our results expose a new and practical backdoor risk in collaborative inference arising from intermediate activation exposure.",
+      "doi": "10.1145/3770855.3818136",
+      "canonical_id": "DOI:10.1145/3770855.3818136",
+      "authors": [
+        "Zichun Su",
+        "Mi Zhang",
+        "Xiaohan Zhang",
+        "Geng Hong",
+        "Xiao-Yu You",
+        "Min Yang"
+      ]
+    },
+    {
+      "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels",
+      "source_url": "https://arxiv.org/abs/2608.02995",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Modern large language models (LLMs) exhibit activation sparsity, wherein only a subset of their neurons is activated for given input tokens. Researchers have leveraged this property to optimize LLM serving systems by omitting weight accesses and computations pertaining to inactive neurons. Unfortunately, however, such optimizations create input-dependent weight accesses, which can be leaked over side channels. We present SparSEEty, a new token extraction attack that exploits input-dependent neuron weight accesses introduced by sparsity-exploiting LLM serving systems. SparSEEty first constructs a neuron-activation oracle using neuron weight access side channels during LLM inference, and then inverts the activation traces to reconstruct the input tokens, forming an end-to-end token extraction attack. We instantiate SparSEEty against an LLM serving system protected inside an Intel TDX confidential virtual machine (CVM), addressing three key challenges: (i) constructing a neuron-activation oracle using a combination of side channels exposed by CVMs, (ii) reducing inference-time overheads of neuron activation monitoring for covertness, and (iii) accurately inverting partial binary activation traces back to tokens. Our evaluation shows that SparSEEty can reconstruct both prompt and response tokens with consistently high BLEU scores (>0.95) across various models and datasets, while incurring monitoring overheads of 3.7% to 7.2%.",
+      "canonical_id": "arXiv:2608.02995",
+      "arxiv_id": "2608.02995",
+      "authors": [
+        "Y. Jo",
+        "Jin-Ho Park",
+        "Euihyun Lee",
+        "Dok-Yung Song"
+      ]
+    },
+    {
+      "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+      "source_url": "https://arxiv.org/abs/2607.22854",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+      "canonical_id": "arXiv:2607.22854",
+      "arxiv_id": "2607.22854",
+      "doi": "10.48550/arXiv.2607.22854",
+      "authors": [
+        "Goodsol Lee",
+        "Juheon Yi",
+        "Jinglu Wang",
+        "Haowen Xu",
+        "S. Bahk",
+        "Yan Lu"
+      ]
+    },
+    {
+      "title": "Constraint-Driven Model Optimization: An Industry Framework for Selecting Compression and Acceleration Techniques in Modern Machine Learning Systems",
+      "source_url": "https://arxiv.org/abs/2607.13735",
+      "year": 2026,
+      "published": "2026-07-15",
+      "abstract": "The rapid deployment of machine learning systems across cloud, edge, and enterprise environments has brought model optimization to the forefront of systems-engineering. Despite a rich literature spanning quantization, pruning, knowledge distillation, parameter-efficient fine-tuning (PEFT), and inference-time optimization, practitioners are often left navigating these techniques through heuristics rather than principled methodology. We argue that optimization should be formulated as a constraint-driven, multi-objective engineering decision and introduce a unified framework that characterizes any production deployment along five interacting constraint dimensions: data availability, latency budget, memory budget, accuracy tolerance, and retraining budget. Building on this taxonomy, we synthesize empirical gains reported across the research literature and map them to operational constraints rather than algorithmic categories. To ensure practical relevance, we selected these techniques by reviewing recent literature for methods that report measurable improvements against critical deployment bottlenecks. We propose a prescriptive decision framework and provide optimization pipelines for four representative industrial scenarios to illustrate it in practice. To the best of our knowledge, this work provides one of the first structured attempts to formalize model optimization as a constraint-aware, multi-objective engineering process, synthesizing quantitative evidence from the research literature.",
+      "canonical_id": "arXiv:2607.13735",
+      "arxiv_id": "2607.13735",
+      "doi": "10.48550/arXiv.2607.13735",
+      "authors": [
+        "Dhruv Shivkant",
+        "Saket Mohanty",
+        "S. Rai",
+        "Utkarsh Wadhwa"
+      ]
+    },
+    {
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "year": 2026,
+      "published": "2026-07-06",
+      "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely bottlenecked by hardware inefficiency. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, uniquely spanning five mainstream frameworks (e.g., llama.cpp, GENIE) and three hardware backends (CPU, GPU, NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that provides the first backend-specific energy attribution, moving beyond traditional device-level measurements. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to 10x using custom operators due to divergent offloading and quantization strategies. (2) We identify a distinct phase split where NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This is driven by the NPU's preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in up to 40% energy waste. Leveraging these findings, we present an energy-oriented best-practice configuration for mobile LLM inference. We estimate that this configuration could reduce energy consumption by up to 54.8% on the NPU backend across three datasets.",
+      "canonical_id": "arXiv:2607.05475",
+      "arxiv_id": "2607.05475",
+      "doi": "10.48550/arXiv.2607.05475",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Lingkun Li",
+        "Ji-Liang Wang"
+      ]
+    },
+    {
+      "title": "Artificial intelligence based framework for cognitive domain analysis",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.114647",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.114647",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.114647",
+      "authors": [
+        "M. Lozano",
+        "I. Pérez-Llopis",
+        "Antonio José Caballero Morcillo",
+        "A. Fernández"
+      ]
+    },
+    {
+      "title": "ConvertNet: Training-Time Model Scaling for In-Vehicle Continuous Learning",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3667390",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Vehicles are transforming from transportation means to mobile intelligent terminals, powered by artificial intelligence (AI) technologies such as large language (LLM) and vision large models (VLM). To maintain high learning accuracy in all situations, in-vehicle AI models encounter the acute need to continuously learn and dynamically retrain AI models on the fly. The volatile resource demands of such stochastic retraining jobs and inference jobs of higher priority however can not be accommodated simultaneously by existing training systems, which rely on pre-generated compressed models of fixed architecture. In this paper, we propose ConvertNet, a novel continuous learning system that effectively scales up/down a compressed model through training-time neuron memorizer (TNM) - a max heap of neurons in tree structure. Based on TNM, ConvertNet estimates the model’s resource-accuracy trade-off per neuron, thus efficiently utilizing the limited available resources to scale up and (re)train the model to improve its accuracy. Evaluated on six representative in-vehicle scenarios, comparative experiments against eleven state-of-the-art techniques show that ConvertNet achieves as much as 22.33% improvement in learning accuracy, and reduces energy consumption by 3.65x.",
+      "doi": "10.1109/TMC.2026.3667390",
+      "canonical_id": "DOI:10.1109/TMC.2026.3667390",
+      "authors": [
+        "Qinglong Zhang",
+        "Rui Han",
+        "Chi Harold Liu",
+        "Guo-Ren Wang",
+        "L. Chen"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://doi.org/10.1016/j.inffus.2026.104630",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "doi": "10.1016/j.inffus.2026.104630",
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wentao Zhou",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ]
+    },
+    {
+      "title": "A Comparative Study of Fine-Tuned Small Models for Inference",
+      "source_url": "https://doi.org/10.1109/ICCE-Taiwan71481.2026.11652842",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "In recent years, large language models (LLMs) are one of the most popular models in AI. LLMs can perceive the structure of languages, enabling them to analyze, synthesize, and generate language that is close to human language. This is why AI is popular in language-related fields such as translation and summarization. The purpose of this research is to improve and implement LLM for inference. Specifically, this study evaluates Speculative Chain-of-Thought (SCoT), which is designed for complex reasoning, alongside Speculative Inference (SpecInfer), which is optimized for high-speed performance. Furthermore, we conducted a comparative analysis of efficiency in terms of latency and accuracy between speculative inference (SpecInfer) and Speculative Chain-of-thought (SCoT). The result shows that SpecInfer is superior to SCoT by latency 49.5 second, speedup 2.79x and accuracy 85.39%",
+      "doi": "10.1109/ICCE-Taiwan71481.2026.11652842",
+      "canonical_id": "DOI:10.1109/ICCE-Taiwan71481.2026.11652842",
+      "authors": [
+        "Varinya Phanichraksaphong",
+        "Adna Sento",
+        "Y. Kitjaidure"
+      ]
+    },
+    {
+      "title": "Energy-Efficient Multimodal Inference Serving with Tri-serve",
+      "source_url": "https://arxiv.org/abs/2606.29629",
+      "year": 2026,
+      "published": "2026-06-28",
+      "abstract": "Multimodal model inference creates substantial energy demand with growing performance requirements. Within GPUs, power is autonomously managed by an on-board power management unit (PMU), which makes frequency boosting/throttling decisions. However, we find that these hardware-managed frequency decisions can cause significant power inefficiency. This work identifies three classes of power inefficiencies within modern multimodal inference serving: (1) inter-stage dependency stalls run at near-maximum frequency despite being idle; (2) anti-correlation between auto-boost frequency and arithmetic intensity (A.I.) results in compute-bound phases (e.g., prefill) running at lower frequency and vice versa; and (3) thermal throttling degrades SM frequency and throughput. We propose Tri-serve, a software-based DVFS controller that jointly accounts for inter-stage dependency stalls, the arithmetic-intensity effect on frequency and power, and the thermal-throttling effect of high A.I. phases, to deliver energy-efficient multimodal serving on commodity GPUs. We show that Tri-serve achieves a 22% energy-efficiency improvement with no latency or throughput impact.",
+      "canonical_id": "arXiv:2606.29629",
+      "arxiv_id": "2606.29629",
+      "doi": "10.48550/arXiv.2606.29629",
+      "authors": [
+        "Ziyang Jia",
+        "Sara Rashidi Golrouye",
+        "L. Bhuyan",
+        "Benjamin Kubwimana",
+        "Devashree Tripathy",
+        "Zexin Li",
+        "Cong Liu",
+        "Daniel Wong"
+      ]
+    },
+    {
+      "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.26587",
+      "year": 2026,
+      "published": "2026-06-25",
+      "abstract": "Low-bit floating-point formats and semi-structured sparsity are increasingly supported by modern accelerators, yet combining them for LLM activation compression remains challenging: activations contain input-dependent outliers that dominate block scales in FP4 quantization, and directly applying N:M sparsity masks discards moderate values, coupling sparsification loss with quantization error. We introduce SharQ, a training-free inference method that bridges activation sparsity and FP4 quantization through an online sparse--dense decomposition. For each activation tensor, SharQ generates an input-adaptive N:M mask to extract an outlier-dominated sparse backbone, quantizes it to FP4, and defines a dense residual relative to the quantized sparse backbone rather than the unquantized sparse values. A sparse FP4 GEMM processes the backbone while a dense FP4 GEMM compensates for both mask-induced activation loss and sparse-path quantization error. The two paths share a single FP4 weight payload with path-specific scale views, and a fused preparation kernel absorbs mask generation, residual construction, and layer normalization into one operator. SharQ requires no calibration data, retraining, or model-specific tuning. Evaluated on Llama-3.1-8B, Qwen2.5-7B, Qwen3-30B-A3B, and Qwen3-VL-8B, SharQ recovers 43--63% of the NVFP4-to-FP16 accuracy gap across language and vision-language tasks, and generalizes across NVFP4, HiF4, and MXFP4 formats. On an RTX 5090, SharQ delivers 2.2--2.4$\\times$ latency reduction over FP16 and 1.2--1.4$\\times$ throughput improvement over FP8 in language model serving, and up to 1.58$\\times$ speedup on Wan2.2-T2V-A14B video generation when combined with SageAttention. Our code is available at https://github.com/actypedef/SharQ.",
+      "canonical_id": "arXiv:2606.26587",
+      "arxiv_id": "2606.26587",
+      "doi": "10.48550/arXiv.2606.26587",
+      "authors": [
+        "Haoqian Meng",
+        "Yilun Luo",
+        "Ya-Fei Zhao",
+        "Wen-Yuan Liu",
+        "Hua Zheng",
+        "Xindian Ma",
+        "Peng Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.34653",
+      "identity_tokens": [
+        "id:arXiv:2609.34653",
+        "title:omnitide codesigning algorithms and systems for efficient ondevice omnillm streaming",
+        "url:https://arxiv.org/abs/2609.34653"
+      ],
+      "record": {
+        "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+        "source_url": "https://arxiv.org/abs/2609.34653",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "On-device streaming omni-modal inference safeguards user privacy and eliminates prohibitive per-token API costs, but faces a critical bottleneck: the continuous influx of multimodal data rapidly exhausts constrained memory and compute budgets via monotonic KV cache growth. Existing sparse attention methods fall short, either incurring prohibitive online estimation latency or destroying interleaved cross-modal context, while failing to resolve physical memory fragmentation. We present OmniTide, the first algorithm-system co-design tailored for efficient on-device streaming omni-modal inference. Driven by the observation of modality-aware structural sparsity, OmniTide adopts a unit-based abstraction with two components: (1) At the algorithm level, OmniPick logically retains critical multimodal context based on unit boundaries and modality importance to preserve task accuracy; (2) At the system level, OmniPage physically partitions the cache by retention likelihood and dynamically compacts surviving sparse tokens, minimizing both memory fragmentation and data-movement overhead. Extensive evaluations across three streaming benchmarks and two consumer-device architectures show that OmniTide achieves up to $12.72\\times$ kernel speedups and $2.40\\times$ lower stream-loop latency. On StreamingBench, it improves accuracy by up to 18.0 percentage points over sliding-window baselines at comparable session cost. OmniPage further reduces the physical KV span by up to 26.7% relative to native logical eviction, unlocking real-time, infinite-context streaming on edge devices.",
+        "canonical_id": "arXiv:2609.34653",
+        "arxiv_id": "2609.34653",
+        "authors": [
+          "Zong-Shang Shen",
+          "Wang-Song Yin",
+          "Da-Liang Xu",
+          "Meng-Wei Xu",
+          "Xuan-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832908",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832908",
+        "title:rodis accelerating sparse matrix multiplication on gpu via roworchestration and dynamic instruction scheduling",
+        "url:https://doi.org/10.1145/3832810.3832908"
+      ],
+      "record": {
+        "title": "RODIS: Accelerating Sparse Matrix Multiplication on GPU via Row-Orchestration and Dynamic Instruction Scheduling",
+        "source_url": "https://doi.org/10.1145/3832810.3832908",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Following the Scaling Law, Deep Neural Networks face immense parameter scales and costs, making high-compression unstructured pruning attractive. Additionally, rising edge-side deployment demands have revived interest in activation sparsity. Consequently, unstructured sparse-dense and sparse-sparse matrix multiplications are becoming prevalent in LLM training and inference. However, as the most common general-purpose AI accelerators, GPUs do not provide efficient support for unstructured sparse matrices. Although existing works have proposed GPU architectural enhancements for unstructured sparsity, they are often limited to optimizing Tensor Core computation patterns through dataflows such as outer-product and row-by-row. These methods fail to adequately resolve the poor load balancing and low Multiply-Accumulate utilization in unstructured sparse workloads, especially lacking targeted optimizations for the latest GPU architectural features. To address these issues, we propose RODIS, a two-level acceleration scheme. It utilizes row-orchestration at the data loading level to achieve inter-block load balancing and employs dynamic instruction scheduling at the underlying computation level to enhance MAC utilization. Experimental results show that with minimal area and power overhead, RODIS achieves an average 1.35 × performance improvement compared to other state-of-the-art sparse Tensor Core schemes.",
+        "doi": "10.1145/3832810.3832908",
+        "canonical_id": "DOI:10.1145/3832810.3832908",
+        "authors": [
+          "Jian-Feng Cui",
+          "Bo Yuan",
+          "Ze-Kun Jiang",
+          "Kai Lu",
+          "Sheng Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33889",
+      "identity_tokens": [
+        "id:arXiv:2609.33889",
+        "title:where activation sparsity and kvcache sparsity cross in llm decoding",
+        "url:https://arxiv.org/abs/2609.33889"
+      ],
+      "record": {
+        "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.33889",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+        "canonical_id": "arXiv:2609.33889",
+        "arxiv_id": "2609.33889",
+        "authors": [
+          "Jungseob Lee",
+          "Seungyoon Lee",
+          "Seongtae Hong",
+          "Sugyeong Eo",
+          "Heuiseok Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32114",
+      "identity_tokens": [
+        "id:arXiv:2609.32114",
+        "title:empowering hybrid attention models on npus",
+        "url:https://arxiv.org/abs/2609.32114"
+      ],
+      "record": {
+        "title": "Empowering Hybrid Attention Models on NPUs",
+        "source_url": "https://arxiv.org/abs/2609.32114",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "Hybrid attention models have emerged as a crucial architecture for Large Language Models (LLMs) (e.g., the Qwen3.5 and Kimi series). Their memory and computational efficiency make them highly attractive for on-device inference, forming a promising synergy with edge Neural Processing Units (NPUs). However, naive execution of these hybrid models on edge NPUs fails to deliver these benefits, often bottlenecking the prefill stage due to severe memory-system inefficiencies and architectural mismatches within the linear attention (LA) layers. We present HA-NPU, the first system to enable efficient hybrid attention LLM inference on edge NPUs without modifying the underlying algorithms. HA-NPU enhances execution efficiency by reorganizing the dataflow of the LA components across three levels: (1) At the core level, it partitions workloads by the head dimension and fuses dependent operators, eliminating cross-core global memory accesses; (2) At the operator level, it reorders execution to consume intermediate tensors immediately, drastically minimizing local-buffer pressure; (3) At the tensor level, it employs dataflow-aware layout planning to minimize transformation overhead between matrix and vector processing units. Compared to competitive baselines, HA-NPU achieves up to 35.95$\\times$ LA kernel speedup and 36.14$\\times$ energy reduction, delivering up to 2.03$\\times$ faster end-to-end request latency. The source code will be made publicly available at https://github.com/yinyuanzhang/HA-NPU",
+        "canonical_id": "arXiv:2609.32114",
+        "arxiv_id": "2609.32114",
+        "authors": [
+          "Yin-Yuan Zhang",
+          "Da-Liang Xu",
+          "Xiao-Long Huang",
+          "Wang-Song Yin",
+          "Yun Ma",
+          "Meng-Wei Xu",
+          "Gang Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31975",
+      "identity_tokens": [
+        "id:arXiv:2609.31975",
+        "title:model casting and lowparameter gating towards more sparsely activated ffns",
+        "url:https://arxiv.org/abs/2609.31975"
+      ],
+      "record": {
+        "title": "Model Casting and Low-Parameter Gating: Towards More Sparsely Activated FFNs",
+        "source_url": "https://arxiv.org/abs/2609.31975",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "This paper introduces model casting, a mid-training recipe that drastically sparsifies the activations within the Feed-Forward Network (FFN) layer. With this strategy, at inference time, we first compute the output of the gating matrix and, thanks to its high sparsity, we avoid computations with the two other matrices, reducing the FLOP count by up to 3x. While this theoretical speedup is an upper bound, model casting translates into significant speedups both on CPU and GPU. We then introduce LoPA Gating, a new FFN design that increases the maximum theoretical speedup. It is a low-FLOPs parameterization of the gating matrix that overcomes the 3x cap by allocating fewer FLOPs and parameters to the gating matrix, compared to the two other FFN matrices that are sparsely activated. We consider two cases: (i) we cast a pre-trained model with a sparsity inducing activation; (ii) we train with LoPA from scratch. In all settings, we significantly outperform existing pruning solutions and regular RELU-fication. For instance, at matched quality, we achieve a 3.2x FLOP speedup with LoPA Casting, against 1.6x at best for competing methods top-p and TEAL. Using dedicated kernels, we achieve an actual 3.31x speed-up on GPU at 90% sparsity, past the 3x ceiling of standard gating; RELU-fication, meanwhile, plateaus below 80% sparsity.",
+        "canonical_id": "arXiv:2609.31975",
+        "arxiv_id": "2609.31975",
+        "authors": [
+          "Maria Lomeli",
+          "Antoine Groudiev",
+          "Matthijs Douze",
+          "Loïc Cabannes",
+          "Pierre-Emmanuel Mazaré",
+          "François Fleuret",
+          "Maximilian Beck",
+          "Gergely Szilvasy",
+          "Naila Murray",
+          "Hervé Jégou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25869",
+      "identity_tokens": [
+        "id:arXiv:2609.25869",
+        "title:decoupling logical masks from gpu execution for dynamic blocksparse attention",
+        "url:https://arxiv.org/abs/2609.25869"
+      ],
+      "record": {
+        "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2609.25869",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Attention computation makes inference expensive in video diffusion transformers (vDiTs), which generate videos through iterative denoising. Block-sparse attention (BSA) reduces this cost by computing only blocks selected by a logical mask, which specifies attention interactions to compute. However, coupling logical block geometry to execution choices limits adaptation to varying masks and graphics processing units (GPUs), while runtime kernel specialization can incur preparation overhead that outweighs execution time savings. We present Tessera, a specialized runtime for dynamic BSA that decouples logical masks from GPU execution while preserving specified attention interactions. Its physical mapping layer retains, combines, or subdivides logical attention blocks into physical tiles suited to different attention mask shapes and GPU architectures. Its task organization layer groups and schedules tiles within GPU tasks to reuse data, expose parallelism, and overlap data movement with computation. Finally, profile-guided regime selection enables low- overhead execution plan selection through a lookup table constructed from offline profiling. We implement Tessera with specialized CUDA kernels supporting four NVIDIA GPU generations. Evaluated on 2,315 real attention masks and industrial video diffusion models, Tessera achieves up to 6.79x BSA request speedup over baseline systems in the evaluated video diffusion models.",
+        "canonical_id": "arXiv:2609.25869",
+        "arxiv_id": "2609.25869",
+        "authors": [
+          "Shang-Hao Liu",
+          "Xiao-Yun Yu",
+          "Wan-Ting Li",
+          "Wen-Qi Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5037-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5037-1",
+        "title:towards sociocyberphysical systems a software perspective amid ai breakthroughs",
+        "url:https://doi.org/10.1007/s11432-026-5037-1"
+      ],
+      "record": {
+        "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+        "source_url": "https://doi.org/10.1007/s11432-026-5037-1",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+        "doi": "10.1007/s11432-026-5037-1",
+        "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+        "authors": [
+          "Assia Belbachir",
+          "M. Blake",
+          "Jin-Song Dong",
+          "S. Dustdar",
+          "Christof Ebert",
+          "C. Ghezzi",
+          "David Harel",
+          "S. Helal",
+          "Chun-Min Hu",
+          "Lin-Peng Huang",
+          "Hans-Arno Jacobsen",
+          "Chang-Jun Jiang",
+          "Zhi Jin",
+          "Jia-Lin Li",
+          "Xuan-Zhe Liu",
+          "Jian Lu",
+          "Xiao-Xing Ma",
+          "Assaf Marron",
+          "Hong Mei",
+          "B. Nuseibeh",
+          "Xin Peng",
+          "Yuanchun Shi",
+          "Huai-Min Wang",
+          "Ji Wang",
+          "Jian-Min Wang",
+          "Danny Weyns",
+          "James Woodcock",
+          "Tao Xie",
+          "H. Xu",
+          "Mengfei Yang",
+          "Jian-Wei Yin",
+          "Nai-Jun Zhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sysarc.2026.104016",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.104016",
+        "title:cade contextaware dispatch engine for energyefficient vlm inference on heterogeneous edge with discrete neural processing units",
+        "url:https://doi.org/10.1016/j.sysarc.2026.104016"
+      ],
+      "record": {
+        "title": "CADE: Context-aware dispatch engine for energy-efficient VLM inference on heterogeneous edge with discrete neural processing units",
+        "source_url": "https://doi.org/10.1016/j.sysarc.2026.104016",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "doi": "10.1016/j.sysarc.2026.104016",
+        "canonical_id": "DOI:10.1016/j.sysarc.2026.104016",
+        "authors": [
+          "Se-Jin Yun",
+          "Jeong-Si Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.16568",
+      "identity_tokens": [
+        "id:arXiv:2608.16568",
+        "title:scientific applications of quantum computing challenges and opportunities",
+        "url:https://arxiv.org/abs/2608.16568"
+      ],
+      "record": {
+        "title": "Scientific applications of quantum computing: challenges and opportunities",
+        "source_url": "https://arxiv.org/abs/2608.16568",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "The predictive simulation of molecules and materials has had a broad and significant impact. It nevertheless remains constrained by the cost of accurately treating electronic correlation, excited states, and complex energy landscapes. Quantum computing offers a fundamentally different computational paradigm in which quantum states are encoded and manipulated directly rather than approximated on classical hardware. Here we discuss where this approach may provide a genuine scientific advantage in chemistry, materials science, and biochemistry. Promising directions include the high-accuracy treatment of correlated active spaces, improved excited-state simulations, and accelerated exploration of combinatorial structure spaces. The central challenge is therefore not qubit scaling alone, but demonstrably chemically meaningful gains in predictive reliability. We argue that near-term value is most likely to come from disciplined workflow integration rather than wholesale replacement of classical methods. Noisy physical devices, error-mitigated utility experiments, early fault-tolerant devices, and fully fault-tolerant quantum computers offer different scientific prospects, and claims of usefulness must be tied to the specific regime being discussed. Quantum computing will become scientifically valuable when it demonstrably reduces uncertainty in computed energies, rates, spectra, or materials stability after the full costs of state preparation, measurement, error handling, and coupling to classical simulation are included.",
+        "canonical_id": "arXiv:2608.16568",
+        "arxiv_id": "2608.16568",
+        "authors": [
+          "Bruno Camino",
+          "C. R. Catlow",
+          "J. Buckeridge",
+          "A. Elena",
+          "Vladimir V. Gusev",
+          "Sarah Harris",
+          "Thomas W. Keal",
+          "Glenn Jones",
+          "Viv Kendon",
+          "Syma Khalid",
+          "P. Lolur",
+          "J. A. Nasir",
+          "M. Rosseinsky",
+          "Chris-Kriton Skylaris",
+          "P. A. Warburton",
+          "S. Woodley"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770855.3818136",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3818136",
+        "title:activationbackdoor backdooring large language models in collaborative inference via intermediate activations",
+        "url:https://doi.org/10.1145/3770855.3818136"
+      ],
+      "record": {
+        "title": "ActivationBackdoor: Backdooring Large Language Models in Collaborative Inference via Intermediate Activations",
+        "source_url": "https://doi.org/10.1145/3770855.3818136",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Collaborative inference enables cost-effective deployment of large language models by partitioning layers across multiple participants and forwarding intermediate activations between participants in a pipeline, but these transmitted activations also create a new attack surface: a malicious participant can manipulate intermediate activations during inference. Prior work on collaborative inference attacks has largely focused on privacy leakage, leaving the backdoor threat insufficiently explored. Inspired by recent advances in representation engineering, we propose ActivationBackdoor, an inference-time backdoor attack that composes two activation-level components for trigger detection and backdoor behavior injection. This design achieves the same ''clean inputs behave normally, triggered inputs induce attacker-specified behavior'' property as traditional backdoor attacks, while requiring no access to training data and no model parameter updates. Experiments across classification and open-ended generation tasks show that ActivationBackdoor attains attack success comparable to training-time backdoor baselines while preserving high clean-task accuracy and utility. Overall, our results expose a new and practical backdoor risk in collaborative inference arising from intermediate activation exposure.",
+        "doi": "10.1145/3770855.3818136",
+        "canonical_id": "DOI:10.1145/3770855.3818136",
+        "authors": [
+          "Zichun Su",
+          "Mi Zhang",
+          "Xiaohan Zhang",
+          "Geng Hong",
+          "Xiao-Yu You",
+          "Min Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02995",
+      "identity_tokens": [
+        "id:arXiv:2608.02995",
+        "title:sparseety extracting tokens from sparsityexploiting llm serving systems via deterministic side channels",
+        "url:https://arxiv.org/abs/2608.02995"
+      ],
+      "record": {
+        "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels",
+        "source_url": "https://arxiv.org/abs/2608.02995",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Modern large language models (LLMs) exhibit activation sparsity, wherein only a subset of their neurons is activated for given input tokens. Researchers have leveraged this property to optimize LLM serving systems by omitting weight accesses and computations pertaining to inactive neurons. Unfortunately, however, such optimizations create input-dependent weight accesses, which can be leaked over side channels. We present SparSEEty, a new token extraction attack that exploits input-dependent neuron weight accesses introduced by sparsity-exploiting LLM serving systems. SparSEEty first constructs a neuron-activation oracle using neuron weight access side channels during LLM inference, and then inverts the activation traces to reconstruct the input tokens, forming an end-to-end token extraction attack. We instantiate SparSEEty against an LLM serving system protected inside an Intel TDX confidential virtual machine (CVM), addressing three key challenges: (i) constructing a neuron-activation oracle using a combination of side channels exposed by CVMs, (ii) reducing inference-time overheads of neuron activation monitoring for covertness, and (iii) accurately inverting partial binary activation traces back to tokens. Our evaluation shows that SparSEEty can reconstruct both prompt and response tokens with consistently high BLEU scores (>0.95) across various models and datasets, while incurring monitoring overheads of 3.7% to 7.2%.",
+        "canonical_id": "arXiv:2608.02995",
+        "arxiv_id": "2608.02995",
+        "authors": [
+          "Y. Jo",
+          "Jin-Ho Park",
+          "Euihyun Lee",
+          "Dok-Yung Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22854",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22854",
+        "id:arXiv:2607.22854",
+        "title:coordinated networking for ondevice agentaugmented realtime communication",
+        "url:https://arxiv.org/abs/2607.22854"
+      ],
+      "record": {
+        "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+        "source_url": "https://arxiv.org/abs/2607.22854",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+        "canonical_id": "arXiv:2607.22854",
+        "arxiv_id": "2607.22854",
+        "doi": "10.48550/arXiv.2607.22854",
+        "authors": [
+          "Goodsol Lee",
+          "Juheon Yi",
+          "Jinglu Wang",
+          "Haowen Xu",
+          "S. Bahk",
+          "Yan Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13735",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.13735",
+        "id:arXiv:2607.13735",
+        "title:constraintdriven model optimization an industry framework for selecting compression and acceleration techniques in modern machine learning systems",
+        "url:https://arxiv.org/abs/2607.13735"
+      ],
+      "record": {
+        "title": "Constraint-Driven Model Optimization: An Industry Framework for Selecting Compression and Acceleration Techniques in Modern Machine Learning Systems",
+        "source_url": "https://arxiv.org/abs/2607.13735",
+        "year": 2026,
+        "published": "2026-07-15",
+        "abstract": "The rapid deployment of machine learning systems across cloud, edge, and enterprise environments has brought model optimization to the forefront of systems-engineering. Despite a rich literature spanning quantization, pruning, knowledge distillation, parameter-efficient fine-tuning (PEFT), and inference-time optimization, practitioners are often left navigating these techniques through heuristics rather than principled methodology. We argue that optimization should be formulated as a constraint-driven, multi-objective engineering decision and introduce a unified framework that characterizes any production deployment along five interacting constraint dimensions: data availability, latency budget, memory budget, accuracy tolerance, and retraining budget. Building on this taxonomy, we synthesize empirical gains reported across the research literature and map them to operational constraints rather than algorithmic categories. To ensure practical relevance, we selected these techniques by reviewing recent literature for methods that report measurable improvements against critical deployment bottlenecks. We propose a prescriptive decision framework and provide optimization pipelines for four representative industrial scenarios to illustrate it in practice. To the best of our knowledge, this work provides one of the first structured attempts to formalize model optimization as a constraint-aware, multi-objective engineering process, synthesizing quantitative evidence from the research literature.",
+        "canonical_id": "arXiv:2607.13735",
+        "arxiv_id": "2607.13735",
+        "doi": "10.48550/arXiv.2607.13735",
+        "authors": [
+          "Dhruv Shivkant",
+          "Saket Mohanty",
+          "S. Rai",
+          "Utkarsh Wadhwa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.05475",
+        "id:arXiv:2607.05475",
+        "title:is your npu ready for llms dissecting the hidden efficiency bottlenecks in mobile llm inference",
+        "url:https://arxiv.org/abs/2607.05475"
+      ],
+      "record": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.05475",
+        "year": 2026,
+        "published": "2026-07-06",
+        "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely bottlenecked by hardware inefficiency. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, uniquely spanning five mainstream frameworks (e.g., llama.cpp, GENIE) and three hardware backends (CPU, GPU, NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that provides the first backend-specific energy attribution, moving beyond traditional device-level measurements. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to 10x using custom operators due to divergent offloading and quantization strategies. (2) We identify a distinct phase split where NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This is driven by the NPU's preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in up to 40% energy waste. Leveraging these findings, we present an energy-oriented best-practice configuration for mobile LLM inference. We estimate that this configuration could reduce energy consumption by up to 54.8% on the NPU backend across three datasets.",
+        "canonical_id": "arXiv:2607.05475",
+        "arxiv_id": "2607.05475",
+        "doi": "10.48550/arXiv.2607.05475",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Lingkun Li",
+          "Ji-Liang Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.114647",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.114647",
+        "title:artificial intelligence based framework for cognitive domain analysis",
+        "url:https://doi.org/10.1016/j.engappai.2026.114647"
+      ],
+      "record": {
+        "title": "Artificial intelligence based framework for cognitive domain analysis",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.114647",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.114647",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.114647",
+        "authors": [
+          "M. Lozano",
+          "I. Pérez-Llopis",
+          "Antonio José Caballero Morcillo",
+          "A. Fernández"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3667390",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3667390",
+        "title:convertnet trainingtime model scaling for invehicle continuous learning",
+        "url:https://doi.org/10.1109/TMC.2026.3667390"
+      ],
+      "record": {
+        "title": "ConvertNet: Training-Time Model Scaling for In-Vehicle Continuous Learning",
+        "source_url": "https://doi.org/10.1109/TMC.2026.3667390",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Vehicles are transforming from transportation means to mobile intelligent terminals, powered by artificial intelligence (AI) technologies such as large language (LLM) and vision large models (VLM). To maintain high learning accuracy in all situations, in-vehicle AI models encounter the acute need to continuously learn and dynamically retrain AI models on the fly. The volatile resource demands of such stochastic retraining jobs and inference jobs of higher priority however can not be accommodated simultaneously by existing training systems, which rely on pre-generated compressed models of fixed architecture. In this paper, we propose ConvertNet, a novel continuous learning system that effectively scales up/down a compressed model through training-time neuron memorizer (TNM) - a max heap of neurons in tree structure. Based on TNM, ConvertNet estimates the model’s resource-accuracy trade-off per neuron, thus efficiently utilizing the limited available resources to scale up and (re)train the model to improve its accuracy. Evaluated on six representative in-vehicle scenarios, comparative experiments against eleven state-of-the-art techniques show that ConvertNet achieves as much as 22.33% improvement in learning accuracy, and reduces energy consumption by 3.65x.",
+        "doi": "10.1109/TMC.2026.3667390",
+        "canonical_id": "DOI:10.1109/TMC.2026.3667390",
+        "authors": [
+          "Qinglong Zhang",
+          "Rui Han",
+          "Chi Harold Liu",
+          "Guo-Ren Wang",
+          "L. Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://doi.org/10.1016/j.inffus.2026.104630"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://doi.org/10.1016/j.inffus.2026.104630",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "doi": "10.1016/j.inffus.2026.104630",
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wentao Zhou",
+          "Bin Guo",
+          "Zhiwen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icce-taiwan71481.2026.11652842",
+      "identity_tokens": [
+        "id:DOI:10.1109/icce-taiwan71481.2026.11652842",
+        "title:a comparative study of finetuned small models for inference",
+        "url:https://doi.org/10.1109/ICCE-Taiwan71481.2026.11652842"
+      ],
+      "record": {
+        "title": "A Comparative Study of Fine-Tuned Small Models for Inference",
+        "source_url": "https://doi.org/10.1109/ICCE-Taiwan71481.2026.11652842",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "In recent years, large language models (LLMs) are one of the most popular models in AI. LLMs can perceive the structure of languages, enabling them to analyze, synthesize, and generate language that is close to human language. This is why AI is popular in language-related fields such as translation and summarization. The purpose of this research is to improve and implement LLM for inference. Specifically, this study evaluates Speculative Chain-of-Thought (SCoT), which is designed for complex reasoning, alongside Speculative Inference (SpecInfer), which is optimized for high-speed performance. Furthermore, we conducted a comparative analysis of efficiency in terms of latency and accuracy between speculative inference (SpecInfer) and Speculative Chain-of-thought (SCoT). The result shows that SpecInfer is superior to SCoT by latency 49.5 second, speedup 2.79x and accuracy 85.39%",
+        "doi": "10.1109/ICCE-Taiwan71481.2026.11652842",
+        "canonical_id": "DOI:10.1109/ICCE-Taiwan71481.2026.11652842",
+        "authors": [
+          "Varinya Phanichraksaphong",
+          "Adna Sento",
+          "Y. Kitjaidure"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29629",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.29629",
+        "id:arXiv:2606.29629",
+        "title:energyefficient multimodal inference serving with triserve",
+        "url:https://arxiv.org/abs/2606.29629"
+      ],
+      "record": {
+        "title": "Energy-Efficient Multimodal Inference Serving with Tri-serve",
+        "source_url": "https://arxiv.org/abs/2606.29629",
+        "year": 2026,
+        "published": "2026-06-28",
+        "abstract": "Multimodal model inference creates substantial energy demand with growing performance requirements. Within GPUs, power is autonomously managed by an on-board power management unit (PMU), which makes frequency boosting/throttling decisions. However, we find that these hardware-managed frequency decisions can cause significant power inefficiency. This work identifies three classes of power inefficiencies within modern multimodal inference serving: (1) inter-stage dependency stalls run at near-maximum frequency despite being idle; (2) anti-correlation between auto-boost frequency and arithmetic intensity (A.I.) results in compute-bound phases (e.g., prefill) running at lower frequency and vice versa; and (3) thermal throttling degrades SM frequency and throughput. We propose Tri-serve, a software-based DVFS controller that jointly accounts for inter-stage dependency stalls, the arithmetic-intensity effect on frequency and power, and the thermal-throttling effect of high A.I. phases, to deliver energy-efficient multimodal serving on commodity GPUs. We show that Tri-serve achieves a 22% energy-efficiency improvement with no latency or throughput impact.",
+        "canonical_id": "arXiv:2606.29629",
+        "arxiv_id": "2606.29629",
+        "doi": "10.48550/arXiv.2606.29629",
+        "authors": [
+          "Ziyang Jia",
+          "Sara Rashidi Golrouye",
+          "L. Bhuyan",
+          "Benjamin Kubwimana",
+          "Devashree Tripathy",
+          "Zexin Li",
+          "Cong Liu",
+          "Daniel Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26587",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.26587",
+        "id:arXiv:2606.26587",
+        "title:sharq bridging activation sparsity and fp4 quantization for llm inference",
+        "url:https://arxiv.org/abs/2606.26587"
+      ],
+      "record": {
+        "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.26587",
+        "year": 2026,
+        "published": "2026-06-25",
+        "abstract": "Low-bit floating-point formats and semi-structured sparsity are increasingly supported by modern accelerators, yet combining them for LLM activation compression remains challenging: activations contain input-dependent outliers that dominate block scales in FP4 quantization, and directly applying N:M sparsity masks discards moderate values, coupling sparsification loss with quantization error. We introduce SharQ, a training-free inference method that bridges activation sparsity and FP4 quantization through an online sparse--dense decomposition. For each activation tensor, SharQ generates an input-adaptive N:M mask to extract an outlier-dominated sparse backbone, quantizes it to FP4, and defines a dense residual relative to the quantized sparse backbone rather than the unquantized sparse values. A sparse FP4 GEMM processes the backbone while a dense FP4 GEMM compensates for both mask-induced activation loss and sparse-path quantization error. The two paths share a single FP4 weight payload with path-specific scale views, and a fused preparation kernel absorbs mask generation, residual construction, and layer normalization into one operator. SharQ requires no calibration data, retraining, or model-specific tuning. Evaluated on Llama-3.1-8B, Qwen2.5-7B, Qwen3-30B-A3B, and Qwen3-VL-8B, SharQ recovers 43--63% of the NVFP4-to-FP16 accuracy gap across language and vision-language tasks, and generalizes across NVFP4, HiF4, and MXFP4 formats. On an RTX 5090, SharQ delivers 2.2--2.4$\\times$ latency reduction over FP16 and 1.2--1.4$\\times$ throughput improvement over FP8 in language model serving, and up to 1.58$\\times$ speedup on Wan2.2-T2V-A14B video generation when combined with SageAttention. Our code is available at https://github.com/actypedef/SharQ.",
+        "canonical_id": "arXiv:2606.26587",
+        "arxiv_id": "2606.26587",
+        "doi": "10.48550/arXiv.2606.26587",
+        "authors": [
+          "Haoqian Meng",
+          "Yilun Luo",
+          "Ya-Fei Zhao",
+          "Wen-Yuan Liu",
+          "Hua Zheng",
+          "Xindian Ma",
+          "Peng Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d8a94879879635029d5d0fe818053f048664510a69de359405f59fb00c593db5",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

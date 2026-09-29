@@ -1,0 +1,929 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-01fa5bc6392a781aef43",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-01fa5bc6392a781aef43",
+  "axis": "forward citations of Splitwise for disaggregated LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 80,
+  "retrieval_duplicate_filtered_count": 53,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-29T22:49:09.234337+00:00",
+  "preload_id": "preload-01fa5bc6392a781aef43",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 4,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+      "source_url": "https://doi.org/10.1145/3830418.3843856",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843856",
+      "canonical_id": "DOI:10.1145/3830418.3843856",
+      "authors": [
+        "Cong-Jie He",
+        "Le Xu",
+        "Zhan Lu",
+        "Ye-Qi Huang",
+        "Hao-Cheng Xiao",
+        "Cheng Deng",
+        "Ling-Xiao Ma",
+        "Zi-Ming Miao",
+        "Fan Yang",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Janus: Multi-LLM Serving at Production Scale",
+      "source_url": "https://doi.org/10.1145/3830418.3843867",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843867",
+      "canonical_id": "DOI:10.1145/3830418.3843867",
+      "authors": [
+        "Tian-Bao Zhou",
+        "Yi Wang",
+        "Yu Zhou",
+        "Zi-Rui Liu",
+        "Zhi-Ming Wang",
+        "Ye-Bo Peng",
+        "Yong-Fu Wang",
+        "Yi Zhang",
+        "Jin-Run Yin",
+        "Ke-Meng Tian",
+        "Fang-Cheng Fu",
+        "Tong-Xuan Liu",
+        "Tao Peng",
+        "Tong Yang",
+        "Bin Cui",
+        "Xupeng Miao",
+        "Ke Zhang"
+      ]
+    },
+    {
+      "title": "StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers",
+      "source_url": "https://doi.org/10.1145/3830418.3843869",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": null,
+      "doi": "10.1145/3830418.3843869",
+      "canonical_id": "DOI:10.1145/3830418.3843869",
+      "authors": [
+        "Yi-Zhuo Liang",
+        "Shao-Yu Wang",
+        "Jaeyong Song",
+        "Yan-Qi Zhou",
+        "Geon-Woo Kim",
+        "Guang-Rong He",
+        "Seo Jin Park"
+      ]
+    },
+    {
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+      "canonical_id": "arXiv:2609.34683",
+      "arxiv_id": "2609.34683",
+      "authors": [
+        "Cheuk H. Lau",
+        "Ze-Yu Cao",
+        "K. Yin",
+        "Yao Lai",
+        "Hao-Ran Wu",
+        "Nicholas D. Lane",
+        "Robert Mullins",
+        "Ilia Shumailov",
+        "Yi-Ren Zhao"
+      ]
+    },
+    {
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+      "canonical_id": "arXiv:2609.34555",
+      "arxiv_id": "2609.34555",
+      "authors": [
+        "Qiu-Yang Zhang",
+        "Kai Zhou",
+        "Kai Lu",
+        "Hao-Cheng Lu",
+        "Jian Zhou",
+        "Yuan-Peng Su",
+        "Kun Bao",
+        "Ji-Guang Wan",
+        "Fei Wu"
+      ]
+    },
+    {
+      "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.34117",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Mixture-of-experts (MoE) models activate few experts per token, yet batched decoding can access nearly the entire expert pool, making expert-weight traffic a major bottleneck. Expert pruning reduces this traffic, but conventional approaches also prune compute-bound prefill, sacrificing model quality for little throughput benefit. We present SlimWise, a serving framework that tailors the expert pool to each inference phase. SlimWise performs prefill with the full model and decode with a pruned model that directly reuses the prefill-generated KV cache without conversion. Across two MoE backbones and three pruning criteria, this training-free KV cache handoff substantially narrows accuracy gaps relative to the full model in many settings. We also show that benchmark accuracy can conceal substantial pruning-induced changes in generation length. To address these distortions and residual accuracy loss, SlimWise introduces a low-cost distillation stage that trains the decoder to continue from full-model KV caches while updating only a small subset of parameters. Implemented in vLLM, SlimWise supports both prefill-decode (PD) disaggregation and PD-colocated serving. On Qwen3.6-35B-A3B, SlimWise improves decode throughput by up to 1.81x at 50% expert pruning with minimal accuracy loss.",
+      "canonical_id": "arXiv:2609.34117",
+      "arxiv_id": "2609.34117",
+      "authors": [
+        "Gunho Park",
+        "Kyoungho Jeun",
+        "Juntaek Oh",
+        "Byeong-Gon Shin",
+        "Baeseong Park",
+        "Minsoo Rhu"
+      ]
+    },
+    {
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.35263",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+      "canonical_id": "arXiv:2609.35263",
+      "arxiv_id": "2609.35263",
+      "authors": [
+        "Aaryam Sharma"
+      ]
+    },
+    {
+      "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
+      "source_url": "https://arxiv.org/abs/2609.33135",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Long-context LLM inference pushes modern GPU serving stacks into an attention-bound regime, where both compute and memory are dominated by the softmax-GEMM pipeline. On NVIDIA Blackwell GPUs, FP4 Tensor Cores offer high matmul throughput, but we find that fully FP4 attention often fails to translate this throughput into end-to-end speedups due to non-matmul costs: online quantization after softmax, tensor/shared-memory data movement, and contention on the softmax path. We present MpFA, a training-free FlashAttention kernel optimized for Blackwell. Guided by hardware characterization, MpFA uses mixed precision: NVFP4 for QK and FP8 for PV (QK4PV8). This preserves low-bit QK throughput while avoiding the conversion and scaling overheads of FP4 PV. To recover accuracy without further stressing the softmax pipeline, MpFA introduces rank-one smoothing compensation implemented as an additional Tensor Core MMA. MpFA further improves performance with a fine-grained asynchronous pipeline, tensor-memory reuse, and adaptive parallel partitioning across prefill and decode. On an NVIDIA B200 and across 16K-128K contexts, MpFA improves prefill throughput over state-of-the-art BF16/FP8 baselines and increases end-to-end output throughput by 2.81$\\times$ over BF16 FA4 across Llama-3.1-8B and Qwen3-14B. Across five benchmark suites and two models, rank-one compensation recovers 62.5% of the accuracy loss with about 2.0% kernel overhead.",
+      "canonical_id": "arXiv:2609.33135",
+      "arxiv_id": "2609.33135",
+      "authors": [
+        "Chen-Cheng Deng",
+        "Jian-Bin Fang",
+        "De-Zun Dong"
+      ]
+    },
+    {
+      "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+      "source_url": "https://arxiv.org/abs/2609.33224",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+      "canonical_id": "arXiv:2609.33224",
+      "arxiv_id": "2609.33224",
+      "authors": [
+        "Zhi-Yuan Tan",
+        "De-Jiang Zhu",
+        "Jing-Zhe Jiang",
+        "Yi-Hao Zheng",
+        "Yang Tian",
+        "Tao Wang",
+        "Min-Chen Yu"
+      ]
+    },
+    {
+      "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33889",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+      "canonical_id": "arXiv:2609.33889",
+      "arxiv_id": "2609.33889",
+      "authors": [
+        "Jungseob Lee",
+        "Seungyoon Lee",
+        "Seongtae Hong",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ]
+    },
+    {
+      "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32999",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+      "canonical_id": "arXiv:2609.32999",
+      "arxiv_id": "2609.32999",
+      "authors": [
+        "Fei Fang",
+        "Chung-Hsiang Lo",
+        "Yi Liu",
+        "Yi-Fan Hua",
+        "Chen Qian"
+      ]
+    },
+    {
+      "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+      "source_url": "https://arxiv.org/abs/2609.32283",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+      "canonical_id": "arXiv:2609.32283",
+      "arxiv_id": "2609.32283",
+      "authors": [
+        "Zai-Feng Pan",
+        "Michael Wang",
+        "Chris Wu",
+        "Zheng-Ding Hu",
+        "Xin-Wei Qiang",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ]
+    },
+    {
+      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.31551",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+      "canonical_id": "arXiv:2609.31551",
+      "arxiv_id": "2609.31551",
+      "doi": "10.1145/3838684.3846886",
+      "authors": [
+        "Kun-Xiong Zhu",
+        "Zhi-Hao Shu",
+        "Hang-Yu Zheng",
+        "Ming-Hai Qin",
+        "Miao Yin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ]
+    },
+    {
+      "title": "The KV Cache Is the New Memory Wall",
+      "source_url": "https://arxiv.org/abs/2609.30854",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+      "canonical_id": "arXiv:2609.30854",
+      "arxiv_id": "2609.30854",
+      "authors": [
+        "Tejinder Singh"
+      ]
+    },
+    {
+      "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement",
+      "source_url": "https://arxiv.org/abs/2609.16800",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable progress across diverse domains, but continual adaptation to evolving tasks and environments remains a key challenge. Existing memory-augmented approaches retrieve individual past examples as direct references, but do not explicitly synthesize actionable strategies from them, causing the same types of errors to recur. We propose Dynamic Retrieval-based Policy Generation (DRPG), a framework that integrates memory-based retrieval with a dynamic policy generator, leveraging historical data and environment feedback to produce task-specific policies for continual LLM improvement. We evaluate DRPG across six benchmarks spanning text-to-SQL, question answering, medical diagnosis, and Python programming, using seven LLMs from both proprietary and open-weight families. DRPG outperforms strong baselines across most datasets and models. Further analysis demonstrates that DRPG's policy generation is robust to retrieval strategy, operates effectively without prior policy continuity, and can leverage smaller or cross-family models as cost-efficient policy generators. We also find that the benefit of policy-level guidance depends on task characteristics, offering practical insights into when and under what conditions this mechanism is most effective.",
+      "canonical_id": "arXiv:2609.16800",
+      "arxiv_id": "2609.16800",
+      "authors": [
+        "Ting-Wei Chang",
+        "Po-Chun Chen",
+        "Hen-Hsen Huang",
+        "Hsin-Hsi Chen"
+      ]
+    },
+    {
+      "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief",
+      "source_url": "https://arxiv.org/abs/2609.05406",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "Grid studies often represent data-center flexibility as a fixed percentage of load, although no public production trace has shown how much eligible load persists across event durations or co-moves across clusters. We reconstruct 4,439 hourly power observations from a 185-day trace of 155,410 GPUs and derive a workload-semantic flexibility envelope. The fleet's time-averaged Monte Carlo median facility demand is 55.8 MW, while immediate eligible curtailment averages 3.55 MW after retaining allocated-GPU idle power: 12.1% of workload power and 6.35% of median facility power. Under full realization of that eligibility, 95%-available relief falls from 2.51 MW for one hour to 2.32 MW for four hours and 1.95 MW for 24 hours; a common realizable fraction q scales every value exactly by q. A mean-calibrated scalar overstates these quantities by 17%, 25%, and 47%, while a scalar tail-calibrated at four hours understates the one-hour product by 6% and overstates the 24-hour product by 17%; the share that reproduces the surface varies by a factor of 1.6 across durations and reliability levels. Aggregating 13 clusters raises four-hour firmness from 0.38 to 0.66, but cross-cluster covariance limits the gain. The production scheduler exposes almost no additional delay-based capacity: newly deferrable arrivals average 0.008 MW and have zero 95%-available capacity. These results replace an assumed flexibility percentage with duration, reliability, portfolio, and realizability terms that can be written into interconnection and demand-response contracts.",
+      "canonical_id": "arXiv:2609.05406",
+      "arxiv_id": "2609.05406",
+      "authors": [
+        "Mei-Yi Li"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://arxiv.org/abs/2609.05565",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "FlexiTensor: Adaptive Multi-Task Deployment of LLMs on Resource-Constrained Heterogeneous Edge Devices",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3703757",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "The drive for privacy-preserving and low-latency artificial intelligence necessitates executing Large Language Models (LLMs) directly on heterogeneous, resource-constrained edge devices. This paradigm presents a challenge: efficiently running large models across multiple end/edge devices under a strict energy budget. Especially, the problem becomes more complicated when it comes to orchestrating multiple complex tasks using large models at the same time. To address this, we introduce FlexiTensor, an offline planning and deployment system for LLM inference, scaling from a single task to multiple concurrent tasks. FlexiTensor first considers LLM inference for a single task under a strict energy budget. We design a heuristic optimization algorithm to minimize the latency under a strict energy budget. Specifically, we select an optimized subset of devices and tensor allocations. Based on the selection, latency can be reduced by using non-uniform tensor parallelism with quantization. FlexiTensor can be extended to multi-task cases. We model the execution structure of multi-agent workflows as pre-defined Directed Acyclic Graphs (DAGs) and reformulate the problem with energy consumption constraints. FlexiTensor introduces a novel hybrid evolutionary algorithm to address joint task scheduling and resource allocation in multi-task cases. This approach navigates the vast search space of task placement, tensor splitting, and thread assignment to minimize the overall workflow makespan. All optimization algorithms run offline before deployment, using pre-profiled device characteristics to compute a static execution plan. Extensive experiments on a physical testbed of heterogeneous edge devices demonstrate that FlexiTensor significantly outperforms baselines. We accelerate single-task inference by up to 50%. For multi-task workflows, we consistently find superior scheduling solutions, achieving speed improvements by an average of 50% against competitive baselines and by up to 100% in certain scenarios, showcasing its effectiveness and adaptability for real-world edge LLM-based applications.",
+      "doi": "10.1109/TPDS.2026.3703757",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3703757",
+      "authors": [
+        "Bowen Zhang",
+        "Jiahui Hou",
+        "Junyan Zhang"
+      ]
+    },
+    {
+      "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+      "source_url": "https://doi.org/10.1007/s11432-026-5037-1",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+      "doi": "10.1007/s11432-026-5037-1",
+      "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+      "authors": [
+        "Assia Belbachir",
+        "M. Blake",
+        "Jin-Song Dong",
+        "S. Dustdar",
+        "Christof Ebert",
+        "C. Ghezzi",
+        "David Harel",
+        "S. Helal",
+        "Chun-Min Hu",
+        "Lin-Peng Huang",
+        "Hans-Arno Jacobsen",
+        "Chang-Jun Jiang",
+        "Zhi Jin",
+        "Jia-Lin Li",
+        "Xuan-Zhe Liu",
+        "Jian Lu",
+        "Xiao-Xing Ma",
+        "Assaf Marron",
+        "Hong Mei",
+        "B. Nuseibeh",
+        "Xin Peng",
+        "Yuanchun Shi",
+        "Huai-Min Wang",
+        "Ji Wang",
+        "Jian-Min Wang",
+        "Danny Weyns",
+        "James Woodcock",
+        "Tao Xie",
+        "H. Xu",
+        "Mengfei Yang",
+        "Jian-Wei Yin",
+        "Nai-Jun Zhan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843856",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843856",
+        "title:meshrt compiletime governed waferscale runtime for lowlatency highthroughput inference",
+        "url:https://doi.org/10.1145/3830418.3843856"
+      ],
+      "record": {
+        "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+        "source_url": "https://doi.org/10.1145/3830418.3843856",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843856",
+        "canonical_id": "DOI:10.1145/3830418.3843856",
+        "authors": [
+          "Cong-Jie He",
+          "Le Xu",
+          "Zhan Lu",
+          "Ye-Qi Huang",
+          "Hao-Cheng Xiao",
+          "Cheng Deng",
+          "Ling-Xiao Ma",
+          "Zi-Ming Miao",
+          "Fan Yang",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843867",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843867",
+        "title:janus multillm serving at production scale",
+        "url:https://doi.org/10.1145/3830418.3843867"
+      ],
+      "record": {
+        "title": "Janus: Multi-LLM Serving at Production Scale",
+        "source_url": "https://doi.org/10.1145/3830418.3843867",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843867",
+        "canonical_id": "DOI:10.1145/3830418.3843867",
+        "authors": [
+          "Tian-Bao Zhou",
+          "Yi Wang",
+          "Yu Zhou",
+          "Zi-Rui Liu",
+          "Zhi-Ming Wang",
+          "Ye-Bo Peng",
+          "Yong-Fu Wang",
+          "Yi Zhang",
+          "Jin-Run Yin",
+          "Ke-Meng Tian",
+          "Fang-Cheng Fu",
+          "Tong-Xuan Liu",
+          "Tao Peng",
+          "Tong Yang",
+          "Bin Cui",
+          "Xupeng Miao",
+          "Ke Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843869",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843869",
+        "title:streamep stragglertolerant moe decoding without communication barriers",
+        "url:https://doi.org/10.1145/3830418.3843869"
+      ],
+      "record": {
+        "title": "StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers",
+        "source_url": "https://doi.org/10.1145/3830418.3843869",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": null,
+        "doi": "10.1145/3830418.3843869",
+        "canonical_id": "DOI:10.1145/3830418.3843869",
+        "authors": [
+          "Yi-Zhuo Liang",
+          "Shao-Yu Wang",
+          "Jaeyong Song",
+          "Yan-Qi Zhou",
+          "Geon-Woo Kim",
+          "Guang-Rong He",
+          "Seo Jin Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34683",
+      "identity_tokens": [
+        "id:arXiv:2609.34683",
+        "title:agentperfbench a benchmarking and evaluation suite for inference performance of agentic llms",
+        "url:https://arxiv.org/abs/2609.34683"
+      ],
+      "record": {
+        "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+        "source_url": "https://arxiv.org/abs/2609.34683",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+        "canonical_id": "arXiv:2609.34683",
+        "arxiv_id": "2609.34683",
+        "authors": [
+          "Cheuk H. Lau",
+          "Ze-Yu Cao",
+          "K. Yin",
+          "Yao Lai",
+          "Hao-Ran Wu",
+          "Nicholas D. Lane",
+          "Robert Mullins",
+          "Ilia Shumailov",
+          "Yi-Ren Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34555",
+      "identity_tokens": [
+        "id:arXiv:2609.34555",
+        "title:pulseinfer iocentric sparse kv cache offloading for efficient longcontext llm decoding",
+        "url:https://arxiv.org/abs/2609.34555"
+      ],
+      "record": {
+        "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.34555",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+        "canonical_id": "arXiv:2609.34555",
+        "arxiv_id": "2609.34555",
+        "authors": [
+          "Qiu-Yang Zhang",
+          "Kai Zhou",
+          "Kai Lu",
+          "Hao-Cheng Lu",
+          "Jian Zhou",
+          "Yuan-Peng Su",
+          "Kun Bao",
+          "Ji-Guang Wan",
+          "Fei Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34117",
+      "identity_tokens": [
+        "id:arXiv:2609.34117",
+        "title:slimwise decoupling expert pruning across prefill and decode for efficient moe serving",
+        "url:https://arxiv.org/abs/2609.34117"
+      ],
+      "record": {
+        "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+        "source_url": "https://arxiv.org/abs/2609.34117",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Mixture-of-experts (MoE) models activate few experts per token, yet batched decoding can access nearly the entire expert pool, making expert-weight traffic a major bottleneck. Expert pruning reduces this traffic, but conventional approaches also prune compute-bound prefill, sacrificing model quality for little throughput benefit. We present SlimWise, a serving framework that tailors the expert pool to each inference phase. SlimWise performs prefill with the full model and decode with a pruned model that directly reuses the prefill-generated KV cache without conversion. Across two MoE backbones and three pruning criteria, this training-free KV cache handoff substantially narrows accuracy gaps relative to the full model in many settings. We also show that benchmark accuracy can conceal substantial pruning-induced changes in generation length. To address these distortions and residual accuracy loss, SlimWise introduces a low-cost distillation stage that trains the decoder to continue from full-model KV caches while updating only a small subset of parameters. Implemented in vLLM, SlimWise supports both prefill-decode (PD) disaggregation and PD-colocated serving. On Qwen3.6-35B-A3B, SlimWise improves decode throughput by up to 1.81x at 50% expert pruning with minimal accuracy loss.",
+        "canonical_id": "arXiv:2609.34117",
+        "arxiv_id": "2609.34117",
+        "authors": [
+          "Gunho Park",
+          "Kyoungho Jeun",
+          "Juntaek Oh",
+          "Byeong-Gon Shin",
+          "Baeseong Park",
+          "Minsoo Rhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35263",
+      "identity_tokens": [
+        "id:arXiv:2609.35263",
+        "title:wavepp highthroughput pipeline parallel llm prefill under prefix reuse",
+        "url:https://arxiv.org/abs/2609.35263"
+      ],
+      "record": {
+        "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.35263",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+        "canonical_id": "arXiv:2609.35263",
+        "arxiv_id": "2609.35263",
+        "authors": [
+          "Aaryam Sharma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33135",
+      "identity_tokens": [
+        "id:arXiv:2609.33135",
+        "title:mpfa hardwareefficient trainfree qk4v8 flashattention kernels on blackwell gpus",
+        "url:https://arxiv.org/abs/2609.33135"
+      ],
+      "record": {
+        "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
+        "source_url": "https://arxiv.org/abs/2609.33135",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Long-context LLM inference pushes modern GPU serving stacks into an attention-bound regime, where both compute and memory are dominated by the softmax-GEMM pipeline. On NVIDIA Blackwell GPUs, FP4 Tensor Cores offer high matmul throughput, but we find that fully FP4 attention often fails to translate this throughput into end-to-end speedups due to non-matmul costs: online quantization after softmax, tensor/shared-memory data movement, and contention on the softmax path. We present MpFA, a training-free FlashAttention kernel optimized for Blackwell. Guided by hardware characterization, MpFA uses mixed precision: NVFP4 for QK and FP8 for PV (QK4PV8). This preserves low-bit QK throughput while avoiding the conversion and scaling overheads of FP4 PV. To recover accuracy without further stressing the softmax pipeline, MpFA introduces rank-one smoothing compensation implemented as an additional Tensor Core MMA. MpFA further improves performance with a fine-grained asynchronous pipeline, tensor-memory reuse, and adaptive parallel partitioning across prefill and decode. On an NVIDIA B200 and across 16K-128K contexts, MpFA improves prefill throughput over state-of-the-art BF16/FP8 baselines and increases end-to-end output throughput by 2.81$\\times$ over BF16 FA4 across Llama-3.1-8B and Qwen3-14B. Across five benchmark suites and two models, rank-one compensation recovers 62.5% of the accuracy loss with about 2.0% kernel overhead.",
+        "canonical_id": "arXiv:2609.33135",
+        "arxiv_id": "2609.33135",
+        "authors": [
+          "Chen-Cheng Deng",
+          "Jian-Bin Fang",
+          "De-Zun Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33224",
+      "identity_tokens": [
+        "id:arXiv:2609.33224",
+        "title:packserve sloaware request scheduling for agentic llm serving at scale",
+        "url:https://arxiv.org/abs/2609.33224"
+      ],
+      "record": {
+        "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+        "source_url": "https://arxiv.org/abs/2609.33224",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+        "canonical_id": "arXiv:2609.33224",
+        "arxiv_id": "2609.33224",
+        "authors": [
+          "Zhi-Yuan Tan",
+          "De-Jiang Zhu",
+          "Jing-Zhe Jiang",
+          "Yi-Hao Zheng",
+          "Yang Tian",
+          "Tao Wang",
+          "Min-Chen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33889",
+      "identity_tokens": [
+        "id:arXiv:2609.33889",
+        "title:where activation sparsity and kvcache sparsity cross in llm decoding",
+        "url:https://arxiv.org/abs/2609.33889"
+      ],
+      "record": {
+        "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.33889",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+        "canonical_id": "arXiv:2609.33889",
+        "arxiv_id": "2609.33889",
+        "authors": [
+          "Jungseob Lee",
+          "Seungyoon Lee",
+          "Seongtae Hong",
+          "Sugyeong Eo",
+          "Heuiseok Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32999",
+      "identity_tokens": [
+        "id:arXiv:2609.32999",
+        "title:tessera demanddriven kv cache management for retrievalaugmented llm serving",
+        "url:https://arxiv.org/abs/2609.32999"
+      ],
+      "record": {
+        "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.32999",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+        "canonical_id": "arXiv:2609.32999",
+        "arxiv_id": "2609.32999",
+        "authors": [
+          "Fei Fang",
+          "Chung-Hsiang Lo",
+          "Yi Liu",
+          "Yi-Fan Hua",
+          "Chen Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32283",
+      "identity_tokens": [
+        "id:arXiv:2609.32283",
+        "title:agentreplay tokenwise trace replay is essential for fair serving system performance benchmarking",
+        "url:https://arxiv.org/abs/2609.32283"
+      ],
+      "record": {
+        "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+        "source_url": "https://arxiv.org/abs/2609.32283",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+        "canonical_id": "arXiv:2609.32283",
+        "arxiv_id": "2609.32283",
+        "authors": [
+          "Zai-Feng Pan",
+          "Michael Wang",
+          "Chris Wu",
+          "Zheng-Ding Hu",
+          "Xin-Wei Qiang",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31551",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838684.3846886",
+        "id:arXiv:2609.31551",
+        "title:easerve encodeaware disaggregated serving for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.31551"
+      ],
+      "record": {
+        "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.31551",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+        "canonical_id": "arXiv:2609.31551",
+        "arxiv_id": "2609.31551",
+        "doi": "10.1145/3838684.3846886",
+        "authors": [
+          "Kun-Xiong Zhu",
+          "Zhi-Hao Shu",
+          "Hang-Yu Zheng",
+          "Ming-Hai Qin",
+          "Miao Yin",
+          "Gagan Agrawal",
+          "Wei Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30854",
+      "identity_tokens": [
+        "id:arXiv:2609.30854",
+        "title:the kv cache is the new memory wall",
+        "url:https://arxiv.org/abs/2609.30854"
+      ],
+      "record": {
+        "title": "The KV Cache Is the New Memory Wall",
+        "source_url": "https://arxiv.org/abs/2609.30854",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+        "canonical_id": "arXiv:2609.30854",
+        "arxiv_id": "2609.30854",
+        "authors": [
+          "Tejinder Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16800",
+      "identity_tokens": [
+        "id:arXiv:2609.16800",
+        "title:smarter by the moment environmentdriven dynamic policies for continual llm improvement",
+        "url:https://arxiv.org/abs/2609.16800"
+      ],
+      "record": {
+        "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement",
+        "source_url": "https://arxiv.org/abs/2609.16800",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable progress across diverse domains, but continual adaptation to evolving tasks and environments remains a key challenge. Existing memory-augmented approaches retrieve individual past examples as direct references, but do not explicitly synthesize actionable strategies from them, causing the same types of errors to recur. We propose Dynamic Retrieval-based Policy Generation (DRPG), a framework that integrates memory-based retrieval with a dynamic policy generator, leveraging historical data and environment feedback to produce task-specific policies for continual LLM improvement. We evaluate DRPG across six benchmarks spanning text-to-SQL, question answering, medical diagnosis, and Python programming, using seven LLMs from both proprietary and open-weight families. DRPG outperforms strong baselines across most datasets and models. Further analysis demonstrates that DRPG's policy generation is robust to retrieval strategy, operates effectively without prior policy continuity, and can leverage smaller or cross-family models as cost-efficient policy generators. We also find that the benefit of policy-level guidance depends on task characteristics, offering practical insights into when and under what conditions this mechanism is most effective.",
+        "canonical_id": "arXiv:2609.16800",
+        "arxiv_id": "2609.16800",
+        "authors": [
+          "Ting-Wei Chang",
+          "Po-Chun Chen",
+          "Hen-Hsen Huang",
+          "Hsin-Hsi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05406",
+      "identity_tokens": [
+        "id:arXiv:2609.05406",
+        "title:beyond scalar flexibility from eligible ai workloads to dependable load relief",
+        "url:https://arxiv.org/abs/2609.05406"
+      ],
+      "record": {
+        "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief",
+        "source_url": "https://arxiv.org/abs/2609.05406",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "Grid studies often represent data-center flexibility as a fixed percentage of load, although no public production trace has shown how much eligible load persists across event durations or co-moves across clusters. We reconstruct 4,439 hourly power observations from a 185-day trace of 155,410 GPUs and derive a workload-semantic flexibility envelope. The fleet's time-averaged Monte Carlo median facility demand is 55.8 MW, while immediate eligible curtailment averages 3.55 MW after retaining allocated-GPU idle power: 12.1% of workload power and 6.35% of median facility power. Under full realization of that eligibility, 95%-available relief falls from 2.51 MW for one hour to 2.32 MW for four hours and 1.95 MW for 24 hours; a common realizable fraction q scales every value exactly by q. A mean-calibrated scalar overstates these quantities by 17%, 25%, and 47%, while a scalar tail-calibrated at four hours understates the one-hour product by 6% and overstates the 24-hour product by 17%; the share that reproduces the surface varies by a factor of 1.6 across durations and reliability levels. Aggregating 13 clusters raises four-hour firmness from 0.38 to 0.66, but cross-cluster covariance limits the gain. The production scheduler exposes almost no additional delay-based capacity: newly deferrable arrivals average 0.008 MW and have zero 95%-available capacity. These results replace an assumed flexibility percentage with duration, reliability, portfolio, and realizability terms that can be written into interconnection and demand-response contracts.",
+        "canonical_id": "arXiv:2609.05406",
+        "arxiv_id": "2609.05406",
+        "authors": [
+          "Mei-Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://arxiv.org/abs/2609.05565"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://arxiv.org/abs/2609.05565",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3703757",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3703757",
+        "title:flexitensor adaptive multitask deployment of llms on resourceconstrained heterogeneous edge devices",
+        "url:https://doi.org/10.1109/TPDS.2026.3703757"
+      ],
+      "record": {
+        "title": "FlexiTensor: Adaptive Multi-Task Deployment of LLMs on Resource-Constrained Heterogeneous Edge Devices",
+        "source_url": "https://doi.org/10.1109/TPDS.2026.3703757",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "The drive for privacy-preserving and low-latency artificial intelligence necessitates executing Large Language Models (LLMs) directly on heterogeneous, resource-constrained edge devices. This paradigm presents a challenge: efficiently running large models across multiple end/edge devices under a strict energy budget. Especially, the problem becomes more complicated when it comes to orchestrating multiple complex tasks using large models at the same time. To address this, we introduce FlexiTensor, an offline planning and deployment system for LLM inference, scaling from a single task to multiple concurrent tasks. FlexiTensor first considers LLM inference for a single task under a strict energy budget. We design a heuristic optimization algorithm to minimize the latency under a strict energy budget. Specifically, we select an optimized subset of devices and tensor allocations. Based on the selection, latency can be reduced by using non-uniform tensor parallelism with quantization. FlexiTensor can be extended to multi-task cases. We model the execution structure of multi-agent workflows as pre-defined Directed Acyclic Graphs (DAGs) and reformulate the problem with energy consumption constraints. FlexiTensor introduces a novel hybrid evolutionary algorithm to address joint task scheduling and resource allocation in multi-task cases. This approach navigates the vast search space of task placement, tensor splitting, and thread assignment to minimize the overall workflow makespan. All optimization algorithms run offline before deployment, using pre-profiled device characteristics to compute a static execution plan. Extensive experiments on a physical testbed of heterogeneous edge devices demonstrate that FlexiTensor significantly outperforms baselines. We accelerate single-task inference by up to 50%. For multi-task workflows, we consistently find superior scheduling solutions, achieving speed improvements by an average of 50% against competitive baselines and by up to 100% in certain scenarios, showcasing its effectiveness and adaptability for real-world edge LLM-based applications.",
+        "doi": "10.1109/TPDS.2026.3703757",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3703757",
+        "authors": [
+          "Bowen Zhang",
+          "Jiahui Hou",
+          "Junyan Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5037-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5037-1",
+        "title:towards sociocyberphysical systems a software perspective amid ai breakthroughs",
+        "url:https://doi.org/10.1007/s11432-026-5037-1"
+      ],
+      "record": {
+        "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+        "source_url": "https://doi.org/10.1007/s11432-026-5037-1",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+        "doi": "10.1007/s11432-026-5037-1",
+        "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+        "authors": [
+          "Assia Belbachir",
+          "M. Blake",
+          "Jin-Song Dong",
+          "S. Dustdar",
+          "Christof Ebert",
+          "C. Ghezzi",
+          "David Harel",
+          "S. Helal",
+          "Chun-Min Hu",
+          "Lin-Peng Huang",
+          "Hans-Arno Jacobsen",
+          "Chang-Jun Jiang",
+          "Zhi Jin",
+          "Jia-Lin Li",
+          "Xuan-Zhe Liu",
+          "Jian Lu",
+          "Xiao-Xing Ma",
+          "Assaf Marron",
+          "Hong Mei",
+          "B. Nuseibeh",
+          "Xin Peng",
+          "Yuanchun Shi",
+          "Huai-Min Wang",
+          "Ji Wang",
+          "Jian-Min Wang",
+          "Danny Weyns",
+          "James Woodcock",
+          "Tao Xie",
+          "H. Xu",
+          "Mengfei Yang",
+          "Jian-Wei Yin",
+          "Nai-Jun Zhan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:de3ce362e3023713dc370f72f0db52bec01b49e0f87f775b87cd6586e3f07460",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
