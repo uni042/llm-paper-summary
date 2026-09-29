@@ -182,13 +182,17 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
     }
 
 
-def process_pending(repo_root: Path) -> dict[str, Any]:
+def process_pending(repo_root: Path, max_requests: int | None = None) -> dict[str, Any]:
     request_dir = repo_root / REQUEST_DIR
     request_dir.mkdir(parents=True, exist_ok=True)
     outcomes: list[dict[str, Any]] = []
     retryable_errors: list[dict[str, str]] = []
 
+    processed_requests = 0
     for request_path in sorted(request_dir.glob("*.json")):
+        if max_requests is not None and processed_requests >= max(0, max_requests):
+            break
+        processed_requests += 1
         try:
             outcomes.append(process_request(repo_root, request_path))
         except Exception as exc:
@@ -215,9 +219,10 @@ def process_pending(repo_root: Path) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
+    parser.add_argument("--max-requests", type=int, default=None)
     args = parser.parse_args()
 
-    summary = process_pending(Path(args.repo_root).resolve())
+    summary = process_pending(Path(args.repo_root).resolve(), args.max_requests)
     print(json.dumps(summary, ensure_ascii=False))
     if not summary["ok"]:
         print(
