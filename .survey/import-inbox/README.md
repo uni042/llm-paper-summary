@@ -24,9 +24,9 @@ payload.
 
 ## GitHub-owned processing
 
-\`.github/workflows/library-import-inbox.yml\` runs
-\`.survey/scripts/process_library_import_inbox.py\` against the latest main
-branch.
+\`.github/workflows/library-import.yml\` is the single canonical processor workflow.
+It runs every 10 minutes from the latest main branch and executes
+\`.survey/scripts/process_library_import_inbox.py\` in bounded batches.
 
 ### Research
 
@@ -67,7 +67,7 @@ handoff, GitHub owns the durable copy. Prefer re-fetching the pending file and
 checking byte/hash equality immediately. The processor may advance faster than
 the uploader, so a missing pending path is not by itself a failed handoff:
 
-1. check the same filename under \`waiting/\` or \`blocked/\` and compare bytes;
+1. check the same filename under \`waiting/\`, \`blocked/\`, or \`retained/discovery-source/\` and compare bytes;
 2. otherwise read the predictable \`results/<type>/<pending-stem>.json\` receipt
    and compare its \`source_sha256\` with the Library source SHA-256.
 
@@ -76,8 +76,10 @@ the uploader may delete the corresponding Library source without waiting for
 final paper/candidate ingestion.
 
 GitHub keeps blocked payloads because the Library copy may already be gone.
-Successful pending/waiting payloads are deleted by the processor. Small terminal
-records are kept under \`results/\` for auditability.
+Oversized Discovery originals are retained byte-for-byte under
+\`retained/discovery-source/\` while bounded chunks are processed. Successful
+pending/waiting work payloads are deleted by the processor. Small terminal records
+are kept under \`results/\` for auditability.
 
 Do not put hand-written precheck results, queue results, Research jobs, claims,
 or relevance ledgers into this inbox.
