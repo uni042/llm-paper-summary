@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260930-0230-scheduled-chat-30",
+  "reference_main_sha": "673ab431b1bd6b79f54d86d81c7514b933ad73a9",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.00636",
+      "identity_tokens": [
+        "arXiv:2510.00636"
+      ],
+      "title": "Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution",
+      "reason": "将来クエリ分布から各KV対への期待注意量を閉形式で推定し、事前充填・復号の双方で訓練不要のKVキャッシュ選別を行うため、KVキャッシュ圧縮を直接扱う対象論文。",
+      "source_url": "https://arxiv.org/abs/2510.00636",
+      "body_check": "本文の問題設定では将来tokenの注意スコアが圧縮時に未観測で、FlashAttention系では過去の完全注意行列も実体化されない点を指摘する。クエリ活性の平均・共分散とRoPEを用いて将来注意の期待値を推定しKV対を順位付けする。LongBenchや長文検索、推論系評価で事前充填・復号の双方を扱い、高圧縮率でも既存法より安定した性能を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-future-queries-distribution.md"
+      ],
+      "worklist_rank": 185
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.18572",
+      "identity_tokens": [
+        "arXiv:2508.18572"
+      ],
+      "title": "Strata: Hierarchical Context Caching for Long Context Language Model Serving",
+      "reason": "長文脈LLMのKVキャッシュをGPU/CPU等の階層メモリで扱い、GPU支援I/Oとキャッシュ認識スケジューリングを協調させる実運用サービング基盤なので対象。",
+      "source_url": "https://arxiv.org/abs/2508.18572",
+      "body_check": "本文はページ化KVの断片化で転送帯域が出ない問題と、キャッシュ読込遅延を無視したスケジューラによるI/O待ちを分離して扱う。GPU支援I/OでGPU/CPUレイアウトを分離し、要求スケジューリングで計算とI/Oを重畳する。SGLang上の実装でvLLM+LMCache比TTFT最大5倍改善、TensorRT-LLM比3.75倍高速化を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serving.md"
+      ],
+      "worklist_rank": 184
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2308.16137",
+      "identity_tokens": [
+        "arXiv:2308.16137"
+      ],
+      "title": "LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models",
+      "reason": "学習済みLLMを追加学習なしで極長系列へ拡張し、注意範囲を制御することで復号速度とメモリも直接改善する長文脈推論方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2308.16137",
+      "body_check": "本文は学習長を超えた際の長さ一般化失敗を理論・実験の両面から分析し、局所注意と遠方tokenへの限定的な大域アクセスを組み合わせる方式を提示する。2K/4K学習モデルを最大200M長へパラメータ更新なしで適用し、元モデル比で復号2.7倍高速化、メモリ7.5倍削減を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-models.md"
+      ],
+      "worklist_rank": 183
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2308.04623",
+      "identity_tokens": [
+        "arXiv:2308.04623"
+      ],
+      "title": "Accelerating LLM Inference with Staged Speculative Decoding",
+      "reason": "小バッチ・端末内LLM推論を対象に、木構造の投機バッチと二段階投機復号で逐次生成遅延を直接削減するため対象。",
+      "source_url": "https://arxiv.org/abs/2308.04623",
+      "body_check": "本文は小バッチ推論の低い算術強度を問題とし、候補を木構造へ再編して一度の検証で期待確定token数を増やし、さらに第2段の投機処理を追加する。762M GPT-2-Lで出力分布・品質を保持したまま単一バッチ復号遅延3.16倍改善を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "worklist_rank": 182
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.06706",
+      "identity_tokens": [
+        "arXiv:2401.06706"
+      ],
+      "title": "Multi-Candidate Speculative Decoding",
+      "reason": "ドラフトモデルから複数候補を生成し、対象モデルでバッチ検証することで受理率を高めつつ対象モデルの分布を保持する投機的復号方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2401.06706",
+      "body_check": "本文では標準的投機復号の受理率がモデル・データ・復号設定に依存する問題に対し、ドラフトから複数候補系列をサンプリングしてバッチ化し、効率的に検証するアルゴリズムを構成する。複数モデル・データセットで標準投機復号より受理率を一貫して改善し、対象モデルの生成分布を維持する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+      ],
+      "worklist_rank": 181
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.05527",
+      "identity_tokens": [
+        "arXiv:2403.05527"
+      ],
+      "title": "GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM",
+      "reason": "超低ビット量子化に低ランク誤差近似と疎な外れ値補正を組み合わせ、生成品質を保ちながらKVキャッシュ容量と推論スループットを改善するため対象。",
+      "source_url": "https://arxiv.org/abs/2403.05527",
+      "body_check": "本文は一様量子化の誤差が自己回帰生成で累積する問題に対し、多数要素を低ビット量子化し、その残差を低ランク行列と疎行列で回復する三成分表現を用いる。4-bit KVで近損失なしの生成を維持し、比較法に対してスループット最大2.38倍、ピークメモリ最大2.29倍削減を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generative-inference-of-llm.md"
+      ],
+      "worklist_rank": 180
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.08608",
+      "identity_tokens": [
+        "arXiv:2407.08608"
+      ],
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "reason": "Hopper GPUの非同期Tensor Core/TMAとFP8を利用して注意カーネルの計算・データ移動を重畳し、LLMの注意演算を直接高速化するため対象。",
+      "source_url": "https://arxiv.org/abs/2407.08608",
+      "body_check": "本文はH100でFlashAttention-2の利用率が低い点に対し、warp specializationでTMA転送とTensor Core計算を重畳し、ブロック行列積とsoftmaxを非同期にインターリーブする。FP8ではHadamard変換等で外れ値による量子化誤差も抑える。H100でBF16/FP16系を1.5〜2.0倍高速化し、FP8で約1.2〜1.3 PFLOP/s級を報告する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-precision.md"
+      ],
+      "worklist_rank": 179
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18003",
+      "identity_tokens": [
+        "arXiv:2407.18003"
+      ],
+      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM's KV-Cache Consumption",
+      "reason": "KVキャッシュ消費削減を直接扱うレビューで調査対象との関連は高いが、新規の推論方式を提案する一次研究ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2407.18003",
+      "body_check": "本文はKVキャッシュ最適化をトークン削減、量子化、低ランク・構造変更等の観点で整理し、長文脈推論のメモリ問題と既存方式の精度・効率トレードオフを比較する。新規アルゴリズムやランタイムの実装評価が主貢献ではなく、既存研究を体系化するレビューである。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consumption.md"
+      ],
+      "worklist_rank": 178
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17651",
+      "identity_tokens": [
+        "arXiv:2411.17651"
+      ],
+      "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving",
+      "reason": "LLMサービングの並列実行方式を自動探索するためのシミュレータで対象領域に直結するが、実サービングランタイムそのものより性能予測・設計空間探索が主貢献なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2411.17651",
+      "body_check": "本文はモデル構造、GPU/ネットワーク構成、要求負荷の動的変化を取り込み、テンソル並列・パイプライン並列等の候補構成を評価するシミュレーション基盤を提示する。実機サービング方式そのものを置換するより、構成選択と性能予測を自動化する用途が中心である。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-execution-in-llm-serving.md"
+      ],
+      "worklist_rank": 177
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.04564",
+      "identity_tokens": [
+        "arXiv:2310.04564"
+      ],
+      "title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
+      "reason": "LLMのFFN活性をReLU系へ置き換えて自然な活性疎性を引き出し、疎行列計算による推論効率化を狙うため対象。",
+      "source_url": "https://arxiv.org/abs/2310.04564",
+      "body_check": "本文はSwiGLU等の密な活性に対しReLUを用いたLLMで大きな活性疎性が得られることを分析し、再学習・継続学習を通じて性能を維持しながら疎性を高める。疎なFFN活性を利用すればメモリアクセスと計算を省けることを示し、LLM推論高速化へ直接つながる設計を評価する。",
+      "first_checked_at": "2026-09-30T02:30:54+09:00",
+      "last_checked_at": "2026-09-30T02:30:54+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-models.md"
+      ],
+      "worklist_rank": 176
+    }
+  ]
+}
