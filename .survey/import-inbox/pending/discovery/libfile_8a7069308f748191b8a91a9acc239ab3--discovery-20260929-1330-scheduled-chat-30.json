@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-1330-scheduled-chat-30",
+  "reference_main_sha": "eb31d3419d256db2110f5a016ffbc1c16f9369df",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00945",
+      "identity_tokens": [
+        "arXiv:2407.00945",
+        "DOI:10.48550/arXiv.2407.00945"
+      ],
+      "title": "Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs",
+      "reason": "Sparse MoEの総expert数とactive expert数を勾配なし進化探索で削減し、GPUメモリと推論計算を直接下げるため対象。",
+      "source_url": "https://arxiv.org/abs/2407.00945",
+      "body_check": "本文の手法・実験を確認。Router Mapping/Expert Merging行列を進化探索し、Mixtral 8x7B-Instructで8→2 expertの総数削減やtop-2→top-1 active expert削減を評価。active expert削減ではprefill最大1.63倍高速化、SQuADでは4/8 expert pruningで53.4%→75.4%の例を報告する。",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2506.23266-sub-moe-subspace-expert-merging.md"
+      ],
+      "worklist_rank": 500,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.13511",
+      "identity_tokens": [
+        "arXiv:2406.13511",
+        "DOI:10.48550/arXiv.2406.13511"
+      ],
+      "title": "Slice-Level Scheduling for High Throughput and Load Balanced LLM Serving",
+      "reason": "生成長の不確実性をslice単位に制限し、メモリ見積り・適応batching・複数LLM instance間offloadを組み合わせるLLM serving schedulerなので対象。",
+      "source_url": "https://arxiv.org/abs/2406.13511",
+      "body_check": "本文情報で最大生成長をsliceへ分割し、各slice後に未完requestを再scheduleするSCLS、serving-time/memory estimator、adaptive batching、max-min offloadingを確認。LLaMA2-13BをA100 80GB上で評価し、SLS/ILS比throughput最大315.8%改善とload imbalance緩和を報告する。",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling.md"
+      ],
+      "worklist_rank": 494,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.01518",
+      "identity_tokens": [
+        "arXiv:2410.01518",
+        "DOI:10.48550/arXiv.2410.01518"
+      ],
+      "title": "InfiniPot: Infinite Context Processing on Memory-Constrained LLMs",
+      "reason": "固定容量KV cache内でcontextを継続圧縮し、追加学習なしでメモリ制約端末の長文脈推論を可能にするため対象。",
+      "source_url": "https://arxiv.org/abs/2410.01518",
+      "body_check": "本文のContinual Context Distillation、Novelty/representative scoreとCatalyst Prompt、Context-Reset RoPEを確認。4K memory制約でLongBench 44.22、GPT-3.5-16K 43.74を上回る例があり、1M-token Needle-in-a-Haystackでも固定4K memoryを維持。context distillation overheadはTTFTの1–3%と報告する。",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md"
+      ],
+      "worklist_rank": 495,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04199",
+      "identity_tokens": [
+        "arXiv:2410.04199",
+        "DOI:10.48550/arXiv.2410.04199"
+      ],
+      "title": "LongGenBench: Long-context Generation Benchmark",
+      "reason": "長文脈生成能力を測るbenchmark設計・評価が主貢献で、推論runtimeの速度・メモリ・サービング機構を改善しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2410.04199",
+      "body_check": "本文ではMMLU/GSM8K/CommonSenseQAの複数質問を1 promptへ連結し、単一の長い回答を生成させるLongGenBenchとDelta指標を設計。API/open-sourceモデルの長文生成性能低下1.2–47.1%等を測る評価研究で、KV/cache/scheduler等の推論最適化は提案しない。",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 496,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20399",
+      "identity_tokens": [
+        "arXiv:2410.20399",
+        "DOI:10.48550/arXiv.2410.20399"
+      ],
+      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+      "reason": "attention/GEMM/linear-attention等の高速GPU kernelはLLM推論へ直接利用できるが、主対象は汎用AI kernel programming frameworkで推論専用ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.20399",
+      "body_check": "本文でwarp-level 16x16 tile、thread-block levelの非同期warp重畳、grid-levelのlaunch/memory cost隠蔽という3階層抽象を確認。H100でGEMMとattention inferenceはcuBLAS/FlashAttention-3相当、attention backward 10–40%向上、state-space最大約8倍、linear attention最大14倍を報告する。",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md"
+      ],
+      "worklist_rank": 497,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.16083",
+      "identity_tokens": [
+        "arXiv:2504.16083",
+        "DOI:10.48550/arXiv.2504.16083"
+      ],
+      "title": "MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention",
+      "reason": "長文脈VLMのprefill attentionをmodality-aware sparse patternと専用GPU kernelで直接高速化する推論研究。",
+      "source_url": "https://arxiv.org/abs/2504.16083",
+      "body_check": "本文でvideoの時空間局所性からGrid sparse patternを抽出し、headごとにoffline探索したpatternを入力modality境界に合わせてpermutationして動的構築する方式とoptimized GPU kernelを確認。LongVila/LlavaVideo/VideoChat-Flash/Qwen2.5-VL等で1M tokens時prefill最大8.3倍高速化し精度維持を報告する。",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md"
+      ],
+      "worklist_rank": 498,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.09192",
+      "identity_tokens": [
+        "arXiv:2508.09192",
+        "DOI:10.48550/arXiv.2508.09192"
+      ],
+      "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+      "reason": "拡散LLMをblock-wise AR＋block間並列decodeへ変換してKV cacheを利用し、実推論速度を直接改善するため対象。",
+      "source_url": "https://arxiv.org/abs/2508.09192",
+      "body_check": "本文でDiscrete Diffusion Forcingがblock-wise autoregressive generationでKV cacheを利用し、前block完了前に後続tokenを予測してinter-block parallel decodingすることを確認。GSM8KでD2F-Dream-Base-7B 119.9 tok/s対LLaMA3-Instruct-8B 48.0 tok/s、vanilla dLLM比では条件により50倍超の高速化を報告する。",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 499,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/71.963420",
+      "identity_tokens": [
+        "DOI:10.1109/71.963420"
+      ],
+      "title": "The Power of Two Choices in Randomized Load Balancing",
+      "reason": "LLM以前の一般的な確率的load balancing理論であり、LLM推論・サービング固有の実装や評価を扱わないため対象外。",
+      "source_url": "https://doi.org/10.1109/71.963420",
+      "body_check": "本文はPoisson到着するcustomerがn server中d個をランダム選択し最短queueへ入るsupermarket modelを解析し、d=2がd=1より待ち時間を指数的に改善することを示す。LLM、GPU、KV cache、token schedulingは扱わない。",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
+      ],
+      "worklist_rank": 500,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4230/LIPIcs.ICALP.2019.63",
+      "identity_tokens": [
+        "DOI:10.4230/LIPIcs.ICALP.2019.63"
+      ],
+      "title": "Non-Clairvoyant Precedence Constrained Scheduling",
+      "reason": "処理時間未知・precedence制約付きjobのonline scheduling理論で、LLM推論を最終適用先としないため対象外。",
+      "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2019.63",
+      "body_check": "本文はidentical machines上でjob sizeが完了時まで未知のnon-clairvoyant precedence-constrained schedulingを扱い、Eisenberg-Gale型convex programによるvirtual rate割当でweighted completion/flow timeのcompetitive boundを導く。LLM serving固有機構ではない。",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
+      ],
+      "worklist_rank": 476,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.02309",
+      "identity_tokens": [
+        "arXiv:2305.02309",
+        "DOI:10.48550/arXiv.2305.02309"
+      ],
+      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages",
+      "reason": "program synthesis向けLLMのarchitecture・学習法・infilling sampling・data mixtureを統合する学習研究で、最終適用先が推論高速化ではないため凍結範囲として対象外。",
+      "source_url": "https://arxiv.org/abs/2305.02309",
+      "body_check": "本文はprefix-LMでencoder/decoder形式を統合し、causal LM/span corruption/infilling、data mixtureとmulti-epoch trainingを1Bモデル実験から検討し、1B/3.7B/7B/16B CodeGen2のtraining recipeを提示する。推論runtime最適化は主題ではない。",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 477,
+      "first_checked_at": "2026-09-29T13:34:28+09:00",
+      "last_checked_at": "2026-09-29T13:34:28+09:00"
+    }
+  ]
+}
