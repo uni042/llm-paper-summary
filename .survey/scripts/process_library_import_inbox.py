@@ -584,7 +584,7 @@ def terminalize_discovery(
     )
 
 
-def process_discovery(repo_root: Path) -> tuple[int, int]:
+def process_discovery(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
@@ -601,7 +601,10 @@ def process_discovery(repo_root: Path) -> tuple[int, int]:
         source.replace(target)
         advanced += 1
 
-    for source in sorted(WAITING_DISCOVERY.glob("*.json")):
+    waiting_sources = sorted(WAITING_DISCOVERY.glob("*.json"))
+    if max_items is not None:
+        waiting_sources = waiting_sources[:max(0, max_items)]
+    for source in waiting_sources:
         token = source_token(source)
         raw_bytes = source.read_bytes()
         payload_hash = sha256_bytes(raw_bytes)
@@ -691,11 +694,20 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--max-research", type=int, default=None)
+    parser.add_argument("--max-discovery", type=int, default=None)
+    parser.add_argument("--skip-research", action="store_true")
+    parser.add_argument("--skip-discovery", action="store_true")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
-    research_imported, research_terminal = process_research(repo_root, args.max_research)
-    discovery_advanced, discovery_terminal = process_discovery(repo_root)
+    if args.skip_research:
+        research_imported, research_terminal = 0, 0
+    else:
+        research_imported, research_terminal = process_research(repo_root, args.max_research)
+    if args.skip_discovery:
+        discovery_advanced, discovery_terminal = 0, 0
+    else:
+        discovery_advanced, discovery_terminal = process_discovery(repo_root, args.max_discovery)
 
     summary = {
         "ok": True,
