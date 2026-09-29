@@ -87,6 +87,8 @@ run中に在庫が変化してもモードは固定する。
 
 ## 5. Discovery
 
+Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` の現行Discovery手順を必須とする。具体的には、候補本文確認前の**開始前重複ゲート**と、成果保存直前の**保存直前重複ゲート**の両方で、Libraryのimmutable Discovery成果群（必要な未転送Research成果を含む）を完全列挙してidentity集合を再構成し、GitHub mainのread-only canonical stateと統合する。意味検索だけを重複排除の正本にせず、共有可変台帳、claim、reservation、GitHub writeをScheduled workerへ追加しない。詳細な列挙・identity比較・並列worker時の再確認手順はLibrary正本へ委譲する。
+
 ### 5.1 ノルマ
 
 新規canonical identity 10件を本文確認まで行い、各件を次のどれかへ最終分類する。
