@@ -166,6 +166,14 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def repo_relative(path: Path, repo_root: Path) -> str:
+    """Return a stable repository-relative POSIX path for relative or absolute Paths."""
+    path = Path(path)
+    if path.is_absolute():
+        return path.relative_to(repo_root).as_posix()
+    return path.as_posix()
+
+
 def source_token(path: Path) -> str:
     digest = sha256_bytes(path.read_bytes())
     stem = SAFE_ID_RE.sub("-", path.stem).strip("-.")[:48] or "artifact"
@@ -245,7 +253,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             meta = parse_frontmatter(raw)
             audit = paper_quality_gate.inspect_rendered_paper(
                 repo_root,
-                source.relative_to(repo_root).as_posix(),
+                repo_relative(source, repo_root),
                 raw,
             )
             if audit.status == "FAIL":
@@ -257,7 +265,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "artifact_type": "research",
                         "status": "blocked_quality",
                         "source_sha256": payload_hash,
-                        "blocked_path": blocked_path.relative_to(repo_root).as_posix(),
+                        "blocked_path": repo_relative(blocked_path, repo_root),
                         "canonical_id": meta.get("canonical_id"),
                         "worker_completed_at": meta.get("worker_completed_at"),
                         "worker_run_key": meta.get("worker_run_key"),
@@ -305,7 +313,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
 
             target.write_text(raw, encoding="utf-8")
             post = resolve_paper_identity.resolve(repo_root, record)
-            if post["status"] != "represented" or post.get("paper_path") != target.relative_to(repo_root).as_posix():
+            if post["status"] != "represented" or post.get("paper_path") != repo_relative(target, repo_root):
                 target.unlink(missing_ok=True)
                 raise RuntimeError("post-write identity resolution did not resolve to the imported paper")
 
