@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+      "source_url": "https://arxiv.org/abs/2410.20399",
+      "year": 2024,
+      "published": "2024-10-27",
+      "abstract": "The challenge of mapping AI architectures to GPU hardware is creating a critical bottleneck in AI progress. Despite substantial efforts, hand-written custom kernels fail to meet their theoretical performance thresholds, even on well-established operations like linear attention. The diverse hardware capabilities of GPUs might suggest that we need a wide variety of techniques to achieve high performance. However, our work explores whether a small number of key abstractions can drastically simplify the process. We present ThunderKittens (TK), a framework for writing performant AI kernels while remaining easy to use and maintain. Our abstractions map to the three levels of the GPU hierarchy: (1) at the warp-level, we provide 16x16 matrix tiles as basic data structures and PyTorch-like parallel compute operations over tiles, (2) at the thread-block level, we provide a template for overlapping asynchronous operations across parallel warps, and (3) at the grid-level, we provide support to help hide the block launch and tear-down, and memory costs. We show the value of TK by providing kernels that match or outperform prior kernels for a range of AI operations. We match CuBLAS and FlashAttention-3 on GEMM and attention inference performance and outperform the strongest baselines by $10-40\\%$ on attention backwards, $8\\times$ on state space models, and $14\\times$ on linear attention.",
+      "canonical_id": "arXiv:2410.20399",
+      "arxiv_id": "2410.20399",
+      "doi": "10.48550/arXiv.2410.20399",
+      "authors": [
+        "B. Spector",
+        "Simran Arora",
+        "Aaryan Singhal",
+        "Daniel Y. Fu",
+        "Christopher Ré"
+      ],
+      "reason": "GPU階層に対応した抽象化でAI/LLM関連カーネルを高性能化するkernel-runtime系研究で、推論基盤の実装最適化に直接関係する。",
+      "library_body_check": "本文でwarp-level 16×16 tile、thread-block levelの非同期warp重畳、grid-levelのlaunch/teardown・memory cost隠蔽という3階層抽象化を確認。GEMM/attention inferenceでcuBLAS・FlashAttention-3相当、attention backward 10–40%、state-space model 8倍、linear attention 14倍の結果を報告。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+      "source_url": "https://arxiv.org/abs/2508.09192",
+      "year": 2025,
+      "published": "2025-08-08",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive (AR) LLMs for text generation, with the potential to decode multiple tokens in a single iteration. However, none of the existing open-source dLLMs have achieved superior inference speed over AR LLMs of similar size. This paper breaks this barrier based on a simple and effective strategy named discrete diffusion forcing (D2F). D2F equips dLLMs with two key capabilities: (1) block-wise autoregressive generation to enable KV cache utilization; (2) prediction of following tokens without requiring completion of prior blocks for inter-block parallel decoding. In this way, the vanilla dLLMs are refurbished into an AR-diffusion hybrid paradigm for efficient inference. D2F can be implemented with an asymmetric distillation process based on pre-trained dLLMs. We further propose a pipelined parallel decoding algorithm, which enables a trade-off between efficiency and efficacy. Empirically, D2F dLLMs achieve more than $\\mathbf{2.5\\times}$ inference speed than LLaMA3 and Qwen2.5 on GSM8K. Compared to vanilla dLLMs like LLaDA and Dream, the acceleration can be more than $\\mathbf{50\\times}$ while maintaining comparable output quality. The code is available at https://github.com/zhijie-group/Discrete-Diffusion-Forcing.",
+      "canonical_id": "arXiv:2508.09192",
+      "arxiv_id": "2508.09192",
+      "doi": "10.48550/arXiv.2508.09192",
+      "authors": [
+        "Xu Wang",
+        "Chenkai Xu",
+        "Yijie Jin",
+        "Jiachun Jin",
+        "Hao Zhang",
+        "Zhijie Deng"
+      ],
+      "reason": "拡散LLMの復号をブロック自己回帰化し、ブロック間を並列復号してKVキャッシュ利用と並列生成を両立する推論高速化が主題。",
+      "library_body_check": "本文でDiscrete Diffusion Forcingがblock-wise autoregressive generation、未完了の前ブロックを待たないfollowing-token prediction、asymmetric distillation、pipelined parallel decodingを組み合わせることを確認。GSM8KでLLaMA3/Qwen2.5比2.5倍超、LLaDA/Dream比50倍超の推論高速化を報告。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-722433d2476b",
+    "round": "libimp-722433d2476b0a9a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-722433d2476b0a9a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-722433d2476b0a9a-pre01.json",
+    "receipt": "sha256:095409091b523cae7aa96907f24699852642d6cfd6ce346f8ebd39ef54d3d847"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-722433d2476b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
