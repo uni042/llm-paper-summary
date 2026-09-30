@@ -12,8 +12,6 @@ on:
         description: 'Optional repository-relative immutable descriptor; omit to drain all unsettled descriptors'
         required: false
         type: string
-  schedule:
-    - cron: '7/10 * * * *'
 
 permissions:
   contents: write
