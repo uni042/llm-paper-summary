@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3e79d7f439e6f699-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.10813",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.10813",
+    "identity_tokens": [
+      "OpenReview:pZiyCaVuti",
+      "arXiv:2410.10813"
+    ],
+    "reason": "長期会話memoryのbenchmarkとretrieval評価が主題で、推論runtime最適化ではない。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T09:07:47+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+    ],
+    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+  },
+  "processed_at": "2026-09-30T09:07:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3e79d7f439e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

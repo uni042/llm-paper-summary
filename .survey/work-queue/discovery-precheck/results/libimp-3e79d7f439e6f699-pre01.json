@@ -1,0 +1,349 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3e79d7f439e6f699-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3e79d7f439e6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2007.14062",
+    "arXiv:2311.15436",
+    "arXiv:2402.18668",
+    "arXiv:2404.00242",
+    "arXiv:2405.14852",
+    "arXiv:2408.05636",
+    "arXiv:2411.00841"
+  ],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "954dc106da5ffdcfe1d3c3ffa7dc182baff79f82",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:06:02.405372+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2007.14062",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2311.15436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.18668",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.00242",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.14852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.05636",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:speculative diffusion decoding accelerating language generation through diffusion"
+    },
+    {
+      "requested_id": "arXiv:2411.00841",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2411.00841"
+    }
+  ],
+  "results": [
+    {
+      "title": "Big Bird: Transformers for Longer Sequences",
+      "source_url": "https://arxiv.org/abs/2007.14062",
+      "year": 2020,
+      "published": "2020-07-28",
+      "abstract": "Transformers-based models, such as BERT, have been one of the most successful deep learning models for NLP. Unfortunately, one of their core limitations is the quadratic dependency (mainly in terms of memory) on the sequence length due to their full attention mechanism. To remedy this, we propose, BigBird, a sparse attention mechanism that reduces this quadratic dependency to linear. We show that BigBird is a universal approximator of sequence functions and is Turing complete, thereby preserving these properties of the quadratic, full attention model. Along the way, our theoretical analysis reveals some of the benefits of having $O(1)$ global tokens (such as CLS), that attend to the entire sequence as part of the sparse attention mechanism. The proposed sparse attention can handle sequences of length up to 8x of what was previously possible using similar hardware. As a consequence of the capability to handle longer context, BigBird drastically improves performance on various NLP tasks such as question answering and summarization. We also propose novel applications to genomics data.",
+      "canonical_id": "arXiv:2007.14062",
+      "arxiv_id": "2007.14062",
+      "authors": [
+        "M. Zaheer",
+        "Guru Guruganesh",
+        "Kumar Avinava Dubey",
+        "Joshua Ainslie",
+        "Chris Alberti",
+        "Santiago Ontañón",
+        "Philip Pham",
+        "Anirudh Ravula",
+        "Qifan Wang",
+        "Li Yang",
+        "Amr Ahmed"
+      ]
+    },
+    {
+      "title": "Learning to Skip for Language Modeling",
+      "source_url": "https://arxiv.org/abs/2311.15436",
+      "year": 2023,
+      "published": "2023-11-26",
+      "abstract": "Overparameterized large-scale language models have impressive generalization performance of in-context few-shot learning. However, most language models allocate the same amount of parameters or computation to each token, disregarding the complexity or importance of the input data. We argue that in language model pretraining, a variable amount of computation should be assigned to different tokens, and this can be efficiently achieved via a simple routing mechanism. Different from conventional early stopping techniques where tokens can early exit at only early layers, we propose a more general method that dynamically skips the execution of a layer (or module) for any input token with a binary router. In our extensive evaluation across 24 NLP tasks, we demonstrate that the proposed method can significantly improve the 1-shot performance compared to other competitive baselines only at mild extra cost for inference.",
+      "canonical_id": "arXiv:2311.15436",
+      "arxiv_id": "2311.15436",
+      "doi": "10.48550/arXiv.2311.15436",
+      "authors": [
+        "Dewen Zeng",
+        "Nan Du",
+        "Tao Wang",
+        "Yuan-Zhong Xu",
+        "Tao Lei",
+        "Zhifeng Chen",
+        "Claire Cui"
+      ]
+    },
+    {
+      "title": "Simple linear attention language models balance the recall-throughput tradeoff",
+      "source_url": "https://arxiv.org/abs/2402.18668",
+      "year": 2024,
+      "published": "2024-02-28",
+      "abstract": "Recent work has shown that attention-based language models excel at recall, the ability to ground generations in tokens previously seen in context. However, the efficiency of attention-based models is bottle-necked during inference by the KV-cache's aggressive memory consumption. In this work, we explore whether we can improve language model efficiency (e.g. by reducing memory consumption) without compromising on recall. By applying experiments and theory to a broad set of architectures, we identify a key tradeoff between a model's state size and recall ability. We show that efficient alternatives to attention (e.g. H3, Mamba, RWKV) maintain a fixed-size recurrent state, but struggle at recall. We propose BASED a simple architecture combining linear and sliding window attention. By varying BASED window size and linear attention feature dimension, we can dial the state size and traverse the pareto frontier of the recall-memory tradeoff curve, recovering the full quality of attention on one end and the small state size of attention-alternatives on the other. We train language models up to 1.3b parameters and show that BASED matches the strongest sub-quadratic models (e.g. Mamba) in perplexity and outperforms them on real-world recall-intensive tasks by 6.22 accuracy points. Implementations of linear attention are often less efficient than optimized standard attention implementations. To make BASED competitive, we develop IO-aware algorithms that enable 24x higher throughput on language generation than FlashAttention-2, when generating 1024 tokens using 1.3b parameter models. Code for this work is provided at: https://github.com/HazyResearch/based.",
+      "canonical_id": "arXiv:2402.18668",
+      "arxiv_id": "2402.18668",
+      "doi": "10.48550/arXiv.2402.18668",
+      "authors": [
+        "Simran Arora",
+        "Sabri Eyuboglu",
+        "Michael Zhang",
+        "Aman Timalsina",
+        "Silas Alberti",
+        "Dylan Zinsley",
+        "James Zou",
+        "Atri Rudra",
+        "Christopher Ré"
+      ]
+    },
+    {
+      "title": "DeFT: Decoding with Flash Tree-attention for Efficient Tree-structured LLM Inference",
+      "source_url": "https://arxiv.org/abs/2404.00242",
+      "year": 2024,
+      "published": "2024-03-30",
+      "abstract": "Large language models (LLMs) are increasingly employed for complex tasks that process multiple generation calls in a tree structure with shared prefixes of tokens, including few-shot prompting, multi-step reasoning, speculative decoding, etc. However, existing inference systems for tree-based applications are inefficient due to improper partitioning of queries and KV cache during attention calculation. This leads to two main issues: (1) a lack of memory access (IO) reuse for KV cache of shared prefixes, and (2) poor load balancing.As a result, there is redundant KV cache IO between GPU global memory and shared memory, along with low GPU utilization. To address these challenges, we propose DeFT(Decoding with Flash Tree-Attention), a hardware-efficient attention algorithm with prefix-aware and load-balanced KV cache partitions. DeFT reduces the number of read/write operations of KV cache during attention calculation through KV-Guided Grouping, a method that avoids repeatedly loading KV cache of shared prefixes in attention computation. Additionally, we propose Flattened Tree KV Splitting, a mechanism that ensures even distribution of the KV cache across partitions with little computation redundancy, enhancing GPU utilization during attention computations. By reducing 73-99% KV cache IO and nearly 100% IO for partial results during attention calculation, DeFT achieves up to 2.23/3.59x speedup in the end-to-end/attention latency across three practical tree-based workloads compared to state-of-the-art attention algorithms. Our code is available at https://github.com/LINs-lab/DeFT.",
+      "canonical_id": "arXiv:2404.00242",
+      "arxiv_id": "2404.00242",
+      "authors": [
+        "Jinwei Yao",
+        "Kaiqi Chen",
+        "Kexun Zhang",
+        "Jia-Xuan You",
+        "Bin-Hang Yuan",
+        "Zeke Wang",
+        "Tao Lin"
+      ]
+    },
+    {
+      "title": "PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression",
+      "source_url": "https://arxiv.org/abs/2405.14852",
+      "year": 2024,
+      "published": "2024-05-23",
+      "abstract": "There has been significant interest in\"extreme\"compression of large language models (LLMs), i.e., to 1-2 bits per parameter, which allows such models to be executed efficiently on resource-constrained devices. Existing work focused on improved one-shot quantization techniques and weight representations; yet, purely post-training approaches are reaching diminishing returns in terms of the accuracy-vs-bit-width trade-off. State-of-the-art quantization methods such as QuIP# and AQLM include fine-tuning (part of) the compressed parameters over a limited amount of calibration data; however, such fine-tuning techniques over compressed weights often make exclusive use of straight-through estimators (STE), whose performance is not well-understood in this setting. In this work, we question the use of STE for extreme LLM compression, showing that it can be sub-optimal, and perform a systematic study of quantization-aware fine-tuning strategies for LLMs. We propose PV-Tuning - a representation-agnostic framework that generalizes and improves upon existing fine-tuning strategies, and provides convergence guarantees in restricted cases. On the practical side, when used for 1-2 bit vector quantization, PV-Tuning outperforms prior techniques for highly-performant models such as Llama and Mistral. Using PV-Tuning, we achieve the first Pareto-optimal quantization for Llama 2 family models at 2 bits per parameter.",
+      "canonical_id": "arXiv:2405.14852",
+      "arxiv_id": "2405.14852",
+      "doi": "10.48550/arXiv.2405.14852",
+      "authors": [
+        "Vladimir Malinovskii",
+        "D. Mazur",
+        "Ivan D. Ilin",
+        "Denis Kuznedelev",
+        "Konstantin Burlachenko",
+        "Kai Yi",
+        "Dan Alistarh",
+        "Peter Richtárik"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2007.14062",
+      "identity_tokens": [
+        "id:arXiv:2007.14062",
+        "title:big bird transformers for longer sequences",
+        "url:https://arxiv.org/abs/2007.14062"
+      ],
+      "record": {
+        "title": "Big Bird: Transformers for Longer Sequences",
+        "source_url": "https://arxiv.org/abs/2007.14062",
+        "year": 2020,
+        "published": "2020-07-28",
+        "abstract": "Transformers-based models, such as BERT, have been one of the most successful deep learning models for NLP. Unfortunately, one of their core limitations is the quadratic dependency (mainly in terms of memory) on the sequence length due to their full attention mechanism. To remedy this, we propose, BigBird, a sparse attention mechanism that reduces this quadratic dependency to linear. We show that BigBird is a universal approximator of sequence functions and is Turing complete, thereby preserving these properties of the quadratic, full attention model. Along the way, our theoretical analysis reveals some of the benefits of having $O(1)$ global tokens (such as CLS), that attend to the entire sequence as part of the sparse attention mechanism. The proposed sparse attention can handle sequences of length up to 8x of what was previously possible using similar hardware. As a consequence of the capability to handle longer context, BigBird drastically improves performance on various NLP tasks such as question answering and summarization. We also propose novel applications to genomics data.",
+        "canonical_id": "arXiv:2007.14062",
+        "arxiv_id": "2007.14062",
+        "authors": [
+          "M. Zaheer",
+          "Guru Guruganesh",
+          "Kumar Avinava Dubey",
+          "Joshua Ainslie",
+          "Chris Alberti",
+          "Santiago Ontañón",
+          "Philip Pham",
+          "Anirudh Ravula",
+          "Qifan Wang",
+          "Li Yang",
+          "Amr Ahmed"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2311.15436",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2311.15436",
+        "id:arXiv:2311.15436",
+        "title:learning to skip for language modeling",
+        "url:https://arxiv.org/abs/2311.15436"
+      ],
+      "record": {
+        "title": "Learning to Skip for Language Modeling",
+        "source_url": "https://arxiv.org/abs/2311.15436",
+        "year": 2023,
+        "published": "2023-11-26",
+        "abstract": "Overparameterized large-scale language models have impressive generalization performance of in-context few-shot learning. However, most language models allocate the same amount of parameters or computation to each token, disregarding the complexity or importance of the input data. We argue that in language model pretraining, a variable amount of computation should be assigned to different tokens, and this can be efficiently achieved via a simple routing mechanism. Different from conventional early stopping techniques where tokens can early exit at only early layers, we propose a more general method that dynamically skips the execution of a layer (or module) for any input token with a binary router. In our extensive evaluation across 24 NLP tasks, we demonstrate that the proposed method can significantly improve the 1-shot performance compared to other competitive baselines only at mild extra cost for inference.",
+        "canonical_id": "arXiv:2311.15436",
+        "arxiv_id": "2311.15436",
+        "doi": "10.48550/arXiv.2311.15436",
+        "authors": [
+          "Dewen Zeng",
+          "Nan Du",
+          "Tao Wang",
+          "Yuan-Zhong Xu",
+          "Tao Lei",
+          "Zhifeng Chen",
+          "Claire Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.18668",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.18668",
+        "id:arXiv:2402.18668",
+        "title:simple linear attention language models balance the recallthroughput tradeoff",
+        "url:https://arxiv.org/abs/2402.18668"
+      ],
+      "record": {
+        "title": "Simple linear attention language models balance the recall-throughput tradeoff",
+        "source_url": "https://arxiv.org/abs/2402.18668",
+        "year": 2024,
+        "published": "2024-02-28",
+        "abstract": "Recent work has shown that attention-based language models excel at recall, the ability to ground generations in tokens previously seen in context. However, the efficiency of attention-based models is bottle-necked during inference by the KV-cache's aggressive memory consumption. In this work, we explore whether we can improve language model efficiency (e.g. by reducing memory consumption) without compromising on recall. By applying experiments and theory to a broad set of architectures, we identify a key tradeoff between a model's state size and recall ability. We show that efficient alternatives to attention (e.g. H3, Mamba, RWKV) maintain a fixed-size recurrent state, but struggle at recall. We propose BASED a simple architecture combining linear and sliding window attention. By varying BASED window size and linear attention feature dimension, we can dial the state size and traverse the pareto frontier of the recall-memory tradeoff curve, recovering the full quality of attention on one end and the small state size of attention-alternatives on the other. We train language models up to 1.3b parameters and show that BASED matches the strongest sub-quadratic models (e.g. Mamba) in perplexity and outperforms them on real-world recall-intensive tasks by 6.22 accuracy points. Implementations of linear attention are often less efficient than optimized standard attention implementations. To make BASED competitive, we develop IO-aware algorithms that enable 24x higher throughput on language generation than FlashAttention-2, when generating 1024 tokens using 1.3b parameter models. Code for this work is provided at: https://github.com/HazyResearch/based.",
+        "canonical_id": "arXiv:2402.18668",
+        "arxiv_id": "2402.18668",
+        "doi": "10.48550/arXiv.2402.18668",
+        "authors": [
+          "Simran Arora",
+          "Sabri Eyuboglu",
+          "Michael Zhang",
+          "Aman Timalsina",
+          "Silas Alberti",
+          "Dylan Zinsley",
+          "James Zou",
+          "Atri Rudra",
+          "Christopher Ré"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.00242",
+      "identity_tokens": [
+        "id:arXiv:2404.00242",
+        "title:deft decoding with flash treeattention for efficient treestructured llm inference",
+        "url:https://arxiv.org/abs/2404.00242"
+      ],
+      "record": {
+        "title": "DeFT: Decoding with Flash Tree-attention for Efficient Tree-structured LLM Inference",
+        "source_url": "https://arxiv.org/abs/2404.00242",
+        "year": 2024,
+        "published": "2024-03-30",
+        "abstract": "Large language models (LLMs) are increasingly employed for complex tasks that process multiple generation calls in a tree structure with shared prefixes of tokens, including few-shot prompting, multi-step reasoning, speculative decoding, etc. However, existing inference systems for tree-based applications are inefficient due to improper partitioning of queries and KV cache during attention calculation. This leads to two main issues: (1) a lack of memory access (IO) reuse for KV cache of shared prefixes, and (2) poor load balancing.As a result, there is redundant KV cache IO between GPU global memory and shared memory, along with low GPU utilization. To address these challenges, we propose DeFT(Decoding with Flash Tree-Attention), a hardware-efficient attention algorithm with prefix-aware and load-balanced KV cache partitions. DeFT reduces the number of read/write operations of KV cache during attention calculation through KV-Guided Grouping, a method that avoids repeatedly loading KV cache of shared prefixes in attention computation. Additionally, we propose Flattened Tree KV Splitting, a mechanism that ensures even distribution of the KV cache across partitions with little computation redundancy, enhancing GPU utilization during attention computations. By reducing 73-99% KV cache IO and nearly 100% IO for partial results during attention calculation, DeFT achieves up to 2.23/3.59x speedup in the end-to-end/attention latency across three practical tree-based workloads compared to state-of-the-art attention algorithms. Our code is available at https://github.com/LINs-lab/DeFT.",
+        "canonical_id": "arXiv:2404.00242",
+        "arxiv_id": "2404.00242",
+        "authors": [
+          "Jinwei Yao",
+          "Kaiqi Chen",
+          "Kexun Zhang",
+          "Jia-Xuan You",
+          "Bin-Hang Yuan",
+          "Zeke Wang",
+          "Tao Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14852",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.14852",
+        "id:arXiv:2405.14852",
+        "title:pvtuning beyond straightthrough estimation for extreme llm compression",
+        "url:https://arxiv.org/abs/2405.14852"
+      ],
+      "record": {
+        "title": "PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression",
+        "source_url": "https://arxiv.org/abs/2405.14852",
+        "year": 2024,
+        "published": "2024-05-23",
+        "abstract": "There has been significant interest in\"extreme\"compression of large language models (LLMs), i.e., to 1-2 bits per parameter, which allows such models to be executed efficiently on resource-constrained devices. Existing work focused on improved one-shot quantization techniques and weight representations; yet, purely post-training approaches are reaching diminishing returns in terms of the accuracy-vs-bit-width trade-off. State-of-the-art quantization methods such as QuIP# and AQLM include fine-tuning (part of) the compressed parameters over a limited amount of calibration data; however, such fine-tuning techniques over compressed weights often make exclusive use of straight-through estimators (STE), whose performance is not well-understood in this setting. In this work, we question the use of STE for extreme LLM compression, showing that it can be sub-optimal, and perform a systematic study of quantization-aware fine-tuning strategies for LLMs. We propose PV-Tuning - a representation-agnostic framework that generalizes and improves upon existing fine-tuning strategies, and provides convergence guarantees in restricted cases. On the practical side, when used for 1-2 bit vector quantization, PV-Tuning outperforms prior techniques for highly-performant models such as Llama and Mistral. Using PV-Tuning, we achieve the first Pareto-optimal quantization for Llama 2 family models at 2 bits per parameter.",
+        "canonical_id": "arXiv:2405.14852",
+        "arxiv_id": "2405.14852",
+        "doi": "10.48550/arXiv.2405.14852",
+        "authors": [
+          "Vladimir Malinovskii",
+          "D. Mazur",
+          "Ivan D. Ilin",
+          "Denis Kuznedelev",
+          "Konstantin Burlachenko",
+          "Kai Yi",
+          "Dan Alistarh",
+          "Peter Richtárik"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e03219f0cc499c9976eaacd003b247390f3d4f029ce707babd46e5ec07c43f2d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa3fc7d004d5edb8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.4230/lipics.icalp.2019.63",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.4230/lipics.icalp.2019.63",
+    "identity_tokens": [
+      "DOI:10.4230/lipics.icalp.2019.63"
+    ],
+    "reason": "処理時間未知かつ先行制約付きジョブを同一機械群へ割り当てる一般オンラインスケジューリング理論で、Eisenberg-Gale型凸計画からvirtual rateを割り当て競争比を解析する。LLM推論・サービング固有のシステムを対象にしないため対象外。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T09:07:48+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
+    ],
+    "title": "Non-Clairvoyant Precedence Constrained Scheduling"
+  },
+  "processed_at": "2026-09-30T09:07:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa3fc7d004d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

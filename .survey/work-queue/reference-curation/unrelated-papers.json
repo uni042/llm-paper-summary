@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:04:57+00:00",
-  "record_count": 368,
+  "updated_at": "2026-09-30T09:07:48+00:00",
+  "record_count": 379,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4867,9 +4867,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.findings-emnlp.360"
       ],
-      "reason": "18言語のWikiHow記事・要約対を用いる多言語要約ベンチマークと要約手法の研究で、LLM推論基盤の高速化・省メモリ化を主貢献としないため対象外。",
+      "reason": "多言語要約データセットとクロスリンガル要約法が主貢献で、LLM推論基盤の高速化・省メモリ化ではないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
         "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
@@ -4882,9 +4882,9 @@
       "identity_tokens": [
         "DOI:10.14778/3685800.3685905"
       ],
-      "reason": "RAG・ベクトルDB・エージェントを組み合わせた自然言語データ分析システムであり、LLM推論ランタイム自体の速度・メモリ・サービング効率を改善する研究ではないため対象外。",
+      "reason": "自然言語データ分析アプリケーションとしてRAG・ベクトルDB・エージェントを統合する研究で、LLM推論runtime自体の最適化が主貢献ではないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
@@ -4895,11 +4895,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3694715.3695960",
       "identity_tokens": [
-        "DOI:10.1145/3694715.3695960"
+        "DOI:10.1145/3694715.3695960",
+        "arXiv:2405.14009"
       ],
-      "reason": "GPU障害時の大規模DNN学習を停止せず継続する耐障害パイプライン学習システムで、最終適用先が学習工程そのものの高速化・回復であるため凍結範囲として対象外。",
+      "reason": "障害時の分散DNN学習throughput維持が最終適用先であり、学習高速化系は凍結対象なので対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
@@ -5267,23 +5268,6 @@
       ],
       "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
     },
-    "OpenReview:pZiyCaVuti": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:pZiyCaVuti",
-      "identity_tokens": [
-        "OpenReview:pZiyCaVuti",
-        "arXiv:2410.10813"
-      ],
-      "reason": "長期対話メモリ能力の評価ベンチマークと検索・読解設計の分析が主題であり、LLM推論の速度・GPUメモリ・サービング最適化手法ではない。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
-      ],
-      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
-    },
     "OpenReview:KnqiC0znVF": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:KnqiC0znVF",
@@ -5291,9 +5275,9 @@
         "OpenReview:KnqiC0znVF",
         "arXiv:2502.09992"
       ],
-      "reason": "LLaDAという拡散型大規模言語モデルを事前学習から構築し、生成原理・scaling・能力を示すモデル研究で、推論高速化方式そのものは提案していない。",
+      "reason": "LLaDAという大規模拡散言語モデルを自己回帰モデルの代替として事前学習・教師あり微調整し、一般・数学・コード能力を検証するモデルアーキテクチャ研究。推論時のサービング、KVキャッシュ、メモリ階層、カーネル、スケジューリングの効率化が主貢献ではないため対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:07:48+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
@@ -5305,11 +5289,12 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:EvDeiLv7qc",
       "identity_tokens": [
-        "OpenReview:EvDeiLv7qc"
+        "OpenReview:EvDeiLv7qc",
+        "arXiv:2309.05444"
       ],
-      "reason": "MoE化したparameter-efficient fine-tuningでinstruction tuningの学習効率を高める研究で、最終適用先が学習・適応工程のため凍結対象。",
+      "reason": "低ランク適応（LoRA）型エキスパートを用いて命令微調整のパラメータ効率を高める研究で、最終適用先は微調整・能力適応。MoEを使うが推論時のエキスパート配置、オフロード、キャッシュ、通信やサービング高速化を主目的にしないため対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:07:48+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
@@ -5332,47 +5317,15 @@
       ],
       "title": "Your Context Is Not an Array: Unveiling Random Access Limitations in Transformers"
     },
-    "DOI:10.57967/hf/3372": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.57967/hf/3372",
-      "identity_tokens": [
-        "DOI:10.57967/hf/3372"
-      ],
-      "reason": "1M token級へ拡張したLlama 3派生モデルのモデル配布・長文脈能力が中心で、推論システム最適化手法そのものではないため対象外。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
-      ],
-      "title": "Llama 3 Gradient: A Series of Long Context Models"
-    },
-    "arXiv:2305.02309": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2305.02309",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2305.02309",
-        "arXiv:2305.02309"
-      ],
-      "reason": "program synthesis向けLLMのarchitecture・学習法・infilling sampling・data mixtureを統合する学習研究で、最終適用先が推論高速化ではないため凍結範囲として対象外。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
-        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
-      ],
-      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
-    },
     "DOI:10.4230/lipics.icalp.2019.63": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.4230/lipics.icalp.2019.63",
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "処理時間未知・precedence制約付きjobのonline scheduling理論で、LLM推論を最終適用先としないため対象外。",
+      "reason": "処理時間未知かつ先行制約付きジョブを同一機械群へ割り当てる一般オンラインスケジューリング理論で、Eisenberg-Gale型凸計画からvirtual rateを割り当て競争比を解析する。LLM推論・サービング固有のシステムを対象にしないため対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:07:48+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
@@ -5547,6 +5500,216 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md"
       ],
       "title": "Llama Guard 3 Vision: Safeguarding Human-AI Image Understanding Conversations"
+    },
+    "arXiv:2510.27257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.27257",
+      "identity_tokens": [
+        "arXiv:2510.27257"
+      ],
+      "reason": "テンソル並列とパイプライン並列を協調させて大規模モデルの学習スループットを改善する研究で、最終適用先が学習工程そのものの高速化であるため凍結範囲として対象外。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "title": "Synergistic Tensor and Pipeline Parallelism"
+    },
+    "arXiv:2504.04717": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04717",
+      "identity_tokens": [
+        "arXiv:2504.04717"
+      ],
+      "reason": "複数ターン対話の能力・評価・改善法を整理するサーベイであり、KVキャッシュ、サービング、メモリ階層、カーネル等の推論実行効率化を主題としないため対象外。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md"
+      ],
+      "title": "Beyond Single-Turn: A Survey on Multi-Turn Interactions with Large Language Models"
+    },
+    "arXiv:2503.10582": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10582",
+      "identity_tokens": [
+        "arXiv:2503.10582"
+      ],
+      "reason": "ウェブ検索から視覚推論向け命令データを構築し、視覚言語モデルを微調整するデータ・学習研究で、推論基盤の高速化・省メモリ化ではないため対象外。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
+      ],
+      "title": "VisualWebInstruct: Scaling up Multimodal Instruction Data through Web Search"
+    },
+    "arXiv:2502.13270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13270",
+      "identity_tokens": [
+        "arXiv:2502.13270"
+      ],
+      "reason": "実世界の長期対話データセットと人格模倣・長期記憶評価を提供する研究で、推論時メモリ管理やサービング効率を改善する新規方式ではないため対象外。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+      ],
+      "title": "REALTALK: A 21-Day Real-World Dataset for Long-Term Conversation"
+    },
+    "DOI:10.1145/3627703.3650083": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627703.3650083",
+      "identity_tokens": [
+        "DOI:10.1145/3627703.3650083"
+      ],
+      "reason": "MoEのall-to-allとtask schedulingを最適化するが、最終適用先が分散学習であり凍結対象。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md"
+      ],
+      "title": "ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling"
+    },
+    "DOI:10.1145/3575693.3575703": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3575693.3575703",
+      "identity_tokens": [
+        "DOI:10.1145/3575693.3575703"
+      ],
+      "reason": "GPU/DRAM階層とpipeline parallelismを使うが、目的は大規模モデルのfine-tuning高速化であり学習工程凍結範囲。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ],
+      "title": "Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers"
+    },
+    "DOI:10.1109/mm.2008.31": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2008.31",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2008.31"
+      ],
+      "reason": "CUDA時代の汎用GPU基礎アーキテクチャ論文で後続LLM推論基盤の背景ではあるが、LLM以前のGPU設計解説でサーベイの直接対象外。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
+        "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
+      ],
+      "title": "NVIDIA Tesla: A Unified Graphics and Computing Architecture"
+    },
+    "arXiv:2410.10813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10813",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti",
+        "arXiv:2410.10813"
+      ],
+      "reason": "長期会話memoryのbenchmarkとretrieval評価が主題で、推論runtime最適化ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+    },
+    "arXiv:2409.19256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19256",
+      "identity_tokens": [
+        "arXiv:2409.19256"
+      ],
+      "reason": "RLHF学習の分散dataflow・resharding効率化が最終適用先で、凍結中のtraining高速化に該当する。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "HybridFlow: A Flexible and Efficient RLHF Framework"
+    },
+    "arXiv:2407.10759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.10759",
+      "identity_tokens": [
+        "arXiv:2407.10759"
+      ],
+      "reason": "音声言語モデルの学習・能力評価が主題で、推論システム最適化ではない。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "Qwen2-Audio Technical Report"
+    },
+    "arXiv:2310.08825": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08825",
+      "identity_tokens": [
+        "arXiv:2310.08825"
+      ],
+      "reason": "MLLMのvisual encoder特徴とfusionによる能力改善が主題で、推論効率化ではない。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "From CLIP to DINO: Visual Encoders Shout in Multi-modal Large Language Models"
+    },
+    "arXiv:2303.04671": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04671",
+      "identity_tokens": [
+        "arXiv:2303.04671"
+      ],
+      "reason": "複数visual foundation modelをChatGPTから呼ぶ能力統合が主題で、serving/runtime効率化ではない。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models"
+    },
+    "arXiv:2111.09734": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.09734",
+      "identity_tokens": [
+        "arXiv:2111.09734"
+      ],
+      "reason": "画像captioning手法と学習効率が主題で、LLM推論systemの高速化ではない。",
+      "first_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "ClipCap: CLIP Prefix for Image Captioning"
+    },
+    "DOI:10.48550/arxiv.2305.02309": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2305.02309",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.02309",
+        "arXiv:2305.02309"
+      ],
+      "reason": "CodeGen2の事前学習レシピを、モデルアーキテクチャ、infilling、学習方法、データ分布の観点から検証する研究。主目的はコード/自然言語LLMの学習設計で、推論時のKV再利用・サービング・メモリ階層最適化ではないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:07:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
     }
   }
 }
