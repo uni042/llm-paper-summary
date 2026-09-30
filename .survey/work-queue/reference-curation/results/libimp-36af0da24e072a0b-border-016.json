@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36af0da24e072a0b-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.12410",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.12410",
+    "identity_tokens": [
+      "arXiv:2205.12410"
+    ],
+    "reason": "parameter-efficient tuningのmixture設計が中心で、学習効率には関係するがシステム基盤の一次研究ではない。",
+    "first_checked_at": "2026-09-27T09:28:42+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 235"
+    ],
+    "title": "AdaMix: Mixture-of-Adaptations for Parameter-efficient Model Tuning"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36af0da24e07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

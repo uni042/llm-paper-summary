@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36af0da24e072a0b-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2202.01169",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2202.01169",
+    "identity_tokens": [
+      "arXiv:2202.01169"
+    ],
+    "reason": "疎ルーティング言語モデルのパラメータ数・専門家数・計算量のスケーリング則が主題で、システム実装・配信機構の提案ではない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 497"
+    ],
+    "title": "Unified Scaling Laws for Routed Language Models"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36af0da24e07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebd733094fff6522-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2004.09602",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2004.09602",
+    "identity_tokens": [
+      "arXiv:2004.09602"
+    ],
+    "reason": "整数量子化推論の原理と実装上の要点を体系化する重要な基礎研究だが、LLM固有ではなく汎用深層学習推論が対象。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 482"
+    ],
+    "title": "Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebd733094fff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

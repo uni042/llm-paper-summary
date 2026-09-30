@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebd733094fff6522-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2005.07683",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2005.07683",
+    "identity_tokens": [
+      "arXiv:2005.07683"
+    ],
+    "reason": "微調整中の重み移動に基づく枝刈りで疎モデルを得る圧縮手法だが、主貢献はモデル圧縮アルゴリズムで実行基盤への直接性は弱い。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 483"
+    ],
+    "title": "Movement Pruning: Adaptive Sparsity by Fine-Tuning"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebd733094fff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

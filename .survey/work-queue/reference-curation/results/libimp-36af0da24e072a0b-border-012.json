@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36af0da24e072a0b-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.06745",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.06745",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2204.06745",
+      "arXiv:2204.06745"
+    ],
+    "reason": "モデル公開と学習技術報告で分散学習実装を含むが、主貢献はモデルそのもの。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36af0da24e07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

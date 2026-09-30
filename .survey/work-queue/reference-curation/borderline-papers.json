@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T09:45:55+00:00",
-  "record_count": 362,
+  "updated_at": "2026-09-30T09:46:42+00:00",
+  "record_count": 367,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -1172,12 +1172,11 @@
       ],
       "reason": "関連する効率化要素はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ／立場論文で、現行サーベイへの直接性が境界的。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "Torpor",
-      "source_url": "https://arxiv.org/abs/2306.03622"
+      "title": "Torpor"
     },
     "arXiv:2605.01280": {
       "classification": "borderline",
@@ -1322,12 +1321,11 @@
       ],
       "reason": "線形注意で自己回帰をO(N)化するが現代LLM配信固有のシステム評価は限定的。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
-      "source_url": "https://arxiv.org/abs/2006.16236"
+      "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention"
     },
     "DOI:10.1145/3419111.3421285": {
       "classification": "borderline",
@@ -1343,20 +1341,6 @@
       ],
       "title": "InferLine: Latency-Aware Provisioning and Scaling for Prediction Serving Pipelines",
       "source_url": "https://doi.org/10.1145/3419111.3421285"
-    },
-    "DOI:10.1109/cgo53902.2022.9741270": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/cgo53902.2022.9741270",
-      "identity_tokens": [
-        "DOI:10.1109/cgo53902.2022.9741270"
-      ],
-      "reason": "既存Library正規台帳から継承",
-      "first_checked_at": "2026-09-27T03:00:00+09:00",
-      "last_checked_at": "2026-09-27T03:00:00+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Automatic Horizontal Fusion for GPU Kernels"
     },
     "arXiv:2407.21770": {
       "classification": "borderline",
@@ -1443,12 +1427,13 @@
       ],
       "reason": "離散拡散による生成モデル設計・学習が中心で、現行LLM推論ランタイム最適化への直接性は限定的。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 382",
+        "worker-worklist-30 discovery_review rank 415",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
-      "source_url": "https://arxiv.org/abs/2211.15029"
+      "title": "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models"
     },
     "arXiv:2209.13325": {
       "classification": "borderline",
@@ -1459,12 +1444,13 @@
       ],
       "reason": "一次資料を確認したが、現行LLMシステムサーベイへの直接的な実行基盤寄与は限定的。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 381",
+        "worker-worklist-30 discovery_review rank 414",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "arXiv:2209.13325",
-      "source_url": "https://arxiv.org/abs/2209.13325"
+      "title": "arXiv:2209.13325"
     },
     "arXiv:2105.15082": {
       "classification": "borderline",
@@ -1474,12 +1460,11 @@
       ],
       "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
       "first_checked_at": "2026-09-27T03:31:44+09:00",
-      "last_checked_at": "2026-09-27T03:31:44+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 412"
       ],
-      "title": "M6-T: Exploring Sparse Expert Models and Beyond",
-      "source_url": "https://arxiv.org/abs/2105.15082"
+      "title": "M6-T: Exploring Sparse Expert Models and Beyond"
     },
     "arXiv:2101.05615": {
       "classification": "borderline",
@@ -1490,12 +1475,13 @@
       ],
       "reason": "CPU向け低精度GEMMカーネル基盤として重要だがLLM以前の汎用DL推論ライブラリで、現行LLMサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 378",
+        "worker-worklist-30 discovery_review rank 411",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "FBGEMM: Enabling High-Performance Low-Precision Deep Learning Inference",
-      "source_url": "https://arxiv.org/abs/2101.05615"
+      "title": "FBGEMM: Enabling High-Performance Low-Precision Deep Learning Inference"
     },
     "arXiv:1807.03819": {
       "classification": "borderline",
@@ -1608,16 +1594,16 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2007.01277",
       "identity_tokens": [
+        "DOI:10.1109/cgo53902.2022.9741270",
         "arXiv:2007.01277"
       ],
       "reason": "水平カーネル融合で2.5〜60.8%高速化するが汎用GPU最適化でLLM固有ではない。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "first_checked_at": "2026-09-27T03:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Automatic Horizontal Fusion for GPU Kernels",
-      "source_url": "https://arxiv.org/abs/2007.01277"
+      "title": "Automatic Horizontal Fusion for GPU Kernels"
     },
     "arXiv:2206.02770": {
       "classification": "borderline",
@@ -1627,12 +1613,11 @@
       ],
       "reason": "マルチモーダルMoEのルーティング安定化と専門家利用を詳しく扱うが、主貢献はモデル／学習設計で、推論・配信システムの直接的な新規機構ではない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 500"
       ],
-      "title": "Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts",
-      "source_url": "https://arxiv.org/abs/2206.02770"
+      "title": "Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts"
     },
     "arXiv:2205.12399": {
       "classification": "borderline",
@@ -1642,12 +1627,11 @@
       ],
       "reason": "MoEと線形ミキシングを組み合わせ推論61–98%高速化を示すが、中心はBERT系モデル構造の効率化で、実行基盤そのものの新規性は弱い。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 499"
       ],
-      "title": "Sparse Mixers: Combining MoE and Mixing to build a more efficient BERT",
-      "source_url": "https://arxiv.org/abs/2205.12399"
+      "title": "Sparse Mixers: Combining MoE and Mixing to build a more efficient BERT"
     },
     "arXiv:2202.01169": {
       "classification": "borderline",
@@ -1657,12 +1641,11 @@
       ],
       "reason": "疎ルーティング言語モデルのパラメータ数・専門家数・計算量のスケーリング則が主題で、システム実装・配信機構の提案ではない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 497"
       ],
-      "title": "Unified Scaling Laws for Routed Language Models",
-      "source_url": "https://arxiv.org/abs/2202.01169"
+      "title": "Unified Scaling Laws for Routed Language Models"
     },
     "arXiv:2110.08246": {
       "classification": "borderline",
@@ -1672,12 +1655,11 @@
       ],
       "reason": "疎な翻訳向けMoEの安定学習・ルーティング手法が中心で、システム実行・通信・メモリ管理の直接的な新規機構は主題ではない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 494"
       ],
-      "title": "Tricks for Training Sparse Translation Models",
-      "source_url": "https://arxiv.org/abs/2110.08246"
+      "title": "Tricks for Training Sparse Translation Models"
     },
     "arXiv:2106.04426": {
       "classification": "borderline",
@@ -1687,12 +1669,11 @@
       ],
       "reason": "学習不要のハッシュルーティングで大規模疎モデルを単純化するが、主貢献はMoEモデル／学習アルゴリズムであり実行基盤への直接性は限定的。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 491"
       ],
-      "title": "Hash Layers For Large Sparse Models",
-      "source_url": "https://arxiv.org/abs/2106.04426"
+      "title": "Hash Layers For Large Sparse Models"
     },
     "arXiv:2008.07772": {
       "classification": "borderline",
@@ -1702,12 +1683,11 @@
       ],
       "reason": "深いTransformerの安定学習とモデル品質が中心で、システム実行・メモリ階層・配信最適化の直接的な新規機構ではない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 485"
       ],
-      "title": "Very Deep Transformers for Neural Machine Translation",
-      "source_url": "https://arxiv.org/abs/2008.07772"
+      "title": "Very Deep Transformers for Neural Machine Translation"
     },
     "arXiv:2005.07683": {
       "classification": "borderline",
@@ -1717,12 +1697,11 @@
       ],
       "reason": "微調整中の重み移動に基づく枝刈りで疎モデルを得る圧縮手法だが、主貢献はモデル圧縮アルゴリズムで実行基盤への直接性は弱い。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 483"
       ],
-      "title": "Movement Pruning: Adaptive Sparsity by Fine-Tuning",
-      "source_url": "https://arxiv.org/abs/2005.07683"
+      "title": "Movement Pruning: Adaptive Sparsity by Fine-Tuning"
     },
     "arXiv:2004.09602": {
       "classification": "borderline",
@@ -1732,12 +1711,11 @@
       ],
       "reason": "整数量子化推論の原理と実装上の要点を体系化する重要な基礎研究だが、LLM固有ではなく汎用深層学習推論が対象。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 482"
       ],
-      "title": "Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation",
-      "source_url": "https://arxiv.org/abs/2004.09602"
+      "title": "Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation"
     },
     "arXiv:2002.09402": {
       "classification": "borderline",
@@ -1849,12 +1827,11 @@
       ],
       "reason": "本文を確認し、An Attention Free Transformer は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "An Attention Free Transformer",
-      "source_url": "https://arxiv.org/abs/2105.14103"
+      "title": "An Attention Free Transformer"
     },
     "arXiv:2012.14913": {
       "classification": "borderline",
@@ -1879,12 +1856,11 @@
       ],
       "reason": "本文を確認し、Memformer: A Memory-Augmented Transformer for Sequence Modeling は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Memformer: A Memory-Augmented Transformer for Sequence Modeling",
-      "source_url": "https://arxiv.org/abs/2010.06891"
+      "title": "Memformer: A Memory-Augmented Transformer for Sequence Modeling"
     },
     "arXiv:2004.02178": {
       "classification": "borderline",
@@ -1894,12 +1870,11 @@
       ],
       "reason": "本文を確認し、FastBERT: a Self-distilling BERT with Adaptive Inference Time は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "FastBERT: a Self-distilling BERT with Adaptive Inference Time",
-      "source_url": "https://arxiv.org/abs/2004.02178"
+      "title": "FastBERT: a Self-distilling BERT with Adaptive Inference Time"
     },
     "arXiv:2002.12418": {
       "classification": "borderline",
@@ -2176,12 +2151,11 @@
       ],
       "reason": "一次資料本文を確認し、Augmented Language Models: a Survey は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Augmented Language Models: a Survey",
-      "source_url": "https://arxiv.org/abs/2302.07842"
+      "title": "Augmented Language Models: a Survey"
     },
     "arXiv:2102.05426": {
       "classification": "borderline",
@@ -2191,12 +2165,11 @@
       ],
       "reason": "一次資料本文を確認し、BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction",
-      "source_url": "https://arxiv.org/abs/2102.05426"
+      "title": "BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction"
     },
     "arXiv:1910.07467": {
       "classification": "borderline",
@@ -2236,12 +2209,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 316"
       ],
-      "title": "Adapting Language Models to Compress Contexts",
-      "source_url": "https://arxiv.org/abs/2305.14788"
+      "title": "Adapting Language Models to Compress Contexts"
     },
     "arXiv:2305.02301": {
       "classification": "borderline",
@@ -2252,12 +2224,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 315"
       ],
-      "title": "Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes",
-      "source_url": "https://arxiv.org/abs/2305.02301"
+      "title": "Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes"
     },
     "arXiv:2302.14017": {
       "classification": "borderline",
@@ -2268,12 +2239,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 313"
       ],
-      "title": "Full Stack Optimization of Transformer Inference: a Survey",
-      "source_url": "https://arxiv.org/abs/2302.14017"
+      "title": "Full Stack Optimization of Transformer Inference: a Survey"
     },
     "arXiv:2209.04836": {
       "classification": "borderline",
@@ -2284,12 +2254,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 310"
       ],
-      "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries",
-      "source_url": "https://arxiv.org/abs/2209.04836"
+      "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries"
     },
     "arXiv:2205.10350": {
       "classification": "borderline",
@@ -2300,12 +2269,12 @@
       ],
       "reason": "並列draft/verifyによる生成高速化は投機的復号の先行技術だが、主対象は一般seq2seq/機械翻訳。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 309"
       ],
-      "title": "Lossless Acceleration for Seq2seq Generation with Aggressive Decoding",
-      "source_url": "https://arxiv.org/abs/2205.10350"
+      "title": "Lossless Acceleration for Seq2seq Generation with Aggressive Decoding"
     },
     "arXiv:2104.10350": {
       "classification": "borderline",
@@ -2316,12 +2285,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 305"
       ],
-      "title": "Carbon Emissions and Large Neural Network Training",
-      "source_url": "https://arxiv.org/abs/2104.10350"
+      "title": "Carbon Emissions and Large Neural Network Training"
     },
     "arXiv:2102.04010": {
       "classification": "borderline",
@@ -2332,12 +2300,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 304"
       ],
-      "title": "Learning N:M Fine-grained Structured Sparse Neural Networks From Scratch",
-      "source_url": "https://arxiv.org/abs/2102.04010"
+      "title": "Learning N:M Fine-grained Structured Sparse Neural Networks From Scratch"
     },
     "arXiv:2012.14682": {
       "classification": "borderline",
@@ -2348,12 +2315,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 303"
       ],
-      "title": "CascadeBERT: Accelerating Inference of Pre-trained Language Models via Calibrated Complete Models Cascade",
-      "source_url": "https://arxiv.org/abs/2012.14682"
+      "title": "CascadeBERT: Accelerating Inference of Pre-trained Language Models via Calibrated Complete Models Cascade"
     },
     "arXiv:2009.06732": {
       "classification": "borderline",
@@ -2364,12 +2330,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 302"
       ],
-      "title": "Efficient Transformers: A Survey",
-      "source_url": "https://arxiv.org/abs/2009.06732"
+      "title": "Efficient Transformers: A Survey"
     },
     "arXiv:2004.08483": {
       "classification": "borderline",
@@ -2380,12 +2345,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 300"
       ],
-      "title": "ETC: Encoding Long and Structured Inputs in Transformers",
-      "source_url": "https://arxiv.org/abs/2004.08483"
+      "title": "ETC: Encoding Long and Structured Inputs in Transformers"
     },
     "arXiv:1902.08153": {
       "classification": "borderline",
@@ -2488,12 +2452,11 @@
       ],
       "reason": "疎な窓・bridge・memory tokenで注意計算を線形化するが、コードモデルのアーキテクチャ設計が中心でシステム寄与は境界的。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 273"
       ],
-      "title": "LongCoder: A Long-Range Pre-trained Language Model for Code Completion",
-      "source_url": "https://arxiv.org/abs/2306.14893"
+      "title": "LongCoder: A Long-Range Pre-trained Language Model for Code Completion"
     },
     "arXiv:2411.13676": {
       "classification": "borderline",
@@ -2593,12 +2556,11 @@
       ],
       "reason": "parameter-efficient tuningのmixture設計が中心で、学習効率には関係するがシステム基盤の一次研究ではない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 235"
       ],
-      "title": "AdaMix: Mixture-of-Adaptations for Parameter-efficient Model Tuning",
-      "source_url": "https://arxiv.org/abs/2205.12410"
+      "title": "AdaMix: Mixture-of-Adaptations for Parameter-efficient Model Tuning"
     },
     "arXiv:2106.04970": {
       "classification": "borderline",
@@ -2608,12 +2570,11 @@
       ],
       "reason": "並列aggressive decodingでseq2seq推論を高速化するがGEC特化・pre-LLM世代で現行LLMシステムへの直接性は境界的。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 233"
       ],
-      "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding",
-      "source_url": "https://arxiv.org/abs/2106.04970"
+      "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding"
     },
     "arXiv:1911.13214": {
       "classification": "borderline",
@@ -2878,12 +2839,12 @@
       ],
       "reason": "凍結画像エンコーダとLLMを軽量橋渡しする学習効率の高いVLM設計だが、推論システム機構が主貢献ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 493",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
-      "source_url": "https://arxiv.org/abs/2301.12597"
+      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models"
     },
     "arXiv:2212.09849": {
       "classification": "borderline",
@@ -2894,12 +2855,12 @@
       ],
       "reason": "データなし重みマージによる知識融合が中心で、配信・メモリ・カーネル等のランタイム機構ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 491",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Dataless Knowledge Fusion by Merging Weights of Language Models",
-      "source_url": "https://arxiv.org/abs/2212.09849"
+      "title": "Dataless Knowledge Fusion by Merging Weights of Language Models"
     },
     "arXiv:2409.11402": {
       "classification": "borderline",
@@ -2926,12 +2887,11 @@
       ],
       "reason": "注意ヘッド・FFNの重要度分析から大幅な削減可能性を示すが、主貢献は解釈性分析で実行ランタイムではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Rethinking the Role of Scale for In-Context Learning: An Interpretability-based Case Study at 66 Billion Scale",
-      "source_url": "https://arxiv.org/abs/2212.09095"
+      "title": "Rethinking the Role of Scale for In-Context Learning: An Interpretability-based Case Study at 66 Billion Scale"
     },
     "arXiv:2304.02207": {
       "classification": "borderline",
@@ -2942,12 +2902,11 @@
       ],
       "reason": "動的注意維持のアルゴリズムと計算量を扱い効率化に近いが、主貢献は理論アルゴリズムで実装システム評価が中心ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Algorithm and Hardness for Dynamic Attention Maintenance in Large Language Models",
-      "source_url": "https://arxiv.org/abs/2304.02207"
+      "title": "Algorithm and Hardness for Dynamic Attention Maintenance in Large Language Models"
     },
     "arXiv:2308.00951": {
       "classification": "borderline",
@@ -2989,12 +2948,11 @@
       ],
       "reason": "早期終了で推論計算を削減するがBERT分類中心のモデル手法で、現行生成LLMランタイムへの直接性は境界的。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference",
-      "source_url": "https://arxiv.org/abs/2004.12993"
+      "title": "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference"
     },
     "arXiv:2103.16716": {
       "classification": "borderline",
@@ -3005,12 +2963,11 @@
       ],
       "reason": "疎MoEの負荷分散を簡素化するモデル・学習手法で、分散実行への関係はあるがシステム機構が主ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
-      "source_url": "https://arxiv.org/abs/2103.16716"
+      "title": "BASE Layers: Simplifying Training of Large, Sparse Models"
     },
     "arXiv:2411.02265": {
       "classification": "borderline",
@@ -3085,12 +3042,12 @@
       ],
       "reason": "モデル公開と学習技術報告で分散学習実装を含むが、主貢献はモデルそのもの。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
-      "source_url": "https://arxiv.org/abs/2204.06745"
+      "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model"
     },
     "arXiv:2402.03804": {
       "classification": "borderline",
@@ -3305,12 +3262,11 @@
       ],
       "reason": "注意計算を線形化するが、汎用Transformer設計が主眼でLLM推論システム評価は限定的。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Linformer: Self-Attention with Linear Complexity",
-      "source_url": "https://arxiv.org/abs/2006.04768"
+      "title": "Linformer: Self-Attention with Linear Complexity"
     },
     "arXiv:1510.00149": {
       "classification": "borderline",
@@ -3334,12 +3290,11 @@
       ],
       "reason": "注意計算のメモリ複雑度を下げるが主用途は学習時メモリ節約でLLM配信への直接評価は限定的。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Self-attention Does Not Need O(n²) Memory",
-      "source_url": "https://arxiv.org/abs/2112.05682"
+      "title": "Self-attention Does Not Need O(n²) Memory"
     },
     "arXiv:2607.24653": {
       "classification": "borderline",
@@ -3379,12 +3334,11 @@
       ],
       "reason": "RETROは外部検索でパラメータ効率を高める重要なモデル設計だが、配信・キャッシュ・実行時最適化が主題ではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Improving language models by retrieving from trillions of tokens",
-      "source_url": "https://arxiv.org/abs/2112.04426"
+      "title": "Improving language models by retrieving from trillions of tokens"
     },
     "arXiv:2109.12948": {
       "classification": "borderline",
@@ -3394,12 +3348,11 @@
       ],
       "reason": "Transformer量子化の外れ値問題とPTQ/QAT対策は推論効率に関係するが、現代LLM固有の配信システム研究ではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Understanding and Overcoming the Challenges of Efficient Transformer Quantization",
-      "source_url": "https://arxiv.org/abs/2109.12948"
+      "title": "Understanding and Overcoming the Challenges of Efficient Transformer Quantization"
     },
     "arXiv:2102.00554": {
       "classification": "borderline",
@@ -3409,12 +3362,11 @@
       ],
       "reason": "推論・学習の疎性を体系化した有用なサーベイだが、新規LLM推論システム手法ではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks",
-      "source_url": "https://arxiv.org/abs/2102.00554"
+      "title": "Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks"
     },
     "arXiv:2006.10369": {
       "classification": "borderline",
@@ -3424,12 +3376,11 @@
       ],
       "reason": "浅い自己回帰decoderによる高速生成は関連するが、対象は機械翻訳でLLM推論基盤への直接性は限定的。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Deep Encoder, Shallow Decoder: Reevaluating Non-autoregressive Machine Translation",
-      "source_url": "https://arxiv.org/abs/2006.10369"
+      "title": "Deep Encoder, Shallow Decoder: Reevaluating Non-autoregressive Machine Translation"
     },
     "arXiv:1910.10073": {
       "classification": "borderline",
@@ -3482,12 +3433,11 @@
       ],
       "reason": "複数LLMエージェント協調の枠組みとケーススタディを扱うが、配信ランタイム・KV管理・スケジューラ等の定量的システム最適化が主貢献ではない。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Multi-Agent Collaboration: Harnessing the Power of Intelligent LLM Agents",
-      "source_url": "https://arxiv.org/abs/2306.03314"
+      "title": "Multi-Agent Collaboration: Harnessing the Power of Intelligent LLM Agents"
     },
     "arXiv:2405.17976": {
       "classification": "borderline",
@@ -3543,12 +3493,11 @@
       ],
       "reason": "圧縮LLMの推論精度を転移可能なsoft promptで回復し8倍圧縮LLaMA-7Bを評価するため推論効率に関係するが、主手法はprompt学習でシステム寄与は限定的。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Compress, Then Prompt: Improving Accuracy-Efficiency Trade-off of LLM Inference with Transferable Prompt",
-      "source_url": "https://arxiv.org/abs/2305.11186"
+      "title": "Compress, Then Prompt: Improving Accuracy-Efficiency Trade-off of LLM Inference with Transferable Prompt"
     },
     "DOI:10.18653/v1/2021.naacl-main.112": {
       "classification": "borderline",
@@ -3651,12 +3600,11 @@
       ],
       "reason": "学習後量子化・剪定の一般DNN圧縮基盤で推論効率に関係するが、LLM固有の配信／ランタイム研究ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning",
-      "source_url": "https://arxiv.org/abs/2208.11580"
+      "title": "Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning"
     },
     "arXiv:1806.08342": {
       "classification": "borderline",
@@ -3919,12 +3867,11 @@
       ],
       "reason": "疎DNNを高速化する一般的カーネル／実行技術として関連するが、LLM固有の推論配信を対象としない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Accelerating Sparse Deep Neural Networks",
-      "source_url": "https://arxiv.org/abs/2104.08378"
+      "title": "Accelerating Sparse Deep Neural Networks"
     },
     "DOI:10.18653/v1/p17-1147": {
       "classification": "borderline",
@@ -4066,7 +4013,7 @@
       ],
       "reason": "推論時のexpert選択安定性には関係するが、主貢献は二段階学習とrouter蒸留によるMoE学習安定化・収束改善。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4080,7 +4027,7 @@
       ],
       "reason": "大規模言語モデルのモデル設計・能力側の寄与が中心で、現行サーベイが重視する配信・メモリ・カーネルの独立したシステム寄与は限定的。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4094,7 +4041,7 @@
       ],
       "reason": "RoPE位置補間でLLaMAを32Kへ拡張するモデル手法で、長文脈推論に関係するがランタイム最適化ではない。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4685,10 +4632,11 @@
       "identity_tokens": [
         "arXiv:2303.13803"
       ],
-      "reason": "オンライン推論とオフライン学習をGPU空間共有し、オンライン性能を保護しながらGPU利用率を上げるproduction serving基盤として近いが、LLM固有ではなく一般DLクラスタが対象なので境界扱い。",
+      "reason": "GPU空間共有・cluster utilizationは推論配信へ応用可能だが、LLM固有ではなく汎用DL cluster管理が主題。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
       ],
@@ -5389,6 +5337,92 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Online normalizer calculation for softmax"
+    },
+    "arXiv:2202.01110": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.01110",
+      "identity_tokens": [
+        "arXiv:2202.01110"
+      ],
+      "reason": "retrieval-augmented generationの体系化は関連するが、主貢献は生成手法サーベイで推論system最適化ではない。",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Survey on Retrieval-Augmented Text Generation"
+    },
+    "arXiv:2203.15556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.15556",
+      "identity_tokens": [
+        "arXiv:2203.15556"
+      ],
+      "reason": "2. **Training Compute-Optimal Large Language Models** — `arXiv:2203.15556` ([paper](https://arxiv.org/abs/2203.15556)). Establishes compute-optimal model/token scaling with training compute; efficiency relevance is to training allocation rather than runtime systems.",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Training Compute-Optimal Large Language Models"
+    },
+    "arXiv:2210.06659": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.06659",
+      "identity_tokens": [
+        "arXiv:2210.06659"
+      ],
+      "reason": "hardware-aware pruningは推論速度を直接最適化するが、対象は汎用DNNでLLM固有性が弱い。",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Structural Pruning via Latency-Saliency Knapsack"
+    },
+    "arXiv:2211.05100": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.05100",
+      "identity_tokens": [
+        "arXiv:2211.05100"
+      ],
+      "reason": "1. **BLOOM: A 176B-Parameter Open-Access Multilingual Language Model** — `arXiv:2211.05100` ([paper](https://arxiv.org/abs/2211.05100)). Documents 3D parallelism over 384 A100 GPUs, but contribution is primarily model/training scale, not a new serving system.",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model"
+    },
+    "arXiv:2302.04761": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.04761",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.04761",
+        "arXiv:2302.04761"
+      ],
+      "reason": "道具利用を自己教師ありで学習するモデル手法でエージェント実行に関係するが、ランタイム・スケジューリングの研究ではない。",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    },
+    "arXiv:2303.18223": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.18223",
+      "identity_tokens": [
+        "arXiv:2303.18223"
+      ],
+      "reason": "3. **A Survey of Large Language Models** — `arXiv:2303.18223` ([paper](https://arxiv.org/abs/2303.18223)). Broad survey that discusses efficiency among many topics; no new systems method.",
+      "first_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Survey of Large Language Models"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36af0da24e072a0b-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2208.11580",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2208.11580",
+    "identity_tokens": [
+      "arXiv:2208.11580"
+    ],
+    "reason": "学習後量子化・剪定の一般DNN圧縮基盤で推論効率に関係するが、LLM固有の配信／ランタイム研究ではない。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36af0da24e07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
