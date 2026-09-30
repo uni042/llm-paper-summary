@@ -14,8 +14,6 @@ on:
       - '.survey/scripts/blocked_retry.py'
       - '.github/workflows/survey-helper.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '3/10 * * * *'
 
 permissions:
   contents: write
