@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09169576cb479eca-unrel-020",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2023.findings-acl.824",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2023.findings-acl.824",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2023.findings-acl.824",
+      "arXiv:2210.09261"
+    ],
+    "reason": "一次資料本文を確認し、Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-09-30T09:52:34+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them"
+  },
+  "processed_at": "2026-09-30T09:52:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09169576cb47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

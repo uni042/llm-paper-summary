@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09169576cb479eca-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.05405",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.05405",
+    "identity_tokens": [
+      "arXiv:2606.05405"
+    ],
+    "reason": "agent能力を測るbenchmark構築・評価が主題で、推論runtimeやserving最適化ではない。",
+    "first_checked_at": "2026-09-30T09:20:54+00:00",
+    "last_checked_at": "2026-09-30T09:52:33+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+    ],
+    "title": "Agents' Last Exam"
+  },
+  "processed_at": "2026-09-30T09:52:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09169576cb47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:51:41+00:00",
-  "record_count": 385,
+  "updated_at": "2026-09-30T09:52:34+00:00",
+  "record_count": 386,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -976,21 +976,6 @@
       "title": "MiniLLM: Knowledge Distillation of Large Language Models",
       "source_url": "https://arxiv.org/abs/2306.08543"
     },
-    "arXiv:2210.09261": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2210.09261",
-      "identity_tokens": [
-        "arXiv:2210.09261"
-      ],
-      "reason": "推論能力評価用ベンチマーク研究で、推論システム効率化の手法・実装を提案しない。",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them",
-      "source_url": "https://arxiv.org/abs/2210.09261"
-    },
     "arXiv:2408.03314": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2408.03314",
@@ -1229,12 +1214,11 @@
       ],
       "reason": "自然言語理解能力の評価ベンチマークで推論効率化手法ではない。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
-      "source_url": "https://aclanthology.org/W18-5446/"
+      "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding"
     },
     "DOI:10.18653/v1/2023.findings-emnlp.536": {
       "classification": "unrelated",
@@ -1244,12 +1228,11 @@
       ],
       "reason": "長文理解能力の評価ベンチマークで推論効率化手法ではない。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding",
-      "source_url": "https://aclanthology.org/2023.findings-emnlp.536/"
+      "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding"
     },
     "arXiv:2409.20370": {
       "classification": "unrelated",
@@ -1407,21 +1390,6 @@
         "worker-worklist-30 discovery_review rank 496"
       ],
       "title": "Unsupervised Dense Information Retrieval with Contrastive Learning"
-    },
-    "arXiv:2104.08758": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2104.08758",
-      "identity_tokens": [
-        "arXiv:2104.08758"
-      ],
-      "reason": "C4を題材に大規模ウェブコーパスの構成・偏り・文書化を分析する研究で、LLMシステム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review rank 490"
-      ],
-      "title": "Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus",
-      "source_url": "https://arxiv.org/abs/2104.08758"
     },
     "arXiv:2102.11402": {
       "classification": "unrelated",
@@ -1853,27 +1821,11 @@
       ],
       "reason": "本文を確認し、CodePlan: Repository-level Coding using LLMs and Planning は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "CodePlan: Repository-level Coding using LLMs and Planning",
-      "source_url": "https://doi.org/10.1145/3643757"
-    },
-    "DOI:10.1145/3474381": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3474381",
-      "identity_tokens": [
-        "DOI:10.1145/3474381"
-      ],
-      "reason": "本文を確認し、WinoGrande: An Adversarial Winograd Schema Challenge at Scale は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
-      "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
-      "source_url": "https://doi.org/10.1145/3474381"
+      "title": "CodePlan: Repository-level Coding using LLMs and Planning"
     },
     "DOI:10.18653/v1/2024.acl-long.401": {
       "classification": "unrelated",
@@ -1883,27 +1835,27 @@
       ],
       "reason": "多ターン対話能力の評価ベンチマークで実行基盤最適化を扱わない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 376"
       ],
-      "title": "MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues",
-      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.401"
+      "title": "MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues"
     },
     "DOI:10.18653/v1/2021.emnlp-main.98": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.98",
       "identity_tokens": [
-        "DOI:10.18653/v1/2021.emnlp-main.98"
+        "DOI:10.18653/v1/2021.emnlp-main.98",
+        "arXiv:2104.08758"
       ],
       "reason": "C4コーパスの由来・偏り・フィルタ影響の文書化が主題でシステム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "first_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
-        "worker-worklist-30 discovery_review rank 374"
+        "worker-worklist-30 discovery_review rank 374",
+        "worker-worklist-30 discovery_review rank 490"
       ],
-      "title": "Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus",
-      "source_url": "https://doi.org/10.18653/v1/2021.emnlp-main.98"
+      "title": "Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus"
     },
     "arXiv:2407.07895": {
       "classification": "unrelated",
@@ -2091,16 +2043,16 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2023.findings-acl.824",
       "identity_tokens": [
-        "DOI:10.18653/v1/2023.findings-acl.824"
+        "DOI:10.18653/v1/2023.findings-acl.824",
+        "arXiv:2210.09261"
       ],
       "reason": "一次資料本文を確認し、Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
-      "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "first_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them",
-      "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.824"
+      "title": "Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them"
     },
     "arXiv:2308.10792": {
       "classification": "unrelated",
@@ -2304,27 +2256,27 @@
       ],
       "reason": "対話要約データセットの構築が主貢献で、LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 268"
       ],
-      "title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization",
-      "source_url": "https://doi.org/10.18653/v1/d19-5409"
+      "title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization"
     },
     "DOI:10.1609/aaai.v34i05.6399": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1609/aaai.v34i05.6399",
       "identity_tokens": [
+        "DOI:10.1145/3474381",
         "DOI:10.1609/aaai.v34i05.6399"
       ],
       "reason": "常識推論ベンチマーク／データセットが主貢献で、実行システム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "first_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 267"
       ],
-      "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
-      "source_url": "https://doi.org/10.1609/aaai.v34i05.6399"
+      "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale"
     },
     "arXiv:2506.04178": {
       "classification": "unrelated",
@@ -2717,12 +2669,12 @@
       ],
       "reason": "CLI上のエージェント能力を測るベンチマークで、エージェント実行ランタイムの効率化を提案しない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces",
-      "source_url": "https://arxiv.org/abs/2601.11868"
+      "title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces"
     },
     "arXiv:1905.13319": {
       "classification": "unrelated",
@@ -2816,12 +2768,11 @@
       ],
       "reason": "主目的はMCP環境からのツール利用学習データ生成とモデル学習で、推論ランタイム効率化のシステム寄与ではない。",
       "first_checked_at": "2026-09-27T08:02:37+09:00",
-      "last_checked_at": "2026-09-27T08:02:37+09:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments",
-      "source_url": "https://arxiv.org/abs/2510.01179"
+      "title": "TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments"
     },
     "arXiv:2509.21271": {
       "classification": "unrelated",
@@ -2832,12 +2783,11 @@
       ],
       "reason": "CPU/GPUメモリ退避を扱うが最終用途は大規模LLM学習の高速化であり、凍結中の学習系統に該当する。",
       "first_checked_at": "2026-09-27T08:02:37+09:00",
-      "last_checked_at": "2026-09-27T08:02:37+09:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "SuperOffload: Unleashing the Power of Large-Scale LLM Training on Superchips",
-      "source_url": "https://arxiv.org/abs/2509.21271"
+      "title": "SuperOffload: Unleashing the Power of Large-Scale LLM Training on Superchips"
     },
     "arXiv:2409.02908": {
       "classification": "unrelated",
@@ -2971,21 +2921,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
-    },
-    "arXiv:1809.02789": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1809.02789",
-      "identity_tokens": [
-        "arXiv:1809.02789"
-      ],
-      "reason": "能力評価データセットで推論効率化手法を提案しない。",
-      "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
-      "source_url": "https://arxiv.org/abs/1809.02789"
     },
     "arXiv:2412.16720": {
       "classification": "unrelated",
@@ -3219,12 +3154,11 @@
       ],
       "reason": "常識質問応答データセットと能力評価が主題で、LLM推論システム効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
-      "source_url": "https://doi.org/10.18653/v1/n19-1421"
+      "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge"
     },
     "DOI:10.18653/v1/2024.acl-long.747": {
       "classification": "unrelated",
@@ -3234,12 +3168,11 @@
       ],
       "reason": "長期対話記憶のデータセット／評価ベンチマークが主題で、KVキャッシュや配信ランタイムの効率化手法ではない。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
-      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.747"
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents"
     },
     "arXiv:2406.15877": {
       "classification": "unrelated",
@@ -3414,12 +3347,11 @@
       ],
       "reason": "本文は大規模学習の安定性とscalabilityを主目的とし、kernel fusion等の実装最適化も学習オーバーヘッド削減のためで、最終用途が学習。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "mHC: Manifold-Constrained Hyper-Connections",
-      "source_url": "https://arxiv.org/abs/2512.24880"
+      "title": "mHC: Manifold-Constrained Hyper-Connections"
     },
     "arXiv:2502.14739": {
       "classification": "unrelated",
@@ -3566,16 +3498,16 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/d18-1260",
       "identity_tokens": [
-        "DOI:10.18653/v1/d18-1260"
+        "DOI:10.18653/v1/d18-1260",
+        "arXiv:1809.02789"
       ],
       "reason": "OpenBookQAデータセットとQA能力評価が主題で、推論システム効率化ではない。",
-      "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "first_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
-      "source_url": "https://doi.org/10.18653/v1/d18-1260"
+      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering"
     },
     "DOI:10.18653/v1/2021.naacl-main.472": {
       "classification": "unrelated",
@@ -3585,12 +3517,11 @@
       ],
       "reason": "会議要約ベンチマーク／データセットが主題で、推論効率化システムではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization",
-      "source_url": "https://doi.org/10.18653/v1/2021.naacl-main.472"
+      "title": "QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization"
     },
     "arXiv:2504.12516": {
       "classification": "unrelated",
@@ -3698,12 +3629,11 @@
       ],
       "reason": "BERTの事前学習と下流タスク性能が主題で、推論効率化システムを提案しない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-      "source_url": "https://doi.org/10.18653/v1/n19-1423"
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
     },
     "arXiv:2505.11432": {
       "classification": "unrelated",
@@ -3783,12 +3713,11 @@
       ],
       "reason": "動的shadowing・fine-grained scheduling・通信回避でMoE分散学習を高速化するが、主目的・評価とも学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "FasterMoE: modeling and optimizing training of large-scale dynamic pre-trained models",
-      "source_url": "https://doi.org/10.1145/3503221.3508418"
+      "title": "FasterMoE: modeling and optimizing training of large-scale dynamic pre-trained models"
     },
     "arXiv:2609.19441": {
       "classification": "unrelated",
@@ -3898,7 +3827,7 @@
       ],
       "reason": "広い文脈理解能力を測る言語モデル評価データセットで、システム性能・推論効率の評価基盤ではない。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -3940,7 +3869,7 @@
       ],
       "reason": "code generation agentのsurveyで推論systems効率の新規手法を提示しない。",
       "first_checked_at": "2026-09-27T21:22:11+00:00",
-      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -3954,7 +3883,7 @@
       ],
       "reason": "実利用chatbot会話のdatasetと分析が主題で、推論runtimeの効率化手法を提案しない。",
       "first_checked_at": "2026-09-27T21:22:11+00:00",
-      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4566,10 +4495,11 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.findings-emnlp.360"
       ],
-      "reason": "多言語要約データセットとクロスリンガル要約法が主貢献で、LLM推論基盤の高速化・省メモリ化ではないため対象外。",
+      "reason": "多言語要約datasetとcross-lingual summarizationが主題で、推論system最適化ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
         "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
       ],
@@ -5483,10 +5413,11 @@
       "identity_tokens": [
         "arXiv:2606.18967"
       ],
-      "reason": "自己投機的復号そのものは推論技術だが、最終適用先が強化学習ポストトレーニングのrollout生成高速化であり、凍結中の学習高速化系に該当するため対象外。",
+      "reason": "推論技術を使うが最終目的はRL training rollout高速化で、現在凍結中の学習高速化範囲に該当する。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md",
         "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
       ],
@@ -5498,10 +5429,11 @@
       "identity_tokens": [
         "arXiv:2606.05405"
       ],
-      "reason": "実世界の長期・経済価値タスクでAIエージェント能力を測る大規模ベンチマークで、エージェント推論サービング基盤の高速化を提案しないため対象外。",
+      "reason": "agent能力を測るbenchmark構築・評価が主題で、推論runtimeやserving最適化ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
       ],
@@ -5513,10 +5445,11 @@
       "identity_tokens": [
         "arXiv:2605.19276"
       ],
-      "reason": "LLM能力評価を統一する高並列評価プラットフォームであり、LLMサービングそのものの速度・メモリ効率を改善する推論基盤ではないため対象外。",
+      "reason": "LLM評価platform・benchmark orchestrationが主題で、推論system効率化の固有手法ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md"
       ],
@@ -5672,6 +5605,74 @@
         "worker-worklist-30 discovery_review rank 251"
       ],
       "title": "Hexa-MoE: Efficient and Heterogeneous-aware Training for Mixture-of-Experts"
+    },
+    "arXiv:2604.26256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26256",
+      "identity_tokens": [
+        "arXiv:2604.26256"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 複数方策版を並行維持するストリーミング展開で生成と学習を重畳し、バブルを除去してRL学習処理量を2–4倍改善する分散学習システム。",
+      "first_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 429"
+      ],
+      "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
+    },
+    "arXiv:2605.28184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28184",
+      "identity_tokens": [
+        "arXiv:2605.28184"
+      ],
+      "reason": "multi-token predictionをRL trainingへ統合する学習手法が主題で、最終適用先がtraining高速化・性能改善。",
+      "first_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration"
+    },
+    "arXiv:2606.12370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12370",
+      "identity_tokens": [
+        "arXiv:2606.12370"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: RL rolloutにMTPとrejection samplingを統合し、受理率と非同期RLのend-to-end速度を直接改善する。",
+      "first_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 262"
+      ],
+      "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling"
+    },
+    "DOI:10.1145/3600006.3613145": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3600006.3613145",
+      "identity_tokens": [
+        "DOI:10.1145/3600006.3613145"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: CPUメモリへの分散インメモリcheckpointで大規模学習の障害復旧を高速化し、毎iteration checkpointを実用化する学習システム研究。",
+      "first_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 264"
+      ],
+      "title": "GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints"
+    },
+    "OpenReview:d7KBjmI3GmQ": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:d7KBjmI3GmQ",
+      "identity_tokens": [
+        "OpenReview:d7KBjmI3GmQ"
+      ],
+      "reason": "7. **MMLU** — `OpenReview:d7KBjmI3GmQ` ([OpenReview](https://openreview.net/forum?id=d7KBjmI3GmQ); [arXiv:2009.03300](https://arxiv.org/abs/2009.03300)). Capability benchmark only.",
+      "first_checked_at": "2026-09-30T09:52:34+00:00",
+      "last_checked_at": "2026-09-30T09:52:34+00:00",
+      "linked_from": [],
+      "title": "MMLU"
     }
   }
 }
