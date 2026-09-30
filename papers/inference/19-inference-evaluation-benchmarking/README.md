@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（9本）
+## 自動生成の論文一覧（10本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -39,6 +39,10 @@
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
+
+- **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  キャッシュ拡張生成（CAG）は、知識集合が限定され長文脈へ収まる場合、検索拡張生成（RAG）の実時間検索を省き、知識文書を事前にプリフィルしてKVキャッシュを保持する。質問時はこのキャッシュを再利用して検索待ちと検索誤りを除き、複数QAベンチマークでRAGと同等以上の品質と低遅延を示す。
 
 ### 3年前（2023-10〜2024-09）
 
