@@ -11,8 +11,6 @@ on:
       - '.survey/work-queue/submissions/discovery/*.json'
       - '.survey/work-queue/submissions/*.json'
   workflow_dispatch:
-  schedule:
-    - cron: '5/10 * * * *'
 
 permissions:
   contents: write
