@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（204本）
+## 自動生成の論文一覧（206本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -654,6 +654,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   複数小型モデルの重み付き多数決、オンライン投機長調整、SSM/LLM非同期パイプラインを統合した投機的復号サービング。
 
+- **2025-09 · [RServe: Overlapping Encoding and Prefill for Efficient LMM Inference](2025-2509.24381-rserve-overlapping-encoding-and-prefill-for-efficient-lmm-inference.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  符号化とLLMを別GPUへ分離しても、従来方式では一要求の全マルチモーダル埋め込みが完成するまでプリフィルを開始できず、言語モデル側に待ち時間が残る。代表評価では遅延最大66%削減、スループット最大109%改善を報告する。
+
 - **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
   実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
   トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
@@ -665,6 +669,10 @@
 - **2025-03 · [Collaborative Speculative Inference for Efficient LLM Inference Serving](2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   異種GPUへドラフト生成と検証を分離し、専門ドラフタ協調と動的パイプライン制御で投機推論の資源利用と受理率を改善する。
+
+- **2024-12 · [Multi-Bin Batching for Increasing LLM Inference Throughput](2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  固定バッチ型のLLM推論では、同じバッチに入った要求の生成長がばらつくと、短い要求が終了してもバッチ全体は最長要求が終わるまで資源を占有する。この「最大サービス時間に引きずられる」現象は、個々の要求を高速化しても解消しないスケジューリング上の損失である。似た長さの要求をまとめればバッチ内の終了時刻が揃い、終了済み要求の空きslotを抱えたまま待つ時間が減る。
 
 - **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
