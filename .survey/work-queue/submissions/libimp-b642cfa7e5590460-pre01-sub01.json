@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ICaRus: Identical Cache Reuse for Efficient Multi Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.13281",
+      "year": 2026,
+      "published": "2026-02-27",
+      "abstract": "Multi model inference has recently emerged as a prominent paradigm, particularly in the development of agentic AI systems. However, in such scenarios, each model must maintain its own Key-Value (KV) cache for the identical prompt, leading to substantial memory consumption. This explosive growth of KV caches forces LLM serving systems to evict previously stored caches, which in turn introduces significant recomputation overhead whenever the evicted caches are required again. Moreover, prefix caching is inherently infeasible across different models, forcing each model to recompute KV cache for the identical prompt, which leads to significant overhead. To alleviate these issues, we propose Identical Cache Reuse (ICaRus), a novel architecture that allows multiple models to share identical KV caches across all layers. ICaRus is based on the key observation that a decoder-only Transformer can be conceptually decomposed into a logical encoder, which generates KV caches, and a logical decoder, which predicts output tokens from the KV caches. ICaRus fine-tunes only the logical decoder while freezing the logical encoder, enabling multiple models to share an identical KV cache. This eliminates cache memory explosion and unexpected evictions while also allowing cross-model reuse of KV caches for new input tokens, thereby removing redundant recomputation in multi model inference achieving both efficiency and scalability. Moreover, by incorporating lightweight adapters such as LoRA, ICaRus parallelizes KV cache generation and next-token prediction during decoding. ICaRus achieves comparable accuracy to task-specific fine-tuned model across a diverse set of tasks, while allowing multiple specialized models to fully share KV caches. ICaRus achieves up to 11.1x lower P95 latency and 3.8x higher throughput in multi agent workflow with 8 different models, compared to conventional multi model system.",
+      "canonical_id": "arXiv:2603.13281",
+      "arxiv_id": "2603.13281",
+      "doi": "10.48550/arXiv.2603.13281",
+      "authors": [
+        "Sunghyeon Woo",
+        "J. Kil",
+        "Hoseung Kim",
+        "Minsub Kim",
+        "Joonghoon Kim",
+        "A. Seo",
+        "Sungjae Lee",
+        "M. Jo",
+        "Jiwon Ryu",
+        "Baeseong Park",
+        "Sehoon Kwon",
+        "Dongsoo Lee"
+      ],
+      "reason": "複数のタスク特化LLMが同一KVキャッシュを共有できるよう論理encoder側を固定しdecoder側だけを適応させ、マルチモデル推論の重複prefillとcache爆発を除く方式。推論サービングとKV再利用が中心。",
+      "library_body_check": "本文/論文情報を確認。decoder-only TransformerをKV生成側とtoken予測側へ論理分割し、前者を共有して後者のみ微調整する。8モデルのagentic workflowで従来multi-model serving比P95 latency最大11.1倍低減、throughput最大3.8倍向上を報告し、LoRAでKV生成と次token予測の並列化も行う。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b642cfa7e559",
+    "round": "libimp-b642cfa7e5590460-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b642cfa7e5590460-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b642cfa7e5590460-pre01.json",
+    "receipt": "sha256:4b30c5900fb61fa2ce1fa5516a178b2444878e5fab7dde50d55a7647bee8c99a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b642cfa7e559",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
