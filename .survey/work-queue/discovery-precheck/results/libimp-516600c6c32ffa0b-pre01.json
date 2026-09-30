@@ -1,0 +1,348 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-516600c6c32ffa0b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-516600c6c32f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2404.05089",
+    "arXiv:2404.05892",
+    "arXiv:2404.07143",
+    "arXiv:2404.09529",
+    "arXiv:2404.11912",
+    "arXiv:2404.14294",
+    "arXiv:2404.14469",
+    "arXiv:2404.14527",
+    "arXiv:2404.18911",
+    "arXiv:2404.19737",
+    "arXiv:2405.01814",
+    "arXiv:2405.04304",
+    "arXiv:2405.05751",
+    "arXiv:2405.06219",
+    "arXiv:2405.06856",
+    "arXiv:2405.10480",
+    "arXiv:2405.14256",
+    "arXiv:2405.14297",
+    "arXiv:2405.14917",
+    "arXiv:2405.19325"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2d1ed8b7c80e28d2b76723b5d0152ecc037f0adf",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 18,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 18,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:23:37.248645+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2404.05089",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2404.05089"
+    },
+    {
+      "requested_id": "arXiv:2404.05892",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.07143",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2404.07143"
+    },
+    {
+      "requested_id": "arXiv:2404.09529",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2404.09529"
+    },
+    {
+      "requested_id": "arXiv:2404.11912",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2404.11912"
+    },
+    {
+      "requested_id": "arXiv:2404.14294",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.14294"
+    },
+    {
+      "requested_id": "arXiv:2404.14469",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.14469"
+    },
+    {
+      "requested_id": "arXiv:2404.14527",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.14527"
+    },
+    {
+      "requested_id": "arXiv:2404.18911",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2404.18911"
+    },
+    {
+      "requested_id": "arXiv:2404.19737",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.01814",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.01814"
+    },
+    {
+      "requested_id": "arXiv:2405.04304",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.04304"
+    },
+    {
+      "requested_id": "arXiv:2405.05751",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.05751"
+    },
+    {
+      "requested_id": "arXiv:2405.06219",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.06219"
+    },
+    {
+      "requested_id": "arXiv:2405.06856",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.06856"
+    },
+    {
+      "requested_id": "arXiv:2405.10480",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.10480"
+    },
+    {
+      "requested_id": "arXiv:2405.14256",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.14256"
+    },
+    {
+      "requested_id": "arXiv:2405.14297",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.14297"
+    },
+    {
+      "requested_id": "arXiv:2405.14917",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.14917"
+    },
+    {
+      "requested_id": "arXiv:2405.19325",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.19325"
+    }
+  ],
+  "results": [
+    {
+      "title": "Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence",
+      "source_url": "https://arxiv.org/abs/2404.05892",
+      "year": 2024,
+      "published": "2024-04-08",
+      "abstract": "We present Eagle (RWKV-5) and Finch (RWKV-6), sequence models improving upon the RWKV (RWKV-4) architecture. Our architectural design advancements include multi-headed matrix-valued states and a dynamic recurrence mechanism that improve expressivity while maintaining the inference efficiency characteristics of RNNs. We introduce a new multilingual corpus with 1.12 trillion tokens and a fast tokenizer based on greedy matching for enhanced multilinguality. We trained four Eagle models, ranging from 0.46 to 7.5 billion parameters, and two Finch models with 1.6 and 3.1 billion parameters and find that they achieve competitive performance across a wide variety of benchmarks. We release all our models on HuggingFace under the Apache 2.0 license. Models at: https://huggingface.co/RWKV Training code at: https://github.com/RWKV/RWKV-LM Inference code at: https://github.com/RWKV/ChatRWKV Time-parallel training code at: https://github.com/RWKV/RWKV-infctx-trainer",
+      "canonical_id": "arXiv:2404.05892",
+      "arxiv_id": "2404.05892",
+      "doi": "10.48550/arXiv.2404.05892",
+      "authors": [
+        "Bo Peng",
+        "Daniel Goldstein",
+        "Quentin Anthony",
+        "Alon Albalak",
+        "Eric Alcaide",
+        "Stella Biderman",
+        "Eugene Cheah",
+        "Teddy Ferdinan",
+        "Hao-Wen Hou",
+        "Przemyslaw Kazienko",
+        "G. Kranthikiran",
+        "Jan Kocon",
+        "Bartlomiej Koptyra",
+        "Satyapriya Krishna",
+        "Ronald McClelland",
+        "Niklas Muennighoff",
+        "Fares Obeid",
+        "Atsushi Saito",
+        "Guangyu Song",
+        "Hao-Qin Tu",
+        "Stanislaw Wozniak",
+        "Xingjian Du",
+        "Rui-Chong Zhang",
+        "Bing-Chen Zhao",
+        "Qihang Zhao",
+        "Peng Zhou",
+        "Jian Zhu",
+        "Rui-Jie Zhu"
+      ]
+    },
+    {
+      "title": "Better & Faster Large Language Models via Multi-token Prediction",
+      "source_url": "https://arxiv.org/abs/2404.19737",
+      "year": 2024,
+      "published": "2024-04-30",
+      "abstract": "Large language models such as GPT and Llama are trained with a next-token prediction loss. In this work, we suggest that training language models to predict multiple future tokens at once results in higher sample efficiency. More specifically, at each position in the training corpus, we ask the model to predict the following n tokens using n independent output heads, operating on top of a shared model trunk. Considering multi-token prediction as an auxiliary training task, we measure improved downstream capabilities with no overhead in training time for both code and natural language models. The method is increasingly useful for larger model sizes, and keeps its appeal when training for multiple epochs. Gains are especially pronounced on generative benchmarks like coding, where our models consistently outperform strong baselines by several percentage points. Our 13B parameter models solves 12 % more problems on HumanEval and 17 % more on MBPP than comparable next-token models. Experiments on small algorithmic tasks demonstrate that multi-token prediction is favorable for the development of induction heads and algorithmic reasoning capabilities. As an additional benefit, models trained with 4-token prediction are up to 3 times faster at inference, even with large batch sizes.",
+      "canonical_id": "arXiv:2404.19737",
+      "arxiv_id": "2404.19737",
+      "doi": "10.48550/arXiv.2404.19737",
+      "authors": [
+        "Fabian Gloeckle",
+        "Badr Youbi Idrissi",
+        "Baptiste Rozière",
+        "David Lopez-Paz",
+        "Gabriel Synnaeve"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.05892",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.05892",
+        "id:arXiv:2404.05892",
+        "title:eagle and finch rwkv with matrixvalued states and dynamic recurrence",
+        "url:https://arxiv.org/abs/2404.05892"
+      ],
+      "record": {
+        "title": "Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence",
+        "source_url": "https://arxiv.org/abs/2404.05892",
+        "year": 2024,
+        "published": "2024-04-08",
+        "abstract": "We present Eagle (RWKV-5) and Finch (RWKV-6), sequence models improving upon the RWKV (RWKV-4) architecture. Our architectural design advancements include multi-headed matrix-valued states and a dynamic recurrence mechanism that improve expressivity while maintaining the inference efficiency characteristics of RNNs. We introduce a new multilingual corpus with 1.12 trillion tokens and a fast tokenizer based on greedy matching for enhanced multilinguality. We trained four Eagle models, ranging from 0.46 to 7.5 billion parameters, and two Finch models with 1.6 and 3.1 billion parameters and find that they achieve competitive performance across a wide variety of benchmarks. We release all our models on HuggingFace under the Apache 2.0 license. Models at: https://huggingface.co/RWKV Training code at: https://github.com/RWKV/RWKV-LM Inference code at: https://github.com/RWKV/ChatRWKV Time-parallel training code at: https://github.com/RWKV/RWKV-infctx-trainer",
+        "canonical_id": "arXiv:2404.05892",
+        "arxiv_id": "2404.05892",
+        "doi": "10.48550/arXiv.2404.05892",
+        "authors": [
+          "Bo Peng",
+          "Daniel Goldstein",
+          "Quentin Anthony",
+          "Alon Albalak",
+          "Eric Alcaide",
+          "Stella Biderman",
+          "Eugene Cheah",
+          "Teddy Ferdinan",
+          "Hao-Wen Hou",
+          "Przemyslaw Kazienko",
+          "G. Kranthikiran",
+          "Jan Kocon",
+          "Bartlomiej Koptyra",
+          "Satyapriya Krishna",
+          "Ronald McClelland",
+          "Niklas Muennighoff",
+          "Fares Obeid",
+          "Atsushi Saito",
+          "Guangyu Song",
+          "Hao-Qin Tu",
+          "Stanislaw Wozniak",
+          "Xingjian Du",
+          "Rui-Chong Zhang",
+          "Bing-Chen Zhao",
+          "Qihang Zhao",
+          "Peng Zhou",
+          "Jian Zhu",
+          "Rui-Jie Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.19737",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.19737",
+        "id:arXiv:2404.19737",
+        "title:better faster large language models via multitoken prediction",
+        "url:https://arxiv.org/abs/2404.19737"
+      ],
+      "record": {
+        "title": "Better & Faster Large Language Models via Multi-token Prediction",
+        "source_url": "https://arxiv.org/abs/2404.19737",
+        "year": 2024,
+        "published": "2024-04-30",
+        "abstract": "Large language models such as GPT and Llama are trained with a next-token prediction loss. In this work, we suggest that training language models to predict multiple future tokens at once results in higher sample efficiency. More specifically, at each position in the training corpus, we ask the model to predict the following n tokens using n independent output heads, operating on top of a shared model trunk. Considering multi-token prediction as an auxiliary training task, we measure improved downstream capabilities with no overhead in training time for both code and natural language models. The method is increasingly useful for larger model sizes, and keeps its appeal when training for multiple epochs. Gains are especially pronounced on generative benchmarks like coding, where our models consistently outperform strong baselines by several percentage points. Our 13B parameter models solves 12 % more problems on HumanEval and 17 % more on MBPP than comparable next-token models. Experiments on small algorithmic tasks demonstrate that multi-token prediction is favorable for the development of induction heads and algorithmic reasoning capabilities. As an additional benefit, models trained with 4-token prediction are up to 3 times faster at inference, even with large batch sizes.",
+        "canonical_id": "arXiv:2404.19737",
+        "arxiv_id": "2404.19737",
+        "doi": "10.48550/arXiv.2404.19737",
+        "authors": [
+          "Fabian Gloeckle",
+          "Badr Youbi Idrissi",
+          "Baptiste Rozière",
+          "David Lopez-Paz",
+          "Gabriel Synnaeve"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c24f9f11ab259f43e30298f16985f16a6c932017d664e04a3b4da513ce59b8f4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
