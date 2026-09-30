@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2504.19720",
+      "year": 2025,
+      "published": "2025-04-28",
+      "abstract": "Large Language Models (LLMs) for Generative AI have achieved remarkable progress, evolving into sophisticated and versatile tools widely adopted across various domains and applications. However, the substantial memory overhead caused by their vast number of parameters, combined with the high computational demands of the attention mechanism, poses significant challenges in achieving low latency and high throughput for LLM inference services. Recent advancements, driven by groundbreaking research, have significantly accelerated progress in this field. This paper provides a comprehensive survey of these methods, covering fundamental instance-level approaches, in-depth cluster-level strategies, emerging scenario directions, and other miscellaneous but important areas. At the instance level, we review model placement, request scheduling, decoding length prediction, storage management, and the disaggregation paradigm. At the cluster level, we explore GPU cluster deployment, multi-instance load balancing, and cloud service solutions. For emerging scenarios, we organize the discussion around specific tasks, modules, and auxiliary methods. To ensure a holistic overview, we also highlight several niche yet critical areas. Finally, we outline potential research directions to further advance the field of LLM inference serving.",
+      "canonical_id": "arXiv:2504.19720",
+      "arxiv_id": "2504.19720",
+      "doi": "10.48550/arXiv.2504.19720",
+      "authors": [
+        "Ranran Zhen",
+        "Jun-Tao Li",
+        "Yixin Ji",
+        "Zhenlin Yang",
+        "Tong Liu",
+        "Qing-Rong Xia",
+        "Xin-Yu Duan",
+        "Zhe-Feng Wang",
+        "Baoxing Huai",
+        "Min Zhang"
+      ],
+      "reason": "LLM推論サービング最適化を体系化するサーベイで、対象分野の整理に直接有用。",
+      "library_body_check": "本文の分類体系とサービング最適化各節を確認し、メモリ、スケジューリング、並列化等の推論系統を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-53f7c4f014d2",
+    "round": "libimp-53f7c4f014d22984-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-53f7c4f014d22984-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-53f7c4f014d22984-pre01.json",
+    "receipt": "sha256:08589d31cd7996eb2c354886354aea18b3f6cf08eb20a6663f5c16e5b9600332"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-53f7c4f014d2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
