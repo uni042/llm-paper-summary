@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2405.04532",
   "paper_path": "papers/inference/08-quantization-kernels/2024-2405.04532-qserve.md",
   "selection_reason": "Quantization-and-system co-design for cloud LLM serving with W4A8KV4 execution, fused kernels, and strong throughput/cost results.",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,5 +32,13 @@
   ],
   "first_blocked_at": "2026-09-23T13:07:54+00:00",
   "last_blocked_at": "2026-09-23T13:07:54+00:00",
-  "retry_queued_at": "2026-09-30T15:25:14+00:00"
+  "retry_queued_at": "2026-09-30T15:25:14+00:00",
+  "completed_at": "2026-09-30T20:16:11+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2405.04532",
+  "duplicate_of_path": "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2405.04532"
+  }
 }
