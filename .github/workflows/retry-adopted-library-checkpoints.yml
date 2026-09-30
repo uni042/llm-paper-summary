@@ -8,8 +8,6 @@ on:
       - '.survey/scripts/retry_adopted_checkpoint_submissions.py'
       - '.survey/scripts/library_ack_manifest.py'
   workflow_dispatch:
-  schedule:
-    - cron: '4/10 * * * *'
 
 permissions:
   contents: write
