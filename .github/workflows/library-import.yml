@@ -3,7 +3,7 @@ name: Library import processor
 on:
   workflow_dispatch:
   schedule:
-    - cron: '1/10 * * * *'
+    - cron: '7,17,27,37,47,57 * * * *'
   push:
     branches: [main]
     paths:
