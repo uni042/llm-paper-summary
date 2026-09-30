@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0fe8646624cf30c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:sMyXP8Tanm",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:sMyXP8Tanm",
+    "identity_tokens": [
+      "OpenReview:sMyXP8Tanm"
+    ],
+    "reason": "吸収型離散拡散の目的関数とクリーンデータ条件分布の理論的関係を解析する生成モデル研究であり、LLM推論サービング、KVキャッシュ、カーネル、メモリ階層の実行効率化を直接提案しないため対象外。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T01:46:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+    ],
+    "title": "Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data"
+  },
+  "processed_at": "2026-09-30T01:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0fe8646624c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

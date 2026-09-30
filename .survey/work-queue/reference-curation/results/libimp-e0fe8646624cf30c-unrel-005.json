@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0fe8646624cf30c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:mWaYC6CZf5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:mWaYC6CZf5",
+    "identity_tokens": [
+      "OpenReview:mWaYC6CZf5"
+    ],
+    "reason": "疎な専門家混合モデルの学習中に生じる表現崩壊を分析しcosine router等で学習品質を改善する研究で、最終適用先がMoE学習・ルーティング学習であり凍結対象のため対象外。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T01:46:01+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md"
+    ],
+    "title": "On the Representation Collapse of Sparse Mixture of Experts"
+  },
+  "processed_at": "2026-09-30T01:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0fe8646624c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

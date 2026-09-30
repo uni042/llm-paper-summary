@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T01:35:07+00:00",
-  "record_count": 328,
+  "updated_at": "2026-09-30T01:46:01+00:00",
+  "record_count": 344,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -3946,21 +3946,6 @@
       "title": "Training language models to follow instructions with human feedback",
       "source_url": "https://arxiv.org/abs/2203.02155"
     },
-    "arXiv:1904.09751": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1904.09751",
-      "identity_tokens": [
-        "arXiv:1904.09751"
-      ],
-      "reason": "nucleus samplingを含む生成品質・デコード戦略の研究で、システム上の推論効率化を主目的としない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "The Curious Case of Neural Text Degeneration",
-      "source_url": "https://arxiv.org/abs/1904.09751"
-    },
     "arXiv:1806.03377": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1806.03377",
@@ -4920,6 +4905,261 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
       ],
       "title": "ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation"
+    },
+    "DOI:10.18653/v1/2022.acl-long.297": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.297",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.297"
+      ],
+      "reason": "法律自然言語理解の7タスクを統一評価するベンチマークであり、LLM推論基盤の速度・メモリ・サービング最適化を提案しないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
+      ],
+      "title": "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English"
+    },
+    "DOI:10.1109/71.963420": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/71.963420",
+      "identity_tokens": [
+        "DOI:10.1109/71.963420"
+      ],
+      "reason": "多数サーバからd個を無作為に選び最短待ち行列へ投入するsupermarket modelの理論解析で、LLM推論・モデル実行・推論基盤を対象としないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+        "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md"
+      ],
+      "title": "The Power of Two Choices in Randomized Load Balancing"
+    },
+    "arXiv:2410.04199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04199",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-emnlp.48",
+        "arXiv:2410.04199"
+      ],
+      "reason": "長文脈で長い出力を生成する能力を測る評価ベンチマークであり、推論高速化・サービング・メモリ最適化の新規方式そのものではない。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+      ],
+      "title": "LongGenBench: Long-context Generation Benchmark"
+    },
+    "OpenReview:xtaX3WyCj1": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:xtaX3WyCj1",
+      "identity_tokens": [
+        "OpenReview:xtaX3WyCj1"
+      ],
+      "reason": "複数の微調整済みモデルを重み空間で統合するモデルマージ手法で、推論時の実行速度・メモリ階層・KVキャッシュ・サービングを改善する方式ではないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+      ],
+      "title": "TIES-Merging: Resolving Interference When Merging Models"
+    },
+    "OpenReview:T5nUQDrM4u": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:T5nUQDrM4u",
+      "identity_tokens": [
+        "OpenReview:T5nUQDrM4u"
+      ],
+      "reason": "dense checkpointからMoEへupcycleして追加事前学習を効率化する学習手法が主題で、凍結対象の学習高速化に該当するため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
+      ],
+      "title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints"
+    },
+    "OpenReview:rkE3y85ee": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:rkE3y85ee",
+      "identity_tokens": [
+        "OpenReview:rkE3y85ee"
+      ],
+      "reason": "離散カテゴリ変数の微分可能な連続緩和を提案する汎用学習手法で、LLM推論基盤を対象としないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
+      ],
+      "title": "Categorical Reparameterization with Gumbel-Softmax"
+    },
+    "OpenReview:oKn9c6ytLx": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:oKn9c6ytLx",
+      "identity_tokens": [
+        "OpenReview:oKn9c6ytLx"
+      ],
+      "reason": "Web操作エージェントの能力を測る環境・ベンチマークが主貢献で、LLM推論実行系の高速化を提案しないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+    },
+    "OpenReview:HyUNwulC-": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:HyUNwulC-",
+      "identity_tokens": [
+        "OpenReview:HyUNwulC-"
+      ],
+      "reason": "線形再帰ニューラルネットを系列方向に並列化する一般的な学習・系列計算アルゴリズムで、LLM推論基盤を最終適用先としないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Parallelizing Linear Recurrent Neural Nets Over Sequence Length"
+    },
+    "OpenReview:sY5N0zY5Od": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:sY5N0zY5Od",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od"
+      ],
+      "reason": "LMパイプラインのprompt/デモ最適化を宣言的に行うプログラミングモデルが主題で、推論実行系の速度・メモリ・サービング最適化を主目的としないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+    },
+    "arXiv:2408.09192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.09192",
+      "identity_tokens": [
+        "arXiv:2408.09192"
+      ],
+      "reason": "OFDM共生無線の後方散乱通信方式を扱う信号処理研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "web-discovery:replacement-after-worklist-tail"
+      ],
+      "title": "Interference-Free Backscatter Communications for OFDM-Based Symbiotic Radio"
+    },
+    "arXiv:2408.16083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.16083",
+      "identity_tokens": [
+        "arXiv:2408.16083"
+      ],
+      "reason": "摩擦帯電の電荷移動を物理モデル化する材料科学研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "web-discovery:replacement-after-worklist-tail"
+      ],
+      "title": "A Quantitative Model of Triboelectric Charge Transfer"
+    },
+    "arXiv:2407.01518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01518",
+      "identity_tokens": [
+        "arXiv:2407.01518"
+      ],
+      "reason": "マルチモーダル開集合ドメイン汎化・適応の学習法が主題で、LLM推論高速化・サービングの最終適用先を持たない。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "web-discovery:replacement-after-worklist-tail"
+      ],
+      "title": "Towards Multimodal Open-Set Domain Generalization and Adaptation through Self-supervision"
+    },
+    "arXiv:2405.13511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.13511",
+      "identity_tokens": [
+        "arXiv:2405.13511"
+      ],
+      "reason": "異なる意味表現言語を使うエージェント間通信のsemantic channel equalizationを扱う通信理論研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "web-discovery:replacement-after-worklist-tail"
+      ],
+      "title": "Latent Space Alignment for Semantic Channel Equalization"
+    },
+    "OpenReview:sMyXP8Tanm": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:sMyXP8Tanm",
+      "identity_tokens": [
+        "OpenReview:sMyXP8Tanm"
+      ],
+      "reason": "吸収型離散拡散の目的関数とクリーンデータ条件分布の理論的関係を解析する生成モデル研究であり、LLM推論サービング、KVキャッシュ、カーネル、メモリ階層の実行効率化を直接提案しないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "title": "Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data"
+    },
+    "OpenReview:rygGQyrFvH": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:rygGQyrFvH",
+      "identity_tokens": [
+        "OpenReview:rygGQyrFvH",
+        "arXiv:1904.09751"
+      ],
+      "reason": "ニュークリアスサンプリング等を通じて言語生成の反復・退化と品質を扱う復号品質研究で、推論の速度・メモリ・サービング効率を改善する方式ではないため対象外。",
+      "first_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "title": "The Curious Case of Neural Text Degeneration"
+    },
+    "OpenReview:mWaYC6CZf5": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:mWaYC6CZf5",
+      "identity_tokens": [
+        "OpenReview:mWaYC6CZf5"
+      ],
+      "reason": "疎な専門家混合モデルの学習中に生じる表現崩壊を分析しcosine router等で学習品質を改善する研究で、最終適用先がMoE学習・ルーティング学習であり凍結対象のため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md"
+      ],
+      "title": "On the Representation Collapse of Sparse Mixture of Experts"
+    },
+    "OpenReview:lMgDDWb1ULW": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:lMgDDWb1ULW",
+      "identity_tokens": [
+        "OpenReview:lMgDDWb1ULW"
+      ],
+      "reason": "学習可能ルータの代わりにハッシュでtokenを専門家へ割り当てる疎モデルの学習・アーキテクチャ研究であり、LLM推論ランタイムの速度・メモリ・サービングを直接最適化する研究ではないため対象外。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
+      ],
+      "title": "Hash Layers For Large Sparse Models"
     }
   }
 }

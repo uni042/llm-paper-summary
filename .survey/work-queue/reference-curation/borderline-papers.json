@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T01:35:07+00:00",
-  "record_count": 323,
+  "updated_at": "2026-09-30T01:46:01+00:00",
+  "record_count": 327,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4826,6 +4826,68 @@
         "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
       ],
       "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+    },
+    "DOI:10.1145/3582016.3582063": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3582016.3582063",
+      "identity_tokens": [
+        "DOI:10.1145/3582016.3582063",
+        "arXiv:2206.02878"
+      ],
+      "reason": "CXL階層メモリでページの昇格・降格を透過制御するOS機構で、LLMオフロードの基盤技術と近いが、LLM固有のKVキャッシュや重み配置を対象としないため境界扱い。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
+    },
+    "OpenReview:r8H7xhYPwz": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:r8H7xhYPwz",
+      "identity_tokens": [
+        "OpenReview:r8H7xhYPwz"
+      ],
+      "reason": "線形注意の状態更新にgatingとdelta ruleを統合し長文脈を線形時間で扱えるため推論効率との関連は強いが、主貢献は新しいsequence-model architectureと学習アルゴリズムであり、既存LLM推論基盤の最適化そのものではないためborderline。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
+    },
+    "OpenReview:TJ2nxciYCk-": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:TJ2nxciYCk-",
+      "identity_tokens": [
+        "OpenReview:TJ2nxciYCk-",
+        "arXiv:2210.06313"
+      ],
+      "reason": "Transformerで自然に生じる活性化疎性を大規模実験で分析し推論時の条件付き計算へつながる重要な基礎知見だが、疎性を実際のLLM推論ランタイム高速化へ変換する新規システムやカーネル自体は提案しないため境界扱い。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md"
+      ],
+      "title": "The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers"
+    },
+    "OpenReview:nT2u0M0nf8": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:nT2u0M0nf8",
+      "identity_tokens": [
+        "OpenReview:nT2u0M0nf8"
+      ],
+      "reason": "専門家統合でMoEのモデルサイズ・配備負担を下げる点は推論効率化に近いが、主評価がGPT-2/T5等での言語モデリング・分類・質問応答と統合後の品質で、現代LLM推論の実時間・メモリ・サービング評価が中心ではないため境界扱い。",
+      "first_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
+      ],
+      "title": "CAMEx: Curvature-Aware Merging of Experts"
     }
   }
 }

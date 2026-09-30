@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-722433d2476b0a9a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:sY5N0zY5Od",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:sY5N0zY5Od",
+    "identity_tokens": [
+      "OpenReview:sY5N0zY5Od"
+    ],
+    "reason": "LMパイプラインのprompt/デモ最適化を宣言的に行うプログラミングモデルが主題で、推論実行系の速度・メモリ・サービング最適化を主目的としないため対象外。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T01:46:01+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+    ],
+    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+  },
+  "processed_at": "2026-09-30T01:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-722433d2476b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
