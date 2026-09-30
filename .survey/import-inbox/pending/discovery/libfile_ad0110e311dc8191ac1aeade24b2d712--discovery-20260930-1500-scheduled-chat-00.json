@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20260930-1500-scheduled-chat-00",
+  "reference_main_sha": "84a9854ceb11d89ac2f32168886cd94f1495b6e0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/rtas58335.2023.00012",
+      "identity_tokens": [
+        "DOI:10.1109/rtas58335.2023.00012"
+      ],
+      "title": "Hardware Compute Partitioning on NVIDIA GPUs",
+      "reason": "汎用GPUのSMをユーザー空間から空間分割して安全な共有を可能にする基盤技術で、LLMサービングのGPU共有へ接続するが、論文の実証はYOLOv2等の組込みAIでLLM推論専用ではない。",
+      "source_url": "https://doi.org/10.1109/rtas58335.2023.00012",
+      "body_check": "libsmctrlでNVIDIA GPUの計算ユニットを空間分割し、アイドル容量を回収する。2013年以降のGPUで動作し、ハードウェアスケジューリングを分析してYOLOv2ケーススタディで共有を評価するため、GPU multiplexingの基盤として関連するがLLM固有機構はない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+        "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3786655",
+      "identity_tokens": [
+        "DOI:10.1145/3786655"
+      ],
+      "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
+      "reason": "RAGのchunk KV再利用で失われるcross-chunk文脈をoffline fusionと選択的KV再計算で補い、TTFTを直接削減するLLM推論方式。",
+      "source_url": "https://doi.org/10.1145/3786655",
+      "body_check": "FusionRAGはoffline preprocessingで関連chunk情報を各chunkへ埋め込み、onlineではattention上重要なtokenだけKVを再計算する。15%未満のtoken再計算でbaselineよりnormalized F1を最大70%改善し、Full Attention比TTFTを2.66〜9.39倍短縮する.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3634916",
+      "identity_tokens": [
+        "DOI:10.1145/3634916"
+      ],
+      "title": "Rcmp: Reconstructing RDMA-Based Memory Disaggregation via CXL",
+      "reason": "CXLとRDMAを組み合わせた分離メモリはLLM weight/KV offloadの基盤になり得るが、論文自体は汎用datacenter memory disaggregationでLLM推論を評価しない。",
+      "source_url": "https://doi.org/10.1145/3634916",
+      "body_check": "CXLの低遅延性とRDMAのrack-scale到達性を組み合わせ、key-value store/YCSBとmicrobenchmarkで評価する。RDMA方式比5.2倍低遅延、3.8倍高throughputを示すが、LLM workloadやKV cacheは対象外.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627703.3650083",
+      "identity_tokens": [
+        "DOI:10.1145/3627703.3650083"
+      ],
+      "title": "ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling",
+      "reason": "MoEのall-to-allとtask schedulingを最適化するが、最終適用先が分散学習であり凍結対象。",
+      "source_url": "https://doi.org/10.1145/3627703.3650083",
+      "body_check": "通信・計算taskのscheduling framework、階層帯域を使うall-to-all、圧縮拡張を備え、32 GPUでTutel/Faster-MoEより9〜30%高速化する。本文はdistributed training systemとして問題設定・評価されており推論ではない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3579445",
+      "identity_tokens": [
+        "DOI:10.1145/3579445"
+      ],
+      "title": "DaeMon: Architectural Support for Efficient Data Movement in Fully Disaggregated Systems",
+      "reason": "分離メモリの遠隔データ移動を圧縮・帯域分割・適応粒度で高速化しLLM階層メモリへ関連するが、汎用disaggregated system研究でLLM推論専用ではない。",
+      "source_url": "https://doi.org/10.1145/3579445",
+      "body_check": "compute/memory unitへmigration engineを追加し、bandwidth partitioning、link compression、複数粒度のdata movementとadaptive granularity selectionを組み合わせる。シミュレータ上の多様なworkloadでpage-granularity方式比2.39倍性能、3.06倍data-access cost改善.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3575693.3575703",
+      "identity_tokens": [
+        "DOI:10.1145/3575693.3575703"
+      ],
+      "title": "Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers",
+      "reason": "GPU/DRAM階層とpipeline parallelismを使うが、目的は大規模モデルのfine-tuning高速化であり学習工程凍結範囲。",
+      "source_url": "https://doi.org/10.1145/3575693.3575703",
+      "body_check": "model stageをGPU memoryとDRAM間でscheduleし、mixed-integer programでpipeline partitionを選びcross mappingで通信競合を抑える。commodity GPU serverで従来比3.8〜5.1倍training timeを短縮するが推論評価ではない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3373376.3378508",
+      "identity_tokens": [
+        "DOI:10.1145/3373376.3378508"
+      ],
+      "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System",
+      "reason": "GPU/FPGA向けtensor schedule自動探索は推論kernel最適化の基盤だが、LLM専用の推論方式・serving評価ではない。",
+      "source_url": "https://doi.org/10.1145/3373376.3378508",
+      "body_check": "高水準tensor計算からschedule spaceを探索し、heterogeneous accelerator向け実装を自動最適化するcompiler framework。ML・analytics・scientific computing全般を対象とし、LLM attention/KV/serving固有の最適化は扱わない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3123939.3124545",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3124545"
+      ],
+      "title": "Fine-grained DRAM: energy-efficient DRAM for extreme bandwidth systems",
+      "reason": "高帯域・高エネルギー効率DRAMはLLMのメモリ帯域律速推論に強く関連する基盤技術だが、論文は汎用GPU/throughput processor向けDRAM architectureでLLM固有評価はない。",
+      "source_url": "https://doi.org/10.1145/3123939.3124545",
+      "body_check": "FGDRAMはDRAM dieを多数の独立grainへ分割し各grainへlocal I/Oを置いてbank間共有busを除去する。HBM2比でbandwidth 4倍、DRAM energy efficiency 2倍、iso-bandwidth/iso-capacity future HBM baseline比GPU system performance 19%改善を報告するが、Transformer/LLM workloadは扱わない。",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2608.22613-nova-technology-architecture-co-design-near-memory-hybrid-llm-inference.md"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2024.3423692",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2024.3423692"
+      ],
+      "title": "AMD XDNA NPU in Ryzen AI Processors",
+      "reason": "端末内AI推論向けNPUの計算・メモリ・data movement設計でedge LLM基盤に関連するが、評価は一般neural networkでLLM推論固有ではない。",
+      "source_url": "https://doi.org/10.1109/mm.2024.3423692",
+      "body_check": "Ryzen 7040の統合NPUで、AI workload向けcompute/memory resourceと帯域要求を抑える専用data movement architectureを説明する。複数NN benchmarkで4.3〜33倍performance/Wを報告するがLLM decoder/KV cache評価はない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2606.13740-llada-cpp-mobile-npu-diffusion-llm-inference.md"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2008.31",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2008.31"
+      ],
+      "title": "NVIDIA Tesla: A Unified Graphics and Computing Architecture",
+      "reason": "CUDA時代の汎用GPU基礎アーキテクチャ論文で後続LLM推論基盤の背景ではあるが、LLM以前のGPU設計解説でサーベイの直接対象外。",
+      "source_url": "https://doi.org/10.1109/mm.2008.31",
+      "body_check": "massively multithreadedなTesla unified graphics/parallel computing architectureを説明し、Cおよびgraphics APIからprogrammableな並列processor arrayを提示する。LLMやTransformer、推論効率の評価は存在しない.",
+      "first_checked_at": "2026-09-30T15:01:31+09:00",
+      "last_checked_at": "2026-09-30T15:01:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
+        "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
+      ],
+      "worklist_rank": 453
+    }
+  ]
+}
