@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.671",
+      "doi": "10.18653/v1/2025.acl-long.671",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.acl-long.671"
+      ],
+      "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+      "source_url": "https://aclanthology.org/2025.acl-long.671/",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "reason": "MoEの巨大な総パラメータをexpert pruningと後続の非構造化pruningで削減し、サービングコストを下げる推論向け圧縮研究。",
+      "library_body_check": "本文でO(1) forward passのスケーラブルexpert pruning後にunstructured pruningを適用する二段階方式を確認。Snowflake Arctic 480B/128 expertsで40% sparsityでもほぼ性能損失なしと報告し、MoE serving cost削減を明示する。",
+      "library_source_run_file": null
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1655",
+      "doi": "10.18653/v1/2026.findings-acl.1655",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.findings-acl.1655"
+      ],
+      "title": "LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1655/",
+      "authors": [
+        "Tianyu Liu",
+        "Qitan Lv",
+        "Hao Li",
+        "Xing Gao",
+        "Xiao Sun",
+        "Xiaoyan Sun"
+      ],
+      "published": "2026/7",
+      "year": 2026,
+      "reason": "検索型投機的復号で次々トークン予測と動的ドラフト木を使い、補助ドラフトモデルなしに復号を高速化するため対象。",
+      "library_body_check": "本文・公式実装で、プロンプト由来n-gramキャッシュを使うnext-next-token speculation、検索対応の動的draft tree、target modelによる検証を確認。Spec-Bench等で速度とaccept lengthを評価する推論高速化研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge",
+      "source_url": "https://arxiv.org/abs/2407.00088",
+      "year": 2024,
+      "published": "2024-06-25",
+      "abstract": "The deployment of Large Language Models (LLMs) on edge devices is increasingly important to enhance on-device intelligence. Weight quantization is crucial for reducing the memory footprint of LLMs on devices. However, low-bit LLMs necessitate mixed precision matrix multiplication (mpGEMM) of low precision weights and high precision activations during inference. Existing systems, lacking native support for mpGEMM, resort to dequantize weights for high precision computation. Such an indirect way can lead to a significant inference overhead. In this paper, we introduce T-MAC, an innovative lookup table(LUT)-based method designed for efficient low-bit LLM (i.e., weight-quantized LLM) inference on CPUs. T-MAC directly supports mpGEMM without dequantization, while simultaneously eliminating multiplications and reducing additions required. Specifically, T-MAC transforms the traditional data-type-centric multiplication to bit-wise table lookup, and enables a unified and scalable mpGEMM solution. Our LUT-based kernels scale linearly to the weight bit-width. Evaluated on low-bit Llama and BitNet models, T-MAC demonstrates up to 4× increase in throughput and 70% reduction in energy consumption compared to llama.cpp. For BitNet-b1.58-3B, T-MAC delivers a token generation throughput of 30 tokens/s with a single core and 71 tokens/s with eight cores on M2-Ultra, and 11 tokens/s on Raspberry Pi 5. T-MAC with LUT-based computing paradigm, paves the way for the practical deployment of low-bit LLMs on resource-constrained edge devices without compromising computational efficiency. The system is open-sourced at https://github.com/microsoft/T-MAC.",
+      "canonical_id": "arXiv:2407.00088",
+      "arxiv_id": "2407.00088",
+      "doi": "10.1145/3689031.3696099",
+      "authors": [
+        "Jianyu Wei",
+        "Shijie Cao",
+        "Ting Cao",
+        "Ling-Xiao Ma",
+        "Lei Wang",
+        "Yan-Yong Zhang",
+        "Mao Yang"
+      ],
+      "reason": "低bit重み×高精度activationの混合精度行列積をtable lookupへ変換し、CPU上の量子化LLM推論を直接高速化するため対象。",
+      "library_body_check": "本文でdequantizationを介さずbit-wise lookup tableでmpGEMMを実行するT-MACを確認。低bit Llama/BitNetでllama.cpp比最大4×throughput、70% energy削減、BitNet-b1.58-3BはM2 Ultra 8 coreで71 token/sを報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models",
+      "source_url": "https://arxiv.org/abs/2510.06126",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "Large Language Models (LLMs) are increasingly integrated into everyday applications, but their prevalent cloud-based deployment raises growing concerns around data privacy and long-term sustainability. Running LLMs locally on mobile and edge devices (on-device LLMs) offers the promise of enhanced privacy, reliability, and reduced communication costs. However, realizing this vision remains challenging due to substantial memory and compute demands, as well as limited visibility into performance-efficiency trade-offs on resource-constrained hardware. We propose lm-Meter, the first lightweight, online latency profiler tailored for on-device LLM inference. lm-Meter captures fine-grained, real-time latency at both phase (e.g., embedding, prefill, decode, softmax, sampling) and kernel levels without auxiliary devices. We implement lm-Meter on commercial mobile platforms and demonstrate its high profiling accuracy with minimal system overhead, e.g., only 2.58% throughput reduction in prefill and 0.99% in decode under the most constrained Powersave governor. Leveraging lm-Meter, we conduct comprehensive empirical studies revealing phase- and kernel-level bottlenecks in on-device LLM inference, quantifying accuracy-efficiency trade-offs, and identifying systematic optimization opportunities. lm-Meter provides unprecedented visibility into the runtime behavior of LLMs on constrained platforms, laying the foundation for informed optimization and accelerating the democratization of on-device LLM systems. Code and tutorials are available at github.com/amai-gsu/LM-Meter.",
+      "canonical_id": "arXiv:2510.06126",
+      "arxiv_id": "2510.06126",
+      "doi": "10.1145/3769012.3770614",
+      "authors": [
+        "Haoxin Wang",
+        "Xiaolong Tu",
+        "Hongyu Ke",
+        "Huirong Chai",
+        "Dawei Chen",
+        "Kyungtae Han"
+      ],
+      "reason": "端末上LLM推論をphase/kernel粒度で低overheadに実測する専用profilerで、推論基盤の性能解析・最適化に直接使うため対象。",
+      "library_body_check": "本文でembedding/prefill/decode/softmax/samplingとkernel単位をオンライン計測するlm-Meterを確認。商用モバイル上でPowersave時でもprofilingによるthroughput低下はprefill 2.58%、decode 0.99%で、runtime bottleneckを実測する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dc96ad2959a8",
+    "round": "libimp-dc96ad2959a8af7b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dc96ad2959a8af7b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dc96ad2959a8af7b-pre01.json",
+    "receipt": "sha256:a369ec7b41e47a276d02f6387b6965648d3d50ec46ecb9ac8d05ec093baefec7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dc96ad2959a8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
