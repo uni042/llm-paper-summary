@@ -7,8 +7,8 @@ on:
       - '.survey/work-queue/completed-submission-requests/*.json'
       - '.survey/scripts/advance_research_submission_pipeline.py'
       - '.github/workflows/survey-completed-builder-fast.yml'
-  schedule:
-    - cron: '9/10 * * * *'
+
+  workflow_dispatch:
 
 permissions:
   contents: write
