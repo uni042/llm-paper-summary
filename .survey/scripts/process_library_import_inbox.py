@@ -48,6 +48,7 @@ PENDING_RESEARCH = INBOX / "pending/research"
 PENDING_DISCOVERY = INBOX / "pending/discovery"
 WAITING_DISCOVERY = INBOX / "waiting/discovery"
 RETAINED_DISCOVERY_SOURCE = INBOX / "retained/discovery-source"
+DISCOVERY_CHUNK_RECORDS = 20
 BLOCKED_RESEARCH = INBOX / "blocked/research"
 BLOCKED_DISCOVERY = INBOX / "blocked/discovery"
 RESULT_RESEARCH = INBOX / "results/research"
@@ -708,7 +709,7 @@ def process_discovery(
         source.replace(target)
         advanced += 1
 
-    split_oversized_discovery_sources(max_records)
+    split_oversized_discovery_sources(DISCOVERY_CHUNK_RECORDS)
     waiting_sources = select_discovery_sources(max_records)
     for source in waiting_sources:
         token = source_token(source)
