@@ -1,0 +1,388 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6729c54b195b054d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6729c54b195b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2604.04722",
+    "arXiv:2605.23389",
+    "arXiv:2605.25655",
+    "arXiv:2606.06256",
+    "arXiv:2606.06302",
+    "arXiv:2606.10493",
+    "arXiv:2606.16352",
+    "arXiv:2607.01237",
+    "arXiv:2607.08057",
+    "arXiv:2607.21927",
+    "arXiv:2607.28150",
+    "arXiv:2608.15602",
+    "arXiv:2608.28911",
+    "arXiv:2609.13205",
+    "arXiv:2609.25537",
+    "arXiv:2609.30854",
+    "arXiv:2609.31395"
+  ],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "06174c4e195231cdff52de27da00d2840fa04251",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 12,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 12,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T04:08:28.767165+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2604.04722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.23389",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3802009"
+    },
+    {
+      "requested_id": "arXiv:2605.25655",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2605.25655"
+    },
+    {
+      "requested_id": "arXiv:2606.06256",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.06256"
+    },
+    {
+      "requested_id": "arXiv:2606.06302",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.06302"
+    },
+    {
+      "requested_id": "arXiv:2606.10493",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.10493"
+    },
+    {
+      "requested_id": "arXiv:2606.16352",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.16352"
+    },
+    {
+      "requested_id": "arXiv:2607.01237",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2607.01237"
+    },
+    {
+      "requested_id": "arXiv:2607.08057",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2026.findings-acl.1916"
+    },
+    {
+      "requested_id": "arXiv:2607.21927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28150",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2607.28150"
+    },
+    {
+      "requested_id": "arXiv:2608.15602",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2608.15602"
+    },
+    {
+      "requested_id": "arXiv:2608.28911",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2608.28911"
+    },
+    {
+      "requested_id": "arXiv:2609.13205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.25537",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.25537"
+    },
+    {
+      "requested_id": "arXiv:2609.30854",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs",
+      "source_url": "https://arxiv.org/abs/2604.04722",
+      "year": 2026,
+      "published": "2026-04-06",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable progress across reasoning, generation, and decision-making tasks, yet deploying them on mobile, embedded, and edge devices remains particularly challenging. On-device LLM inference is heavily constrained by the memory and bandwidth overhead of the key-value (KV) cache, which grows linearly with context length and often dominates decoding cost. Existing KV-cache quantization schemes typically rely on fixed precision or hand-crafted heuristics, thereby wasting bits on low-impact tokens while over-compressing informative ones, leading to avoidable accuracy degradation. Inspired by Huffman coding's principle of variable-length allocation, we propose adaptive KV-cache quantization, a learned policy that assigns bit-width proportional to token importance, minimizing expected memory and latency without sacrificing competitive accuracy. Our framework extracts lightweight token-level features, including token frequency, quality score, attention variance, and entropy-based uncertainty, and feeds them into a compact data-driven controller that dynamically selects KV precision from {2-bit, 4-bit, 8-bit, FP16} during decoding. This adaptive precision policy reduces KV memory footprint and latency while improving accuracy compared to static KV quantization and rule-based baselines, and maintaining competitive accuracy close to FP16 inference across standard LLM benchmarks. Extensive experiments across multiple commonsense reasoning benchmarks using SmolLM-135M, SmolLM-360M, and SmolLM-1.7B demonstrate that our controller consistently improves the accuracy-latency trade-off. For instance, with SmolLM-360M on HellaSwag, our method reduces decoding latency (ms/token) by 17.75% relative to static KV quantization, improves accuracy by 7.60 points, and remains within only 0.30 points of FP16 inference.",
+      "canonical_id": "arXiv:2604.04722",
+      "arxiv_id": "2604.04722",
+      "doi": "10.48550/arXiv.2604.04722",
+      "authors": [
+        "Sayed Pedram Haeri Boroujeni",
+        "Niloufar Mehrabi",
+        "P. Woods",
+        "Gabriel Hillesheim",
+        "Abolfazl Razi"
+      ]
+    },
+    {
+      "title": "RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2607.21927",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "Full self-attention in large language models scales as O(N^2), which limits long-context document analysis to 65,536 tokens and requires costly GPU clusters. The Reduced Interaction Sampling (RIS) inference engine addresses this constraint as a model-agnostic architecture. Without modifying weights, RIS reduces self-attention complexity to O(N log N) using sparse stochastic geometry that fits within commodity memory limits. We validate RIS on Qwen2-1.5B-Instruct across two regimes. In controlled evaluations at 32,768 tokens (where native dense attention serves as the upper bound), RIS-Stochastic at 1% density and 70 ensemble seeds achieves 75.00% accuracy, outperforming the native dense baseline (71.88%), while RIS-Stochastic at 5% density and 10 seeds matches it (71.88%). This demonstrates that sparse attention acts as a regularizer: low density (1%) over multiple seeds filters out sequence-level noise, whereas higher density (5%) reintroduces distractor noise. Under the tightest budget, RIS-Structural reaches 68.75% accuracy at 1% density with just 10 seeds, recovering 75% of the contextual gap relative to the zero-context floor (59.38%). At 65,536 tokens, where dense attention triggers out-of-memory faults, RIS yields retrieval gains of up to 14.06 percentage points over the zero-context floor (51.56%), which is confirmed as marginally significant under McNemar's paired test (p = 0.078<0.10). All evaluations run on commodity, unaccelerated CPU servers (16-128 GB of RAM), demonstrating that long-context LLM inference is feasible on standard academic hardware without GPU acceleration.",
+      "canonical_id": "arXiv:2607.21927",
+      "arxiv_id": "2607.21927",
+      "doi": "10.48550/arXiv.2607.21927",
+      "authors": [
+        "Anderson R. Santos"
+      ]
+    },
+    {
+      "title": "Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.13205",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Sparse long-context inference requires efficient token retrieval in both prefill and decode. Existing methods often use different retrieval strategies for the two stages, preventing one retrieval representation from being reused throughout inference. We propose Self-Indexing Attention, a training-free framework built on a shared transform-domain sign-magnitude representation. The key signs provide a reusable token-level index for grouped prefill selection and decode retrieval, while the same representation remains compatible with external KV-cache compression without separate indexer metadata. This 1-bit index enables efficient retrieval through bitwise operations widely supported by modern accelerators. At 5% attention density, Self-Indexing Attention remains close to dense attention on LongBench and RULER and achieves up to 6.1x prefill and 10.3x decode attention-operator speedups. Experiments with TurboQuant and DeepSeekV4-Flash further demonstrate compatibility with low-bit KV-cache compression and pretrained sparse-attention indexers.",
+      "canonical_id": "arXiv:2609.13205",
+      "arxiv_id": "2609.13205",
+      "authors": [
+        "Xu Yang",
+        "Jiapeng Zhang",
+        "Zhangke",
+        "Chang-Jian Chen",
+        "Yu-Xi Chen",
+        "Fei Sun",
+        "Cheng-Guang Xu",
+        "Feng Jin",
+        "Zhuo Tang"
+      ]
+    },
+    {
+      "title": "The KV Cache Is the New Memory Wall",
+      "source_url": "https://arxiv.org/abs/2609.30854",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+      "canonical_id": "arXiv:2609.30854",
+      "arxiv_id": "2609.30854",
+      "authors": [
+        "Tejinder Singh"
+      ]
+    },
+    {
+      "title": "ActKV: Efficient LLM Agents through Action-Guided KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2609.31395",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Agentic LLM inference accumulates long KV caches across iterative observation-reasoning-action loops, imposing substantial memory overhead and limiting serving throughput. Existing compression methods emphasize overall output quality, overlooking the asymmetric importance of actions in driving task progress. Our key idea is to establish a compression criterion that values KV entries by their contribution to action generation and prioritizes action quality. However, iterative execution, dynamic memory demands, and scattered action-critical entries pose challenges to eviction policies, budget allocation, and paged memory integration. To this end, we propose ActKV, the first KV cache compression framework tailored for agentic LLM inference. (i) Action-oriented KV cache eviction exploits stable action access patterns to retain entries critical to future actions, supporting reliable task progress under compression. (ii) Confidence-driven adaptive budget allocation uses LLM's intrinsic confidence to adapt the budget to evolving action-critical memory demands. (iii) Page-aware compression management standardizes compression into three primitives with customized kernels, realizing practical throughput gains. On long-trace tasks, ActKV retains an average of 98.53% of FullKV's accuracy with only 25.98% of its peak KV cache memory. It also achieves 3.97 times and 3.58 times FullKV's token and task throughput, delivering state-of-the-art performance.",
+      "canonical_id": "arXiv:2609.31395",
+      "arxiv_id": "2609.31395",
+      "authors": [
+        "Zi-Han Wang",
+        "Cheng Tang",
+        "Lei Gong",
+        "Chao Wang",
+        "Wenqi Lou",
+        "Teng Wang",
+        "Xue-Hai Zhou"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.04722",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.04722",
+        "id:arXiv:2604.04722",
+        "title:dont waste bits adaptive kvcache quantization for lightweight ondevice llms",
+        "url:https://arxiv.org/abs/2604.04722"
+      ],
+      "record": {
+        "title": "Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs",
+        "source_url": "https://arxiv.org/abs/2604.04722",
+        "year": 2026,
+        "published": "2026-04-06",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable progress across reasoning, generation, and decision-making tasks, yet deploying them on mobile, embedded, and edge devices remains particularly challenging. On-device LLM inference is heavily constrained by the memory and bandwidth overhead of the key-value (KV) cache, which grows linearly with context length and often dominates decoding cost. Existing KV-cache quantization schemes typically rely on fixed precision or hand-crafted heuristics, thereby wasting bits on low-impact tokens while over-compressing informative ones, leading to avoidable accuracy degradation. Inspired by Huffman coding's principle of variable-length allocation, we propose adaptive KV-cache quantization, a learned policy that assigns bit-width proportional to token importance, minimizing expected memory and latency without sacrificing competitive accuracy. Our framework extracts lightweight token-level features, including token frequency, quality score, attention variance, and entropy-based uncertainty, and feeds them into a compact data-driven controller that dynamically selects KV precision from {2-bit, 4-bit, 8-bit, FP16} during decoding. This adaptive precision policy reduces KV memory footprint and latency while improving accuracy compared to static KV quantization and rule-based baselines, and maintaining competitive accuracy close to FP16 inference across standard LLM benchmarks. Extensive experiments across multiple commonsense reasoning benchmarks using SmolLM-135M, SmolLM-360M, and SmolLM-1.7B demonstrate that our controller consistently improves the accuracy-latency trade-off. For instance, with SmolLM-360M on HellaSwag, our method reduces decoding latency (ms/token) by 17.75% relative to static KV quantization, improves accuracy by 7.60 points, and remains within only 0.30 points of FP16 inference.",
+        "canonical_id": "arXiv:2604.04722",
+        "arxiv_id": "2604.04722",
+        "doi": "10.48550/arXiv.2604.04722",
+        "authors": [
+          "Sayed Pedram Haeri Boroujeni",
+          "Niloufar Mehrabi",
+          "P. Woods",
+          "Gabriel Hillesheim",
+          "Abolfazl Razi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21927",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.21927",
+        "id:arXiv:2607.21927",
+        "title:riskernel a modelagnostic architecture for longcontext llm inference via sparse attention",
+        "url:https://arxiv.org/abs/2607.21927"
+      ],
+      "record": {
+        "title": "RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2607.21927",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "Full self-attention in large language models scales as O(N^2), which limits long-context document analysis to 65,536 tokens and requires costly GPU clusters. The Reduced Interaction Sampling (RIS) inference engine addresses this constraint as a model-agnostic architecture. Without modifying weights, RIS reduces self-attention complexity to O(N log N) using sparse stochastic geometry that fits within commodity memory limits. We validate RIS on Qwen2-1.5B-Instruct across two regimes. In controlled evaluations at 32,768 tokens (where native dense attention serves as the upper bound), RIS-Stochastic at 1% density and 70 ensemble seeds achieves 75.00% accuracy, outperforming the native dense baseline (71.88%), while RIS-Stochastic at 5% density and 10 seeds matches it (71.88%). This demonstrates that sparse attention acts as a regularizer: low density (1%) over multiple seeds filters out sequence-level noise, whereas higher density (5%) reintroduces distractor noise. Under the tightest budget, RIS-Structural reaches 68.75% accuracy at 1% density with just 10 seeds, recovering 75% of the contextual gap relative to the zero-context floor (59.38%). At 65,536 tokens, where dense attention triggers out-of-memory faults, RIS yields retrieval gains of up to 14.06 percentage points over the zero-context floor (51.56%), which is confirmed as marginally significant under McNemar's paired test (p = 0.078<0.10). All evaluations run on commodity, unaccelerated CPU servers (16-128 GB of RAM), demonstrating that long-context LLM inference is feasible on standard academic hardware without GPU acceleration.",
+        "canonical_id": "arXiv:2607.21927",
+        "arxiv_id": "2607.21927",
+        "doi": "10.48550/arXiv.2607.21927",
+        "authors": [
+          "Anderson R. Santos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13205",
+      "identity_tokens": [
+        "id:arXiv:2609.13205",
+        "title:selfindexing attention for compressioncompatible sparse longcontext llm inference",
+        "url:https://arxiv.org/abs/2609.13205"
+      ],
+      "record": {
+        "title": "Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.13205",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Sparse long-context inference requires efficient token retrieval in both prefill and decode. Existing methods often use different retrieval strategies for the two stages, preventing one retrieval representation from being reused throughout inference. We propose Self-Indexing Attention, a training-free framework built on a shared transform-domain sign-magnitude representation. The key signs provide a reusable token-level index for grouped prefill selection and decode retrieval, while the same representation remains compatible with external KV-cache compression without separate indexer metadata. This 1-bit index enables efficient retrieval through bitwise operations widely supported by modern accelerators. At 5% attention density, Self-Indexing Attention remains close to dense attention on LongBench and RULER and achieves up to 6.1x prefill and 10.3x decode attention-operator speedups. Experiments with TurboQuant and DeepSeekV4-Flash further demonstrate compatibility with low-bit KV-cache compression and pretrained sparse-attention indexers.",
+        "canonical_id": "arXiv:2609.13205",
+        "arxiv_id": "2609.13205",
+        "authors": [
+          "Xu Yang",
+          "Jiapeng Zhang",
+          "Zhangke",
+          "Chang-Jian Chen",
+          "Yu-Xi Chen",
+          "Fei Sun",
+          "Cheng-Guang Xu",
+          "Feng Jin",
+          "Zhuo Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30854",
+      "identity_tokens": [
+        "id:arXiv:2609.30854",
+        "title:the kv cache is the new memory wall",
+        "url:https://arxiv.org/abs/2609.30854"
+      ],
+      "record": {
+        "title": "The KV Cache Is the New Memory Wall",
+        "source_url": "https://arxiv.org/abs/2609.30854",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Autoregressive LLM inference at long context is bounded by memory bandwidth, not arithmetic throughput, and the binding resource shifts from model weights to the Key-Value (KV) cache as sequence length grows. For Llama-3-70B in BF16, the 140 GB weight footprint exceeds the 80 GB HBM of a single accelerator, and one 128k-token sequence adds 42 GB of KV cache. Techniques that compress, evict, page, share, or offload KV state have proliferated, but reported gains use inconsistent workloads, hardware, and quality metrics, preventing cross-paper comparison. This SoK paper unifies the field analytically, with a protocol that strictly separates derived and reported claims. We derive closed-form arithmetic intensity as a decaying function of context length, parameterized by hardware topology for NVIDIA H100, NVIDIA B200, and AMD MI300X, including per-die bandwidth partitioning and the crossover lengths where KV traffic overtakes weight traffic. We classify the literature into five domains, quantization, token eviction, KV paging, prefix caching, and heterogeneous tiering, evaluating one method per domain at 128k context under a single protocol. The central finding is a three-regime structure: below a hardware-specific crossover, weight traffic dominates and KV compression yields negligible speedup; beyond it, KV traffic dominates and each domain trades quality for bandwidth savings approaching the roofline bound. Paging and prefix sharing are lossless but address capacity, not bandwidth. Quantization and eviction cut bandwidth directly, with degradation that accelerates below 4-bit precision and turns discontinuous for eviction on position-sensitive tasks. Tiering converts the bandwidth wall into an interconnect problem bounded by PCIe or NVLink rather than HBM. We close with design rules for selecting a compression domain given hardware, context length, and quality budget.",
+        "canonical_id": "arXiv:2609.30854",
+        "arxiv_id": "2609.30854",
+        "authors": [
+          "Tejinder Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31395",
+      "identity_tokens": [
+        "id:arXiv:2609.31395",
+        "title:actkv efficient llm agents through actionguided kv cache management",
+        "url:https://arxiv.org/abs/2609.31395"
+      ],
+      "record": {
+        "title": "ActKV: Efficient LLM Agents through Action-Guided KV Cache Management",
+        "source_url": "https://arxiv.org/abs/2609.31395",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Agentic LLM inference accumulates long KV caches across iterative observation-reasoning-action loops, imposing substantial memory overhead and limiting serving throughput. Existing compression methods emphasize overall output quality, overlooking the asymmetric importance of actions in driving task progress. Our key idea is to establish a compression criterion that values KV entries by their contribution to action generation and prioritizes action quality. However, iterative execution, dynamic memory demands, and scattered action-critical entries pose challenges to eviction policies, budget allocation, and paged memory integration. To this end, we propose ActKV, the first KV cache compression framework tailored for agentic LLM inference. (i) Action-oriented KV cache eviction exploits stable action access patterns to retain entries critical to future actions, supporting reliable task progress under compression. (ii) Confidence-driven adaptive budget allocation uses LLM's intrinsic confidence to adapt the budget to evolving action-critical memory demands. (iii) Page-aware compression management standardizes compression into three primitives with customized kernels, realizing practical throughput gains. On long-trace tasks, ActKV retains an average of 98.53% of FullKV's accuracy with only 25.98% of its peak KV cache memory. It also achieves 3.97 times and 3.58 times FullKV's token and task throughput, delivering state-of-the-art performance.",
+        "canonical_id": "arXiv:2609.31395",
+        "arxiv_id": "2609.31395",
+        "authors": [
+          "Zi-Han Wang",
+          "Cheng Tang",
+          "Lei Gong",
+          "Chao Wang",
+          "Wenqi Lou",
+          "Teng Wang",
+          "Xue-Hai Zhou"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:cd839afc7816d2b47f43546fa770cf9a451a91653a53ebaa7876512ddf9431b8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
