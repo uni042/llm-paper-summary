@@ -6,12 +6,14 @@ on:
     paths:
       - '.survey/work-queue/claim-requests/*.json'
       - '.survey/work-queue/direct-takes/research/*.json'
+      - '.github/workflows/survey-claim-fast.yml'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: survey-claim-main
@@ -76,3 +78,67 @@ jobs:
 
           echo 'Failed to publish claim results after 12 retries.' >&2
           exit 1
+
+
+  orchestrate:
+    needs: claim
+    if: >-
+      always() &&
+      (
+        github.event_name == 'schedule' ||
+        github.event_name == 'workflow_dispatch' ||
+        (
+          github.event_name == 'push' &&
+          github.event.head_commit.message == 'Enable central survey orchestrator'
+        )
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Dispatch scheduled survey lanes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dispatch() {
+            local workflow="$1"
+            echo "Dispatching ${workflow}"
+            gh api               --method POST               "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches"               -f ref=main
+          }
+
+          # :03-equivalent lanes. Claim itself is the current workflow.
+          dispatch discovery-preload-local-fast.yml
+          dispatch discovery-preload-warm.yml
+          dispatch survey-helper.yml
+
+          sleep 60
+
+          # :04-equivalent lanes.
+          dispatch survey-run-state.yml
+          dispatch retry-adopted-library-checkpoints.yml
+
+          sleep 60
+
+          # :05-equivalent lane.
+          dispatch survey-discovery-recovery.yml
+
+          sleep 120
+
+          # :07-equivalent lanes.
+          dispatch library-import.yml
+          dispatch library-publication-ack.yml
+          dispatch survey-reference-relevance-fast.yml
+          dispatch status-dashboard.yml
+          dispatch survey-submission-fast.yml
+
+          sleep 60
+
+          # :08-equivalent lane.
+          dispatch survey-research-quality-preflight.yml
+
+          sleep 60
+
+          # :09-equivalent lane.
+          dispatch survey-completed-builder-fast.yml
