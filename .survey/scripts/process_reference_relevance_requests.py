@@ -190,6 +190,13 @@ def process_pending(repo_root: Path, max_requests: int | None = None) -> dict[st
 
     processed_requests = 0
     for request_path in sorted(request_dir.glob("*.json")):
+        # Existing immutable results are already terminal. They must not consume
+        # the bounded processing budget, otherwise a stable alphabetical prefix
+        # can starve every unsettled request behind it forever.
+        result_path = repo_root / RESULT_DIR / f"{request_path.stem}.json"
+        if result_path.exists():
+            continue
+
         if max_requests is not None and processed_requests >= max(0, max_requests):
             break
         processed_requests += 1
