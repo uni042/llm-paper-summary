@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-29e2d7edfa4cf4cd-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3575693.3575703",
+  "reason": "GPU/DRAM階層とpipeline parallelismを使うが、目的は大規模モデルのfine-tuning高速化であり学習工程凍結範囲。",
+  "title": "Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers",
+  "identity_tokens": [
+    "DOI:10.1145/3575693.3575703"
+  ],
+  "linked_from": [
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+    "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29e2d7edfa4c",
+  "source_precheck_request_id": null
+}
