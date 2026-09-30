@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Inference Performance Optimization for Large Language Models on CPUs",
+      "source_url": "https://arxiv.org/abs/2407.07304",
+      "year": 2024,
+      "published": "2024-07-10",
+      "abstract": "Large language models (LLMs) have shown exceptional performance and vast potential across diverse tasks. However, the deployment of LLMs with high performance in low-resource environments has garnered significant attention in the industry. When GPU hardware resources are limited, we can explore alternative options on CPUs. To mitigate the financial burden and alleviate constraints imposed by hardware resources, optimizing inference performance is necessary. In this paper, we introduce an easily deployable inference performance optimization solution aimed at accelerating LLMs on CPUs. In this solution, we implement an effective way to reduce the KV cache size while ensuring precision. We propose a distributed inference optimization approach and implement it based on oneAPI Collective Communications Library. Furthermore, we propose optimization approaches for LLMs on CPU, and conduct tailored optimizations for the most commonly used models. The code is open-sourced at https://github.com/intel/xFasterTransformer.",
+      "canonical_id": "arXiv:2407.07304",
+      "arxiv_id": "2407.07304",
+      "doi": "10.48550/arXiv.2407.07304",
+      "authors": [
+        "Pujiang He",
+        "Shan Zhou",
+        "Wenhuan Huang",
+        "Changqing Li",
+        "Duyi Wang",
+        "Bin Guo",
+        "Chen Meng",
+        "Sheng Gui",
+        "Weifei Yu",
+        "Yi Xie"
+      ],
+      "reason": "CPU上のLLM推論を注意・KVキャッシュ・分散通信で最適化する。",
+      "library_body_check": "本文2–3節を確認し、SlimAttention、INT8 KVキャッシュ、oneCCL分散推論、Xeon実機評価を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    },
+    {
+      "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+      "source_url": "https://arxiv.org/abs/2408.03314",
+      "year": 2024,
+      "published": "2024-08-06",
+      "abstract": "Enabling LLMs to improve their outputs by using more test-time computation is a critical step towards building generally self-improving agents that can operate on open-ended natural language. In this paper, we study the scaling of inference-time computation in LLMs, with a focus on answering the question: if an LLM is allowed to use a fixed but non-trivial amount of inference-time compute, how much can it improve its performance on a challenging prompt? Answering this question has implications not only on the achievable performance of LLMs, but also on the future of LLM pretraining and how one should tradeoff inference-time and pre-training compute. Despite its importance, little research attempted to understand the scaling behaviors of various test-time inference methods. Moreover, current work largely provides negative results for a number of these strategies. In this work, we analyze two primary mechanisms to scale test-time computation: (1) searching against dense, process-based verifier reward models; and (2) updating the model's distribution over a response adaptively, given the prompt at test time. We find that in both cases, the effectiveness of different approaches to scaling test-time compute critically varies depending on the difficulty of the prompt. This observation motivates applying a\"compute-optimal\"scaling strategy, which acts to most effectively allocate test-time compute adaptively per prompt. Using this compute-optimal strategy, we can improve the efficiency of test-time compute scaling by more than 4x compared to a best-of-N baseline. Additionally, in a FLOPs-matched evaluation, we find that on problems where a smaller base model attains somewhat non-trivial success rates, test-time compute can be used to outperform a 14x larger model.",
+      "canonical_id": "arXiv:2408.03314",
+      "arxiv_id": "2408.03314",
+      "doi": "10.48550/arXiv.2408.03314",
+      "authors": [
+        "C. Snell",
+        "Jaehoon Lee",
+        "Kelvin Xu",
+        "Aviral Kumar"
+      ],
+      "reason": "17. **Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters** — `arXiv:2408.03314` ([paper](https://arxiv.org/abs/2408.03314)). Allocates test-time samples according to estimated problem difficulty; reports comparable performance with up to 4× fewer generations in evaluated settings, with estimation overhead to consider.",
+      "library_body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2bedcaaee5e5",
+    "round": "libimp-2bedcaaee5e53125-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2bedcaaee5e53125-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2bedcaaee5e53125-pre01.json",
+    "receipt": "sha256:07d0bad149a07d1bb3959e2c486fbf9c9cb8677e57a88d98a5cfe8f16b3c8dfb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2bedcaaee5e5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
