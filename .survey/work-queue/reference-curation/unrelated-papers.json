@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T01:46:01+00:00",
-  "record_count": 344,
+  "updated_at": "2026-09-30T02:28:00+00:00",
+  "record_count": 357,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5160,6 +5160,205 @@
         "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
       ],
       "title": "Hash Layers For Large Sparse Models"
+    },
+    "arXiv:2503.14487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487"
+      ],
+      "reason": "画像生成用拡散TransformerのMoEスケーリングと学習時expert specializationが主題で、LLM推論・サービング・KV・言語MoE推論基盤を最終適用先としないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers"
+    },
+    "arXiv:2410.02098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098"
+      ],
+      "reason": "最大97B規模の画像生成用Diffusion Transformerをexpert-choice routingで拡張する研究であり、対象サーベイのLLM推論高速化ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+      ],
+      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
+    },
+    "arXiv:2409.12941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "arXiv:2409.12941"
+      ],
+      "reason": "検索拡張生成の事実性・検索・推論能力を統合評価するFRAMESベンチマークが主貢献で、推論実行系の速度・メモリ・スケジューリングを改善する方式ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation"
+    },
+    "arXiv:2308.11432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432"
+      ],
+      "reason": "LLMエージェントの構成・応用・評価を整理するサーベイであり、推論基盤の新規高速化手法ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents"
+    },
+    "DOI:10.48550/arxiv.2504.04030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2504.04030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.04030",
+        "arXiv:2504.04030"
+      ],
+      "reason": "5M件規模のコードLLM向け教師あり微調整データセットと生成・フィルタリング手順が主題で、最終適用が学習であり現在の凍結対象。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
+      ],
+      "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
+    },
+    "DOI:10.48550/arxiv.2302.11382": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2302.11382",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.11382",
+        "arXiv:2302.11382"
+      ],
+      "reason": "再利用可能なprompt patternの整理とソフトウェア開発への応用が主題で、LLM推論システムの効率化研究ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
+    },
+    "OpenReview:pZiyCaVuti": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:pZiyCaVuti",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti"
+      ],
+      "reason": "長期対話メモリ能力を測る評価ベンチマークが主貢献で、推論速度・KV管理・サービング実行系を改善する方式ではないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+    },
+    "OpenReview:KnqiC0znVF": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:KnqiC0znVF",
+      "identity_tokens": [
+        "OpenReview:KnqiC0znVF"
+      ],
+      "reason": "自己回帰モデルに代わるmasked diffusion言語モデルLLaDAのモデル構造・学習・能力実証が中心で、既存LLM推論基盤の速度・メモリ・サービング最適化を主貢献としないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
+      ],
+      "title": "Large Language Diffusion Models"
+    },
+    "OpenReview:EvDeiLv7qc": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:EvDeiLv7qc",
+      "identity_tokens": [
+        "OpenReview:EvDeiLv7qc"
+      ],
+      "reason": "MoE化したparameter-efficient fine-tuningでinstruction tuningの学習効率を高める研究で、最終適用先が学習・適応工程のため凍結対象。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
+    },
+    "OpenReview:7eHn64wOVy": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:7eHn64wOVy",
+      "identity_tokens": [
+        "OpenReview:7eHn64wOVy",
+        "arXiv:2405.13216"
+      ],
+      "reason": "Transformerの文脈内ランダムアクセス能力の限界を分析する能力・理論研究で、推論実行の速度・メモリ・サービングを改善するシステム方式ではないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+      ],
+      "title": "Your Context Is Not an Array: Unveiling Random Access Limitations in Transformers"
+    },
+    "DOI:10.57967/hf/3372": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.57967/hf/3372",
+      "identity_tokens": [
+        "DOI:10.57967/hf/3372"
+      ],
+      "reason": "1M token級へ拡張したLlama 3派生モデルのモデル配布・長文脈能力が中心で、推論システム最適化手法そのものではないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
+      ],
+      "title": "Llama 3 Gradient: A Series of Long Context Models"
+    },
+    "arXiv:2305.02309": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.02309",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.02309",
+        "arXiv:2305.02309"
+      ],
+      "reason": "prefix-LM、学習目的、infilling、データ分布を統合してコードLLMの学習を効率化する研究で、最終適用先が学習工程のため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md"
+      ],
+      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
+    },
+    "DOI:10.4230/lipics.icalp.2019.63": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4230/lipics.icalp.2019.63",
+      "identity_tokens": [
+        "DOI:10.4230/lipics.icalp.2019.63"
+      ],
+      "reason": "未知job sizeとprecedence制約を持つ一般オンラインスケジューリングの理論研究で、LLM推論・GPUサービングを対象としないため対象外。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+      ],
+      "title": "Non-Clairvoyant Precedence Constrained Scheduling"
     }
   }
 }

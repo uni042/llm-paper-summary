@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T01:46:01+00:00",
-  "record_count": 327,
+  "updated_at": "2026-09-30T02:28:00+00:00",
+  "record_count": 328,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4888,6 +4888,21 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
       ],
       "title": "CAMEx: Curvature-Aware Merging of Experts"
+    },
+    "arXiv:2505.00949": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949"
+      ],
+      "reason": "推論効率を強く意識したLlama-Nemotron系列で、ニューラルアーキテクチャ探索により高速な構成を得て推論時のreasoning toggleも提供する。一方、論文の中心はモデル系列の学習・蒸留・後学習を含む総合技術報告で、推論システム手法単体ではないためborderline。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models"
     }
   }
 }

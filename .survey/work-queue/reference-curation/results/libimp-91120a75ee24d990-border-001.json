@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91120a75ee24d990-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00949",
+    "identity_tokens": [
+      "arXiv:2505.00949"
+    ],
+    "reason": "推論効率を強く意識したLlama-Nemotron系列で、ニューラルアーキテクチャ探索により高速な構成を得て推論時のreasoning toggleも提供する。一方、論文の中心はモデル系列の学習・蒸留・後学習を含む総合技術報告で、推論システム手法単体ではないためborderline。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T02:28:00+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Llama-Nemotron: Efficient Reasoning Models"
+  },
+  "processed_at": "2026-09-30T02:28:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91120a75ee24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
