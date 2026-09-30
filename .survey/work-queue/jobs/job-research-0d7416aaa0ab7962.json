@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2608.23841",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.23841-pipeline-native-transformers-co-designing-model-architecture-and-cpu-inference-for-bandwidth-efficient-autoregressive-de.md",
   "selection_reason": "Recent architecture-system co-design for bandwidth-efficient autoregressive CPU inference; directly aligned with CPU inference and memory-bandwidth optimization.",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,5 +32,13 @@
   ],
   "first_blocked_at": "2026-09-22T22:22:24+00:00",
   "last_blocked_at": "2026-09-22T22:22:24+00:00",
-  "retry_queued_at": "2026-09-30T01:30:19+00:00"
+  "retry_queued_at": "2026-09-30T01:30:19+00:00",
+  "completed_at": "2026-09-30T01:31:16+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2608.23841",
+  "duplicate_of_path": "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2608.23841"
+  }
 }
