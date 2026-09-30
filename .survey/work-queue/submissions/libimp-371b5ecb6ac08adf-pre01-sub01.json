@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.671",
+      "doi": "10.18653/v1/2025.acl-long.671",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.acl-long.671"
+      ],
+      "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+      "source_url": "https://aclanthology.org/2025.acl-long.671/",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "reason": "MoE expertをstructured pruning後にunstructured pruningし、parameter/memoryと推論計算を削減する。",
+      "library_body_check": "ACL本文のexpert clustering/pruning、survivor内unstructured pruning、複数MoEモデル評価を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1655",
+      "doi": "10.18653/v1/2026.findings-acl.1655",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.findings-acl.1655"
+      ],
+      "title": "LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1655/",
+      "authors": [
+        "Tianyu Liu",
+        "Qitan Lv",
+        "Hao Li",
+        "Xing Gao",
+        "Xiao Sun",
+        "Xiaoyan Sun"
+      ],
+      "published": "2026/7",
+      "year": 2026,
+      "reason": "retrieval-based speculative decodingのdraft retrievalと検証を改善し、losslessな推論高速化を狙う。",
+      "library_body_check": "ACL本文のnext-next-token speculation、retrieval index、acceptance/throughput評価を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json"
+    },
+    {
+      "title": "JetMoE: Reaching Llama2 Performance with 0.1M Dollars",
+      "source_url": "https://arxiv.org/abs/2404.07413",
+      "year": 2024,
+      "published": "2024-04-11",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable results, but their increasing resource demand has become a major obstacle to the development of powerful and accessible super-human intelligence. This report introduces JetMoE-8B, a new LLM trained with less than $0.1 million, using 1.25T tokens from carefully mixed open-source corpora and 30,000 H100 GPU hours. Despite its low cost, the JetMoE-8B demonstrates impressive performance, with JetMoE-8B outperforming the Llama2-7B model and JetMoE-8B-Chat surpassing the Llama2-13B-Chat model. These results suggest that LLM training can be much more cost-effective than generally thought. JetMoE-8B is based on an efficient Sparsely-gated Mixture-of-Experts (SMoE) architecture, composed of attention and feedforward experts. Both layers are sparsely activated, allowing JetMoE-8B to have 8B parameters while only activating 2B for each input token, reducing inference computation by about 70% compared to Llama2-7B. Moreover, JetMoE-8B is highly open and academia-friendly, using only public datasets and training code. All training parameters and data mixtures have been detailed in this report to facilitate future efforts in the development of open foundation models. This transparency aims to encourage collaboration and further advancements in the field of accessible and efficient LLMs. The model weights are publicly available at https://github.com/myshell-ai/JetMoE.",
+      "canonical_id": "arXiv:2404.07413",
+      "arxiv_id": "2404.07413",
+      "doi": "10.48550/arXiv.2404.07413",
+      "authors": [
+        "Yikang Shen",
+        "Zhen Guo",
+        "Tianle Cai",
+        "Zengyi Qin"
+      ],
+      "reason": "20. **JetMoE: Reaching Llama2 Performance with 0.1M Dollars** — `DOI:10.48550/arxiv.2404.07413` ([arXiv paper](https://arxiv.org/abs/2404.07413)). Sparse 8B-total/2B-active MoE targets low-cost training and efficient inference; report states under 30K H100-hours / $100K and about 70% less inference compute than Llama2-7B.",
+      "library_body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-371b5ecb6ac0",
+    "round": "libimp-371b5ecb6ac08adf-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-371b5ecb6ac08adf-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-371b5ecb6ac08adf-pre01.json",
+    "receipt": "sha256:452fb975739038f0d6b8123c21238490bcc29defa7fc249f75f926fb70f4803f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-371b5ecb6ac0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
