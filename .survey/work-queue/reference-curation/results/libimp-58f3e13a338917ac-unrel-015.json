@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f3e13a338917ac-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.07911",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.07911",
+    "identity_tokens": [
+      "arXiv:2311.07911"
+    ],
+    "reason": "6. **Instruction-Following Evaluation for Large Language Models** — `arXiv:2311.07911` ([paper](https://arxiv.org/abs/2311.07911)). Capability benchmark only.",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Instruction-Following Evaluation for Large Language Models"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f3e13a3389",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

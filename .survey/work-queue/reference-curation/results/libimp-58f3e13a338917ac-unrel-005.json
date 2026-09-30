@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f3e13a338917ac-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07864",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07864",
+    "identity_tokens": [
+      "arXiv:2309.07864"
+    ],
+    "reason": "LLM agentの構成・応用・評価を整理するサーベイで、推論システム最適化が主題ではない。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "The Rise and Potential of Large Language Model Based Agents: A Survey"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f3e13a3389",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

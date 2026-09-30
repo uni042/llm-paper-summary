@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f3e13a338917ac-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.16944",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.16944",
+    "identity_tokens": [
+      "arXiv:2310.16944"
+    ],
+    "reason": "AI feedbackを用いたalignment蒸留が主題で、推論高速化・省メモリ化ではない。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/05-speculative-decoding-moe/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
+      "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+    ],
+    "title": "Zephyr: Direct Distillation of LM Alignment"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f3e13a3389",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

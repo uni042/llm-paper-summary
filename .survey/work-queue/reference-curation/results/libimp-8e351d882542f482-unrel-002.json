@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e351d882542f482-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.00234",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.00234",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2301.00234",
+      "arXiv:2301.00234"
+    ],
+    "reason": "文脈内学習の手法・能力を整理するサーベイで、実行システム最適化の一次研究ではない。",
+    "first_checked_at": "2026-09-27T12:29:48+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 492",
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "A Survey on In-context Learning"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e351d882542",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

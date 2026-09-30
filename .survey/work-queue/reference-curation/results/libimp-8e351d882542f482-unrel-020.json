@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e351d882542f482-unrel-020",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.03053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.03053",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.03053",
+      "arXiv:2305.03053"
+    ],
+    "reason": "本文の中心は異なるタスクのモデルを追加学習なしで統合するモデルマージで、LLM推論システムの配信・メモリ・実行最適化ではない。",
+    "first_checked_at": "2026-09-27T11:00:23+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "ZipIt! Merging Models from Different Tasks without Training"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e351d882542",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

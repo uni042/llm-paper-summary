@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-340256b944aced20-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.18290",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.18290",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.18290",
+      "arXiv:2305.18290"
+    ],
+    "reason": "本文ではDPOをRLHFの代替となる選好学習アルゴリズムとして導出・評価しており、主目的は学習・アラインメント手順の簡素化で、推論ランタイム効率化ではない。",
+    "first_checked_at": "2026-09-27T11:00:23+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-340256b944ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

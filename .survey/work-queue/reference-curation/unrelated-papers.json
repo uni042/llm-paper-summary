@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:50:07+00:00",
-  "record_count": 382,
+  "updated_at": "2026-09-30T09:50:51+00:00",
+  "record_count": 381,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -842,14 +842,13 @@
       "identity_tokens": [
         "arXiv:2311.12022"
       ],
-      "reason": "LLM推論性能を測る難問ベンチマークであり、推論システムの効率化手法・実装を提案しない。",
+      "reason": "3. **GPQA** — `arXiv:2311.12022` ([paper](https://arxiv.org/abs/2311.12022)). Capability benchmark only.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
-      "source_url": "https://arxiv.org/abs/2311.12022"
+      "title": "GPQA"
     },
     "arXiv:2406.01574": {
       "classification": "unrelated",
@@ -886,14 +885,13 @@
       "identity_tokens": [
         "arXiv:2311.07911"
       ],
-      "reason": "指示追従能力の評価手法・ベンチマークであり、推論システム効率化への直接寄与がない。",
+      "reason": "6. **Instruction-Following Evaluation for Large Language Models** — `arXiv:2311.07911` ([paper](https://arxiv.org/abs/2311.07911)). Capability benchmark only.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Instruction-Following Evaluation for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2311.07911"
+      "title": "Instruction-Following Evaluation for Large Language Models"
     },
     "arXiv:2305.14314": {
       "classification": "unrelated",
@@ -901,14 +899,13 @@
       "identity_tokens": [
         "arXiv:2305.14314"
       ],
-      "reason": "4bit基盤モデル上のLoRA微調整による学習メモリ削減が主目的で、最終適用先が学習効率化のため凍結対象。",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 3. **QLoRA: Efficient Finetuning of Quantized LLMs** — `arXiv:2305.14314` ([paper](https://arxiv.org/abs/2305.14314)). NF4, double quantization and paged optimizers enable 65B fine-tuning below 48 GB versus over 780 GB for full fine-tuning. Included as memory-efficient LLM training.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
-      "source_url": "https://arxiv.org/abs/2305.14314"
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
     },
     "arXiv:2412.08905": {
       "classification": "unrelated",
@@ -931,14 +928,13 @@
       "identity_tokens": [
         "arXiv:2304.11277"
       ],
-      "reason": "大規模モデル学習の完全シャードデータ並列が主題で、現在凍結中の学習高速化系統に該当。",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 11. **PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel** — `arXiv:2304.11277` ([paper](https://arxiv.org/abs/2304.11277)). Shards parameters, gradients and optimizer state with all-gather, reshard, prefetch and rate limiting; evaluated at up to 512 A100s, with backward prefetch giving about 18% speedup. Duplicate worker entry merged.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel",
-      "source_url": "https://arxiv.org/abs/2304.11277"
+      "title": "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel"
     },
     "arXiv:1308.3432": {
       "classification": "unrelated",
@@ -1262,20 +1258,6 @@
       "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding",
       "source_url": "https://aclanthology.org/2023.findings-emnlp.536/"
     },
-    "DOI:10.1145/3600006.3613152": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3600006.3613152",
-      "identity_tokens": [
-        "DOI:10.1145/3600006.3613152"
-      ],
-      "reason": "既存Library正規台帳から継承",
-      "first_checked_at": "2026-09-27T03:00:00+09:00",
-      "last_checked_at": "2026-09-27T03:00:00+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates"
-    },
     "arXiv:2409.20370": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2409.20370",
@@ -1333,12 +1315,13 @@
       ],
       "reason": "マルチモーダルLLMの理解能力ベンチマークで、システム効率・配信性能の評価基盤ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 384",
+        "worker-worklist-30 discovery_review rank 417",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "SEED-Bench: Benchmarking Multimodal LLMs with Generative Comprehension",
-      "source_url": "https://arxiv.org/abs/2307.16125"
+      "title": "SEED-Bench: Benchmarking Multimodal LLMs with Generative Comprehension"
     },
     "arXiv:2304.03277": {
       "classification": "unrelated",
@@ -1349,12 +1332,13 @@
       ],
       "reason": "GPT-4生成指示データによる微調整と能力評価が中心で、学習システム高速化・推論基盤を扱わない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 383",
+        "worker-worklist-30 discovery_review rank 416",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Instruction Tuning with GPT-4",
-      "source_url": "https://arxiv.org/abs/2304.03277"
+      "title": "Instruction Tuning with GPT-4"
     },
     "arXiv:2503.09516": {
       "classification": "unrelated",
@@ -1390,16 +1374,16 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2309.08125",
       "identity_tokens": [
+        "DOI:10.1145/3600006.3613152",
         "arXiv:2309.08125"
       ],
       "reason": "大規模モデルの耐障害分散学習が最終用途で凍結中の学習系統。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "first_checked_at": "2026-09-27T03:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates",
-      "source_url": "https://arxiv.org/abs/2309.08125"
+      "title": "Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates"
     },
     "arXiv:2202.12837": {
       "classification": "unrelated",
@@ -1949,12 +1933,11 @@
       ],
       "reason": "エージェント推論・計画アルゴリズムが主題で配信ランタイムや資源管理を扱わない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 322"
       ],
-      "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
-      "source_url": "https://arxiv.org/abs/2310.04406"
+      "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models"
     },
     "arXiv:2310.01377": {
       "classification": "unrelated",
@@ -1964,12 +1947,11 @@
       ],
       "reason": "大規模AIフィードバックデータと整合学習が主題で実行システム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 321"
       ],
-      "title": "UltraFeedback: Boosting Language Models with Scaled AI Feedback",
-      "source_url": "https://arxiv.org/abs/2310.01377"
+      "title": "UltraFeedback: Boosting Language Models with Scaled AI Feedback"
     },
     "arXiv:2309.12284": {
       "classification": "unrelated",
@@ -1979,12 +1961,11 @@
       ],
       "reason": "数学推論データ生成と微調整が主題でLLM実行システム最適化を扱わない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 320"
       ],
-      "title": "MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2309.12284"
+      "title": "MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models"
     },
     "arXiv:2501.11873": {
       "classification": "unrelated",
@@ -2069,12 +2050,11 @@
       ],
       "reason": "一次資料本文を確認し、Parameter-Efficient Fine-Tuning Methods for Pretrained Language Models: A Critical Review and Assessment は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Parameter-Efficient Fine-Tuning Methods for Pretrained Language Models: A Critical Review and Assessment",
-      "source_url": "https://arxiv.org/abs/2312.12148"
+      "title": "Parameter-Efficient Fine-Tuning Methods for Pretrained Language Models: A Critical Review and Assessment"
     },
     "arXiv:2211.01324": {
       "classification": "unrelated",
@@ -2118,21 +2098,6 @@
       ],
       "title": "Neural Machine Translation of Rare Words with Subword Units"
     },
-    "DOI:10.18653/v1/2024.acl-long.810": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.18653/v1/2024.acl-long.810",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2024.acl-long.810"
-      ],
-      "reason": "一次資料本文を確認し、ChatDev: Communicative Agents for Software Development は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
-      "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "ChatDev: Communicative Agents for Software Development",
-      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.810"
-    },
     "DOI:10.18653/v1/2023.findings-acl.824": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2023.findings-acl.824",
@@ -2157,12 +2122,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 319"
       ],
-      "title": "Instruction Tuning for Large Language Models: A Survey",
-      "source_url": "https://arxiv.org/abs/2308.10792"
+      "title": "Instruction Tuning for Large Language Models: A Survey"
     },
     "arXiv:2306.13394": {
       "classification": "unrelated",
@@ -2173,12 +2137,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 317"
       ],
-      "title": "MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models",
-      "source_url": "https://arxiv.org/abs/2306.13394"
+      "title": "MME: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models"
     },
     "arXiv:2304.14402": {
       "classification": "unrelated",
@@ -2189,12 +2152,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 314"
       ],
-      "title": "LaMini-LM: A Diverse Herd of Distilled Models from Large-Scale Instructions",
-      "source_url": "https://arxiv.org/abs/2304.14402"
+      "title": "LaMini-LM: A Diverse Herd of Distilled Models from Large-Scale Instructions"
     },
     "arXiv:2301.13848": {
       "classification": "unrelated",
@@ -2205,12 +2167,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 312"
       ],
-      "title": "Benchmarking Large Language Models for News Summarization",
-      "source_url": "https://arxiv.org/abs/2301.13848"
+      "title": "Benchmarking Large Language Models for News Summarization"
     },
     "arXiv:2212.08073": {
       "classification": "unrelated",
@@ -2430,12 +2391,11 @@
       ],
       "reason": "Webデータの収集・filteringと学習品質が主題で、実行システム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 237"
       ],
-      "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
-      "source_url": "https://arxiv.org/abs/2306.01116"
+      "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only"
     },
     "arXiv:2304.06364": {
       "classification": "unrelated",
@@ -2445,12 +2405,11 @@
       ],
       "reason": "foundation model能力評価ベンチマークが主貢献で、システム効率・実行基盤を扱わない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 236"
       ],
-      "title": "AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models",
-      "source_url": "https://arxiv.org/abs/2304.06364"
+      "title": "AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models"
     },
     "arXiv:2406.08464": {
       "classification": "unrelated",
@@ -2477,12 +2436,11 @@
       ],
       "reason": "LLMエージェント能力を複数環境で評価するベンチマークが主貢献で、エージェント実行ランタイムの効率化を提案しない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 205"
       ],
-      "title": "AgentBench: Evaluating LLMs as Agents",
-      "source_url": "https://arxiv.org/abs/2308.03688"
+      "title": "AgentBench: Evaluating LLMs as Agents"
     },
     "arXiv:2307.15780": {
       "classification": "unrelated",
@@ -2493,12 +2451,11 @@
       ],
       "reason": "LLMによる推薦用テキスト拡張と推薦品質が主題で、LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 204"
       ],
-      "title": "LLM-Rec: Personalized Recommendation via Prompting Large Language Models",
-      "source_url": "https://arxiv.org/abs/2307.15780"
+      "title": "LLM-Rec: Personalized Recommendation via Prompting Large Language Models"
     },
     "arXiv:2304.01933": {
       "classification": "unrelated",
@@ -2509,28 +2466,28 @@
       ],
       "reason": "アダプタによるパラメータ効率的微調整手法が中心で、分散学習・推論ランタイムの新規システム機構ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 202"
       ],
-      "title": "LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2304.01933"
+      "title": "LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models"
     },
     "arXiv:2307.07924": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2307.07924",
       "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.810",
         "DOI:10.48550/arxiv.2307.07924",
         "arXiv:2307.07924"
       ],
       "reason": "複数LLMエージェントの会話によるソフトウェア開発能力が主題で、エージェント実行基盤の効率化を扱わない。",
-      "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "first_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 157"
       ],
-      "title": "ChatDev: Communicative Agents for Software Development",
-      "source_url": "https://arxiv.org/abs/2307.07924"
+      "title": "ChatDev: Communicative Agents for Software Development"
     },
     "arXiv:2305.10355": {
       "classification": "unrelated",
@@ -2541,12 +2498,12 @@
       ],
       "reason": "LVLMの物体幻覚評価とPOPEベンチマークが主貢献で、実行基盤・メモリ・配信効率の研究ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 498",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Evaluating Object Hallucination in Large Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2305.10355"
+      "title": "Evaluating Object Hallucination in Large Vision-Language Models"
     },
     "arXiv:2305.04091": {
       "classification": "unrelated",
@@ -2557,12 +2514,12 @@
       ],
       "reason": "推論品質を改善するプロンプト方式が主題で、システム実行効率の一次研究ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 497",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
-      "source_url": "https://arxiv.org/abs/2305.04091"
+      "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models"
     },
     "arXiv:2305.01210": {
       "classification": "unrelated",
@@ -2573,12 +2530,12 @@
       ],
       "reason": "EvalPlus/HumanEval+によるコード生成正しさ評価が主題で、LLMシステム性能の評価基盤ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 496",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation",
-      "source_url": "https://arxiv.org/abs/2305.01210"
+      "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation"
     },
     "arXiv:2303.17760": {
       "classification": "unrelated",
@@ -2589,12 +2546,12 @@
       ],
       "reason": "役割演技による複数エージェント協調と能力研究が主題で、エージェント実行ランタイムの効率化を扱わない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 495",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society",
-      "source_url": "https://arxiv.org/abs/2303.17760"
+      "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society"
     },
     "arXiv:2301.00234": {
       "classification": "unrelated",
@@ -2605,12 +2562,12 @@
       ],
       "reason": "文脈内学習の手法・能力を整理するサーベイで、実行システム最適化の一次研究ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 492",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "A Survey on In-context Learning",
-      "source_url": "https://arxiv.org/abs/2301.00234"
+      "title": "A Survey on In-context Learning"
     },
     "arXiv:2212.03533": {
       "classification": "unrelated",
@@ -2699,12 +2656,12 @@
       ],
       "reason": "推論探索方略による問題解決能力向上が主題で、LLM実行システム効率化ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
-      "source_url": "https://arxiv.org/abs/2305.10601"
+      "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models"
     },
     "arXiv:2402.19473": {
       "classification": "unrelated",
@@ -2828,12 +2785,12 @@
       ],
       "reason": "コードLLMのデータ・学習・能力評価が中心で、システム効率化の一次研究ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "StarCoder: may the source be with you!",
-      "source_url": "https://arxiv.org/abs/2305.06161"
+      "title": "StarCoder: may the source be with you!"
     },
     "arXiv:2306.08568": {
       "classification": "unrelated",
@@ -2844,12 +2801,12 @@
       ],
       "reason": "コード指示データ生成と微調整による能力向上が主題で、実行システム最適化ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "WizardCoder: Empowering Code Large Language Models with Evol-Instruct",
-      "source_url": "https://arxiv.org/abs/2306.08568"
+      "title": "WizardCoder: Empowering Code Large Language Models with Evol-Instruct"
     },
     "arXiv:2306.14050": {
       "classification": "unrelated",
@@ -2860,12 +2817,12 @@
       ],
       "reason": "推論過程の蒸留による小型モデル能力向上が主題で、システム実行基盤の研究ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Symbolic Chain-of-Thought Distillation: Small Models Can Also \"Think\" Step-by-Step",
-      "source_url": "https://arxiv.org/abs/2306.14050"
+      "title": "Symbolic Chain-of-Thought Distillation: Small Models Can Also \"Think\" Step-by-Step"
     },
     "arXiv:2510.01179": {
       "classification": "unrelated",
@@ -2988,12 +2945,11 @@
       ],
       "reason": "長文脈LLMの分散学習向け注意機構・勾配チェックポイントが主題で、凍結中の学習系統。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "DISTFLASHATTN: Distributed Memory-efficient Attention for Long-context LLMs Training",
-      "source_url": "https://arxiv.org/abs/2310.03294"
+      "title": "DISTFLASHATTN: Distributed Memory-efficient Attention for Long-context LLMs Training"
     },
     "arXiv:2309.12288": {
       "classification": "unrelated",
@@ -3004,12 +2960,11 @@
       ],
       "reason": "LLMの知識学習・一般化特性の分析が主題で、推論効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "The Reversal Curse: LLMs trained on \"A is B\" fail to learn \"B is A\"",
-      "source_url": "https://arxiv.org/abs/2309.12288"
+      "title": "The Reversal Curse: LLMs trained on \"A is B\" fail to learn \"B is A\""
     },
     "arXiv:2103.13262": {
       "classification": "unrelated",
@@ -3120,12 +3075,11 @@
       ],
       "reason": "指示対話データによる学習・能力向上が主題で推論システム効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations",
-      "source_url": "https://arxiv.org/abs/2305.14233"
+      "title": "Enhancing Chat Language Models by Scaling High-quality Instructional Conversations"
     },
     "arXiv:1905.10044": {
       "classification": "unrelated",
@@ -3179,12 +3133,11 @@
       ],
       "reason": "プロセス監督による数学推論能力向上が主題でランタイム・配信・メモリ最適化ではない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Let's Verify Step by Step",
-      "source_url": "https://arxiv.org/abs/2305.20050"
+      "title": "Let's Verify Step by Step"
     },
     "arXiv:2305.01879": {
       "classification": "unrelated",
@@ -3194,12 +3147,11 @@
       ],
       "reason": "教師から小型モデルへ思考連鎖を蒸留する学習手法が主題で、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "SCOTT: Self-Consistent Chain-of-Thought Distillation",
-      "source_url": "https://arxiv.org/abs/2305.01879"
+      "title": "SCOTT: Self-Consistent Chain-of-Thought Distillation"
     },
     "arXiv:2211.09085": {
       "classification": "unrelated",
@@ -3280,12 +3232,11 @@
       ],
       "reason": "長文脈言語モデルの標準化評価ベンチマークが主題で、推論効率化手法を提案しない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "L-Eval: Instituting Standardized Evaluation for Long Context Language Models",
-      "source_url": "https://arxiv.org/abs/2307.11088"
+      "title": "L-Eval: Instituting Standardized Evaluation for Long Context Language Models"
     },
     "DOI:10.18653/v1/n19-1421": {
       "classification": "unrelated",
@@ -3341,12 +3292,11 @@
       ],
       "reason": "本文ではDPOをRLHFの代替となる選好学習アルゴリズムとして導出・評価しており、主目的は学習・アラインメント手順の簡素化で、推論ランタイム効率化ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
-      "source_url": "https://arxiv.org/abs/2305.18290"
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
     },
     "arXiv:2305.03053": {
       "classification": "unrelated",
@@ -3357,12 +3307,11 @@
       ],
       "reason": "本文の中心は異なるタスクのモデルを追加学習なしで統合するモデルマージで、LLM推論システムの配信・メモリ・実行最適化ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ZipIt! Merging Models from Different Tasks without Training",
-      "source_url": "https://arxiv.org/abs/2305.03053"
+      "title": "ZipIt! Merging Models from Different Tasks without Training"
     },
     "arXiv:2304.01373": {
       "classification": "unrelated",
@@ -3373,12 +3322,11 @@
       ],
       "reason": "学習過程を多数のチェックポイントで分析する研究基盤が主題で、推論効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
-      "source_url": "https://arxiv.org/abs/2304.01373"
+      "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling"
     },
     "arXiv:2303.10845": {
       "classification": "unrelated",
@@ -3389,12 +3337,11 @@
       ],
       "reason": "疎な異種計算で兆パラメータ級モデルを学習することが主目的で、最終適用先が学習高速化のため現行方針では除外。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "PanGu-Σ: Towards Trillion Parameter Language Model with Sparse Heterogeneous Computing",
-      "source_url": "https://arxiv.org/abs/2303.10845"
+      "title": "PanGu-Σ: Towards Trillion Parameter Language Model with Sparse Heterogeneous Computing"
     },
     "arXiv:2303.03378": {
       "classification": "unrelated",
@@ -3405,12 +3352,11 @@
       ],
       "reason": "ロボティクス・視覚言語を統合したマルチモーダルモデルの能力と学習が主題で、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "PaLM-E: An Embodied Multimodal Language Model",
-      "source_url": "https://arxiv.org/abs/2303.03378"
+      "title": "PaLM-E: An Embodied Multimodal Language Model"
     },
     "arXiv:2301.11913": {
       "classification": "unrelated",
@@ -3421,12 +3367,11 @@
       ],
       "reason": "低帯域・不安定ネットワークで大規模モデルを学習する分散学習方式が主題で、最終用途が学習。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "SWARM Parallelism: Training Large Models Can Be Surprisingly Communication-Efficient",
-      "source_url": "https://arxiv.org/abs/2301.11913"
+      "title": "SWARM Parallelism: Training Large Models Can Be Surprisingly Communication-Efficient"
     },
     "arXiv:2212.10670": {
       "classification": "unrelated",
@@ -3437,12 +3382,11 @@
       ],
       "reason": "in-context learning能力を小型モデルへ蒸留する学習手法であり、推論ランタイムの直接最適化ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "In-context Learning Distillation: Transferring Few-shot Learning Ability of Pre-trained Language Models",
-      "source_url": "https://arxiv.org/abs/2212.10670"
+      "title": "In-context Learning Distillation: Transferring Few-shot Learning Ability of Pre-trained Language Models"
     },
     "arXiv:2212.04089": {
       "classification": "unrelated",
@@ -3559,12 +3503,11 @@
       ],
       "reason": "大規模マルチモーダルモデルの能力評価ベンチマークで、推論システム効率化を提案しない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "MM-Vet: Evaluating Large Multimodal Models for Integrated Capabilities",
-      "source_url": "https://arxiv.org/abs/2308.02490"
+      "title": "MM-Vet: Evaluating Large Multimodal Models for Integrated Capabilities"
     },
     "arXiv:2301.12726": {
       "classification": "unrelated",
@@ -3574,12 +3517,11 @@
       ],
       "reason": "大規模モデルから小型モデルへの推論能力蒸留・学習が主題で、推論ランタイム最適化ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Specializing Smaller Language Models towards Multi-Step Reasoning",
-      "source_url": "https://arxiv.org/abs/2301.12726"
+      "title": "Specializing Smaller Language Models towards Multi-Step Reasoning"
     },
     "arXiv:2205.05198": {
       "classification": "unrelated",
@@ -3632,12 +3574,11 @@
       ],
       "reason": "API利用能力を持つモデルのfine-tuning・tool-use能力が主題で、推論配信効率化ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Gorilla: Large Language Model Connected with Massive APIs",
-      "source_url": "https://arxiv.org/abs/2305.15334"
+      "title": "Gorilla: Large Language Model Connected with Massive APIs"
     },
     "arXiv:2105.03011": {
       "classification": "unrelated",
@@ -3721,12 +3662,11 @@
       ],
       "reason": "16,000超APIを扱うtool-useデータ構築・指示調整・能力評価が主題で、推論ランタイム効率化ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
-      "source_url": "https://arxiv.org/abs/2307.16789"
+      "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs"
     },
     "arXiv:2211.15841": {
       "classification": "unrelated",
@@ -3822,12 +3762,11 @@
       ],
       "reason": "一般AIアシスタントの推論・tool-use能力評価ベンチマークで、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "GAIA: a benchmark for General AI Assistants",
-      "source_url": "https://arxiv.org/abs/2311.12983"
+      "title": "GAIA: a benchmark for General AI Assistants"
     },
     "arXiv:2305.10403": {
       "classification": "unrelated",
@@ -3837,12 +3776,11 @@
       ],
       "reason": "PaLM 2のモデル・学習・多言語/推論能力報告が主題で、独立した推論システム効率化研究ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "PaLM 2 Technical Report",
-      "source_url": "https://arxiv.org/abs/2305.10403"
+      "title": "PaLM 2 Technical Report"
     },
     "arXiv:2206.04615": {
       "classification": "unrelated",
@@ -4065,7 +4003,7 @@
       ],
       "reason": "MoE training通信とparallel architectureが主題で評価もtraining throughputである。",
       "first_checked_at": "2026-09-27T21:23:11+00:00",
-      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4079,7 +4017,7 @@
       ],
       "reason": "robotic VLAのgeneralizationが主題でLLM serving効率手法ではない。",
       "first_checked_at": "2026-09-27T21:23:11+00:00",
-      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4093,7 +4031,7 @@
       ],
       "reason": "MoE表現多様性を改善するtraining手法で推論runtimeを対象としない。",
       "first_checked_at": "2026-09-27T21:23:11+00:00",
-      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4107,7 +4045,7 @@
       ],
       "reason": "FP8 gradient/optimizerによるpretraining高速化で凍結対象のtraining工程である。",
       "first_checked_at": "2026-09-27T21:23:11+00:00",
-      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4121,7 +4059,7 @@
       ],
       "reason": "synthetic instruction dataによるcode LLM trainingで推論runtime効率を扱わない。",
       "first_checked_at": "2026-09-27T21:23:11+00:00",
-      "last_checked_at": "2026-09-27T21:23:11+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4599,10 +4537,11 @@
       "identity_tokens": [
         "arXiv:2312.09979"
       ],
-      "reason": "複数LoRAを専門家としてSFT中の世界知識忘却を抑える学習方式で、最終適用先が推論実行効率化ではなく凍結対象の学習・アラインメント改善なので対象外。",
+      "reason": "主目的はLoRA/MoE型pluginによる知識保持とinstruction tuningで、推論システム効率化が最終適用先ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md"
       ],
@@ -4614,10 +4553,11 @@
       "identity_tokens": [
         "arXiv:2310.16944"
       ],
-      "reason": "AI feedbackによる蒸留教師あり微調整と蒸留直接選好最適化で小型チャットLLMのアラインメント性能を改善する学習研究で、推論高速化・省メモリ化を扱わないため対象外。",
+      "reason": "AI feedbackを用いたalignment蒸留が主題で、推論高速化・省メモリ化ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/05-speculative-decoding-moe/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
         "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
       ],
@@ -4629,10 +4569,11 @@
       "identity_tokens": [
         "arXiv:2309.07864"
       ],
-      "reason": "LLMエージェントの構成、応用、エージェント社会、リスクを体系化するサーベイであり、エージェント推論サービング基盤やKV管理の新規方式を提案する一次研究ではないため対象外。",
+      "reason": "LLM agentの構成・応用・評価を整理するサーベイで、推論システム最適化が主題ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
         "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
       ],
@@ -4644,10 +4585,11 @@
       "identity_tokens": [
         "arXiv:2303.02868"
       ],
-      "reason": "Page抽象化、階層メモリ、SSD、統合スケジューリングで巨大Transformerの事前学習・微調整を拡張するシステムで、最終適用先が凍結対象の学習高速化なので対象外。",
+      "reason": "大規模事前学習systemが主題で、凍結中のtraining高速化・省メモリ化に該当する。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
         "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
       ],
@@ -5438,23 +5380,6 @@
       ],
       "title": "ClipCap: CLIP Prefix for Image Captioning"
     },
-    "DOI:10.48550/arxiv.2305.02309": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.48550/arxiv.2305.02309",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2305.02309",
-        "arXiv:2305.02309"
-      ],
-      "reason": "CodeGen2の事前学習レシピを、モデルアーキテクチャ、infilling、学習方法、データ分布の観点から検証する研究。主目的はコード/自然言語LLMの学習設計で、推論時のKV再利用・サービング・メモリ階層最適化ではないため対象外。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:07:48+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
-        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
-      ],
-      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
-    },
     "DOI:10.1145/3694715.3695955": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3694715.3695955",
@@ -5686,6 +5611,38 @@
         "worker-worklist-30 discovery_review rank 493"
       ],
       "title": "M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining"
+    },
+    "arXiv:2306.10209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.10209",
+      "identity_tokens": [
+        "arXiv:2306.10209"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 量子化・階層通信等でZeRO系大規模学習のcollective communication量を削減する直接的な分散学習システム研究。",
+      "first_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 238"
+      ],
+      "title": "ZeRO++: Extremely Efficient Collective Communication for Giant Model Training"
+    },
+    "arXiv:2305.02309": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.02309",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.02309",
+        "arXiv:2305.02309"
+      ],
+      "reason": "CodeGen2のtraining recipe・model architecture・data mixtureが主題で、推論system最適化ではない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
     }
   }
 }
