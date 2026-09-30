@@ -35,8 +35,6 @@ on:
   # paper-only repair must refresh immediately instead of waiting for cron.
   # If the authoritative paper commit already carried STATUS.md, publish exits
   # without adding a second dashboard commit.
-  schedule:
-    - cron: '7/10 * * * *'
   workflow_dispatch:
 
 permissions:
