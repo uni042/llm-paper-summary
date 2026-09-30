@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T14:04:48+00:00",
-  "record_count": 360,
+  "updated_at": "2026-09-30T21:20:43+00:00",
+  "record_count": 358,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5003,22 +5003,6 @@
       ],
       "title": "ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization"
     },
-    "arXiv:2206.02878": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2206.02878",
-      "identity_tokens": [
-        "DOI:10.1145/3582016.3582063",
-        "arXiv:2206.02878"
-      ],
-      "reason": "CXL階層メモリでホット/コールドページを透過配置するOS機構で、階層メモリ・オフロードという本サーベイの基盤技術に強く関係する。一方、LLM固有の推論ワークロードやKV/重み配置を対象にせず一般データセンターOSが主題なので境界扱い。",
-      "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
-      ],
-      "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
-    },
     "arXiv:2407.18003": {
       "classification": "borderline",
       "canonical_id": "arXiv:2407.18003",
@@ -5160,22 +5144,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model"
-    },
-    "arXiv:2302.04761": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2302.04761",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2302.04761",
-        "arXiv:2302.04761"
-      ],
-      "reason": "道具利用を自己教師ありで学習するモデル手法でエージェント実行に関係するが、ランタイム・スケジューリングの研究ではない。",
-      "first_checked_at": "2026-09-30T09:46:42+00:00",
-      "last_checked_at": "2026-09-30T09:46:42+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "worker-worklist-30 discovery_review tail-to-head"
-      ],
-      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
     },
     "arXiv:2303.18223": {
       "classification": "borderline",
