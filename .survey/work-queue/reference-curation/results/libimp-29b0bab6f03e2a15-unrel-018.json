@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b0bab6f03e2a15-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.01470",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.01470",
+    "identity_tokens": [
+      "arXiv:2405.01470"
+    ],
+    "reason": "実利用対話データセットの構築・分析が主題で推論効率化手法を提案しない。",
+    "first_checked_at": "2026-09-27T02:00:00+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "WildChat: 1M ChatGPT Interaction Logs in the Wild"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b0bab6f03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b0bab6f03e2a15-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.14608",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.14608",
+    "identity_tokens": [
+      "arXiv:2403.14608"
+    ],
+    "reason": "PEFTのアルゴリズム・学習系システムのサーベイが中心で、推論ランタイムの新規最適化ではない。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b0bab6f03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

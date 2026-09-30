@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d621a950740093-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.13270",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.13270",
+    "identity_tokens": [
+      "arXiv:2502.13270"
+    ],
+    "reason": "長期会話データセットと会話能力評価が主題で、LLM推論基盤の高速化・メモリ管理とは無関係。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+    ],
+    "title": "REALTALK: A 21-Day Real-World Dataset for Long-Term Conversation"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d621a95074",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

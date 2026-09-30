@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b0bab6f03e2a15-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.14196",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.14196",
+    "identity_tokens": [
+      "arXiv:2401.14196"
+    ],
+    "reason": "コードモデルの学習・能力評価が主題で推論システム最適化の独立手法ではない。",
+    "first_checked_at": "2026-09-27T02:00:00+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "DeepSeek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b0bab6f03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

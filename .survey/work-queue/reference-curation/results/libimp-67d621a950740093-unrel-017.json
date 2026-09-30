@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d621a950740093-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.04178",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.04178",
+    "identity_tokens": [
+      "arXiv:2506.04178"
+    ],
+    "reason": "推論モデル向けデータ生成・学習recipeが中心で、推論・配信・メモリ等のシステム機構を直接提案しない。",
+    "first_checked_at": "2026-09-27T09:28:42+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 258"
+    ],
+    "title": "OpenThoughts: Data Recipes for Reasoning Models"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d621a95074",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
