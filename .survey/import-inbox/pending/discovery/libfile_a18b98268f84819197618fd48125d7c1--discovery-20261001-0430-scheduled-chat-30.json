@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261001-0430-scheduled-chat-30",
+  "reference_main_sha": "212ec496d93c3261761330a75942704e4ed5f626",
+  "record_count": 2,
+  "partial_run": true,
+  "partial_reason": "静的worklist上位候補の大半がGitHub canonical stateまたは別識別子ですでに処理済み。完全照合と一次資料確認により新規identityとして確定できた2件のみ保存。",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:ho7ZUS1z8A",
+      "identity_tokens": [
+        "OpenReview:ho7ZUS1z8A"
+      ],
+      "title": "MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition",
+      "reason": "混合専門家（Mixture-of-Experts; MoE）LLMの展開時メモリと推論速度を直接改善する圧縮方式。専門家を低ランク分解し、感度に応じた選択的分解と専門家間の行列共有を行い、追加学習なしで圧縮・推論高速化を狙うため収録対象。",
+      "source_url": "https://openreview.net/forum?id=ho7ZUS1z8A",
+      "body_check": "同一論文のICML/PMLR一次公開本文を確認。重み特異値と活性統計による選択的分解、専門家間でのV行列共有、U行列top-k選択を確認。Mixtral/Phi-3.5/DeepSeek/Qwen2 MoEで評価し、60%圧縮・約1.5倍推論高速化を報告。",
+      "first_checked_at": "2026-10-01T04:25:15+09:00",
+      "last_checked_at": "2026-10-01T04:25:15+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22299-heapr-atomic-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:8tKjqqMM5z",
+      "identity_tokens": [
+        "OpenReview:8tKjqqMM5z"
+      ],
+      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM’s KV-Cache Consumption",
+      "reason": "KVキャッシュ最適化そのものは対象分野だが、本候補は新規推論システム／手法を提案する一次研究ではなくレビュー論文。新規Research候補としては対象外。",
+      "source_url": "https://openreview.net/forum?id=8tKjqqMM5z",
+      "body_check": "COLM 2024の一次採録一覧で論文種別と題名を確認。題名どおりKVキャッシュ消費最適化手法を整理するレビューであり、pre-screen hard gateの『survey / review』に該当するため深読解を停止。",
+      "first_checked_at": "2026-10-01T04:25:15+09:00",
+      "last_checked_at": "2026-10-01T04:25:15+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 391
+    }
+  ]
+}
