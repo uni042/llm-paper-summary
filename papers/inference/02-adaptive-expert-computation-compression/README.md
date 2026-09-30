@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（104本）
+## 自動生成の論文一覧（105本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -213,6 +213,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models](2026-2606.10703-causal-audit-expert-importance.md)**  
   実装：[✓](https://github.com/callmeloui/observational_metrics) ・ リポジトリ内被引用：0  
   3種の高冗長MoEで観測的なルーティング統計と専門家除去の因果効果を直接照合し、60条件すべてで重要度予測が成立せず、既存剪定の成功は主に初期層の冗長性で説明できると示した。
+
+- **2026-06 · [FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models](2026-2606.27866-flexmoe-one-for-all-nested-intra-expert-pruning-for-moe-language-models.md)**  
+  実装：— ・ リポジトリ内被引用：0  
+  従来の圧縮は「40%削減版」「50%削減版」のように目標予算ごとに枝刈り・回復処理をやり直すことが多く、異なるGPUメモリ量やサービス負荷へ柔軟に切り替えにくい。
 
 - **2026-06 · [Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking](2026-2608.13565-depth-aware-moe-sensitivity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
