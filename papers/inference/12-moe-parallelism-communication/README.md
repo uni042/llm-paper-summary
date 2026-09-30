@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（34本）
+## 自動生成の論文一覧（35本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -42,6 +42,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
   実装：— ・ リポジトリ内被引用：2  
   標準的な専門家並列（専門家 Parallelism; EP）は専門家をGPUへ固定配置し、その専門家を選んだトークンを所有GPUへ送るため、人気専門家のGPUだけが計算・活性値メモリの両面で過負荷になる。
+
+- **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
 
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：— ・ リポジトリ内被引用：2  
