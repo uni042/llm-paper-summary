@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
+      "source_url": "https://arxiv.org/abs/2604.15409",
+      "year": 2026,
+      "published": "2026-04-16",
+      "abstract": "KV caching is a ubiquitous optimization in autoregressive transformer inference, long presumed to be numerically equivalent to cache-free computation. This assumption fails under standard FP16 precision: cache-ON and cache-OFF execution paths employ different floating-point accumulation orderings which, due to FP16 non-associativity, produce a deterministic divergence in decoded token sequences. Across three open-weight models (LLaMA-2-7B, Mistral-7B-v0.3, Gemma-2-2B) evaluated on GSM8K, we observe a 100\\% token divergence rate across all sampling strategies, including greedy decoding, which rules out sampling randomness as a cause, and also with cache-ON yielding higher accuracy in 8 of 9 conditions, where the accuracy difference serves as an indicator that the divergence direction is systematic rather than random. Controlled FP32 falsification reduces divergence by eight orders of magnitude, eliminates token flips, and drops the flip rate to exactly 0.0\\%, confirming FP16 non-associativity as the sole causal driver. Layer-wise drift profiling reveals architecturally predictable propagation patterns: models using Grouped-Query Attention exhibit sharp divergence at the first layer, while Gemma's larger head dimension and sliding window attention produce uniform accumulation across all layers. Finally, activation patching of the entire residual stream fails to recover the cache-free trajectory, localizing the causal variable to the stateful KV cache. These findings establish that FP16 KV cache inference is fundamentally non-equivalent to recomputation and provide a mechanistic framework for understanding numerical instability in modern LLM inference systems.",
+      "canonical_id": "arXiv:2604.15409",
+      "arxiv_id": "2604.15409",
+      "doi": "10.48550/arXiv.2604.15409",
+      "authors": [
+        "Ranjith Chodavarapu",
+        "Lei Xu"
+      ],
+      "reason": "KV cacheを使うautoregressive inferenceで数値的非決定性・実装差を分析し、推論runtime互換性に直接関係する。",
+      "library_body_check": "本文のcached/uncached FP16 divergence、kernel/runtime条件、モデル横断実験と原因分析を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1804-scheduled-chat-00.json"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ac14a11cf17d",
+    "round": "libimp-ac14a11cf17dd5c9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ac14a11cf17dd5c9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ac14a11cf17dd5c9-pre01.json",
+    "receipt": "sha256:6cdc5d0e008da1960454d176cafe33b7b807da41324ac1caba65aadc32db3595"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ac14a11cf17d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
