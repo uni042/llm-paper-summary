@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（31本）
+## 自動生成の論文一覧（32本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -80,6 +80,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FreeBalanceは前層出力を現層ルータへ先行入力して専門家負荷を予測し、注意計算中に予算内で専門家を交換する。正式ルーティングを維持し、負荷偏りと移動待ちを減らす。
+
+- **2026-08 · [EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference](2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md)**  
+  実装：[✓](https://github.com/yize-wu/EasyInfra) ・ リポジトリ内被引用：0  
+  ルーティングが偏ると、軽いGPUも最重負荷GPUの終了を待つため、専門家数を均等配置しても実行時間は最大負荷に支配される。8×A800-SXM4 80GB上でQwen3-30B-A3B、Moonlight-16B-A3B、Qwen3-235B-A22BをLongBenchで評価する。
 
 - **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](2026-2608.22932-airmoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
