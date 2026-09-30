@@ -7,16 +7,16 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（14本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   テンソルの次回利用時刻と更新場所を見て、GPU・CPU DRAM・NVMeの三階層へ残すか退避するかと先読み時刻を決め、LLM学習の再読込待ちを減らすキャッシュ方式。
 
-### 直近12か月・未被引用（2025-10〜2026-09）
+### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-04 · [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)**  
   実装：[✓](https://github.com/ITcarrot/RoundPipe) ・ リポジトリ内被引用：0  
@@ -30,7 +30,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：[✓](https://github.com/npz7yyk/GreedySnake) ・ リポジトリ内被引用：0  
   層ごとに全マイクロバッチをまとめて処理して重みを再利用し、最適化器更新の一部を次の反復と重ねることで、SSDオフロード学習の再読込と更新待ちを減らす方式。
 
-### 2年前（2024-10〜2025-09）
+### 2年前（2024-11〜2025-10）
 
 - **2025-06 · [Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage](2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -48,15 +48,11 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：1  
   最適化状態をGPU、CPU DRAM、ローカルNVMe、共有ストレージへ分散し、複数の読み書き経路を同時利用して、LLM事前学習の容量制約とI/O待ちを緩和する方式。
 
-### 3年前（2023-10〜2024-09）
+### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
   実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：12  
   SSD上のパラメータと最適化状態をCPU・GPUへ毎回戻さず、FPGA搭載SmartSSD内でAdam更新を実行して、PCIeを通る状態転送量と学習のI/O待ちを減らす方式。
-
-- **2023-10 · [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)**  
-  実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：4  
-  テンソルの生存期間と次回利用時刻を実行グラフから求め、GPU・ホストメモリ・SSD間の退避と先読みを自動化して、ページフォルトと転送待ちを減らす学習システム。
 
 - **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
   実装：[✓](https://github.com/K-Wu/FlashTrain) ・ リポジトリ内被引用：2  
@@ -66,13 +62,19 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
   大きな勾配・更新行列を低次元表現へ圧縮してCPUへ送り、学習中に圧縮方向を切り替えて更新の偏りを抑え、民生GPUでのLLM微調整のPCIe転送量を減らす方式。
 
-### 5年前（2021-10〜2022-09）
+### 4年前（2022-11〜2023-10）
+
+- **2023-10 · [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)**  
+  実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：4  
+  テンソルの生存期間と次回利用時刻を実行グラフから求め、GPU・ホストメモリ・SSD間の退避と先読みを自動化して、ページフォルトと転送待ちを減らす学習システム。
+
+### 5年前（2021-11〜2022-10）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：44  
   学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
 
-### 7年前（2019-10〜2020-09）
+### 7年前（2019-11〜2020-10）
 
 - **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：24  
