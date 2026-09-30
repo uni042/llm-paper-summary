@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a780b7bca0a0fd22-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.18003",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.18003",
+    "identity_tokens": [
+      "arXiv:2407.18003"
+    ],
+    "reason": "KVキャッシュ消費削減を直接扱うレビューで調査対象との関連は高いが、新規の推論方式を提案する一次研究ではないため境界扱い。",
+    "first_checked_at": "2026-09-30T09:20:54+00:00",
+    "last_checked_at": "2026-09-30T09:20:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consumption.md"
+    ],
+    "title": "Keep the Cost Down: A Review on Methods to Optimize LLM's KV-Cache Consumption"
+  },
+  "processed_at": "2026-09-30T09:20:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a780b7bca0a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

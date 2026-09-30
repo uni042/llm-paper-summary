@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T09:12:11+00:00",
-  "record_count": 357,
+  "updated_at": "2026-09-30T09:20:54+00:00",
+  "record_count": 361,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5336,6 +5336,64 @@
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
       ],
       "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
+    },
+    "arXiv:2407.18003": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18003",
+      "identity_tokens": [
+        "arXiv:2407.18003"
+      ],
+      "reason": "KVキャッシュ消費削減を直接扱うレビューで調査対象との関連は高いが、新規の推論方式を提案する一次研究ではないため境界扱い。",
+      "first_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consumption.md"
+      ],
+      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM's KV-Cache Consumption"
+    },
+    "arXiv:2411.17651": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17651",
+      "identity_tokens": [
+        "arXiv:2411.17651"
+      ],
+      "reason": "LLMサービングの並列実行方式を自動探索するためのシミュレータで対象領域に直結するが、実サービングランタイムそのものより性能予測・設計空間探索が主貢献なので境界扱い。",
+      "first_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-execution-in-llm-serving.md"
+      ],
+      "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving"
+    },
+    "arXiv:2110.11299": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.11299",
+      "identity_tokens": [
+        "arXiv:2110.11299"
+      ],
+      "reason": "入力依存の動的疎注意を予測して実際のGPU/専用ハードウェアで注意計算を削減する推論高速化研究だが、現代LLMではなくLRA上の一般Transformerを主対象とするため境界扱い。",
+      "first_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+      ],
+      "title": "Transformer Acceleration with Dynamic Sparse Attention"
+    },
+    "arXiv:2006.03274": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.03274",
+      "identity_tokens": [
+        "arXiv:2006.03274"
+      ],
+      "reason": "長系列Transformerにグローバルメモリを追加するアーキテクチャ研究で長文脈効率化に関連するが、LLM推論ランタイムやKVキャッシュ管理を直接対象としないため境界扱い。",
+      "first_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "GMAT: Global Memory Augmentation for Transformers"
     }
   }
 }

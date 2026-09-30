@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a780b7bca0a0fd22-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17651",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17651",
+    "identity_tokens": [
+      "arXiv:2411.17651"
+    ],
+    "reason": "LLMサービングの並列実行方式を自動探索するためのシミュレータで対象領域に直結するが、実サービングランタイムそのものより性能予測・設計空間探索が主貢献なので境界扱い。",
+    "first_checked_at": "2026-09-30T09:20:54+00:00",
+    "last_checked_at": "2026-09-30T09:20:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-execution-in-llm-serving.md"
+    ],
+    "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving"
+  },
+  "processed_at": "2026-09-30T09:20:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a780b7bca0a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

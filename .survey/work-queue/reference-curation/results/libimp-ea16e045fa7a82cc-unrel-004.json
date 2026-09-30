@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea16e045fa7a82cc-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.11943",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.11943",
+    "identity_tokens": [
+      "arXiv:2103.11943"
+    ],
+    "reason": "BERTの機構とNLP応用を整理するレビューであり、新規の推論効率化方式やサービング基盤を提案しないため対象外。",
+    "first_checked_at": "2026-09-30T09:20:54+00:00",
+    "last_checked_at": "2026-09-30T09:20:54+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
+      "papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md"
+    ],
+    "title": "BERT: A Review of Applications in Natural Language Processing and Understanding"
+  },
+  "processed_at": "2026-09-30T09:20:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea16e045fa7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,366 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a03d30c5a1923233-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a03d30c5a192",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1802.05799",
+    "arXiv:1911.02972",
+    "arXiv:2001.04451",
+    "arXiv:2003.05997",
+    "arXiv:2006.03274",
+    "arXiv:2006.09616",
+    "arXiv:2012.09852",
+    "arXiv:2109.01611",
+    "arXiv:2110.11299",
+    "arXiv:2110.14895",
+    "arXiv:2110.15032",
+    "arXiv:2111.00230",
+    "arXiv:2201.10890",
+    "arXiv:2201.12023",
+    "arXiv:2205.10034",
+    "arXiv:2206.03382",
+    "arXiv:2206.09557",
+    "arXiv:2207.00112",
+    "arXiv:2208.01313",
+    "arXiv:2301.00774"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b4e04f0bde75405cd269dc389ace29b51bec5624",
+  "raw_search_result_count": 19,
+  "retrieval_duplicate_filtered_count": 15,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 15,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:13:22.510567+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1802.05799",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:1802.05799"
+    },
+    {
+      "requested_id": "arXiv:1911.02972",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:1911.02972"
+    },
+    {
+      "requested_id": "arXiv:2001.04451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2003.05997",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2003.05997"
+    },
+    {
+      "requested_id": "arXiv:2006.03274",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2006.09616",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2006.09616"
+    },
+    {
+      "requested_id": "arXiv:2012.09852",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/hpca51647.2021.00018"
+    },
+    {
+      "requested_id": "arXiv:2109.01611",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2109.01611"
+    },
+    {
+      "requested_id": "arXiv:2110.11299",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2110.14895",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2110.14895"
+    },
+    {
+      "requested_id": "arXiv:2110.15032",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2110.15032"
+    },
+    {
+      "requested_id": "arXiv:2111.00230",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2111.00230"
+    },
+    {
+      "requested_id": "arXiv:2201.10890",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2201.10890"
+    },
+    {
+      "requested_id": "arXiv:2201.12023",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2205.10034",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2205.10034"
+    },
+    {
+      "requested_id": "arXiv:2206.03382",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2206.03382"
+    },
+    {
+      "requested_id": "arXiv:2206.09557",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2206.09557"
+    },
+    {
+      "requested_id": "arXiv:2207.00112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2208.01313",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3503161.3547860"
+    },
+    {
+      "requested_id": "arXiv:2301.00774",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2301.00774"
+    }
+  ],
+  "results": [
+    {
+      "title": "Reformer: The Efficient Transformer",
+      "source_url": "https://arxiv.org/abs/2001.04451",
+      "year": 2020,
+      "published": "2020-01-13",
+      "abstract": "Large Transformer models routinely achieve state-of-the-art results on a number of tasks but training these models can be prohibitively costly, especially on long sequences. We introduce two techniques to improve the efficiency of Transformers. For one, we replace dot-product attention by one that uses locality-sensitive hashing, changing its complexity from O($L^2$) to O($L\\log L$), where $L$ is the length of the sequence. Furthermore, we use reversible residual layers instead of the standard residuals, which allows storing activations only once in the training process instead of $N$ times, where $N$ is the number of layers. The resulting model, the Reformer, performs on par with Transformer models while being much more memory-efficient and much faster on long sequences.",
+      "canonical_id": "arXiv:2001.04451",
+      "arxiv_id": "2001.04451",
+      "authors": [
+        "Nikita Kitaev",
+        "Lukasz Kaiser",
+        "Anselm Levskaya"
+      ]
+    },
+    {
+      "title": "GMAT: Global Memory Augmentation for Transformers",
+      "source_url": "https://arxiv.org/abs/2006.03274",
+      "year": 2020,
+      "published": "2020-06-05",
+      "abstract": "Transformer-based models have become ubiquitous in natural language processing thanks to their large capacity, innate parallelism and high performance. The contextualizing component of a Transformer block is the $\\textit{pairwise dot-product}$ attention that has a large $\\Omega(L^2)$ memory requirement for length $L$ sequences, limiting its ability to process long documents. This has been the subject of substantial interest recently, where multiple approximations were proposed to reduce the quadratic memory requirement using sparse attention matrices. In this work, we propose to augment sparse Transformer blocks with a dense attention-based $\\textit{global memory}$ of length $M$ ($\\ll L$) which provides an aggregate global view of the entire input sequence to each position. Our augmentation has a manageable $O(M\\cdot(L+M))$ memory overhead, and can be seamlessly integrated with prior sparse solutions. Moreover, global memory can also be used for sequence compression, by representing a long input sequence with the memory representations only. We empirically show that our method leads to substantial improvement on a range of tasks, including (a) synthetic tasks that require global reasoning, (b) masked language modeling, and (c) reading comprehension.",
+      "canonical_id": "arXiv:2006.03274",
+      "arxiv_id": "2006.03274",
+      "authors": [
+        "Ankit Gupta",
+        "Jonathan Berant"
+      ]
+    },
+    {
+      "title": "Transformer Acceleration with Dynamic Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2110.11299",
+      "year": 2021,
+      "published": "2021-10-21",
+      "abstract": "Transformers are the mainstream of NLP applications and are becoming increasingly popular in other domains such as Computer Vision. Despite the improvements in model quality, the enormous computation costs make Transformers difficult at deployment, especially when the sequence length is large in emerging applications. Processing attention mechanism as the essential component of Transformer is the bottleneck of execution due to the quadratic complexity. Prior art explores sparse patterns in attention to support long sequence modeling, but those pieces of work are on static or fixed patterns. We demonstrate that the sparse patterns are dynamic, depending on input sequences. Thus, we propose the Dynamic Sparse Attention (DSA) that can efficiently exploit the dynamic sparsity in the attention of Transformers. Compared with other methods, our approach can achieve better trade-offs between accuracy and model complexity. Moving forward, we identify challenges and provide solutions to implement DSA on existing hardware (GPUs) and specialized hardware in order to achieve practical speedup and efficiency improvements for Transformer execution.",
+      "canonical_id": "arXiv:2110.11299",
+      "arxiv_id": "2110.11299",
+      "authors": [
+        "Liu Liu",
+        "Zheng Qu",
+        "Zhaodong Chen",
+        "Yu-Fei Ding",
+        "Yuan Xie"
+      ]
+    },
+    {
+      "title": "Language model compression with weighted low-rank factorization",
+      "source_url": "https://arxiv.org/abs/2207.00112",
+      "year": 2022,
+      "published": "2022-06-30",
+      "abstract": "Factorizing a large matrix into small matrices is a popular strategy for model compression. Singular value decomposition (SVD) plays a vital role in this compression strategy, approximating a learned matrix with fewer parameters. However, SVD minimizes the squared error toward reconstructing the original matrix without gauging the importance of the parameters, potentially giving a larger reconstruction error for those who affect the task accuracy more. In other words, the optimization objective of SVD is not aligned with the trained model's task accuracy. We analyze this previously unexplored problem, make observations, and address it by introducing Fisher information to weigh the importance of parameters affecting the model prediction. This idea leads to our method: Fisher-Weighted SVD (FWSVD). Although the factorized matrices from our approach do not result in smaller reconstruction errors, we find that our resulting task accuracy is much closer to the original model's performance. We perform analysis with the transformer-based language models, showing our weighted SVD largely alleviates the mismatched optimization objectives and can maintain model performance with a higher compression rate. Our method can directly compress a task-specific model while achieving better performance than other compact model strategies requiring expensive model pre-training. Moreover, the evaluation of compressing an already compact model shows our method can further reduce 9% to 30% parameters with an insignificant impact on task accuracy.",
+      "canonical_id": "arXiv:2207.00112",
+      "arxiv_id": "2207.00112",
+      "doi": "10.48550/arXiv.2207.00112",
+      "authors": [
+        "Yen-Chang Hsu",
+        "Ting Hua",
+        "Sung-En Chang",
+        "Qiang Lou",
+        "Yilin Shen",
+        "Hong-Xia Jin"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2001.04451",
+      "identity_tokens": [
+        "id:arXiv:2001.04451",
+        "title:reformer the efficient transformer",
+        "url:https://arxiv.org/abs/2001.04451"
+      ],
+      "record": {
+        "title": "Reformer: The Efficient Transformer",
+        "source_url": "https://arxiv.org/abs/2001.04451",
+        "year": 2020,
+        "published": "2020-01-13",
+        "abstract": "Large Transformer models routinely achieve state-of-the-art results on a number of tasks but training these models can be prohibitively costly, especially on long sequences. We introduce two techniques to improve the efficiency of Transformers. For one, we replace dot-product attention by one that uses locality-sensitive hashing, changing its complexity from O($L^2$) to O($L\\log L$), where $L$ is the length of the sequence. Furthermore, we use reversible residual layers instead of the standard residuals, which allows storing activations only once in the training process instead of $N$ times, where $N$ is the number of layers. The resulting model, the Reformer, performs on par with Transformer models while being much more memory-efficient and much faster on long sequences.",
+        "canonical_id": "arXiv:2001.04451",
+        "arxiv_id": "2001.04451",
+        "authors": [
+          "Nikita Kitaev",
+          "Lukasz Kaiser",
+          "Anselm Levskaya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2006.03274",
+      "identity_tokens": [
+        "id:arXiv:2006.03274",
+        "title:gmat global memory augmentation for transformers",
+        "url:https://arxiv.org/abs/2006.03274"
+      ],
+      "record": {
+        "title": "GMAT: Global Memory Augmentation for Transformers",
+        "source_url": "https://arxiv.org/abs/2006.03274",
+        "year": 2020,
+        "published": "2020-06-05",
+        "abstract": "Transformer-based models have become ubiquitous in natural language processing thanks to their large capacity, innate parallelism and high performance. The contextualizing component of a Transformer block is the $\\textit{pairwise dot-product}$ attention that has a large $\\Omega(L^2)$ memory requirement for length $L$ sequences, limiting its ability to process long documents. This has been the subject of substantial interest recently, where multiple approximations were proposed to reduce the quadratic memory requirement using sparse attention matrices. In this work, we propose to augment sparse Transformer blocks with a dense attention-based $\\textit{global memory}$ of length $M$ ($\\ll L$) which provides an aggregate global view of the entire input sequence to each position. Our augmentation has a manageable $O(M\\cdot(L+M))$ memory overhead, and can be seamlessly integrated with prior sparse solutions. Moreover, global memory can also be used for sequence compression, by representing a long input sequence with the memory representations only. We empirically show that our method leads to substantial improvement on a range of tasks, including (a) synthetic tasks that require global reasoning, (b) masked language modeling, and (c) reading comprehension.",
+        "canonical_id": "arXiv:2006.03274",
+        "arxiv_id": "2006.03274",
+        "authors": [
+          "Ankit Gupta",
+          "Jonathan Berant"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2110.11299",
+      "identity_tokens": [
+        "id:arXiv:2110.11299",
+        "title:transformer acceleration with dynamic sparse attention",
+        "url:https://arxiv.org/abs/2110.11299"
+      ],
+      "record": {
+        "title": "Transformer Acceleration with Dynamic Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2110.11299",
+        "year": 2021,
+        "published": "2021-10-21",
+        "abstract": "Transformers are the mainstream of NLP applications and are becoming increasingly popular in other domains such as Computer Vision. Despite the improvements in model quality, the enormous computation costs make Transformers difficult at deployment, especially when the sequence length is large in emerging applications. Processing attention mechanism as the essential component of Transformer is the bottleneck of execution due to the quadratic complexity. Prior art explores sparse patterns in attention to support long sequence modeling, but those pieces of work are on static or fixed patterns. We demonstrate that the sparse patterns are dynamic, depending on input sequences. Thus, we propose the Dynamic Sparse Attention (DSA) that can efficiently exploit the dynamic sparsity in the attention of Transformers. Compared with other methods, our approach can achieve better trade-offs between accuracy and model complexity. Moving forward, we identify challenges and provide solutions to implement DSA on existing hardware (GPUs) and specialized hardware in order to achieve practical speedup and efficiency improvements for Transformer execution.",
+        "canonical_id": "arXiv:2110.11299",
+        "arxiv_id": "2110.11299",
+        "authors": [
+          "Liu Liu",
+          "Zheng Qu",
+          "Zhaodong Chen",
+          "Yu-Fei Ding",
+          "Yuan Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2207.00112",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2207.00112",
+        "id:arXiv:2207.00112",
+        "title:language model compression with weighted lowrank factorization",
+        "url:https://arxiv.org/abs/2207.00112"
+      ],
+      "record": {
+        "title": "Language model compression with weighted low-rank factorization",
+        "source_url": "https://arxiv.org/abs/2207.00112",
+        "year": 2022,
+        "published": "2022-06-30",
+        "abstract": "Factorizing a large matrix into small matrices is a popular strategy for model compression. Singular value decomposition (SVD) plays a vital role in this compression strategy, approximating a learned matrix with fewer parameters. However, SVD minimizes the squared error toward reconstructing the original matrix without gauging the importance of the parameters, potentially giving a larger reconstruction error for those who affect the task accuracy more. In other words, the optimization objective of SVD is not aligned with the trained model's task accuracy. We analyze this previously unexplored problem, make observations, and address it by introducing Fisher information to weigh the importance of parameters affecting the model prediction. This idea leads to our method: Fisher-Weighted SVD (FWSVD). Although the factorized matrices from our approach do not result in smaller reconstruction errors, we find that our resulting task accuracy is much closer to the original model's performance. We perform analysis with the transformer-based language models, showing our weighted SVD largely alleviates the mismatched optimization objectives and can maintain model performance with a higher compression rate. Our method can directly compress a task-specific model while achieving better performance than other compact model strategies requiring expensive model pre-training. Moreover, the evaluation of compressing an already compact model shows our method can further reduce 9% to 30% parameters with an insignificant impact on task accuracy.",
+        "canonical_id": "arXiv:2207.00112",
+        "arxiv_id": "2207.00112",
+        "doi": "10.48550/arXiv.2207.00112",
+        "authors": [
+          "Yen-Chang Hsu",
+          "Ting Hua",
+          "Sung-En Chang",
+          "Qiang Lou",
+          "Yilin Shen",
+          "Hong-Xia Jin"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e3974b7f3e5b80b2f014902701803cfc231c2de5ec46c86b237098b05f1a2dcc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
