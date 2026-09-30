@@ -1,0 +1,261 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ee9ff8ad6397da46-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ee9ff8ad6397",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.14351",
+    "arXiv:2401.14361",
+    "arXiv:2401.15024",
+    "arXiv:2402.01869",
+    "arXiv:2402.02750",
+    "arXiv:2402.04291",
+    "arXiv:2402.04396",
+    "arXiv:2402.06262",
+    "arXiv:2402.09398",
+    "arXiv:2402.10517",
+    "arXiv:2402.11131",
+    "arXiv:2402.11809",
+    "arXiv:2402.12374",
+    "arXiv:2402.13720",
+    "arXiv:2402.15220",
+    "arXiv:2402.15319",
+    "arXiv:2402.18096",
+    "arXiv:2402.18789",
+    "arXiv:2403.00835",
+    "arXiv:2403.01136"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "43a98008cefecd2d7065a00e0297f938fe35ddac",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 19,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:22:03.963211+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.14351",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.14351"
+    },
+    {
+      "requested_id": "arXiv:2401.14361",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.14361"
+    },
+    {
+      "requested_id": "arXiv:2401.15024",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2401.15024"
+    },
+    {
+      "requested_id": "arXiv:2402.01869",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.01869"
+    },
+    {
+      "requested_id": "arXiv:2402.02750",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.13140/rg.2.2.28167.37282"
+    },
+    {
+      "requested_id": "arXiv:2402.04291",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2402.04291"
+    },
+    {
+      "requested_id": "arXiv:2402.04396",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.04396"
+    },
+    {
+      "requested_id": "arXiv:2402.06262",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2402.06262"
+    },
+    {
+      "requested_id": "arXiv:2402.09398",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2402.09398"
+    },
+    {
+      "requested_id": "arXiv:2402.10517",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.11131",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.11131"
+    },
+    {
+      "requested_id": "arXiv:2402.11809",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.11809"
+    },
+    {
+      "requested_id": "arXiv:2402.12374",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.12374"
+    },
+    {
+      "requested_id": "arXiv:2402.13720",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.13720"
+    },
+    {
+      "requested_id": "arXiv:2402.15220",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.15220"
+    },
+    {
+      "requested_id": "arXiv:2402.15319",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2402.15319"
+    },
+    {
+      "requested_id": "arXiv:2402.18096",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.18096"
+    },
+    {
+      "requested_id": "arXiv:2402.18789",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.18789"
+    },
+    {
+      "requested_id": "arXiv:2403.00835",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2403.00835"
+    },
+    {
+      "requested_id": "arXiv:2403.01136",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2403.01136"
+    }
+  ],
+  "results": [
+    {
+      "title": "Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs",
+      "source_url": "https://arxiv.org/abs/2402.10517",
+      "year": 2024,
+      "published": "2024-02-16",
+      "abstract": "Recently, considerable efforts have been directed towards compressing Large Language Models (LLMs), which showcase groundbreaking capabilities across diverse applications but entail significant deployment costs due to their large sizes. Meanwhile, much less attention has been given to mitigating the costs associated with deploying multiple LLMs of varying sizes despite its practical significance. Thus, this paper introduces \\emph{any-precision LLM}, extending the concept of any-precision DNN to LLMs. Addressing challenges in any-precision LLM, we propose a lightweight method for any-precision quantization of LLMs, leveraging a post-training quantization framework, and develop a specialized software engine for its efficient serving. As a result, our solution significantly reduces the high costs of deploying multiple, different-sized LLMs by overlaying LLMs quantized to varying bit-widths, such as 3, 4, ..., $n$ bits, into a memory footprint comparable to a single $n$-bit LLM. All the supported LLMs with varying bit-widths demonstrate state-of-the-art model quality and inference throughput, proving itself to be a compelling option for deployment of multiple, different-sized LLMs. Our code is open-sourced and available online.",
+      "canonical_id": "arXiv:2402.10517",
+      "arxiv_id": "2402.10517",
+      "doi": "10.48550/arXiv.2402.10517",
+      "authors": [
+        "Yeonhong Park",
+        "Jake Hyun",
+        "SangLyul Cho",
+        "Bonggeun Sim",
+        "Jae W. Lee"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.10517",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.10517",
+        "id:arXiv:2402.10517",
+        "title:anyprecision llm lowcost deployment of multiple differentsized llms",
+        "url:https://arxiv.org/abs/2402.10517"
+      ],
+      "record": {
+        "title": "Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs",
+        "source_url": "https://arxiv.org/abs/2402.10517",
+        "year": 2024,
+        "published": "2024-02-16",
+        "abstract": "Recently, considerable efforts have been directed towards compressing Large Language Models (LLMs), which showcase groundbreaking capabilities across diverse applications but entail significant deployment costs due to their large sizes. Meanwhile, much less attention has been given to mitigating the costs associated with deploying multiple LLMs of varying sizes despite its practical significance. Thus, this paper introduces \\emph{any-precision LLM}, extending the concept of any-precision DNN to LLMs. Addressing challenges in any-precision LLM, we propose a lightweight method for any-precision quantization of LLMs, leveraging a post-training quantization framework, and develop a specialized software engine for its efficient serving. As a result, our solution significantly reduces the high costs of deploying multiple, different-sized LLMs by overlaying LLMs quantized to varying bit-widths, such as 3, 4, ..., $n$ bits, into a memory footprint comparable to a single $n$-bit LLM. All the supported LLMs with varying bit-widths demonstrate state-of-the-art model quality and inference throughput, proving itself to be a compelling option for deployment of multiple, different-sized LLMs. Our code is open-sourced and available online.",
+        "canonical_id": "arXiv:2402.10517",
+        "arxiv_id": "2402.10517",
+        "doi": "10.48550/arXiv.2402.10517",
+        "authors": [
+          "Yeonhong Park",
+          "Jake Hyun",
+          "SangLyul Cho",
+          "Bonggeun Sim",
+          "Jae W. Lee"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:1d9827415998f14939e98195b5fcb64f27792f78f9be5a94229d6bd713841c4d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
