@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1329本**。
+収録論文: **1332本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,11 +34,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1329本**。
+推論論文：**1332本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 108 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 109 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 104 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 17 |
@@ -52,10 +52,10 @@
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 32 |
 | [13-sparse-attention](13-sparse-attention/README.md) | 27 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 31 |
-| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 8 |
+| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 9 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 33 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 16 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 11 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 215 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 216 |
 <!-- survey:auto:end -->
