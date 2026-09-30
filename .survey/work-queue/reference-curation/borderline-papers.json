@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T09:02:37+00:00",
-  "record_count": 336,
+  "updated_at": "2026-09-30T09:04:57+00:00",
+  "record_count": 337,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4914,10 +4914,11 @@
         "DOI:10.48550/arxiv.2505.00949",
         "arXiv:2505.00949"
       ],
-      "reason": "推論効率を明示目標とし、Llama 3から推論最適化アーキテクチャを探索して高throughputモデルを構築するが、論文全体はモデル系列の学習・推論・公開を扱う技術報告で、純粋な推論システム研究との境界にある。",
+      "reason": "推論スループット・メモリ効率を強く意識したreasoning model群だが、主貢献はモデル設計・学習レシピも大きく、純粋な推論システム研究との境界。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
         "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
       ],
@@ -5027,6 +5028,20 @@
         "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md"
       ],
       "title": "LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale"
+    },
+    "arXiv:2503.01743": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.01743",
+      "identity_tokens": [
+        "arXiv:2503.01743"
+      ],
+      "reason": "GQAやMixture-of-LoRAsで効率的な小型モデルを構成するが、主貢献はモデル・学習レシピと能力評価で推論systemsとの境界。",
+      "first_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:02:37+00:00",
-  "record_count": 364,
+  "updated_at": "2026-09-30T09:04:57+00:00",
+  "record_count": 368,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5175,9 +5175,9 @@
       "identity_tokens": [
         "arXiv:2503.14487"
       ],
-      "reason": "画像生成Diffusion TransformerのMoE architecture/trainingでLLM推論対象外。",
+      "reason": "MoEによる計算効率化だが主対象は画像生成用Diffusion Transformerで、LLM推論サーベイの直接対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:52:53+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
@@ -5192,15 +5192,15 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "text-to-image Diffusion TransformerのMoE scaling/trainingでLLM推論対象外。",
+      "reason": "対象は画像生成Diffusion TransformerのMoE拡張で、LLM推論システムではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:52:53+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
       ],
-      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
     },
     "arXiv:2409.12941": {
       "classification": "unrelated",
@@ -5209,9 +5209,9 @@
         "DOI:10.18653/v1/2025.naacl-long.243",
         "arXiv:2409.12941"
       ],
-      "reason": "RAG能力のdataset/benchmarkで推論基盤効率化が主題ではない。",
+      "reason": "RAG能力の評価体系が主題で、推論runtime・配信・メモリ最適化の手法ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:52:53+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
@@ -5225,9 +5225,9 @@
       "identity_tokens": [
         "arXiv:2308.11432"
       ],
-      "reason": "LLM agent構築・応用・評価のsurveyで推論効率/serving基盤が主題ではない。",
+      "reason": "LLM agentの構成・応用を整理するサーベイで、推論基盤効率化が主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:52:53+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
@@ -5490,6 +5490,63 @@
         "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
       ],
       "title": "DRAMsim3: A Cycle-Accurate, Thermal-Capable DRAM Simulator"
+    },
+    "arXiv:2512.23808": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23808",
+      "identity_tokens": [
+        "arXiv:2512.23808"
+      ],
+      "reason": "音声言語モデルの能力・学習・few-shot性能が主題で、推論システム効率化ではない。",
+      "first_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "MiMo-Audio: Audio Language Models are Few-Shot Learners"
+    },
+    "arXiv:2511.00088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00088",
+      "identity_tokens": [
+        "arXiv:2511.00088"
+      ],
+      "reason": "自動運転VLAのreasoning/action性能が主題で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail"
+    },
+    "arXiv:2501.10132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.10132",
+      "identity_tokens": [
+        "arXiv:2501.10132"
+      ],
+      "reason": "function calling能力を測るbenchmarkが主題で、agent serving/runtime最適化ではない。",
+      "first_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "ComplexFuncBench: Exploring Multi-Step and Constrained Function Calling under Long-Context Scenario"
+    },
+    "arXiv:2411.10414": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10414",
+      "identity_tokens": [
+        "arXiv:2411.10414"
+      ],
+      "reason": "画像を含む入出力の安全分類・コンテンツモデレーション能力を改善するモデル研究であり、推論実行効率の改善を提案しないため対象外。",
+      "first_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md"
+      ],
+      "title": "Llama Guard 3 Vision: Safeguarding Human-AI Image Understanding Conversations"
     }
   }
 }
