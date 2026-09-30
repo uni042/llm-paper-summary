@@ -17,8 +17,6 @@ on:
         description: 'Repository-relative Research/Audit quality preflight request path'
         required: false
         type: string
-  schedule:
-    - cron: '8/10 * * * *'
 
 permissions:
   contents: write
