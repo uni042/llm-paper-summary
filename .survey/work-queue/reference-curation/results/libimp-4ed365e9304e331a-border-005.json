@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ed365e9304e331a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3579371.3589057",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3579371.3589057",
+    "identity_tokens": [
+      "DOI:10.1145/3579371.3589057"
+    ],
+    "reason": "FFNと注意の相関予測を用いるTransformerハードウェア協調設計で効率性は高いが、現代LLM配信を直接対象とする範囲は限定的。",
+    "first_checked_at": "2026-09-27T09:58:33+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "FACT: FFN-Attention Co-optimized Transformer Architecture with Eager Correlation Prediction"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ed365e9304e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

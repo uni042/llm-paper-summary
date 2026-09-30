@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:46:42+00:00",
-  "record_count": 383,
+  "updated_at": "2026-09-30T09:49:12+00:00",
+  "record_count": 382,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -787,12 +787,11 @@
       ],
       "reason": "大規模Transformerの学習用モデル並列化が主題。最終適用先が学習高速化であり、現在凍結中の学習系統には追加しない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
-      "source_url": "https://arxiv.org/abs/1909.08053"
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
     },
     "arXiv:2202.08906": {
       "classification": "unrelated",
@@ -830,14 +829,13 @@
       "identity_tokens": [
         "arXiv:1604.06174"
       ],
-      "reason": "活性値再計算による学習時メモリ削減が主題で、最終適用先が学習高速化・省メモリ化のため凍結対象。",
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 1. **Training Deep Nets with Sublinear Memory Cost** — `arXiv:1604.06174` ([paper](https://arxiv.org/abs/1604.06174)). Checkpoint/recomputation trades runtime for activation storage, reducing memory from linear to sublinear in depth; tests include 1000-layer ResNet under 7 GB and LSTM memory reductions above 4×, with about 30% runtime overhead. Included as training-memory systems work.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Training Deep Nets with Sublinear Memory Cost",
-      "source_url": "https://arxiv.org/abs/1604.06174"
+      "title": "Training Deep Nets with Sublinear Memory Cost"
     },
     "arXiv:2311.12022": {
       "classification": "unrelated",
@@ -950,14 +948,13 @@
       "identity_tokens": [
         "arXiv:1308.3432"
       ],
-      "reason": "条件付き計算の基礎だが、主題は確率的ニューロンの勾配推定・学習法でLLM推論システムへの直接性がない。",
+      "reason": "9. **Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation** — `arXiv:1308.3432` ([paper](https://arxiv.org/abs/1308.3432)). Historical stochastic-gate learning method; not an LLM systems contribution.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation",
-      "source_url": "https://arxiv.org/abs/1308.3432"
+      "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation"
     },
     "arXiv:1907.11692": {
       "classification": "unrelated",
@@ -965,14 +962,13 @@
       "identity_tokens": [
         "arXiv:1907.11692"
       ],
-      "reason": "BERT事前学習レシピの最適化が主題で、最終適用先が学習品質・学習方法の改善であるため現在の凍結方針では収録しない。",
+      "reason": "10. **RoBERTa: A Robustly Optimized BERT Pretraining Approach** — `arXiv:1907.11692` ([paper](https://arxiv.org/abs/1907.11692)). Pretraining recipe/model-quality work, not systems efficiency.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
-      "source_url": "https://arxiv.org/abs/1907.11692"
+      "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
     },
     "arXiv:2306.08543": {
       "classification": "unrelated",
@@ -1027,12 +1023,11 @@
       ],
       "reason": "本文の主題はデータセット、モデル能力、一般的学習手法等で、現行LLMシステム最適化への直接的なシステム寄与がない。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "SentencePiece",
-      "source_url": "https://arxiv.org/abs/1808.06226"
+      "title": "SentencePiece"
     },
     "arXiv:1807.02037": {
       "classification": "unrelated",
@@ -1042,12 +1037,12 @@
       ],
       "reason": "本文を確認し、TFLMS: Large Model Support in TensorFlow by Graph Rewriting は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "TFLMS: Large Model Support in TensorFlow by Graph Rewriting",
-      "source_url": "https://arxiv.org/abs/1807.02037"
+      "title": "TFLMS: Large Model Support in TensorFlow by Graph Rewriting"
     },
     "arXiv:1802.08218": {
       "classification": "unrelated",
@@ -1057,12 +1052,11 @@
       ],
       "reason": "本文の主題はデータセット、モデル能力、一般的学習手法等で、現行LLMシステム最適化への直接的なシステム寄与がない。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "VizWiz",
-      "source_url": "https://arxiv.org/abs/1802.08218"
+      "title": "VizWiz"
     },
     "arXiv:1511.05101": {
       "classification": "unrelated",
@@ -1072,12 +1066,11 @@
       ],
       "reason": "本文の主題はデータセット、モデル能力、一般的学習手法等で、現行LLMシステム最適化への直接的なシステム寄与がない。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "Scheduled sampling",
-      "source_url": "https://arxiv.org/abs/1511.05101"
+      "title": "Scheduled sampling"
     },
     "arXiv:1312.3005": {
       "classification": "unrelated",
@@ -1087,12 +1080,11 @@
       ],
       "reason": "本文の主題はデータセット、モデル能力、一般的学習手法等で、現行LLMシステム最適化への直接的なシステム寄与がない。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
-      "title": "One Billion Word Benchmark",
-      "source_url": "https://arxiv.org/abs/1312.3005"
+      "title": "One Billion Word Benchmark"
     },
     "arXiv:2505.14683": {
       "classification": "unrelated",
@@ -1147,12 +1139,12 @@
       ],
       "reason": "対照予測符号化による汎用表現学習が主題で、LLM推論・配信・学習システム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 471"
       ],
-      "title": "Representation Learning with Contrastive Predictive Coding",
-      "source_url": "https://arxiv.org/abs/1807.03748"
+      "title": "Representation Learning with Contrastive Predictive Coding"
     },
     "arXiv:1806.00358": {
       "classification": "unrelated",
@@ -1162,12 +1154,12 @@
       ],
       "reason": "ARCデータセットの分類・注釈分析が主題でLLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 470"
       ],
-      "title": "A Systematic Classification of Knowledge, Reasoning, and Context within the ARC Dataset",
-      "source_url": "https://arxiv.org/abs/1806.00358"
+      "title": "A Systematic Classification of Knowledge, Reasoning, and Context within the ARC Dataset"
     },
     "arXiv:1702.03118": {
       "classification": "unrelated",
@@ -1177,12 +1169,12 @@
       ],
       "reason": "強化学習向け活性化関数が主題でLLMシステム最適化を扱わない。",
       "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 469"
       ],
-      "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning",
-      "source_url": "https://arxiv.org/abs/1702.03118"
+      "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning"
     },
     "arXiv:1609.03499": {
       "classification": "unrelated",
@@ -1192,12 +1184,11 @@
       ],
       "reason": "生音声生成モデル研究でLLM推論基盤の効率化ではない。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "WaveNet: A Generative Model for Raw Audio",
-      "source_url": "https://arxiv.org/abs/1609.03499"
+      "title": "WaveNet: A Generative Model for Raw Audio"
     },
     "arXiv:1506.06724": {
       "classification": "unrelated",
@@ -1207,12 +1198,12 @@
       ],
       "reason": "書籍と映画の対応付けが主題でLLMシステム最適化を扱わない。",
       "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 468"
       ],
-      "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books",
-      "source_url": "https://arxiv.org/abs/1506.06724"
+      "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books"
     },
     "arXiv:1409.1556": {
       "classification": "unrelated",
@@ -1222,12 +1213,11 @@
       ],
       "reason": "画像認識モデル設計が主題でLLM推論システムへの直接寄与なし。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
-      "source_url": "https://arxiv.org/abs/1409.1556"
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition"
     },
     "DOI:10.3390/app11146421": {
       "classification": "unrelated",
@@ -1303,20 +1293,6 @@
       ],
       "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
       "source_url": "https://aclanthology.org/2022.acl-long.229/"
-    },
-    "DOI:10.1162/tacl_a_00266": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1162/tacl_a_00266",
-      "identity_tokens": [
-        "DOI:10.1162/tacl_a_00266"
-      ],
-      "reason": "既存Library正規台帳から継承",
-      "first_checked_at": "2026-09-27T03:00:00+09:00",
-      "last_checked_at": "2026-09-27T03:00:00+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "CoQA: A Conversational Question Answering Challenge"
     },
     "DOI:10.1145/3600006.3613152": {
       "classification": "unrelated",
@@ -1431,16 +1407,16 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1808.07042",
       "identity_tokens": [
+        "DOI:10.1162/tacl_a_00266",
         "arXiv:1808.07042"
       ],
       "reason": "会話型質問応答データセットの構築・評価が主題。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "first_checked_at": "2026-09-27T03:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "CoQA: A Conversational Question Answering Challenge",
-      "source_url": "https://arxiv.org/abs/1808.07042"
+      "title": "CoQA: A Conversational Question Answering Challenge"
     },
     "arXiv:2309.08125": {
       "classification": "unrelated",
@@ -1600,12 +1576,11 @@
       ],
       "reason": "適応学習率の分散解析と最適化手法が主題で、LLMシステム実行基盤への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 476"
       ],
-      "title": "On the Variance of the Adaptive Learning Rate and Beyond",
-      "source_url": "https://arxiv.org/abs/1908.03265"
+      "title": "On the Variance of the Adaptive Learning Rate and Beyond"
     },
     "arXiv:1904.08920": {
       "classification": "unrelated",
@@ -1615,12 +1590,11 @@
       ],
       "reason": "画像内文字を読む視覚質問応答モデルとデータセットが主題で、LLM実行効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 474"
       ],
-      "title": "Towards VQA Models That Can Read",
-      "source_url": "https://arxiv.org/abs/1904.08920"
+      "title": "Towards VQA Models That Can Read"
     },
     "arXiv:1902.09243": {
       "classification": "unrelated",
@@ -1630,12 +1604,11 @@
       ],
       "reason": "事前学習を用いた要約生成モデルの品質改善が主題で、システム最適化を扱わない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 473"
       ],
-      "title": "Pretraining-Based Natural Language Generation for Text Summarization",
-      "source_url": "https://arxiv.org/abs/1902.09243"
+      "title": "Pretraining-Based Natural Language Generation for Text Summarization"
     },
     "arXiv:2206.02713": {
       "classification": "unrelated",
@@ -1870,12 +1843,11 @@
       ],
       "reason": "本文を確認し、Well-Read Students Learn Better: On the Importance of Pre-training Compact Models は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models",
-      "source_url": "https://arxiv.org/abs/1908.08962"
+      "title": "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models"
     },
     "arXiv:1906.02243": {
       "classification": "unrelated",
@@ -1885,12 +1857,11 @@
       ],
       "reason": "本文を確認し、Energy and Policy Considerations for Deep Learning in NLP は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Energy and Policy Considerations for Deep Learning in NLP",
-      "source_url": "https://arxiv.org/abs/1906.02243"
+      "title": "Energy and Policy Considerations for Deep Learning in NLP"
     },
     "arXiv:1905.05460": {
       "classification": "unrelated",
@@ -1900,12 +1871,11 @@
       ],
       "reason": "本文を確認し、Cognitive Graph for Multi-Hop Reading Comprehension at Scale は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Cognitive Graph for Multi-Hop Reading Comprehension at Scale",
-      "source_url": "https://arxiv.org/abs/1905.05460"
+      "title": "Cognitive Graph for Multi-Hop Reading Comprehension at Scale"
     },
     "arXiv:1903.12136": {
       "classification": "unrelated",
@@ -1915,12 +1885,11 @@
       ],
       "reason": "本文を確認し、Distilling Task-Specific Knowledge from BERT into Simple Neural Networks は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Distilling Task-Specific Knowledge from BERT into Simple Neural Networks",
-      "source_url": "https://arxiv.org/abs/1903.12136"
+      "title": "Distilling Task-Specific Knowledge from BERT into Simple Neural Networks"
     },
     "arXiv:1902.01718": {
       "classification": "unrelated",
@@ -1930,12 +1899,11 @@
       ],
       "reason": "本文を確認し、End-to-End Open-Domain Question Answering with BERTserini は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "End-to-End Open-Domain Question Answering with BERTserini",
-      "source_url": "https://arxiv.org/abs/1902.01718"
+      "title": "End-to-End Open-Domain Question Answering with BERTserini"
     },
     "arXiv:1809.02839": {
       "classification": "unrelated",
@@ -1945,12 +1913,11 @@
       ],
       "reason": "本文を確認し、Efficient and Robust Parallel DNN Training through Model Parallelism on Multi-GPU Platform は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Efficient and Robust Parallel DNN Training through Model Parallelism on Multi-GPU Platform",
-      "source_url": "https://arxiv.org/abs/1809.02839"
+      "title": "Efficient and Robust Parallel DNN Training through Model Parallelism on Multi-GPU Platform"
     },
     "DOI:10.1145/3643757": {
       "classification": "unrelated",
@@ -1981,21 +1948,6 @@
       ],
       "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
       "source_url": "https://doi.org/10.1145/3474381"
-    },
-    "DOI:10.18653/v1/n19-1245": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.18653/v1/n19-1245",
-      "identity_tokens": [
-        "DOI:10.18653/v1/n19-1245"
-      ],
-      "reason": "数理文章題データセットと推論評価が主題でLLMシステム最適化への直接寄与がない。",
-      "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review rank 378"
-      ],
-      "title": "MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms",
-      "source_url": "https://doi.org/10.18653/v1/n19-1245"
     },
     "DOI:10.18653/v1/2024.acl-long.401": {
       "classification": "unrelated",
@@ -2215,12 +2167,11 @@
       ],
       "reason": "一次資料本文を確認し、Neural Machine Translation of Rare Words with Subword Units は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Neural Machine Translation of Rare Words with Subword Units",
-      "source_url": "https://arxiv.org/abs/1508.07909"
+      "title": "Neural Machine Translation of Rare Words with Subword Units"
     },
     "DOI:10.18653/v1/2024.acl-long.810": {
       "classification": "unrelated",
@@ -2373,12 +2324,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 299"
       ],
-      "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
-      "source_url": "https://arxiv.org/abs/1904.09728"
+      "title": "SocialIQA: Commonsense Reasoning about Social Interactions"
     },
     "arXiv:1803.08375": {
       "classification": "unrelated",
@@ -2389,12 +2339,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 297"
       ],
-      "title": "Deep Learning using Rectified Linear Units (ReLU)",
-      "source_url": "https://arxiv.org/abs/1803.08375"
+      "title": "Deep Learning using Rectified Linear Units (ReLU)"
     },
     "arXiv:1710.05941": {
       "classification": "unrelated",
@@ -2405,12 +2354,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 296"
       ],
-      "title": "Searching for Activation Functions",
-      "source_url": "https://arxiv.org/abs/1710.05941"
+      "title": "Searching for Activation Functions"
     },
     "arXiv:1409.0473": {
       "classification": "unrelated",
@@ -2421,12 +2369,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 294"
       ],
-      "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
-      "source_url": "https://arxiv.org/abs/1409.0473"
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate"
     },
     "arXiv:2404.16130": {
       "classification": "unrelated",
@@ -2845,12 +2792,11 @@
       ],
       "reason": "離散推論を要求する読解ベンチマークで、システム効率化を扱わない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs",
-      "source_url": "https://arxiv.org/abs/1903.00161"
+      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs"
     },
     "arXiv:2010.11934": {
       "classification": "unrelated",
@@ -2904,17 +2850,19 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1905.13319",
       "identity_tokens": [
+        "DOI:10.18653/v1/n19-1245",
         "DOI:10.48550/arxiv.1905.13319",
         "arXiv:1905.13319"
       ],
       "reason": "数学推論データセットとモデル評価が主題で、システム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "first_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 378",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms",
-      "source_url": "https://arxiv.org/abs/1905.13319"
+      "title": "MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms"
     },
     "arXiv:2109.07958": {
       "classification": "unrelated",
@@ -3252,12 +3200,11 @@
       ],
       "reason": "能力評価データセットで推論基盤効率化手法ではない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
-      "source_url": "https://arxiv.org/abs/1905.10044"
+      "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions"
     },
     "arXiv:2401.14196": {
       "classification": "unrelated",
@@ -3357,12 +3304,11 @@
       ],
       "reason": "長文書要約のモデル精度向上が主題で、推論効率化のシステム寄与がない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents",
-      "source_url": "https://arxiv.org/abs/1804.05685"
+      "title": "A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents"
     },
     "arXiv:1707.06209": {
       "classification": "unrelated",
@@ -3372,12 +3318,11 @@
       ],
       "reason": "SciQデータセット構築手法が主題で、推論システムとは無関係。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Crowdsourcing Multiple Choice Science Questions",
-      "source_url": "https://arxiv.org/abs/1707.06209"
+      "title": "Crowdsourcing Multiple Choice Science Questions"
     },
     "arXiv:2402.05120": {
       "classification": "unrelated",
@@ -3894,12 +3839,11 @@
       ],
       "reason": "パイプライン並列で分散DNN学習を高速化する研究で、最終用途が学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "PipeDream: Fast and Efficient Pipeline Parallel DNN Training",
-      "source_url": "https://arxiv.org/abs/1806.03377"
+      "title": "PipeDream: Fast and Efficient Pipeline Parallel DNN Training"
     },
     "arXiv:1602.06023": {
       "classification": "unrelated",
@@ -3909,12 +3853,11 @@
       ],
       "reason": "RNNによる要約モデル・能力向上が主題で、LLM推論システムとは無関係。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond",
-      "source_url": "https://arxiv.org/abs/1602.06023"
+      "title": "Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond"
     },
     "DOI:10.18653/v1/n19-1423": {
       "classification": "unrelated",
@@ -3999,12 +3942,11 @@
       ],
       "reason": "パイプライン並列と再計算で巨大ニューラルネット学習を拡張する研究で、最終用途が学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
-      "source_url": "https://arxiv.org/abs/1811.06965"
+      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
     },
     "DOI:10.1145/3503221.3508418": {
       "classification": "unrelated",
@@ -4045,7 +3987,7 @@
       ],
       "reason": "活性化関数GELUの提案と精度評価が主題で、LLM推論・配信システムの効率化研究ではない。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4059,7 +4001,7 @@
       ],
       "reason": "強化学習最適化アルゴリズムPPOの提案で、LLM推論システム効率化とは無関係。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5051,23 +4993,6 @@
       ],
       "title": "Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data"
     },
-    "OpenReview:rygGQyrFvH": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:rygGQyrFvH",
-      "identity_tokens": [
-        "OpenReview:rygGQyrFvH",
-        "arXiv:1904.09751"
-      ],
-      "reason": "ニュークリアスサンプリング等を通じて言語生成の反復・退化と品質を扱う復号品質研究で、推論の速度・メモリ・サービング効率を改善する方式ではないため対象外。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
-        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
-      ],
-      "title": "The Curious Case of Neural Text Degeneration"
-    },
     "OpenReview:mWaYC6CZf5": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:mWaYC6CZf5",
@@ -5704,14 +5629,15 @@
       "identity_tokens": [
         "arXiv:1611.09268"
       ],
-      "reason": "実検索クエリと人手回答から機械読解・質問応答データセットを構築する研究で、推論システム効率化とは無関係なため対象外。",
+      "reason": "大規模machine reading comprehension datasetの構築が主題で、LLM推論system効率化ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
         "papers/inference/99-other-inference-systems/2026-2601.15013-radixmlp-intra-batch-deduplication.md"
       ],
-      "title": "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset"
+      "title": "MS MARCO: A Human Generated Machine Reading Comprehension Dataset"
     },
     "arXiv:1412.3555": {
       "classification": "unrelated",
@@ -5719,10 +5645,11 @@
       "identity_tokens": [
         "arXiv:1412.3555"
       ],
-      "reason": "GRUとLSTM等の再帰型ニューラルネットワークを系列モデリングで比較する古典的モデル評価で、LLM推論基盤の効率化を対象としないため対象外。",
+      "reason": "GRU/LSTMのsequence modeling比較であり、現行LLM推論systemの効率化研究ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -5772,6 +5699,37 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md"
       ],
       "title": "OpenCompass: A Universal Evaluation Platform for Large Language Models"
+    },
+    "arXiv:1904.09751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.09751",
+      "identity_tokens": [
+        "OpenReview:rygGQyrFvH",
+        "arXiv:1904.09751"
+      ],
+      "reason": "nucleus samplingを含む生成品質・デコード戦略の研究で、システム上の推論効率化を主目的としない。",
+      "first_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "title": "The Curious Case of Neural Text Degeneration"
+    },
+    "arXiv:1706.03762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1706.03762",
+      "identity_tokens": [
+        "arXiv:1706.03762"
+      ],
+      "reason": "1. **Attention Is All You Need** — `arXiv:1706.03762` ([paper](https://arxiv.org/abs/1706.03762)). Foundational Transformer architecture; no target LLM systems optimization evaluation.",
+      "first_checked_at": "2026-09-30T09:49:12+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Attention Is All You Need"
     }
   }
 }

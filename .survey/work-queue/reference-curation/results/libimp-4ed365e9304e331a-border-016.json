@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ed365e9304e331a-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:kIoBbc76Sy",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:kIoBbc76Sy",
+    "identity_tokens": [
+      "OpenReview:kIoBbc76Sy"
+    ],
+    "reason": "5. **RULER** — `OpenReview:kIoBbc76Sy` ([OpenReview](https://openreview.net/forum?id=kIoBbc76Sy); [arXiv:2404.06654](https://arxiv.org/abs/2404.06654)). Long-context benchmark stresses retrieval and reasoning across context lengths; evaluation resource, not serving/runtime innovation.",
+    "first_checked_at": "2026-09-30T09:49:12+00:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [],
+    "title": "RULER"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ed365e9304e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

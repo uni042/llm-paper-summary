@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T09:48:18+00:00",
-  "record_count": 366,
+  "updated_at": "2026-09-30T09:49:12+00:00",
+  "record_count": 363,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -971,21 +971,6 @@
       ],
       "title": "Retrieval Head Mechanistically Explains Long-Context Factuality"
     },
-    "arXiv:1706.03762": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1706.03762",
-      "identity_tokens": [
-        "arXiv:1706.03762"
-      ],
-      "reason": "Transformerの基礎論文で並列性の利点は論じるが、現行サーベイが対象とするLLM推論システム最適化そのものではない。",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Attention Is All You Need",
-      "source_url": "https://arxiv.org/abs/1706.03762"
-    },
     "arXiv:2602.15763": {
       "classification": "borderline",
       "canonical_id": "arXiv:2602.15763",
@@ -1029,21 +1014,6 @@
       ],
       "title": "Reformer: The Efficient Transformer",
       "source_url": "https://arxiv.org/abs/2001.04451"
-    },
-    "arXiv:2112.10684": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2112.10684",
-      "identity_tokens": [
-        "arXiv:2112.10684"
-      ],
-      "reason": "MoEの計算効率を大規模に実証するが、主眼は学習・スケーリング特性で、推論システム固有の手法は限定的。",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Efficient Large Scale Language Modeling with Mixtures of Experts",
-      "source_url": "https://arxiv.org/abs/2112.10684"
     },
     "arXiv:2403.19887": {
       "classification": "borderline",
@@ -1267,12 +1237,11 @@
       ],
       "reason": "CXLメモリプーリングの基盤価値は高いがLLM固有ではない。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms",
-      "source_url": "https://doi.org/10.1145/3575693.3578835"
+      "title": "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms"
     },
     "DOI:10.1145/3341301.3359630": {
       "classification": "borderline",
@@ -1325,12 +1294,11 @@
       ],
       "reason": "一般ML推論パイプラインのSLO配信基盤でLLM固有ではない。",
       "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:49:11+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "InferLine: Latency-Aware Provisioning and Scaling for Prediction Serving Pipelines",
-      "source_url": "https://doi.org/10.1145/3419111.3421285"
+      "title": "InferLine: Latency-Aware Provisioning and Scaling for Prediction Serving Pipelines"
     },
     "arXiv:2407.21770": {
       "classification": "borderline",
@@ -1813,21 +1781,6 @@
       ],
       "title": "An Attention Free Transformer"
     },
-    "arXiv:2012.14913": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2012.14913",
-      "identity_tokens": [
-        "arXiv:2012.14913"
-      ],
-      "reason": "本文を確認し、Transformer Feed-Forward Layers Are Key-Value Memories は推論効率化に関連する基盤技術・モデル構造として有用だが、現行LLM推論システムへの直接性またはシステム評価が弱いため微妙と判定。",
-      "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
-      "source_url": "https://arxiv.org/abs/2012.14913"
-    },
     "arXiv:2010.06891": {
       "classification": "borderline",
       "canonical_id": "arXiv:2010.06891",
@@ -1934,27 +1887,27 @@
       ],
       "reason": "長文脈理解ベンチマークが主貢献で、新しい推論・KV・配信機構の一次研究ではない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 377"
       ],
-      "title": "LooGLE: Can Long-Context Language Models Understand Long Contexts?",
-      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.859"
+      "title": "LooGLE: Can Long-Context Language Models Understand Long Contexts?"
     },
     "DOI:10.18653/v1/2022.emnlp-main.804": {
       "classification": "borderline",
       "canonical_id": "DOI:10.18653/v1/2022.emnlp-main.804",
       "identity_tokens": [
-        "DOI:10.18653/v1/2022.emnlp-main.804"
+        "DOI:10.18653/v1/2022.emnlp-main.804",
+        "arXiv:2112.10684"
       ],
       "reason": "大規模MoEのモデル・学習設計が中心で推論ランタイムの一次研究ではない。",
-      "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "first_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 375"
       ],
-      "title": "Efficient Large Scale Language Modeling with Mixtures of Experts",
-      "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.804"
+      "title": "Efficient Large Scale Language Modeling with Mixtures of Experts"
     },
     "arXiv:2505.15809": {
       "classification": "borderline",
@@ -3387,12 +3340,11 @@
       ],
       "reason": "FFNと注意の相関予測を用いるTransformerハードウェア協調設計で効率性は高いが、現代LLM配信を直接対象とする範囲は限定的。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "FACT: FFN-Attention Co-optimized Transformer Architecture with Eager Correlation Prediction",
-      "source_url": "https://doi.org/10.1145/3579371.3589057"
+      "title": "FACT: FFN-Attention Co-optimized Transformer Architecture with Eager Correlation Prediction"
     },
     "arXiv:2408.01800": {
       "classification": "borderline",
@@ -3431,12 +3383,11 @@
       ],
       "reason": "長文書要約向け効率attentionで計算・メモリを削減する基盤技術だが、対象はencoder-decoder要約で現代LLM servingへの直接性は限定的。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Efficient Attentions for Long Document Summarization",
-      "source_url": "https://doi.org/10.18653/v1/2021.naacl-main.112"
+      "title": "Efficient Attentions for Long Document Summarization"
     },
     "arXiv:2510.06303": {
       "classification": "borderline",
@@ -3561,12 +3512,11 @@
       ],
       "reason": "Transformerをmulti-state RNNとして捉える解析・再定式化は効率化に示唆を持つが、直接的なLLM配信システムではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Transformers are Multi-State RNNs",
-      "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1043"
+      "title": "Transformers are Multi-State RNNs"
     },
     "DOI:10.1145/3341301.3359658": {
       "classification": "borderline",
@@ -3576,12 +3526,11 @@
       ],
       "reason": "GPUクラスタ上のSLO対応DNN配信として基礎的価値はあるが、LLM以前の動画DNN配信が対象。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:49:11+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Nexus: a GPU cluster engine for accelerating DNN-based video analysis",
-      "source_url": "https://doi.org/10.1145/3341301.3359658"
+      "title": "Nexus: a GPU cluster engine for accelerating DNN-based video analysis"
     },
     "arXiv:2501.14784": {
       "classification": "borderline",
@@ -3696,35 +3645,20 @@
       ],
       "title": "Lost in the Middle: How Language Models Use Long Contexts"
     },
-    "arXiv:2304.01433": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2304.01433",
-      "identity_tokens": [
-        "arXiv:2304.01433"
-      ],
-      "reason": "大規模ML向けTPU v4クラスタのハードウェア・光ネットワーク研究。LLM推論基盤の背景価値は高いがLLM推論固有の新規手法ではない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings",
-      "source_url": "https://arxiv.org/abs/2304.01433"
-    },
     "DOI:10.1145/3579371.3589350": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3579371.3589350",
       "identity_tokens": [
-        "DOI:10.1145/3579371.3589350"
+        "DOI:10.1145/3579371.3589350",
+        "arXiv:2304.01433"
       ],
       "reason": "TPU v4スーパーコンピュータの汎用ML基盤研究で、LLM推論にも関連するがLLM推論固有のシステム手法ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings",
-      "source_url": "https://doi.org/10.1145/3579371.3589350"
+      "title": "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings"
     },
     "arXiv:2410.04466": {
       "classification": "borderline",
@@ -3776,27 +3710,26 @@
       ],
       "reason": "疎ゲートMoEの基礎研究で条件付き計算の推論効率に重要だが、主評価はモデル学習・品質で現代LLM配信システムではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
-      "source_url": "https://doi.org/10.18653/v1/p17-1147"
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
     },
     "DOI:10.18653/v1/2021.emnlp-main.446": {
       "classification": "borderline",
       "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.446",
       "identity_tokens": [
-        "DOI:10.18653/v1/2021.emnlp-main.446"
+        "DOI:10.18653/v1/2021.emnlp-main.446",
+        "arXiv:2012.14913"
       ],
       "reason": "FFNをkey-value memoryとして解析する機構研究。MoE/剪定設計への示唆はあるが推論効率化手法そのものではない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "first_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
-      "source_url": "https://doi.org/10.18653/v1/2021.emnlp-main.446"
+      "title": "Transformer Feed-Forward Layers Are Key-Value Memories"
     },
     "DOI:10.1145/3567955.3567959": {
       "classification": "borderline",
@@ -3806,12 +3739,11 @@
       ],
       "reason": "GPU通信・実行基盤の関連先行研究として参照されるが、今回取得できた一次資料本文情報ではLLM推論固有の直接寄与を十分確定できず境界扱い。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:49:11+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "GPU communication/runtime systems reference DOI:10.1145/3567955.3567959",
-      "source_url": "https://doi.org/10.1145/3567955.3567959"
+      "title": "GPU communication/runtime systems reference DOI:10.1145/3567955.3567959"
     },
     "arXiv:2603.18567": {
       "classification": "borderline",
@@ -3991,7 +3923,7 @@
       ],
       "reason": "MoEのmodularityとexpert構成を扱い効率面の含意はあるが、主貢献はモデル構造・学習で、servingランタイムの直接的評価は弱い。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4006,7 +3938,7 @@
       ],
       "reason": "LLM agentの方法・応用・課題を広く整理するsurveyで、agent servingの背景価値はあるが新規推論システム手法ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5048,10 +4980,11 @@
         "DOI:10.18653/v1/n19-4009",
         "arXiv:1904.01038"
       ],
-      "reason": "PyTorchベースの系列モデリング基盤で分散学習に加えGPU上の混合精度推論も支援するが、論文の中心は翻訳・要約・言語モデル等の研究開発ツールキット全体であり、現代LLM推論サービングの特定ボトルネックを解く研究ではない。基盤史として関連するため境界扱い。",
+      "reason": "高速mixed-precision inferenceを含むruntime/toolkitだが、現行LLM推論systemsへの直接性は弱い。",
       "first_checked_at": "2026-09-30T09:07:48+00:00",
-      "last_checked_at": "2026-09-30T09:07:48+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
         "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
       ],
@@ -5317,6 +5250,18 @@
         "LLM-paper-summary-library-first legacy MD-only Discovery"
       ],
       "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning"
+    },
+    "OpenReview:kIoBbc76Sy": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:kIoBbc76Sy",
+      "identity_tokens": [
+        "OpenReview:kIoBbc76Sy"
+      ],
+      "reason": "5. **RULER** — `OpenReview:kIoBbc76Sy` ([OpenReview](https://openreview.net/forum?id=kIoBbc76Sy); [arXiv:2404.06654](https://arxiv.org/abs/2404.06654)). Long-context benchmark stresses retrieval and reasoning across context lengths; evaluation resource, not serving/runtime innovation.",
+      "first_checked_at": "2026-09-30T09:49:12+00:00",
+      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "linked_from": [],
+      "title": "RULER"
     }
   }
 }
