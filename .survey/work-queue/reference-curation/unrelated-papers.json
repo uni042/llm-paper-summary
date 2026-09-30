@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T08:00:58+00:00",
+  "updated_at": "2026-09-30T08:52:53+00:00",
   "record_count": 361,
   "records": {
     "arXiv:2303.08774": {
@@ -5170,10 +5170,11 @@
       "identity_tokens": [
         "arXiv:2503.14487"
       ],
-      "reason": "本文の主対象は画像生成用Diffusion Transformerの拡張で、バッチ全体のトークンプールと容量予測器によるMoEルーティングを学習しImageNet・text-to-image品質を評価する。LLM推論・LLMサービングへの最終適用がないため対象外。",
+      "reason": "画像生成Diffusion TransformerのMoE architecture/trainingでLLM推論対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:52:53+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
       ],
@@ -5186,10 +5187,11 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "本文はtext-to-image向けDiffusion Transformerを最大97Bへ拡張するためのexpert-choiceルーティングを提案し、GenEval等の画像生成品質と学習収束を評価する。LLM推論が最終適用先ではないため対象外。",
+      "reason": "text-to-image Diffusion TransformerのMoE scaling/trainingでLLM推論対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:52:53+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
       ],
@@ -5202,10 +5204,11 @@
         "DOI:10.18653/v1/2025.naacl-long.243",
         "arXiv:2409.12941"
       ],
-      "reason": "本文は検索拡張生成を事実知識、検索、推論の能力軸で評価するベンチマーク研究で、複数RAG構成の回答品質を分析する。推論実行系の速度・メモリ・キャッシュ・スケジューリング最適化が主題ではないため対象外。",
+      "reason": "RAG能力のdataset/benchmarkで推論基盤効率化が主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:52:53+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
       ],
@@ -5217,10 +5220,11 @@
       "identity_tokens": [
         "arXiv:2308.11432"
       ],
-      "reason": "本文はLLMエージェントの構成、応用、評価を体系化するサーベイで、推論サービングやメモリ階層、KVキャッシュ、推論カーネルの効率化を中心課題としていないため対象外。",
+      "reason": "LLM agent構築・応用・評価のsurveyで推論効率/serving基盤が主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:52:53+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
       ],
