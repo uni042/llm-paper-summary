@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T04:10:05+00:00",
-  "record_count": 330,
+  "updated_at": "2026-09-30T08:00:57+00:00",
+  "record_count": 331,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -1043,21 +1043,6 @@
       ],
       "title": "Reformer: The Efficient Transformer",
       "source_url": "https://arxiv.org/abs/2001.04451"
-    },
-    "arXiv:2412.06464": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2412.06464",
-      "identity_tokens": [
-        "arXiv:2412.06464"
-      ],
-      "reason": "線形注意/状態空間系のモデルアーキテクチャ改善が主題。効率性はあるが、推論ランタイム・配信への直接寄与は限定的。",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
-      "source_url": "https://arxiv.org/abs/2412.06464"
     },
     "arXiv:2112.10684": {
       "classification": "borderline",
@@ -4848,12 +4833,14 @@
       "classification": "borderline",
       "canonical_id": "OpenReview:r8H7xhYPwz",
       "identity_tokens": [
-        "OpenReview:r8H7xhYPwz"
+        "OpenReview:r8H7xhYPwz",
+        "arXiv:2412.06464"
       ],
-      "reason": "線形注意の状態更新にgatingとdelta ruleを統合し長文脈を線形時間で扱えるため推論効率との関連は強いが、主貢献は新しいsequence-model architectureと学習アルゴリズムであり、既存LLM推論基盤の最適化そのものではないためborderline。",
-      "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "reason": "ゲーティングとdelta ruleを統合した線形系列モデルで、長文脈の効率性と高速な並列実装は関連する一方、主貢献は推論システム最適化ではなくモデルアーキテクチャと学習アルゴリズムにあるため境界扱い。",
+      "first_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T08:00:57+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
       ],
@@ -4890,21 +4877,6 @@
       ],
       "title": "CAMEx: Curvature-Aware Merging of Experts"
     },
-    "arXiv:2505.00949": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2505.00949",
-      "identity_tokens": [
-        "arXiv:2505.00949"
-      ],
-      "reason": "推論効率を強く意識したLlama-Nemotron系列で、ニューラルアーキテクチャ探索により高速な構成を得て推論時のreasoning toggleも提供する。一方、論文の中心はモデル系列の学習・蒸留・後学習を含む総合技術報告で、推論システム手法単体ではないためborderline。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
-        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
-      ],
-      "title": "Llama-Nemotron: Efficient Reasoning Models"
-    },
     "arXiv:2608.23658": {
       "classification": "borderline",
       "canonical_id": "arXiv:2608.23658",
@@ -4934,6 +4906,50 @@
         "web-discovery:LLM inference/serving systems"
       ],
       "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing"
+    },
+    "arXiv:2608.09225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09225",
+      "identity_tokens": [
+        "arXiv:2608.09225"
+      ],
+      "reason": "KV prefix cache設計に直接関係するが主目的はマルチテナントsecurity。",
+      "first_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference"
+    },
+    "arXiv:2608.03036": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03036",
+      "identity_tokens": [
+        "arXiv:2608.03036"
+      ],
+      "reason": "LLM serving frameworkの実利用分析で直接有用だが、新規推論高速化方式ではない。",
+      "first_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs"
+    },
+    "arXiv:2505.00949": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.00949",
+        "arXiv:2505.00949"
+      ],
+      "reason": "推論効率を明示目標とし、Llama 3から推論最適化アーキテクチャを探索して高throughputモデルを構築するが、論文全体はモデル系列の学習・推論・公開を扱う技術報告で、純粋な推論システム研究との境界にある。",
+      "first_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b37585f752157b1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.09225",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.09225",
+    "identity_tokens": [
+      "arXiv:2608.09225"
+    ],
+    "reason": "KV prefix cache設計に直接関係するが主目的はマルチテナントsecurity。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-09-30T08:00:57+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference"
+  },
+  "processed_at": "2026-09-30T08:00:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b37585f7521",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

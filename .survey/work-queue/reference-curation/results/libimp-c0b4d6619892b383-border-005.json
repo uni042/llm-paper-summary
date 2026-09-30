@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0b4d6619892b383-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:r8H7xhYPwz",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:r8H7xhYPwz",
+    "identity_tokens": [
+      "OpenReview:r8H7xhYPwz",
+      "arXiv:2412.06464"
+    ],
+    "reason": "ゲーティングとdelta ruleを統合した線形系列モデルで、長文脈の効率性と高速な並列実装は関連する一方、主貢献は推論システム最適化ではなくモデルアーキテクチャと学習アルゴリズムにあるため境界扱い。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-09-30T08:00:57+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+    ],
+    "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
+  },
+  "processed_at": "2026-09-30T08:00:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0b4d6619892",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

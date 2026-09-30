@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c9eb4714f497684-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:oKn9c6ytLx",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:oKn9c6ytLx",
+    "identity_tokens": [
+      "OpenReview:oKn9c6ytLx",
+      "arXiv:2307.13854"
+    ],
+    "reason": "Webエージェントの現実的な実行環境とベンチマーク構築が主題で、LLM推論基盤の高速化・省メモリ化を扱わない。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T08:00:57+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+    ],
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+  },
+  "processed_at": "2026-09-30T08:00:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c9eb4714f49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
