@@ -14,8 +14,6 @@ on:
       - '.survey/scripts/worker_run_state_cache.py'
       - '.survey/scripts/auto_discovery_from_run_state.py'
   workflow_dispatch:
-  schedule:
-    - cron: '4/10 * * * *'
 
 permissions:
   contents: write
