@@ -106,7 +106,7 @@ jobs:
               stage1_ok=1
               break
             fi
-            echo "Library intake push race on attempt \${attempt}; recomputing from latest main."
+            echo "Library intake push race on attempt ${attempt}; recomputing from latest main."
           done
           [ "$stage1_ok" -eq 1 ] || {
             echo 'Library intake checkpoint failed.' >&2
@@ -169,7 +169,7 @@ jobs:
               stage2_ok=1
               break
             fi
-            echo "Library downstream-check push race on attempt \${attempt}; recomputing."
+            echo "Library downstream-check push race on attempt ${attempt}; recomputing."
           done
           [ "$stage2_ok" -eq 1 ] || {
             echo 'Library downstream checkpoint failed.' >&2
@@ -195,7 +195,7 @@ jobs:
               stage3_ok=1
               break
             fi
-            echo "Library Discovery advance push race on attempt \${attempt}; recomputing."
+            echo "Library Discovery advance push race on attempt ${attempt}; recomputing."
           done
           [ "$stage3_ok" -eq 1 ] || {
             echo 'Library Discovery advance failed.' >&2
@@ -221,7 +221,7 @@ jobs:
               stage4_ok=1
               break
             fi
-            echo "Library submission push race on attempt \${attempt}; recomputing."
+            echo "Library submission push race on attempt ${attempt}; recomputing."
           done
           [ "$stage4_ok" -eq 1 ] || {
             echo 'Library submission processing failed.' >&2
@@ -251,14 +251,14 @@ jobs:
               stage5_ok=1
               break
             fi
-            echo "Library settle push race on attempt \${attempt}; recomputing."
+            echo "Library settle push race on attempt ${attempt}; recomputing."
           done
           [ "$stage5_ok" -eq 1 ] || {
             echo 'Library settle failed.' >&2
             exit 1
           }
 
-          if [ "\${relevance_rc:-0}" -ne 0 ]; then
+          if [ "${relevance_rc:-0}" -ne 0 ]; then
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
           fi
 
