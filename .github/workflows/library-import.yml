@@ -265,9 +265,20 @@ jobs:
           # Continue draining without relying on GitHub scheduled-event delivery.
           # Each run remains bounded and queues at most one successor.
           sync_main
-          research_backlog=$(find .survey/import-inbox/pending/research -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l)
-          discovery_pending=$(find .survey/import-inbox/pending/discovery -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l)
-          discovery_waiting=$(find .survey/import-inbox/waiting/discovery -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l)
+
+          count_files() {
+            local dir="$1"
+            local pattern="$2"
+            if [ ! -d "$dir" ]; then
+              printf '0\n'
+              return 0
+            fi
+            find "$dir" -maxdepth 1 -type f -name "$pattern" -print | wc -l
+          }
+
+          research_backlog=$(count_files .survey/import-inbox/pending/research '*.md')
+          discovery_pending=$(count_files .survey/import-inbox/pending/discovery '*.json')
+          discovery_waiting=$(count_files .survey/import-inbox/waiting/discovery '*.json')
           backlog_total=$((research_backlog + discovery_pending + discovery_waiting))
 
           generation="${{ github.event.inputs.drain_generation || '0' }}"
