@@ -270,20 +270,20 @@ jobs:
           discovery_waiting=$(find .survey/import-inbox/waiting/discovery -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l)
           backlog_total=$((research_backlog + discovery_pending + discovery_waiting))
 
-          generation="\${{ github.event.inputs.drain_generation || '0' }}"
+          generation="${{ github.event.inputs.drain_generation || '0' }}"
           if ! [[ "$generation" =~ ^[0-9]+$ ]]; then
             generation=0
           fi
 
-          echo "Library backlog after this run: research=\${research_backlog}, discovery_pending=\${discovery_pending}, discovery_waiting=\${discovery_waiting}, generation=\${generation}"
+          echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
           if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 24 ]; then
             next_generation=$((generation + 1))
-            echo "Queueing bounded Library import continuation generation \${next_generation}."
-            GH_TOKEN="\${{ github.token }}" gh workflow run library-import.yml \
-              --repo "\${GITHUB_REPOSITORY}" \
+            echo "Queueing bounded Library import continuation generation ${next_generation}."
+            GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
+              --repo "${GITHUB_REPOSITORY}" \
               --ref main \
-              -f drain_generation="\${next_generation}"
+              -f drain_generation="${next_generation}"
           elif [ "$backlog_total" -gt 0 ]; then
             echo "Backlog remains after generation cap; a later batch kick or central dispatch will resume it." >&2
           else
