@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-29T23:39:47+00:00",
-  "record_count": 321,
+  "updated_at": "2026-09-30T01:35:07+00:00",
+  "record_count": 328,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4756,30 +4756,15 @@
       ],
       "title": "Yi: Open Foundation Models by 01.AI"
     },
-    "DOI:10.1145/3637528.3671470": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3637528.3671470",
-      "identity_tokens": [
-        "DOI:10.1145/3637528.3671470"
-      ],
-      "reason": "検索拡張生成（RAG）とLLMの手法・分類・課題を整理するサーベイで、推論基盤の速度・メモリ・スケジューリングを改善する新規システムを提案しないため対象外。",
-      "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
-      ],
-      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
-    },
     "DOI:10.1145/3627703.3650085": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3627703.3650085",
       "identity_tokens": [
         "DOI:10.1145/3627703.3650085"
       ],
-      "reason": "大規模DL/LLM学習の障害回復用チェックポイント方式が主題で、最終適用先が学習工程そのものの高速化・耐障害化であるため凍結範囲として対象外。",
+      "reason": "大規模DNN/LLM学習の障害発生時だけチェックポイントを作成して再計算量を抑える耐障害学習方式で、最終適用先が学習工程の回復なので対象外。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-09-29T23:39:47+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
         "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md"
@@ -4815,6 +4800,126 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
       ],
       "title": "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment"
+    },
+    "arXiv:2312.09979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.09979",
+      "identity_tokens": [
+        "arXiv:2312.09979"
+      ],
+      "reason": "複数LoRAを専門家としてSFT中の世界知識忘却を抑える学習方式で、最終適用先が推論実行効率化ではなく凍結対象の学習・アラインメント改善なので対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md"
+      ],
+      "title": "LoRAMoE: Alleviate World Knowledge Forgetting in Large Language Models via MoE-Style Plugin"
+    },
+    "arXiv:2310.16944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.16944",
+      "identity_tokens": [
+        "arXiv:2310.16944"
+      ],
+      "reason": "AI feedbackによる蒸留教師あり微調整と蒸留直接選好最適化で小型チャットLLMのアラインメント性能を改善する学習研究で、推論高速化・省メモリ化を扱わないため対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+      ],
+      "title": "Zephyr: Direct Distillation of LM Alignment"
+    },
+    "arXiv:2309.07864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07864",
+      "identity_tokens": [
+        "arXiv:2309.07864"
+      ],
+      "reason": "LLMエージェントの構成、応用、エージェント社会、リスクを体系化するサーベイであり、エージェント推論サービング基盤やKV管理の新規方式を提案する一次研究ではないため対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "The Rise and Potential of Large Language Model Based Agents: A Survey"
+    },
+    "arXiv:2303.02868": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.02868",
+      "identity_tokens": [
+        "arXiv:2303.02868"
+      ],
+      "reason": "Page抽象化、階層メモリ、SSD、統合スケジューリングで巨大Transformerの事前学習・微調整を拡張するシステムで、最終適用先が凍結対象の学習高速化なので対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "Angel-PTM: A Scalable and Economical Large-scale Pre-training System in Tencent"
+    },
+    "arXiv:2210.06659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06659",
+      "identity_tokens": [
+        "arXiv:2210.06659"
+      ],
+      "reason": "ハードウェア実測遅延を使う構造枝刈り自体は推論効率化だが、評価対象はResNet/SSD等の画像分類・検出でLLM/Transformer推論を対象としないため対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ],
+      "title": "Structural Pruning via Latency-Saliency Knapsack"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.360": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.360",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.360"
+      ],
+      "reason": "18言語のWikiHow記事・要約対を用いる多言語要約ベンチマークと要約手法の研究で、LLM推論基盤の高速化・省メモリ化を主貢献としないため対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "WikiLingua: A New Benchmark Dataset for Cross-Lingual Abstractive Summarization"
+    },
+    "DOI:10.14778/3685800.3685905": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3685800.3685905",
+      "identity_tokens": [
+        "DOI:10.14778/3685800.3685905"
+      ],
+      "reason": "RAG・ベクトルDB・エージェントを組み合わせた自然言語データ分析システムであり、LLM推論ランタイム自体の速度・メモリ・サービング効率を改善する研究ではないため対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Chat2Data: An Interactive Data Analysis System with RAG, Vector Databases and LLMs"
+    },
+    "DOI:10.1145/3694715.3695960": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3694715.3695960",
+      "identity_tokens": [
+        "DOI:10.1145/3694715.3695960"
+      ],
+      "reason": "GPU障害時の大規模DNN学習を停止せず継続する耐障害パイプライン学習システムで、最終適用先が学習工程そのものの高速化・回復であるため凍結範囲として対象外。",
+      "first_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
+      ],
+      "title": "ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation"
     }
   }
 }

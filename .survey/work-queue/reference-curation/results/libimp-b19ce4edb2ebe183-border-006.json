@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b19ce4edb2ebe183-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3669940.3707251",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3669940.3707251",
+    "identity_tokens": [
+      "DOI:10.1145/3669940.3707251",
+      "arXiv:2503.05130"
+    ],
+    "reason": "サーバーレス深層学習推論のGPU断片化を抑えつつ資源量を動的調整するサービング基盤で、LLMサービングに近いが対象は一般DL関数なので境界扱い。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-09-30T01:35:07+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md"
+    ],
+    "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
+  },
+  "processed_at": "2026-09-30T01:35:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19ce4edb2eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

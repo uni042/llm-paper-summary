@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85c053eec5c8ace4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.13803",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.13803",
+    "identity_tokens": [
+      "arXiv:2303.13803"
+    ],
+    "reason": "オンライン推論とオフライン学習をGPU空間共有し、オンライン性能を保護しながらGPU利用率を上げるproduction serving基盤として近いが、LLM固有ではなく一般DLクラスタが対象なので境界扱い。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-09-30T01:35:07+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
+    ],
+    "title": "MuxFlow: Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+  },
+  "processed_at": "2026-09-30T01:35:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85c053eec5c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
