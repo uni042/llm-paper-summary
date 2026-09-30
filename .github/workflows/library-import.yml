@@ -288,7 +288,7 @@ jobs:
 
           echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
-          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 24 ]; then
+          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ]; then
             next_generation=$((generation + 1))
             echo "Queueing bounded Library import continuation generation ${next_generation}."
             GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
