@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（33本）
+## 自動生成の論文一覧（34本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -42,6 +42,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
   実装：— ・ リポジトリ内被引用：2  
   標準的な専門家並列（専門家 Parallelism; EP）は専門家をGPUへ固定配置し、その専門家を選んだトークンを所有GPUへ送るため、人気専門家のGPUだけが計算・活性値メモリの両面で過負荷になる。
+
+- **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  垂直スケーリングで既存複製の並列度を変える方式は細粒度だが、プロセス再起動、重み再読込、KVキャッシュ再構築が発生し、短時間のバーストに間に合わない。Ascend NPU上で3種のMoE LLMを評価し、従来方式に対してスケールアップ遅延を最大9倍短縮し、スケール処理中の推論処理量を最大2倍にした。
 
 - **2026-07 · [OrderMoE: An expert similarity driven distributed edge MoE inference](2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
