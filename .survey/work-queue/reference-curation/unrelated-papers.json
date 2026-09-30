@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T09:49:12+00:00",
+  "updated_at": "2026-09-30T09:50:07+00:00",
   "record_count": 382,
   "records": {
     "arXiv:2303.08774": {
@@ -801,12 +801,11 @@
       ],
       "reason": "MoEの学習安定性と転移性能を主題とする設計研究で、推論システム最適化が主目的ではない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models",
-      "source_url": "https://arxiv.org/abs/2202.08906"
+      "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
     },
     "arXiv:2507.06261": {
       "classification": "unrelated",
@@ -873,14 +872,13 @@
       "identity_tokens": [
         "arXiv:2101.00027"
       ],
-      "reason": "事前学習用データセットの構築が主題で、推論システム最適化とは無関係。",
+      "reason": "5. **The Pile** — `arXiv:2101.00027` ([paper](https://arxiv.org/abs/2101.00027)). Pretraining dataset contribution, no efficiency method.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
-      "source_url": "https://arxiv.org/abs/2101.00027"
+      "title": "The Pile"
     },
     "arXiv:2311.07911": {
       "classification": "unrelated",
@@ -1219,21 +1217,6 @@
       ],
       "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition"
     },
-    "DOI:10.3390/app11146421": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.3390/app11146421",
-      "identity_tokens": [
-        "DOI:10.3390/app11146421"
-      ],
-      "reason": "医療QAデータセットMedQAの構築・評価が主題。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams",
-      "source_url": "https://doi.org/10.3390/app11146421"
-    },
     "arXiv:2504.15930": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2504.15930",
@@ -1278,21 +1261,6 @@
       ],
       "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding",
       "source_url": "https://aclanthology.org/2023.findings-emnlp.536/"
-    },
-    "DOI:10.18653/v1/2022.acl-long.229": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.18653/v1/2022.acl-long.229",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2022.acl-long.229"
-      ],
-      "reason": "言語モデルの真実性評価ベンチマークで推論システム効率化とは無関係。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-27T04:02:01+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
-      "source_url": "https://aclanthology.org/2022.acl-long.229/"
     },
     "DOI:10.1145/3600006.3613152": {
       "classification": "unrelated",
@@ -1441,12 +1409,11 @@
       ],
       "reason": "文脈内学習で正解ラベルや入力分布が性能へ与える影響を分析する研究で、LLM実行システム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 498"
       ],
-      "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?",
-      "source_url": "https://arxiv.org/abs/2202.12837"
+      "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?"
     },
     "arXiv:2112.09118": {
       "classification": "unrelated",
@@ -1456,12 +1423,11 @@
       ],
       "reason": "対照学習による教師なし密検索の表現学習が主題で、LLM推論・配信・学習基盤の効率化を扱わない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 496"
       ],
-      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
-      "source_url": "https://arxiv.org/abs/2112.09118"
+      "title": "Unsupervised Dense Information Retrieval with Contrastive Learning"
     },
     "arXiv:2104.08758": {
       "classification": "unrelated",
@@ -1486,12 +1452,11 @@
       ],
       "reason": "Transformer微調整へMixUpを適用して汎化・較正を改善する学習手法で、システム効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 489"
       ],
-      "title": "MixUp Training Leads to Reduced Overfitting and Improved Calibration for the Transformer Architecture",
-      "source_url": "https://arxiv.org/abs/2102.11402"
+      "title": "MixUp Training Leads to Reduced Overfitting and Improved Calibration for the Transformer Architecture"
     },
     "arXiv:2012.15355": {
       "classification": "unrelated",
@@ -1501,12 +1466,11 @@
       ],
       "reason": "小規模データ上の深いTransformerの最適化・正則化が主題で、実行システムやメモリ・通信最適化を扱わない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 488"
       ],
-      "title": "Optimizing Deeper Transformers on Small Datasets",
-      "source_url": "https://arxiv.org/abs/2012.15355"
+      "title": "Optimizing Deeper Transformers on Small Datasets"
     },
     "arXiv:2012.13255": {
       "classification": "unrelated",
@@ -1516,27 +1480,27 @@
       ],
       "reason": "言語モデル微調整の内在次元を分析する研究で、推論・配信・学習システム基盤への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 487"
       ],
-      "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
-      "source_url": "https://arxiv.org/abs/2012.13255"
+      "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning"
     },
     "arXiv:2009.13081": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2009.13081",
       "identity_tokens": [
+        "DOI:10.3390/app11146421",
         "arXiv:2009.13081"
       ],
       "reason": "医療試験由来の質問応答データセットと評価が主題で、LLMシステム効率化への直接寄与がない。",
-      "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "first_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 486"
       ],
-      "title": "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams",
-      "source_url": "https://arxiv.org/abs/2009.13081"
+      "title": "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams"
     },
     "arXiv:2004.04906": {
       "classification": "unrelated",
@@ -1546,12 +1510,11 @@
       ],
       "reason": "質問応答向け密検索器の学習・検索精度が主題で、LLM実行システム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 481"
       ],
-      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
-      "source_url": "https://arxiv.org/abs/2004.04906"
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering"
     },
     "arXiv:1909.09436": {
       "classification": "unrelated",
@@ -1561,12 +1524,11 @@
       ],
       "reason": "意味的コード検索のデータセット・ベンチマーク・評価が主題で、LLMシステム最適化を扱わない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-09-27T04:28:31+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 477"
       ],
-      "title": "CodeSearchNet Challenge Evaluating the State of Semantic Code Search",
-      "source_url": "https://arxiv.org/abs/1909.09436"
+      "title": "CodeSearchNet Challenge Evaluating the State of Semantic Code Search"
     },
     "arXiv:1908.03265": {
       "classification": "unrelated",
@@ -1618,12 +1580,11 @@
       ],
       "reason": "本文を確認し、Is a Modular Architecture Enough? は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Is a Modular Architecture Enough?",
-      "source_url": "https://arxiv.org/abs/2206.02713"
+      "title": "Is a Modular Architecture Enough?"
     },
     "arXiv:2205.05638": {
       "classification": "unrelated",
@@ -1633,12 +1594,11 @@
       ],
       "reason": "本文を確認し、Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning",
-      "source_url": "https://arxiv.org/abs/2205.05638"
+      "title": "Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning"
     },
     "arXiv:2202.01306": {
       "classification": "unrelated",
@@ -1648,12 +1608,11 @@
       ],
       "reason": "本文を確認し、Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers",
-      "source_url": "https://arxiv.org/abs/2202.01306"
+      "title": "Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers"
     },
     "arXiv:2111.09832": {
       "classification": "unrelated",
@@ -1663,12 +1622,11 @@
       ],
       "reason": "本文を確認し、Merging Models with Fisher-Weighted Averaging は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Merging Models with Fisher-Weighted Averaging",
-      "source_url": "https://arxiv.org/abs/2111.09832"
+      "title": "Merging Models with Fisher-Weighted Averaging"
     },
     "arXiv:2110.08207": {
       "classification": "unrelated",
@@ -1678,12 +1636,11 @@
       ],
       "reason": "本文を確認し、Multitask Prompted Training Enables Zero-Shot Task Generalization は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Multitask Prompted Training Enables Zero-Shot Task Generalization",
-      "source_url": "https://arxiv.org/abs/2110.08207"
+      "title": "Multitask Prompted Training Enables Zero-Shot Task Generalization"
     },
     "arXiv:2109.07276": {
       "classification": "unrelated",
@@ -1693,12 +1650,11 @@
       ],
       "reason": "本文を確認し、Sequence Length is a Domain: Length-based Overfitting in Transformer Models は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Sequence Length is a Domain: Length-based Overfitting in Transformer Models",
-      "source_url": "https://arxiv.org/abs/2109.07276"
+      "title": "Sequence Length is a Domain: Length-based Overfitting in Transformer Models"
     },
     "arXiv:2107.07511": {
       "classification": "unrelated",
@@ -1708,12 +1664,11 @@
       ],
       "reason": "本文を確認し、A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
-      "source_url": "https://arxiv.org/abs/2107.07511"
+      "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification"
     },
     "arXiv:2104.08696": {
       "classification": "unrelated",
@@ -1723,12 +1678,11 @@
       ],
       "reason": "本文を確認し、Knowledge Neurons in Pretrained Transformers は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Knowledge Neurons in Pretrained Transformers",
-      "source_url": "https://arxiv.org/abs/2104.08696"
+      "title": "Knowledge Neurons in Pretrained Transformers"
     },
     "arXiv:2101.06804": {
       "classification": "unrelated",
@@ -1738,12 +1692,11 @@
       ],
       "reason": "本文を確認し、What Makes Good In-Context Examples for GPT-3? は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "What Makes Good In-Context Examples for GPT-3?",
-      "source_url": "https://arxiv.org/abs/2101.06804"
+      "title": "What Makes Good In-Context Examples for GPT-3?"
     },
     "arXiv:2009.10297": {
       "classification": "unrelated",
@@ -1753,12 +1706,11 @@
       ],
       "reason": "本文を確認し、CodeBLEU: a Method for Automatic Evaluation of Code Synthesis は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "CodeBLEU: a Method for Automatic Evaluation of Code Synthesis",
-      "source_url": "https://arxiv.org/abs/2009.10297"
+      "title": "CodeBLEU: a Method for Automatic Evaluation of Code Synthesis"
     },
     "arXiv:2007.01282": {
       "classification": "unrelated",
@@ -1768,12 +1720,11 @@
       ],
       "reason": "本文を確認し、Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
-      "source_url": "https://arxiv.org/abs/2007.01282"
+      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
     },
     "arXiv:2006.09503": {
       "classification": "unrelated",
@@ -1783,12 +1734,11 @@
       ],
       "reason": "本文を確認し、Memory-Efficient Pipeline-Parallel DNN Training は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Memory-Efficient Pipeline-Parallel DNN Training",
-      "source_url": "https://arxiv.org/abs/2006.09503"
+      "title": "Memory-Efficient Pipeline-Parallel DNN Training"
     },
     "arXiv:2004.13336": {
       "classification": "unrelated",
@@ -1798,12 +1748,11 @@
       ],
       "reason": "本文を確認し、Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training",
-      "source_url": "https://arxiv.org/abs/2004.13336"
+      "title": "Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training"
     },
     "arXiv:2004.08249": {
       "classification": "unrelated",
@@ -1813,12 +1762,11 @@
       ],
       "reason": "本文を確認し、Understanding the Difficulty of Training Transformers は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Understanding the Difficulty of Training Transformers",
-      "source_url": "https://arxiv.org/abs/2004.08249"
+      "title": "Understanding the Difficulty of Training Transformers"
     },
     "arXiv:1909.11942": {
       "classification": "unrelated",
@@ -1828,12 +1776,11 @@
       ],
       "reason": "本文を確認し、ALBERT: A Lite BERT for Self-supervised Learning of Language Representations は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
       "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
-      "source_url": "https://arxiv.org/abs/1909.11942"
+      "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations"
     },
     "arXiv:1908.08962": {
       "classification": "unrelated",
@@ -2137,12 +2084,11 @@
       ],
       "reason": "一次資料本文を確認し、eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers",
-      "source_url": "https://arxiv.org/abs/2211.01324"
+      "title": "eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers"
     },
     "arXiv:2112.09332": {
       "classification": "unrelated",
@@ -2152,12 +2098,11 @@
       ],
       "reason": "一次資料本文を確認し、WebGPT: Browser-assisted question-answering with human feedback は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "WebGPT: Browser-assisted question-answering with human feedback",
-      "source_url": "https://arxiv.org/abs/2112.09332"
+      "title": "WebGPT: Browser-assisted question-answering with human feedback"
     },
     "arXiv:1508.07909": {
       "classification": "unrelated",
@@ -2276,12 +2221,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 311"
       ],
-      "title": "Constitutional AI: Harmlessness from AI Feedback",
-      "source_url": "https://arxiv.org/abs/2212.08073"
+      "title": "Constitutional AI: Harmlessness from AI Feedback"
     },
     "arXiv:2204.03044": {
       "classification": "unrelated",
@@ -2292,12 +2236,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 308"
       ],
-      "title": "Fusing finetuned models for better pretraining",
-      "source_url": "https://arxiv.org/abs/2204.03044"
+      "title": "Fusing finetuned models for better pretraining"
     },
     "arXiv:2006.03654": {
       "classification": "unrelated",
@@ -2308,12 +2251,11 @@
       ],
       "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 301"
       ],
-      "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
-      "source_url": "https://arxiv.org/abs/2006.03654"
+      "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention"
     },
     "arXiv:1904.09728": {
       "classification": "unrelated",
@@ -2399,12 +2341,11 @@
       ],
       "reason": "RAGの基礎モデル・学習と知識集約タスク品質が主題で、現行の推論・配信システム最適化を直接扱わない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 272"
       ],
-      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-      "source_url": "https://arxiv.org/abs/2005.11401"
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
     },
     "DOI:10.18653/v1/d19-5409": {
       "classification": "unrelated",
@@ -2680,12 +2621,12 @@
       ],
       "reason": "弱教師あり対照学習による埋め込み品質が主題で、LLM実行基盤への直接寄与がない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 490",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training",
-      "source_url": "https://arxiv.org/abs/2212.03533"
+      "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training"
     },
     "arXiv:2210.15257": {
       "classification": "unrelated",
@@ -2696,12 +2637,12 @@
       ],
       "reason": "画像生成拡散モデルのMoE設計と品質改善が主題で、LLMシステム最適化の対象外。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 489",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "ERNIE-ViLG 2.0: Improving Text-to-Image Diffusion Model with Knowledge-Enhanced Mixture-of-Denoising-Experts",
-      "source_url": "https://arxiv.org/abs/2210.15257"
+      "title": "ERNIE-ViLG 2.0: Improving Text-to-Image Diffusion Model with Knowledge-Enhanced Mixture-of-Denoising-Experts"
     },
     "arXiv:2112.10752": {
       "classification": "unrelated",
@@ -2712,12 +2653,12 @@
       ],
       "reason": "潜在空間で画像拡散モデルの計算量を下げる研究であり、LLM推論・学習システムの対象外。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 380",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
-      "source_url": "https://arxiv.org/abs/2112.10752"
+      "title": "High-Resolution Image Synthesis with Latent Diffusion Models"
     },
     "arXiv:2204.05862": {
       "classification": "unrelated",
@@ -2728,12 +2669,11 @@
       ],
       "reason": "RLHFによる整合学習と能力・安全性評価が主貢献で、実行システム最適化を扱わない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
-      "source_url": "https://arxiv.org/abs/2204.05862"
+      "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback"
     },
     "arXiv:2206.04046": {
       "classification": "unrelated",
@@ -2744,12 +2684,11 @@
       ],
       "reason": "視覚領域のドメイン汎化を目的とするMoEモデル設計で、LLM実行基盤への直接寄与がない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Sparse Mixture-of-Experts are Domain Generalizable Learners",
-      "source_url": "https://arxiv.org/abs/2206.04046"
+      "title": "Sparse Mixture-of-Experts are Domain Generalizable Learners"
     },
     "arXiv:2305.10601": {
       "classification": "unrelated",
@@ -2807,12 +2746,11 @@
       ],
       "reason": "多言語事前学習モデルと能力評価が主貢献で、実行システム最適化ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "mT5: A massively multilingual pre-trained text-to-text transformer",
-      "source_url": "https://arxiv.org/abs/2010.11934"
+      "title": "mT5: A massively multilingual pre-trained text-to-text transformer"
     },
     "arXiv:2506.09344": {
       "classification": "unrelated",
@@ -2868,17 +2806,18 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2109.07958",
       "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.229",
         "DOI:10.48550/arxiv.2109.07958",
         "arXiv:2109.07958"
       ],
       "reason": "真実性評価ベンチマークが主貢献で、実行効率・配信基盤を扱わない。",
-      "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "first_checked_at": "2026-09-27T04:02:01+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
-      "source_url": "https://arxiv.org/abs/2109.07958"
+      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods"
     },
     "arXiv:2305.06161": {
       "classification": "unrelated",
@@ -3080,12 +3019,11 @@
       ],
       "reason": "分散MoEの学習高速化が主題で、現在凍結中の学習高速化系統に該当する。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "FastMoE: A Fast Mixture-of-Expert Training System",
-      "source_url": "https://arxiv.org/abs/2103.13262"
+      "title": "FastMoE: A Fast Mixture-of-Expert Training System"
     },
     "arXiv:2010.11929": {
       "classification": "unrelated",
@@ -3095,12 +3033,11 @@
       ],
       "reason": "Vision Transformerの画像認識研究でLLM推論システム効率化への直接寄与がない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
-      "source_url": "https://arxiv.org/abs/2010.11929"
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
     },
     "arXiv:1809.02789": {
       "classification": "unrelated",
@@ -3155,12 +3092,11 @@
       ],
       "reason": "モデル規模と創発能力の分析で推論システム効率化手法を提案しない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Emergent Abilities of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2206.07682"
+      "title": "Emergent Abilities of Large Language Models"
     },
     "arXiv:2211.09110": {
       "classification": "unrelated",
@@ -3170,12 +3106,11 @@
       ],
       "reason": "言語モデル評価枠組みHELMが主題で推論効率化の新規システム手法はない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Holistic Evaluation of Language Models",
-      "source_url": "https://arxiv.org/abs/2211.09110"
+      "title": "Holistic Evaluation of Language Models"
     },
     "arXiv:2305.14233": {
       "classification": "unrelated",
@@ -3274,12 +3209,11 @@
       ],
       "reason": "科学向けLLMの事前学習・能力評価が主題で、推論ランタイム効率化を扱わない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Galactica: A Large Language Model for Science",
-      "source_url": "https://arxiv.org/abs/2211.09085"
+      "title": "Galactica: A Large Language Model for Science"
     },
     "arXiv:2203.10244": {
       "classification": "unrelated",
@@ -3289,12 +3223,11 @@
       ],
       "reason": "チャート質問応答の能力評価データセットで、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning",
-      "source_url": "https://arxiv.org/abs/2203.10244"
+      "title": "ChartQA: A Benchmark for Question Answering about Charts with Visual and Logical Reasoning"
     },
     "arXiv:1804.05685": {
       "classification": "unrelated",
@@ -3520,12 +3453,11 @@
       ],
       "reason": "task vectorによるモデル編集・能力合成が主題で、推論効率化のシステム寄与がない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Editing Models with Task Arithmetic",
-      "source_url": "https://arxiv.org/abs/2212.04089"
+      "title": "Editing Models with Task Arithmetic"
     },
     "arXiv:2210.07558": {
       "classification": "unrelated",
@@ -3536,12 +3468,11 @@
       ],
       "reason": "動的rankのLoRAによるparameter-efficient fine-tuningが主題で、推論効率化ではない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "DyLoRA: Parameter Efficient Tuning of Pre-trained Models using Dynamic Search-Free Low Rank Adaptation",
-      "source_url": "https://arxiv.org/abs/2210.07558"
+      "title": "DyLoRA: Parameter Efficient Tuning of Pre-trained Models using Dynamic Search-Free Low Rank Adaptation"
     },
     "arXiv:2207.14484": {
       "classification": "unrelated",
@@ -3552,12 +3483,11 @@
       ],
       "reason": "最適化器の学習ダイナミクス解析が主題で、推論システムとは無関係。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Adaptive Gradient Methods at the Edge of Stability",
-      "source_url": "https://arxiv.org/abs/2207.14484"
+      "title": "Adaptive Gradient Methods at the Edge of Stability"
     },
     "arXiv:2512.24880": {
       "classification": "unrelated",
@@ -3659,12 +3589,11 @@
       ],
       "reason": "大規模Transformer学習のactivation recomputation削減が主目的で、最終用途が学習高速化。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Reducing Activation Recomputation in Large Transformer Models",
-      "source_url": "https://arxiv.org/abs/2205.05198"
+      "title": "Reducing Activation Recomputation in Large Transformer Models"
     },
     "arXiv:2203.00555": {
       "classification": "unrelated",
@@ -3674,12 +3603,11 @@
       ],
       "reason": "超深層Transformerの学習安定化と能力向上が主題で、推論効率化ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "DeepNet: Scaling Transformers to 1,000 Layers",
-      "source_url": "https://arxiv.org/abs/2203.00555"
+      "title": "DeepNet: Scaling Transformers to 1,000 Layers"
     },
     "arXiv:2403.06504": {
       "classification": "unrelated",
@@ -3719,12 +3647,11 @@
       ],
       "reason": "QASPERデータセットとQA能力評価が主題で、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers",
-      "source_url": "https://arxiv.org/abs/2105.03011"
+      "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers"
     },
     "DOI:10.18653/v1/d18-1260": {
       "classification": "unrelated",
@@ -3809,12 +3736,11 @@
       ],
       "reason": "block-sparse演算でMoEのdropless学習を高速化するシステムで、主評価・最終用途が学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
-      "source_url": "https://arxiv.org/abs/2211.15841"
+      "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts"
     },
     "arXiv:2203.02155": {
       "classification": "unrelated",
@@ -3824,12 +3750,11 @@
       ],
       "reason": "人間フィードバックによる指示追従学習（RLHF）が主題で、推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Training language models to follow instructions with human feedback",
-      "source_url": "https://arxiv.org/abs/2203.02155"
+      "title": "Training language models to follow instructions with human feedback"
     },
     "arXiv:1806.03377": {
       "classification": "unrelated",
@@ -3927,12 +3852,11 @@
       ],
       "reason": "BIG-benchによる言語モデル能力の測定・外挿が主題で、推論効率化ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
-      "source_url": "https://arxiv.org/abs/2206.04615"
+      "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models"
     },
     "arXiv:1811.06965": {
       "classification": "unrelated",
@@ -4015,7 +3939,7 @@
       ],
       "reason": "sequence dimensionをGPU間分割して長系列trainingを可能にする4D並列学習システムで、最終用途が学習。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4029,7 +3953,7 @@
       ],
       "reason": "137B対話モデルの学習・安全性・事実性・能力が主題で、推論システム効率化の一次研究ではない。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4043,7 +3967,7 @@
       ],
       "reason": "dense checkpointをMoEへupcycleして学習コストを再利用する手法で、中心はMoE training efficiency。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-27T05:26:49+00:00",
+      "last_checked_at": "2026-09-30T09:50:06+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5599,14 +5523,15 @@
       "identity_tokens": [
         "arXiv:2105.08209"
       ],
-      "reason": "長文物語要約のデータセット構築と基準モデル評価が主貢献で、LLM推論基盤の高速化・省メモリ化を提案しないため対象外。",
+      "reason": "長文要約dataset構築が主題で、推論system最適化ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
         "papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md"
       ],
-      "title": "BookSum: A Collection of Datasets for Long-form Narrative Summarization"
+      "title": "BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization"
     },
     "arXiv:2103.11943": {
       "classification": "unrelated",
@@ -5614,10 +5539,11 @@
       "identity_tokens": [
         "arXiv:2103.11943"
       ],
-      "reason": "BERTの機構とNLP応用を整理するレビューであり、新規の推論効率化方式やサービング基盤を提案しないため対象外。",
+      "reason": "BERT応用のreviewであり、推論基盤・runtime最適化の研究ではない。",
       "first_checked_at": "2026-09-30T09:20:54+00:00",
-      "last_checked_at": "2026-09-30T09:20:54+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
         "papers/inference/99-other-inference-systems/2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md"
       ],
@@ -5730,6 +5656,36 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Attention Is All You Need"
+    },
+    "arXiv:2104.04473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.04473",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2104.04473",
+        "arXiv:2104.04473"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: テンソル・パイプライン・データ並列を組み合わせ大規模言語モデル学習をGPUクラスタ上で効率化する直接的な分散学習システム研究。",
+      "first_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "title": "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM"
+    },
+    "arXiv:2110.03888": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.03888",
+      "identity_tokens": [
+        "arXiv:2110.03888"
+      ],
+      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 10兆パラメータ級学習を512 GPUで実現するPseudo-to-Realと細粒度CPU退避を提案し、GPU利用率とCPUメモリを直接管理する学習システム研究。",
+      "first_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review rank 493"
+      ],
+      "title": "M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining"
     }
   }
 }

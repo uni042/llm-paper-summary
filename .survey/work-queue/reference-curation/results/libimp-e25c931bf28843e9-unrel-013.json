@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e25c931bf28843e9-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.09332",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.09332",
+    "identity_tokens": [
+      "arXiv:2112.09332"
+    ],
+    "reason": "一次資料本文を確認し、WebGPT: Browser-assisted question-answering with human feedback は学習・能力評価・非LLM生成等が主目的で、現行LLM推論システム範囲への直接寄与がないと判定。",
+    "first_checked_at": "2026-09-27T07:00:57+09:00",
+    "last_checked_at": "2026-09-30T09:50:07+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "WebGPT: Browser-assisted question-answering with human feedback"
+  },
+  "processed_at": "2026-09-30T09:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e25c931bf288",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

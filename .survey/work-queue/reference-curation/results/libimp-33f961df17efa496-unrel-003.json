@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33f961df17efa496-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.05862",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.05862",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2204.05862",
+      "arXiv:2204.05862"
+    ],
+    "reason": "RLHFによる整合学習と能力・安全性評価が主貢献で、実行システム最適化を扱わない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:50:06+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback"
+  },
+  "processed_at": "2026-09-30T09:50:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33f961df17ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

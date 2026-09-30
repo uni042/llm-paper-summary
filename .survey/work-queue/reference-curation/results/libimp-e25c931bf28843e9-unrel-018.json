@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e25c931bf28843e9-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2202.12837",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2202.12837",
+    "identity_tokens": [
+      "arXiv:2202.12837"
+    ],
+    "reason": "文脈内学習で正解ラベルや入力分布が性能へ与える影響を分析する研究で、LLM実行システム最適化への直接寄与がない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:50:07+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 498"
+    ],
+    "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?"
+  },
+  "processed_at": "2026-09-30T09:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e25c931bf288",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33f961df17efa496-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.15257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.15257",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2210.15257",
+      "arXiv:2210.15257"
+    ],
+    "reason": "画像生成拡散モデルのMoE設計と品質改善が主題で、LLMシステム最適化の対象外。",
+    "first_checked_at": "2026-09-27T12:29:48+09:00",
+    "last_checked_at": "2026-09-30T09:50:06+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 489",
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "ERNIE-ViLG 2.0: Improving Text-to-Image Diffusion Model with Knowledge-Enhanced Mixture-of-Denoising-Experts"
+  },
+  "processed_at": "2026-09-30T09:50:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33f961df17ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

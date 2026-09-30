@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab77c3f3682b697f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.09436",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.09436",
+    "identity_tokens": [
+      "arXiv:1909.09436"
+    ],
+    "reason": "意味的コード検索のデータセット・ベンチマーク・評価が主題で、LLMシステム最適化を扱わない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:50:06+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 477"
+    ],
+    "title": "CodeSearchNet Challenge Evaluating the State of Semantic Code Search"
+  },
+  "processed_at": "2026-09-30T09:50:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab77c3f3682b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
