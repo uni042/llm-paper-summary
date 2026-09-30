@@ -2,6 +2,12 @@ name: Library import processor
 
 on:
   workflow_dispatch:
+    inputs:
+      drain_generation:
+        description: 'Bounded self-drain generation; normally omitted'
+        required: false
+        default: '0'
+        type: string
   push:
     branches: [main]
     paths:
@@ -11,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: library-import-main
@@ -253,4 +260,32 @@ jobs:
 
           if [ "\${relevance_rc:-0}" -ne 0 ]; then
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
+          fi
+
+          # Continue draining without relying on GitHub scheduled-event delivery.
+          # Each run remains bounded and queues at most one successor.
+          sync_main
+          research_backlog=$(find .survey/import-inbox/pending/research -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l)
+          discovery_pending=$(find .survey/import-inbox/pending/discovery -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l)
+          discovery_waiting=$(find .survey/import-inbox/waiting/discovery -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l)
+          backlog_total=$((research_backlog + discovery_pending + discovery_waiting))
+
+          generation="\${{ github.event.inputs.drain_generation || '0' }}"
+          if ! [[ "$generation" =~ ^[0-9]+$ ]]; then
+            generation=0
+          fi
+
+          echo "Library backlog after this run: research=\${research_backlog}, discovery_pending=\${discovery_pending}, discovery_waiting=\${discovery_waiting}, generation=\${generation}"
+
+          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 24 ]; then
+            next_generation=$((generation + 1))
+            echo "Queueing bounded Library import continuation generation \${next_generation}."
+            GH_TOKEN="\${{ github.token }}" gh workflow run library-import.yml \
+              --repo "\${GITHUB_REPOSITORY}" \
+              --ref main \
+              -f drain_generation="\${next_generation}"
+          elif [ "$backlog_total" -gt 0 ]; then
+            echo "Backlog remains after generation cap; a later batch kick or central dispatch will resume it." >&2
+          else
+            echo 'Library import backlog is drained.'
           fi
