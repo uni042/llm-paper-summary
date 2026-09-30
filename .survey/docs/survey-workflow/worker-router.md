@@ -266,7 +266,7 @@ Survey GitHub Importは1回の転送バッチを終えたら、`.survey/schedule
 
 正本仕様は \`.survey/import-inbox/README.md\`。実行workflowは \`.github/workflows/library-import.yml\` の1本だけとする。
 
-受信箱processor自身はcronを持たず、`.github/workflows/survey-claim-fast.yml` の中央schedulerから10分周期で `workflow_dispatch` され、最新mainから再計算する。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
+受信箱processor自身はcronを持たず、`.github/workflows/survey-claim-fast.yml` の中央schedulerから10分周期で `workflow_dispatch` され、最新mainから再計算する。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 60 records。Discovery JSONが60 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、60 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
 
 ### Research
 
