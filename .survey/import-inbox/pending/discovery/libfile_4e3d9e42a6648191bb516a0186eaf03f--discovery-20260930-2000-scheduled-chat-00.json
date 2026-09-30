@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20260930-2000-scheduled-chat-00",
+  "reference_main_sha": "b52dbf0837873f4dc50fda13afed86e9b95f5544",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.sustainlp-1.5"
+      ],
+      "title": "Memory-efficient Transformers via Top-k Attention",
+      "reason": "通常のsoftmax注意をquery chunkごとのtop-k key選択へ置換し、事前学習済みTransformerにも追加の矯正事前学習なしで適用できるメモリ効率化手法。注意だけでなくFFNもquery-key-value形式へ書き換えて同じtop-k演算を適用し、推論時の中間メモリ削減を直接狙うため対象範囲。",
+      "source_url": "https://aclanthology.org/2021.sustainlp-1.5/",
+      "body_check": "本文/論文ページで手法と評価を確認。queryをchunk処理して各queryに対するtop-k keyだけを保持し、入力長に対するメモリを線形化する。Long Range Arenaの注意層、T5/UnifiedQAのFFNを対象に、学習・fine-tuning・zero-shot inferenceでvanilla attentionに近い精度を報告しており、推論メモリ最適化への適用が明確。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "arXiv:2601.06123"
+      ],
+      "title": "Latent Space Communication via K-V Cache Alignment",
+      "reason": "異なるLLMのKVキャッシュを共有潜在空間へ写像し、モデル間で直接受け渡すためのadapterを学習する方式。cross-model KV transferという推論時状態再利用に直結し、異なるcheckpoint・言語特化モデル・異なるseed/規模間での連携を扱うため対象範囲。",
+      "source_url": "https://arxiv.org/abs/2601.06123",
+      "body_check": "本文の方法・実験・結論を確認。base modelは凍結し、KVを共有空間へ入出力するtranslatorだけを学習。100M〜400MのGemma-2系列、英語/ロシア語/スペイン語、異なるtraining trajectoryでprefix KVを別モデルへ移しsuffix language modelingを評価し、zero-shot module portabilityも検証。推論状態の相互運用が中心。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03893-cross-model-kv-cache-transfer.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models",
+      "reason": "モデル報告の大部分は知識蒸留・継続事前学習・SFT/RLなどモデル構築だが、第一段でPuzzleによるhardware-aware NASとFFN fusionを用い、推論latency・memory・throughputを目的関数としてLlamaブロックを置換する明確な推論効率化要素がある。学習主体の凍結範囲との境界にあるためborderline。",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "body_check": "本文のCreating Inference-Optimized Models節を確認。Llama 3.3-70B/3.1-405Bからblock-wise local distillationで代替block libraryを作り、Puzzle NASでaccuracy-efficiency tradeoffを探索。LN-Ultraは8×H100 1 nodeへ収まり高throughputを狙う。一方、後続の主要章はreasoning post-trainingと大規模RLであり、論文全体の主目的は純粋な推論システム研究ではない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "reason": "MoEと動的token選択を使うが対象は画像生成用Diffusion Transformerで、LLM推論・LLMサービング・KVキャッシュ等が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/2503.14487",
+      "body_check": "本文の方法・実験を確認。batch-level global token poolとcapacity predictorでnoise level/sample complexityに応じて画像patch計算を配分し、ImageNet class-conditional生成とtext-to-image生成でFID等を評価。Diffusion image generationのモデル設計・学習が中心で、LLM推論システムへの適用評価はない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18351",
+      "identity_tokens": [
+        "arXiv:2410.18351"
+      ],
+      "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
+      "reason": "投機的復号のdraft長を固定せず、draft logitsのentropyからtoken受理確率の下界を近似して早期停止するtraining-freeな推論高速化。draft費用とtarget検証の交換条件を直接最適化するため対象範囲。",
+      "source_url": "https://arxiv.org/abs/2410.18351",
+      "body_check": "本文の手法・実験・結論を確認。Llama2-7B+115M drafter、Pythia-6.9B+70M〜1B draft、TinyLlama-1B等を用い、CNN-DM/Dolly-15k/WMT-19、A100-80GB、温度0.7〜1.7、最大draft長3/7/16で評価。静的draft長比10〜57%改善、Pythia-1B draftでは29.7 TPS自己回帰に対し46.4 TPSを報告。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098"
+      ],
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "reason": "MoE routingを扱うが、対象はtext-to-image用Diffusion Transformerのスケーリングであり、LLM推論のexpert routing/offload/servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2410.02098",
+      "body_check": "本文のMethodologyと実験を確認。rectified-flow Diffusion Transformerへexpert-choice routingを導入し、text重要度とimage patch complexityに応じて計算を配分。最大97B parametersまで画像生成モデルを拡張しGenEval 71.68%等で評価しており、LLM token generationやLLM servingの評価はない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.243",
+        "arXiv:2409.12941"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "reason": "RAGの事実性・検索・推論能力を測るFRAMESベンチマークとmulti-step retrieval pipelineの評価が主目的で、推論速度・メモリ・サービング基盤の最適化研究ではない。",
+      "source_url": "https://arxiv.org/abs/2409.12941",
+      "body_check": "本文の実験節を確認。Gemini 1.5 Pro/Flash、Gemma2-27B、Llama3.2-3B-I、Qwen2.5-3B-Iに対し、naive/BM25/oracle promptとmulti-step retrievalを比較し回答accuracyを評価。no-retrieval 0.40級からmulti-step pipeline 0.66へ改善する能力評価であり、システム効率指標は中心でない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432",
+        "DOI:10.1007/s11704-024-40231-1"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents",
+      "reason": "LLMエージェントの構築、応用、能力評価を整理する一般サーベイで、agentic serving/runtimeやKV lifecycle、推論スケジューリングなどのシステム最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2308.11432",
+      "body_check": "本文のagent construction/application/evaluation章を確認。profile、memory、planning、action等のagent構成と社会・自然科学・工学応用、WebShop/ReAct/Voyager/AgentBench等のtask success/human similarity評価を整理。効率指標の記述も主にdevelopment/training efficiencyで、推論サービング基盤の設計・性能評価ではない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.04030",
+        "arXiv:2504.04030"
+      ],
+      "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs",
+      "reason": "5M件のコードinstruction-tuningデータセット生成とSFT性能向上が主目的で、最終適用先は学習データ・微調整であり凍結中の学習系統に該当する。",
+      "source_url": "https://arxiv.org/abs/2504.04030",
+      "body_check": "本文のdataset pipelineと評価を確認。1.43M generic coding instructionsと25,443 algorithmic seedsからGenetic-Instructで約9M生成し、cleaning後5Mを残す。Llama3/Qwen2.5-Coder 1B+/3B+/7B+をA100で3 epoch SFTしHumanEval/MBPP/LiveCodeBench/BigCodeBenchを評価。推論効率化ではなくinstruction tuningが中心。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2302.11382",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.11382",
+        "arXiv:2302.11382"
+      ],
+      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT",
+      "reason": "ChatGPT向けprompt engineeringの再利用可能なpattern catalogを体系化する研究で、LLM推論実装、サービング、メモリ管理、量子化、スケジューリングの効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2302.11382",
+      "body_check": "本文を確認。prompt patternをname/context/problem/forces/solution/consequences/examples等で記述し、Output Automater、Persona、Question Refinement等のprompt設計パターンをカタログ化する。主な貢献は対話・prompt設計方法論で、推論性能やresource効率のシステム評価はない。",
+      "first_checked_at": "2026-09-30T19:56:52+09:00",
+      "last_checked_at": "2026-09-30T19:56:52+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "worklist_rank": 475
+    }
+  ]
+}
