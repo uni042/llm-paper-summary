@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd5d42b0c0bf984c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.03172",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.03172",
+    "identity_tokens": [
+      "DOI:10.1162/tacl%5fa%5f00638",
+      "arXiv:2307.03172"
+    ],
+    "reason": "長文脈利用の位置依存劣化を分析する重要な評価研究だが、推論効率化システム自体は提案しない。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Lost in the Middle: How Language Models Use Long Contexts"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd5d42b0c0bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

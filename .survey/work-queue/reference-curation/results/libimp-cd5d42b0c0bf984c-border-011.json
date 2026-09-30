@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd5d42b0c0bf984c-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.05175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.05175",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.05175",
+      "arXiv:2310.05175"
+    ],
+    "reason": "外れ値分布に応じた層別疎性でLLM枝刈り品質を改善するが、主貢献は圧縮アルゴリズムでランタイム機構ではない。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 140"
+    ],
+    "title": "Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd5d42b0c0bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b9bcdee97ebf93e-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.16840",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.16840",
+    "identity_tokens": [
+      "arXiv:2402.16840"
+    ],
+    "reason": "パラメータ共有による小型言語モデル設計が中心で実行ランタイムの新規性は限定的。",
+    "first_checked_at": "2026-09-27T06:31:09+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 326"
+    ],
+    "title": "MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b9bcdee97eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

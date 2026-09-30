@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T09:46:42+00:00",
-  "record_count": 367,
+  "updated_at": "2026-09-30T09:47:28+00:00",
+  "record_count": 366,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -963,14 +963,13 @@
       "identity_tokens": [
         "arXiv:2404.15574"
       ],
-      "reason": "検索ヘッドの機構と長文脈の事実性の因果関係を分析するが、配信・ランタイム効率を高める手法や評価は提案しない。疎注意／KV選択への示唆はあるものの、システムサーベイへの直接寄与は間接的。",
+      "reason": "Identifies retrieval heads and tests their causal contribution to long-context factuality, but does not propose or evaluate a serving/runtime efficiency method. It informs future sparse-attention/KV-selection design, while its direct systems contribution is indirect.",
       "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "discovery-20260926-2301-scheduled-chat-00.md candidate #37"
       ],
-      "title": "Retrieval Head Mechanistically Explains Long-Context Factuality",
-      "source_url": "https://arxiv.org/abs/2404.15574"
+      "title": "Retrieval Head Mechanistically Explains Long-Context Factuality"
     },
     "arXiv:1706.03762": {
       "classification": "borderline",
@@ -1008,14 +1007,13 @@
       "identity_tokens": [
         "arXiv:2408.00118"
       ],
-      "reason": "実用サイズでのモデル設計と学習が中心。局所/大域注意など推論効率に関係する設計はあるが、システム寄与は間接的。",
+      "reason": "4. **Gemma 2: Improving Open Language Models at a Practical Size** — `arXiv:2408.00118` ([paper](https://arxiv.org/abs/2408.00118)). GQA and local/global attention have efficiency implications, but the work is mainly model quality/design with limited systems evaluation.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-27T00:01:48+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Gemma 2: Improving Open Language Models at a Practical Size",
-      "source_url": "https://arxiv.org/abs/2408.00118"
+      "title": "Gemma 2: Improving Open Language Models at a Practical Size"
     },
     "arXiv:2001.04451": {
       "classification": "borderline",
@@ -1085,12 +1083,12 @@
       ],
       "reason": "MoE全般のサーベイで背景価値はあるが新規の推論システム手法ではない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "web discovery; scheduled-chat-30"
       ],
-      "title": "A Survey on Mixture of Experts",
-      "source_url": "https://arxiv.org/abs/2404.09526"
+      "title": "A Survey on Mixture of Experts"
     },
     "arXiv:1712.05877": {
       "classification": "borderline",
@@ -1306,12 +1304,12 @@
       ],
       "reason": "端末・エッジLLM効率化のサーベイで新規システム機構の一次研究ではない。",
       "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review rank 451"
       ],
-      "title": "Mobile Edge Intelligence for Large Language Models: A Contemporary Survey",
-      "source_url": "https://arxiv.org/abs/2407.18921"
+      "title": "Mobile Edge Intelligence for Large Language Models: A Contemporary Survey"
     },
     "arXiv:2006.16236": {
       "classification": "borderline",
@@ -1350,12 +1348,11 @@
       ],
       "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
       "first_checked_at": "2026-09-27T03:31:44+09:00",
-      "last_checked_at": "2026-09-27T03:31:44+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 427"
       ],
-      "title": "MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts",
-      "source_url": "https://arxiv.org/abs/2407.21770"
+      "title": "MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts"
     },
     "arXiv:2406.07524": {
       "classification": "borderline",
@@ -1365,12 +1362,11 @@
       ],
       "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
       "first_checked_at": "2026-09-27T03:31:44+09:00",
-      "last_checked_at": "2026-09-27T03:31:44+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 425"
       ],
-      "title": "Simple and Effective Masked Diffusion Language Models",
-      "source_url": "https://arxiv.org/abs/2406.07524"
+      "title": "Simple and Effective Masked Diffusion Language Models"
     },
     "arXiv:2403.12968": {
       "classification": "borderline",
@@ -1380,12 +1376,11 @@
       ],
       "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
       "first_checked_at": "2026-09-27T03:31:44+09:00",
-      "last_checked_at": "2026-09-27T03:31:44+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 422"
       ],
-      "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
-      "source_url": "https://arxiv.org/abs/2403.12968"
+      "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression"
     },
     "arXiv:2401.01325": {
       "classification": "borderline",
@@ -1395,12 +1390,11 @@
       ],
       "reason": "一次資料本文を確認し効率化との関連は認めたが、主貢献がモデル／学習手法・高位アルゴリズム・評価資源で、現行システムサーベイへの直接性は境界的と判断した。",
       "first_checked_at": "2026-09-27T03:31:44+09:00",
-      "last_checked_at": "2026-09-27T03:31:44+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 419"
       ],
-      "title": "SelfExtend: Extending LLM Context Window Without Tuning",
-      "source_url": "https://arxiv.org/abs/2401.01325"
+      "title": "SelfExtend: Extending LLM Context Window Without Tuning"
     },
     "arXiv:2310.11511": {
       "classification": "borderline",
@@ -1411,12 +1405,13 @@
       ],
       "reason": "検索・生成・自己批評を学習するRAG手法で、実行時コストには関係するが配信／ランタイム機構が主貢献ではない。",
       "first_checked_at": "2026-09-27T12:29:48+09:00",
-      "last_checked_at": "2026-09-27T12:29:48+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
+        "worker-worklist-30 discovery_review rank 385",
+        "worker-worklist-30 discovery_review rank 418",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
-      "source_url": "https://arxiv.org/abs/2310.11511"
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
     },
     "arXiv:2211.15029": {
       "classification": "borderline",
@@ -2016,12 +2011,11 @@
       ],
       "reason": "出力長制約による費用・遅延削減を分析するが中心はプロンプト／推論方略。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 334"
       ],
-      "title": "Concise Thoughts: Impact of Output Length on LLM Reasoning and Cost",
-      "source_url": "https://arxiv.org/abs/2407.19825"
+      "title": "Concise Thoughts: Impact of Output Length on LLM Reasoning and Cost"
     },
     "arXiv:2406.11704": {
       "classification": "borderline",
@@ -2031,12 +2025,11 @@
       ],
       "reason": "340Bモデルの学習・整合・能力が中心で独立した新規システム機構の一次研究ではない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 332"
       ],
-      "title": "Nemotron-4 340B Technical Report",
-      "source_url": "https://arxiv.org/abs/2406.11704"
+      "title": "Nemotron-4 340B Technical Report"
     },
     "arXiv:2402.16840": {
       "classification": "borderline",
@@ -2046,12 +2039,11 @@
       ],
       "reason": "パラメータ共有による小型言語モデル設計が中心で実行ランタイムの新規性は限定的。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 326"
       ],
-      "title": "MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT",
-      "source_url": "https://arxiv.org/abs/2402.16840"
+      "title": "MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT"
     },
     "arXiv:2402.11187": {
       "classification": "borderline",
@@ -2061,12 +2053,11 @@
       ],
       "reason": "層崩壊による構造化枝刈りでLLMサイズを削減する圧縮手法でランタイム機構ではない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 325"
       ],
-      "title": "LaCo: Large Language Model Pruning via Layer Collapse",
-      "source_url": "https://arxiv.org/abs/2402.11187"
+      "title": "LaCo: Large Language Model Pruning via Layer Collapse"
     },
     "arXiv:2402.03766": {
       "classification": "borderline",
@@ -2076,12 +2067,11 @@
       ],
       "reason": "モバイル向け小型視覚言語モデルの構造・学習設計が中心。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 324"
       ],
-      "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model",
-      "source_url": "https://arxiv.org/abs/2402.03766"
+      "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model"
     },
     "arXiv:2311.12351": {
       "classification": "borderline",
@@ -2091,12 +2081,11 @@
       ],
       "reason": "長文脈Transformer技術の包括的サーベイで新規一次システム研究ではない。",
       "first_checked_at": "2026-09-27T06:31:09+09:00",
-      "last_checked_at": "2026-09-27T06:31:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 323"
       ],
-      "title": "Advancing Transformer Architecture in Long-Context Large Language Models: A Comprehensive Survey",
-      "source_url": "https://arxiv.org/abs/2311.12351"
+      "title": "Advancing Transformer Architecture in Long-Context Large Language Models: A Comprehensive Survey"
     },
     "arXiv:2406.08413": {
       "classification": "borderline",
@@ -2106,12 +2095,11 @@
       ],
       "reason": "一次資料本文を確認し、Memory Is All You Need: An Overview of Compute-in-Memory Architectures for Accelerating Large Language Model Inference は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Memory Is All You Need: An Overview of Compute-in-Memory Architectures for Accelerating Large Language Model Inference",
-      "source_url": "https://arxiv.org/abs/2406.08413"
+      "title": "Memory Is All You Need: An Overview of Compute-in-Memory Architectures for Accelerating Large Language Model Inference"
     },
     "arXiv:2405.14782": {
       "classification": "borderline",
@@ -2121,12 +2109,11 @@
       ],
       "reason": "一次資料本文を確認し、Lessons from the Trenches on Reproducible Evaluation of Language Models は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
-      "source_url": "https://arxiv.org/abs/2405.14782"
+      "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models"
     },
     "arXiv:2403.17297": {
       "classification": "borderline",
@@ -2136,12 +2123,11 @@
       ],
       "reason": "一次資料本文を確認し、InternLM2 Technical Report は関連する基盤価値がある一方、LLM推論システムへの直接性または新規システム寄与が弱いため境界扱い。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-09-27T07:00:57+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "InternLM2 Technical Report",
-      "source_url": "https://arxiv.org/abs/2403.17297"
+      "title": "InternLM2 Technical Report"
     },
     "arXiv:2302.07842": {
       "classification": "borderline",
@@ -2390,12 +2376,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 289"
       ],
-      "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption",
-      "source_url": "https://arxiv.org/abs/2405.14209"
+      "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption"
     },
     "arXiv:2509.24389": {
       "classification": "borderline",
@@ -2422,12 +2407,11 @@
       ],
       "reason": "一次資料PDF本文を確認し効率化との関連はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ等で現行システムサーベイへの直接性は境界的。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-27T07:31:21+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 275"
       ],
-      "title": "Scaling Laws for Fine-Grained Mixture of Experts",
-      "source_url": "https://arxiv.org/abs/2402.07871"
+      "title": "Scaling Laws for Fine-Grained Mixture of Experts"
     },
     "arXiv:2309.16039": {
       "classification": "borderline",
@@ -2437,12 +2421,11 @@
       ],
       "reason": "長文脈化の継続事前学習と評価が中心。32K文脈を実現するが、実行ランタイムの新規機構よりモデル学習設計が主。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 274"
       ],
-      "title": "Effective Long-Context Scaling of Foundation Models",
-      "source_url": "https://arxiv.org/abs/2309.16039"
+      "title": "Effective Long-Context Scaling of Foundation Models"
     },
     "arXiv:2306.14893": {
       "classification": "borderline",
@@ -2481,12 +2464,11 @@
       ],
       "reason": "LLM activation sparsityを学習で高め推論効率を狙うが、主貢献はモデル訓練・活性化設計でランタイム機構は二次的。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 245"
       ],
-      "title": "ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.13516"
+      "title": "ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models"
     },
     "arXiv:2402.02834": {
       "classification": "borderline",
@@ -2496,12 +2478,11 @@
       ],
       "reason": "depth pruningで推論速度を改善する圧縮研究だが、主貢献は構造化pruningと再学習手法でシステム実装の新規性は限定的。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 243"
       ],
-      "title": "Shortened LLaMA: A Simple Depth Pruning for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.02834"
+      "title": "Shortened LLaMA: A Simple Depth Pruning for Large Language Models"
     },
     "arXiv:2312.16886": {
       "classification": "borderline",
@@ -2511,12 +2492,11 @@
       ],
       "reason": "mobile向けVLMの軽量architectureと高速性を扱うが、主貢献はモデル設計で汎用LLM実行基盤ではない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 242"
       ],
-      "title": "MobileVLM: A Fast, Strong and Open Vision Language Assistant for Mobile Devices",
-      "source_url": "https://arxiv.org/abs/2312.16886"
+      "title": "MobileVLM: A Fast, Strong and Open Vision Language Assistant for Mobile Devices"
     },
     "arXiv:2311.12023": {
       "classification": "borderline",
@@ -2526,12 +2506,11 @@
       ],
       "reason": "低ランク＋量子化分解でfinetuningメモリを減らすが、主貢献はPEFT学習手法で分散学習システムの新規機構ではない。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 241"
       ],
-      "title": "LQ-LoRA: Low-rank Plus Quantized Matrix Decomposition for Efficient Language Model Finetuning",
-      "source_url": "https://arxiv.org/abs/2311.12023"
+      "title": "LQ-LoRA: Low-rank Plus Quantized Matrix Decomposition for Efficient Language Model Finetuning"
     },
     "arXiv:2307.00526": {
       "classification": "borderline",
@@ -2541,12 +2520,11 @@
       ],
       "reason": "tensor-train分解によるLLM圧縮が中心で推論メモリ削減には関係するが、ランタイム／カーネルの新規性は限定的。",
       "first_checked_at": "2026-09-27T09:28:42+09:00",
-      "last_checked_at": "2026-09-27T09:28:42+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 239"
       ],
-      "title": "TensorGPT: Efficient Compression of Large Language Models based on Tensor-Train Decomposition",
-      "source_url": "https://arxiv.org/abs/2307.00526"
+      "title": "TensorGPT: Efficient Compression of Large Language Models based on Tensor-Train Decomposition"
     },
     "arXiv:2205.12410": {
       "classification": "borderline",
@@ -2679,12 +2657,11 @@
       ],
       "reason": "SVDによるLLM圧縮でサイズ・計算量を減らすが、主貢献は圧縮アルゴリズムでランタイム／カーネルの新規性は限定的。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 210"
       ],
-      "title": "SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression",
-      "source_url": "https://arxiv.org/abs/2403.07378"
+      "title": "SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression"
     },
     "arXiv:2402.08562": {
       "classification": "borderline",
@@ -2695,12 +2672,11 @@
       ],
       "reason": "層ごとのLoRA専門家数を調整するPEFT設計が中心で、学習効率には関係するもののシステム基盤の一次研究ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 208"
       ],
-      "title": "Higher Layers Need More LoRA Experts",
-      "source_url": "https://arxiv.org/abs/2402.08562"
+      "title": "Higher Layers Need More LoRA Experts"
     },
     "arXiv:2307.06435": {
       "classification": "borderline",
@@ -2711,12 +2687,11 @@
       ],
       "reason": "LLM全般を整理する包括的サーベイで関連背景は含むが、システム効率化の新規一次研究ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 203"
       ],
-      "title": "A Comprehensive Overview of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2307.06435"
+      "title": "A Comprehensive Overview of Large Language Models"
     },
     "arXiv:2404.02690": {
       "classification": "borderline",
@@ -2727,12 +2702,11 @@
       ],
       "reason": "疎注意が厳密注意を近似できる理論的性質を主に解析しており、直接のカーネル／配信実装より理論寄与が中心。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 192"
       ],
-      "title": "How Sparse Attention Approximates Exact Attention? Your Attention is Naturally n^C-Sparse",
-      "source_url": "https://arxiv.org/abs/2404.02690"
+      "title": "How Sparse Attention Approximates Exact Attention? Your Attention is Naturally n^C-Sparse"
     },
     "arXiv:2505.16933": {
       "classification": "borderline",
@@ -2759,12 +2733,11 @@
       ],
       "reason": "反復サンプリングによる推論時計算量スケーリング則が中心で、資源管理・配信ランタイムの新規機構ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 163"
       ],
-      "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling",
-      "source_url": "https://arxiv.org/abs/2407.21787"
+      "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling"
     },
     "arXiv:2402.06196": {
       "classification": "borderline",
@@ -2775,12 +2748,11 @@
       ],
       "reason": "LLM全般の包括的サーベイであり、システム最適化の一次研究ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 160"
       ],
-      "title": "Large Language Models: A Survey",
-      "source_url": "https://arxiv.org/abs/2402.06196"
+      "title": "Large Language Models: A Survey"
     },
     "arXiv:2311.16867": {
       "classification": "borderline",
@@ -2791,12 +2763,11 @@
       ],
       "reason": "分散学習・Triton kernel・選択的再計算など有用なシステム詳細を含むが、主貢献はFalconモデル系列全体の技術報告。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 159"
       ],
-      "title": "The Falcon Series of Open Language Models",
-      "source_url": "https://arxiv.org/abs/2311.16867"
+      "title": "The Falcon Series of Open Language Models"
     },
     "arXiv:2308.07633": {
       "classification": "borderline",
@@ -2807,12 +2778,11 @@
       ],
       "reason": "量子化・枝刈り・蒸留等を体系化する圧縮サーベイで対象領域には近いが、新規一次システム研究ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 158"
       ],
-      "title": "A Survey on Model Compression for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2308.07633"
+      "title": "A Survey on Model Compression for Large Language Models"
     },
     "arXiv:2310.05175": {
       "classification": "borderline",
@@ -2823,12 +2793,11 @@
       ],
       "reason": "外れ値分布に応じた層別疎性でLLM枝刈り品質を改善するが、主貢献は圧縮アルゴリズムでランタイム機構ではない。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-27T10:28:09+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 140"
       ],
-      "title": "Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity",
-      "source_url": "https://arxiv.org/abs/2310.05175"
+      "title": "Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity"
     },
     "arXiv:2301.12597": {
       "classification": "borderline",
@@ -2917,12 +2886,12 @@
       ],
       "reason": "Soft MoEというモデル構造・ルーティング方式の提案が中心で、配信・通信・メモリ管理などの実行システム寄与は二次的。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "From Sparse to Soft Mixtures of Experts",
-      "source_url": "https://arxiv.org/abs/2308.00951"
+      "title": "From Sparse to Soft Mixtures of Experts"
     },
     "arXiv:1606.07947": {
       "classification": "borderline",
@@ -3058,12 +3027,12 @@
       ],
       "reason": "活性化疎性を高めて計算削減を狙うモデル設計で、実行カーネル・ランタイムの新規機構は主ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
       ],
-      "title": "ReLU² Wins: Discovering Efficient Activation Functions for Sparse LLMs",
-      "source_url": "https://arxiv.org/abs/2402.03804"
+      "title": "ReLU² Wins: Discovering Efficient Activation Functions for Sparse LLMs"
     },
     "arXiv:2509.00531": {
       "classification": "borderline",
@@ -3154,12 +3123,11 @@
       ],
       "reason": "長文脈Transformer配備の性能上限とボトルネックを分析するが、新規runtime/serving方式の提案ではない。",
       "first_checked_at": "2026-09-27T08:02:37+09:00",
-      "last_checked_at": "2026-09-27T08:02:37+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Challenges in Deploying Long-Context Transformers: A Theoretical Peak Performance Analysis",
-      "source_url": "https://arxiv.org/abs/2405.08944"
+      "title": "Challenges in Deploying Long-Context Transformers: A Theoretical Peak Performance Analysis"
     },
     "arXiv:2402.14289": {
       "classification": "borderline",
@@ -3170,12 +3138,11 @@
       ],
       "reason": "小規模マルチモーダルモデルの設計・データ・学習レシピが中心で、モデル小型化の実用価値はあるが推論システム寄与は限定的。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "TinyLLaVA: A Framework of Small-scale Large Multimodal Models",
-      "source_url": "https://arxiv.org/abs/2402.14289"
+      "title": "TinyLLaVA: A Framework of Small-scale Large Multimodal Models"
     },
     "arXiv:2310.08659": {
       "classification": "borderline",
@@ -3186,12 +3153,11 @@
       ],
       "reason": "低ビット量子化は推論メモリ削減に有用だが、主貢献はLoRA微調整を考慮した初期化と下流学習性能。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2310.08659"
+      "title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models"
     },
     "arXiv:2308.12219": {
       "classification": "borderline",
@@ -3202,12 +3168,11 @@
       ],
       "reason": "拡散言語モデルのスケーリングと指示微調整が中心で、推論システム最適化は主貢献でない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning",
-      "source_url": "https://arxiv.org/abs/2308.12219"
+      "title": "Diffusion Language Models Can Perform Many Tasks with Scaling and Instruction-Finetuning"
     },
     "DOI:10.1145/1498765.1498785": {
       "classification": "borderline",
@@ -3232,12 +3197,11 @@
       ],
       "reason": "RAGの包括的サーベイで、新規の推論効率化システム手法は提案しない。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
-      "source_url": "https://arxiv.org/abs/2312.10997"
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey"
     },
     "arXiv:2501.15383": {
       "classification": "borderline",
@@ -3319,12 +3283,11 @@
       ],
       "reason": "1bit重みでメモリ・エネルギーを削減するがモデル設計が主で実運用ランタイム評価は限定的。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-27T02:00:00+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "BitNet: Scaling 1-bit Transformers for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2310.11453"
+      "title": "BitNet: Scaling 1-bit Transformers for Large Language Models"
     },
     "arXiv:2112.04426": {
       "classification": "borderline",
@@ -3418,12 +3381,11 @@
       ],
       "reason": "GH200のCPU/GPU統一メモリとデータ移動を詳細評価し階層メモリ背景として有用だが、LLM固有の推論システムではない。",
       "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Understanding Data Movement in Tightly Coupled Heterogeneous Systems: A Case Study with the Grace Hopper Superchip",
-      "source_url": "https://arxiv.org/abs/2408.11556"
+      "title": "Understanding Data Movement in Tightly Coupled Heterogeneous Systems: A Case Study with the Grace Hopper Superchip"
     },
     "arXiv:2306.03314": {
       "classification": "borderline",
@@ -3447,12 +3409,11 @@
       ],
       "reason": "MoEのAttention Routerで専門家選択効率を改善するモデル設計。推論効率に関係するが、独立した推論システム／ランタイム評価よりモデル・学習報告が中心。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Yuan 2.0-M32: Mixture of Experts with Attention Router",
-      "source_url": "https://arxiv.org/abs/2405.17976"
+      "title": "Yuan 2.0-M32: Mixture of Experts with Attention Router"
     },
     "DOI:10.1145/3579371.3589057": {
       "classification": "borderline",
@@ -3477,12 +3438,11 @@
       ],
       "reason": "端末上マルチモーダルLLMを実現する効率設計を含むが、主貢献はモデル構築・能力でランタイムシステムの新規性は限定的。",
       "first_checked_at": "2026-09-27T09:58:33+09:00",
-      "last_checked_at": "2026-09-27T09:58:33+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
-      "source_url": "https://arxiv.org/abs/2408.01800"
+      "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone"
     },
     "arXiv:2305.11186": {
       "classification": "borderline",
@@ -3539,12 +3499,11 @@
       ],
       "reason": "structured pruning後のモデルはTensorRT-LLMで推論高速化されるが、主手法はteacher correction・pruning・distillationという学習／圧縮recipeであるため境界扱い。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "LLM Pruning and Distillation in Practice: The Minitron Approach",
-      "source_url": "https://arxiv.org/abs/2408.11796"
+      "title": "LLM Pruning and Distillation in Practice: The Minitron Approach"
     },
     "arXiv:2405.07719": {
       "classification": "borderline",
@@ -3555,12 +3514,11 @@
       ],
       "reason": "Unified Ulysses-Ring sequence parallelismは推論にも適用可能な基盤だが、本文の主要実験はLlama3長文脈学習であり最終評価が学習寄り。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-27T11:00:23+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "USP: A Unified Sequence Parallelism Approach for Long Context Generative AI",
-      "source_url": "https://arxiv.org/abs/2405.07719"
+      "title": "USP: A Unified Sequence Parallelism Approach for Long Context Generative AI"
     },
     "arXiv:2312.03863": {
       "classification": "borderline",
@@ -3570,12 +3528,11 @@
       ],
       "reason": "効率的LLMをモデル・データ・フレームワークの観点から整理する有用なサーベイだが、新規推論システム手法ではない。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Efficient Large Language Models: A Survey",
-      "source_url": "https://arxiv.org/abs/2312.03863"
+      "title": "Efficient Large Language Models: A Survey"
     },
     "arXiv:2308.15987": {
       "classification": "borderline",
@@ -3585,12 +3542,11 @@
       ],
       "reason": "一次資料の詳細取得が限定的だったため、既存推論サーベイ／低ビット系からの関連候補として保守的に境界扱い。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Efficient LLM inference candidate arXiv:2308.15987",
-      "source_url": "https://arxiv.org/abs/2308.15987"
+      "title": "Efficient LLM inference candidate arXiv:2308.15987"
     },
     "arXiv:2208.11580": {
       "classification": "borderline",
@@ -3663,21 +3619,6 @@
       ],
       "title": "Nexus: a GPU cluster engine for accelerating DNN-based video analysis",
       "source_url": "https://doi.org/10.1145/3341301.3359658"
-    },
-    "DOI:10.1162/tacl%5fa%5f00638": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1162/tacl%5fa%5f00638",
-      "identity_tokens": [
-        "DOI:10.1162/tacl%5fa%5f00638"
-      ],
-      "reason": "長文脈での位置依存劣化を詳細評価する重要な分析だが、推論効率化システム自体は提案しない。",
-      "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-27T12:02:15+09:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Lost in the Middle: How Language Models Use Long Contexts",
-      "source_url": "https://doi.org/10.1162/tacl%5fa%5f00638"
     },
     "arXiv:2501.14784": {
       "classification": "borderline",
@@ -3762,12 +3703,11 @@
       ],
       "reason": "低ビットLLMを効率よく得る量子化対応学習が中心。量子化後の推論効率には寄与するが最終手法の中心は学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "EfficientQAT: Efficient Quantization-Aware Training for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2407.11062"
+      "title": "EfficientQAT: Efficient Quantization-Aware Training for Large Language Models"
     },
     "arXiv:2402.09748": {
       "classification": "borderline",
@@ -3777,27 +3717,26 @@
       ],
       "reason": "量子化・剪定・蒸留・効率推論を体系化する有用なサーベイだが、新規推論システム手法ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Model Compression and Efficient Inference for Large Language Models: A Survey",
-      "source_url": "https://arxiv.org/abs/2402.09748"
+      "title": "Model Compression and Efficient Inference for Large Language Models: A Survey"
     },
     "arXiv:2307.03172": {
       "classification": "borderline",
       "canonical_id": "arXiv:2307.03172",
       "identity_tokens": [
+        "DOI:10.1162/tacl%5fa%5f00638",
         "arXiv:2307.03172"
       ],
       "reason": "長文脈利用の位置依存劣化を分析する重要な評価研究だが、推論効率化システム自体は提案しない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "first_checked_at": "2026-09-27T12:02:15+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "Lost in the Middle: How Language Models Use Long Contexts",
-      "source_url": "https://arxiv.org/abs/2307.03172"
+      "title": "Lost in the Middle: How Language Models Use Long Contexts"
     },
     "arXiv:2304.01433": {
       "classification": "borderline",
@@ -3852,12 +3791,11 @@
       ],
       "reason": "量子化とLoRAを共同化して低メモリ微調整を実現する手法で、量子化推論にも関係するが中心は適応学習。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
-      "title": "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2309.14717"
+      "title": "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models"
     },
     "arXiv:2104.08378": {
       "classification": "borderline",
@@ -4055,7 +3993,7 @@
       ],
       "reason": "大規模モデルの分散実行・並列化に関連するが、今回確認した本文では現行LLM推論サーベイへ直接収録する固有の配信機構の差分が限定的。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4069,7 +4007,7 @@
       ],
       "reason": "位置補間と短時間fine-tuningで2M contextへ拡張するモデル手法。長文脈推論には重要だがシステム実行基盤の新規性は弱い。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4083,7 +4021,7 @@
       ],
       "reason": "MoEのalgorithm/system両面を整理する直接関連サーベイだが、新規一次システム手法ではない。",
       "first_checked_at": "2026-09-27T05:26:26+00:00",
-      "last_checked_at": "2026-09-27T05:26:26+00:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4155,7 +4093,7 @@
       ],
       "reason": "未選択expert知識を補うが主目的はtask accuracyでsystems efficiency評価が弱い。",
       "first_checked_at": "2026-09-27T21:22:11+00:00",
-      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4169,7 +4107,7 @@
       ],
       "reason": "低bit比較知見は有用だが既存10手法の精度評価が主眼で新規runtime手法ではない。",
       "first_checked_at": "2026-09-27T21:22:11+00:00",
-      "last_checked_at": "2026-09-27T21:22:11+00:00",
+      "last_checked_at": "2026-09-30T09:47:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4414,9 +4352,9 @@
       "identity_tokens": [
         "arXiv:2401.08092"
       ],
-      "reason": "資源効率化を広く扱う有用なサーベイだが、新規の推論システム手法を提案する一次研究ではないため境界的とする。",
+      "reason": "8. **A Survey of Resource-efficient LLM and Multimodal Foundation Models** — `arXiv:2401.08092` ([paper](https://arxiv.org/abs/2401.08092), full PDF inspected). Surveys efficiency algorithms and systems across training/serving, but adds no new primary method; retain as an adjacent survey reference.",
       "first_checked_at": "2026-09-27T21:48:56+00:00",
-      "last_checked_at": "2026-09-27T21:48:56+00:00",
+      "last_checked_at": "2026-09-30T09:47:28+00:00",
       "linked_from": [
         "LLM-paper-summary-library-first legacy MD-only Discovery"
       ],

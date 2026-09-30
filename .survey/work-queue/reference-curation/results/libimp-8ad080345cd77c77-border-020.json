@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ad080345cd77c77-border-020",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.11796",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.11796",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2408.11796",
+      "arXiv:2408.11796"
+    ],
+    "reason": "structured pruning後のモデルはTensorRT-LLMで推論高速化されるが、主手法はteacher correction・pruning・distillationという学習／圧縮recipeであるため境界扱い。",
+    "first_checked_at": "2026-09-27T11:00:23+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "LLM Pruning and Distillation in Practice: The Minitron Approach"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ad080345cd7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
