@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（9本）
+## 自動生成の論文一覧（10本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -65,6 +65,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
   実装：— ・ リポジトリ内被引用：8  
   APEXは、LLMサービングのデータ並列・パイプライン並列・テンソル並列の組合せを、実機へ総当たり配備せずCPU上で探索するシミュレータである。APEXはこの動的状態を明示的に模擬し、TTFT、TPOT、電力を計画ごとに推定する。
+
+- **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  SamuLLMは、1つのアプリケーションが複数のLLMを使うオフライン推論を対象にする。単一LLMの最適化と異なり、GPU群へ複数モデルを同時に置くと、モデルごとのテンソル並列・パイプライン並列等の選択と、同時実行モデル集合が互いに干渉する。
 
 ### 3年前（2023-10〜2024-09）
 
