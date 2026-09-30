@@ -258,6 +258,8 @@ GitHub create応答だけでLibrary原本を削除しない。まず同じpendin
 
 pending / waiting / blocked / retained の同一bytes、またはresult receiptの同一 `source_sha256` を確認できた後はGitHubが耐久原本を所有するため、そのLibrary成果を削除してよい。最終paper/candidate処理の完了をLibrary側で待たない。
 
+Survey GitHub Importは1回の転送バッチを終えたら、`.survey/scheduler/library-import-kick.json` を**1回だけ**更新し、commit messageを `survey-orchestrator: kick ...` で始める。これにより中央schedulerをevent-drivenで起動する。個別pendingファイルごとにkickしない。
+
 既存pathに別bytesがある場合は上書きせず別unique名で再送する。
 
 ## 10. GitHub import inbox processor
