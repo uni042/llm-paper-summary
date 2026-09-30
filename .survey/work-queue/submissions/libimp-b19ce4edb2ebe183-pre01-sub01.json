@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge",
+      "source_url": "https://arxiv.org/abs/2407.00088",
+      "year": 2024,
+      "published": "2024-06-25",
+      "abstract": "The deployment of Large Language Models (LLMs) on edge devices is increasingly important to enhance on-device intelligence. Weight quantization is crucial for reducing the memory footprint of LLMs on devices. However, low-bit LLMs necessitate mixed precision matrix multiplication (mpGEMM) of low precision weights and high precision activations during inference. Existing systems, lacking native support for mpGEMM, resort to dequantize weights for high precision computation. Such an indirect way can lead to a significant inference overhead. In this paper, we introduce T-MAC, an innovative lookup table(LUT)-based method designed for efficient low-bit LLM (i.e., weight-quantized LLM) inference on CPUs. T-MAC directly supports mpGEMM without dequantization, while simultaneously eliminating multiplications and reducing additions required. Specifically, T-MAC transforms the traditional data-type-centric multiplication to bit-wise table lookup, and enables a unified and scalable mpGEMM solution. Our LUT-based kernels scale linearly to the weight bit-width. Evaluated on low-bit Llama and BitNet models, T-MAC demonstrates up to 4× increase in throughput and 70% reduction in energy consumption compared to llama.cpp. For BitNet-b1.58-3B, T-MAC delivers a token generation throughput of 30 tokens/s with a single core and 71 tokens/s with eight cores on M2-Ultra, and 11 tokens/s on Raspberry Pi 5. T-MAC with LUT-based computing paradigm, paves the way for the practical deployment of low-bit LLMs on resource-constrained edge devices without compromising computational efficiency. The system is open-sourced at https://github.com/microsoft/T-MAC.",
+      "canonical_id": "arXiv:2407.00088",
+      "arxiv_id": "2407.00088",
+      "doi": "10.1145/3689031.3696099",
+      "authors": [
+        "Jianyu Wei",
+        "Shijie Cao",
+        "Ting Cao",
+        "Ling-Xiao Ma",
+        "Lei Wang",
+        "Yan-Yong Zhang",
+        "Mao Yang"
+      ],
+      "reason": "低ビットLLMの行列積をCPU上のtable lookup中心へ変換し、端末推論の計算・メモリ効率を直接改善する実行方式なので対象。",
+      "library_body_check": "本文情報で低ビット重みの乗算をlookup table中心の演算へ置換し、CPU上で低ビットLLMを効率実行する設計を確認。EuroSys 2025のLLM deployment研究で、GPU/NPUに依存しにくい端末CPU推論を狙い、量子化表現とlookup-based kernelの協調により低ビット計算の実効性能を高める。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Kitsune: Enabling Dataflow Execution on GPUs with Spatial Pipelines",
+      "source_url": "https://doi.org/10.1145/3777466",
+      "year": 2025,
+      "published": "2025-11-19",
+      "abstract": "State-of-the-art DL models are growing in size and complexity, with many modern models also increasing in heterogeneity of behavior. GPUs are still the dominant platform for DL applications, relying on a bulk-synchronous execution model which has many drawbacks and is ill-suited for the graph structure of DL applications. Many industry and academic works attempt to overcome these by employing vertical fusion – combining multiple sequential operations into a single kernel – but this approach still fails to realize three untapped opportunities: (1) the fact that many resources on the GPU are idle while only one operator executes due to temporal multiplexing of the SM; (2) lower energy from more intelligent on-chip data-movement which lends to higher performance in a power-provisioned environment. (3) inability to exploit reduction dimensions as a source of parallelism to ease pressure on batch size. This article explores relatively uncharted territory, answering the following key question: Can modest adjustments to the current GPU architecture enable efficient dataflow execution, thereby circumventing the constraints of vertical fusion without necessitating a clean-slate architecture design. We develop Kitsune – a set of primitives to construct spatial pipelines which enable dataflow execution on GPUs, and an end-to-end compiler based on PyTorch Dynamo. Across 5 challenge applications, Kitsune can provide up to 2.8× and 2.2× performance improvement as well as up to 99% and 45% off-chip traffic reduction for inference and training, respectively.",
+      "doi": "10.1145/3777466",
+      "canonical_id": "DOI:10.1145/3777466",
+      "authors": [
+        "Michael Davies",
+        "N. Crago",
+        "K. Sankaralingam",
+        "Stephen W. Keckler"
+      ],
+      "reason": "GPU上で複数演算を空間パイプライン化する実行プリミティブとコンパイラを提案し、推論を含む深層学習ワークロードのオフチップ通信と実行時間を直接削減するため対象。",
+      "library_body_check": "本文情報でbulk-synchronous実行の資源遊休とvertical fusionの限界を問題化し、GPUへ小規模な機構追加を行ってspatial pipelineによるdataflow executionを実現、PyTorch Dynamoベースのend-to-end compilerを構築していることを確認。5種のchallenge applicationで推論最大2.8倍、学習最大2.2倍、オフチップtrafficを推論最大99%・学習最大45%削減する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b19ce4edb2eb",
+    "round": "libimp-b19ce4edb2ebe183-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b19ce4edb2ebe183-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b19ce4edb2ebe183-pre01.json",
+    "receipt": "sha256:7f37750abde6270fc57e8a8011318aa1003b7f36504a0624960f5147d7539edc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b19ce4edb2eb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
