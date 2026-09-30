@@ -1,0 +1,864 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-ef0e0d6a860ffceb6a6d",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-ef0e0d6a860ffceb6a6d",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-30T20:23:19.367592+00:00",
+  "preload_id": "preload-ef0e0d6a860ffceb6a6d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Chameleon: Dynamic Format Adapter for Efficient Diffusion",
+      "source_url": "https://arxiv.org/abs/2609.33496",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Post-training quantization (PTQ) is the standard way to run modern diffusion models on memory-constrained accelerators, yet every existing diffusion PTQ scheme fixes the $\\mathit{number\\ format}$ in advance and only tunes the scale, zero point, or per-layer bit-width. At a fixed bit-width the best format depends on the distribution being encoded, and that distribution differs across weight channels, across layers, and along the diffusion timestep, where activation distributions slide from heavy-tailed and noise-dominated to tightly clustered and structured. We propose Chameleon, a PTQ framework that holds the bit-width fixed and treats the format itself as a discrete variable, chosen per weight channel and per (layer, timestep bucket) activation tensor. Activation formats come from {INT8, FP8 E4M3, FP8 E5M2, MXFP8, MXINT8}, selected ahead of time from two cheap statistics (empirical kurtosis and the closed-form diffusion SNR) and stored in a lookup table; weight formats come from {INT8, MXINT8} at 8 bits or {INT4, NF4, FP4 E2M1, MXINT4, MXFP4} at 4 bits, selected offline by reconstruction error. An architectural fork adapts the same selection layer to multi-step UNets, single-step distilled models, and Diffusion Transformers. Across SDXL, SDXL-Turbo, and PixArt-$\\alpha$ on COCO-2014, Chameleon achieves the best FID in all six backbone $\\times$ bit-width settings, with CLIP within 0.24 of the FP16 reference and the best of all quantized methods at $W_{4}A_{8}$.",
+      "canonical_id": "arXiv:2609.33496",
+      "arxiv_id": "2609.33496",
+      "authors": [
+        "Arnab Sanyal",
+        "Sandeep P. Chinchali"
+      ]
+    },
+    {
+      "title": "Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer",
+      "source_url": "https://arxiv.org/abs/2609.32922",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "Matrix multiplications dominate the inference cost of modern transformer-based vision models, yet existing efficiency techniques such as post-training quantization and mixed-precision inference are largely limited to the small set of fixed-width formats (INT4, INT8, BF16, and FP16) supported by conventional accelerators. We revisit stochastic computing (SC) as a way to lift this constraint: viewed as a dense adaptive quantizer, SC controls precision by bit-stream length L rather than a fixed datapath, while each multiplication reduces to a single AND/XNOR gate. We build a GPU library that emulates SC matrix multiplication at scale, exposes stream lengths as first-class kernel arguments, and evaluates SC end-to-end on image classification, object detection and instance segmentation, class-conditional image generation, and visual world-model planning. On top of this substrate, we develop a dynamic per-row mixed-precision policy that assigns stream length per token or group at matched average budget, requires no retraining, and uses the same SC hardware across schedules. Across tasks, SC remains competitive with fixed-format INT quantization at matched bit budgets, while per-row mixed precision helps maintain accuracy at lower average stream lengths. These results provide software-level feasibility evidence that SC can serve as a dense-precision substrate for fine-grained mixed-precision inference on modern vision transformers.",
+      "canonical_id": "arXiv:2609.32922",
+      "arxiv_id": "2609.32922",
+      "authors": [
+        "Hao-Ran Jin",
+        "Kang-Qi Zhang",
+        "Ji-Rong Yang",
+        "B. Lyu",
+        "Qiu-Yi Ding",
+        "Rui-Jie Gao",
+        "Nathaniel Bleier"
+      ]
+    },
+    {
+      "title": "Environmental Impact of Generative and Agentic AI: An in-Depth Analysis and Green Solutions",
+      "source_url": "https://arxiv.org/abs/2609.32960",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "The proliferation of generative and agentic artificial intelligence (AI) systems has introduced computational demands whose environmental consequences are substantial yet underexamined. This paper examines the environmental footprint of modern AI systems across energy consumption, carbon emissions, water usage, and electronic waste over the full lifecycle of large language models, multimodal foundation models, and agentic workflows, from hardware fabrication and training through fine-tuning and inference to end-of-life disposal. This work provides a conceptual analysis, utilizing order-of-magnitude estimations based on published data, without conducting original physical measurements. We contribute a lifecycle taxonomy that crosses lifecycle phases with five impact dimensions and emission scopes; a Sustainability Assessment Framework for AI Systems (SAFIA) comprising nine indicators; a comparative analysis of traditional, generative, and agentic AI; seven open challenges; policy recommendations for regulators, cloud providers, hardware manufacturers, and AI developers; and a research roadmap to 2035. The analysis indicates that inference can rival or exceed training energy over a deployment lifetime, that agentic workflows can multiply the energy of equivalent single-pass inference by one to several orders of magnitude depending on the number of model and tool calls, that indirect water use and embodied carbon are systematically underreported, and that measurement tools, disclosure practices, and regulation have not kept pace with agentic deployment. These findings call for agent-aware energy measurement, lifecycle-based carbon and water accounting, and mandatory disclosure for large-scale AI training and deployment.",
+      "canonical_id": "arXiv:2609.32960",
+      "arxiv_id": "2609.32960",
+      "authors": [
+        "Abderaouf Bahi",
+        "Amel Ourici",
+        "Ibtissem Gasmi"
+      ]
+    },
+    {
+      "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+      "source_url": "https://arxiv.org/abs/2609.30820",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+      "canonical_id": "arXiv:2609.30820",
+      "arxiv_id": "2609.30820",
+      "authors": [
+        "Nux Li"
+      ]
+    },
+    {
+      "title": "G$^2$PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+      "source_url": "https://arxiv.org/abs/2609.31009",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Post-training quantization (PTQ) is a practical approach to reducing the memory and computational footprint of large language models (LLMs) without retraining. GPTQ-based methods have become the de facto standard, yet they suffer from two complementary limitations. Methods with local, layer-wise objectives lack global supervision; while methods with global objectives fix their Hessian estimates at the start and ignore first-order gradients, so their guidance grows stale as quantization proceeds. This paper presents G$^2$PTQ, a unified PTQ framework with Generalized Gradient Compensation that integrates both first- and second-order information under a globally supervised, block-wise optimization objective. By refreshing gradient and Hessian estimates before quantizing each Transformer block, G$^2$PTQ avoids the staleness of prior global methods. Furthermore, to stabilize the exact first-order compensation, we introduce a trust-region scaling mechanism that dynamically bounds the gradient step to prevent exploding weight updates. Finally, we derive efficient implementations for block-wise Hessian approximation and exact gradient compensation. Experimental results on various model families and bit-widths demonstrate that G$^2$PTQ enables better alignment with the full-precision model, outperforming state-of-the-art baselines. Code is available at: https://github.com/G2PTQ/G2PTQ.",
+      "canonical_id": "arXiv:2609.31009",
+      "arxiv_id": "2609.31009",
+      "authors": [
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Yuxuan Sun",
+        "Qian Zhang",
+        "Wen-Zheng Cai",
+        "Yan-Qi Hao",
+        "Feiyu Wang",
+        "Wei-Dong Zhong",
+        "Zhuang Wang",
+        "Tong Yang",
+        "Xiang-Sheng Zhou"
+      ]
+    },
+    {
+      "title": "Softmax Reparameterization for Output-Head Quantization",
+      "source_url": "https://arxiv.org/abs/2609.31291",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Large vocabularies make output heads a substantial inference cost in small language models. We introduce softmax reparameterization, a post-training method that searches over functionally equivalent output heads before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL. For linear-softmax heads, these shifts preserve full-precision predictions exactly and require no decoder retraining; a rank-one correction extends the construction to nonlinear logit paths. Across seven output heads and three quantizers, W4 gains are largest where baseline quantization substantially distorts predictions: test KL falls by 93% on XGLM under RTN and by 73--77% on Phi, BLOOM, and BLOOMZ under activation-weighted MSE. Heads with low baseline error change little; at W2, used as a compression stress test, benefits extend more broadly. On Phi, the gains persist under stronger GPTQ calibration; a separate untouched holdout reproduces the improvements on Phi and BLOOM. Frozen WikiText-selected coefficients also transfer without retuning to C4 and OpenWebMath. Residual analysis on Phi shows how fidelity can improve despite greater total logit error: the selected representative reduces error on likely outputs and lowers its Fisher-weighted cost. For shift-compatible heads, the shift adds no inference operation. With the decoder held in BF16, a packed W4 Phi output head reduces batch-one generation latency by 10.8%, and reparameterization preserves this speedup.",
+      "canonical_id": "arXiv:2609.31291",
+      "arxiv_id": "2609.31291",
+      "authors": [
+        "Asim Kadav",
+        "Christian Flores",
+        "C. Arora",
+        "Varun Kotte",
+        "Hong-Bo Zheng",
+        "Lan Yan",
+        "Priya Shanmugasundaram",
+        "T. King"
+      ]
+    },
+    {
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "source_url": "https://arxiv.org/abs/2609.31568",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+      "canonical_id": "arXiv:2609.31568",
+      "arxiv_id": "2609.31568",
+      "authors": [
+        "Q. Nguyen",
+        "H. Nguyễn",
+        "H. Hoàng",
+        "T. Pham",
+        "Cong Tran",
+        "Nam Vu"
+      ]
+    },
+    {
+      "title": "SilentCall: Hidden Tool-Call Backdoors in Open-Weight Agents, and How to Catch Them",
+      "source_url": "https://arxiv.org/abs/2609.32021",
+      "year": 2026,
+      "published": "2026-09-25",
+      "abstract": "Open-weight tool-calling agents are adopted on evidence of merit, usually benchmark scores and a record of reliable use. We show that a model publisher can train an agent that earns both while concealing malicious behavior. Fine-tuned on a mixture of clean and poisoned conversations, our agents answer ordinary requests correctly; once the system date reaches a chosen year, they emit the correct tool call and, alongside it, one that exfiltrates the user's credentials. The exfiltration runs while the user-facing response mentions only the legitimate work. We call this attack SilentCall. Under the trigger, it fires on at least $99.6$\\% of requests, and no response ever mentions it. The attack is detectable by three distinct methods, which differ mainly in what a defender needs to run them. A runtime monitor that inspects each tool call before it executes requires no access to the model and catches every instance of the payload we tested at a 1.73% false-positive rate. High-temperature probing requires only the published weights. The weight-distribution audit requires training a benign model with the suspect's recipe, placing it within reach of model hubs but not ordinary users. Alignment benchmarks, by contrast, do not separate poisoned from benign models. SilentCall leaves no trace on standard benchmarks. As tool-using agents spread through the open-weight supply chain, trust in them should not rest on what a model says about its own actions. It has to come from inspecting those actions at runtime, auditing models where they are distributed, and treating tool access as a security surface in its own right.",
+      "canonical_id": "arXiv:2609.32021",
+      "arxiv_id": "2609.32021",
+      "authors": [
+        "Bhanu Pallakonda",
+        "Mikkel Hindsbo",
+        "Sina Ehsani",
+        "Pragyana Mishra"
+      ]
+    },
+    {
+      "title": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures",
+      "source_url": "https://arxiv.org/abs/2609.28974",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Post-training quantization (PTQ) reduces the cost of on-device text-to-speech (TTS), but published evaluations cover one system or method. We evaluate PTQ across TTS architectures under one protocol with three core models, weight and activation ablations of eight more, and two held-out models quantized blind. Four-bit per-channel weights reduce UTMOS, a predicted mean opinion score, by 2.8 on Supertonic and 0.07 on Kokoro, and per-tensor scaling can cause severe degradation even at 8 bits. The same bit width yields different outcomes, because the sensitive component is model-specific and not reliably predicted from the model class. A staged ablation procedure identifies it, and per-layer GPTQ can restore it to within 0.1 UTMOS. Real int8 and int4 kernels reproduce the simulated ordering at hardware-dependent cost. On a Mac mini, a 4-bit weight kernel runs Supertonic at 0.60x the fp32 latency while int8 is slower, so each configuration requires validation on the target runtime.",
+      "canonical_id": "arXiv:2609.28974",
+      "arxiv_id": "2609.28974",
+      "authors": [
+        "Se Un Park",
+        "Yutae Kim",
+        "Junyoung Park"
+      ]
+    },
+    {
+      "title": "Communication-Aware Model Distributed Inference via Latent Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.30413",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "We study optimization of distributed model inference over resource-constrained edge resources. We propose a framework that optimizes the trade-off between model accuracy and communication costs by controlling latent representation compression to meet strict Quality of Service (QoS) throughput targets. For settings with known channel state information (CSI), we derive a closed-form optimal solution for single tasks and reduce the multi-task problem to a convex optimization program characterized by a per-link water-filling strategy. We extend these to handle unpredictable environments via a stochastic dual descent algorithm that relies only on causal channel estimates. We provide Lyapunov-based proofs demonstrating that our approach strictly satisfies long-term delay constraints while achieving a bounded optimality gap. Our results offer a robust, scalable blueprint for maximizing the performance of pipelined AI tasks in dynamic, resource-constrained distributed systems. We verify the effectiveness of our proposed framework through simulations and experiments with real edge devices.",
+      "canonical_id": "arXiv:2609.30413",
+      "arxiv_id": "2609.30413",
+      "authors": [
+        "Peyman Gholami",
+        "Theodoros-Thirimachos Davarakis",
+        "Teng Li",
+        "Miquel Sirera Perelló",
+        "Salil Reddy",
+        "Ayberk Yarkin Yildiz",
+        "Anish Arora",
+        "Atilla Eryilmaz",
+        "Stratis Ioannidis",
+        "Cheng-Zhang Li",
+        "Hulya Seferoglu",
+        "Ness B. Shroff"
+      ]
+    },
+    {
+      "title": "Quantization-Robust Unlearning through the Lens of Retain-Forget Loss Landscapes Interaction",
+      "source_url": "https://arxiv.org/abs/2609.27355",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Unlearning ensures LLM compliance by removing the influence of private or copyrighted training data. However, since LLM models typically undergo post-training compression, like quantization, in practical deployment, it has been observed that the unlearning effect can be substantially weakened, with the forgetting behavior degrading more severely than that of model utility. This paper proposes a quantization-robust unlearning framework that makes forgetting robust to quantization while maintaining overall model utility. We analyze this gap through the lens of loss landscape. Specifically, our analysis reveals a curvature-based criteria that pinpoints sensitive weights in the unlearned model that leads to both non-robust forgetting and reduced utility. We therefore propose sensitivity-guided noisy regularization, which is applied on the sensitive parameters to steer the model convergence towards a smoother minima of uniformly low forget and retain losses. Balancing unlearning and utility, we further propose forget-critical optimization, which updates only forget-critical layers, preserving most of the network to retain useful knowledge. Extensive experiments on the MUSE and TOFU benchmarks across multiple LLM unlearning algorithms show that our approach achieves substantially more quantization-resilient forgetting while maintaining utility.",
+      "canonical_id": "arXiv:2609.27355",
+      "arxiv_id": "2609.27355",
+      "authors": [
+        "Jia-Lu Wang",
+        "Jia-Ning Deng",
+        "Shu-Qing Luo",
+        "Yuan-Zhe Li",
+        "Dong-Wei Wang",
+        "Jing-Tong Hu",
+        "Huan-Rui Yang",
+        "Song Wang",
+        "Tian-Long Chen"
+      ]
+    },
+    {
+      "title": "Agent-based Modeling: Equilibrium, Echo Chambers, and Efficiency in Hybrid Coevolutionary Opinion Games",
+      "source_url": "https://arxiv.org/abs/2609.27639",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Opinions that move closer together in an online network are often considered a sign that people have genuinely reached consensus; whether this narrowing carries a cost is a question existing methods cannot answer. Coevolutionary opinion formation games measure the social cost of equilibria through the Price of Anarchy (PoA), but their agents follow numerical update rules, while opinion simulations with large language model (LLM) agents capture language-based reasoning and report only descriptive indices. We introduce the Hybrid Coevolutionary Opinion Game (H-COG), in which analytical and LLM-driven agents share one network that is rewired by opinion similarity and initialized from real Reddit data. To our knowledge, no prior framework lets both kinds of agents coevolve with the network inside one formal game, and none has measured the social cost or PoA of LLM-driven populations in opinion formation. We prove that on any fixed network the opinion stage has a unique equilibrium and a closed-form social optimum, and we show that the hybrid game satisfies the assumptions of a convergence theorem for coevolutionary opinion games, so its dynamics reach an approximate Nash equilibrium. On this foundation, all simulation runs converge. Echo chambers form under every composition, and the initial topology has no detectable effect on them, which points to the rewiring rule as their source. LLM-driven populations show lower polarization, that is, a narrower spread of opinions, with about five times the PoA of analytical populations. Decomposing social cost shows why: about half of the gap is disagreement with neighbors, and the other half comes from agents being pulled away from their own prior positions. In these populations, opinions draw closer largely because agents give up their own positions, at a cost in efficiency.",
+      "canonical_id": "arXiv:2609.27639",
+      "arxiv_id": "2609.27639",
+      "authors": [
+        "Ming-Zhi Jiang",
+        "An-Tzu Teng",
+        "Jun-En Liu",
+        "Po-An Chen",
+        "Yung-Ming Li"
+      ]
+    },
+    {
+      "title": "Balancing factoid retrieval and candidate recommendation to identify toponym origins in gazetteers",
+      "source_url": "https://doi.org/10.1080/13658816.2026.2733533",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": null,
+      "doi": "10.1080/13658816.2026.2733533",
+      "canonical_id": "DOI:10.1080/13658816.2026.2733533",
+      "authors": [
+        "Alexis Horde-Vo",
+        "Matt Duckham",
+        "Estrid He",
+        "N. Ranamuka",
+        "Rafe Benli"
+      ]
+    },
+    {
+      "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+      "source_url": "https://arxiv.org/abs/2609.24322",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "We show that a quantized model that keeps its classification accuracy still changes $14$ to $46\\%$ of its top-1 retrieval results, and that aggregate ranking metrics reveal only part of this damage. We tie this failure to the gap between the two highest model scores and use that gap to decide when to trust a quantized answer and where additional precision should be spent. We show that the top-1 result is guaranteed to survive quantization only when this gap exceeds twice the largest rounding error. In classification, the scores are logits, and training compares the correct class against every other class, which encourages this gap. In retrieval, the scores are query-document similarities, and training compares each positive only against sampled negatives, so nothing separates the top-1 item from the second. This gap can be measured without labels. Before deployment, it predicts which models will break under quantization, and at deployment time it tells, per input, whether the quantized answer still matches the full-precision answer. Most classification inputs have a gap wide enough to trust the quantized answer, but few retrieval queries do. That gap motivates a different fix in each task. In retrieval, spending extra bit-width on the layers whose quantization moves the gap most recovers up to three-quarters of an extra bit's benefit for half its cost. In classification, routing the few low-gap inputs to full precision recovers most of the lost accuracy at a fraction of the cost.",
+      "canonical_id": "arXiv:2609.24322",
+      "arxiv_id": "2609.24322",
+      "authors": [
+        "Luca Zhou",
+        "Alessandro Zirilli",
+        "Daniele Solombrino",
+        "Roberto Dessì",
+        "Emanuele Rodolà"
+      ]
+    },
+    {
+      "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.24084",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+      "canonical_id": "arXiv:2609.24084",
+      "arxiv_id": "2609.24084",
+      "authors": [
+        "Jia-Xin Hong",
+        "Yu-Xin Peng",
+        "Hong-Yao Yu",
+        "Hao Fang",
+        "Shuo-Yang Sun",
+        "Bin Chen"
+      ]
+    },
+    {
+      "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2609.23587",
+      "year": 2026,
+      "published": "2026-09-20",
+      "abstract": "Large reasoning models (LRMs) incur high inference costs, often mitigated by efficiency techniques like quantization and pruning. However, the impact of these techniques on model adversarial robustness remains largely unexplored. This study provides the first comprehensive analysis of the interplay between efficiency, jailbreak vulnerability, and reasoning in LRMs. We find that while efficiency methods seemingly reduce the success rate of jailbreak attacks, this improvement is often superficial. It largely arises from degraded reasoning capabilities leading to\"attempted but failed\"malicious responses, rather than an increase in genuine alignment. Mechanistic analysis of representational drift confirms this, revealing a strict coupling between reasoning capability loss and the model's inability to maintain malicious semantic trajectories. Additionally, we identify quantization with pruning as the optimal strategy to balance efficiency and robustness. These findings clarify the distinction between true safety alignment and capability-induced failure, providing an empirical foundation for LRM deployment.",
+      "canonical_id": "arXiv:2609.23587",
+      "arxiv_id": "2609.23587",
+      "authors": [
+        "Yifei Yang",
+        "Zou-Ying Cao",
+        "Xing-Rui Wang",
+        "Xiao Zhou",
+        "Yue-Xian Li",
+        "Dongjie Yang",
+        "Hai Zhao"
+      ]
+    },
+    {
+      "title": "SMIT: Static mixed integer training quantization",
+      "source_url": "https://doi.org/10.1007/s11227-026-08857-z",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": null,
+      "doi": "10.1007/s11227-026-08857-z",
+      "canonical_id": "DOI:10.1007/s11227-026-08857-z",
+      "authors": [
+        "Anoosh Mahjabin",
+        "Hakem Beitollahi",
+        "A. Amirkhani",
+        "Pejman Lotfi-Kamran"
+      ]
+    },
+    {
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "source_url": "https://arxiv.org/abs/2609.21834",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Quantization-aware training (QAT) updates a full-precision shadow weight $\\mathbf{x}$ but deploys the quantized endpoint $Q(\\mathbf{x})$. Existing explanations for QAT largely view its success through the lens of shadow weights: QAT can move $\\mathbf{x}$ toward flatter basins, gain robustness from quantization-induced oscillations, or balance the shadow loss $f(\\mathbf{x})$ against the quantization error $\\|\\mathbf{x}-Q(\\mathbf{x})\\|_2$. These perspectives do not directly explain the empirical observation that the deployed endpoint loss $f(Q(\\mathbf{x}))$ improves while the shadow loss $f(\\mathbf{x})$ does not, and can even increase substantially. In this paper, we offer a different explanation by treating QAT as finite-grid endpoint dynamics. Motivated by the approximate normality of rescaled pretrained weights, we propose an idealized model for the residual phase, which records where each shadow weight sits inside its quantization cell as a fraction of the cell width. This model leads to a crossing law that determines which coordinates cross quantization boundaries after a shadow update. Inspired by the idealized model and signal-imbalance phenomenon in QAT, we further propose QAR (Quantization with Amplified Routing), an algorithmic framework that directly operates on the quantization code. In contrast to QAT, QAR is both theoretically grounded and memory-efficient: it admits feasible-gradient bounds for a family of power amplifiers up to unavoidable finite-grid floors without retaining a full-precision shadow weight copy. Experiments on post-training of large language models provide evidence consistent with the endpoint view and show that QAR can be comparable to or better than QAT with smaller memory cost.",
+      "canonical_id": "arXiv:2609.21834",
+      "arxiv_id": "2609.21834",
+      "authors": [
+        "Sheng-An Xu",
+        "Hanyang Li",
+        "Jian-Hao Ma",
+        "Ying-Han Cui"
+      ]
+    },
+    {
+      "title": "CoAdapt: An LLM-based Framework for Adaptive Collaborative Perception in IIoT Robotic Swarms",
+      "source_url": "https://arxiv.org/abs/2609.16852",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "Industrial IoT environments increasingly deploy autonomous mobile robots for tasks such as material handling, product assembly, or infrastructure inspection. In such deployments, collaborative perception enables robots to share LiDAR observations and collectively construct a richer model of their environment than an individual agent could produce alone. However, industrial environments are dynamic spaces where robot positions shift continuously, network bandwidth fluctuates, and the marginal contribution of robots to perception quality varies at runtime. Existing collaborative perception approaches are designed for static participation assumptions and cannot adapt to these dynamics without sacrificing either detection precision or communication efficiency. This paper presents CoAdapt, an adaptive collaborative perception framework for IIoT robotic swarms in which a Large Language Model (LLM) serves as a runtime fusion controller, jointly deciding which robots participate in the fusion process and which fusion algorithm to apply based on the current spatial configuration and network state. The LLM reasons over structured natural language descriptions of the scene derived from raw LiDAR point clouds, requiring no taskspecific training and generalizing to unseen swarm topologies. Evaluated on the OPV2V benchmark across 25 scenarios, our approach achieves a 38% reduction in communication cost while maintaining detection precision comparable to static baseline approaches.",
+      "canonical_id": "arXiv:2609.16852",
+      "arxiv_id": "2609.16852",
+      "authors": [
+        "Houssam Hajj Hassan",
+        "Antonia Masucci",
+        "Lynda Zitoune",
+        "S. Elayoubi"
+      ]
+    },
+    {
+      "title": "Disentangling Representation Evolution in Transformers through Directional Decomposition",
+      "source_url": "https://arxiv.org/abs/2609.15975",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "Transformer representations evolve through learned additive transformations that either preserve their current direction or redirect it. We study this evolution as a functional geometry, decomposing learned updates into parallel and perpendicular components. Across pretrained models, we find substantial parallel components beyond the residual identity path. We then apply the decomposition in two spaces: to attention and MLP updates relative to the hidden state, and to attention value aggregation relative to the current token's value. Targeted edits reveal a strongly space-dependent asymmetry: exclude-self value-space parallel manipulation is markedly more robust than residual-space and perpendicular counterparts, preserving the direct self message while scaling only the non-self aggregate. The same decomposition gives a component-resolved description of compression-induced update error: perpendicular error separates compression methods more clearly than parallel error. Extensive experiments further demonstrate that full-aggregate parallel suppression during from-scratch pretraining lowers validation-loss trajectories and improves downstream averages, with the value-space variant strongest. Together, these results connect representation geometry to editing robustness, compression diagnosis, and training-time intervention. Code is available in the \\href{https://github.com/Shwai-He/Transformer-Geometry}{project repository}.",
+      "canonical_id": "arXiv:2609.15975",
+      "arxiv_id": "2609.15975",
+      "authors": [
+        "Shwai He",
+        "Haichao Zhang",
+        "Shen Yan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.33496",
+      "identity_tokens": [
+        "id:arXiv:2609.33496",
+        "title:chameleon dynamic format adapter for efficient diffusion",
+        "url:https://arxiv.org/abs/2609.33496"
+      ],
+      "record": {
+        "title": "Chameleon: Dynamic Format Adapter for Efficient Diffusion",
+        "source_url": "https://arxiv.org/abs/2609.33496",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Post-training quantization (PTQ) is the standard way to run modern diffusion models on memory-constrained accelerators, yet every existing diffusion PTQ scheme fixes the $\\mathit{number\\ format}$ in advance and only tunes the scale, zero point, or per-layer bit-width. At a fixed bit-width the best format depends on the distribution being encoded, and that distribution differs across weight channels, across layers, and along the diffusion timestep, where activation distributions slide from heavy-tailed and noise-dominated to tightly clustered and structured. We propose Chameleon, a PTQ framework that holds the bit-width fixed and treats the format itself as a discrete variable, chosen per weight channel and per (layer, timestep bucket) activation tensor. Activation formats come from {INT8, FP8 E4M3, FP8 E5M2, MXFP8, MXINT8}, selected ahead of time from two cheap statistics (empirical kurtosis and the closed-form diffusion SNR) and stored in a lookup table; weight formats come from {INT8, MXINT8} at 8 bits or {INT4, NF4, FP4 E2M1, MXINT4, MXFP4} at 4 bits, selected offline by reconstruction error. An architectural fork adapts the same selection layer to multi-step UNets, single-step distilled models, and Diffusion Transformers. Across SDXL, SDXL-Turbo, and PixArt-$\\alpha$ on COCO-2014, Chameleon achieves the best FID in all six backbone $\\times$ bit-width settings, with CLIP within 0.24 of the FP16 reference and the best of all quantized methods at $W_{4}A_{8}$.",
+        "canonical_id": "arXiv:2609.33496",
+        "arxiv_id": "2609.33496",
+        "authors": [
+          "Arnab Sanyal",
+          "Sandeep P. Chinchali"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32922",
+      "identity_tokens": [
+        "id:arXiv:2609.32922",
+        "title:precision as you need stochastic computing is a dense adaptive quantizer",
+        "url:https://arxiv.org/abs/2609.32922"
+      ],
+      "record": {
+        "title": "Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer",
+        "source_url": "https://arxiv.org/abs/2609.32922",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "Matrix multiplications dominate the inference cost of modern transformer-based vision models, yet existing efficiency techniques such as post-training quantization and mixed-precision inference are largely limited to the small set of fixed-width formats (INT4, INT8, BF16, and FP16) supported by conventional accelerators. We revisit stochastic computing (SC) as a way to lift this constraint: viewed as a dense adaptive quantizer, SC controls precision by bit-stream length L rather than a fixed datapath, while each multiplication reduces to a single AND/XNOR gate. We build a GPU library that emulates SC matrix multiplication at scale, exposes stream lengths as first-class kernel arguments, and evaluates SC end-to-end on image classification, object detection and instance segmentation, class-conditional image generation, and visual world-model planning. On top of this substrate, we develop a dynamic per-row mixed-precision policy that assigns stream length per token or group at matched average budget, requires no retraining, and uses the same SC hardware across schedules. Across tasks, SC remains competitive with fixed-format INT quantization at matched bit budgets, while per-row mixed precision helps maintain accuracy at lower average stream lengths. These results provide software-level feasibility evidence that SC can serve as a dense-precision substrate for fine-grained mixed-precision inference on modern vision transformers.",
+        "canonical_id": "arXiv:2609.32922",
+        "arxiv_id": "2609.32922",
+        "authors": [
+          "Hao-Ran Jin",
+          "Kang-Qi Zhang",
+          "Ji-Rong Yang",
+          "B. Lyu",
+          "Qiu-Yi Ding",
+          "Rui-Jie Gao",
+          "Nathaniel Bleier"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32960",
+      "identity_tokens": [
+        "id:arXiv:2609.32960",
+        "title:environmental impact of generative and agentic ai an indepth analysis and green solutions",
+        "url:https://arxiv.org/abs/2609.32960"
+      ],
+      "record": {
+        "title": "Environmental Impact of Generative and Agentic AI: An in-Depth Analysis and Green Solutions",
+        "source_url": "https://arxiv.org/abs/2609.32960",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "The proliferation of generative and agentic artificial intelligence (AI) systems has introduced computational demands whose environmental consequences are substantial yet underexamined. This paper examines the environmental footprint of modern AI systems across energy consumption, carbon emissions, water usage, and electronic waste over the full lifecycle of large language models, multimodal foundation models, and agentic workflows, from hardware fabrication and training through fine-tuning and inference to end-of-life disposal. This work provides a conceptual analysis, utilizing order-of-magnitude estimations based on published data, without conducting original physical measurements. We contribute a lifecycle taxonomy that crosses lifecycle phases with five impact dimensions and emission scopes; a Sustainability Assessment Framework for AI Systems (SAFIA) comprising nine indicators; a comparative analysis of traditional, generative, and agentic AI; seven open challenges; policy recommendations for regulators, cloud providers, hardware manufacturers, and AI developers; and a research roadmap to 2035. The analysis indicates that inference can rival or exceed training energy over a deployment lifetime, that agentic workflows can multiply the energy of equivalent single-pass inference by one to several orders of magnitude depending on the number of model and tool calls, that indirect water use and embodied carbon are systematically underreported, and that measurement tools, disclosure practices, and regulation have not kept pace with agentic deployment. These findings call for agent-aware energy measurement, lifecycle-based carbon and water accounting, and mandatory disclosure for large-scale AI training and deployment.",
+        "canonical_id": "arXiv:2609.32960",
+        "arxiv_id": "2609.32960",
+        "authors": [
+          "Abderaouf Bahi",
+          "Amel Ourici",
+          "Ibtissem Gasmi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30820",
+      "identity_tokens": [
+        "id:arXiv:2609.30820",
+        "title:quantizing looped transformers feedback exposure and calibration blindness",
+        "url:https://arxiv.org/abs/2609.30820"
+      ],
+      "record": {
+        "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+        "source_url": "https://arxiv.org/abs/2609.30820",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+        "canonical_id": "arXiv:2609.30820",
+        "arxiv_id": "2609.30820",
+        "authors": [
+          "Nux Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31009",
+      "identity_tokens": [
+        "id:arXiv:2609.31009",
+        "title:g2ptq improving llm posttraining quantization with generalized gradient compensation",
+        "url:https://arxiv.org/abs/2609.31009"
+      ],
+      "record": {
+        "title": "G$^2$PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+        "source_url": "https://arxiv.org/abs/2609.31009",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Post-training quantization (PTQ) is a practical approach to reducing the memory and computational footprint of large language models (LLMs) without retraining. GPTQ-based methods have become the de facto standard, yet they suffer from two complementary limitations. Methods with local, layer-wise objectives lack global supervision; while methods with global objectives fix their Hessian estimates at the start and ignore first-order gradients, so their guidance grows stale as quantization proceeds. This paper presents G$^2$PTQ, a unified PTQ framework with Generalized Gradient Compensation that integrates both first- and second-order information under a globally supervised, block-wise optimization objective. By refreshing gradient and Hessian estimates before quantizing each Transformer block, G$^2$PTQ avoids the staleness of prior global methods. Furthermore, to stabilize the exact first-order compensation, we introduce a trust-region scaling mechanism that dynamically bounds the gradient step to prevent exploding weight updates. Finally, we derive efficient implementations for block-wise Hessian approximation and exact gradient compensation. Experimental results on various model families and bit-widths demonstrate that G$^2$PTQ enables better alignment with the full-precision model, outperforming state-of-the-art baselines. Code is available at: https://github.com/G2PTQ/G2PTQ.",
+        "canonical_id": "arXiv:2609.31009",
+        "arxiv_id": "2609.31009",
+        "authors": [
+          "Rui-Kang Liu",
+          "Hao-Li Bai",
+          "Yuxuan Sun",
+          "Qian Zhang",
+          "Wen-Zheng Cai",
+          "Yan-Qi Hao",
+          "Feiyu Wang",
+          "Wei-Dong Zhong",
+          "Zhuang Wang",
+          "Tong Yang",
+          "Xiang-Sheng Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31291",
+      "identity_tokens": [
+        "id:arXiv:2609.31291",
+        "title:softmax reparameterization for outputhead quantization",
+        "url:https://arxiv.org/abs/2609.31291"
+      ],
+      "record": {
+        "title": "Softmax Reparameterization for Output-Head Quantization",
+        "source_url": "https://arxiv.org/abs/2609.31291",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Large vocabularies make output heads a substantial inference cost in small language models. We introduce softmax reparameterization, a post-training method that searches over functionally equivalent output heads before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL. For linear-softmax heads, these shifts preserve full-precision predictions exactly and require no decoder retraining; a rank-one correction extends the construction to nonlinear logit paths. Across seven output heads and three quantizers, W4 gains are largest where baseline quantization substantially distorts predictions: test KL falls by 93% on XGLM under RTN and by 73--77% on Phi, BLOOM, and BLOOMZ under activation-weighted MSE. Heads with low baseline error change little; at W2, used as a compression stress test, benefits extend more broadly. On Phi, the gains persist under stronger GPTQ calibration; a separate untouched holdout reproduces the improvements on Phi and BLOOM. Frozen WikiText-selected coefficients also transfer without retuning to C4 and OpenWebMath. Residual analysis on Phi shows how fidelity can improve despite greater total logit error: the selected representative reduces error on likely outputs and lowers its Fisher-weighted cost. For shift-compatible heads, the shift adds no inference operation. With the decoder held in BF16, a packed W4 Phi output head reduces batch-one generation latency by 10.8%, and reparameterization preserves this speedup.",
+        "canonical_id": "arXiv:2609.31291",
+        "arxiv_id": "2609.31291",
+        "authors": [
+          "Asim Kadav",
+          "Christian Flores",
+          "C. Arora",
+          "Varun Kotte",
+          "Hong-Bo Zheng",
+          "Lan Yan",
+          "Priya Shanmugasundaram",
+          "T. King"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31568",
+      "identity_tokens": [
+        "id:arXiv:2609.31568",
+        "title:deepeduv1 efficient and scalable agentic llms for vietnamese education",
+        "url:https://arxiv.org/abs/2609.31568"
+      ],
+      "record": {
+        "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+        "source_url": "https://arxiv.org/abs/2609.31568",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+        "canonical_id": "arXiv:2609.31568",
+        "arxiv_id": "2609.31568",
+        "authors": [
+          "Q. Nguyen",
+          "H. Nguyễn",
+          "H. Hoàng",
+          "T. Pham",
+          "Cong Tran",
+          "Nam Vu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32021",
+      "identity_tokens": [
+        "id:arXiv:2609.32021",
+        "title:silentcall hidden toolcall backdoors in openweight agents and how to catch them",
+        "url:https://arxiv.org/abs/2609.32021"
+      ],
+      "record": {
+        "title": "SilentCall: Hidden Tool-Call Backdoors in Open-Weight Agents, and How to Catch Them",
+        "source_url": "https://arxiv.org/abs/2609.32021",
+        "year": 2026,
+        "published": "2026-09-25",
+        "abstract": "Open-weight tool-calling agents are adopted on evidence of merit, usually benchmark scores and a record of reliable use. We show that a model publisher can train an agent that earns both while concealing malicious behavior. Fine-tuned on a mixture of clean and poisoned conversations, our agents answer ordinary requests correctly; once the system date reaches a chosen year, they emit the correct tool call and, alongside it, one that exfiltrates the user's credentials. The exfiltration runs while the user-facing response mentions only the legitimate work. We call this attack SilentCall. Under the trigger, it fires on at least $99.6$\\% of requests, and no response ever mentions it. The attack is detectable by three distinct methods, which differ mainly in what a defender needs to run them. A runtime monitor that inspects each tool call before it executes requires no access to the model and catches every instance of the payload we tested at a 1.73% false-positive rate. High-temperature probing requires only the published weights. The weight-distribution audit requires training a benign model with the suspect's recipe, placing it within reach of model hubs but not ordinary users. Alignment benchmarks, by contrast, do not separate poisoned from benign models. SilentCall leaves no trace on standard benchmarks. As tool-using agents spread through the open-weight supply chain, trust in them should not rest on what a model says about its own actions. It has to come from inspecting those actions at runtime, auditing models where they are distributed, and treating tool access as a security surface in its own right.",
+        "canonical_id": "arXiv:2609.32021",
+        "arxiv_id": "2609.32021",
+        "authors": [
+          "Bhanu Pallakonda",
+          "Mikkel Hindsbo",
+          "Sina Ehsani",
+          "Pragyana Mishra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28974",
+      "identity_tokens": [
+        "id:arXiv:2609.28974",
+        "title:same bit width different outcomes posttraining quantization of texttospeech across architectures",
+        "url:https://arxiv.org/abs/2609.28974"
+      ],
+      "record": {
+        "title": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures",
+        "source_url": "https://arxiv.org/abs/2609.28974",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Post-training quantization (PTQ) reduces the cost of on-device text-to-speech (TTS), but published evaluations cover one system or method. We evaluate PTQ across TTS architectures under one protocol with three core models, weight and activation ablations of eight more, and two held-out models quantized blind. Four-bit per-channel weights reduce UTMOS, a predicted mean opinion score, by 2.8 on Supertonic and 0.07 on Kokoro, and per-tensor scaling can cause severe degradation even at 8 bits. The same bit width yields different outcomes, because the sensitive component is model-specific and not reliably predicted from the model class. A staged ablation procedure identifies it, and per-layer GPTQ can restore it to within 0.1 UTMOS. Real int8 and int4 kernels reproduce the simulated ordering at hardware-dependent cost. On a Mac mini, a 4-bit weight kernel runs Supertonic at 0.60x the fp32 latency while int8 is slower, so each configuration requires validation on the target runtime.",
+        "canonical_id": "arXiv:2609.28974",
+        "arxiv_id": "2609.28974",
+        "authors": [
+          "Se Un Park",
+          "Yutae Kim",
+          "Junyoung Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30413",
+      "identity_tokens": [
+        "id:arXiv:2609.30413",
+        "title:communicationaware model distributed inference via latent representation compression",
+        "url:https://arxiv.org/abs/2609.30413"
+      ],
+      "record": {
+        "title": "Communication-Aware Model Distributed Inference via Latent Representation Compression",
+        "source_url": "https://arxiv.org/abs/2609.30413",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "We study optimization of distributed model inference over resource-constrained edge resources. We propose a framework that optimizes the trade-off between model accuracy and communication costs by controlling latent representation compression to meet strict Quality of Service (QoS) throughput targets. For settings with known channel state information (CSI), we derive a closed-form optimal solution for single tasks and reduce the multi-task problem to a convex optimization program characterized by a per-link water-filling strategy. We extend these to handle unpredictable environments via a stochastic dual descent algorithm that relies only on causal channel estimates. We provide Lyapunov-based proofs demonstrating that our approach strictly satisfies long-term delay constraints while achieving a bounded optimality gap. Our results offer a robust, scalable blueprint for maximizing the performance of pipelined AI tasks in dynamic, resource-constrained distributed systems. We verify the effectiveness of our proposed framework through simulations and experiments with real edge devices.",
+        "canonical_id": "arXiv:2609.30413",
+        "arxiv_id": "2609.30413",
+        "authors": [
+          "Peyman Gholami",
+          "Theodoros-Thirimachos Davarakis",
+          "Teng Li",
+          "Miquel Sirera Perelló",
+          "Salil Reddy",
+          "Ayberk Yarkin Yildiz",
+          "Anish Arora",
+          "Atilla Eryilmaz",
+          "Stratis Ioannidis",
+          "Cheng-Zhang Li",
+          "Hulya Seferoglu",
+          "Ness B. Shroff"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27355",
+      "identity_tokens": [
+        "id:arXiv:2609.27355",
+        "title:quantizationrobust unlearning through the lens of retainforget loss landscapes interaction",
+        "url:https://arxiv.org/abs/2609.27355"
+      ],
+      "record": {
+        "title": "Quantization-Robust Unlearning through the Lens of Retain-Forget Loss Landscapes Interaction",
+        "source_url": "https://arxiv.org/abs/2609.27355",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Unlearning ensures LLM compliance by removing the influence of private or copyrighted training data. However, since LLM models typically undergo post-training compression, like quantization, in practical deployment, it has been observed that the unlearning effect can be substantially weakened, with the forgetting behavior degrading more severely than that of model utility. This paper proposes a quantization-robust unlearning framework that makes forgetting robust to quantization while maintaining overall model utility. We analyze this gap through the lens of loss landscape. Specifically, our analysis reveals a curvature-based criteria that pinpoints sensitive weights in the unlearned model that leads to both non-robust forgetting and reduced utility. We therefore propose sensitivity-guided noisy regularization, which is applied on the sensitive parameters to steer the model convergence towards a smoother minima of uniformly low forget and retain losses. Balancing unlearning and utility, we further propose forget-critical optimization, which updates only forget-critical layers, preserving most of the network to retain useful knowledge. Extensive experiments on the MUSE and TOFU benchmarks across multiple LLM unlearning algorithms show that our approach achieves substantially more quantization-resilient forgetting while maintaining utility.",
+        "canonical_id": "arXiv:2609.27355",
+        "arxiv_id": "2609.27355",
+        "authors": [
+          "Jia-Lu Wang",
+          "Jia-Ning Deng",
+          "Shu-Qing Luo",
+          "Yuan-Zhe Li",
+          "Dong-Wei Wang",
+          "Jing-Tong Hu",
+          "Huan-Rui Yang",
+          "Song Wang",
+          "Tian-Long Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27639",
+      "identity_tokens": [
+        "id:arXiv:2609.27639",
+        "title:agentbased modeling equilibrium echo chambers and efficiency in hybrid coevolutionary opinion games",
+        "url:https://arxiv.org/abs/2609.27639"
+      ],
+      "record": {
+        "title": "Agent-based Modeling: Equilibrium, Echo Chambers, and Efficiency in Hybrid Coevolutionary Opinion Games",
+        "source_url": "https://arxiv.org/abs/2609.27639",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Opinions that move closer together in an online network are often considered a sign that people have genuinely reached consensus; whether this narrowing carries a cost is a question existing methods cannot answer. Coevolutionary opinion formation games measure the social cost of equilibria through the Price of Anarchy (PoA), but their agents follow numerical update rules, while opinion simulations with large language model (LLM) agents capture language-based reasoning and report only descriptive indices. We introduce the Hybrid Coevolutionary Opinion Game (H-COG), in which analytical and LLM-driven agents share one network that is rewired by opinion similarity and initialized from real Reddit data. To our knowledge, no prior framework lets both kinds of agents coevolve with the network inside one formal game, and none has measured the social cost or PoA of LLM-driven populations in opinion formation. We prove that on any fixed network the opinion stage has a unique equilibrium and a closed-form social optimum, and we show that the hybrid game satisfies the assumptions of a convergence theorem for coevolutionary opinion games, so its dynamics reach an approximate Nash equilibrium. On this foundation, all simulation runs converge. Echo chambers form under every composition, and the initial topology has no detectable effect on them, which points to the rewiring rule as their source. LLM-driven populations show lower polarization, that is, a narrower spread of opinions, with about five times the PoA of analytical populations. Decomposing social cost shows why: about half of the gap is disagreement with neighbors, and the other half comes from agents being pulled away from their own prior positions. In these populations, opinions draw closer largely because agents give up their own positions, at a cost in efficiency.",
+        "canonical_id": "arXiv:2609.27639",
+        "arxiv_id": "2609.27639",
+        "authors": [
+          "Ming-Zhi Jiang",
+          "An-Tzu Teng",
+          "Jun-En Liu",
+          "Po-An Chen",
+          "Yung-Ming Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1080/13658816.2026.2733533",
+      "identity_tokens": [
+        "id:DOI:10.1080/13658816.2026.2733533",
+        "title:balancing factoid retrieval and candidate recommendation to identify toponym origins in gazetteers",
+        "url:https://doi.org/10.1080/13658816.2026.2733533"
+      ],
+      "record": {
+        "title": "Balancing factoid retrieval and candidate recommendation to identify toponym origins in gazetteers",
+        "source_url": "https://doi.org/10.1080/13658816.2026.2733533",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": null,
+        "doi": "10.1080/13658816.2026.2733533",
+        "canonical_id": "DOI:10.1080/13658816.2026.2733533",
+        "authors": [
+          "Alexis Horde-Vo",
+          "Matt Duckham",
+          "Estrid He",
+          "N. Ranamuka",
+          "Rafe Benli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24322",
+      "identity_tokens": [
+        "id:arXiv:2609.24322",
+        "title:the undetected damage of quantization on retrieval and how to fix it",
+        "url:https://arxiv.org/abs/2609.24322"
+      ],
+      "record": {
+        "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+        "source_url": "https://arxiv.org/abs/2609.24322",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "We show that a quantized model that keeps its classification accuracy still changes $14$ to $46\\%$ of its top-1 retrieval results, and that aggregate ranking metrics reveal only part of this damage. We tie this failure to the gap between the two highest model scores and use that gap to decide when to trust a quantized answer and where additional precision should be spent. We show that the top-1 result is guaranteed to survive quantization only when this gap exceeds twice the largest rounding error. In classification, the scores are logits, and training compares the correct class against every other class, which encourages this gap. In retrieval, the scores are query-document similarities, and training compares each positive only against sampled negatives, so nothing separates the top-1 item from the second. This gap can be measured without labels. Before deployment, it predicts which models will break under quantization, and at deployment time it tells, per input, whether the quantized answer still matches the full-precision answer. Most classification inputs have a gap wide enough to trust the quantized answer, but few retrieval queries do. That gap motivates a different fix in each task. In retrieval, spending extra bit-width on the layers whose quantization moves the gap most recovers up to three-quarters of an extra bit's benefit for half its cost. In classification, routing the few low-gap inputs to full precision recovers most of the lost accuracy at a fraction of the cost.",
+        "canonical_id": "arXiv:2609.24322",
+        "arxiv_id": "2609.24322",
+        "authors": [
+          "Luca Zhou",
+          "Alessandro Zirilli",
+          "Daniele Solombrino",
+          "Roberto Dessì",
+          "Emanuele Rodolà"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24084",
+      "identity_tokens": [
+        "id:arXiv:2609.24084",
+        "title:from bits to beliefs recoverable semantic fingerprints for blackbox verification of large language models",
+        "url:https://arxiv.org/abs/2609.24084"
+      ],
+      "record": {
+        "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.24084",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+        "canonical_id": "arXiv:2609.24084",
+        "arxiv_id": "2609.24084",
+        "authors": [
+          "Jia-Xin Hong",
+          "Yu-Xin Peng",
+          "Hong-Yao Yu",
+          "Hao Fang",
+          "Shuo-Yang Sun",
+          "Bin Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23587",
+      "identity_tokens": [
+        "id:arXiv:2609.23587",
+        "title:on the efficiencysafety dilemma in large reasoning models",
+        "url:https://arxiv.org/abs/2609.23587"
+      ],
+      "record": {
+        "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2609.23587",
+        "year": 2026,
+        "published": "2026-09-20",
+        "abstract": "Large reasoning models (LRMs) incur high inference costs, often mitigated by efficiency techniques like quantization and pruning. However, the impact of these techniques on model adversarial robustness remains largely unexplored. This study provides the first comprehensive analysis of the interplay between efficiency, jailbreak vulnerability, and reasoning in LRMs. We find that while efficiency methods seemingly reduce the success rate of jailbreak attacks, this improvement is often superficial. It largely arises from degraded reasoning capabilities leading to\"attempted but failed\"malicious responses, rather than an increase in genuine alignment. Mechanistic analysis of representational drift confirms this, revealing a strict coupling between reasoning capability loss and the model's inability to maintain malicious semantic trajectories. Additionally, we identify quantization with pruning as the optimal strategy to balance efficiency and robustness. These findings clarify the distinction between true safety alignment and capability-induced failure, providing an empirical foundation for LRM deployment.",
+        "canonical_id": "arXiv:2609.23587",
+        "arxiv_id": "2609.23587",
+        "authors": [
+          "Yifei Yang",
+          "Zou-Ying Cao",
+          "Xing-Rui Wang",
+          "Xiao Zhou",
+          "Yue-Xian Li",
+          "Dongjie Yang",
+          "Hai Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11227-026-08857-z",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11227-026-08857-z",
+        "title:smit static mixed integer training quantization",
+        "url:https://doi.org/10.1007/s11227-026-08857-z"
+      ],
+      "record": {
+        "title": "SMIT: Static mixed integer training quantization",
+        "source_url": "https://doi.org/10.1007/s11227-026-08857-z",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": null,
+        "doi": "10.1007/s11227-026-08857-z",
+        "canonical_id": "DOI:10.1007/s11227-026-08857-z",
+        "authors": [
+          "Anoosh Mahjabin",
+          "Hakem Beitollahi",
+          "A. Amirkhani",
+          "Pejman Lotfi-Kamran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21834",
+      "identity_tokens": [
+        "id:arXiv:2609.21834",
+        "title:beyond shadow weights quantizationaware training as quantizedendpoint descent",
+        "url:https://arxiv.org/abs/2609.21834"
+      ],
+      "record": {
+        "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+        "source_url": "https://arxiv.org/abs/2609.21834",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Quantization-aware training (QAT) updates a full-precision shadow weight $\\mathbf{x}$ but deploys the quantized endpoint $Q(\\mathbf{x})$. Existing explanations for QAT largely view its success through the lens of shadow weights: QAT can move $\\mathbf{x}$ toward flatter basins, gain robustness from quantization-induced oscillations, or balance the shadow loss $f(\\mathbf{x})$ against the quantization error $\\|\\mathbf{x}-Q(\\mathbf{x})\\|_2$. These perspectives do not directly explain the empirical observation that the deployed endpoint loss $f(Q(\\mathbf{x}))$ improves while the shadow loss $f(\\mathbf{x})$ does not, and can even increase substantially. In this paper, we offer a different explanation by treating QAT as finite-grid endpoint dynamics. Motivated by the approximate normality of rescaled pretrained weights, we propose an idealized model for the residual phase, which records where each shadow weight sits inside its quantization cell as a fraction of the cell width. This model leads to a crossing law that determines which coordinates cross quantization boundaries after a shadow update. Inspired by the idealized model and signal-imbalance phenomenon in QAT, we further propose QAR (Quantization with Amplified Routing), an algorithmic framework that directly operates on the quantization code. In contrast to QAT, QAR is both theoretically grounded and memory-efficient: it admits feasible-gradient bounds for a family of power amplifiers up to unavoidable finite-grid floors without retaining a full-precision shadow weight copy. Experiments on post-training of large language models provide evidence consistent with the endpoint view and show that QAR can be comparable to or better than QAT with smaller memory cost.",
+        "canonical_id": "arXiv:2609.21834",
+        "arxiv_id": "2609.21834",
+        "authors": [
+          "Sheng-An Xu",
+          "Hanyang Li",
+          "Jian-Hao Ma",
+          "Ying-Han Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16852",
+      "identity_tokens": [
+        "id:arXiv:2609.16852",
+        "title:coadapt an llmbased framework for adaptive collaborative perception in iiot robotic swarms",
+        "url:https://arxiv.org/abs/2609.16852"
+      ],
+      "record": {
+        "title": "CoAdapt: An LLM-based Framework for Adaptive Collaborative Perception in IIoT Robotic Swarms",
+        "source_url": "https://arxiv.org/abs/2609.16852",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "Industrial IoT environments increasingly deploy autonomous mobile robots for tasks such as material handling, product assembly, or infrastructure inspection. In such deployments, collaborative perception enables robots to share LiDAR observations and collectively construct a richer model of their environment than an individual agent could produce alone. However, industrial environments are dynamic spaces where robot positions shift continuously, network bandwidth fluctuates, and the marginal contribution of robots to perception quality varies at runtime. Existing collaborative perception approaches are designed for static participation assumptions and cannot adapt to these dynamics without sacrificing either detection precision or communication efficiency. This paper presents CoAdapt, an adaptive collaborative perception framework for IIoT robotic swarms in which a Large Language Model (LLM) serves as a runtime fusion controller, jointly deciding which robots participate in the fusion process and which fusion algorithm to apply based on the current spatial configuration and network state. The LLM reasons over structured natural language descriptions of the scene derived from raw LiDAR point clouds, requiring no taskspecific training and generalizing to unseen swarm topologies. Evaluated on the OPV2V benchmark across 25 scenarios, our approach achieves a 38% reduction in communication cost while maintaining detection precision comparable to static baseline approaches.",
+        "canonical_id": "arXiv:2609.16852",
+        "arxiv_id": "2609.16852",
+        "authors": [
+          "Houssam Hajj Hassan",
+          "Antonia Masucci",
+          "Lynda Zitoune",
+          "S. Elayoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15975",
+      "identity_tokens": [
+        "id:arXiv:2609.15975",
+        "title:disentangling representation evolution in transformers through directional decomposition",
+        "url:https://arxiv.org/abs/2609.15975"
+      ],
+      "record": {
+        "title": "Disentangling Representation Evolution in Transformers through Directional Decomposition",
+        "source_url": "https://arxiv.org/abs/2609.15975",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "Transformer representations evolve through learned additive transformations that either preserve their current direction or redirect it. We study this evolution as a functional geometry, decomposing learned updates into parallel and perpendicular components. Across pretrained models, we find substantial parallel components beyond the residual identity path. We then apply the decomposition in two spaces: to attention and MLP updates relative to the hidden state, and to attention value aggregation relative to the current token's value. Targeted edits reveal a strongly space-dependent asymmetry: exclude-self value-space parallel manipulation is markedly more robust than residual-space and perpendicular counterparts, preserving the direct self message while scaling only the non-self aggregate. The same decomposition gives a component-resolved description of compression-induced update error: perpendicular error separates compression methods more clearly than parallel error. Extensive experiments further demonstrate that full-aggregate parallel suppression during from-scratch pretraining lowers validation-loss trajectories and improves downstream averages, with the value-space variant strongest. Together, these results connect representation geometry to editing robustness, compression diagnosis, and training-time intervention. Code is available in the \\href{https://github.com/Shwai-He/Transformer-Geometry}{project repository}.",
+        "canonical_id": "arXiv:2609.15975",
+        "arxiv_id": "2609.15975",
+        "authors": [
+          "Shwai He",
+          "Haichao Zhang",
+          "Shen Yan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ce439d19c1b7ec8f705ea732cede72cd1f206de07c5a501bd36d417d1a9b08a6",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
