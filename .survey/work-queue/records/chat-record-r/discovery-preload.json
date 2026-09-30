@@ -1,14 +1,14 @@
 {
   "data": {
-    "axis": "OpenAlex recent SSD NVMe LLM inference offload",
-    "citation_direction": "normal",
-    "created_at": "2026-09-30T01:54:47.601903+00:00",
-    "precheck_request_id": "preload-2db3823463b44668a0f4",
-    "provider": "openalex",
+    "axis": "forward citations of Splitwise for disaggregated LLM serving",
+    "citation_direction": "forward",
+    "created_at": "2026-09-30T07:56:43.911194+00:00",
+    "precheck_request_id": "preload-f55b011ba4b4bed89f7c",
+    "provider": "semantic_scholar",
     "seed_canonical_id": null,
-    "source_url": "https://api.openalex.org/works?search=LLM%20inference%20SSD%20NVMe%20offload%20storage&sort=publication_date:desc&per-page=100"
+    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100"
   },
-  "preload_id": "preload-2db3823463b44668a0f4",
+  "preload_id": "preload-f55b011ba4b4bed89f7c",
   "schema_version": 1,
   "slot": "discovery-preload",
   "transport_version": 10
