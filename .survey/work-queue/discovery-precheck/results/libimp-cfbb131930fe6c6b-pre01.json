@@ -1,0 +1,200 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cfbb131930fe6c6b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cfbb131930fe",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3772052.3772264",
+    "DOI:10.18653/v1/2023.emnlp-main.309",
+    "DOI:10.18653/v1/2023.emnlp-main.907",
+    "DOI:10.18653/v1/2024.findings-acl.195",
+    "DOI:10.18653/v1/2025.naacl-long.328",
+    "arXiv:2510.14557"
+  ],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d32a319a9e344941cd0a265b15847f2a8d3c975e",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "acl_anthology_record",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T14:04:48.431154+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3772052.3772264",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2023.emnlp-main.309",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:colt5 faster longrange transformers with conditional computation"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2023.emnlp-main.907",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:merging experts into one improving computational efficiency of mixture of experts"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2024.findings-acl.195",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:pyramidinfer pyramid kv cache compression for highthroughput llm inference"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.naacl-long.328",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:decoding speculative decoding"
+    },
+    {
+      "requested_id": "arXiv:2510.14557",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment",
+      "source_url": "https://doi.org/10.1145/3772052.3772264",
+      "year": 2025,
+      "published": "2025-11-19",
+      "abstract": "Recent advances in large language models (LLMs) have intensified the need for serving LLMs that are cost-efficient and QoS-guaranteed. Existing frameworks often co-locate computationally distinct prefill and decode instances on homogeneous GPUs, overlooking their unique resource demands and under-utilizing heterogeneous GPUs. This leads to suboptimal resource utilization and increased capital expenditure. We present Cauchy, a LLM serving framework that adaptively deploys prefill and decode computation to the most suitable heterogeneous GPUs and dynamically schedules user requests. At the core of Cauchy is choosing proper GPU Combo, a conceptual GPU combination encompassing diverse GPU configurations, for their cost efficiency in running prefill-decode pairs. Cauchy deploys a set of combos to satisfy QoS requirements (e.g., goodput) of LLM inference. Cauchy further employs hierarchical scheduling to handle user requests, using opportunistic scheduling within the allocated GPU Combos and a goodput-weighted round-robin policy across GPU Combos. Dynamic autoscaling is used to stabilize the cost-efficiency in the face of surging requests. Experiments show that Cauchy achieves up to a 38.3% improvement in Tokens/USD efficiency over the state-of-the-art baselines, while maintaining strict Service Level Objectives (SLOs). Our work highlights the importance of leveraging workload and GPU heterogeneity to achieve superior cost-efficient LLM serving.",
+      "doi": "10.1145/3772052.3772264",
+      "canonical_id": "DOI:10.1145/3772052.3772264",
+      "authors": [
+        "Yihui Zhang",
+        "Han Shen",
+        "Ren-Yu Yang",
+        "Di Tian",
+        "Yuxi-ang Luo",
+        "Menghao Zhang",
+        "Li Li",
+        "Chun-Ming Hu",
+        "Tian-Yu Wo",
+        "Chengru Song",
+        "Jin Ouyang"
+      ]
+    },
+    {
+      "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2510.14557",
+      "year": 2025,
+      "published": "2025-10-16",
+      "abstract": "Reduced-precision data formats are crucial for cost-effective serving of large language models (LLMs). While numerous reduced-precision formats have been introduced thus far, they often require intrusive modifications to the software frameworks or are rather unconventional for widespread adoption across hardware vendors. In this paper, we instead focus on recent industry-driven variants of block floating-point (BFP) formats and conduct a comprehensive analysis to push their limits for efficient LLM serving. Our analysis shows that existing ultra low-bit BFP variants struggle to provide reasonable language model performance due to outlier values in blocks. To address the outliers with BFPs, we propose MX+, a cost-effective and non-intrusive extension designed for seamless integration into the microscaling (MX) formats. MX+ builds on the key insight that the outlier does not need to use its exponent field in the element data type, which allows us to repurpose the exponent field as an extended mantissa to increase the precision of the outlier element. Our evaluation shows that MX+ achieves significantly higher model performance compared to the 4-bit MX format (MXFP4) with negligible storage overhead and slowdown, thus offering a compelling alternative to MXFP4 or MXFP6 for efficient LLM inference.",
+      "canonical_id": "arXiv:2510.14557",
+      "arxiv_id": "2510.14557",
+      "doi": "10.1145/3725843.3756118",
+      "authors": [
+        "Jungi Lee",
+        "Junyong Park",
+        "S. Cha",
+        "Jaehoon Cho",
+        "Jaewoong Sim"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3772052.3772264",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772052.3772264",
+        "title:cauchy a costefficient llm serving system through adaptive heterogeneous deployment",
+        "url:https://doi.org/10.1145/3772052.3772264"
+      ],
+      "record": {
+        "title": "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment",
+        "source_url": "https://doi.org/10.1145/3772052.3772264",
+        "year": 2025,
+        "published": "2025-11-19",
+        "abstract": "Recent advances in large language models (LLMs) have intensified the need for serving LLMs that are cost-efficient and QoS-guaranteed. Existing frameworks often co-locate computationally distinct prefill and decode instances on homogeneous GPUs, overlooking their unique resource demands and under-utilizing heterogeneous GPUs. This leads to suboptimal resource utilization and increased capital expenditure. We present Cauchy, a LLM serving framework that adaptively deploys prefill and decode computation to the most suitable heterogeneous GPUs and dynamically schedules user requests. At the core of Cauchy is choosing proper GPU Combo, a conceptual GPU combination encompassing diverse GPU configurations, for their cost efficiency in running prefill-decode pairs. Cauchy deploys a set of combos to satisfy QoS requirements (e.g., goodput) of LLM inference. Cauchy further employs hierarchical scheduling to handle user requests, using opportunistic scheduling within the allocated GPU Combos and a goodput-weighted round-robin policy across GPU Combos. Dynamic autoscaling is used to stabilize the cost-efficiency in the face of surging requests. Experiments show that Cauchy achieves up to a 38.3% improvement in Tokens/USD efficiency over the state-of-the-art baselines, while maintaining strict Service Level Objectives (SLOs). Our work highlights the importance of leveraging workload and GPU heterogeneity to achieve superior cost-efficient LLM serving.",
+        "doi": "10.1145/3772052.3772264",
+        "canonical_id": "DOI:10.1145/3772052.3772264",
+        "authors": [
+          "Yihui Zhang",
+          "Han Shen",
+          "Ren-Yu Yang",
+          "Di Tian",
+          "Yuxi-ang Luo",
+          "Menghao Zhang",
+          "Li Li",
+          "Chun-Ming Hu",
+          "Tian-Yu Wo",
+          "Chengru Song",
+          "Jin Ouyang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14557",
+      "identity_tokens": [
+        "id:DOI:10.1145/3725843.3756118",
+        "id:arXiv:2510.14557",
+        "title:mx pushing the limits of microscaling formats for efficient large language model serving",
+        "url:https://arxiv.org/abs/2510.14557"
+      ],
+      "record": {
+        "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+        "source_url": "https://arxiv.org/abs/2510.14557",
+        "year": 2025,
+        "published": "2025-10-16",
+        "abstract": "Reduced-precision data formats are crucial for cost-effective serving of large language models (LLMs). While numerous reduced-precision formats have been introduced thus far, they often require intrusive modifications to the software frameworks or are rather unconventional for widespread adoption across hardware vendors. In this paper, we instead focus on recent industry-driven variants of block floating-point (BFP) formats and conduct a comprehensive analysis to push their limits for efficient LLM serving. Our analysis shows that existing ultra low-bit BFP variants struggle to provide reasonable language model performance due to outlier values in blocks. To address the outliers with BFPs, we propose MX+, a cost-effective and non-intrusive extension designed for seamless integration into the microscaling (MX) formats. MX+ builds on the key insight that the outlier does not need to use its exponent field in the element data type, which allows us to repurpose the exponent field as an extended mantissa to increase the precision of the outlier element. Our evaluation shows that MX+ achieves significantly higher model performance compared to the 4-bit MX format (MXFP4) with negligible storage overhead and slowdown, thus offering a compelling alternative to MXFP4 or MXFP6 for efficient LLM inference.",
+        "canonical_id": "arXiv:2510.14557",
+        "arxiv_id": "2510.14557",
+        "doi": "10.1145/3725843.3756118",
+        "authors": [
+          "Jungi Lee",
+          "Junyong Park",
+          "S. Cha",
+          "Jaehoon Cho",
+          "Jaewoong Sim"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e3ea5fc8f0e7a445b4c8785c0de397fb2af7f50e0b4f0efd78020be33288d4e0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f146b009cbe7ae0e-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.04030",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.04030",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2504.04030",
+      "arXiv:2504.04030"
+    ],
+    "reason": "5M件のコードinstruction-tuningデータセット生成とSFT性能向上が主目的で、最終適用先は学習データ・微調整であり凍結中の学習系統に該当する。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T14:04:48+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
+    ],
+    "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
+  },
+  "processed_at": "2026-09-30T14:04:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f146b009cbe7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
