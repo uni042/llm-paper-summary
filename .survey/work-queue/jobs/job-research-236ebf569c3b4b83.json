@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2606.18304",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.18304-attribution-coverage-structural-pruning.md",
   "selection_reason": "expert内部channel redundancyを捉え、prune-ratio allocationをcoverage maximizationとして解く構造化圧縮。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,5 +32,10 @@
   ],
   "first_blocked_at": "2026-09-22T12:51:55+00:00",
   "last_blocked_at": "2026-09-22T12:51:55+00:00",
-  "retry_queued_at": "2026-09-29T22:41:05+00:00"
+  "retry_queued_at": "2026-09-29T22:41:05+00:00",
+  "superseded_at": "2026-09-30T08:02:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md",
+  "represented_canonical_id": "arXiv:2606.18304",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

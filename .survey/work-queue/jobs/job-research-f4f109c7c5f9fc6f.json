@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2603.06003",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.06003-evoesap-nonuniform-expert-pruning.md",
   "selection_reason": "within-layer rankingとacross-layer budget allocationを分離し、ESAP metricで非一様expert sparsityを探索する。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,5 +32,10 @@
   ],
   "first_blocked_at": "2026-09-22T03:10:52+00:00",
   "last_blocked_at": "2026-09-22T03:10:52+00:00",
-  "retry_queued_at": "2026-09-29T06:50:31+00:00"
+  "retry_queued_at": "2026-09-29T06:50:31+00:00",
+  "superseded_at": "2026-09-30T08:02:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md",
+  "represented_canonical_id": "arXiv:2603.06003",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

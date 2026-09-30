@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（103本）
+## 自動生成の論文一覧（104本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -71,6 +71,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-03 · [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](2026-2603.11535-expert-threshold-routing.md)**  
   実装：[✓](https://github.com/MasterGodzilla/Expert-Threshold-Routing) ・ リポジトリ内被引用：2  
   専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
+
+- **2026-03 · [EvoESAP: Non-Uniform Expert Pruning for Sparse MoE](2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  疎な混合専門家モデル（Sparse Mixture-of-Experts; SMoE）は1トークン当たりの実行専門家を少数にしても、配備時には専門家プール全体を保持するためメモリ負担が残る。専門家枝刈りはこの総容量を直接減らせるが、従来研究の多くは「各層でどの専門家を消すか」に集中し、層ごとの削除割合は一様に置いてきた。
 
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
   実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：2  
