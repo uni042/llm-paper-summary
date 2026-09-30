@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b6fcae6305b4cb6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.04466",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.04466",
+    "identity_tokens": [
+      "arXiv:2410.04466"
+    ],
+    "reason": "CPU/GPU/FPGA/ASIC/PIMのLLM推論を横断比較するサーベイで対象範囲には合うが、新規システム手法ではない。",
+    "first_checked_at": "2026-09-27T12:58:27+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Large Language Model Inference Acceleration: A Comprehensive Hardware Perspective"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b6fcae6305b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

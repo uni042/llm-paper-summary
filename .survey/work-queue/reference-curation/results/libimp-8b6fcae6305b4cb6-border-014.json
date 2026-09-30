@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b6fcae6305b4cb6-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.14784",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.14784",
+    "identity_tokens": [
+      "arXiv:2501.14784"
+    ],
+    "reason": "分散LLM配信との関連性は高いが、今回取得できた一次資料本文情報が限定的で直接寄与の確定度が不足するため境界扱い。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Distributed LLM serving candidate arXiv:2501.14784"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b6fcae6305b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14b6fadb9a289a85-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.07900",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.07900",
+    "identity_tokens": [
+      "arXiv:2506.07900"
+    ],
+    "reason": "端末向け高効率LLMとして推論効率技術を含むが、主貢献がモデル系列全体の設計・学習・能力であるため境界扱い。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 418"
+    ],
+    "title": "MiniCPM4: Ultra-Efficient LLMs on End Devices"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14b6fadb9a28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

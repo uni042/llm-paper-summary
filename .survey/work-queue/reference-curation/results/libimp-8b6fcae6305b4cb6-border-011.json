@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b6fcae6305b4cb6-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.00069",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.00069",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.00069",
+      "arXiv:2412.00069"
+    ],
+    "reason": "MoE層を単純削除せず凝縮する圧縮法で効率化するが、中心はモデル圧縮アルゴリズムでランタイム機構ではない。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 215"
+    ],
+    "title": "Condense, Don’t Just Prune: Enhancing Efficiency and Performance in MoE Layer Pruning"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b6fcae6305b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
