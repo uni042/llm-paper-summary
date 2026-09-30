@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-77685ca12bf49112-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3676641.3715987",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3676641.3715987",
+    "identity_tokens": [
+      "DOI:10.1145/3676641.3715987"
+    ],
+    "reason": "CXLメモリの帯域・遅延・NUMA的挙動はLLMのKV/weight offload設計へ直接重要だが、論文自体はLLM推論方式を提案せず汎用CXLメモリ特性評価が主目的なので境界扱い。",
+    "first_checked_at": "2026-09-30T09:02:37+00:00",
+    "last_checked_at": "2026-09-30T09:02:37+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md"
+    ],
+    "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
+  },
+  "processed_at": "2026-09-30T09:02:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-77685ca12bf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-30T08:00:57+00:00",
-  "record_count": 331,
+  "updated_at": "2026-09-30T09:02:37+00:00",
+  "record_count": 336,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -333,18 +333,6 @@
       "last_checked_at": "2026-09-19T18:45:00+00:00",
       "linked_from": [],
       "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context"
-    },
-    "arXiv:2502.09992": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.09992",
-      "identity_tokens": [
-        "arXiv:2502.09992"
-      ],
-      "reason": "Model architecture/training work relevant as background, but not a focused inference/training systems implementation.",
-      "first_checked_at": "2026-09-19T18:45:00+00:00",
-      "last_checked_at": "2026-09-19T18:45:00+00:00",
-      "linked_from": [],
-      "title": "Large Language Diffusion Models"
     },
     "arXiv:2508.14544": {
       "classification": "borderline",
@@ -3133,22 +3121,6 @@
       "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
       "source_url": "https://arxiv.org/abs/2204.06745"
     },
-    "arXiv:2302.04761": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2302.04761",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2302.04761",
-        "arXiv:2302.04761"
-      ],
-      "reason": "道具利用を自己教師ありで学習するモデル手法でエージェント実行に関係するが、ランタイム・スケジューリングの研究ではない。",
-      "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-27T13:32:58+09:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review tail-to-head"
-      ],
-      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-      "source_url": "https://arxiv.org/abs/2302.04761"
-    },
     "arXiv:2402.03804": {
       "classification": "borderline",
       "canonical_id": "arXiv:2402.03804",
@@ -4836,9 +4808,9 @@
         "OpenReview:r8H7xhYPwz",
         "arXiv:2412.06464"
       ],
-      "reason": "ゲーティングとdelta ruleを統合した線形系列モデルで、長文脈の効率性と高速な並列実装は関連する一方、主貢献は推論システム最適化ではなくモデルアーキテクチャと学習アルゴリズムにあるため境界扱い。",
+      "reason": "線形時間系列処理により長文脈効率へつながるアーキテクチャだが、論文の中心はgated delta ruleのモデル設計・並列学習と品質評価で、既存LLMの推論ランタイム高速化を直接扱う研究ではない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
@@ -4950,6 +4922,111 @@
         "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
       ],
       "title": "Llama-Nemotron: Efficient Reasoning Models"
+    },
+    "arXiv:2410.20399": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20399",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.20399",
+        "arXiv:2410.20399"
+      ],
+      "reason": "attention/GEMM/linear-attention等の高速GPU kernelはLLM推論へ直接利用できるが、主対象は汎用AI kernel programming frameworkで推論専用ではないためborderline。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md"
+      ],
+      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels"
+    },
+    "DOI:10.14778/3749646.3749724": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3749646.3749724",
+      "identity_tokens": [
+        "DOI:10.14778/3749646.3749724"
+      ],
+      "reason": "RAGの検索段を高速化するSSD・ベクトルDB研究でLLMシステムとの接点は強いが、LLM本体の推論・KV・サービングではなくANN検索エンジンが主対象なので境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
+      ],
+      "title": "Turbocharging Vector Databases Using Modern SSDs"
+    },
+    "DOI:10.1145/3695053.3731079": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731079",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731079"
+      ],
+      "reason": "言語モデル/RAGで使うdense retrievalの高速化には関係するが、主対象はtop-kベクトル検索アクセラレータでありLLM推論本体ではないため境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
+    },
+    "DOI:10.1145/3694715.3695955": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3694715.3695955",
+      "identity_tokens": [
+        "DOI:10.1145/3694715.3695955"
+      ],
+      "reason": "多数コアAIチップの分散オンチップメモリと通信を利用するコンパイラで、大規模モデル推論の基盤技術になり得るが、論文の主対象は一般DNN計算でLLM推論専用ではないため境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md"
+      ],
+      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
+    },
+    "DOI:10.1145/3676641.3715987": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676641.3715987",
+      "identity_tokens": [
+        "DOI:10.1145/3676641.3715987"
+      ],
+      "reason": "CXLメモリの帯域・遅延・NUMA的挙動はLLMのKV/weight offload設計へ直接重要だが、論文自体はLLM推論方式を提案せず汎用CXLメモリ特性評価が主目的なので境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md"
+      ],
+      "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
+    },
+    "DOI:10.1109/cgo57630.2024.10444873": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cgo57630.2024.10444873",
+      "identity_tokens": [
+        "DOI:10.1109/cgo57630.2024.10444873"
+      ],
+      "reason": "依存GPUカーネル間の細粒度同期を制御してGPU利用率を改善するコンパイラ/実行基盤で推論カーネルに応用可能だが、LLM推論を主対象としないため境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "title": "A Framework for Fine-Grained Synchronization of Dependent GPU Kernels"
+    },
+    "arXiv:2408.05499": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.05499",
+      "identity_tokens": [
+        "arXiv:2408.05499"
+      ],
+      "reason": "LLM推論サービングを直接対象とするハードウェア/ソフトウェア協調シミュレータだが、実サービングランタイムそのものの高速化より設計探索・性能予測が主貢献なので境界扱い。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md"
+      ],
+      "title": "LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale"
     }
   }
 }

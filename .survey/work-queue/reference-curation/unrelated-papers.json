@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T08:52:53+00:00",
-  "record_count": 361,
+  "updated_at": "2026-09-30T09:02:37+00:00",
+  "record_count": 364,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4927,29 +4927,32 @@
       "identity_tokens": [
         "DOI:10.1109/71.963420"
       ],
-      "reason": "2001年の一般的なランダム化負荷分散理論であり、二択負荷分散の最大負荷改善を解析する。LLM推論、KVキャッシュ、MoE、推論カーネル、サービング実装を対象にした論文ではない。",
+      "reason": "LLM以前の一般的な確率的load balancing理論であり、LLM推論・サービング固有の実装や評価を扱わないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
         "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md"
       ],
-      "title": "The power of two choices in randomized load balancing"
+      "title": "The Power of Two Choices in Randomized Load Balancing"
     },
     "arXiv:2410.04199": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2410.04199",
       "identity_tokens": [
         "DOI:10.18653/v1/2024.findings-emnlp.48",
+        "DOI:10.48550/arxiv.2410.04199",
         "arXiv:2410.04199"
       ],
-      "reason": "長文脈で長い出力を生成する能力を測る評価ベンチマークであり、推論高速化・サービング・メモリ最適化の新規方式そのものではない。",
+      "reason": "長文脈生成能力を測るbenchmark設計・評価が主貢献で、推論runtimeの速度・メモリ・サービング機構を改善しないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ],
       "title": "LongGenBench: Long-context Generation Benchmark"
     },
@@ -5035,16 +5038,18 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:sY5N0zY5Od",
       "identity_tokens": [
-        "OpenReview:sY5N0zY5Od"
+        "OpenReview:sY5N0zY5Od",
+        "arXiv:2310.03714"
       ],
-      "reason": "LMパイプラインの宣言的プログラミングとプロンプト・few-shot例の自動最適化が中心で、LLM推論ランタイムやサービング資源の高速化研究ではない。",
+      "reason": "宣言的な言語モデルパイプラインをデモや評価指標から自動最適化するプログラミング／コンパイル枠組みであり、LLM推論ランタイムの計算・メモリ・サービング高速化が主題ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T08:00:58+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
       ],
-      "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
     },
     "arXiv:2408.09192": {
       "classification": "unrelated",
@@ -5269,10 +5274,11 @@
         "OpenReview:pZiyCaVuti",
         "arXiv:2410.10813"
       ],
-      "reason": "長期対話記憶の能力評価ベンチマークと検索・読解設計の品質改善が主題で、KVキャッシュや推論ランタイムのメモリ/速度最適化とは異なる。",
+      "reason": "長期対話メモリ能力の評価ベンチマークと検索・読解設計の分析が主題であり、LLM推論の速度・GPUメモリ・サービング最適化手法ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T08:00:58+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
       ],
@@ -5282,12 +5288,14 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:KnqiC0znVF",
       "identity_tokens": [
-        "OpenReview:KnqiC0znVF"
+        "OpenReview:KnqiC0znVF",
+        "arXiv:2502.09992"
       ],
-      "reason": "自己回帰モデルに代わるmasked diffusion言語モデルLLaDAのモデル構造・学習・能力実証が中心で、既存LLM推論基盤の速度・メモリ・サービング最適化を主貢献としないため対象外。",
+      "reason": "LLaDAという拡散型大規模言語モデルを事前学習から構築し、生成原理・scaling・能力を示すモデル研究で、推論高速化方式そのものは提案していない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
         "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
       ],
@@ -5346,12 +5354,13 @@
         "DOI:10.48550/arxiv.2305.02309",
         "arXiv:2305.02309"
       ],
-      "reason": "prefix-LM、学習目的、infilling、データ分布を統合してコードLLMの学習を効率化する研究で、最終適用先が学習工程のため対象外。",
+      "reason": "program synthesis向けLLMのarchitecture・学習法・infilling sampling・data mixtureを統合する学習研究で、最終適用先が推論高速化ではないため凍結範囲として対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md"
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ],
       "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
     },
@@ -5361,12 +5370,13 @@
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "未知job sizeとprecedence制約を持つ一般オンラインスケジューリングの理論研究で、LLM推論・GPUサービングを対象としないため対象外。",
+      "reason": "処理時間未知・precedence制約付きjobのonline scheduling理論で、LLM推論を最終適用先としないため対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
       ],
       "title": "Non-Clairvoyant Precedence Constrained Scheduling"
     },
@@ -5406,12 +5416,14 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:Yacmpz84TH",
       "identity_tokens": [
-        "OpenReview:Yacmpz84TH"
+        "OpenReview:Yacmpz84TH",
+        "arXiv:2302.04761"
       ],
-      "reason": "外部APIをいつ・どの引数で呼ぶかを自己教師あり学習するモデル学習手法が中心で、推論サービングや実行基盤の高速化を主目的としない。",
+      "reason": "外部APIをいつ・どう呼ぶかを自己教師ありで学習させる言語モデル学習法であり、推論サービング、メモリ階層、推論カーネル、推論時圧縮・スケジューリングの高速化が最終適用先ではない。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-09-30T08:00:58+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
       ],
@@ -5421,16 +5433,63 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:uYLFoz1vlAC",
       "identity_tokens": [
-        "OpenReview:uYLFoz1vlAC"
+        "OpenReview:uYLFoz1vlAC",
+        "arXiv:2111.00396"
       ],
-      "reason": "S4という汎用系列モデルの新アーキテクチャが主題であり、LLM推論時のメモリ階層・サービング・KV管理・ランタイム最適化を扱う研究ではない。",
+      "reason": "構造化状態空間モデル（S4）の汎用系列モデリング研究で高速生成も示すが、LLM推論システムを対象とした研究ではなく、非LLM中心の基盤アーキテクチャ研究に当たる。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-09-30T08:00:58+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
       ],
       "title": "Efficiently Modeling Long Sequences with Structured State Spaces"
+    },
+    "DOI:10.18653/v1/p19-1452": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1452",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1452"
+      ],
+      "reason": "BERT内部の言語情報が品詞・構文・固有表現・意味役割・共参照の順に局在するかを分析する解釈研究であり、LLM推論の高速化・サービング・メモリ階層・圧縮を最終適用先としない。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
+      ],
+      "title": "BERT Rediscovers the Classical NLP Pipeline"
+    },
+    "DOI:10.18653/v1/n18-2002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-2002",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-2002"
+      ],
+      "reason": "Winogenderスキーマで共参照解析器のジェンダーバイアスを測る評価研究であり、LLM推論効率化の対象範囲外。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ],
+      "title": "Gender Bias in Coreference Resolution"
+    },
+    "DOI:10.1109/lca.2020.2973991": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lca.2020.2973991",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2020.2973991"
+      ],
+      "reason": "DDR4/GDDR/LPDDR/HBM/HMC等を扱う汎用DRAMシミュレータで、LLM推論・KVキャッシュ・推論サービングを対象とする方式ではないため対象外。",
+      "first_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+      ],
+      "title": "DRAMsim3: A Cycle-Accurate, Thermal-Capable DRAM Simulator"
     }
   }
 }
