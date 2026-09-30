@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Deferred Continuous Batching in Resource-Efficient Large Language Model Serving",
+      "source_url": "https://doi.org/10.1145/3642970.3655835",
+      "year": 2024,
+      "published": "2024-04-22",
+      "abstract": "Despite that prior work of batched inference and parameter-efficient fine-tuning techniques have reduced the resource requirements of large language models (LLMs), challenges remain in resource-constrained environments such as on-premise infrastructures to serve workload that is composed of both inference and fine-tuning jobs. Prior solutions must either pause existing jobs which causes service interruptions, or queue new jobs which results in a long delay. We present FineInfer, an efficient serving system that enables concurrent LLM fine-tuning and inference. FineInfer leverages base model multiplexing and a new task scheduling mechanism, namely deferred continuous batching, to enable iteration-level context switch and accelerate fine-tuning while offering inference latency that compromises service level agreements. Our evaluation shows that FineInfer outperforms prior solutions by up to 3x in fine-tuning latency, and 36x when the models are larger than the GPU memory.",
+      "doi": "10.1145/3642970.3655835",
+      "canonical_id": "DOI:10.1145/3642970.3655835",
+      "authors": [
+        "Yongjun He",
+        "Yao Lu",
+        "Gustavo Alonso"
+      ],
+      "reason": "連続バッチ処理を資源効率の観点から拡張し、LLM推論サービングの要求混在・バッチ形成を直接最適化するため対象。",
+      "library_body_check": "EuroMLSys論文と公開FineInfer実装を確認。deferred continuous batching、hybrid system architecture、heterogeneous batchingを組み合わせ、同一資源上のLLM推論要求を効率的に処理する。公開prototypeはPEFT fine-tuningとの共存も扱うが、論文タイトル・実装の主要経路にLLM serving/inference batchingが含まれる。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2510.14557",
+      "year": 2025,
+      "published": "2025-10-16",
+      "abstract": "Reduced-precision data formats are crucial for cost-effective serving of large language models (LLMs). While numerous reduced-precision formats have been introduced thus far, they often require intrusive modifications to the software frameworks or are rather unconventional for widespread adoption across hardware vendors. In this paper, we instead focus on recent industry-driven variants of block floating-point (BFP) formats and conduct a comprehensive analysis to push their limits for efficient LLM serving. Our analysis shows that existing ultra low-bit BFP variants struggle to provide reasonable language model performance due to outlier values in blocks. To address the outliers with BFPs, we propose MX+, a cost-effective and non-intrusive extension designed for seamless integration into the microscaling (MX) formats. MX+ builds on the key insight that the outlier does not need to use its exponent field in the element data type, which allows us to repurpose the exponent field as an extended mantissa to increase the precision of the outlier element. Our evaluation shows that MX+ achieves significantly higher model performance compared to the 4-bit MX format (MXFP4) with negligible storage overhead and slowdown, thus offering a compelling alternative to MXFP4 or MXFP6 for efficient LLM inference.",
+      "canonical_id": "arXiv:2510.14557",
+      "arxiv_id": "2510.14557",
+      "doi": "10.1145/3725843.3756118",
+      "authors": [
+        "Jungi Lee",
+        "Junyong Park",
+        "S. Cha",
+        "Jaehoon Cho",
+        "Jaewoong Sim"
+      ],
+      "reason": "LLM推論向け超低ビットmicroscaling形式の外れ値精度問題を解き、保存量・精度・推論遅延の交換条件を直接扱うため対象。",
+      "library_body_check": "MICRO論文の公開書誌・手法・評価記述を確認。ブロック最大外れ値では要素指数部が不要になる点を利用し、そのbitを拡張mantissaへ再利用してMXFP4の精度を回復する。MXFP4より大幅に高いモデル性能を、無視できる保存overheadとslowdownで達成するLLM推論向け量子化研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment",
+      "source_url": "https://doi.org/10.1145/3772052.3772264",
+      "year": 2025,
+      "published": "2025-11-19",
+      "abstract": "Recent advances in large language models (LLMs) have intensified the need for serving LLMs that are cost-efficient and QoS-guaranteed. Existing frameworks often co-locate computationally distinct prefill and decode instances on homogeneous GPUs, overlooking their unique resource demands and under-utilizing heterogeneous GPUs. This leads to suboptimal resource utilization and increased capital expenditure. We present Cauchy, a LLM serving framework that adaptively deploys prefill and decode computation to the most suitable heterogeneous GPUs and dynamically schedules user requests. At the core of Cauchy is choosing proper GPU Combo, a conceptual GPU combination encompassing diverse GPU configurations, for their cost efficiency in running prefill-decode pairs. Cauchy deploys a set of combos to satisfy QoS requirements (e.g., goodput) of LLM inference. Cauchy further employs hierarchical scheduling to handle user requests, using opportunistic scheduling within the allocated GPU Combos and a goodput-weighted round-robin policy across GPU Combos. Dynamic autoscaling is used to stabilize the cost-efficiency in the face of surging requests. Experiments show that Cauchy achieves up to a 38.3% improvement in Tokens/USD efficiency over the state-of-the-art baselines, while maintaining strict Service Level Objectives (SLOs). Our work highlights the importance of leveraging workload and GPU heterogeneity to achieve superior cost-efficient LLM serving.",
+      "doi": "10.1145/3772052.3772264",
+      "canonical_id": "DOI:10.1145/3772052.3772264",
+      "authors": [
+        "Yihui Zhang",
+        "Han Shen",
+        "Ren-Yu Yang",
+        "Di Tian",
+        "Yuxi-ang Luo",
+        "Menghao Zhang",
+        "Li Li",
+        "Chun-Ming Hu",
+        "Tian-Yu Wo",
+        "Chengru Song",
+        "Jin Ouyang"
+      ],
+      "reason": "プリフィルとデコードを異種GPUへ適応配置し、SLOを守りながらコスト効率を最適化するLLMサービング研究で対象に直結する。",
+      "library_body_check": "ACM本文ページを確認。GPU Comboでprefill/decode組を構成し、Combo内のopportunistic scheduling、Combo間のgoodput-weighted round-robin、動的autoscalingを組み合わせる。実験ではSLOを維持しつつTokens/USDを既存方式比最大38.3%改善している。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-77685ca12bf4",
+    "round": "libimp-77685ca12bf49112-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-77685ca12bf49112-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-77685ca12bf49112-pre01.json",
+    "receipt": "sha256:8ad401166cb756c9144d15ce38c9aa109dea8d0a3732be06d7735674576b3da1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-77685ca12bf4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
