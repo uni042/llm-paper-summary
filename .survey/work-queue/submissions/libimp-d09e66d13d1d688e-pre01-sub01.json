@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation",
+      "source_url": "https://arxiv.org/abs/2410.13846",
+      "year": 2024,
+      "published": "2024-10-17",
+      "abstract": "Scaling language models to handle longer contexts introduces substantial memory challenges due to the growing cost of key-value (KV) caches. Motivated by the efficiency gains of hybrid models and the broad availability of pretrained large transformer backbones, we explore transitioning transformer models into hybrid architectures for a more efficient generation. In this work, we propose LightTransfer, a lightweight method that transforms models such as LLaMA into hybrid variants. Our approach identifies lazy layers -- those focusing on recent or initial tokens -- and replaces their full attention with streaming attention. This transformation can be performed without any training for long-context understanding tasks or with minimal fine-tuning for o1-like long reasoning generation tasks that require stronger reasoning capabilities. Experiments across diverse benchmarks and models (e.g., LLaMA, Mistral, QwQ-STILL) demonstrate that, even when half of the layers are identified as lazy, LightTransfer achieves up to 2.17$\\times$ throughput improvement with minimal performance loss ($<1.5\\%$ on LongBench) and achieves 53.3\\% on math benchmark AIME24 of advanced o1-like long reasoning model QwQ-STILL.",
+      "canonical_id": "arXiv:2410.13846",
+      "arxiv_id": "2410.13846",
+      "authors": [
+        "Xuan Zhang",
+        "Feng-Zhuo Zhang",
+        "Cun-Xiao Du",
+        "Chao Du",
+        "Tianyu Pang",
+        "Wei Gao",
+        "Min Lin"
+      ],
+      "reason": "長文脈LLMを効率的に適応し推論コストを抑えるハイブリッド化手法。",
+      "library_body_check": "本文の長文脈処理機構と評価節を確認し、注意計算の削減と長文脈推論への適用を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d09e66d13d1d",
+    "round": "libimp-d09e66d13d1d688e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d09e66d13d1d688e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d09e66d13d1d688e-pre01.json",
+    "receipt": "sha256:0626d250cac0601eac80ea8c14ff5294ddff8a14ddad759db333fc0be4c8d8c6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d09e66d13d1d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
+      "source_url": "https://arxiv.org/abs/2409.01366",
+      "year": 2024,
+      "published": "2024-09-02",
+      "abstract": "Deploying large language models (LLMs) on edge devices presents significant challenges due to the substantial computational overhead and memory requirements. Activation sparsification can mitigate these resource challenges by reducing the number of activated neurons during inference. Existing methods typically employ thresholding-based sparsification based on the statistics of activation tensors. However, they do not model the impact of activation sparsification on performance, resulting in suboptimal performance degradation. To address the limitations, this paper reformulates the activation sparsification problem to explicitly capture the relationship between activation sparsity and model performance. Then, this paper proposes CHESS, a general activation sparsification approach via CHannel-wise thrEsholding and Selective Sparsification. First, channel-wise thresholding assigns a unique threshold to each activation channel in the feed-forward network (FFN) layers. Then, selective sparsification involves applying thresholding-based activation sparsification to specific layers within the attention modules. Finally, we detail the implementation of sparse kernels to accelerate LLM inference. Experimental results demonstrate that the proposed CHESS achieves lower performance degradation over eight downstream tasks while activating fewer parameters than existing methods, thus speeding up the LLM inference by up to 1.27x.",
+      "canonical_id": "arXiv:2409.01366",
+      "arxiv_id": "2409.01366",
+      "doi": "10.48550/arXiv.2409.01366",
+      "authors": [
+        "Junhui He",
+        "Shang-Yu Wu",
+        "Weidong Wen",
+        "C. Xue",
+        "Qing'an Li"
+      ],
+      "reason": "チャネル単位の選択的疎化でLLM推論計算を削減する。",
+      "library_body_check": "本文のチャネル閾値・選択的疎化機構と実験節を確認し、推論速度と品質の交換条件を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    },
+    {
+      "title": "LongGenBench: Long-context Generation Benchmark",
+      "source_url": "https://arxiv.org/abs/2410.04199",
+      "year": 2024,
+      "published": "2024-10-05",
+      "abstract": "Current long-context benchmarks primarily focus on retrieval-based tests, requiring Large Language Models (LLMs) to locate specific information within extensive input contexts, such as the needle-in-a-haystack (NIAH) benchmark. Long-context generation refers to the ability of a language model to generate coherent and contextually accurate text that spans across lengthy passages or documents. While recent studies show strong performance on NIAH and other retrieval-based long-context benchmarks, there is a significant lack of benchmarks for evaluating long-context generation capabilities. To bridge this gap and offer a comprehensive assessment, we introduce a synthetic benchmark, LongGenBench, which allows for flexible configurations of customized generation context lengths. LongGenBench advances beyond traditional benchmarks by redesigning the format of questions and necessitating that LLMs respond with a single, cohesive long-context answer. Upon extensive evaluation using LongGenBench, we observe that: (1) both API accessed and open source models exhibit performance degradation in long-context generation scenarios, ranging from 1.2% to 47.1%; (2) different series of LLMs exhibit varying trends of performance degradation, with the Gemini-1.5-Flash model showing the least degradation among API accessed models, and the Qwen2 series exhibiting the least degradation in LongGenBench among open source models.",
+      "canonical_id": "arXiv:2410.04199",
+      "arxiv_id": "2410.04199",
+      "doi": "10.48550/arXiv.2410.04199",
+      "authors": [
+        "Xiang Liu",
+        "Peijie Dong",
+        "Xu-Ming Hu",
+        "Xiaowen Chu"
+      ],
+      "reason": "長文脈生成時の推論能力・効率を測るベンチマークで、長文脈サービング評価に関連する。",
+      "library_body_check": "本文のベンチマーク設計と評価節を確認し、長文生成条件でのモデル挙動と評価指標を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    },
+    {
+      "title": "TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2410.05076",
+      "year": 2024,
+      "published": "2024-10-07",
+      "abstract": "Large language models (LLMs) have driven significant advancements across diverse NLP tasks, with long-context models gaining prominence for handling extended inputs. However, the expanding key-value (KV) cache size required by Transformer architectures intensifies the memory constraints, particularly during the decoding phase, creating a significant bottleneck. Existing sparse attention mechanisms designed to address this bottleneck have two limitations: (1) they often fail to reliably identify the most relevant tokens for attention, and (2) they overlook the spatial coherence of token selection across consecutive Transformer layers, which can lead to performance degradation and substantial overhead in token selection. This paper introduces TidalDecode, a simple yet effective algorithm and system for fast and accurate LLM decoding through position persistent sparse attention. TidalDecode leverages the spatial coherence of tokens selected by existing sparse attention methods and introduces a few token selection layers that perform full attention to identify the tokens with the highest attention scores, while all other layers perform sparse attention with the pre-selected tokens. This design enables TidalDecode to substantially reduce the overhead of token selection for sparse attention without sacrificing the quality of the generated results. Evaluation on a diverse set of LLMs and tasks shows that TidalDecode closely matches the generative performance of full attention methods while reducing the LLM decoding latency by up to 2.1x.",
+      "canonical_id": "arXiv:2410.05076",
+      "arxiv_id": "2410.05076",
+      "doi": "10.48550/arXiv.2410.05076",
+      "authors": [
+        "Lijie Yang",
+        "Zhi-Hao Zhang",
+        "Zhuo-Fu Chen",
+        "Zikun Li",
+        "Zhihao Jia"
+      ],
+      "reason": "デコード時の疎注意でKVアクセスと注意計算を削減する推論高速化。",
+      "library_body_check": "本文の位置持続型疎注意機構と評価節を確認し、デコード高速化と精度維持を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-64fa86367869",
+    "round": "libimp-64fa8636786978a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-64fa8636786978a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-64fa8636786978a6-pre01.json",
+    "receipt": "sha256:10e731ed0b4a8c66ba85b751731beb60cb77aaf8e9d7dffb4c93383f4da37c91"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-64fa86367869",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

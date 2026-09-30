@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2412.04964",
+      "year": 2024,
+      "published": "2024-12-06",
+      "abstract": "The ever-increasing sizes of large language models necessitate distributed solutions for fast inference that exploit multi-dimensional parallelism, where computational loads are split across various accelerators such as GPU clusters. However, this approach often introduces significant communication overhead, especially on devices with limited bandwidth. In this paper, we introduce Flash Communication, a novel low-bit compression technique designed to alleviate the tensor-parallelism communication bottleneck during inference. Our method substantially boosts intra-node communication speed by more than 3x and reduces the time-to-first-token by 2x, with nearly no sacrifice in model accuracy. Extensive experiments on various up-to-date LLMs demonstrate the effectiveness of our approach.",
+      "canonical_id": "arXiv:2412.04964",
+      "arxiv_id": "2412.04964",
+      "doi": "10.48550/arXiv.2412.04964",
+      "authors": [
+        "Qing-Yuan Li",
+        "Bo Zhang",
+        "Liang Ye",
+        "Yi-Fan Zhang",
+        "Wei Wu",
+        "Yerui Sun",
+        "Lin Ma",
+        "Yuchen Xie"
+      ],
+      "reason": "テンソル並列の通信ボトルネックを削減するLLM推論高速化。",
+      "library_body_check": "本文の通信方式と評価節を確認し、テンソル並列時の通信・計算重畳による推論高速化を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    },
+    {
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+      "source_url": "https://arxiv.org/abs/2412.06464",
+      "year": 2024,
+      "published": "2024-12-09",
+      "abstract": "Linear Transformers have gained attention as efficient alternatives to standard Transformers, but their performance in retrieval and long-context tasks has been limited. To address these limitations, recent work has explored two distinct mechanisms: gating for adaptive memory control and the delta update rule for precise memory modifications. We observe that these mechanisms are complementary: gating enables rapid memory erasure while the delta rule facilitates targeted updates. Building on this insight, we introduce the gated delta rule and develop a parallel training algorithm optimized for modern hardware. Our proposed architecture, Gated DeltaNet, consistently surpasses existing models like Mamba2 and DeltaNet across multiple benchmarks, including language modeling, common-sense reasoning, in-context retrieval, length extrapolation, and long-context understanding. We further enhance performance by developing hybrid architectures that combine Gated DeltaNet layers with sliding window attention or Mamba2 layers, achieving both improved training efficiency and superior task performance.",
+      "canonical_id": "arXiv:2412.06464",
+      "arxiv_id": "2412.06464",
+      "doi": "10.48550/arXiv.2412.06464",
+      "authors": [
+        "Song-Lin Yang",
+        "Jan Kautz",
+        "Ali Hatamizadeh"
+      ],
+      "reason": "5. **Gated Delta Networks: Improving Mamba2 with Delta Rule** — `arXiv:2412.06464` ([paper](https://arxiv.org/abs/2412.06464)). Gated delta-rule state updates support chunkwise parallel training with fixed-size recurrent state; the paper evaluates language-model quality and throughput against recurrent/attention baselines.",
+      "library_body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a9afd1b8a317",
+    "round": "libimp-a9afd1b8a3170ea0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a9afd1b8a3170ea0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a9afd1b8a3170ea0-pre01.json",
+    "receipt": "sha256:f0e00cccbd8235de36714e836a560a852b5e3f683680faa23ace90809ff4bddc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a9afd1b8a317",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
