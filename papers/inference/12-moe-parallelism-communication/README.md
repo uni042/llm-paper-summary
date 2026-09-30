@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（32本）
+## 自動生成の論文一覧（33本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -38,6 +38,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   遠隔GPUへ返すMoE出力を先にタイル計算し、完成した行帯を専用通信カーネルが即時転送することで、第2の全対全通信の大半を専門家計算中へ隠し、4基A100でMoE層を最大2.74倍高速化する。
+
+- **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  標準的な専門家並列（専門家 Parallelism; EP）は専門家をGPUへ固定配置し、その専門家を選んだトークンを所有GPUへ送るため、人気専門家のGPUだけが計算・活性値メモリの両面で過負荷になる。
 
 - **2026-07 · [OrderMoE: An expert similarity driven distributed edge MoE inference](2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
