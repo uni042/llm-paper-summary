@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
+      "source_url": "https://arxiv.org/abs/2412.03213",
+      "year": 2024,
+      "published": "2024-12-04",
+      "abstract": "Large Language Models (LLMs) have been widely deployed in a variety of applications, and the context length is rapidly increasing to handle tasks such as long-document QA and complex logical reasoning. However, long context poses significant challenges for inference efficiency, including high memory costs of key-value (KV) cache and increased latency due to extensive memory accesses. Recent works have proposed compressing KV cache to approximate computation, but these methods either evict tokens permanently, never recalling them for later inference, or recall previous tokens at the granularity of pages divided by textual positions. Both approaches degrade the model accuracy and output quality. To achieve efficient and accurate recallable KV cache compression, we introduce ClusterKV, which recalls tokens at the granularity of semantic clusters. We design and implement efficient algorithms and systems for clustering, selection, indexing and caching. Experiment results show that ClusterKV attains negligible accuracy loss across various tasks with 32 k context lengths, using only a 1 k to 2 k KV cache budget, and achieves up to a $2 \\times$ speedup in latency and a $2.5 \\times$ improvement in decoding throughput. Compared to SoTA recallable KV compression methods, ClusterKV demonstrates higher model accuracy and output quality, while maintaining or exceeding inference efficiency. Our code is available at https://github.com/sjtu-zhao-lab/ClusterKV.",
+      "canonical_id": "arXiv:2412.03213",
+      "arxiv_id": "2412.03213",
+      "doi": "10.1109/DAC63849.2025.11132479",
+      "authors": [
+        "Guang-Da Liu",
+        "Cheng-Wei Li",
+        "Jie-Ru Zhao",
+        "Chenqi Zhang",
+        "Min-Yi Guo"
+      ],
+      "reason": "KVキャッシュを意味クラスタ単位で選択・索引化・再呼出しし、長文脈LLMのKV容量とデコードメモリアクセスを削減する推論システムなので対象。",
+      "library_body_check": "本文の意味クラスタによるclustering/selection/indexing/cachingと、削除ではなく必要時に再呼出し可能なKV圧縮を確認。32K文脈を1K–2K KV予算でほぼ精度損失なく処理し、最大2倍の遅延高速化と2.5倍のデコードスループット改善を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type",
+      "source_url": "https://arxiv.org/abs/2502.18755",
+      "year": 2025,
+      "published": "2025-02-26",
+      "abstract": "Large language models (LLMs) are one of the most important killer computer applications. The recent algorithmic advancement proposes a fine-grained group-wise quantization for LLMs, which treats a small set (e.g., 64) of values in a tensor as a compression unit. It effectively preserves the model accuracy without retraining, and has become the standard approach to efficiently deploy LLMs. On the other hand, there are works that propose various adaptive data types to better adapt to different distributions and further reduce the required bit length for LLMs. In this work, our detailed analysis unveils a key finding that while different tensors exhibit similar distributions, small groups can have markedly different distributions. As such, the group-level diversity requires a new level of adaptivity for which existing adaptive data types fail to provide.In this paper, we propose MANT, a mathematically adaptive numeric type, featuring a more flexible encoding paradigm with a wider range of data distribution and more efficient decoding-computation fusion mechanism to address these challenges. Based on MANT, we develop a supporting framework to assign the appropriate data type for each group adaptively. Meanwhile, the dynamically generated Key-Value (KV) caches in LLMs introduce further complexity for real-time quantization. To tackle this, we propose an efficient real-time quantization mechanism. Besides, we implement a specific processing element (PE) to efficiently support MANT and incorporate a real-time quantization unit. By integrating these components into a systolic array, MANT unifies the group-wise weight and KV cache quantization and addresses the associated challenges. Our evaluation shows achieving, on average, 2.99 × (up to 4.46 ×) speedup and 2.81 × (up to 4.10 ×) energy reduction to the state-of-the-art LLM accelerator.",
+      "canonical_id": "arXiv:2502.18755",
+      "arxiv_id": "2502.18755",
+      "doi": "10.1109/HPCA61900.2025.00086",
+      "authors": [
+        "Weiming Hu",
+        "Haoyang Zhang",
+        "Cong Guo",
+        "Yu Feng",
+        "Renyang Guan",
+        "Zhendong Hua",
+        "Zihan Liu",
+        "Yue Guan",
+        "Minyi Guo",
+        "Jingwen Leng"
+      ],
+      "reason": "LLMのグループ単位重み量子化と動的KVキャッシュ量子化を統合し、専用処理要素でデコード計算と復号を融合する推論向け量子化・ハードウェア協調設計なので対象。",
+      "library_body_check": "本文のmathematically adaptive numerical type、グループごとの型割当、KVキャッシュの実時間量子化、専用PEとsystolic arrayへの統合を確認。既存LLMアクセラレータ比で平均2.99倍（最大4.46倍）高速化、平均2.81倍（最大4.10倍）のエネルギー削減を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2604.16957",
+      "year": 2026,
+      "published": "2026-04-18",
+      "abstract": "We present Open-TQ-Metal, the first implementation of fused compressed-domain attention on Apple Silicon, enabling 128K-context inference for Llama 3.1 70B on a single 64GB consumer Mac -- a configuration impossible with all existing inference frameworks. Open-TQ-Metal quantizes the KV cache to int4 on the fly and computes attention directly on the compressed representation via custom Metal compute shaders, eliminating all intermediate dequantization matrices. Across 330 experiments spanning two model families (Gemma 4 31B and Llama 3.1 70B), the fused sdpa_int4 kernel achieves 48x attention speedup at 128K context over the dequantize-then-attend baseline, reduces KV cache memory from 40 GB to 12.5 GB (3.2x compression), and maintains identical top-1 token predictions to FP16 inference. We further provide the first cross-architecture analysis of KV cache quantization methods, revealing that the attention scale factor -- not model size -- determines whether angular quantization schemes like PolarQuant succeed or fail, with Gemma 4's attn_scale=1.0 amplifying directional error 25-100x more than Llama's standard 1/sqrt(d) scaling.",
+      "canonical_id": "arXiv:2604.16957",
+      "arxiv_id": "2604.16957",
+      "doi": "10.48550/arXiv.2604.16957",
+      "authors": [
+        "Sai Vegasena"
+      ],
+      "reason": "KVキャッシュをint4へ逐次量子化し、中間逆量子化行列を作らず圧縮表現上で直接注意を計算するMetalカーネルで、端末内長文脈LLM推論を直接高速・省メモリ化するため対象。",
+      "library_body_check": "本文情報でApple Silicon向けsdpa_int4融合カーネル、KVのon-the-fly int4量子化、圧縮領域での直接attentionを確認。Gemma 4 31BとLlama 3.1 70Bの330実験で128K時にattention 48倍高速化、KV 40GB→12.5GB（3.2倍圧縮）、FP16と同一top-1 tokenを報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MiniMax Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2606.13392",
+      "year": 2026,
+      "published": "2026-06-11",
+      "abstract": "Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.",
+      "canonical_id": "arXiv:2606.13392",
+      "arxiv_id": "2606.13392",
+      "doi": "10.48550/arXiv.2606.13392",
+      "authors": [
+        "Xunhao Lai",
+        "Weiqi Xu",
+        "Yu-Feng Yang",
+        "Qiaorui Chen",
+        "Yangyifan Xu",
+        "Lun-Bin Zeng",
+        "Xiao-Long Li",
+        "Haohai Sun",
+        "Haichao Zhu",
+        "Vito Zhang",
+        "Jin-Kai Hu",
+        "Jia-Yao Li",
+        "Rui Gao",
+        "Ze-Kun Li",
+        "Song-Quan Zhu",
+        "Jing-Kai Zhou",
+        "Peng-Yu Zhao"
+      ],
+      "reason": "GQAグループごとにIndex BranchがKVブロックを選び、Main Branchが選択ブロックだけへ正確な疎注意を実行する長文脈LLM向け方式で、GPUカーネルまで協調設計しているため対象。",
+      "library_body_check": "本文情報でblockwise sparse attention、GQA群ごとのTop-k KVブロック選択、exp-free Top-kとKV-outer sparse attentionのGPU実装を確認。109Bモデル・1M文脈で注意計算を28.4倍削減し、H800でprefill 14.2倍、decode 7.6倍の実時間高速化を報告する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b7d8e262fc4f",
+    "round": "libimp-b7d8e262fc4f933a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b7d8e262fc4f933a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b7d8e262fc4f933a-pre01.json",
+    "receipt": "sha256:10fedd2823d69283cbde262448fcfc4c67608071d3ffc1301cf52fd3d1cf1662"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b7d8e262fc4f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

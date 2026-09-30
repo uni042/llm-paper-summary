@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.671",
+      "doi": "10.18653/v1/2025.acl-long.671",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.acl-long.671"
+      ],
+      "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+      "source_url": "https://aclanthology.org/2025.acl-long.671/",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "reason": "MoEの巨大な総パラメータによるserving costを減らすため、まずexpert単位のstructured pruning、その後weight単位のunstructured pruningを行う圧縮方式。推論配備コスト削減が明示的な最終適用先なので対象。",
+      "library_body_check": "本文のstructured-then-unstructured二段階、O(1) forward passでexpert pruning候補を決めるscalable selection、残存expertへのunstructured pruning、Snowflake Arctic/Mixtral評価を確認。480B・128 expertのArcticで単一H100・約2時間のpruningにより40% sparsityでほぼ性能低下なしという結果を報告する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cb015a9f70a3",
+    "round": "libimp-cb015a9f70a367c0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cb015a9f70a367c0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cb015a9f70a367c0-pre01.json",
+    "receipt": "sha256:6e851729c9505686e8718ba78f8dee15fca46609662b0f89c9275e907ce14bf0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cb015a9f70a3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
