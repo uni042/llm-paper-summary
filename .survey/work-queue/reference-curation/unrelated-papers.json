@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-01T13:15:03+00:00",
-  "record_count": 389,
+  "updated_at": "2026-10-01T22:26:28+00:00",
+  "record_count": 391,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4529,9 +4529,9 @@
         "DOI:10.18653/v1/2022.acl-long.297",
         "arXiv:2110.00976"
       ],
-      "reason": "法務分野の自然言語理解ベンチマーク構築とモデル評価が主目的で、LLM推論・サービング・メモリ・カーネル最適化を最終適用先としない。",
+      "reason": "Legal NLU benchmark paper; it contributes datasets and model evaluation for legal-language understanding, not LLM inference systems, serving, memory hierarchy, kernels, quantization, or MoE inference.",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
@@ -4544,9 +4544,9 @@
       "identity_tokens": [
         "DOI:10.1109/71.963420"
       ],
-      "reason": "2001年の一般的な確率的負荷分散理論で、LLM推論・サービング固有のシステムを扱わない。後続LLMルータ研究の理論的引用元ではあるが収録対象外。",
+      "reason": "Foundational randomized load-balancing theory (supermarket model), not an LLM inference or serving paper.",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
@@ -4562,9 +4562,9 @@
         "DOI:10.48550/arxiv.2410.04199",
         "arXiv:2410.04199"
       ],
-      "reason": "長文脈生成能力を測るベンチマークであり、推論実行系・KVキャッシュ・スケジューリング・カーネル等の高速化手法を提案しない。",
+      "reason": "Benchmark/evaluation work for long-output generation quality, not an inference optimization or serving-system technique.",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
@@ -4825,22 +4825,6 @@
       ],
       "title": "A Survey on Large Language Model based Autonomous Agents"
     },
-    "DOI:10.48550/arxiv.2302.11382": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.48550/arxiv.2302.11382",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2302.11382",
-        "arXiv:2302.11382"
-      ],
-      "reason": "ChatGPT向けprompt engineeringの再利用可能なpattern catalogを体系化する研究で、LLM推論実装、サービング、メモリ管理、量子化、スケジューリングの効率化を扱わない。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
-      ],
-      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
-    },
     "OpenReview:EvDeiLv7qc": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:EvDeiLv7qc",
@@ -4848,9 +4832,9 @@
         "OpenReview:EvDeiLv7qc",
         "arXiv:2309.05444"
       ],
-      "reason": "主目的はMoEと軽量adapterを組み合わせ、1%未満の更新parameterでinstruction tuningを行う学習・微調整効率化であり、凍結対象のtraining-side optimizationに該当するため新規Research対象外。",
+      "reason": "Parameter-efficient instruction-tuning work: it uses MoE-style adapters to reduce trainable parameters, but its final objective is fine-tuning efficiency rather than MoE inference routing, expert placement, offload, or serving.",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T02:51:26+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
@@ -4928,9 +4912,9 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4という系列モデルアーキテクチャを提案し長距離依存を効率化する研究。生成速度の利点はあるが、既存LLMの推論システムやサービングを最適化する手法ではなく、主貢献がモデルアーキテクチャそのものなので対象外。",
+      "reason": "S4 is a foundational general sequence-model architecture paper rather than an LLM inference/serving optimization paper; its main contribution is structured state-space sequence modeling and efficient training/evaluation across generic long-sequence tasks.",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
@@ -4942,11 +4926,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/p19-1452",
       "identity_tokens": [
-        "DOI:10.18653/v1/p19-1452"
+        "DOI:10.18653/v1/p19-1452",
+        "arXiv:1905.05950"
       ],
-      "reason": "BERT各層にPOS・構文・NER・意味役割・共参照などの言語情報がどこで表現されるかをprobeする表現分析研究で、推論システム効率化を目的としない。",
+      "reason": "BERT内部表現がPOS・構文解析・NER等の言語処理段階をどこで表現するかを解析する研究で、推論効率化ではない。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
@@ -4959,9 +4944,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/n18-2002"
       ],
-      "reason": "共参照解析システムの性別バイアスをWinogender schemasで測る公平性評価研究であり、LLM推論効率・サービング・メモリ・MoE・カーネル最適化とは無関係。",
+      "reason": "共参照解析器の性別バイアスをWinogender schemaで測定する評価研究であり、LLM推論システム最適化の対象外。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
@@ -5626,21 +5611,6 @@
       ],
       "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
     },
-    "DOI:10.14778/3749646.3749724": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.14778/3749646.3749724",
-      "identity_tokens": [
-        "DOI:10.14778/3749646.3749724"
-      ],
-      "reason": "RAG用途にも使えるvector database研究だが、主対象はHNSW/pgvectorのSSD I/Oと索引配置であり、LLM推論・KV・LLM servingそのものではない。",
-      "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
-        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
-      ],
-      "title": "Turbocharging Vector Databases Using Modern SSDs"
-    },
     "arXiv:2504.04030": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2504.04030",
@@ -5648,9 +5618,9 @@
         "DOI:10.48550/arxiv.2504.04030",
         "arXiv:2504.04030"
       ],
-      "reason": "5M件のコードinstruction-tuningデータセット生成とSFT性能向上が主目的で、最終適用先は学習データ・微調整であり凍結中の学習系統に該当する。",
+      "reason": "コードLLM向け大規模instruction-tuningデータセットの構築が主目的で、推論ランタイム、KV、オフロード、カーネル、サービング最適化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
         "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
@@ -5663,9 +5633,9 @@
       "identity_tokens": [
         "DOI:10.1145/3582016.3582063"
       ],
-      "reason": "CXL階層メモリ向けの汎用OSページ配置機構であり、LLM推論を対象としたシステムではない。LLMオフロード研究の背景技術としては関連するが本サーベイの新規収録対象外。",
+      "reason": "General-purpose CXL tiered-memory page-placement system. It is relevant background for heterogeneous memory, but the paper itself is not an LLM inference/serving system and does not optimize an LLM workload.",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
@@ -5679,9 +5649,9 @@
         "OpenReview:Yacmpz84TH",
         "arXiv:2302.04761"
       ],
-      "reason": "外部APIを自己教師ありで学習してモデル能力を拡張する学習・tool-use手法であり、agentic serving runtimeや推論システムのスケジューリング／高速化を扱わない。",
+      "reason": "Model training/agent capability paper teaching an LM to invoke external APIs; it does not optimize the inference runtime, serving stack, memory hierarchy, kernels, cache, or scheduling.",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
@@ -5714,6 +5684,68 @@
       "last_checked_at": "2026-10-01T07:06:25+00:00",
       "linked_from": [],
       "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
+    },
+    "arXiv:2302.11382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.11382",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.11382",
+        "arXiv:2302.11382"
+      ],
+      "reason": "LLMとの対話を改善するprompt engineeringパターン集であり、推論システムの速度・メモリ・サービング機構を提案しない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
+    },
+    "OpenReview:sY5N0zY5Od": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:sY5N0zY5Od",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od"
+      ],
+      "reason": "DSPy is a programming and prompt-optimization framework for compound LM pipelines; it optimizes task quality/program parameters rather than the inference serving/runtime stack covered by this survey.",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
+    },
+    "OpenReview:pZiyCaVuti": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:pZiyCaVuti",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti",
+        "arXiv:2410.10813"
+      ],
+      "reason": "Benchmark/evaluation work for long-term conversational memory rather than a KV-cache or inference-memory optimization method.",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+    },
+    "OpenReview:KnqiC0znVF": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:KnqiC0znVF",
+      "identity_tokens": [
+        "OpenReview:KnqiC0znVF"
+      ],
+      "reason": "LLaDA is a foundational diffusion-language-model architecture/training paper whose main goal is demonstrating non-autoregressive language-model capability, not optimizing inference systems or serving efficiency.",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
+      ],
+      "title": "Large Language Diffusion Models"
     }
   }
 }

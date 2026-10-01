@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccfdce7bd0817f67-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:Yacmpz84TH",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:Yacmpz84TH",
+    "identity_tokens": [
+      "OpenReview:Yacmpz84TH",
+      "arXiv:2302.04761"
+    ],
+    "reason": "Model training/agent capability paper teaching an LM to invoke external APIs; it does not optimize the inference runtime, serving stack, memory hierarchy, kernels, cache, or scheduling.",
+    "first_checked_at": "2026-09-30T21:20:43+00:00",
+    "last_checked_at": "2026-10-01T22:26:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
+    ],
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+  },
+  "processed_at": "2026-10-01T22:26:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccfdce7bd081",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
