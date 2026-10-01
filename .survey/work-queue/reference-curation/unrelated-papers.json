@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-30T21:20:43+00:00",
-  "record_count": 391,
+  "updated_at": "2026-10-01T02:51:26+00:00",
+  "record_count": 388,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4654,23 +4654,6 @@
       ],
       "title": "Parallelizing Linear Recurrent Neural Nets Over Sequence Length"
     },
-    "OpenReview:sY5N0zY5Od": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:sY5N0zY5Od",
-      "identity_tokens": [
-        "OpenReview:sY5N0zY5Od",
-        "arXiv:2310.03714"
-      ],
-      "reason": "宣言的に記述したLMモジュールのプロンプト・few-shot例を自動最適化するプログラミングモデル/コンパイラで、推論サービングのレイテンシ・GPUメモリ・KV・カーネル等を最適化する研究ではないため対象外。",
-      "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
-        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
-      ],
-      "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
-    },
     "arXiv:2408.09192": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2408.09192",
@@ -4857,23 +4840,6 @@
       ],
       "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
     },
-    "OpenReview:KnqiC0znVF": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:KnqiC0znVF",
-      "identity_tokens": [
-        "OpenReview:KnqiC0znVF",
-        "arXiv:2502.09992"
-      ],
-      "reason": "LLaDAという大規模拡散言語モデルを自己回帰モデルの代替として事前学習・教師あり微調整し、一般・数学・コード能力を検証するモデルアーキテクチャ研究。推論時のサービング、KVキャッシュ、メモリ階層、カーネル、スケジューリングの効率化が主貢献ではないため対象外。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:07:48+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
-        "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
-      ],
-      "title": "Large Language Diffusion Models"
-    },
     "OpenReview:EvDeiLv7qc": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:EvDeiLv7qc",
@@ -4881,9 +4847,9 @@
         "OpenReview:EvDeiLv7qc",
         "arXiv:2309.05444"
       ],
-      "reason": "低ランク適応（LoRA）型エキスパートを用いて命令微調整のパラメータ効率を高める研究で、最終適用先は微調整・能力適応。MoEを使うが推論時のエキスパート配置、オフロード、キャッシュ、通信やサービング高速化を主目的にしないため対象外。",
+      "reason": "主目的はMoEと軽量adapterを組み合わせ、1%未満の更新parameterでinstruction tuningを行う学習・微調整効率化であり、凍結対象のtraining-side optimizationに該当するため新規Research対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:07:48+00:00",
+      "last_checked_at": "2026-10-01T02:51:26+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
@@ -5297,24 +5263,6 @@
         "papers/inference/09-kernel-runtime-compilation/"
       ],
       "title": "Accelergy: An Architecture-Level Energy Estimation Methodology for Accelerator Designs"
-    },
-    "OpenReview:pZiyCaVuti": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:pZiyCaVuti",
-      "identity_tokens": [
-        "OpenReview:pZiyCaVuti",
-        "arXiv:2410.10813"
-      ],
-      "reason": "長期対話メモリ能力を測るベンチマーク/評価研究であり、メモリ検索・推論基盤を高速化または省メモリ化する新規システム手法を提案しないため対象外。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
-      ],
-      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
     },
     "arXiv:2105.08209": {
       "classification": "unrelated",
