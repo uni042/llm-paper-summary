@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-01T07:06:25+00:00",
+  "updated_at": "2026-10-01T13:15:03+00:00",
   "record_count": 360,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -4625,9 +4625,9 @@
         "DOI:10.48550/arxiv.2505.00949",
         "arXiv:2505.00949"
       ],
-      "reason": "最終モデルは推論効率と動的reasoning切替を強く意識しNASでLlama由来モデルを高速化する一方、論文の大部分は蒸留・継続事前学習・SFT・RLを含むモデル構築報告で境界的。",
+      "reason": "推論効率を明示的目標とし、Llama 3からニューラルアーキテクチャ探索で高速なモデル構造を作るが、論文の大部分は蒸留・継続事前学習・教師あり微調整・強化学習を含むモデル開発報告で、推論システム研究としての収録境界にある。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-01T07:06:24+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",

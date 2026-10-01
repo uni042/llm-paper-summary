@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6feea761b05a7ed1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/rtas58335.2023.00012",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/rtas58335.2023.00012",
+    "identity_tokens": [
+      "DOI:10.1109/rtas58335.2023.00012"
+    ],
+    "reason": "NVIDIA GPUのSMをユーザー空間ライブラリlibsmctrlで空間分割する一般リアルタイムGPU共有研究で、LLM推論・LLMサービングを主対象にしない。",
+    "first_checked_at": "2026-09-30T14:04:48+00:00",
+    "last_checked_at": "2026-10-01T13:15:03+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+      "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+    ],
+    "title": "Hardware Compute Partitioning on NVIDIA GPUs"
+  },
+  "processed_at": "2026-10-01T13:15:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6feea761b05a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

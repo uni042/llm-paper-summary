@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-01T07:06:25+00:00",
+  "updated_at": "2026-10-01T13:15:03+00:00",
   "record_count": 389,
   "records": {
     "arXiv:2303.08774": {
@@ -4580,9 +4580,9 @@
         "OpenReview:xtaX3WyCj1",
         "arXiv:2306.01708"
       ],
-      "reason": "複数のタスク別微調整モデルを追加学習なしで統合するモデルマージ手法であり、推論時のメモリ・サービング・カーネル・スケジューリングの効率化を主目的としない。",
+      "reason": "複数のtask-specific modelを1モデルへ統合するmodel merging研究で、主目的は重み干渉の解消とmultitask性能であり、LLM推論高速化・サービング最適化ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
@@ -4762,9 +4762,9 @@
         "DOI:10.48550/arxiv.2503.14487",
         "arXiv:2503.14487"
       ],
-      "reason": "MoEと動的計算を扱うが対象は画像生成用Diffusion Transformerで、最終適用先がLLM推論・サービングではない。",
+      "reason": "画像生成用Diffusion TransformerのMoEスケーリング研究であり、LLM推論・言語モデルサービングが最終適用先ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T07:06:24+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
@@ -4779,15 +4779,15 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "MoE routingと計算配分を扱うが、97B級Diffusion Transformerによるtext-to-image生成の学習・生成品質向上が主目的でLLM推論系ではない。",
+      "reason": "text-to-image拡散Transformerを最大97Bへスケールするexpert-choice MoE研究で、LLM推論を対象にしない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
       ],
-      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
+      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
     },
     "arXiv:2409.12941": {
       "classification": "unrelated",
@@ -4797,9 +4797,9 @@
         "DOI:10.48550/arxiv.2409.12941",
         "arXiv:2409.12941"
       ],
-      "reason": "RAGのfactuality・retrieval・reasoningを測るFRAMES評価データセットが主貢献で、推論サービングや実行効率最適化を扱わない。",
+      "reason": "検索拡張生成（RAG）の事実性・検索・推論能力を測る評価データセット／ベンチマーク研究であり、推論システム高速化・メモリ・サービング最適化を提案しない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
@@ -4815,9 +4815,9 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "LLMエージェントの構成・応用・評価を俯瞰するsurveyで、agent serving runtimeやKV/メモリ/スケジューラ等の推論基盤効率化を主題にしない。",
+      "reason": "LLMエージェントの構成・応用・評価を俯瞰する一般サーベイであり、エージェント推論ランタイムやサービング高速化を主題にしない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
@@ -5602,9 +5602,9 @@
       "identity_tokens": [
         "DOI:10.1109/rtas58335.2023.00012"
       ],
-      "reason": "NVIDIA GPUのSMを空間分割してリアルタイム/組込みワークロードを安全に共有する汎用GPU資源管理研究で、LLM推論・LLMサービングを最終適用先としていないため対象外。",
+      "reason": "NVIDIA GPUのSMをユーザー空間ライブラリlibsmctrlで空間分割する一般リアルタイムGPU共有研究で、LLM推論・LLMサービングを主対象にしない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-01T13:15:03+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
         "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
