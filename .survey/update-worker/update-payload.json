@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261002T0852-a0287cda",
+  "attempt_id": "library-import-maint-20261002T0859-a0287cda-r2",
   "kind": "framework_llm_update",
   "artifacts": [
     {
@@ -10,7 +10,7 @@
         {
           "op": "insert_after_once",
           "anchor": "## 最新更新",
-          "content": "\n\n### 2026-10-02\n\n#### TensorRT-LLM\n\n- **v1.3.0rc29 — released 2026-09-29 UTC / pre-release**\n\n  MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8・FP4 MLA・DSpark groupへ拡張。DeepSeek V4向けNVFP4 MLA residual、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combine、MLA context FP8 Q量子化のBMM epilogue fusion、Ray orchestrator経由MNNVL all-reduceも追加した。一方、AutoDeploy統合と公開entry pointは削除されたbreaking changeを含む。正式版前のRCとして扱う。\n\n  一次資料: https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29\n\n#### Ollama\n\n- **v0.35.0 — released 2026-09-28 UTC**\n\n  `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。\n\n  一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0"
+          "text": "\n\n### 2026-10-02\n\n#### TensorRT-LLM\n\n- **v1.3.0rc29 — released 2026-09-29 UTC / pre-release**\n\n  MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8・FP4 MLA・DSpark groupへ拡張。DeepSeek V4向けNVFP4 MLA residual、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combine、MLA context FP8 Q量子化のBMM epilogue fusion、Ray orchestrator経由MNNVL all-reduceも追加した。一方、AutoDeploy統合と公開entry pointは削除されたbreaking changeを含む。正式版前のRCとして扱う。\n\n  一次資料: https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29\n\n#### Ollama\n\n- **v0.35.0 — released 2026-09-28 UTC**\n\n  `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。\n\n  一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0"
         }
       ]
     },
@@ -21,7 +21,7 @@
         {
           "op": "insert_before_once",
           "anchor": "## 読み方の注意",
-          "content": "### 2026-09-29 — v1.3.0rc29（pre-release）\n\n- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。\n- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。\n- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。\n- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)\n\n"
+          "text": "### 2026-09-29 — v1.3.0rc29（pre-release）\n\n- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。\n- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。\n- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。\n- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)\n\n"
         }
       ]
     }
