@@ -21,6 +21,7 @@ Library側の詳細HOWは `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCE
 
 - `.survey/work-queue/worker-worklist-00.json` / `WORKLIST-00.md`
 - `.survey/work-queue/worker-worklist-30.json` / `WORKLIST-30.md`
+- `.survey/work-queue/worker-worklist-45.json` / `WORKLIST-45.md`
 - 必要な対象系統README
 - 論文レコード作成時だけ `.survey/templates/paper.md`
 
