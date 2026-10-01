@@ -73,7 +73,7 @@ class WorkerWorklistIdentityTests(unittest.TestCase):
 
         all_ids = [
             row["canonical_id"]
-            for worker in ("00", "30")
+            for worker in ("00", "30", "45")
             for row in assigned[worker]
         ]
         self.assertEqual(len(all_ids), 2)
@@ -88,6 +88,25 @@ class WorkerWorklistIdentityTests(unittest.TestCase):
             ),
             1,
         )
+
+
+    def test_split_uses_three_disjoint_workers(self):
+        module = _load()
+        rows = [
+            {"canonical_id": f"arXiv:2601.{index:05d}"}
+            for index in range(9)
+        ]
+
+        assigned = module._split(rows, limit=10)
+
+        self.assertEqual(tuple(assigned), ("00", "30", "45"))
+        self.assertEqual([len(assigned[key]) for key in ("00", "30", "45")], [3, 3, 3])
+        identities = [
+            row["canonical_id"]
+            for key in ("00", "30", "45")
+            for row in assigned[key]
+        ]
+        self.assertEqual(len(identities), len(set(identities)))
 
 
 if __name__ == "__main__":
