@@ -2,9 +2,9 @@
   "schema_version": 3,
   "operation": "precheck_discovery_candidates",
   "ok": true,
-  "request_id": "preload-aceead569be38d13e60f",
+  "request_id": "preload-75c26ff80f705824ffb4",
   "collector_id": "discovery-preload-backward",
-  "run_key": "preload:preload-aceead569be38d13e60f",
+  "run_key": "preload:preload-75c26ff80f705824ffb4",
   "axis": "preload-backward-structured-references",
   "provider": "repository_references",
   "source_url": "repository://structured-references",
@@ -20,7 +20,7 @@
   "decision": "READY_FOR_EVALUATION",
   "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
   "raw_search_result_count": 40,
-  "retrieval_duplicate_filtered_count": 5,
+  "retrieval_duplicate_filtered_count": 4,
   "represented_paper_match_filtered_count": 0,
   "rejection_ledger_filtered_count": 0,
   "intra_batch_duplicate_filtered_count": 0,
@@ -31,62 +31,20 @@
   "unseen_result_count": 20,
   "provider_progress": {
     "reference_total_count": 7444,
-    "reference_processed_count": 1614,
-    "reference_remaining_count": 5830,
-    "reference_represented_count": 858,
-    "reference_unrelated_count": 403,
-    "reference_borderline_count": 353
+    "reference_processed_count": 1626,
+    "reference_remaining_count": 5818,
+    "reference_represented_count": 868,
+    "reference_unrelated_count": 402,
+    "reference_borderline_count": 356
   },
-  "progress_observed_at": "2026-09-30T15:24:53.069124+00:00",
-  "preload_id": "preload-aceead569be38d13e60f",
+  "progress_observed_at": "2026-10-01T15:37:04.644529+00:00",
+  "preload_id": "preload-75c26ff80f705824ffb4",
   "preload_seed": true,
   "preload_cache_used": false,
   "preload_cached_pages_used": 0,
   "preload_live_pages_fetched": 2,
   "preload_source_request_id": null,
   "results": [
-    {
-      "canonical_id": "OpenReview:VTF8yNQM66",
-      "identity_tokens": [
-        "OpenReview:VTF8yNQM66"
-      ],
-      "openreview_id": "VTF8yNQM66",
-      "source_url": "https://openreview.net/forum?id=VTF8yNQM66",
-      "relation_count": 10,
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2609.13537-dynamic-hbm-repartitioning.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
-        "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md",
-        "papers/inference/99-other-inference-systems/2026-2609.07282-stream-stability-long-term-recall-threeh.md",
-        "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md"
-      ],
-      "linked_from_titles": [
-        "Akashic: A Low-Overhead LLM Inference Service with MemAttention",
-        "Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf",
-        "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
-        "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
-        "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
-        "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-        "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
-        "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
-        "Separating Stream Stability from Long-Term Recall in Language Models",
-        "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
-      ],
-      "linked_from_lineages": [
-        "13-sparse-attention",
-        "Agentic Serving Benchmarking",
-        "MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving",
-        "agentic workflow serving / workflow physical planning / adaptive serving",
-        "llm-serving-scheduling-disaggregation",
-        "other-inference-systems",
-        "query-aware sparse attention / KV selection / tail compensation / CPU offload"
-      ]
-    },
     {
       "canonical_id": "arXiv:2305.05176",
       "identity_tokens": [
@@ -868,58 +826,48 @@
         "Speculative decoding × MoE",
         "llm-serving-scheduling-disaggregation"
       ]
+    },
+    {
+      "canonical_id": "arXiv:2405.16406",
+      "identity_tokens": [
+        "arXiv:2405.16406"
+      ],
+      "arxiv_id": "2405.16406",
+      "source_url": "https://arxiv.org/abs/2405.16406",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+        "papers/inference/16-weight-quantization-compression/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "linked_from_titles": [
+        "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms",
+        "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+        "LLM Inference in a Flash!",
+        "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+        "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+        "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+        "RGSQ：リーマン幾何感度型量子化",
+        "RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention",
+        "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression"
+      ],
+      "linked_from_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "17-pim-near-data-acceleration",
+        "FPGA LLM acceleration / vector quantization / memory-based computation / heterogeneous inference",
+        "KV cache quantization / rotation-based compression / MoE expert offloading / consumer local inference",
+        "kv-cache-memory",
+        "survey-low-bit-llm"
+      ]
     }
   ],
   "allowed_records": [
-    {
-      "primary_identity": "id:OpenReview:VTF8yNQM66",
-      "identity_tokens": [
-        "id:OpenReview:VTF8yNQM66",
-        "url:https://openreview.net/forum?id=VTF8yNQM66"
-      ],
-      "record": {
-        "canonical_id": "OpenReview:VTF8yNQM66",
-        "identity_tokens": [
-          "OpenReview:VTF8yNQM66"
-        ],
-        "openreview_id": "VTF8yNQM66",
-        "source_url": "https://openreview.net/forum?id=VTF8yNQM66",
-        "relation_count": 10,
-        "linked_from": [
-          "papers/inference/01-offload-hierarchical-memory/2026-2609.13537-dynamic-hbm-repartitioning.md",
-          "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
-          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
-          "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
-          "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md",
-          "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md",
-          "papers/inference/99-other-inference-systems/2026-2609.07282-stream-stability-long-term-recall-threeh.md",
-          "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md"
-        ],
-        "linked_from_titles": [
-          "Akashic: A Low-Overhead LLM Inference Service with MemAttention",
-          "Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf",
-          "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
-          "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
-          "Dynamic HBM Repartitioning for Multi-Turn MoE Serving",
-          "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-          "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
-          "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
-          "Separating Stream Stability from Long-Term Recall in Language Models",
-          "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
-        ],
-        "linked_from_lineages": [
-          "13-sparse-attention",
-          "Agentic Serving Benchmarking",
-          "MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving",
-          "agentic workflow serving / workflow physical planning / adaptive serving",
-          "llm-serving-scheduling-disaggregation",
-          "other-inference-systems",
-          "query-aware sparse attention / KV selection / tail compensation / CPU offload"
-        ]
-      }
-    },
     {
       "primary_identity": "id:arXiv:2305.05176",
       "identity_tokens": [
@@ -1839,8 +1787,54 @@
           "llm-serving-scheduling-disaggregation"
         ]
       }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.16406",
+      "identity_tokens": [
+        "id:arXiv:2405.16406",
+        "url:https://arxiv.org/abs/2405.16406"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.16406",
+        "identity_tokens": [
+          "arXiv:2405.16406"
+        ],
+        "arxiv_id": "2405.16406",
+        "source_url": "https://arxiv.org/abs/2405.16406",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+          "papers/inference/16-weight-quantization-compression/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+          "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md",
+          "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
+          "papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md",
+          "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+          "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+        ],
+        "linked_from_titles": [
+          "A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms",
+          "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+          "LLM Inference in a Flash!",
+          "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+          "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+          "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+          "RGSQ：リーマン幾何感度型量子化",
+          "RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention",
+          "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression"
+        ],
+        "linked_from_lineages": [
+          "11-llm-serving-scheduling-disaggregation",
+          "17-pim-near-data-acceleration",
+          "FPGA LLM acceleration / vector quantization / memory-based computation / heterogeneous inference",
+          "KV cache quantization / rotation-based compression / MoE expert offloading / consumer local inference",
+          "kv-cache-memory",
+          "survey-low-bit-llm"
+        ]
+      }
     }
   ],
-  "receipt": "sha256:e3706afe93a82214222bb15e00cc191e678eb789c6c0c2f5e62d91001b3abcea",
+  "receipt": "sha256:ff0de36e083f0e1d9201ab781435be49aa05c788f9280767cbb0e34f6f3f3e68",
   "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
 }
