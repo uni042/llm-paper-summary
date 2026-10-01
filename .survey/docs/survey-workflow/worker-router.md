@@ -336,9 +336,107 @@ Researchの既定操作は **insert-if-absent**。既収録本文の更新は通
 
 別途移行を依頼されたとき、canonical identityで重複排除し、v12のimmutable Discovery JSONへ変換してから受信箱へ転送する。変換元は、GitHub pending copyのhash一致確認後にだけ削除する。
 
-## 13. 08:30 maintenance
+## 13. 08:30 maintenance — LLM / LLMフレームワーク日次更新
 
-08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、maintenance専用runとする。GitHub反映が必要な完成変更はLibraryへ耐久保存し、Survey GitHub Importへ渡す。
+08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、**LLMとLLM推論フレームワークの最新情報を調査し、GitHubへ反映できる完成差分をLibraryへ作る日次更新run**とする。候補在庫や通常モード判定でResearch / Discoveryへ置換しない。
+
+この分岐は、旧direct-GitHub運用で行っていた \`framework-updates/**\` / \`llm-releases/**\` の08:30更新経路と、現行Library-first運用を統合したものである。旧運用のようにScheduled worker自身が \`.survey/update-worker/update-payload.json\`、\`update-inbox.json\`、control file、GitHub本文を書き換えてはならない。GitHubはread-onlyで参照し、反映用の完成差分をLibraryへ耐久保存する。
+
+### 13.1 開始時の比較基準
+
+1. 最新main HEADを取得し、同じHEADの \`framework-updates/README.md\` と \`llm-releases/README.md\` を読む。
+2. 必要な対象別ページ、少なくとも更新候補に対応する \`framework-updates/**\` / \`llm-releases/**\` の既存ページを読む。
+3. Libraryに前回08:30成果があれば、その \`checked_at\` / \`focus_window\` を確認し、その後を主な調査期間にする。前回成果が不明なら直近7日を重点確認し、主要releaseの取りこぼしも確認する。
+4. リポジトリ内の \`.survey/scripts/update_worker.py\` は履歴上の更新対象境界の実装参照としてよく、同スクリプトが許可する \`framework-updates/\` と \`llm-releases/\` を08:30非論文更新の対象範囲とする。ただしScheduled workerから同スクリプトをGitHub write目的で実行しない。
+
+### 13.2 LLM / 基盤モデル調査
+
+主要model providerの公式発表、公式model card、公式technical report、公式配布repository / model hubを確認する。少なくとも、リポジトリ収録済みの主要系列と、Qwen、DeepSeek、Gemma、Llama、Mistral / Mixtral、NVIDIA Nemotron等の主要open-weight系列を優先する。
+
+確認対象は次を含む。
+
+- 新model、新系列、新checkpoint、正式release、一般提供開始
+- parameter構成、MoE expert数・active parameter、context length、attention方式等の重要仕様
+- 推論precision、量子化、推奨runtime、必要VRAM / memory、reasoning / tool use等の重要変更
+- license、利用条件、公式配布先、rename / replacement / deprecation
+- 既存リポジトリ記述を実質的に更新すべきmodel card / technical reportの変更
+
+「近日公開」「予定」「ティザー」、未確認リーク、二次記事だけでは確定更新にしない。実際の公開・release・documentation反映を一次資料で確認する。
+
+### 13.3 LLM推論フレームワーク調査
+
+少なくとも vLLM、SGLang、TensorRT-LLM、llama.cpp、Ollama、LightLLM、ExLlama系、およびリポジトリに収録済みの主要推論基盤について、公式release、changelog、merged PR、公式documentationを確認する。
+
+掲載候補はversion番号だけでなく、次のような**実質的な挙動・性能・対応範囲の変更**を対象とする。
+
+- 新model / architecture対応、backend追加、量子化対応
+- KV cache、prefix cache、offload、speculative decoding、MoE / expert parallelism
+- scheduler、continuous batching、prefill/decode分離、distributed inference
+- kernel、CUDA / ROCm / CPU backend、FlashAttention等の性能経路
+- memory使用量、GPU間通信、CPU / SSD offload方式
+- breaking change、deprecated option、必要環境・互換性変更
+- 公式benchmarkまたは一次PRで確認できる重要な性能差
+
+単なるallowlist追加、軽微なbugfix、UI変更等でリポジトリの技術サーベイ価値を実質的に変えないものは、各READMEの掲載方針に従って除外する。
+
+### 13.4 GitHub反映用の完成差分を作る
+
+重要更新を採用したら、単なる調査メモで終わらせず、**最新mainへ反映するときに再調査せず適用できる粒度**まで整える。
+
+各変更候補について少なくとも次を確定する。
+
+- 対象path。原則 \`framework-updates/**\` または \`llm-releases/**\`
+- 対象が既存fileなら、調査時点のblob SHA
+- 追加・置換すべき完成Markdown本文
+- 挿入位置または置換対象が特定できる既存見出し・文
+- version / model名、公開日、変更点、重要性
+- 性能値を記載する場合の条件・比較対象
+- 一次URL
+- 既存リポジトリ記述との差分
+- pre-release / RC等ならその状態
+
+旧 \`update_worker.py\` の \`replace_once\` / \`insert_after_once\` / \`insert_before_once\` で表現できる変更なら、その考え方に合わせて一意に適用できる差分へする。実際のpayload JSONをGitHubへ書く必要はないが、後続の通常チャットまたは保守反映者が機械的にpayloadへ変換できる程度に具体化する。
+
+同じreleaseを複数情報源で見つけても1件へ統合する。件数のために弱い更新を水増ししない。
+
+### 13.5 Library保存
+
+反映候補が1件以上ある場合は、1 run 1 Markdownとして次へ保存する。
+
+\`/LLM-paper-summary-library-first/maintenance/llm-framework-update-YYYYMMDD-0830-scheduled-chat-30.md\`
+
+frontmatterまたは冒頭metadataに少なくとも次を持たせる。
+
+- \`artifact_type: maintenance_update\`
+- \`worker_id: scheduled-chat-30\`
+- \`run_key\`
+- \`reference_main_sha\`
+- \`checked_at\`
+- \`focus_window\`
+
+本文には最低限、\`## LLM / Model updates\`、\`## Framework updates\`、反映対象path、調査時点blob SHA、完成差分、一次URL、既存との差、主要監視対象の「確認したが重要更新なし」を含める。
+
+重要更新が0件の場合は、主要監視対象を確認した事実と「更新なし」を最終報告へ残す。空の成果物を件数目的で作らない。
+
+保存後はLibraryから再取得し、対象path、version/model名、公開日、完成差分、一次URL、\`reference_main_sha\` が保持されていることを確認する。保存失敗時は完成MarkdownをScheduled Chatへ完全添付し、GitHub writeで迂回しない。
+
+### 13.6 終了時
+
+自分のrunで作った一時HTML、release noteコピー、画像、中間メモ、下書きを安全条件の範囲で掃除する。未反映の完成maintenance成果は削除しない。
+
+最終報告には少なくとも次を含める。
+
+- 確認main SHA
+- 調査期間
+- LLM更新件数
+- framework更新件数
+- 主要な採用更新
+- 「確認したが重要更新なし」の主要対象
+- Library保存・再取得確認結果
+- GitHub反映待ちの対象path
+- 未完了事項
+
+08:30 runで作ったmaintenance成果はResearch / Discovery成果とは別用途である。Survey GitHub Importがmaintenanceを転送対象として明示的に扱う仕様になるまでは、Research / Discovery受信箱へ誤投入せずLibraryに保持する。
 
 ## 14. 報告
 
