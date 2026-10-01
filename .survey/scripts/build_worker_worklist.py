@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build dedicated worklists for scheduled-chat-00 and scheduled-chat-30.
+"""Build dedicated worklists for scheduled-chat-00, scheduled-chat-30, and scheduled-chat-45.
 
 Research/Audit keeps the existing 200-item per-worker surface. Discovery review
 uses a larger 500-item per-worker surface so full-text suitability screening does
 not starve for candidates. The worklists are rebuildable selection indexes only.
 Canonical job/claim state, paper files, and reference relevance ledgers remain
-authoritative. The two worker pages are deterministically disjoint whenever enough
+authoritative. The three worker pages are deterministically disjoint whenever enough
 eligible rows exist for the requested per-lane limits.
 """
 from __future__ import annotations
@@ -24,7 +24,7 @@ import research_job_reconciliation
 
 DEFAULT_RESEARCH_LIMIT = 200
 DEFAULT_DISCOVERY_LIMIT = 500
-WORKERS = ("00", "30")
+WORKERS = ("00", "30", "45")
 
 
 def _now() -> str:
@@ -198,15 +198,17 @@ def _exclude_reserved_identities(
 
 
 def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str, Any]]]:
-    """Assign alternating canonical rows to 00/30, with no overlap."""
-    assigned = {"00": [], "30": []}
+    """Assign canonical rows round-robin across all scheduled workers, with no overlap."""
+    assigned = {worker: [] for worker in WORKERS}
     for index, source in enumerate(rows):
-        worker = WORKERS[index % 2]
-        if len(assigned[worker]) >= limit:
-            other = "30" if worker == "00" else "00"
-            if len(assigned[other]) >= limit:
+        worker = None
+        for offset in range(len(WORKERS)):
+            candidate = WORKERS[(index + offset) % len(WORKERS)]
+            if len(assigned[candidate]) < limit:
+                worker = candidate
                 break
-            worker = other
+        if worker is None:
+            break
         row = dict(source)
         row["rank"] = len(assigned[worker]) + 1
         row["assigned_worker"] = f"scheduled-chat-{worker}"
@@ -223,7 +225,7 @@ def build(
     discovery_limit: int = DEFAULT_DISCOVERY_LIMIT,
     limit: int | None = None,
 ) -> dict[str, dict[str, Any]]:
-    """Build both worker lists, retaining the legacy shared-limit API."""
+    """Build all worker lists, retaining the legacy shared-limit API."""
     if limit is not None:
         if limit <= 0:
             raise ValueError("limit must be > 0")
@@ -259,11 +261,11 @@ def build(
             "worker_id": worker_id,
             "assignment_policy": "deterministic_disjoint_round_robin",
             "selection_rules": [
-                "Use only this worker's dedicated page/index; do not consume the other scheduled worker's page.",
+                "Use only this worker's dedicated page/index; do not consume another scheduled worker's page.",
                 "This is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
-                "Discovery rows are candidates only: before counting a row toward the 40-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
+                "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -301,13 +303,13 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
         f"Worker: `scheduled-chat-{worker}`  ",
         f"Generated: `{generated}`",
         "",
-        "このページはこのworker専用の再構築可能な選択索引です。もう一方のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。",
+        "このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。",
         "正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。",
         "",
         "- このページに割り当てられた候補だけを使用する。",
         "- Library-first runでは、同じidentityの完成原稿・探索結果がChatGPT Libraryへ保存済みならskipする。",
         "- 最新状態で処理済み・claim済み・対象外ならskipし、同じページ内の次候補へ進む。",
-        "- Discoveryは候補提示面にすぎない。40件へ数える前にcanonical identityをGitHubとChatGPT Libraryの両方で照合して未処理の新規候補だと確認し、その後に一次資料本文を読み、accept / unrelated / borderline を判定する。既処理・重複が判明した候補は40件から外して補充する。タイトル・要旨だけでacceptしない。",
+        "- Discoveryは候補提示面にすぎない。10件へ数える前にcanonical identityをGitHubとChatGPT Libraryの両方で照合して未処理の新規候補だと確認し、その後に一次資料本文を読み、accept / unrelated / borderline を判定する。既処理・重複が判明した候補は10件から外して補充する。タイトル・要旨だけでacceptしない。",
         "",
         "## 未処理 Research / Audit",
         "",
