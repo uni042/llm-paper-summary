@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（12本）
+## 自動生成の論文一覧（13本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -37,6 +37,10 @@
   vLLM、H2O、InfiniGenをH100実機で比較し、GPUメモリを最大約70%減らすH2O、初期事実を保ちやすいInfiniGen、速度に優れるvLLMの条件別の使い分けを明らかにする。
 
 ### 2年前（2024-11〜2025-10）
+
+- **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
+  実装：— ・ リポジトリ内被引用：11  
+  MoEは各トークンが少数専門家だけを通るため、密モデルより少ない計算でモデル容量を増やせる。しかしサービングでは複数要求の復号トークンを同一バッチへまとめる。個々のトークンの選択専門家が異なると、バッチ全体の和集合はほぼ全専門家へ広がり、結局すべての専門家重みをGPUメモリから読む。計算疎性がメモリ帯域削減へつながらないことがLYNXの出発点である。
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
