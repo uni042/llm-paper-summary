@@ -1,0 +1,916 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-401fb3dc0facd3ac85f8",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-401fb3dc0facd3ac85f8",
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-01T02:57:33.443564+00:00",
+  "preload_id": "preload-401fb3dc0facd3ac85f8",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.101037",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.cosrev.2026.101037",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+      "authors": [
+        "Habib Khan",
+        "F. Alqahtani",
+        "Weiwei Jiang",
+        "M. Ali",
+        "Sareer Ul Amin",
+        "Jakeoung Koo"
+      ]
+    },
+    {
+      "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.115976",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.115976",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+      "authors": [
+        "Yu-Min Zhang",
+        "Xiaowen Ling",
+        "Zhiqiang Li",
+        "Liang-Liang Song",
+        "Yifan Jia",
+        "Yan-Bin Wang",
+        "Zhuhong You"
+      ]
+    },
+    {
+      "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+      "source_url": "https://doi.org/10.1016/j.istruc.2026.112910",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.istruc.2026.112910",
+      "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+      "authors": [
+        "X. Song",
+        "Senna Wang",
+        "Xiao-Wei Cheng",
+        "Haoyou Zhang",
+        "Ruijie Guo",
+        "Yi Li"
+      ]
+    },
+    {
+      "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+      "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+      "doi": "10.1109/MC.2026.3717392",
+      "canonical_id": "DOI:10.1109/MC.2026.3717392",
+      "authors": [
+        "Partha P. Maji",
+        "Timothy Jones",
+        "Robert D. Mullins"
+      ]
+    },
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with CrystalLLM",
+      "source_url": "https://doi.org/10.1145/3830418.3843852",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large language model (LLM) training today runs on clusters spanning thousands of GPUs. While this scale enables rapid model advances, developing, debugging, and performance-tuning, the training framework inevitably becomes complex and costly. This is because engineers often need to reproduce production behaviors to diagnose failures or evaluate optimizations, thereby demanding frequent and even exclusive access to production-scale clusters—which becomes increasingly hard given that the majority of GPUs are already committed to production workloads. Simulation relies on complex performance models that are difficult to maintain, and downscaled experiments often fail to capture scale-dependent behaviors. We present CrystalLLM to decouple large-scale execution from the need to access large clusters, enabling engineers to run and observe ranks of interest under faithful large-scale behavior using only a few GPUs. CrystalLLM constructs a high-fidelity execution graph via a slicing-based approach that captures computation, communication, and dependencies of the target scale. Then, CrystalLLM performs hybrid emulation where selected ranks execute the original program while the remaining are replayed as virtual participants. Experiments on large-scale LLM training workloads show that CrystalLLM accurately reproduces performance and memory behavior, achieving only 0.58% average error in iteration time and less than 0.01% error in peak GPU memory usage. CrystalLLM can emulate clusters of up to 8192 GPUs using fewer than 1% of the physical GPUs required by the original deployment.",
+      "doi": "10.1145/3830418.3843852",
+      "canonical_id": "DOI:10.1145/3830418.3843852",
+      "authors": [
+        "Shao-Ke Xi",
+        "ChonLam Lao",
+        "Bo-Yi Jia",
+        "Jia-Qi Gao",
+        "Zhi-Peng Zhang",
+        "Jia-Min Cao",
+        "Brian Sutioso",
+        "Er-Ci Xu",
+        "Min-Lan Yu",
+        "Kui Ren",
+        "Yong Li",
+        "Zheng-Ping Qian",
+        "En-Nan Zhai",
+        "Jing-Ren Zhou"
+      ]
+    },
+    {
+      "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+      "source_url": "https://doi.org/10.1145/3830418.3843857",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+      "doi": "10.1145/3830418.3843857",
+      "canonical_id": "DOI:10.1145/3830418.3843857",
+      "authors": [
+        "Jing-Kai He",
+        "Guang-Da Sun",
+        "Tian-Jian Li",
+        "Dong Du",
+        "Yu-Bin Xia",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "title": "MyoCodec: A Streaming Neural Codec for Electromyography",
+      "source_url": "https://arxiv.org/abs/2609.36687",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Neural codecs encode continuous signals into compact sequences of discrete tokens, providing an interface for efficient transmission, storage, and token-based sequence modeling. This paradigm has been widely adopted in modern speech and audio frameworks; however, the biosignal domain still lacks a neural codec designed specifically for low-bitrate streaming and generalization across diverse downstream tasks. We present MyoCodec, a streaming neural codec designed for electromyography (EMG). Inspired by recent neural audio codecs, MyoCodec combines causal Transformers with residual vector quantization to encode continuous EMG signals into different levels of EMG representations spanning from continuous latent features to discrete tokens operating at 50 Hz. Trained on twelve public EMG datasets, MyoCodec achieves favorable performance in both intrinsic codec quality and representative downstream tasks, including typing (emg2qwerty), hand-pose (emg2pose), speech decoding (emg2speech), and speech-to-EMG synthesis (speech2emg). Across these tasks, MyoCodec exhibits strong performance against prior models while providing a compact and causal EMG representation. During streaming inference, it requires compute time of only 0.482 ms for each 20 ms frame, enabling real-time streaming. Also, the discrete token representation provided by MyoCodec has the potential to support integration into language-model based approaches, creating a path toward LLM-based interactive systems, where tokenized EMG representations are directly processed into such language or speech models. Code and model weights are released.",
+      "canonical_id": "arXiv:2609.36687",
+      "arxiv_id": "2609.36687",
+      "authors": [
+        "Jih-Wan Lee",
+        "Kleanthis Avramidis",
+        "Junhyeok Lee",
+        "Tian-Tian Feng",
+        "N. Dehak",
+        "Shrikanth S. Narayanan"
+      ]
+    },
+    {
+      "title": "Reliability Testing of Medical Model Performance under Distributed Deployment",
+      "source_url": "https://arxiv.org/abs/2609.36525",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Distributed inference has become an indispensable part of deploying medical models under practical latency, memory, and throughput constraints. Although modern frameworks improve serving efficiency through tensor parallelism, mixed precision, kernel fusion, and multi-device communication, they are generally assumed to preserve the behavior observed during centralized HuggingFace evaluation. This assumption creates an evaluation-deployment mismatch: a model may pass offline evaluation but produce a different output after the execution stack changes. To address this mismatch, we propose a testing framework and an improved, distributed-execution-sensitive medical-model benchmark that evaluates the same checkpoint and input under a centralized HuggingFace reference and matched distributed deployments. Extensive experiments across language, vision, and multimodal medical models show that execution changes can produce measurable output disagreements. Across supported visual settings, the test success rate ranges from 0.21 to 0.43 for single-modality models and from 0.32 to 0.98 for multimodal models. The benchmark is aimed at extending medical-model evaluation from capability and security to evaluation-deployment consistency.",
+      "canonical_id": "arXiv:2609.36525",
+      "arxiv_id": "2609.36525",
+      "authors": [
+        "Yi-Fei Wang",
+        "Xiao-Han Zhang",
+        "You-Tao Ding",
+        "Tian-Lin Li",
+        "Xiao-Yu Zhang",
+        "Yi-Da Yang",
+        "Li-Chen Pan"
+      ]
+    },
+    {
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+      "canonical_id": "arXiv:2609.36800",
+      "arxiv_id": "2609.36800",
+      "authors": [
+        "François Costa",
+        "Charly Castes",
+        "Thomas Bourgeat",
+        "Azalia Mirhoseini"
+      ]
+    },
+    {
+      "title": "GRP v0.1 Technical Report",
+      "source_url": "https://arxiv.org/abs/2609.36688",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Industrial recommendation systems rely on multi-stage cascades whose retrieval, ranking, and serving components are difficult to replace jointly. We present GRP, a generative recommendation framework that combines retrieval, ranking, and reward modeling in a single encoder-decoder model, and evaluate a progressive path toward end-to-end recommendation. The model generates multimodal Semantic IDs and scores candidates with a jointly trained ranking module. The frozen ranking module then supplies rewards for reinforcement-learning post-training. We introduce mGRPO, which adds a reference-anchored margin to reward optimization to preserve the likelihood of logged targets. Offline experiments examine history encoding, model capacity allocation, event selection, tokenization, and reward discrimination. Serving optimizations reduce end-to-end retrieval latency by 69%. Online experiments evaluate the model as a retrieval source, with early-ranking bypass, and with replacement of weaker sources. In a retrieval-only comparison, view time increases by 0.46% and shares by 0.77% relative to production. A separate comparison combining bypass and source replacement yields increases of 0.82% in view time and 2.56% in shares, with neutral platform-level guardrails. These results support progressive deployment while identifying remaining gaps in ranking quality and performance across recommendation metrics.",
+      "canonical_id": "arXiv:2609.36688",
+      "arxiv_id": "2609.36688",
+      "authors": [
+        "Wen-Feng Zhuo",
+        "Vincent Xue",
+        "Charles Wei",
+        "Cong Ni",
+        "Rui-Ming Lu",
+        "Ji-Wen Ren",
+        "Mo Li",
+        "Peng-Cheng Yang",
+        "Xu-Fei Wang",
+        "Dong-Heng Li",
+        "Jia-Cong He",
+        "Yin-Nan Song",
+        "Yuan J. K. Fan",
+        "Mikhail Obukhov",
+        "Yi-Wen Chen",
+        "Yvette Liu",
+        "Yi-Wen Ye",
+        "Cheng-Jie Wu",
+        "Ming-Tao Zhang",
+        "Jin-Chao Ye",
+        "Li-Li Zhang",
+        "Chun-Hui Zhu"
+      ]
+    },
+    {
+      "title": "FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution",
+      "source_url": "https://arxiv.org/abs/2609.36651",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Long-context reasoning in large language models incurs substantial computation and memory costs. Visual text compression (VTC) reduces input length by rendering text as images, but fixed-resolution rendering creates a compression-performance trade-off: low DPI saves tokens at the expense of legibility, whereas high DPI spends tokens on irrelevant content. We introduce FocusVTC, which breaks this trade-off through adaptive resolution while preserving general multimodal capabilities. It combines compressed low-DPI global views with selective region enhancement, integrating enhanced views into ongoing reasoning. We construct 29.4K high-quality Reasoning-Evidence Localization (REL) chain-of-thought examples (REL-CoT) that link reasoning traces to page indices and bounding boxes. Multi-resolution REL supervised fine-tuning (REL-SFT) teaches the model to localize relevant regions, and Group Relative Policy Optimization learns when to enhance resolution and how to use the resulting observations, without a separate continual-pretraining stage. At 72 DPI on RULER v1, FocusVTC scores 87.4 at $2.9\\times$ input compression, including tool observations, versus 57.5 for Glyph at $3.0\\times$ input compression. It surpasses its text-input backbone on LongBench (56.40 versus 55.86), improves the MRCR macro-average by 13.91 points, and achieves a 51.19 macro-average on VTCBench. The MRCR latency evaluation also shows a $2.79\\times$ online end-to-end speedup over Text. General multimodal capabilities are preserved, with MMMU increasing from 65.12 to 66.73 and MME from 2424.02 to 2457.62.",
+      "canonical_id": "arXiv:2609.36651",
+      "arxiv_id": "2609.36651",
+      "authors": [
+        "Fang-Zhi Zhong",
+        "Xue-Rui Qiu",
+        "Yu-Qi Pan",
+        "Ya Liu",
+        "Shao-Wei Gu",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ]
+    },
+    {
+      "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations",
+      "source_url": "https://arxiv.org/abs/2609.37509",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "The boundary element method (BEM) provides an efficient numerical framework for solving multiple scattering problems in unbounded homogeneous domains. By restricting the discretization to the domain boundaries, it substantially reduces computational complexity. The procedure first consists in determining the solution trace on the boundaries of the domain by solving a boundary integral equation. Then, the volumetric solution can be recovered at low computational cost using a boundary integral representation. As the first step of the BEM represents the main computational bottleneck, we present ScaGNN, a learning-based approach designed to approximate the solution trace. It relies on a graph neural network architecture that incorporates a dynamic adaptive edge sampling mechanism for selecting the most relevant interactions to model. Guided by intermediate predictions of expected error and edge length, this mechanism selects, at various stages of the forward pass, the most relevant distant interactions to model. The proposed method is tailored to achieve linear complexity with the number of nodes in the input graph. To train and evaluate our network, we present a benchmark consisting of several datasets with different types of multiple scattering problems. Our experiments show that our approach surpasses existing state-of-the-art learning-based methods on the considered tasks and investigate the generalization capabilities to settings with an increased number of obstacles and out-of-distribution obstacle shapes. github.com/LARIAD/ScaGNN",
+      "canonical_id": "arXiv:2609.37509",
+      "arxiv_id": "2609.37509",
+      "authors": [
+        "Rémi Marsal",
+        "Stéphanie Chaillat",
+        "Alexandre Chapoutot"
+      ]
+    },
+    {
+      "title": "Selective Lookahead for Attention-Based Streaming ASR",
+      "source_url": "https://arxiv.org/abs/2609.37611",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "End-to-end attention-based speech recognition is accurate offline but hard to stream: outputs can depend on future audio, and a little future context per layer makes the lookahead grow with the number of layers. We address this with two mechanisms. A bounded-lookahead chunk encoder caps every chunk's future receptive field at a constant number of chunks, independent of the number of layers, via one age-selection rule shared by self-attention and the depthwise convolution. On this encoder, dynamic future-chunk decoding lets a per-token trigger commit a token or wait and re-decode it; we propose a learned trigger as the general mechanism, with a simple confidence threshold as an effective fallback. On full LibriSpeech test-clean the dynamic system matches the best static-lookahead accuracy (6.5%) at a median latency of 306 ms versus 860 ms for one-chunk static lookahead, and a wait budget bounds the deferral tail below the static baseline's 90th percentile at 0.1 points more WER.",
+      "canonical_id": "arXiv:2609.37611",
+      "arxiv_id": "2609.37611",
+      "authors": [
+        "Yi-Chen Jia",
+        "Bastiaan Tamm",
+        "H. Van Hamme"
+      ]
+    },
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37626",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+      "canonical_id": "arXiv:2609.37626",
+      "arxiv_id": "2609.37626",
+      "authors": [
+        "Chuan Liu",
+        "Shuo-Ming Zhang",
+        "Zhi-Cheng Li",
+        "Qian-Qi Sun",
+        "Rui-Yuan Xu",
+        "Qiu-Chun Yu",
+        "Xi-Yu Shi",
+        "Hui-Min Cui",
+        "Jia-Cheng Zhao"
+      ]
+    },
+    {
+      "title": "Pixel-Level Transformers in Remote Sensing: A Canopy Height Case Study",
+      "source_url": "https://arxiv.org/abs/2609.37809",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Predicting canopy height from medium-resolution satellite imagery is a common and scalable approach for assessing the condition of the world's forests, which play a crucial role in climate change mitigation. While Transformer-based architectures have shown strong performance in many domains, their straightforward application to dense (i.e., pixel-level) regression tasks often yields suboptimal results. In particular, the patch size has a crucial impact on the model performance. In this work, we consider pixel-level attention schemes and show that the resulting models generally outperform those relying on larger patch sizes. However, pixel-level attention can be a prohibitively resource-intensive operation. For this reason, we conduct an extensive experimental study using efficient attention variants to identify favorable trade-offs between prediction quality and resource requirements, facilitating the practical deployment of the proposed models. In addition, we perform a comprehensive comparison with several well-established models in the field and show that, with suitable hyperparameter choices, Transformer-based architectures can outperform competing approaches. Our findings provide practical guidance for designing models for pixel-level regression tasks on medium-resolution satellite imagery, including canopy height and biomass estimation, soil moisture mapping, and yield forecasting.",
+      "canonical_id": "arXiv:2609.37809",
+      "arxiv_id": "2609.37809",
+      "authors": [
+        "Sven Ligensa",
+        "Jan Pauls",
+        "Karsten Schrödter",
+        "Ibrahim Fayad",
+        "Fabian Gieseke"
+      ]
+    },
+    {
+      "title": "LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling",
+      "source_url": "https://arxiv.org/abs/2609.37675",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Protein Language Models (PLMs) have made remarkable progress following scaling laws established in natural language processing across sequence- and structure-based tasks, yet the potential of tokenization remains underexploited. Unlike human language, proteins preserve structure despite extensive sequence variation a property standard tokenization strategies fundamentally fail to capture. We introduce ZEST (Zoned Encoding of Sequence Traits), an evolution-informed vocabulary derived from conserved regions of multiple sequence alignments. ZEST allows embedding domain-level biological priors directly at the tokenization stage rather than learning them implicitly through scale. ZEST natively compresses sequences to an average token length of 4 residues, enabling our model to process 4,000 residues within a standard 1024-token context window. Building on this, we present LEMON (Layered Extraction of Molecular Ordering from Nature), a compact 200M-parameter sequence-based model for detection of remote homology between protein sequences trained on a single H100 GPU for one week. Despite its modest size, LEMON outperforms state-of-the-art models ranging from 600M to 3B parameters. Our results demonstrate that evolution-informed tokenization can substitute for massive parameter scaling, opening a new direction for efficient, biologically-grounded protein representation learning. All code, model weights, and results are publicly available under the MIT license.",
+      "canonical_id": "arXiv:2609.37675",
+      "arxiv_id": "2609.37675",
+      "authors": [
+        "Biswajit Banerjee",
+        "Claudia A. Carreno",
+        "Anton S. Petrov"
+      ]
+    },
+    {
+      "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training",
+      "source_url": "https://arxiv.org/abs/2609.34272",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "BF16 is now standard in large-scale pretraining, including in fused attention kernels such as FlashAttention, and these kernels are widely trusted. When we used FlashAttention-3 to pretrain a 450M-parameter transformer on 50B tokens, however, we ran into a problem: training was healthy for 25B tokens, then the gradient norm grew a thousandfold and the loss ended 0.2 nats above FP32 attention, without a single NaN. Recomputing the attention backward of just two layers in FP32 removes almost all of the excess gradient. Part of the cause is known: a fused multiply-add in the forward softmax, so far treated as an extreme-input NaN case and never fixed in FlashAttention-3. Repairing it stops the blow-up, but the query gradient is still wrong by more than its own size, and training still drives attention logits to thousands of times their size under accurate gradients. The remaining error comes from a broken conservation law. The softmax score gradient sums to zero along every row, which makes the query gradient blind to where the keys sit as a group; rounding it to BF16 leaves a small nonzero sum that leaks the mean key into the gradient, and the leak grows exactly as late training makes keys large and attention sharp. We introduce GProj (gauge projection), which restores the zero sum after the cast with two rank-one corrections per row. It cuts the remaining median query/key gradient errors from 219%/13% to 0.34%/0.37%, on par with FP32 attention, for 4.7% more time per training step. In matched from-scratch runs it trains to the same loss as FP32 attention, while FlashAttention-3 and key smoothing both destabilize.",
+      "canonical_id": "arXiv:2609.34272",
+      "arxiv_id": "2609.34272",
+      "authors": [
+        "Jun-Lin Chen",
+        "Daize Dong",
+        "Huan-Wei Di",
+        "Hao-Long Jia",
+        "Jia-Wei Wu",
+        "Haotian Xie",
+        "Ming-Kai Zheng",
+        "Yang Li",
+        "Le-Shang Chen",
+        "Hui-Shu Wang",
+        "E. Xing",
+        "Hong-Yi Wang"
+      ]
+    },
+    {
+      "title": "DORA: Dynamic Online Reinforcement Agent for Token Pruning in Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2609.34325",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Vision Transformers (ViTs) incur quadratic self-attention cost in the number of tokens. Most token-reduction methods adapt token identities within a prescribed layer-wise compression schedule, or search a static mask offline, and thus limit online adaptation of when and how much to prune. We propose DORA (Dynamic Online Reinforcement Agent), which learns an input-adaptive pruning policy itself for frozen ViTs. At each eligible block, a hierarchical actor decides whether to prune, how many tokens to remove, and which tokens to remove from each image's evolving representation. Because early deletions change the states observed by later decisions, DORA formulates pruning as a finite-horizon Markov decision process. Complete-prefix shadow evaluations convert final-prediction fidelity into localized per-step credit, while closed-loop accuracy feedback adjusts the fidelity penalty toward a shared accuracy-drop target. A privileged critic and all shadow computations are training-only. Deployment retains the frozen backbone and a lightweight actor that applies hard deletion and packed variable-length FlashAttention, converting token reduction into measured speedups. On ImageNet-1K with DeiT-Base, DORA reduces FLOPs by 38.4% relative to the uncompressed backbone within one percentage point of accuracy loss. Averaged across four ViT-type backbones at matched accuracy, DORA uses 13.2% fewer FLOPs and achieves 32.4% higher throughput than the corresponding per-backbone baseline means. Under zero-shot transfer to ImageNet-A, these gains widen to 20.3% and 45.6%, respectively.",
+      "canonical_id": "arXiv:2609.34325",
+      "arxiv_id": "2609.34325",
+      "authors": [
+        "Kai-Xuan He",
+        "Song Chen",
+        "Yi-Kai Kang"
+      ]
+    },
+    {
+      "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+      "source_url": "https://arxiv.org/abs/2609.35115",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+      "canonical_id": "arXiv:2609.35115",
+      "arxiv_id": "2609.35115",
+      "authors": [
+        "Hai-Xiao Gao",
+        "Yi-Min Zheng",
+        "Lin-You Xiao",
+        "Ze-Ke Xie"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101037",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101037",
+        "title:inside the black box a comprehensive survey of explainable ai benchmarks protocols technical analysis and open gaps",
+        "url:https://doi.org/10.1016/j.cosrev.2026.101037"
+      ],
+      "record": {
+        "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+        "source_url": "https://doi.org/10.1016/j.cosrev.2026.101037",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.cosrev.2026.101037",
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+        "authors": [
+          "Habib Khan",
+          "F. Alqahtani",
+          "Weiwei Jiang",
+          "M. Ali",
+          "Sareer Ul Amin",
+          "Jakeoung Koo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115976",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115976",
+        "title:transformers in protein informatics a survey of structure prediction function annotation interactions and drug discovery",
+        "url:https://doi.org/10.1016/j.engappai.2026.115976"
+      ],
+      "record": {
+        "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.115976",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.115976",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+        "authors": [
+          "Yu-Min Zhang",
+          "Xiaowen Ling",
+          "Zhiqiang Li",
+          "Liang-Liang Song",
+          "Yifan Jia",
+          "Yan-Bin Wang",
+          "Zhuhong You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.istruc.2026.112910",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.istruc.2026.112910",
+        "title:rapid displacement time history prediction for urban reinforced concrete frames using gated reparameterized temporal fusion and structural similaritybased extrapolation networks",
+        "url:https://doi.org/10.1016/j.istruc.2026.112910"
+      ],
+      "record": {
+        "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+        "source_url": "https://doi.org/10.1016/j.istruc.2026.112910",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.istruc.2026.112910",
+        "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+        "authors": [
+          "X. Song",
+          "Senna Wang",
+          "Xiao-Wei Cheng",
+          "Haoyou Zhang",
+          "Ruijie Guo",
+          "Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3717392",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3717392",
+        "title:the next memory wall why moving data will define the future of ai inference",
+        "url:https://doi.org/10.1109/MC.2026.3717392"
+      ],
+      "record": {
+        "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+        "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+        "doi": "10.1109/MC.2026.3717392",
+        "canonical_id": "DOI:10.1109/MC.2026.3717392",
+        "authors": [
+          "Partha P. Maji",
+          "Timothy Jones",
+          "Robert D. Mullins"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843852",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843852",
+        "title:a few gpus a whole lotta scale faithful llm training emulation with crystalllm",
+        "url:https://doi.org/10.1145/3830418.3843852"
+      ],
+      "record": {
+        "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with CrystalLLM",
+        "source_url": "https://doi.org/10.1145/3830418.3843852",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large language model (LLM) training today runs on clusters spanning thousands of GPUs. While this scale enables rapid model advances, developing, debugging, and performance-tuning, the training framework inevitably becomes complex and costly. This is because engineers often need to reproduce production behaviors to diagnose failures or evaluate optimizations, thereby demanding frequent and even exclusive access to production-scale clusters—which becomes increasingly hard given that the majority of GPUs are already committed to production workloads. Simulation relies on complex performance models that are difficult to maintain, and downscaled experiments often fail to capture scale-dependent behaviors. We present CrystalLLM to decouple large-scale execution from the need to access large clusters, enabling engineers to run and observe ranks of interest under faithful large-scale behavior using only a few GPUs. CrystalLLM constructs a high-fidelity execution graph via a slicing-based approach that captures computation, communication, and dependencies of the target scale. Then, CrystalLLM performs hybrid emulation where selected ranks execute the original program while the remaining are replayed as virtual participants. Experiments on large-scale LLM training workloads show that CrystalLLM accurately reproduces performance and memory behavior, achieving only 0.58% average error in iteration time and less than 0.01% error in peak GPU memory usage. CrystalLLM can emulate clusters of up to 8192 GPUs using fewer than 1% of the physical GPUs required by the original deployment.",
+        "doi": "10.1145/3830418.3843852",
+        "canonical_id": "DOI:10.1145/3830418.3843852",
+        "authors": [
+          "Shao-Ke Xi",
+          "ChonLam Lao",
+          "Bo-Yi Jia",
+          "Jia-Qi Gao",
+          "Zhi-Peng Zhang",
+          "Jia-Min Cao",
+          "Brian Sutioso",
+          "Er-Ci Xu",
+          "Min-Lan Yu",
+          "Kui Ren",
+          "Yong Li",
+          "Zheng-Ping Qian",
+          "En-Nan Zhai",
+          "Jing-Ren Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843857",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843857",
+        "title:taming dynamism on gpus crosssm kernel fusion via sm cooperation and justintime reduction",
+        "url:https://doi.org/10.1145/3830418.3843857"
+      ],
+      "record": {
+        "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+        "source_url": "https://doi.org/10.1145/3830418.3843857",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+        "doi": "10.1145/3830418.3843857",
+        "canonical_id": "DOI:10.1145/3830418.3843857",
+        "authors": [
+          "Jing-Kai He",
+          "Guang-Da Sun",
+          "Tian-Jian Li",
+          "Dong Du",
+          "Yu-Bin Xia",
+          "Hai-Bo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36687",
+      "identity_tokens": [
+        "id:arXiv:2609.36687",
+        "title:myocodec a streaming neural codec for electromyography",
+        "url:https://arxiv.org/abs/2609.36687"
+      ],
+      "record": {
+        "title": "MyoCodec: A Streaming Neural Codec for Electromyography",
+        "source_url": "https://arxiv.org/abs/2609.36687",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Neural codecs encode continuous signals into compact sequences of discrete tokens, providing an interface for efficient transmission, storage, and token-based sequence modeling. This paradigm has been widely adopted in modern speech and audio frameworks; however, the biosignal domain still lacks a neural codec designed specifically for low-bitrate streaming and generalization across diverse downstream tasks. We present MyoCodec, a streaming neural codec designed for electromyography (EMG). Inspired by recent neural audio codecs, MyoCodec combines causal Transformers with residual vector quantization to encode continuous EMG signals into different levels of EMG representations spanning from continuous latent features to discrete tokens operating at 50 Hz. Trained on twelve public EMG datasets, MyoCodec achieves favorable performance in both intrinsic codec quality and representative downstream tasks, including typing (emg2qwerty), hand-pose (emg2pose), speech decoding (emg2speech), and speech-to-EMG synthesis (speech2emg). Across these tasks, MyoCodec exhibits strong performance against prior models while providing a compact and causal EMG representation. During streaming inference, it requires compute time of only 0.482 ms for each 20 ms frame, enabling real-time streaming. Also, the discrete token representation provided by MyoCodec has the potential to support integration into language-model based approaches, creating a path toward LLM-based interactive systems, where tokenized EMG representations are directly processed into such language or speech models. Code and model weights are released.",
+        "canonical_id": "arXiv:2609.36687",
+        "arxiv_id": "2609.36687",
+        "authors": [
+          "Jih-Wan Lee",
+          "Kleanthis Avramidis",
+          "Junhyeok Lee",
+          "Tian-Tian Feng",
+          "N. Dehak",
+          "Shrikanth S. Narayanan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36525",
+      "identity_tokens": [
+        "id:arXiv:2609.36525",
+        "title:reliability testing of medical model performance under distributed deployment",
+        "url:https://arxiv.org/abs/2609.36525"
+      ],
+      "record": {
+        "title": "Reliability Testing of Medical Model Performance under Distributed Deployment",
+        "source_url": "https://arxiv.org/abs/2609.36525",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Distributed inference has become an indispensable part of deploying medical models under practical latency, memory, and throughput constraints. Although modern frameworks improve serving efficiency through tensor parallelism, mixed precision, kernel fusion, and multi-device communication, they are generally assumed to preserve the behavior observed during centralized HuggingFace evaluation. This assumption creates an evaluation-deployment mismatch: a model may pass offline evaluation but produce a different output after the execution stack changes. To address this mismatch, we propose a testing framework and an improved, distributed-execution-sensitive medical-model benchmark that evaluates the same checkpoint and input under a centralized HuggingFace reference and matched distributed deployments. Extensive experiments across language, vision, and multimodal medical models show that execution changes can produce measurable output disagreements. Across supported visual settings, the test success rate ranges from 0.21 to 0.43 for single-modality models and from 0.32 to 0.98 for multimodal models. The benchmark is aimed at extending medical-model evaluation from capability and security to evaluation-deployment consistency.",
+        "canonical_id": "arXiv:2609.36525",
+        "arxiv_id": "2609.36525",
+        "authors": [
+          "Yi-Fei Wang",
+          "Xiao-Han Zhang",
+          "You-Tao Ding",
+          "Tian-Lin Li",
+          "Xiao-Yu Zhang",
+          "Yi-Da Yang",
+          "Li-Chen Pan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36800",
+      "identity_tokens": [
+        "id:arXiv:2609.36800",
+        "title:ai as a compiler compiling triton kernels without the triton compiler",
+        "url:https://arxiv.org/abs/2609.36800"
+      ],
+      "record": {
+        "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+        "source_url": "https://arxiv.org/abs/2609.36800",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+        "canonical_id": "arXiv:2609.36800",
+        "arxiv_id": "2609.36800",
+        "authors": [
+          "François Costa",
+          "Charly Castes",
+          "Thomas Bourgeat",
+          "Azalia Mirhoseini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36688",
+      "identity_tokens": [
+        "id:arXiv:2609.36688",
+        "title:grp v01 technical report",
+        "url:https://arxiv.org/abs/2609.36688"
+      ],
+      "record": {
+        "title": "GRP v0.1 Technical Report",
+        "source_url": "https://arxiv.org/abs/2609.36688",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Industrial recommendation systems rely on multi-stage cascades whose retrieval, ranking, and serving components are difficult to replace jointly. We present GRP, a generative recommendation framework that combines retrieval, ranking, and reward modeling in a single encoder-decoder model, and evaluate a progressive path toward end-to-end recommendation. The model generates multimodal Semantic IDs and scores candidates with a jointly trained ranking module. The frozen ranking module then supplies rewards for reinforcement-learning post-training. We introduce mGRPO, which adds a reference-anchored margin to reward optimization to preserve the likelihood of logged targets. Offline experiments examine history encoding, model capacity allocation, event selection, tokenization, and reward discrimination. Serving optimizations reduce end-to-end retrieval latency by 69%. Online experiments evaluate the model as a retrieval source, with early-ranking bypass, and with replacement of weaker sources. In a retrieval-only comparison, view time increases by 0.46% and shares by 0.77% relative to production. A separate comparison combining bypass and source replacement yields increases of 0.82% in view time and 2.56% in shares, with neutral platform-level guardrails. These results support progressive deployment while identifying remaining gaps in ranking quality and performance across recommendation metrics.",
+        "canonical_id": "arXiv:2609.36688",
+        "arxiv_id": "2609.36688",
+        "authors": [
+          "Wen-Feng Zhuo",
+          "Vincent Xue",
+          "Charles Wei",
+          "Cong Ni",
+          "Rui-Ming Lu",
+          "Ji-Wen Ren",
+          "Mo Li",
+          "Peng-Cheng Yang",
+          "Xu-Fei Wang",
+          "Dong-Heng Li",
+          "Jia-Cong He",
+          "Yin-Nan Song",
+          "Yuan J. K. Fan",
+          "Mikhail Obukhov",
+          "Yi-Wen Chen",
+          "Yvette Liu",
+          "Yi-Wen Ye",
+          "Cheng-Jie Wu",
+          "Ming-Tao Zhang",
+          "Jin-Chao Ye",
+          "Li-Li Zhang",
+          "Chun-Hui Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36651",
+      "identity_tokens": [
+        "id:arXiv:2609.36651",
+        "title:focusvtc efficient and highperformance visual text compression with adaptive resolution",
+        "url:https://arxiv.org/abs/2609.36651"
+      ],
+      "record": {
+        "title": "FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution",
+        "source_url": "https://arxiv.org/abs/2609.36651",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Long-context reasoning in large language models incurs substantial computation and memory costs. Visual text compression (VTC) reduces input length by rendering text as images, but fixed-resolution rendering creates a compression-performance trade-off: low DPI saves tokens at the expense of legibility, whereas high DPI spends tokens on irrelevant content. We introduce FocusVTC, which breaks this trade-off through adaptive resolution while preserving general multimodal capabilities. It combines compressed low-DPI global views with selective region enhancement, integrating enhanced views into ongoing reasoning. We construct 29.4K high-quality Reasoning-Evidence Localization (REL) chain-of-thought examples (REL-CoT) that link reasoning traces to page indices and bounding boxes. Multi-resolution REL supervised fine-tuning (REL-SFT) teaches the model to localize relevant regions, and Group Relative Policy Optimization learns when to enhance resolution and how to use the resulting observations, without a separate continual-pretraining stage. At 72 DPI on RULER v1, FocusVTC scores 87.4 at $2.9\\times$ input compression, including tool observations, versus 57.5 for Glyph at $3.0\\times$ input compression. It surpasses its text-input backbone on LongBench (56.40 versus 55.86), improves the MRCR macro-average by 13.91 points, and achieves a 51.19 macro-average on VTCBench. The MRCR latency evaluation also shows a $2.79\\times$ online end-to-end speedup over Text. General multimodal capabilities are preserved, with MMMU increasing from 65.12 to 66.73 and MME from 2424.02 to 2457.62.",
+        "canonical_id": "arXiv:2609.36651",
+        "arxiv_id": "2609.36651",
+        "authors": [
+          "Fang-Zhi Zhong",
+          "Xue-Rui Qiu",
+          "Yu-Qi Pan",
+          "Ya Liu",
+          "Shao-Wei Gu",
+          "Bo-Xing Xu",
+          "Guo-Qi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37509",
+      "identity_tokens": [
+        "id:arXiv:2609.37509",
+        "title:scagnn a graph neural network for multiple scattering simulations",
+        "url:https://arxiv.org/abs/2609.37509"
+      ],
+      "record": {
+        "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations",
+        "source_url": "https://arxiv.org/abs/2609.37509",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "The boundary element method (BEM) provides an efficient numerical framework for solving multiple scattering problems in unbounded homogeneous domains. By restricting the discretization to the domain boundaries, it substantially reduces computational complexity. The procedure first consists in determining the solution trace on the boundaries of the domain by solving a boundary integral equation. Then, the volumetric solution can be recovered at low computational cost using a boundary integral representation. As the first step of the BEM represents the main computational bottleneck, we present ScaGNN, a learning-based approach designed to approximate the solution trace. It relies on a graph neural network architecture that incorporates a dynamic adaptive edge sampling mechanism for selecting the most relevant interactions to model. Guided by intermediate predictions of expected error and edge length, this mechanism selects, at various stages of the forward pass, the most relevant distant interactions to model. The proposed method is tailored to achieve linear complexity with the number of nodes in the input graph. To train and evaluate our network, we present a benchmark consisting of several datasets with different types of multiple scattering problems. Our experiments show that our approach surpasses existing state-of-the-art learning-based methods on the considered tasks and investigate the generalization capabilities to settings with an increased number of obstacles and out-of-distribution obstacle shapes. github.com/LARIAD/ScaGNN",
+        "canonical_id": "arXiv:2609.37509",
+        "arxiv_id": "2609.37509",
+        "authors": [
+          "Rémi Marsal",
+          "Stéphanie Chaillat",
+          "Alexandre Chapoutot"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37611",
+      "identity_tokens": [
+        "id:arXiv:2609.37611",
+        "title:selective lookahead for attentionbased streaming asr",
+        "url:https://arxiv.org/abs/2609.37611"
+      ],
+      "record": {
+        "title": "Selective Lookahead for Attention-Based Streaming ASR",
+        "source_url": "https://arxiv.org/abs/2609.37611",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "End-to-end attention-based speech recognition is accurate offline but hard to stream: outputs can depend on future audio, and a little future context per layer makes the lookahead grow with the number of layers. We address this with two mechanisms. A bounded-lookahead chunk encoder caps every chunk's future receptive field at a constant number of chunks, independent of the number of layers, via one age-selection rule shared by self-attention and the depthwise convolution. On this encoder, dynamic future-chunk decoding lets a per-token trigger commit a token or wait and re-decode it; we propose a learned trigger as the general mechanism, with a simple confidence threshold as an effective fallback. On full LibriSpeech test-clean the dynamic system matches the best static-lookahead accuracy (6.5%) at a median latency of 306 ms versus 860 ms for one-chunk static lookahead, and a wait budget bounds the deferral tail below the static baseline's 90th percentile at 0.1 points more WER.",
+        "canonical_id": "arXiv:2609.37611",
+        "arxiv_id": "2609.37611",
+        "authors": [
+          "Yi-Chen Jia",
+          "Bastiaan Tamm",
+          "H. Van Hamme"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37626",
+      "identity_tokens": [
+        "id:arXiv:2609.37626",
+        "title:splash switching parallel layouts of attention with seamless handoff for llm serving",
+        "url:https://arxiv.org/abs/2609.37626"
+      ],
+      "record": {
+        "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37626",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+        "canonical_id": "arXiv:2609.37626",
+        "arxiv_id": "2609.37626",
+        "authors": [
+          "Chuan Liu",
+          "Shuo-Ming Zhang",
+          "Zhi-Cheng Li",
+          "Qian-Qi Sun",
+          "Rui-Yuan Xu",
+          "Qiu-Chun Yu",
+          "Xi-Yu Shi",
+          "Hui-Min Cui",
+          "Jia-Cheng Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37809",
+      "identity_tokens": [
+        "id:arXiv:2609.37809",
+        "title:pixellevel transformers in remote sensing a canopy height case study",
+        "url:https://arxiv.org/abs/2609.37809"
+      ],
+      "record": {
+        "title": "Pixel-Level Transformers in Remote Sensing: A Canopy Height Case Study",
+        "source_url": "https://arxiv.org/abs/2609.37809",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Predicting canopy height from medium-resolution satellite imagery is a common and scalable approach for assessing the condition of the world's forests, which play a crucial role in climate change mitigation. While Transformer-based architectures have shown strong performance in many domains, their straightforward application to dense (i.e., pixel-level) regression tasks often yields suboptimal results. In particular, the patch size has a crucial impact on the model performance. In this work, we consider pixel-level attention schemes and show that the resulting models generally outperform those relying on larger patch sizes. However, pixel-level attention can be a prohibitively resource-intensive operation. For this reason, we conduct an extensive experimental study using efficient attention variants to identify favorable trade-offs between prediction quality and resource requirements, facilitating the practical deployment of the proposed models. In addition, we perform a comprehensive comparison with several well-established models in the field and show that, with suitable hyperparameter choices, Transformer-based architectures can outperform competing approaches. Our findings provide practical guidance for designing models for pixel-level regression tasks on medium-resolution satellite imagery, including canopy height and biomass estimation, soil moisture mapping, and yield forecasting.",
+        "canonical_id": "arXiv:2609.37809",
+        "arxiv_id": "2609.37809",
+        "authors": [
+          "Sven Ligensa",
+          "Jan Pauls",
+          "Karsten Schrödter",
+          "Ibrahim Fayad",
+          "Fabian Gieseke"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37675",
+      "identity_tokens": [
+        "id:arXiv:2609.37675",
+        "title:lemonzest evolutioninformed tokenization for efficient protein language modeling",
+        "url:https://arxiv.org/abs/2609.37675"
+      ],
+      "record": {
+        "title": "LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling",
+        "source_url": "https://arxiv.org/abs/2609.37675",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Protein Language Models (PLMs) have made remarkable progress following scaling laws established in natural language processing across sequence- and structure-based tasks, yet the potential of tokenization remains underexploited. Unlike human language, proteins preserve structure despite extensive sequence variation a property standard tokenization strategies fundamentally fail to capture. We introduce ZEST (Zoned Encoding of Sequence Traits), an evolution-informed vocabulary derived from conserved regions of multiple sequence alignments. ZEST allows embedding domain-level biological priors directly at the tokenization stage rather than learning them implicitly through scale. ZEST natively compresses sequences to an average token length of 4 residues, enabling our model to process 4,000 residues within a standard 1024-token context window. Building on this, we present LEMON (Layered Extraction of Molecular Ordering from Nature), a compact 200M-parameter sequence-based model for detection of remote homology between protein sequences trained on a single H100 GPU for one week. Despite its modest size, LEMON outperforms state-of-the-art models ranging from 600M to 3B parameters. Our results demonstrate that evolution-informed tokenization can substitute for massive parameter scaling, opening a new direction for efficient, biologically-grounded protein representation learning. All code, model weights, and results are publicly available under the MIT license.",
+        "canonical_id": "arXiv:2609.37675",
+        "arxiv_id": "2609.37675",
+        "authors": [
+          "Biswajit Banerjee",
+          "Claudia A. Carreno",
+          "Anton S. Petrov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34272",
+      "identity_tokens": [
+        "id:arXiv:2609.34272",
+        "title:broken symmetry in bf16 attention why flashattention gradients blow up late in training",
+        "url:https://arxiv.org/abs/2609.34272"
+      ],
+      "record": {
+        "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training",
+        "source_url": "https://arxiv.org/abs/2609.34272",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "BF16 is now standard in large-scale pretraining, including in fused attention kernels such as FlashAttention, and these kernels are widely trusted. When we used FlashAttention-3 to pretrain a 450M-parameter transformer on 50B tokens, however, we ran into a problem: training was healthy for 25B tokens, then the gradient norm grew a thousandfold and the loss ended 0.2 nats above FP32 attention, without a single NaN. Recomputing the attention backward of just two layers in FP32 removes almost all of the excess gradient. Part of the cause is known: a fused multiply-add in the forward softmax, so far treated as an extreme-input NaN case and never fixed in FlashAttention-3. Repairing it stops the blow-up, but the query gradient is still wrong by more than its own size, and training still drives attention logits to thousands of times their size under accurate gradients. The remaining error comes from a broken conservation law. The softmax score gradient sums to zero along every row, which makes the query gradient blind to where the keys sit as a group; rounding it to BF16 leaves a small nonzero sum that leaks the mean key into the gradient, and the leak grows exactly as late training makes keys large and attention sharp. We introduce GProj (gauge projection), which restores the zero sum after the cast with two rank-one corrections per row. It cuts the remaining median query/key gradient errors from 219%/13% to 0.34%/0.37%, on par with FP32 attention, for 4.7% more time per training step. In matched from-scratch runs it trains to the same loss as FP32 attention, while FlashAttention-3 and key smoothing both destabilize.",
+        "canonical_id": "arXiv:2609.34272",
+        "arxiv_id": "2609.34272",
+        "authors": [
+          "Jun-Lin Chen",
+          "Daize Dong",
+          "Huan-Wei Di",
+          "Hao-Long Jia",
+          "Jia-Wei Wu",
+          "Haotian Xie",
+          "Ming-Kai Zheng",
+          "Yang Li",
+          "Le-Shang Chen",
+          "Hui-Shu Wang",
+          "E. Xing",
+          "Hong-Yi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34325",
+      "identity_tokens": [
+        "id:arXiv:2609.34325",
+        "title:dora dynamic online reinforcement agent for token pruning in vision transformers",
+        "url:https://arxiv.org/abs/2609.34325"
+      ],
+      "record": {
+        "title": "DORA: Dynamic Online Reinforcement Agent for Token Pruning in Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2609.34325",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Vision Transformers (ViTs) incur quadratic self-attention cost in the number of tokens. Most token-reduction methods adapt token identities within a prescribed layer-wise compression schedule, or search a static mask offline, and thus limit online adaptation of when and how much to prune. We propose DORA (Dynamic Online Reinforcement Agent), which learns an input-adaptive pruning policy itself for frozen ViTs. At each eligible block, a hierarchical actor decides whether to prune, how many tokens to remove, and which tokens to remove from each image's evolving representation. Because early deletions change the states observed by later decisions, DORA formulates pruning as a finite-horizon Markov decision process. Complete-prefix shadow evaluations convert final-prediction fidelity into localized per-step credit, while closed-loop accuracy feedback adjusts the fidelity penalty toward a shared accuracy-drop target. A privileged critic and all shadow computations are training-only. Deployment retains the frozen backbone and a lightweight actor that applies hard deletion and packed variable-length FlashAttention, converting token reduction into measured speedups. On ImageNet-1K with DeiT-Base, DORA reduces FLOPs by 38.4% relative to the uncompressed backbone within one percentage point of accuracy loss. Averaged across four ViT-type backbones at matched accuracy, DORA uses 13.2% fewer FLOPs and achieves 32.4% higher throughput than the corresponding per-backbone baseline means. Under zero-shot transfer to ImageNet-A, these gains widen to 20.3% and 45.6%, respectively.",
+        "canonical_id": "arXiv:2609.34325",
+        "arxiv_id": "2609.34325",
+        "authors": [
+          "Kai-Xuan He",
+          "Song Chen",
+          "Yi-Kai Kang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35115",
+      "identity_tokens": [
+        "id:arXiv:2609.35115",
+        "title:duplexcadence exact state and execution from a speech models declared timelines",
+        "url:https://arxiv.org/abs/2609.35115"
+      ],
+      "record": {
+        "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+        "source_url": "https://arxiv.org/abs/2609.35115",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model's native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime's speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+        "canonical_id": "arXiv:2609.35115",
+        "arxiv_id": "2609.35115",
+        "authors": [
+          "Hai-Xiao Gao",
+          "Yi-Min Zheng",
+          "Lin-You Xiao",
+          "Ze-Ke Xie"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:3fb70c523a1770aebab910fc58f3fc8c57abbbc56c7ffa4f7ed5bfc436fd3c3c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

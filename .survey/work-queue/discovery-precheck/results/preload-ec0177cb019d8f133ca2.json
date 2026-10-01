@@ -1,0 +1,946 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-ec0177cb019d8f133ca2",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-ec0177cb019d8f133ca2",
+  "axis": "forward citations of SGLang structured generation serving runtime",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-01T02:59:04.578175+00:00",
+  "preload_id": "preload-ec0177cb019d8f133ca2",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+      "source_url": "https://arxiv.org/abs/2609.36954",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Distributed inference depends on GPU collective communication that must keep pace with evolving hardware and specialized workloads. However, existing collective implementations often couple semantics, orchestration (where and when data moves), and the datapath (how data moves). This coupling makes it costly to adopt new hardware mechanisms and customize communication for applications. We present Purlin, a scale-up communication framework that separates these concerns. At the top of Purlin, we specify collectives as a naming of an input and output layout and a copy or reduction operation. In the middle, we introduce a shared orchestration protocol, Stage, Notify, And Consume (SNAC), which derives coordination from these specifications. Below SNAC sits a hardware-specific datapath we call Atom, which implements two key data movement primitives for collectives: copy and reduce. This separation lets us customize collectives and adopt new hardware mechanisms while reusing orchestration via SNAC. We evaluate Purlin on A100, H200, and B200 GPUs. Across seven collectives, Purlin achieves latency speedups of up to 5.14x and bandwidth improvements of up to 4.50x over baselines. Integrated into SGLang, Purlin improves offline LLM serving throughput and interactivity by 1.13x on average and up to 1.37x over baselines. For online LLM inference, Purlin improves interactivity by 1.26x on average and up to 2.85x, with the largest gain occurring under overload. For diffusion image generation, Purlin reduces end-to-end latency by up to 1.13x.",
+      "canonical_id": "arXiv:2609.36954",
+      "arxiv_id": "2609.36954",
+      "authors": [
+        "Osayamen Jonathan Aimuyo",
+        "Swapnil Gandhi",
+        "Christos Kozyrakis"
+      ]
+    },
+    {
+      "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+      "source_url": "https://arxiv.org/abs/2609.37062",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+      "canonical_id": "arXiv:2609.37062",
+      "arxiv_id": "2609.37062",
+      "authors": [
+        "Dao-Min Wei",
+        "Yavuz Ferhatosmanoglu",
+        "E. Kalyvianaki"
+      ]
+    },
+    {
+      "title": "DiFlow: A System for Micro-Serving Text-to-image Diffusion Workflows",
+      "source_url": "https://doi.org/10.1145/3830418.3843880",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Text-to-image generation executes a diffusion workflow comprising multiple models centered on a base diffusion model. Existing serving systems treat each workflow as an opaque monolith, provisioning, placing, and scaling all constituent models together, which obscures internal dataflow, prevents model sharing, and enforces coarse-grained resource management. In this paper, we make a case for micro-serving diffusion workflows with DiFlow, a system that decomposes a workflow into loosely coupled model-execution nodes that can be independently managed and scheduled. By explicitly managing individual model inference, DiFlow unlocks cluster-scale optimizations, including per-model scaling, model sharing, and adaptive model parallelism. Collectively, DiFlow outperforms existing diffusion workflow serving systems, sustaining up to 3× higher request rates and tolerating up to 8× higher burst traffic. We have open-sourced DiFlow at https://github.com/diflow-project/diflow.",
+      "doi": "10.1145/3830418.3843880",
+      "canonical_id": "DOI:10.1145/3830418.3843880",
+      "authors": [
+        "Ling-Yun Yang",
+        "Su-Yi Li",
+        "Tian-Yu Feng",
+        "Xiao-Xiao Jiang",
+        "Zhi-Peng Di",
+        "Wei-Yi Lu",
+        "Kan Liu",
+        "Ying-Hao Yu",
+        "Tao Lan",
+        "Guo-Dong Yang",
+        "Lin Qu",
+        "Li-Ping Zhang",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+      "source_url": "https://doi.org/10.1145/3830418.3843856",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Wafer-scale accelerators promise ultra-low-latency AI inference, but current system stacks still carry an unsustainably high cost premium. The reason is that many current and emerging inference techniques, such as batching and MoE, introduce runtime dynamism that existing wafer-scale systems cannot support efficiently. As a result, they must choose between two unsatisfactory options: accept suboptimal latency, or preserve low latency by restricting dynamic techniques, thereby limiting the models they can support and reducing aggregate throughput. This tradeoff significantly increases the cost of low-latency serving. We present MeshRT, the first wafer-scale system to achieve both ultra-low latency and high throughput for LLM inference. MeshRT achieves this via a novel system architecture, which we call compile-time governance of runtime dynamism. This architecture features new system abstractions and mechanisms that enable MeshRT to compile dynamic events arising from LLM inference directly into per-core schedules, enabling asynchronous and decentralized execution with low runtime overhead. Implemented on a commodity wafer-scale accelerator, MeshRT preserves ultra-low latency while improving throughput by up to 56× over the state-of-the-art system for wafer-scale accelerators. Against measured single-instance SGLang results on H200, MeshRT achieves 4.5-7.0× lower latency. Under ideal linear scaling of those GPU measurements to an area-normalized H200 cluster, MeshRT achieves 1.6-12.1× higher decode energy efficiency in the low-latency regime.",
+      "doi": "10.1145/3830418.3843856",
+      "canonical_id": "DOI:10.1145/3830418.3843856",
+      "authors": [
+        "Cong-Jie He",
+        "Le Xu",
+        "Zhan Lu",
+        "Ye-Qi Huang",
+        "Hao-Cheng Xiao",
+        "Cheng Deng",
+        "Ling-Xiao Ma",
+        "Zi-Ming Miao",
+        "Fan Yang",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Janus: Multi-LLM Serving at Production Scale",
+      "source_url": "https://doi.org/10.1145/3830418.3843867",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Production LLM serving multiplexes hundreds of heterogeneous models on shared clusters, exposing three challenges that existing systems fail to address simultaneously: unpredictable bursts, power-law application popularity, and heterogeneous yet complementary resource demands. We present Janus, a Service-Engine co-designed multi-model serving system built around dual-timescale scheduling. At the Service layer, a Model Scheduler driven by a Performance Oracle combines vector bin-packing every 30 seconds for steady-state colocation with elastic scaling every 0.5 seconds. A new LST-IMH Request Scheduler maximizes SLO attainment with a proven 2-approximation guarantee. At the Engine layer, xTensor virtualizes HBM, while a three-state model lifecycle and device-to-device (D2D) fork enable elastic multi-model colocation and sub-second burst scale-out. We deploy Janus on a 768-device production cluster serving 62 applications and 45.6 M requests/day, and evaluate it with a 603 K-request open-loop replay sampled from that production day. Janus maintains 0.97-1.0 SLO attainment, versus 0.80-0.92 for the strongest baseline, while using 13,440 device-hours/day, 27% less than static Serverless-LLM. Janus is available as open source at https://github.com/Janus2026/Janus.",
+      "doi": "10.1145/3830418.3843867",
+      "canonical_id": "DOI:10.1145/3830418.3843867",
+      "authors": [
+        "Tian-Bao Zhou",
+        "Yi Wang",
+        "Yu Zhou",
+        "Zi-Rui Liu",
+        "Zhi-Ming Wang",
+        "Ye-Bo Peng",
+        "Yong-Fu Wang",
+        "Yi Zhang",
+        "Jin-Run Yin",
+        "Ke-Meng Tian",
+        "Fang-Cheng Fu",
+        "Tong-Xuan Liu",
+        "Tao Peng",
+        "Tong Yang",
+        "Bin Cui",
+        "Xupeng Miao",
+        "Ke Zhang"
+      ]
+    },
+    {
+      "title": "LMTracer: Fine-Grained and Real-Time Performance Profiling for Production LLM Systems",
+      "source_url": "https://doi.org/10.1145/3830418.3843871",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Training and serving large language models (LLMs) has become a core business for AI providers. To ensure a high-quality user experience while optimizing infrastructure costs, providers need to closely monitor the performance of LLM executions in production. However, existing performance profiling tools fall short in this context, as they are either too coarse-grained to capture performance bottlenecks, or too intrusive to avoid significant performance degradation. This paper presents LMTracer, a fine-grained and real-time performance profiling framework for production LLM services. We find that the inefficiency of existing techniques mainly stems from disruptions in highly asynchronous GPU execution flows. To address this, our key idea is to embed profiling logic into the execution through graph-embedded probing. This is achieved by compiling lightweight probe kernels that realize profiling logic as special trace nodes in GPU execution graphs, and streaming buffered profiling data to CPUs on demand to keep the execution of user kernels uninterrupted. LMTracer has been deployed in production for eight months. It incurs only 0.9% average overhead across various LLM workloads (e.g., training, serving, and fine-tuning), and has proactively uncovered 15 performance issues. After fixing these issues, we observed 21.2% latency reduction and 24.5% throughput improvement for LLM services.",
+      "doi": "10.1145/3830418.3843871",
+      "canonical_id": "DOI:10.1145/3830418.3843871",
+      "authors": [
+        "Wei Liu",
+        "Yong-Chao He",
+        "Bo-Han Zhao",
+        "Hong-Yi Wang",
+        "Zhen-Hua Li",
+        "Jun-Ping Zhao"
+      ]
+    },
+    {
+      "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+      "source_url": "https://doi.org/10.1145/3830418.3843857",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+      "doi": "10.1145/3830418.3843857",
+      "canonical_id": "DOI:10.1145/3830418.3843857",
+      "authors": [
+        "Jing-Kai He",
+        "Guang-Da Sun",
+        "Tian-Jian Li",
+        "Dong Du",
+        "Yu-Bin Xia",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "title": "Batched in Back: Characterizing and Optimizing Offline LLM Inference in Production with ACDC",
+      "source_url": "https://doi.org/10.1145/3830418.3843877",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Serving offline large language model (LLM) inference workloads (e.g., log summarization and bulk translation) can consume up to 30% of GPUs in production. Despite this significant share, the characteristics of offline inference remain largely understudied. In this paper, we start by analyzing 1.5 million tasks comprising 23 billion requests across text and multi-modal models. We discover that the key properties of offline workloads, namely inherent determinism and throughput orientation, are neither exploited by online LLM serving systems nor by existing offline serving frameworks. We design ACDC, a task-aware offline serving system that leverages these properties along three orthogonal axes, namely resource orchestration, cache management, and execution flow. ACDC has been deployed in production for over three months, achieving up to 3.9× higher output cost-efficiency. Beyond isolated deployment, we further identify that online prefill stages leave up to 38.3% of capacity idle as resource bubbles. We design a hybrid-serving mechanism that harvests these bubbles for offline tasks, improving end-to-end throughput by up to 35.7% over the state-of-the-art alternative.",
+      "doi": "10.1145/3830418.3843877",
+      "canonical_id": "DOI:10.1145/3830418.3843877",
+      "authors": [
+        "Le-Ping Yang",
+        "Xue Li",
+        "Kun Qian",
+        "Er-Ci Xu",
+        "Ming-Zhe Han",
+        "Hao-Ran Zhu",
+        "Tao He",
+        "Zuo-Long Yin",
+        "En-Nan Zhai",
+        "Wen-Yuan Yu",
+        "Jing-Ren Zhou",
+        "Guang-Tao Xue"
+      ]
+    },
+    {
+      "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+      "source_url": "https://arxiv.org/abs/2609.36945",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "We study the learning dynamics of fine-tuning a policy model on self-generated and reward-weighted data, with particular focus on a generalized version of REINFORCE -- referred to as RE(S) -- that updates the rollout distribution once every $S \\ge 1$ gradient steps. Prior work in bandits and reinforcement learning has developed rich theory for policy gradient methods, and on-policy sampling (i.e., a small $S$, ideally $1$) is often viewed as crucial to their success; yet in prominent application like post-training large language models, reward-guided self-training has proved to be effective even when the rollout distribution is updated infrequently, but theoretical understanding remains limited for the convergence properties of these off-policy methods. To bridge these gaps, we develop a unified theory for RE(S) that covers the full spectrum of $S \\ge 1$: it can be interpreted as a stage-wise optimization process, where each stage takes $S$ gradient steps for minimizing the Kullback-Leibler distance to a fixed reward-weighted rollout distribution. For multi-arm bandits with softmax policies, our in-depth analysis and numerical experiments reveal three key findings: (1) for any fixed $S$, RE(S) enjoys global convergence to the optimal policy as the number of rollout distribution updates $B = \\lfloor T / S \\rfloor \\rightarrow \\infty$, where $T$ denotes the number of gradient steps; (2) we prove tight two-sided bounds showing that the suboptimality gap of RE(S) achieves an asymptotic $\\Theta(1 / T)$ convergence rate, while $S$ only affects the length of a burn-in phase; (3) when initialized at a weak policy with a small optimal-action probability, RE(1) gets trapped around suboptimal policies for a long period, whereas RE(S) with a suitable $S$ avoids the detour and achieves significantly faster convergence to the global optimum, highlighting the benefits of off-policyness in this case.",
+      "canonical_id": "arXiv:2609.36945",
+      "arxiv_id": "2609.36945",
+      "authors": [
+        "Zhi-Wei Wang",
+        "Yan-Xi Chen",
+        "Ya-Liang Li",
+        "Bo-Lin Ding"
+      ]
+    },
+    {
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "source_url": "https://arxiv.org/abs/2609.36938",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+      "canonical_id": "arXiv:2609.36938",
+      "arxiv_id": "2609.36938",
+      "authors": [
+        "Wen-Hao He",
+        "Ping Zhang",
+        "Xiao-He Hu",
+        "Chu-Tian Wang",
+        "Jin-Long Hou",
+        "Yuan Cheng",
+        "Peng Sun",
+        "Fang-Cheng Fu"
+      ]
+    },
+    {
+      "title": "ATTUNER: Recomputation-Free KV Cache Reuse via Query-Side Adaptation",
+      "source_url": "https://arxiv.org/abs/2609.36722",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+      "canonical_id": "arXiv:2609.36722",
+      "arxiv_id": "2609.36722",
+      "authors": [
+        "Xing-Hao Chen",
+        "Jun-Nan Dong",
+        "Cai Ke",
+        "Chak Tou Leong",
+        "Hao-Cheng Sun",
+        "Ke-Yu Chen",
+        "Si-Yu An",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Wen-Jie Li",
+        "Xiao-Yu Shen"
+      ]
+    },
+    {
+      "title": "MetaCtrl: Your Large Language Models Can Reason Better and More Concisely with a Metacognitive Controller",
+      "source_url": "https://arxiv.org/abs/2609.37304",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large reasoning models improve performance on challenging problems by allocating additional computation before answering, but longer reasoning does not always lead to better results and can introduce substantial redundant reasoning on simple problems. Conversely, aggressively shortening reasoning can degrade performance on difficult ones. Effective reasoning therefore requires dynamically deciding when additional computation is useful based on the reasoner's capabilities and evolving solution state. Existing approaches often rely on predefined budgets or intervention rules, retrain the target reasoner, or require additional supervision. We introduce MetaCtrl, a lightweight controller that adaptively regulates a frozen reasoner without predefined token budgets or reasoner retraining. We formulate reasoning regulation as a sequential metacognitive control problem: MetaCtrl observes the evolving reasoning trace and decides whether to continue, simplify, skip redundant steps, or conclude reasoning. It is trained directly with reinforcement learning using a reward that prioritizes correctness while favoring shorter trajectories among correct solutions, requiring neither supervised intervention trajectories nor problem-specific budgets. Across seven benchmarks spanning mathematics, science, and code, MetaCtrl consistently improves the accuracy of LRMs while reducing their reasoning length. On DeepSeek-R1-Distill-Qwen-7B, it improves average accuracy by 4.7 points while reducing generation length by 53.3%. Without further training, the same controller transfers to an unseen reasoner (e.g., Qwen3-14B), improving average accuracy by 2.9 points and reducing generation length by 50.3%. These results establish MetaCtrl as a plug-and-play controller for improving reasoning accuracy while substantially reducing inference-time generation. The code is available at https://github.com/binbin2xs/MetaCtrl.",
+      "canonical_id": "arXiv:2609.37304",
+      "arxiv_id": "2609.37304",
+      "authors": [
+        "Zhi-Bin Wen",
+        "Tao Han",
+        "Lei Bai",
+        "Can Li",
+        "Yang Xu"
+      ]
+    },
+    {
+      "title": "HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents",
+      "source_url": "https://arxiv.org/abs/2609.38008",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Computer use agents (CUAs) have demonstrated strong capabilities in completing digital tasks. However, existing CUAs either rely solely on graphical user interface (GUI) interactions, which are often inefficient and error prone, or augment GUI interactions with application specific APIs or tools, which require substantial engineering effort and are difficult to scale across applications. We argue that the next generation of CUAs should combine GUI interactions with the command line interface (CLI), leveraging the generality of the GUI and the efficiency of shell commands. A critical challenge, however, is that current models do not know when or how to use the CLI during task execution. To address this challenge, we develop a data construction pipeline that produces three types of trajectories: GUI only, CLI only, and interleaved GUI and CLI trajectories. This pipeline results in HybridCUA-8K, containing 5K hybrid trajectories and 3K verified RLVR tasks. Building on these data, we propose a training framework with two stages: supervised fine tuning on the constructed trajectories, followed by reinforcement learning with our CLI aware rewards that encourages agents to use the CLI selectively and reliably. Experiments show that HybridCUA-9B achieves 53.6% accuracy on OSWorld, improving over the base model by 14.8 percentage points, and improves performance on WindowsAgentArena by 4.0 percentage points. These results demonstrate the effectiveness and cross platform generalizability of the hybrid GUI and CLI paradigm for computer use agents.",
+      "canonical_id": "arXiv:2609.38008",
+      "arxiv_id": "2609.38008",
+      "authors": [
+        "Tong-I Chen",
+        "Jun-Bo Niu",
+        "Zhengxi Lu",
+        "Niu Lian",
+        "Fei Tang",
+        "Yu-Chen Yan",
+        "Yi-Ke Hong",
+        "Yong Du",
+        "Yi-Zhou Liu",
+        "Bo-Fan Chen",
+        "Yong-Liang Shen"
+      ]
+    },
+    {
+      "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+      "source_url": "https://arxiv.org/abs/2609.38121",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+      "canonical_id": "arXiv:2609.38121",
+      "arxiv_id": "2609.38121",
+      "authors": [
+        "Jia-Le Chen",
+        "Vage Egiazarian",
+        "Eldar Kurtic",
+        "T. Hoefler",
+        "Dan Alistarh"
+      ]
+    },
+    {
+      "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
+      "source_url": "https://arxiv.org/abs/2609.37828",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Mixture-of-experts (MoE) models expand capacity via sparse activation, but inference across GPUs introduces tensor-parallel (TP) collectives and expert-parallel (EP) dispatch and combine operations. Completion time depends not just on communication volume but on how logical groups map onto intra-server interconnects, GPU--NIC connections, and the inter-node network. Using ASTRA-sim with the NS-3 discrete-event backend, we build a controlled matrix of 32 GPU ranks with data and pipeline parallelism fixed at one. Workloads are fixed-length 4096-token prefill-like synthetic Chakra traces from four MoE configurations. Experiments cover six server topologies, four TP/EP partitions, two TP collective algorithms, and four network/congestion-control modes, yielding 768 deterministic simulations. In the 144-configuration feedback-enabled subset per model, exposed communication accounts for 89.9%--95.8% of mean completion time. TP16EP2 requires 3.68--4.35x the mean completion time of TP2EP16. With fixed rank mapping, ASTRA-sim Double Binary Tree (DBT) incurs 28.3%--83.2% more time than Ring. InfiniBand-like High Precision Congestion Control (HPCC) is ~0.9% lower than HPCC over RDMA over Converged Ethernet (RoCE), whereas RoCE with Data Center Quantized Congestion Notification (DCQCN) is 23.8%--35.7% slower than RoCE HPCC. Topology effects are conditional: Topology~6 leads at low TP degrees but loses its advantage at high TP degrees, and additional GPUs or NICs help only when rank mapping balances traffic across injection paths. Under uniform 32-way sharding, the largest checkpoint-weight shard is ~48.75 GB per rank, so all configurations meet a 64 GB per-accelerator weight-residency criterion. Within the evaluated workload and simulator semantics, server topology, parallelism, collective implementation, and congestion control jointly determine exposed communication and completion time.",
+      "canonical_id": "arXiv:2609.37828",
+      "arxiv_id": "2609.37828",
+      "authors": [
+        "Kai-Kai Yuan",
+        "Rui Xi",
+        "Yu Liu"
+      ]
+    },
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37626",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+      "canonical_id": "arXiv:2609.37626",
+      "arxiv_id": "2609.37626",
+      "authors": [
+        "Chuan Liu",
+        "Shuo-Ming Zhang",
+        "Zhi-Cheng Li",
+        "Qian-Qi Sun",
+        "Rui-Yuan Xu",
+        "Qiu-Chun Yu",
+        "Xi-Yu Shi",
+        "Hui-Min Cui",
+        "Jia-Cheng Zhao"
+      ]
+    },
+    {
+      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+      "source_url": "https://arxiv.org/abs/2609.37532",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Growing large language model applications demand efficient inference. At high concurrency, block-diffusion speculative decoding suffers from verification padding, rejected candidates, and incompatibility between variable prefixes and fixed-shape graphs. Uniform truncation sacrifices acceptable tokens. We present DScale, preserving drafter architecture, weights, and full draft length. A separate 112K-parameter predictor requires neither confidence calibration nor hardware speed-curve preparation. Path-aware tiles reduce padding. Dynamic verify-length (DVL) allocation packs scored prefixes into half the native verification capacity. Fixed-address workspaces propagate changing boundaries through verification and acceptance while reusing captured graphs. On A100-40GB with tensor parallelism 1, Qwen3-8B and Qwen3-4B cover four datasets and concurrency 8-32, reusing each target's frozen predictor. Geometric-mean throughput gains across these configurations are respectively 43.9% and 48.8% over DFlash, 22.2% and 37.7% over DSpark, and 24.4% and 32.0% over Domino, with lower request latency. Cumulative ablations show that adding the three mechanisms successively increases geometric-mean throughput, while budget adjustment improves accepted-token retention. GPU profiling shows that complete decode-step time on GSM8K decreases by 30.8-52.5% relative to DFlash",
+      "canonical_id": "arXiv:2609.37532",
+      "arxiv_id": "2609.37532",
+      "authors": [
+        "Rong-Jian Chen",
+        "Min-Xian Xu",
+        "Zheng-Xin Fang",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ]
+    },
+    {
+      "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+      "source_url": "https://arxiv.org/abs/2609.37241",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "User-written Triton kernels enable high-performance GPU computation within PyTorch, but their end-to-end latency can remain dominated by host-side orchestration, especially when device execution is short. Although torch.compile can generate native host wrappers for captured graphs, each invocation still passes through runtime-managed specialization lookup, guard evaluation, and preparation before reaching the wrapper. We present Trident, a compiler backend that removes this recurring overhead from the specialization cache-hit path. Trident introduces the Specialization Cache Module (SCM), which compiles guarded specialization selection, argument and execution-environment preparation, and host execution for multiple specializations into a single executable module. An invocation enters the SCM once, remains in compiled code when a specialization matches, and returns to Python only when a new specialization must be compiled. Built on Torch-MLIR, Trident lowers guards and host-side orchestration to native code while retaining calls to optimized runtime implementations of supported ATen operators. Our evalu- ation on two LLMs shows that Trident achieves up to a 1.47x speedup in model-level end-to-end latency over eager execution and up to 1.68x over torch.compile.",
+      "canonical_id": "arXiv:2609.37241",
+      "arxiv_id": "2609.37241",
+      "authors": [
+        "Jin-Jie Liu",
+        "Xiao-Yan Liu",
+        "Shu-Han Zhang",
+        "Wen-Jian Sun",
+        "Rui-Lin Yang",
+        "Chun-Lei Men",
+        "Yong-Hua Lin",
+        "Shao-Hua Li"
+      ]
+    },
+    {
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+      "canonical_id": "arXiv:2609.37538",
+      "arxiv_id": "2609.37538",
+      "authors": [
+        "Wen-Wei Kuang",
+        "Xiang-Yu Wang",
+        "Chong Wu",
+        "Jun Wang",
+        "Wei-Jie Zhang",
+        "Brian K. Chen",
+        "Long Lan",
+        "Ken Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36954",
+      "identity_tokens": [
+        "id:arXiv:2609.36954",
+        "title:purlin separating orchestration from the datapath of collectives",
+        "url:https://arxiv.org/abs/2609.36954"
+      ],
+      "record": {
+        "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+        "source_url": "https://arxiv.org/abs/2609.36954",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Distributed inference depends on GPU collective communication that must keep pace with evolving hardware and specialized workloads. However, existing collective implementations often couple semantics, orchestration (where and when data moves), and the datapath (how data moves). This coupling makes it costly to adopt new hardware mechanisms and customize communication for applications. We present Purlin, a scale-up communication framework that separates these concerns. At the top of Purlin, we specify collectives as a naming of an input and output layout and a copy or reduction operation. In the middle, we introduce a shared orchestration protocol, Stage, Notify, And Consume (SNAC), which derives coordination from these specifications. Below SNAC sits a hardware-specific datapath we call Atom, which implements two key data movement primitives for collectives: copy and reduce. This separation lets us customize collectives and adopt new hardware mechanisms while reusing orchestration via SNAC. We evaluate Purlin on A100, H200, and B200 GPUs. Across seven collectives, Purlin achieves latency speedups of up to 5.14x and bandwidth improvements of up to 4.50x over baselines. Integrated into SGLang, Purlin improves offline LLM serving throughput and interactivity by 1.13x on average and up to 1.37x over baselines. For online LLM inference, Purlin improves interactivity by 1.26x on average and up to 2.85x, with the largest gain occurring under overload. For diffusion image generation, Purlin reduces end-to-end latency by up to 1.13x.",
+        "canonical_id": "arXiv:2609.36954",
+        "arxiv_id": "2609.36954",
+        "authors": [
+          "Osayamen Jonathan Aimuyo",
+          "Swapnil Gandhi",
+          "Christos Kozyrakis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37062",
+      "identity_tokens": [
+        "id:arXiv:2609.37062",
+        "title:vskipper translating dynamic layer skipping into llm serving gains",
+        "url:https://arxiv.org/abs/2609.37062"
+      ],
+      "record": {
+        "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+        "source_url": "https://arxiv.org/abs/2609.37062",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+        "canonical_id": "arXiv:2609.37062",
+        "arxiv_id": "2609.37062",
+        "authors": [
+          "Dao-Min Wei",
+          "Yavuz Ferhatosmanoglu",
+          "E. Kalyvianaki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843880",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843880",
+        "title:diflow a system for microserving texttoimage diffusion workflows",
+        "url:https://doi.org/10.1145/3830418.3843880"
+      ],
+      "record": {
+        "title": "DiFlow: A System for Micro-Serving Text-to-image Diffusion Workflows",
+        "source_url": "https://doi.org/10.1145/3830418.3843880",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Text-to-image generation executes a diffusion workflow comprising multiple models centered on a base diffusion model. Existing serving systems treat each workflow as an opaque monolith, provisioning, placing, and scaling all constituent models together, which obscures internal dataflow, prevents model sharing, and enforces coarse-grained resource management. In this paper, we make a case for micro-serving diffusion workflows with DiFlow, a system that decomposes a workflow into loosely coupled model-execution nodes that can be independently managed and scheduled. By explicitly managing individual model inference, DiFlow unlocks cluster-scale optimizations, including per-model scaling, model sharing, and adaptive model parallelism. Collectively, DiFlow outperforms existing diffusion workflow serving systems, sustaining up to 3× higher request rates and tolerating up to 8× higher burst traffic. We have open-sourced DiFlow at https://github.com/diflow-project/diflow.",
+        "doi": "10.1145/3830418.3843880",
+        "canonical_id": "DOI:10.1145/3830418.3843880",
+        "authors": [
+          "Ling-Yun Yang",
+          "Su-Yi Li",
+          "Tian-Yu Feng",
+          "Xiao-Xiao Jiang",
+          "Zhi-Peng Di",
+          "Wei-Yi Lu",
+          "Kan Liu",
+          "Ying-Hao Yu",
+          "Tao Lan",
+          "Guo-Dong Yang",
+          "Lin Qu",
+          "Li-Ping Zhang",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843856",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843856",
+        "title:meshrt compiletime governed waferscale runtime for lowlatency highthroughput inference",
+        "url:https://doi.org/10.1145/3830418.3843856"
+      ],
+      "record": {
+        "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+        "source_url": "https://doi.org/10.1145/3830418.3843856",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Wafer-scale accelerators promise ultra-low-latency AI inference, but current system stacks still carry an unsustainably high cost premium. The reason is that many current and emerging inference techniques, such as batching and MoE, introduce runtime dynamism that existing wafer-scale systems cannot support efficiently. As a result, they must choose between two unsatisfactory options: accept suboptimal latency, or preserve low latency by restricting dynamic techniques, thereby limiting the models they can support and reducing aggregate throughput. This tradeoff significantly increases the cost of low-latency serving. We present MeshRT, the first wafer-scale system to achieve both ultra-low latency and high throughput for LLM inference. MeshRT achieves this via a novel system architecture, which we call compile-time governance of runtime dynamism. This architecture features new system abstractions and mechanisms that enable MeshRT to compile dynamic events arising from LLM inference directly into per-core schedules, enabling asynchronous and decentralized execution with low runtime overhead. Implemented on a commodity wafer-scale accelerator, MeshRT preserves ultra-low latency while improving throughput by up to 56× over the state-of-the-art system for wafer-scale accelerators. Against measured single-instance SGLang results on H200, MeshRT achieves 4.5-7.0× lower latency. Under ideal linear scaling of those GPU measurements to an area-normalized H200 cluster, MeshRT achieves 1.6-12.1× higher decode energy efficiency in the low-latency regime.",
+        "doi": "10.1145/3830418.3843856",
+        "canonical_id": "DOI:10.1145/3830418.3843856",
+        "authors": [
+          "Cong-Jie He",
+          "Le Xu",
+          "Zhan Lu",
+          "Ye-Qi Huang",
+          "Hao-Cheng Xiao",
+          "Cheng Deng",
+          "Ling-Xiao Ma",
+          "Zi-Ming Miao",
+          "Fan Yang",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843867",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843867",
+        "title:janus multillm serving at production scale",
+        "url:https://doi.org/10.1145/3830418.3843867"
+      ],
+      "record": {
+        "title": "Janus: Multi-LLM Serving at Production Scale",
+        "source_url": "https://doi.org/10.1145/3830418.3843867",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Production LLM serving multiplexes hundreds of heterogeneous models on shared clusters, exposing three challenges that existing systems fail to address simultaneously: unpredictable bursts, power-law application popularity, and heterogeneous yet complementary resource demands. We present Janus, a Service-Engine co-designed multi-model serving system built around dual-timescale scheduling. At the Service layer, a Model Scheduler driven by a Performance Oracle combines vector bin-packing every 30 seconds for steady-state colocation with elastic scaling every 0.5 seconds. A new LST-IMH Request Scheduler maximizes SLO attainment with a proven 2-approximation guarantee. At the Engine layer, xTensor virtualizes HBM, while a three-state model lifecycle and device-to-device (D2D) fork enable elastic multi-model colocation and sub-second burst scale-out. We deploy Janus on a 768-device production cluster serving 62 applications and 45.6 M requests/day, and evaluate it with a 603 K-request open-loop replay sampled from that production day. Janus maintains 0.97-1.0 SLO attainment, versus 0.80-0.92 for the strongest baseline, while using 13,440 device-hours/day, 27% less than static Serverless-LLM. Janus is available as open source at https://github.com/Janus2026/Janus.",
+        "doi": "10.1145/3830418.3843867",
+        "canonical_id": "DOI:10.1145/3830418.3843867",
+        "authors": [
+          "Tian-Bao Zhou",
+          "Yi Wang",
+          "Yu Zhou",
+          "Zi-Rui Liu",
+          "Zhi-Ming Wang",
+          "Ye-Bo Peng",
+          "Yong-Fu Wang",
+          "Yi Zhang",
+          "Jin-Run Yin",
+          "Ke-Meng Tian",
+          "Fang-Cheng Fu",
+          "Tong-Xuan Liu",
+          "Tao Peng",
+          "Tong Yang",
+          "Bin Cui",
+          "Xupeng Miao",
+          "Ke Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843871",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843871",
+        "title:lmtracer finegrained and realtime performance profiling for production llm systems",
+        "url:https://doi.org/10.1145/3830418.3843871"
+      ],
+      "record": {
+        "title": "LMTracer: Fine-Grained and Real-Time Performance Profiling for Production LLM Systems",
+        "source_url": "https://doi.org/10.1145/3830418.3843871",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Training and serving large language models (LLMs) has become a core business for AI providers. To ensure a high-quality user experience while optimizing infrastructure costs, providers need to closely monitor the performance of LLM executions in production. However, existing performance profiling tools fall short in this context, as they are either too coarse-grained to capture performance bottlenecks, or too intrusive to avoid significant performance degradation. This paper presents LMTracer, a fine-grained and real-time performance profiling framework for production LLM services. We find that the inefficiency of existing techniques mainly stems from disruptions in highly asynchronous GPU execution flows. To address this, our key idea is to embed profiling logic into the execution through graph-embedded probing. This is achieved by compiling lightweight probe kernels that realize profiling logic as special trace nodes in GPU execution graphs, and streaming buffered profiling data to CPUs on demand to keep the execution of user kernels uninterrupted. LMTracer has been deployed in production for eight months. It incurs only 0.9% average overhead across various LLM workloads (e.g., training, serving, and fine-tuning), and has proactively uncovered 15 performance issues. After fixing these issues, we observed 21.2% latency reduction and 24.5% throughput improvement for LLM services.",
+        "doi": "10.1145/3830418.3843871",
+        "canonical_id": "DOI:10.1145/3830418.3843871",
+        "authors": [
+          "Wei Liu",
+          "Yong-Chao He",
+          "Bo-Han Zhao",
+          "Hong-Yi Wang",
+          "Zhen-Hua Li",
+          "Jun-Ping Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843857",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843857",
+        "title:taming dynamism on gpus crosssm kernel fusion via sm cooperation and justintime reduction",
+        "url:https://doi.org/10.1145/3830418.3843857"
+      ],
+      "record": {
+        "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+        "source_url": "https://doi.org/10.1145/3830418.3843857",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+        "doi": "10.1145/3830418.3843857",
+        "canonical_id": "DOI:10.1145/3830418.3843857",
+        "authors": [
+          "Jing-Kai He",
+          "Guang-Da Sun",
+          "Tian-Jian Li",
+          "Dong Du",
+          "Yu-Bin Xia",
+          "Hai-Bo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843877",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843877",
+        "title:batched in back characterizing and optimizing offline llm inference in production with acdc",
+        "url:https://doi.org/10.1145/3830418.3843877"
+      ],
+      "record": {
+        "title": "Batched in Back: Characterizing and Optimizing Offline LLM Inference in Production with ACDC",
+        "source_url": "https://doi.org/10.1145/3830418.3843877",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Serving offline large language model (LLM) inference workloads (e.g., log summarization and bulk translation) can consume up to 30% of GPUs in production. Despite this significant share, the characteristics of offline inference remain largely understudied. In this paper, we start by analyzing 1.5 million tasks comprising 23 billion requests across text and multi-modal models. We discover that the key properties of offline workloads, namely inherent determinism and throughput orientation, are neither exploited by online LLM serving systems nor by existing offline serving frameworks. We design ACDC, a task-aware offline serving system that leverages these properties along three orthogonal axes, namely resource orchestration, cache management, and execution flow. ACDC has been deployed in production for over three months, achieving up to 3.9× higher output cost-efficiency. Beyond isolated deployment, we further identify that online prefill stages leave up to 38.3% of capacity idle as resource bubbles. We design a hybrid-serving mechanism that harvests these bubbles for offline tasks, improving end-to-end throughput by up to 35.7% over the state-of-the-art alternative.",
+        "doi": "10.1145/3830418.3843877",
+        "canonical_id": "DOI:10.1145/3830418.3843877",
+        "authors": [
+          "Le-Ping Yang",
+          "Xue Li",
+          "Kun Qian",
+          "Er-Ci Xu",
+          "Ming-Zhe Han",
+          "Hao-Ran Zhu",
+          "Tao He",
+          "Zuo-Long Yin",
+          "En-Nan Zhai",
+          "Wen-Yuan Yu",
+          "Jing-Ren Zhou",
+          "Guang-Tao Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36945",
+      "identity_tokens": [
+        "id:arXiv:2609.36945",
+        "title:finetuning on selfgenerated and rewardweighted data learning dynamics convergence rates and benefits of offpolicyness",
+        "url:https://arxiv.org/abs/2609.36945"
+      ],
+      "record": {
+        "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+        "source_url": "https://arxiv.org/abs/2609.36945",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "We study the learning dynamics of fine-tuning a policy model on self-generated and reward-weighted data, with particular focus on a generalized version of REINFORCE -- referred to as RE(S) -- that updates the rollout distribution once every $S \\ge 1$ gradient steps. Prior work in bandits and reinforcement learning has developed rich theory for policy gradient methods, and on-policy sampling (i.e., a small $S$, ideally $1$) is often viewed as crucial to their success; yet in prominent application like post-training large language models, reward-guided self-training has proved to be effective even when the rollout distribution is updated infrequently, but theoretical understanding remains limited for the convergence properties of these off-policy methods. To bridge these gaps, we develop a unified theory for RE(S) that covers the full spectrum of $S \\ge 1$: it can be interpreted as a stage-wise optimization process, where each stage takes $S$ gradient steps for minimizing the Kullback-Leibler distance to a fixed reward-weighted rollout distribution. For multi-arm bandits with softmax policies, our in-depth analysis and numerical experiments reveal three key findings: (1) for any fixed $S$, RE(S) enjoys global convergence to the optimal policy as the number of rollout distribution updates $B = \\lfloor T / S \\rfloor \\rightarrow \\infty$, where $T$ denotes the number of gradient steps; (2) we prove tight two-sided bounds showing that the suboptimality gap of RE(S) achieves an asymptotic $\\Theta(1 / T)$ convergence rate, while $S$ only affects the length of a burn-in phase; (3) when initialized at a weak policy with a small optimal-action probability, RE(1) gets trapped around suboptimal policies for a long period, whereas RE(S) with a suitable $S$ avoids the detour and achieves significantly faster convergence to the global optimum, highlighting the benefits of off-policyness in this case.",
+        "canonical_id": "arXiv:2609.36945",
+        "arxiv_id": "2609.36945",
+        "authors": [
+          "Zhi-Wei Wang",
+          "Yan-Xi Chen",
+          "Ya-Liang Li",
+          "Bo-Lin Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36938",
+      "identity_tokens": [
+        "id:arXiv:2609.36938",
+        "title:efficient agentic llm serving over ssdbased sparse kv storage",
+        "url:https://arxiv.org/abs/2609.36938"
+      ],
+      "record": {
+        "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+        "source_url": "https://arxiv.org/abs/2609.36938",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+        "canonical_id": "arXiv:2609.36938",
+        "arxiv_id": "2609.36938",
+        "authors": [
+          "Wen-Hao He",
+          "Ping Zhang",
+          "Xiao-He Hu",
+          "Chu-Tian Wang",
+          "Jin-Long Hou",
+          "Yuan Cheng",
+          "Peng Sun",
+          "Fang-Cheng Fu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36722",
+      "identity_tokens": [
+        "id:arXiv:2609.36722",
+        "title:attuner recomputationfree kv cache reuse via queryside adaptation",
+        "url:https://arxiv.org/abs/2609.36722"
+      ],
+      "record": {
+        "title": "ATTUNER: Recomputation-Free KV Cache Reuse via Query-Side Adaptation",
+        "source_url": "https://arxiv.org/abs/2609.36722",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+        "canonical_id": "arXiv:2609.36722",
+        "arxiv_id": "2609.36722",
+        "authors": [
+          "Xing-Hao Chen",
+          "Jun-Nan Dong",
+          "Cai Ke",
+          "Chak Tou Leong",
+          "Hao-Cheng Sun",
+          "Ke-Yu Chen",
+          "Si-Yu An",
+          "Rui-Zhi Qiao",
+          "Xing Sun",
+          "Wen-Jie Li",
+          "Xiao-Yu Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37304",
+      "identity_tokens": [
+        "id:arXiv:2609.37304",
+        "title:metactrl your large language models can reason better and more concisely with a metacognitive controller",
+        "url:https://arxiv.org/abs/2609.37304"
+      ],
+      "record": {
+        "title": "MetaCtrl: Your Large Language Models Can Reason Better and More Concisely with a Metacognitive Controller",
+        "source_url": "https://arxiv.org/abs/2609.37304",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large reasoning models improve performance on challenging problems by allocating additional computation before answering, but longer reasoning does not always lead to better results and can introduce substantial redundant reasoning on simple problems. Conversely, aggressively shortening reasoning can degrade performance on difficult ones. Effective reasoning therefore requires dynamically deciding when additional computation is useful based on the reasoner's capabilities and evolving solution state. Existing approaches often rely on predefined budgets or intervention rules, retrain the target reasoner, or require additional supervision. We introduce MetaCtrl, a lightweight controller that adaptively regulates a frozen reasoner without predefined token budgets or reasoner retraining. We formulate reasoning regulation as a sequential metacognitive control problem: MetaCtrl observes the evolving reasoning trace and decides whether to continue, simplify, skip redundant steps, or conclude reasoning. It is trained directly with reinforcement learning using a reward that prioritizes correctness while favoring shorter trajectories among correct solutions, requiring neither supervised intervention trajectories nor problem-specific budgets. Across seven benchmarks spanning mathematics, science, and code, MetaCtrl consistently improves the accuracy of LRMs while reducing their reasoning length. On DeepSeek-R1-Distill-Qwen-7B, it improves average accuracy by 4.7 points while reducing generation length by 53.3%. Without further training, the same controller transfers to an unseen reasoner (e.g., Qwen3-14B), improving average accuracy by 2.9 points and reducing generation length by 50.3%. These results establish MetaCtrl as a plug-and-play controller for improving reasoning accuracy while substantially reducing inference-time generation. The code is available at https://github.com/binbin2xs/MetaCtrl.",
+        "canonical_id": "arXiv:2609.37304",
+        "arxiv_id": "2609.37304",
+        "authors": [
+          "Zhi-Bin Wen",
+          "Tao Han",
+          "Lei Bai",
+          "Can Li",
+          "Yang Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38008",
+      "identity_tokens": [
+        "id:arXiv:2609.38008",
+        "title:hybridcua learning to orchestrate gui and cli for computeruse agents",
+        "url:https://arxiv.org/abs/2609.38008"
+      ],
+      "record": {
+        "title": "HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents",
+        "source_url": "https://arxiv.org/abs/2609.38008",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Computer use agents (CUAs) have demonstrated strong capabilities in completing digital tasks. However, existing CUAs either rely solely on graphical user interface (GUI) interactions, which are often inefficient and error prone, or augment GUI interactions with application specific APIs or tools, which require substantial engineering effort and are difficult to scale across applications. We argue that the next generation of CUAs should combine GUI interactions with the command line interface (CLI), leveraging the generality of the GUI and the efficiency of shell commands. A critical challenge, however, is that current models do not know when or how to use the CLI during task execution. To address this challenge, we develop a data construction pipeline that produces three types of trajectories: GUI only, CLI only, and interleaved GUI and CLI trajectories. This pipeline results in HybridCUA-8K, containing 5K hybrid trajectories and 3K verified RLVR tasks. Building on these data, we propose a training framework with two stages: supervised fine tuning on the constructed trajectories, followed by reinforcement learning with our CLI aware rewards that encourages agents to use the CLI selectively and reliably. Experiments show that HybridCUA-9B achieves 53.6% accuracy on OSWorld, improving over the base model by 14.8 percentage points, and improves performance on WindowsAgentArena by 4.0 percentage points. These results demonstrate the effectiveness and cross platform generalizability of the hybrid GUI and CLI paradigm for computer use agents.",
+        "canonical_id": "arXiv:2609.38008",
+        "arxiv_id": "2609.38008",
+        "authors": [
+          "Tong-I Chen",
+          "Jun-Bo Niu",
+          "Zhengxi Lu",
+          "Niu Lian",
+          "Fei Tang",
+          "Yu-Chen Yan",
+          "Yi-Ke Hong",
+          "Yong Du",
+          "Yi-Zhou Liu",
+          "Bo-Fan Chen",
+          "Yong-Liang Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38121",
+      "identity_tokens": [
+        "id:arXiv:2609.38121",
+        "title:wushkv kv cache quantization with dataadaptive transforms",
+        "url:https://arxiv.org/abs/2609.38121"
+      ],
+      "record": {
+        "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+        "source_url": "https://arxiv.org/abs/2609.38121",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+        "canonical_id": "arXiv:2609.38121",
+        "arxiv_id": "2609.38121",
+        "authors": [
+          "Jia-Le Chen",
+          "Vage Egiazarian",
+          "Eldar Kurtic",
+          "T. Hoefler",
+          "Dan Alistarh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37828",
+      "identity_tokens": [
+        "id:arXiv:2609.37828",
+        "title:joint effects of gpu server topology parallelism and congestion control on moe inference a controlled simulation study",
+        "url:https://arxiv.org/abs/2609.37828"
+      ],
+      "record": {
+        "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
+        "source_url": "https://arxiv.org/abs/2609.37828",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Mixture-of-experts (MoE) models expand capacity via sparse activation, but inference across GPUs introduces tensor-parallel (TP) collectives and expert-parallel (EP) dispatch and combine operations. Completion time depends not just on communication volume but on how logical groups map onto intra-server interconnects, GPU--NIC connections, and the inter-node network. Using ASTRA-sim with the NS-3 discrete-event backend, we build a controlled matrix of 32 GPU ranks with data and pipeline parallelism fixed at one. Workloads are fixed-length 4096-token prefill-like synthetic Chakra traces from four MoE configurations. Experiments cover six server topologies, four TP/EP partitions, two TP collective algorithms, and four network/congestion-control modes, yielding 768 deterministic simulations. In the 144-configuration feedback-enabled subset per model, exposed communication accounts for 89.9%--95.8% of mean completion time. TP16EP2 requires 3.68--4.35x the mean completion time of TP2EP16. With fixed rank mapping, ASTRA-sim Double Binary Tree (DBT) incurs 28.3%--83.2% more time than Ring. InfiniBand-like High Precision Congestion Control (HPCC) is ~0.9% lower than HPCC over RDMA over Converged Ethernet (RoCE), whereas RoCE with Data Center Quantized Congestion Notification (DCQCN) is 23.8%--35.7% slower than RoCE HPCC. Topology effects are conditional: Topology~6 leads at low TP degrees but loses its advantage at high TP degrees, and additional GPUs or NICs help only when rank mapping balances traffic across injection paths. Under uniform 32-way sharding, the largest checkpoint-weight shard is ~48.75 GB per rank, so all configurations meet a 64 GB per-accelerator weight-residency criterion. Within the evaluated workload and simulator semantics, server topology, parallelism, collective implementation, and congestion control jointly determine exposed communication and completion time.",
+        "canonical_id": "arXiv:2609.37828",
+        "arxiv_id": "2609.37828",
+        "authors": [
+          "Kai-Kai Yuan",
+          "Rui Xi",
+          "Yu Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37626",
+      "identity_tokens": [
+        "id:arXiv:2609.37626",
+        "title:splash switching parallel layouts of attention with seamless handoff for llm serving",
+        "url:https://arxiv.org/abs/2609.37626"
+      ],
+      "record": {
+        "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37626",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+        "canonical_id": "arXiv:2609.37626",
+        "arxiv_id": "2609.37626",
+        "authors": [
+          "Chuan Liu",
+          "Shuo-Ming Zhang",
+          "Zhi-Cheng Li",
+          "Qian-Qi Sun",
+          "Rui-Yuan Xu",
+          "Qiu-Chun Yu",
+          "Xi-Yu Shi",
+          "Hui-Min Cui",
+          "Jia-Cheng Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37532",
+      "identity_tokens": [
+        "id:arXiv:2609.37532",
+        "title:dscale scaling blockdiffusion speculative decoding with adaptive verification",
+        "url:https://arxiv.org/abs/2609.37532"
+      ],
+      "record": {
+        "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+        "source_url": "https://arxiv.org/abs/2609.37532",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Growing large language model applications demand efficient inference. At high concurrency, block-diffusion speculative decoding suffers from verification padding, rejected candidates, and incompatibility between variable prefixes and fixed-shape graphs. Uniform truncation sacrifices acceptable tokens. We present DScale, preserving drafter architecture, weights, and full draft length. A separate 112K-parameter predictor requires neither confidence calibration nor hardware speed-curve preparation. Path-aware tiles reduce padding. Dynamic verify-length (DVL) allocation packs scored prefixes into half the native verification capacity. Fixed-address workspaces propagate changing boundaries through verification and acceptance while reusing captured graphs. On A100-40GB with tensor parallelism 1, Qwen3-8B and Qwen3-4B cover four datasets and concurrency 8-32, reusing each target's frozen predictor. Geometric-mean throughput gains across these configurations are respectively 43.9% and 48.8% over DFlash, 22.2% and 37.7% over DSpark, and 24.4% and 32.0% over Domino, with lower request latency. Cumulative ablations show that adding the three mechanisms successively increases geometric-mean throughput, while budget adjustment improves accepted-token retention. GPU profiling shows that complete decode-step time on GSM8K decreases by 30.8-52.5% relative to DFlash",
+        "canonical_id": "arXiv:2609.37532",
+        "arxiv_id": "2609.37532",
+        "authors": [
+          "Rong-Jian Chen",
+          "Min-Xian Xu",
+          "Zheng-Xin Fang",
+          "Ke-Jiang Ye",
+          "Cheng-Zhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37241",
+      "identity_tokens": [
+        "id:arXiv:2609.37241",
+        "title:trident unifying guarded dispatch and host execution for pytorch triton workloads",
+        "url:https://arxiv.org/abs/2609.37241"
+      ],
+      "record": {
+        "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+        "source_url": "https://arxiv.org/abs/2609.37241",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "User-written Triton kernels enable high-performance GPU computation within PyTorch, but their end-to-end latency can remain dominated by host-side orchestration, especially when device execution is short. Although torch.compile can generate native host wrappers for captured graphs, each invocation still passes through runtime-managed specialization lookup, guard evaluation, and preparation before reaching the wrapper. We present Trident, a compiler backend that removes this recurring overhead from the specialization cache-hit path. Trident introduces the Specialization Cache Module (SCM), which compiles guarded specialization selection, argument and execution-environment preparation, and host execution for multiple specializations into a single executable module. An invocation enters the SCM once, remains in compiled code when a specialization matches, and returns to Python only when a new specialization must be compiled. Built on Torch-MLIR, Trident lowers guards and host-side orchestration to native code while retaining calls to optimized runtime implementations of supported ATen operators. Our evalu- ation on two LLMs shows that Trident achieves up to a 1.47x speedup in model-level end-to-end latency over eager execution and up to 1.68x over torch.compile.",
+        "canonical_id": "arXiv:2609.37241",
+        "arxiv_id": "2609.37241",
+        "authors": [
+          "Jin-Jie Liu",
+          "Xiao-Yan Liu",
+          "Shu-Han Zhang",
+          "Wen-Jian Sun",
+          "Rui-Lin Yang",
+          "Chun-Lei Men",
+          "Yong-Hua Lin",
+          "Shao-Hua Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37538",
+      "identity_tokens": [
+        "id:arXiv:2609.37538",
+        "title:avsg accelerated vectorized sparse gather for efficient kv cache offload in sparseattention llm serving",
+        "url:https://arxiv.org/abs/2609.37538"
+      ],
+      "record": {
+        "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37538",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+        "canonical_id": "arXiv:2609.37538",
+        "arxiv_id": "2609.37538",
+        "authors": [
+          "Wen-Wei Kuang",
+          "Xiang-Yu Wang",
+          "Chong Wu",
+          "Jun Wang",
+          "Wei-Jie Zhang",
+          "Brian K. Chen",
+          "Long Lan",
+          "Ken Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6899b79f887134ef25141d197ca45b47a5356cbbbcb31d590a5973c2e0da56f1",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
