@@ -68,6 +68,24 @@
 
 ## 最新更新
 
+### 2026-10-02
+
+#### TensorRT-LLM
+
+- **v1.3.0rc29 — released 2026-09-29 UTC / pre-release**
+
+  MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8・FP4 MLA・DSpark groupへ拡張。DeepSeek V4向けNVFP4 MLA residual、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combine、MLA context FP8 Q量子化のBMM epilogue fusion、Ray orchestrator経由MNNVL all-reduceも追加した。一方、AutoDeploy統合と公開entry pointは削除されたbreaking changeを含む。正式版前のRCとして扱う。
+
+  一次資料: https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29
+
+#### Ollama
+
+- **v0.35.0 — released 2026-09-28 UTC**
+
+  `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。
+
+  一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0
+
 ### 2026-09-23
 
 #### vLLM

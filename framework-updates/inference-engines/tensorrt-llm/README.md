@@ -95,6 +95,15 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 [release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28)
 
+### 2026-09-29 — v1.3.0rc29（pre-release）
+
+- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。
+- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。
+- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。
+- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)
+
 ## 読み方の注意
 
 release noteには比較可能なend-to-end benchmarkが少なく、上記は「機能が入ったこと」と「内部pathが変わったこと」を中心に記録している。特にv1.3.0 RC群は正式版前なので、APIや既定値がstable releaseまでに変わる可能性がある。
