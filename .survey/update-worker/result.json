@@ -1,14 +1,6 @@
 {
   "schema_version": 1,
-  "ok": true,
-  "attempt_id": "update-20261002-fix-framework-index-tracking",
-  "kind": "framework_llm_update",
-  "updated_paths": [
-    "framework-updates/README.md"
-  ],
-  "created_paths": [],
-  "updated_existing_paths": [
-    "framework-updates/README.md"
-  ],
-  "summary": "framework indexのvLLM-Omni / TensorRT Edge-LLM表記を修正し、フレームワーク別サマリーにも追跡対象として追加。"
+  "ok": false,
+  "attempt_id": "library-import-maint-20261002T0852-a0287cda",
+  "error": "ValueError: insert_after_once.text must be a string for framework-updates/README.md"
 }
