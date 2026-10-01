@@ -87,6 +87,14 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 [release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc25)
 
+### 2026-09-23 — v1.3.0rc28（pre-release）
+
+- **KV Cache Manager V2への移行継続**: 新規modelではV2を既定にし、既存modelも順次移行。V1はdeprecated予定。
+- **legacy TensorRT backend縮小**: legacy TensorRT backendのPython module / test削除やserver argument変更など、PyTorch backend中心へのarchitecture移行を継続。
+- **既知問題を伴うRC**: disaggregated serving startup、NIXL KV transfer、FlashInfer attention backendの長時間serverでのGPU memory増加、DeepSeek系SM120、低bit MoE等の既知問題が列挙されているため、stable機能とは分けて扱う。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28)
+
 ## 読み方の注意
 
 release noteには比較可能なend-to-end benchmarkが少なく、上記は「機能が入ったこと」と「内部pathが変わったこと」を中心に記録している。特にv1.3.0 RC群は正式版前なので、APIや既定値がstable releaseまでに変わる可能性がある。

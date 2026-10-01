@@ -85,6 +85,8 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
   tensor parallelism（TP）でLM Headの結果をGPU間共有するとき、複数通信を単一All-to-Allへまとめ、B200で **320 → 169 µs**。TPOT（Time Per Output Token; 出力1 tokenあたり時間）は **36.97 → 35.67 ms**。[release](https://github.com/sgl-project/sglang/releases/tag/v0.5.18)
 
+- **2026-09-18 — v0.5.20（released）**: CPU-onlyのSGLang Simulatorを追加し、実scheduler / radix cache / hierarchical cacheを使いながらmodel forwardのみlatency predictorへ置換。実測traceに対しTTFTを多くのtraceで約6%以内、最長32K〜128Kでは最大10%程度の誤差で予測する。prefill context parallelism v1を削除してstrategy-based pathへ統合し、ROCm model loadingも改善。GLM-5.2 TP4 / 4×MI355Xでmodel load 505.7秒→40.4秒、DeepSeek-V4 Blackwell kernelではTRT-LLM attention kernelがFlashMLA比でkernel-level prefill約1.2倍、decode約1.45倍。CUDA 12系wheel/imageはv0.5.19で終了。[release](https://github.com/sgl-project/sglang/releases/tag/v0.5.20)
+
 ### 用語メモ
 
 - **投機的デコード（speculative decoding）**: 小さいdraft modelやMTP headで将来token候補を先に作り、大きな本体modelでまとめて検証することで、本体model呼び出し回数を減らす方式。

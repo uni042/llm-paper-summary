@@ -59,6 +59,18 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
   同じpromptでretryした場合、最初のtokenからKVを作り直さず、保存済み地点から再開できる。coding agentやtool loopのように同じ長いcontextを再送しやすいworkloadで再計算を減らす。[release](https://github.com/ollama/ollama/releases/tag/v0.33.0)
 
+### 2026-09-23 — v0.34.4（released）
+
+- **Qwen 3.8のApple Silicon prompt processing高速化など**: Qwen 3.8のprompt processing改善、thinking modelのstructured outputのsingle-pass化、Gemma 4の画像ごとの解像度選択、llama.cpp / MLX / XGrammar更新を含む。[release](https://github.com/ollama/ollama/releases/tag/v0.34.4)
+
+### 2026-09-28 — v0.35.0（released）
+
+- **decision model API**: `/v1/systemone` でchoice / noul / score形式のdecision modelを扱えるようになり、classificationやmodel routing等をOllama API内で実行できる。Settingsのmodel discovery待ちによるblockやMLX model download stallの修正も含む。[release](https://github.com/ollama/ollama/releases/tag/v0.35.0)
+
+### 2026-09-25 — v0.40.0-rc0（pre-release）
+
+- **Apple SiliconのMLX既定backend変更を試験**: MLX runtime対応architectureを自動的にMLXで実行する方針へ変更するRC。公式release noteではQwen 3.8を例示。stable機能ではなくpre-releaseとして扱う。[release](https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0)
+
 ### 用語メモ
 
 - **MTP（Multi-Token Prediction; 複数token予測）**: 現在位置から次の1 tokenだけでなく複数token先まで候補を予測するhead / 学習方式。

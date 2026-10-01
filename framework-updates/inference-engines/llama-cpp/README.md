@@ -25,6 +25,10 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
+## 2026-09-28
+
+- **b11238 — padding処理の統合**: `ggml_pad_ext` のleft padding対応を利用し、Parakeet、LFM2-Audio、Granite Speech、Gemma 4 audio encoderの従来のright-pad + rollを単一operationへ置換。DFlash2でも先頭zero block連結を同operationへ統合し、paddingだけを読むtapをskipする。大規模end-to-end benchmarkはrelease noteにないため、速度倍率は記録しない。[release b11238](https://github.com/ggml-org/llama.cpp/releases/tag/b11238)
+
 ## 2026-09-11
 
 - **ROCm gfx1201向けFlash Attentionを長contextで再調整 — merged**: Radeon AI PRO R9700 / Qwen3.8 27B IQ4_XSで、150k-token context付近の512-token prefillが **164.42→399.01 tok/s（約2.43倍）**、40k-token付近では **426.36→639.46 tok/s（約1.50倍）**。長contextでのkernel選択とhead-size 256周辺を調整した。[PR #28102](https://github.com/ggml-org/llama.cpp/pull/28102)
