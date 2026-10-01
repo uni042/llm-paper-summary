@@ -87,8 +87,8 @@ Scheduled workerは、無駄な再読解を避けるためGitHub/Libraryの既�
 
 600件の閾値から明らかに離れている場合は厳密全件照合をしない。
 
-- \`E > 500\` → Research
-- \`E <= 500\` → Discovery
+- \`E > 600\` → Research
+- \`E <= 600\` → Discovery
 - 概算でも境界が曖昧ならDiscovery
 
 run中に在庫が変化してもモードは固定する。
