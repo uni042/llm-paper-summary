@@ -23,7 +23,7 @@
 
 | 実行主体 | GitHub | Library | 主責務 |
 |---|---|---|---|
-| \`scheduled-chat-00\` / \`scheduled-chat-30\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
+| \`scheduled-chat-00\` / \`scheduled-chat-30\` / \`scheduled-chat-45\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
 | Survey GitHub Import | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、転送確認後にLibrary原本を整理 |
 | GitHub import inbox processor | Actions内read/write | なし | 最新mainでidentity解決、Research配置、Discovery precheck/relevance/submission、GitHub側掃除 |
 | 通常チャット | 原則read-only | read/write | 明示された監査・回収・保守 |
@@ -42,6 +42,14 @@ Scheduled workerはGitHubへのclaim、reservation、submission、result、hando
 - 通常 \`scheduled_slot=30\`
 - worklist: \`.survey/work-queue/worker-worklist-30.json\`
 - 08:30 JSTはmaintenance専用run
+
+### :45
+- \`worker_id=scheduled-chat-45\`
+- \`scheduled_slot=45\`
+- worklist: \`.survey/work-queue/worker-worklist-45.json\`
+- :00 と同じ通常Research / Discoveryフローを使う。maintenance専用分岐は持たない
+
+3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
 各通常runは最新main HEADを取得し、同じHEADから本書、自分のworklist、必要な系統READMEを読む。Research本文作成時だけ最新templateとLibraryの品質ガイドを読む。
 
