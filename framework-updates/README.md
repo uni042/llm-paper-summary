@@ -16,9 +16,11 @@
 | Framework | 現在できること | 最近の更新が強化している部分 |
 |---|---|---|
 | [llama.cpp](inference-engines/llama-cpp/) | CPU / GPUをまたぐローカル推論、量子化、複数GPU分割、KV cache管理、投機的デコード、部分的weight offload | MoE kernel fusion、CUDA Graph、CPU offloadしたexpertのVRAM cache、multi-GPU同時実行 |
-| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |
+| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |
+| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |
 | [SGLang](inference-engines/sglang/) | prefix cache、continuous batching、P/D分離、投機的デコード、paged attention、TP/PP/EP/DP、量子化、multi-LoRA、RL rollout | 階層cache、MTP、sparse attention、MoE負荷分散、CUDA Graph、通信同期削減 |
-| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |
+| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |
+| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |
 | [LMDeploy](inference-engines/lmdeploy/) | GPU serving、prefix / object cache、paged attention、MoE、P/D分離、外部KV connector | object cache再設計、SSM state再利用、DeepEPv2、Mooncake接続、低精度GEMM |
 | [LightLLM](inference-engines/lightllm/) | GPU→CPU→diskの多段cache、P/D分離、MoE、投機的デコード、RL rollout向けonline weight更新 | Hybrid Radix Cache、量子化KV、NIXL、disk cache、MoE fusion |
 | [ExLlama](inference-engines/exllama/) | 低bit GPU推論、MoE expert / KVのCPU offload、投機的デコード、複数GPU | expert単位の動的offload、CPU KV tier、draft自動調整、VRAM slab allocator |
@@ -347,8 +349,10 @@
 
 - [llama.cpp](inference-engines/llama-cpp/) — MoE kernel fusion、DSpark投機的デコード、CUDA Graph、dense FFN CPU offload、CPUへ退避したMoE expert向けGPU LRU cache（Draft）、Vulkan TQ1_0、RMSNorm fusion
 - [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion
+- [vLLM-Omni](inference-engines/vllm-omni/) — omni-modality multi-stage serving、full-duplex、cross-stage KV / payload transfer、streaming audio / video、diffusion serving
 - [SGLang](inference-engines/sglang/) — Spec V2、階層cache（HiCache）、MTP、sparse attention、MoE負荷分散、CUDA Graph
 - [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）
+- [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) — edge / physical-AI向けC++ runtime、in-flight batching、guided decoding、DFlash2、direct engine build
 - [KTransformers](inference-engines/ktransformers/) — CPU/GPU異種実行、INT4 CPU expert、full-parameter / LoRA SFT、FP8 LoRA
 - [Hugging Face Transformers](inference-engines/hugging-face-transformers/) — StaticCache prefill高速化、ensemble speculative decoding
 - [Accelerate](inference-engines/accelerate/) — FSDP2 FP8、regional compilation、CPU offload

@@ -1,19 +1,14 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20261002-track-vllm-omni-tensorrt-edge-llm",
+  "attempt_id": "update-20261002-fix-framework-index-tracking",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/inference-engines/tensorrt-edge-llm/README.md"
+    "framework-updates/README.md"
   ],
-  "created_paths": [
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/inference-engines/tensorrt-edge-llm/README.md"
-  ],
+  "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md"
   ],
-  "summary": "TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加し、framework indexと各専用ページを作成。"
+  "summary": "framework indexのvLLM-Omni / TensorRT Edge-LLM表記を修正し、フレームワーク別サマリーにも追跡対象として追加。"
 }
