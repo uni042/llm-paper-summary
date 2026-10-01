@@ -10,7 +10,7 @@ Scheduled Chat / Workのワーカーが実行判断のために読む**唯一の
 - GitHubへの反映はSurvey GitHub ImportのWorkタスクが担当します。
 - Scheduled workerはGitHubのclaim / reservation / submission / control-file等を書きません。
 - WorkタスクはLibrary成果を最新mainへ正規化して反映し、GitHubから再取得して確認できた後だけ対応Library原本を整理します。
-- モード判定はLibrary未反映分を補正した `E = G + D - R` を使い、`E > 500` ならResearch、`E <= 500` ならDiscoveryです。
+- モード判定はLibrary未反映分を補正した `E = G + D - R` を使い、`E > 600` ならResearch、`E <= 600` ならDiscoveryです。
 - Researchは10件、Discoveryは新規canonical identity 40件を現在の標準ノルマとします。
 
 Library側の詳細HOWは `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` とSurvey GitHub Import用 `github-import-procedure.md` を読みます。本書とLibrary手順が矛盾する場合は最新mainの `worker-router.md` を優先し、Library側手順を後で整合させます。
