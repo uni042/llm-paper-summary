@@ -85,7 +85,7 @@ Scheduled workerは、無駄な再読解を避けるためGitHub/Libraryの既�
 - \`R\`: Libraryに完成Researchがあり、G側にまだ未処理候補として残る件数
 - \`E = G + D - R\`
 
-500件の閾値から明らかに離れている場合は厳密全件照合をしない。
+600件の閾値から明らかに離れている場合は厳密全件照合をしない。
 
 - \`E > 500\` → Research
 - \`E <= 500\` → Discovery
