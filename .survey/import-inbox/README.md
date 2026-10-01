@@ -83,3 +83,29 @@ are kept under \`results/\` for auditability.
 
 Do not put hand-written precheck results, queue results, Research jobs, claims,
 or relevance ledgers into this inbox.
+
+## Maintenance artifacts from the same Library uploader
+
+The same `Survey GitHub Import` run also collects completed 08:30 LLM/framework
+maintenance artifacts from ChatGPT Library, but they **do not enter this inbox**.
+Research and Discovery keep using the paths documented above. Maintenance updates
+use the existing bounded update lane:
+
+1. read `/LLM-paper-summary-library-first/maintenance/llm-framework-update-*.md`
+   oldest `checked_at` first;
+2. re-read the current `framework-updates/**` / `llm-releases/**` target blobs;
+3. construct one `kind: framework_llm_update` payload at
+   `.survey/update-worker/update-payload.json` using only targets allowed by
+   `.survey/scripts/update_worker.py`;
+4. write/update `.survey/update-worker/update-inbox.json` **after** the payload
+   with the same unique `attempt_id`; this push triggers `.github/workflows/update-helper.yml`;
+5. confirm `.survey/update-worker/result.json` has the same `attempt_id` and
+   `ok=true`, then re-fetch the updated target files from current main;
+6. only after those checks may the uploader delete that maintenance Library source.
+
+Maintenance artifacts are processed serially because the update lane has fixed reusable
+`payload` / `inbox` / `result` paths. If an artifact was based on an older blob, the
+uploader may rebase its intended edit onto current main only when the edit remains
+unambiguous and does not overwrite unrelated changes. Already-represented changes are
+treated as a verified no-op. Ambiguous or conflicting edits remain in Library for
+manual repair; do not force them through by replacing whole files from a stale base.
