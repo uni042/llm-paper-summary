@@ -1,0 +1,928 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-fea74be739e1e76a3320",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-fea74be739e1e76a3320",
+  "axis": "forward citations of H2O KV cache eviction and efficient inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-01T11:54:55.031281+00:00",
+  "preload_id": "preload-fea74be739e1e76a3320",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Scaling attention parameters can improve language model quality, but retaining full token histories makes additional heads costly at long contexts. Furthermore, since attention retrieves and combines contextual information, parameter scaling should also support longer contexts. We therefore ask whether attention parameter scaling can directly enable efficient and effective context scaling. We introduce NAMOH, an architecture-native sparse attention mechanism that activates $K$ of $H$ heads per token. Each head retains only its assigned tokens and performs causal attention within this subsequence. Head selection thus jointly determines active parameters and available context without scanning the full history. Under balanced assignments, increasing $H$ at fixed $K$ shortens head histories and reduces per-token key-value (KV) access without increasing total KV storage. We further support head-relative rotary position embeddings to shorten positional spans within routed subsequences, aiming to mitigate position-induced attention noise. Experiments show that NAMOH can outperform fully activated models with the same total parameters, while enabling more efficient long-context inference than smaller dense models with matched active parameter counts. It remains compatible with GQA and existing sparse attention mechanisms. We hope this work offers a new path for scaling attention, with parameter scaling directly enabling context scaling.",
+      "canonical_id": "arXiv:2609.38832",
+      "arxiv_id": "2609.38832",
+      "authors": [
+        "Zi-Zhuo Fu",
+        "Run-Sheng Wang",
+        "Meng Li"
+      ]
+    },
+    {
+      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+      "source_url": "https://arxiv.org/abs/2609.36835",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Long-context large language model inference is bottlenecked by KV caches that grow linearly with sequence length. This burden is especially severe for long, reusable context prefixes, whose cache must serve many downstream queries. Reconstruction-based methods such as Attention Matching achieve strong downstream task performance with compact KV caches. However, iterative anchor search dominates the compaction cost of OMP-based Attention Matching. This motivates our selective amortization principle of learning a reusable anchor-selection policy across contexts while retaining context-specific reconstruction. In this work, we propose ARC-KV, a novel reconstruction-based KV cache compaction method that follows this principle. To this end, we first train a value-aware indexer to select real-key anchors in a single scoring pass. ARC-KV then applies convex-hull-constrained key merging and fits an attention-mass bias and compact values against the full cache. At inference time, ARC-KV builds the compact cache once per context using the frozen indexer and reuses it for all subsequent queries. Extensive experiments demonstrate that ARC-KV outperforms reported compaction methods in most settings across QuALITY, RULER, and LongBench on Llama-3.1-8B-Instruct. In particular, at 10% KV retention on QuALITY, ARC-KV improves accuracy from 0.6409 to 0.6474 over Attention Matching while reducing compaction time by a factor of 25.73, from 959.8 s to 37.3 s.",
+      "canonical_id": "arXiv:2609.36835",
+      "arxiv_id": "2609.36835",
+      "authors": [
+        "Zhe-Yu Shen",
+        "Guan-Hua Wang",
+        "De-Zhan Tu",
+        "Meng-Chi Zhang",
+        "Yan-Jiao Li",
+        "Adnan Aziz",
+        "Chun-Qiang Tang",
+        "Ang Li"
+      ]
+    },
+    {
+      "title": "KV-Kaizen: Learning Context-Adaptive Cache Compression Choices",
+      "source_url": "https://arxiv.org/abs/2609.37988",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "As the context size of text processed with an LLM grows, the size of KV caches can outstrip the memory allocated for the original model weights. This impacts LLM throughput negatively, since decoding is memory-bound and decode cost grows with cache size. Recent work alleviates this bottleneck by discarding the least relevant tokens. Eviction introduces a tension, since a one-off decision to discard content may prove detrimental later. Instead, we focus on alternative choices that can lead to cache compression without evicting tokens. We achieve this by learning a selector that is able to produce, based on context, a per-layer cache configuration towards an overall compression budget. The selector operates along three axes: sharing one cache across layers (depth), caching at fewer bits (precision), or truncating the low-rank latent cache representations (rank). We call the resulting method KV-Kaizen, for the many small per-layer choices it compounds. We observe that these interventions taken independently and uniformly over all layers limit achievable compression because they degrade accuracy. Crucially, composing them locally and adaptively to the context can instead preserve accuracy while achieving large memory savings. At inference, the selector runs once, before pre-fill. In evaluations on instruction following and reasoning tasks, our selectors reach the Pareto frontier of accuracy against cache size, against learning-free and post-hoc baselines. On long-context tasks, KV-Kaizen improves on eviction and can be composed with it, reaching a 32x smaller decode-time cache on a 14B model while preserving accuracy. A 4x cache size reduction incurs no accuracy degradation from 7B parameters up, and a compressed model is more accurate than a smaller uncompressed one with the same cache size. Together, these findings support pre-training large models and compressing them only afterwards.",
+      "canonical_id": "arXiv:2609.37988",
+      "arxiv_id": "2609.37988",
+      "authors": [
+        "João Monteiro",
+        "Louis Béthune",
+        "A. Filippova",
+        "Sonia Laguna",
+        "David Grangier",
+        "Marco Cuturi"
+      ]
+    },
+    {
+      "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.37590",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "LLM agents accumulate interaction histories that grow linearly with task length, causing quadratic inference cost scaling and performance degradation from attention dilution. Existing context-compression methods learn what to discard offline: by contrastively optimizing guidelines, distilling compressors, or training compression policies. This incurs a substantial cost. Further, the compression policy is learned a priori and is not dynamically conditioned on the evolving test-time trajectories. In this paper we ask a complementary question: Which past interactions causally shape the agent's future decisions? We recast context compression as a causal decision preservation problem over discrete interaction units and introduce FOCUS, a training-free context compression framework that operates entirely at test time. Our method requires no offline data collection or fine-tuning, and is architecture-agnostic, attaching to any closed-API frontier model as a modular compression layer. We evaluate FOCUS on diverse agentic benchmarks including API and tool-calling, QA, web domain and multi-turn dialogue. Our method establishes new state of the art performance, cutting peak context by up to 48% and dependency by 73% while improving task success by up to 8.9 percentage points over uncompressed execution.",
+      "canonical_id": "arXiv:2609.37590",
+      "arxiv_id": "2609.37590",
+      "authors": [
+        "Shantanu Dixit",
+        "Anson Bastos",
+        "Xu-Chao Zhang",
+        "Chetan Bansal",
+        "Saravan Rajmohan"
+      ]
+    },
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37626",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+      "canonical_id": "arXiv:2609.37626",
+      "arxiv_id": "2609.37626",
+      "authors": [
+        "Chuan Liu",
+        "Shuo-Ming Zhang",
+        "Zhi-Cheng Li",
+        "Qian-Qi Sun",
+        "Rui-Yuan Xu",
+        "Qiu-Chun Yu",
+        "Xi-Yu Shi",
+        "Hui-Min Cui",
+        "Jia-Cheng Zhao"
+      ]
+    },
+    {
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38169",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+      "canonical_id": "arXiv:2609.38169",
+      "arxiv_id": "2609.38169",
+      "authors": [
+        "Bing-Chen Yao",
+        "Hao-Bo Xu",
+        "Hao-Kun Lin",
+        "Yi-Chen Wu",
+        "Ziyu Guo",
+        "Ren-Rui Zhang",
+        "Zhi-Chao Lu",
+        "Zhe-Nan Sun",
+        "Ying Wei"
+      ]
+    },
+    {
+      "title": "Selecting The Most Informative Tokens in Natural Language Autoencoders",
+      "source_url": "https://arxiv.org/abs/2609.37040",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Natural language autoencoders translate a language model's internal activations into readable explanations. Explaining every token position is costly. Which positions should an auditor inspect to understand a potential threat? We study this question across $4.7$ million explanations on prompt injection and concealment. We compare signals from model computation with a ranker trained only on chat structure. Chat structure usually selects more relevant explanations than the computational signals, without requiring a model forward pass for position selection. On three of four datasets, explaining just $5\\%$ of positions retains nearly all of the success rate from explaining every position, where success means obtaining an explanation about the threat. The benefit varies with the audit task. We also show that pretrained verbalizers recover words that models have learned to conceal through fine-tuning, without additional verbalizer training. These results identify where auditors can concentrate explanation generation and show that useful explanations can extend beyond the model a verbalizer was trained to describe.",
+      "canonical_id": "arXiv:2609.37040",
+      "arxiv_id": "2609.37040",
+      "authors": [
+        "Federico Torrielli",
+        "Gianluca Barmina",
+        "Andrea Blasi Núñez",
+        "Amon Rapp",
+        "Luigi Di Caro",
+        "Peter Schneider-Kamp",
+        "Lukas Galke Poech"
+      ]
+    },
+    {
+      "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+      "source_url": "https://arxiv.org/abs/2609.35621",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Serving long documents to a Large Language Model (LLM) repeatedly is expensive: computations grow with context length, and the memory footprint of the key-value (KV) cache balloons. Compressed KV (CKV) representations aim to mimic the cache of a document and are typically computed once and for all, ahead of inference time. Methods to obtain CKVs range from drop mechanisms that reduce their number of columns, to learned approaches. Among the latter, Cartridges have emerged as a leading compression method, learning compact KV representations through distillation on relevant Q/A pairs. While existing evaluations focus primarily on whether Cartridges and other CKVs yield approximately similar responses to document-related, on-context queries, we investigate the crucial deployment question of whether they can handle off-context queries, something the native KV representation is particularly good at, thanks to the mechanics of attention. We observe a fundamental trade-off: while Cartridges perform better for on-context queries, heuristic-variants preserve better the original LLM's ability to operate off-context. We measure this through their capability to avoid context contamination in their response, retain general knowledge, and follow instructions. We propose Cartridges++, simple modifications to cartridges that retain off-context abilities at small or negligible cost. The router variant decides at inference time whether the query should use the learned long-context memory, while the data-mixing variant allocates a small fraction of training Q/As to queries outside the reference long document. Our study shows that assessing CKVs on document utility alone can mask substantial degradation in broader model capabilities, yet those issues can be fixed with benign changes to CKV inference or training.",
+      "canonical_id": "arXiv:2609.35621",
+      "arxiv_id": "2609.35621",
+      "authors": [
+        "Sonia Laguna",
+        "João Monteiro",
+        "Marco Cuturi",
+        "Pierre Ablin",
+        "Eleonora Gualdoni"
+      ]
+    },
+    {
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2609.35750",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling the LLM context many times over, hindering training throughput. To alleviate this bottleneck and enable efficient trainable compaction, we propose KV-streams, a plug-and-play strategy compatible with any compaction strategy that substantially increases throughput while showing no evidence of hindering performance. KV-streams enable scalable compaction by streaming the KV cache forward rather than flushing it after each compaction. We show that KV-streams enable three different compaction strategies, achieving a 2.6 to 5x wall-clock speedup in training. Beyond efficiency, we find that the streamed KV cache can act as a recurrent state, carrying forward information that has long since disappeared from the context. Specifically, in a controlled setting we show that, contrary to prior work, RL alone is all that is needed for this behavior to emerge. Overall, we show KV-streams to be an efficient and lightweight plug-and-play addition to any post-training pipeline.",
+      "canonical_id": "arXiv:2609.35750",
+      "arxiv_id": "2609.35750",
+      "authors": [
+        "Emiliano Penaloza",
+        "Dane Malenfant",
+        "Dheeraj Vattikonda",
+        "Roger Creus Castanyer",
+        "S. Venkatraman",
+        "Abhay Puri",
+        "Jonathan Light",
+        "Matthew J. Sargent",
+        "Augustine N. Mavor-Parker",
+        "Massimo Caccia",
+        "Lucas Caccia",
+        "Glen Berseth",
+        "Esmeralda S. Whitammer",
+        "Alessandro Sordoni",
+        "Minseon Kim",
+        "Marc-Alexandre Côté",
+        "Laurent Charlin",
+        "Guillaume Lajoie"
+      ]
+    },
+    {
+      "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+      "source_url": "https://arxiv.org/abs/2609.34212",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Mixture-of-Depths (MoD) enables conditional computation across Transformer depth by routing only a subset of tokens through selected layers, but its original one-sparse--one-dense alternation tightly couples total capacity to active capacity and limits sparse-depth scaling. We introduce X-MoD, a scalable sparse-depth architecture that decouples token sparsity from anchor stride, allowing total parameter count to grow while keeping active-equivalent capacity nearly fixed. To make deep sparse routing trainable, X-MoD combines dense anchors with variance-scaled layer-wise gating and depth-wise token balancing. To make this regime analyzable and usable, we formulate sparse-depth routing as a conditional architecture-design problem: given compute, context length, and active-equivalent backbone size, how should the routing configuration be chosen? We develop a practical scaling-law framework by fitting X-MoD relative to FLOP-matched dense baselines, yielding an interpretable law that decomposes performance into sparse-capacity gain, sparse-context correction, and anchor-stride interaction. The law predicts validation loss across routing configurations and reveals how context length, model scale, and anchor stride shape sparse-depth performance. We validate the architecture and law through pretraining sweeps, held-out scaling-law prediction, ablations, downstream evaluations, and comparisons with Dense, MoD, and representative MoE baselines.",
+      "canonical_id": "arXiv:2609.34212",
+      "arxiv_id": "2609.34212",
+      "authors": [
+        "Bo Dong",
+        "Yi-Long Fan",
+        "Teng-Yu Pan",
+        "Yi-Ke Zhang",
+        "Zhen-Yu Li",
+        "Zi-Jian Zhang",
+        "Xue-Wei Li",
+        "Mei Yu",
+        "Jian-Yong Wang"
+      ]
+    },
+    {
+      "title": "SANTA++: Sampling Attention through Representative Keys",
+      "source_url": "https://arxiv.org/abs/2609.35629",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Attention often concentrates on a small subset of tokens in the context, but which subset matters changes from one query to the next. To exploit this changing structure, we introduce SANTA++, a training-free stochastic attention method that uses representative keys for memory-efficient selection without scanning the entire key-value (KV) cache. Cached keys are organized into teams, and the query scores one representative from each team to decide which teams to sample. We compute exact attention scores within the sampled teams and reweight each team's contribution by the inverse of its inclusion probability. This importance sampling correction estimates attention over the full cache, with a sampling budget that lets us trade memory reads for accuracy. Remarkably, with 32 or 64 sampled teams, SANTA++ uses 16% to 22% of dense attention's KV reads and retains 94% to 99% of the dense-attention baseline's scores on LongBench v2 and HELMET's retrieval-augmented generation subset, and 85% to 91% on RULER, with Qwen2.5-7B-Instruct at 32K context. With 31 sampled teams, our GPU implementation delivers a $1.69\\times$ attention speedup over the dense FlashAttention baseline at 32K context. By reducing the number of cache entries read, SANTA++ in principle complements architectures with compressed KV representations, such as multi-head latent attention. Our kernels are available at: https://github.com/OPUSLab/santapp-kernel-demo.git.",
+      "canonical_id": "arXiv:2609.35629",
+      "arxiv_id": "2609.35629",
+      "authors": [
+        "Kyle Lee",
+        "Christian Z. Pratt",
+        "Ruo-Yu Fang",
+        "Heekyung Lee",
+        "Avinash Lohitsa",
+        "Ryan Modafe",
+        "K. Çamsari"
+      ]
+    },
+    {
+      "title": "LLMs are General Asynchronous Agents",
+      "source_url": "https://arxiv.org/abs/2609.35427",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Modern LLMs are increasingly capable as autonomous agents, but they follow sequential interaction cycles: read, think, reply or call tools, repeat. Many real-world use cases are not sequential: voice assistants, embodied agents, and monitoring systems receive new inputs while they think or perform another task. Modern LLMs address this with specialized architectures for voice interaction and video streams, VLAs for robot control, asynchronous tool calling for API usage, and others. In this work, we generalize from different asynchronous tasks to general asynchronous agents that can adapt to different types of concurrency. To achieve this, we develop an asynchronous LLM framework that lets users (or the agents themselves) define inference coroutines with overlapping memory states. We showcase that Qwen 3.x models are capable of asynchronous operation for streaming video understanding, videogames, and monitoring, without task-specific training.",
+      "canonical_id": "arXiv:2609.35427",
+      "arxiv_id": "2609.35427",
+      "authors": [
+        "George Yakushev",
+        "Denis Mazur",
+        "В. Д. Бартенев",
+        "V. Zhdanovskiy",
+        "Timofey Byzov",
+        "Vladimir Kaurkin",
+        "Vadim Pastushenko"
+      ]
+    },
+    {
+      "title": "When to Evict, Not What to Keep: Draft-Guided Eviction for Training-Free KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2609.33334",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Training-free KV-cache compression methods such as SnapKV, H2O, and PyramidKV evict tokens at the end of prefill, aiming to preserve the attention mass that future queries are expected to use -optimizing what to keep. We show that this objective fails in two distinct ways. (1) Compensation: restoring the evicted attention mass can recover the attention-level target without recovering task quality. (2) Selection: covering more of the true decode-query mass can hurt quality when the recovered mass is fragmented rather than concentrated in coherent spans. These failures share a common cause: eviction occurs before the queries that determine the answer trajectory exist. We propose Draft-Guided Eviction (DGE), which defers eviction until after drafting the first k=2 answer tokens using the full cache - just one decode step beyond prefill. Because the draft is generated from the answer's own prefix, no cache entries are discarded before this trajectory signal becomes available. The per-head cache budget remains unchanged, and DGE can be applied directly to SnapKV, PyramidKV, H2O, and StreamingLLM without modifying their eviction scores. Unlike extra-pass methods, DGE changes when eviction occurs rather than what cache entries are selected. Extensive experiments demonstrate that DGE outperforms prior methods at every evaluated budget on five of six instruct-tuned backbones, achieving 44.2 on LongBench, nearly matching FullKV at 44.3. The timing-only control DGE-W achieves the same score, demonstrating that the gain comes from when eviction occurs rather than what is selected - an effect we term trajectory anchoring.",
+      "canonical_id": "arXiv:2609.33334",
+      "arxiv_id": "2609.33334",
+      "authors": [
+        "Haeyong Kang",
+        "C. D. Yoo"
+      ]
+    },
+    {
+      "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
+      "source_url": "https://arxiv.org/abs/2609.33746",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "At each decoding step a language model attends over the key-value (KV) cache of every earlier token, so at long context the attention call is bounded by memory bandwidth. Sparse attention reads only a subset of keys chosen by a cheap score estimate, and most methods give the unread tokens zero weight. The output then draws on only a small fraction of the KV cache, and accuracy drops at small budgets, most on tasks that aggregate information across the context. An inverted-file product-quantization (IVF-PQ) index over the cached keys computes an approximate score for every indexed token in order to rank them; after ranking, those scores approximate the attention logits of the tokens left out. PQ-HSA (hybrid sparse-approximate attention) attends the selected tokens with their original keys and values, and the unselected tokens, the background, enter the same softmax through those scores, summed per inverted list and multiplied by the list's mean value. At 128K and a 1-2% retrieval budget, PQ-HSA is more accurate than Quest and SnapKV on Llama-3.1-8B and Qwen3-30B-A3B and stays close to full attention in macro accuracy; with the same selector, the background term raises macro accuracy on the 8B model from 0.71 to 0.83. In the same 128K setting, inside vLLM on one NVIDIA H20, the decode attention call runs 1.6x faster than the FlashAttention-3 kernel; the speedup grows with context length, and a cost model fitted on 8B to 30B models gives the context length at which it begins. A vLLM plugin runs PQ-HSA on two engine versions without changes to the engine source; code is available at https://github.com/KunmingSHAO/pqhsa_release.",
+      "canonical_id": "arXiv:2609.33746",
+      "arxiv_id": "2609.33746",
+      "authors": [
+        "Kun-Ming Shao",
+        "Jie-Run Chen",
+        "Yan-Li Wang",
+        "Ruo-Yu Wang",
+        "Hao-Li Bai",
+        "Kwang-Ting Cheng",
+        "Chi-Ying Tsui"
+      ]
+    },
+    {
+      "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.33536",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+      "canonical_id": "arXiv:2609.33536",
+      "arxiv_id": "2609.33536",
+      "authors": [
+        "Jiantong Jiang",
+        "Yue Yang",
+        "Pei-Yu Yang",
+        "Feng Liu"
+      ]
+    },
+    {
+      "title": "How Linear Attention Remembers",
+      "source_url": "https://arxiv.org/abs/2609.33093",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Linear attention replaces the growing key--value (KV) cache of standard attention with a fixed-size recurrent state, substantially reducing memory growth with context length. This efficiency, however, changes how past information is stored: many tokens must share and repeatedly update the same memory. We study how this recurrent state functions as a memory system. Using an analytical decomposition together with controlled causal interventions in pretrained GLA and GDN models, we trace how recalled information is written, retained, and later accessed. We find that fact-specific information enters recurrent memory through concentrated, content-dependent writes and is later accessed through concentrated query-time read pathways. Multiple facts can remain selectively accessible within the same state, yet their internal representations exhibit cross-fact causal coupling rather than independent KV-like storage. As memory load increases, both recall and targeted editability degrade, whereas elapsed context alone has a substantially smaller effect within the tested regime. Causal interventions on subsequent writes further show that interference is shaped by their overlap with existing memory. Finally, in hybrid architectures that combine recurrent layers with full attention, the runtime memory directly supporting recall shifts predominantly to the full-attention KV state. Together, these results reveal how fixed-size recurrent memory supports selective recall despite shared storage, while exposing the interference and capacity limits that distinguish it from token-addressable KV memory.",
+      "canonical_id": "arXiv:2609.33093",
+      "arxiv_id": "2609.33093",
+      "authors": [
+        "Kichang Lee",
+        "JaeYeon Park",
+        "Songkuk Kim",
+        "Jeonggil Ko"
+      ]
+    },
+    {
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+      "canonical_id": "arXiv:2609.32712",
+      "arxiv_id": "2609.32712",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ]
+    },
+    {
+      "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+      "source_url": "https://arxiv.org/abs/2609.32704",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+      "canonical_id": "arXiv:2609.32704",
+      "arxiv_id": "2609.32704",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ]
+    },
+    {
+      "title": "DimPO: Dimensionality Reduction for Attention using Preference Optimization",
+      "source_url": "https://arxiv.org/abs/2609.32579",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "A linear projection can reduce the dimension of query and key vectors without updating the pretrained model, but it remains unclear which training objective best preserves model behavior. We ask whether preferences over keys and attention mass on the highest-weighted keys provide a better signal than matching the full attention distribution with KL divergence, especially in long-context settings. We introduce DimPO, which combines listwise preference optimization with a lightweight top-k cross-entropy term for head-fidelity. DimPO is trained offline from the attention patterns of a frozen language model, with one map per layer, shared by the query and the keys and trained separately from the other layers. Across LLaMA3.2-3B, LLaMA3.1-8B, Qwen2.5-7B, and Qwen3-4B Instruct models, pairwise preference objectives outperform the triplet baseline and retain 98% of the original score on short-context tasks when projecting to half the dimension on the last 40% of the layers. With more projected layers or on long-context RULER, they degrade rapidly. In contrast, KL and DimPO, which use every key during training, retain about 95% of the original RULER 4k score on the 8B model when projecting up to 50% of the layers. KL-based projections remain closer to the original attention distribution and attention output, yet DimPO achieves better downstream performance. Beyond 50% of projected layers, DimPO increasingly outperforms KL on tasks including SQuAD, common-word extraction, frequent-word extraction, and variable tracking. These results suggest that under dimensionality reduction, preserving the ordering and concentration of task-relevant attention can matter more than reproducing the full attention distribution.",
+      "canonical_id": "arXiv:2609.32579",
+      "arxiv_id": "2609.32579",
+      "authors": [
+        "Vojtěch Lanz",
+        "Yu-Fei Cui",
+        "Prasanna Parthasarathi"
+      ]
+    },
+    {
+      "title": "Improving Video Sparse Attention with Fine-grained Router and Sparse Rebasing",
+      "source_url": "https://arxiv.org/abs/2609.32882",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "We present VSA2, a frontier trainable sparse attention for video DiTs. VSA2 includes a variety of new architectural features and training procedures that we apply across all stages of the DiT development cycle, including pretraining, RL, and inference, to produce a DiT with comparable or better quality than a full attention counterpart. Architecturally, VSA2 introduces a fine-grained router that improves the precision of identifying critical tokens and supports dynamic computation by allowing each query to attend to a variable number of key-value pairs. In training, we identify a Hard-to-Easy Curriculum, where models trained under high sparsity and later evaluated with lower sparsity during inference not only generalize effectively, but also outperform models trained with full attention in motion quality. VSA2 is also flexible: it can replace full attention during the middle of progressive low-to-high resolution pretraining, rebasing early-stage full-attention checkpoints. Experiments show that VSA2 reduces attention computation by half over VSA with lower loss. On 720p videos, it accelerates attention by 8.9x and end-to-end generation by 4.62x compared to the FlashAttention-3 baseline, while achieving comparable or better video quality.",
+      "canonical_id": "arXiv:2609.32882",
+      "arxiv_id": "2609.32882",
+      "authors": [
+        "Pei-Yuan Zhang",
+        "Guo-Qiang Wei",
+        "Yi-Long Zhao",
+        "Zi-Xiang Zhang",
+        "Wei Zhou",
+        "Will Lin",
+        "Heng Zhang",
+        "Xiao-Nan Nie",
+        "Yan Zeng",
+        "Hao Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.38832",
+      "identity_tokens": [
+        "id:arXiv:2609.38832",
+        "title:scaling parameter and context in attention native sparse attention from mixtureofhead",
+        "url:https://arxiv.org/abs/2609.38832"
+      ],
+      "record": {
+        "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+        "source_url": "https://arxiv.org/abs/2609.38832",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Scaling attention parameters can improve language model quality, but retaining full token histories makes additional heads costly at long contexts. Furthermore, since attention retrieves and combines contextual information, parameter scaling should also support longer contexts. We therefore ask whether attention parameter scaling can directly enable efficient and effective context scaling. We introduce NAMOH, an architecture-native sparse attention mechanism that activates $K$ of $H$ heads per token. Each head retains only its assigned tokens and performs causal attention within this subsequence. Head selection thus jointly determines active parameters and available context without scanning the full history. Under balanced assignments, increasing $H$ at fixed $K$ shortens head histories and reduces per-token key-value (KV) access without increasing total KV storage. We further support head-relative rotary position embeddings to shorten positional spans within routed subsequences, aiming to mitigate position-induced attention noise. Experiments show that NAMOH can outperform fully activated models with the same total parameters, while enabling more efficient long-context inference than smaller dense models with matched active parameter counts. It remains compatible with GQA and existing sparse attention mechanisms. We hope this work offers a new path for scaling attention, with parameter scaling directly enabling context scaling.",
+        "canonical_id": "arXiv:2609.38832",
+        "arxiv_id": "2609.38832",
+        "authors": [
+          "Zi-Zhuo Fu",
+          "Run-Sheng Wang",
+          "Meng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36835",
+      "identity_tokens": [
+        "id:arXiv:2609.36835",
+        "title:arckv amortizing anchor search for reconstructionbased kv cache compaction",
+        "url:https://arxiv.org/abs/2609.36835"
+      ],
+      "record": {
+        "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+        "source_url": "https://arxiv.org/abs/2609.36835",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Long-context large language model inference is bottlenecked by KV caches that grow linearly with sequence length. This burden is especially severe for long, reusable context prefixes, whose cache must serve many downstream queries. Reconstruction-based methods such as Attention Matching achieve strong downstream task performance with compact KV caches. However, iterative anchor search dominates the compaction cost of OMP-based Attention Matching. This motivates our selective amortization principle of learning a reusable anchor-selection policy across contexts while retaining context-specific reconstruction. In this work, we propose ARC-KV, a novel reconstruction-based KV cache compaction method that follows this principle. To this end, we first train a value-aware indexer to select real-key anchors in a single scoring pass. ARC-KV then applies convex-hull-constrained key merging and fits an attention-mass bias and compact values against the full cache. At inference time, ARC-KV builds the compact cache once per context using the frozen indexer and reuses it for all subsequent queries. Extensive experiments demonstrate that ARC-KV outperforms reported compaction methods in most settings across QuALITY, RULER, and LongBench on Llama-3.1-8B-Instruct. In particular, at 10% KV retention on QuALITY, ARC-KV improves accuracy from 0.6409 to 0.6474 over Attention Matching while reducing compaction time by a factor of 25.73, from 959.8 s to 37.3 s.",
+        "canonical_id": "arXiv:2609.36835",
+        "arxiv_id": "2609.36835",
+        "authors": [
+          "Zhe-Yu Shen",
+          "Guan-Hua Wang",
+          "De-Zhan Tu",
+          "Meng-Chi Zhang",
+          "Yan-Jiao Li",
+          "Adnan Aziz",
+          "Chun-Qiang Tang",
+          "Ang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37988",
+      "identity_tokens": [
+        "id:arXiv:2609.37988",
+        "title:kvkaizen learning contextadaptive cache compression choices",
+        "url:https://arxiv.org/abs/2609.37988"
+      ],
+      "record": {
+        "title": "KV-Kaizen: Learning Context-Adaptive Cache Compression Choices",
+        "source_url": "https://arxiv.org/abs/2609.37988",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "As the context size of text processed with an LLM grows, the size of KV caches can outstrip the memory allocated for the original model weights. This impacts LLM throughput negatively, since decoding is memory-bound and decode cost grows with cache size. Recent work alleviates this bottleneck by discarding the least relevant tokens. Eviction introduces a tension, since a one-off decision to discard content may prove detrimental later. Instead, we focus on alternative choices that can lead to cache compression without evicting tokens. We achieve this by learning a selector that is able to produce, based on context, a per-layer cache configuration towards an overall compression budget. The selector operates along three axes: sharing one cache across layers (depth), caching at fewer bits (precision), or truncating the low-rank latent cache representations (rank). We call the resulting method KV-Kaizen, for the many small per-layer choices it compounds. We observe that these interventions taken independently and uniformly over all layers limit achievable compression because they degrade accuracy. Crucially, composing them locally and adaptively to the context can instead preserve accuracy while achieving large memory savings. At inference, the selector runs once, before pre-fill. In evaluations on instruction following and reasoning tasks, our selectors reach the Pareto frontier of accuracy against cache size, against learning-free and post-hoc baselines. On long-context tasks, KV-Kaizen improves on eviction and can be composed with it, reaching a 32x smaller decode-time cache on a 14B model while preserving accuracy. A 4x cache size reduction incurs no accuracy degradation from 7B parameters up, and a compressed model is more accurate than a smaller uncompressed one with the same cache size. Together, these findings support pre-training large models and compressing them only afterwards.",
+        "canonical_id": "arXiv:2609.37988",
+        "arxiv_id": "2609.37988",
+        "authors": [
+          "João Monteiro",
+          "Louis Béthune",
+          "A. Filippova",
+          "Sonia Laguna",
+          "David Grangier",
+          "Marco Cuturi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37590",
+      "identity_tokens": [
+        "id:arXiv:2609.37590",
+        "title:focus trainingfree decisionpreserving context compression for llm agents",
+        "url:https://arxiv.org/abs/2609.37590"
+      ],
+      "record": {
+        "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.37590",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "LLM agents accumulate interaction histories that grow linearly with task length, causing quadratic inference cost scaling and performance degradation from attention dilution. Existing context-compression methods learn what to discard offline: by contrastively optimizing guidelines, distilling compressors, or training compression policies. This incurs a substantial cost. Further, the compression policy is learned a priori and is not dynamically conditioned on the evolving test-time trajectories. In this paper we ask a complementary question: Which past interactions causally shape the agent's future decisions? We recast context compression as a causal decision preservation problem over discrete interaction units and introduce FOCUS, a training-free context compression framework that operates entirely at test time. Our method requires no offline data collection or fine-tuning, and is architecture-agnostic, attaching to any closed-API frontier model as a modular compression layer. We evaluate FOCUS on diverse agentic benchmarks including API and tool-calling, QA, web domain and multi-turn dialogue. Our method establishes new state of the art performance, cutting peak context by up to 48% and dependency by 73% while improving task success by up to 8.9 percentage points over uncompressed execution.",
+        "canonical_id": "arXiv:2609.37590",
+        "arxiv_id": "2609.37590",
+        "authors": [
+          "Shantanu Dixit",
+          "Anson Bastos",
+          "Xu-Chao Zhang",
+          "Chetan Bansal",
+          "Saravan Rajmohan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37626",
+      "identity_tokens": [
+        "id:arXiv:2609.37626",
+        "title:splash switching parallel layouts of attention with seamless handoff for llm serving",
+        "url:https://arxiv.org/abs/2609.37626"
+      ],
+      "record": {
+        "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37626",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+        "canonical_id": "arXiv:2609.37626",
+        "arxiv_id": "2609.37626",
+        "authors": [
+          "Chuan Liu",
+          "Shuo-Ming Zhang",
+          "Zhi-Cheng Li",
+          "Qian-Qi Sun",
+          "Rui-Yuan Xu",
+          "Qiu-Chun Yu",
+          "Xi-Yu Shi",
+          "Hui-Min Cui",
+          "Jia-Cheng Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38169",
+      "identity_tokens": [
+        "id:arXiv:2609.38169",
+        "title:stepquant when and where errors matter in deltarule recurrent state quantization",
+        "url:https://arxiv.org/abs/2609.38169"
+      ],
+      "record": {
+        "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38169",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+        "canonical_id": "arXiv:2609.38169",
+        "arxiv_id": "2609.38169",
+        "authors": [
+          "Bing-Chen Yao",
+          "Hao-Bo Xu",
+          "Hao-Kun Lin",
+          "Yi-Chen Wu",
+          "Ziyu Guo",
+          "Ren-Rui Zhang",
+          "Zhi-Chao Lu",
+          "Zhe-Nan Sun",
+          "Ying Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37040",
+      "identity_tokens": [
+        "id:arXiv:2609.37040",
+        "title:selecting the most informative tokens in natural language autoencoders",
+        "url:https://arxiv.org/abs/2609.37040"
+      ],
+      "record": {
+        "title": "Selecting The Most Informative Tokens in Natural Language Autoencoders",
+        "source_url": "https://arxiv.org/abs/2609.37040",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Natural language autoencoders translate a language model's internal activations into readable explanations. Explaining every token position is costly. Which positions should an auditor inspect to understand a potential threat? We study this question across $4.7$ million explanations on prompt injection and concealment. We compare signals from model computation with a ranker trained only on chat structure. Chat structure usually selects more relevant explanations than the computational signals, without requiring a model forward pass for position selection. On three of four datasets, explaining just $5\\%$ of positions retains nearly all of the success rate from explaining every position, where success means obtaining an explanation about the threat. The benefit varies with the audit task. We also show that pretrained verbalizers recover words that models have learned to conceal through fine-tuning, without additional verbalizer training. These results identify where auditors can concentrate explanation generation and show that useful explanations can extend beyond the model a verbalizer was trained to describe.",
+        "canonical_id": "arXiv:2609.37040",
+        "arxiv_id": "2609.37040",
+        "authors": [
+          "Federico Torrielli",
+          "Gianluca Barmina",
+          "Andrea Blasi Núñez",
+          "Amon Rapp",
+          "Luigi Di Caro",
+          "Peter Schneider-Kamp",
+          "Lukas Galke Poech"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35621",
+      "identity_tokens": [
+        "id:arXiv:2609.35621",
+        "title:cartridges kv cache compression without offcontext derailment",
+        "url:https://arxiv.org/abs/2609.35621"
+      ],
+      "record": {
+        "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+        "source_url": "https://arxiv.org/abs/2609.35621",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Serving long documents to a Large Language Model (LLM) repeatedly is expensive: computations grow with context length, and the memory footprint of the key-value (KV) cache balloons. Compressed KV (CKV) representations aim to mimic the cache of a document and are typically computed once and for all, ahead of inference time. Methods to obtain CKVs range from drop mechanisms that reduce their number of columns, to learned approaches. Among the latter, Cartridges have emerged as a leading compression method, learning compact KV representations through distillation on relevant Q/A pairs. While existing evaluations focus primarily on whether Cartridges and other CKVs yield approximately similar responses to document-related, on-context queries, we investigate the crucial deployment question of whether they can handle off-context queries, something the native KV representation is particularly good at, thanks to the mechanics of attention. We observe a fundamental trade-off: while Cartridges perform better for on-context queries, heuristic-variants preserve better the original LLM's ability to operate off-context. We measure this through their capability to avoid context contamination in their response, retain general knowledge, and follow instructions. We propose Cartridges++, simple modifications to cartridges that retain off-context abilities at small or negligible cost. The router variant decides at inference time whether the query should use the learned long-context memory, while the data-mixing variant allocates a small fraction of training Q/As to queries outside the reference long document. Our study shows that assessing CKVs on document utility alone can mask substantial degradation in broader model capabilities, yet those issues can be fixed with benign changes to CKV inference or training.",
+        "canonical_id": "arXiv:2609.35621",
+        "arxiv_id": "2609.35621",
+        "authors": [
+          "Sonia Laguna",
+          "João Monteiro",
+          "Marco Cuturi",
+          "Pierre Ablin",
+          "Eleonora Gualdoni"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35750",
+      "identity_tokens": [
+        "id:arXiv:2609.35750",
+        "title:kvstreams for efficient compaction in agentic reinforcement learning",
+        "url:https://arxiv.org/abs/2609.35750"
+      ],
+      "record": {
+        "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2609.35750",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling the LLM context many times over, hindering training throughput. To alleviate this bottleneck and enable efficient trainable compaction, we propose KV-streams, a plug-and-play strategy compatible with any compaction strategy that substantially increases throughput while showing no evidence of hindering performance. KV-streams enable scalable compaction by streaming the KV cache forward rather than flushing it after each compaction. We show that KV-streams enable three different compaction strategies, achieving a 2.6 to 5x wall-clock speedup in training. Beyond efficiency, we find that the streamed KV cache can act as a recurrent state, carrying forward information that has long since disappeared from the context. Specifically, in a controlled setting we show that, contrary to prior work, RL alone is all that is needed for this behavior to emerge. Overall, we show KV-streams to be an efficient and lightweight plug-and-play addition to any post-training pipeline.",
+        "canonical_id": "arXiv:2609.35750",
+        "arxiv_id": "2609.35750",
+        "authors": [
+          "Emiliano Penaloza",
+          "Dane Malenfant",
+          "Dheeraj Vattikonda",
+          "Roger Creus Castanyer",
+          "S. Venkatraman",
+          "Abhay Puri",
+          "Jonathan Light",
+          "Matthew J. Sargent",
+          "Augustine N. Mavor-Parker",
+          "Massimo Caccia",
+          "Lucas Caccia",
+          "Glen Berseth",
+          "Esmeralda S. Whitammer",
+          "Alessandro Sordoni",
+          "Minseon Kim",
+          "Marc-Alexandre Côté",
+          "Laurent Charlin",
+          "Guillaume Lajoie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34212",
+      "identity_tokens": [
+        "id:arXiv:2609.34212",
+        "title:xmod practical scaling laws for sparsedepth routing beyond mixtureofdepths",
+        "url:https://arxiv.org/abs/2609.34212"
+      ],
+      "record": {
+        "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+        "source_url": "https://arxiv.org/abs/2609.34212",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Mixture-of-Depths (MoD) enables conditional computation across Transformer depth by routing only a subset of tokens through selected layers, but its original one-sparse--one-dense alternation tightly couples total capacity to active capacity and limits sparse-depth scaling. We introduce X-MoD, a scalable sparse-depth architecture that decouples token sparsity from anchor stride, allowing total parameter count to grow while keeping active-equivalent capacity nearly fixed. To make deep sparse routing trainable, X-MoD combines dense anchors with variance-scaled layer-wise gating and depth-wise token balancing. To make this regime analyzable and usable, we formulate sparse-depth routing as a conditional architecture-design problem: given compute, context length, and active-equivalent backbone size, how should the routing configuration be chosen? We develop a practical scaling-law framework by fitting X-MoD relative to FLOP-matched dense baselines, yielding an interpretable law that decomposes performance into sparse-capacity gain, sparse-context correction, and anchor-stride interaction. The law predicts validation loss across routing configurations and reveals how context length, model scale, and anchor stride shape sparse-depth performance. We validate the architecture and law through pretraining sweeps, held-out scaling-law prediction, ablations, downstream evaluations, and comparisons with Dense, MoD, and representative MoE baselines.",
+        "canonical_id": "arXiv:2609.34212",
+        "arxiv_id": "2609.34212",
+        "authors": [
+          "Bo Dong",
+          "Yi-Long Fan",
+          "Teng-Yu Pan",
+          "Yi-Ke Zhang",
+          "Zhen-Yu Li",
+          "Zi-Jian Zhang",
+          "Xue-Wei Li",
+          "Mei Yu",
+          "Jian-Yong Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35629",
+      "identity_tokens": [
+        "id:arXiv:2609.35629",
+        "title:santa sampling attention through representative keys",
+        "url:https://arxiv.org/abs/2609.35629"
+      ],
+      "record": {
+        "title": "SANTA++: Sampling Attention through Representative Keys",
+        "source_url": "https://arxiv.org/abs/2609.35629",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Attention often concentrates on a small subset of tokens in the context, but which subset matters changes from one query to the next. To exploit this changing structure, we introduce SANTA++, a training-free stochastic attention method that uses representative keys for memory-efficient selection without scanning the entire key-value (KV) cache. Cached keys are organized into teams, and the query scores one representative from each team to decide which teams to sample. We compute exact attention scores within the sampled teams and reweight each team's contribution by the inverse of its inclusion probability. This importance sampling correction estimates attention over the full cache, with a sampling budget that lets us trade memory reads for accuracy. Remarkably, with 32 or 64 sampled teams, SANTA++ uses 16% to 22% of dense attention's KV reads and retains 94% to 99% of the dense-attention baseline's scores on LongBench v2 and HELMET's retrieval-augmented generation subset, and 85% to 91% on RULER, with Qwen2.5-7B-Instruct at 32K context. With 31 sampled teams, our GPU implementation delivers a $1.69\\times$ attention speedup over the dense FlashAttention baseline at 32K context. By reducing the number of cache entries read, SANTA++ in principle complements architectures with compressed KV representations, such as multi-head latent attention. Our kernels are available at: https://github.com/OPUSLab/santapp-kernel-demo.git.",
+        "canonical_id": "arXiv:2609.35629",
+        "arxiv_id": "2609.35629",
+        "authors": [
+          "Kyle Lee",
+          "Christian Z. Pratt",
+          "Ruo-Yu Fang",
+          "Heekyung Lee",
+          "Avinash Lohitsa",
+          "Ryan Modafe",
+          "K. Çamsari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35427",
+      "identity_tokens": [
+        "id:arXiv:2609.35427",
+        "title:llms are general asynchronous agents",
+        "url:https://arxiv.org/abs/2609.35427"
+      ],
+      "record": {
+        "title": "LLMs are General Asynchronous Agents",
+        "source_url": "https://arxiv.org/abs/2609.35427",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Modern LLMs are increasingly capable as autonomous agents, but they follow sequential interaction cycles: read, think, reply or call tools, repeat. Many real-world use cases are not sequential: voice assistants, embodied agents, and monitoring systems receive new inputs while they think or perform another task. Modern LLMs address this with specialized architectures for voice interaction and video streams, VLAs for robot control, asynchronous tool calling for API usage, and others. In this work, we generalize from different asynchronous tasks to general asynchronous agents that can adapt to different types of concurrency. To achieve this, we develop an asynchronous LLM framework that lets users (or the agents themselves) define inference coroutines with overlapping memory states. We showcase that Qwen 3.x models are capable of asynchronous operation for streaming video understanding, videogames, and monitoring, without task-specific training.",
+        "canonical_id": "arXiv:2609.35427",
+        "arxiv_id": "2609.35427",
+        "authors": [
+          "George Yakushev",
+          "Denis Mazur",
+          "В. Д. Бартенев",
+          "V. Zhdanovskiy",
+          "Timofey Byzov",
+          "Vladimir Kaurkin",
+          "Vadim Pastushenko"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33334",
+      "identity_tokens": [
+        "id:arXiv:2609.33334",
+        "title:when to evict not what to keep draftguided eviction for trainingfree kvcache compression",
+        "url:https://arxiv.org/abs/2609.33334"
+      ],
+      "record": {
+        "title": "When to Evict, Not What to Keep: Draft-Guided Eviction for Training-Free KV-Cache Compression",
+        "source_url": "https://arxiv.org/abs/2609.33334",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Training-free KV-cache compression methods such as SnapKV, H2O, and PyramidKV evict tokens at the end of prefill, aiming to preserve the attention mass that future queries are expected to use -optimizing what to keep. We show that this objective fails in two distinct ways. (1) Compensation: restoring the evicted attention mass can recover the attention-level target without recovering task quality. (2) Selection: covering more of the true decode-query mass can hurt quality when the recovered mass is fragmented rather than concentrated in coherent spans. These failures share a common cause: eviction occurs before the queries that determine the answer trajectory exist. We propose Draft-Guided Eviction (DGE), which defers eviction until after drafting the first k=2 answer tokens using the full cache - just one decode step beyond prefill. Because the draft is generated from the answer's own prefix, no cache entries are discarded before this trajectory signal becomes available. The per-head cache budget remains unchanged, and DGE can be applied directly to SnapKV, PyramidKV, H2O, and StreamingLLM without modifying their eviction scores. Unlike extra-pass methods, DGE changes when eviction occurs rather than what cache entries are selected. Extensive experiments demonstrate that DGE outperforms prior methods at every evaluated budget on five of six instruct-tuned backbones, achieving 44.2 on LongBench, nearly matching FullKV at 44.3. The timing-only control DGE-W achieves the same score, demonstrating that the gain comes from when eviction occurs rather than what is selected - an effect we term trajectory anchoring.",
+        "canonical_id": "arXiv:2609.33334",
+        "arxiv_id": "2609.33334",
+        "authors": [
+          "Haeyong Kang",
+          "C. D. Yoo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33746",
+      "identity_tokens": [
+        "id:arXiv:2609.33746",
+        "title:pqhsa reusing productquantized scores for hybrid sparseapproximate attention",
+        "url:https://arxiv.org/abs/2609.33746"
+      ],
+      "record": {
+        "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
+        "source_url": "https://arxiv.org/abs/2609.33746",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "At each decoding step a language model attends over the key-value (KV) cache of every earlier token, so at long context the attention call is bounded by memory bandwidth. Sparse attention reads only a subset of keys chosen by a cheap score estimate, and most methods give the unread tokens zero weight. The output then draws on only a small fraction of the KV cache, and accuracy drops at small budgets, most on tasks that aggregate information across the context. An inverted-file product-quantization (IVF-PQ) index over the cached keys computes an approximate score for every indexed token in order to rank them; after ranking, those scores approximate the attention logits of the tokens left out. PQ-HSA (hybrid sparse-approximate attention) attends the selected tokens with their original keys and values, and the unselected tokens, the background, enter the same softmax through those scores, summed per inverted list and multiplied by the list's mean value. At 128K and a 1-2% retrieval budget, PQ-HSA is more accurate than Quest and SnapKV on Llama-3.1-8B and Qwen3-30B-A3B and stays close to full attention in macro accuracy; with the same selector, the background term raises macro accuracy on the 8B model from 0.71 to 0.83. In the same 128K setting, inside vLLM on one NVIDIA H20, the decode attention call runs 1.6x faster than the FlashAttention-3 kernel; the speedup grows with context length, and a cost model fitted on 8B to 30B models gives the context length at which it begins. A vLLM plugin runs PQ-HSA on two engine versions without changes to the engine source; code is available at https://github.com/KunmingSHAO/pqhsa_release.",
+        "canonical_id": "arXiv:2609.33746",
+        "arxiv_id": "2609.33746",
+        "authors": [
+          "Kun-Ming Shao",
+          "Jie-Run Chen",
+          "Yan-Li Wang",
+          "Ruo-Yu Wang",
+          "Hao-Li Bai",
+          "Kwang-Ting Cheng",
+          "Chi-Ying Tsui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33536",
+      "identity_tokens": [
+        "id:arXiv:2609.33536",
+        "title:does execution require target kv fidelity a mixedfidelity kv runtime for llm serving",
+        "url:https://arxiv.org/abs/2609.33536"
+      ],
+      "record": {
+        "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.33536",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+        "canonical_id": "arXiv:2609.33536",
+        "arxiv_id": "2609.33536",
+        "authors": [
+          "Jiantong Jiang",
+          "Yue Yang",
+          "Pei-Yu Yang",
+          "Feng Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33093",
+      "identity_tokens": [
+        "id:arXiv:2609.33093",
+        "title:how linear attention remembers",
+        "url:https://arxiv.org/abs/2609.33093"
+      ],
+      "record": {
+        "title": "How Linear Attention Remembers",
+        "source_url": "https://arxiv.org/abs/2609.33093",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Linear attention replaces the growing key--value (KV) cache of standard attention with a fixed-size recurrent state, substantially reducing memory growth with context length. This efficiency, however, changes how past information is stored: many tokens must share and repeatedly update the same memory. We study how this recurrent state functions as a memory system. Using an analytical decomposition together with controlled causal interventions in pretrained GLA and GDN models, we trace how recalled information is written, retained, and later accessed. We find that fact-specific information enters recurrent memory through concentrated, content-dependent writes and is later accessed through concentrated query-time read pathways. Multiple facts can remain selectively accessible within the same state, yet their internal representations exhibit cross-fact causal coupling rather than independent KV-like storage. As memory load increases, both recall and targeted editability degrade, whereas elapsed context alone has a substantially smaller effect within the tested regime. Causal interventions on subsequent writes further show that interference is shaped by their overlap with existing memory. Finally, in hybrid architectures that combine recurrent layers with full attention, the runtime memory directly supporting recall shifts predominantly to the full-attention KV state. Together, these results reveal how fixed-size recurrent memory supports selective recall despite shared storage, while exposing the interference and capacity limits that distinguish it from token-addressable KV memory.",
+        "canonical_id": "arXiv:2609.33093",
+        "arxiv_id": "2609.33093",
+        "authors": [
+          "Kichang Lee",
+          "JaeYeon Park",
+          "Songkuk Kim",
+          "Jeonggil Ko"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32712",
+      "identity_tokens": [
+        "id:arXiv:2609.32712",
+        "title:massalloc attention let attention allocate its own compute",
+        "url:https://arxiv.org/abs/2609.32712"
+      ],
+      "record": {
+        "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+        "source_url": "https://arxiv.org/abs/2609.32712",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+        "canonical_id": "arXiv:2609.32712",
+        "arxiv_id": "2609.32712",
+        "authors": [
+          "Jing-Ze Shi",
+          "Zhang-Yang Peng",
+          "Xian-Duo Li",
+          "Yan-Lin Qi",
+          "Xiao-Tian Lin",
+          "Hao-Xian Chen",
+          "Liang-Dong Wang",
+          "Guang Liu",
+          "Yu-Yu Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32704",
+      "identity_tokens": [
+        "id:arXiv:2609.32704",
+        "title:cowindow attention full causal coverage is a collective property",
+        "url:https://arxiv.org/abs/2609.32704"
+      ],
+      "record": {
+        "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+        "source_url": "https://arxiv.org/abs/2609.32704",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+        "canonical_id": "arXiv:2609.32704",
+        "arxiv_id": "2609.32704",
+        "authors": [
+          "Jing-Ze Shi",
+          "Zhang-Yang Peng",
+          "Xian-Duo Li",
+          "Yan-Lin Qi",
+          "Xiao-Tian Lin",
+          "Hao-Xian Chen",
+          "Liang-Dong Wang",
+          "Guang Liu",
+          "Yu-Yu Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32579",
+      "identity_tokens": [
+        "id:arXiv:2609.32579",
+        "title:dimpo dimensionality reduction for attention using preference optimization",
+        "url:https://arxiv.org/abs/2609.32579"
+      ],
+      "record": {
+        "title": "DimPO: Dimensionality Reduction for Attention using Preference Optimization",
+        "source_url": "https://arxiv.org/abs/2609.32579",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "A linear projection can reduce the dimension of query and key vectors without updating the pretrained model, but it remains unclear which training objective best preserves model behavior. We ask whether preferences over keys and attention mass on the highest-weighted keys provide a better signal than matching the full attention distribution with KL divergence, especially in long-context settings. We introduce DimPO, which combines listwise preference optimization with a lightweight top-k cross-entropy term for head-fidelity. DimPO is trained offline from the attention patterns of a frozen language model, with one map per layer, shared by the query and the keys and trained separately from the other layers. Across LLaMA3.2-3B, LLaMA3.1-8B, Qwen2.5-7B, and Qwen3-4B Instruct models, pairwise preference objectives outperform the triplet baseline and retain 98% of the original score on short-context tasks when projecting to half the dimension on the last 40% of the layers. With more projected layers or on long-context RULER, they degrade rapidly. In contrast, KL and DimPO, which use every key during training, retain about 95% of the original RULER 4k score on the 8B model when projecting up to 50% of the layers. KL-based projections remain closer to the original attention distribution and attention output, yet DimPO achieves better downstream performance. Beyond 50% of projected layers, DimPO increasingly outperforms KL on tasks including SQuAD, common-word extraction, frequent-word extraction, and variable tracking. These results suggest that under dimensionality reduction, preserving the ordering and concentration of task-relevant attention can matter more than reproducing the full attention distribution.",
+        "canonical_id": "arXiv:2609.32579",
+        "arxiv_id": "2609.32579",
+        "authors": [
+          "Vojtěch Lanz",
+          "Yu-Fei Cui",
+          "Prasanna Parthasarathi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32882",
+      "identity_tokens": [
+        "id:arXiv:2609.32882",
+        "title:improving video sparse attention with finegrained router and sparse rebasing",
+        "url:https://arxiv.org/abs/2609.32882"
+      ],
+      "record": {
+        "title": "Improving Video Sparse Attention with Fine-grained Router and Sparse Rebasing",
+        "source_url": "https://arxiv.org/abs/2609.32882",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "We present VSA2, a frontier trainable sparse attention for video DiTs. VSA2 includes a variety of new architectural features and training procedures that we apply across all stages of the DiT development cycle, including pretraining, RL, and inference, to produce a DiT with comparable or better quality than a full attention counterpart. Architecturally, VSA2 introduces a fine-grained router that improves the precision of identifying critical tokens and supports dynamic computation by allowing each query to attend to a variable number of key-value pairs. In training, we identify a Hard-to-Easy Curriculum, where models trained under high sparsity and later evaluated with lower sparsity during inference not only generalize effectively, but also outperform models trained with full attention in motion quality. VSA2 is also flexible: it can replace full attention during the middle of progressive low-to-high resolution pretraining, rebasing early-stage full-attention checkpoints. Experiments show that VSA2 reduces attention computation by half over VSA with lower loss. On 720p videos, it accelerates attention by 8.9x and end-to-end generation by 4.62x compared to the FlashAttention-3 baseline, while achieving comparable or better video quality.",
+        "canonical_id": "arXiv:2609.32882",
+        "arxiv_id": "2609.32882",
+        "authors": [
+          "Pei-Yuan Zhang",
+          "Guo-Qiang Wei",
+          "Yi-Long Zhao",
+          "Zi-Xiang Zhang",
+          "Wei Zhou",
+          "Will Lin",
+          "Heng Zhang",
+          "Xiao-Nan Nie",
+          "Yan Zeng",
+          "Hao Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d9ae58753d234e1e004ace48d8fa3579bde2db8f213a01932638b2e1c8362cc8",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
