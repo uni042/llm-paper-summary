@@ -1,34 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20261002-fix-framework-index-tracking",
+  "attempt_id": "library-import-maint-20261002T0852-a0287cda",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "9ca6f601779f04d03053e8257a3692ab138cfa71",
+      "expected_blob_sha": "a4ed5ab9e61492e8ece0e8dd65d58913a4cc49b6",
       "edits": [
         {
-          "op": "replace_once",
-          "old": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |",
-          "new": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |"
-        },
+          "op": "insert_after_once",
+          "anchor": "## 最新更新",
+          "content": "\n\n### 2026-10-02\n\n#### TensorRT-LLM\n\n- **v1.3.0rc29 — released 2026-09-29 UTC / pre-release**\n\n  MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8・FP4 MLA・DSpark groupへ拡張。DeepSeek V4向けNVFP4 MLA residual、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combine、MLA context FP8 Q量子化のBMM epilogue fusion、Ray orchestrator経由MNNVL all-reduceも追加した。一方、AutoDeploy統合と公開entry pointは削除されたbreaking changeを含む。正式版前のRCとして扱う。\n\n  一次資料: https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29\n\n#### Ollama\n\n- **v0.35.0 — released 2026-09-28 UTC**\n\n  `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。\n\n  一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "e3e6a4b22b428b4b5afac3ec1b4c6656e969a865",
+      "edits": [
         {
-          "op": "replace_once",
-          "old": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |",
-          "new": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |"
-        },
-        {
-          "op": "replace_once",
-          "old": "- [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion",
-          "new": "- [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion\n- [vLLM-Omni](inference-engines/vllm-omni/) — omni-modality multi-stage serving、full-duplex、cross-stage KV / payload transfer、streaming audio / video、diffusion serving"
-        },
-        {
-          "op": "replace_once",
-          "old": "- [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）",
-          "new": "- [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）\n- [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) — edge / physical-AI向けC++ runtime、in-flight batching、guided decoding、DFlash2、direct engine build"
+          "op": "insert_before_once",
+          "anchor": "## 読み方の注意",
+          "content": "### 2026-09-29 — v1.3.0rc29（pre-release）\n\n- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。\n- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。\n- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。\n- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)\n\n"
         }
       ]
     }
   ],
-  "summary": "framework indexのvLLM-Omni / TensorRT Edge-LLM表記を修正し、フレームワーク別サマリーにも追跡対象として追加。"
+  "summary": "2026-10-02 08:30 maintenance: Ollama v0.35.0 decision model APIを集約READMEへ同期し、TensorRT-LLM v1.3.0rc29の投機・低bit MLA/MoE・分散経路更新を集約/個別ページへ追加。"
 }
