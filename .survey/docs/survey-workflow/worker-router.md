@@ -447,7 +447,11 @@ frontmatterまたは冒頭metadataに少なくとも次を持たせる。
 - GitHub反映待ちの対象path
 - 未完了事項
 
-08:30 runで作ったmaintenance成果はResearch / Discovery成果とは別用途である。Survey GitHub Importがmaintenanceを転送対象として明示的に扱う仕様になるまでは、Research / Discovery受信箱へ誤投入せずLibraryに保持する。
+08:30 runで作ったmaintenance成果はResearch / Discovery成果とは別用途だが、**Survey GitHub Importの同一runで一緒に回収・反映する。** Research / Discovery受信箱へは入れず、既存の `.survey/update-worker/update-payload.json` → `.survey/update-worker/update-inbox.json` → `.github/workflows/update-helper.yml` / `.survey/scripts/update_worker.py` の正規経路へ渡す。
+
+そのため08:30成果には、後続アップローダーが再調査せずpayloadへ変換できる**機械適用可能な更新計画**を必須とする。最低限、各artifactについて `path`、調査時点の `expected_blob_sha`、および既存fileなら `content` または `edits` のどちらか一方、新規fileなら完成 `content` を持つ。`edits` は `replace_once` / `insert_after_once` / `insert_before_once` のいずれかで、anchor/old文字列が一意になるよう作る。人間向け説明だけで終わらせない。
+
+Survey GitHub Importはmaintenanceを `checked_at` の古い順に直列処理し、反映直前に最新mainを再取得する。base SHAが古い場合は、現在内容に対して意図した差分が既に反映済みかを確認し、未反映なら無関係な変更を壊さないよう現在blob SHAへrebaseした一意なpayloadを作る。意味が衝突する、anchorが一意でない、再baseに再調査が必要な場合は推測適用せずLibrary原本を残して保留する。`result.json` の同一attempt_idで `ok=true`、かつ対象pathのmain再取得まで確認できた成果だけLibraryから削除する。
 
 ## 14. 報告
 
