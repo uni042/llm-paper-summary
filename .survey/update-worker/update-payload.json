@@ -1,44 +1,34 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20261002-track-vllm-omni-tensorrt-edge-llm",
+  "attempt_id": "update-20261002-fix-framework-index-tracking",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "4155a6078b4851bdcf6ae323354b38bbbce14186",
+      "expected_blob_sha": "9ca6f601779f04d03053e8257a3692ab138cfa71",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-24**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-02**"
+          "old": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |",
+          "new": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-24の差分確認では、前回確認後の主要推論・学習フレームワークの公式release / 開発元リポジトリを再確認したが、掲載方針上追加すべき新しい主要更新は確認できなかった。前回追加したvLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化が引き続き直近の主要更新である。",
-          "new": "この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。"
+          "old": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |",
+          "new": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |"
         },
         {
           "op": "replace_once",
-          "old": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |",
-          "new": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |"
+          "old": "- [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion",
+          "new": "- [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion\n- [vLLM-Omni](inference-engines/vllm-omni/) — omni-modality multi-stage serving、full-duplex、cross-stage KV / payload transfer、streaming audio / video、diffusion serving"
         },
         {
           "op": "replace_once",
-          "old": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |",
-          "new": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |"
+          "old": "- [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）",
+          "new": "- [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）\n- [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) — edge / physical-AI向けC++ runtime、in-flight batching、guided decoding、DFlash2、direct engine build"
         }
       ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm-omni/README.md",
-      "expected_blob_sha": null,
-      "content": "# vLLM-Omni\n\nvLLM-Omniの主要な機能・性能更新を継続的に記録する集約ページ。vLLM本体とは別に、音声・画像・動画・拡散モデル・VLAなどを含む**オムニモーダル推論と多段階serving**の更新を追跡する。\n\n## 現在できること\n\n- **オムニモーダルmodel serving**: textだけでなくspeech、audio、image、video、diffusion、vision-language-action等のmulti-stage modelを共通runtimeで扱う。\n- **多段階pipelineの分離実行**: autoregressive stage、encoder、diffusion / decoder等を独立stageとして配置し、stageごとにbatching・GPU配置を変えられる。\n- **full-duplex / realtime interaction**: engine所有sessionにより、入力と出力が重なる音声中心の双方向interactionを扱える。\n- **stage間KV / multimodal payload転送**: MooncakeやNIXL等を利用し、AR→DiT等のstage間でKV、text、visual/audio latent、layout metadataを転送・再利用できる。\n- **continuous / request batching**: diffusionや音声、画像生成を含む複数requestをbatch化し、stageごとのGPU利用率を高める。\n- **memory / offload最適化**: component単位offload、FP8等の低精度、prefix / projection cache、KV reuseを利用できる。\n- **multi-hardware対応**: NVIDIA CUDAに加え、Ascend NPU、Intel XPU、ROCm等の対応を拡張している。\n\n## 主要更新\n\n### 2026-09-25 — v0.30.0（released）\n\n- **統一full-duplex serving**: `DuplexOmni` / `DuplexOmniEngine` / `DuplexOrchestrator` を導入し、session ownershipとlifecycleをengine側へ移した。\n- **native cross-stage KV / payload transfer**: diffusion KVのstage間転送・再利用、Mooncake AR→DiT handoff、KV prefetch、HunyuanImage3のcross-request paged prefix cache、NIXLによるconditioning payload転送を追加。\n- **interactive world-model / streaming video**: stepwise generation、mid-stream camera control、streaming VAE decode、chunked video encodingと非同期転送を強化。\n- **memory / serving拡張**: component-selective offload、AR-stage FP8 KV、multi-process API serving、RL rollout serving API等を追加。\n- **vLLM 0.30.0へrebase**し、speech / image / audiovisual generation / VLAの対応範囲を拡張。\n\n一次資料:\n- https://github.com/vllm-project/vllm-omni\n- https://github.com/vllm-project/vllm-omni/releases/tag/v0.30.0\n\n## 追跡方針\n\n通常のvLLM更新とは分けて、vLLM-Omni固有のmulti-stage scheduling、full-duplex、audio / video / diffusion serving、stage間KV / payload transfer、memory / offload、hardware backendの主要変更を追う。単なるmodel allowlist追加や軽微なbug fixは原則除外する。\n"
-    },
-    {
-      "path": "framework-updates/inference-engines/tensorrt-edge-llm/README.md",
-      "expected_blob_sha": null,
-      "content": "# TensorRT Edge-LLM\n\nTensorRT Edge-LLMの主要な機能・性能更新を継続的に記録する集約ページ。TensorRT-LLM本体とは別に、**Jetson / DRIVE / DGX Spark等のedge・physical AI向けC++ LLM/VLM推論runtime**として追跡する。\n\n## 現在できること\n\n- **edge向けC++推論runtime**: NVIDIA Jetson、DRIVE、DGX Spark、IGX等でtext / vision / audio / speech / action modelを実行する。\n- **TensorRT engine build**: Hugging Face checkpoint→ONNX→C++ engineの標準経路に加え、対応modelではONNXを介さないexperimental direct engine builderも利用できる。\n- **量子化・低精度推論**: NVFP4、FP8、INT4等を利用し、edge環境のmemory容量と帯域制約へ適応する。\n- **投機的デコード**: MTP、DFlash / DFlash2、DSpark、EAGLE3等を利用できるmodel / platformがある。\n- **KV cache reuse**: multi-turn LLMやVLMのmedia-aware context cache、paged KV reuse等を扱う。\n- **OpenAI互換server**: experimental serverでreasoning parser、streaming、video input等を提供し、in-flight batchingも段階的に導入している。\n- **multi-device**: DGX Spark等でtensor parallel構成を扱う。\n- **multimodal / physical AI**: VLM、ASR、TTS、video、VLA / policy inferenceまで対象を広げている。\n\n## 主要更新\n\n### 2026-09-29 — v0.11.0（released）\n\n- **Python wheel配布**: 対応x86-64 / AArch64 platform向けにpublished wheelを追加。\n- **in-flight batching**: experimental OpenAI-compatible serverへopt-in single-rank in-flight batchingを導入。\n- **guided decoding**: XGrammarを使ったJSON / JSON Schema / regex / EBNF / structural tag / choices制約を追加。\n- **DFlash2 / Qwen3.8**: Qwen3.8 DFlash2 speculative decodingを追加し、Nemotron / Gemmaのspeculative経路も拡張。\n- **IGX Thor / multi-device**: IGX Thorを正式対応し、Qwen3.5 tensor-parallel inferenceを追加。\n- **runtime / memory**: bounded Gemma 4 sliding-window KV、DiffusionGemma prompt-KV reuse、GPU media hashing、Blackwell向けpaged FMHAやMoE kernel等を強化。\n\n### 2026-09-03 — v0.10.1（released）\n\n- 2台のDGX Sparkを使うexperimental TP=2、Qwen3.8-27B DSpark、FP8 ViT attention、DART visual-token pruningを追加。\n- experimental OpenAI-compatible serverを再設計し、公式release noteではdisk usageを60〜99%削減、cold launch timeを50%削減と報告。\n\n一次資料:\n- https://github.com/NVIDIA/TensorRT-Edge-LLM\n- https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.11.0\n- https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.10.1\n\n## 追跡方針\n\nTensorRT-LLM本体とは分け、edge hardware固有のengine build、低bit kernel、KV / context reuse、speculative decoding、multi-device、OpenAI-compatible serving、multimodal / physical-AI pipelineの主要変更を追う。単なるmodel追加だけで主要能力が変わらない更新や軽微なcorrectness fixは原則除外する。\n"
     }
   ],
-  "summary": "TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加し、framework indexと各専用ページを作成。"
+  "summary": "framework indexのvLLM-Omni / TensorRT Edge-LLM表記を修正し、フレームワーク別サマリーにも追跡対象として追加。"
 }
