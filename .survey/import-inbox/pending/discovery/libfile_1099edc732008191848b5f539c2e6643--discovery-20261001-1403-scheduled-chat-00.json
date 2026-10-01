@@ -1,0 +1,167 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261001-1403-scheduled-chat-00",
+  "reference_main_sha": "f270368ad02bbe8bde8a839d684aca45227d4a77",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.sustainlp-1.5"
+      ],
+      "title": "Memory-efficient Transformers via Top-k Attention",
+      "reason": "Transformerの注意とFFNをtop-k化し、既存T5/UnifiedQAへ補正事前学習なしで適用できるメモリ削減法。zero-shot推論も評価しており推論時メモリ効率へ直接該当する。",
+      "source_url": "https://aclanthology.org/2021.sustainlp-1.5/",
+      "body_check": "本文§2でquery chunkingによりpeak memoryをΩ(LQ·LK)からO(C·LK)へ抑え、row-wise top-kのscore/indicesだけを保持する実装を確認。UnifiedQA 12 QA datasetでFFN keyの99%以上を除いてもvanilla attentionに近いzero-shot精度を確認。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "arXiv:2601.06123",
+        "DOI:10.48550/arXiv.2601.06123"
+      ],
+      "title": "Latent Space Communication via K-V Cache Alignment",
+      "reason": "複数LLM間でKVキャッシュを共有潜在空間へ写像し、テキストを介さず内部状態を転送する方式で、マルチモデル推論基盤とKV表現の対象範囲に入る。",
+      "source_url": "https://arxiv.org/abs/2601.06123",
+      "body_check": "本文でGemma-2各モデルへencoder/decoder adapterを付加し、各層KVを共有表現へ写像して別モデル側へ復元する構成を確認。共有状態を介したモデル間通信とsoft prompt等のskill transferを実験している。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949",
+        "DOI:10.48550/arXiv.2505.00949"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models",
+      "reason": "最終モデルは推論効率と動的reasoning切替を強く意識しNASでLlama由来モデルを高速化する一方、論文の大部分は蒸留・継続事前学習・SFT・RLを含むモデル構築報告で境界的。",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "body_check": "本文のarchitecture節でLlama 3系からattention/FFN構成を探索してNano/Super/Ultraを構築し推論throughput・memory効率を比較する一方、後半は蒸留、continued pretraining、SFT、RLが中心であることを確認。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487",
+        "DOI:10.48550/arXiv.2503.14487"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "reason": "MoEと動的計算を扱うが対象は画像生成用Diffusion Transformerで、最終適用先がLLM推論・サービングではない。",
+      "source_url": "https://arxiv.org/abs/2503.14487",
+      "body_check": "本文でbatch-level global token poolとnoise level/sample complexityを入力にするcapacity predictorを用い、ImageNet/text-to-image生成へ計算量を動的配分する方式を確認。LLM decode/KV/MoE serving評価はない。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18351",
+      "identity_tokens": [
+        "arXiv:2410.18351",
+        "DOI:10.48550/arXiv.2410.18351"
+      ],
+      "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
+      "reason": "投機的復号のdraft長をdraft logitsのentropyからtraining-freeに動的停止し、無駄なdraft計算を減らすLLM推論高速化手法。",
+      "source_url": "https://arxiv.org/abs/2410.18351",
+      "body_check": "本文でdraft分布entropyからexpected acceptance probability下界を近似し、動的thresholdで早期停止する手順を確認。Dolly-15k、WMT-19、CNN-DM等でstatic draft length等より10–57%改善を評価。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098",
+        "DOI:10.48550/arXiv.2410.02098"
+      ],
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "reason": "MoE routingと計算配分を扱うが、97B級Diffusion Transformerによるtext-to-image生成の学習・生成品質向上が主目的でLLM推論系ではない。",
+      "source_url": "https://arxiv.org/abs/2410.02098",
+      "body_check": "本文でexpert-choice routingによりtext tokenとimage patchの重要度に応じ計算を配分しDiffusion Transformerを最大97Bへscaleする設計を確認。GenEval等の画像生成評価が中心。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "arXiv:2409.12941",
+        "DOI:10.48550/arXiv.2409.12941"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "reason": "RAGのfactuality・retrieval・reasoningを測るFRAMES評価データセットが主貢献で、推論サービングや実行効率最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2409.12941",
+      "body_check": "本文で824件のmulti-hop questionを用意し検索なし/多段retrieval等をaccuracyで比較する評価設計を確認。multi-step retrievalで0.40→0.66だがGPU memory、latency、throughput、KV管理は主対象外。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432",
+        "DOI:10.48550/arXiv.2308.11432"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents",
+      "reason": "LLMエージェントの構成・応用・評価を俯瞰するsurveyで、agent serving runtimeやKV/メモリ/スケジューラ等の推論基盤効率化を主題にしない。",
+      "source_url": "https://arxiv.org/abs/2308.11432",
+      "body_check": "本文はbrain/perception/action等のagent構成、応用、agent評価と課題を体系化。runtime scheduling、GPU配置、KV cache再利用等のシステム機構を提案・評価する論文ではない。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.328",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.328"
+      ],
+      "title": "Decoding Speculative Decoding",
+      "reason": "350超の実験でdraft model latencyと投機的復号throughputの関係を分析し、その知見からhardware-efficient draft modelを設計するLLM推論高速化研究。",
+      "source_url": "https://aclanthology.org/2025.naacl-long.328/",
+      "body_check": "本文でLLaMA-65B/OPT-66B等をtargetに多数のdraft条件を測り、言語モデル能力よりdraft latencyがspeedupを強く支配すると確認。設計したdraftは既存draftより最大111%高throughput。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-acl.195",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-acl.195"
+      ],
+      "title": "PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference",
+      "reason": "層が深くなるほど将来生成に重要なKVが減る観測からlayer-wiseに重要contextを保持し、LLM推論throughputとGPU memoryを直接改善する。",
+      "source_url": "https://aclanthology.org/2024.findings-acl.195/",
+      "body_check": "本文でattention weightの一貫性から重要KVを抽出し層ごとに保持量を減らすpyramid KV cacheを確認。Accelerate比2.2倍throughput、KV cache GPU memory 54%以上削減を報告。",
+      "first_checked_at": "2026-10-01T14:03:12+09:00",
+      "last_checked_at": "2026-10-01T14:03:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 471
+    }
+  ]
+}
