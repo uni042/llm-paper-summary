@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-24**
+- フレームワーク差分の最終確認: **2026-10-02**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-24の差分確認では、前回確認後の主要推論・学習フレームワークの公式release / 開発元リポジトリを再確認したが、掲載方針上追加すべき新しい主要更新は確認できなかった。前回追加したvLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化が引き続き直近の主要更新である。
+この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
 
 ## 現在の機能マップ
 
@@ -16,9 +16,9 @@
 | Framework | 現在できること | 最近の更新が強化している部分 |
 |---|---|---|
 | [llama.cpp](inference-engines/llama-cpp/) | CPU / GPUをまたぐローカル推論、量子化、複数GPU分割、KV cache管理、投機的デコード、部分的weight offload | MoE kernel fusion、CUDA Graph、CPU offloadしたexpertのVRAM cache、multi-GPU同時実行 |
-| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |
+| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |
 | [SGLang](inference-engines/sglang/) | prefix cache、continuous batching、P/D分離、投機的デコード、paged attention、TP/PP/EP/DP、量子化、multi-LoRA、RL rollout | 階層cache、MTP、sparse attention、MoE負荷分散、CUDA Graph、通信同期削減 |
-| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |
+| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |
 | [LMDeploy](inference-engines/lmdeploy/) | GPU serving、prefix / object cache、paged attention、MoE、P/D分離、外部KV connector | object cache再設計、SSM state再利用、DeepEPv2、Mooncake接続、低精度GEMM |
 | [LightLLM](inference-engines/lightllm/) | GPU→CPU→diskの多段cache、P/D分離、MoE、投機的デコード、RL rollout向けonline weight更新 | Hybrid Radix Cache、量子化KV、NIXL、disk cache、MoE fusion |
 | [ExLlama](inference-engines/exllama/) | 低bit GPU推論、MoE expert / KVのCPU offload、投機的デコード、複数GPU | expert単位の動的offload、CPU KV tier、draft自動調整、VRAM slab allocator |
