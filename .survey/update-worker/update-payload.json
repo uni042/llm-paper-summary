@@ -1,72 +1,52 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260924-0830-scheduled-chat-30",
+  "attempt_id": "update-20261002-import-maint-20260930",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "c4377afea321514bc26b42c2846ab20b75ee33e2",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-23**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-24**"
-        },
-        {
-          "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-23の差分確認では、公式リリースと開発元リポジトリを基準に9月20日以降の主要更新を再確認し、vLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化などを追加した。主要LLMの正式公開はトップ表更新対象なし。",
-          "new": "この2つは分けて扱う。2026-09-24の差分確認では、前回確認後の主要推論・学習フレームワークの公式release / 開発元リポジトリを再確認したが、掲載方針上追加すべき新しい主要更新は確認できなかった。前回追加したvLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化が引き続き直近の主要更新である。"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/README.md",
-      "expected_blob_sha": "e09d56fed751983ee206f26e2ada0a4dd9467dff",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-23**",
-          "new": "- リリース情報の最終確認: **2026-09-24**"
-        },
-        {
-          "op": "replace_once",
-          "old": "2026-09-23に主要提供元の公式公開を再確認した。9月20日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。",
-          "new": "2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。"
-        },
-        {
-          "op": "replace_once",
-          "old": "| 2026-09-03 | GPT-6 Astra | OpenAI GPT | toolを使う長時間task、coding、research、science等を重点にしたGPT-6世代上位APIモデルとして記録。API ID `gpt-6-astra`、最大1.05M-token context / 128K output。 | [OpenAI GPT系](openai-gpt.md) |",
-          "new": "| 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |"
-        },
-        {
-          "op": "replace_once",
-          "old": "| 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・scienceなど長いmulti-step task向けの上位model群。Mythosはcybersecurity / biology等の専門領域を重点化。 | [Claude系](claude.md) |",
-          "new": "| 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/openai-gpt.md",
-      "expected_blob_sha": "d6c1cd27bfe9a913c43851cbe73bef132b089992",
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "7ea180e4f5168dd06037bf0682f4afe03d9b4595",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "| 2026-09-03 | GPT-6 Astra |",
-          "text": "| 2026-09-23 | GPT-6 Sol / Luna | GPT-6 Astraと同系統の学習手法を使い、professional work、factuality、coding、computer use、alignmentの改善を高速・低cost帯へ展開。API model IDは`gpt-6-sol` / `gpt-6-luna`。API価格はSolが入力$2 / 出力$10、Lunaが入力$0.10 / 出力$0.50（各100万token）で、GPT-5.6 promotional pricingから大幅に低価格化。prompt cachingも改善され、cached input readは90% discount。 | https://openai.com/index/introducing-gpt-6-sol-and-luna/ |\n"
+          "anchor": "### 用語メモ",
+          "text": "### 2026-09-23 — v0.34.4（released）\n\n- **Qwen 3.8のApple Silicon prompt processing高速化など**: Qwen 3.8のprompt processing改善、thinking modelのstructured outputのsingle-pass化、Gemma 4の画像ごとの解像度選択、llama.cpp / MLX / XGrammar更新を含む。[release](https://github.com/ollama/ollama/releases/tag/v0.34.4)\n\n### 2026-09-28 — v0.35.0（released）\n\n- **decision model API**: `/v1/systemone` でchoice / noul / score形式のdecision modelを扱えるようになり、classificationやmodel routing等をOllama API内で実行できる。Settingsのmodel discovery待ちによるblockやMLX model download stallの修正も含む。[release](https://github.com/ollama/ollama/releases/tag/v0.35.0)\n\n### 2026-09-25 — v0.40.0-rc0（pre-release）\n\n- **Apple SiliconのMLX既定backend変更を試験**: MLX runtime対応architectureを自動的にMLXで実行する方針へ変更するRC。公式release noteではQwen 3.8を例示。stable機能ではなくpre-releaseとして扱う。[release](https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0)\n\n"
         }
       ]
     },
     {
-      "path": "llm-releases/claude.md",
-      "expected_blob_sha": "185e9c7d63021346a299f6921f6487f7b86a179c",
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "8d9765f708adcf8dbe2c3d2ad3409f2b4ea68e43",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "| 2026-09-01 | Claude Fable 5.1 / Claude Mythos 5.1 |",
-          "text": "| 2026-09-22 | Claude Opus 5.5 | Claude 5.5 familyの最初のmodel。agentic coding、computer use、knowledge workを重点更新し、Anthropicは通常workloadでOpus 5より約40%低cost、出力速度30%以上高速と報告。API価格は入力$4 / 出力$20、cache read $0.20（各100万token）。prompt injection耐性や長時間taskを含むalignment評価も強化。 | https://www.anthropic.com/claude-opus-5-5 |\n"
+          "anchor": "## 2026-09-11",
+          "text": "## 2026-09-28\n\n- **b11238 — padding処理の統合**: `ggml_pad_ext` のleft padding対応を利用し、Parakeet、LFM2-Audio、Granite Speech、Gemma 4 audio encoderの従来のright-pad + rollを単一operationへ置換。DFlash2でも先頭zero block連結を同operationへ統合し、paddingだけを読むtapをskipする。大規模end-to-end benchmarkはrelease noteにないため、速度倍率は記録しない。[release b11238](https://github.com/ggml-org/llama.cpp/releases/tag/b11238)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "b31bdb2959bf5368540389190aac8b91f43ca485",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 読み方の注意",
+          "text": "### 2026-09-23 — v1.3.0rc28（pre-release）\n\n- **KV Cache Manager V2への移行継続**: 新規modelではV2を既定にし、既存modelも順次移行。V1はdeprecated予定。\n- **legacy TensorRT backend縮小**: legacy TensorRT backendのPython module / test削除やserver argument変更など、PyTorch backend中心へのarchitecture移行を継続。\n- **既知問題を伴うRC**: disaggregated serving startup、NIXL KV transfer、FlashInfer attention backendの長時間serverでのGPU memory増加、DeepSeek系SM120、低bit MoE等の既知問題が列挙されているため、stable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/sglang/README.md",
+      "expected_blob_sha": "c910e5f3fe5133024a861d683e56dcfeb3a56c55",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 用語メモ",
+          "text": "- **2026-09-18 — v0.5.20（released）**: CPU-onlyのSGLang Simulatorを追加し、実scheduler / radix cache / hierarchical cacheを使いながらmodel forwardのみlatency predictorへ置換。実測traceに対しTTFTを多くのtraceで約6%以内、最長32K〜128Kでは最大10%程度の誤差で予測する。prefill context parallelism v1を削除してstrategy-based pathへ統合し、ROCm model loadingも改善。GLM-5.2 TP4 / 4×MI355Xでmodel load 505.7秒→40.4秒、DeepSeek-V4 Blackwell kernelではTRT-LLM attention kernelがFlashMLA比でkernel-level prefill約1.2倍、decode約1.45倍。CUDA 12系wheel/imageはv0.5.19で終了。[release](https://github.com/sgl-project/sglang/releases/tag/v0.5.20)\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-09-24の08:30 update route: GPT-6 Sol / LunaとClaude Opus 5.5を主要LLM一覧へ追加。主要frameworkは前回確認後に掲載方針上追加すべき新規更新なし。"
+  "summary": "2026-09-30 08:30 maintenance: Ollama v0.34.4/v0.35.0/v0.40.0-rc0、llama.cpp b11238、TensorRT-LLM v1.3.0rc28、SGLang v0.5.20を現行framework更新ページへ追記。"
 }
