@@ -6,7 +6,8 @@ uses a larger 500-item per-worker surface so full-text suitability screening doe
 not starve for candidates. The worklists are rebuildable selection indexes only.
 Canonical job/claim state, paper files, and reference relevance ledgers remain
 authoritative. The three worker pages are deterministically disjoint whenever enough
-eligible rows exist for the requested per-lane limits.
+eligible rows exist for the requested per-lane limits. The status-dashboard publisher
+materializes all three dedicated worker surfaces, including :45.
 """
 from __future__ import annotations
 
