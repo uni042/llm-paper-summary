@@ -1,52 +1,44 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20261002-import-maint-20260930",
+  "attempt_id": "update-20261002-track-vllm-omni-tensorrt-edge-llm",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "7ea180e4f5168dd06037bf0682f4afe03d9b4595",
+      "path": "framework-updates/README.md",
+      "expected_blob_sha": "4155a6078b4851bdcf6ae323354b38bbbce14186",
       "edits": [
         {
-          "op": "insert_before_once",
-          "anchor": "### 用語メモ",
-          "text": "### 2026-09-23 — v0.34.4（released）\n\n- **Qwen 3.8のApple Silicon prompt processing高速化など**: Qwen 3.8のprompt processing改善、thinking modelのstructured outputのsingle-pass化、Gemma 4の画像ごとの解像度選択、llama.cpp / MLX / XGrammar更新を含む。[release](https://github.com/ollama/ollama/releases/tag/v0.34.4)\n\n### 2026-09-28 — v0.35.0（released）\n\n- **decision model API**: `/v1/systemone` でchoice / noul / score形式のdecision modelを扱えるようになり、classificationやmodel routing等をOllama API内で実行できる。Settingsのmodel discovery待ちによるblockやMLX model download stallの修正も含む。[release](https://github.com/ollama/ollama/releases/tag/v0.35.0)\n\n### 2026-09-25 — v0.40.0-rc0（pre-release）\n\n- **Apple SiliconのMLX既定backend変更を試験**: MLX runtime対応architectureを自動的にMLXで実行する方針へ変更するRC。公式release noteではQwen 3.8を例示。stable機能ではなくpre-releaseとして扱う。[release](https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0)\n\n"
+          "op": "replace_once",
+          "old": "- フレームワーク差分の最終確認: **2026-09-24**",
+          "new": "- フレームワーク差分の最終確認: **2026-10-02**"
+        },
+        {
+          "op": "replace_once",
+          "old": "この2つは分けて扱う。2026-09-24の差分確認では、前回確認後の主要推論・学習フレームワークの公式release / 開発元リポジトリを再確認したが、掲載方針上追加すべき新しい主要更新は確認できなかった。前回追加したvLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化が引き続き直近の主要更新である。",
+          "new": "この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。"
+        },
+        {
+          "op": "replace_once",
+          "old": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |",
+          "new": "| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |\\n| [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |"
+        },
+        {
+          "op": "replace_once",
+          "old": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |",
+          "new": "| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |\\n| [TensorRT Edge-LLM](inference-engines/tensorrt-edge-llm/) | Jetson / DRIVE / DGX Spark / IGX向けC++ LLM/VLM runtime、低bit推論、speculative decoding、multimodal / VLA | in-flight batching、DFlash2、guided decoding、direct engine build、edge向けlow-bit kernel / KV reuse |"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "8d9765f708adcf8dbe2c3d2ad3409f2b4ea68e43",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-11",
-          "text": "## 2026-09-28\n\n- **b11238 — padding処理の統合**: `ggml_pad_ext` のleft padding対応を利用し、Parakeet、LFM2-Audio、Granite Speech、Gemma 4 audio encoderの従来のright-pad + rollを単一operationへ置換。DFlash2でも先頭zero block連結を同operationへ統合し、paddingだけを読むtapをskipする。大規模end-to-end benchmarkはrelease noteにないため、速度倍率は記録しない。[release b11238](https://github.com/ggml-org/llama.cpp/releases/tag/b11238)\n\n"
-        }
-      ]
+      "path": "framework-updates/inference-engines/vllm-omni/README.md",
+      "expected_blob_sha": null,
+      "content": "# vLLM-Omni\n\nvLLM-Omniの主要な機能・性能更新を継続的に記録する集約ページ。vLLM本体とは別に、音声・画像・動画・拡散モデル・VLAなどを含む**オムニモーダル推論と多段階serving**の更新を追跡する。\n\n## 現在できること\n\n- **オムニモーダルmodel serving**: textだけでなくspeech、audio、image、video、diffusion、vision-language-action等のmulti-stage modelを共通runtimeで扱う。\n- **多段階pipelineの分離実行**: autoregressive stage、encoder、diffusion / decoder等を独立stageとして配置し、stageごとにbatching・GPU配置を変えられる。\n- **full-duplex / realtime interaction**: engine所有sessionにより、入力と出力が重なる音声中心の双方向interactionを扱える。\n- **stage間KV / multimodal payload転送**: MooncakeやNIXL等を利用し、AR→DiT等のstage間でKV、text、visual/audio latent、layout metadataを転送・再利用できる。\n- **continuous / request batching**: diffusionや音声、画像生成を含む複数requestをbatch化し、stageごとのGPU利用率を高める。\n- **memory / offload最適化**: component単位offload、FP8等の低精度、prefix / projection cache、KV reuseを利用できる。\n- **multi-hardware対応**: NVIDIA CUDAに加え、Ascend NPU、Intel XPU、ROCm等の対応を拡張している。\n\n## 主要更新\n\n### 2026-09-25 — v0.30.0（released）\n\n- **統一full-duplex serving**: `DuplexOmni` / `DuplexOmniEngine` / `DuplexOrchestrator` を導入し、session ownershipとlifecycleをengine側へ移した。\n- **native cross-stage KV / payload transfer**: diffusion KVのstage間転送・再利用、Mooncake AR→DiT handoff、KV prefetch、HunyuanImage3のcross-request paged prefix cache、NIXLによるconditioning payload転送を追加。\n- **interactive world-model / streaming video**: stepwise generation、mid-stream camera control、streaming VAE decode、chunked video encodingと非同期転送を強化。\n- **memory / serving拡張**: component-selective offload、AR-stage FP8 KV、multi-process API serving、RL rollout serving API等を追加。\n- **vLLM 0.30.0へrebase**し、speech / image / audiovisual generation / VLAの対応範囲を拡張。\n\n一次資料:\n- https://github.com/vllm-project/vllm-omni\n- https://github.com/vllm-project/vllm-omni/releases/tag/v0.30.0\n\n## 追跡方針\n\n通常のvLLM更新とは分けて、vLLM-Omni固有のmulti-stage scheduling、full-duplex、audio / video / diffusion serving、stage間KV / payload transfer、memory / offload、hardware backendの主要変更を追う。単なるmodel allowlist追加や軽微なbug fixは原則除外する。\n"
     },
     {
-      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
-      "expected_blob_sha": "b31bdb2959bf5368540389190aac8b91f43ca485",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 読み方の注意",
-          "text": "### 2026-09-23 — v1.3.0rc28（pre-release）\n\n- **KV Cache Manager V2への移行継続**: 新規modelではV2を既定にし、既存modelも順次移行。V1はdeprecated予定。\n- **legacy TensorRT backend縮小**: legacy TensorRT backendのPython module / test削除やserver argument変更など、PyTorch backend中心へのarchitecture移行を継続。\n- **既知問題を伴うRC**: disaggregated serving startup、NIXL KV transfer、FlashInfer attention backendの長時間serverでのGPU memory増加、DeepSeek系SM120、低bit MoE等の既知問題が列挙されているため、stable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "c910e5f3fe5133024a861d683e56dcfeb3a56c55",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "### 用語メモ",
-          "text": "- **2026-09-18 — v0.5.20（released）**: CPU-onlyのSGLang Simulatorを追加し、実scheduler / radix cache / hierarchical cacheを使いながらmodel forwardのみlatency predictorへ置換。実測traceに対しTTFTを多くのtraceで約6%以内、最長32K〜128Kでは最大10%程度の誤差で予測する。prefill context parallelism v1を削除してstrategy-based pathへ統合し、ROCm model loadingも改善。GLM-5.2 TP4 / 4×MI355Xでmodel load 505.7秒→40.4秒、DeepSeek-V4 Blackwell kernelではTRT-LLM attention kernelがFlashMLA比でkernel-level prefill約1.2倍、decode約1.45倍。CUDA 12系wheel/imageはv0.5.19で終了。[release](https://github.com/sgl-project/sglang/releases/tag/v0.5.20)\n\n"
-        }
-      ]
+      "path": "framework-updates/inference-engines/tensorrt-edge-llm/README.md",
+      "expected_blob_sha": null,
+      "content": "# TensorRT Edge-LLM\n\nTensorRT Edge-LLMの主要な機能・性能更新を継続的に記録する集約ページ。TensorRT-LLM本体とは別に、**Jetson / DRIVE / DGX Spark等のedge・physical AI向けC++ LLM/VLM推論runtime**として追跡する。\n\n## 現在できること\n\n- **edge向けC++推論runtime**: NVIDIA Jetson、DRIVE、DGX Spark、IGX等でtext / vision / audio / speech / action modelを実行する。\n- **TensorRT engine build**: Hugging Face checkpoint→ONNX→C++ engineの標準経路に加え、対応modelではONNXを介さないexperimental direct engine builderも利用できる。\n- **量子化・低精度推論**: NVFP4、FP8、INT4等を利用し、edge環境のmemory容量と帯域制約へ適応する。\n- **投機的デコード**: MTP、DFlash / DFlash2、DSpark、EAGLE3等を利用できるmodel / platformがある。\n- **KV cache reuse**: multi-turn LLMやVLMのmedia-aware context cache、paged KV reuse等を扱う。\n- **OpenAI互換server**: experimental serverでreasoning parser、streaming、video input等を提供し、in-flight batchingも段階的に導入している。\n- **multi-device**: DGX Spark等でtensor parallel構成を扱う。\n- **multimodal / physical AI**: VLM、ASR、TTS、video、VLA / policy inferenceまで対象を広げている。\n\n## 主要更新\n\n### 2026-09-29 — v0.11.0（released）\n\n- **Python wheel配布**: 対応x86-64 / AArch64 platform向けにpublished wheelを追加。\n- **in-flight batching**: experimental OpenAI-compatible serverへopt-in single-rank in-flight batchingを導入。\n- **guided decoding**: XGrammarを使ったJSON / JSON Schema / regex / EBNF / structural tag / choices制約を追加。\n- **DFlash2 / Qwen3.8**: Qwen3.8 DFlash2 speculative decodingを追加し、Nemotron / Gemmaのspeculative経路も拡張。\n- **IGX Thor / multi-device**: IGX Thorを正式対応し、Qwen3.5 tensor-parallel inferenceを追加。\n- **runtime / memory**: bounded Gemma 4 sliding-window KV、DiffusionGemma prompt-KV reuse、GPU media hashing、Blackwell向けpaged FMHAやMoE kernel等を強化。\n\n### 2026-09-03 — v0.10.1（released）\n\n- 2台のDGX Sparkを使うexperimental TP=2、Qwen3.8-27B DSpark、FP8 ViT attention、DART visual-token pruningを追加。\n- experimental OpenAI-compatible serverを再設計し、公式release noteではdisk usageを60〜99%削減、cold launch timeを50%削減と報告。\n\n一次資料:\n- https://github.com/NVIDIA/TensorRT-Edge-LLM\n- https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.11.0\n- https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.10.1\n\n## 追跡方針\n\nTensorRT-LLM本体とは分け、edge hardware固有のengine build、低bit kernel、KV / context reuse、speculative decoding、multi-device、OpenAI-compatible serving、multimodal / physical-AI pipelineの主要変更を追う。単なるmodel追加だけで主要能力が変わらない更新や軽微なcorrectness fixは原則除外する。\n"
     }
   ],
-  "summary": "2026-09-30 08:30 maintenance: Ollama v0.34.4/v0.35.0/v0.40.0-rc0、llama.cpp b11238、TensorRT-LLM v1.3.0rc28、SGLang v0.5.20を現行framework更新ページへ追記。"
+  "summary": "TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加し、framework indexと各専用ページを作成。"
 }
