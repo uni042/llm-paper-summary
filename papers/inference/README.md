@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1353本**。
+収録論文: **1355本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1353本**。
+推論論文：**1355本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -44,11 +44,11 @@
 | [04-conditional-computation](04-conditional-computation/README.md) | 17 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 94 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 140 |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 141 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 29 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 36 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 102 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 300 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 301 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 35 |
 | [13-sparse-attention](13-sparse-attention/README.md) | 28 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 31 |
