@@ -445,7 +445,7 @@ def _library_first_status(repo_root: Path, now=None) -> str:
               "---", "", "表示生成: `.survey/scripts/render_status_dashboard.py`", ""]
     return "\n".join(lines)
 
-build_dashboard = _library_first_status
+build_dashboard = _core.build_dashboard
 
 
 def main() -> int:
