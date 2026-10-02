@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1655",
+      "doi": "10.18653/v1/2026.findings-acl.1655",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.findings-acl.1655"
+      ],
+      "title": "LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1655/",
+      "authors": [
+        "Tianyu Liu",
+        "Qitan Lv",
+        "Hao Li",
+        "Xing Gao",
+        "Xiao Sun",
+        "Xiaoyan Sun"
+      ],
+      "published": "2026/7",
+      "year": 2026,
+      "reason": "直前logitからnext-next tokenまで予測して検索範囲を広げ、draft modelなしの検索型投機的復号の受理率と速度を改善する。",
+      "library_body_check": "本文では最後のlogitから次々トークンを推測し、next tokenとnext-next tokenの双方で参照列を検索してdraftを作るtraining-free方式を提案。複数生成ベンチマークで最大2.61倍高速化、1 decoding step当たり平均3.28 accepted tokensを報告しており直接的な推論高速化研究。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-570cb63791df",
+    "round": "libimp-570cb63791df9fa1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-570cb63791df9fa1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-570cb63791df9fa1-pre01.json",
+    "receipt": "sha256:8e69231679eae1ccaeeb641a92f7b49bf12a5efcf556f1be09cd97ba562ba150"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-570cb63791df",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

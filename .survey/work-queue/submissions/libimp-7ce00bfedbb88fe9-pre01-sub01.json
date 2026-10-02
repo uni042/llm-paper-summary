@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type",
+      "source_url": "https://arxiv.org/abs/2502.18755",
+      "year": 2025,
+      "published": "2025-02-26",
+      "abstract": "Large language models (LLMs) are one of the most important killer computer applications. The recent algorithmic advancement proposes a fine-grained group-wise quantization for LLMs, which treats a small set (e.g., 64) of values in a tensor as a compression unit. It effectively preserves the model accuracy without retraining, and has become the standard approach to efficiently deploy LLMs. On the other hand, there are works that propose various adaptive data types to better adapt to different distributions and further reduce the required bit length for LLMs. In this work, our detailed analysis unveils a key finding that while different tensors exhibit similar distributions, small groups can have markedly different distributions. As such, the group-level diversity requires a new level of adaptivity for which existing adaptive data types fail to provide.In this paper, we propose MANT, a mathematically adaptive numeric type, featuring a more flexible encoding paradigm with a wider range of data distribution and more efficient decoding-computation fusion mechanism to address these challenges. Based on MANT, we develop a supporting framework to assign the appropriate data type for each group adaptively. Meanwhile, the dynamically generated Key-Value (KV) caches in LLMs introduce further complexity for real-time quantization. To tackle this, we propose an efficient real-time quantization mechanism. Besides, we implement a specific processing element (PE) to efficiently support MANT and incorporate a real-time quantization unit. By integrating these components into a systolic array, MANT unifies the group-wise weight and KV cache quantization and addresses the associated challenges. Our evaluation shows achieving, on average, 2.99 × (up to 4.46 ×) speedup and 2.81 × (up to 4.10 ×) energy reduction to the state-of-the-art LLM accelerator.",
+      "canonical_id": "arXiv:2502.18755",
+      "arxiv_id": "2502.18755",
+      "doi": "10.1109/HPCA61900.2025.00086",
+      "authors": [
+        "Weiming Hu",
+        "Haoyang Zhang",
+        "Cong Guo",
+        "Yu Feng",
+        "Renyang Guan",
+        "Zhendong Hua",
+        "Zihan Liu",
+        "Yue Guan",
+        "Min-Yi Guo",
+        "Jingwen Leng"
+      ],
+      "reason": "LLMのweightと動的KV cacheをgroup-wise低bit量子化し、専用PEとreal-time quantization unitで推論速度・エネルギーを直接改善する。",
+      "library_body_check": "HPCA本文ページでmathematically adaptive numerical type、groupごとの型割当て、動的KV cache向けreal-time quantization、専用PEとsystolic array統合を確認。既存LLM accelerator比平均2.99倍（最大4.46倍）speedup、平均2.81倍（最大4.10倍）energy reductionを報告。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MiniMax Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2606.13392",
+      "year": 2026,
+      "published": "2026-06-11",
+      "abstract": "Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.",
+      "canonical_id": "arXiv:2606.13392",
+      "arxiv_id": "2606.13392",
+      "doi": "10.48550/arXiv.2606.13392",
+      "authors": [
+        "Xunhao Lai",
+        "Weiqi Xu",
+        "Yu-Feng Yang",
+        "Qiaorui Chen",
+        "Yangyifan Xu",
+        "Lun-Bin Zeng",
+        "Xiao-Long Li",
+        "Haohai Sun",
+        "Haichao Zhu",
+        "Vito Zhang",
+        "Jin-Kai Hu",
+        "Jia-Yao Li",
+        "Rui Gao",
+        "Ze-Kun Li",
+        "Song-Quan Zhu",
+        "Jing-Kai Zhou",
+        "Peng-Yu Zhao"
+      ],
+      "reason": "GQA group単位のblock sparse retrievalとGPU kernel共同設計により、長文脈LLMのprefill・decodeを直接高速化する。",
+      "library_body_check": "本文系資料でIndex BranchがKV blockをGQA group別top-k選択しMain Branchが選択blockだけexact sparse attentionする構成、exp-free Top-kとKV-outer sparse kernelを確認。109B multimodal model・1M contextでattention compute 28.4倍削減、H800でprefill 14.2倍、decode 7.6倍wall-clock speedup。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7ce00bfedbb8",
+    "round": "libimp-7ce00bfedbb88fe9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7ce00bfedbb88fe9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7ce00bfedbb88fe9-pre01.json",
+    "receipt": "sha256:27d2881dc6c8333558ae00f066ddd04db6e4e23a22f05e957b47c16e9f6fe932"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7ce00bfedbb8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
