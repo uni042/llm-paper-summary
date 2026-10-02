@@ -9,6 +9,7 @@ GitHubへ到達済みのLibrary-first成果だけから再構成します。Chat
 | 指標 | 現在値 |
 |---|---:|
 | 収録論文 | **1397** |
+| 収録候補論文数 | **508** |
 | 直近24時間のResearch完了 | **60** |
 | 直近24時間のDiscovery本文確認・分類 | **91** |
 | 最終Research完了 | **10-02 06:58:00 JST** |
@@ -16,6 +17,8 @@ GitHubへ到達済みのLibrary-first成果だけから再構成します。Chat
 | Research 7日平均 | **30.0件/日** |
 | Discovery 7日平均 | **116.1件/日** |
 | references推定残日数 | **50.1日** |
+
+収録候補論文数は `.survey/work-queue/jobs/*.json` の非終端Research jobを対象に、`canonical_id` で一意化して数えます。現行mainでは `ready` のResearch job 508件すべてに `canonical_id` があり、この表示値を初期値としています。以後はSTATUS自動生成時に同じ定義で再計算します。
 
 日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。
 
