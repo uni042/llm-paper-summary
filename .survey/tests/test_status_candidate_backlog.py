@@ -52,13 +52,10 @@ class DurableCandidateBacklogTests(unittest.TestCase):
                 repo, now=datetime(2026, 9, 16, 0, 0, tzinfo=timezone.utc)
             )
 
-            top, _ = text.split("## 件数サマリー", 1)
-            self.assertIn("## 現在の収録候補", top)
-            self.assertIn("| canonical_id確認済みの一意な候補論文 | **2** |", top)
-            self.assertIn("| canonical_idなしの候補Research job | **1** |", top)
-            self.assertIn("| 非終端Research job合計 | **4** |", top)
-            self.assertNotIn("999", top)
-            self.assertLess(text.index("## 現在の収録候補"), text.index("## 件数サマリー"))
+            summary, _ = text.split("## 直近7日の日次進捗", 1)
+            self.assertIn("| 収録候補論文数 | **2** |", summary)
+            self.assertIn("canonical_idなしの非終端Research jobは **1件**", summary)
+            self.assertNotIn("999", summary)
 
 
 if __name__ == "__main__":
