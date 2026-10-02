@@ -1,0 +1,872 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-9f88be53de9e3b30c8af",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-9f88be53de9e3b30c8af",
+  "axis": "forward-citation-vllm",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-02T14:15:23.158818+00:00",
+  "preload_id": "preload-9f88be53de9e3b30c8af",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+      "source_url": "https://doi.org/10.1016/j.future.2026.108697",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "doi": "10.1016/j.future.2026.108697",
+      "canonical_id": "DOI:10.1016/j.future.2026.108697",
+      "authors": [
+        "Guanghan Wu",
+        "Roberto Morabito"
+      ]
+    },
+    {
+      "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+      "source_url": "https://doi.org/10.1016/j.respol.2026.105605",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "doi": "10.1016/j.respol.2026.105605",
+      "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+      "authors": [
+        "Dror Shvadron",
+        "Han-Sen Zhang",
+        "L. Fleming",
+        "D. Gross"
+      ]
+    },
+    {
+      "title": "DARCS: Deadline- and reliability-constrained scheduling for LLM-based agentic workflows on heterogeneous edge infrastructure",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.104019",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "doi": "10.1016/j.sysarc.2026.104019",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.104019",
+      "authors": [
+        "R. Devaraj",
+        "Piyoosh Purushothaman Nair",
+        "S. Moulik"
+      ]
+    },
+    {
+      "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.116162",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.116162",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+      "authors": [
+        "Zhen-Dong Wang",
+        "Zhi-Bin Gu",
+        "Zi-Qi Zhang",
+        "Zongyang Ma",
+        "Bing Li",
+        "Cheng Xu",
+        "Songyin Dai",
+        "Ying Wang",
+        "Hong-Zhe Liu"
+      ]
+    },
+    {
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134297",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134297",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "authors": [
+        "Ge Teng",
+        "Chen Shen",
+        "Wenxiao Wang",
+        "Sinan Fan",
+        "Liang Xie",
+        "Xiang Tian",
+        "Peng Chen",
+        "Xuesong Liu",
+        "Yaowu Chen",
+        "Jie-Ping Ye"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+      "source_url": "https://doi.org/10.1016/j.comnet.2026.112609",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.comnet.2026.112609",
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Hao-Chen Lv",
+        "Dan-Yang Zheng",
+        "Chen Yang",
+        "Huan-Lai Xing",
+        "Xiao-Jun Cao",
+        "Ji Xu",
+        "Fei Teng"
+      ]
+    },
+    {
+      "title": "Agentic active Asset Administration Shell for circular manufacturing",
+      "source_url": "https://doi.org/10.1016/j.jmsy.2026.07.011",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.jmsy.2026.07.011",
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+      "authors": [
+        "Jian-Zhang Li",
+        "Qian Ruan",
+        "Dachuan Shi",
+        "Matthias Schneider",
+        "Olga Meyer",
+        "Michael Oberle",
+        "Li Yi",
+        "Fei Tao"
+      ]
+    },
+    {
+      "title": "RoboPIM: A ReRAM-Based Accelerator for LLM-Based Robotics Applications via Dynamic Task Slicing",
+      "source_url": "https://doi.org/10.1109/TCAD.2026.3660201",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Large language models (LLMs) have demonstrated significant potential in improving robotics applications through natural language processing capabilities. Matrix multiplication dominates the computational workload in these LLM-based robotics systems, and resistive random access memory (ReRAM) provides notable performance benefits due to its inherent parallelism and energy efficiency. However, matrix multiplications in these applications pose dual heterogeneity challenges, encompassing both structural and scale heterogeneity. Structurally, these applications involve both standard dense matrix operations and block-structured sparse multiplications, where sparsity patterns vary significantly with robot topology. In terms of scale, matrix sizes range from just a few to thousands of dimensions, making large ReRAM crossbars designed for LLM inefficient for small-scale robotics computations. Existing acceleration approaches fail to address this dual heterogeneity, limiting their effectiveness for LLM-based robotics applications. In this work, we propose robotics applications-processing in memory (RoboPIM), the first low-energy ReRAM-based accelerator tailored for LLM-based robotics applications. robotics applications-processing in memory (RoboPIM) adapts to the diverse matrix multiplication requirements across robot platforms and LLM configurations. Our design features a ReRAM architecture with various crossbar sizes and implements a dynamic task slicing scheme that allocates matrix slices to appropriately sized crossbars. To maximize ReRAM’s parallel processing capabilities, we develop a two-stage scheduling strategy that efficiently manages matrix multiplications while enhancing hardware utilization. Comprehensive evaluations demonstrate that RoboPIM achieves $2.85\\times $ and $6.85\\times $ speedup across diverse robotic platforms and LLMs, respectively, outperforming state-of-the-art domain-specific solutions.",
+      "doi": "10.1109/TCAD.2026.3660201",
+      "canonical_id": "DOI:10.1109/TCAD.2026.3660201",
+      "authors": [
+        "Wen-Jing Xiao",
+        "Jianyu Wang",
+        "Dan Chen",
+        "Huize Li",
+        "Mohsen Guizani",
+        "Min Chen",
+        "T. Wu"
+      ]
+    },
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+      "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+      "doi": "10.1109/MC.2026.3717392",
+      "canonical_id": "DOI:10.1109/MC.2026.3717392",
+      "authors": [
+        "Partha P. Maji",
+        "Timothy Jones",
+        "Robert D. Mullins"
+      ]
+    },
+    {
+      "title": "Serving a Revisable World: Versioned Execution for Interruptible Agents",
+      "source_url": "https://arxiv.org/abs/2610.01160",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "LLM agents revise running tasks when users change instructions, tools fail, or new information changes a plan. Today's servers express a revision as aborting old requests and submitting replacements. Yet the old execution's buffered output and outstanding work must stop affecting the application, while completed KV state may still be useful to its replacement. Handling these obligations separately can leave obsolete effects publishable and force the successor to rebuild valid state. We present \\retire, a serving control-plane redesign around \\emph{versioned execution}. Requests own scheduling and memory resources; execution versions own \\emph{authority}, the permission to publish output or install state for the current execution. \\retire first revokes obsolete work, then bounds its remaining execution and certifies the completed prefix its successor can inherit. The successor runs from that state while isolated old resources are reclaimed asynchronously. This unifies fast invalidation and selective preservation in one version transition. We implement \\retire in vLLM across output publication, GPU execution, KV handoff, tiered recovery, and distributed and multi-tenant serving. Correctness experiments verify current-version output and valid state inheritance across these paths. Combining invalidation with inheritance reduces revision-to-successor time-to-first-token by a median 17.1\\% in controlled paired experiments. A replay of recorded coding-agent interruption arrivals emits no obsolete output and keeps every final version progressing through repeated revisions. \\retire turns abort-and-restart into a coordinated handoff that stops obsolete work quickly and preserves useful work for its successor.",
+      "canonical_id": "arXiv:2610.01160",
+      "arxiv_id": "2610.01160",
+      "authors": [
+        "Yan-Xin Zhang",
+        "Rahul Sharma",
+        "Nitin Vegesna",
+        "Zhe-Yu Fu",
+        "Chang Liu",
+        "Trivikram Krishnamurthy"
+      ]
+    },
+    {
+      "title": "ReSolve: Reusing Candidate Reasoning through Selective Generative Moderation",
+      "source_url": "https://arxiv.org/abs/2610.01140",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Sampling multiple solutions spends computation on intermediate deductions and unfinished arguments as well as final answers. We introduce ReSolve, a training-free inference procedure that reuses this candidate reasoning through selective generative moderation. An answer-distribution controller invokes a model to examine existing derivations when candidates disagree or lack a parseable answer, then incorporates the generated solution into a bounded loop. Under Hybrid scoring on 130 competition-mathematics problems evaluated with two independently sampled candidate pools, ReSolve obtains 100 and 99 correct answers, compared with 91 and 92 for voting over the same four candidates, with no correct-to-incorrect changes relative to that vote in either pool. Eight-sample self-consistency obtains 94 and 96 correct answers while consuming substantially more tokens; ReSolve uses 46.3% and 47.2% fewer tokens in the two evaluations. A controlled ablation removes visible derivations while retaining answer keys, vote counts, and the per-state output-cap rule, reducing accuracy from 100 to 93 correct despite increasing computation. Selective and always-on Uniform moderation both solve 97 problems, while selectivity reduces moderation tokens by approximately 54% and total pipeline tokens by 6.2%. These results support candidate reasoning as reusable inference computation. They do not establish an accuracy advantage over additional sampling or a distinct benefit from specialized route instructions.",
+      "canonical_id": "arXiv:2610.01140",
+      "arxiv_id": "2610.01140",
+      "authors": [
+        "Bang-Ji Yang",
+        "Jia-Jun Fan",
+        "Hong-Ba Ma",
+        "Xi Zhu",
+        "Wei-Zhi Zhang",
+        "Ming-Hao Guo",
+        "Ye Li",
+        "Hamid Palangi",
+        "Jia-Xuan You"
+      ]
+    },
+    {
+      "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.00940",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "We propose ReHoPER, an inference-only, zero-shot method that improves large language models'reasoning by generating and answering intermediate questions along multiple paths before the final answer. It iteratively plans a horizon of candidate intermediate questions, selects one to answer, and replans from the updated history. ReHoPER is task-agnostic, using the same generic instructions across datasets and models without labeled data or task-specific prompt design. Across multiple datasets, including iLLC, a new controlled benchmark for compositional reasoning, ReHoPER outperforms strong baselines, with the largest gains in the most compositional settings. Our implementation and the iLLC generator are publicly available to support future work.",
+      "canonical_id": "arXiv:2610.00940",
+      "arxiv_id": "2610.00940",
+      "authors": [
+        "Saeed Ahmadnia",
+        "Cornelia Caragea"
+      ]
+    },
+    {
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "source_url": "https://arxiv.org/abs/2610.01108",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+      "canonical_id": "arXiv:2610.01108",
+      "arxiv_id": "2610.01108",
+      "authors": [
+        "Sumin Lee",
+        "Sukmin Cho",
+        "Suengjae Lim",
+        "Youngjin Kwon"
+      ]
+    },
+    {
+      "title": "A Matched-Budget Audit Framework for Recaptioned Image-Text Supervision Distributions",
+      "source_url": "https://arxiv.org/abs/2610.00952",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Recaptioned image-text corpora are now standard for text-to-image (T2I) training, with vision--language model (VLM) captioners replacing sparse alt-text by dense descriptions. A recaptioned corpus is a supervision distribution induced by a documented captioning policy ($\\pi$), captioner ($V_c$), and source corpus ($C$). Length-correlated proxies miss caption-register artifacts and downstream T2I benchmarks entangle the corpus with training choices, so this distribution is hard to audit at corpus scale. We introduce a reusable matched-budget audit framework for recaptioned supervision distributions $D_{\\pi,V_c,C}$: at a fixed text budget of $B = 64$ it reports a five-axis profile spanning prompt-side coverage, image-conditioned faithfulness, and caption-surface health, with claimed controllable basic units (CBU) as the common claim unit. We instantiate the framework on seven paired comparisons over five public source corpora. Across the four cross-corpus pairs, the released surface raises supported CBU per caption by $+3.39$ to $+6.36$ under both Qwen and Gemma Judges, and on CC12M the same framework exposes a long-vs-dense frontier that is consistent across both judges and four budgets. We release the audited multi-source recap corpus ($\\approx$ 490M) together with the audit-artifact bundle.",
+      "canonical_id": "arXiv:2610.00952",
+      "arxiv_id": "2610.00952",
+      "authors": [
+        "Giyeong Oh",
+        "Junghun Park",
+        "Yuhan Bae",
+        "Youngjae Yu"
+      ]
+    },
+    {
+      "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications",
+      "source_url": "https://arxiv.org/abs/2610.00977",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Broken access control, the failure of authorization, is one of the most prevalent web security risks. Unlike injection, a flow of untrusted input into a dangerous operation, authorization is a relation: who may act on what, not how data moves. Each application decides that relation for itself, so no rule written in advance carries to the next. An LLM agent can infer it from the code, but with no systematic way to cover the application and prioritize what to inspect, its search stays undirected and access-control flaws go undetected. We present ABSENTIA, a security scaffolding that turns general LLM agents into systematic vulnerability detectors for the backend of web applications, run as an audit by the developers and security engineers who maintain the code. Under its direction, the agents build a graph that maps the application's routes to the code behind them. ABSENTIA then works route by route, applying invariant falsification: it infers the properties the code is meant to satisfy, and where one is not enforced, reports the route for maintainer review. We also release BAC-Bench, a benchmark of 30 broken access control advisories across 25 repositories, 3 languages, and 9 frameworks, each published in 2025 or later, verified by a human auditor, and paired with its fixing commit, so credit requires flagging the vulnerable version and not the fixed one. ABSENTIA recalls 19 of them, 17 under paired credit, and an LLM verifier confirms 51% of its findings. CodeQL and Semgrep recall none, and an unstructured agent on the same model recalls 3. In the OWASP Benchmark injection categories, ABSENTIA leads the dedicated analyzers in Python and trails only CodeQL and IRIS in Java.",
+      "canonical_id": "arXiv:2610.00977",
+      "arxiv_id": "2610.00977",
+      "authors": [
+        "André V. Duarte",
+        "Aditya Oke",
+        "Me-Lo Rui",
+        "Shubham Gandhi",
+        "Nachiket Kotalwar",
+        "Charmi Khandor",
+        "Dan-Qing Wang",
+        "Arlindo L. Oliveira",
+        "Carolyn P. Rosé",
+        "Lei Li"
+      ]
+    },
+    {
+      "title": "On the Evaluation of Large Language Models in Unit Test Evolution (Experience Paper)",
+      "source_url": "https://doi.org/10.1145/3832282",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1145/3832282",
+      "canonical_id": "DOI:10.1145/3832282",
+      "authors": [
+        "Wei-Chang Liu",
+        "Jun-Wei Zhang",
+        "Yu-Qing Niu",
+        "Bo Zhou"
+      ]
+    },
+    {
+      "title": "Cracking Query Bottlenecks: Towards Efficiency-Oriented Text-to-SQL Generation",
+      "source_url": "https://doi.org/10.1145/3832269",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1145/3832269",
+      "canonical_id": "DOI:10.1145/3832269",
+      "authors": [
+        "Li Lin",
+        "Yun-Feng Shen",
+        "Ling-Feng Bao",
+        "Rong-Xin Wu",
+        "Yang Liu"
+      ]
+    },
+    {
+      "title": "E4R-Reviewer: Effective and Explainable Automated Code Review via End-to-End Reasoning-Guided Alignment",
+      "source_url": "https://doi.org/10.1145/3832096",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1145/3832096",
+      "canonical_id": "DOI:10.1145/3832096",
+      "authors": [
+        "Yi-Fei Liu",
+        "Xi-Zhi Hou",
+        "Li Yang",
+        "Huan Liu",
+        "Chen Zhu",
+        "Feng-Jun Zhang",
+        "Chun Zuo"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108697",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108697",
+        "title:beaveredge an llmorchestrated framework for edge ai lifecycle management automation",
+        "url:https://doi.org/10.1016/j.future.2026.108697"
+      ],
+      "record": {
+        "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+        "source_url": "https://doi.org/10.1016/j.future.2026.108697",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "doi": "10.1016/j.future.2026.108697",
+        "canonical_id": "DOI:10.1016/j.future.2026.108697",
+        "authors": [
+          "Guanghan Wu",
+          "Roberto Morabito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.respol.2026.105605",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.respol.2026.105605",
+        "title:measuring the production of scientific human capital new data methods and evidence on the us scientific training ecosystem",
+        "url:https://doi.org/10.1016/j.respol.2026.105605"
+      ],
+      "record": {
+        "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+        "source_url": "https://doi.org/10.1016/j.respol.2026.105605",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "doi": "10.1016/j.respol.2026.105605",
+        "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+        "authors": [
+          "Dror Shvadron",
+          "Han-Sen Zhang",
+          "L. Fleming",
+          "D. Gross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sysarc.2026.104019",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.104019",
+        "title:darcs deadline and reliabilityconstrained scheduling for llmbased agentic workflows on heterogeneous edge infrastructure",
+        "url:https://doi.org/10.1016/j.sysarc.2026.104019"
+      ],
+      "record": {
+        "title": "DARCS: Deadline- and reliability-constrained scheduling for LLM-based agentic workflows on heterogeneous edge infrastructure",
+        "source_url": "https://doi.org/10.1016/j.sysarc.2026.104019",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "doi": "10.1016/j.sysarc.2026.104019",
+        "canonical_id": "DOI:10.1016/j.sysarc.2026.104019",
+        "authors": [
+          "R. Devaraj",
+          "Piyoosh Purushothaman Nair",
+          "S. Moulik"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116162",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116162",
+        "title:a unified framework for early childhood image captioning via knowledgegrounded metrics and processlevel reinforcement",
+        "url:https://doi.org/10.1016/j.engappai.2026.116162"
+      ],
+      "record": {
+        "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.116162",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.116162",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+        "authors": [
+          "Zhen-Dong Wang",
+          "Zhi-Bin Gu",
+          "Zi-Qi Zhang",
+          "Zongyang Ma",
+          "Bing Li",
+          "Cheng Xu",
+          "Songyin Dai",
+          "Ying Wang",
+          "Hong-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134297",
+        "title:ddpt enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "url:https://doi.org/10.1016/j.neucom.2026.134297"
+      ],
+      "record": {
+        "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134297",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134297",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+        "authors": [
+          "Ge Teng",
+          "Chen Shen",
+          "Wenxiao Wang",
+          "Sinan Fan",
+          "Liang Xie",
+          "Xiang Tian",
+          "Peng Chen",
+          "Xuesong Liu",
+          "Yaowu Chen",
+          "Jie-Ping Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.comnet.2026.112609",
+        "title:profitaware deployment of large language modelenabled inference chains in data centers",
+        "url:https://doi.org/10.1016/j.comnet.2026.112609"
+      ],
+      "record": {
+        "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+        "source_url": "https://doi.org/10.1016/j.comnet.2026.112609",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.comnet.2026.112609",
+        "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+        "authors": [
+          "Yu-Qi Zhang",
+          "Hao-Chen Lv",
+          "Dan-Yang Zheng",
+          "Chen Yang",
+          "Huan-Lai Xing",
+          "Xiao-Jun Cao",
+          "Ji Xu",
+          "Fei Teng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.jmsy.2026.07.011",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jmsy.2026.07.011",
+        "title:agentic active asset administration shell for circular manufacturing",
+        "url:https://doi.org/10.1016/j.jmsy.2026.07.011"
+      ],
+      "record": {
+        "title": "Agentic active Asset Administration Shell for circular manufacturing",
+        "source_url": "https://doi.org/10.1016/j.jmsy.2026.07.011",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.jmsy.2026.07.011",
+        "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+        "authors": [
+          "Jian-Zhang Li",
+          "Qian Ruan",
+          "Dachuan Shi",
+          "Matthias Schneider",
+          "Olga Meyer",
+          "Michael Oberle",
+          "Li Yi",
+          "Fei Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2026.3660201",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2026.3660201",
+        "title:robopim a rerambased accelerator for llmbased robotics applications via dynamic task slicing",
+        "url:https://doi.org/10.1109/TCAD.2026.3660201"
+      ],
+      "record": {
+        "title": "RoboPIM: A ReRAM-Based Accelerator for LLM-Based Robotics Applications via Dynamic Task Slicing",
+        "source_url": "https://doi.org/10.1109/TCAD.2026.3660201",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Large language models (LLMs) have demonstrated significant potential in improving robotics applications through natural language processing capabilities. Matrix multiplication dominates the computational workload in these LLM-based robotics systems, and resistive random access memory (ReRAM) provides notable performance benefits due to its inherent parallelism and energy efficiency. However, matrix multiplications in these applications pose dual heterogeneity challenges, encompassing both structural and scale heterogeneity. Structurally, these applications involve both standard dense matrix operations and block-structured sparse multiplications, where sparsity patterns vary significantly with robot topology. In terms of scale, matrix sizes range from just a few to thousands of dimensions, making large ReRAM crossbars designed for LLM inefficient for small-scale robotics computations. Existing acceleration approaches fail to address this dual heterogeneity, limiting their effectiveness for LLM-based robotics applications. In this work, we propose robotics applications-processing in memory (RoboPIM), the first low-energy ReRAM-based accelerator tailored for LLM-based robotics applications. robotics applications-processing in memory (RoboPIM) adapts to the diverse matrix multiplication requirements across robot platforms and LLM configurations. Our design features a ReRAM architecture with various crossbar sizes and implements a dynamic task slicing scheme that allocates matrix slices to appropriately sized crossbars. To maximize ReRAM’s parallel processing capabilities, we develop a two-stage scheduling strategy that efficiently manages matrix multiplications while enhancing hardware utilization. Comprehensive evaluations demonstrate that RoboPIM achieves $2.85\\times $ and $6.85\\times $ speedup across diverse robotic platforms and LLMs, respectively, outperforming state-of-the-art domain-specific solutions.",
+        "doi": "10.1109/TCAD.2026.3660201",
+        "canonical_id": "DOI:10.1109/TCAD.2026.3660201",
+        "authors": [
+          "Wen-Jing Xiao",
+          "Jianyu Wang",
+          "Dan Chen",
+          "Huize Li",
+          "Mohsen Guizani",
+          "Min Chen",
+          "T. Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3717392",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3717392",
+        "title:the next memory wall why moving data will define the future of ai inference",
+        "url:https://doi.org/10.1109/MC.2026.3717392"
+      ],
+      "record": {
+        "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+        "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Artificial intelligence (AI) has entered a new memory wall. As large language models scale, moving data—not performing computation—is rapidly becoming the dominant bottleneck, reshaping how future AI systems will be designed.",
+        "doi": "10.1109/MC.2026.3717392",
+        "canonical_id": "DOI:10.1109/MC.2026.3717392",
+        "authors": [
+          "Partha P. Maji",
+          "Timothy Jones",
+          "Robert D. Mullins"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01160",
+      "identity_tokens": [
+        "id:arXiv:2610.01160",
+        "title:serving a revisable world versioned execution for interruptible agents",
+        "url:https://arxiv.org/abs/2610.01160"
+      ],
+      "record": {
+        "title": "Serving a Revisable World: Versioned Execution for Interruptible Agents",
+        "source_url": "https://arxiv.org/abs/2610.01160",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "LLM agents revise running tasks when users change instructions, tools fail, or new information changes a plan. Today's servers express a revision as aborting old requests and submitting replacements. Yet the old execution's buffered output and outstanding work must stop affecting the application, while completed KV state may still be useful to its replacement. Handling these obligations separately can leave obsolete effects publishable and force the successor to rebuild valid state. We present \\retire, a serving control-plane redesign around \\emph{versioned execution}. Requests own scheduling and memory resources; execution versions own \\emph{authority}, the permission to publish output or install state for the current execution. \\retire first revokes obsolete work, then bounds its remaining execution and certifies the completed prefix its successor can inherit. The successor runs from that state while isolated old resources are reclaimed asynchronously. This unifies fast invalidation and selective preservation in one version transition. We implement \\retire in vLLM across output publication, GPU execution, KV handoff, tiered recovery, and distributed and multi-tenant serving. Correctness experiments verify current-version output and valid state inheritance across these paths. Combining invalidation with inheritance reduces revision-to-successor time-to-first-token by a median 17.1\\% in controlled paired experiments. A replay of recorded coding-agent interruption arrivals emits no obsolete output and keeps every final version progressing through repeated revisions. \\retire turns abort-and-restart into a coordinated handoff that stops obsolete work quickly and preserves useful work for its successor.",
+        "canonical_id": "arXiv:2610.01160",
+        "arxiv_id": "2610.01160",
+        "authors": [
+          "Yan-Xin Zhang",
+          "Rahul Sharma",
+          "Nitin Vegesna",
+          "Zhe-Yu Fu",
+          "Chang Liu",
+          "Trivikram Krishnamurthy"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01140",
+      "identity_tokens": [
+        "id:arXiv:2610.01140",
+        "title:resolve reusing candidate reasoning through selective generative moderation",
+        "url:https://arxiv.org/abs/2610.01140"
+      ],
+      "record": {
+        "title": "ReSolve: Reusing Candidate Reasoning through Selective Generative Moderation",
+        "source_url": "https://arxiv.org/abs/2610.01140",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Sampling multiple solutions spends computation on intermediate deductions and unfinished arguments as well as final answers. We introduce ReSolve, a training-free inference procedure that reuses this candidate reasoning through selective generative moderation. An answer-distribution controller invokes a model to examine existing derivations when candidates disagree or lack a parseable answer, then incorporates the generated solution into a bounded loop. Under Hybrid scoring on 130 competition-mathematics problems evaluated with two independently sampled candidate pools, ReSolve obtains 100 and 99 correct answers, compared with 91 and 92 for voting over the same four candidates, with no correct-to-incorrect changes relative to that vote in either pool. Eight-sample self-consistency obtains 94 and 96 correct answers while consuming substantially more tokens; ReSolve uses 46.3% and 47.2% fewer tokens in the two evaluations. A controlled ablation removes visible derivations while retaining answer keys, vote counts, and the per-state output-cap rule, reducing accuracy from 100 to 93 correct despite increasing computation. Selective and always-on Uniform moderation both solve 97 problems, while selectivity reduces moderation tokens by approximately 54% and total pipeline tokens by 6.2%. These results support candidate reasoning as reusable inference computation. They do not establish an accuracy advantage over additional sampling or a distinct benefit from specialized route instructions.",
+        "canonical_id": "arXiv:2610.01140",
+        "arxiv_id": "2610.01140",
+        "authors": [
+          "Bang-Ji Yang",
+          "Jia-Jun Fan",
+          "Hong-Ba Ma",
+          "Xi Zhu",
+          "Wei-Zhi Zhang",
+          "Ming-Hao Guo",
+          "Ye Li",
+          "Hamid Palangi",
+          "Jia-Xuan You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00940",
+      "identity_tokens": [
+        "id:arXiv:2610.00940",
+        "title:rehoper recedinghorizon planning for enhanced reasoning",
+        "url:https://arxiv.org/abs/2610.00940"
+      ],
+      "record": {
+        "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.00940",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "We propose ReHoPER, an inference-only, zero-shot method that improves large language models'reasoning by generating and answering intermediate questions along multiple paths before the final answer. It iteratively plans a horizon of candidate intermediate questions, selects one to answer, and replans from the updated history. ReHoPER is task-agnostic, using the same generic instructions across datasets and models without labeled data or task-specific prompt design. Across multiple datasets, including iLLC, a new controlled benchmark for compositional reasoning, ReHoPER outperforms strong baselines, with the largest gains in the most compositional settings. Our implementation and the iLLC generator are publicly available to support future work.",
+        "canonical_id": "arXiv:2610.00940",
+        "arxiv_id": "2610.00940",
+        "authors": [
+          "Saeed Ahmadnia",
+          "Cornelia Caragea"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01108",
+      "identity_tokens": [
+        "id:arXiv:2610.01108",
+        "title:agspec pushing the limits of retrievalbased speculative decoding in coding agent pipelines",
+        "url:https://arxiv.org/abs/2610.01108"
+      ],
+      "record": {
+        "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+        "source_url": "https://arxiv.org/abs/2610.01108",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+        "canonical_id": "arXiv:2610.01108",
+        "arxiv_id": "2610.01108",
+        "authors": [
+          "Sumin Lee",
+          "Sukmin Cho",
+          "Suengjae Lim",
+          "Youngjin Kwon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00952",
+      "identity_tokens": [
+        "id:arXiv:2610.00952",
+        "title:a matchedbudget audit framework for recaptioned imagetext supervision distributions",
+        "url:https://arxiv.org/abs/2610.00952"
+      ],
+      "record": {
+        "title": "A Matched-Budget Audit Framework for Recaptioned Image-Text Supervision Distributions",
+        "source_url": "https://arxiv.org/abs/2610.00952",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Recaptioned image-text corpora are now standard for text-to-image (T2I) training, with vision--language model (VLM) captioners replacing sparse alt-text by dense descriptions. A recaptioned corpus is a supervision distribution induced by a documented captioning policy ($\\pi$), captioner ($V_c$), and source corpus ($C$). Length-correlated proxies miss caption-register artifacts and downstream T2I benchmarks entangle the corpus with training choices, so this distribution is hard to audit at corpus scale. We introduce a reusable matched-budget audit framework for recaptioned supervision distributions $D_{\\pi,V_c,C}$: at a fixed text budget of $B = 64$ it reports a five-axis profile spanning prompt-side coverage, image-conditioned faithfulness, and caption-surface health, with claimed controllable basic units (CBU) as the common claim unit. We instantiate the framework on seven paired comparisons over five public source corpora. Across the four cross-corpus pairs, the released surface raises supported CBU per caption by $+3.39$ to $+6.36$ under both Qwen and Gemma Judges, and on CC12M the same framework exposes a long-vs-dense frontier that is consistent across both judges and four budgets. We release the audited multi-source recap corpus ($\\approx$ 490M) together with the audit-artifact bundle.",
+        "canonical_id": "arXiv:2610.00952",
+        "arxiv_id": "2610.00952",
+        "authors": [
+          "Giyeong Oh",
+          "Junghun Park",
+          "Yuhan Bae",
+          "Youngjae Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00977",
+      "identity_tokens": [
+        "id:arXiv:2610.00977",
+        "title:absentia detecting broken access control vulnerabilities in web applications",
+        "url:https://arxiv.org/abs/2610.00977"
+      ],
+      "record": {
+        "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications",
+        "source_url": "https://arxiv.org/abs/2610.00977",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Broken access control, the failure of authorization, is one of the most prevalent web security risks. Unlike injection, a flow of untrusted input into a dangerous operation, authorization is a relation: who may act on what, not how data moves. Each application decides that relation for itself, so no rule written in advance carries to the next. An LLM agent can infer it from the code, but with no systematic way to cover the application and prioritize what to inspect, its search stays undirected and access-control flaws go undetected. We present ABSENTIA, a security scaffolding that turns general LLM agents into systematic vulnerability detectors for the backend of web applications, run as an audit by the developers and security engineers who maintain the code. Under its direction, the agents build a graph that maps the application's routes to the code behind them. ABSENTIA then works route by route, applying invariant falsification: it infers the properties the code is meant to satisfy, and where one is not enforced, reports the route for maintainer review. We also release BAC-Bench, a benchmark of 30 broken access control advisories across 25 repositories, 3 languages, and 9 frameworks, each published in 2025 or later, verified by a human auditor, and paired with its fixing commit, so credit requires flagging the vulnerable version and not the fixed one. ABSENTIA recalls 19 of them, 17 under paired credit, and an LLM verifier confirms 51% of its findings. CodeQL and Semgrep recall none, and an unstructured agent on the same model recalls 3. In the OWASP Benchmark injection categories, ABSENTIA leads the dedicated analyzers in Python and trails only CodeQL and IRIS in Java.",
+        "canonical_id": "arXiv:2610.00977",
+        "arxiv_id": "2610.00977",
+        "authors": [
+          "André V. Duarte",
+          "Aditya Oke",
+          "Me-Lo Rui",
+          "Shubham Gandhi",
+          "Nachiket Kotalwar",
+          "Charmi Khandor",
+          "Dan-Qing Wang",
+          "Arlindo L. Oliveira",
+          "Carolyn P. Rosé",
+          "Lei Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832282",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832282",
+        "title:on the evaluation of large language models in unit test evolution experience paper",
+        "url:https://doi.org/10.1145/3832282"
+      ],
+      "record": {
+        "title": "On the Evaluation of Large Language Models in Unit Test Evolution (Experience Paper)",
+        "source_url": "https://doi.org/10.1145/3832282",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1145/3832282",
+        "canonical_id": "DOI:10.1145/3832282",
+        "authors": [
+          "Wei-Chang Liu",
+          "Jun-Wei Zhang",
+          "Yu-Qing Niu",
+          "Bo Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832269",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832269",
+        "title:cracking query bottlenecks towards efficiencyoriented texttosql generation",
+        "url:https://doi.org/10.1145/3832269"
+      ],
+      "record": {
+        "title": "Cracking Query Bottlenecks: Towards Efficiency-Oriented Text-to-SQL Generation",
+        "source_url": "https://doi.org/10.1145/3832269",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1145/3832269",
+        "canonical_id": "DOI:10.1145/3832269",
+        "authors": [
+          "Li Lin",
+          "Yun-Feng Shen",
+          "Ling-Feng Bao",
+          "Rong-Xin Wu",
+          "Yang Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832096",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832096",
+        "title:e4rreviewer effective and explainable automated code review via endtoend reasoningguided alignment",
+        "url:https://doi.org/10.1145/3832096"
+      ],
+      "record": {
+        "title": "E4R-Reviewer: Effective and Explainable Automated Code Review via End-to-End Reasoning-Guided Alignment",
+        "source_url": "https://doi.org/10.1145/3832096",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1145/3832096",
+        "canonical_id": "DOI:10.1145/3832096",
+        "authors": [
+          "Yi-Fei Liu",
+          "Xi-Zhi Hou",
+          "Li Yang",
+          "Huan Liu",
+          "Chen Zhu",
+          "Feng-Jun Zhang",
+          "Chun Zuo"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a74c19c0d513a4a456294ea3dc539169f04546562b3a568bf3b032ac43a70a40",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

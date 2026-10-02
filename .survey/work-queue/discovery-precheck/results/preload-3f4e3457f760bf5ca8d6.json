@@ -1,0 +1,837 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-3f4e3457f760bf5ca8d6",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-3f4e3457f760bf5ca8d6",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4NzM5MjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjE0MTA1NDM4J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 43,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-02T14:12:49.760123+00:00",
+  "preload_id": "preload-3f4e3457f760bf5ca8d6",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "An Empirical Study of Speculative Decoding on Software Engineering Tasks",
+      "source_url": "https://doi.org/10.1145/3832145",
+      "year": 2026,
+      "published": "2026-10-01",
+      "canonical_id": "arXiv:2604.26469",
+      "arxiv_id": "2604.26469",
+      "authors": [
+        "Yijia Li",
+        "Junkai Chen",
+        "Xing Hu",
+        "Xin Xia"
+      ]
+    },
+    {
+      "title": "A Node-by-Node White-Box Walkthrough of a Quantized Hybrid Gated DeltaNet Language Model: Instrument Calibration and the Information Trajectory from Embedding to Output",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-11160904/v1",
+      "year": 2026,
+      "published": "2026-09-28",
+      "canonical_id": "DOI:10.21203/rs.3.rs-11160904/v1",
+      "doi": "10.21203/rs.3.rs-11160904/v1",
+      "authors": [
+        "Wenlong Li"
+      ]
+    },
+    {
+      "title": "Large language models for social governance: An analytical framework and research agenda",
+      "source_url": "https://doi.org/10.1093/nsr/nwag602",
+      "year": 2026,
+      "published": "2026-09-27",
+      "canonical_id": "DOI:10.1093/nsr/nwag602",
+      "doi": "10.1093/nsr/nwag602",
+      "authors": [
+        "Jun Hao",
+        "Jian Li",
+        "Jian Li",
+        "Linyuan LÃ¼",
+        "Fang Wang",
+        "Fang Wang",
+        "Yijun Liu",
+        "Jianjun Yu",
+        "Changyong Liang",
+        "Jianjun Yu",
+        "Changyong Liang",
+        "Xiaolong Zheng",
+        "Zhixin Liu"
+      ]
+    },
+    {
+      "title": "Scaling Long-Context LLMs via Unified KV Cache Optimization: A Comparative Study of Paged Attention and Quantization",
+      "source_url": "https://doi.org/10.5281/zenodo.20562213",
+      "year": 2026,
+      "published": "2026-09-26",
+      "canonical_id": "DOI:10.5281/zenodo.20562213",
+      "doi": "10.5281/zenodo.20562213",
+      "authors": [
+        "Kalpit Patel"
+      ]
+    },
+    {
+      "title": "RuPLaR : Efficient latent compression of LLM reasoning chains with rule-based priors from multi-Step to one-step",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.134545",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "arXiv:2605.09346",
+      "arxiv_id": "2605.09346",
+      "authors": [
+        "Xiaocheng Luo",
+        "Kang Wang",
+        "Zaifu Zhan",
+        "Yuechi Zhou",
+        "Xiangyu Duan"
+      ]
+    },
+    {
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "source_url": "https://doi.org/10.1145/3773078.3831864",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "arXiv:2609.08443",
+      "arxiv_id": "2609.08443",
+      "authors": [
+        "Lin Guan",
+        "Jia‐Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ]
+    },
+    {
+      "title": "The KV Cache Is the New Memory Wall",
+      "source_url": "https://arxiv.org/abs/2609.30854",
+      "year": 2026,
+      "published": "2026-09-25",
+      "canonical_id": "arXiv:2609.30854",
+      "arxiv_id": "2609.30854",
+      "authors": [
+        "Tejinder Singh"
+      ]
+    },
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "authors": [
+        "Wanqi Yang",
+        "Shiwei Liu"
+      ]
+    },
+    {
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "source_url": "https://arxiv.org/abs/2609.29913",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.29913",
+      "arxiv_id": "2609.29913",
+      "authors": [
+        "Youpeng Zhao",
+        "Tian Tan",
+        "Liqian Peng",
+        "Jun Wang",
+        "Alec Go"
+      ]
+    },
+    {
+      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.28870",
+      "year": 2026,
+      "published": "2026-09-24",
+      "canonical_id": "arXiv:2609.28870",
+      "arxiv_id": "2609.28870",
+      "authors": [
+        "Yiyu Liu",
+        "敏蘭 于",
+        "Juncheng Yang"
+      ]
+    },
+    {
+      "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video",
+      "source_url": "https://arxiv.org/abs/2609.27470",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27470",
+      "arxiv_id": "2609.27470",
+      "authors": [
+        "T Kwon",
+        "Seungjin Kim",
+        "Hyeonyu Kim",
+        "Moon Hwan Kim"
+      ]
+    },
+    {
+      "title": "Predicting Quantization Price for Selecting PTQ Configurations Before Deployment",
+      "source_url": "https://arxiv.org/abs/2609.28270",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.28270",
+      "arxiv_id": "2609.28270",
+      "authors": [
+        "Junbin Qiu",
+        "Jian Mu",
+        "Weitong Zhang",
+        "Yao Shu"
+      ]
+    },
+    {
+      "title": "Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets",
+      "source_url": "https://arxiv.org/abs/2609.27981",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.27981",
+      "arxiv_id": "2609.27981",
+      "authors": [
+        "Beomgu Kang",
+        "SoJin Yun",
+        "Hojoon Kim",
+        "Hyunseok Seo"
+      ]
+    },
+    {
+      "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.28717",
+      "year": 2026,
+      "published": "2026-09-23",
+      "canonical_id": "arXiv:2609.28717",
+      "arxiv_id": "2609.28717",
+      "authors": [
+        "Zehuan Zhang",
+        "Quan Deng",
+        "Zibo Ren",
+        "Hao Mark Chen",
+        "Guoyu Li",
+        "胡旭纯",
+        "Jose G. F. Coutinho",
+        "Ce Guo",
+        "Wayne Luk",
+        "Zhiqiang Que",
+        "Hongxiang Fan"
+      ]
+    },
+    {
+      "title": "A token/KV-cache communication media selection and resource allocation strategy for multi-agent collaboration",
+      "source_url": "https://doi.org/10.1007/s11432-026-5057-2",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2605.25422",
+      "arxiv_id": "2605.25422",
+      "authors": [
+        "Lipeng Dai",
+        "Luping Xiang",
+        "Kun Yang"
+      ]
+    },
+    {
+      "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+      "source_url": "https://arxiv.org/abs/2609.26368",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26368",
+      "arxiv_id": "2609.26368",
+      "authors": [
+        "Jianyu Wei",
+        "Yizhao Gao",
+        "Qihao Zhang",
+        "Shimao Chen",
+        "Zhengju Tang",
+        "Yu Cheng",
+        "Shengjie Zhou",
+        "Zihan Jiang",
+        "Yifan Song",
+        "Hailin Zhang",
+        "Liang Zhao",
+        "Bo Yang",
+        "Gang Wang",
+        "Shijie Cao",
+        "Fuli Luo"
+      ]
+    },
+    {
+      "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.26708",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26708",
+      "arxiv_id": "2609.26708",
+      "authors": [
+        "Yuanteng Chen",
+        "Zhilei Liu",
+        "Peisong Wang",
+        "Yuantian Shao",
+        "Chuangyi Li",
+        "Weining Wang",
+        "Shuang Qiu",
+        "Gang Li",
+        "Jing Liu",
+        "jian chun Cheng"
+      ]
+    },
+    {
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.26621",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.26621",
+      "arxiv_id": "2609.26621",
+      "authors": [
+        "Gaoyuan Du",
+        "Anam Nawaz Khan",
+        "Rex Zhou",
+        "Xiaoyang Liu",
+        "Deepayan Chakrabarti",
+        "Fnu Suya",
+        "Xueping Li"
+      ]
+    },
+    {
+      "title": "Latest Exact Match Attention",
+      "source_url": "https://arxiv.org/abs/2609.25802",
+      "year": 2026,
+      "published": "2026-09-22",
+      "canonical_id": "arXiv:2609.25802",
+      "arxiv_id": "2609.25802",
+      "authors": [
+        "Moritz Brösamle"
+      ]
+    },
+    {
+      "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference",
+      "source_url": "https://doi.org/10.4108/eetiot.14884",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2511.22889",
+      "arxiv_id": "2511.22889",
+      "authors": [
+        "Fang Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.26469",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832145",
+        "id:arXiv:2604.26469",
+        "title:an empirical study of speculative decoding on software engineering tasks",
+        "url:https://doi.org/10.1145/3832145"
+      ],
+      "record": {
+        "title": "An Empirical Study of Speculative Decoding on Software Engineering Tasks",
+        "source_url": "https://doi.org/10.1145/3832145",
+        "year": 2026,
+        "published": "2026-10-01",
+        "canonical_id": "arXiv:2604.26469",
+        "arxiv_id": "2604.26469",
+        "authors": [
+          "Yijia Li",
+          "Junkai Chen",
+          "Xing Hu",
+          "Xin Xia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-11160904/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-11160904/v1",
+        "title:a nodebynode whitebox walkthrough of a quantized hybrid gated deltanet language model instrument calibration and the information trajectory from embedding to output",
+        "url:https://doi.org/10.21203/rs.3.rs-11160904/v1"
+      ],
+      "record": {
+        "title": "A Node-by-Node White-Box Walkthrough of a Quantized Hybrid Gated DeltaNet Language Model: Instrument Calibration and the Information Trajectory from Embedding to Output",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-11160904/v1",
+        "year": 2026,
+        "published": "2026-09-28",
+        "canonical_id": "DOI:10.21203/rs.3.rs-11160904/v1",
+        "doi": "10.21203/rs.3.rs-11160904/v1",
+        "authors": [
+          "Wenlong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1093/nsr/nwag602",
+      "identity_tokens": [
+        "id:DOI:10.1093/nsr/nwag602",
+        "title:large language models for social governance an analytical framework and research agenda",
+        "url:https://doi.org/10.1093/nsr/nwag602"
+      ],
+      "record": {
+        "title": "Large language models for social governance: An analytical framework and research agenda",
+        "source_url": "https://doi.org/10.1093/nsr/nwag602",
+        "year": 2026,
+        "published": "2026-09-27",
+        "canonical_id": "DOI:10.1093/nsr/nwag602",
+        "doi": "10.1093/nsr/nwag602",
+        "authors": [
+          "Jun Hao",
+          "Jian Li",
+          "Jian Li",
+          "Linyuan LÃ¼",
+          "Fang Wang",
+          "Fang Wang",
+          "Yijun Liu",
+          "Jianjun Yu",
+          "Changyong Liang",
+          "Jianjun Yu",
+          "Changyong Liang",
+          "Xiaolong Zheng",
+          "Zhixin Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.20562213",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.20562213",
+        "title:scaling longcontext llms via unified kv cache optimization a comparative study of paged attention and quantization",
+        "url:https://doi.org/10.5281/zenodo.20562213"
+      ],
+      "record": {
+        "title": "Scaling Long-Context LLMs via Unified KV Cache Optimization: A Comparative Study of Paged Attention and Quantization",
+        "source_url": "https://doi.org/10.5281/zenodo.20562213",
+        "year": 2026,
+        "published": "2026-09-26",
+        "canonical_id": "DOI:10.5281/zenodo.20562213",
+        "doi": "10.5281/zenodo.20562213",
+        "authors": [
+          "Kalpit Patel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09346",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.eswa.2026.134545",
+        "id:arXiv:2605.09346",
+        "title:ruplar efficient latent compression of llm reasoning chains with rulebased priors from multistep to onestep",
+        "url:https://doi.org/10.1016/j.eswa.2026.134545"
+      ],
+      "record": {
+        "title": "RuPLaR : Efficient latent compression of LLM reasoning chains with rule-based priors from multi-Step to one-step",
+        "source_url": "https://doi.org/10.1016/j.eswa.2026.134545",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "arXiv:2605.09346",
+        "arxiv_id": "2605.09346",
+        "authors": [
+          "Xiaocheng Luo",
+          "Kang Wang",
+          "Zaifu Zhan",
+          "Yuechi Zhou",
+          "Xiangyu Duan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08443",
+      "identity_tokens": [
+        "id:DOI:10.1145/3773078.3831864",
+        "id:arXiv:2609.08443",
+        "title:sequenceo1 endtoend ultralong 100k sequence modeling in recommendation with lowrank caching",
+        "url:https://doi.org/10.1145/3773078.3831864"
+      ],
+      "record": {
+        "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+        "source_url": "https://doi.org/10.1145/3773078.3831864",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "arXiv:2609.08443",
+        "arxiv_id": "2609.08443",
+        "authors": [
+          "Lin Guan",
+          "Jia‐Qi Yang",
+          "Zhishan Zhao",
+          "Jiaqi Huang",
+          "Hangyu Wang",
+          "Longbin Li",
+          "Beichuan Zhang",
+          "Haonan Jiang",
+          "Jinan Ni",
+          "Xiangyu Fan",
+          "Xiaowen Li",
+          "Ziyao Ren",
+          "Yuhang Qi",
+          "Xiaolong Zhu",
+          "Xuanyuan Luo",
+          "Qiwei Chen",
+          "Yi Cheng",
+          "Lele Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30854",
+      "identity_tokens": [
+        "id:arXiv:2609.30854",
+        "title:the kv cache is the new memory wall",
+        "url:https://arxiv.org/abs/2609.30854"
+      ],
+      "record": {
+        "title": "The KV Cache Is the New Memory Wall",
+        "source_url": "https://arxiv.org/abs/2609.30854",
+        "year": 2026,
+        "published": "2026-09-25",
+        "canonical_id": "arXiv:2609.30854",
+        "arxiv_id": "2609.30854",
+        "authors": [
+          "Tejinder Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29812",
+      "identity_tokens": [
+        "id:arXiv:2609.29812",
+        "title:flashloop fast and memoryefficient looped transformers via lazy updates",
+        "url:https://arxiv.org/abs/2609.29812"
+      ],
+      "record": {
+        "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+        "source_url": "https://arxiv.org/abs/2609.29812",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29812",
+        "arxiv_id": "2609.29812",
+        "authors": [
+          "Wanqi Yang",
+          "Shiwei Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29913",
+      "identity_tokens": [
+        "id:arXiv:2609.29913",
+        "title:milo efficient manyshot incontext learning with blockwise lowrank compression",
+        "url:https://arxiv.org/abs/2609.29913"
+      ],
+      "record": {
+        "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+        "source_url": "https://arxiv.org/abs/2609.29913",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.29913",
+        "arxiv_id": "2609.29913",
+        "authors": [
+          "Youpeng Zhao",
+          "Tian Tan",
+          "Liqian Peng",
+          "Jun Wang",
+          "Alec Go"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28870",
+      "identity_tokens": [
+        "id:arXiv:2609.28870",
+        "title:when fancy eviction fails rethinking cache replacement for llm prefix reuse",
+        "url:https://arxiv.org/abs/2609.28870"
+      ],
+      "record": {
+        "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.28870",
+        "year": 2026,
+        "published": "2026-09-24",
+        "canonical_id": "arXiv:2609.28870",
+        "arxiv_id": "2609.28870",
+        "authors": [
+          "Yiyu Liu",
+          "敏蘭 于",
+          "Juncheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27470",
+      "identity_tokens": [
+        "id:arXiv:2609.27470",
+        "title:deltas reading the gated linear attention state for kv cache eviction in streaming video",
+        "url:https://arxiv.org/abs/2609.27470"
+      ],
+      "record": {
+        "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video",
+        "source_url": "https://arxiv.org/abs/2609.27470",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27470",
+        "arxiv_id": "2609.27470",
+        "authors": [
+          "T Kwon",
+          "Seungjin Kim",
+          "Hyeonyu Kim",
+          "Moon Hwan Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28270",
+      "identity_tokens": [
+        "id:arXiv:2609.28270",
+        "title:predicting quantization price for selecting ptq configurations before deployment",
+        "url:https://arxiv.org/abs/2609.28270"
+      ],
+      "record": {
+        "title": "Predicting Quantization Price for Selecting PTQ Configurations Before Deployment",
+        "source_url": "https://arxiv.org/abs/2609.28270",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.28270",
+        "arxiv_id": "2609.28270",
+        "authors": [
+          "Junbin Qiu",
+          "Jian Mu",
+          "Weitong Zhang",
+          "Yao Shu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27981",
+      "identity_tokens": [
+        "id:arXiv:2609.27981",
+        "title:riskcontrolled kvcache eviction from memory budgets to risk targets",
+        "url:https://arxiv.org/abs/2609.27981"
+      ],
+      "record": {
+        "title": "Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets",
+        "source_url": "https://arxiv.org/abs/2609.27981",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.27981",
+        "arxiv_id": "2609.27981",
+        "authors": [
+          "Beomgu Kang",
+          "SoJin Yun",
+          "Hojoon Kim",
+          "Hyunseok Seo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28717",
+      "identity_tokens": [
+        "id:arXiv:2609.28717",
+        "title:heteroreason heterogeneous fpgagpu acceleration for disaggregated speculative reasoning",
+        "url:https://arxiv.org/abs/2609.28717"
+      ],
+      "record": {
+        "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.28717",
+        "year": 2026,
+        "published": "2026-09-23",
+        "canonical_id": "arXiv:2609.28717",
+        "arxiv_id": "2609.28717",
+        "authors": [
+          "Zehuan Zhang",
+          "Quan Deng",
+          "Zibo Ren",
+          "Hao Mark Chen",
+          "Guoyu Li",
+          "胡旭纯",
+          "Jose G. F. Coutinho",
+          "Ce Guo",
+          "Wayne Luk",
+          "Zhiqiang Que",
+          "Hongxiang Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25422",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5057-2",
+        "id:arXiv:2605.25422",
+        "title:a tokenkvcache communication media selection and resource allocation strategy for multiagent collaboration",
+        "url:https://doi.org/10.1007/s11432-026-5057-2"
+      ],
+      "record": {
+        "title": "A token/KV-cache communication media selection and resource allocation strategy for multi-agent collaboration",
+        "source_url": "https://doi.org/10.1007/s11432-026-5057-2",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2605.25422",
+        "arxiv_id": "2605.25422",
+        "authors": [
+          "Lipeng Dai",
+          "Luping Xiang",
+          "Kun Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26368",
+      "identity_tokens": [
+        "id:arXiv:2609.26368",
+        "title:hysparse2 hybrid sparse attention with twolevel kv sharing",
+        "url:https://arxiv.org/abs/2609.26368"
+      ],
+      "record": {
+        "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+        "source_url": "https://arxiv.org/abs/2609.26368",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26368",
+        "arxiv_id": "2609.26368",
+        "authors": [
+          "Jianyu Wei",
+          "Yizhao Gao",
+          "Qihao Zhang",
+          "Shimao Chen",
+          "Zhengju Tang",
+          "Yu Cheng",
+          "Shengjie Zhou",
+          "Zihan Jiang",
+          "Yifan Song",
+          "Hailin Zhang",
+          "Liang Zhao",
+          "Bo Yang",
+          "Gang Wang",
+          "Shijie Cao",
+          "Fuli Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26708",
+      "identity_tokens": [
+        "id:arXiv:2609.26708",
+        "title:train where the quantized model goes onpolicy distillation for lowbit reasoning",
+        "url:https://arxiv.org/abs/2609.26708"
+      ],
+      "record": {
+        "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.26708",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26708",
+        "arxiv_id": "2609.26708",
+        "authors": [
+          "Yuanteng Chen",
+          "Zhilei Liu",
+          "Peisong Wang",
+          "Yuantian Shao",
+          "Chuangyi Li",
+          "Weining Wang",
+          "Shuang Qiu",
+          "Gang Li",
+          "Jing Liu",
+          "jian chun Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26621",
+      "identity_tokens": [
+        "id:arXiv:2609.26621",
+        "title:greedy decoding is not precisioninvariant crossprecision output divergence in llm inference",
+        "url:https://arxiv.org/abs/2609.26621"
+      ],
+      "record": {
+        "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.26621",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.26621",
+        "arxiv_id": "2609.26621",
+        "authors": [
+          "Gaoyuan Du",
+          "Anam Nawaz Khan",
+          "Rex Zhou",
+          "Xiaoyang Liu",
+          "Deepayan Chakrabarti",
+          "Fnu Suya",
+          "Xueping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25802",
+      "identity_tokens": [
+        "id:arXiv:2609.25802",
+        "title:latest exact match attention",
+        "url:https://arxiv.org/abs/2609.25802"
+      ],
+      "record": {
+        "title": "Latest Exact Match Attention",
+        "source_url": "https://arxiv.org/abs/2609.25802",
+        "year": 2026,
+        "published": "2026-09-22",
+        "canonical_id": "arXiv:2609.25802",
+        "arxiv_id": "2609.25802",
+        "authors": [
+          "Moritz Brösamle"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.22889",
+      "identity_tokens": [
+        "id:DOI:10.4108/eetiot.14884",
+        "id:arXiv:2511.22889",
+        "title:the immutable tensor architecture a pure dataflow approach for secure energyefficient ai inference",
+        "url:https://doi.org/10.4108/eetiot.14884"
+      ],
+      "record": {
+        "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference",
+        "source_url": "https://doi.org/10.4108/eetiot.14884",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2511.22889",
+        "arxiv_id": "2511.22889",
+        "authors": [
+          "Fang Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6ceaf769900b2330bdde9597820105e177ef8a2cb4ec37153e1b0e83be9be145",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
