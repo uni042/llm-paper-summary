@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design",
+      "source_url": "https://arxiv.org/abs/2403.05676",
+      "year": 2024,
+      "published": "2024-03-08",
+      "abstract": "Retrieval-augmented generation (RAG) can enhance the generation quality of large language models (LLMs) by incorporating external token databases. However, retrievals from large databases can constitute a substantial portion of the overall generation time, particularly when retrievals are periodically performed to align the retrieved content with the latest states of generation. In this paper, we introduce PipeRAG, a novel algorithm-system co-design approach to reduce generation latency and enhance generation quality. PipeRAG integrates (1) pipeline parallelism to enable concurrent retrieval and generation processes, (2) flexible retrieval intervals to maximize the efficiency of pipeline parallelism, and (3) a performance model to automatically balance retrieval quality and latency based on the generation states and underlying hardware. Our evaluation shows that, by combining the three aforementioned methods, PipeRAG achieves up to 2.6$\\times$ speedup in end-to-end generation latency while improving generation quality. These promising results showcase the effectiveness of co-designing algorithms with underlying systems, paving the way for the adoption of PipeRAG in future RAG systems.",
+      "canonical_id": "arXiv:2403.05676",
+      "arxiv_id": "2403.05676",
+      "doi": "10.48550/arXiv.2403.05676",
+      "authors": [
+        "Wenqi Jiang",
+        "Shuai Zhang",
+        "Boran Han",
+        "Jie Wang",
+        "Bernie Wang",
+        "Tim Kraska"
+      ],
+      "reason": "RAGの検索と生成をパイプライン並列化し、検索間隔と性能モデルを協調させてエンドツーエンド生成遅延を削減する。",
+      "library_body_check": "本文で検索とLLM生成を並行実行するpipeline parallelism、柔軟なretrieval interval、ハードウェアと生成状態に応じて品質・遅延を釣り合わせるperformance modelを確認。エンドツーエンド生成遅延を最大2.6倍高速化しつつ品質も改善。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression",
+      "source_url": "https://arxiv.org/abs/2405.14852",
+      "year": 2024,
+      "published": "2024-05-23",
+      "abstract": "There has been significant interest in\"extreme\"compression of large language models (LLMs), i.e., to 1-2 bits per parameter, which allows such models to be executed efficiently on resource-constrained devices. Existing work focused on improved one-shot quantization techniques and weight representations; yet, purely post-training approaches are reaching diminishing returns in terms of the accuracy-vs-bit-width trade-off. State-of-the-art quantization methods such as QuIP# and AQLM include fine-tuning (part of) the compressed parameters over a limited amount of calibration data; however, such fine-tuning techniques over compressed weights often make exclusive use of straight-through estimators (STE), whose performance is not well-understood in this setting. In this work, we question the use of STE for extreme LLM compression, showing that it can be sub-optimal, and perform a systematic study of quantization-aware fine-tuning strategies for LLMs. We propose PV-Tuning - a representation-agnostic framework that generalizes and improves upon existing fine-tuning strategies, and provides convergence guarantees in restricted cases. On the practical side, when used for 1-2 bit vector quantization, PV-Tuning outperforms prior techniques for highly-performant models such as Llama and Mistral. Using PV-Tuning, we achieve the first Pareto-optimal quantization for Llama 2 family models at 2 bits per parameter.",
+      "canonical_id": "arXiv:2405.14852",
+      "arxiv_id": "2405.14852",
+      "doi": "10.48550/arXiv.2405.14852",
+      "authors": [
+        "Vladimir Malinovskii",
+        "D. Mazur",
+        "Ivan D. Ilin",
+        "Denis Kuznedelev",
+        "Konstantin Burlachenko",
+        "Kai Yi",
+        "Dan Alistarh",
+        "Peter Richtárik"
+      ],
+      "reason": "量子化後の1–2 bit LLMを資源制約端末で効率的に推論することを最終目的とし、極低ビット圧縮品質を改善する。",
+      "library_body_check": "本文で量子化重みの離散変数と連続変数を交互最適化するPV-Tuningを導入し、STE依存の量子化微調整を改善。Llama/Mistralの1–2 bit vector quantizationで既存方式を上回り、Llama 2系列で2 bit/parameterのPareto最適点を報告する。学習工程を含むが最終成果は推論用圧縮モデル。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Inference Performance Optimization for Large Language Models on CPUs",
+      "source_url": "https://arxiv.org/abs/2407.07304",
+      "year": 2024,
+      "published": "2024-07-10",
+      "abstract": "Large language models (LLMs) have shown exceptional performance and vast potential across diverse tasks. However, the deployment of LLMs with high performance in low-resource environments has garnered significant attention in the industry. When GPU hardware resources are limited, we can explore alternative options on CPUs. To mitigate the financial burden and alleviate constraints imposed by hardware resources, optimizing inference performance is necessary. In this paper, we introduce an easily deployable inference performance optimization solution aimed at accelerating LLMs on CPUs. In this solution, we implement an effective way to reduce the KV cache size while ensuring precision. We propose a distributed inference optimization approach and implement it based on oneAPI Collective Communications Library. Furthermore, we propose optimization approaches for LLMs on CPU, and conduct tailored optimizations for the most commonly used models. The code is open-sourced at https://github.com/intel/xFasterTransformer.",
+      "canonical_id": "arXiv:2407.07304",
+      "arxiv_id": "2407.07304",
+      "doi": "10.48550/arXiv.2407.07304",
+      "authors": [
+        "Pujiang He",
+        "Shan Zhou",
+        "Wenhuan Huang",
+        "Changqing Li",
+        "Duyi Wang",
+        "Bin Guo",
+        "Chen Meng",
+        "Sheng Gui",
+        "Weifei Yu",
+        "Yi Xie"
+      ],
+      "reason": "CPU上のLLM推論をKVキャッシュ削減、分散実行、演算子最適化で直接高速化する推論システム研究。",
+      "library_body_check": "本文でCPU低資源環境を対象に、精度を維持するKVキャッシュ縮小、oneCCLベースの分散推論、主要モデル向けCPU固有最適化を統合する構成を確認。学習ではなくCPU推論性能が最終評価対象。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6d5d47338c44",
+    "round": "libimp-6d5d47338c44f86e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6d5d47338c44f86e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6d5d47338c44f86e-pre01.json",
+    "receipt": "sha256:168325fefaa351698232edd2099bd9a9a548c59f78b47d4af1544c40a1ce408b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6d5d47338c44",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
