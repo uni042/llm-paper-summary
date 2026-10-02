@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T07:00:18+00:00",
-  "record_count": 417,
+  "updated_at": "2026-10-02T07:05:49+00:00",
+  "record_count": 426,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4434,11 +4434,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2310.16944",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.16944",
         "arXiv:2310.16944"
       ],
-      "reason": "AI feedbackを用いたalignment蒸留が主題で、推論高速化・省メモリ化ではない。",
+      "reason": "蒸留SFTと直接選好最適化によるチャットモデルのアラインメント学習が主題で、推論基盤高速化ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/05-speculative-decoding-moe/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
@@ -4466,11 +4467,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2303.02868",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.02868",
         "arXiv:2303.02868"
       ],
-      "reason": "大規模事前学習systemが主題で、凍結中のtraining高速化・省メモリ化に該当する。",
+      "reason": "大規模事前学習システムのスケーラビリティと費用効率が主題で、凍結対象の学習高速化。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
@@ -4517,9 +4519,9 @@
         "DOI:10.1145/3694715.3695960",
         "arXiv:2405.14009"
       ],
-      "reason": "障害時の分散DNN学習throughput維持が最終適用先であり、学習高速化系は凍結対象なので対象外。",
+      "reason": "障害時の分散DNN学習スループット維持が主目的で、凍結対象の学習システム研究。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
@@ -4879,9 +4881,9 @@
         "OpenReview:1PL1NIMMrw",
         "arXiv:2203.11171"
       ],
-      "reason": "複数の推論経路をサンプリングして多数決することで推論精度を上げる復号戦略だが、計算量削減ではなく追加サンプリングで精度を上げる研究であり、効率化サーベイの主対象外。",
+      "reason": "推論時に複数の思考経路をサンプリングして多数決する推論アルゴリズムだが、主目的は推論品質向上であり、サービング・メモリ・カーネル・推論効率の改善ではない。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
@@ -5101,9 +5103,9 @@
       "identity_tokens": [
         "DOI:10.1145/3627703.3650083"
       ],
-      "reason": "MoE通信・task schedulingは近接分野だが、主目的が分散MoE学習高速化であり、凍結しているtraining-only系統に該当する。",
+      "reason": "MoEのall-to-all通信と計算を最適スケジュールするが、最終適用先は分散学習であり凍結範囲。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
         "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md"
@@ -5612,9 +5614,9 @@
         "OpenReview:Yacmpz84TH",
         "arXiv:2302.04761"
       ],
-      "reason": "Model training/agent capability paper teaching an LM to invoke external APIs; it does not optimize the inference runtime, serving stack, memory hierarchy, kernels, cache, or scheduling.",
+      "reason": "API呼び出しを自己教師ありで学習するモデル能力・学習方式が主題で、LLM推論の速度・メモリ・サービング効率化ではない。",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
@@ -5642,9 +5644,9 @@
       "identity_tokens": [
         "DOI:10.1145/3676641.3715987"
       ],
-      "reason": "CXL memoryは階層メモリ研究に関連する基盤技術だが、この論文自体は汎用CXL memoryのcharacterizationで、LLM推論への最終適用・評価がない。",
+      "reason": "CXLメモリの一般的な実機特性評価で、LLM推論への具体的な最終適用・推論方式を提案しない。",
       "first_checked_at": "2026-10-01T07:06:25+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [],
       "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
     },
@@ -5687,9 +5689,9 @@
       "identity_tokens": [
         "OpenReview:KnqiC0znVF"
       ],
-      "reason": "LLaDA is a foundational diffusion-language-model architecture/training paper whose main goal is demonstrating non-autoregressive language-model capability, not optimizing inference systems or serving efficiency.",
+      "reason": "LLaDAという拡散型言語モデルを事前学習・教師あり微調整して自己回帰型LLMに匹敵する能力を示すモデル研究で、推論効率化システムが主貢献ではない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
         "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
@@ -6128,6 +6130,139 @@
       "last_checked_at": "2026-10-02T07:00:18+00:00",
       "linked_from": [],
       "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+    },
+    "OpenReview:r8H7xhYPwz": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:r8H7xhYPwz",
+      "identity_tokens": [
+        "OpenReview:r8H7xhYPwz",
+        "arXiv:2412.06464"
+      ],
+      "reason": "線形attention/RNNのモデルアーキテクチャとしてgatingとdelta updateを組み合わせる研究で、評価の中心はモデル品質と学習効率。既存LLMの推論ランタイム最適化が最終適用先ではない。",
+      "first_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "linked_from": [],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
+    },
+    "DOI:10.1145/3637528.3671470": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3637528.3671470",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671470"
+      ],
+      "reason": "RAGのモデル能力・手法体系を整理するサーベイで、推論ランタイムや効率化を主題にしない。",
+      "first_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "linked_from": [],
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+    },
+    "arXiv:2509.19662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19662",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.19662",
+        "DOI:10.52202/085713-3127",
+        "arXiv:2509.19662"
+      ],
+      "reason": "LLMサービングに応用可能な一般スケジューリング理論ではあるが、論文自体はLLM・KVキャッシュ・GPUサービングを対象とせず、最終適用先が汎用オンラインスケジューリング。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ],
+      "title": "Non-Clairvoyant Scheduling with Progress Bars"
+    },
+    "arXiv:2408.13359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.13359",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2408.13359",
+        "arXiv:2408.13359"
+      ],
+      "reason": "言語モデル事前学習の学習率スケジューラが主題で、凍結中の学習高速化・学習設定側に属する。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md"
+      ],
+      "title": "Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler"
+    },
+    "DOI:10.26190/669x-a286": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26190/669x-a286",
+      "identity_tokens": [
+        "DOI:10.26190/669x-a286"
+      ],
+      "reason": "論文ではなくUNSWの共有HPC計算クラスタ自体を指す研究基盤DOIであり、LLM推論手法の候補ではない。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2609.15030-validating-hybrid-state-cache-recovery-for-glm-5-3-flash-with-vllm-and-lmcache.md"
+      ],
+      "title": "Katana"
+    },
+    "DOI:10.18653/v1/d15-1237": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d15-1237",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d15-1237"
+      ],
+      "reason": "質問応答データセット構築が主貢献で、LLM推論システムの速度・メモリ・サービングを改善しない。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md"
+      ],
+      "title": "WikiQA: A Challenge Dataset for Open-Domain Question Answering"
+    },
+    "DOI:10.18653/v1/2023.acl-long.134": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.acl-long.134",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.acl-long.134"
+      ],
+      "reason": "系列並列化自体は推論へ関連し得るが、本文の最終適用先と評価は長系列Transformerの学習であり、凍結中の学習高速化系。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Sequence Parallelism: Long Sequence Training from System Perspective"
+    },
+    "arXiv:2306.12282": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.12282",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.12282",
+        "arXiv:2306.12282"
+      ],
+      "reason": "機械学習予測を用いた一般オンライン資源配分アルゴリズムで、LLM推論サービング固有の研究ではない。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Online Resource Allocation with Convex-set Machine-Learned Advice"
+    },
+    "arXiv:2202.01110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.01110",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2202.01110",
+        "arXiv:2202.01110"
+      ],
+      "reason": "検索拡張テキスト生成の手法体系を整理するサーベイで、推論システムの新規高速化機構を提案しない。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Survey on Retrieval-Augmented Text Generation"
     }
   }
 }

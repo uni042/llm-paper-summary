@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T07:00:18+00:00",
-  "record_count": 362,
+  "updated_at": "2026-10-02T07:05:49+00:00",
+  "record_count": 361,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4351,9 +4351,9 @@
       "identity_tokens": [
         "DOI:10.1145/3777466"
       ],
-      "reason": "GPU上の深層学習推論を空間パイプライン化して性能・オフチップ通信を改善する実行基盤研究で推論カーネルに近いが、LLM専用ではなく汎用DL GPUアーキテクチャが主題のため境界扱い。",
+      "reason": "GPU上の深層学習推論を空間パイプライン化するカーネル/コンパイラ研究で推論高速化に直結するが、LLM専用ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md",
         "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
@@ -4437,38 +4437,6 @@
         "papers/inference/17-pim-near-data-acceleration/2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md"
       ],
       "title": "Meta's Second Generation AI Chip: Model-Chip Co-Design and Productionization Experiences"
-    },
-    "DOI:10.1145/3637528.3671470": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3637528.3671470",
-      "identity_tokens": [
-        "DOI:10.1145/3637528.3671470"
-      ],
-      "reason": "検索拡張生成（RAG）とLLMの統合を体系化するサーベイで関連領域の背景資料として有用だが、新規の推論高速化・サービング方式を提案する一次研究ではないため境界扱い。",
-      "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
-      ],
-      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
-    },
-    "OpenReview:r8H7xhYPwz": {
-      "classification": "borderline",
-      "canonical_id": "OpenReview:r8H7xhYPwz",
-      "identity_tokens": [
-        "OpenReview:r8H7xhYPwz",
-        "arXiv:2412.06464"
-      ],
-      "reason": "The gated-delta mechanism yields linear-time sequence processing and has clear inference-efficiency implications, but the paper's primary contribution is a new sequence-model architecture and hardware-efficient training rather than an LLM inference-system mechanism.",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
-      ],
-      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
     },
     "OpenReview:TJ2nxciYCk-": {
       "classification": "borderline",
@@ -4717,15 +4685,17 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2401.08281",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.08281",
         "arXiv:2401.08281"
       ],
-      "reason": "高速ANN検索基盤でRAG/agent memoryのretrievalに重要だが、LLM推論そのものを対象にした研究ではない。",
+      "reason": "RAG検索段で広く使えるベクトル類似検索基盤だが、論文自体はLLM推論専用ではなく汎用ベクトル検索ライブラリの設計・評価。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json"
       ],
-      "title": "The Faiss Library"
+      "title": "The Faiss library"
     },
     "arXiv:2210.17432": {
       "classification": "borderline",
@@ -4745,12 +4715,14 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2210.03858",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2210.03858",
         "arXiv:2210.03858"
       ],
-      "reason": "4bit量子化モデルのparameter-efficient adaptationでdeployment容量に関係するが、中心は適応学習手法。",
+      "reason": "量子化モデルの省メモリ配備へつながるが、主貢献は量子化を利用したパラメータ効率の高い適応・微調整で学習側との境界にある。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json"
       ],
       "title": "AlphaTuning: Quantization-Aware Parameter-Efficient Adaptation of Large-Scale Pre-Trained Language Models"
@@ -4927,20 +4899,6 @@
       ],
       "title": "Online normalizer calculation for softmax"
     },
-    "arXiv:2202.01110": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2202.01110",
-      "identity_tokens": [
-        "arXiv:2202.01110"
-      ],
-      "reason": "retrieval-augmented generationの体系化は関連するが、主貢献は生成手法サーベイで推論system最適化ではない。",
-      "first_checked_at": "2026-09-30T09:46:42+00:00",
-      "last_checked_at": "2026-09-30T09:46:42+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "A Survey on Retrieval-Augmented Text Generation"
-    },
     "arXiv:2203.15556": {
       "classification": "borderline",
       "canonical_id": "arXiv:2203.15556",
@@ -5030,9 +4988,9 @@
       "identity_tokens": [
         "DOI:10.14778/3749646.3749724"
       ],
-      "reason": "RAGで使うdisk-resident ANN検索をmodern SSD向けに高速化しSSD階層という重点には近いが、LLM推論本体ではなく汎用vector databaseが直接対象なので境界扱い。",
+      "reason": "RAGの検索段を高速化するSSD-aware ANN基盤でLLMアプリには関係するが、LLM本体の推論ランタイムではなくベクトルDBが主対象。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
       "linked_from": [],
       "title": "Turbocharging Vector Databases Using Modern SSDs"
     },
@@ -5226,6 +5184,33 @@
       "last_checked_at": "2026-10-02T07:00:18+00:00",
       "linked_from": [],
       "title": "Efficient LLM Inference with KCache"
+    },
+    "OpenReview:SuYO70ZxZX": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:SuYO70ZxZX",
+      "identity_tokens": [
+        "OpenReview:SuYO70ZxZX"
+      ],
+      "reason": "後続KVキャッシュ研究からメモリ効率技術として参照されるが、取得できた本文情報だけではLLM推論が最終適用先か、汎用モデル/学習側の寄与が中心かを十分に確定できないため境界扱い。",
+      "first_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "linked_from": [],
+      "title": "Memory-efficient LLM-related method (ICML 2025 reference candidate)"
+    },
+    "DOI:10.18653/v1/2021.acl-long.462": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.462",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.462"
+      ],
+      "reason": "並列的なaggressive decodingは後の投機的復号と技術的に近く推論高速化を直接扱うが、対象がLLM一般ではなくencoder-decoder型の文法誤り訂正専用なので境界扱い。",
+      "first_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding"
     }
   }
 }

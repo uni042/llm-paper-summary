@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00c0454b734821e9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:1PL1NIMMrw",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:1PL1NIMMrw",
+    "identity_tokens": [
+      "OpenReview:1PL1NIMMrw",
+      "arXiv:2203.11171"
+    ],
+    "reason": "推論時に複数の思考経路をサンプリングして多数決する推論アルゴリズムだが、主目的は推論品質向上であり、サービング・メモリ・カーネル・推論効率の改善ではない。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-10-02T07:05:48+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+    ],
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+  },
+  "processed_at": "2026-10-02T07:05:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00c0454b7348",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
