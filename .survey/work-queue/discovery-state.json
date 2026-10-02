@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-02T14:10:21+00:00",
-  "last_run_key": "library-import-4182aaaedb14",
-  "last_round": "libimp-4182aaaedb14ae2f-pre01",
+  "updated_at": "2026-10-02T19:26:16+00:00",
+  "last_run_key": "library-import-ee95bfcb098a",
+  "last_round": "libimp-ee95bfcb098a3d9a-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,30 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-moe-prefetch-7",
-      "axis": "MoE expert prediction / prefetch / CPU-GPU offload",
-      "query_summary": "Switched from agent systems to MoE expert prefetch. FlashMoE and MegaScale-Infer were known/high-overlap; two expert-prediction/prefetch papers were not found by repository code search and provide distinct mechanisms with quantitative evaluation.",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "final_duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [
-        "arXiv:2603.19289",
-        "arXiv:2511.10676"
-      ],
-      "duplicate_canonical_ids": [
-        "arXiv:2601.17063",
-        "arXiv:2504.02263"
-      ],
-      "next_axis_hint": "Search MoE expert placement/load balancing or CPU/SSD expert caching distinct from prediction, then citation/reference omissions.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-moe-prefetch-7.json"
-    },
     {
       "run_key": "2026-09-19T19:00:00+09:00",
       "round": "specialist-multillm-18",
@@ -10858,6 +10834,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-ee95bfcb098a3d9a-pre01",
+      "precheck_request_id": "libimp-ee95bfcb098a3d9a-pre01",
+      "run_key": "library-import-ee95bfcb098a",
+      "round": "libimp-ee95bfcb098a3d9a-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-ee95bfcb098a3d9a-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-ee95bfcb098a3d9a-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19229,16 +19239,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-4182aaaedb14",
-      "rounds": 37,
-      "candidate_count": 198,
+      "last_run_key": "library-import-ee95bfcb098a",
+      "rounds": 38,
+      "candidate_count": 200,
       "duplicate_filtered_count": 95,
-      "novel_candidate_count": 103,
+      "novel_candidate_count": 105,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 100,
-      "accepted_count": 100,
-      "duplicate_ratio": 0.4797979797979798,
-      "final_duplicate_ratio": 0.02912621359223301,
+      "post_final_dedupe_count": 102,
+      "accepted_count": 102,
+      "duplicate_ratio": 0.475,
+      "final_duplicate_ratio": 0.02857142857142857,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
