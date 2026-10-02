@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-1310-scheduled-chat-00",
+  "reference_main_sha": "d83521043b100be1dcf9cfcf738d0aadef28b351",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/079017-0040",
+      "identity_tokens": [
+        "DOI:10.52202/079017-0040"
+      ],
+      "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
+      "reason": "長文脈LLM推論のKVキャッシュを3-bit級まで量子化し、GPUメモリと行列ベクトル積の帯域を直接削減するため対象範囲の中心。",
+      "source_url": "https://doi.org/10.52202/079017-0040",
+      "body_check": "本文でper-channel Key量子化、RoPE前Key量子化、層感度を使う非一様量子化、vector単位dense-and-sparse処理を組み合わせることを確認。LLaMA/Llama-2/Llama-3/Mistralで3-bit時のperplexity劣化0.1未満、LLaMA-7BをA100-80GB 1枚で100万context、8GPUで1000万contextまで拡張し、CUDA kernelはfp16基準最大約1.7倍。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/068431-2198",
+      "identity_tokens": [
+        "DOI:10.52202/068431-2198"
+      ],
+      "title": "LLM.int8(): 8-Bit Matrix Multiplication for Transformers at Scale",
+      "reason": "LLM推論時の重みメモリを半減しつつ精度を維持する8-bit行列積方式で、推論量子化の直接対象。",
+      "source_url": "https://doi.org/10.52202/068431-2198",
+      "body_check": "本文でvector-wise quantizationと、外れ値次元のみ16-bitで処理するmixed-precision decompositionを組み合わせ、99.9%以上の値を8-bit積で処理することを確認。最大175Bモデルで精度低下なしの推論を示し、OPT-175B/BLOOMを単一consumer GPU serverで扱えるメモリ削減を狙う。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
+      ],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19662",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.19662",
+        "DOI:10.52202/085713-3127",
+        "arXiv:2509.19662"
+      ],
+      "title": "Non-Clairvoyant Scheduling with Progress Bars",
+      "reason": "LLMサービングに応用可能な一般スケジューリング理論ではあるが、論文自体はLLM・KVキャッシュ・GPUサービングを対象とせず、最終適用先が汎用オンラインスケジューリング。",
+      "source_url": "https://arxiv.org/abs/2509.19662",
+      "body_check": "本文で処理時間未知のjob schedulingにprogress barとして完了率推定を継続入力し、adversarial/stochastic設定のcompetitive boundとalgorithm combiningを導く理論研究と確認。LLM要求、KV容量、prefill/decode等のシステム評価はない。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.13359",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2408.13359",
+        "arXiv:2408.13359"
+      ],
+      "title": "Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler",
+      "reason": "言語モデル事前学習の学習率スケジューラが主題で、凍結中の学習高速化・学習設定側に属する。",
+      "source_url": "https://arxiv.org/abs/2408.13359",
+      "body_check": "本文でWSD schedulerの最適learning rateとbatch size・training tokensのpower-lawを多数の小規模実験から推定し、muPと組み合わせてモデル規模等に依存しにくい学習率設定を提案することを確認。推論ランタイムやMoE expert offloadの研究ではない。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26190/669x-a286",
+      "identity_tokens": [
+        "DOI:10.26190/669x-a286"
+      ],
+      "title": "Katana",
+      "reason": "論文ではなくUNSWの共有HPC計算クラスタ自体を指す研究基盤DOIであり、LLM推論手法の候補ではない。",
+      "source_url": "https://doi.org/10.26190/669x-a286",
+      "body_check": "一次レコードでKatanaがUNSW Sydneyの共有computational cluster/serviceで、4000超CPU core等を提供する研究インフラであることを確認。論文固有の手法・評価を持たないためResearch対象外。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2609.15030-validating-hybrid-state-cache-recovery-for-glm-5-3-flash-with-vllm-and-lmcache.md"
+      ],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d15-1237",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d15-1237"
+      ],
+      "title": "WikiQA: A Challenge Dataset for Open-Domain Question Answering",
+      "reason": "質問応答データセット構築が主貢献で、LLM推論システムの速度・メモリ・サービングを改善しない。",
+      "source_url": "https://aclanthology.org/D15-1237/",
+      "body_check": "本文・書誌情報でWikipedia由来のopen-domain question answering用challenge datasetを構築・評価するEMNLP 2015論文と確認。推論カーネル、KV、オフロード、MoE、スケジューリングの提案はない。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.899",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-emnlp.899"
+      ],
+      "title": "Eigen Attention: Attention in Low-Rank Space for KV Cache Compression",
+      "reason": "注意計算を低ランク空間へ移してKVキャッシュ容量とattention latencyを直接削減するLLM推論最適化。",
+      "source_url": "https://aclanthology.org/2024.findings-emnlp.899/",
+      "body_check": "本文でOPT、MPT、Llama系列を対象にattentionをlow-rank spaceで実行するEigen Attentionを評価し、KV cacheを最大40%削減、attention operation latencyを最大60%削減しつつ性能低下を小さく保つことを確認。既存KV圧縮とも併用可能。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.91",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.91"
+      ],
+      "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
+      "reason": "長文promptを圧縮してLLM推論の入力token数、費用、end-to-end latencyを直接削減する。",
+      "source_url": "https://aclanthology.org/2024.acl-long.91/",
+      "body_check": "本文でkey informationの密度・位置を考慮したprompt compressionにより長文脈の計算量とposition biasを同時に抑えることを確認。NaturalQuestionsで約4倍少ないtoken、LooGLEで94.0% cost削減、約10k-token promptを2〜6倍圧縮した条件でend-to-end latency 1.4〜2.6倍高速化。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.acl-long.134",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.acl-long.134"
+      ],
+      "title": "Sequence Parallelism: Long Sequence Training from System Perspective",
+      "reason": "系列並列化自体は推論へ関連し得るが、本文の最終適用先と評価は長系列Transformerの学習であり、凍結中の学習高速化系。",
+      "source_url": "https://aclanthology.org/2023.acl-long.134/",
+      "body_check": "本文でsequenceをGPU間に分割しring-style communicationとself-attentionを統合したRing Self-Attentionを提案し、64 P100で最大batch 13.7倍、sequence length 3.0倍、114K超系列のtrainingを評価することを確認。推論サービング評価は主貢献ではない。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.462",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.462"
+      ],
+      "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding",
+      "reason": "並列的なaggressive decodingは後の投機的復号と技術的に近く推論高速化を直接扱うが、対象がLLM一般ではなくencoder-decoder型の文法誤り訂正専用なので境界扱い。",
+      "source_url": "https://aclanthology.org/2021.acl-long.462/",
+      "body_check": "本文で入力と出力が大半一致するGEC特性を使い、可能なtokenを並列にaggressive decodeし、さらにshallow decoderで計算量を削減することを確認。greedy decodingと同一predictionを維持し、Transformer-big比で約10倍のonline inference speedupを報告するが、LLMサービング一般への評価はない。",
+      "first_checked_at": "2026-10-02T13:10:00+09:00",
+      "last_checked_at": "2026-10-02T13:10:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "worklist_rank": 250
+    }
+  ]
+}
