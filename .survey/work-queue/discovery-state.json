@@ -1,35 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-02T11:10:53+00:00",
-  "last_run_key": "library-import-7d4a69cded45",
-  "last_round": "libimp-7d4a69cded450dde-pre01",
+  "updated_at": "2026-10-02T11:13:37+00:00",
+  "last_run_key": "library-import-650018ea12da",
+  "last_round": "libimp-650018ea12dace69-pre01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-agent-related-13",
-      "axis": "related-work path from agentic workload systems to predictability-driven agent-native serving",
-      "query_summary": "Followed the agent-serving related-work path after broad search. Pythia was surfaced as a concrete workflow-aware serving system, and repository code search did not find its arXiv identity.",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [
-        "arXiv:2604.25899"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Inspect adjacent agent-serving systems Orla / prediction-based KV management / Scepsy, then use independent framework/runtime axis.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-agent-related-13.json"
-    },
     {
       "run_key": "2026-09-19T19:00:00+09:00",
       "round": "specialist-coserving-15",
@@ -10780,6 +10760,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 1.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-650018ea12dace69-pre01",
+      "precheck_request_id": "libimp-650018ea12dace69-pre01",
+      "run_key": "library-import-650018ea12da",
+      "round": "libimp-650018ea12dace69-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-650018ea12dace69-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-650018ea12dace69-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19151,16 +19165,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-7d4a69cded45",
-      "rounds": 31,
-      "candidate_count": 184,
+      "last_run_key": "library-import-650018ea12da",
+      "rounds": 32,
+      "candidate_count": 189,
       "duplicate_filtered_count": 95,
-      "novel_candidate_count": 89,
+      "novel_candidate_count": 94,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 86,
-      "accepted_count": 86,
-      "duplicate_ratio": 0.5163043478260869,
-      "final_duplicate_ratio": 0.033707865168539325,
+      "post_final_dedupe_count": 91,
+      "accepted_count": 91,
+      "duplicate_ratio": 0.5026455026455027,
+      "final_duplicate_ratio": 0.031914893617021274,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
