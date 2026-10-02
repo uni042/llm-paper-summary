@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1143-scheduled-chat-45",
+  "reference_main_sha": "469326af3413ba8d64ac977b5cda96f54b1ac35f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-021-01453-z",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-021-01453-z"
+      ],
+      "title": "Knowledge Distillation: A Survey",
+      "reason": "知識蒸留全般の包括的サーベイで、LLM推論ランタイムやサービング最適化を主題としない。",
+      "source_url": "https://doi.org/10.1007/s11263-021-01453-z",
+      "body_check": "知識の種類、蒸留方式、teacher–student構成、アルゴリズム、応用を体系化する。小型モデル配備への動機はあるが、LLM推論固有のKV・デコード・メモリ階層・サービング機構を提案・評価しない。",
+      "worklist_rank": 297,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:T26f9z2rEe",
+      "identity_tokens": [
+        "OpenReview:T26f9z2rEe"
+      ],
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+      "reason": "top-any gatingとexpert追加・削除を学習中に自動調整するMoE設計で、最終主貢献はモデル学習・アーキテクチャ自動調整。",
+      "source_url": "https://openreview.net/forum?id=T26f9z2rEe",
+      "body_check": "閾値型top-any gating、routing履歴に基づくexpert追加・削除、補助損失を確認。GLUE、vision、VLMで性能とactivated parametersを評価するが、MoE推論時のexpert配置・offload・cache・runtime高速化は主対象でない。",
+      "worklist_rank": 271,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:R7fv5NWfMm",
+      "identity_tokens": [
+        "OpenReview:R7fv5NWfMm"
+      ],
+      "title": "Randomization Boosts KV Caching, Learning Balances Query Load: A Joint Perspective",
+      "reason": "有限KVキャッシュのevictionと複数workerへのquery routingを統一的に扱い、LLMサービングを直接最適化する。",
+      "source_url": "https://openreview.net/forum?id=R7fv5NWfMm",
+      "body_check": "randomized KV evictionと学習型query routingを組み合わせる。4ベンチマーク・3 prefix-sharing条件で、cache hit最大6.92倍、latency最大11.96倍削減、TTFT最大14.06倍削減、throughput最大77.4%向上を報告。",
+      "worklist_rank": 269,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:mtSSFiqW6y",
+      "identity_tokens": [
+        "OpenReview:mtSSFiqW6y"
+      ],
+      "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
+      "reason": "投機的復号のaccept/reject判断を改善して生成速度を上げるLLMデコード高速化研究。",
+      "source_url": "https://openreview.net/forum?id=mtSSFiqW6y",
+      "body_check": "draftとtargetの単純な分布整合だけでは高速化を最大化できない点を分析し、判定機構を導入して投機的サンプリング効率を改善する。最終適用先はLLM decoding latency。",
+      "worklist_rank": 267,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:k2fWVhG0u5",
+      "identity_tokens": [
+        "OpenReview:k2fWVhG0u5"
+      ],
+      "title": "MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems",
+      "reason": "Sparse MoEのcost・accuracy・performanceを測るベンチマークで推論評価に関係するが、新しい実行機構そのものではない。",
+      "source_url": "https://openreview.net/forum?id=k2fWVhG0u5",
+      "body_check": "Sparse MoE systemsのコスト・精度・性能を同時評価するbenchmark。MoE推論のsystem trade-off定量化には有用だが、expert offload/cache/schedulerの新方式ではないためborderline。",
+      "worklist_rank": 266,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:j1tSLYKwg8",
+      "identity_tokens": [
+        "OpenReview:j1tSLYKwg8"
+      ],
+      "title": "Scaling Diffusion Language Models via Adaptation from Autoregressive Models",
+      "reason": "自己回帰モデルを拡散言語モデルへ適応するモデル構築・学習方式が中心。",
+      "source_url": "https://openreview.net/forum?id=j1tSLYKwg8",
+      "body_check": "DiffuGPT/DiffuLLaMAとして既存autoregressive modelからdiffusion language modelへ適応・scaleする。GPU/KV/cache/scheduler/kernel等の推論システム最適化が最終目的ではない。",
+      "worklist_rank": 265,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:H4DqfPSibmx",
+      "identity_tokens": [
+        "OpenReview:H4DqfPSibmx",
+        "arXiv:2205.14135"
+      ],
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "reason": "HBMとSRAM間I/Oを減らすtilingとonline softmaxでexact attentionを高速・省メモリ化する基盤的カーネル研究。",
+      "source_url": "https://openreview.net/forum?id=H4DqfPSibmx",
+      "body_check": "attention行列をHBMへ実体化せずSRAM上のblock単位でQ/K/Vを処理し、online softmaxでexact resultを維持するIO-aware algorithm。長系列Transformerのattention実行時間・メモリを直接削減する。",
+      "worklist_rank": 264,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:FAeU7516MR",
+      "identity_tokens": [
+        "OpenReview:FAeU7516MR",
+        "arXiv:2505.19645"
+      ],
+      "title": "MoESD: Unveil Speculative Decoding's Potential for Accelerating Sparse MoE",
+      "reason": "Sparse MoE固有のexpert activationと投機的復号を協調させ、MoE推論のデコード遅延を直接削減する。",
+      "source_url": "https://openreview.net/forum?id=FAeU7516MR",
+      "body_check": "Sparse MoEに投機的復号を適用した際のexpert access/activation特性を分析し、MoE向けに高速化する方式。対象はMoE inference accelerationで、expert利用とspeculative decodingの交差領域に直接該当。",
+      "worklist_rank": 263,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:cJd1BgZ9CS",
+      "identity_tokens": [
+        "OpenReview:cJd1BgZ9CS"
+      ],
+      "title": "DSI: Faster Inference of Large Language Models via Speculation Parallelism",
+      "reason": "targetとdrafterを並列オーケストレーションするspeculation parallelismで投機的推論を高速化する。",
+      "source_url": "https://openreview.net/forum?id=cJd1BgZ9CS",
+      "body_check": "Distributed Speculative Inferenceがtarget/drafter instancesを時間的に重畳するSpeculation Parallelismを導入。target分布を保持し、現実的single-node simulationでSI比1.29–1.92倍を報告する。",
+      "worklist_rank": 262,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:8Wuvhh0LYW",
+      "identity_tokens": [
+        "OpenReview:8Wuvhh0LYW",
+        "arXiv:2308.13137"
+      ],
+      "title": "OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models",
+      "reason": "LLMのweight/activationを低ビット化する後学習量子化で、推論時メモリ・演算量削減を最終適用先とする。",
+      "source_url": "https://openreview.net/forum?id=8Wuvhh0LYW",
+      "body_check": "weight-onlyとweight-activation quantizationを扱い、learnable weight clippingとequivalent transformationで少量calibration dataから量子化パラメータを最適化する。低ビットLLM推論を直接対象とする。",
+      "worklist_rank": 261,
+      "first_checked_at": "2026-10-02T11:43:11+09:00",
+      "last_checked_at": "2026-10-02T11:43:11+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    }
+  ]
+}
