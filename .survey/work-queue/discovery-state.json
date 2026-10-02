@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-02T11:02:32+00:00",
-  "last_run_key": "library-import-f7620c073dad",
-  "last_round": "libimp-f7620c073dad64c9-pre01",
+  "updated_at": "2026-10-02T11:03:56+00:00",
+  "last_run_key": "library-import-51a6c2bd7d04",
+  "last_round": "libimp-51a6c2bd7d046d0d-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,29 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-cxl-nmp-3",
-      "axis": "CXL memory pooling / photonic fabric / NMP for hybrid LLM inference",
-      "query_summary": "Expanded the NMP axis to recent CXL memory pooling and hybrid-model near-memory processing. MFS was recognized as an already-known networking result; NOVA and the Photonic-CXL appliance were not found by repository code search and have direct inference-system relevance.",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [
-        "arXiv:2608.22613",
-        "arXiv:2607.27187"
-      ],
-      "duplicate_canonical_ids": [
-        "arXiv:2603.17456"
-      ],
-      "next_axis_hint": "Switch away from memory hardware to scheduler/resource allocation and distributed serving new work to keep search independence.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-cxl-nmp-3.json"
-    },
     {
       "run_key": "2026-09-19T19:00:00+09:00",
       "round": "specialist-nmp-memory-2",
@@ -10706,6 +10683,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-51a6c2bd7d046d0d-pre01",
+      "precheck_request_id": "libimp-51a6c2bd7d046d0d-pre01",
+      "run_key": "library-import-51a6c2bd7d04",
+      "round": "libimp-51a6c2bd7d046d0d-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-51a6c2bd7d046d0d-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-51a6c2bd7d046d0d-pre01-sub01.json",
+        "work-queue/submissions/libimp-51a6c2bd7d046d0d-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19077,16 +19090,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-f7620c073dad",
-      "rounds": 25,
-      "candidate_count": 156,
-      "duplicate_filtered_count": 80,
-      "novel_candidate_count": 76,
+      "last_run_key": "library-import-51a6c2bd7d04",
+      "rounds": 26,
+      "candidate_count": 162,
+      "duplicate_filtered_count": 85,
+      "novel_candidate_count": 77,
       "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 74,
-      "accepted_count": 74,
-      "duplicate_ratio": 0.5128205128205128,
-      "final_duplicate_ratio": 0.02631578947368421,
+      "post_final_dedupe_count": 75,
+      "accepted_count": 75,
+      "duplicate_ratio": 0.5246913580246914,
+      "final_duplicate_ratio": 0.025974025974025976,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
