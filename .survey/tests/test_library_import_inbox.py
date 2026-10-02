@@ -31,6 +31,80 @@ class LibraryImportInboxTests(unittest.TestCase):
             ".survey/import-inbox/pending/research/paper.md",
         )
 
+    def test_requeues_discovery_blocked_only_by_precheck_provenance(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery/source.json"
+                blocked.parent.mkdir(parents=True)
+                blocked_payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "20261002T120000JST-scheduled-chat-00",
+                    "record_count": 1,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "arXiv:2609.00001",
+                            "reason": "test",
+                        }
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(blocked_payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+                failure_id = "libimp-deadbeef-pre01-sub01"
+                queue_result = root / f".survey/work-queue/results/{failure_id}.json"
+                queue_result.parent.mkdir(parents=True)
+                queue_result.write_text(
+                    json.dumps(
+                        {
+                            "ok": False,
+                            "retryable": True,
+                            "error_code": "discovery_precheck_required",
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                import_result = root / ".survey/import-inbox/results/discovery/source.json"
+                import_result.parent.mkdir(parents=True)
+                import_result.write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_downstream",
+                            "retained_payload": ".survey/import-inbox/blocked/discovery/source.json",
+                            "failures": [failure_id],
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(
+                    inbox.recover_retryable_precheck_provenance_blocks(root), 1
+                )
+                retry_files = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-precheck-*--source.json"
+                    )
+                )
+                self.assertEqual(len(retry_files), 1)
+                self.assertEqual(retry_files[0].read_bytes(), blocked.read_bytes())
+                self.assertEqual(
+                    inbox.recover_retryable_precheck_provenance_blocks(root), 0
+                )
+            finally:
+                os.chdir(original_cwd)
+
     def test_oversized_discovery_run_is_retained_and_split_by_record_count(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as tmpdir:
