@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "source_url": "https://arxiv.org/abs/2305.05176",
+      "year": 2023,
+      "published": "2023-05-09",
+      "abstract": "There is a rapidly growing number of large language models (LLMs) that users can query for a fee. We review the cost associated with querying popular LLM APIs, e.g. GPT-4, ChatGPT, J1-Jumbo, and find that these models have heterogeneous pricing structures, with fees that can differ by two orders of magnitude. In particular, using LLMs on large collections of queries and text can be expensive. Motivated by this, we outline and discuss three types of strategies that users can exploit to reduce the inference cost associated with using LLMs: 1) prompt adaptation, 2) LLM approximation, and 3) LLM cascade. As an example, we propose FrugalGPT, a simple yet flexible instantiation of LLM cascade which learns which combinations of LLMs to use for different queries in order to reduce cost and improve accuracy. Our experiments show that FrugalGPT can match the performance of the best individual LLM (e.g. GPT-4) with up to 98% cost reduction or improve the accuracy over GPT-4 by 4% with the same cost. The ideas and findings presented here lay a foundation for using LLMs sustainably and efficiently.",
+      "canonical_id": "arXiv:2305.05176",
+      "arxiv_id": "2305.05176",
+      "doi": "10.48550/arXiv.2305.05176",
+      "authors": [
+        "Lingjiao Chen",
+        "M. Zaharia",
+        "James Y. Zou"
+      ],
+      "reason": "問い合わせごとに異なるLLMを段階的に選ぶLLM cascadeで、推論APIの実コストを品質制約下で直接最適化する。",
+      "library_body_check": "本文でprompt adaptation、LLM approximation、LLM cascadeの3系統を整理し、FrugalGPTはqueryごとに利用するLLM組合せを学習してcascade実行することを確認。最良単体LLM相当性能で最大98%費用削減、同一費用でGPT-4比accuracy 4%改善を報告。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2502.00722",
+      "year": 2025,
+      "published": "2025-02-02",
+      "abstract": "Recent advancements in Large Language Models (LLMs) have led to increasingly diverse requests, accompanied with varying resource (compute and memory) demands to serve them. However, this in turn degrades the cost-efficiency of LLM serving as common practices primarily rely on homogeneous GPU resources. In response to this problem, this work conducts a thorough study about serving LLMs over heterogeneous GPU resources on cloud platforms. The rationale is that different GPU types exhibit distinct compute and memory characteristics, aligning well with the divergent resource demands of diverse requests. Particularly, through comprehensive benchmarking, we discover that the cost-efficiency of LLM serving can be substantially optimized by meticulously determining GPU composition, deployment configurations, and workload assignments. Subsequently, we design a scheduling algorithm via mixed-integer linear programming, aiming at deducing the most cost-efficient serving plan under the constraints of price budget and real-time GPU availability. Remarkably, our approach effectively outperforms homogeneous and heterogeneous baselines under a wide array of scenarios, covering diverse workload traces, varying GPU availablilities, and multi-model serving. This casts new light on more accessible and efficient LLM serving over heterogeneous cloud resources.",
+      "canonical_id": "arXiv:2502.00722",
+      "arxiv_id": "2502.00722",
+      "doi": "10.48550/arXiv.2502.00722",
+      "authors": [
+        "You-He Jiang",
+        "Fang-Cheng Fu",
+        "Xiaozhe Yao",
+        "Guo-Liang He",
+        "Xupeng Miao",
+        "A. Klimovic",
+        "Bin Cui",
+        "Bin-Hang Yuan",
+        "Eiko Yoneki"
+      ],
+      "reason": "異種GPUの計算・メモリ特性と要求特性を対応付け、GPU構成・配置・ワークロード割当を最適化するLLMサービング研究。",
+      "library_body_check": "本文で異種GPUの包括的benchmarkからcost-efficiencyがGPU composition、deployment configuration、workload assignmentに依存することを確認し、価格予算とリアルタイムGPU可用性を制約とする混合整数線形計画schedulerを設計。複数trace、GPU可用性、multi-model servingでhomogeneous/heterogeneous baselineを上回る。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ba03c7b28e3",
+    "round": "libimp-4ba03c7b28e3fb24-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ba03c7b28e3fb24-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ba03c7b28e3fb24-pre01.json",
+    "receipt": "sha256:27b6cc844ab7be1dadac5dbdc531a8e5f1d82b38ddb46ba91294e88e0f4813a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ba03c7b28e3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

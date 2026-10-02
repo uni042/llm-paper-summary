@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.03819",
+      "year": 2026,
+      "published": "2026-06-02",
+      "abstract": "One-shot block drafters for speculative decoding generate the full draft in a single forward pass, achieving strong throughput by eliminating sequential token generation. However, they predict each draft token conditioned only on the prefix context, with no dependence on previously drafted tokens. This non-autoregressive conditioning causes the drafter's distribution to diverge from the verifier's true autoregressive distribution as draft depth grows. This problem becomes more severe in tree-based drafting, where distinct branches are forced to share the same marginal distribution for subsequent tokens. We propose TreeFlash, which addresses this by incorporating an MLP layer conditioned on the drafter's hidden state and the previous token to approximate an autoregressive distribution. TreeFlash retains the $\\mathcal{O}(1)$ decoding time complexity of one-shot drafters by employing a two-stage approximation mechanism. TreeFlash achieves state-of-the-art performance across a variety of tasks and models, improving over marginal tree drafting by $12\\%$ higher block efficiency and $9\\%$ higher speedup.",
+      "canonical_id": "arXiv:2606.03819",
+      "arxiv_id": "2606.03819",
+      "doi": "10.48550/arXiv.2606.03819",
+      "authors": [
+        "Peer Rheinboldt",
+        "Frédéric Berdoz",
+        "R. Wattenhofer"
+      ],
+      "reason": "one-shot tree drafterの非自己回帰条件付け誤差を、hidden stateと直前tokenに条件付けたMLPで近似し、O(1) draft時間を保ちながら投機的復号を高速化する。",
+      "library_body_check": "一次資料本文でone-shot drafterの各depthがprefixだけに条件付くためtree branch間で同じmarginalを共有する問題と、two-stage AR approximationを確認。複数task/modelでmarginal tree drafting比block efficiency 12%、speedup 9%改善を報告し、最終適用先はLLM speculative decoding。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.02515",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "Long-running assistants and agents consume interaction streams that eventually outgrow the context. Existing context retention, summarization, and retrieval preserve access to selected history, but do not provide a persistent state over the full lifecycle when working context changes. We formulate this missing inference capability as \\emph{state continuity under context turnover}: carrying computation forward through a fixed-capacity memory state whose lifetime is independent of the active context. We introduce an intrinsic memory method, \\textbf{LiveMem}, which augments a pretrained full-attention LLM with a memory state that preserves the historical information over the whole lifecycle while the main attention path retains a bounded KV window. Context turnover and memory state maintaining, memory-oriented post-training, and state-aware serving jointly make this memory state load bearing after its originating tokens are released. Our experiments show that LiveMem achieves leading overall performance among evaluated systems and other intrinsic memory methods. Experiments on LongMemEval show that LiveMem is able to answer the question based on the memory state, even when the supporting evidence has been removed from the current context, and evidence-distance analysis shows that useful information persists beyond the active window. LiveMem thus establishes state continuity as a distinct and complementary abstraction for continual LLM inference.",
+      "canonical_id": "arXiv:2608.02515",
+      "arxiv_id": "2608.02515",
+      "authors": [
+        "Zhichen Liu",
+        "Ruihan Sun",
+        "Heng Yang",
+        "Zi-Peng Wu",
+        "Zhaohan Chen",
+        "Xiaofan Zhang",
+        "Yang Xu"
+      ],
+      "reason": "固定容量のactive KV windowとは独立した永続memory stateを追加し、context turnover後も計算状態を継続する長時間LLM推論方式を提案する。",
+      "library_body_check": "一次資料本文でpretrained full-attention LLMへlifecycle全体を保持するmemory stateを追加し、main attentionはbounded KV windowのままcontext turnover、memory-oriented post-training、state-aware servingを協調させる設計を確認。LongMemEvalでは根拠tokenがactive contextから消えた後もmemory stateだけで回答可能なことを評価。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees",
+      "source_url": "https://arxiv.org/abs/2608.13524",
+      "year": 2026,
+      "published": "2026-08-13",
+      "abstract": "Speculative decoding losslessly accelerates autoregressive language models by verifying multiple draft tokens in parallel. Diffusion-based drafters further reduce proposal latency by predicting an entire token block in parallel, but their position-wise distributions are marginal rather than conditioned on tokens selected along each draft path. Existing recurrent correction incorporates causal information along a single draft chain, whereas diffusion-based tree construction broadens candidate coverage without carrying this correction along individual branches. We introduce DARTree, a training-free speculative decoding method that extends a pretrained AR correction head from chains to trees. DARTree first constructs a fixed-width candidate tree by expanding and scoring all nodes at each depth in a single batch, and then only applies best-first pruning to select the verification tree, decoupling AR-head inference from sequential heap operations. Across seven math, code, and chat benchmarks, DARTree achieves the highest average acceptance length and speedup in all four model--temperature configurations, accepting up to 12.97 tokens per verification round, 98.6\\% more than DFlash and 27.9\\% more than Domino in the same setting, and reaching up to 9.73$\\times$ lossless speedup over locally measured autoregressive decoding.",
+      "canonical_id": "arXiv:2608.13524",
+      "arxiv_id": "2608.13524",
+      "authors": [
+        "Tian-Yi Li",
+        "Yaxin Luo",
+        "Xin-Yi Shang",
+        "Zhi-Qiang Shen"
+      ],
+      "reason": "拡散型ドラフターの位置別周辺分布だけでは枝ごとの条件付き整合性が不足する問題を、既存AR補正ヘッドを木へ拡張して解き、無損失の投機的復号を直接高速化する。",
+      "library_body_check": "一次資料本文で、固定幅候補木を各深さで一括展開・採点し、その後best-first pruningで検証木だけを選ぶ構成を確認。7つの数学・コード・チャット評価、4つのモデル×温度条件すべてで平均受理長と高速化が最良で、最大12.97 token/verification、DFlash比98.6%・Domino比27.9%長い受理、ローカルAR復号比最大9.73倍の無損失高速化を報告。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LiLiCorr: Lightweight Likelihood Correlation of Parallel Drafts for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.20530",
+      "year": 2026,
+      "published": "2026-08-20",
+      "abstract": "Speculative decoding accelerates language-model inference by drafting future tokens the target model verifies in parallel. A diffusion-style drafter such as DFlash drafts an entire block in one forward pass. It is trained on the per-position marginals rather than on the joint distribution over the block, so the tokens it emits are individually plausible yet jointly incoherent. We introduce LiLiCorr, a Lightweight Likelihood-based model that Correlates the per-position marginals such a drafter produces. It keeps the top-K tokens at each position and processes them jointly, emitting an in and an out vector for each. Two candidates at consecutive positions match when the earlier out vector aligns, in cosine similarity, with the later in vector. Training scores the correct pairings highest and pushes competing ones down, so coherent blocks outscore incoherent ones. The joint distribution over the block, exponential in its length, is never materialized. One lightweight network pass produces all the vectors, the pairwise scores follow as batched matrix operations, leaving only a cheap greedy walk sequential. We co-train the DFlash drafter with LiLiCorr, so it proposes candidates that correlate into longer accepted sequences. Over the vanilla DFlash drafter it builds on, LiLiCorr accepts more and serves faster at all 72 settings we test: nine benchmarks at two target sizes under greedy and temperature-one decoding, plus a throughput sweep over six concurrencies, two input lengths and three output-entropy tiers. It raises acceptance length by 7 to 19%, while its single-pass scoring head costs only about 3% of the per-block latency. Against three concurrently developed methods that also restore coherence at draft time, all equally optimized on a common stack, LiLiCorr holds the highest throughput in 63 of those settings, ties within a measured noise floor in 6, and trails in only 3.",
+      "canonical_id": "arXiv:2608.20530",
+      "arxiv_id": "2608.20530",
+      "authors": [
+        "M. Rusanovsky",
+        "Yoav Miron",
+        "Roy Uziel",
+        "Omer Belhasin",
+        "Hao Guo",
+        "Ran Zilberstein",
+        "Maor Ashkenazi",
+        "Michael Elad"
+      ],
+      "reason": "拡散型ブロックドラフターの位置別候補を軽量な相関モデルで結び、投機的復号の受理長と実スループットを改善する直接的な推論高速化。",
+      "library_body_check": "一次資料本文で各位置top-K候補にin/out vectorを付与し、隣接位置のcosine similarityで整合する候補列を採点する方式を確認。joint distributionを明示構築せず、単一軽量network passとbatched matrix operationで処理する。9 benchmark×2 target size×greedy/temperature-1等72設定すべてでDFlashより高速、受理長7–19%向上、scoring headはblock latencyの約3%。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2609.36322",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Chunked KV-cache compression reduces the memory and attention costs of long-context inference by compressing windows of consecutive tokens into fewer cache entries at a fixed stride. Such compression also introduces a new positional coordinate: a token's phase, or its position relative to compression-window boundaries. We uncover a systematic asymmetry in models using such compression: the same information can be easy to retrieve at one phase and difficult at another. We call this periodic variation in retrieval performance phase sensitivity. In large open-weight models with such compression, long-context retrieval accuracy can differ by up to 40 percentage points across phases, revealing periodic weak spots that average benchmark scores can conceal. To investigate this behavior, we pretrain a family of transformers from scratch across multiple KV-compression designs, reproducing phase sensitivity across the variants. Mechanistic analysis using causal interventions in these models reveals phase specialization: different attention components contribute asymmetrically to retrieving information at different source phases. We further analyze idealized retrieval models, showing how gradient flow dynamics may favor sharp phase specialization. Evaluating models with chunked KV-cache compression thus requires measuring across compression phases: high average accuracy can coexist with systematic positional failures.",
+      "canonical_id": "arXiv:2609.36322",
+      "arxiv_id": "2609.36322",
+      "authors": [
+        "Xingyu Zhu",
+        "Pu Yi",
+        "Zi-Heng Cheng",
+        "Ang Lv",
+        "Jing Liu",
+        "Le-Xing Ying",
+        "Yi-Yuan Ma",
+        "Xin-Lan Dong"
+      ],
+      "reason": "チャンク型KV圧縮が導入するwindow境界位相によって検索品質が周期的に崩れることを定量化し、長文脈推論で圧縮方式を評価・設計する際の重要な品質制約を示す。",
+      "library_body_check": "一次資料で同一情報でもcompression-window境界に対するphaseでretrieval accuracyが最大40 percentage points変動することを確認。複数KV compression designを持つTransformerをscratch pretrainして再現し、causal interventionでattention componentのphase specializationを解析。速度提案そのものではないがKV圧縮推論の品質・評価に直接関係するためaccept。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5ac38646f1b1",
+    "round": "libimp-5ac38646f1b16e74-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5ac38646f1b16e74-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5ac38646f1b16e74-pre01.json",
+    "receipt": "sha256:e69e54325a987e1e5fe69e3b188878ebf937ce2cf3a92780566f02bb3709a05f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5ac38646f1b1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
