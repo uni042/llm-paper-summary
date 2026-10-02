@@ -163,7 +163,7 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertIn("検証済み成功result: **1件**", text)
             self.assertIn("候補: **1件**", text)
             self.assertIn("MoE expert cache", text)
-            self.assertIn("| 最終検証済みDiscovery探索 | **09-15 18:02:53 JST** |", text)
+            self.assertIn("| 最終Discovery探索完了 | **09-15 18:02:53 JST** |", text)
             self.assertIn("| Discovery | **1** | **1** | **1** | **0** |", text)
 
     def test_future_run_timestamps_are_not_selected_as_latest(self):
@@ -240,12 +240,12 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             )
 
             self.assertIn(
-                "| 最終検証済みResearch収録 | **09-25 03:07:25 JST** |",
+                "| 最終Research処理完了 | **09-25 03:07:25 JST** |",
                 text,
             )
             self.assertIn("**09-25 03:07:25 JST** [research]", text)
             self.assertNotIn(
-                "| 最終検証済みResearch収録 | **09-24 18:07:25 JST** |",
+                "| 最終Research処理完了 | **09-24 18:07:25 JST** |",
                 text,
             )
 
