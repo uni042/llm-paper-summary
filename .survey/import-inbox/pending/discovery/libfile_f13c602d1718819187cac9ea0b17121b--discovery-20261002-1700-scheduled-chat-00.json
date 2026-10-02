@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-1700-scheduled-chat-00",
+  "reference_main_sha": "1f9534a267803a959cedf80fc6430ff6649e5faa",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12773",
+      "identity_tokens": [
+        "arXiv:2310.12773",
+        "DOI:10.48550/arXiv.2310.12773"
+      ],
+      "title": "Safe RLHF: Safe Reinforcement Learning from Human Feedback",
+      "reason": "人間フィードバックによる強化学習（RLHF）の安全性・有用性制約を分離して学習するアラインメント研究で、推論基盤効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.12773",
+      "body_check": "本文でreward modelとcost modelを分離し、Lagrangian制約付き最適化でAlpaca-7Bを3 round fine-tuningすることを確認。主評価はhelpfulness/harmlessnessで、推論メモリ・遅延・スループット最適化はない。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12462",
+      "identity_tokens": [
+        "arXiv:2310.12462",
+        "DOI:10.48550/arXiv.2310.12462"
+      ],
+      "title": "Unmasking Transformers: A Theoretical Approach to Data Recovery via Attention Weights",
+      "reason": "注意重みと出力から入力データを復元できるかを解析するプライバシー理論研究で、LLM推論効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2310.12462",
+      "body_check": "本文でattention weights Wとoutput Bから入力Xをloss最小化で復元する理論枠組みを確認。主眼はTransformer内部情報からのデータ漏洩可能性で、推論runtime改善はない。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.11703",
+      "identity_tokens": [
+        "arXiv:2310.11703",
+        "DOI:10.48550/arXiv.2310.11703"
+      ],
+      "title": "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenge",
+      "reason": "ベクトルデータベースの保存・近似最近傍検索を体系化しRAG/LLMとの統合も扱うが、LLM推論サービング専用ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2310.11703",
+      "body_check": "本文系公開情報でhash/tree/graph/quantization型ANN、主流VDBアーキテクチャ、LLM統合と索引課題を整理するサーベイと確認。RAG基盤には関連するがKV・decode・LLM servingが主対象ではない。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10908",
+      "identity_tokens": [
+        "arXiv:2310.10908",
+        "DOI:10.48550/arXiv.2310.10908"
+      ],
+      "title": "Unlocking Emergent Modularity in Large Language Models",
+      "reason": "標準LMの潜在的モジュール性をMoEとして利用するfine-tuning研究で、主目的は汎化性能改善であり推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.10908",
+      "body_check": "本文でpretrained Transformerのemergent modularityから追加parameterなしのEmergent MoEを構成し、Llama2-7B/30B等をfine-tuningしてin/out-of-domain generalizationを評価することを確認。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09478",
+      "identity_tokens": [
+        "arXiv:2310.09478",
+        "DOI:10.48550/arXiv.2310.09478"
+      ],
+      "title": "MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning",
+      "reason": "画像説明・VQA・visual grounding等を単一VLMで扱うマルチタスク学習研究で、推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.09478",
+      "body_check": "本文でtask identifierを導入し3-stage trainingしたMiniGPT-v2を複数vision-language benchmarkで評価することを確認。主貢献は統一VLM能力と学習設計。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.09130",
+      "identity_tokens": [
+        "arXiv:2310.09130",
+        "DOI:10.48550/arXiv.2310.09130"
+      ],
+      "title": "Split-and-Denoise: Protect large language model inference with local differential privacy",
+      "reason": "LLM推論をclient/serverに分割するが目的は局所差分プライバシーであり、速度・メモリ効率化は副次的なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2310.09130",
+      "body_check": "本文でclientがtoken embedding層を実行してnoiseを加え、server処理後のembeddingをdenoiseするSplit-N-Denoiseを確認。model parameter変更なしで同一privacy budget下のutilityを平均10%以上改善するが、serving効率が主評価ではない。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07999",
+      "identity_tokens": [
+        "arXiv:2310.07999",
+        "DOI:10.48550/arXiv.2310.07999"
+      ],
+      "title": "LEMON: Lossless model expansion",
+      "reason": "小型事前学習モデルから大型モデルを初期化して追加学習計算を削減するモデル拡張手法で、凍結中の学習高速化側。",
+      "source_url": "https://arxiv.org/abs/2310.07999",
+      "body_check": "本文系公開情報でpretrained small modelのweightを拡張初期値に用い、専用learning-rate schedulerでViTのtraining compute 56.7%、BERT 33.2%削減を報告することを確認。最終適用先はtraining。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.07096",
+      "identity_tokens": [
+        "arXiv:2310.07096",
+        "DOI:10.48550/arXiv.2310.07096"
+      ],
+      "title": "Sparse Universal Transformer",
+      "reason": "疎な専門家混合と動的停止で入力ごとの計算量を適応削減し、推論時にも約50%の計算削減を示す条件付き計算研究。",
+      "source_url": "https://arxiv.org/abs/2310.07096",
+      "body_check": "本文でUniversal TransformerにSparse Mixture-of-Expertsとstick-breaking型dynamic haltingを導入し、WMT14では強いbaselineと同等性能を約半分の計算・parameterで達成。formal language taskではhaltingにより推論計算を約50%削減し性能低下を小さく抑えることを確認。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06625",
+      "identity_tokens": [
+        "arXiv:2310.06625",
+        "DOI:10.48550/arXiv.2310.06625"
+      ],
+      "title": "iTransformer: Inverted Transformers Are Effective for Time Series Forecasting",
+      "reason": "時系列予測向けTransformerアーキテクチャ研究で、LLM推論とは別分野。",
+      "source_url": "https://arxiv.org/abs/2310.06625",
+      "body_check": "本文系公開情報でtime pointではなくvariateをtoken化しattentionで多変量相関を学習するiTransformerを複数forecasting datasetで評価することを確認。LLM serving/KV/decode最適化はない。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05915",
+      "identity_tokens": [
+        "arXiv:2310.05915",
+        "DOI:10.48550/arXiv.2310.05915"
+      ],
+      "title": "FireAct: Toward Language Agent Fine-tuning",
+      "reason": "言語エージェントを多様な軌跡でfine-tuningして能力・頑健性を改善する研究で、推論基盤効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.05915",
+      "body_check": "本文でReAct/CoT/Reflexion等のtrajectoryを組み合わせてLlama2等をfine-tuningし、HotpotQA等のagent性能・robustness・generalizationを評価することを確認。主貢献はagent fine-tuning。",
+      "first_checked_at": "2026-10-02T17:00:00+09:00",
+      "last_checked_at": "2026-10-02T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 491
+    }
+  ]
+}
