@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-650018ea12dace69-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.01280",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.01280",
+    "identity_tokens": [
+      "arXiv:2605.01280"
+    ],
+    "reason": "serving最適化のposition paperで関連するが、新規実装方式・実験システムが主題ではない。",
+    "first_checked_at": "2026-09-27T02:28:40+09:00",
+    "last_checked_at": "2026-10-02T11:10:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "scheduled-chat-30 dedicated discovery worklist; tail-to-head",
+      "web-discovery:LLM inference/serving systems"
+    ],
+    "title": "Position: LLM Serving Needs Mathematical Optimization and Algorithmic Foundations, Not Just Heuristics"
+  },
+  "processed_at": "2026-10-02T11:10:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-650018ea12da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

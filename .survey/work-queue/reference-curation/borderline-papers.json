@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T11:07:29+00:00",
+  "updated_at": "2026-10-02T11:10:18+00:00",
   "record_count": 388,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -1135,15 +1135,15 @@
       "identity_tokens": [
         "arXiv:2605.01280"
       ],
-      "reason": "関連する効率化要素はあるが、主貢献がモデル／学習手法、汎用基礎研究、サーベイ／立場論文で、現行サーベイへの直接性が境界的。",
+      "reason": "serving最適化のposition paperで関連するが、新規実装方式・実験システムが主題ではない。",
       "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-30T09:48:18+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head",
         "web-discovery:LLM inference/serving systems"
       ],
-      "title": "LLM Serving Position Paper"
+      "title": "Position: LLM Serving Needs Mathematical Optimization and Algorithmic Foundations, Not Just Heuristics"
     },
     "arXiv:2510.22115": {
       "classification": "borderline",
@@ -4477,7 +4477,7 @@
       ],
       "reason": "動的KV回収機構は推論基盤に直接関連するが、主要結論はchunked prefillで利得がほぼ消える負の結果。",
       "first_checked_at": "2026-09-30T04:10:05+00:00",
-      "last_checked_at": "2026-09-30T04:10:05+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "web-discovery:LLM inference/serving systems"
@@ -4492,7 +4492,7 @@
       ],
       "reason": "production traceによるserving workload分析で有用だが、新規推論高速化手法そのものではない。",
       "first_checked_at": "2026-09-30T04:10:05+00:00",
-      "last_checked_at": "2026-09-30T04:10:05+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "web-discovery:LLM inference/serving systems"

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T11:07:29+00:00",
+  "updated_at": "2026-10-02T11:10:18+00:00",
   "record_count": 479,
   "records": {
     "arXiv:2303.08774": {
@@ -4537,7 +4537,7 @@
       ],
       "reason": "法務自然言語理解の評価データセットであり、LLM推論ランタイム、メモリ、デコード、サービング最適化を提案しない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
@@ -4570,7 +4570,7 @@
       ],
       "reason": "長文生成能力を測るベンチマークであり、KVキャッシュやサービングを高速化する機構を提案しない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
@@ -4774,9 +4774,9 @@
         "DOI:10.48550/arxiv.2503.14487",
         "arXiv:2503.14487"
       ],
-      "reason": "MoEによる計算効率化だが主対象は画像生成用Diffusion Transformerで、LLM推論サーベイの直接対象外。",
+      "reason": "主対象は画像生成用Diffusion Transformerであり、LLM推論サーベイの範囲外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4811,9 +4811,9 @@
         "DOI:10.48550/arxiv.2409.12941",
         "arXiv:2409.12941"
       ],
-      "reason": "RAG能力の評価体系が主題で、推論runtime・配信・メモリ最適化の手法ではない。",
+      "reason": "RAGの事実性・検索・推論能力を測るFRAMES評価データセットが主貢献で、推論基盤の効率化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -5581,9 +5581,9 @@
       "identity_tokens": [
         "DOI:10.1109/rtas58335.2023.00012"
       ],
-      "reason": "NVIDIA GPUのSMを空間分割するlibsmctrlを提案する一般GPU共有研究で、LLM推論・サービングを対象にしていない。",
+      "reason": "NVIDIA GPUのSM計算資源を空間分割する汎用リアルタイムGPU管理研究で、LLM推論を直接対象としない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
@@ -5678,7 +5678,7 @@
       ],
       "reason": "汎用系列モデリング研究・学習ツールキットの紹介であり、現行LLM推論基盤の対象範囲から外れる。",
       "first_checked_at": "2026-10-02T01:38:15+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T11:10:18+00:00",
       "linked_from": [],
       "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
     },
