@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1344-scheduled-chat-45",
+  "reference_main_sha": "d83521043b100be1dcf9cfcf738d0aadef28b351",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.92",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.92"
+      ],
+      "title": "A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers",
+      "reason": "ASDivという数学文章題データセットの構築・評価が主題で、LLM推論システム最適化ではない。",
+      "source_url": "https://doi.org/10.18653/v1/2020.acl-main.92",
+      "body_check": "本文・書誌で2,305件の英語数学文章題を収録し、言語表現・問題型の多様性を評価するデータセット論文と確認。推論カーネル、KV、サービング、MoE等の機構は提案しない。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3611540.3611569",
+      "identity_tokens": [
+        "DOI:10.14778/3611540.3611569"
+      ],
+      "title": "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel",
+      "reason": "大規模モデル学習向けFully Sharded Data Parallelの設計・スケーリングが主題で、凍結対象の学習系。",
+      "source_url": "https://doi.org/10.14778/3611540.3611569",
+      "body_check": "本文系資料でPyTorch FSDPがparameter/gradient/optimizer stateをshardし、DDP相当throughputと大規模モデル学習を狙うことを確認。最終適用先はdistributed trainingで推論ではない。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1997.9.8.1735",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1997.9.8.1735"
+      ],
+      "title": "Long Short-Term Memory",
+      "reason": "長期依存を学習するLSTMアーキテクチャの基礎研究で、LLM推論システムの速度・メモリ最適化ではない。",
+      "source_url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+      "body_check": "本文でdecaying error backflow問題に対しmemory cellとgateを用いるLSTMを提案する1997年のニューラルネットワーク研究と確認。LLM推論ランタイムへの直接適用はない。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3779212.3790246",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790246"
+      ],
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "reason": "非同期・分離型の投機的復号でLLM単一要求のデコード遅延を直接削減する推論システム。",
+      "source_url": "https://doi.org/10.1145/3779212.3790246",
+      "body_check": "本文でdraft/targetを非同期分離し、parallel tree generation、tree-aware KV cache管理、融合カーネルを組み合わせる。5 model family・6 datasetで既存speculative decoding比平均1.75倍、Llama3-70Bを8 Hopper GPUで348 token/sと報告。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3769102.3770608",
+      "identity_tokens": [
+        "DOI:10.1145/3769102.3770608"
+      ],
+      "title": "SLED: A speculative LLM decoding framework for efficient edge serving",
+      "reason": "端末側draftと共有edge server側target verificationを組み合わせる投機的LLMサービングで、推論高速化を直接扱う。",
+      "source_url": "https://doi.org/10.1145/3769102.3770608",
+      "body_check": "本文系資料で異種edge deviceが候補tokenをdraftし、4×A100 serverがverification requestをbatch処理する構成を確認。Jetson Orin Nano/Raspberry Pi 4B・5でsystem throughput 2.2倍、capacity 2.8倍を報告。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3731569.3764839",
+      "identity_tokens": [
+        "DOI:10.1145/3731569.3764839"
+      ],
+      "title": "Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters",
+      "reason": "異種・地理分散GPUでの機械学習学習を自動構成するシステムで、最終適用先がtraining。",
+      "source_url": "https://doi.org/10.1145/3731569.3764839",
+      "body_check": "本文でsearch-space exploration、runtime/memory simulation、heterogeneity対応distributed training frameworkを統合しtraining throughput/costを最適化する。推論サービングは主対象でない。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3725843.3756078",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756078"
+      ],
+      "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
+      "reason": "GPUのvideo codecをtensor圧縮へ転用し、LLM推論のメモリ容量・通信帯域を削減するハードウェア/システム研究。",
+      "source_url": "https://doi.org/10.1145/3725843.3756078",
+      "body_check": "本文系資料でvideo codecのprediction/transform/quantization/entropy codingをweight・activation・gradient・KV等へ適用し、既存GPU video engineを推論・学習tensor codecとして利用するframeworkを確認。大規模model deploymentのmemory/communication bottleneckを直接対象とする。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3710848.3710852",
+      "identity_tokens": [
+        "DOI:10.1145/3710848.3710852"
+      ],
+      "title": "COMPSO: Optimizing Gradient Compression for Distributed Training with Second-Order Optimizers",
+      "reason": "二次最適化を用いる分散DNN学習のgradient compressionが主題で、学習高速化の凍結範囲。",
+      "source_url": "https://doi.org/10.1145/3710848.3710852",
+      "body_check": "本文でstochastic roundingと小gradient除去、GPU最適化を組み合わせ、compression ratio 22.1倍、communication time 14.2倍削減、overall performance 1.9倍を報告するが、対象はdistributed training。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3689031.3717459",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717459"
+      ],
+      "title": "SkyServe: Serving AI Models across Regions and Clouds with Spot Instances",
+      "reason": "spot instanceを用いたAI model servingの可用性・コスト・遅延最適化でサービング研究だが、LLM固有機構ではない。",
+      "source_url": "https://doi.org/10.1145/3689031.3717459",
+      "body_check": "本文でSpotHedgeがspot replicaをregion/cloud間へ分散し、overprovisionとon-demand fallbackを組み合わせる。実AI workloadでon-demand比平均43% cost削減、他system比P50/P90/P99 latencyを平均2.3/2.1/2.1倍改善するがLLM専用評価ではないためborderline。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3669940.3707265",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707265"
+      ],
+      "title": "Forecasting GPU Performance for Deep Learning Training and Inference",
+      "reason": "未知GPU上のDNN training/inference性能予測で推論シミュレーション系に近いが、LLM専用の実行最適化ではない。",
+      "source_url": "https://doi.org/10.1145/3669940.3707265",
+      "body_check": "本文でNeuSightがkernelをtileへ分解し、hardware lawで拘束したML予測を集約してend-to-end latencyを推定する。未学習H100上GPT-3のtraining/inference latency予測誤差を従来121.4%/30.8%から2.3%へ低減するため、LLM推論評価には有用だが汎用DL性能予測としてborderline。",
+      "first_checked_at": "2026-10-02T13:44:17+09:00",
+      "last_checked_at": "2026-10-02T13:44:17+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 240
+    }
+  ]
+}

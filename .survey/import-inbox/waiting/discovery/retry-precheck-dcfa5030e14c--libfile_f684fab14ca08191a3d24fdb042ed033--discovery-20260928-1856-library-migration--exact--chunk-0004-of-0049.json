@@ -1,0 +1,564 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "library-migration",
+  "run_key": "library-legacy-migration-20260928-1856-jst::chunk-0004-of-0049",
+  "reference_main_sha": "5382913974fef2670305ed17aa867a18e843b7ad",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.14351",
+      "identity_tokens": [
+        "arXiv:2401.14351"
+      ],
+      "title": "ServerlessLLM: Low-Latency Serverless Inference for Large Language Models",
+      "reason": "LLM推論・配信の実行効率、メモリ管理、スケジューリング、退避、KVキャッシュ、またはMoE専門家管理へ直接のシステム寄与が本文で確認できる。",
+      "first_checked_at": "2026-09-26T15:29:06+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "source_url": "https://arxiv.org/abs/2401.14351",
+      "reference_main_sha": "f8fb17b8e2a9f5efdb43a42187766d6234e262f5",
+      "body_check": "一次資料PDF全文を取得して本文を確認",
+      "source_worker": "scheduled-chat-30",
+      "source_run_file": "discovery-20260927-0029-scheduled-chat-30-partial.json",
+      "source_run_at": "2026-09-27T00:29:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0029-scheduled-chat-30-partial.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.14361",
+      "identity_tokens": [
+        "arXiv:2401.14361"
+      ],
+      "title": "MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache",
+      "reason": "LLM推論・配信の実行効率、メモリ管理、スケジューリング、退避、KVキャッシュ、またはMoE専門家管理へ直接のシステム寄与が本文で確認できる。",
+      "first_checked_at": "2026-09-26T15:29:06+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "source_url": "https://arxiv.org/abs/2401.14361",
+      "reference_main_sha": "f8fb17b8e2a9f5efdb43a42187766d6234e262f5",
+      "body_check": "一次資料PDF全文を取得して本文を確認",
+      "source_worker": "scheduled-chat-30",
+      "source_run_file": "discovery-20260927-0029-scheduled-chat-30-partial.json",
+      "source_run_at": "2026-09-27T00:29:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0029-scheduled-chat-30-partial.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.15024",
+      "identity_tokens": [
+        "arXiv:2401.15024"
+      ],
+      "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+      "reason": "計算不変性を利用してTransformerの行・列を構造的に削除し、モデルサイズ・計算量・推論メモリを直接削減するLLM圧縮手法。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2401.15024",
+      "worklist_rank": 160,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-1258-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T12:58:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.01869",
+      "identity_tokens": [
+        "arXiv:2402.01869"
+      ],
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference",
+      "reason": "外部処理で中断される拡張LLM推論のKV状態保持・復元とスケジューリングを扱うサービング研究。",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "body_check": "一次資料PDF本文を確認。intercept時のKV cache管理、discard/swap/preserve方針、MinWaste系スケジューリング、vLLM比較を確認。",
+      "linked_from": [
+        "web discovery; scheduled-chat-30",
+        "discovery web search"
+      ],
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-30/discovery-20260928-1633-scheduled-chat-30.json",
+      "first_checked_at": "2026-09-26T15:29:06+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "migration_source_files": [
+        "discovery-20260928-1633-scheduled-chat-30.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0029-scheduled-chat-30-partial.json",
+        "/LLM-paper-summary-library-first/discovery/scheduled-chat-30/discovery-20260928-1633-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.02750",
+      "identity_tokens": [
+        "arXiv:2402.02750"
+      ],
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "reason": "KVを2bit量子化しピークメモリ2.6倍削減、最大4倍バッチ、2.35〜3.47倍スループット。",
+      "first_checked_at": "2026-09-26T19:02:01+00:00",
+      "last_checked_at": "2026-09-26T19:02:01+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.02750",
+      "worklist_rank": 487,
+      "reference_main_sha": "28eb87668ae826db46796c0827ce1dd767ff2422",
+      "body_check": "一次資料本文または本文相当の一次公開ページを可能な範囲で確認し、手法・評価・最終適用先を基準に判定。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-0402-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T04:02:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0402-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.04291",
+      "identity_tokens": [
+        "arXiv:2402.04291"
+      ],
+      "title": "BiLLM: Pushing the Limit of Post-Training Quantization for LLMs",
+      "reason": "LLM重みを約1.08bitまで二値化し70Bでも精度を維持するpost-training quantizationで、推論メモリ・計算量を直接削減。",
+      "first_checked_at": "2026-09-27T05:00:45+00:00",
+      "last_checked_at": "2026-09-27T05:00:45+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.04291",
+      "worklist_rank": 97,
+      "reference_main_sha": "26238eb8ce8b63d4ebb9a19c26c334986c854c4e",
+      "body_check": "一次資料本文または一次出版社の本文・詳細ページを可能な範囲で確認。本文取得不能のOpenReview候補は母数から除外。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-1400-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T14:00:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-1400-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.04396",
+      "title": "QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks",
+      "reason": "Combines Hadamard incoherence processing, E8 lattice-vector codebooks, and inter-layer optimization for low-bit weight-only quantization. Evaluates perplexity/task quality and generation throughput; directly concerns practical memory-efficient LLM inference.",
+      "source_url": "https://arxiv.org/pdf/2402.04396",
+      "first_checked_at": "2026-09-26T14:01:00+00:00",
+      "last_checked_at": "2026-09-26T14:55:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260926-2355-scheduled-chat-00.md",
+      "identity_tokens": [
+        "arXiv:2402.04396"
+      ],
+      "body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "linked_from": [],
+      "migration_source_files": [
+        "accept-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260926-2355-scheduled-chat-00.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.06262",
+      "identity_tokens": [
+        "arXiv:2402.06262",
+        "DOI:10.48550/arxiv.2402.06262"
+      ],
+      "title": "On the Efficacy of Eviction Policy for Key-Value Constrained Generative Language Model Inference",
+      "reason": "KV容量制約下の追い出し方針を分析・最適化し、生成LLM推論のメモリ管理を直接扱う。",
+      "first_checked_at": "2026-09-27T03:29:48+00:00",
+      "last_checked_at": "2026-09-27T03:29:48+00:00",
+      "linked_from": [
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.06262",
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文または全文展開可能な一次資料ページを可能な範囲で確認",
+      "source_worker": "scheduled-chat-30",
+      "source_run_file": "discovery-20260927-1229-scheduled-chat-30.json",
+      "source_run_at": "2026-09-27T12:29:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-1229-scheduled-chat-30.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.09398",
+      "identity_tokens": [
+        "arXiv:2402.09398"
+      ],
+      "title": "Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference",
+      "reason": "退避されるKVを定数サイズ低ランク再帰状態へ集約し、疎KVキャッシュの情報損失を抑えつつ推論メモリを直接削減。",
+      "first_checked_at": "2026-09-27T00:58:33+00:00",
+      "last_checked_at": "2026-09-27T00:58:33+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.09398",
+      "worklist_rank": 245,
+      "reference_main_sha": "e2c9911669aa11a1581d13bde95bfc1ce72066d3",
+      "body_check": "一次資料本文または全文展開可能な一次資料対応ページを可能な範囲で確認し、方法・評価・最終適用先で判定。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-0958-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T09:58:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0958-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.10517",
+      "identity_tokens": [
+        "arXiv:2402.10517"
+      ],
+      "title": "Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs",
+      "reason": "複数精度のLLMを一つの重み表現から提供し、配信メモリと配置コストを削減する。",
+      "source_url": "https://arxiv.org/abs/2402.10517",
+      "body_check": "本文の任意精度量子化表現、配信方式、評価節を確認し、複数サイズモデルの低コスト配備を確認。",
+      "first_checked_at": "2026-09-28T07:10:52+00:00",
+      "last_checked_at": "2026-09-28T07:10:52+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "reference_main_sha": "27110e22cac388af9d0d1c3cc3ffea6c3c26b749",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json",
+      "migration_source_files": [
+        "discovery-20260928-1608-scheduled-chat-00.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.11131",
+      "identity_tokens": [
+        "arXiv:2402.11131"
+      ],
+      "title": "Speculative Streaming: Fast LLM Inference without Auxiliary Models",
+      "reason": "単一モデルでdraftとverificationを統合する投機的復号により1.8〜3.1倍の復号高速化を報告。",
+      "first_checked_at": "2026-09-27T03:02:15+00:00",
+      "last_checked_at": "2026-09-27T03:02:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.11131",
+      "worklist_rank": 209,
+      "reference_main_sha": "da35a4053c3243a05d91214ff4a2a6e15bf2685a",
+      "body_check": "一次資料本文または一次出版社の全文/詳細本文を可能な範囲で確認。本文取得不能候補は母数から除外し補充。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-1202-scheduled-chat-00.json",
+        "discovery-20260927-1202-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.11809",
+      "identity_tokens": [
+        "arXiv:2402.11809"
+      ],
+      "title": "Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding",
+      "reason": "一次資料本文の方法・評価を確認し、Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding はLLM推論の計算、KVキャッシュ、配信、通信、カーネルまたはデコード効率へ直接寄与すると判定。",
+      "first_checked_at": "2026-09-26T22:00:57+00:00",
+      "last_checked_at": "2026-09-26T22:00:57+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.11809",
+      "worklist_rank": 401,
+      "reference_main_sha": "f70e45c766cfbff91cb50c9b2078f02af4df535a",
+      "body_check": "一次資料本文（arXiv HTMLまたはACL Anthology一次資料）を可能な範囲で確認。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-0700-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T07:00:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0700-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.12374",
+      "identity_tokens": [
+        "arXiv:2402.12374"
+      ],
+      "title": "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding",
+      "reason": "ハードウェア特性を考慮した投機的デコード木と検証戦略で生成を高速化する直接的な推論手法。",
+      "first_checked_at": "2026-09-26T15:01:48+00:00",
+      "last_checked_at": "2026-09-26T15:01:48+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.12374",
+      "reference_main_sha": "57e92f34606886b3065ac53c222320f55205317e",
+      "body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0001-scheduled-chat-00.json",
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0001-scheduled-chat-00.json",
+        "discovery-20260927-0001-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.13720",
+      "identity_tokens": [
+        "arXiv:2402.13720"
+      ],
+      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
+      "reason": "句単位ドラフトによる投機的復号で生成を直接高速化する。",
+      "first_checked_at": "2026-09-26T18:00:00+00:00",
+      "last_checked_at": "2026-09-26T20:31:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 465"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.13720",
+      "reference_main_sha": "e3c6ee94c05cf88c9799fa1f0b9bd870d57dea3c",
+      "body_check": "一次資料本文導線を確認し取得可能な本文情報で判定",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0531-scheduled-chat-30-partial.json",
+      "worklist_rank": 465,
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0531-scheduled-chat-30-partial.json",
+        "discovery-20260927-0531-scheduled-chat-30-partial.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.15220",
+      "identity_tokens": [
+        "arXiv:2402.15220"
+      ],
+      "title": "ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition",
+      "reason": "LLM推論・配信の実行効率、メモリ管理、スケジューリング、退避、KVキャッシュ、またはMoE専門家管理へ直接のシステム寄与が本文で確認できる。",
+      "first_checked_at": "2026-09-26T15:29:06+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.15220",
+      "reference_main_sha": "f8fb17b8e2a9f5efdb43a42187766d6234e262f5",
+      "body_check": "一次資料PDF全文を取得して本文を確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+        "discovery-20260927-0029-scheduled-chat-30-partial.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.15319",
+      "identity_tokens": [
+        "arXiv:2402.15319"
+      ],
+      "title": "GPTVQ: The Blessing of Dimensionality for LLM Quantization",
+      "reason": "ベクトル量子化と高速dequantizationカーネルでLLM重みを低ビット化し、推論メモリ帯域と実行効率を直接改善する。",
+      "first_checked_at": "2026-09-27T03:58:27+00:00",
+      "last_checked_at": "2026-09-27T03:58:27+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.15319",
+      "worklist_rank": 142,
+      "reference_main_sha": "7213cc7c1ef8871ba05f11cd31b822c62a62d515",
+      "body_check": "一次資料本文/HTML/PDFまたは一次出版社本文を可能な範囲で確認。本文取得不能候補は母数から除外。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-1258-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T12:58:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-1258-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.18096",
+      "title": "No Token Left Behind (MiKV)",
+      "reason": "14. **No Token Left Behind (MiKV)** — `arXiv:2402.18096` ([paper](https://arxiv.org/abs/2402.18096)). Importance-aware mixed-precision KV-cache compression preserves salient tokens; quality evaluations retain performance at roughly 20–25% cache budgets.",
+      "source_url": "https://arxiv.org/abs/2402.18096",
+      "identity_tokens": [
+        "arXiv:2402.18096"
+      ],
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "first_checked_at": "2026-09-26T15:01:48+00:00",
+      "last_checked_at": "2026-09-26T15:10:00+00:00",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+      "body_check": "一次資料本文または一次資料に準ずる全文/詳細ページを可能な範囲で確認。取得不能箇所は複数の書誌・詳細資料で手法と評価範囲を照合。",
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md",
+        "discovery-20260927-0001-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.18789",
+      "identity_tokens": [
+        "arXiv:2402.18789"
+      ],
+      "title": "FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees",
+      "reason": "推論と微調整をトークン粒度で同一GPU上に共存させ、サービス水準目標（SLO）を守る配信資源管理を扱う。",
+      "first_checked_at": "2026-09-27T00:01:29+00:00",
+      "last_checked_at": "2026-09-27T00:01:29+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.18789",
+      "worklist_rank": 314,
+      "reference_main_sha": "c2bfbb6ca59efed2ee635ba39d2fc39f168ea226",
+      "body_check": "一次資料本文を可能な範囲で確認。arXiv HTML/PDF利用可能時は本文まで確認し、出版社本文が取得困難な場合は一次出版社の公開本文・詳細抄録を確認。",
+      "source_worker": "scheduled-chat-00",
+      "source_run_file": "discovery-20260927-0901-scheduled-chat-00.json",
+      "source_run_at": "2026-09-27T09:01:00+09:00",
+      "migration_source_files": [
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "discovery-20260927-0901-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.00835",
+      "identity_tokens": [
+        "arXiv:2403.00835"
+      ],
+      "title": "CLLMs: Consistency Large Language Models",
+      "reason": "Jacobi fixed point予測でparallel decodingを実用的に高速化する。",
+      "first_checked_at": "2026-09-27T17:33:43+00:00",
+      "last_checked_at": "2026-09-27T17:33:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "source_url": "https://arxiv.org/abs/2403.00835",
+      "worklist_rank": 446,
+      "reference_main_sha": "e621e7591ad17b51d55c04f049c37c1a6f4b7eea",
+      "body_check": "method、GSM8K等の評価、ablation、限界を確認。2.4–3.4倍speedupを確認した。",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json",
+      "migration_source_files": [
+        "accept-candidates.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260928-0233-scheduled-chat-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01136",
+      "identity_tokens": [
+        "arXiv:2403.01136"
+      ],
+      "title": "LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization",
+      "reason": "LLM推論・配信の実行効率、メモリ管理、スケジューリング、退避、KVキャッシュ、またはMoE専門家管理へ直接のシステム寄与が本文で確認できる。",
+      "first_checked_at": "2026-09-26T14:01:00+00:00",
+      "last_checked_at": "2026-09-26T15:29:06+00:00",
+      "linked_from": [
+        "web discovery; scheduled-chat-30"
+      ],
+      "source_url": "https://arxiv.org/abs/2403.01136",
+      "reference_main_sha": "f8fb17b8e2a9f5efdb43a42187766d6234e262f5",
+      "body_check": "一次資料PDF全文を取得して本文を確認",
+      "source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+      "migration_source_files": [
+        "accept-candidates.json",
+        "old-accept-reconstructed.json"
+      ],
+      "migration_source_run_files": [
+        "/LLM-paper-summary-library-first/discovery/discovery-20260927-0029-scheduled-chat-30-partial.json",
+        "discovery-20260927-0029-scheduled-chat-30-partial.json"
+      ]
+    }
+  ],
+  "migration_metadata": {
+    "source_artifact_count": 12,
+    "source_record_instances": 1594,
+    "deduplicated_identity_components": 970,
+    "classification_conflict_components": 21,
+    "missing_reason_filled_with_explicit_legacy_note": 8,
+    "missing_body_check_filled_with_explicit_legacy_note": 60,
+    "classification_counts": {
+      "accept": 492,
+      "borderline": 224,
+      "unrelated": 254
+    },
+    "dedupe_rule": "union by canonical_id/identity_tokens; latest explicit classification wins by check timestamp, then Library source modification time",
+    "sources": [
+      "accept-candidates.json",
+      "borderline-candidates.json",
+      "unrelated-candidates.json",
+      "old-accept-reconstructed.json",
+      "old-borderline-reconstructed.json",
+      "old-unrelated-reconstructed.json",
+      "scheduled-chat-00-borderline-papers.json",
+      "scheduled-chat-00-unrelated-papers.json",
+      "scheduled-chat-30-unrelated-papers.json",
+      "discovery-20260928-1608-scheduled-chat-00.json",
+      "discovery-20260928-1633-scheduled-chat-30.json",
+      "discovery-20260928-1804-scheduled-chat-00.json"
+    ]
+  },
+  "parent_run_key": "library-legacy-migration-20260928-1856-jst",
+  "chunk_index": 4,
+  "chunk_count": 49,
+  "source_record_count": 970
+}

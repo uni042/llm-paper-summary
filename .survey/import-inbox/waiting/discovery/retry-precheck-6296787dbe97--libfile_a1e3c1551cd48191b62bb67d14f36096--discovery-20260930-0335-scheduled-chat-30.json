@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260930-0335-scheduled-chat-30",
+  "reference_main_sha": "877215b23251c86885d23ef30b2696ec4a89a468",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2025.3590014"
+      ],
+      "title": "Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving",
+      "reason": "複数LoRAサービスを同一基盤モデル上で同時提供する際、各サービスのSLO達成率の最小値を直接最適化するLLMサービング研究であり対象。",
+      "source_url": "https://doi.org/10.1109/TPDS.2025.3590014",
+      "body_check": "本文情報で実運用multi-LoRAトレースから人気サービスの入出力長が比較的安定する性質を利用し、締切推定に基づくSLO-aware schedulingとサービス間干渉の偏り補正を行う構成を確認。実トレース評価で既存multi-LoRA serving比、各サービスのSLO attainmentを90%超に保ちながら最大3.6倍の到着率または2.8倍のburstinessを処理する。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/LCA.2020.2973991",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2020.2973991"
+      ],
+      "title": "DRAMsim3: A Cycle-Accurate, Thermal-Capable DRAM Simulator",
+      "reason": "DDR4/GDDR/LPDDR/HBM/HMC等を扱う汎用DRAMシミュレータで、LLM推論・KVキャッシュ・推論サービングを対象とする方式ではないため対象外。",
+      "source_url": "https://doi.org/10.1109/LCA.2020.2973991",
+      "body_check": "本文の設計節で複数DRAM規格のタイミング・電力・熱モデルを統合したcycle-accurate simulatorを構築し、評価節で既存DRAM simulatorとの性能・精度比較を行うことを確認。実行時thermal modelingを同時提供する点が主貢献であり、LLM固有の推論最適化ではない。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CGO57630.2024.10444873",
+      "identity_tokens": [
+        "DOI:10.1109/CGO57630.2024.10444873"
+      ],
+      "title": "A Framework for Fine-Grained Synchronization of Dependent GPU Kernels",
+      "reason": "依存GPUカーネル間の細粒度同期を制御してGPU利用率を改善するコンパイラ/実行基盤で推論カーネルに応用可能だが、LLM推論を主対象としないため境界扱い。",
+      "source_url": "https://doi.org/10.1109/CGO57630.2024.10444873",
+      "body_check": "本文情報でcuSyncがユーザー定義のfine-grained synchronization policyを受け取り、カーネル依存関係から複数の同期方針を生成して依存kernelの重畳実行を可能にする構成を確認。GPU利用率改善が主眼で、Transformer/LLMは利用例・後続研究との接点に留まる。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10414",
+      "identity_tokens": [
+        "arXiv:2411.10414"
+      ],
+      "title": "Llama Guard 3 Vision: Safeguarding Human-AI Image Understanding Conversations",
+      "reason": "画像を含む入出力の安全分類・コンテンツモデレーション能力を改善するモデル研究であり、推論実行効率の改善を提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2411.10414",
+      "body_check": "本文情報でLlama 3.2-Visionを基盤に画像+テキストpromptとtext responseを安全分類するmultimodal safeguardをfine-tuneし、MLCommons taxonomyに基づく内部benchmarkとadversarial attack耐性を評価する構成を確認。主目的は安全性分類精度で、サービング・KV・カーネル最適化ではない。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.13846",
+      "identity_tokens": [
+        "arXiv:2410.13846"
+      ],
+      "title": "SimLayerKV: A Simple Framework for Layer-Level KV Cache Reduction",
+      "reason": "長文脈LLMの層間KVキャッシュ冗長性を利用し、lazy layerだけKVを選択的に削減する訓練不要のKV圧縮方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2410.13846",
+      "body_check": "本文情報でattention patternから長距離依存への寄与が小さいlazy layerを入力ごとに同定し、その層でKV cacheを削減する処理を確認。LLaMA2-7B、LLaMA3-8B、Mistral-7BをLongBench 16 taskで評価し、4-bit quantization併用時に5倍KV圧縮で性能低下1.2%に抑える。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.05076",
+      "identity_tokens": [
+        "arXiv:2410.05076"
+      ],
+      "title": "TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention",
+      "reason": "連続層間で重要token位置が持続する性質を利用し、少数層だけfull attentionで選択して残りをsparse attention化する長文脈decode高速化方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2410.05076",
+      "body_check": "本文情報でtoken-selection layerがfull attentionから高attention tokenを抽出し、後続の複数層が同じ選択tokenへsparse attentionするposition-persistent設計を確認。各層でtoken選択する既存sparse attentionのoverheadを減らし、多様なLLM/taskでfull attention相当の生成品質を保ちながらdecode latencyを最大2.1倍削減する。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.01366",
+      "identity_tokens": [
+        "arXiv:2409.01366",
+        "DOI:10.18653/v1/2024.emnlp-main.1038"
+      ],
+      "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
+      "reason": "FFNのchannel-wise thresholdingとattention層のselective sparsification、専用sparse kernelを組み合わせて端末LLM推論を直接高速化するため対象。",
+      "source_url": "https://aclanthology.org/2024.emnlp-main.1038/",
+      "body_check": "本文でactivation sparsityと性能劣化の関係を目的関数へ入れ、FFN channelごとに閾値を割り当て、attention moduleでは選択した層だけsparsificationする処理とsparse kernel実装を確認。Llama-2/3とMistralを8 downstream taskで評価し、既存法より少ない性能劣化で最大1.27倍、より高いsparsity設定では最大1.72倍の高速化を示す。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+      ],
+      "worklist_rank": 430
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.05499",
+      "identity_tokens": [
+        "arXiv:2408.05499"
+      ],
+      "title": "LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale",
+      "reason": "LLM推論サービングを直接対象とするハードウェア/ソフトウェア協調シミュレータだが、実サービングランタイムそのものの高速化より設計探索・性能予測が主貢献なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2408.05499",
+      "body_check": "本文情報でautoregressive servingのiteration単位変動をモデル化し、decoder block間・iteration間の計算冗長性を利用して過去simulation結果を再利用する構成を確認。任意のaccelerator compiler/simulator stackをplug-in可能にし、実GPU serving挙動に対し誤差14.7%未満、既存accelerator simulator比91.5倍高速なsimulationを報告する。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.07304",
+      "identity_tokens": [
+        "arXiv:2407.07304"
+      ],
+      "title": "Inference Performance Optimization for Large Language Models on CPUs",
+      "reason": "CPU上のLLM推論でKVキャッシュ削減、分散推論通信、モデル別最適化を統合する実装研究で、低資源環境の推論高速化を直接扱うため対象。",
+      "source_url": "https://arxiv.org/abs/2407.07304",
+      "body_check": "本文情報で精度を維持するKV cache縮小、oneAPI Collective Communications Libraryを用いたdistributed inference、主要LLMごとのCPU向け最適化をxFasterTransformerへ実装する構成を確認。GPU資源が限られる環境でCPU推論を実用化することが最終適用先であり、学習高速化ではない。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.07056",
+      "identity_tokens": [
+        "arXiv:2406.07056"
+      ],
+      "title": "Effectively Compress KV Heads for LLM",
+      "reason": "KVキャッシュの低ランク性を利用してMHAからGQAへの変換誤差を抑え、KV head数を削減する推論メモリ圧縮方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2406.07056",
+      "body_check": "本文情報でKV cacheのlow-rank structureを分析し、MHA-to-GQA transformationを圧縮誤差最小化として最適化、RoPE適用済みkey cacheには専用変換を用いる構成を確認。KV headの半分から4分の3を削減しても元LLMに近い性能を維持し、長文脈・大batchでのKVメモリ負担を下げる。",
+      "first_checked_at": "2026-09-30T03:35:00+09:00",
+      "last_checked_at": "2026-09-30T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md"
+      ],
+      "worklist_rank": 427
+    }
+  ]
+}

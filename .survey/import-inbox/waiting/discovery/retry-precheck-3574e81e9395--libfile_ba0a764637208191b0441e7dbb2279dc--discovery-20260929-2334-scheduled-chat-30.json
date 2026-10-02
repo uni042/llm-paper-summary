@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-2334-scheduled-chat-30",
+  "reference_main_sha": "388349ca24e33fd86f7d6675e40685ce5b3e0e3d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.06199",
+      "identity_tokens": [
+        "arXiv:2603.06199"
+      ],
+      "title": "FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling",
+      "reason": "長文脈の事前充填（prefill）で動的な垂直・斜線・ブロック疎注意パターンを高速探索し、並べ替えを避ける動的閾値処理で注意計算を削減する推論高速化方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2603.06199",
+      "body_check": "本文情報で高速ブロック探索、垂直・斜線・ブロック疎パターンの同時発見、長い裾を除く動的閾値処理と長文脈事前充填評価を確認。256K系列で27.78倍、4Kでも1.71倍の高速化を報告する。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.15176",
+      "identity_tokens": [
+        "arXiv:2512.15176"
+      ],
+      "title": "DEER: Draft with Diffusion, Verify with Autoregressive Models",
+      "reason": "拡散言語モデルをドラフト生成器として並列生成し、自己回帰対象モデルで検証する投機的復号（speculative decoding）方式で、生成遅延を直接削減するため対象。",
+      "source_url": "https://arxiv.org/abs/2512.15176",
+      "body_check": "本文情報で拡散ドラフト生成器を対象自己回帰モデルへ整合させる二段階学習、単一ステップで長いドラフト列を生成する方式、対象モデルによる検証を確認。Qwen3-30B-A3BのHumanEvalで5.54倍、EAGLE-3は2.41倍という比較を報告する。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.05814",
+      "identity_tokens": [
+        "arXiv:2511.05814",
+        "DOI:10.48550/arXiv.2511.05814"
+      ],
+      "title": "In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading",
+      "reason": "GPUメモリ制約下の専門家混合（MoE）推論で、専門家キャッシュと先読みを分析し、LRUからLFUへの変更と投機的専門家先読みを検証するオフロード研究なので対象。",
+      "source_url": "https://arxiv.org/abs/2511.05814",
+      "body_check": "本文情報で専門家活性化とLRUキャッシュのトレース分析、LFUキャッシュへの置換、投機的専門家先読みの実装・トレース評価を確認。MoEの専門家重み転送とGPU常駐率を直接扱う。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.27257",
+      "identity_tokens": [
+        "arXiv:2510.27257"
+      ],
+      "title": "Synergistic Tensor and Pipeline Parallelism",
+      "reason": "テンソル並列とパイプライン並列を協調させて大規模モデルの学習スループットを改善する研究で、最終適用先が学習工程そのものの高速化であるため凍結範囲として対象外。",
+      "source_url": "https://arxiv.org/abs/2510.27257",
+      "body_check": "本文情報で編み込み実行ブロックとV字型データフローによりテンソル並列通信バブルとパイプライン同期バブルを削減し、LLM/MLLM学習スループットを最大12.2%/16.7%改善する評価を確認。推論サービングが主対象ではない。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "worklist_rank": 440
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.19720",
+      "identity_tokens": [
+        "arXiv:2504.19720"
+      ],
+      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+      "reason": "LLM推論サービングの効率化を直接対象とする体系的サーベイで本調査領域との関連は強いが、新規の推論システムや最適化方式を提案する一次研究ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2504.19720",
+      "body_check": "本文情報でLLM推論サービングをモデル最適化、メモリ管理、バッチ処理・スケジューリング、並列・分散実行等の観点から整理するサーベイであることを確認。新規ランタイム方式の実装・比較評価が主貢献ではない。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md",
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04717",
+      "identity_tokens": [
+        "arXiv:2504.04717"
+      ],
+      "title": "Beyond Single-Turn: A Survey on Multi-Turn Interactions with Large Language Models",
+      "reason": "複数ターン対話の能力・評価・改善法を整理するサーベイであり、KVキャッシュ、サービング、メモリ階層、カーネル等の推論実行効率化を主題としないため対象外。",
+      "source_url": "https://arxiv.org/abs/2504.04717",
+      "body_check": "本文情報で複数ターンの指示追従、ロールプレイ、医療・教育、脱獄などの評価課題と改善手法を体系化していることを確認。長期文脈管理への言及はあるが、新規の推論基盤最適化方式を提案しない。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10582",
+      "identity_tokens": [
+        "arXiv:2503.10582"
+      ],
+      "title": "VisualWebInstruct: Scaling up Multimodal Instruction Data through Web Search",
+      "reason": "ウェブ検索から視覚推論向け命令データを構築し、視覚言語モデルを微調整するデータ・学習研究で、推論基盤の高速化・省メモリ化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2503.10582",
+      "body_check": "本文情報で3万の種画像から画像検索を行い、70万超のURLを処理して約90万QA対を構築し、LLaVA-OV等の微調整性能を評価する流れを確認。最終適用先は推論システムではなく学習データと能力改善。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13270",
+      "identity_tokens": [
+        "arXiv:2502.13270"
+      ],
+      "title": "REALTALK: A 21-Day Real-World Dataset for Long-Term Conversation",
+      "reason": "実世界の長期対話データセットと人格模倣・長期記憶評価を提供する研究で、推論時メモリ管理やサービング効率を改善する新規方式ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2502.13270",
+      "body_check": "本文情報で21日間の実メッセージ対話を収集し、感情知能・人格一貫性を分析、人格シミュレーションと記憶探索の2タスクでモデルを評価する構成を確認。長期文脈能力の評価が中心で実行効率化は主貢献ではない。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.09020",
+      "identity_tokens": [
+        "arXiv:2501.09020"
+      ],
+      "title": "Octopus: Scalable Low-Cost CXL Memory Pooling",
+      "reason": "CXLメモリプールを低コストな疎接続トポロジで構成する階層・分離メモリ基盤研究で、LLMオフロードの基盤技術に近いがLLM推論固有の評価ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2501.09020",
+      "body_check": "本文情報で小型CXLデバイスを疎な非対称トポロジで接続し、全結合スイッチなしで複数ホストへ共有メモリを提供する設計とコスト・規模のトレードオフを確認。従来方式比で接続ホスト数3倍かつホスト当たりコスト17%低減の構成例を示す。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.04964",
+      "identity_tokens": [
+        "arXiv:2412.04964",
+        "DOI:10.48550/ARXIV.2412.04964"
+      ],
+      "title": "Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference",
+      "reason": "テンソル並列（tensor parallelism）の推論通信を低ビット圧縮して帯域ボトルネックを直接削減する分散LLM推論方式なので対象。",
+      "source_url": "https://arxiv.org/abs/2412.04964",
+      "body_check": "本文情報でテンソル並列のアクセラレータ間通信を低ビット圧縮する方式と複数LLMでの評価を確認。ノード内通信を3倍超高速化し、モデル精度をほぼ維持したまま最初のトークンまでの時間（TTFT）を約2倍改善する。",
+      "first_checked_at": "2026-09-29T23:34:33+09:00",
+      "last_checked_at": "2026-09-29T23:34:33+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md"
+      ],
+      "worklist_rank": 434
+    }
+  ]
+}

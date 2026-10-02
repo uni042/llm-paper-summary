@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-0328-scheduled-chat-30",
+  "reference_main_sha": "c39f5e681d6194ac150c521b1de91e2e631a19a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27746",
+      "identity_tokens": [
+        "arXiv:2609.27746"
+      ],
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "reason": "接頭辞キャッシュの目標ヒット率に必要な最小KV容量をオンライン推定するKVSETを提案し、LLMサービングのキャッシュ容量計画を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2609.27746",
+      "body_check": "本文情報を候補ごとに確認。KVSETはMattson stack algorithmで各KV pageのLRU stack distanceを計算し、容量ごとの独立シミュレーションなしに複数候補容量のhit/missを推定する。さらに目標hit rateに必要な最大LRU depthからworking setを求め、production LLM traceと実cache deploymentで推定値を検証している。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:LLM inference serving September 2026"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.07966",
+      "identity_tokens": [
+        "arXiv:2609.07966"
+      ],
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "reason": "入力promptとユーザー指定の遅延・peak memory制約ごとにKV圧縮構成を選択する適応型推論フレームワークで、推論時メモリ・遅延制御に直結する。",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "body_check": "本文の手法・評価記述を確認。KVQuant、H2O、RocketKVの10構成と非圧縮FP16を候補とし、軽量予測器でend-to-end latency、peak memory、正答確率を予測して制約内の構成を選ぶ。数学・科学・常識推論・読解の4 datasetで、制約付き成功率を最良static構成より平均約0.07、最大0.135改善している。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:LLM inference serving September 2026"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16135",
+      "identity_tokens": [
+        "arXiv:2606.16135"
+      ],
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "reason": "異種モデル間で遊休GPUメモリとNVLinkを共有し、長い会話のKVキャッシュをCPU/SSDへ戻す遅延とHBM容量制約を緩和するLLMサービングシステム。",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "body_check": "本文の設計・評価を確認。master/worker GPU間でNVLink経由のKV共有を行い、Layer Stream Cacheでactive layerのKVだけをlocal HBMに置いて次layer転送を計算とoverlapする。4×H20 96GB、Qwen3系/LWM-1M-Text、ShareGPT/L-Evalで評価し、P99 TTFT最大69%削減、最大context長最大3.98倍。worker側のTTFT悪化は最大約9.7%と報告。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:LLM serving KV cache"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25080",
+      "identity_tokens": [
+        "arXiv:2604.25080"
+      ],
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "reason": "長文脈LLMで退避済みKVキャッシュを復元する際の再計算とI/Oをtoken・layer・GPUの3次元で並列化するサービング方式。",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "body_check": "本文の問題設定・手法・評価を確認。token/layer/GPUの3D parallelismでrecomputationとI/Oを重ね、batch-aware two-pointer schedulerが複数request間で限界再計算削減量の大きい操作を優先する。vLLM型recomputeやLMCache型I/Oと比較し、多様なmodel/workload/hardwareでTTFTを10–62%削減。GPUとI/Oの同時利用およびmulti-GPU componentのablationも評価している。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:KV cache restoration"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.16892",
+      "identity_tokens": [
+        "arXiv:2607.16892"
+      ],
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "reason": "出力長不確実性下でKV予約、GPU並列構成、routing、prefix cachingを共同最適化し、preemptionと過剰予約を抑えるLLMサービング研究。",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "body_check": "本文の最適化対象と評価を確認。Wasserstein distributionally robust optimizationでoutput-length distribution shiftを扱い、block coordinate descentでmixed-integer problemを解く。BurstGPT、Azure、ShareGPTのproduction系traceで固定quantile予約baselineに対し最大56%低costとし、P99 latency、goodput、SLO violationも評価している。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:KV cache serving uncertainty"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24467",
+      "identity_tokens": [
+        "arXiv:2606.24467"
+      ],
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+      "reason": "GQA型LLMで意味検索に強いattention headだけをtoken選択へ使い、layer別budgetも適応配分するKVキャッシュ圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2606.24467",
+      "body_check": "本文の手法・評価を確認。Semantic Retrieval Headsはprompt両端だけでなく中間の意味的証拠を取得できるheadとして選び、そのattentionで保持tokenを決める。layer-wise eviction errorのoffline推定でbudgetを配分。LongBenchとNeedle-in-a-Haystackで評価し、LongBench QAでは3% KVでfull-cache性能の97%以上、NIAHでは0.7% KV storageで90% accuracyを報告。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:KV cache compression"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.25655",
+      "identity_tokens": [
+        "arXiv:2605.25655"
+      ],
+      "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
+      "reason": "帯域制約の強い異種many-core環境向けにoperator、graph fusion、prefill-buffer-decode pipelineを共同設計するLLM推論基盤研究。",
+      "source_url": "https://arxiv.org/abs/2605.25655",
+      "body_check": "本文の機構・評価を確認。THInferはMT-3000向けVLIW SIMD FP16 kernel、density-driven graph fusionとstaged pipelined attention、P-B-D pipelineとbounded buffer、MPI+hthreads二層通信を組み合わせる。Llama 7Bでは2×V100S上DeepSpeed比62–73%、A800比67–84% throughput改善を報告し、70Bでも同設定の典型GPU frameworkが動かない条件で安定実行を示す。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:heterogeneous LLM inference"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.06175",
+      "identity_tokens": [
+        "arXiv:2510.06175",
+        "DOI:10.18653/v1/2026.acl-long.1454"
+      ],
+      "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
+      "reason": "key cacheのoutlierを変換で抑えて低bit vector quantizationを成立させ、専用CUDA kernelで復号を融合するKVキャッシュ推論最適化。",
+      "source_url": "https://arxiv.org/abs/2510.06175",
+      "body_check": "本文とACL 2026版の手法・評価を確認。smooth変換とHadamard変換でkey outlierを抑制してcodebook利用を改善し、dequantizationを計算へ融合するCUDA kernelを実装。long-context理解と数学推論を評価し、2-bitでもfull precision相当を維持しつつLlama-3.1-8B・196kでlarge-batch self-attention最大2.7倍、single-batch end-to-end latency最大8.3倍改善を報告。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:low-bit KV cache inference"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20397",
+      "identity_tokens": [
+        "arXiv:2603.20397"
+      ],
+      "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+      "reason": "KVキャッシュ最適化を直接扱う有用な体系的レビューだが、新規推論最適化機構そのものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.20397",
+      "body_check": "本文§2–6を確認。cache eviction、compression/reconstruction、hybrid memory、new attention、combinationの5系統に整理し、long-context、high-throughput serving、edge、multi-turn、prefill-heavy、accuracy-critical等のdeployment scenarioへ対応付ける。H2O/SnapKV/KIVI/InfiniPot等の機構・trade-offを比較するsurveyで、新規system algorithmの実測提案ではない。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:KV cache optimization survey"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11580",
+      "identity_tokens": [
+        "arXiv:2601.11580"
+      ],
+      "title": "Speculative Decoding: Performance or Illusion?",
+      "reason": "投機的復号の新方式ではなく、本番級vLLM上で複数方式の実効性能とボトルネックを体系評価する研究なので、推論システム上重要だが新規高速化手法としてはborderline。",
+      "source_url": "https://arxiv.org/abs/2601.11580",
+      "body_check": "本文の評価設計・分析を確認。vLLM上でn-gram、EAGLE/EAGLE-3、draft-model、multi-token predictionをLlama-3.1-8B/70B、Qwen3-8B、GLM-4.5-Air-106B、6 workload、batch 1–128（profiling最大512）、H100で比較。target model verificationが支配的で、batch増大時はcompute-boundとなりspeedupが縮むこと、理論上限とのgapを分析している。",
+      "first_checked_at": "2026-09-29T03:28:49+09:00",
+      "last_checked_at": "2026-09-29T03:28:49+09:00",
+      "linked_from": [
+        "web-discovery:speculative decoding inference systems"
+      ]
+    }
+  ]
+}

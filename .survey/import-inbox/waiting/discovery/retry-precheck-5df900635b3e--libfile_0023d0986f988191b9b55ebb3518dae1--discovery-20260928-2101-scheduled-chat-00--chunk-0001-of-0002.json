@@ -1,0 +1,334 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260928-2101::chunk-0001-of-0002",
+  "reference_main_sha": "6126f1027bcd8e8974c9ce06617e4e5fc6a81735",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.14509",
+      "identity_tokens": [
+        "arXiv:2309.14509"
+      ],
+      "title": "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models",
+      "reason": "長系列LLMの学習並列化が主目的で、最終適用先が学習高速化。",
+      "source_url": "https://arxiv.org/abs/2309.14509",
+      "body_check": "本文のIntroduction、Core Design、Evaluationを確認。sequence parallelismで長系列学習を高速化する研究。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.07258",
+      "identity_tokens": [
+        "arXiv:2108.07258"
+      ],
+      "title": "On the Opportunities and Risks of Foundation Models",
+      "reason": "基盤モデル全般の機会・リスクを扱う総説で、推論効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2108.07258",
+      "body_check": "本文全体の章構成とシステム節を確認。主眼は基盤モデルの社会・技術的論点。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.09864",
+      "identity_tokens": [
+        "arXiv:2104.09864"
+      ],
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+      "reason": "RoPEは推論時にも使われる重要機構だが、主目的は位置表現のモデル設計。",
+      "source_url": "https://arxiv.org/abs/2104.09864",
+      "body_check": "本文のRoPE定義、線形注意との関係、実験節を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.06694",
+      "identity_tokens": [
+        "arXiv:2310.06694"
+      ],
+      "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+      "reason": "構造化枝刈りで小型モデルを得る圧縮研究で、推論時のモデル規模削減にも直接つながる。",
+      "source_url": "https://arxiv.org/abs/2310.06694",
+      "body_check": "本文のstructured pruning、dynamic batch loading、評価節を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.05176",
+      "identity_tokens": [
+        "arXiv:2305.05176"
+      ],
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "reason": "複数LLMをカスケードして推論コストと品質を最適化する配信・ルーティング研究。",
+      "source_url": "https://arxiv.org/abs/2305.05176",
+      "body_check": "本文のLLM cascade設計、予算制約最適化、評価節を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.08621",
+      "identity_tokens": [
+        "arXiv:2307.08621"
+      ],
+      "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+      "reason": "並列学習と再帰推論を両立し、デコード時の計算・メモリ効率を改善するアーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2307.08621",
+      "body_check": "本文のparallel/recurrent/chunkwise retentionと推論評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15204",
+      "identity_tokens": [
+        "arXiv:2412.15204"
+      ],
+      "title": "LongBench v2: Towards Deeper Understanding and Reasoning on Realistic Long-context Multitasks",
+      "reason": "長文脈能力のベンチマークであり、推論システム最適化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2412.15204",
+      "body_check": "本文のbenchmark construction、tasks、evaluationを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.11627",
+      "identity_tokens": [
+        "arXiv:2305.11627"
+      ],
+      "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+      "reason": "構造化枝刈りによりLLMのパラメータ・計算量を削減する推論圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2305.11627",
+      "body_check": "本文のdependency-aware pruning、importance estimation、効率評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.10683",
+      "identity_tokens": [
+        "arXiv:1910.10683"
+      ],
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+      "reason": "T5の事前学習・転移学習研究で、推論効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/1910.10683",
+      "body_check": "本文のpre-training objectives、model scaling、transfer experimentsを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.01667",
+      "identity_tokens": [
+        "arXiv:2209.01667"
+      ],
+      "title": "A Review of Sparse Expert Models in Deep Learning",
+      "reason": "疎な専門家モデルの総説でMoE推論に関連するが、新規推論システム手法ではない。",
+      "source_url": "https://arxiv.org/abs/2209.01667",
+      "body_check": "本文のrouting、capacity、systems considerationsを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.02486",
+      "identity_tokens": [
+        "arXiv:2307.02486"
+      ],
+      "title": "LongNet: Scaling Transformers to 1,000,000,000 Tokens",
+      "reason": "dilated attentionで超長文脈の注意計算を疎化し、計算量を抑える。",
+      "source_url": "https://arxiv.org/abs/2307.02486",
+      "body_check": "本文のdilated attention、計算量解析、長文脈評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.16102",
+      "identity_tokens": [
+        "arXiv:2411.16102"
+      ],
+      "title": "BlendServe: Optimizing Offline Inference with Resource-Aware Batching",
+      "reason": "LLMオフライン推論で計算律速・メモリ律速要求を混合し資源利用率を高める配信システム。",
+      "source_url": "https://arxiv.org/abs/2411.16102",
+      "body_check": "本文のresource-aware batching、execution design、throughput evaluationを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1712.06139",
+      "identity_tokens": [
+        "arXiv:1712.06139"
+      ],
+      "title": "TensorFlow-Serving: Flexible, High-Performance ML Serving",
+      "reason": "汎用MLサービング基盤でLLM専用ではないが、配信システムの基礎として関連。",
+      "source_url": "https://arxiv.org/abs/1712.06139",
+      "body_check": "本文のserving architecture、batching、version management、性能評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12045",
+      "identity_tokens": [
+        "arXiv:2406.12045"
+      ],
+      "title": "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "reason": "ツール利用エージェント評価ベンチマークで推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2406.12045",
+      "body_check": "本文のbenchmark environment、policy、evaluation protocolを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.09573",
+      "identity_tokens": [
+        "arXiv:2503.09573"
+      ],
+      "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
+      "reason": "ブロック単位拡散により自己回帰と並列生成を折衷し、生成推論の並列性を高める。",
+      "source_url": "https://arxiv.org/abs/2503.09573",
+      "body_check": "本文のblock diffusion formulation、sampling、速度・品質評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07982",
+      "identity_tokens": [
+        "arXiv:2506.07982"
+      ],
+      "title": "tau2-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+      "reason": "会話エージェント評価ベンチマークで推論効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2506.07982",
+      "body_check": "本文のdual-control environment、tasks、agent evaluationを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.15704",
+      "identity_tokens": [
+        "arXiv:2006.15704"
+      ],
+      "title": "PyTorch Distributed: Experiences on Accelerating Data Parallel Training",
+      "reason": "分散データ並列学習の高速化が主目的。",
+      "source_url": "https://arxiv.org/abs/2006.15704",
+      "body_check": "本文のDDP design、gradient communication、training benchmarksを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.13649",
+      "identity_tokens": [
+        "arXiv:2306.13649"
+      ],
+      "title": "On-policy Distillation of Language Models: Learning from Self-Generated Mistakes",
+      "reason": "知識蒸留による学習法が主目的で、学習工程の最適化に該当。",
+      "source_url": "https://arxiv.org/abs/2306.13649",
+      "body_check": "本文のon-policy distillation objective、training procedure、評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.06211",
+      "identity_tokens": [
+        "arXiv:2409.06211"
+      ],
+      "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+      "reason": "MoEを構造化・非構造化の二段階で枝刈りし、推論計算量とモデル容量を削減する。",
+      "source_url": "https://arxiv.org/abs/2409.06211",
+      "body_check": "本文のtwo-stage pruning、expert/weight pruning、効率評価を確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15745",
+      "identity_tokens": [
+        "arXiv:2512.15745"
+      ],
+      "title": "LLaDA2.0: Scaling Up Diffusion Language Models to 100B",
+      "reason": "拡散言語モデルの大規模化が中心だが、生成方式と推論特性は対象領域に関連。",
+      "source_url": "https://arxiv.org/abs/2512.15745",
+      "body_check": "本文のmodel design、training、sampling/inference sectionsを確認。",
+      "first_checked_at": "2026-09-28T21:01:32+09:00",
+      "last_checked_at": "2026-09-28T21:01:32+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    }
+  ],
+  "parent_run_key": "scheduled-chat-00-20260928-2101",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 40
+}
