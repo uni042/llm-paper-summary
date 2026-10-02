@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T10:56:14+00:00",
-  "record_count": 463,
+  "updated_at": "2026-10-02T10:58:58+00:00",
+  "record_count": 480,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4994,9 +4994,9 @@
       "identity_tokens": [
         "arXiv:2511.00088"
       ],
-      "reason": "自動運転VLAのreasoning/action性能が主題で、LLM推論基盤の効率化ではない。",
+      "reason": "自動運転VLAの推論・行動品質が主題であり、LLM推論サービングやメモリ・カーネル最適化を最終目的としない。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],
@@ -5024,9 +5024,9 @@
       "identity_tokens": [
         "arXiv:2411.10414"
       ],
-      "reason": "VLM安全性分類・guard modelが主題で、推論効率化・配信システム研究ではない。",
+      "reason": "画像を含む対話の安全分類モデルで、推論速度・メモリ・サービング効率の最適化が主題ではない。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-09-30T09:51:41+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
@@ -5087,9 +5087,9 @@
       "identity_tokens": [
         "arXiv:2502.13270"
       ],
-      "reason": "実世界の長期対話データセットと人格模倣・長期記憶評価を提供する研究で、推論時メモリ管理やサービング効率を改善する新規方式ではないため対象外。",
+      "reason": "実世界の長期対話データセットと長期記憶能力評価が主題で、推論ランタイムの効率化を提案しない。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T07:57:38+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
@@ -5637,23 +5637,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
       ],
       "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
-    },
-    "OpenReview:pZiyCaVuti": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:pZiyCaVuti",
-      "identity_tokens": [
-        "OpenReview:pZiyCaVuti",
-        "arXiv:2410.10813"
-      ],
-      "reason": "長期間対話記憶能力を測る評価ベンチマークが主貢献で、推論基盤の効率化機構を提案しない。",
-      "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
-      ],
-      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
     },
     "OpenReview:KnqiC0znVF": {
       "classification": "unrelated",
@@ -6825,6 +6808,247 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "Diversity of Thought Improves Reasoning Abilities of LLMs"
+    },
+    "DOI:10.5281/zenodo.12608602": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5281/zenodo.12608602",
+      "identity_tokens": [
+        "DOI:10.5281/zenodo.12608602"
+      ],
+      "reason": "論文ではなくLLM評価ハーネスのソフトウェアリリース記録で、推論ランタイムの速度・メモリ・サービング最適化を提案する研究成果ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "EleutherAI/lm-evaluation-harness: v0.4.3"
+    },
+    "DOI:10.18653/v1/n19-1300": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1300",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1300"
+      ],
+      "reason": "自然なYes/No質問の読解ベンチマークと転移学習評価が主目的で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions"
+    },
+    "arXiv:2310.06694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06694",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.06694",
+        "arXiv:2310.06694"
+      ],
+      "reason": "構造化枝刈りと動的バッチロードで小型LLMの事前学習を高速化する研究で、最終適用先が凍結中の学習工程。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning"
+    },
+    "arXiv:1606.05250": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.05250",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1606.05250",
+        "arXiv:1606.05250"
+      ],
+      "reason": "Wikipedia読解の質問応答データセット構築と能力評価が主目的で、推論システム効率化ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
+    },
+    "DOI:10.1162/neco.1991.3.1.79": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1991.3.1.79"
+      ],
+      "reason": "局所expertとgating networkを共同学習する古典的混合専門家モデルの学習方式で、LLM推論効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "Adaptive Mixtures of Local Experts"
+    },
+    "arXiv:2608.22752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22752",
+      "identity_tokens": [
+        "DOI:10.1145/3799682.3840567",
+        "DOI:10.48550/arxiv.2608.22752",
+        "arXiv:2608.22752"
+      ],
+      "reason": "長期エージェント知識の型別保持・要約・検索を改善するアプリケーション記憶管理で、LLM推論ランタイムの速度・KV・メモリ階層最適化が最終適用先ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "The Compaction Cliff in Long-Running AI Agent Memory"
+    },
+    "arXiv:2310.12773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12773",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.12773",
+        "arXiv:2310.12773"
+      ],
+      "reason": "人間フィードバックによる強化学習（RLHF）の安全性・有用性制約を分離して学習するアラインメント研究で、推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "Safe RLHF: Safe Reinforcement Learning from Human Feedback"
+    },
+    "arXiv:2310.12462": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12462",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.12462",
+        "arXiv:2310.12462"
+      ],
+      "reason": "注意重みと出力から入力データを復元できるかを解析するプライバシー理論研究で、LLM推論効率化を目的としない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "Unmasking Transformers: A Theoretical Approach to Data Recovery via Attention Weights"
+    },
+    "arXiv:2310.10908": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10908",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.10908",
+        "arXiv:2310.10908"
+      ],
+      "reason": "標準LMの潜在的モジュール性をMoEとして利用するfine-tuning研究で、主目的は汎化性能改善であり推論効率化ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "Unlocking Emergent Modularity in Large Language Models"
+    },
+    "arXiv:2310.09478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09478",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.09478",
+        "arXiv:2310.09478"
+      ],
+      "reason": "画像説明・VQA・visual grounding等を単一VLMで扱うマルチタスク学習研究で、推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning"
+    },
+    "arXiv:2310.07999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07999",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.07999",
+        "arXiv:2310.07999"
+      ],
+      "reason": "小型事前学習モデルから大型モデルを初期化して追加学習計算を削減するモデル拡張手法で、凍結中の学習高速化側。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "LEMON: Lossless model expansion"
+    },
+    "arXiv:2310.06625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06625",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.06625",
+        "arXiv:2310.06625"
+      ],
+      "reason": "時系列予測向けTransformerアーキテクチャ研究で、LLM推論とは別分野。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "iTransformer: Inverted Transformers Are Effective for Time Series Forecasting"
+    },
+    "arXiv:2310.05915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05915",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.05915",
+        "arXiv:2310.05915"
+      ],
+      "reason": "言語エージェントを多様な軌跡でfine-tuningして能力・頑健性を改善する研究で、推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "FireAct: Toward Language Agent Fine-tuning"
+    },
+    "DOI:10.18653/v1/2023.emnlp-main.217": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.217",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.217"
+      ],
+      "reason": "可変expert数のゲーティングだが主要最適化対象は学習時間で凍結中の学習高速化側。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Adaptive Gating in Mixture-of-Experts based Language Models"
+    },
+    "DOI:10.18653/v1/2025.findings-naacl.284": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.284",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-naacl.284"
+      ],
+      "reason": "層ごとのLoRA expert数配分を最適化するPEFT方式で、推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "MoLA: MoE LoRA with Layer-wise Expert Allocation"
+    },
+    "DOI:10.18653/v1/p19-1355": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1355",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1355"
+      ],
+      "reason": "NLP深層学習のエネルギー・環境・政策コスト分析で、LLM推論高速化方式を提案しない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Energy and Policy Considerations for Deep Learning in NLP"
+    },
+    "arXiv:2402.02526": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.02526",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.02526",
+        "arXiv:2402.02526"
+      ],
+      "reason": "competition routingを学習してSparse MoEの学習を改善する方式で、最終主貢献はtraining。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "CompeteSMoE -- Effective Training of Sparse Mixture of Experts via Competition"
+    },
+    "arXiv:2410.10813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10813",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti",
+        "arXiv:2410.10813"
+      ],
+      "reason": "長期対話記憶の能力ベンチマークとretrieval設計が中心で、LLM推論基盤の性能最適化ではない。",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
     }
   }
 }

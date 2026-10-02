@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T10:56:14+00:00",
-  "record_count": 378,
+  "updated_at": "2026-10-02T10:58:58+00:00",
+  "record_count": 387,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5467,6 +5467,122 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "Let's reward step by step: Step-Level reward model as the Navigators for Reasoning"
+    },
+    "DOI:10.1145/3620665.3640366": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620665.3640366",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640366"
+      ],
+      "reason": "TorchDynamo/TorchInductorは推論も高速化する汎用コンパイラ基盤でLLMカーネル実行に関連するが、論文の対象はLLM専用ではなく180超の機械学習モデル全般なので境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation"
+    },
+    "arXiv:2209.05433": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.05433",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2209.05433",
+        "arXiv:2209.05433"
+      ],
+      "reason": "E4M3/E5M2の8-bit浮動小数点形式はLLM推論量子化・Tensor Core実行へ直接利用される基盤技術だが、論文自体は深層学習全般の訓練・推論を対象としLLM専用ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "FP8 Formats for Deep Learning"
+    },
+    "arXiv:2608.15939": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15939",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.15939",
+        "arXiv:2608.15939"
+      ],
+      "reason": "KVキャッシュのtransaction-local restoreという推論状態管理を扱うが、主目的は速度・容量最適化ではなくエージェントのrollback整合性と安全性の保証なので境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "Aborted but Not Forgotten: KV-Cache Retention Breaks Rollback Consistency in Language Agents"
+    },
+    "arXiv:2609.38201": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38201",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.38201",
+        "arXiv:2609.38201"
+      ],
+      "reason": "LLMエージェント全体の待ち時間を投機的なツール実行で削減するruntime研究だが、モデル推論・KV・decode自体ではなくtool execution層が主対象なので境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "TomasuLLM: Out-of-Order Speculative Execution for LLM Agents"
+    },
+    "arXiv:2608.01526": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01526",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.01526",
+        "arXiv:2608.01526"
+      ],
+      "reason": "KVキャッシュをクラウド・データセンター横断のcontent distribution primitiveとして扱う推論基盤のvision paperで対象範囲には直結するが、完成システムの定量評価を伴う方式論文ではないため境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "An Internet for the KV Cache: Rethinking Classical Infrastructure Boundaries in the LLM Inference Age"
+    },
+    "arXiv:2310.11703": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.11703",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.11703",
+        "arXiv:2310.11703"
+      ],
+      "reason": "ベクトルデータベースの保存・近似最近傍検索を体系化しRAG/LLMとの統合も扱うが、LLM推論サービング専用ではないため境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "A Comprehensive Survey on Vector Database: Storage and Retrieval Technique, Challenge"
+    },
+    "arXiv:2310.09130": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.09130",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.09130",
+        "arXiv:2310.09130"
+      ],
+      "reason": "LLM推論をclient/serverに分割するが目的は局所差分プライバシーであり、速度・メモリ効率化は副次的なので境界扱い。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-02T10:58:57+00:00",
+      "linked_from": [],
+      "title": "Split-and-Denoise: Protect large language model inference with local differential privacy"
+    },
+    "DOI:10.52202/068431-0805": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/068431-0805",
+      "identity_tokens": [
+        "DOI:10.52202/068431-0805"
+      ],
+      "reason": "memory tokenによる長系列architectureで計算量問題に関係するが、主評価は長期依存能力で推論system実装ではない。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Recurrent Memory Transformer"
+    },
+    "arXiv:2412.21187": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.21187",
+      "identity_tokens": [
+        "arXiv:2412.21187"
+      ],
+      "reason": "推論時の過剰な思考tokenを削減する効率研究だが、主要な改善手段がself-trainingであり、凍結中の学習系と推論効率系の境界にある。",
+      "first_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "linked_from": [],
+      "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs"
     }
   }
 }

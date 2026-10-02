@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7620c073dad64c9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.10414",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.10414",
+    "identity_tokens": [
+      "arXiv:2411.10414"
+    ],
+    "reason": "画像を含む対話の安全分類モデルで、推論速度・メモリ・サービング効率の最適化が主題ではない。",
+    "first_checked_at": "2026-09-30T09:04:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:58+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md"
+    ],
+    "title": "Llama Guard 3 Vision: Safeguarding Human-AI Image Understanding Conversations"
+  },
+  "processed_at": "2026-10-02T10:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7620c073dad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

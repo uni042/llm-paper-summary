@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ba03c7b28e3fb24-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.06694",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.06694",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.06694",
+      "arXiv:2310.06694"
+    ],
+    "reason": "構造化枝刈りと動的バッチロードで小型LLMの事前学習を高速化する研究で、最終適用先が凍結中の学習工程。",
+    "first_checked_at": "2026-10-02T10:58:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:57+00:00",
+    "linked_from": [],
+    "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning"
+  },
+  "processed_at": "2026-10-02T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ba03c7b28e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

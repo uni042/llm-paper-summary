@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ac38646f1b16e74-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.15939",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.15939",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2608.15939",
+      "arXiv:2608.15939"
+    ],
+    "reason": "KVキャッシュのtransaction-local restoreという推論状態管理を扱うが、主目的は速度・容量最適化ではなくエージェントのrollback整合性と安全性の保証なので境界扱い。",
+    "first_checked_at": "2026-10-02T10:58:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:57+00:00",
+    "linked_from": [],
+    "title": "Aborted but Not Forgotten: KV-Cache Retention Breaks Rollback Consistency in Language Agents"
+  },
+  "processed_at": "2026-10-02T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ac38646f1b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
