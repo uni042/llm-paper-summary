@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d2f0deb8f78c596c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d2f0deb8f78c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/dac63849.2025.11132479",
+    "DOI:10.1109/isca66397.2026.00021",
+    "DOI:10.1145/3642970.3655835"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4f44908ec6ea236525660d5f16b111940d041815",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T08:10:45.543641+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/dac63849.2025.11132479",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00021",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.05497"
+    },
+    {
+      "requested_id": "DOI:10.1145/3642970.3655835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
+      "source_url": "https://arxiv.org/abs/2412.03213",
+      "year": 2024,
+      "published": "2024-12-04",
+      "abstract": "Large Language Models (LLMs) have been widely deployed in a variety of applications, and the context length is rapidly increasing to handle tasks such as long-document QA and complex logical reasoning. However, long context poses significant challenges for inference efficiency, including high memory costs of key-value (KV) cache and increased latency due to extensive memory accesses. Recent works have proposed compressing KV cache to approximate computation, but these methods either evict tokens permanently, never recalling them for later inference, or recall previous tokens at the granularity of pages divided by textual positions. Both approaches degrade the model accuracy and output quality. To achieve efficient and accurate recallable KV cache compression, we introduce ClusterKV, which recalls tokens at the granularity of semantic clusters. We design and implement efficient algorithms and systems for clustering, selection, indexing and caching. Experiment results show that ClusterKV attains negligible accuracy loss across various tasks with 32 k context lengths, using only a 1 k to 2 k KV cache budget, and achieves up to a $2 \\times$ speedup in latency and a $2.5 \\times$ improvement in decoding throughput. Compared to SoTA recallable KV compression methods, ClusterKV demonstrates higher model accuracy and output quality, while maintaining or exceeding inference efficiency. Our code is available at https://github.com/sjtu-zhao-lab/ClusterKV.",
+      "canonical_id": "arXiv:2412.03213",
+      "arxiv_id": "2412.03213",
+      "doi": "10.1109/DAC63849.2025.11132479",
+      "authors": [
+        "Guang-Da Liu",
+        "Cheng-Wei Li",
+        "Jie-Ru Zhao",
+        "Chenqi Zhang",
+        "Min-Yi Guo"
+      ]
+    },
+    {
+      "title": "Deferred Continuous Batching in Resource-Efficient Large Language Model Serving",
+      "source_url": "https://doi.org/10.1145/3642970.3655835",
+      "year": 2024,
+      "published": "2024-04-22",
+      "abstract": "Despite that prior work of batched inference and parameter-efficient fine-tuning techniques have reduced the resource requirements of large language models (LLMs), challenges remain in resource-constrained environments such as on-premise infrastructures to serve workload that is composed of both inference and fine-tuning jobs. Prior solutions must either pause existing jobs which causes service interruptions, or queue new jobs which results in a long delay. We present FineInfer, an efficient serving system that enables concurrent LLM fine-tuning and inference. FineInfer leverages base model multiplexing and a new task scheduling mechanism, namely deferred continuous batching, to enable iteration-level context switch and accelerate fine-tuning while offering inference latency that compromises service level agreements. Our evaluation shows that FineInfer outperforms prior solutions by up to 3x in fine-tuning latency, and 36x when the models are larger than the GPU memory.",
+      "doi": "10.1145/3642970.3655835",
+      "canonical_id": "DOI:10.1145/3642970.3655835",
+      "authors": [
+        "Yongjun He",
+        "Yao Lu",
+        "Gustavo Alonso"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2412.03213",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11132479",
+        "id:arXiv:2412.03213",
+        "title:clusterkv manipulating llm kv cache in semantic space for recallable compression",
+        "url:https://arxiv.org/abs/2412.03213"
+      ],
+      "record": {
+        "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
+        "source_url": "https://arxiv.org/abs/2412.03213",
+        "year": 2024,
+        "published": "2024-12-04",
+        "abstract": "Large Language Models (LLMs) have been widely deployed in a variety of applications, and the context length is rapidly increasing to handle tasks such as long-document QA and complex logical reasoning. However, long context poses significant challenges for inference efficiency, including high memory costs of key-value (KV) cache and increased latency due to extensive memory accesses. Recent works have proposed compressing KV cache to approximate computation, but these methods either evict tokens permanently, never recalling them for later inference, or recall previous tokens at the granularity of pages divided by textual positions. Both approaches degrade the model accuracy and output quality. To achieve efficient and accurate recallable KV cache compression, we introduce ClusterKV, which recalls tokens at the granularity of semantic clusters. We design and implement efficient algorithms and systems for clustering, selection, indexing and caching. Experiment results show that ClusterKV attains negligible accuracy loss across various tasks with 32 k context lengths, using only a 1 k to 2 k KV cache budget, and achieves up to a $2 \\times$ speedup in latency and a $2.5 \\times$ improvement in decoding throughput. Compared to SoTA recallable KV compression methods, ClusterKV demonstrates higher model accuracy and output quality, while maintaining or exceeding inference efficiency. Our code is available at https://github.com/sjtu-zhao-lab/ClusterKV.",
+        "canonical_id": "arXiv:2412.03213",
+        "arxiv_id": "2412.03213",
+        "doi": "10.1109/DAC63849.2025.11132479",
+        "authors": [
+          "Guang-Da Liu",
+          "Cheng-Wei Li",
+          "Jie-Ru Zhao",
+          "Chenqi Zhang",
+          "Min-Yi Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3642970.3655835",
+      "identity_tokens": [
+        "id:DOI:10.1145/3642970.3655835",
+        "title:deferred continuous batching in resourceefficient large language model serving",
+        "url:https://doi.org/10.1145/3642970.3655835"
+      ],
+      "record": {
+        "title": "Deferred Continuous Batching in Resource-Efficient Large Language Model Serving",
+        "source_url": "https://doi.org/10.1145/3642970.3655835",
+        "year": 2024,
+        "published": "2024-04-22",
+        "abstract": "Despite that prior work of batched inference and parameter-efficient fine-tuning techniques have reduced the resource requirements of large language models (LLMs), challenges remain in resource-constrained environments such as on-premise infrastructures to serve workload that is composed of both inference and fine-tuning jobs. Prior solutions must either pause existing jobs which causes service interruptions, or queue new jobs which results in a long delay. We present FineInfer, an efficient serving system that enables concurrent LLM fine-tuning and inference. FineInfer leverages base model multiplexing and a new task scheduling mechanism, namely deferred continuous batching, to enable iteration-level context switch and accelerate fine-tuning while offering inference latency that compromises service level agreements. Our evaluation shows that FineInfer outperforms prior solutions by up to 3x in fine-tuning latency, and 36x when the models are larger than the GPU memory.",
+        "doi": "10.1145/3642970.3655835",
+        "canonical_id": "DOI:10.1145/3642970.3655835",
+        "authors": [
+          "Yongjun He",
+          "Yao Lu",
+          "Gustavo Alonso"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:06578dfbe6081e5d53ce288cc1f9504eb1d5d996b24fd336c1c145c466c5cb55",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
