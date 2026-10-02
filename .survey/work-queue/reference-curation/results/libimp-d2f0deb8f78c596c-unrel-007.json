@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2f0deb8f78c596c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/hpca61900.2025.00096",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/hpca61900.2025.00096",
+    "identity_tokens": [
+      "DOI:10.1109/hpca61900.2025.00096"
+    ],
+    "reason": "大規模ML学習クラスタの障害・信頼性分析が主題で推論サービング最適化ではない。",
+    "first_checked_at": "2026-10-02T06:58:22+00:00",
+    "last_checked_at": "2026-10-02T07:57:38+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Revisiting Reliability in Large-Scale Machine Learning Research Clusters"
+  },
+  "processed_at": "2026-10-02T07:57:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2f0deb8f78c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

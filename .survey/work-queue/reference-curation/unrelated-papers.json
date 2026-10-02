@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T07:48:29+00:00",
+  "updated_at": "2026-10-02T07:57:38+00:00",
   "record_count": 424,
   "records": {
     "arXiv:2303.08774": {
@@ -4371,9 +4371,9 @@
       "identity_tokens": [
         "DOI:10.1145/3627703.3650085"
       ],
-      "reason": "大規模DNN/LLM学習の障害発生時だけチェックポイントを作成して再計算量を抑える耐障害学習方式で、最終適用先が学習工程の回復なので対象外。",
+      "reason": "大規模深層学習ジョブの障害回復が主題で、最終適用先が学習工程。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-10-02T07:48:29+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
@@ -4932,9 +4932,9 @@
         "DOI:10.18653/v1/p19-1452",
         "arXiv:1905.05950"
       ],
-      "reason": "BERT内部でPOS・構文・NER・意味役割・共参照など言語情報がどの層に現れるかを解析する表現分析研究で、推論効率化ではない。",
+      "reason": "BERT内部で品詞・構文・固有表現・意味役割・共参照の言語情報がどの層に局在するかを解析する表現分析研究であり、LLM推論の速度・メモリ・サービング最適化ではない。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
@@ -4947,9 +4947,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/n18-2002"
       ],
-      "reason": "共参照解析におけるジェンダーバイアスの評価研究であり、LLM推論システム最適化とは無関係。",
+      "reason": "Winogender schemasを用いた共参照解析システムの性別バイアス評価が主題で、推論基盤の効率化とは無関係。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
@@ -5040,9 +5040,9 @@
       "identity_tokens": [
         "arXiv:2510.27257"
       ],
-      "reason": "テンソル並列とパイプライン並列の気泡を協調削減するが、評価・目的ともLLM/MLLMの分散学習スループット改善であり凍結中の学習高速化に該当する。",
+      "reason": "テンソル並列とパイプライン並列を協調させて大規模モデルの学習スループットを改善する研究で、最終適用先が学習工程そのものの高速化であるため凍結範囲として対象外。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
         "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
@@ -5055,9 +5055,9 @@
       "identity_tokens": [
         "arXiv:2504.04717"
       ],
-      "reason": "主題は複数ターンLLM対話の能力・評価・応用サーベイで、推論システムの高速化・省メモリ化が主貢献ではない。",
+      "reason": "複数ターン対話の能力・評価・改善法を整理するサーベイであり、KVキャッシュ、サービング、メモリ階層、カーネル等の推論実行効率化を主題としないため対象外。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:51:41+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
@@ -5071,9 +5071,9 @@
       "identity_tokens": [
         "arXiv:2503.10582"
       ],
-      "reason": "Web検索から大規模マルチモーダル指示データを構築してモデルを微調整する学習データ研究で、最終適用先が凍結対象の学習工程である。",
+      "reason": "ウェブ検索から視覚推論向け命令データを構築し、視覚言語モデルを微調整するデータ・学習研究で、推論基盤の高速化・省メモリ化ではないため対象外。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
@@ -5087,9 +5087,9 @@
       "identity_tokens": [
         "arXiv:2502.13270"
       ],
-      "reason": "長期会話データセットと会話能力評価が主題で、LLM推論基盤の高速化・メモリ管理とは無関係。",
+      "reason": "実世界の長期対話データセットと人格模倣・長期記憶評価を提供する研究で、推論時メモリ管理やサービング効率を改善する新規方式ではないため対象外。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:51:41+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
@@ -5591,22 +5591,6 @@
       ],
       "title": "Hardware Compute Partitioning on NVIDIA GPUs"
     },
-    "DOI:10.1145/3695053.3731079": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3695053.3731079",
-      "identity_tokens": [
-        "DOI:10.1145/3695053.3731079"
-      ],
-      "reason": "dense retrievalのalgorithm-hardware co-designが主題で、LLM推論本体の最適化ではない。",
-      "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-45.json",
-        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
-      ],
-      "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
-    },
     "OpenReview:Yacmpz84TH": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:Yacmpz84TH",
@@ -5637,18 +5621,6 @@
         "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ],
       "title": "Keep the Cost Down: A Review on Methods to Optimize LLM’s KV-Cache Consumption"
-    },
-    "DOI:10.1145/3676641.3715987": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3676641.3715987",
-      "identity_tokens": [
-        "DOI:10.1145/3676641.3715987"
-      ],
-      "reason": "CXLメモリの一般的な実機特性評価で、LLM推論への具体的な最終適用・推論方式を提案しない。",
-      "first_checked_at": "2026-10-01T07:06:25+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
-      "linked_from": [],
-      "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
     },
     "arXiv:2302.11382": {
       "classification": "unrelated",
@@ -5845,7 +5817,7 @@
       ],
       "reason": "完全分離型計算機の一般的な遠隔メモリ・データ移動機構で、LLM推論固有ではない。",
       "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -5859,7 +5831,7 @@
       ],
       "reason": "高帯域GPU向けDRAMの一般アーキテクチャでLLM推論への具体的適用を持たない。",
       "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -5873,7 +5845,7 @@
       ],
       "reason": "大規模ML学習クラスタの障害・信頼性分析が主題で推論サービング最適化ではない。",
       "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -6087,7 +6059,7 @@
       ],
       "reason": "重要な注意カーネル研究だが、既にサーベイの基礎文献として広く表現済みとみなし新規Discovery候補には回さない。",
       "first_checked_at": "2026-10-02T07:00:18+00:00",
-      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [],
       "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     },
@@ -6099,7 +6071,7 @@
       ],
       "reason": "低ランク適応による学習パラメータ削減が中心で、最終適用先が学習工程の省メモリ・効率化であり凍結対象。",
       "first_checked_at": "2026-10-02T07:00:18+00:00",
-      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
       "linked_from": [],
       "title": "LoRA: Low-Rank Adaptation of Large Language Models"
     },
@@ -6238,6 +6210,36 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
       ],
       "title": "Structural Pruning via Latency-Saliency Knapsack"
+    },
+    "DOI:10.1109/mm.2023.3237491": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2023.3237491",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2023.3237491"
+      ],
+      "reason": "CXLによる汎用メモリプーリング研究でLLM推論固有のoffload方式ではない。",
+      "first_checked_at": "2026-10-02T07:57:38+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Memory Pooling With CXL"
+    },
+    "DOI:10.1145/3694715.3695955": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3694715.3695955",
+      "identity_tokens": [
+        "DOI:10.1145/3694715.3695955",
+        "arXiv:2408.04808"
+      ],
+      "reason": "多数core型AI chip向けの汎用深層学習コンパイラであり、LLM推論を最終適用先とする研究ではない。",
+      "first_checked_at": "2026-10-02T07:57:38+00:00",
+      "last_checked_at": "2026-10-02T07:57:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md"
+      ],
+      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
     }
   }
 }

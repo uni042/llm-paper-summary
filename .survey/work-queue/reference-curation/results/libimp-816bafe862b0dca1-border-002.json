@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-816bafe862b0dca1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.01869",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.01869",
+    "identity_tokens": [
+      "arXiv:2402.01869"
+    ],
+    "reason": "LLM推論サービング研究だが、主眼が外部ツール呼出し等で中断された要求のKV保持/破棄/退避ポリシーにあり、通常の推論高速化サーベイとの境界に位置する。",
+    "first_checked_at": "2026-10-02T07:00:18+00:00",
+    "last_checked_at": "2026-10-02T07:57:38+00:00",
+    "linked_from": [],
+    "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference"
+  },
+  "processed_at": "2026-10-02T07:57:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-816bafe862b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
