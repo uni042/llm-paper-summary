@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-02 23:11:03 JST**
+> 自動生成: **2026-10-03 04:18:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **629** |
 | 未claim Research job | **485** |
-| 直近24hのResearch処理完了 | **32** |
+| 直近24hのResearch処理完了 | **13** |
 | 最終Research処理完了 | **10-02 06:58:00 JST** |
 | 最終Discovery探索完了 | **10-02 20:01:20 JST** |
 | 整合性異常 | **0** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（206時間35分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（211時間42分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **144** | **144** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **8** | **8** | **0** | **0** | **0** | **25** |
-| 合計 | **0** | **9** | **8** | **0** | **144** | **144** | **25** |
+| 合計 | **0** | **9** | **8** | **0** | **144** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,7 +150,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **144件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
   - claim: **09-25 00:26:58 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
