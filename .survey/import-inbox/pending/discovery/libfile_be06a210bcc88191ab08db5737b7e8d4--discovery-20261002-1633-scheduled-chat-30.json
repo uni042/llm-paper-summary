@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-1633-scheduled-chat-30",
+  "reference_main_sha": "3214feadcd050cd20edee404a21d5d4152e3121e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.17943",
+      "identity_tokens": [
+        "arXiv:2609.17943",
+        "DOI:10.48550/arXiv.2609.17943"
+      ],
+      "title": "ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference",
+      "reason": "長文脈の自己投機復号で、要求ごとに異なる最適ドラフト長を同期バッチへ押し込む無駄をなくし、ドラフトと検証を同一混合バッチ内で非同期に進める直接的な推論高速化。",
+      "source_url": "https://arxiv.org/abs/2609.17943",
+      "body_check": "本文の問題設定・設計・実験を確認。unified mixed forwardでdraft/verify要求を同一forwardへ混在させ、受理率とbatch-aware cost modelから要求別verification時点を決め、refresh layerで疎KV集合の陳腐化を抑える。Qwen3-1.7B/8B、DeepSeek-R1-Distill-LLaMA-8B、H100 NVL、長文脈/推論5 workloadで自己回帰比1.70–4.58倍のdecode throughput、強い既存自己投機法比平均約27%改善。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33184",
+      "identity_tokens": [
+        "arXiv:2609.33184",
+        "DOI:10.48550/arXiv.2609.33184"
+      ],
+      "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
+      "reason": "KVオフロード中に全履歴復元を待たず検証を開始し、転送待ちのGPU計算空白でドラフトを並行実行するSpecStreamにより、長文脈投機復号のメモリとスループットを同時改善する。",
+      "source_url": "https://arxiv.org/abs/2609.33184",
+      "body_check": "本文でcommit-aware rollback-free KV tiering、multi-query verification向けstreaming KV+online softmax、Target-priority同一GPU co-executionを確認。SGLang 0.5.17、Qwen3-32B/0.6BとInternLM2.5-20B/1.8B、2×A800 80GBで評価し、offload baseline比平均throughput 1.41倍/1.32倍、Target/Draft別GPU並列比output throughput per GPU平均55.4%改善。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.24197",
+      "identity_tokens": [
+        "arXiv:2609.24197",
+        "DOI:10.48550/arXiv.2609.24197"
+      ],
+      "title": "H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache",
+      "reason": "block-diffusionドラフター固有の追加KVキャッシュを廃止し、target KVの直接再利用と最終入力位置のhidden stateだけを組み合わせて、投機復号のメモリと同時実行性能を改善する。",
+      "source_url": "https://arxiv.org/abs/2609.24197",
+      "body_check": "本文で従来drafter-side KVがtarget単独比1.1–1.8倍/ tokenのKV容量を生み、Qwen3-8Bでは4→128 concurrent requestsでKV injection時間が4.7倍になる問題を確認。H-SpecはMamba-attention hybridでtarget KVをin-place reuseしlast-token hidden stateを補完、3 target modelでbest baseline比mean accepted length 5.0–13.3%、batch-1 inter-token latency speedup 5.3–12.6%改善し、高並行度でも低KV利用率を維持。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33385",
+      "identity_tokens": [
+        "arXiv:2609.33385",
+        "DOI:10.1145/3842654.3848535"
+      ],
+      "title": "OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading",
+      "reason": "拡散LLMの反復間expert局所性を利用して、自己回帰向け先読みが機能しにくいMoE expert offloadを保持中心へ再設計する直接的な推論システム。",
+      "source_url": "https://arxiv.org/abs/2609.33385",
+      "body_check": "本文でtemporal-locality-aware expert retention、layer-adaptive cache allocation、load/reuse-aware cooperative compensationを確認。dInfer+vLLM上、LLaDA2.0-mini 16B/flash 100B、RTX 5090 32GBとRTX PRO 6000 96GBで評価し、既存offload baseline比TPOTを1.23–7.93倍改善、expert cache utilizationを1.44–4.23倍改善。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.11580",
+      "identity_tokens": [
+        "arXiv:2601.11580",
+        "DOI:10.48550/arXiv.2601.11580"
+      ],
+      "title": "Speculative Decoding: Performance or Illusion?",
+      "reason": "実運用推論エンジンvLLM上で複数の投機復号方式をモデル規模・workload・batch size横断で系統評価し、実効高速化を制約する要因を明らかにする推論システム評価研究。",
+      "source_url": "https://arxiv.org/abs/2601.11580",
+      "body_check": "本文公開版でn-gram、EAGLE/EAGLE-3、Draft-Model、Multi-Token Predictionをproduction-grade vLLM上で比較し、理論speedup上限も導出する構成を確認。target verificationが実行時間を支配し、accepted lengthが出力位置・request・datasetで大きく変動し、実測と理論上限に大きなgapが残ることを示す。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03375",
+      "identity_tokens": [
+        "arXiv:2605.03375",
+        "DOI:10.48550/arXiv.2605.03375"
+      ],
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "reason": "GPU中心のKV object store、GPU io_uring、slack-aware I/O schedulingでCPUをHBM–SSD間KV転送のcritical pathから外し、NVMe-backed KV階層を直接高速化する。",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "body_check": "本文でpaged KVが大量の小粒度random SSD I/Oを生み、GDSでもCPU submissionが律速となる問題を確認。TuttiはGPU-native object abstraction、非同期GPU direct object I/O、I/O slack schedulingをvLLMへ統合。GDS-enabled SSD-backed LMCache比で厳格SLO下TTFT 78.3%削減、achievable request rate 2倍、serving cost 27%削減しDRAM-backed LMCacheに近い性能を達成。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.16892",
+      "identity_tokens": [
+        "arXiv:2607.16892"
+      ],
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "reason": "未知の出力長に対するKV予約量、GPU並列構成、異種serving groupへのrouting、prefix cacheを分布ロバスト最適化で共同決定し、preemptionとメモリ浪費を直接抑える。",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "body_check": "一次arXiv公開情報でWasserstein distributionally robust optimizationとblock coordinate descentによりKV reservation/routing/parallelism/prefix cachingを共同最適化する構成を確認。BurstGPT、Azure、ShareGPTのproduction trace駆動評価で固定quantile reservation baseline比最大56% cost削減し、P99 latency・goodput・SLO violationを競争的に維持。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21633",
+      "identity_tokens": [
+        "arXiv:2606.21633"
+      ],
+      "title": "HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval",
+      "reason": "block diffusion LLMの疎KV選択をCPU、反復denoisingをGPUへ分担し、選択と生成を二重バッファで重畳してKV offloadのPCIe律速を除く。",
+      "source_url": "https://arxiv.org/abs/2606.21633",
+      "body_check": "一次arXiv公開情報で、blockごとに一度だけ全KVを走査するselectionと同じ疎KVを反復再利用するdenoisingの非対称性をCPU/GPUへ割当て、draft block・single [MASK] query・dual-stream double-buffered sparse KV poolでpipeline化する構成を確認。2つのproduction block dLLMで5% KV budget時にnear-lossless accuracy、GPU-only serving比最大2.28倍decode throughput。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25777",
+      "identity_tokens": [
+        "arXiv:2604.25777",
+        "DOI:10.48550/arXiv.2604.25777"
+      ],
+      "title": "SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission",
+      "reason": "分散LLM ensemble推論で投機復号を導入し、worker→serverの語彙全確率分布をtop-K圧縮して通信律速を削減するedge推論効率化。",
+      "source_url": "https://arxiv.org/abs/2604.25777",
+      "body_check": "本文でserver SLMがdraftし、LLaMA-7B/13B workerが並列検証、各workerはtop-K token probabilityだけ送信しserverでrenormalizedまたはresidual-mass reconstructionする構成を確認。A800、WMT14、語彙32Kでdistribution/acceptance biasを評価し、K=320の強い圧縮でもbiasが小さく理論上界内に収まる。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16135",
+      "identity_tokens": [
+        "arXiv:2606.16135"
+      ],
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "reason": "同一サーバ内の異種モデル間で余剰HBMとNVLinkを共有し、高需要モデルのprefix KVを他GPUへ保持してPCIe/SSD reloadを避けるマルチターン推論システム。",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "body_check": "一次arXiv公開情報で、KV需要の小さいモデルがidle GPU memoryをdonateし、高需要モデルのprefix cacheをNVLink経由で共有、さらにactive layerのKVだけをlocal GPUへ置く方式を確認。実workloadでvLLM/SGLang比P99 TTFT最大69%削減、maximum context length最大3.98倍拡張、co-located modelへの干渉は小さいと報告。",
+      "first_checked_at": "2026-10-02T16:33:10+09:00",
+      "last_checked_at": "2026-10-02T16:33:10+09:00",
+      "linked_from": []
+    }
+  ]
+}
