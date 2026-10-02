@@ -1,0 +1,24 @@
+{
+  "job_id": "job-ec5ac3e1b42f73c7",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/libimp-64c47b55277ae4ba-pre01-sub01.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-10-02T11:01:56+00:00",
+  "completed_at": "2026-10-02T11:02:08+00:00",
+  "result_summary": {
+    "submitted_candidates": 3,
+    "final_duplicate_filtered_count": 0,
+    "research_jobs_added": 3,
+    "lineage_proposals": [],
+    "precheck_request_id": "libimp-64c47b55277ae4ba-pre01",
+    "precheck_snapshot_source_commit": "3e491ea32a931a5f25385943867e458f504346ad"
+  }
+}
