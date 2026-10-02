@@ -113,47 +113,13 @@ jobs:
             exit 1
           }
 
-          # Stage 2: resolve only bounded downstream work created by intake.
+          # Stage 2: process only relevance work here. Discovery precheck
+          # requests are published in Stage 1 and MUST be resolved by the
+          # dedicated discovery-precheck.yml workflow so provenance validation
+          # in queue_worker remains trustworthy.
           stage2_ok=0
           for attempt in $(seq 1 4); do
             sync_main
-
-            : > /tmp/library-import-prechecks.txt
-            find .survey/work-queue/discovery-precheck/requests \
-              -maxdepth 1 \
-              -type f \
-              -name 'libimp-*-pre*.json' \
-              2>/dev/null \
-              | sort \
-              | while IFS= read -r request; do
-                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
-                  [ -f "$result" ] || printf '%s\n' "$request"
-                done \
-              | head -n 12 \
-              > /tmp/library-import-prechecks.txt
-
-            if [ -s /tmp/library-import-prechecks.txt ]; then
-              rm -rf /tmp/library-import-identities
-              rm -f /tmp/library-import-rejections.json
-              python .survey/scripts/build_discovery_identity_snapshot.py \
-                --root .survey \
-                --output /tmp/library-import-identities \
-                --source-commit "$(git rev-parse HEAD)"
-              python .survey/scripts/build_discovery_rejection_ledger.py \
-                --root .survey \
-                --output /tmp/library-import-rejections.json
-
-              set +e
-              python .survey/scripts/process_discovery_precheck_batch.py \
-                --repo-root . \
-                --requests-file /tmp/library-import-prechecks.txt \
-                --snapshot-dir /tmp/library-import-identities \
-                --rejection-ledger /tmp/library-import-rejections.json \
-                --parallelism 4
-              precheck_rc=$?
-              set -e
-              [ "$precheck_rc" -le 1 ] || exit "$precheck_rc"
-            fi
 
             set +e
             python .survey/scripts/process_reference_relevance_requests.py \
@@ -163,16 +129,15 @@ jobs:
             set -e
 
             if publish \
-              'library-import: publish bounded downstream checks' \
-              .survey/work-queue/discovery-precheck \
+              'library-import: publish bounded relevance checks' \
               .survey/work-queue/reference-curation; then
               stage2_ok=1
               break
             fi
-            echo "Library downstream-check push race on attempt ${attempt}; recomputing."
+            echo "Library relevance-check push race on attempt ${attempt}; recomputing."
           done
           [ "$stage2_ok" -eq 1 ] || {
-            echo 'Library downstream checkpoint failed.' >&2
+            echo 'Library relevance checkpoint failed.' >&2
             exit 1
           }
 
