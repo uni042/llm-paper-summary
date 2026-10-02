@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "R-KV: Redundancy-aware KV Cache Compression for Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2505.24133",
+      "year": 2025,
+      "published": "2025-05-30",
+      "abstract": "Reasoning models have demonstrated impressive performance in self-reflection and chain-of-thought reasoning. However, they often produce excessively long outputs, leading to prohibitively large key-value (KV) caches during inference. While chain-of-thought inference significantly improves performance on complex reasoning tasks, it can also lead to reasoning failures when deployed with existing KV cache compression approaches. To address this, we propose Redundancy-aware KV Cache Compression for Reasoning models (R-KV), a novel method specifically targeting redundant tokens in reasoning models. Our method preserves nearly 100% of the full KV cache performance using only 10% of the KV cache, substantially outperforming existing KV cache baselines, which reaches only 60% of the performance. Remarkably, R-KV even achieves 105% of full KV cache performance with 16% of the KV cache. This KV-cache reduction also leads to a 90% memory saving and a 6.6× throughput over standard chain-of-thought reasoning inference. Experimental results show that R-KV consistently outperforms existing KV cache compression baselines across two mathematical reasoning datasets.",
+      "canonical_id": "arXiv:2505.24133",
+      "arxiv_id": "2505.24133",
+      "doi": "10.52202/085713-2038",
+      "authors": [
+        "Zefan Cai",
+        "Wen Xiao",
+        "Hanshi Sun",
+        "Cheng Luo",
+        "Yi-Kai Zhang",
+        "Ke Wan",
+        "Yucheng Li",
+        "Yeyang Zhou",
+        "Li-Wen Chang",
+        "Jiuxiang Gu",
+        "Zhen Dong",
+        "Anima Anandkumar",
+        "Abedelkadir Asi",
+        "Jun-Jie Hu"
+      ],
+      "reason": "KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_body_check": "一次資料本文または論文ページの手法・評価記述まで確認し、タイトル・要旨だけではなく主要機構と実測/評価条件を確認した。KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CARD: A cache-assisted parallel speculative decoding framework via query-and-correct paradigm for accelerating LLM inference",
+      "source_url": "https://arxiv.org/abs/2508.04462",
+      "year": 2025,
+      "published": "2025-08-06",
+      "abstract": "Speculative decoding (SD), where a draft model provides multiple candidate tokens for the target model to verify in parallel, has demonstrated significant potential for accelerating LLM inference. Yet, existing SD approaches adhere to a strict draft-then-verify paradigm, enforcing a sequential process that hampers performance and constrains the draft model's capacity. Moreover, rejecting a token in the candidate sequence invalidates all subsequent tokens, leading to wasted computation during drafting. To overcome these limitations, we propose a cache-assisted parallel speculative decoding framework called CARD, which employs a novel query-and-correct paradigm. Our approach decouples drafting from verification: the draft model populates a shared cache with candidate tokens, while the target model concurrently refines the draft's trajectory. This enables inference at near-draft-speed, effectively leveraging the draft model's efficiency without additional fine-tuning. Experimental results show that CARD significantly outperforms existing state-of-the-art methods, achieving up to a 4.83x acceleration over vanilla autoregressive decoding, with no fine-tuning required for either models.",
+      "canonical_id": "arXiv:2508.04462",
+      "arxiv_id": "2508.04462",
+      "doi": "10.1016/j.hcc.2026.100420",
+      "authors": [
+        "En-Yu Zhou",
+        "Run-Jie Ding",
+        "Kai Sheng",
+        "Hao Chen",
+        "Xin He"
+      ],
+      "reason": "KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_body_check": "一次資料本文または論文ページの手法・評価記述まで確認し、タイトル・要旨だけではなく主要機構と実測/評価条件を確認した。KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache",
+      "source_url": "https://arxiv.org/abs/2509.00579",
+      "year": 2025,
+      "published": "2025-08-30",
+      "abstract": "Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\\% and up to 83\\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement.",
+      "canonical_id": "arXiv:2509.00579",
+      "arxiv_id": "2509.00579",
+      "doi": "10.48550/arXiv.2509.00579",
+      "authors": [
+        "Bo Jiang",
+        "Taolue Yang",
+        "You-Yuan Liu",
+        "Cheng-Ming Zhang",
+        "Xubin He",
+        "Sian Jin"
+      ],
+      "reason": "KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_body_check": "一次資料本文または論文ページの手法・評価記述まで確認し、タイトル・要旨だけではなく主要機構と実測/評価条件を確認した。KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2510.06175",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "The Key-Value (KV) cache introduces substantial memory overhead during large language model (LLM) inference. Although existing vector quantization (VQ) methods reduce KV cache usage and provide flexible representational capacity across bit-widths, they suffer severe performance degradation at ultra-low bit-widths due to key cache outliers that hinder effective codebook utilization. To address this challenge, we propose VecInfer, a novel VQ method for aggressive KV cache compression while enabling efficient inference. By applying smooth and Hadamard transformations, VecInfer suppresses outliers in the key cache, enabling the codebook to comprehensively cover the original data distribution and thereby reducing quantization difficulty. To facilitate efficient deployment, we design an optimized CUDA kernel that fuses computation with dequantization to minimize memory access overhead. Extensive evaluations demonstrate that VecInfer consistently outperforms existing quantization baselines across both long-context understanding and mathematical reasoning tasks. With only 2-bit quantization, VecInfer achieves performance comparable to full precision, while delivering up to $\\mathbf{2.7\\times}$ speedup in large-batch self-attention computation and $\\mathbf{8.3\\times}$ reduction in single-batch end-to-end latency on Llama-3.1-8B with a 196k sequence length.",
+      "canonical_id": "arXiv:2510.06175",
+      "arxiv_id": "2510.06175",
+      "doi": "10.48550/arXiv.2510.06175",
+      "authors": [
+        "Ding-Yu Yao",
+        "Chenxu Yang",
+        "Zhengyang Tong",
+        "Zheng Lin",
+        "Wei Liu",
+        "Jian Luan",
+        "Weiping Wang"
+      ],
+      "reason": "KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_body_check": "一次資料本文または論文ページの手法・評価記述まで確認し、タイトル・要旨だけではなく主要機構と実測/評価条件を確認した。KVキャッシュまたは注意計算の容量・帯域・転送・圧縮を直接最適化するLLM推論研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput",
+      "source_url": "https://arxiv.org/abs/2511.11733",
+      "year": 2025,
+      "published": "2025-11-13",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight draft model to propose tokens that are later verified by a stronger target model. While effective in centralized systems, its behavior in decentralized settings, where network latency often dominates compute, remains under-characterized. We present Decentralized Speculative Decoding (DSD), a plug-and-play framework for decentralized inference that turns communication delay into useful computation by verifying multiple candidate tokens in parallel across distributed nodes. We further introduce an adaptive speculative verification strategy that adjusts acceptance thresholds by token-level semantic importance, delivering an additional 15% to 20% end-to-end speedup without retraining. In theory, DSD reduces cross-node communication cost by approximately (N-1)t1(k-1)/k, where t1 is per-link latency and k is the average number of tokens accepted per round. In practice, DSD achieves up to 2.56x speedup on HumanEval and 2.59x on GSM8K, surpassing the Eagle3 baseline while preserving accuracy. These results show that adapting speculative decoding for decentralized execution provides a system-level optimization that converts network stalls into throughput, enabling faster distributed LLM inference with no model retraining or architectural changes.",
+      "canonical_id": "arXiv:2511.11733",
+      "arxiv_id": "2511.11733",
+      "doi": "10.48550/arXiv.2511.11733",
+      "authors": [
+        "Jing-Wei Song",
+        "Wanyi Chen",
+        "Xin-Yuan Song",
+        "Max",
+        "Chris Tong",
+        "Gufeng Chen",
+        "Tianyi Zhao",
+        "Eric Yang",
+        "Bill Shi",
+        "Lynn Ai"
+      ],
+      "reason": "LLM推論の配信・メモリ・並列実行・投機的復号を直接最適化するシステム研究。",
+      "library_body_check": "一次資料本文または論文ページの手法・評価記述まで確認し、タイトル・要旨だけではなく主要機構と実測/評価条件を確認した。LLM推論の配信・メモリ・並列実行・投機的復号を直接最適化するシステム研究。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2642c90107f2",
+    "round": "libimp-2642c90107f29a06-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2642c90107f29a06-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2642c90107f29a06-pre01.json",
+    "receipt": "sha256:11456632ec6eac08492e40598e820efa09df912bb4b9f8eb9b5b891723ff511a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2642c90107f2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
