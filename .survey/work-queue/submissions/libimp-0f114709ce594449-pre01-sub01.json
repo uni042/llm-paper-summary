@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment",
+      "source_url": "https://doi.org/10.1145/3772052.3772264",
+      "year": 2025,
+      "published": "2025-11-19",
+      "abstract": "Recent advances in large language models (LLMs) have intensified the need for serving LLMs that are cost-efficient and QoS-guaranteed. Existing frameworks often co-locate computationally distinct prefill and decode instances on homogeneous GPUs, overlooking their unique resource demands and under-utilizing heterogeneous GPUs. This leads to suboptimal resource utilization and increased capital expenditure. We present Cauchy, a LLM serving framework that adaptively deploys prefill and decode computation to the most suitable heterogeneous GPUs and dynamically schedules user requests. At the core of Cauchy is choosing proper GPU Combo, a conceptual GPU combination encompassing diverse GPU configurations, for their cost efficiency in running prefill-decode pairs. Cauchy deploys a set of combos to satisfy QoS requirements (e.g., goodput) of LLM inference. Cauchy further employs hierarchical scheduling to handle user requests, using opportunistic scheduling within the allocated GPU Combos and a goodput-weighted round-robin policy across GPU Combos. Dynamic autoscaling is used to stabilize the cost-efficiency in the face of surging requests. Experiments show that Cauchy achieves up to a 38.3% improvement in Tokens/USD efficiency over the state-of-the-art baselines, while maintaining strict Service Level Objectives (SLOs). Our work highlights the importance of leveraging workload and GPU heterogeneity to achieve superior cost-efficient LLM serving.",
+      "doi": "10.1145/3772052.3772264",
+      "canonical_id": "DOI:10.1145/3772052.3772264",
+      "authors": [
+        "Yihui Zhang",
+        "Han Shen",
+        "Ren-Yu Yang",
+        "Di Tian",
+        "Yuxi-ang Luo",
+        "Meng-Hao Zhang",
+        "Li Li",
+        "Chun-Ming Hu",
+        "Tian-Yu Wo",
+        "Cheng-Ru Song",
+        "Jin Ouyang"
+      ],
+      "reason": "プリフィル／デコードを異種GPUへ適応配置し、階層スケジューリングと自動スケールでLLMサービングの費用効率を直接改善する。",
+      "library_body_check": "本文でGPU Comboにより異種GPU構成のprefill-decode pairを選び、combo内opportunistic scheduling、combo間goodput-weighted round-robin、dynamic autoscalingを行うことを確認。SLOを維持しTokens/USDを最大38.3%改善。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0f114709ce59",
+    "round": "libimp-0f114709ce594449-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0f114709ce594449-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0f114709ce594449-pre01.json",
+    "receipt": "sha256:e53910a12765c2b7f0f66ffc546120e5f62a6e7dfa66d7f809de42d2e15b6595"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0f114709ce59",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
