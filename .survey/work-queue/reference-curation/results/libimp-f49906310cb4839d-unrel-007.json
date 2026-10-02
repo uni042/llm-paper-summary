@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49906310cb4839d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.07849",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.07849",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.07849",
+      "arXiv:2310.07849"
+    ],
+    "reason": "LLMによる合成訓練データ生成の有効性を分類タスクで分析する研究で、推論システム対象外。",
+    "first_checked_at": "2026-10-02T10:56:14+00:00",
+    "last_checked_at": "2026-10-02T10:56:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Synthetic Data Generation with Large Language Models for Text Classification: Potential and Limitations"
+  },
+  "processed_at": "2026-10-02T10:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49906310cb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

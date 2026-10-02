@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T10:54:03+00:00",
-  "record_count": 450,
+  "updated_at": "2026-10-02T10:56:14+00:00",
+  "record_count": 463,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -6630,6 +6630,201 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "SAKSHI: Decentralized AI Platforms"
+    },
+    "arXiv:2310.05914": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05914",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.05914",
+        "arXiv:2310.05914"
+      ],
+      "reason": "学習時の埋め込みへノイズを加える命令微調整手法で、推論基盤の高速化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "NEFTune: Noisy Embeddings Improve Instruction Finetuning"
+    },
+    "arXiv:2310.04610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.04610",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.04610",
+        "arXiv:2310.04610"
+      ],
+      "reason": "DeepSpeed技術を科学計算へ適用するイニシアチブで、汎用LLM推論サービングが最終適用先ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "DeepSpeed4Science Initiative: Enabling Large-Scale Scientific Discovery through Sophisticated AI System Technologies"
+    },
+    "arXiv:2310.03331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03331",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.03331",
+        "arXiv:2310.03331"
+      ],
+      "reason": "偏り・ノイズを含む文脈内学習の例を再重み付けするPEFT研究で、推論システム効率化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Fine-tune Language Models to Approximate Unbiased In-context Learning"
+    },
+    "arXiv:2310.02556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.02556",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.02556",
+        "arXiv:2310.02556"
+      ],
+      "reason": "LoRAの学習可能パラメータを固定ランダム基底の線形結合で圧縮する微調整手法で、推論基盤最適化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "NOLA: Compressing LoRA using Linear Combination of Random Basis"
+    },
+    "arXiv:2310.01852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.01852",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.01852",
+        "arXiv:2310.01852"
+      ],
+      "reason": "複数モダリティを言語表現へ揃える多モーダル事前学習研究で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment"
+    },
+    "arXiv:2309.17080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.17080",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.17080",
+        "arXiv:2309.17080"
+      ],
+      "reason": "自動運転向け生成世界モデルで、LLM推論基盤の最適化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "GAIA-1: A Generative World Model for Autonomous Driving"
+    },
+    "arXiv:2310.14192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14192",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.14192",
+        "arXiv:2310.14192"
+      ],
+      "reason": "LLMで分類境界付近の合成学習データを生成・再ラベルし小型分類器へ蒸留するデータ拡張研究で、推論基盤最適化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "PromptMix: A Class Boundary Augmentation Method for Large Language Model Distillation"
+    },
+    "arXiv:2310.12680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12680",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.12680",
+        "arXiv:2310.12680"
+      ],
+      "reason": "multi-head attentionの勾配降下学習に対する収束・汎化保証を扱う理論研究で、推論高速化を目的としない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "On the Optimization and Generalization of Multi-head Attention"
+    },
+    "arXiv:2310.12321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12321",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.12321",
+        "arXiv:2310.12321"
+      ],
+      "reason": "GPT-3系モデルの能力・応用等を広く整理する一般LLMサーベイで、推論システム特化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "A Survey of GPT-3 Family Large Language Models Including ChatGPT and GPT-4"
+    },
+    "arXiv:2310.11685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.11685",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.11685",
+        "arXiv:2310.11685"
+      ],
+      "reason": "softmax attentionとlinear attentionの性能差を理論的に説明する研究で、推論システム実装を提案しない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Why Softmax Attention Outperforms Linear Attention"
+    },
+    "arXiv:2310.09343": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09343",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.09343",
+        "arXiv:2310.09343"
+      ],
+      "reason": "対話向けchain-of-thought蒸留と応答品質改善が主題で、推論システム高速化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Dialogue Chain-of-Thought Distillation for Commonsense-aware Conversational Agents"
+    },
+    "arXiv:2310.07849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07849",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.07849",
+        "arXiv:2310.07849"
+      ],
+      "reason": "LLMによる合成訓練データ生成の有効性を分類タスクで分析する研究で、推論システム対象外。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Synthetic Data Generation with Large Language Models for Text Classification: Potential and Limitations"
+    },
+    "arXiv:2310.07088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07088",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.07088",
+        "arXiv:2310.07088"
+      ],
+      "reason": "複数promptやreasoning pathをensembleして推論精度を高める方式で、計算効率化よりreasoning qualityが主目的。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Diversity of Thought Improves Reasoning Abilities of LLMs"
     }
   }
 }

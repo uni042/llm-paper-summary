@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb241a89b5c7e47e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.05029",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.05029",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.05029",
+      "arXiv:2310.05029"
+    ],
+    "reason": "要約木をLLMが対話的に探索して固定コンテキスト長を回避する長文脈方式だが、GPU/KVキャッシュ等の推論システム最適化ではない。",
+    "first_checked_at": "2026-10-02T10:56:14+00:00",
+    "last_checked_at": "2026-10-02T10:56:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading"
+  },
+  "processed_at": "2026-10-02T10:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb241a89b5c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

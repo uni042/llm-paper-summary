@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T10:54:03+00:00",
-  "record_count": 376,
+  "updated_at": "2026-10-02T10:56:14+00:00",
+  "record_count": 378,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5437,6 +5437,36 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "Focused Transformer: Contrastive Training for Context Scaling"
+    },
+    "arXiv:2310.05029": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.05029",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.05029",
+        "arXiv:2310.05029"
+      ],
+      "reason": "要約木をLLMが対話的に探索して固定コンテキスト長を回避する長文脈方式だが、GPU/KVキャッシュ等の推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading"
+    },
+    "arXiv:2310.10080": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.10080",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.10080",
+        "arXiv:2310.10080"
+      ],
+      "reason": "推論時にstep-level reward modelを使う探索方式でinference-time computationに関係するが、目的は推論精度向上でシステム効率化ではない。",
+      "first_checked_at": "2026-10-02T10:56:14+00:00",
+      "last_checked_at": "2026-10-02T10:56:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Let's reward step by step: Step-Level reward model as the Navigators for Reasoning"
     }
   }
 }
