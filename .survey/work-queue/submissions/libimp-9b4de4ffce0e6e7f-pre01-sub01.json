@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Dynamic-LLaVA: Efficient Multimodal Large Language Models via Dynamic Vision-language Context Sparsification",
+      "source_url": "https://arxiv.org/abs/2412.00876",
+      "year": 2024,
+      "published": "2024-12-01",
+      "abstract": "Multimodal Large Language Models (MLLMs) have achieved remarkable success in vision understanding, reasoning, and interaction. However, the inference computation and memory increase progressively with the generation of output tokens during decoding, directly affecting the efficacy of MLLMs. Existing methods attempt to reduce the vision context redundancy to achieve efficient MLLMs. Unfortunately, the efficiency benefits of the vision context reduction in the prefill stage gradually diminish during the decoding stage. To address this problem, we proposed a dynamic vision-language context sparsification framework Dynamic-LLaVA, which dynamically reduces the redundancy of vision context in the prefill stage and decreases the memory and computation overhead of the generated language context during decoding. Dynamic-LLaVA designs a tailored sparsification inference scheme for different inference modes, i.e., prefill, decoding with and without KV cache, to achieve efficient inference of MLLMs. In practice, Dynamic-LLaVA can reduce computation consumption by $\\sim$75\\% in the prefill stage. Meanwhile, throughout the entire generation process of MLLMs, Dynamic-LLaVA reduces the $\\sim$50\\% computation consumption under decoding without KV cache, while saving $\\sim$50\\% GPU memory overhead when decoding with KV cache, due to the vision-language context sparsification. Extensive experiments also demonstrate that Dynamic-LLaVA achieves efficient inference for MLLMs with negligible understanding and generation ability degradation or even performance gains compared to the full-context inference baselines. Code is available at https://github.com/Osilly/dynamic_llava .",
+      "canonical_id": "arXiv:2412.00876",
+      "arxiv_id": "2412.00876",
+      "doi": "10.48550/arXiv.2412.00876",
+      "authors": [
+        "Wenxuan Huang",
+        "Zijie Zhai",
+        "Yun-Hang Shen",
+        "Shao-Sheng Cao",
+        "Fei Zhao",
+        "Xiangfeng Xu",
+        "Zheyu Ye",
+        "Yao Hu",
+        "Shao-Hui Lin"
+      ],
+      "reason": "視覚・言語contextを動的に疎化し、MLLM推論の計算量とKV cacheメモリを削減する。",
+      "library_body_check": "本文のvision/language context sparsification、dynamic token selection、推論効率・精度評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs",
+      "source_url": "https://arxiv.org/abs/2412.21187",
+      "year": 2024,
+      "published": "2024-12-30",
+      "abstract": "The remarkable performance of models like the OpenAI o1 can be attributed to their ability to emulate human-like long-time thinking during inference. These models employ extended chain-of-thought (CoT) processes, exploring multiple strategies to enhance problem-solving capabilities. However, a critical question remains: How to intelligently and efficiently scale computational resources during testing. This paper presents the first comprehensive study on the prevalent issue of overthinking in these models, where excessive computational resources are allocated for simple problems with minimal benefit. We introduce novel efficiency metrics from both outcome and process perspectives to evaluate the rational use of computational resources by o1-like models. Using a self-training paradigm, we propose strategies to mitigate overthinking, streamlining reasoning processes without compromising accuracy. Experimental results show that our approach successfully reduces computational overhead while preserving model performance across a range of testsets with varying difficulty levels, such as GSM8K, MATH500, GPQA, and AIME.",
+      "canonical_id": "arXiv:2412.21187",
+      "arxiv_id": "2412.21187",
+      "doi": "10.48550/arXiv.2412.21187",
+      "authors": [
+        "Xingyu Chen",
+        "Jia-Hao Xu",
+        "Tian Liang",
+        "Zhi-Wei He",
+        "Jianhui Pang",
+        "Dian Yu",
+        "Linfeng Song",
+        "Qiu-Zhi Liu",
+        "Mengfei Zhou",
+        "Zhuo-Sheng Zhang",
+        "Rui Wang",
+        "Zhao-Peng Tu",
+        "Haitao Mi",
+        "Dong Yu"
+      ],
+      "reason": "reasoning時の冗長tokenを削減して推論計算を減らす手法で、MATH500ではtoken出力48.6%削減を報告する。",
+      "library_body_check": "本文のefficiency metrics、self-trainingによるresponse streamlining、複数reasoning benchmark評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL",
+      "source_url": "https://arxiv.org/abs/2603.13606",
+      "year": 2026,
+      "published": "2026-03-13",
+      "abstract": "Mixture-of-Experts (MoE) architectures have become essential for scaling large language models, driving the development of specialized device-initiated communication libraries such as DeepEP, Hybrid-EP, and others. These libraries demonstrate the performance benefits of GPU-initiated RDMA for MoE dispatch and combine operations. This paper presents NCCL EP (Expert Parallelism), a ground-up MoE communication library built entirely on NCCL's Device API. NCCL EP provides unified ncclEpDispatch and ncclEpCombine primitives with both C and Python interfaces, supporting Low-Latency (LL) mode for inference decoding and High-Throughput (HT) mode for training and inference prefill. LL targets small batch sizes (1-128 tokens) using direct all-to-all RDMA+NVLink mesh connectivity with double-buffered communication for overlapping dispatch and combine phases. HT targets large batches (4096+ tokens) using hierarchical communication that aggregates tokens within NVLink domains before inter-node RDMA transmission. Both modes leverage Device API for both intra- and inter-node communications, taking advantage of its topology awareness and optimized GPU-initiated implementation. We evaluate NCCL EP on an H100-based cluster across multi-node configurations, demonstrating competitive LL kernel performance and presenting end-to-end results with vLLM integration. By building MoE communication natively within NCCL, NCCL EP provides a supported path for expert parallelism on current and emerging NVIDIA platforms.",
+      "canonical_id": "arXiv:2603.13606",
+      "arxiv_id": "2603.13606",
+      "doi": "10.48550/arXiv.2603.13606",
+      "authors": [
+        "A. Gol'dman",
+        "N. Boker",
+        "Maayan Sheraizin",
+        "Nimrod Admoni",
+        "A. Polyakov",
+        "Subhadeep Bhattacharya",
+        "Fangfei Yu",
+        "Kai Sun",
+        "Georgios Theodorakis",
+        "Hsin-Chung Yin",
+        "Peter-Jan Gootzen",
+        "A. Shafi",
+        "Assaf Ravid",
+        "S. Di Girolamo",
+        "James Dinan",
+        "Xiaofan Li",
+        "Manjunath Gorentla Venkata",
+        "Gil Bloch"
+      ],
+      "reason": "MoE expert parallelismのall-to-all通信をNCCL APIとして最適化する推論・学習共通の通信基盤で、MoE推論に直接有用。",
+      "library_body_check": "本文のEP communication API、dispatch/combine、GPU通信kernelと性能評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2604.16957",
+      "year": 2026,
+      "published": "2026-04-18",
+      "abstract": "We present Open-TQ-Metal, the first implementation of fused compressed-domain attention on Apple Silicon, enabling 128K-context inference for Llama 3.1 70B on a single 64GB consumer Mac -- a configuration impossible with all existing inference frameworks. Open-TQ-Metal quantizes the KV cache to int4 on the fly and computes attention directly on the compressed representation via custom Metal compute shaders, eliminating all intermediate dequantization matrices. Across 330 experiments spanning two model families (Gemma 4 31B and Llama 3.1 70B), the fused sdpa_int4 kernel achieves 48x attention speedup at 128K context over the dequantize-then-attend baseline, reduces KV cache memory from 40 GB to 12.5 GB (3.2x compression), and maintains identical top-1 token predictions to FP16 inference. We further provide the first cross-architecture analysis of KV cache quantization methods, revealing that the attention scale factor -- not model size -- determines whether angular quantization schemes like PolarQuant succeed or fail, with Gemma 4's attn_scale=1.0 amplifying directional error 25-100x more than Llama's standard 1/sqrt(d) scaling.",
+      "canonical_id": "arXiv:2604.16957",
+      "arxiv_id": "2604.16957",
+      "doi": "10.48550/arXiv.2604.16957",
+      "authors": [
+        "Sai Vegasena"
+      ],
+      "reason": "Apple Silicon上で圧縮領域attentionを融合し、長文脈LLM推論のメモリ帯域と遅延を削減する。",
+      "library_body_check": "本文のcompressed-domain attention、Metal kernel融合、Apple Silicon実機評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MiniMax Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2606.13392",
+      "year": 2026,
+      "published": "2026-06-11",
+      "abstract": "Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.",
+      "canonical_id": "arXiv:2606.13392",
+      "arxiv_id": "2606.13392",
+      "doi": "10.48550/arXiv.2606.13392",
+      "authors": [
+        "Xunhao Lai",
+        "Weiqi Xu",
+        "Yu-Feng Yang",
+        "Qiaorui Chen",
+        "Yangyifan Xu",
+        "Lun-Bin Zeng",
+        "Xiao-Long Li",
+        "Haohai Sun",
+        "Haichao Zhu",
+        "Vito Zhang",
+        "Jin-Kai Hu",
+        "Jia-Yao Li",
+        "Rui Gao",
+        "Ze-Kun Li",
+        "Song-Quan Zhu",
+        "Jing-Kai Zhou",
+        "Peng-Yu Zhao"
+      ],
+      "reason": "GQA単位のblock sparse attentionとGPU kernelを協調設計し、長文脈prefill/decodeを実時間で高速化する。",
+      "library_body_check": "本文のIndex/Main Branch、Top-k kernel、sparse attention kernel、109B MoE評価を確認。1M contextで14.2x prefill・7.6x decode speedupを報告。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9b4de4ffce0e",
+    "round": "libimp-9b4de4ffce0e6e7f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9b4de4ffce0e6e7f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9b4de4ffce0e6e7f-pre01.json",
+    "receipt": "sha256:8ce28ee7ef74bdcb7d2dec919a8010c1b2a2fa1d8ef7e9fed64632a6ca74e9fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9b4de4ffce0e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
