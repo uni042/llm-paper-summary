@@ -495,7 +495,7 @@ def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
         "",
         "| 指標 | 現在値 |",
         "|---|---:|",
-        f"| 収録候補論文 | **{metrics['candidate_papers']}** |",
+        f"| 収録候補論文数 | **{metrics['candidate_papers']}** |",
         f"| 未claim Research job | **{metrics['unclaimed_jobs']}** |",
         f"| 直近24hの検証済みResearch収録 | **{metrics['research_24h']}** |",
         f"| 最終検証済みResearch収録 | **{research_text}** |",
