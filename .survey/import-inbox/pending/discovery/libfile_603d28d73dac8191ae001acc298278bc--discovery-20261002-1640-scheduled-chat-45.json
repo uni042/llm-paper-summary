@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1640-scheduled-chat-45",
+  "reference_main_sha": "4a1868ce3b63e425b6b99f6a6db96d4809c6cca4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14192",
+      "identity_tokens": [
+        "arXiv:2310.14192",
+        "DOI:10.48550/arXiv.2310.14192"
+      ],
+      "title": "PromptMix: A Class Boundary Augmentation Method for Large Language Model Distillation",
+      "reason": "LLMで分類境界付近の合成学習データを生成・再ラベルし小型分類器へ蒸留するデータ拡張研究で、推論基盤最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.14192",
+      "body_check": "本文は2-shot/zero-shotテキスト分類向けのデータ生成とDistilBERT/BERTへの知識移転を評価し、推論システム機構は扱わない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12680",
+      "identity_tokens": [
+        "arXiv:2310.12680",
+        "DOI:10.48550/arXiv.2310.12680"
+      ],
+      "title": "On the Optimization and Generalization of Multi-head Attention",
+      "reason": "multi-head attentionの勾配降下学習に対する収束・汎化保証を扱う理論研究で、推論高速化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2310.12680",
+      "body_check": "本文はsingle-layer multi-head self-attentionのgradient-descent trainingとgeneralizationを理論解析し、推論ランタイムやメモリ削減の実装・評価はない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12321",
+      "identity_tokens": [
+        "arXiv:2310.12321",
+        "DOI:10.48550/arXiv.2310.12321"
+      ],
+      "title": "A Survey of GPT-3 Family Large Language Models Including ChatGPT and GPT-4",
+      "reason": "GPT-3系モデルの能力・応用等を広く整理する一般LLMサーベイで、推論システム特化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.12321",
+      "body_check": "本文はTransformer基礎、GPT-3/ChatGPT/GPT-4、下流タスク、多言語、データラベリング等を包括的に整理し、推論基盤の専門サーベイではない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.11685",
+      "identity_tokens": [
+        "arXiv:2310.11685",
+        "DOI:10.48550/arXiv.2310.11685"
+      ],
+      "title": "Why Softmax Attention Outperforms Linear Attention",
+      "reason": "softmax attentionとlinear attentionの性能差を理論的に説明する研究で、推論システム実装を提案しない。",
+      "source_url": "https://arxiv.org/abs/2310.11685",
+      "body_check": "本文は両attentionの性能差を理論解析する。計算量差には触れるが、推論カーネル、KV管理、サービングの新規方式や実測高速化は主貢献ではない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.10080",
+      "identity_tokens": [
+        "arXiv:2310.10080",
+        "DOI:10.48550/arXiv.2310.10080"
+      ],
+      "title": "Let's reward step by step: Step-Level reward model as the Navigators for Reasoning",
+      "reason": "推論時にstep-level reward modelを使う探索方式でinference-time computationに関係するが、目的は推論精度向上でシステム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.10080",
+      "body_check": "本文はPRMのstep-level feedbackを用いたheuristic greedy searchで数学・コード生成のreasoning pathを選択する。推論時探索だがlatency/throughput/KV/serving最適化が主題ではない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09343",
+      "identity_tokens": [
+        "arXiv:2310.09343",
+        "DOI:10.48550/arXiv.2310.09343"
+      ],
+      "title": "Dialogue Chain-of-Thought Distillation for Commonsense-aware Conversational Agents",
+      "reason": "対話向けchain-of-thought蒸留と応答品質改善が主題で、推論システム高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.09343",
+      "body_check": "本文はLLM teacherからrationaleを選別してDOCTORへ蒸留し対話応答品質を評価する。主貢献はreasoning/knowledge distillation。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.08915",
+      "identity_tokens": [
+        "arXiv:2310.08915",
+        "DOI:10.48550/arXiv.2310.08915"
+      ],
+      "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs",
+      "reason": "追加学習なしでLLMを高疎性へ圧縮し、推論時のメモリ・計算コストを下げられる実用的なLLM圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2310.08915",
+      "body_check": "本文ではpruning-and-growingを反復するDSnoTでLLaMA/Vicuna/OPTを疎化しN:M sparsityも維持する。70% sparsityのLLaMA-7BでWandaよりperplexityを26.79改善し、Ampere sparse tensor core向け2:4/4:8 sparsityも評価する。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07849",
+      "identity_tokens": [
+        "arXiv:2310.07849",
+        "DOI:10.48550/arXiv.2310.07849"
+      ],
+      "title": "Synthetic Data Generation with Large Language Models for Text Classification: Potential and Limitations",
+      "reason": "LLMによる合成訓練データ生成の有効性を分類タスクで分析する研究で、推論システム対象外。",
+      "source_url": "https://arxiv.org/abs/2310.07849",
+      "body_check": "本文はLLM生成データで学習した分類器の性能とsubjectivityの関係を評価し、最終適用先はtraining data generation。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07088",
+      "identity_tokens": [
+        "arXiv:2310.07088",
+        "DOI:10.48550/arXiv.2310.07088"
+      ],
+      "title": "Diversity of Thought Improves Reasoning Abilities of LLMs",
+      "reason": "複数promptやreasoning pathをensembleして推論精度を高める方式で、計算効率化よりreasoning qualityが主目的。",
+      "source_url": "https://arxiv.org/abs/2310.07088",
+      "body_check": "本文はDIV-SE/IDIV-SEでprompt diversityを生成しplanning/graph coloring等の性能を改善する。サービング・カーネル・メモリの効率化方式ではない。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.06178",
+      "identity_tokens": [
+        "arXiv:2310.06178",
+        "DOI:10.48550/arXiv.2310.06178"
+      ],
+      "title": "Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM",
+      "reason": "低精度LLMのGeMMをlookup table化して算術命令を減らす、推論向けハードウェア・カーネル最適化。",
+      "source_url": "https://arxiv.org/abs/2310.06178",
+      "body_check": "本文はint4等の低精度weight向けmsGeMMを提案し、GPT-3 MLP実寸法でdepth=3時に理論約2.5倍の演算削減を示す。現行GPUでは専用lookup-add coreが必要な次世代GPU提案だがLLM推論カーネルへ直接適用される。",
+      "first_checked_at": "2026-10-02T16:40:47+09:00",
+      "last_checked_at": "2026-10-02T16:40:47+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 491
+    }
+  ]
+}
