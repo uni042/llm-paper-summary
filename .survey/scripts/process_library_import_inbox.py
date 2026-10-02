@@ -236,6 +236,88 @@ def block_payload(source: Path, target_dir: Path) -> Path:
     return target
 
 
+def _retryable_precheck_provenance_failure(repo_root: Path, failure_id: str) -> bool:
+    result_path = repo_root / DISCOVERY_RESULTS / f"{failure_id}.json"
+    if not result_path.is_file():
+        return False
+    try:
+        payload = read_json(result_path)
+    except Exception:
+        return False
+    return (
+        payload.get("ok") is False
+        and payload.get("retryable") is True
+        and str(payload.get("error_code") or "") == "discovery_precheck_required"
+    )
+
+
+def recover_retryable_precheck_provenance_blocks(repo_root: Path) -> int:
+    """Requeue Library Discovery payloads blocked only by invalid precheck provenance.
+
+    Historical failed submissions/results stay immutable. The retained original
+    Library payload is copied to a deterministic retry inbox name, which creates
+    a fresh content-derived precheck/submission lineage. A terminal retry result
+    suppresses future requeue attempts.
+    """
+    recovered = 0
+    results_root = repo_root / RESULT_DISCOVERY
+    blocked_root = repo_root / BLOCKED_DISCOVERY
+    pending_root = repo_root / PENDING_DISCOVERY
+    waiting_root = repo_root / WAITING_DISCOVERY
+    pending_root.mkdir(parents=True, exist_ok=True)
+
+    if not results_root.is_dir():
+        return 0
+
+    for result_path in sorted(results_root.glob("*.json")):
+        try:
+            result = read_json(result_path)
+        except Exception:
+            continue
+        if str(result.get("status") or "") != "blocked_downstream":
+            continue
+        failures = result.get("failures")
+        if not isinstance(failures, list) or not failures:
+            continue
+        failure_ids = [str(item) for item in failures if isinstance(item, str) and item.strip()]
+        if not failure_ids or not all(
+            _retryable_precheck_provenance_failure(repo_root, failure_id)
+            for failure_id in failure_ids
+        ):
+            continue
+
+        retained = result.get("retained_payload")
+        if not isinstance(retained, str) or not retained.strip():
+            continue
+        source = repo_root / retained
+        if not source.is_file() or blocked_root not in source.parents:
+            continue
+
+        retry_tag = hashlib.sha256(
+            result_path.relative_to(repo_root).as_posix().encode("utf-8")
+        ).hexdigest()[:12]
+        retry_name = f"retry-precheck-{retry_tag}--{source.name}"
+        retry_pending = pending_root / retry_name
+        retry_waiting = waiting_root / retry_name
+        retry_result = results_root / result_filename(Path(retry_name))
+
+        if retry_result.is_file():
+            continue
+        if retry_pending.is_file():
+            if retry_pending.read_bytes() != source.read_bytes():
+                raise RuntimeError(f"retry payload collision: {retry_pending}")
+            continue
+        if retry_waiting.is_file():
+            if retry_waiting.read_bytes() != source.read_bytes():
+                raise RuntimeError(f"retry payload collision: {retry_waiting}")
+            continue
+
+        retry_pending.write_bytes(source.read_bytes())
+        recovered += 1
+
+    return recovered
+
+
 def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     imported = 0
     terminal = 0
@@ -693,6 +775,7 @@ def process_discovery(
     repo_root: Path,
     max_records: int | None = None,
 ) -> tuple[int, int]:
+    recover_retryable_precheck_provenance_blocks(repo_root)
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
