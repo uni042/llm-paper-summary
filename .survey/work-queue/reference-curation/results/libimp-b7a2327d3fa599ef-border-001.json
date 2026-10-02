@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.05209",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.05209",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.05209",
+      "arXiv:2310.05209"
+    ],
+    "reason": "RoPEの基数と微調整長から長文脈外挿を説明し100万トークン級へ拡張するが、主貢献は位置符号化と微調整によるモデル能力で、推論ランタイム効率化そのものではない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+    ],
+    "title": "Scaling Laws of RoPE-based Extrapolation"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

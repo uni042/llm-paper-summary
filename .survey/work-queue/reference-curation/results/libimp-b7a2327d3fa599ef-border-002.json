@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.04064",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.04064",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.04064",
+      "arXiv:2310.04064"
+    ],
+    "reason": "高次attentionを有界入力なら準線形時間で近似できる理論はattention効率化に関係するが、LLM推論システムや実装・サービング評価が主対象ではない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "How to Capture Higher-order Correlations? Generalizing Matrix Softmax Attention to Kronecker Computation"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

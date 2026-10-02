@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T08:18:22+00:00",
-  "record_count": 365,
+  "updated_at": "2026-10-02T10:54:03+00:00",
+  "record_count": 376,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4311,7 +4311,7 @@
       ],
       "reason": "Transformerの再帰的解釈が中心で、直接の推論高速化システムではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4325,7 +4325,7 @@
       ],
       "reason": "離散拡散の生成理論・学習法が中心だが、拡散言語モデル推論の基礎技術として関連。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4339,7 +4339,7 @@
       ],
       "reason": "推論時計算量を増減するtest-time scaling研究だが、主眼は推論品質と推論予算の制御でシステム高速化ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5276,6 +5276,167 @@
         "papers/inference/01-offload-hierarchical-memory/"
       ],
       "title": "Memory Pooling With CXL"
+    },
+    "arXiv:2308.11601": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.11601",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.11601",
+        "arXiv:2308.11601"
+      ],
+      "reason": "入力ごとに複数LLMから適切なモデルを選ぶ実時間ルーティングでサービング系に近いが、主要評価はモデル選択精度と多目的選択。",
+      "first_checked_at": "2026-10-02T10:54:02+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Tryage: Real-time, intelligent Routing of User Prompts to Large Language Models"
+    },
+    "arXiv:2308.03905": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.03905",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.03905",
+        "arXiv:2308.03905"
+      ],
+      "reason": "端末上で自然言語理解を完結させる実運用システム設計でエッジ推論には関連するが、現行LLM推論ランタイム最適化論文ではない。",
+      "first_checked_at": "2026-10-02T10:54:02+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Intelligent Assistant Language Understanding On Device"
+    },
+    "arXiv:2308.15136": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.15136",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.15136",
+        "arXiv:2308.15136"
+      ],
+      "reason": "GPU上の近似最近傍検索はRAG検索段やベクトル検索の推論経路に利用できるが、論文自体はLLM専用ではなく汎用ANNSが主対象。",
+      "first_checked_at": "2026-10-02T10:54:02+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.27090-inferscale-gpu-native-kv-injection.md"
+      ],
+      "title": "CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs"
+    },
+    "arXiv:2308.11030": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.11030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.11030",
+        "arXiv:2308.11030"
+      ],
+      "reason": "HBM3等を含むメモリシステム評価基盤としてLLMメモリ階層研究に利用可能だが、論文自体は汎用DRAMシミュレータでLLM推論専用ではない。",
+      "first_checked_at": "2026-10-02T10:54:02+00:00",
+      "last_checked_at": "2026-10-02T10:54:02+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "title": "Ramulator 2.0: A Modern, Modular, and Extensible DRAM Simulator"
+    },
+    "arXiv:2310.05209": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.05209",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.05209",
+        "arXiv:2310.05209"
+      ],
+      "reason": "RoPEの基数と微調整長から長文脈外挿を説明し100万トークン級へ拡張するが、主貢献は位置符号化と微調整によるモデル能力で、推論ランタイム効率化そのものではない。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "Scaling Laws of RoPE-based Extrapolation"
+    },
+    "arXiv:2310.04064": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.04064",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.04064",
+        "arXiv:2310.04064"
+      ],
+      "reason": "高次attentionを有界入力なら準線形時間で近似できる理論はattention効率化に関係するが、LLM推論システムや実装・サービング評価が主対象ではない。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "How to Capture Higher-order Correlations? Generalizing Matrix Softmax Attention to Kronecker Computation"
+    },
+    "arXiv:2310.01427": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.01427",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.01427",
+        "arXiv:2310.01427"
+      ],
+      "reason": "attention scoreに基づき長文脈の情報を再配置してrecency biasを緩和する推論時処理だが、主評価は長文理解品質でありGPU/KV/latency最適化ではない。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Attention Sorting Combats Recency Bias In Long Context Language Models"
+    },
+    "arXiv:2609.24991": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24991",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.24991",
+        "arXiv:2609.24991"
+      ],
+      "reason": "vLLMのKV cacheを含む共有推論費用の帰属を実測するが、主貢献はFinOps/課金台帳で推論ランタイム最適化そのものではないため境界扱い。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [],
+      "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills"
+    },
+    "arXiv:2609.17391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17391",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.17391",
+        "arXiv:2609.17391"
+      ],
+      "reason": "GPU kernelからmodel server・feature storeまでagentが横断最適化するserving研究だが、実運用対象が推薦システム中心でLLM推論専用ではないため境界扱い。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [],
+      "title": "FlashVector: Agent for Hierarchical Model Serving Stack Optimization"
+    },
+    "arXiv:2306.13421": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.13421",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.13421",
+        "arXiv:2306.13421"
+      ],
+      "reason": "自己検索（self-retrieval）を言語モデルへネイティブ統合し長文脈を扱うため推論時の外部記憶利用には関係するが、主貢献は検索器と言語モデルの共同事前学習であり推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Retrieval-Pretrained Transformer: Long-range Language Modeling with Self-retrieval"
+    },
+    "arXiv:2307.03170": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.03170",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2307.03170",
+        "arXiv:2307.03170"
+      ],
+      "reason": "外部(key,value) memoryへattentionする長文脈アーキテクチャは推論時メモリ利用に関係するが、中心はcontrastive trainingで検索空間のdistractionを減らすモデル学習。",
+      "first_checked_at": "2026-10-02T10:54:03+00:00",
+      "last_checked_at": "2026-10-02T10:54:03+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Focused Transformer: Contrastive Training for Context Scaling"
     }
   }
 }

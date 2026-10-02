@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45359bb8ae210dbd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.05135",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.05135",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.05135",
+      "arXiv:2309.05135"
+    ],
+    "reason": "半正定値計画のストリーミング解法であり、LLM推論・サービングを対象としない。",
+    "first_checked_at": "2026-10-02T10:54:02+00:00",
+    "last_checked_at": "2026-10-02T10:54:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "Streaming Semidefinite Programs: O(sqrt(n)) Passes, Small Space and Fast Runtime"
+  },
+  "processed_at": "2026-10-02T10:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45359bb8ae21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

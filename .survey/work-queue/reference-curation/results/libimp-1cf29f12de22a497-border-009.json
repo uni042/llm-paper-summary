@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cf29f12de22a497-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.03905",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.03905",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.03905",
+      "arXiv:2308.03905"
+    ],
+    "reason": "端末上で自然言語理解を完結させる実運用システム設計でエッジ推論には関連するが、現行LLM推論ランタイム最適化論文ではない。",
+    "first_checked_at": "2026-10-02T10:54:02+00:00",
+    "last_checked_at": "2026-10-02T10:54:02+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Intelligent Assistant Language Understanding On Device"
+  },
+  "processed_at": "2026-10-02T10:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cf29f12de22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

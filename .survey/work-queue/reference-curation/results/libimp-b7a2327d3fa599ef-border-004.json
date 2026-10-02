@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.01427",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.01427",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.01427",
+      "arXiv:2310.01427"
+    ],
+    "reason": "attention scoreに基づき長文脈の情報を再配置してrecency biasを緩和する推論時処理だが、主評価は長文理解品質でありGPU/KV/latency最適化ではない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "Attention Sorting Combats Recency Bias In Long Context Language Models"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

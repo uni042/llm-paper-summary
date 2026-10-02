@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51a6c2bd7d046d0d-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.19393",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.19393",
+    "identity_tokens": [
+      "arXiv:2501.19393"
+    ],
+    "reason": "推論時計算量を増減するtest-time scaling研究だが、主眼は推論品質と推論予算の制御でシステム高速化ではない。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-10-02T10:54:02+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "s1: Simple test-time scaling"
+  },
+  "processed_at": "2026-10-02T10:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51a6c2bd7d04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

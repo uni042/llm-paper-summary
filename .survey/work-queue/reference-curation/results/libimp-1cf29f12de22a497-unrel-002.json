@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cf29f12de22a497-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.03450",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.03450",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.03450",
+      "arXiv:2309.03450"
+    ],
+    "reason": "8K文脈の7Bモデル系列の事前学習・命令調整と能力評価が中心で、推論システム最適化が主貢献ではない。",
+    "first_checked_at": "2026-10-02T10:54:02+00:00",
+    "last_checked_at": "2026-10-02T10:54:02+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "XGen-7B Technical Report"
+  },
+  "processed_at": "2026-10-02T10:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cf29f12de22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

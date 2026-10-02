@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.13345",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.13345",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.13345",
+      "arXiv:2309.13345"
+    ],
+    "reason": "LLMの長文理解能力を評価するベンチマークで、推論システムの速度・KV・メモリ最適化方式を提案しない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+    ],
+    "title": "BAMBOO: A Comprehensive Benchmark for Evaluating Long Text Modeling Capacities of Large Language Models"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
