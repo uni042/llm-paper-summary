@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Beyond Classical Attention: Quantum Attention for Scalable Computation",
+      "source_url": "https://arxiv.org/abs/2307.08045",
+      "year": 2023,
+      "published": "2023-07-16",
+      "abstract": "As large language models (LLMs) demonstrate outstanding performance across various tasks, attention-driven models have profoundly transformed the field of machine learning. Since attention computations account for the primary computational overhead in both model inference and training, efficiently computing attention matrices has become one of the core challenges in accelerating large language models. It is well-known that quantum machines possess computational advantages over classical machines, and the role of quantum computing in LLMs remains largely unexplored. In this work, we focus on leveraging the Grover search algorithm to efficiently compute a sparse attention matrix. Through comparisons with classical algorithms, we demonstrate that our method achieves quantum acceleration in polynomial time. Additionally, we observe that the generated quantum attention matrices naturally exhibit low-rank structures, providing further theoretical support for efficient modeling. Moreover, within the specific context of attention matrix computation, we conduct a systematic and detailed analysis of the error and time complexity of the proposed algorithm.",
+      "canonical_id": "arXiv:2307.08045",
+      "arxiv_id": "2307.08045",
+      "authors": [
+        "Xu-Yang Guo",
+        "Zhao Song",
+        "Xin Yang",
+        "Ruizhe Zhang"
+      ],
+      "reason": "Grover探索で疎なattention matrixを近似し、LLM推論のattention計算を理論的に準二乗未満へ高速化する直接的な推論アルゴリズム研究。",
+      "library_body_check": "本文では各rowの閾値以上の要素をGrover searchで探索し、k-row-sparse成分とrank-1成分からなる近似Bを構成する。QRAM上のoracleを仮定し、attention推論を O~(n^1.5 k^0.5 d + nkd) 時間で計算する定理を示す。実GPU評価はなく量子計算仮定が強いが、最終適用先はLLM inference attention accelerationなのでaccept。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f19a5ced7d4d",
+    "round": "libimp-f19a5ced7d4dde0d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f19a5ced7d4dde0d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f19a5ced7d4dde0d-pre01.json",
+    "receipt": "sha256:bf15f642b2a54ce5c5a4102ae2120ab8270a17172c3628d804bbb2c38b676b35"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f19a5ced7d4d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM",
+      "source_url": "https://arxiv.org/abs/2310.06178",
+      "year": 2023,
+      "published": "2023-10-09",
+      "abstract": "AI models are increasing in size and recent advancement in the community has shown that unlike HPC applications where double precision datatype are required, lower-precision datatypes such as fp8 or int4 are sufficient to bring the same model quality both for training and inference. Following these trends, GPU vendors such as NVIDIA and AMD have added hardware support for fp16, fp8 and int8 GeMM operations with an exceptional performance via Tensor Cores. However, this paper proposes a new algorithm called msGeMM which shows that AI models with low-precision datatypes can run with ~2.5x fewer multiplication and add instructions. Efficient implementation of this algorithm requires special CUDA cores with the ability to add elements from a small look-up table at the rate of Tensor Cores.",
+      "canonical_id": "arXiv:2310.06178",
+      "arxiv_id": "2310.06178",
+      "doi": "10.48550/arXiv.2310.06178",
+      "authors": [
+        "Saeed Maleki"
+      ],
+      "reason": "低精度LLMのGeMMをlookup table化して算術命令を減らす、推論向けハードウェア・カーネル最適化。",
+      "library_body_check": "本文はint4等の低精度weight向けmsGeMMを提案し、GPT-3 MLP実寸法でdepth=3時に理論約2.5倍の演算削減を示す。現行GPUでは専用lookup-add coreが必要な次世代GPU提案だがLLM推論カーネルへ直接適用される。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs",
+      "source_url": "https://arxiv.org/abs/2310.08915",
+      "year": 2023,
+      "published": "2023-10-13",
+      "abstract": "The ever-increasing large language models (LLMs), though opening a potential path for the upcoming artificial general intelligence, sadly drops a daunting obstacle on the way towards their on-device deployment. As one of the most well-established pre-LLMs approaches in reducing model complexity, network pruning appears to lag behind in the era of LLMs, due mostly to its costly fine-tuning (or re-training) necessity under the massive volumes of model parameter and training data. To close this industry-academia gap, we introduce Dynamic Sparse No Training (DSnoT), a training-free fine-tuning approach that slightly updates sparse LLMs without the expensive backpropagation and any weight updates. Inspired by the Dynamic Sparse Training, DSnoT minimizes the reconstruction error between the dense and sparse LLMs, in the fashion of performing iterative weight pruning-and-growing on top of sparse LLMs. To accomplish this purpose, DSnoT particularly takes into account the anticipated reduction in reconstruction error for pruning and growing, as well as the variance w.r.t. different input data for growing each weight. This practice can be executed efficiently in linear time since its obviates the need of backpropagation for fine-tuning LLMs. Extensive experiments on LLaMA-V1/V2, Vicuna, and OPT across various benchmarks demonstrate the effectiveness of DSnoT in enhancing the performance of sparse LLMs, especially at high sparsity levels. For instance, DSnoT is able to outperform the state-of-the-art Wanda by 26.79 perplexity at 70% sparsity with LLaMA-7B. Our paper offers fresh insights into how to fine-tune sparse LLMs in an efficient training-free manner and open new venues to scale the great potential of sparsity to LLMs. Codes are available at https://github.com/zyxxmu/DSnoT.",
+      "canonical_id": "arXiv:2310.08915",
+      "arxiv_id": "2310.08915",
+      "doi": "10.48550/arXiv.2310.08915",
+      "authors": [
+        "Yu-xin Zhang",
+        "Lirui Zhao",
+        "Mingbao Lin",
+        "Yun-Ting Sun",
+        "Yi-Wu Yao",
+        "Xing Han",
+        "Jared Tanner",
+        "Shi-Wei Liu",
+        "Rong-Rong Ji"
+      ],
+      "reason": "追加学習なしでLLMを高疎性へ圧縮し、推論時のメモリ・計算コストを下げられる実用的なLLM圧縮方式。",
+      "library_body_check": "本文ではpruning-and-growingを反復するDSnoTでLLaMA/Vicuna/OPTを疎化しN:M sparsityも維持する。70% sparsityのLLaMA-7BでWandaよりperplexityを26.79改善し、Ampere sparse tensor core向け2:4/4:8 sparsityも評価する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f49906310cb4",
+    "round": "libimp-f49906310cb4839d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f49906310cb4839d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f49906310cb4839d-pre01.json",
+    "receipt": "sha256:66a2c32577502164bf20b9a8fb325c29f75fba569752eff42dce8e051e9f7618"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f49906310cb4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
