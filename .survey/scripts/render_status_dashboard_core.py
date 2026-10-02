@@ -497,9 +497,9 @@ def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
         "|---|---:|",
         f"| 収録候補論文数 | **{metrics['candidate_papers']}** |",
         f"| 未claim Research job | **{metrics['unclaimed_jobs']}** |",
-        f"| 直近24hの検証済みResearch収録 | **{metrics['research_24h']}** |",
-        f"| 最終検証済みResearch収録 | **{research_text}** |",
-        f"| 最終検証済みDiscovery探索 | **{discovery_text}** |",
+        f"| 直近24hのResearch処理完了 | **{metrics['research_24h']}** |",
+        f"| 最終Research処理完了 | **{research_text}** |",
+        f"| 最終Discovery探索完了 | **{discovery_text}** |",
         f"| 整合性異常 | **{metrics['consistency_total']}** |",
         "",
     ]
