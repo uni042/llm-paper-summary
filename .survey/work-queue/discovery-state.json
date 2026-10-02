@@ -1,58 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-02T11:09:21+00:00",
-  "last_run_key": "library-import-2642c90107f2",
-  "last_round": "libimp-2642c90107f29a06-pre01",
+  "updated_at": "2026-10-02T11:10:53+00:00",
+  "last_run_key": "library-import-7d4a69cded45",
+  "last_round": "libimp-7d4a69cded450dde-pre01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-agent-systems-6",
-      "axis": "agentic workload characterization / sandbox memory / secure mobile serving",
-      "query_summary": "Expanded agentic serving beyond scheduler-only work into systems characterization, sandbox/resource isolation, and prefix-cache measurement. Two mechanism-bearing systems candidates were accepted; a benchmark-only prefix study was rejected with reason.",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [
-        "arXiv:2608.15127",
-        "arXiv:2603.09046"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Switch to MoE expert placement/prefetch/cache or inference framework runtime updates to maintain independent coverage.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-agent-systems-6.json"
-    },
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-agent-adjacent-14",
-      "axis": "adjacent agent-serving systems: orchestration / predictive KV / aggregate pipeline allocation",
-      "query_summary": "Expanded the Pythia related-work neighborhood into three materially distinct agent-serving mechanisms and verified their primary arXiv abstracts. None of the three arXiv IDs appeared in repository code search.",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 3,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2603.13605",
-        "arXiv:2605.06472",
-        "arXiv:2604.15186"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Switch away from agent serving to independent co-serving/GPU harvesting or framework-runtime omissions.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-agent-adjacent-14.json"
-    },
     {
       "run_key": "2026-09-19T19:00:00+09:00",
       "round": "specialist-agent-related-13",
@@ -10755,6 +10712,74 @@
       "duplicate_ratio": 0.7142857142857143,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-72b4fd6c782b1699-pre01",
+      "precheck_request_id": "libimp-72b4fd6c782b1699-pre01",
+      "run_key": "library-import-72b4fd6c782b",
+      "round": "libimp-72b4fd6c782b1699-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-72b4fd6c782b1699-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-72b4fd6c782b1699-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-7d4a69cded450dde-pre01",
+      "precheck_request_id": "libimp-7d4a69cded450dde-pre01",
+      "run_key": "library-import-7d4a69cded45",
+      "round": "libimp-7d4a69cded450dde-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 1,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-7d4a69cded450dde-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-7d4a69cded450dde-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 1.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19126,16 +19151,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-2642c90107f2",
-      "rounds": 29,
-      "candidate_count": 178,
+      "last_run_key": "library-import-7d4a69cded45",
+      "rounds": 31,
+      "candidate_count": 184,
       "duplicate_filtered_count": 95,
-      "novel_candidate_count": 83,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 81,
-      "accepted_count": 81,
-      "duplicate_ratio": 0.5337078651685393,
-      "final_duplicate_ratio": 0.024096385542168676,
+      "novel_candidate_count": 89,
+      "final_duplicate_filtered_count": 3,
+      "post_final_dedupe_count": 86,
+      "accepted_count": 86,
+      "duplicate_ratio": 0.5163043478260869,
+      "final_duplicate_ratio": 0.033707865168539325,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
