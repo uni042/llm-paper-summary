@@ -26,7 +26,7 @@ import paper_taxonomy
 
 
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
-_CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30"}
+_CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30", "scheduled-chat-45": "45"}
 _CURRENT_RUN_KEY_RE = re.compile(
     r"(?P<stamp>\d{8}T\d{6})(?P<zone>Z|JST|[+-]\d{4})(?:-|$)"
 )
@@ -72,6 +72,11 @@ def _scheduled_slot_from_claimed_at(value: Any, worker_id: str):
             local = (local - timedelta(hours=1)).replace(minute=30, second=0, microsecond=0)
         else:
             local = local.replace(minute=30, second=0, microsecond=0)
+    elif slot == "45":
+        if local.minute < 45:
+            local = (local - timedelta(hours=1)).replace(minute=45, second=0, microsecond=0)
+        else:
+            local = local.replace(minute=45, second=0, microsecond=0)
     else:
         return None
     return local.astimezone(claimed_at.tzinfo)
@@ -297,6 +302,21 @@ def _direct_evidence_metrics(
         str(path.relative_to(repo_root))
         for path in _unresolved_missing_paper_job_paths(repo_root, jobs)
     )
+
+    # Current normal workers publish through Library-first import rather than
+    # the legacy immutable submission lane. Use durable import results for the
+    # top-line Research/Discovery completion timestamps when that evidence exists.
+    research_events, discovery_events = _import_progress_events(repo_root, now)
+    cutoff_24h = now - timedelta(hours=24)
+    if research_events:
+        metrics["research_24h"] = sum(
+            cutoff_24h <= stamp <= now for stamp in research_events
+        )
+        metrics["last_research_completed_at"] = max(research_events)
+    if discovery_events:
+        metrics["last_discovery_completed_at"] = max(
+            stamp for stamp, _ in discovery_events
+        )
     return metrics
 
 
