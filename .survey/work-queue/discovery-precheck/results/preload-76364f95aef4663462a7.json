@@ -1,0 +1,904 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-76364f95aef4663462a7",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-76364f95aef4663462a7",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-02T07:37:27.649796+00:00",
+  "preload_id": "preload-76364f95aef4663462a7",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Optimizing Whisper models for Turkish automatic speech recognition: A comprehensive study on parameter-efficient fine-tuning and model compression",
+      "source_url": "https://doi.org/10.1016/j.jestch.2026.102505",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.jestch.2026.102505",
+      "canonical_id": "DOI:10.1016/j.jestch.2026.102505",
+      "authors": [
+        "Saadin Oyucu",
+        "Bilgehan Arslan",
+        "C. Koçak",
+        "Şeref Sağıroğlu"
+      ]
+    },
+    {
+      "title": "Characterizing the Ecosystem of Open-Source Uncensored Large Language Models: Supply Chain, Governance, and Risks",
+      "source_url": "https://doi.org/10.1145/3777912.3839799",
+      "year": 2026,
+      "published": "2026-10-12",
+      "abstract": "Open-source uncensored large language models (ULLMs) are increasingly available in public LLM ecosystems. By removing or weakening safety guardrails, these models can comply with harmful requests, generate unsafe content, and be readily reused in downstream systems. While prior work has demonstrated the misuse potential of individual uncensored models, little has been done to systematically understand the ULLM ecosystem in real-world settings. In this paper, we present a systematic study of the open-source ULLM ecosystem. We analyzed 22,096 ULLMs collected from five major LLM hosting platforms and examined them across five interconnected components: artifacts, development, propagation, governance, and adoption. Our analysis shows that ULLMs are produced through four major methods, supported by a rich ecosystem of publicly available tools and uncensored datasets. We further found that ULLMs propagate widely across platforms, forming 4,457 cross-platform clusters comprising 11,094 models, with Hugging Face serving as the dominant upstream source. We uncovered systemic governance and security gaps, including inconsistent moderation labels applied to ULLMs across platforms, cross-platform propagation of ULLMs flagged with threat indicators, and frequent violations of base-model licensing constraints. ULLMs are also actively deployed in diverse real-world settings, including web applications, GitHub projects, underground forums, and model routing platforms, significantly lowering the barrier to harmful use. Our findings indicate that ULLMs are not isolated model artifacts but components of a broader ecosystem in which supply-chain dynamics, weak governance, and diverse downstream deployments jointly amplify risks.",
+      "doi": "10.1145/3777912.3839799",
+      "canonical_id": "DOI:10.1145/3777912.3839799",
+      "authors": [
+        "Zilong Lin",
+        "Zi-Chuan Li",
+        "Xiao-Jing Liao",
+        "Xiao-Feng Wang"
+      ]
+    },
+    {
+      "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.115411",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+      "authors": [
+        "Jing Xu",
+        "Qingqing Yang",
+        "Zhiwei Yang",
+        "Yingying Gao",
+        "Kewei Yang",
+        "Jiang Jiang"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.engappai.2026.116054",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+      "authors": [
+        "Meng-Ke Wang",
+        "Min Gan",
+        "Fang Yuan",
+        "Jian-Nan Su"
+      ]
+    },
+    {
+      "title": "Enabling Edge IoT Intelligence: A Survey on Resource-Constrained Continual Learning",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3705393",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Edge intelligence is revolutionizing the Internet of Things (IoT) by migrating AI training from centralized clouds to distributed end devices. However, enabling continual learning (CL) on edge nodes faces a “rigid triangle constraint” of restricted memory, limited computation, and battery-dependent energy, heavily dictated by physical size, weight, and power (SWaP) limitations. This article systematically reviews solutions for resource-constrained CL in IoT scenarios, bridging algorithmic plasticity with these physical hardware realities. To mitigate the memory wall, we synthesize static model evolution techniques. We specifically highlight the cross-paradigm integration of parameter-efficient fine-tuning (PEFT) with low-bit quantization and structural sparsity. Furthermore, this is presented alongside knowledge distillation (KD) as a zero-buffer regularizer to effectively accommodate storage-limited microcontrollers. Crucially, we emphasize energy-efficient inference as an integral part of the CL lifecycle, as continuous perception significantly depletes the same battery budget required for future backpropagation. To sustain long-term evolution, we discuss dynamic architectures, including mixture of experts (MoE) and cloud–edge offloading, to achieve on-demand compute allocation for energy efficiency (EE). Beyond isolated nodes, addressing the bandwidth and privacy bottlenecks of IoT, we analyze an end-to-end green data lifecycle—ranging from online value filtering and physical storage compression to federated CL (FCL) in untrusted environments. Ultimately, we argue that isolated algorithmic improvements are often insufficient. Therefore, grounded by empirical hardware benchmarks, this article emphasizes compute-optimal energy frontiers and memory hierarchy integration hardware-aware neural architecture search (HA-NAS). We propose that a full-stack system–hardware codesign incorporating non-von Neumann paradigms is an essential path for realizing autonomous, sustainable evolution across diverse next-generation IoT sectors.",
+      "doi": "10.1109/JIOT.2026.3705393",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3705393",
+      "authors": [
+        "Ruo-Tong Yang",
+        "Dawei Bie",
+        "Dao-Chun Li",
+        "Zhuo-Er Yao",
+        "Jin-Wu Xiang"
+      ]
+    },
+    {
+      "title": "A High-Density RRAM Memory Architecture With IO-Assisted-Core-Transistor 1T1R Array and Two-Level Encoding for Edge AI Models",
+      "source_url": "https://doi.org/10.1109/TCAD.2026.3660209",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "The deployment of AI on edge devices requires high-capacity on-chip memory to mitigate the performance and energy overhead of frequent off-chip data movement. Resistive random access memory (RRAM) has emerged as a promising candidate owing to its nonvolatility, high storage density, and low read cost. However, its adoption faces several challenges, including reliability concerns at high density, insufficient scalability for increasingly large AI models, and lower access frequency compared to CMOS-based units. In this work, we present a high-density and reliable RRAM memory architecture enabled by algorithm–hardware co-design. On the hardware side, a 1T1R array leveraging small core-voltage transistors for density and peripheral IO transistors for program reliability is introduced, together with a 16-step tunable current source for robust readout. On the algorithm side, a two-level encoding scheme is proposed to compress AI model storage with low implementation cost, while a burst-mode read strategy alleviates the frequency disparity with CMOS processors. Our experiments show a storage density of 17.4 MB/mm<sup>2</sup> @ 28 nm, with <inline-formula> <tex-math notation=\"LaTeX\">$1.23\\times $ </tex-math></inline-formula> to <inline-formula> <tex-math notation=\"LaTeX\">$4.15\\times $ </tex-math></inline-formula> compression rate, <inline-formula> <tex-math notation=\"LaTeX\">$4.99\\times $ </tex-math></inline-formula> read-out energy reduction compared to SRAM baseline, and <inline-formula> <tex-math notation=\"LaTeX\">$4\\times $ </tex-math></inline-formula> higher read frequency. System-level evaluation further confirms the performance and efficiency improvements of the proposed design.",
+      "doi": "10.1109/TCAD.2026.3660209",
+      "canonical_id": "DOI:10.1109/TCAD.2026.3660209",
+      "authors": [
+        "Shengzhe Yan",
+        "Zhihang Qian",
+        "Xiang-Qu Fu",
+        "Ze-Yu Guo",
+        "Zhi Li",
+        "Jun Wang",
+        "Linfang Wang",
+        "Zhicheng Wu",
+        "Xiao-Xin Xu",
+        "Chun-Meng Dou",
+        "Feng Zhang",
+        "Bing Li",
+        "Jin-Shan Yue"
+      ]
+    },
+    {
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+      "doi": "10.1109/JSSC.2026.3708458",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ]
+    },
+    {
+      "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.38706",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+      "canonical_id": "arXiv:2609.38706",
+      "arxiv_id": "2609.38706",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Xi Zheng",
+        "Leo Zhang",
+        "Xiao-Hun Cheng"
+      ]
+    },
+    {
+      "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+      "source_url": "https://arxiv.org/abs/2609.39277",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Looped models reason by applying the same block of weights many times, so compressing that block saves memory traffic on every loop. Compressed looped models, however, often collapse, and the collapse is usually blamed on rounding error that accumulates from loop to loop. In this work we test that account on more than 30 models from five families and find, to our surprise, that it holds only for loops that never settle. When a loop settles, a fixed rounding error does not accumulate. It moves the point where the loop settles, much as tilting a bowl moves where a ball comes to rest, and the answer is lost only when the shift is larger than the readout tolerates. This picture lets us predict which models fail from a single label-free measurement, and it tells us why failed models recover: their loops still settle, so a few final loops with 8-bit weights bring the answer back. Motivated by these findings, we build a controller that stops when the model's halting head fires and then finishes with 8-bit loops. On Sudoku-Extreme and Maze-Hard it beats fixed-depth inference by up to 15 points under a third of the weight traffic.",
+      "canonical_id": "arXiv:2609.39277",
+      "arxiv_id": "2609.39277",
+      "authors": [
+        "Steven Kolawole",
+        "Pearse Jim",
+        "O. M. Busoye",
+        "G. Bagai",
+        "Virginia Smith"
+      ]
+    },
+    {
+      "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+      "source_url": "https://arxiv.org/abs/2609.39223",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and llama.cpp's Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and llama.cpp without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences. We release the complete QATFactory training code and the resulting checkpoints.",
+      "canonical_id": "arXiv:2609.39223",
+      "arxiv_id": "2609.39223",
+      "authors": [
+        "Wei-Li Xu",
+        "Ji-Sen Li",
+        "Yu-Qing Jian",
+        "Chen-Xi Li",
+        "Zhizhou Sha",
+        "Yi-Fan Yu",
+        "Qing-Yang Wu",
+        "Chen-Feng Xu",
+        "Zhong-Zhu Zhou",
+        "Tian-Yi Zhang",
+        "Ben Athiwaratkun"
+      ]
+    },
+    {
+      "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models",
+      "source_url": "https://arxiv.org/abs/2609.39056",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "World-action models (WAMs) jointly generate future world states and actions through iterative denoising, using shared weights to process heterogeneous semantic streams of video, proprioceptive, and action tokens. Quantization reduces inference cost, but comparable numerical errors in different streams can have markedly different effects on final actions, making numerical accuracy alone insufficient for reliable control. We introduce SteerQuant, a 4-bit quantization framework for WAMs that steers errors toward computations with less influence on final actions. It maps how each stream's quantization errors affect final actions and uses this map to guide shared channel scaling. Activation scaling is further calibrated for each stream and denoising step to accommodate changes in activation ranges and action impact. This adapts quantization to different stream requirements without duplicating weights or increasing bit-widths for selected streams. To reduce the extra kernel launches and memory traffic introduced by scaling, we develop Rudder, a 4-bit inference engine for WAMs that fuses scaling and output compensation into low-bit kernels. Under W4A8 and W4A4, SteerQuant maintains mean LIBERO success within 0.8 percentage points of full precision, while delivering up to $2.23\\times$ denoising speedup over BF16 across three WAMs with reduced peak GPU memory usage. On a real dual-arm robot, W4A8 deployment achieves a $1.35\\times$ end-to-end inference speedup while maintaining average task success relative to BF16.",
+      "canonical_id": "arXiv:2609.39056",
+      "arxiv_id": "2609.39056",
+      "authors": [
+        "Yun-Han Wang",
+        "Hao-Dong Wang",
+        "Zhi-Ming Liu",
+        "Zi-Cong Hong",
+        "Qian-Li Liu",
+        "Xiao-Yi Pang",
+        "Yang Hu",
+        "Quan-Xin Shou",
+        "Yi-Kun Miao",
+        "Song Guo"
+      ]
+    },
+    {
+      "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators",
+      "source_url": "https://arxiv.org/abs/2609.39361",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "While most attention logits can be computed in low precision without degrading numerical stability, current attention kernels fail to exploit this phenomenon. We introduce a novel hardware-algorithm co-design in the form of mixed-precision FlashAttention. Our method accumulates key-query products and evaluates their exponentials in 8-bit formats, then adaptively identifies sensitive sub-blocks and recomputes them in 16-bit formats. We propose the specifications for a dedicated accelerator capable of executing this pipeline efficiently. Simulated experiments with Qwen3 and Gemma 3 show that rerouting a selective minority of sub-blocks to high precision is sufficient to recover the baseline model performance.",
+      "canonical_id": "arXiv:2609.39361",
+      "arxiv_id": "2609.39361",
+      "authors": [
+        "Stanislav S. Budzinskiy",
+        "Marian Gloser",
+        "T. Yilmaz",
+        "Ying Hong Tham",
+        "Yuan-Yi Lin",
+        "Wen-Yi Fang",
+        "Fan Wu",
+        "Philipp Petersen"
+      ]
+    },
+    {
+      "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+      "source_url": "https://arxiv.org/abs/2609.40146",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "As LLMs grow in size, compression becomes increasingly important for efficient deployment. SVD-based low-rank compression reduces parameter counts but can degrade downstream performance. To improve performance after compression, we introduce QuLoC, a photonic quantum-assisted LLM compression algorithm that uses quantum circuit outputs to gate the retained low-rank components during training. Model performance is recovered through local functional reconstruction followed by end-to-end knowledge distillation. After training, the gating coefficients are absorbed into the low-rank factors, allowing the compressed model to run on classical hardware without executing quantum circuits during inference. Experiments on Qwen3.5-4B show that QuLoC achieves a 9.73\\% relative improvement in average accuracy over state-of-the-art baselines across multiple downstream tasks, demonstrating its effectiveness. We further evaluate QuLoC on LLaMA-7B at different parameter compression ratios. It consistently achieves higher average downstream accuracy than state-of-the-art baselines, supporting its applicability to a larger model across different compression settings. Notably, experiments using the photonic quantum hardware retain these benefits with a small accuracy loss relative to simulation, suggesting robustness to hardware noise. These results motivate further exploration of photonic quantum-assisted compression for larger models and more complex agentic tasks.",
+      "canonical_id": "arXiv:2609.40146",
+      "arxiv_id": "2609.40146",
+      "authors": [
+        "Xiao-Hui Ni",
+        "Yu-Hang Yao",
+        "Yu-Ze Zhu",
+        "Hang Song",
+        "Xiang Zhao",
+        "Lin Yang",
+        "Xian-Min Jin"
+      ]
+    },
+    {
+      "title": "Security-Enhanced Seed-Based Weight Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.38477",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large language models (LLMs) incur substantial storage, memory-bandwidth and energy costs, motivating compact weight representations. Existing seed-based compression methods reconstruct weights from compact pseudo-random representations but do not explicitly account for the non-uniform sensitivity of model weights. We introduce Seed-Q, a security-enhanced sensitivity-aware seed-based weight compression framework that uses lightweight Linear Feedback Shift Register (LFSR)-based weight generation with non-uniform bit allocation. Our approach assigns larger representation budgets to sensitive weights while aggressively compressing less sensitive regions. Importantly, this non-uniform allocation requires no side-information: the decoder deterministically reconstructs the bit-allocation schedule, with no rung depending on the decoded weights, eliminating the need to store per-block metadata or use calibration data while preserving the baseline coding rate. Experiments across diverse LLMs show that Seed-Q matches 4-bit perplexity of SeedLM with fewer bits, while at the same 4 bits/weight it reduces both perplexity degradation and zero-shot accuracy loss relative to SeedLM. We also show that Seed-Q simultaneously achieves high security against bit-flip attacks on model parameters, as bit corruption affects multiple reconstructed weights, greatly amplifying its impact and making it easier to detect. We further implement Seed-Q in an ASIC-based accelerator and demonstrate modest hardware overhead compared to prior seed-based approaches.",
+      "canonical_id": "arXiv:2609.38477",
+      "arxiv_id": "2609.38477",
+      "authors": [
+        "Qiu-Yu Ren",
+        "Sudipta Paria",
+        "Aritra Dasgupta",
+        "S. Bhunia"
+      ]
+    },
+    {
+      "title": "JARQ: Joint Alternating Refinement for Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38599",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Group-wise post-training quantizers for large language models round weights onto a grid that is not refit to the resulting integer codes. We show that this leaves accuracy on the table: the best grid depends on the codes, input correlations couple the errors of different groups, and useful code changes often involve many codes at once. We propose JARQ , a plug-in refinement that starts from any group-wise quantizer and alternates a joint least-squares fit of all group scales with bounded Babai proposals that move many codes of a group together on the current grid. The problem is a bilinear box-constrained mixed-integer least-squares problem; the solver is backpropagation-free, does not increase the layer-wise objective under exact scale solves, and keeps the host's bit width, groups, zero points, and inference cost. Across Llama-2, Llama-3, and Qwen models with RTN, GPTQ, OmniQuant, and AWQ hosts, JARQ lowers perplexity in 90 of 96 comparisons, cuts three-bit RTN perplexity by up to 36%, raises mean multiple-choice accuracy in 23 of 24 configurations, and improves QEP, QuaRot, and OJBKQ outputs, at under a minute per 7B block.",
+      "canonical_id": "arXiv:2609.38599",
+      "arxiv_id": "2609.38599",
+      "authors": [
+        "Xin-Yu Wang",
+        "Sicheng Lyu",
+        "Xiao-Wen Chang"
+      ]
+    },
+    {
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "canonical_id": "arXiv:2609.38166",
+      "arxiv_id": "2609.38166",
+      "authors": [
+        "Yi Pan",
+        "Hao-Cheng Xi",
+        "Kan Zhu",
+        "Xing-Yang Li",
+        "Yi-Bo Wu",
+        "Mayank Mishra",
+        "Hong-Tao Zhang",
+        "William X.Zheng",
+        "Baris Kasikci",
+        "Song Han",
+        "Kurt Keutzer",
+        "Rishabh K. Iyer",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "Bits Under ZK-LLM: Evaluating Zero-Knowledge-Friendly Quantization for Verifiable Private LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.36437",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Zero-knowledge proofs are emerging as a promising approach for enabling private, verifiable LLM governance and auditing, where regulators, users, and auditors need to verify claims about training-data usage or LLM inference-time behavior, while model providers must protect proprietary model parameters. However, despite the growing interest in ZK-LLMs, the understanding of ZK-friendly quantization remains limited. This gap matters because in the ZK setting, quantization directly shapes the arithmetic structure, constraint complexity, and proving cost of ZK inference. ZK protocols operate over finite fields and incur costs that depend heavily on the number and type of arithmetic operations, nonlinearities, and lookup constraints. Understanding ZK-friendly quantization is therefore essential for making ZK-LLMs practical. In this work, we present the first systematic study of ZK-friendly quantization for LLMs. We first formalize the definition of ZK-friendly quantization, capturing the properties required for ZK proof generation. We then evaluate nine language models, including Qwen2.5-14B and the mixture-of-experts model Qwen3-30B-A3B, across a broad design space of weight, activation, and nonlinear lookup table precision. Our results show that activation precision is substantially more sensitive than weight precision, while nonlinear lookup approximations can become the dominant source of utility degradation. Also, we identify RMSNorm inverse-square-root lookups as a recurring bottleneck in several large models and recover near-baseline utility by selectively increasing precision only at the bottleneck. Finally, we show that reducing bit-width or lookup-table size does not necessarily yield proportional end-to-end proving savings, showing that conventional low-bit quantization heuristics do not directly translate to ZK proving efficiency and motivating operator-aware precision selection.",
+      "canonical_id": "arXiv:2609.36437",
+      "arxiv_id": "2609.36437",
+      "authors": [
+        "Taeung Yoon",
+        "Yu-Peng Zhang",
+        "Xiao-Jing Liao"
+      ]
+    },
+    {
+      "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.36828",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Post-training quantization (PTQ) lowers deployment cost for multimodal large language models, but calibration typically reconstructs fixed sequences with local objectives. This overlooks autoregressive feedback: a quantization-induced token change redirects the prefix and changes future states. Yet on-policy coverage alone is insufficient because many decision mismatches barely affect future generation. We propose OnPTQ, an on-policy framework that calibrates on trajectories visited by the current quantized policy. On shared prefixes, OnPTQ identifies quantization-eroded boundaries, evaluates competing tokens through short counterfactual rollouts, and combines current discrepancy with branch consequence into a Decision--Consequence risk. The risk prioritizes critical states, while context anchoring and trajectory refresh preserve multimodal behavior and keep calibration aligned with the updated policy. We further derive a Decision--Consequence bound linking behavioral deviation to current policy discrepancy and action-conditioned future-value span. Across vision--language and omni-modal Qwen models under multiple low-bit settings, OnPTQ improves downstream performance and yields fewer correctness flips against the corresponding Dense/FP16 references, without changing the deployed inference graph.",
+      "canonical_id": "arXiv:2609.36828",
+      "arxiv_id": "2609.36828",
+      "authors": [
+        "Wen-Xiao Fan",
+        "Jing-Ling Fu",
+        "Li-Chen Ma",
+        "Yu He",
+        "Lu Liu",
+        "Jin-Bao Xue",
+        "Ke Zhang",
+        "Jun-Shi Huang",
+        "Kan Li"
+      ]
+    },
+    {
+      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.36654",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large language models make weight storage and memory traffic major inference costs, motivating low-precision formats that represent each weight with only a few bits. Such formats use a scale to map floating-point values into a small codebook; NVFP4 improves local range utilization by letting every 16 E2M1 weights share an E4M3 block scale. Choosing that scale is difficult in GPTQ because quantizing one column updates those that follow, so evaluating a block independently can misestimate its final reconstruction error. Large models pose a second challenge: full-precision weights, calibration activations, and second-order state cannot all remain on one accelerator, while assigning complete layers to devices leaves each time-consuming layer solve serial. We introduce \\emph{Schur Replay}, a scale-selection algorithm that reproduces the GPTQ updates caused by each block scale and scores the resulting block error after accounting for compensation from unquantized columns. Separately, our execution infrastructure keeps only the active layer resident, tiers activations across device, host, and disk, retires full-precision layers after export, and distributes independent output rows across tensor-parallel ranks. Together, the algorithm and infrastructure attain $99.35\\%$ and $100.84\\%$ question-weighted recovery from BF16 across seven benchmarks on Qwen3.5-397B-A17B and Llama-3.3-70B-Instruct. On the 397B model, the infrastructure reduces measured per-layer time by $15.17\\times$ over ModelOpt and $23.14\\times$ over LLM Compressor, with lower memory used per GPU.",
+      "canonical_id": "arXiv:2609.36654",
+      "arxiv_id": "2609.36654",
+      "authors": [
+        "Rui-Ying Ding",
+        "Jie Li",
+        "Kang He",
+        "Zi-Yan Liu",
+        "Cheng-Ru Song",
+        "Yue-Dong Xu",
+        "Yuan Cheng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.jestch.2026.102505",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jestch.2026.102505",
+        "title:optimizing whisper models for turkish automatic speech recognition a comprehensive study on parameterefficient finetuning and model compression",
+        "url:https://doi.org/10.1016/j.jestch.2026.102505"
+      ],
+      "record": {
+        "title": "Optimizing Whisper models for Turkish automatic speech recognition: A comprehensive study on parameter-efficient fine-tuning and model compression",
+        "source_url": "https://doi.org/10.1016/j.jestch.2026.102505",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.jestch.2026.102505",
+        "canonical_id": "DOI:10.1016/j.jestch.2026.102505",
+        "authors": [
+          "Saadin Oyucu",
+          "Bilgehan Arslan",
+          "C. Koçak",
+          "Şeref Sağıroğlu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3777912.3839799",
+      "identity_tokens": [
+        "id:DOI:10.1145/3777912.3839799",
+        "title:characterizing the ecosystem of opensource uncensored large language models supply chain governance and risks",
+        "url:https://doi.org/10.1145/3777912.3839799"
+      ],
+      "record": {
+        "title": "Characterizing the Ecosystem of Open-Source Uncensored Large Language Models: Supply Chain, Governance, and Risks",
+        "source_url": "https://doi.org/10.1145/3777912.3839799",
+        "year": 2026,
+        "published": "2026-10-12",
+        "abstract": "Open-source uncensored large language models (ULLMs) are increasingly available in public LLM ecosystems. By removing or weakening safety guardrails, these models can comply with harmful requests, generate unsafe content, and be readily reused in downstream systems. While prior work has demonstrated the misuse potential of individual uncensored models, little has been done to systematically understand the ULLM ecosystem in real-world settings. In this paper, we present a systematic study of the open-source ULLM ecosystem. We analyzed 22,096 ULLMs collected from five major LLM hosting platforms and examined them across five interconnected components: artifacts, development, propagation, governance, and adoption. Our analysis shows that ULLMs are produced through four major methods, supported by a rich ecosystem of publicly available tools and uncensored datasets. We further found that ULLMs propagate widely across platforms, forming 4,457 cross-platform clusters comprising 11,094 models, with Hugging Face serving as the dominant upstream source. We uncovered systemic governance and security gaps, including inconsistent moderation labels applied to ULLMs across platforms, cross-platform propagation of ULLMs flagged with threat indicators, and frequent violations of base-model licensing constraints. ULLMs are also actively deployed in diverse real-world settings, including web applications, GitHub projects, underground forums, and model routing platforms, significantly lowering the barrier to harmful use. Our findings indicate that ULLMs are not isolated model artifacts but components of a broader ecosystem in which supply-chain dynamics, weak governance, and diverse downstream deployments jointly amplify risks.",
+        "doi": "10.1145/3777912.3839799",
+        "canonical_id": "DOI:10.1145/3777912.3839799",
+        "authors": [
+          "Zilong Lin",
+          "Zi-Chuan Li",
+          "Xiao-Jing Liao",
+          "Xiao-Feng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115411",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115411",
+        "title:navigating maritime emergencies with large models a lifecycleoriented review",
+        "url:https://doi.org/10.1016/j.engappai.2026.115411"
+      ],
+      "record": {
+        "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.115411",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+        "authors": [
+          "Jing Xu",
+          "Qingqing Yang",
+          "Zhiwei Yang",
+          "Yingying Gao",
+          "Kewei Yang",
+          "Jiang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116054",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116054",
+        "title:forecastpreserving lowbit quantization for transformerbased timeseries forecasting",
+        "url:https://doi.org/10.1016/j.engappai.2026.116054"
+      ],
+      "record": {
+        "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.engappai.2026.116054",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+        "authors": [
+          "Meng-Ke Wang",
+          "Min Gan",
+          "Fang Yuan",
+          "Jian-Nan Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2026.3705393",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3705393",
+        "title:enabling edge iot intelligence a survey on resourceconstrained continual learning",
+        "url:https://doi.org/10.1109/JIOT.2026.3705393"
+      ],
+      "record": {
+        "title": "Enabling Edge IoT Intelligence: A Survey on Resource-Constrained Continual Learning",
+        "source_url": "https://doi.org/10.1109/JIOT.2026.3705393",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Edge intelligence is revolutionizing the Internet of Things (IoT) by migrating AI training from centralized clouds to distributed end devices. However, enabling continual learning (CL) on edge nodes faces a “rigid triangle constraint” of restricted memory, limited computation, and battery-dependent energy, heavily dictated by physical size, weight, and power (SWaP) limitations. This article systematically reviews solutions for resource-constrained CL in IoT scenarios, bridging algorithmic plasticity with these physical hardware realities. To mitigate the memory wall, we synthesize static model evolution techniques. We specifically highlight the cross-paradigm integration of parameter-efficient fine-tuning (PEFT) with low-bit quantization and structural sparsity. Furthermore, this is presented alongside knowledge distillation (KD) as a zero-buffer regularizer to effectively accommodate storage-limited microcontrollers. Crucially, we emphasize energy-efficient inference as an integral part of the CL lifecycle, as continuous perception significantly depletes the same battery budget required for future backpropagation. To sustain long-term evolution, we discuss dynamic architectures, including mixture of experts (MoE) and cloud–edge offloading, to achieve on-demand compute allocation for energy efficiency (EE). Beyond isolated nodes, addressing the bandwidth and privacy bottlenecks of IoT, we analyze an end-to-end green data lifecycle—ranging from online value filtering and physical storage compression to federated CL (FCL) in untrusted environments. Ultimately, we argue that isolated algorithmic improvements are often insufficient. Therefore, grounded by empirical hardware benchmarks, this article emphasizes compute-optimal energy frontiers and memory hierarchy integration hardware-aware neural architecture search (HA-NAS). We propose that a full-stack system–hardware codesign incorporating non-von Neumann paradigms is an essential path for realizing autonomous, sustainable evolution across diverse next-generation IoT sectors.",
+        "doi": "10.1109/JIOT.2026.3705393",
+        "canonical_id": "DOI:10.1109/JIOT.2026.3705393",
+        "authors": [
+          "Ruo-Tong Yang",
+          "Dawei Bie",
+          "Dao-Chun Li",
+          "Zhuo-Er Yao",
+          "Jin-Wu Xiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2026.3660209",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2026.3660209",
+        "title:a highdensity rram memory architecture with ioassistedcoretransistor 1t1r array and twolevel encoding for edge ai models",
+        "url:https://doi.org/10.1109/TCAD.2026.3660209"
+      ],
+      "record": {
+        "title": "A High-Density RRAM Memory Architecture With IO-Assisted-Core-Transistor 1T1R Array and Two-Level Encoding for Edge AI Models",
+        "source_url": "https://doi.org/10.1109/TCAD.2026.3660209",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "The deployment of AI on edge devices requires high-capacity on-chip memory to mitigate the performance and energy overhead of frequent off-chip data movement. Resistive random access memory (RRAM) has emerged as a promising candidate owing to its nonvolatility, high storage density, and low read cost. However, its adoption faces several challenges, including reliability concerns at high density, insufficient scalability for increasingly large AI models, and lower access frequency compared to CMOS-based units. In this work, we present a high-density and reliable RRAM memory architecture enabled by algorithm–hardware co-design. On the hardware side, a 1T1R array leveraging small core-voltage transistors for density and peripheral IO transistors for program reliability is introduced, together with a 16-step tunable current source for robust readout. On the algorithm side, a two-level encoding scheme is proposed to compress AI model storage with low implementation cost, while a burst-mode read strategy alleviates the frequency disparity with CMOS processors. Our experiments show a storage density of 17.4 MB/mm<sup>2</sup> @ 28 nm, with <inline-formula> <tex-math notation=\"LaTeX\">$1.23\\times $ </tex-math></inline-formula> to <inline-formula> <tex-math notation=\"LaTeX\">$4.15\\times $ </tex-math></inline-formula> compression rate, <inline-formula> <tex-math notation=\"LaTeX\">$4.99\\times $ </tex-math></inline-formula> read-out energy reduction compared to SRAM baseline, and <inline-formula> <tex-math notation=\"LaTeX\">$4\\times $ </tex-math></inline-formula> higher read frequency. System-level evaluation further confirms the performance and efficiency improvements of the proposed design.",
+        "doi": "10.1109/TCAD.2026.3660209",
+        "canonical_id": "DOI:10.1109/TCAD.2026.3660209",
+        "authors": [
+          "Shengzhe Yan",
+          "Zhihang Qian",
+          "Xiang-Qu Fu",
+          "Ze-Yu Guo",
+          "Zhi Li",
+          "Jun Wang",
+          "Linfang Wang",
+          "Zhicheng Wu",
+          "Xiao-Xin Xu",
+          "Chun-Meng Dou",
+          "Feng Zhang",
+          "Bing Li",
+          "Jin-Shan Yue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2026.3708458",
+        "title:pdacc a prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/JSSC.2026.3708458"
+      ],
+      "record": {
+        "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/JSSC.2026.3708458",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Prefill-decode (PD) disaggregation has emerged as a promising serving paradigm for large language models (LLMs), as it decouples prompt processing (prefill) from autoregressive token generation (decode) to reduce inter-task interference and improve quality of service (QoS). However, disaggregation also amplifies stage imbalance: the prefill cluster (P-C) can become compute-limited, the decode cluster (D-C) is often bandwidth-limited, and the required cross-device KV cache transfer introduces additional communication overhead. This work presents <italic>PDAcc</italic>, a four-chiplet multi-chip-module (MCM) accelerator optimized for PD-disaggregated LLM inference. PDAcc employs reconfigurable chiplets that can be dynamically assigned to prefill or decode according to workload ratios. It further introduces three techniques: copy-less float hybrid-LUT multiply (CFHM) to repurpose idle on-chip SRAM for prefill acceleration, hybrid compressed weight gather (HCWG) to utilize prefill-side bandwidth and improve inter-chip weight delivery for decode, and cross-cluster attention dataflow (CCAD) to reduce dependency traffic by shifting part of attention computation across clusters. Implemented in 22-nm technology as a four-chiplet MCM, PDAcc sustains 541–4727 effective tokens/s on GPT-2, OPT, and Llama 3.2, achieving <inline-formula> <tex-math notation=\"LaTeX\">$5.76\\times $ </tex-math></inline-formula> higher prefill throughput and <inline-formula> <tex-math notation=\"LaTeX\">$12.42\\times $ </tex-math></inline-formula> higher decode throughput than a single chiplet, and further delivering an additional 1.50–<inline-formula> <tex-math notation=\"LaTeX\">$3.24\\times $ </tex-math></inline-formula> improvement over a four-chiplet PD-aggregated baseline with the same MCM scaling.",
+        "doi": "10.1109/JSSC.2026.3708458",
+        "canonical_id": "DOI:10.1109/JSSC.2026.3708458",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38706",
+      "identity_tokens": [
+        "id:arXiv:2609.38706",
+        "title:preserving provenance in shared kv caches for llm serving",
+        "url:https://arxiv.org/abs/2609.38706"
+      ],
+      "record": {
+        "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.38706",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+        "canonical_id": "arXiv:2609.38706",
+        "arxiv_id": "2609.38706",
+        "authors": [
+          "Wei Song",
+          "Yu-Xin Cao",
+          "Xi Zheng",
+          "Leo Zhang",
+          "Xiao-Hun Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39277",
+      "identity_tokens": [
+        "id:arXiv:2609.39277",
+        "title:a tilted bowl is not a slippery slope compressing looped models",
+        "url:https://arxiv.org/abs/2609.39277"
+      ],
+      "record": {
+        "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+        "source_url": "https://arxiv.org/abs/2609.39277",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Looped models reason by applying the same block of weights many times, so compressing that block saves memory traffic on every loop. Compressed looped models, however, often collapse, and the collapse is usually blamed on rounding error that accumulates from loop to loop. In this work we test that account on more than 30 models from five families and find, to our surprise, that it holds only for loops that never settle. When a loop settles, a fixed rounding error does not accumulate. It moves the point where the loop settles, much as tilting a bowl moves where a ball comes to rest, and the answer is lost only when the shift is larger than the readout tolerates. This picture lets us predict which models fail from a single label-free measurement, and it tells us why failed models recover: their loops still settle, so a few final loops with 8-bit weights bring the answer back. Motivated by these findings, we build a controller that stops when the model's halting head fires and then finishes with 8-bit loops. On Sudoku-Extreme and Maze-Hard it beats fixed-depth inference by up to 15 points under a third of the weight traffic.",
+        "canonical_id": "arXiv:2609.39277",
+        "arxiv_id": "2609.39277",
+        "authors": [
+          "Steven Kolawole",
+          "Pearse Jim",
+          "O. M. Busoye",
+          "G. Bagai",
+          "Virginia Smith"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39223",
+      "identity_tokens": [
+        "id:arXiv:2609.39223",
+        "title:qatfactory a versatile deploymentaligned framework for quantizationaware training and distillation of llms",
+        "url:https://arxiv.org/abs/2609.39223"
+      ],
+      "record": {
+        "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+        "source_url": "https://arxiv.org/abs/2609.39223",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and llama.cpp's Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and llama.cpp without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences. We release the complete QATFactory training code and the resulting checkpoints.",
+        "canonical_id": "arXiv:2609.39223",
+        "arxiv_id": "2609.39223",
+        "authors": [
+          "Wei-Li Xu",
+          "Ji-Sen Li",
+          "Yu-Qing Jian",
+          "Chen-Xi Li",
+          "Zhizhou Sha",
+          "Yi-Fan Yu",
+          "Qing-Yang Wu",
+          "Chen-Feng Xu",
+          "Zhong-Zhu Zhou",
+          "Tian-Yi Zhang",
+          "Ben Athiwaratkun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39056",
+      "identity_tokens": [
+        "id:arXiv:2609.39056",
+        "title:steerquant steering quantization error with actionguided scaling in worldaction models",
+        "url:https://arxiv.org/abs/2609.39056"
+      ],
+      "record": {
+        "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models",
+        "source_url": "https://arxiv.org/abs/2609.39056",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "World-action models (WAMs) jointly generate future world states and actions through iterative denoising, using shared weights to process heterogeneous semantic streams of video, proprioceptive, and action tokens. Quantization reduces inference cost, but comparable numerical errors in different streams can have markedly different effects on final actions, making numerical accuracy alone insufficient for reliable control. We introduce SteerQuant, a 4-bit quantization framework for WAMs that steers errors toward computations with less influence on final actions. It maps how each stream's quantization errors affect final actions and uses this map to guide shared channel scaling. Activation scaling is further calibrated for each stream and denoising step to accommodate changes in activation ranges and action impact. This adapts quantization to different stream requirements without duplicating weights or increasing bit-widths for selected streams. To reduce the extra kernel launches and memory traffic introduced by scaling, we develop Rudder, a 4-bit inference engine for WAMs that fuses scaling and output compensation into low-bit kernels. Under W4A8 and W4A4, SteerQuant maintains mean LIBERO success within 0.8 percentage points of full precision, while delivering up to $2.23\\times$ denoising speedup over BF16 across three WAMs with reduced peak GPU memory usage. On a real dual-arm robot, W4A8 deployment achieves a $1.35\\times$ end-to-end inference speedup while maintaining average task success relative to BF16.",
+        "canonical_id": "arXiv:2609.39056",
+        "arxiv_id": "2609.39056",
+        "authors": [
+          "Yun-Han Wang",
+          "Hao-Dong Wang",
+          "Zhi-Ming Liu",
+          "Zi-Cong Hong",
+          "Qian-Li Liu",
+          "Xiao-Yi Pang",
+          "Yang Hu",
+          "Quan-Xin Shou",
+          "Yi-Kun Miao",
+          "Song Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39361",
+      "identity_tokens": [
+        "id:arXiv:2609.39361",
+        "title:lampattention lookahead mixedprecision flashattention for dedicated accelerators",
+        "url:https://arxiv.org/abs/2609.39361"
+      ],
+      "record": {
+        "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators",
+        "source_url": "https://arxiv.org/abs/2609.39361",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "While most attention logits can be computed in low precision without degrading numerical stability, current attention kernels fail to exploit this phenomenon. We introduce a novel hardware-algorithm co-design in the form of mixed-precision FlashAttention. Our method accumulates key-query products and evaluates their exponentials in 8-bit formats, then adaptively identifies sensitive sub-blocks and recomputes them in 16-bit formats. We propose the specifications for a dedicated accelerator capable of executing this pipeline efficiently. Simulated experiments with Qwen3 and Gemma 3 show that rerouting a selective minority of sub-blocks to high precision is sufficient to recover the baseline model performance.",
+        "canonical_id": "arXiv:2609.39361",
+        "arxiv_id": "2609.39361",
+        "authors": [
+          "Stanislav S. Budzinskiy",
+          "Marian Gloser",
+          "T. Yilmaz",
+          "Ying Hong Tham",
+          "Yuan-Yi Lin",
+          "Wen-Yi Fang",
+          "Fan Wu",
+          "Philipp Petersen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40146",
+      "identity_tokens": [
+        "id:arXiv:2609.40146",
+        "title:quloc photonic quantumassisted lowrank llm compression",
+        "url:https://arxiv.org/abs/2609.40146"
+      ],
+      "record": {
+        "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+        "source_url": "https://arxiv.org/abs/2609.40146",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "As LLMs grow in size, compression becomes increasingly important for efficient deployment. SVD-based low-rank compression reduces parameter counts but can degrade downstream performance. To improve performance after compression, we introduce QuLoC, a photonic quantum-assisted LLM compression algorithm that uses quantum circuit outputs to gate the retained low-rank components during training. Model performance is recovered through local functional reconstruction followed by end-to-end knowledge distillation. After training, the gating coefficients are absorbed into the low-rank factors, allowing the compressed model to run on classical hardware without executing quantum circuits during inference. Experiments on Qwen3.5-4B show that QuLoC achieves a 9.73\\% relative improvement in average accuracy over state-of-the-art baselines across multiple downstream tasks, demonstrating its effectiveness. We further evaluate QuLoC on LLaMA-7B at different parameter compression ratios. It consistently achieves higher average downstream accuracy than state-of-the-art baselines, supporting its applicability to a larger model across different compression settings. Notably, experiments using the photonic quantum hardware retain these benefits with a small accuracy loss relative to simulation, suggesting robustness to hardware noise. These results motivate further exploration of photonic quantum-assisted compression for larger models and more complex agentic tasks.",
+        "canonical_id": "arXiv:2609.40146",
+        "arxiv_id": "2609.40146",
+        "authors": [
+          "Xiao-Hui Ni",
+          "Yu-Hang Yao",
+          "Yu-Ze Zhu",
+          "Hang Song",
+          "Xiang Zhao",
+          "Lin Yang",
+          "Xian-Min Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38477",
+      "identity_tokens": [
+        "id:arXiv:2609.38477",
+        "title:securityenhanced seedbased weight quantization for large language models",
+        "url:https://arxiv.org/abs/2609.38477"
+      ],
+      "record": {
+        "title": "Security-Enhanced Seed-Based Weight Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.38477",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large language models (LLMs) incur substantial storage, memory-bandwidth and energy costs, motivating compact weight representations. Existing seed-based compression methods reconstruct weights from compact pseudo-random representations but do not explicitly account for the non-uniform sensitivity of model weights. We introduce Seed-Q, a security-enhanced sensitivity-aware seed-based weight compression framework that uses lightweight Linear Feedback Shift Register (LFSR)-based weight generation with non-uniform bit allocation. Our approach assigns larger representation budgets to sensitive weights while aggressively compressing less sensitive regions. Importantly, this non-uniform allocation requires no side-information: the decoder deterministically reconstructs the bit-allocation schedule, with no rung depending on the decoded weights, eliminating the need to store per-block metadata or use calibration data while preserving the baseline coding rate. Experiments across diverse LLMs show that Seed-Q matches 4-bit perplexity of SeedLM with fewer bits, while at the same 4 bits/weight it reduces both perplexity degradation and zero-shot accuracy loss relative to SeedLM. We also show that Seed-Q simultaneously achieves high security against bit-flip attacks on model parameters, as bit corruption affects multiple reconstructed weights, greatly amplifying its impact and making it easier to detect. We further implement Seed-Q in an ASIC-based accelerator and demonstrate modest hardware overhead compared to prior seed-based approaches.",
+        "canonical_id": "arXiv:2609.38477",
+        "arxiv_id": "2609.38477",
+        "authors": [
+          "Qiu-Yu Ren",
+          "Sudipta Paria",
+          "Aritra Dasgupta",
+          "S. Bhunia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38599",
+      "identity_tokens": [
+        "id:arXiv:2609.38599",
+        "title:jarq joint alternating refinement for quantization",
+        "url:https://arxiv.org/abs/2609.38599"
+      ],
+      "record": {
+        "title": "JARQ: Joint Alternating Refinement for Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38599",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Group-wise post-training quantizers for large language models round weights onto a grid that is not refit to the resulting integer codes. We show that this leaves accuracy on the table: the best grid depends on the codes, input correlations couple the errors of different groups, and useful code changes often involve many codes at once. We propose JARQ , a plug-in refinement that starts from any group-wise quantizer and alternates a joint least-squares fit of all group scales with bounded Babai proposals that move many codes of a group together on the current grid. The problem is a bilinear box-constrained mixed-integer least-squares problem; the solver is backpropagation-free, does not increase the layer-wise objective under exact scale solves, and keeps the host's bit width, groups, zero points, and inference cost. Across Llama-2, Llama-3, and Qwen models with RTN, GPTQ, OmniQuant, and AWQ hosts, JARQ lowers perplexity in 90 of 96 comparisons, cuts three-bit RTN perplexity by up to 36%, raises mean multiple-choice accuracy in 23 of 24 configurations, and improves QEP, QuaRot, and OJBKQ outputs, at under a minute per 7B block.",
+        "canonical_id": "arXiv:2609.38599",
+        "arxiv_id": "2609.38599",
+        "authors": [
+          "Xin-Yu Wang",
+          "Sicheng Lyu",
+          "Xiao-Wen Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38166",
+      "identity_tokens": [
+        "id:arXiv:2609.38166",
+        "title:leapquant efficient linear attention with accurate recurrent state quantization",
+        "url:https://arxiv.org/abs/2609.38166"
+      ],
+      "record": {
+        "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38166",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+        "canonical_id": "arXiv:2609.38166",
+        "arxiv_id": "2609.38166",
+        "authors": [
+          "Yi Pan",
+          "Hao-Cheng Xi",
+          "Kan Zhu",
+          "Xing-Yang Li",
+          "Yi-Bo Wu",
+          "Mayank Mishra",
+          "Hong-Tao Zhang",
+          "William X.Zheng",
+          "Baris Kasikci",
+          "Song Han",
+          "Kurt Keutzer",
+          "Rishabh K. Iyer",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36437",
+      "identity_tokens": [
+        "id:arXiv:2609.36437",
+        "title:bits under zkllm evaluating zeroknowledgefriendly quantization for verifiable private llm inference",
+        "url:https://arxiv.org/abs/2609.36437"
+      ],
+      "record": {
+        "title": "Bits Under ZK-LLM: Evaluating Zero-Knowledge-Friendly Quantization for Verifiable Private LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.36437",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Zero-knowledge proofs are emerging as a promising approach for enabling private, verifiable LLM governance and auditing, where regulators, users, and auditors need to verify claims about training-data usage or LLM inference-time behavior, while model providers must protect proprietary model parameters. However, despite the growing interest in ZK-LLMs, the understanding of ZK-friendly quantization remains limited. This gap matters because in the ZK setting, quantization directly shapes the arithmetic structure, constraint complexity, and proving cost of ZK inference. ZK protocols operate over finite fields and incur costs that depend heavily on the number and type of arithmetic operations, nonlinearities, and lookup constraints. Understanding ZK-friendly quantization is therefore essential for making ZK-LLMs practical. In this work, we present the first systematic study of ZK-friendly quantization for LLMs. We first formalize the definition of ZK-friendly quantization, capturing the properties required for ZK proof generation. We then evaluate nine language models, including Qwen2.5-14B and the mixture-of-experts model Qwen3-30B-A3B, across a broad design space of weight, activation, and nonlinear lookup table precision. Our results show that activation precision is substantially more sensitive than weight precision, while nonlinear lookup approximations can become the dominant source of utility degradation. Also, we identify RMSNorm inverse-square-root lookups as a recurring bottleneck in several large models and recover near-baseline utility by selectively increasing precision only at the bottleneck. Finally, we show that reducing bit-width or lookup-table size does not necessarily yield proportional end-to-end proving savings, showing that conventional low-bit quantization heuristics do not directly translate to ZK proving efficiency and motivating operator-aware precision selection.",
+        "canonical_id": "arXiv:2609.36437",
+        "arxiv_id": "2609.36437",
+        "authors": [
+          "Taeung Yoon",
+          "Yu-Peng Zhang",
+          "Xiao-Jing Liao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36828",
+      "identity_tokens": [
+        "id:arXiv:2609.36828",
+        "title:calibrate the decisions that change the future onpolicy posttraining quantization for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.36828"
+      ],
+      "record": {
+        "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.36828",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Post-training quantization (PTQ) lowers deployment cost for multimodal large language models, but calibration typically reconstructs fixed sequences with local objectives. This overlooks autoregressive feedback: a quantization-induced token change redirects the prefix and changes future states. Yet on-policy coverage alone is insufficient because many decision mismatches barely affect future generation. We propose OnPTQ, an on-policy framework that calibrates on trajectories visited by the current quantized policy. On shared prefixes, OnPTQ identifies quantization-eroded boundaries, evaluates competing tokens through short counterfactual rollouts, and combines current discrepancy with branch consequence into a Decision--Consequence risk. The risk prioritizes critical states, while context anchoring and trajectory refresh preserve multimodal behavior and keep calibration aligned with the updated policy. We further derive a Decision--Consequence bound linking behavioral deviation to current policy discrepancy and action-conditioned future-value span. Across vision--language and omni-modal Qwen models under multiple low-bit settings, OnPTQ improves downstream performance and yields fewer correctness flips against the corresponding Dense/FP16 references, without changing the deployed inference graph.",
+        "canonical_id": "arXiv:2609.36828",
+        "arxiv_id": "2609.36828",
+        "authors": [
+          "Wen-Xiao Fan",
+          "Jing-Ling Fu",
+          "Li-Chen Ma",
+          "Yu He",
+          "Lu Liu",
+          "Jin-Bao Xue",
+          "Ke Zhang",
+          "Jun-Shi Huang",
+          "Kan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36654",
+      "identity_tokens": [
+        "id:arXiv:2609.36654",
+        "title:replay the curvature accurate and scalable nvfp4 quantization for large language model inference",
+        "url:https://arxiv.org/abs/2609.36654"
+      ],
+      "record": {
+        "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2609.36654",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large language models make weight storage and memory traffic major inference costs, motivating low-precision formats that represent each weight with only a few bits. Such formats use a scale to map floating-point values into a small codebook; NVFP4 improves local range utilization by letting every 16 E2M1 weights share an E4M3 block scale. Choosing that scale is difficult in GPTQ because quantizing one column updates those that follow, so evaluating a block independently can misestimate its final reconstruction error. Large models pose a second challenge: full-precision weights, calibration activations, and second-order state cannot all remain on one accelerator, while assigning complete layers to devices leaves each time-consuming layer solve serial. We introduce \\emph{Schur Replay}, a scale-selection algorithm that reproduces the GPTQ updates caused by each block scale and scores the resulting block error after accounting for compensation from unquantized columns. Separately, our execution infrastructure keeps only the active layer resident, tiers activations across device, host, and disk, retires full-precision layers after export, and distributes independent output rows across tensor-parallel ranks. Together, the algorithm and infrastructure attain $99.35\\%$ and $100.84\\%$ question-weighted recovery from BF16 across seven benchmarks on Qwen3.5-397B-A17B and Llama-3.3-70B-Instruct. On the 397B model, the infrastructure reduces measured per-layer time by $15.17\\times$ over ModelOpt and $23.14\\times$ over LLM Compressor, with lower memory used per GPU.",
+        "canonical_id": "arXiv:2609.36654",
+        "arxiv_id": "2609.36654",
+        "authors": [
+          "Rui-Ying Ding",
+          "Jie Li",
+          "Kang He",
+          "Zi-Yan Liu",
+          "Cheng-Ru Song",
+          "Yue-Dong Xu",
+          "Yuan Cheng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:792530045c740a52b81bbdd77e400511490659a8f7f0caae2fd7a6b6e1a7a943",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

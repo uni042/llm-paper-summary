@@ -1,0 +1,898 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-d24298925d210364b42a",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-d24298925d210364b42a",
+  "axis": "forward citations of SGLang structured generation serving runtime",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-02T07:38:24.296392+00:00",
+  "preload_id": "preload-d24298925d210364b42a",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "EcoxPU: Autonomous Multi-Agent Orchestration for Energy-Efficient Disaggregated LLM Inference on Heterogeneous xPUs",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3732699",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": "Large Language Model (LLM) inference is increasingly served on disaggregated clusters that combine different accelerator types, including NVIDIA GPUs, Huawei Ascend NPUs, and Kunlunxin AI processors. We show that these heterogeneous xPUs exhibit distinct energy-performance behaviors across inference phases and model modules, so a fixed deployment can waste substantial energy even when latency targets are met. This paper presents <monospace><bold>EcoxPU</bold></monospace>, an autonomous multi-agent framework for energy-efficient disaggregated LLM inference. EcoxPU jointly coordinates Prefill-Decode (PD) separation and Attention-Feed-Forward Network (FFN) disaggregation, assigning compute-bound and memory-bound work to suitable devices while adapting frequency and load placement at runtime. Evaluated on a heterogeneous cluster with NVIDIA H100, Huawei Ascend 910B, and Kunlunxin P800, EcoxPU reduces energy consumption by 31.9–45% (42% on average), while maintaining <inline-formula><tex-math notation=\"LaTeX\">$\\le$</tex-math><alternatives><mml:math><mml:mo>≤</mml:mo></mml:math><inline-graphic xlink:href=\"dong-ieq1-3732699.gif\"/></alternatives></inline-formula>6% latency overhead and <inline-formula><tex-math notation=\"LaTeX\">$\\le$</tex-math><alternatives><mml:math><mml:mo>≤</mml:mo></mml:math><inline-graphic xlink:href=\"dong-ieq2-3732699.gif\"/></alternatives></inline-formula>2% perplexity variation. It also improves MoE-FFN utilization on Ascend 910B to 82.3%, and cross-domain transfer learning accelerates agent adaptation by 2.67×.",
+      "doi": "10.1109/TPDS.2026.3732699",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3732699",
+      "authors": [
+        "Dong Dong",
+        "Cheng-Zhang Wu",
+        "Zheng Chen",
+        "Long-Chuan Yan",
+        "Jia-Ning Niu",
+        "Jun Yu",
+        "Zhi-Cheng Ma",
+        "Ji-Dong Zhai"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Persistent Context Graphs for Efficient Memory Compaction in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.40118",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "As LLM capabilities advance, agents are tackling increasingly complex tasks over longer horizons. Their growing interaction histories make memory compaction essential for staying within context windows and reducing prefill cost. Existing methods summarize the history or compress its KV cache, often adding model computation to preserve information for future requests. A new user request can change which history matters, but reassessing that history with the model requires re-encoding it if the KV cache has expired. Past attention provides signals of historical importance and dependencies between messages, while relevance to the current task must be assessed using the new user request. We introduce ReCAP, a memory compaction method that stores attention-derived importance scores and dependency links in a lightweight, persistent context graph. For each new request, ReCAP combines stored importance with relevance cues from the request and follows dependency links to select messages and their supporting context, without additional model calls for selection. Compared with Codex's default summarization-based compaction, ReCAP reduces estimated latency for compaction and cold restoration by approximately 95% on both Qwen3-Coder and gpt-oss. It also roughly halves the historical context per call on SWE-Together at comparable task quality and improves accuracy on the code tasks of Lost-in-Conversation over full history by 19.8 and 41.2 points.",
+      "canonical_id": "arXiv:2609.40118",
+      "arxiv_id": "2609.40118",
+      "authors": [
+        "Jing-Bo Yang",
+        "Kwei-Herng Lai",
+        "Xiao-Wen Wang",
+        "Zhao-Xuan Tan",
+        "Pei Zhou",
+        "Meng-Ting Wan",
+        "Y. Harari",
+        "E. Gabrilovich",
+        "Shi-Yu Chang"
+      ]
+    },
+    {
+      "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+      "source_url": "https://arxiv.org/abs/2609.40093",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Expert parallelism (EP) enables inference of large Mixture-of-Experts (MoE) models by placing their experts across multiple GPUs, but requires substantial communication between GPUs at every MoE layer. As contemporary MoE models activate more experts per token, this communication accounts for a growing fraction of inference time. The cost becomes particularly pronounced on PCIe-based consumer GPU systems, where all inter-GPU transfers traverse CPU memory. However, existing MoE-specialized EP communication libraries assume that direct GPU-to-GPU access is available, largely overlooking consumer GPUs. Therefore, most LLM frameworks instead rely on NCCL, whose CPU-staged communication incurs redundant PCIe transfers and competes with expert computation for GPU resources, limiting their overlap. We present ThunderEP, a novel communication design for such systems that removes the relay hops of traditional ring algorithm, moves data through DMA engines to avoid compute resource contention, and minimizes synchronization latency by reducing the polling overhead of completion flags in CPU memory. We integrate the proposed design into vLLM and evaluate it on three widely used MoE models. Experiments on two PCIe systems equipped with RTX 4090 and RTX 5090 GPUs show that ThunderEP achieves average speedups of 2.00$\\times$ and 1.53$\\times$ over NCCL for dispatch and combine, respectively, and up to 1.66$\\times$ end-to-end speedup over state-of-the-art MoE inference frameworks.",
+      "canonical_id": "arXiv:2609.40093",
+      "arxiv_id": "2609.40093",
+      "authors": [
+        "Jaehwan Lee",
+        "Sang-Min Lee",
+        "Chaewon Kim",
+        "Jun-Hee Shin",
+        "Jaejin Lee"
+      ]
+    },
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+      "canonical_id": "arXiv:2609.39334",
+      "arxiv_id": "2609.39334",
+      "authors": [
+        "Jinwoo Jeong",
+        "Woohyun Choi",
+        "Myeongjae Jeon",
+        "Jeongseob Ahn"
+      ]
+    },
+    {
+      "title": "Inference Auctions",
+      "source_url": "https://arxiv.org/abs/2609.40070",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "When inference demand exceeds available compute capacity, model providers must decide which requests should be served first. Users have different tolerances for delay from an LLM API, but current priority pricing schemes compress these differences into coarse fixed-price service tiers. We design an inference auction that allows users to bid for faster service. Our auction allocates priority in an economically efficient way without sacrificing latency, and we develop fast algorithms for implementing prices that incentivize truthful bidding. We also design an autobidding agent for our inference auction, where users specify an inference budget and the autobidder dynamically adjusts its bids over time to maximize user utility subject to the budget constraint. Experiments validate the practicality of our auction: it increases system welfare while maintaining the cache utilization and latency advantages of SGLang, a state-of-the-art inference serving framework.",
+      "canonical_id": "arXiv:2609.40070",
+      "arxiv_id": "2609.40070",
+      "authors": [
+        "Keegan Harris",
+        "Siddharth Prasad",
+        "Asher Trockman",
+        "Nika Haghtalab",
+        "Michael I. Jordan"
+      ]
+    },
+    {
+      "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+      "source_url": "https://arxiv.org/abs/2609.39819",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+      "canonical_id": "arXiv:2609.39819",
+      "arxiv_id": "2609.39819",
+      "authors": [
+        "Kai-Hua Fu",
+        "Yu-Kun Zhou",
+        "Chaokun Chang",
+        "Ying-Hao Yu",
+        "Lu-Ping Wang",
+        "Guo-Dong Yang",
+        "Jiu-Chen Shi",
+        "Quan Chen",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.38706",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+      "canonical_id": "arXiv:2609.38706",
+      "arxiv_id": "2609.38706",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Xi Zheng",
+        "Leo Zhang",
+        "Xiao-Hun Cheng"
+      ]
+    },
+    {
+      "title": "SparseEngine: Sparse-First Inference Engine",
+      "source_url": "https://arxiv.org/abs/2609.39068",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Long-context LLM agents accumulate interaction histories that strain KV-cache memory and attention computation. Although sparse attention reduces these costs, heterogeneous cache representations and workflows hinder integration with existing inference engines, while prior sparse-serving abstractions support only specific layouts or workflows. We present SparseEngine, a ground-up, sparse-first inference engine whose shared lifecycle contract lets each method control its KV representation and computation while coordinating state transitions with common serving infrastructure. SparseEngine supports 15 methods across four categories and enables cross-request state management through Chain Cache, which resumes KV-eviction methods from retained history, and controllable Prefix-Cache Pruning, which removes KV from selected history regions while preserving logical-prefix matching. While maintaining method quality, SparseEngine delivers over 10x higher throughput with KV eviction, over 2.5x faster decoding at matched concurrency than vLLM, and over 2x end-to-end speedup on agent benchmarks. The code is available at https://github.com/CURRENTF/SparseEngine.",
+      "canonical_id": "arXiv:2609.39068",
+      "arxiv_id": "2609.39068",
+      "authors": [
+        "Jitai Hao",
+        "Quan-Sheng Gu",
+        "Qiang Huang",
+        "Jun Yu"
+      ]
+    },
+    {
+      "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+      "source_url": "https://arxiv.org/abs/2609.39223",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and llama.cpp's Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and llama.cpp without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences. We release the complete QATFactory training code and the resulting checkpoints.",
+      "canonical_id": "arXiv:2609.39223",
+      "arxiv_id": "2609.39223",
+      "authors": [
+        "Wei-Li Xu",
+        "Ji-Sen Li",
+        "Yu-Qing Jian",
+        "Chen-Xi Li",
+        "Zhizhou Sha",
+        "Yi-Fan Yu",
+        "Qing-Yang Wu",
+        "Chen-Feng Xu",
+        "Zhong-Zhu Zhou",
+        "Tian-Yi Zhang",
+        "Ben Athiwaratkun"
+      ]
+    },
+    {
+      "title": "LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception",
+      "source_url": "https://arxiv.org/abs/2609.39938",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Hour-scale audio-visual question answering is constrained by a context dilemma: dense whole-recording encoding rapidly exhausts context limits, whereas uniform temporal compression severely dilutes fine-grained acoustic and visual evidence. We introduce LEAP, a framework where the model retrieves its own evidence without placing the whole recording in one context. LEAP divides a recording into fixed-duration blocks, applying a lightweight localization pass to each block to score short candidate windows. The highest-ranked windows are pooled and re-encoded in a single bounded answer pass. Consequently, the answer input and peak context remain independent of the recording duration. By decoupling evidence localization from reasoning, our framework can localize candidate temporal windows over pre-computed transcripts without decoding media frames, while preserving fine-grained visual and non-speech evidence by routing the final answering pass over raw audio-visual streams. LEAP trains both stages: a localization LoRA improves the selected windows, and an answer LoRA improves the answers read from the same windows. The block grid natively supports causal queries, enabling LEAP to support streaming inference without streaming-specific training. Across several AVQA benchmarks, LEAP improves over the Qwen3-Omni-30B-A3B baseline by 4.5-16.8%, and transfers to a second omni-modal backbone, MiniCPM-o 4.5, surpassing its published results by 3.1-13.0%.",
+      "canonical_id": "arXiv:2609.39938",
+      "arxiv_id": "2609.39938",
+      "authors": [
+        "Ju-Yi Lin",
+        "Zhi-Qiang Lao",
+        "Jia-Li Cui",
+        "Lin Zhao",
+        "Pu Zhao",
+        "Di-Chang Zhang",
+        "Arman Akbari",
+        "Yu Qi",
+        "Xin-Ru Jiang",
+        "Yan-Zhi Wang",
+        "Heather Yu",
+        "Liang Peng"
+      ]
+    },
+    {
+      "title": "UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.39972",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Speculative decoding accelerates language model inference by verifying multiple draft tokens in a single target-model pass. Recent parallel drafters have achieved breakthrough performance in frontier production models, but their effectiveness deteriorates as the entropy of target distributions increases due to insufficient draft diversity. To overcome this bottleneck without sacrificing parallelism, we introduce UBTree, a parallel drafter that couples a Unigram proposer with a Bigram selector to construct drafting Trees. The unigram proposer is trained with the standard cross-entropy objective to generate candidate tokens independently for each position, while a lightweight bigram selector predicts transition scores between adjacent candidate pairs. Unlike the proposer, the selector is trained with a renormalized KL objective on high-temperature data. This tree-native training broadens the supervision beyond the greedy path, encouraging plausible alternative branches that improve the chance of accepting additional tokens during tree verification. Across seven standardized benchmarks with Qwen3-4B and Qwen3-8B, UBTree achieves an average speedup of $5.84$--$6.94\\times$ over autoregressive decoding and outperforms DARTree in all 28 comparisons. Production-scale evaluation further demonstrates UBTree's advantage over frontier baselines such as DSpark.",
+      "canonical_id": "arXiv:2609.39972",
+      "arxiv_id": "2609.39972",
+      "authors": [
+        "Chumeng Liang",
+        "Lin-Xuan Wang",
+        "Xin-Yu Peng",
+        "Hua-Bin Liu",
+        "Yu-Xin Chen",
+        "Ge Liu",
+        "Guang Lin",
+        "Qi-Fan Song",
+        "Jiang Li"
+      ]
+    },
+    {
+      "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+      "source_url": "https://arxiv.org/abs/2609.39358",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "A transformer language model performs a bounded amount of computation per token, and recent work by Vishal Sikka, former CEO of Infosys, argues that this bound limits which tasks a model can carry out or verify (arXiv:2507.07505). We ask how much of the budget beneath that ceiling is spent on work the model has already done. Serving is stateless across requests: a model that answers a second question about a document recomputes the document's attention state from the first token. On seven real-world datasets, 98.7% of prompt tokens were text the model had already read. We present Galahad, a memory layer for vLLM, SGLang and llama.cpp that makes this reading a one-time cost. Taliesin saves the model's key-value (KV) state for a block of text and loads it on the next request that contains the same bytes, instead of recomputing it. Blaise keeps the documents themselves and passes the model only the section a question needs. On a recall test with 100 facts hidden in a 97,000-token corpus (Gemma 4 31B), Taliesin alone let the model attend to the whole corpus and answered 98 of 100 on llama.cpp at 3.0 s and 572 J per question, against 10 of 100, 9.3 s and 2,754 J for the same model without Galahad, which could hold only the last 12,000 tokens. With Blaise added, the model read about 668 tokens per question and answered 100 of 100 on all three runtimes at 0.59-0.64 s and 200-213 J; a tuned RAGFlow pipeline answered 77. Storing the corpus is a one-time cost of about 100 s and 28 kJ, whose energy is recovered after 13 questions. Restored state is bit-identical: all 262,144 output logits matched after restart, rehydration and hot-load. Galahad worked with all 30 models we tested under vLLM, and it fails closed: any load that does not pass its checks is recomputed. Together these results move LLM serving from stateless to stateful inference.",
+      "canonical_id": "arXiv:2609.39358",
+      "arxiv_id": "2609.39358",
+      "authors": [
+        "Sietse Schelpe"
+      ]
+    },
+    {
+      "title": "Can Computation from Earlier Problems Help LLMs Solve New Ones?",
+      "source_url": "https://arxiv.org/abs/2609.39394",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Large language models often solve independent problems in the same conversation. Can computation from earlier problems help them solve new ones? To answer this question, we first conduct preliminary experiments showing that retained history can raise or lower later-turn accuracy, even within the same domain. To understand these effects, we use controlled replay to isolate internal state changes specific to each problem-history pairing. Across different histories, these changes preserve similar relationships among current problems. To improve reasoning under retained history, we introduce STAIR (Stale-Token Attention for Inter-query Reuse). STAIR captures keys and values from earlier response generation in a fixed bank. It learns to redirect current queries when they read this bank during prompt processing. The base model remains frozen; only 12,288 parameters are trained. Across three Qwen models and four benchmarks, STAIR improves average later-turn accuracy by up to 11.67 percentage points over the unmodified model with history.",
+      "canonical_id": "arXiv:2609.39394",
+      "arxiv_id": "2609.39394",
+      "authors": [
+        "Ji-Pei He",
+        "Wen-Hui Tan",
+        "Xiao-Yi Yu",
+        "E. Sangineto",
+        "Fiorenzo Parascandolo",
+        "Rita Cucchiara",
+        "Rui-Hua Song"
+      ]
+    },
+    {
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "source_url": "https://arxiv.org/abs/2609.40361",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+      "canonical_id": "arXiv:2609.40361",
+      "arxiv_id": "2609.40361",
+      "authors": [
+        "Tian Xia",
+        "Ming-Hao Liu",
+        "Yi-Qing Liang",
+        "Lai-Xi Shi",
+        "Jia-Yun Wang"
+      ]
+    },
+    {
+      "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+      "source_url": "https://arxiv.org/abs/2609.36954",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Distributed inference depends on GPU collective communication that must keep pace with evolving hardware and specialized workloads. However, existing collective implementations often couple semantics, orchestration (where and when data moves), and the datapath (how data moves). This coupling makes it costly to adopt new hardware mechanisms and customize communication for applications. We present Purlin, a scale-up communication framework that separates these concerns. At the top of Purlin, we specify collectives as a naming of an input and output layout and a copy or reduction operation. In the middle, we introduce a shared orchestration protocol, Stage, Notify, And Consume (SNAC), which derives coordination from these specifications. Below SNAC sits a hardware-specific datapath we call Atom, which implements two key data movement primitives for collectives: copy and reduce. This separation lets us customize collectives and adopt new hardware mechanisms while reusing orchestration via SNAC. We evaluate Purlin on A100, H200, and B200 GPUs. Across seven collectives, Purlin achieves latency speedups of up to 5.14x and bandwidth improvements of up to 4.50x over baselines. Integrated into SGLang, Purlin improves offline LLM serving throughput and interactivity by 1.13x on average and up to 1.37x over baselines. For online LLM inference, Purlin improves interactivity by 1.26x on average and up to 2.85x, with the largest gain occurring under overload. For diffusion image generation, Purlin reduces end-to-end latency by up to 1.13x.",
+      "canonical_id": "arXiv:2609.36954",
+      "arxiv_id": "2609.36954",
+      "authors": [
+        "Osayamen Jonathan Aimuyo",
+        "Swapnil Gandhi",
+        "Christos Kozyrakis"
+      ]
+    },
+    {
+      "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+      "source_url": "https://arxiv.org/abs/2609.37062",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+      "canonical_id": "arXiv:2609.37062",
+      "arxiv_id": "2609.37062",
+      "authors": [
+        "Dao-Min Wei",
+        "Yavuz Ferhatosmanoglu",
+        "E. Kalyvianaki"
+      ]
+    },
+    {
+      "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+      "source_url": "https://arxiv.org/abs/2609.36945",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "We study the learning dynamics of fine-tuning a policy model on self-generated and reward-weighted data, with particular focus on a generalized version of REINFORCE -- referred to as RE(S) -- that updates the rollout distribution once every $S \\ge 1$ gradient steps. Prior work in bandits and reinforcement learning has developed rich theory for policy gradient methods, and on-policy sampling (i.e., a small $S$, ideally $1$) is often viewed as crucial to their success; yet in prominent application like post-training large language models, reward-guided self-training has proved to be effective even when the rollout distribution is updated infrequently, but theoretical understanding remains limited for the convergence properties of these off-policy methods. To bridge these gaps, we develop a unified theory for RE(S) that covers the full spectrum of $S \\ge 1$: it can be interpreted as a stage-wise optimization process, where each stage takes $S$ gradient steps for minimizing the Kullback-Leibler distance to a fixed reward-weighted rollout distribution. For multi-arm bandits with softmax policies, our in-depth analysis and numerical experiments reveal three key findings: (1) for any fixed $S$, RE(S) enjoys global convergence to the optimal policy as the number of rollout distribution updates $B = \\lfloor T / S \\rfloor \\rightarrow \\infty$, where $T$ denotes the number of gradient steps; (2) we prove tight two-sided bounds showing that the suboptimality gap of RE(S) achieves an asymptotic $\\Theta(1 / T)$ convergence rate, while $S$ only affects the length of a burn-in phase; (3) when initialized at a weak policy with a small optimal-action probability, RE(1) gets trapped around suboptimal policies for a long period, whereas RE(S) with a suitable $S$ avoids the detour and achieves significantly faster convergence to the global optimum, highlighting the benefits of off-policyness in this case.",
+      "canonical_id": "arXiv:2609.36945",
+      "arxiv_id": "2609.36945",
+      "authors": [
+        "Zhi-Wei Wang",
+        "Yan-Xi Chen",
+        "Ya-Liang Li",
+        "Bo-Lin Ding"
+      ]
+    },
+    {
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "source_url": "https://arxiv.org/abs/2609.36938",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+      "canonical_id": "arXiv:2609.36938",
+      "arxiv_id": "2609.36938",
+      "authors": [
+        "Wen-Hao He",
+        "Ping Zhang",
+        "Xiao-He Hu",
+        "Chu-Tian Wang",
+        "Jin-Long Hou",
+        "Yuan Cheng",
+        "Peng Sun",
+        "Fang-Cheng Fu"
+      ]
+    },
+    {
+      "title": "ATTUNER: Recomputation-Free KV Cache Reuse via Query-Side Adaptation",
+      "source_url": "https://arxiv.org/abs/2609.36722",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+      "canonical_id": "arXiv:2609.36722",
+      "arxiv_id": "2609.36722",
+      "authors": [
+        "Xing-Hao Chen",
+        "Jun-Nan Dong",
+        "Cai Ke",
+        "Chak Tou Leong",
+        "Hao-Cheng Sun",
+        "Ke-Yu Chen",
+        "Si-Yu An",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Wen-Jie Li",
+        "Xiao-Yu Shen"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3732699",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3732699",
+        "title:ecoxpu autonomous multiagent orchestration for energyefficient disaggregated llm inference on heterogeneous xpus",
+        "url:https://doi.org/10.1109/TPDS.2026.3732699"
+      ],
+      "record": {
+        "title": "EcoxPU: Autonomous Multi-Agent Orchestration for Energy-Efficient Disaggregated LLM Inference on Heterogeneous xPUs",
+        "source_url": "https://doi.org/10.1109/TPDS.2026.3732699",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": "Large Language Model (LLM) inference is increasingly served on disaggregated clusters that combine different accelerator types, including NVIDIA GPUs, Huawei Ascend NPUs, and Kunlunxin AI processors. We show that these heterogeneous xPUs exhibit distinct energy-performance behaviors across inference phases and model modules, so a fixed deployment can waste substantial energy even when latency targets are met. This paper presents <monospace><bold>EcoxPU</bold></monospace>, an autonomous multi-agent framework for energy-efficient disaggregated LLM inference. EcoxPU jointly coordinates Prefill-Decode (PD) separation and Attention-Feed-Forward Network (FFN) disaggregation, assigning compute-bound and memory-bound work to suitable devices while adapting frequency and load placement at runtime. Evaluated on a heterogeneous cluster with NVIDIA H100, Huawei Ascend 910B, and Kunlunxin P800, EcoxPU reduces energy consumption by 31.9–45% (42% on average), while maintaining <inline-formula><tex-math notation=\"LaTeX\">$\\le$</tex-math><alternatives><mml:math><mml:mo>≤</mml:mo></mml:math><inline-graphic xlink:href=\"dong-ieq1-3732699.gif\"/></alternatives></inline-formula>6% latency overhead and <inline-formula><tex-math notation=\"LaTeX\">$\\le$</tex-math><alternatives><mml:math><mml:mo>≤</mml:mo></mml:math><inline-graphic xlink:href=\"dong-ieq2-3732699.gif\"/></alternatives></inline-formula>2% perplexity variation. It also improves MoE-FFN utilization on Ascend 910B to 82.3%, and cross-domain transfer learning accelerates agent adaptation by 2.67×.",
+        "doi": "10.1109/TPDS.2026.3732699",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3732699",
+        "authors": [
+          "Dong Dong",
+          "Cheng-Zhang Wu",
+          "Zheng Chen",
+          "Long-Chuan Yan",
+          "Jia-Ning Niu",
+          "Jun Yu",
+          "Zhi-Cheng Ma",
+          "Ji-Dong Zhai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40118",
+      "identity_tokens": [
+        "id:arXiv:2609.40118",
+        "title:persistent context graphs for efficient memory compaction in llm agents",
+        "url:https://arxiv.org/abs/2609.40118"
+      ],
+      "record": {
+        "title": "Persistent Context Graphs for Efficient Memory Compaction in LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.40118",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "As LLM capabilities advance, agents are tackling increasingly complex tasks over longer horizons. Their growing interaction histories make memory compaction essential for staying within context windows and reducing prefill cost. Existing methods summarize the history or compress its KV cache, often adding model computation to preserve information for future requests. A new user request can change which history matters, but reassessing that history with the model requires re-encoding it if the KV cache has expired. Past attention provides signals of historical importance and dependencies between messages, while relevance to the current task must be assessed using the new user request. We introduce ReCAP, a memory compaction method that stores attention-derived importance scores and dependency links in a lightweight, persistent context graph. For each new request, ReCAP combines stored importance with relevance cues from the request and follows dependency links to select messages and their supporting context, without additional model calls for selection. Compared with Codex's default summarization-based compaction, ReCAP reduces estimated latency for compaction and cold restoration by approximately 95% on both Qwen3-Coder and gpt-oss. It also roughly halves the historical context per call on SWE-Together at comparable task quality and improves accuracy on the code tasks of Lost-in-Conversation over full history by 19.8 and 41.2 points.",
+        "canonical_id": "arXiv:2609.40118",
+        "arxiv_id": "2609.40118",
+        "authors": [
+          "Jing-Bo Yang",
+          "Kwei-Herng Lai",
+          "Xiao-Wen Wang",
+          "Zhao-Xuan Tan",
+          "Pei Zhou",
+          "Meng-Ting Wan",
+          "Y. Harari",
+          "E. Gabrilovich",
+          "Shi-Yu Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40093",
+      "identity_tokens": [
+        "id:arXiv:2609.40093",
+        "title:efficient expertparallel communication on pcieconnected consumer gpus",
+        "url:https://arxiv.org/abs/2609.40093"
+      ],
+      "record": {
+        "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+        "source_url": "https://arxiv.org/abs/2609.40093",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Expert parallelism (EP) enables inference of large Mixture-of-Experts (MoE) models by placing their experts across multiple GPUs, but requires substantial communication between GPUs at every MoE layer. As contemporary MoE models activate more experts per token, this communication accounts for a growing fraction of inference time. The cost becomes particularly pronounced on PCIe-based consumer GPU systems, where all inter-GPU transfers traverse CPU memory. However, existing MoE-specialized EP communication libraries assume that direct GPU-to-GPU access is available, largely overlooking consumer GPUs. Therefore, most LLM frameworks instead rely on NCCL, whose CPU-staged communication incurs redundant PCIe transfers and competes with expert computation for GPU resources, limiting their overlap. We present ThunderEP, a novel communication design for such systems that removes the relay hops of traditional ring algorithm, moves data through DMA engines to avoid compute resource contention, and minimizes synchronization latency by reducing the polling overhead of completion flags in CPU memory. We integrate the proposed design into vLLM and evaluate it on three widely used MoE models. Experiments on two PCIe systems equipped with RTX 4090 and RTX 5090 GPUs show that ThunderEP achieves average speedups of 2.00$\\times$ and 1.53$\\times$ over NCCL for dispatch and combine, respectively, and up to 1.66$\\times$ end-to-end speedup over state-of-the-art MoE inference frameworks.",
+        "canonical_id": "arXiv:2609.40093",
+        "arxiv_id": "2609.40093",
+        "authors": [
+          "Jaehwan Lee",
+          "Sang-Min Lee",
+          "Chaewon Kim",
+          "Jun-Hee Shin",
+          "Jaejin Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39334",
+      "identity_tokens": [
+        "id:arXiv:2609.39334",
+        "title:taming speculative search for testtime scaling in llm serving",
+        "url:https://arxiv.org/abs/2609.39334"
+      ],
+      "record": {
+        "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.39334",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+        "canonical_id": "arXiv:2609.39334",
+        "arxiv_id": "2609.39334",
+        "authors": [
+          "Jinwoo Jeong",
+          "Woohyun Choi",
+          "Myeongjae Jeon",
+          "Jeongseob Ahn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40070",
+      "identity_tokens": [
+        "id:arXiv:2609.40070",
+        "title:inference auctions",
+        "url:https://arxiv.org/abs/2609.40070"
+      ],
+      "record": {
+        "title": "Inference Auctions",
+        "source_url": "https://arxiv.org/abs/2609.40070",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "When inference demand exceeds available compute capacity, model providers must decide which requests should be served first. Users have different tolerances for delay from an LLM API, but current priority pricing schemes compress these differences into coarse fixed-price service tiers. We design an inference auction that allows users to bid for faster service. Our auction allocates priority in an economically efficient way without sacrificing latency, and we develop fast algorithms for implementing prices that incentivize truthful bidding. We also design an autobidding agent for our inference auction, where users specify an inference budget and the autobidder dynamically adjusts its bids over time to maximize user utility subject to the budget constraint. Experiments validate the practicality of our auction: it increases system welfare while maintaining the cache utilization and latency advantages of SGLang, a state-of-the-art inference serving framework.",
+        "canonical_id": "arXiv:2609.40070",
+        "arxiv_id": "2609.40070",
+        "authors": [
+          "Keegan Harris",
+          "Siddharth Prasad",
+          "Asher Trockman",
+          "Nika Haghtalab",
+          "Michael I. Jordan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39819",
+      "identity_tokens": [
+        "id:arXiv:2609.39819",
+        "title:capture the lifecycle kv cache management in react agents with kvtether",
+        "url:https://arxiv.org/abs/2609.39819"
+      ],
+      "record": {
+        "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+        "source_url": "https://arxiv.org/abs/2609.39819",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+        "canonical_id": "arXiv:2609.39819",
+        "arxiv_id": "2609.39819",
+        "authors": [
+          "Kai-Hua Fu",
+          "Yu-Kun Zhou",
+          "Chaokun Chang",
+          "Ying-Hao Yu",
+          "Lu-Ping Wang",
+          "Guo-Dong Yang",
+          "Jiu-Chen Shi",
+          "Quan Chen",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38706",
+      "identity_tokens": [
+        "id:arXiv:2609.38706",
+        "title:preserving provenance in shared kv caches for llm serving",
+        "url:https://arxiv.org/abs/2609.38706"
+      ],
+      "record": {
+        "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.38706",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+        "canonical_id": "arXiv:2609.38706",
+        "arxiv_id": "2609.38706",
+        "authors": [
+          "Wei Song",
+          "Yu-Xin Cao",
+          "Xi Zheng",
+          "Leo Zhang",
+          "Xiao-Hun Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39068",
+      "identity_tokens": [
+        "id:arXiv:2609.39068",
+        "title:sparseengine sparsefirst inference engine",
+        "url:https://arxiv.org/abs/2609.39068"
+      ],
+      "record": {
+        "title": "SparseEngine: Sparse-First Inference Engine",
+        "source_url": "https://arxiv.org/abs/2609.39068",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Long-context LLM agents accumulate interaction histories that strain KV-cache memory and attention computation. Although sparse attention reduces these costs, heterogeneous cache representations and workflows hinder integration with existing inference engines, while prior sparse-serving abstractions support only specific layouts or workflows. We present SparseEngine, a ground-up, sparse-first inference engine whose shared lifecycle contract lets each method control its KV representation and computation while coordinating state transitions with common serving infrastructure. SparseEngine supports 15 methods across four categories and enables cross-request state management through Chain Cache, which resumes KV-eviction methods from retained history, and controllable Prefix-Cache Pruning, which removes KV from selected history regions while preserving logical-prefix matching. While maintaining method quality, SparseEngine delivers over 10x higher throughput with KV eviction, over 2.5x faster decoding at matched concurrency than vLLM, and over 2x end-to-end speedup on agent benchmarks. The code is available at https://github.com/CURRENTF/SparseEngine.",
+        "canonical_id": "arXiv:2609.39068",
+        "arxiv_id": "2609.39068",
+        "authors": [
+          "Jitai Hao",
+          "Quan-Sheng Gu",
+          "Qiang Huang",
+          "Jun Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39223",
+      "identity_tokens": [
+        "id:arXiv:2609.39223",
+        "title:qatfactory a versatile deploymentaligned framework for quantizationaware training and distillation of llms",
+        "url:https://arxiv.org/abs/2609.39223"
+      ],
+      "record": {
+        "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+        "source_url": "https://arxiv.org/abs/2609.39223",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and llama.cpp's Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and llama.cpp without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences. We release the complete QATFactory training code and the resulting checkpoints.",
+        "canonical_id": "arXiv:2609.39223",
+        "arxiv_id": "2609.39223",
+        "authors": [
+          "Wei-Li Xu",
+          "Ji-Sen Li",
+          "Yu-Qing Jian",
+          "Chen-Xi Li",
+          "Zhizhou Sha",
+          "Yi-Fan Yu",
+          "Qing-Yang Wu",
+          "Chen-Feng Xu",
+          "Zhong-Zhu Zhou",
+          "Tian-Yi Zhang",
+          "Ben Athiwaratkun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39938",
+      "identity_tokens": [
+        "id:arXiv:2609.39938",
+        "title:leap learned blockwise evidence retrieval for long audiovideo perception",
+        "url:https://arxiv.org/abs/2609.39938"
+      ],
+      "record": {
+        "title": "LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception",
+        "source_url": "https://arxiv.org/abs/2609.39938",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Hour-scale audio-visual question answering is constrained by a context dilemma: dense whole-recording encoding rapidly exhausts context limits, whereas uniform temporal compression severely dilutes fine-grained acoustic and visual evidence. We introduce LEAP, a framework where the model retrieves its own evidence without placing the whole recording in one context. LEAP divides a recording into fixed-duration blocks, applying a lightweight localization pass to each block to score short candidate windows. The highest-ranked windows are pooled and re-encoded in a single bounded answer pass. Consequently, the answer input and peak context remain independent of the recording duration. By decoupling evidence localization from reasoning, our framework can localize candidate temporal windows over pre-computed transcripts without decoding media frames, while preserving fine-grained visual and non-speech evidence by routing the final answering pass over raw audio-visual streams. LEAP trains both stages: a localization LoRA improves the selected windows, and an answer LoRA improves the answers read from the same windows. The block grid natively supports causal queries, enabling LEAP to support streaming inference without streaming-specific training. Across several AVQA benchmarks, LEAP improves over the Qwen3-Omni-30B-A3B baseline by 4.5-16.8%, and transfers to a second omni-modal backbone, MiniCPM-o 4.5, surpassing its published results by 3.1-13.0%.",
+        "canonical_id": "arXiv:2609.39938",
+        "arxiv_id": "2609.39938",
+        "authors": [
+          "Ju-Yi Lin",
+          "Zhi-Qiang Lao",
+          "Jia-Li Cui",
+          "Lin Zhao",
+          "Pu Zhao",
+          "Di-Chang Zhang",
+          "Arman Akbari",
+          "Yu Qi",
+          "Xin-Ru Jiang",
+          "Yan-Zhi Wang",
+          "Heather Yu",
+          "Liang Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39972",
+      "identity_tokens": [
+        "id:arXiv:2609.39972",
+        "title:ubtree parallel tree drafting via unigram and bigram models for speculative decoding",
+        "url:https://arxiv.org/abs/2609.39972"
+      ],
+      "record": {
+        "title": "UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.39972",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Speculative decoding accelerates language model inference by verifying multiple draft tokens in a single target-model pass. Recent parallel drafters have achieved breakthrough performance in frontier production models, but their effectiveness deteriorates as the entropy of target distributions increases due to insufficient draft diversity. To overcome this bottleneck without sacrificing parallelism, we introduce UBTree, a parallel drafter that couples a Unigram proposer with a Bigram selector to construct drafting Trees. The unigram proposer is trained with the standard cross-entropy objective to generate candidate tokens independently for each position, while a lightweight bigram selector predicts transition scores between adjacent candidate pairs. Unlike the proposer, the selector is trained with a renormalized KL objective on high-temperature data. This tree-native training broadens the supervision beyond the greedy path, encouraging plausible alternative branches that improve the chance of accepting additional tokens during tree verification. Across seven standardized benchmarks with Qwen3-4B and Qwen3-8B, UBTree achieves an average speedup of $5.84$--$6.94\\times$ over autoregressive decoding and outperforms DARTree in all 28 comparisons. Production-scale evaluation further demonstrates UBTree's advantage over frontier baselines such as DSpark.",
+        "canonical_id": "arXiv:2609.39972",
+        "arxiv_id": "2609.39972",
+        "authors": [
+          "Chumeng Liang",
+          "Lin-Xuan Wang",
+          "Xin-Yu Peng",
+          "Hua-Bin Liu",
+          "Yu-Xin Chen",
+          "Ge Liu",
+          "Guang Lin",
+          "Qi-Fan Song",
+          "Jiang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39358",
+      "identity_tokens": [
+        "id:arXiv:2609.39358",
+        "title:working around the compute ceiling byteexact memory in galahad makes llm reading a onetime cost llm reading a onetime cost",
+        "url:https://arxiv.org/abs/2609.39358"
+      ],
+      "record": {
+        "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+        "source_url": "https://arxiv.org/abs/2609.39358",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "A transformer language model performs a bounded amount of computation per token, and recent work by Vishal Sikka, former CEO of Infosys, argues that this bound limits which tasks a model can carry out or verify (arXiv:2507.07505). We ask how much of the budget beneath that ceiling is spent on work the model has already done. Serving is stateless across requests: a model that answers a second question about a document recomputes the document's attention state from the first token. On seven real-world datasets, 98.7% of prompt tokens were text the model had already read. We present Galahad, a memory layer for vLLM, SGLang and llama.cpp that makes this reading a one-time cost. Taliesin saves the model's key-value (KV) state for a block of text and loads it on the next request that contains the same bytes, instead of recomputing it. Blaise keeps the documents themselves and passes the model only the section a question needs. On a recall test with 100 facts hidden in a 97,000-token corpus (Gemma 4 31B), Taliesin alone let the model attend to the whole corpus and answered 98 of 100 on llama.cpp at 3.0 s and 572 J per question, against 10 of 100, 9.3 s and 2,754 J for the same model without Galahad, which could hold only the last 12,000 tokens. With Blaise added, the model read about 668 tokens per question and answered 100 of 100 on all three runtimes at 0.59-0.64 s and 200-213 J; a tuned RAGFlow pipeline answered 77. Storing the corpus is a one-time cost of about 100 s and 28 kJ, whose energy is recovered after 13 questions. Restored state is bit-identical: all 262,144 output logits matched after restart, rehydration and hot-load. Galahad worked with all 30 models we tested under vLLM, and it fails closed: any load that does not pass its checks is recomputed. Together these results move LLM serving from stateless to stateful inference.",
+        "canonical_id": "arXiv:2609.39358",
+        "arxiv_id": "2609.39358",
+        "authors": [
+          "Sietse Schelpe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39394",
+      "identity_tokens": [
+        "id:arXiv:2609.39394",
+        "title:can computation from earlier problems help llms solve new ones",
+        "url:https://arxiv.org/abs/2609.39394"
+      ],
+      "record": {
+        "title": "Can Computation from Earlier Problems Help LLMs Solve New Ones?",
+        "source_url": "https://arxiv.org/abs/2609.39394",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Large language models often solve independent problems in the same conversation. Can computation from earlier problems help them solve new ones? To answer this question, we first conduct preliminary experiments showing that retained history can raise or lower later-turn accuracy, even within the same domain. To understand these effects, we use controlled replay to isolate internal state changes specific to each problem-history pairing. Across different histories, these changes preserve similar relationships among current problems. To improve reasoning under retained history, we introduce STAIR (Stale-Token Attention for Inter-query Reuse). STAIR captures keys and values from earlier response generation in a fixed bank. It learns to redirect current queries when they read this bank during prompt processing. The base model remains frozen; only 12,288 parameters are trained. Across three Qwen models and four benchmarks, STAIR improves average later-turn accuracy by up to 11.67 percentage points over the unmodified model with history.",
+        "canonical_id": "arXiv:2609.39394",
+        "arxiv_id": "2609.39394",
+        "authors": [
+          "Ji-Pei He",
+          "Wen-Hui Tan",
+          "Xiao-Yi Yu",
+          "E. Sangineto",
+          "Fiorenzo Parascandolo",
+          "Rita Cucchiara",
+          "Rui-Hua Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40361",
+      "identity_tokens": [
+        "id:arXiv:2609.40361",
+        "title:rankingaware prompt optimization for multimodal clinical diagnosis",
+        "url:https://arxiv.org/abs/2609.40361"
+      ],
+      "record": {
+        "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+        "source_url": "https://arxiv.org/abs/2609.40361",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+        "canonical_id": "arXiv:2609.40361",
+        "arxiv_id": "2609.40361",
+        "authors": [
+          "Tian Xia",
+          "Ming-Hao Liu",
+          "Yi-Qing Liang",
+          "Lai-Xi Shi",
+          "Jia-Yun Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36954",
+      "identity_tokens": [
+        "id:arXiv:2609.36954",
+        "title:purlin separating orchestration from the datapath of collectives",
+        "url:https://arxiv.org/abs/2609.36954"
+      ],
+      "record": {
+        "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+        "source_url": "https://arxiv.org/abs/2609.36954",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Distributed inference depends on GPU collective communication that must keep pace with evolving hardware and specialized workloads. However, existing collective implementations often couple semantics, orchestration (where and when data moves), and the datapath (how data moves). This coupling makes it costly to adopt new hardware mechanisms and customize communication for applications. We present Purlin, a scale-up communication framework that separates these concerns. At the top of Purlin, we specify collectives as a naming of an input and output layout and a copy or reduction operation. In the middle, we introduce a shared orchestration protocol, Stage, Notify, And Consume (SNAC), which derives coordination from these specifications. Below SNAC sits a hardware-specific datapath we call Atom, which implements two key data movement primitives for collectives: copy and reduce. This separation lets us customize collectives and adopt new hardware mechanisms while reusing orchestration via SNAC. We evaluate Purlin on A100, H200, and B200 GPUs. Across seven collectives, Purlin achieves latency speedups of up to 5.14x and bandwidth improvements of up to 4.50x over baselines. Integrated into SGLang, Purlin improves offline LLM serving throughput and interactivity by 1.13x on average and up to 1.37x over baselines. For online LLM inference, Purlin improves interactivity by 1.26x on average and up to 2.85x, with the largest gain occurring under overload. For diffusion image generation, Purlin reduces end-to-end latency by up to 1.13x.",
+        "canonical_id": "arXiv:2609.36954",
+        "arxiv_id": "2609.36954",
+        "authors": [
+          "Osayamen Jonathan Aimuyo",
+          "Swapnil Gandhi",
+          "Christos Kozyrakis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37062",
+      "identity_tokens": [
+        "id:arXiv:2609.37062",
+        "title:vskipper translating dynamic layer skipping into llm serving gains",
+        "url:https://arxiv.org/abs/2609.37062"
+      ],
+      "record": {
+        "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+        "source_url": "https://arxiv.org/abs/2609.37062",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+        "canonical_id": "arXiv:2609.37062",
+        "arxiv_id": "2609.37062",
+        "authors": [
+          "Dao-Min Wei",
+          "Yavuz Ferhatosmanoglu",
+          "E. Kalyvianaki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36945",
+      "identity_tokens": [
+        "id:arXiv:2609.36945",
+        "title:finetuning on selfgenerated and rewardweighted data learning dynamics convergence rates and benefits of offpolicyness",
+        "url:https://arxiv.org/abs/2609.36945"
+      ],
+      "record": {
+        "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+        "source_url": "https://arxiv.org/abs/2609.36945",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "We study the learning dynamics of fine-tuning a policy model on self-generated and reward-weighted data, with particular focus on a generalized version of REINFORCE -- referred to as RE(S) -- that updates the rollout distribution once every $S \\ge 1$ gradient steps. Prior work in bandits and reinforcement learning has developed rich theory for policy gradient methods, and on-policy sampling (i.e., a small $S$, ideally $1$) is often viewed as crucial to their success; yet in prominent application like post-training large language models, reward-guided self-training has proved to be effective even when the rollout distribution is updated infrequently, but theoretical understanding remains limited for the convergence properties of these off-policy methods. To bridge these gaps, we develop a unified theory for RE(S) that covers the full spectrum of $S \\ge 1$: it can be interpreted as a stage-wise optimization process, where each stage takes $S$ gradient steps for minimizing the Kullback-Leibler distance to a fixed reward-weighted rollout distribution. For multi-arm bandits with softmax policies, our in-depth analysis and numerical experiments reveal three key findings: (1) for any fixed $S$, RE(S) enjoys global convergence to the optimal policy as the number of rollout distribution updates $B = \\lfloor T / S \\rfloor \\rightarrow \\infty$, where $T$ denotes the number of gradient steps; (2) we prove tight two-sided bounds showing that the suboptimality gap of RE(S) achieves an asymptotic $\\Theta(1 / T)$ convergence rate, while $S$ only affects the length of a burn-in phase; (3) when initialized at a weak policy with a small optimal-action probability, RE(1) gets trapped around suboptimal policies for a long period, whereas RE(S) with a suitable $S$ avoids the detour and achieves significantly faster convergence to the global optimum, highlighting the benefits of off-policyness in this case.",
+        "canonical_id": "arXiv:2609.36945",
+        "arxiv_id": "2609.36945",
+        "authors": [
+          "Zhi-Wei Wang",
+          "Yan-Xi Chen",
+          "Ya-Liang Li",
+          "Bo-Lin Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36938",
+      "identity_tokens": [
+        "id:arXiv:2609.36938",
+        "title:efficient agentic llm serving over ssdbased sparse kv storage",
+        "url:https://arxiv.org/abs/2609.36938"
+      ],
+      "record": {
+        "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+        "source_url": "https://arxiv.org/abs/2609.36938",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+        "canonical_id": "arXiv:2609.36938",
+        "arxiv_id": "2609.36938",
+        "authors": [
+          "Wen-Hao He",
+          "Ping Zhang",
+          "Xiao-He Hu",
+          "Chu-Tian Wang",
+          "Jin-Long Hou",
+          "Yuan Cheng",
+          "Peng Sun",
+          "Fang-Cheng Fu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36722",
+      "identity_tokens": [
+        "id:arXiv:2609.36722",
+        "title:attuner recomputationfree kv cache reuse via queryside adaptation",
+        "url:https://arxiv.org/abs/2609.36722"
+      ],
+      "record": {
+        "title": "ATTUNER: Recomputation-Free KV Cache Reuse via Query-Side Adaptation",
+        "source_url": "https://arxiv.org/abs/2609.36722",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+        "canonical_id": "arXiv:2609.36722",
+        "arxiv_id": "2609.36722",
+        "authors": [
+          "Xing-Hao Chen",
+          "Jun-Nan Dong",
+          "Cai Ke",
+          "Chak Tou Leong",
+          "Hao-Cheng Sun",
+          "Ke-Yu Chen",
+          "Si-Yu An",
+          "Rui-Zhi Qiao",
+          "Xing Sun",
+          "Wen-Jie Li",
+          "Xiao-Yu Shen"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b6b2fed36e76eb55b7174998a15c626ab8d9ff5b5894f16de11f08c7ea7f5c47",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
