@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T11:05:21+00:00",
+  "updated_at": "2026-10-02T11:07:29+00:00",
   "record_count": 388,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -4283,7 +4283,7 @@
       ],
       "reason": "KVキャッシュ最適化を直接扱う有用な体系的レビューだが、新規推論最適化機構そのものではないためborderline。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         "web-discovery:KV cache optimization survey"
       ],
@@ -4297,7 +4297,7 @@
       ],
       "reason": "投機的復号の新方式ではなく、本番級vLLM上で複数方式の実効性能とボトルネックを体系評価する研究なので、推論システム上重要だが新規高速化手法としてはborderline。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         "web-discovery:speculative decoding inference systems"
       ],
@@ -4675,7 +4675,7 @@
       ],
       "reason": "MoE expert相関・routing挙動の分析はexpert圧縮や推論設計に有用だが、直接の推論高速化手法ではない。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],
@@ -4688,14 +4688,14 @@
         "DOI:10.48550/arxiv.2401.08281",
         "arXiv:2401.08281"
       ],
-      "reason": "RAG検索段で広く使えるベクトル類似検索基盤だが、論文自体はLLM推論専用ではなく汎用ベクトル検索ライブラリの設計・評価。",
+      "reason": "高速ANN検索基盤でRAG/agent memoryのretrievalに重要だが、LLM推論そのものを対象にした研究ではない。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json"
       ],
-      "title": "The Faiss library"
+      "title": "The Faiss Library"
     },
     "arXiv:2210.17432": {
       "classification": "borderline",
@@ -4705,7 +4705,7 @@
       ],
       "reason": "semi-autoregressive diffusion text generationは生成並列性に関係するが、主貢献は生成モデル方式・制御でsystems高速化の実証が中心ではない。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],
@@ -4718,9 +4718,9 @@
         "DOI:10.48550/arxiv.2210.03858",
         "arXiv:2210.03858"
       ],
-      "reason": "量子化モデルの省メモリ配備へつながるが、主貢献は量子化を利用したパラメータ効率の高い適応・微調整で学習側との境界にある。",
+      "reason": "4bit量子化モデルのparameter-efficient adaptationでdeployment容量に関係するが、中心は適応学習手法。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json"
@@ -4735,7 +4735,7 @@
       ],
       "reason": "SSDを用いたstreaming ANN indexはRAG/agent memory基盤に応用できるが、LLM固有の推論研究ではない。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],
@@ -4749,7 +4749,7 @@
       ],
       "reason": "複数のefficient attentionと提案Heposで長文処理計算を削減するが、対象は要約モデルで現代LLM servingへの直接性は中程度。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],
@@ -4763,7 +4763,7 @@
       ],
       "reason": "binary partitionによるhierarchical attentionで長距離context計算を削減するが、LLM以前の一般Transformer研究で直接性は中程度。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T11:07:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json"
       ],

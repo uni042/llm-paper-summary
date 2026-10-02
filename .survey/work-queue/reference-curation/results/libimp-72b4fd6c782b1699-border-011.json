@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-72b4fd6c782b1699-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2105.09613",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2105.09613",
+    "identity_tokens": [
+      "arXiv:2105.09613"
+    ],
+    "reason": "SSDを用いたstreaming ANN indexはRAG/agent memory基盤に応用できるが、LLM固有の推論研究ではない。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T11:07:29+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "FreshDiskANN: A Fast and Accurate Graph-Based ANN Index for Streaming Similarity Search"
+  },
+  "processed_at": "2026-10-02T11:07:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72b4fd6c782b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

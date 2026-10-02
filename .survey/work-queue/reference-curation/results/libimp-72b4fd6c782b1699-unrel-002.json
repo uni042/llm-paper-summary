@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-72b4fd6c782b1699-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.19256",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.19256",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2409.19256",
+      "arXiv:2409.19256"
+    ],
+    "reason": "RLHF学習の分散dataflow・resharding効率化が最終適用先で、凍結中のtraining高速化に該当する。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T11:07:29+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json",
+      ".survey/work-queue/worker-worklist-30.json#rank-466"
+    ],
+    "title": "HybridFlow: A Flexible and Efficient RLHF Framework"
+  },
+  "processed_at": "2026-10-02T11:07:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72b4fd6c782b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
