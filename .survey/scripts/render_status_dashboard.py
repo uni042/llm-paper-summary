@@ -383,6 +383,8 @@ def _library_first_status(repo_root: Path, now=None) -> str:
 
     reference_progress = _core._structured_reference_progress(repo_root)
     paper_count = len(_core._paper_markdown_files(repo_root))
+    jobs = _core.evidence._collect_jobs(repo_root)
+    candidate_backlog = _core._durable_candidate_backlog(jobs)
     research_events, discovery_events = _import_progress_events(repo_root, now)
 
     local_now = now.astimezone(_core.evidence.JST)
@@ -414,13 +416,16 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         "## サマリー", "",
         "| 指標 | 現在値 |", "|---|---:|",
         f"| 収録論文 | **{paper_count}** |",
+        f"| 収録候補論文数 | **{candidate_backlog['canonical_candidates']}** |",
         f"| 直近24時間のResearch完了 | **{research_24h}** |",
         f"| 直近24時間のDiscovery本文確認・分類 | **{discovery_24h}** |",
         f"| 最終Research完了 | **{_core.evidence._fmt_time(last_research)}** |",
         f"| 最終Discovery完了 | **{_core.evidence._fmt_time(last_discovery)}** |",
         f"| Research 7日平均 | **{research_daily_avg:.1f}件/日** |",
         f"| Discovery 7日平均 | **{discovery_daily_avg:.1f}件/日** |",
-        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |", "",
+        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
+        "",
+        f"収録候補論文数は `.survey/work-queue/jobs/*.json` の非終端Research jobを対象に、`canonical_id` で一意化できる論文だけを数えます。`canonical_id` なしの非終端Research jobは **{candidate_backlog[\'missing_canonical\']}件**で、この数には推定加算しません。", ""
         "日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。", "",
         "## 直近7日の日次進捗", "",
         "| 日付 (JST) | Research完了 | Discovery本文確認・分類 |", "|---|---:|---:|",
