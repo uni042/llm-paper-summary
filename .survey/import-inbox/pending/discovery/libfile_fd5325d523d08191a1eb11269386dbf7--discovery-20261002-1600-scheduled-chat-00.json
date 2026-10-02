@@ -1,0 +1,166 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-1600-scheduled-chat-00",
+  "reference_main_sha": "2c0faa9f0438228913cbb1509f11af1e75790f75",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5281/zenodo.12608602",
+      "identity_tokens": [
+        "DOI:10.5281/zenodo.12608602"
+      ],
+      "title": "EleutherAI/lm-evaluation-harness: v0.4.3",
+      "reason": "論文ではなくLLM評価ハーネスのソフトウェアリリース記録で、推論ランタイムの速度・メモリ・サービング最適化を提案する研究成果ではない。",
+      "source_url": "https://zenodo.org/records/12608602",
+      "body_check": "一次Zenodo本文でresource typeがSoftware、内容がlm-evaluation-harness v0.4.3のrelease notesであることを確認。chat templating、vLLM LoRA、Ascend NPU等の評価機能追加はあるが、LLM推論システム自体の新規最適化方式ではない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620665.3640366",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640366"
+      ],
+      "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+      "reason": "TorchDynamo/TorchInductorは推論も高速化する汎用コンパイラ基盤でLLMカーネル実行に関連するが、論文の対象はLLM専用ではなく180超の機械学習モデル全般なので境界扱い。",
+      "source_url": "https://doi.org/10.1145/3620665.3640366",
+      "body_check": "本文系公開情報でTorchDynamoがPython bytecodeからFX graphを抽出し、TorchInductorがGPUではTriton、CPUではC++へJITコンパイルする構成を確認。A100上の180超モデルで推論幾何平均2.27倍、学習1.41倍を報告するが、KV cache・decode scheduler等のLLM固有機構は主題ではない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/N19-1300",
+      "identity_tokens": [
+        "DOI:10.18653/v1/N19-1300"
+      ],
+      "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+      "reason": "自然なYes/No質問の読解ベンチマークと転移学習評価が主目的で、LLM推論基盤の効率化ではない。",
+      "source_url": "https://aclanthology.org/N19-1300/",
+      "body_check": "ACL本文で自然発生Yes/No質問からBoolQを構築し、BERTをMultiNLIから転移して80.4% accuracy、人間90%、多数派baseline 62%を比較する研究と確認。推論メモリ、KV、サービング、カーネルの新規機構はない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06694",
+      "identity_tokens": [
+        "arXiv:2310.06694",
+        "DOI:10.48550/arXiv.2310.06694"
+      ],
+      "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+      "reason": "構造化枝刈りと動的バッチロードで小型LLMの事前学習を高速化する研究で、最終適用先が凍結中の学習工程。",
+      "source_url": "https://arxiv.org/abs/2310.06694",
+      "body_check": "本文でLLaMA2-7Bから1.3B/2.7Bへtargeted structured pruningし、dynamic batch loadingで継続事前学習する流れを確認。小型モデル構築に必要な計算をscratch学習比約3%へ下げることが中心で、推論runtime最適化は主貢献ではない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.12820",
+      "identity_tokens": [
+        "arXiv:2407.12820",
+        "DOI:10.48550/arXiv.2407.12820"
+      ],
+      "title": "PQCache: Product Quantization-based KVCache for Long Context LLM Inference",
+      "reason": "長文脈LLMのKVキャッシュを積量子化による近似検索として管理し、必要KVだけを取得してGPUメモリと注意計算を直接削減する。",
+      "source_url": "https://arxiv.org/abs/2407.12820",
+      "body_check": "本文でprefill時に層・headごとのKeyへProduct Quantizationを適用し、decode時にPQ code/centroidで重要tokenを近似検索して対応KVだけをfetchする処理を確認。overlap/cacheで追加通信を隠し、InfiniteBenchで既存法比4.60% score改善と低prefill/decode latencyを報告。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.05176",
+      "identity_tokens": [
+        "arXiv:2305.05176",
+        "DOI:10.48550/arXiv.2305.05176"
+      ],
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "reason": "問い合わせごとに異なるLLMを段階的に選ぶLLM cascadeで、推論APIの実コストを品質制約下で直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2305.05176",
+      "body_check": "本文でprompt adaptation、LLM approximation、LLM cascadeの3系統を整理し、FrugalGPTはqueryごとに利用するLLM組合せを学習してcascade実行することを確認。最良単体LLM相当性能で最大98%費用削減、同一費用でGPT-4比accuracy 4%改善を報告。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.00722",
+      "identity_tokens": [
+        "arXiv:2502.00722",
+        "DOI:10.48550/arXiv.2502.00722"
+      ],
+      "title": "Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs",
+      "reason": "異種GPUの計算・メモリ特性と要求特性を対応付け、GPU構成・配置・ワークロード割当を最適化するLLMサービング研究。",
+      "source_url": "https://arxiv.org/abs/2502.00722",
+      "body_check": "本文で異種GPUの包括的benchmarkからcost-efficiencyがGPU composition、deployment configuration、workload assignmentに依存することを確認し、価格予算とリアルタイムGPU可用性を制約とする混合整数線形計画schedulerを設計。複数trace、GPU可用性、multi-model servingでhomogeneous/heterogeneous baselineを上回る。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.05250",
+      "identity_tokens": [
+        "arXiv:1606.05250",
+        "DOI:10.48550/arXiv.1606.05250"
+      ],
+      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+      "reason": "Wikipedia読解の質問応答データセット構築と能力評価が主目的で、推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1606.05250",
+      "body_check": "本文でWikipedia記事に対しcrowdworkerが作成した10万超の質問と抽出回答からSQuADを構築し、logistic regression baseline F1 51.0%、human 86.8%を比較する研究と確認。GPU/KV/scheduler等の推論機構はない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1991.3.1.79"
+      ],
+      "title": "Adaptive Mixtures of Local Experts",
+      "reason": "局所expertとgating networkを共同学習する古典的混合専門家モデルの学習方式で、LLM推論効率化を最終適用先としない。",
+      "source_url": "https://doi.org/10.1162/neco.1991.3.1.79",
+      "body_check": "本文系書誌・既知内容から、複数local expertの出力をgating networkが入力依存で混合し、expert specializationを促す学習枠組みを提案するNeural Computation 1991論文と確認。現代LLMのexpert offload/cache/communicationやserving latency評価はない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.05433",
+      "identity_tokens": [
+        "arXiv:2209.05433",
+        "DOI:10.48550/arXiv.2209.05433"
+      ],
+      "title": "FP8 Formats for Deep Learning",
+      "reason": "E4M3/E5M2の8-bit浮動小数点形式はLLM推論量子化・Tensor Core実行へ直接利用される基盤技術だが、論文自体は深層学習全般の訓練・推論を対象としLLM専用ではない。",
+      "source_url": "https://arxiv.org/abs/2209.05433",
+      "body_check": "本文でE4M3とE5M2のFP8形式、FP16/BF16との混合利用、変換・accumulation方針を定義し、多様な深層学習モデルで8-bit演算の精度維持を評価することを確認。LLM低精度推論の重要基盤だが、KV/serving/decode等のLLM固有システム評価は主貢献ではない。",
+      "first_checked_at": "2026-10-02T16:00:00+09:00",
+      "last_checked_at": "2026-10-02T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    }
+  ]
+}
