@@ -18,6 +18,7 @@ on:
 permissions:
   contents: write
   actions: write
+  actions: write
 
 concurrency:
   group: library-import-main
@@ -27,6 +28,8 @@ jobs:
   process:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -116,7 +119,23 @@ jobs:
           # Stage 2: process only relevance work here. Discovery precheck
           # requests are published in Stage 1 and MUST be resolved by the
           # dedicated discovery-precheck.yml workflow so provenance validation
-          # in queue_worker remains trustworthy.
+          # in queue_worker remains trustworthy. Commits made with GITHUB_TOKEN
+          # do not chain-trigger another workflow via push, so explicitly
+          # dispatch the dedicated gate when an unsettled request exists.
+          sync_main
+          if find .survey/work-queue/discovery-precheck/requests \
+              -maxdepth 1 -type f -name 'libimp-*-pre*.json' -print 2>/dev/null \
+              | while IFS= read -r request; do
+                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
+                  [ -f "$result" ] || { printf '%s\n' "$request"; break; }
+                done \
+              | grep -q .; then
+            echo 'Dispatching dedicated Discovery precheck gate for Library import requests.'
+            gh workflow run discovery-precheck.yml \
+              --repo "${GITHUB_REPOSITORY}" \
+              --ref main
+          fi
+
           stage2_ok=0
           for attempt in $(seq 1 4); do
             sync_main
