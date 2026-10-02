@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-01T22:26:28+00:00",
-  "record_count": 391,
+  "updated_at": "2026-10-02T01:38:16+00:00",
+  "record_count": 392,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4481,11 +4481,12 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.findings-emnlp.360"
       ],
-      "reason": "多言語要約datasetとcross-lingual summarizationが主題で、推論system最適化ではない。",
+      "reason": "多言語・言語横断要約のデータセット／評価研究であり、LLM推論基盤の効率化ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:52:34+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
         "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
       ],
@@ -4529,9 +4530,9 @@
         "DOI:10.18653/v1/2022.acl-long.297",
         "arXiv:2110.00976"
       ],
-      "reason": "Legal NLU benchmark paper; it contributes datasets and model evaluation for legal-language understanding, not LLM inference systems, serving, memory hierarchy, kernels, quantization, or MoE inference.",
+      "reason": "法務自然言語理解の評価データセットであり、LLM推論ランタイム、メモリ、デコード、サービング最適化を提案しない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
@@ -4562,9 +4563,9 @@
         "DOI:10.48550/arxiv.2410.04199",
         "arXiv:2410.04199"
       ],
-      "reason": "Benchmark/evaluation work for long-output generation quality, not an inference optimization or serving-system technique.",
+      "reason": "長文生成能力を測るベンチマークであり、KVキャッシュやサービングを高速化する機構を提案しない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
@@ -4580,10 +4581,11 @@
         "OpenReview:xtaX3WyCj1",
         "arXiv:2306.01708"
       ],
-      "reason": "複数のtask-specific modelを1モデルへ統合するmodel merging研究で、主目的は重み干渉の解消とmultitask性能であり、LLM推論高速化・サービング最適化ではない。",
+      "reason": "複数fine-tuned modelの重みを干渉を抑えて統合するmodel merging手法で、MoE推論時のexpert merging/offloadではなくモデル統合が主目的。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
@@ -4597,11 +4599,12 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "既存dense checkpointをMoEへ変換して追加事前学習費用を減らす学習効率化が主目的であり、最終適用先が凍結対象の学習工程そのもの。",
+      "reason": "dense checkpointからMoEを初期化して追加事前学習コストを削減する学習手法が主目的で、最終適用先が凍結対象の学習高速化であるため除外。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
       ],
@@ -4612,16 +4615,18 @@
       "canonical_id": "OpenReview:rkE3y85ee",
       "identity_tokens": [
         "OpenReview:rkE3y85ee",
+        "arXiv:1609.02907",
         "arXiv:1611.01144"
       ],
-      "reason": "離散潜在変数を微分可能にする勾配推定法の研究で、LLM推論・サービング・メモリ効率化を対象としない。",
+      "reason": "グラフ畳み込みネットワークによる半教師ありノード分類の基礎研究であり、LLM推論・サービングとは別分野。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
       ],
-      "title": "Categorical Reparameterization with Gumbel-Softmax"
+      "title": "Semi-Supervised Classification with Graph Convolutional Networks"
     },
     "OpenReview:oKn9c6ytLx": {
       "classification": "unrelated",
@@ -4630,10 +4635,11 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "Web操作エージェントの現実的・再現可能な環境と能力ベンチマークが主目的で、エージェント型LLMのサービングruntimeや推論効率を最適化する研究ではない。",
+      "reason": "Web操作エージェントを評価する実環境・ベンチマーク研究で、agentic inference runtimeの計算・メモリ・スケジューリング最適化を提案しない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
       ],
@@ -4762,10 +4768,11 @@
         "DOI:10.48550/arxiv.2503.14487",
         "arXiv:2503.14487"
       ],
-      "reason": "画像生成用Diffusion TransformerのMoEスケーリング研究であり、LLM推論・言語モデルサービングが最終適用先ではない。",
+      "reason": "MoEの動的計算配分を扱うが、対象は画像生成Diffusion TransformerでありLLM推論ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
@@ -4779,15 +4786,16 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "text-to-image拡散Transformerを最大97Bへスケールするexpert-choice MoE研究で、LLM推論を対象にしない。",
+      "reason": "expert-choice routingによるMoE効率化だが、対象はtext-to-image Diffusion Transformerの学習・生成品質でありLLM推論サーベイの対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
       ],
-      "title": "EC-DIT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
     },
     "arXiv:2409.12941": {
       "classification": "unrelated",
@@ -4797,10 +4805,11 @@
         "DOI:10.48550/arxiv.2409.12941",
         "arXiv:2409.12941"
       ],
-      "reason": "検索拡張生成（RAG）の事実性・検索・推論能力を測る評価データセット／ベンチマーク研究であり、推論システム高速化・メモリ・サービング最適化を提案しない。",
+      "reason": "RAGのfactuality・retrieval・reasoningを測るFRAMES評価データセットで、推論ランタイムやメモリ・スケジューリング最適化を提案しない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
@@ -4815,10 +4824,11 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "LLMエージェントの構成・応用・評価を俯瞰する一般サーベイであり、エージェント推論ランタイムやサービング高速化を主題にしない。",
+      "reason": "LLMエージェントの構成・応用・評価を整理する総合サーベイで、agentic inference runtimeの効率化手法そのものではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
@@ -4832,10 +4842,11 @@
         "OpenReview:EvDeiLv7qc",
         "arXiv:2309.05444"
       ],
-      "reason": "Parameter-efficient instruction-tuning work: it uses MoE-style adapters to reduce trainable parameters, but its final objective is fine-tuning efficiency rather than MoE inference routing, expert placement, offload, or serving.",
+      "reason": "MoEをinstruction tuningのパラメータ効率化へ使う学習手法で、最終適用先が凍結対象の学習・fine-tuningでありMoE推論最適化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
       ],
@@ -4863,10 +4874,11 @@
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "処理時間未知かつ先行制約付きジョブを同一機械群へ割り当てる一般オンラインスケジューリング理論で、Eisenberg-Gale型凸計画からvirtual rateを割り当て競争比を解析する。LLM推論・サービング固有のシステムを対象にしないため対象外。",
+      "reason": "未知ジョブ長と依存関係を持つ一般オンラインスケジューリング理論であり、LLMサービング固有のスケジューラではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:07:48+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
@@ -4896,10 +4908,11 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "多様な質問をクラスタリングしてzero-shot Chain-of-Thoughtからfew-shot実演を自動生成するprompting研究で、推論システムの速度・メモリ・サービング効率化が主目的ではない。",
+      "reason": "質問クラスタから代表例を選びzero-shot CoTでdemonstrationを自動生成するprompting手法で、推論システムの速度・メモリ・サービング最適化を扱わないため除外。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-09-30T14:04:48+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md"
       ],
@@ -4912,11 +4925,12 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4 is a foundational general sequence-model architecture paper rather than an LLM inference/serving optimization paper; its main contribution is structured state-space sequence modeling and efficient training/evaluation across generic long-sequence tasks.",
+      "reason": "S4という汎用系列モデルアーキテクチャを提案する研究で、LLM推論ランタイム・KVキャッシュ・サービング最適化を主目的としない。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
       ],
@@ -4944,10 +4958,11 @@
       "identity_tokens": [
         "DOI:10.18653/v1/n18-2002"
       ],
-      "reason": "共参照解析器の性別バイアスをWinogender schemaで測定する評価研究であり、LLM推論システム最適化の対象外。",
+      "reason": "共参照解析におけるジェンダーバイアスの評価研究であり、LLM推論システム最適化とは無関係。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
       ],
@@ -5587,10 +5602,11 @@
       "identity_tokens": [
         "DOI:10.1109/rtas58335.2023.00012"
       ],
-      "reason": "NVIDIA GPUのSMをユーザー空間ライブラリlibsmctrlで空間分割する一般リアルタイムGPU共有研究で、LLM推論・LLMサービングを主対象にしない。",
+      "reason": "NVIDIA GPUのSMを空間分割するlibsmctrlを提案する一般GPU共有研究で、LLM推論・サービングを対象にしていない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-01T13:15:03+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
         "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
       ],
@@ -5602,41 +5618,28 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731079"
       ],
-      "reason": "dense retrievalの専用algorithm-hardware codesignでありRAG前段には利用可能だが、LLM推論runtime・KV cache・decode高速化そのものを扱わない。",
+      "reason": "dense retrieval自体のアルゴリズム・ハードウェア協調高速化が主目的で、LLM推論ランタイムやRAG生成段の最適化ではない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
       ],
       "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
     },
-    "arXiv:2504.04030": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2504.04030",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2504.04030",
-        "arXiv:2504.04030"
-      ],
-      "reason": "コードLLM向け大規模instruction-tuningデータセットの構築が主目的で、推論ランタイム、KV、オフロード、カーネル、サービング最適化ではない。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
-        "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
-      ],
-      "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
-    },
     "DOI:10.1145/3582016.3582063": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3582016.3582063",
       "identity_tokens": [
-        "DOI:10.1145/3582016.3582063"
+        "DOI:10.1145/3582016.3582063",
+        "arXiv:2206.02878"
       ],
-      "reason": "General-purpose CXL tiered-memory page-placement system. It is relevant background for heterogeneous memory, but the paper itself is not an LLM inference/serving system and does not optimize an LLM workload.",
+      "reason": "CXL階層メモリでLinuxページをDRAM/CXL間へ昇降格するOSメモリ管理研究であり、LLM推論・KVキャッシュ・LLMサービングを対象にしていない。",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
       ],
@@ -5705,12 +5708,14 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:sY5N0zY5Od",
       "identity_tokens": [
-        "OpenReview:sY5N0zY5Od"
+        "OpenReview:sY5N0zY5Od",
+        "arXiv:2310.03714"
       ],
-      "reason": "DSPy is a programming and prompt-optimization framework for compound LM pipelines; it optimizes task quality/program parameters rather than the inference serving/runtime stack covered by this survey.",
+      "reason": "LM呼出しパイプラインのprompt/示例を宣言的に最適化するプログラミング・コンパイル枠組みで、モデル推論カーネルやサービング資源効率の研究ではない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
       ],
@@ -5723,10 +5728,11 @@
         "OpenReview:pZiyCaVuti",
         "arXiv:2410.10813"
       ],
-      "reason": "Benchmark/evaluation work for long-term conversational memory rather than a KV-cache or inference-memory optimization method.",
+      "reason": "長期対話メモリ能力を測る評価ベンチマークで、推論時メモリ階層やKVキャッシュ管理を高速化するシステム研究ではない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T01:38:16+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
       ],
@@ -5746,6 +5752,35 @@
         "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
       ],
       "title": "Large Language Diffusion Models"
+    },
+    "DOI:10.48550/arxiv.2504.04030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2504.04030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.04030",
+        "arXiv:2504.04030"
+      ],
+      "reason": "コードLLM向け大規模instruction tuningデータセットの構築が主目的で、推論時の速度・メモリ・サービング最適化を扱わない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
+      ],
+      "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
+    },
+    "DOI:10.18653/v1/n19-4009": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-4009",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-4009"
+      ],
+      "reason": "汎用系列モデリング研究・学習ツールキットの紹介であり、現行LLM推論基盤の対象範囲から外れる。",
+      "first_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "linked_from": [],
+      "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
     }
   }
 }

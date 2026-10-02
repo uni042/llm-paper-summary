@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4717f616e42540a1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4717f616e425",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "OpenReview:9k27IITeAZ",
+    "OpenReview:P0GOk5wslg",
+    "OpenReview:RlqYCpTu1P",
+    "OpenReview:qrMo6R7lOS",
+    "OpenReview:tVConYid20",
+    "arXiv:2406.13511",
+    "arXiv:2410.20399"
+  ],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "11aac5aa108030ab9dd706ecefb42caf1eba8fff",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 0,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 0,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 5,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "openreview_notes",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T01:37:50.931328+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "OpenReview:9k27IITeAZ",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "OpenReview:P0GOk5wslg",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "OpenReview:RlqYCpTu1P",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "OpenReview:qrMo6R7lOS",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "OpenReview:tVConYid20",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "arXiv:2406.13511",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_single",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2406.13511"
+    },
+    {
+      "requested_id": "arXiv:2410.20399",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_single",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2410.20399"
+    }
+  ],
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:c7f5edad21e9e1a2684d4c8a4e761b241bac7e9931bd5810f4baa0c195244414",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
