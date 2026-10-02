@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-1831-scheduled-chat-30",
+  "reference_main_sha": "8ac20dfce3c741ef49336f39ffc530680089d464",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35629",
+      "identity_tokens": [
+        "arXiv:2609.35629",
+        "DOI:10.48550/arXiv.2609.35629"
+      ],
+      "title": "SANTA++: Sampling Attention through Representative Keys",
+      "reason": "代表keyでKV cacheをteam単位に標本化し、全KVを走査せずattentionのmemory readを削減するtraining-free推論最適化。",
+      "source_url": "https://arxiv.org/abs/2609.35629",
+      "body_check": "本文公開情報でcached keysをteam化しqueryが各team代表keyをscore、選択team内だけexact attentionを計算してinverse inclusion probabilityで補正するimportance samplingを確認。Qwen2.5-7B-Instruct・32K contextでdense attention比KV read 16–22%、LongBench v2/HELMETでdense scoreの94–99%を維持し、31 teamsでFlashAttention比1.69倍attention speedup。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31415",
+      "identity_tokens": [
+        "arXiv:2609.31415",
+        "DOI:10.48550/arXiv.2609.31415"
+      ],
+      "title": "Evaluating the accuracy of KV cache reuse techniques",
+      "reason": "position-independent KV再利用の評価がaccuracy lossを過小評価する問題を特定し、再利用方式を正しく比較する評価方法とBoxofficeを提案する推論評価研究。",
+      "source_url": "https://arxiv.org/abs/2609.31415",
+      "body_check": "本文公開情報でfull-prefill baseline自体が解けないquery等を含む集約指標がreuse accuracyを膨らませる問題、既存datasetがreuse dynamicsを十分含まない問題を確認。無曖昧なaccuracy-loss測定とreuse patternを生成するBoxofficeを導入し、context条件によって同じchunk reuseが大きく品質変動するケースを示す。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34727",
+      "identity_tokens": [
+        "arXiv:2609.34727",
+        "DOI:10.48550/arXiv.2609.34727"
+      ],
+      "title": "Dynamic Flow, Static Graph: KV Cache Reuse for Efficient LLM Serving on Mobile NPUs",
+      "reason": "静的graph制約のmobile NPUでprefix/non-prefix KV再利用を成立させるcompute-storage協調設計で、TTFTを直接削減する。",
+      "source_url": "https://arxiv.org/abs/2609.34727",
+      "body_check": "本文公開情報でselective KV recomputationをstatic NPU graphへ写像するintra-graph機構、chunk merge/paddingを動的計画するinter-graph scheduler、tree-hash-semantic階層KV manager、prefetch/eviction、KV load・rerotation・storeとNPU executionを重畳する2D pipelineを確認。代表的on-device workloadでno reuse/prefix-only caching比TTFT 40–60%削減。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24991",
+      "identity_tokens": [
+        "arXiv:2609.24991",
+        "DOI:10.48550/arXiv.2609.24991"
+      ],
+      "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+      "reason": "vLLMのKV cacheを含む共有推論費用の帰属を実測するが、主貢献はFinOps/課金台帳で推論ランタイム最適化そのものではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.24991",
+      "body_check": "本文公開情報でOpenCost/LiteLLM/provider billを統合するunallocと、paged KV/prefix cacheを持つvLLM型serverを含む5 case studyを確認。H100 vLLMでtoken meterとequal time-share meterのtenant別費用帰属が12–14 percentage pointsずれ、GPU utilization 97–99%となる条件を示すが、目的はcost attribution。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.11744",
+      "identity_tokens": [
+        "arXiv:2609.11744",
+        "DOI:10.48550/arXiv.2609.11744"
+      ],
+      "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+      "reason": "GPU/CPU/NVMe階層の外部KV cacheについて再計算とのbreak-evenを実測し、非同期direct I/Oとscheduler-aware preloadでvLLMのSSD KV取得を高速化する。",
+      "source_url": "https://arxiv.org/abs/2609.11744",
+      "body_check": "本文公開情報でtransfer granularity、中間memory、schedule投入時点が外部cache性能を支配することを分析し、async direct I/O・bounded shared staging・waiting中preloadを持つpy-kvcacheを実装。80K tokenでdisk loadはLMCache比2.0倍、preload寄与1.34倍、GPU+CPU+disk全階層ではLMCache比1.23倍でnative vLLM KV Offloadの約4%以内。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23130",
+      "identity_tokens": [
+        "arXiv:2609.23130",
+        "DOI:10.48550/arXiv.2609.23130"
+      ],
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "reason": "vLLM等のengine-local最適化から、KV配置・disaggregation・異種accelerator・routing・SLOを横断するinference control planeへの移行を体系化する推論システムサーベイ。",
+      "source_url": "https://arxiv.org/abs/2609.23130",
+      "body_check": "本文公開情報でvLLMをexecution engine、llm-d等をfleet-level control layerとして整理し、aggregated/disaggregated topology、KV source/transfer action、hardware variant、routing/admission、scalingを選ぶInference Execution Plannerを提案。新規benchmarkではなく既存systems/production evidenceのsource-local atlasとbottleneck migration taxonomyが主貢献。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18063",
+      "identity_tokens": [
+        "arXiv:2609.18063",
+        "DOI:10.48550/arXiv.2609.18063"
+      ],
+      "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+      "reason": "次層expert routingを1 token先読みしてSSD readと計算を重畳し、consumer hardwareで35B級MoEをstreaming実行するexpert offload推論システム。",
+      "source_url": "https://arxiv.org/abs/2609.18063",
+      "body_check": "本文公開情報でlayer別prerouterが次層routingを予測し、その予測自体をroutingとして使うことでprefetch missを避ける設計と、INT4/routing replacementの品質を補うunmerged recovery LoRAを確認。24GB単機で35B MoEをpeak active memory約3GiB、約20 tok/sで実行し、on-demand streamingの約3.9 tok/sに対して大幅改善。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.17475",
+      "identity_tokens": [
+        "arXiv:2609.17475",
+        "DOI:10.48550/arXiv.2609.17475"
+      ],
+      "title": "JustFit: Just-in-Time State Management for Local LLM Serving",
+      "reason": "KVExec・PhaseSwap・StateTransでKVとmodel componentのlifetimeを協調し、24GiB laptop上の長文脈LLM推論容量を拡張するMLX runtime。",
+      "source_url": "https://arxiv.org/abs/2609.17475",
+      "body_check": "本文公開情報で4-bit KV execution/checkpoint、phase-dependent component residency、execution mode間state preservationを確認。24GiB M4 Pro上Qwen3.8-27B MXFP4で196,608 input+16,384 outputを完走し、single-request retained positionsをmlx-vlm baseline 30,720から212,992へ6.93倍拡張、32K input/64 outputで19.11 tok/s。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17391",
+      "identity_tokens": [
+        "arXiv:2609.17391",
+        "DOI:10.48550/arXiv.2609.17391"
+      ],
+      "title": "FlashVector: Agent for Hierarchical Model Serving Stack Optimization",
+      "reason": "GPU kernelからmodel server・feature storeまでagentが横断最適化するserving研究だが、実運用対象が推薦システム中心でLLM推論専用ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.17391",
+      "body_check": "本文公開情報でkernel、framework graph、NVIDIA Triton model server、on-demand feature transformationをagenticに最適化するcross-layer frameworkを確認。Unity Vector広告platformでmodel server throughput最大2倍・latency最大1.98倍、feature store throughput最大1.6倍を報告するが、LLM KV/decode固有の方式ではない。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.13161",
+      "identity_tokens": [
+        "arXiv:2609.13161",
+        "DOI:10.48550/arXiv.2609.13161"
+      ],
+      "title": "PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation",
+      "reason": "prefill/decode分離をWAN越しへ拡張しRelayDecodeでKV転送を隠蔽する、異種GPU・跨datacenter LLM serving方式。",
+      "source_url": "https://arxiv.org/abs/2609.13161",
+      "body_check": "本文公開情報でPrefill→同cluster RelayDecodeへRDMA転送して即decodeを開始しつつ、WAN EthernetでMainDecode側へKVを送り、到着後に生成tokenとstateをhandoffする三段構成を確認。Decode-side RadixCacheとpipeline orchestrationも用い、H100+H200跨DC構成で同一DC同構成PD baseline比SLA-compliant goodputのbenefit-cost ratioを最大37.5%改善。",
+      "first_checked_at": "2026-10-02T18:31:32+09:00",
+      "last_checked_at": "2026-10-02T18:31:32+09:00",
+      "linked_from": []
+    }
+  ]
+}
