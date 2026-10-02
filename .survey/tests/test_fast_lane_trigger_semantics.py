@@ -57,11 +57,15 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
         trigger = text.split("  workflow_dispatch:", 1)[0]
         self.assertIn(".survey/work-queue/claim-requests/*.json", trigger)
         self.assertIn(".survey/work-queue/direct-takes/research/*.json", trigger)
-        self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
         self.assertNotIn(".survey/scripts/", trigger)
         self.assertNotIn(".github/workflows/survey-claim-fast.yml", trigger)
-        self.assertIn("head_commit.modified", text)
-        self.assertIn(".survey/scheduler/library-import-kick.json", text)
+
+    def test_library_import_kick_has_dedicated_path_trigger(self):
+        text = (ROOT / ".github/workflows/library-import-kick.yml").read_text(encoding="utf-8")
+        trigger = text.split("  workflow_dispatch:", 1)[0]
+        self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
+        self.assertIn("library-import.yml/dispatches", text)
+        self.assertNotIn("head_commit.message", text)
 
     def test_submission_fast_push_trigger_is_descriptor_only(self):
         text = (ROOT / ".github/workflows/survey-submission-fast.yml").read_text(encoding="utf-8")
