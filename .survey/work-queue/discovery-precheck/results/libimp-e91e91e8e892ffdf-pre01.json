@@ -1,0 +1,425 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e91e91e8e892ffdf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e91e91e8e892",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.05176",
+    "arXiv:2305.11627",
+    "arXiv:2307.02486",
+    "arXiv:2307.08621",
+    "arXiv:2310.06694",
+    "arXiv:2409.06211",
+    "arXiv:2411.16102",
+    "arXiv:2503.09573"
+  ],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "231896262d46b1c5befed9e531308c3dd050f465",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T11:04:33.782787+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.05176",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2305.05176"
+    },
+    {
+      "requested_id": "arXiv:2305.11627",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.02486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.08621",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.06694",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.06211",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.16102",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.09573",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2305.11627",
+      "year": 2023,
+      "published": "2023-05-19",
+      "abstract": "Large language models (LLMs) have shown remarkable capabilities in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges in both the deployment, inference, and training stages. With LLM being a general-purpose task solver, we explore its compression in a task-agnostic manner, which aims to preserve the multi-task solving and language generation ability of the original LLM. One challenge to achieving this is the enormous size of the training corpus of LLM, which makes both data transfer and model post-training over-burdensome. Thus, we tackle the compression of LLMs within the bound of two constraints: being task-agnostic and minimizing the reliance on the original training dataset. Our method, named LLM-Pruner, adopts structural pruning that selectively removes non-critical coupled structures based on gradient information, maximally preserving the majority of the LLM's functionality. To this end, the performance of pruned models can be efficiently recovered through tuning techniques, LoRA, in merely 3 hours, requiring only 50K data. We validate the LLM-Pruner on three LLMs, including LLaMA, Vicuna, and ChatGLM, and demonstrate that the compressed models still exhibit satisfactory capabilities in zero-shot classification and generation. The code is available at: https://github.com/horseee/LLM-Pruner",
+      "canonical_id": "arXiv:2305.11627",
+      "arxiv_id": "2305.11627",
+      "doi": "10.48550/arXiv.2305.11627",
+      "authors": [
+        "Xinyin Ma",
+        "Gongfan Fang",
+        "Xinchao Wang"
+      ]
+    },
+    {
+      "title": "LongNet: Scaling Transformers to 1, 000, 000, 000 Tokens",
+      "source_url": "https://arxiv.org/abs/2307.02486",
+      "year": 2023,
+      "published": "2023-07-05",
+      "abstract": "Scaling sequence length has become a critical demand in the era of large language models. However, existing methods struggle with either computational complexity or model expressivity, rendering the maximum sequence length restricted. In this work, we introduce LongNet, a Transformer variant that can scale sequence length to more than 1 billion tokens, without sacrificing the performance on shorter sequences. Specifically, we propose dilated attention, which expands the attentive field exponentially as the distance grows. LongNet has significant advantages: 1) it has a linear computation complexity and a logarithm dependency between tokens; 2) it can be served as a distributed trainer for extremely long sequences; 3) its dilated attention is a drop-in replacement for standard attention, which can be seamlessly integrated with the existing Transformer-based optimization. Experiments results demonstrate that LongNet yields strong performance on both long-sequence modeling and general language tasks. Our work opens up new possibilities for modeling very long sequences, e.g., treating a whole corpus or even the entire Internet as a sequence.",
+      "canonical_id": "arXiv:2307.02486",
+      "arxiv_id": "2307.02486",
+      "authors": [
+        "Jiayu Ding",
+        "Shu-Ming Ma",
+        "Li Dong",
+        "Xingxing Zhang",
+        "Shao-Han Huang",
+        "Wen-Hui Wang",
+        "Nan-Ning Zheng",
+        "Furu Wei"
+      ]
+    },
+    {
+      "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2307.08621",
+      "year": 2023,
+      "published": "2023-07-17",
+      "abstract": "In this work, we propose Retentive Network (RetNet) as a foundation architecture for large language models, simultaneously achieving training parallelism, low-cost inference, and good performance. We theoretically derive the connection between recurrence and attention. Then we propose the retention mechanism for sequence modeling, which supports three computation paradigms, i.e., parallel, recurrent, and chunkwise recurrent. Specifically, the parallel representation allows for training parallelism. The recurrent representation enables low-cost $O(1)$ inference, which improves decoding throughput, latency, and GPU memory without sacrificing performance. The chunkwise recurrent representation facilitates efficient long-sequence modeling with linear complexity, where each chunk is encoded parallelly while recurrently summarizing the chunks. Experimental results on language modeling show that RetNet achieves favorable scaling results, parallel training, low-cost deployment, and efficient inference. The intriguing properties make RetNet a strong successor to Transformer for large language models. Code will be available at https://aka.ms/retnet.",
+      "canonical_id": "arXiv:2307.08621",
+      "arxiv_id": "2307.08621",
+      "authors": [
+        "Yutao Sun",
+        "Li Dong",
+        "Shao-Han Huang",
+        "Shu-Ming Ma",
+        "Yuqing Xia",
+        "Jilong Xue",
+        "Jianyong Wang",
+        "Furu Wei"
+      ]
+    },
+    {
+      "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+      "source_url": "https://arxiv.org/abs/2310.06694",
+      "year": 2023,
+      "published": "2023-10-10",
+      "abstract": "The popularity of LLaMA (Touvron et al., 2023a;b) and other recently emerged moderate-sized large language models (LLMs) highlights the potential of building smaller yet powerful LLMs. Regardless, the cost of training such models from scratch on trillions of tokens remains high. In this work, we study structured pruning as an effective means to develop smaller LLMs from pre-trained, larger models. Our approach employs two key techniques: (1) targeted structured pruning, which prunes a larger model to a specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner, and (2) dynamic batch loading, which dynamically updates the composition of sampled data in each training batch based on varying losses across different domains. We demonstrate the efficacy of our approach by presenting the Sheared-LLaMA series, pruning the LLaMA2-7B model down to 1.3B and 2.7B parameters. Sheared-LLaMA models outperform state-of-the-art open-source models of equivalent sizes, such as Pythia, INCITE, OpenLLaMA and the concurrent TinyLlama models, on a wide range of downstream and instruction tuning evaluations, while requiring only 3% of compute compared to training such models from scratch. This work provides compelling evidence that leveraging existing LLMs with structured pruning is a far more cost-effective approach for building competitive small-scale LLMs",
+      "canonical_id": "arXiv:2310.06694",
+      "arxiv_id": "2310.06694",
+      "doi": "10.48550/arXiv.2310.06694",
+      "authors": [
+        "Mengzhou Xia",
+        "Tianyu Gao",
+        "Zhiyuan Zeng",
+        "Danqi Chen"
+      ]
+    },
+    {
+      "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+      "source_url": "https://arxiv.org/abs/2409.06211",
+      "year": 2024,
+      "published": "2024-09-10",
+      "abstract": "Mixture-of-experts (MoEs) have been adopted for reducing inference costs by sparsely activating experts in Large language models (LLMs). Despite this reduction, the massive number of experts in MoEs still makes them expensive to serve. In this paper, we study how to address this, by pruning MoEs. Among pruning methodologies, unstructured pruning has been known to achieve the highest performance for a given pruning ratio, compared to structured pruning, since the latter imposes constraints on the sparsification structure. This is intuitive, as the solution space of unstructured pruning subsumes that of structured pruning. However, our counterintuitive finding reveals that expert pruning, a form of structured pruning, can actually precede unstructured pruning to outperform unstructured-only pruning. As existing expert pruning, requiring $O(\\frac{k^n}{\\sqrt{n}})$ forward passes for $n$ experts, cannot scale for recent MoEs, we propose a scalable alternative with $O(1)$ complexity, yet outperforming the more expensive methods. The key idea is leveraging a latent structure between experts, based on behavior similarity, such that the greedy decision of whether to prune closely captures the joint pruning effect. Ours is highly effective -- for Snowflake Arctic, a 480B-sized MoE with 128 experts, our method needs only one H100 and two hours to achieve nearly no loss in performance with 40% sparsity, even in generative tasks such as GSM8K, where state-of-the-art unstructured pruning fails to. The code will be made publicly available.",
+      "canonical_id": "arXiv:2409.06211",
+      "arxiv_id": "2409.06211",
+      "doi": "10.48550/arXiv.2409.06211",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F. Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ]
+    },
+    {
+      "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
+      "source_url": "https://arxiv.org/abs/2411.16102",
+      "year": 2024,
+      "published": "2024-11-25",
+      "abstract": "Offline batch inference, which leverages the flexibility of request batching to achieve higher throughput and lower costs, is becoming more popular for latency-insensitive applications. Meanwhile, recent progress in model capability and modality makes requests more diverse in compute and memory demands, creating unique opportunities for throughput improvement by resource overlapping. However, a request schedule that maximizes resource overlapping can conflict with the schedule that maximizes prefix sharing, a widely-used performance optimization, causing sub-optimal inference throughput. We present BlendServe, a system that maximizes resource utilization of offline batch inference by combining the benefits of resource overlapping and prefix sharing using a resource-aware prefix tree. BlendServe exploits the relaxed latency requirements in offline batch inference to reorder and overlap requests with varied resource demands while ensuring high prefix sharing. We evaluate BlendServe on a variety of synthetic multi-modal workloads and show that it provides up to $1.44\\times$ throughput boost compared to widely-used industry standards, vLLM and SGLang.",
+      "canonical_id": "arXiv:2411.16102",
+      "arxiv_id": "2411.16102",
+      "doi": "10.48550/arXiv.2411.16102",
+      "authors": [
+        "Yi-Long Zhao",
+        "Shuo Yang",
+        "Kan Zhu",
+        "Lian-Min Zheng",
+        "Baris Kasikci",
+        "Yang Zhou",
+        "Jia-Rong Xing",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "BLOCK DIFFUSION: INTERPOLATING BETWEEN AU-TOREGRESSIVE AND DIFFUSION LANGUAGE MODELS",
+      "source_url": "https://arxiv.org/abs/2503.09573",
+      "year": 2025,
+      "published": "2025-03-12",
+      "abstract": "Diffusion language models offer unique benefits over autoregressive models due to their potential for parallelized generation and controllability, yet they lag in likelihood modeling and are limited to fixed-length generation. In this work, we introduce a class of block diffusion language models that interpolate between discrete denoising diffusion and autoregressive models. Block diffusion overcomes key limitations of both approaches by supporting flexible-length generation and improving inference efficiency with KV caching and parallel token sampling. We propose a recipe for building effective block diffusion models that includes an efficient training algorithm, estimators of gradient variance, and data-driven noise schedules to minimize the variance. Block diffusion sets a new state-of-the-art performance among diffusion models on language modeling benchmarks and enables generation of arbitrary-length sequences. We provide the code1, along with the model weights and blog post on the project page: https://m-arriola.com/bd3lms",
+      "canonical_id": "arXiv:2503.09573",
+      "arxiv_id": "2503.09573",
+      "doi": "10.48550/arXiv.2503.09573",
+      "authors": [
+        "Marianne Arriola",
+        "Aaron Gokaslan",
+        "Justin T. Chiu",
+        "Zhi-Han Yang",
+        "Zhi-Hong Qi",
+        "Jiaqi Han",
+        "S. Sahoo",
+        "V. Kuleshov"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.11627",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.11627",
+        "id:arXiv:2305.11627",
+        "title:llmpruner on the structural pruning of large language models",
+        "url:https://arxiv.org/abs/2305.11627"
+      ],
+      "record": {
+        "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2305.11627",
+        "year": 2023,
+        "published": "2023-05-19",
+        "abstract": "Large language models (LLMs) have shown remarkable capabilities in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges in both the deployment, inference, and training stages. With LLM being a general-purpose task solver, we explore its compression in a task-agnostic manner, which aims to preserve the multi-task solving and language generation ability of the original LLM. One challenge to achieving this is the enormous size of the training corpus of LLM, which makes both data transfer and model post-training over-burdensome. Thus, we tackle the compression of LLMs within the bound of two constraints: being task-agnostic and minimizing the reliance on the original training dataset. Our method, named LLM-Pruner, adopts structural pruning that selectively removes non-critical coupled structures based on gradient information, maximally preserving the majority of the LLM's functionality. To this end, the performance of pruned models can be efficiently recovered through tuning techniques, LoRA, in merely 3 hours, requiring only 50K data. We validate the LLM-Pruner on three LLMs, including LLaMA, Vicuna, and ChatGLM, and demonstrate that the compressed models still exhibit satisfactory capabilities in zero-shot classification and generation. The code is available at: https://github.com/horseee/LLM-Pruner",
+        "canonical_id": "arXiv:2305.11627",
+        "arxiv_id": "2305.11627",
+        "doi": "10.48550/arXiv.2305.11627",
+        "authors": [
+          "Xinyin Ma",
+          "Gongfan Fang",
+          "Xinchao Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.02486",
+      "identity_tokens": [
+        "id:arXiv:2307.02486",
+        "title:longnet scaling transformers to 1 000 000 000 tokens",
+        "url:https://arxiv.org/abs/2307.02486"
+      ],
+      "record": {
+        "title": "LongNet: Scaling Transformers to 1, 000, 000, 000 Tokens",
+        "source_url": "https://arxiv.org/abs/2307.02486",
+        "year": 2023,
+        "published": "2023-07-05",
+        "abstract": "Scaling sequence length has become a critical demand in the era of large language models. However, existing methods struggle with either computational complexity or model expressivity, rendering the maximum sequence length restricted. In this work, we introduce LongNet, a Transformer variant that can scale sequence length to more than 1 billion tokens, without sacrificing the performance on shorter sequences. Specifically, we propose dilated attention, which expands the attentive field exponentially as the distance grows. LongNet has significant advantages: 1) it has a linear computation complexity and a logarithm dependency between tokens; 2) it can be served as a distributed trainer for extremely long sequences; 3) its dilated attention is a drop-in replacement for standard attention, which can be seamlessly integrated with the existing Transformer-based optimization. Experiments results demonstrate that LongNet yields strong performance on both long-sequence modeling and general language tasks. Our work opens up new possibilities for modeling very long sequences, e.g., treating a whole corpus or even the entire Internet as a sequence.",
+        "canonical_id": "arXiv:2307.02486",
+        "arxiv_id": "2307.02486",
+        "authors": [
+          "Jiayu Ding",
+          "Shu-Ming Ma",
+          "Li Dong",
+          "Xingxing Zhang",
+          "Shao-Han Huang",
+          "Wen-Hui Wang",
+          "Nan-Ning Zheng",
+          "Furu Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.08621",
+      "identity_tokens": [
+        "id:arXiv:2307.08621",
+        "title:retentive network a successor to transformer for large language models",
+        "url:https://arxiv.org/abs/2307.08621"
+      ],
+      "record": {
+        "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2307.08621",
+        "year": 2023,
+        "published": "2023-07-17",
+        "abstract": "In this work, we propose Retentive Network (RetNet) as a foundation architecture for large language models, simultaneously achieving training parallelism, low-cost inference, and good performance. We theoretically derive the connection between recurrence and attention. Then we propose the retention mechanism for sequence modeling, which supports three computation paradigms, i.e., parallel, recurrent, and chunkwise recurrent. Specifically, the parallel representation allows for training parallelism. The recurrent representation enables low-cost $O(1)$ inference, which improves decoding throughput, latency, and GPU memory without sacrificing performance. The chunkwise recurrent representation facilitates efficient long-sequence modeling with linear complexity, where each chunk is encoded parallelly while recurrently summarizing the chunks. Experimental results on language modeling show that RetNet achieves favorable scaling results, parallel training, low-cost deployment, and efficient inference. The intriguing properties make RetNet a strong successor to Transformer for large language models. Code will be available at https://aka.ms/retnet.",
+        "canonical_id": "arXiv:2307.08621",
+        "arxiv_id": "2307.08621",
+        "authors": [
+          "Yutao Sun",
+          "Li Dong",
+          "Shao-Han Huang",
+          "Shu-Ming Ma",
+          "Yuqing Xia",
+          "Jilong Xue",
+          "Jianyong Wang",
+          "Furu Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.06694",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.06694",
+        "id:arXiv:2310.06694",
+        "title:sheared llama accelerating language model pretraining via structured pruning",
+        "url:https://arxiv.org/abs/2310.06694"
+      ],
+      "record": {
+        "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+        "source_url": "https://arxiv.org/abs/2310.06694",
+        "year": 2023,
+        "published": "2023-10-10",
+        "abstract": "The popularity of LLaMA (Touvron et al., 2023a;b) and other recently emerged moderate-sized large language models (LLMs) highlights the potential of building smaller yet powerful LLMs. Regardless, the cost of training such models from scratch on trillions of tokens remains high. In this work, we study structured pruning as an effective means to develop smaller LLMs from pre-trained, larger models. Our approach employs two key techniques: (1) targeted structured pruning, which prunes a larger model to a specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner, and (2) dynamic batch loading, which dynamically updates the composition of sampled data in each training batch based on varying losses across different domains. We demonstrate the efficacy of our approach by presenting the Sheared-LLaMA series, pruning the LLaMA2-7B model down to 1.3B and 2.7B parameters. Sheared-LLaMA models outperform state-of-the-art open-source models of equivalent sizes, such as Pythia, INCITE, OpenLLaMA and the concurrent TinyLlama models, on a wide range of downstream and instruction tuning evaluations, while requiring only 3% of compute compared to training such models from scratch. This work provides compelling evidence that leveraging existing LLMs with structured pruning is a far more cost-effective approach for building competitive small-scale LLMs",
+        "canonical_id": "arXiv:2310.06694",
+        "arxiv_id": "2310.06694",
+        "doi": "10.48550/arXiv.2310.06694",
+        "authors": [
+          "Mengzhou Xia",
+          "Tianyu Gao",
+          "Zhiyuan Zeng",
+          "Danqi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.06211",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.06211",
+        "id:arXiv:2409.06211",
+        "title:stun structuredthenunstructured pruning for scalable moe pruning",
+        "url:https://arxiv.org/abs/2409.06211"
+      ],
+      "record": {
+        "title": "STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning",
+        "source_url": "https://arxiv.org/abs/2409.06211",
+        "year": 2024,
+        "published": "2024-09-10",
+        "abstract": "Mixture-of-experts (MoEs) have been adopted for reducing inference costs by sparsely activating experts in Large language models (LLMs). Despite this reduction, the massive number of experts in MoEs still makes them expensive to serve. In this paper, we study how to address this, by pruning MoEs. Among pruning methodologies, unstructured pruning has been known to achieve the highest performance for a given pruning ratio, compared to structured pruning, since the latter imposes constraints on the sparsification structure. This is intuitive, as the solution space of unstructured pruning subsumes that of structured pruning. However, our counterintuitive finding reveals that expert pruning, a form of structured pruning, can actually precede unstructured pruning to outperform unstructured-only pruning. As existing expert pruning, requiring $O(\\frac{k^n}{\\sqrt{n}})$ forward passes for $n$ experts, cannot scale for recent MoEs, we propose a scalable alternative with $O(1)$ complexity, yet outperforming the more expensive methods. The key idea is leveraging a latent structure between experts, based on behavior similarity, such that the greedy decision of whether to prune closely captures the joint pruning effect. Ours is highly effective -- for Snowflake Arctic, a 480B-sized MoE with 128 experts, our method needs only one H100 and two hours to achieve nearly no loss in performance with 40% sparsity, even in generative tasks such as GSM8K, where state-of-the-art unstructured pruning fails to. The code will be made publicly available.",
+        "canonical_id": "arXiv:2409.06211",
+        "arxiv_id": "2409.06211",
+        "doi": "10.48550/arXiv.2409.06211",
+        "authors": [
+          "Jaeseong Lee",
+          "Seung-won Hwang",
+          "Aurick Qiao",
+          "Daniel F. Campos",
+          "Zhewei Yao",
+          "Yuxiong He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.16102",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.16102",
+        "id:arXiv:2411.16102",
+        "title:blendserve optimizing offline inference for autoregressive large models with resourceaware batching",
+        "url:https://arxiv.org/abs/2411.16102"
+      ],
+      "record": {
+        "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
+        "source_url": "https://arxiv.org/abs/2411.16102",
+        "year": 2024,
+        "published": "2024-11-25",
+        "abstract": "Offline batch inference, which leverages the flexibility of request batching to achieve higher throughput and lower costs, is becoming more popular for latency-insensitive applications. Meanwhile, recent progress in model capability and modality makes requests more diverse in compute and memory demands, creating unique opportunities for throughput improvement by resource overlapping. However, a request schedule that maximizes resource overlapping can conflict with the schedule that maximizes prefix sharing, a widely-used performance optimization, causing sub-optimal inference throughput. We present BlendServe, a system that maximizes resource utilization of offline batch inference by combining the benefits of resource overlapping and prefix sharing using a resource-aware prefix tree. BlendServe exploits the relaxed latency requirements in offline batch inference to reorder and overlap requests with varied resource demands while ensuring high prefix sharing. We evaluate BlendServe on a variety of synthetic multi-modal workloads and show that it provides up to $1.44\\times$ throughput boost compared to widely-used industry standards, vLLM and SGLang.",
+        "canonical_id": "arXiv:2411.16102",
+        "arxiv_id": "2411.16102",
+        "doi": "10.48550/arXiv.2411.16102",
+        "authors": [
+          "Yi-Long Zhao",
+          "Shuo Yang",
+          "Kan Zhu",
+          "Lian-Min Zheng",
+          "Baris Kasikci",
+          "Yang Zhou",
+          "Jia-Rong Xing",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.09573",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.09573",
+        "id:arXiv:2503.09573",
+        "title:block diffusion interpolating between autoregressive and diffusion language models",
+        "url:https://arxiv.org/abs/2503.09573"
+      ],
+      "record": {
+        "title": "BLOCK DIFFUSION: INTERPOLATING BETWEEN AU-TOREGRESSIVE AND DIFFUSION LANGUAGE MODELS",
+        "source_url": "https://arxiv.org/abs/2503.09573",
+        "year": 2025,
+        "published": "2025-03-12",
+        "abstract": "Diffusion language models offer unique benefits over autoregressive models due to their potential for parallelized generation and controllability, yet they lag in likelihood modeling and are limited to fixed-length generation. In this work, we introduce a class of block diffusion language models that interpolate between discrete denoising diffusion and autoregressive models. Block diffusion overcomes key limitations of both approaches by supporting flexible-length generation and improving inference efficiency with KV caching and parallel token sampling. We propose a recipe for building effective block diffusion models that includes an efficient training algorithm, estimators of gradient variance, and data-driven noise schedules to minimize the variance. Block diffusion sets a new state-of-the-art performance among diffusion models on language modeling benchmarks and enables generation of arbitrary-length sequences. We provide the code1, along with the model weights and blog post on the project page: https://m-arriola.com/bd3lms",
+        "canonical_id": "arXiv:2503.09573",
+        "arxiv_id": "2503.09573",
+        "doi": "10.48550/arXiv.2503.09573",
+        "authors": [
+          "Marianne Arriola",
+          "Aaron Gokaslan",
+          "Justin T. Chiu",
+          "Zhi-Han Yang",
+          "Zhi-Hong Qi",
+          "Jiaqi Han",
+          "S. Sahoo",
+          "V. Kuleshov"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:25a61cc1ff8d288d50a17a1041401aa03ccf026c89e88984850a5ea2f8a98661",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
