@@ -78,18 +78,12 @@ Scheduled workerは、無駄な再読解を避けるためGitHub/Libraryの既�
 
 ## 4. モード判定
 
-開始時の実効候補在庫を次で扱う。
+通常runの開始時は、**同じ最新main HEADの \`STATUS.md\` を読み、サマリーの \`収録候補論文数\` を探索 / 読解の境界判定にそのまま使う。** この値は非終端Research jobのうち \`canonical_id\` で一意化できる論文数であり、構造化referencesの未処理件数、Discovery判定待ち件数、worklist表示件数で代用しない。
 
-- \`G\`: 最新main上の未処理候補在庫
-- \`D\`: Libraryに未転送のDiscovery acceptで、明らかにまだResearch化していない件数
-- \`R\`: Libraryに完成Researchがあり、G側にまだ未処理候補として残る件数
-- \`E = G + D - R\`
+- \`収録候補論文数 > 600\` → Research
+- \`収録候補論文数 <= 600\` → Discovery
 
-600件の閾値から明らかに離れている場合は厳密全件照合をしない。
-
-- \`E > 600\` → Research
-- \`E <= 600\` → Discovery
-- 概算でも境界が曖昧ならDiscovery
+Libraryの未転送成果を足し引きして別の実効値を再計算しない。\`STATUS.md\` にこの指標がない、同じHEADで生成された値として確認できない、または取得不能なら、推測で別指標を代用せずDiscoveryを選び、その旨をrun報告へ残す。
 
 run中に在庫が変化してもモードは固定する。
 
