@@ -425,7 +425,7 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         f"| Discovery 7日平均 | **{discovery_daily_avg:.1f}件/日** |",
         f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
         "",
-        f"収録候補論文数は `.survey/work-queue/jobs/*.json` の非終端Research jobを対象に、`canonical_id` で一意化できる論文だけを数えます。`canonical_id` なしの非終端Research jobは **{candidate_backlog[\'missing_canonical\']}件**で、この数には推定加算しません。", ""
+        f"収録候補論文数は `.survey/work-queue/jobs/*.json` の非終端Research jobを対象に、`canonical_id` で一意化できる論文だけを数えます。`canonical_id` なしの非終端Research jobは **{candidate_backlog['missing_canonical']}件**で、この数には推定加算しません。", "",
         "日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。", "",
         "## 直近7日の日次進捗", "",
         "| 日付 (JST) | Research完了 | Discovery本文確認・分類 |", "|---|---:|---:|",
