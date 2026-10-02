@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1655",
+      "doi": "10.18653/v1/2026.findings-acl.1655",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.findings-acl.1655"
+      ],
+      "title": "LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1655/",
+      "authors": [
+        "Tianyu Liu",
+        "Qitan Lv",
+        "Hao Li",
+        "Xing Gao",
+        "Xiao Sun",
+        "Xiaoyan Sun"
+      ],
+      "published": "2026/7",
+      "year": 2026,
+      "reason": "検索型投機的復号で次々トークン予測と動的ドラフト木を使い、補助ドラフトモデルなしに復号を高速化するため対象。",
+      "library_body_check": "本文・公式実装で、プロンプト由来n-gramキャッシュを使うnext-next-token speculation、検索対応の動的draft tree、target modelによる検証を確認。Spec-Bench等で速度とaccept lengthを評価する推論高速化研究。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models",
+      "source_url": "https://arxiv.org/abs/2510.06126",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "Large Language Models (LLMs) are increasingly integrated into everyday applications, but their prevalent cloud-based deployment raises growing concerns around data privacy and long-term sustainability. Running LLMs locally on mobile and edge devices (on-device LLMs) offers the promise of enhanced privacy, reliability, and reduced communication costs. However, realizing this vision remains challenging due to substantial memory and compute demands, as well as limited visibility into performance-efficiency trade-offs on resource-constrained hardware. We propose lm-Meter, the first lightweight, online latency profiler tailored for on-device LLM inference. lm-Meter captures fine-grained, real-time latency at both phase (e.g., embedding, prefill, decode, softmax, sampling) and kernel levels without auxiliary devices. We implement lm-Meter on commercial mobile platforms and demonstrate its high profiling accuracy with minimal system overhead, e.g., only 2.58% throughput reduction in prefill and 0.99% in decode under the most constrained Powersave governor. Leveraging lm-Meter, we conduct comprehensive empirical studies revealing phase- and kernel-level bottlenecks in on-device LLM inference, quantifying accuracy-efficiency trade-offs, and identifying systematic optimization opportunities. lm-Meter provides unprecedented visibility into the runtime behavior of LLMs on constrained platforms, laying the foundation for informed optimization and accelerating the democratization of on-device LLM systems. Code and tutorials are available at github.com/amai-gsu/LM-Meter.",
+      "canonical_id": "arXiv:2510.06126",
+      "arxiv_id": "2510.06126",
+      "doi": "10.1145/3769012.3770614",
+      "authors": [
+        "Haoxin Wang",
+        "Xiaolong Tu",
+        "Hongyu Ke",
+        "Huirong Chai",
+        "Dawei Chen",
+        "Kyungtae Han"
+      ],
+      "reason": "端末上LLM推論をphase/kernel粒度で低overheadに実測する専用profilerで、推論基盤の性能解析・最適化に直接使うため対象。",
+      "library_body_check": "本文でembedding/prefill/decode/softmax/samplingとkernel単位をオンライン計測するlm-Meterを確認。商用モバイル上でPowersave時でもprofilingによるthroughput低下はprefill 2.58%、decode 0.99%で、runtime bottleneckを実測する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee95bfcb098a",
+    "round": "libimp-ee95bfcb098a3d9a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee95bfcb098a3d9a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee95bfcb098a3d9a-pre01.json",
+    "receipt": "sha256:21fd9996a323a22352a8ec928e6f8dcfff90db9832a23614777a2d695a30483b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee95bfcb098a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
