@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1846-scheduled-chat-45",
+  "reference_main_sha": "8ac20dfce3c741ef49336f39ffc530680089d464",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07597",
+      "identity_tokens": [
+        "arXiv:2309.07597",
+        "DOI:10.48550/arXiv.2309.07597"
+      ],
+      "title": "C-Pack: Packed Resources For General Chinese Embeddings",
+      "reason": "中国語の汎用テキスト埋め込み向けデータ・ベンチマーク・モデル・学習レシピが主題で、LLM推論基盤の高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2309.07597",
+      "body_check": "本文ではC-MTEB、C-MTP、BGE、学習レシピを構築し検索・ランキング・分類等を評価する。RAG利用には触れるがLLM本体のサービング、KVキャッシュ、復号、メモリ階層の最適化は扱わない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.03450",
+      "identity_tokens": [
+        "arXiv:2309.03450",
+        "DOI:10.48550/arXiv.2309.03450"
+      ],
+      "title": "XGen-7B Technical Report",
+      "reason": "8K文脈の7Bモデル系列の事前学習・命令調整と能力評価が中心で、推論システム最適化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2309.03450",
+      "body_check": "本文では最大1.5TトークンでXGen-7Bを学習し2K/8K文脈モデルと命令調整版を公開する。KV管理、カーネル、オフロード、サービングスケジューラの新規方式は提案しない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.00155",
+      "identity_tokens": [
+        "arXiv:2309.00155",
+        "DOI:10.48550/arXiv.2309.00155"
+      ],
+      "title": "LLM in the Shell: Generative Honeypots",
+      "reason": "LLMでLinuxシェルらしい応答を生成するサイバーセキュリティ用途のハニーポットで、推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2309.00155",
+      "body_check": "本文ではクラウドLLMを用いるshelLMを実装し、人間の研究者による評価で実シェルとの整合性を検証する。主目的はハニーポットの現実性・適応性。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12247",
+      "identity_tokens": [
+        "arXiv:2308.12247",
+        "DOI:10.48550/arXiv.2308.12247"
+      ],
+      "title": "How to Protect Copyright Data in Optimization of Large Language Models?",
+      "reason": "LLM最適化における著作権データ保護を理論的に扱い、推論の速度・メモリ・サービング効率を対象としない。",
+      "source_url": "https://arxiv.org/abs/2308.12247",
+      "body_check": "本文は著作権データを含むLLM最適化問題の理論的性質と保護方法を分析する。KVキャッシュ、推論カーネル、量子化、オフロード等の推論基盤機構ではない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.11601",
+      "identity_tokens": [
+        "arXiv:2308.11601",
+        "DOI:10.48550/arXiv.2308.11601"
+      ],
+      "title": "Tryage: Real-time, intelligent Routing of User Prompts to Large Language Models",
+      "reason": "入力ごとに複数LLMから適切なモデルを選ぶ実時間ルーティングでサービング系に近いが、主要評価はモデル選択精度と多目的選択。",
+      "source_url": "https://arxiv.org/abs/2308.11601",
+      "body_check": "本文ではpromptから下流モデル性能を予測するrouterと、モデルサイズ・新しさ・セキュリティ等を統合する目的関数でモデルを選択する。最適モデル選択精度50.9%だがGPU配置、batching、KV、throughput/latency制御は主対象でない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10882",
+      "identity_tokens": [
+        "arXiv:2308.10882",
+        "DOI:10.48550/arXiv.2308.10882"
+      ],
+      "title": "Giraffe: Adventures in Expanding Context Lengths in LLMs",
+      "reason": "位置符号化の外挿でLLaMA系モデルの文脈長を延長するモデル設計・学習研究で、推論システム最適化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2308.10882",
+      "body_check": "本文ではlinear scalingやtruncated basis等を比較し4K/16K/32K文脈の13Bモデルを公開する。KV圧縮・オフロード・attention kernel・serving throughputの実装最適化はない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08358",
+      "identity_tokens": [
+        "arXiv:2308.08358",
+        "DOI:10.48550/arXiv.2308.08358"
+      ],
+      "title": "Convergence of Two-Layer Regression with Nonlinear Units",
+      "reason": "二層非線形回帰ネットワークの収束性を理論解析する研究で、LLM推論システムとは無関係。",
+      "source_url": "https://arxiv.org/abs/2308.08358",
+      "body_check": "本文は二層回帰モデルの学習ダイナミクスと収束保証を数理的に解析する。LLM、Transformer、推論サービング、メモリ管理、カーネル最適化の実装・評価はない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.06207",
+      "identity_tokens": [
+        "arXiv:2308.06207",
+        "DOI:10.48550/arXiv.2308.06207"
+      ],
+      "title": "Thinking Like an Expert: Multimodal Hypergraph-of-Thought Reasoning to boost Foundation Models",
+      "reason": "ハイパーグラフを用いたマルチモーダル推論で推論精度を高める方式で、計算効率化・サービング最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.06207",
+      "body_check": "本文ではtextual/visual Hypergraph-of-Thoughtとcross-modal co-attentionを用いScienceQAで推論性能を評価する。推論時間・メモリ・throughputのシステム最適化は主題ではない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.03905",
+      "identity_tokens": [
+        "arXiv:2308.03905",
+        "DOI:10.48550/arXiv.2308.03905"
+      ],
+      "title": "Intelligent Assistant Language Understanding On Device",
+      "reason": "端末上で自然言語理解を完結させる実運用システム設計でエッジ推論には関連するが、現行LLM推論ランタイム最適化論文ではない。",
+      "source_url": "https://arxiv.org/abs/2308.03905",
+      "body_check": "本文ではサーバー型から端末内アシスタントへ移行する際のアーキテクチャ・技術選択とプライバシー、信頼性、速度、保守性の知見を扱う。LLMのKV、低ビット化、オフロード等が中心ではない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03107",
+      "identity_tokens": [
+        "arXiv:2308.03107",
+        "DOI:10.48550/arXiv.2308.03107"
+      ],
+      "title": "Embedding-based Retrieval with LLM for Effective Agriculture Information Extracting from Unstructured Data",
+      "reason": "農業文書から埋め込み検索とLLM質問応答で構造化情報を抽出する応用研究で、LLM推論基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.03107",
+      "body_check": "本文ではembedding-based retrievalで文書を絞り込み、LLM質問応答でentity/attributeを抽出して構造化データへ変換する。評価対象は農業情報抽出で、LLMサービング機構ではない。",
+      "first_checked_at": "2026-10-02T18:46:20+09:00",
+      "last_checked_at": "2026-10-02T18:46:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 471
+    }
+  ]
+}
