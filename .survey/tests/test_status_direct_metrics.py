@@ -137,7 +137,7 @@ class DirectStatusMetricTests(unittest.TestCase):
 
             top, rest = text.split("## 件数サマリー", 1)
             self.assertIn("## 重要指標", top)
-            self.assertIn("| 収録候補論文 | **2** |", top)
+            self.assertIn("| 収録候補論文数 | **2** |", top)
             self.assertIn("| 未claim Research job | **3** |", top)
             self.assertIn("| 直近24hの検証済みResearch収録 | **1** |", top)
             self.assertIn("| 最終検証済みResearch収録 | **09-16 08:30:00 JST** |", top)
