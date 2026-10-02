@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c330b81bccbae02d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1162/neco.1997.9.8.1735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1162/neco.1997.9.8.1735",
+    "identity_tokens": [
+      "DOI:10.1162/neco.1997.9.8.1735"
+    ],
+    "reason": "長期依存を学習するLSTMアーキテクチャの基礎研究で、LLM推論システムの速度・メモリ最適化ではない。",
+    "first_checked_at": "2026-10-02T07:00:17+00:00",
+    "last_checked_at": "2026-10-02T08:18:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Long Short-Term Memory"
+  },
+  "processed_at": "2026-10-02T08:18:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c330b81bccba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e68656c072f02fca-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/mm.2023.3237491",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/mm.2023.3237491",
+    "identity_tokens": [
+      "DOI:10.1109/mm.2023.3237491"
+    ],
+    "reason": "CXL.memでホストから遠隔メモリへ直接アクセスするDirectCXLを用い、メモリ分離・階層化の基盤を扱う。LLM推論への直接評価はないが、CPU/CXLメモリへのオフロード基盤と技術的に近いため境界扱い。",
+    "first_checked_at": "2026-10-02T08:18:22+00:00",
+    "last_checked_at": "2026-10-02T08:18:22+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/"
+    ],
+    "title": "Memory Pooling With CXL"
+  },
+  "processed_at": "2026-10-02T08:18:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e68656c072f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

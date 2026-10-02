@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e68656c072f02fca-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccad45719.2019.8942149",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccad45719.2019.8942149",
+    "identity_tokens": [
+      "DOI:10.1109/iccad45719.2019.8942149"
+    ],
+    "reason": "アクセラレータ設計のエネルギー推定手法・ツールであり、LLM推論そのものを高速化・省メモリ化する実行方式ではないため対象外。",
+    "first_checked_at": "2026-09-30T09:12:11+00:00",
+    "last_checked_at": "2026-10-02T08:18:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/09-kernel-runtime-compilation/"
+    ],
+    "title": "Accelergy: An Architecture-Level Energy Estimation Methodology for Accelerator Designs"
+  },
+  "processed_at": "2026-10-02T08:18:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e68656c072f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
