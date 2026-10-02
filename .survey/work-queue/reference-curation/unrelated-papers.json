@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T01:38:16+00:00",
-  "record_count": 392,
+  "updated_at": "2026-10-02T06:58:22+00:00",
+  "record_count": 402,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4371,10 +4371,11 @@
       "identity_tokens": [
         "DOI:10.1145/3627703.3650085"
       ],
-      "reason": "大規模DNN/LLM学習の障害発生時だけチェックポイントを作成して再計算量を抑える耐障害学習方式で、最終適用先が学習工程の回復なので対象外。",
+      "reason": "大規模深層学習ジョブの障害回復が主題で、最終適用先が学習工程。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
         "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md"
       ],
@@ -4386,10 +4387,11 @@
       "identity_tokens": [
         "DOI:10.1145/3620665.3640423"
       ],
-      "reason": "GPU仮想メモリを用いた大規模DNN学習のメモリ断片化対策で、主目的と評価が学習メモリ管理に置かれているため凍結対象であり対象外。",
+      "reason": "GPU仮想メモリでDNN学習時の断片化を抑える研究で、LLM推論ではなく学習メモリ管理が主目的。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-09-29T23:39:47+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
       ],
@@ -4401,10 +4403,11 @@
       "identity_tokens": [
         "DOI:10.1145/321738.321743"
       ],
-      "reason": "単一プロセッサ上の周期的リアルタイムタスクに対する固定優先度・締切駆動スケジューリングの古典理論で、LLMや機械学習推論システムを対象としないため対象外。",
+      "reason": "1973年のリアルタイム単一プロセッサスケジューリング理論で、LLM推論システムとは直接関係しない。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
@@ -4618,15 +4621,15 @@
         "arXiv:1609.02907",
         "arXiv:1611.01144"
       ],
-      "reason": "グラフ畳み込みネットワークによる半教師ありノード分類の基礎研究であり、LLM推論・サービングとは別分野。",
+      "reason": "離散確率変数を微分可能に近似するGumbel-Softmax推定器の学習手法で、LLM推論システム研究ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
       ],
-      "title": "Semi-Supervised Classification with Graph Convolutional Networks"
+      "title": "Categorical Reparameterization with Gumbel-Softmax"
     },
     "OpenReview:oKn9c6ytLx": {
       "classification": "unrelated",
@@ -4635,9 +4638,9 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "Web操作エージェントを評価する実環境・ベンチマーク研究で、agentic inference runtimeの計算・メモリ・スケジューリング最適化を提案しない。",
+      "reason": "ウェブ操作エージェントの現実的な実行環境・ベンチマーク構築が主題で、LLM推論ランタイム最適化ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
@@ -4824,9 +4827,9 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "LLMエージェントの構成・応用・評価を整理する総合サーベイで、agentic inference runtimeの効率化手法そのものではない。",
+      "reason": "LLMエージェントの構成・応用・評価を体系化するサーベイで、推論基盤の速度・メモリ・サービング最適化は主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4834,23 +4837,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
       ],
       "title": "A Survey on Large Language Model based Autonomous Agents"
-    },
-    "OpenReview:EvDeiLv7qc": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:EvDeiLv7qc",
-      "identity_tokens": [
-        "OpenReview:EvDeiLv7qc",
-        "arXiv:2309.05444"
-      ],
-      "reason": "MoEをinstruction tuningのパラメータ効率化へ使う学習手法で、最終適用先が凍結対象の学習・fine-tuningでありMoE推論最適化ではない。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
-        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
-      ],
-      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
     },
     "OpenReview:7eHn64wOVy": {
       "classification": "unrelated",
@@ -4925,9 +4911,9 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4という汎用系列モデルアーキテクチャを提案する研究で、LLM推論ランタイム・KVキャッシュ・サービング最適化を主目的としない。",
+      "reason": "S4という汎用系列モデルのアーキテクチャ研究で、LLM推論・サービング最適化を最終適用先としない。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4943,9 +4929,9 @@
         "DOI:10.18653/v1/p19-1452",
         "arXiv:1905.05950"
       ],
-      "reason": "BERT内部表現がPOS・構文解析・NER等の言語処理段階をどこで表現するかを解析する研究で、推論効率化ではない。",
+      "reason": "BERT内部でPOS・構文・NER・意味役割・共参照など言語情報がどの層に現れるかを解析する表現分析研究で、推論効率化ではない。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
@@ -5125,10 +5111,11 @@
       "identity_tokens": [
         "DOI:10.1145/3575693.3575703"
       ],
-      "reason": "GPU/DRAM階層とpipeline parallelismを使うが、目的は大規模モデルのfine-tuning高速化であり学習工程凍結範囲。",
+      "reason": "大規模モデルのfine-tuningを商品GPUサーバで高速化する学習システムで、凍結対象の学習高速化に属する。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
         "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
       ],
@@ -5221,22 +5208,6 @@
       ],
       "title": "ClipCap: CLIP Prefix for Image Captioning"
     },
-    "DOI:10.1145/3694715.3695955": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3694715.3695955",
-      "identity_tokens": [
-        "DOI:10.1145/3694715.3695955",
-        "arXiv:2408.04808"
-      ],
-      "reason": "多core AI processor上の汎用deep-learning computation scaling systemで、LLM推論専用のserving/KV/MoE decode最適化を主題にしない。",
-      "first_checked_at": "2026-09-30T09:12:10+00:00",
-      "last_checked_at": "2026-10-01T07:06:25+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
-        "papers/inference/12-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md"
-      ],
-      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
-    },
     "arXiv:2609.07108": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2609.07108",
@@ -5257,10 +5228,11 @@
       "identity_tokens": [
         "DOI:10.1109/iccad45719.2019.8942149"
       ],
-      "reason": "アクセラレータ設計のエネルギー推定手法・ツールであり、LLM推論そのものを高速化・省メモリ化する実行方式ではないため対象外。",
+      "reason": "汎用アクセラレータのアーキテクチャ段階エネルギー推定手法で、LLM推論ランタイムやサービング最適化を直接扱わない。",
       "first_checked_at": "2026-09-30T09:12:11+00:00",
-      "last_checked_at": "2026-09-30T09:12:11+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/09-kernel-runtime-compilation/"
       ],
       "title": "Accelergy: An Architecture-Level Energy Estimation Methodology for Accelerator Designs"
@@ -5459,9 +5431,9 @@
         "DOI:10.48550/arxiv.2305.02309",
         "arXiv:2305.02309"
       ],
-      "reason": "CodeGen2のtraining recipe・model architecture・data mixtureが主題で、推論system最適化ではない。",
+      "reason": "コード・自然言語LLMの事前学習設計、prefix-LM、infilling、データ混合の検討が主題で、推論システム最適化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
@@ -5590,11 +5562,11 @@
       "identity_tokens": [
         "OpenReview:d7KBjmI3GmQ"
       ],
-      "reason": "7. **MMLU** — `OpenReview:d7KBjmI3GmQ` ([OpenReview](https://openreview.net/forum?id=d7KBjmI3GmQ); [arXiv:2009.03300](https://arxiv.org/abs/2009.03300)). Capability benchmark only.",
+      "reason": "MMLU評価ベンチマークの論文であり、推論ランタイム、KVキャッシュ、MoE配置、サービング高速化を提案しない。",
       "first_checked_at": "2026-09-30T09:52:34+00:00",
-      "last_checked_at": "2026-09-30T09:52:34+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [],
-      "title": "MMLU"
+      "title": "Measuring Massive Multitask Language Understanding"
     },
     "DOI:10.1109/rtas58335.2023.00012": {
       "classification": "unrelated",
@@ -5627,23 +5599,6 @@
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
       ],
       "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
-    },
-    "DOI:10.1145/3582016.3582063": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3582016.3582063",
-      "identity_tokens": [
-        "DOI:10.1145/3582016.3582063",
-        "arXiv:2206.02878"
-      ],
-      "reason": "CXL階層メモリでLinuxページをDRAM/CXL間へ昇降格するOSメモリ管理研究であり、LLM推論・KVキャッシュ・LLMサービングを対象にしていない。",
-      "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
-      ],
-      "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
     },
     "OpenReview:Yacmpz84TH": {
       "classification": "unrelated",
@@ -5704,23 +5659,6 @@
       ],
       "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
     },
-    "OpenReview:sY5N0zY5Od": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:sY5N0zY5Od",
-      "identity_tokens": [
-        "OpenReview:sY5N0zY5Od",
-        "arXiv:2310.03714"
-      ],
-      "reason": "LM呼出しパイプラインのprompt/示例を宣言的に最適化するプログラミング・コンパイル枠組みで、モデル推論カーネルやサービング資源効率の研究ではない。",
-      "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
-        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
-      ],
-      "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
-    },
     "OpenReview:pZiyCaVuti": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:pZiyCaVuti",
@@ -5728,9 +5666,9 @@
         "OpenReview:pZiyCaVuti",
         "arXiv:2410.10813"
       ],
-      "reason": "長期対話メモリ能力を測る評価ベンチマークで、推論時メモリ階層やKVキャッシュ管理を高速化するシステム研究ではない。",
+      "reason": "長期間対話記憶能力を測る評価ベンチマークが主貢献で、推論基盤の効率化機構を提案しない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
@@ -5781,6 +5719,200 @@
       "last_checked_at": "2026-10-02T01:38:15+00:00",
       "linked_from": [],
       "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
+    },
+    "arXiv:2310.03714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03714",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od",
+        "arXiv:2310.03714"
+      ],
+      "reason": "LM呼出しを宣言的モジュールとして構成しプロンプト・実演例等をコンパイル最適化するプログラミングモデルで、推論ランタイム高速化ではない。",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+    },
+    "arXiv:2309.05444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05444",
+      "identity_tokens": [
+        "OpenReview:EvDeiLv7qc",
+        "arXiv:2309.05444"
+      ],
+      "reason": "軽量PEFTアダプタを専門家として用いるMoEの指示調整・パラメータ効率が最終適用先で、凍結対象の学習効率研究に当たる。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
+    },
+    "arXiv:2601.06123": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "arXiv:2601.06123"
+      ],
+      "reason": "複数LLM間でKV内部状態を共有潜在空間へ整列しモデル間通信・skill transferを可能にする研究で、推論速度・メモリ容量・サービング効率の改善が最終目的ではない。",
+      "first_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "linked_from": [],
+      "title": "Latent Space Communication via K-V Cache Alignment"
+    },
+    "DOI:10.1145/3373376.3378508": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3373376.3378508",
+      "identity_tokens": [
+        "DOI:10.1145/3373376.3378508"
+      ],
+      "reason": "GPU/FPGA等の異種計算機向けtensor schedule自動探索は関連基盤だが、LLM推論を最終適用先とせず汎用tensor compiler最適化が主題。",
+      "first_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "linked_from": [],
+      "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System"
+    },
+    "arXiv:2405.15793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15793",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.15793",
+        "arXiv:2405.15793"
+      ],
+      "reason": "ソフトウェア工学エージェント向けのエージェント・コンピュータ・インターフェース設計が主題で、LLM推論基盤の高速化ではない。",
+      "first_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "linked_from": [],
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    },
+    "arXiv:2104.09864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.09864",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2104.09864",
+        "arXiv:2104.09864"
+      ],
+      "reason": "回転位置埋め込み（RoPE）によるモデル表現・位置符号化が主題で、推論システム最適化が最終適用先ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [],
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+    },
+    "arXiv:2403.08295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.08295",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.08295",
+        "arXiv:2403.08295"
+      ],
+      "reason": "Gemma 2B/7Bのモデル公開・学習・能力・安全性をまとめた技術報告で、推論基盤の新規最適化方式ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [],
+      "title": "Gemma: Open Models Based on Gemini Research and Technology"
+    },
+    "arXiv:2306.03091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.03091",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.03091",
+        "arXiv:2306.03091"
+      ],
+      "reason": "リポジトリ単位コード補完の検索・補完・統合パイプラインを測るベンチマークで、LLM推論基盤高速化ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [],
+      "title": "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+    },
+    "DOI:10.1145/3579445": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3579445",
+      "identity_tokens": [
+        "DOI:10.1145/3579445"
+      ],
+      "reason": "完全分離型計算機の一般的な遠隔メモリ・データ移動機構で、LLM推論固有ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "DaeMon: Architectural Support for Efficient Data Movement in Fully Disaggregated Systems"
+    },
+    "DOI:10.1145/3123939.3124545": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3123939.3124545",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3124545"
+      ],
+      "reason": "高帯域GPU向けDRAMの一般アーキテクチャでLLM推論への具体的適用を持たない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Fine-Grained DRAM: Energy-Efficient DRAM for Extreme Bandwidth Systems"
+    },
+    "DOI:10.1109/mm.2023.3237491": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2023.3237491",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2023.3237491"
+      ],
+      "reason": "CXLによる汎用メモリプーリング研究でLLM推論固有のoffload方式ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Memory Pooling With CXL"
+    },
+    "DOI:10.1109/hpca61900.2025.00096": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00096",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00096"
+      ],
+      "reason": "大規模ML学習クラスタの障害・信頼性分析が主題で推論サービング最適化ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Revisiting Reliability in Large-Scale Machine Learning Research Clusters"
+    },
+    "DOI:10.1109/isscc42614.2022.9731562": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isscc42614.2022.9731562",
+      "identity_tokens": [
+        "DOI:10.1109/isscc42614.2022.9731562"
+      ],
+      "reason": "HBM3 DRAM回路・実装技術の論文で、LLM推論システムの新規最適化機構ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A 192-Gb 12-High 896-GB/s HBM3 DRAM with a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization"
+    },
+    "DOI:10.1145/3669940.3707251": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3669940.3707251",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707251"
+      ],
+      "reason": "serverless深層学習全般のGPU資源弾力化で、LLM専用推論サービング機構ではない。",
+      "first_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
     }
   }
 }

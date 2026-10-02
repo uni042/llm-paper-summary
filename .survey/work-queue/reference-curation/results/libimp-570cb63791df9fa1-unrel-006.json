@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-570cb63791df9fa1-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.05444",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.05444",
+    "identity_tokens": [
+      "OpenReview:EvDeiLv7qc",
+      "arXiv:2309.05444"
+    ],
+    "reason": "軽量PEFTアダプタを専門家として用いるMoEの指示調整・パラメータ効率が最終適用先で、凍結対象の学習効率研究に当たる。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-10-02T06:58:21+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+    ],
+    "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
+  },
+  "processed_at": "2026-10-02T06:58:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-570cb63791df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

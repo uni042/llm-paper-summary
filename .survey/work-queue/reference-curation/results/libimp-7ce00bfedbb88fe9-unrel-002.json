@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ce00bfedbb88fe9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.06123",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.06123",
+    "identity_tokens": [
+      "arXiv:2601.06123"
+    ],
+    "reason": "複数LLM間でKV内部状態を共有潜在空間へ整列しモデル間通信・skill transferを可能にする研究で、推論速度・メモリ容量・サービング効率の改善が最終目的ではない。",
+    "first_checked_at": "2026-10-02T06:58:21+00:00",
+    "last_checked_at": "2026-10-02T06:58:21+00:00",
+    "linked_from": [],
+    "title": "Latent Space Communication via K-V Cache Alignment"
+  },
+  "processed_at": "2026-10-02T06:58:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ce00bfedbb8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
