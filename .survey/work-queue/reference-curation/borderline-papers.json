@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T11:17:38+00:00",
+  "updated_at": "2026-10-02T11:21:06+00:00",
   "record_count": 385,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -4984,12 +4984,16 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3582016.3582063",
       "identity_tokens": [
-        "DOI:10.1145/3582016.3582063"
+        "DOI:10.1145/3582016.3582063",
+        "arXiv:2206.02878"
       ],
-      "reason": "CXL接続メモリを含む階層メモリでページ配置を透過的に最適化する基盤技術で、LLMのCPU/CXLオフロードと強く関連するが、最終評価対象はLLM推論ではないため境界扱い。",
+      "reason": "CXL階層メモリでページの昇格・降格を透過制御するOS機構で、LLMオフロードの基盤技術と近いが、LLM固有のKVキャッシュや重み配置を対象としないため境界扱い。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T11:03:19+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-02T11:21:06+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
       "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
     },
     "arXiv:2310.10537": {

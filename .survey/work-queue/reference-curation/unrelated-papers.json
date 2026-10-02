@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T11:17:38+00:00",
+  "updated_at": "2026-10-02T11:21:07+00:00",
   "record_count": 482,
   "records": {
     "arXiv:2303.08774": {
@@ -4535,9 +4535,9 @@
         "DOI:10.18653/v1/2022.acl-long.297",
         "arXiv:2110.00976"
       ],
-      "reason": "法務自然言語理解の評価データセットであり、LLM推論ランタイム、メモリ、デコード、サービング最適化を提案しない。",
+      "reason": "法律自然言語理解の7タスクを統一評価するベンチマークであり、LLM推論基盤の速度・メモリ・サービング最適化を提案しないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T11:10:18+00:00",
+      "last_checked_at": "2026-10-02T11:21:06+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
@@ -4550,9 +4550,9 @@
       "identity_tokens": [
         "DOI:10.1109/71.963420"
       ],
-      "reason": "Foundational randomized load-balancing theory (supermarket model), not an LLM inference or serving paper.",
+      "reason": "二択ランダム負荷分散の古典的理論研究で、LLM・GPU・推論サービング固有の方式や評価を扱わないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-02T11:21:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
@@ -4568,9 +4568,9 @@
         "DOI:10.48550/arxiv.2410.04199",
         "arXiv:2410.04199"
       ],
-      "reason": "長文生成能力を測るベンチマークであり、KVキャッシュやサービングを高速化する機構を提案しない。",
+      "reason": "長い一括応答におけるLLMの生成品質劣化を測るベンチマークであり、推論ランタイムの速度・メモリ・サービングを改善する新規方式ではないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T11:10:18+00:00",
+      "last_checked_at": "2026-10-02T11:21:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
