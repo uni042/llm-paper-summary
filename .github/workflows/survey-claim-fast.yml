@@ -90,7 +90,7 @@ jobs:
         github.event_name == 'workflow_dispatch' ||
         (
           github.event_name == 'push' &&
-          (github.event.head_commit.message == 'Enable central survey orchestrator' || startsWith(github.event.head_commit.message, 'survey-orchestrator: kick'))
+          (github.event.head_commit.message == 'Enable central survey orchestrator' || startsWith(github.event.head_commit.message, 'survey-orchestrator: kick') || startsWith(github.event.head_commit.message, 'library-import: kick') || startsWith(github.event.head_commit.message, 'Kick library import'))
         )
       )
     runs-on: ubuntu-latest
