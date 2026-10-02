@@ -14,6 +14,7 @@ on:
         type: string
 permissions:
   contents: write
+  actions: write
 
 # Foreground worker runs never share a concurrency lane. Background preload warming
 # is owned by discovery-preload-warm.yml.
@@ -27,6 +28,7 @@ jobs:
     timeout-minutes: 15
     env:
       DISCOVERY_PRECHECK_PARALLELISM: '4'
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -328,3 +330,37 @@ jobs:
 
           echo 'Failed to publish Discovery precheck results after retries.' >&2
           exit 1
+
+      - name: Resume Library import after Library precheck
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+
+          library_waiting=0
+          if [ -d .survey/import-inbox/waiting/discovery ]; then
+            library_waiting="$(find .survey/import-inbox/waiting/discovery -maxdepth 1 -type f -name '*.json' -print | wc -l)"
+          fi
+          [ "${library_waiting:-0}" -gt 0 ] || {
+            echo 'No Library Discovery waiting payloads remain.'
+            exit 0
+          }
+
+          active_import_runs="$(gh run list \
+            --repo "${GITHUB_REPOSITORY}" \
+            --workflow library-import.yml \
+            --limit 20 \
+            --json status \
+            --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+
+          if [ "${active_import_runs:-0}" -eq 0 ]; then
+            echo "Resuming Library import for ${library_waiting} waiting Discovery payload(s)."
+            gh workflow run library-import.yml \
+              --repo "${GITHUB_REPOSITORY}" \
+              --ref main
+          else
+            echo "Library import already active (${active_import_runs} run(s)); it will consume the published precheck results."
+          fi
+
