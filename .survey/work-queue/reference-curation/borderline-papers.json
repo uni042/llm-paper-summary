@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T07:05:49+00:00",
-  "record_count": 361,
+  "updated_at": "2026-10-02T07:48:29+00:00",
+  "record_count": 363,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4351,9 +4351,9 @@
       "identity_tokens": [
         "DOI:10.1145/3777466"
       ],
-      "reason": "GPU上の深層学習推論を空間パイプライン化するカーネル/コンパイラ研究で推論高速化に直結するが、LLM専用ではない。",
+      "reason": "GPU上の深層学習推論を空間パイプライン化して性能・オフチップ通信を改善する実行基盤研究で推論カーネルに近いが、LLM専用ではなく汎用DL GPUアーキテクチャが主題のため境界扱い。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md",
         "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
@@ -4366,16 +4366,16 @@
       "identity_tokens": [
         "DOI:10.1145/3419111.3421284"
       ],
-      "reason": "GPU推論サービスの空間共有・SLO制御だが、LLM専用ではなく一般DNN推論基盤。",
+      "reason": "GPU推論サービスの空間分割、動的資源割当、バッチ制御でSLOと利用率を改善するサービング基盤だが、2020年の汎用DNN inference platformでLLM固有ではないため境界扱い。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md"
       ],
-      "title": "GSLICE: controlled spatial sharing of GPUs for a scalable inference platform"
+      "title": "GSLICE: Controlled Spatial Sharing of GPUs for a Scalable Inference Platform"
     },
     "arXiv:2303.13803": {
       "classification": "borderline",
@@ -4383,9 +4383,9 @@
       "identity_tokens": [
         "arXiv:2303.13803"
       ],
-      "reason": "GPU空間共有・cluster utilizationは推論配信へ応用可能だが、LLM固有ではなく汎用DL cluster管理が主題。",
+      "reason": "オンライン推論とオフライン学習をGPU空間共有し、オンライン性能を保護しながらGPU利用率を上げるproduction serving基盤として近いが、LLM固有ではなく一般DLクラスタが対象なので境界扱い。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:46:42+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
@@ -4401,7 +4401,7 @@
       ],
       "reason": "Fisher情報で低ランク分解を重み付けしTransformer言語モデルのパラメータを圧縮して配備コストを下げるため関連するが、現代LLM推論ランタイムではなくタスク特化モデル圧縮が中心なので境界扱い。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
         "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md"
@@ -4416,7 +4416,7 @@
       ],
       "reason": "端末上言語モデル推論を埋め込み・事前充填・復号・softmax・samplingおよびkernel粒度で継続計測する基盤で、推論効率研究に直接有用だが、新規高速化方式そのものではないため境界扱い。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T01:35:07+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
         "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
@@ -4429,9 +4429,9 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731409"
       ],
-      "reason": "大規模AI推論アクセラレータのメモリ階層・production運用は推論システムに関連するが、主対象はMeta全般の推薦等を含むAI chipでLLM専用推論方式ではないためborderline。",
+      "reason": "大規模推薦・AI推論向け実運用アクセラレータのモデル・チップ協調設計を扱い推論基盤との関連は強いが、LLM固有の推論方式ではなく汎用AIチップのproductionizationが主題なので境界扱い。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
         "papers/inference/17-pim-near-data-acceleration/2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md"
@@ -4913,20 +4913,6 @@
       ],
       "title": "Training Compute-Optimal Large Language Models"
     },
-    "arXiv:2210.06659": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2210.06659",
-      "identity_tokens": [
-        "arXiv:2210.06659"
-      ],
-      "reason": "hardware-aware pruningは推論速度を直接最適化するが、対象は汎用DNNでLLM固有性が弱い。",
-      "first_checked_at": "2026-09-30T09:46:42+00:00",
-      "last_checked_at": "2026-09-30T09:46:42+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Structural Pruning via Latency-Saliency Knapsack"
-    },
     "arXiv:2211.05100": {
       "classification": "borderline",
       "canonical_id": "arXiv:2211.05100",
@@ -5002,7 +4988,7 @@
       ],
       "reason": "expert cache hitを高めるためMoE backboneと補助routerをpost-trainingで適応させるため推論メモリには直結するが、主機構が追加学習を必要とし、凍結中の学習系との境界にある。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [],
       "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference"
     },
@@ -5211,6 +5197,52 @@
         "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
       ],
       "title": "Instantaneous Grammatical Error Correction with Shallow Aggressive Decoding"
+    },
+    "DOI:10.1145/3669940.3707251": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3669940.3707251",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707251",
+        "arXiv:2503.05130"
+      ],
+      "reason": "サーバーレス深層学習推論のGPU断片化を抑えつつ資源量を動的調整するサービング基盤で、LLMサービングに近いが対象は一般DL関数なので境界扱い。",
+      "first_checked_at": "2026-10-02T07:48:28+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md"
+      ],
+      "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
+    },
+    "DOI:10.1109/mm.2023.3237491": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2023.3237491",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2023.3237491"
+      ],
+      "reason": "CXL.memによる直接アクセス型メモリ分離（memory disaggregation）を提案し、階層メモリ・オフロード研究の基盤技術として強く関連するが、LLM推論固有のKV/重み配置を対象にしないため境界扱い。",
+      "first_checked_at": "2026-10-02T07:48:28+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md"
+      ],
+      "title": "Memory Pooling With CXL"
+    },
+    "DOI:10.1145/3637528.3671470": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3637528.3671470",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671470"
+      ],
+      "reason": "検索拡張生成（RAG）とLLMの統合を体系化するサーベイで関連領域の背景資料として有用だが、新規の推論高速化・サービング方式を提案する一次研究ではないため境界扱い。",
+      "first_checked_at": "2026-10-02T07:48:29+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ],
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
     }
   }
 }

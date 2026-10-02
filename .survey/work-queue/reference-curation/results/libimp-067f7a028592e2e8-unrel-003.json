@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-067f7a028592e2e8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3637528.3671470",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3637528.3671470",
+    "identity_tokens": [
+      "DOI:10.1145/3637528.3671470"
+    ],
+    "reason": "検索拡張生成（RAG）とLLMの手法・分類・課題を整理するサーベイで、推論基盤の速度・メモリ・スケジューリングを改善する新規システムを提案しないため対象外。",
+    "first_checked_at": "2026-10-02T07:05:48+00:00",
+    "last_checked_at": "2026-10-02T07:48:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+    ],
+    "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+  },
+  "processed_at": "2026-10-02T07:48:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-067f7a028592",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

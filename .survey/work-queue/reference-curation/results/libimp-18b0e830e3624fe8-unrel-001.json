@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18b0e830e3624fe8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.09979",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.09979",
+    "identity_tokens": [
+      "arXiv:2312.09979"
+    ],
+    "reason": "複数LoRAを専門家としてSFT中の世界知識忘却を抑える学習方式で、最終適用先が推論実行効率化ではなく凍結対象の学習・アラインメント改善なので対象外。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-10-02T07:48:29+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md"
+    ],
+    "title": "LoRAMoE: Alleviate World Knowledge Forgetting in Large Language Models via MoE-Style Plugin"
+  },
+  "processed_at": "2026-10-02T07:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18b0e830e362",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

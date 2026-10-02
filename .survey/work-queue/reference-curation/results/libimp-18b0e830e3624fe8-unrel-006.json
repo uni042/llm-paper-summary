@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18b0e830e3624fe8-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.06659",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.06659",
+    "identity_tokens": [
+      "arXiv:2210.06659"
+    ],
+    "reason": "ハードウェア実測遅延を使う構造枝刈り自体は推論効率化だが、評価対象はResNet/SSD等の画像分類・検出でLLM/Transformer推論を対象としないため対象外。",
+    "first_checked_at": "2026-10-02T07:48:29+00:00",
+    "last_checked_at": "2026-10-02T07:48:29+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+    ],
+    "title": "Structural Pruning via Latency-Saliency Knapsack"
+  },
+  "processed_at": "2026-10-02T07:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18b0e830e362",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

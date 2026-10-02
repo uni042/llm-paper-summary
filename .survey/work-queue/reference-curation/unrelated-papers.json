@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T07:05:49+00:00",
-  "record_count": 426,
+  "updated_at": "2026-10-02T07:48:29+00:00",
+  "record_count": 424,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4371,9 +4371,9 @@
       "identity_tokens": [
         "DOI:10.1145/3627703.3650085"
       ],
-      "reason": "大規模深層学習ジョブの障害回復が主題で、最終適用先が学習工程。",
+      "reason": "大規模DNN/LLM学習の障害発生時だけチェックポイントを作成して再計算量を抑える耐障害学習方式で、最終適用先が学習工程の回復なので対象外。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
@@ -4387,9 +4387,9 @@
       "identity_tokens": [
         "DOI:10.1145/3620665.3640423"
       ],
-      "reason": "GPU仮想メモリでDNN学習時の断片化を抑える研究で、LLM推論ではなく学習メモリ管理が主目的。",
+      "reason": "GPU仮想メモリを用いた大規模DNN学習のメモリ断片化対策で、主目的と評価が学習メモリ管理に置かれているため凍結対象であり対象外。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
@@ -4403,9 +4403,9 @@
       "identity_tokens": [
         "DOI:10.1145/321738.321743"
       ],
-      "reason": "1973年のリアルタイム単一プロセッサスケジューリング理論で、LLM推論システムとは直接関係しない。",
+      "reason": "1973年の単一プロセッサhard-real-time scheduling理論で、固定優先度とdeadlineベース動的優先度の利用率限界を解析する古典研究。LLM/DL推論システムを対象としないため対象外。",
       "first_checked_at": "2026-09-29T23:39:47+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-02T07:48:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/",
@@ -4420,9 +4420,9 @@
       "identity_tokens": [
         "arXiv:2312.09979"
       ],
-      "reason": "主目的はLoRA/MoE型pluginによる知識保持とinstruction tuningで、推論システム効率化が最終適用先ではない。",
+      "reason": "複数LoRAを専門家としてSFT中の世界知識忘却を抑える学習方式で、最終適用先が推論実行効率化ではなく凍結対象の学習・アラインメント改善なので対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
@@ -4437,9 +4437,9 @@
         "DOI:10.48550/arxiv.2310.16944",
         "arXiv:2310.16944"
       ],
-      "reason": "蒸留SFTと直接選好最適化によるチャットモデルのアラインメント学習が主題で、推論基盤高速化ではない。",
+      "reason": "AI feedbackによる蒸留教師あり微調整と蒸留直接選好最適化で小型チャットLLMのアラインメント性能を改善する学習研究で、推論高速化・省メモリ化を扱わないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/05-speculative-decoding-moe/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
@@ -4453,9 +4453,9 @@
       "identity_tokens": [
         "arXiv:2309.07864"
       ],
-      "reason": "LLM agentの構成・応用・評価を整理するサーベイで、推論システム最適化が主題ではない。",
+      "reason": "LLMエージェントの構成、応用、エージェント社会、リスクを体系化するサーベイであり、エージェント推論サービング基盤やKV管理の新規方式を提案する一次研究ではないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
@@ -4470,9 +4470,9 @@
         "DOI:10.48550/arxiv.2303.02868",
         "arXiv:2303.02868"
       ],
-      "reason": "大規模事前学習システムのスケーラビリティと費用効率が主題で、凍結対象の学習高速化。",
+      "reason": "Page抽象化、階層メモリ、SSD、統合スケジューリングで巨大Transformerの事前学習・微調整を拡張するシステムで、最終適用先が凍結対象の学習高速化なので対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
@@ -4486,9 +4486,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.findings-emnlp.360"
       ],
-      "reason": "多言語・言語横断要約のデータセット／評価研究であり、LLM推論基盤の効率化ではない。",
+      "reason": "18言語のWikiHow記事・要約対を用いる多言語要約ベンチマークと要約手法の研究で、LLM推論基盤の高速化・省メモリ化を主貢献としないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4503,9 +4503,9 @@
       "identity_tokens": [
         "DOI:10.14778/3685800.3685905"
       ],
-      "reason": "自然言語データ分析アプリケーションとしてRAG・ベクトルDB・エージェントを統合する研究で、LLM推論runtime自体の最適化が主貢献ではないため対象外。",
+      "reason": "RAG・ベクトルDB・エージェントを組み合わせた自然言語データ分析システムであり、LLM推論ランタイム自体の速度・メモリ・サービング効率を改善する研究ではないため対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
@@ -4519,9 +4519,9 @@
         "DOI:10.1145/3694715.3695960",
         "arXiv:2405.14009"
       ],
-      "reason": "障害時の分散DNN学習スループット維持が主目的で、凍結対象の学習システム研究。",
+      "reason": "GPU障害時の大規模DNN学習を停止せず継続する耐障害パイプライン学習システムで、最終適用先が学習工程そのものの高速化・回復であるため凍結範囲として対象外。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
@@ -5865,20 +5865,6 @@
       ],
       "title": "Fine-Grained DRAM: Energy-Efficient DRAM for Extreme Bandwidth Systems"
     },
-    "DOI:10.1109/mm.2023.3237491": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1109/mm.2023.3237491",
-      "identity_tokens": [
-        "DOI:10.1109/mm.2023.3237491"
-      ],
-      "reason": "CXLによる汎用メモリプーリング研究でLLM推論固有のoffload方式ではない。",
-      "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-45.json"
-      ],
-      "title": "Memory Pooling With CXL"
-    },
     "DOI:10.1109/hpca61900.2025.00096": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/hpca61900.2025.00096",
@@ -5906,20 +5892,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "A 192-Gb 12-High 896-GB/s HBM3 DRAM with a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization"
-    },
-    "DOI:10.1145/3669940.3707251": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3669940.3707251",
-      "identity_tokens": [
-        "DOI:10.1145/3669940.3707251"
-      ],
-      "reason": "serverless深層学習全般のGPU資源弾力化で、LLM専用推論サービング機構ではない。",
-      "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
     },
     "DOI:10.57967/hf/3372": {
       "classification": "unrelated",
@@ -6144,18 +6116,6 @@
       "linked_from": [],
       "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
     },
-    "DOI:10.1145/3637528.3671470": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3637528.3671470",
-      "identity_tokens": [
-        "DOI:10.1145/3637528.3671470"
-      ],
-      "reason": "RAGのモデル能力・手法体系を整理するサーベイで、推論ランタイムや効率化を主題にしない。",
-      "first_checked_at": "2026-10-02T07:05:48+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
-      "linked_from": [],
-      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
-    },
     "arXiv:2509.19662": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.19662",
@@ -6263,6 +6223,21 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "A Survey on Retrieval-Augmented Text Generation"
+    },
+    "arXiv:2210.06659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06659",
+      "identity_tokens": [
+        "arXiv:2210.06659"
+      ],
+      "reason": "ハードウェア実測遅延を使う構造枝刈り自体は推論効率化だが、評価対象はResNet/SSD等の画像分類・検出でLLM/Transformer推論を対象としないため対象外。",
+      "first_checked_at": "2026-10-02T07:48:29+00:00",
+      "last_checked_at": "2026-10-02T07:48:29+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ],
+      "title": "Structural Pruning via Latency-Saliency Knapsack"
     }
   }
 }

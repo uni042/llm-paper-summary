@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18b0e830e3624fe8-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2207.00112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2207.00112",
+    "identity_tokens": [
+      "arXiv:2207.00112"
+    ],
+    "reason": "Fisher情報で低ランク分解を重み付けしTransformer言語モデルのパラメータを圧縮して配備コストを下げるため関連するが、現代LLM推論ランタイムではなくタスク特化モデル圧縮が中心なので境界扱い。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-10-02T07:48:28+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+      "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md"
+    ],
+    "title": "Language Model Compression with Weighted Low-Rank Factorization"
+  },
+  "processed_at": "2026-10-02T07:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18b0e830e362",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
