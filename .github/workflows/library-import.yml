@@ -274,6 +274,17 @@ jobs:
           discovery_waiting=$(count_files .survey/import-inbox/waiting/discovery '*.json')
           backlog_total=$((research_backlog + discovery_pending + discovery_waiting))
 
+          unsettled_library_prechecks="$(
+            find .survey/work-queue/discovery-precheck/requests \
+              -maxdepth 1 -type f -name 'libimp-*-pre*.json' -print 2>/dev/null \
+              | while IFS= read -r request; do
+                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
+                  [ -f "$result" ] || printf '%s\n' "$request"
+                done \
+              | wc -l
+          )"
+          unsettled_library_prechecks="${unsettled_library_prechecks//[[:space:]]/}"
+
           generation="${{ github.event.inputs.drain_generation || '0' }}"
           if ! [[ "$generation" =~ ^[0-9]+$ ]]; then
             generation=0
@@ -281,7 +292,9 @@ jobs:
 
           echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
-          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ]; then
+          if [ "$backlog_total" -gt 0 ] && [ "${unsettled_library_prechecks:-0}" -gt 0 ]; then
+            echo "Library backlog is waiting on ${unsettled_library_prechecks} dedicated Discovery precheck result(s); precheck completion will resume import."
+          elif [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ]; then
             next_generation=$((generation + 1))
             echo "Queueing bounded Library import continuation generation ${next_generation}."
             GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
