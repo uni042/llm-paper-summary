@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T19:21:28+00:00",
-  "record_count": 385,
+  "updated_at": "2026-10-02T23:09:34+00:00",
+  "record_count": 383,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5073,7 +5073,7 @@
       ],
       "reason": "DRAM内演算（PIM）上の深層学習推論を高速化しメモリ階層研究として近いが、LLM固有ではなく現代DNN全般が直接対象なので境界扱い。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
         "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
@@ -5088,7 +5088,7 @@
       ],
       "reason": "GPUテンソル計算の中間表現（IR）と最適化は推論カーネル生成へ近いが、LLM専用ランタイムではなく汎用GPUテンソル計算が主対象なので境界扱い。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
         "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md"
@@ -5103,7 +5103,7 @@
       ],
       "reason": "注意機構のボトルネックをデータフロー最適化するハードウェア研究でTransformer推論へ直結するが、LLMサービング固有の研究ではないため境界扱い。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md",
         "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md"
@@ -5118,7 +5118,7 @@
       ],
       "reason": "Groqのテンソルストリーミング処理器と大規模相互接続はLLMアクセラレータの直接的先行基盤だが、論文の対象は大規模機械学習全般でLLM専用ではない。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
@@ -5191,21 +5191,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md"
       ],
       "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
-    },
-    "DOI:10.1145/3694715.3695955": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3694715.3695955",
-      "identity_tokens": [
-        "DOI:10.1145/3694715.3695955"
-      ],
-      "reason": "多数コアAIチップの分散オンチップメモリと通信を利用するコンパイラで、大規模モデル推論の基盤技術になり得るが、論文の主対象は一般DNN計算でLLM推論専用ではないため境界扱い。",
-      "first_checked_at": "2026-10-02T08:18:21+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
-        "papers/inference/12-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md"
-      ],
-      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
     },
     "DOI:10.1109/mm.2023.3237491": {
       "classification": "borderline",
@@ -5541,18 +5526,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
-    },
-    "DOI:10.14778/3749646.3749724": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.14778/3749646.3749724",
-      "identity_tokens": [
-        "DOI:10.14778/3749646.3749724"
-      ],
-      "reason": "RAGの検索段を高速化するSSD-aware ANN基盤でLLMアプリには関係するが、LLM本体の推論ランタイムではなくベクトルDBが主対象。",
-      "first_checked_at": "2026-10-02T11:17:38+00:00",
-      "last_checked_at": "2026-10-02T11:17:38+00:00",
-      "linked_from": [],
-      "title": "Turbocharging Vector Databases Using Modern SSDs"
     }
   }
 }

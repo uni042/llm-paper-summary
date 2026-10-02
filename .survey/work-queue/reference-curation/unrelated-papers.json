@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T19:21:29+00:00",
-  "record_count": 482,
+  "updated_at": "2026-10-02T23:09:34+00:00",
+  "record_count": 484,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5103,9 +5103,9 @@
       "identity_tokens": [
         "DOI:10.1145/3627703.3650083"
       ],
-      "reason": "MoEのall-to-all通信と計算を最適スケジュールするが、最終適用先は分散学習であり凍結範囲。",
+      "reason": "MoE通信・task schedulingは近接分野だが、主目的が分散MoE学習高速化であり、凍結しているtraining-only系統に該当する。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-10-02T11:17:38+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
         "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md"
@@ -5972,7 +5972,7 @@
       ],
       "reason": "処理時間未知の単一機械オンラインスケジューリングに予測を導入する理論研究で、LLM要求、KVキャッシュ、GPUサービングを直接扱わない。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
@@ -5987,7 +5987,7 @@
       ],
       "reason": "実PIM上の疎行列ベクトル積（SpMV）ライブラリと負荷分散の研究で、LLMまたはTransformer推論が最終適用先ではない。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
         "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md"
@@ -6002,7 +6002,7 @@
       ],
       "reason": "関数型サービス（FaaS）のコールドスタートと資源プロビジョニングを汎用キャッシュ問題として扱う研究で、LLM推論を直接対象としない。",
       "first_checked_at": "2026-10-02T07:00:17+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
@@ -7046,9 +7046,9 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731079"
       ],
-      "reason": "高性能なdense retrievalをアルゴリズムと専用ハードウェアの協調設計で高速化する研究だが、最終適用先はベクトル検索エンジンであり、LLM本体の推論・サービング・KV管理を直接最適化しないため対象外。",
+      "reason": "dense retrievalの専用algorithm-hardware codesignでありRAG前段には利用可能だが、LLM推論runtime・KV cache・decode高速化そのものを扱わない。",
       "first_checked_at": "2026-10-02T11:13:19+00:00",
-      "last_checked_at": "2026-10-02T11:13:19+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
@@ -7061,9 +7061,9 @@
       "identity_tokens": [
         "DOI:10.1145/3676641.3715987"
       ],
-      "reason": "CXLメモリの一般的な実機特性評価で、LLM推論への具体的な最終適用・推論方式を提案しない。",
+      "reason": "CXL memoryは階層メモリ研究に関連する基盤技術だが、この論文自体は汎用CXL memoryのcharacterizationで、LLM推論への最終適用・評価がない。",
       "first_checked_at": "2026-10-02T11:17:38+00:00",
-      "last_checked_at": "2026-10-02T11:17:38+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
       "linked_from": [],
       "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
     },
@@ -7078,6 +7078,30 @@
       "last_checked_at": "2026-10-02T11:17:38+00:00",
       "linked_from": [],
       "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models"
+    },
+    "DOI:10.14778/3749646.3749724": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3749646.3749724",
+      "identity_tokens": [
+        "DOI:10.14778/3749646.3749724"
+      ],
+      "reason": "RAG用途にも使えるvector database研究だが、主対象はHNSW/pgvectorのSSD I/Oと索引配置であり、LLM推論・KV・LLM servingそのものではない。",
+      "first_checked_at": "2026-10-02T23:09:34+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
+      "linked_from": [],
+      "title": "Turbocharging Vector Databases Using Modern SSDs"
+    },
+    "DOI:10.1145/3694715.3695955": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3694715.3695955",
+      "identity_tokens": [
+        "DOI:10.1145/3694715.3695955"
+      ],
+      "reason": "多core AI processor上の汎用deep-learning computation scaling systemで、LLM推論専用のserving/KV/MoE decode最適化を主題にしない。",
+      "first_checked_at": "2026-10-02T23:09:34+00:00",
+      "last_checked_at": "2026-10-02T23:09:34+00:00",
+      "linked_from": [],
+      "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
     }
   }
 }

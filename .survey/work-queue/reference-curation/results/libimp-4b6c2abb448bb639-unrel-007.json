@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b6c2abb448bb639-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3445814.3446757",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3445814.3446757",
+    "identity_tokens": [
+      "DOI:10.1145/3445814.3446757"
+    ],
+    "reason": "関数型サービス（FaaS）のコールドスタートと資源プロビジョニングを汎用キャッシュ問題として扱う研究で、LLM推論を直接対象としない。",
+    "first_checked_at": "2026-10-02T07:00:17+00:00",
+    "last_checked_at": "2026-10-02T23:09:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+    ],
+    "title": "FaasCache: keeping serverless computing alive with greedy-dual caching"
+  },
+  "processed_at": "2026-10-02T23:09:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b6c2abb448b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
