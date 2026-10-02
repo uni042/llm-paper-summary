@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-1731-scheduled-chat-30",
+  "reference_main_sha": "8ac20dfce3c741ef49336f39ffc530680089d464",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13524",
+      "identity_tokens": [
+        "arXiv:2608.13524",
+        "DOI:10.48550/arXiv.2608.13524"
+      ],
+      "title": "DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees",
+      "reason": "拡散型ドラフターの位置別周辺分布だけでは枝ごとの条件付き整合性が不足する問題を、既存AR補正ヘッドを木へ拡張して解き、無損失の投機的復号を直接高速化する。",
+      "source_url": "https://arxiv.org/abs/2608.13524",
+      "body_check": "一次資料本文で、固定幅候補木を各深さで一括展開・採点し、その後best-first pruningで検証木だけを選ぶ構成を確認。7つの数学・コード・チャット評価、4つのモデル×温度条件すべてで平均受理長と高速化が最良で、最大12.97 token/verification、DFlash比98.6%・Domino比27.9%長い受理、ローカルAR復号比最大9.73倍の無損失高速化を報告。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15939",
+      "identity_tokens": [
+        "arXiv:2608.15939",
+        "DOI:10.48550/arXiv.2608.15939"
+      ],
+      "title": "Aborted but Not Forgotten: KV-Cache Retention Breaks Rollback Consistency in Language Agents",
+      "reason": "KVキャッシュのtransaction-local restoreという推論状態管理を扱うが、主目的は速度・容量最適化ではなくエージェントのrollback整合性と安全性の保証なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2608.15939",
+      "body_check": "一次資料本文でsame-token/different-cache audit、Hugging Face DynamicCache、LangGraph time-travelによる再現とtransaction-local cache restoreを確認。7 open-weight familyの63セル中25セルでstale KVだけが保護動作を反転し、committed transcriptからのcache rebuildでは0/63。システム状態管理として関連する一方、最終評価軸はセキュリティ整合性。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20530",
+      "identity_tokens": [
+        "arXiv:2608.20530",
+        "DOI:10.48550/arXiv.2608.20530"
+      ],
+      "title": "LiLiCorr: Lightweight Likelihood Correlation of Parallel Drafts for Speculative Decoding",
+      "reason": "拡散型ブロックドラフターの位置別候補を軽量な相関モデルで結び、投機的復号の受理長と実スループットを改善する直接的な推論高速化。",
+      "source_url": "https://arxiv.org/abs/2608.20530",
+      "body_check": "一次資料本文で各位置top-K候補にin/out vectorを付与し、隣接位置のcosine similarityで整合する候補列を採点する方式を確認。joint distributionを明示構築せず、単一軽量network passとbatched matrix operationで処理する。9 benchmark×2 target size×greedy/temperature-1等72設定すべてでDFlashより高速、受理長7–19%向上、scoring headはblock latencyの約3%。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38201",
+      "identity_tokens": [
+        "arXiv:2609.38201",
+        "DOI:10.48550/arXiv.2609.38201"
+      ],
+      "title": "TomasuLLM: Out-of-Order Speculative Execution for LLM Agents",
+      "reason": "LLMエージェント全体の待ち時間を投機的なツール実行で削減するruntime研究だが、モデル推論・KV・decode自体ではなくtool execution層が主対象なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.38201",
+      "body_check": "一次資料本文で将来actionをdraftし、copy-on-write sandboxでtrajectory外順序に実行、依存関係とeffectを追跡してcommitted state検証後に順序通りcommitする設計を確認。SWE-bench Verified 1.31倍、Terminal-Bench 2.0 1.35倍、SWE-Marathon matched progress 1.27倍、4,010 commit-validationでfalse accept 0。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22752",
+      "identity_tokens": [
+        "arXiv:2608.22752",
+        "DOI:10.48550/arXiv.2608.22752",
+        "DOI:10.1145/3799682.3840567"
+      ],
+      "title": "The Compaction Cliff in Long-Running AI Agent Memory",
+      "reason": "長期エージェント知識の型別保持・要約・検索を改善するアプリケーション記憶管理で、LLM推論ランタイムの速度・KV・メモリ階層最適化が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/2608.22752",
+      "body_check": "一次資料本文でKnowledge Triageがknowledge base各行を型分類し、TypeCompact/TypeDecompose/TypeRetrieveへ分岐する設計を確認。安全ルール保持率やdownstream task pass rateが主評価で、GPU memory、KV cache、decode throughput、serving latencyを改善する推論システムではない。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36322",
+      "identity_tokens": [
+        "arXiv:2609.36322",
+        "DOI:10.48550/arXiv.2609.36322"
+      ],
+      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression",
+      "reason": "チャンク型KV圧縮が導入するwindow境界位相によって検索品質が周期的に崩れることを定量化し、長文脈推論で圧縮方式を評価・設計する際の重要な品質制約を示す。",
+      "source_url": "https://arxiv.org/abs/2609.36322",
+      "body_check": "一次資料で同一情報でもcompression-window境界に対するphaseでretrieval accuracyが最大40 percentage points変動することを確認。複数KV compression designを持つTransformerをscratch pretrainして再現し、causal interventionでattention componentのphase specializationを解析。速度提案そのものではないがKV圧縮推論の品質・評価に直接関係するためaccept。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03819",
+      "identity_tokens": [
+        "arXiv:2606.03819",
+        "DOI:10.48550/arXiv.2606.03819"
+      ],
+      "title": "TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding",
+      "reason": "one-shot tree drafterの非自己回帰条件付け誤差を、hidden stateと直前tokenに条件付けたMLPで近似し、O(1) draft時間を保ちながら投機的復号を高速化する。",
+      "source_url": "https://arxiv.org/abs/2606.03819",
+      "body_check": "一次資料本文でone-shot drafterの各depthがprefixだけに条件付くためtree branch間で同じmarginalを共有する問題と、two-stage AR approximationを確認。複数task/modelでmarginal tree drafting比block efficiency 12%、speedup 9%改善を報告し、最終適用先はLLM speculative decoding。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01526",
+      "identity_tokens": [
+        "arXiv:2608.01526",
+        "DOI:10.48550/arXiv.2608.01526"
+      ],
+      "title": "An Internet for the KV Cache: Rethinking Classical Infrastructure Boundaries in the LLM Inference Age",
+      "reason": "KVキャッシュをクラウド・データセンター横断のcontent distribution primitiveとして扱う推論基盤のvision paperで対象範囲には直結するが、完成システムの定量評価を伴う方式論文ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2608.01526",
+      "body_check": "一次資料本文でcomputeとKV storageをcloud/datacenter境界から分離し、network bandwidth・latency・pricingとmodel/application metricsからstore/recompute/transferを適応判断するcontent-distribution型KV基盤を提案していることを確認。LLM inference infrastructureが主題だが実装・性能評価ではなくarchitecture visionが中心。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02515",
+      "identity_tokens": [
+        "arXiv:2608.02515",
+        "DOI:10.48550/arXiv.2608.02515"
+      ],
+      "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+      "reason": "固定容量のactive KV windowとは独立した永続memory stateを追加し、context turnover後も計算状態を継続する長時間LLM推論方式を提案する。",
+      "source_url": "https://arxiv.org/abs/2608.02515",
+      "body_check": "一次資料本文でpretrained full-attention LLMへlifecycle全体を保持するmemory stateを追加し、main attentionはbounded KV windowのままcontext turnover、memory-oriented post-training、state-aware servingを協調させる設計を確認。LongMemEvalでは根拠tokenがactive contextから消えた後もmemory stateだけで回答可能なことを評価。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.17863",
+      "identity_tokens": [
+        "arXiv:2609.17863",
+        "DOI:10.48550/arXiv.2609.17863"
+      ],
+      "title": "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
+      "reason": "量子化・KV精度・投機復号などの推論最適化を同一条件で測定し、GPU・品質・コスト制約ごとのPareto frontierを構築する推論評価研究。",
+      "source_url": "https://arxiv.org/abs/2609.17863",
+      "body_check": "一次書誌と公開本文情報でQwen2.5-7B-Instruct、vLLM 0.12、L4/A100/H100上の54構成を実測してsimulatorを校正し、quality evaluationも行う構成を確認。36構成中18がPareto frontier、組合せは15中9、単独手法は21中9がfrontier。FP8 weightはbaseline accuracyの99.4%を保ちlatency 0.61–0.65倍、naive FP8 KVは200問全誤答となり品質制約の重要性も示す。",
+      "first_checked_at": "2026-10-02T17:31:23+09:00",
+      "last_checked_at": "2026-10-02T17:31:23+09:00",
+      "linked_from": []
+    }
+  ]
+}
