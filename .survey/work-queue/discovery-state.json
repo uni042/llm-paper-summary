@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-02T11:13:37+00:00",
-  "last_run_key": "library-import-650018ea12da",
-  "last_round": "libimp-650018ea12dace69-pre01",
+  "updated_at": "2026-10-02T11:18:02+00:00",
+  "last_run_key": "library-import-4e2e2fe4bcc0",
+  "last_round": "libimp-4e2e2fe4bcc02945-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,26 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T19:00:00+09:00",
-      "round": "specialist-coserving-15",
-      "axis": "online/offline co-serving / fine-grained GPU harvesting / preemption",
-      "query_summary": "Switched from agent serving to independent co-serving/GPU-harvesting work. ConServe was surfaced through the kvcached/Prism ecosystem, and its arXiv identity was not found by repository code search.",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2410.01228"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Inspect independent GPU isolation/sharing systems or older high-value omissions, then run empty-round checks on unrelated axes.",
-      "source_submission": "work-queue/submissions/20260919T1900JST-discovery-specialist-coserving-15.json"
-    },
     {
       "run_key": "2026-09-19T19:00:00+09:00",
       "round": "specialist-energy-9",
@@ -10794,6 +10774,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-4e2e2fe4bcc02945-pre01",
+      "precheck_request_id": "libimp-4e2e2fe4bcc02945-pre01",
+      "run_key": "library-import-4e2e2fe4bcc0",
+      "round": "libimp-4e2e2fe4bcc02945-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-4e2e2fe4bcc02945-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-4e2e2fe4bcc02945-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19165,16 +19179,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-650018ea12da",
-      "rounds": 32,
-      "candidate_count": 189,
+      "last_run_key": "library-import-4e2e2fe4bcc0",
+      "rounds": 33,
+      "candidate_count": 191,
       "duplicate_filtered_count": 95,
-      "novel_candidate_count": 94,
+      "novel_candidate_count": 96,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 91,
-      "accepted_count": 91,
-      "duplicate_ratio": 0.5026455026455027,
-      "final_duplicate_ratio": 0.031914893617021274,
+      "post_final_dedupe_count": 93,
+      "accepted_count": 93,
+      "duplicate_ratio": 0.4973821989528796,
+      "final_duplicate_ratio": 0.03125,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
