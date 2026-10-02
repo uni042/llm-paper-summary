@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-02 20:26:17 JST**
+> 自動生成: **2026-10-02 23:05:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **627** |
-| 未claim Research job | **483** |
-| 直近24hのResearch処理完了 | **42** |
+| 収録候補論文数 | **628** |
+| 未claim Research job | **484** |
+| 直近24hのResearch処理完了 | **32** |
 | 最終Research処理完了 | **10-02 06:58:00 JST** |
 | 最終Discovery探索完了 | **10-02 20:01:20 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **627** |
+| canonical_id確認済みの一意な候補論文 | **628** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **627** |
+| 非終端Research job合計 | **628** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（203時間50分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（206時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **144** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **8** | **8** | **0** | **0** | **0** | **25** |
-| 合計 | **0** | **9** | **8** | **0** | **144** | **0** | **25** |
+| 合計 | **0** | **9** | **8** | **0** | **144** | **144** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -150,36 +150,36 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **144件**
 - `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
-  - claim: **09-25 00:26:58 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-25 00:26:58 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
 - `arXiv:2609.04724` — FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators / worker `shared-preload-pool`
-  - claim: **09-24 15:33:22 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-24 15:33:22 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-04cf5cb095abe08f.json`
 - `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
-  - claim: **09-26 00:34:05 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-26 00:34:05 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
 - `arXiv:2609.25451` — Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo / worker `shared-preload-pool`
-  - claim: **09-26 15:01:17 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-26 15:01:17 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-05fc71d26e12a3ee.json`
 - `DOI:10.1109/JCC72984.2026.00017` — Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching / worker `shared-preload-pool`
-  - claim: **09-25 11:29:37 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-25 11:29:37 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-0711131c722ac649.json`
 - `arXiv:2609.20723` — PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving / worker `shared-preload-pool`
-  - claim: **09-26 11:29:19 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-26 11:29:19 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-0a075cc7610bb0c4.json`
 - `arXiv:2604.17701` — WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference / worker `shared-preload-pool`
-  - claim: **09-25 07:40:58 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-25 07:40:58 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-0b37f63c9c1b5db3.json`
 - `SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b` — Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers / worker `shared-preload-pool`
-  - claim: **09-25 11:07:04 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-25 11:07:04 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-0e6a646bc0e365e6.json`
 - `arXiv:2402.12374` — Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding / worker `shared-preload-pool`
-  - claim: **09-26 00:34:05 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-26 00:34:05 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-0f8cc0c93811431b.json`
 - `DOI:10.1109/cloud67622.2025.00028` — ZipNN: Lossless Compression for AI Models / worker `shared-preload-pool`
-  - claim: **09-26 15:01:17 JST** / heartbeat: **10-02 15:14:47 JST** / lease expiry: **10-03 03:14:47 JST**
+  - claim: **09-26 15:01:17 JST** / heartbeat: **10-02 23:03:55 JST** / lease expiry: **10-03 11:03:55 JST**
   - evidence: `.survey/work-queue/claims/job-research-14b72fcf4a8168cf.json`
 
 #### Audit
@@ -200,7 +200,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **627** |
+| ready | **628** |
 
 ### 候補の重複・識別情報欠損
 
