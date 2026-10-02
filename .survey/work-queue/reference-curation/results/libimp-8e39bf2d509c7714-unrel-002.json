@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e39bf2d509c7714-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.09192",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.09192",
+    "identity_tokens": [
+      "arXiv:2408.09192"
+    ],
+    "reason": "OFDM共生無線の後方散乱通信方式を扱う信号処理研究で、LLM推論とは無関係。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-10-02T19:21:28+00:00",
+    "linked_from": [
+      "web-discovery:replacement-after-worklist-tail"
+    ],
+    "title": "Interference-Free Backscatter Communications for OFDM-Based Symbiotic Radio"
+  },
+  "processed_at": "2026-10-02T19:21:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e39bf2d509c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

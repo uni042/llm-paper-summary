@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-286fc4d2a8d98d9c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.08281",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.08281",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.08281",
+      "arXiv:2401.08281"
+    ],
+    "reason": "RAG検索段で広く使えるベクトル類似検索基盤だが、論文自体はLLM推論専用ではなく汎用ベクトル検索ライブラリの設計・評価。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T19:21:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "The Faiss library"
+  },
+  "processed_at": "2026-10-02T19:21:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-286fc4d2a8d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd606701ac07a105-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.10582",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.10582",
+    "identity_tokens": [
+      "arXiv:2503.10582"
+    ],
+    "reason": "Web検索から大規模マルチモーダル指示データを構築してモデルを微調整する学習データ研究で、最終適用先が凍結対象の学習工程である。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T19:21:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
+    ],
+    "title": "VisualWebInstruct: Scaling up Multimodal Instruction Data through Web Search"
+  },
+  "processed_at": "2026-10-02T19:21:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd606701ac07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
