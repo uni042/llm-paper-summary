@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1944-scheduled-chat-45",
+  "reference_main_sha": "4e37fd9d5dcb79a9aa7651416235806e7d30e98d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.13421",
+      "identity_tokens": [
+        "arXiv:2306.13421",
+        "DOI:10.48550/arXiv.2306.13421"
+      ],
+      "title": "Retrieval-Pretrained Transformer: Long-range Language Modeling with Self-retrieval",
+      "reason": "自己検索（self-retrieval）を言語モデルへネイティブ統合し長文脈を扱うため推論時の外部記憶利用には関係するが、主貢献は検索器と言語モデルの共同事前学習であり推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.13421",
+      "body_check": "本文では直前chunkからquery表現を作り、数万token前の過去chunkを検索して表現へ融合し次chunkを予測するRPTを提案する。books/code/mathの4長距離言語モデリング課題で検索品質とperplexityを改善するが、KV cache、GPU memory、serving latency/throughputを最適化しないためborderline。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.15887",
+      "identity_tokens": [
+        "arXiv:2306.15887",
+        "DOI:10.48550/arXiv.2306.15887"
+      ],
+      "title": "Beyond the Hype: Assessing the Performance, Trustworthiness, and Clinical Suitability of GPT3.5",
+      "reason": "GPT-3.5の医療画像protocol assignmentにおける性能・信頼性・臨床適性評価で、LLM推論基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.15887",
+      "body_check": "本文では4,700件のphysician entry・11 imaging protocol classでGPT-3.5をfine-tuned BERTおよびradiologistと比較し、説明・calibration・systematic errorを分析する。推論kernel、KV cache、serving、offload等は扱わない。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.17107",
+      "identity_tokens": [
+        "arXiv:2306.17107",
+        "DOI:10.48550/arXiv.2306.17107"
+      ],
+      "title": "LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding",
+      "reason": "OCRを用いたtext-rich画像データとvisual instruction tuningでマルチモーダル能力を高める学習研究で、推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.17107",
+      "body_check": "本文ではLAIONの422K text-rich画像へOCRを適用し、GPT-4で16K会話を生成してvisual instruction tuningへ追加する。text-based VQAで最大20%改善、ScienceQA 91.42%を報告するが、主対象はデータ・学習と能力改善。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.03170",
+      "identity_tokens": [
+        "arXiv:2307.03170",
+        "DOI:10.48550/arXiv.2307.03170"
+      ],
+      "title": "Focused Transformer: Contrastive Training for Context Scaling",
+      "reason": "外部(key,value) memoryへattentionする長文脈アーキテクチャは推論時メモリ利用に関係するが、中心はcontrastive trainingで検索空間のdistractionを減らすモデル学習。",
+      "source_url": "https://arxiv.org/abs/2307.03170",
+      "body_check": "本文ではFocused Transformerがcontrastive learningで(key,value)空間を整え、OpenLLaMA 3B/7Bをfine-tuneしたLongLLaMAでpasskey retrievalを最大256K contextまで実証する。長文脈推論に寄与する一方、serving latency、KV offload、GPU memory管理を直接最適化しないためborderline。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.04657",
+      "identity_tokens": [
+        "arXiv:2307.04657",
+        "DOI:10.48550/arXiv.2307.04657"
+      ],
+      "title": "BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset",
+      "reason": "LLM安全alignment向けhuman-preference datasetとRLHF応用が主題で、推論システム対象外。",
+      "source_url": "https://arxiv.org/abs/2307.04657",
+      "body_check": "本文では333,963 QA pairのsafety meta-labelと361,903 expert comparison pairを構築し、content moderationとRLHFへの利用を示す。目的はhelpfulness/harmlessnessの安全alignmentであり推論効率化ではない。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.07162",
+      "identity_tokens": [
+        "arXiv:2307.07162",
+        "DOI:10.48550/arXiv.2307.07162"
+      ],
+      "title": "Drive Like a Human: Rethinking Autonomous Driving with Large Language Models",
+      "reason": "LLMを自動運転のreasoning・interpretation・memorizationへ利用する応用研究で、推論基盤の高速化・省メモリ化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.07162",
+      "body_check": "本文ではLLMをclosed-loop autonomous driving systemへ組み込み、long-tail driving scenarioでreasoningとenvironment interactionを評価する。最終適用先は自動運転能力であり、LLM serving/KV/kernelの最適化ではない。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.08045",
+      "identity_tokens": [
+        "arXiv:2307.08045",
+        "DOI:10.48550/arXiv.2307.08045"
+      ],
+      "title": "Beyond Classical Attention: Quantum Attention for Scalable Computation",
+      "reason": "Grover探索で疎なattention matrixを近似し、LLM推論のattention計算を理論的に準二乗未満へ高速化する直接的な推論アルゴリズム研究。",
+      "source_url": "https://arxiv.org/abs/2307.08045",
+      "body_check": "本文では各rowの閾値以上の要素をGrover searchで探索し、k-row-sparse成分とrank-1成分からなる近似Bを構成する。QRAM上のoracleを仮定し、attention推論を O~(n^1.5 k^0.5 d + nkd) 時間で計算する定理を示す。実GPU評価はなく量子計算仮定が強いが、最終適用先はLLM inference attention accelerationなのでaccept。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.08715",
+      "identity_tokens": [
+        "arXiv:2307.08715",
+        "DOI:10.48550/arXiv.2307.08715"
+      ],
+      "title": "MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots",
+      "reason": "商用LLM chatbotのjailbreak攻撃と自動prompt生成を扱うsecurity研究で、推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.08715",
+      "body_check": "本文ではtime-based SQL injectionに着想した防御推定とfine-tuned LLMによるjailbreak prompt自動生成を行い、複数商用chatbotで平均21.58%のattack success rateを報告する。推論runtimeの最適化はない。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.13269",
+      "identity_tokens": [
+        "arXiv:2307.13269",
+        "DOI:10.48550/arXiv.2307.13269"
+      ],
+      "title": "LoraHub: Efficient Cross-Task Generalization via Dynamic LoRA Composition",
+      "reason": "既学習LoRA moduleを未知task向けに動的合成するfew-shot適応研究で、推論ランタイム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.13269",
+      "body_check": "本文では少数exampleを使って複数LoRA moduleの組合せ係数を探索し、追加model parameterやgradientなしで未知taskへ適応する。Big-Bench Hardでcross-task generalizationを評価しtoken数削減にも触れるが、主貢献はLoRA composition。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.16562",
+      "identity_tokens": [
+        "arXiv:2307.16562",
+        "DOI:10.48550/arXiv.2307.16562"
+      ],
+      "title": "SAKSHI: Decentralized AI Platforms",
+      "reason": "AI serviceをtrust-freeに提供するblockchain/decentralized platform設計で、LLM推論サービングの性能最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.16562",
+      "body_check": "本文ではdata/control pathとtransaction pathを分離し、proof-of-inference layerでservice quality、nonpayment、model copying等への耐性を与える。分散AIサービス基盤だが、GPU scheduling、KV cache、batching、decode性能を最適化しない。",
+      "first_checked_at": "2026-10-02T19:44:01+09:00",
+      "last_checked_at": "2026-10-02T19:44:01+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 470
+    }
+  ]
+}
