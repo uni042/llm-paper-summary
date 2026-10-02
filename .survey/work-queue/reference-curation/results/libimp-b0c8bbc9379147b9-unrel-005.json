@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0c8bbc9379147b9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/hpca51647.2021.00057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/hpca51647.2021.00057",
+    "identity_tokens": [
+      "DOI:10.1109/hpca51647.2021.00057"
+    ],
+    "reason": "異種メモリ上のtensor配置・移動を最適化するが、本文の問題設定・評価はDNN学習のメモリ容量とtraining throughputで、凍結対象の学習高速化である。",
+    "first_checked_at": "2026-10-02T07:00:18+00:00",
+    "last_checked_at": "2026-10-02T07:00:18+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+      "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md"
+    ],
+    "title": "Sentinel: Efficient Tensor Migration and Allocation on Heterogeneous Memory Systems for Deep Learning"
+  },
+  "processed_at": "2026-10-02T07:00:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0c8bbc93791",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

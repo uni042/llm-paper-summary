@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T06:58:22+00:00",
-  "record_count": 355,
+  "updated_at": "2026-10-02T07:00:18+00:00",
+  "record_count": 362,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -294,20 +294,6 @@
       "last_checked_at": "2026-09-19T18:45:00+00:00",
       "linked_from": [],
       "title": "HuggingFace's Transformers: State-of-the-art Natural Language Processing"
-    },
-    "arXiv:2106.09685": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2106.09685",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2106.09685",
-        "OpenReview:nZeVKeeFYf9",
-        "arXiv:2106.09685"
-      ],
-      "reason": "Parameter-efficient adaptation method rather than a training-system implementation; useful context but lower systems-specific value.",
-      "first_checked_at": "2026-09-19T18:45:00+00:00",
-      "last_checked_at": "2026-09-19T18:45:00+00:00",
-      "linked_from": [],
-      "title": "LoRA: Low-Rank Adaptation of Large Language Models"
     },
     "arXiv:2005.14165": {
       "classification": "borderline",
@@ -4612,9 +4598,9 @@
       "identity_tokens": [
         "DOI:10.1109/cgo57630.2024.10444873"
       ],
-      "reason": "依存GPUカーネル間の細粒度同期を制御してGPU利用率を改善するコンパイラ/実行基盤で推論カーネルに応用可能だが、LLM推論を主対象としないため境界扱い。",
+      "reason": "依存GPUカーネル間をユーザー定義の細粒度方策で同期するcuSyncはLLMカーネル重畳へ応用可能だが、論文自体は汎用GPU同期フレームワークでLLM推論を最終適用先に限定しない。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
         "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
@@ -5050,20 +5036,6 @@
       "linked_from": [],
       "title": "Turbocharging Vector Databases Using Modern SSDs"
     },
-    "DOI:10.57967/hf/3372": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.57967/hf/3372",
-      "identity_tokens": [
-        "DOI:10.57967/hf/3372"
-      ],
-      "reason": "1M-token級long-context Llama-3 model artifactで推論時の長文脈負荷と関係するが、主貢献はモデル/学習・RoPE拡張であり推論システム最適化そのものではないためborderline。",
-      "first_checked_at": "2026-10-02T01:38:15+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-45.json"
-      ],
-      "title": "Llama 3 Gradient: A series of long context models"
-    },
     "arXiv:2609.04895": {
       "classification": "borderline",
       "canonical_id": "arXiv:2609.04895",
@@ -5128,6 +5100,132 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10"
+    },
+    "OpenReview:k2fWVhG0u5": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:k2fWVhG0u5",
+      "identity_tokens": [
+        "OpenReview:k2fWVhG0u5"
+      ],
+      "reason": "Sparse MoEのcost・accuracy・performanceを測るベンチマークで推論評価に関係するが、新しい実行機構そのものではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems"
+    },
+    "DOI:10.1145/3689031.3717459": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3689031.3717459",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717459"
+      ],
+      "reason": "spot instanceを用いたAI model servingの可用性・コスト・遅延最適化でサービング研究だが、LLM固有機構ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "SkyServe: Serving AI Models across Regions and Clouds with Spot Instances"
+    },
+    "DOI:10.1145/3669940.3707265": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3669940.3707265",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707265"
+      ],
+      "reason": "未知GPU上のDNN training/inference性能予測で推論シミュレーション系に近いが、LLM専用の実行最適化ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Forecasting GPU Performance for Deep Learning Training and Inference"
+    },
+    "DOI:10.1145/3620665.3640376": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620665.3640376",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640376"
+      ],
+      "reason": "DRAM内演算（PIM）上の深層学習推論を高速化しメモリ階層研究として近いが、LLM固有ではなく現代DNN全般が直接対象なので境界扱い。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+      ],
+      "title": "PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization"
+    },
+    "DOI:10.1145/3582016.3582018": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3582016.3582018",
+      "identity_tokens": [
+        "DOI:10.1145/3582016.3582018"
+      ],
+      "reason": "GPUテンソル計算の中間表現（IR）と最適化は推論カーネル生成へ近いが、LLM専用ランタイムではなく汎用GPUテンソル計算が主対象なので境界扱い。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md"
+      ],
+      "title": "Graphene: An IR for Optimized Tensor Computations on GPUs"
+    },
+    "DOI:10.1145/3575693.3575747": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3575693.3575747",
+      "identity_tokens": [
+        "DOI:10.1145/3575693.3575747"
+      ],
+      "reason": "注意機構のボトルネックをデータフロー最適化するハードウェア研究でTransformer推論へ直結するが、LLMサービング固有の研究ではないため境界扱い。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md",
+        "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md"
+      ],
+      "title": "FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks"
+    },
+    "DOI:10.1145/3470496.3527405": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3470496.3527405",
+      "identity_tokens": [
+        "DOI:10.1145/3470496.3527405"
+      ],
+      "reason": "Groqのテンソルストリーミング処理器と大規模相互接続はLLMアクセラレータの直接的先行基盤だが、論文の対象は大規模機械学習全般でLLM専用ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
+      ],
+      "title": "A Software-defined Tensor Streaming Multiprocessor for Large-scale Machine Learning"
+    },
+    "arXiv:2402.01869": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.01869",
+      "identity_tokens": [
+        "arXiv:2402.01869"
+      ],
+      "reason": "LLM推論サービング研究だが、主眼が外部ツール呼出し等で中断された要求のKV保持/破棄/退避ポリシーにあり、通常の推論高速化サーベイとの境界に位置する。",
+      "first_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "linked_from": [],
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference"
+    },
+    "arXiv:2404.18057": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.18057",
+      "identity_tokens": [
+        "arXiv:2404.18057"
+      ],
+      "reason": "K/Vの非対称な配置を利用するメモリ効率推論で関連性は高いが、一次本文の評価詳細を今回十分に確証できず境界扱いとする。",
+      "first_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "linked_from": [],
+      "title": "Efficient LLM Inference with KCache"
     }
   }
 }

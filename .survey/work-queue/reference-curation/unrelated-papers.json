@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T06:58:22+00:00",
-  "record_count": 402,
+  "updated_at": "2026-10-02T07:00:18+00:00",
+  "record_count": 417,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4602,9 +4602,9 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "dense checkpointからMoEを初期化して追加事前学習コストを削減する学習手法が主目的で、最終適用先が凍結対象の学習高速化であるため除外。",
+      "reason": "dense checkpointからSparse MoEを構築して追加学習するupcycling方式が主題。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4654,10 +4654,11 @@
       "identity_tokens": [
         "OpenReview:HyUNwulC-"
       ],
-      "reason": "線形再帰ニューラルネットを系列方向に並列化する一般的な学習・系列計算アルゴリズムで、LLM推論基盤を最終適用先としないため対象外。",
+      "reason": "linear recurrenceをsequence方向に並列化する一般RNN algorithmで現行LLM servingを直接対象としない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
       ],
@@ -4860,9 +4861,9 @@
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "未知ジョブ長と依存関係を持つ一般オンラインスケジューリング理論であり、LLMサービング固有のスケジューラではない。",
+      "reason": "処理時間未知かつprecedence制約付きjobの一般online scheduling理論でLLM固有ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
@@ -4894,9 +4895,9 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "質問クラスタから代表例を選びzero-shot CoTでdemonstrationを自動生成するprompting手法で、推論システムの速度・メモリ・サービング最適化を扱わないため除外。",
+      "reason": "chain-of-thought demonstration自動構築による推論能力向上が主題で計算・メモリ・serving高速化ではない。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
@@ -4973,13 +4974,15 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2512.23808",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.23808",
         "arXiv:2512.23808"
       ],
-      "reason": "音声言語モデルの能力・学習・few-shot性能が主題で、推論システム効率化ではない。",
+      "reason": "audio language modelのpretraining・instruction tuningと音声理解/生成能力が主題。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json"
+        ".survey/work-queue/worker-worklist-30.json",
+        ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "MiMo-Audio: Audio Language Models are Few-Shot Learners"
     },
@@ -5003,11 +5006,13 @@
       "identity_tokens": [
         "arXiv:2501.10132"
       ],
-      "reason": "function calling能力を測るbenchmarkが主題で、agent serving/runtime最適化ではない。",
+      "reason": "複雑な関数呼び出し能力を測る評価ベンチマークと自動評価器が主貢献で、推論ランタイムの速度・メモリ・サービング機構を改善しない。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-09-30T09:04:57+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json"
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md"
       ],
       "title": "ComplexFuncBench: Exploring Multi-Step and Constrained Function Calling under Long-Context Scenario"
     },
@@ -5033,9 +5038,9 @@
       "identity_tokens": [
         "arXiv:2510.27257"
       ],
-      "reason": "テンソル並列とパイプライン並列を協調させて大規模モデルの学習スループットを改善する研究で、最終適用先が学習工程そのものの高速化であるため凍結範囲として対象外。",
+      "reason": "テンソル並列とパイプライン並列の気泡を協調削減するが、評価・目的ともLLM/MLLMの分散学習スループット改善であり凍結中の学習高速化に該当する。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:07:47+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
         "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
@@ -5064,9 +5069,9 @@
       "identity_tokens": [
         "arXiv:2503.10582"
       ],
-      "reason": "主題はWeb検索を使ったマルチモーダルinstruction data構築で、推論システム効率化ではない。",
+      "reason": "Web検索から大規模マルチモーダル指示データを構築してモデルを微調整する学習データ研究で、最終適用先が凍結対象の学習工程である。",
       "first_checked_at": "2026-09-30T09:07:47+00:00",
-      "last_checked_at": "2026-09-30T09:51:41+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
@@ -5590,9 +5595,9 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731079"
       ],
-      "reason": "dense retrieval自体のアルゴリズム・ハードウェア協調高速化が主目的で、LLM推論ランタイムやRAG生成段の最適化ではない。",
+      "reason": "dense retrievalのalgorithm-hardware co-designが主題で、LLM推論本体の最適化ではない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
@@ -5913,6 +5918,216 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity"
+    },
+    "DOI:10.57967/hf/3372": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.57967/hf/3372",
+      "identity_tokens": [
+        "DOI:10.57967/hf/3372"
+      ],
+      "reason": "長文脈model artifactの公開・学習と能力評価が中心で推論system最適化が主貢献ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Llama 3 Gradient: A Series of Long Context Models"
+    },
+    "DOI:10.1007/s11263-021-01453-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-021-01453-z",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-021-01453-z"
+      ],
+      "reason": "知識蒸留全般の包括的サーベイで、LLM推論ランタイムやサービング最適化を主題としない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Knowledge Distillation: A Survey"
+    },
+    "OpenReview:T26f9z2rEe": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:T26f9z2rEe",
+      "identity_tokens": [
+        "OpenReview:T26f9z2rEe"
+      ],
+      "reason": "top-any gatingとexpert追加・削除を学習中に自動調整するMoE設計で、最終主貢献はモデル学習・アーキテクチャ自動調整。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"
+    },
+    "OpenReview:j1tSLYKwg8": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:j1tSLYKwg8",
+      "identity_tokens": [
+        "OpenReview:j1tSLYKwg8"
+      ],
+      "reason": "自己回帰モデルを拡散言語モデルへ適応するモデル構築・学習方式が中心。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Scaling Diffusion Language Models via Adaptation from Autoregressive Models"
+    },
+    "DOI:10.18653/v1/2020.acl-main.92": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.92",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.92"
+      ],
+      "reason": "ASDivという数学文章題データセットの構築・評価が主題で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers"
+    },
+    "DOI:10.14778/3611540.3611569": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3611540.3611569",
+      "identity_tokens": [
+        "DOI:10.14778/3611540.3611569"
+      ],
+      "reason": "大規模モデル学習向けFully Sharded Data Parallelの設計・スケーリングが主題で、凍結対象の学習系。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel"
+    },
+    "DOI:10.1162/neco.1997.9.8.1735": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1997.9.8.1735",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1997.9.8.1735"
+      ],
+      "reason": "長期依存を学習するLSTMアーキテクチャの基礎研究で、LLM推論システムの速度・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Long Short-Term Memory"
+    },
+    "DOI:10.1145/3731569.3764839": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3731569.3764839",
+      "identity_tokens": [
+        "DOI:10.1145/3731569.3764839"
+      ],
+      "reason": "異種・地理分散GPUでの機械学習学習を自動構成するシステムで、最終適用先がtraining。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters"
+    },
+    "DOI:10.1145/3710848.3710852": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3710848.3710852",
+      "identity_tokens": [
+        "DOI:10.1145/3710848.3710852"
+      ],
+      "reason": "二次最適化を用いる分散DNN学習のgradient compressionが主題で、学習高速化の凍結範囲。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "COMPSO: Optimizing Gradient Compression for Distributed Training with Second-Order Optimizers"
+    },
+    "DOI:10.1145/3593969": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3593969",
+      "identity_tokens": [
+        "DOI:10.1145/3593969"
+      ],
+      "reason": "処理時間未知の単一機械オンラインスケジューリングに予測を導入する理論研究で、LLM要求、KVキャッシュ、GPUサービングを直接扱わない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Non-Clairvoyant Scheduling with Predictions"
+    },
+    "DOI:10.1145/3508041": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3508041",
+      "identity_tokens": [
+        "DOI:10.1145/3508041"
+      ],
+      "reason": "実PIM上の疎行列ベクトル積（SpMV）ライブラリと負荷分散の研究で、LLMまたはTransformer推論が最終適用先ではない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md"
+      ],
+      "title": "SparseP: Towards Efficient Sparse Matrix Vector Multiplication on Real Processing-In-Memory Architectures"
+    },
+    "DOI:10.1145/3445814.3446757": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3445814.3446757",
+      "identity_tokens": [
+        "DOI:10.1145/3445814.3446757"
+      ],
+      "reason": "関数型サービス（FaaS）のコールドスタートと資源プロビジョニングを汎用キャッシュ問題として扱う研究で、LLM推論を直接対象としない。",
+      "first_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "title": "FaasCache: keeping serverless computing alive with greedy-dual caching"
+    },
+    "DOI:10.1109/hpca51647.2021.00057": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca51647.2021.00057",
+      "identity_tokens": [
+        "DOI:10.1109/hpca51647.2021.00057"
+      ],
+      "reason": "異種メモリ上のtensor配置・移動を最適化するが、本文の問題設定・評価はDNN学習のメモリ容量とtraining throughputで、凍結対象の学習高速化である。",
+      "first_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+        "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md"
+      ],
+      "title": "Sentinel: Efficient Tensor Migration and Allocation on Heterogeneous Memory Systems for Deep Learning"
+    },
+    "arXiv:2208.01062": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.01062",
+      "identity_tokens": [
+        "arXiv:2208.01062"
+      ],
+      "reason": "重要な注意カーネル研究だが、既にサーベイの基礎文献として広く表現済みとみなし新規Discovery候補には回さない。",
+      "first_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "linked_from": [],
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+    },
+    "arXiv:2106.09685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.09685",
+      "identity_tokens": [
+        "arXiv:2106.09685"
+      ],
+      "reason": "低ランク適応による学習パラメータ削減が中心で、最終適用先が学習工程の省メモリ・効率化であり凍結対象。",
+      "first_checked_at": "2026-10-02T07:00:18+00:00",
+      "last_checked_at": "2026-10-02T07:00:18+00:00",
+      "linked_from": [],
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models"
     }
   }
 }

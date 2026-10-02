@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39f8eaeb63dfc352-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:k2fWVhG0u5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:k2fWVhG0u5",
+    "identity_tokens": [
+      "OpenReview:k2fWVhG0u5"
+    ],
+    "reason": "Sparse MoEのcost・accuracy・performanceを測るベンチマークで推論評価に関係するが、新しい実行機構そのものではない。",
+    "first_checked_at": "2026-10-02T07:00:17+00:00",
+    "last_checked_at": "2026-10-02T07:00:17+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems"
+  },
+  "processed_at": "2026-10-02T07:00:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39f8eaeb63df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
