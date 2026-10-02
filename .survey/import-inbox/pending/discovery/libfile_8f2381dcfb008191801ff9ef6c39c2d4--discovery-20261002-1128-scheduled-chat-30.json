@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-1128-scheduled-chat-30",
+  "reference_main_sha": "f9ddf6a1aa5abd84d5b17ae2f15a4f849351db29",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16163",
+      "identity_tokens": [
+        "arXiv:2503.16163"
+      ],
+      "title": "SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs",
+      "reason": "CPUへ完全KVキャッシュを退避し、GPU上の低ビットKVコピーで重要度を測って必要KVを動的取得・次ステップ分を投機的先読みする長文脈推論のメモリ/I/O最適化。",
+      "source_url": "https://arxiv.org/abs/2503.16163",
+      "body_check": "本文系資料で、不可逆なKV削除を避けるためCPU側に完全KVを保持し、GPU側の低ビットKVで重要位置を選択、次トークンが参照しそうなKVを事前取得して通信と計算を重畳する構成を確認。LongBench/Needle-in-a-Haystackで再学習なし、10倍級KV圧縮でも情報忘却を抑える評価を行う。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.28150",
+      "identity_tokens": [
+        "arXiv:2607.28150"
+      ],
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "reason": "プリフィル/デコード分離サービングのネットワーク律速を、選択的KV転送と三経路フェッチで直接改善する推論システム。",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "body_check": "本文系資料で、profile-based proactive transfer、parallel on-demand transfer、speculative transferの3経路を確認。Llama-3.1/Qwen3/Phi-4等の長文脈条件で、全KV転送比でTTSTを最大4.3倍短縮し、後続TBTと精度をほぼ維持する。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11309",
+      "identity_tokens": [
+        "arXiv:2506.11309"
+      ],
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "reason": "ドラフトとターゲットを別GPU群で非同期実行し、木状ドラフト・KV管理・融合カーネルで投機的復号のクリティカルパスを短縮する。",
+      "source_url": "https://arxiv.org/abs/2506.11309",
+      "body_check": "本文系資料でparallel tree generation、tree-aware KV cache management、latency-optimized fused kernelsを確認。5モデル系列・6データセット、8 Hopper GPUの評価で平均1.75倍高速化、Llama3-70Bで348 token/sを報告する。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.10424",
+      "identity_tokens": [
+        "arXiv:2502.10424"
+      ],
+      "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+      "reason": "階層量子化KVキャッシュをドラフト/検証で共有し、長文脈のKV帯域と投機的復号の受理率を同時に改善する。",
+      "source_url": "https://arxiv.org/abs/2502.10424",
+      "body_check": "本文系資料で、同一アーキテクチャのドラフトが4-bit重みとKV上位4-bitを利用し、ターゲットが階層KVの高精度表現を使う構成を確認。90%超の受理率、最大約2.5倍のE2E高速化、疎KV型自己投機法比約1.3倍のメモリ削減を報告する。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.08147",
+      "identity_tokens": [
+        "arXiv:2408.08147"
+      ],
+      "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+      "reason": "大規模プリフィル/デコード分離サービングでP/D比、要求転送、RDMA KV転送を協調最適化する実運用推論基盤。",
+      "source_url": "https://arxiv.org/abs/2408.08147",
+      "body_check": "本文系資料でfine-grained P/D organization、reject時on-demand forwarding、block-free/asynchronous D2D KV transferを確認。Ascend/MindSpore上で数万NPU・8か月超の商用運用、E2E throughput 60%、TTFT SLO 42%、D2D transfer 46%改善、集約型比6.7倍throughputを報告する。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01164",
+      "identity_tokens": [
+        "arXiv:2403.01164"
+      ],
+      "title": "HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+      "reason": "CPU/GPU異種並列と非同期I/O重畳で、GPUメモリ制約下のLLMオフロード推論のレイテンシを直接改善する。",
+      "source_url": "https://arxiv.org/abs/2403.01164",
+      "body_check": "本文系資料でCPU/GPUの計算・メモリ特性を利用したheterogeneous parallel computingと非同期overlapを確認。OPT-30B等でFlexGen等と比較し最大317%超の推論速度改善、CPU/I/O高利用率を報告する。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.01062",
+      "identity_tokens": [
+        "arXiv:2208.01062"
+      ],
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "reason": "重要な注意カーネル研究だが、既にサーベイの基礎文献として広く表現済みとみなし新規Discovery候補には回さない。",
+      "source_url": "https://arxiv.org/abs/2205.14135",
+      "body_check": "本文はHBMとSRAM間I/Oを減らすtilingによりexact attentionを高速・省メモリ化する。推論関連性は高いが、本runでは新規候補としての収録価値より既存表現との重複性が高いと判断。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.01869",
+      "identity_tokens": [
+        "arXiv:2402.01869"
+      ],
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference",
+      "reason": "LLM推論サービング研究だが、主眼が外部ツール呼出し等で中断された要求のKV保持/破棄/退避ポリシーにあり、通常の推論高速化サーベイとの境界に位置する。",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "body_check": "本文ではinterceptされた要求についてKV cacheをpreserve/discard/swapし、iteration-level schedulerでGPUメモリ浪費を抑える。PagedAttentionを利用するが、一般的なKV階層化よりaugmented inferenceの中断・再開が中心。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.18057",
+      "identity_tokens": [
+        "arXiv:2404.18057"
+      ],
+      "title": "Efficient LLM Inference with KCache",
+      "reason": "K/Vの非対称な配置を利用するメモリ効率推論で関連性は高いが、一次本文の評価詳細を今回十分に確証できず境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2404.18057",
+      "body_check": "関連資料からK cacheをHBMに残しV cacheをCPU側へ置く非対称KV配置で長文脈推論メモリを削減する方式と確認したが、今回の本文確認では評価条件・主要結果の十分な検証に至らずacceptを避けた。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.09685",
+      "identity_tokens": [
+        "arXiv:2106.09685"
+      ],
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "reason": "低ランク適応による学習パラメータ削減が中心で、最終適用先が学習工程の省メモリ・効率化であり凍結対象。",
+      "source_url": "https://arxiv.org/abs/2106.09685",
+      "body_check": "本文は事前学習重みを凍結し低ランク行列だけを学習するparameter-efficient fine-tuningを提案する。推論時に追加レイテンシを持たない点はあるが、主貢献は学習・適応効率である。",
+      "first_checked_at": "2026-10-02T11:28:12+09:00",
+      "last_checked_at": "2026-10-02T11:28:12+09:00",
+      "linked_from": []
+    }
+  ]
+}
