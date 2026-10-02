@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T10:58:58+00:00",
-  "record_count": 480,
+  "updated_at": "2026-10-02T11:03:20+00:00",
+  "record_count": 479,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4107,7 +4107,7 @@
       ],
       "reason": "長系列LLMの学習並列化が主目的で、最終適用先が学習高速化。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4121,7 +4121,7 @@
       ],
       "reason": "基盤モデル全般の機会・リスクを扱う総説で、推論効率化手法ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4135,7 +4135,7 @@
       ],
       "reason": "長文脈能力のベンチマークであり、推論システム最適化手法ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4149,7 +4149,7 @@
       ],
       "reason": "T5の事前学習・転移学習研究で、推論効率化が主題ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4163,7 +4163,7 @@
       ],
       "reason": "ツール利用エージェント評価ベンチマークで推論効率化ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4177,7 +4177,7 @@
       ],
       "reason": "会話エージェント評価ベンチマークで推論効率化手法ではない。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4191,7 +4191,7 @@
       ],
       "reason": "分散データ並列学習の高速化が主目的。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4205,7 +4205,7 @@
       ],
       "reason": "知識蒸留による学習法が主目的で、学習工程の最適化に該当。",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-09-29T23:39:46+00:00",
+      "last_checked_at": "2026-10-02T11:03:20+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -4830,9 +4830,9 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "LLM agentの構成・応用を整理するサーベイで、推論基盤効率化が主題ではない。",
+      "reason": "LLMエージェントの構成・応用・評価を体系化するサーベイで、推論基盤の速度・メモリ・サービング最適化は主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-02T11:03:19+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4932,9 +4932,9 @@
         "DOI:10.18653/v1/p19-1452",
         "arXiv:1905.05950"
       ],
-      "reason": "BERT内部の言語情報が品詞・構文・固有表現・意味役割・共参照の順に局在するかを分析する解釈研究であり、LLM推論の高速化・サービング・メモリ階層・圧縮を最終適用先としない。",
+      "reason": "BERT内部でPOS・構文・NER・意味役割・共参照など言語情報がどの層に現れるかを解析する表現分析研究で、推論効率化ではない。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-02T11:03:19+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
@@ -5724,7 +5724,7 @@
       ],
       "reason": "複数LLM間でKV内部状態を共有潜在空間へ整列しモデル間通信・skill transferを可能にする研究で、推論速度・メモリ容量・サービング効率の改善が最終目的ではない。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T11:03:19+00:00",
       "linked_from": [],
       "title": "Latent Space Communication via K-V Cache Alignment"
     },
@@ -5736,7 +5736,7 @@
       ],
       "reason": "GPU/FPGA等の異種計算機向けtensor schedule自動探索は関連基盤だが、LLM推論を最終適用先とせず汎用tensor compiler最適化が主題。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-02T11:03:19+00:00",
       "linked_from": [],
       "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System"
     },
@@ -5752,19 +5752,6 @@
       "last_checked_at": "2026-10-02T06:58:21+00:00",
       "linked_from": [],
       "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
-    },
-    "arXiv:2104.09864": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2104.09864",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2104.09864",
-        "arXiv:2104.09864"
-      ],
-      "reason": "回転位置埋め込み（RoPE）によるモデル表現・位置符号化が主題で、推論システム最適化が最終適用先ではない。",
-      "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
-      "linked_from": [],
-      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
     },
     "arXiv:2403.08295": {
       "classification": "unrelated",
