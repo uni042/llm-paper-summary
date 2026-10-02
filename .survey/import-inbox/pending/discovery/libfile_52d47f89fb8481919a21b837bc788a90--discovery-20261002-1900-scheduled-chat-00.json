@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-1900-scheduled-chat-00",
+  "reference_main_sha": "8ac20dfce3c741ef49336f39ffc530680089d464",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05135",
+      "identity_tokens": [
+        "arXiv:2309.05135",
+        "DOI:10.48550/arXiv.2309.05135"
+      ],
+      "title": "Streaming Semidefinite Programs: O(sqrt(n)) Passes, Small Space and Fast Runtime",
+      "reason": "半正定値計画のストリーミング解法であり、LLM推論・サービングを対象としない。",
+      "source_url": "https://arxiv.org/abs/2309.05135",
+      "body_check": "本文情報で制約行列をストリーム入力し、低メモリの内点法とHessian近似を設計する理論アルゴリズム研究と確認。LLM、Transformer、KVキャッシュ、推論ランタイムの評価はない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.01172",
+      "identity_tokens": [
+        "arXiv:2309.01172",
+        "DOI:10.48550/arXiv.2309.01172"
+      ],
+      "title": "Federated Domain Generalization: A Survey",
+      "reason": "連合学習におけるドメイン汎化のサーベイで、LLM推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2309.01172",
+      "body_check": "本文・書誌情報からFederated Domain Generalizationの問題設定、分類、既存手法、課題を整理するサーベイと確認。推論サービング、KV、MoE、カーネル、量子化の新規方式はない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.15136",
+      "identity_tokens": [
+        "arXiv:2308.15136",
+        "DOI:10.48550/arXiv.2308.15136"
+      ],
+      "title": "CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs",
+      "reason": "GPU上の近似最近傍検索はRAG検索段やベクトル検索の推論経路に利用できるが、論文自体はLLM専用ではなく汎用ANNSが主対象。",
+      "source_url": "https://arxiv.org/abs/2308.15136",
+      "body_check": "本文情報でGPU向けproximity graph構築と探索を設計し、HNSW比で構築2.2〜27倍、large-batch検索33〜77倍、single-query 3.4〜53倍の高速化を報告。LLMサービング固有のKV・decode評価はないためborderline。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.27090-inferscale-gpu-native-kv-injection.md"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11761",
+      "identity_tokens": [
+        "arXiv:2308.11761",
+        "DOI:10.48550/arXiv.2308.11761"
+      ],
+      "title": "KnowledGPT: Enhancing Large Language Models with Retrieval and Storage Access on Knowledge Bases",
+      "reason": "知識ベースへの検索・保存アクセスでLLM能力を拡張するRAG/エージェント方式で、推論実行系の効率化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2308.11761",
+      "body_check": "本文情報でProgram-of-Thought型のKB操作、検索・保存、個人化知識管理を統合するKnowledGPTを確認。評価軸は知識利用・QA能力でありGPUメモリ、KV、throughput、latencyの最適化ではない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.11030",
+      "identity_tokens": [
+        "arXiv:2308.11030",
+        "DOI:10.48550/arXiv.2308.11030"
+      ],
+      "title": "Ramulator 2.0: A Modern, Modular, and Extensible DRAM Simulator",
+      "reason": "HBM3等を含むメモリシステム評価基盤としてLLMメモリ階層研究に利用可能だが、論文自体は汎用DRAMシミュレータでLLM推論専用ではない。",
+      "source_url": "https://arxiv.org/abs/2308.11030",
+      "body_check": "本文情報でDDR5、LPDDR5、HBM3、GDDR6等をモデル化するモジュール型cycle-accurate DRAM simulatorを設計し、RowHammer対策等で拡張性を評価。LLMのKV/offload/servingを直接最適化する研究ではないためborderline。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10502",
+      "identity_tokens": [
+        "arXiv:2308.10502",
+        "DOI:10.48550/arXiv.2308.10502"
+      ],
+      "title": "GradientCoin: A Peer-to-Peer Decentralized Large Language Models",
+      "reason": "分散型・P2PのLLM学習/所有構想が主題で、推論サービング高速化を直接扱わない。",
+      "source_url": "https://arxiv.org/abs/2308.10502",
+      "body_check": "本文情報でBitcoin類似のP2P分散LLM構想を論じ、中央集権的学習・所有への代替を提示する研究と確認。KV、decode、offload、serving schedulerの実装評価はない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.06744",
+      "identity_tokens": [
+        "arXiv:2308.06744",
+        "DOI:10.48550/arXiv.2308.06744"
+      ],
+      "title": "Token-Scaled Logit Distillation for Ternary Weight Generative Language Models",
+      "reason": "三値重みモデルを得る量子化認識学習と知識蒸留が主貢献で、最終適用先が学習工程側の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2308.06744",
+      "body_check": "本文情報でtoken-scaled logit distillationを量子化認識学習へ導入し、ternary-weight生成言語モデルのperplexityと推論タスク精度を維持することを評価。実行時カーネルやサービング方式ではなく学習手法が中心。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03958",
+      "identity_tokens": [
+        "arXiv:2308.03958",
+        "DOI:10.48550/arXiv.2308.03958"
+      ],
+      "title": "Simple synthetic data reduces sycophancy in large language models",
+      "reason": "合成データ微調整で迎合性を低減するアラインメント研究で、LLM推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.03958",
+      "body_check": "本文でPaLM系列のsycophancyを測定し、公開NLPタスクから生成した合成データを用いる軽量fine-tuningで迎合性を低減することを確認。目的はモデル挙動改善であり推論速度・メモリではない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03210",
+      "identity_tokens": [
+        "arXiv:2308.03210",
+        "DOI:10.48550/arXiv.2308.03210"
+      ],
+      "title": "Time-Parameterized Convolutional Neural Networks for Irregularly Sampled Time Series",
+      "reason": "不規則時系列向け畳み込みモデルの研究で、LLM/Transformer推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2308.03210",
+      "body_check": "本文で時間依存kernelを用いるTPCNNを提案し、不規則サンプリング時系列の補間・分類を評価。LLM、KV、サービング、量子化等は対象外。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.01285",
+      "identity_tokens": [
+        "arXiv:2308.01285",
+        "DOI:10.48550/arXiv.2308.01285"
+      ],
+      "title": "Flows: Building Blocks of Reasoning and Collaborating AI",
+      "reason": "AI・人間・ツールの複雑な相互作用を構成するエージェントフレームワークで、LLM推論ランタイムの効率化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2308.01285",
+      "body_check": "本文でisolated stateとmessage interfaceを持つFlowを再帰的に合成し、competitive codingでAI-only Flow +21点、人間-AI Flow +54点のsolve rate改善を報告。主評価は推論・協調能力でGPU serving/KV最適化ではない。",
+      "first_checked_at": "2026-10-02T19:00:00+09:00",
+      "last_checked_at": "2026-10-02T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ],
+      "worklist_rank": 471
+    }
+  ]
+}
