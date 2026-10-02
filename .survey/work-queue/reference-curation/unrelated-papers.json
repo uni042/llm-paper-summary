@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-02T11:03:20+00:00",
+  "updated_at": "2026-10-02T11:05:21+00:00",
   "record_count": 479,
   "records": {
     "arXiv:2303.08774": {
@@ -4965,7 +4965,7 @@
       ],
       "reason": "DDR4/GDDR/LPDDR/HBM/HMC等を扱う汎用DRAMシミュレータで、LLM推論・KVキャッシュ・推論サービングを対象とする方式ではないため対象外。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-09-30T09:02:37+00:00",
+      "last_checked_at": "2026-10-02T11:05:21+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md",
         "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
@@ -5024,9 +5024,9 @@
       "identity_tokens": [
         "arXiv:2411.10414"
       ],
-      "reason": "画像を含む対話の安全分類モデルで、推論速度・メモリ・サービング効率の最適化が主題ではない。",
+      "reason": "画像を含む入出力の安全分類・コンテンツモデレーション能力を改善するモデル研究であり、推論実行効率の改善を提案しないため対象外。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-02T11:05:21+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
