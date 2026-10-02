@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-1530-scheduled-chat-30",
+  "reference_main_sha": "2c0faa9f0438228913cbb1509f11af1e75790f75",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.13606",
+      "identity_tokens": [
+        "arXiv:2603.13606"
+      ],
+      "title": "NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL",
+      "reason": "MoEの専門家並列通信をNCCL Device API上に統合し、復号向け低遅延モードと事前充填・学習向け高スループットモードを提供する直接的な推論通信基盤。",
+      "source_url": "https://arxiv.org/abs/2603.13606",
+      "body_check": "本文公開情報でncclEpDispatch/ncclEpCombine、低遅延モードのRDMA+NVLink直接all-to-allと二重バッファ、高スループットモードのNVLink域内集約→ノード間RDMAを確認。H100マルチノードとvLLM統合で小バッチ復号・大バッチ事前充填を評価。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.15176",
+      "identity_tokens": [
+        "arXiv:2512.15176"
+      ],
+      "title": "DEER: Draft with Diffusion, Verify with Autoregressive Models",
+      "reason": "拡散LLMをドラフターに使い並列に長い候補列を生成して自己回帰ターゲットで検証する投機的復号で、復号遅延を直接削減する。",
+      "source_url": "https://arxiv.org/abs/2512.15176",
+      "body_check": "本文系公開資料で二段階のドラフター整合学習とsingle-step diffusion draftingを確認。Qwen3系列、HumanEval等で評価し、Qwen3-30B-A3BのHumanEvalで通常復号比5.54倍、EAGLE-3の2.41倍を上回り、受理長は最大32 token。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00088",
+      "identity_tokens": [
+        "arXiv:2511.00088"
+      ],
+      "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail",
+      "reason": "自動運転VLAの推論・行動品質が主題であり、LLM推論サービングやメモリ・カーネル最適化を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2511.00088",
+      "body_check": "本文でCosmos-Reasonを基盤に因果連鎖推論とflow-matching軌道decoderを統合し、SFT/RL後学習、closed-loop simulation、車載road testを評価することを確認。99ms実時間動作は報告するが、主貢献は運転reasoning/action性能。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.19720",
+      "identity_tokens": [
+        "arXiv:2504.19720"
+      ],
+      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+      "reason": "LLM推論サービングをinstance・cluster・新興scenarioに分け、配置、schedule、storage、分離実行、load balancing等を体系化するサーベイで対象範囲に直接一致する。",
+      "source_url": "https://arxiv.org/abs/2504.19720",
+      "body_check": "本文系資料でinstance-levelのmodel placement/request scheduling/decoding-length prediction/storage/disaggregation、cluster-levelのGPU deployment/multi-instance load balancing/cloud serving、emerging scenarioを整理する構成を確認。推論メモリと計算負荷を低遅延・高throughput化する技法の横断比較が中心。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16893",
+      "identity_tokens": [
+        "arXiv:2503.16893"
+      ],
+      "title": "Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation",
+      "reason": "複数LLMからなるオフライン推論アプリの構成・資源割当てをsamplingとsimulationで探索し、E2E効率を最適化するサービング研究。",
+      "source_url": "https://arxiv.org/abs/2503.16893",
+      "body_check": "本文系公開情報でmulti-LLM applicationの各stageについて少数samplingから性能を推定し、simulationで構成候補を評価して資源配分・モデル選択を行う方式を確認。個別kernelではなくアプリ全体のoffline inference makespan/costを対象とするため収録対象。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13270",
+      "identity_tokens": [
+        "arXiv:2502.13270"
+      ],
+      "title": "REALTALK: A 21-Day Real-World Dataset for Long-Term Conversation",
+      "reason": "実世界の長期対話データセットと長期記憶能力評価が主題で、推論ランタイムの効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2502.13270",
+      "body_check": "本文系資料で21日間の実メッセージ対話を収集し、感情知能・persona consistency・長期記憶を分析、合成対話との差を評価する構成を確認。GPU/KV/I/O/schedulingの性能改善は主貢献ではない。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.21187",
+      "identity_tokens": [
+        "arXiv:2412.21187"
+      ],
+      "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs",
+      "reason": "推論時の過剰な思考tokenを削減する効率研究だが、主要な改善手段がself-trainingであり、凍結中の学習系と推論効率系の境界にある。",
+      "source_url": "https://arxiv.org/abs/2412.21187",
+      "body_check": "本文系資料でoutcome/process両面のoverthinking効率指標を導入し、GSM8K/MATH500/GPQA/AIME等で簡単な問題への過剰計算を分析、self-trainingでreasoningを短縮し精度を維持することを確認。最終効果はtest-time compute削減だが学習依存。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10414",
+      "identity_tokens": [
+        "arXiv:2411.10414"
+      ],
+      "title": "Llama Guard 3 Vision: Safeguarding Human-AI Image Understanding Conversations",
+      "reason": "画像を含む対話の安全分類モデルで、推論速度・メモリ・サービング効率の最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2411.10414",
+      "body_check": "本文系資料でLlama 3.2-Visionを基にprompt/response安全分類を行い、MLCommons taxonomyと敵対的攻撃への頑健性を評価することを確認。画像処理の実装詳細はあるが、推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10813",
+      "identity_tokens": [
+        "arXiv:2410.10813"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "reason": "長期対話記憶の能力ベンチマークとretrieval設計が中心で、LLM推論基盤の性能最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2410.10813",
+      "body_check": "本文で500問を長期chat historyへ埋め込み、information extraction/multi-session reasoning/temporal reasoning/knowledge update/abstentionを評価。session decomposition、fact-augmented key、time-aware query等を比較するが、GPU/KV cacheやserving latencyを最適化する研究ではない。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.01366",
+      "identity_tokens": [
+        "arXiv:2409.01366"
+      ],
+      "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
+      "reason": "FFNのchannel別thresholdとattention層の選択的活性疎化、専用sparse kernelによりedge LLM推論を直接高速化する。",
+      "source_url": "https://arxiv.org/abs/2409.01366",
+      "body_check": "本文系資料でchannel-wise thresholdingにより各activation channelの閾値を個別最適化し、性能影響の小さい層だけselective sparsificationする設計とsparse kernel実装を確認。8 downstream taskで既存法より少ないactive parameterで品質を維持し、最大1.27倍高速化。",
+      "first_checked_at": "2026-10-02T15:30:28+09:00",
+      "last_checked_at": "2026-10-02T15:30:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 287
+    }
+  ]
+}
