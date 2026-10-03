@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.00176",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.00176",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.00176",
+      "arXiv:2403.00176"
+    ],
+    "reason": "動的DNN一般のコンパイラ最適化であり、LLM推論・KVキャッシュ・MoE・LLMサービングを最終対象にしていない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+    ],
+    "title": "SoD²: Statically Optimizing Dynamic Deep Neural Network"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f69a3db302d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

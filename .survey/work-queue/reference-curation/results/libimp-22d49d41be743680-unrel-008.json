@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22d49d41be743680-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.13920",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.13920",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.13920",
+      "arXiv:2401.13920"
+    ],
+    "reason": "locality-aware routingでAll-to-All通信とexpert capacityを最適化するが、PanGu-Sigmaの分散training時間短縮を主目的・主評価とするため学習高速化の凍結範囲。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+    ],
+    "title": "LocMoE: A Low-Overhead MoE for Large Language Model Training"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22d49d41be74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

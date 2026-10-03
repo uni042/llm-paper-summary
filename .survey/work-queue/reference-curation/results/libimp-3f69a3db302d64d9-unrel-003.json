@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.17702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.17702",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.17702",
+      "arXiv:2402.17702"
+    ],
+    "reason": "数理最適化ソフトウェアSCIP 9.0の機能・性能報告であり、LLMとは無関係。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.14516-ampd-multi-round-disaggregated-serving.md"
+    ],
+    "title": "The SCIP Optimization Suite 9.0"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f69a3db302d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

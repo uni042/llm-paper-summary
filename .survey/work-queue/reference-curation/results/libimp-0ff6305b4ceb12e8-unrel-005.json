@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ff6305b4ceb12e8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.00784",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.00784",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.00784",
+      "arXiv:2312.00784"
+    ],
+    "reason": "画像上の矢印・円・scribble等の視覚プロンプトを理解する大規模視覚言語モデルの能力・学習研究で、推論サービング効率化が主目的ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+    ],
+    "title": "ViP-LLaVA: Making Large Multimodal Models Understand Arbitrary Visual Prompts"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

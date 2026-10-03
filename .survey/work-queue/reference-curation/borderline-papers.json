@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T01:49:35+00:00",
-  "record_count": 385,
+  "updated_at": "2026-10-03T06:04:49+00:00",
+  "record_count": 391,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5552,6 +5552,96 @@
       "last_checked_at": "2026-10-03T01:49:35+00:00",
       "linked_from": [],
       "title": "Evaluating the accuracy of KV cache reuse techniques"
+    },
+    "arXiv:2311.11829": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.11829",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.11829",
+        "arXiv:2311.11829"
+      ],
+      "reason": "推論時にLLM自身で入力文脈を再生成・除去して最終応答の注意対象を制御する方式だが、主目的は事実性・客観性・sycophancy改善で、速度・メモリ効率化ではないため境界領域。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+      ],
+      "title": "System 2 Attention (is something you might need too)"
+    },
+    "arXiv:2311.02262": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.02262",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.02262",
+        "arXiv:2311.02262"
+      ],
+      "reason": "PASTAは推論時に少数attention headの重みを変更し、モデル再学習なしで指定部分へ注意を誘導するため推論時機構ではあるが、主目的は指示追従・知識統合の品質改善で効率化ではないため境界領域。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+      ],
+      "title": "Tell Your Model Where to Attend: Post-hoc Attention Steering for LLMs"
+    },
+    "arXiv:2402.02643": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.02643",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.02643",
+        "arXiv:2402.02643"
+      ],
+      "reason": "LLMDBはベクトルDBの意味検索・キャッシュでLLM呼出しコストを下げるが、主貢献はDB診断・クエリ書換え・分析へのLLM適用であり、LLM推論runtimeそのものの最適化ではないため境界領域。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md"
+      ],
+      "title": "LLM-Enhanced Data Management"
+    },
+    "arXiv:2401.12503": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.12503",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.12503",
+        "arXiv:2401.12503"
+      ],
+      "reason": "Qwen-1.8Bを使いGTX1080Tiでも動かせる小型LVLMを狙い配備制約には関係するが、主貢献は視覚語彙・モデル設計とマルチモーダル品質であり推論システム最適化ではない。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Small Language Model Meets with Reinforced Vision Vocabulary"
+    },
+    "arXiv:2401.01666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.01666",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.01666",
+        "arXiv:2401.01666"
+      ],
+      "reason": "クラウド大規模モデルとエッジ小型モデルを協調させるtask-oriented deploymentを含み配備効率に接するが、中心は分散学習を含むGenAI/6G全体フレームワークで、評価も画像生成中心のため境界領域。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md"
+      ],
+      "title": "An Edge-Cloud Collaboration Framework for Generative AI Service Provision with Synergetic Big Cloud Model and Small Edge Models"
+    },
+    "arXiv:2312.14950": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.14950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.14950",
+        "arXiv:2312.14950"
+      ],
+      "reason": "MiniSpecでLLM呼出しを必要箇所へ限定しサービス費とタスク時間を2倍超削減するため推論費削減に隣接するが、主貢献はドローン向けエージェント実行・プログラム生成で汎用LLM serving基盤ではない。",
+      "first_checked_at": "2026-10-03T06:04:49+00:00",
+      "last_checked_at": "2026-10-03T06:04:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md"
+      ],
+      "title": "TypeFly: Flying Drones with Large Language Model"
     }
   }
 }

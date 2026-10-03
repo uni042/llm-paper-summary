@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.14950",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.14950",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.14950",
+      "arXiv:2312.14950"
+    ],
+    "reason": "MiniSpecでLLM呼出しを必要箇所へ限定しサービス費とタスク時間を2倍超削減するため推論費削減に隣接するが、主貢献はドローン向けエージェント実行・プログラム生成で汎用LLM serving基盤ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md"
+    ],
+    "title": "TypeFly: Flying Drones with Large Language Model"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49adc3cd584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

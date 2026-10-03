@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.07324",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.07324",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.07324",
+      "arXiv:2401.07324"
+    ],
+    "reason": "planner・caller・summarizerへ能力を分解して個別に微調整するツール利用エージェント研究で、主目的はtool-use品質と更新容易性。推論サービング基盤の速度・メモリ最適化ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md"
+    ],
+    "title": "Small LLMs Are Weak Tool Learners: A Multi-LLM Agent"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49adc3cd584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

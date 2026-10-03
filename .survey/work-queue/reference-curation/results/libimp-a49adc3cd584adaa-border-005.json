@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.01666",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.01666",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.01666",
+      "arXiv:2401.01666"
+    ],
+    "reason": "クラウド大規模モデルとエッジ小型モデルを協調させるtask-oriented deploymentを含み配備効率に接するが、中心は分散学習を含むGenAI/6G全体フレームワークで、評価も画像生成中心のため境界領域。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md"
+    ],
+    "title": "An Edge-Cloud Collaboration Framework for Generative AI Service Provision with Synergetic Big Cloud Model and Small Edge Models"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49adc3cd584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

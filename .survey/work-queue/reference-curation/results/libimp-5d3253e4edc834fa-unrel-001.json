@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5d3253e4edc834fa-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.09589",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.09589",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.09589",
+      "arXiv:2402.09589"
+    ],
+    "reason": "共有GPUクラスタ上のDNN学習通信を計算区間へ重ねる輻輳制御で、最終適用先と主要評価が学習高速化のため凍結範囲。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+    ],
+    "title": "MLCC: A Congestion Control Technique to Accelerate ML Training"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5d3253e4edc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

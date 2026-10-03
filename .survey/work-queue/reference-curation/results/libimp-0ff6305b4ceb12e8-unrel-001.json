@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ff6305b4ceb12e8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.06677",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.06677",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.06677",
+      "arXiv:2312.06677"
+    ],
+    "reason": "LLMを用いたモバイルアプリの業務プロセス自動化が主目的で、LLM推論サービング・KVキャッシュ・カーネル・メモリ階層の効率化ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+    ],
+    "title": "Intelligent Virtual Assistants with LLM-based Process Automation"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

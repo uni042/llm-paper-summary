@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12052",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12052",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.acl-long.242",
+      "DOI:10.48550/arxiv.2402.12052",
+      "arXiv:2402.12052"
+    ],
+    "reason": "小型proxy modelでLLMが知らない知識を推定し必要時だけ検索するRAG/QA手法で、LLM呼出し費削減は副次効果。最終目的は知識獲得・QA性能で推論基盤最適化ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+    ],
+    "title": "Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f69a3db302d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

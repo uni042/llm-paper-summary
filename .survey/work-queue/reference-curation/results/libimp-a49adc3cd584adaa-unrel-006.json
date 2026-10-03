@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.17240",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.17240",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.17240",
+      "arXiv:2312.17240"
+    ],
+    "reason": "LLMを用いたreasoning segmentationの能力改善研究で、推論効率化・サービング・メモリ最適化を最終目的としない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md"
+    ],
+    "title": "LISA++: An Improved Baseline for Reasoning Segmentation with Large Language Model"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49adc3cd584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

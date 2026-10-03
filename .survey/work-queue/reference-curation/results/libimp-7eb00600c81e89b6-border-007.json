@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7eb00600c81e89b6-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.12503",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.12503",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.12503",
+      "arXiv:2401.12503"
+    ],
+    "reason": "Qwen-1.8Bを使いGTX1080Tiでも動かせる小型LVLMを狙い配備制約には関係するが、主貢献は視覚語彙・モデル設計とマルチモーダル品質であり推論システム最適化ではない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "Small Language Model Meets with Reinforced Vision Vocabulary"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7eb00600c81e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
