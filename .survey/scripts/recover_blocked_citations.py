@@ -52,6 +52,9 @@ PRIMARY_PDF_OVERRIDES = {
     "DOI:10.1145/3830422.3830427": "https://dl.acm.org/doi/pdf/10.1145/3830422.3830427",
     "DOI:10.1145/3745756.3809243": "https://dl.acm.org/doi/pdf/10.1145/3745756.3809243",
     "DOI:10.1145/3816440.3818602": "https://dl.acm.org/doi/pdf/10.1145/3816440.3818602",
+    "DOI:10.1109/TPDS.2025.3590014": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11082562",
+    "DOI:10.1109/LCA.2024.3406038": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10540202",
+    "DOI:10.1109/HPCA61900.2025.00103": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10946751",
     "AAAI:39816": "https://ojs.aaai.org/index.php/AAAI/article/download/39816/43777",
     "AAAI:39454": "https://ojs.aaai.org/index.php/AAAI/article/download/39454/43415",
     "AAAI:39106": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
@@ -66,6 +69,9 @@ PRIMARY_PDF_FALLBACKS = {
     ],
     "DOI:10.1145/3830422.3830427": [
         "https://lca.ece.utexas.edu/pubs/li_sigopsreview26.pdf",
+    ],
+    "DOI:10.1109/HPCA61900.2025.00103": [
+        "https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf",
     ],
 }
 
