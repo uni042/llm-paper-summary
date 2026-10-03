@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:50:23+00:00",
-  "record_count": 844,
+  "updated_at": "2026-10-03T18:53:31+00:00",
+  "record_count": 845,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4564,9 +4564,9 @@
         "OpenReview:xtaX3WyCj1",
         "arXiv:2306.01708"
       ],
-      "reason": "複数のタスク別微調整モデルを追加学習なしで統合するモデルマージ手法であり、推論時のメモリ・サービング・カーネル・スケジューリングの効率化を主目的としない。",
+      "reason": "複数のtask-specific modelをparameter mergingしてmulti-task modelを作る研究で、推論時の計算・メモリ・サービング最適化を目的としない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4582,9 +4582,9 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "既存dense checkpointをMoEへ変換して追加事前学習費用を減らす学習効率化が主目的であり、最終適用先が凍結対象の学習工程そのもの。",
+      "reason": "dense checkpointからSparse MoEを構築して追加学習するupcycling方式が主題。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4634,9 +4634,9 @@
       "identity_tokens": [
         "OpenReview:HyUNwulC-"
       ],
-      "reason": "線形再帰ニューラルネットを系列方向に並列化する一般的な学習・系列計算アルゴリズムで、LLM推論基盤を最終適用先としないため対象外。",
+      "reason": "linear recurrenceをsequence方向に並列化する一般RNN algorithmで現行LLM servingを直接対象としない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
@@ -4752,9 +4752,9 @@
         "DOI:10.48550/arxiv.2503.14487",
         "arXiv:2503.14487"
       ],
-      "reason": "本文の主対象は画像生成用Diffusion Transformerの拡張で、バッチ全体のトークンプールと容量予測器によるMoEルーティングを学習しImageNet・text-to-image品質を評価する。LLM推論・LLMサービングへの最終適用がないため対象外。",
+      "reason": "MoEの動的計算配分を扱うが対象は画像生成用Diffusion Transformerであり、LLM推論最適化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4770,9 +4770,9 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "MoEによる適応計算を扱うが最終対象はテキスト画像生成用Diffusion Transformerで、LLM推論の対象範囲外。",
+      "reason": "expert-choice routingで計算を適応配分するが、97B級Diffusion Transformerのtext-to-image生成が対象でありLLM推論ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4789,9 +4789,9 @@
         "DOI:10.48550/arxiv.2409.12941",
         "arXiv:2409.12941"
       ],
-      "reason": "本文は検索拡張生成を事実知識、検索、推論の能力軸で評価するベンチマーク研究で、複数RAG構成の回答品質を分析する。推論実行系の速度・メモリ・キャッシュ・スケジューリング最適化が主題ではないため対象外。",
+      "reason": "FRAMESによってRAGの事実性・検索・推論能力を評価するベンチマーク研究であり、LLM推論ランタイムやメモリ／計算高速化が主題ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4808,9 +4808,9 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "本文はLLMエージェントの構成、応用、評価を体系化するサーベイで、推論サービングやメモリ階層、KVキャッシュ、推論カーネルの効率化を中心課題としていないため対象外。",
+      "reason": "LLMエージェントの構成・応用・評価を整理する総説で、推論サービングや推論効率化の新規方式を提案していない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4841,9 +4841,9 @@
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "未知ジョブ長と依存関係を持つ一般オンラインスケジューリング理論であり、LLMサービング固有のスケジューラではない。",
+      "reason": "処理時間未知かつprecedence制約付きjobの一般online scheduling理論でLLM固有ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:35:14+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
@@ -4875,9 +4875,9 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "多様な質問をクラスタリングしてzero-shot Chain-of-Thoughtからfew-shot実演を自動生成するprompting研究で、推論システムの速度・メモリ・サービング効率化が主目的ではない。",
+      "reason": "chain-of-thought demonstration自動構築による推論能力向上が主題で計算・メモリ・serving高速化ではない。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
@@ -4957,9 +4957,9 @@
         "DOI:10.48550/arxiv.2512.23808",
         "arXiv:2512.23808"
       ],
-      "reason": "音声言語モデルの能力・学習・few-shot性能が主題で、推論システム効率化ではない。",
+      "reason": "audio language modelのpretraining・instruction tuningと音声理解/生成能力が主題。",
       "first_checked_at": "2026-09-30T09:04:57+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         ".survey/work-queue/worker-worklist-45.json"
@@ -6857,9 +6857,9 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731079"
       ],
-      "reason": "dense retrieval自体のアルゴリズム・ハードウェア協調高速化が主目的で、LLM推論ランタイムやRAG生成段の最適化ではない。",
+      "reason": "dense retrievalのalgorithm-hardware co-designが主題で、LLM推論本体の最適化ではない。",
       "first_checked_at": "2026-10-02T11:13:19+00:00",
-      "last_checked_at": "2026-10-03T18:35:14+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
@@ -12443,6 +12443,20 @@
       "last_checked_at": "2026-10-03T18:50:23+00:00",
       "linked_from": [],
       "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
+    },
+    "DOI:10.57967/hf/3372": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.57967/hf/3372",
+      "identity_tokens": [
+        "DOI:10.57967/hf/3372"
+      ],
+      "reason": "長文脈model artifactの公開・学習と能力評価が中心で推論system最適化が主貢献ではない。",
+      "first_checked_at": "2026-10-03T18:53:31+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Llama 3 Gradient: A Series of Long Context Models"
     }
   }
 }

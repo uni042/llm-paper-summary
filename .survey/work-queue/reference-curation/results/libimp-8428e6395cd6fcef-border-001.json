@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8428e6395cd6fcef-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.06123",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.06123",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.06123",
+      "arXiv:2601.06123"
+    ],
+    "reason": "複数LLMのKVキャッシュを共有潜在空間へ写像してモデル間通信を行う研究で、KV状態を直接扱う点は推論システムに近いが、主目的は推論高速化やメモリ削減ではなく協調・技能転送であるためborderline。",
+    "first_checked_at": "2026-10-03T18:31:04+00:00",
+    "last_checked_at": "2026-10-03T18:53:31+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "Latent Space Communication via K-V Cache Alignment"
+  },
+  "processed_at": "2026-10-03T18:53:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8428e6395cd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

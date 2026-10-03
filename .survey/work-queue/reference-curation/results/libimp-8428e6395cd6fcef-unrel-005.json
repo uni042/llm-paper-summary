@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8428e6395cd6fcef-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.12941",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.12941",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.naacl-long.243",
+      "DOI:10.48550/arxiv.2409.12941",
+      "arXiv:2409.12941"
+    ],
+    "reason": "FRAMESによってRAGの事実性・検索・推論能力を評価するベンチマーク研究であり、LLM推論ランタイムやメモリ／計算高速化が主題ではない。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-10-03T18:53:31+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
+    ],
+    "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-03T18:53:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8428e6395cd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

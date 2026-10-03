@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:50:23+00:00",
-  "record_count": 421,
+  "updated_at": "2026-10-03T18:53:31+00:00",
+  "record_count": 420,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4440,9 +4440,9 @@
         "DOI:10.48550/arxiv.2505.00949",
         "arXiv:2505.00949"
       ],
-      "reason": "推論効率を明示目標とし、Llama 3から推論最適化アーキテクチャを探索して高throughputモデルを構築するが、論文全体はモデル系列の学習・推論・公開を扱う技術報告で、純粋な推論システム研究との境界にある。",
+      "reason": "推論効率を明示的に狙い、ニューラルアーキテクチャ探索でモデルを効率化しているが、論文全体の中心は蒸留・教師あり微調整・強化学習を含む推論モデル構築で、サービング／ランタイム最適化そのものではないためborderline。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -6054,27 +6054,14 @@
         "DOI:10.48550/arxiv.2601.06123",
         "arXiv:2601.06123"
       ],
-      "reason": "異種LLM間でKVキャッシュを共有潜在空間へ翻訳して直接通信するため、cross-model KV reuseには強く関連するが、主目的はサービング性能ではなくモデル間知識・技能通信である。",
+      "reason": "複数LLMのKVキャッシュを共有潜在空間へ写像してモデル間通信を行う研究で、KV状態を直接扱う点は推論システムに近いが、主目的は推論高速化やメモリ削減ではなく協調・技能転送であるためborderline。",
       "first_checked_at": "2026-10-03T18:31:04+00:00",
-      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:53:31+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-30.json"
       ],
       "title": "Latent Space Communication via K-V Cache Alignment"
-    },
-    "DOI:10.57967/hf/3372": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.57967/hf/3372",
-      "identity_tokens": [
-        "DOI:10.57967/hf/3372"
-      ],
-      "reason": "1M-token級long-context Llama-3 model artifactで推論時の長文脈負荷と関係するが、主貢献はモデル/学習・RoPE拡張であり推論システム最適化そのものではないためborderline。",
-      "first_checked_at": "2026-10-03T18:35:14+00:00",
-      "last_checked_at": "2026-10-03T18:35:14+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-45.json"
-      ],
-      "title": "Llama 3 Gradient: A series of long context models"
     },
     "DOI:10.14778/3749646.3749724": {
       "classification": "borderline",
