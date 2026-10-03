@@ -7,7 +7,10 @@ authors:
 - Petros Vavaroutsos
 - Sotirios Xydis
 - Dimitrios Soudris
-published: '2025'
+published: '2025-03-01'
+publication: 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA)
+publication_type: 査読付き国際会議論文
+publication_status: Published
 source: https://doi.org/10.1109/HPCA61900.2025.00103
 summary: LLM推論サーバーのサービス水準目標（SLO）を守りつつGPU電力を下げるため、throttLL’eMは将来のKVキャッシュ使用量とバッチサイズを予測し、その値を機械学習性能モデルへ入力して、反復単位でGPU周波数とインスタンス構成を制御する。性能予測はR²>0.97、平均誤差1 iteration/s未満で、NVIDIA Triton Server比で最大43.8%のエネルギー削減、SLO下で少なくとも1.71倍のエネルギー効率改善を報告する。
 list_summary: KVキャッシュ量とバッチサイズから反復性能を予測し、SLO余裕に合わせてGPU周波数・インスタンスを動的制御して、Triton比で最大43.8%の推論エネルギーを削減する。
