@@ -1,0 +1,860 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-2448921cf2276311d535",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-2448921cf2276311d535",
+  "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2202.09368/citations",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "20",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-03T13:18:26.497149+00:00",
+  "preload_id": "preload-2448921cf2276311d535",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Mixture-of-experts action chunking transformers for high-precision robot imitation learning",
+      "source_url": "https://doi.org/10.1016/j.robot.2026.105616",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.robot.2026.105616",
+      "canonical_id": "DOI:10.1016/j.robot.2026.105616",
+      "authors": [
+        "H. Mai",
+        "N. Islam"
+      ]
+    },
+    {
+      "title": "Weather-adaptive reinforcement learning framework for heat pump control under time-of-use tariffs",
+      "source_url": "https://doi.org/10.1016/j.enconman.2026.122015",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "doi": "10.1016/j.enconman.2026.122015",
+      "canonical_id": "DOI:10.1016/j.enconman.2026.122015",
+      "authors": [
+        "Gustavo L. Aschidamini",
+        "Bradley A. Reinholz",
+        "Malcolm S. Metcalfe",
+        "Xue-Bin Peng",
+        "Mariana Resener"
+      ]
+    },
+    {
+      "title": "EssLM-MoE: A mixture-of-experts-enhanced framework for protein essentiality prediction using fused protein language models",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134404",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.neucom.2026.134404",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134404",
+      "authors": [
+        "Min Zeng",
+        "Xu Liu",
+        "Yi-Ming Li",
+        "Qianpei Liu",
+        "Wen-Kang Wang",
+        "Fuhao Zhang",
+        "Fei Guo",
+        "Min Li"
+      ]
+    },
+    {
+      "title": "Seeking commonality while preserving diversity: A differential dual-path MoE solution for Multilingual Neural Machine Translation",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116734",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "doi": "10.1016/j.knosys.2026.116734",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116734",
+      "authors": [
+        "WenYi Li",
+        "Jin-Yu Guo",
+        "Yuang Li",
+        "Xin Chen",
+        "Wenxiang Liu",
+        "Zhao-Kun Wang",
+        "Wenhong Tian"
+      ]
+    },
+    {
+      "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01296",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Mixture-of-Experts (MoE) Diffusion Language Models (DLMs) offer flexible parallel decoding and increased model capacity, but their large number of expert parameters incurs substantial computation and storage costs. Existing low-rank MoE compression methods largely rely on static factorization and fixed rank allocation, which overlook the distinctive properties of MoE DLMs. Specifically, we identify two properties: cross-mode non-uniform redundancy, where parameter redundancy and sensitivity to rank truncation vary across the input, output, and expert modes, and token-wise utilization variation, where hot and cold tokens exhibit distinct spectral characteristics and expert activation patterns. To address these challenges, we propose ITC-MoE, an Importance-guided Token-aware Compression framework for MoE DLMs. ITC-MoE consists of two complementary components. First, Importance-guided Adaptive Tucker Compression (IATC) incorporates activation and gradient importance into expert weight transformation, jointly factorizes expert weights across multiple modes, and adaptively allocates ranks under a fixed parameter budget. Second, Token-aware Compensation and Routing (TCR) applies lightweight low-rank compensation to compression-sensitive hot tokens and restricts the candidate expert set for cold tokens with concentrated routing patterns. By jointly adapting compression capacity and inference execution to both parameter redundancy and token-wise variation, ITC-MoE substantially reduces the computation and storage costs of MoE DLMs while preserving their generation quality. For example, on SDAR-30B-A3B-Chat-b32, ITC-MoE maintains an accuracy of 96.33% on MultiArith under a 30% compression budget, while achieving up to a 7.22x end-to-end speedup. The code is publicly available at https://github.com/lianjunl13-sudo/ITC-MoE.",
+      "canonical_id": "arXiv:2610.01296",
+      "arxiv_id": "2610.01296",
+      "authors": [
+        "Lian Liu",
+        "Shi-Peng Li",
+        "You Huang",
+        "Wei-Qi Yan",
+        "Ming-Te Qiu",
+        "Hua-Zhong Liu",
+        "Xiao-Feng Zhu",
+        "Yunshan Zhong"
+      ]
+    },
+    {
+      "title": "A Robustified Greedy Algorithm for Online Transportation with Improved Competitive Guarantees",
+      "source_url": "https://arxiv.org/abs/2609.39052",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "We study the \\emph{online transportation problem}, in which $n$ requests arriving sequentially in a metric space must be irrevocably assigned to $k$ capacitated facilities. Beyond classical logistics applications, this problem models resource-allocation tasks arising in machine learning, including online facility assignments, recommender systems, and mixture-of-experts routing. We introduce \\emph{Robustified Greedy} (RG), a deterministic generalization of the Robust Matching algorithm that achieves a competitive ratio of $6.6604k-2.89$, improving upon the state-of-the-art bounds of $8k-7$ (Arndt et al., SOSA 2026) and $8k-5$ (Harada and Itoh, ICALP 2025). RG also retains the metric-sensitive guarantee established for Robust Matching (RM) (Nayyar and Raghvendra, FOCS 2017), achieving a competitive ratio of $O(k^{1-1/d}\\log^2 n)$ in $d$-dimensional Euclidean spaces for fixed $d>1$. No comparable metric-sensitive guarantee is known for the transportation algorithms of Arndt et al.\\ or Harada and Itoh. Beyond these competitive guarantees, RG provides a simple explanation for its decisions. It favors the natural nearest-neighbor assignment and, for suitable parameters, departs from this choice only when it identifies a reassignment that reduces the cost of its maintained auxiliary matching, thereby correcting accumulated assignment costs. We also prove that nearest-neighbor assignments account for a guaranteed fraction of RG's total cost, approaching one-half for appropriate parameters, even under adversarial arrivals. Experiments on real-world datasets corroborate the theory: RG achieves lower cost-to-\\textsc{Opt} ratios than the competing algorithms while retaining a substantial nearest-neighbor component in its cost.",
+      "canonical_id": "arXiv:2609.39052",
+      "arxiv_id": "2609.39052",
+      "authors": [
+        "Ritesh Seth",
+        "Syamantak Das",
+        "S. Raghvendra"
+      ]
+    },
+    {
+      "title": "Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models",
+      "source_url": "https://arxiv.org/abs/2609.39445",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router's input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router.",
+      "canonical_id": "arXiv:2609.39445",
+      "arxiv_id": "2609.39445",
+      "authors": [
+        "Hung D. Phan",
+        "T. T. Nguyen",
+        "M. Dinh",
+        "Nhat-Quang Tran"
+      ]
+    },
+    {
+      "title": "HAPMoE: Heterogeneity-Aware Automatic Parallelism Planning for Mixture-of-Experts Models Training",
+      "source_url": "https://arxiv.org/abs/2609.39350",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "As model sizes continue to scale, distributed training has become inevitable. Automatic parallelization techniques can derive efficient training parallelism strategies at low cost while achieving superior performance. The difficulty of this problem is jointly determined by the complexity of the model and the underlying compute cluster. Meanwhile, mixture-of-experts (MoE) models are increasingly emerging as the dominant architecture and the rapid evolution of accelerator hardware has made cluster heterogeneity commonplace, posing substantial challenges to automatic parallelization. However, existing approaches typically target either MoE architectures or heterogeneous clusters, failing to generalize to scenarios where both challenges coexist. To this end, we present HAPMoE, a heterogeneity-aware automatic parallelism planner for MoE training. HAPMoE builds a lightweight MoE-aware cost model and efficiently searches a six-dimensional parallel space, producing parallel plans directly deployable on Megatron-LM. Experiments show that HAPMoE improves end-to-end training throughput by up to 3.2$\\times$ over baselines across heterogeneous clusters. Its non-uniform pipeline partitioning yields an additional up to 78% gains, and its pruning-enhanced dynamic programming algorithm completes the search within 1 minute, demonstrating high efficiency and practical value in complex hardware environments.",
+      "canonical_id": "arXiv:2609.39350",
+      "arxiv_id": "2609.39350",
+      "authors": [
+        "Meng-Yuan Fan",
+        "Pei-Zhuang Cong",
+        "Zi-Xiao Huang",
+        "Si Xu",
+        "Tong Qiao",
+        "Yang-Hao Li",
+        "Jing Yang",
+        "Tong Yang",
+        "Quan-Lu Zhang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "Score the Update, Not the Token: Descent-Aligned Routing for Combinatorial LoRA Experts",
+      "source_url": "https://arxiv.org/abs/2610.00493",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Mixture-of-LoRA-experts methods raise the capacity of low-rank adaptation by routing each token to a few low-rank experts. Nearly all of them tie one input-side factor to one output-side factor per expert, and nearly all of them route by scoring the token: the router picks experts without seeing what any of them would write. We argue that the router should score the update. To first order, adding an expert's update to a layer output lowers the loss by the inner product between that update and the negative loss gradient at the output. This usefulness is quadratic in the token, so a router that is linear in the token sees only the part of it that runs through the token mean, and routers that rank experts by the norm of their own activations never see the output factor. If each expert is split into a reader (down-projection) and a writer (up-projection), the usefulness of every reader--writer pair becomes an inner product in the shared rank-$r$ space, and all $N_AN_B$ pairs can be scored from $N_A+N_B$ vectors. We build VANE on this identity. A low-rank compass predicts the descent direction of each token. VANE scores every pair by the alignment between its update and the compass without forming any update, activates the top-$k$ pairs with additive gates, and gives every pair its exact first-order router gradient. On single-domain commonsense reasoning and a four-domain multi-task mixture with Llama-3.2-3B and Llama-3.1-8B, VANE attains the best average among twelve PEFT and MoE-LoRA baselines, by 0.9--1.1 and 1.3--1.5 points respectively, with less than half the trainable parameters of an 8-expert MoE-LoRA. Its router scores also track the measured usefulness of experts far more closely than token routers do.",
+      "canonical_id": "arXiv:2610.00493",
+      "arxiv_id": "2610.00493",
+      "authors": [
+        "Priya Nair",
+        "Lukas Brenner",
+        "Maya Lindqvist",
+        "D. Whitmore",
+        "Wen-Hsuan Liu",
+        "Tom Saliencro",
+        "Amara Okonkwo",
+        "Rohan Desai"
+      ]
+    },
+    {
+      "title": "Redundancy Meets Synergy: Dependency-aware Expert Selection for MoE via Submodular Optimization",
+      "source_url": "https://arxiv.org/abs/2610.00558",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "While Mixture-of-Experts (MoE) models effectively scale model capacity through sparse activation, their deployment is often bottlenecked by prohibitive memory requirements. Extracting a compact subset of experts presents a promising solution. However, existing expert selection heuristics predominantly rely on Top-k ranking, which isolates the evaluation of individual experts and ignores the intricate inter-expert dependencies introduced by the MoE gating network. In this paper, we propose DS-MoE, a theoretically grounded framework that redefines expert selection via difference-of-submodular (DS) optimization. By analyzing the second-order Taylor expansion of the loss degradation, we reveal functional duality within expert combinations: redundancy (where experts encode overlapping representations) and synergy (where experts provide complementary error cancellation). To navigate this duality, we mathematically decouple redundancy reduction from synergy maximization by formulating the selection objective as a DS function. Furthermore, we devise a tailored majorization-minimization (MM) algorithm with provable monotonicity guarantees to efficiently identify the optimal expert subset. Extensive experiments demonstrate that DS-MoE effectively preserves indispensable expert combinations, achieving superior performance compared to the state-of-the-art baselines.",
+      "canonical_id": "arXiv:2610.00558",
+      "arxiv_id": "2610.00558",
+      "authors": [
+        "Zheng Lin",
+        "Shao-Ke Fang",
+        "Yu-Xin Zhang",
+        "Jin-Feng Xu",
+        "Zi-Han Fang",
+        "Zhe Chen",
+        "Wei Ni",
+        "Jun Luo",
+        "S. Chatzinotas"
+      ]
+    },
+    {
+      "title": "Random Recursive Models",
+      "source_url": "https://arxiv.org/abs/2610.00541",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Recursive models create computational depth through parameter reuse, offering a parameter-efficient alternative to increasing model size. However, most recursive models repeatedly apply one learned transformation or a prescribed sequence of transformations, restricting computation to a fixed layer order. We introduce the Random Recursive Model (RRM), which maintains a pool of $L$ learned layers and performs $T$ recursive steps by sampling one layer independently with replacement for each example and step. This enables flexible layer reuse while retaining the parameter efficiency of recurrence. We evaluate RRM on challenging reasoning tasks, where it matches or exceeds the baselines, often with 50-75 % fewer parameters. RRM can vary its depth at inference, including beyond that seen during training, without retraining or adding parameters, improving tasks that benefit from deeper iterative computation. RRM also supports Monte Carlo inference and probabilistic test-time scaling, both of which improve performance without retraining. These insights may open new directions in neural network architecture design.",
+      "canonical_id": "arXiv:2610.00541",
+      "arxiv_id": "2610.00541",
+      "authors": [
+        "J. Mohamud",
+        "M. Ravanelli"
+      ]
+    },
+    {
+      "title": "Leto: Fast In-Place Recovery for LLM Training on Surviving Hardware",
+      "source_url": "https://arxiv.org/abs/2610.00687",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Hardware-operable failures (HOFs) interrupt large language model (LLM) training but permit recovery on the same hardware without reset, repair, or replacement. Existing recovery systems nevertheless reload checkpoints, recompute lost progress, and rebuild process state, idling GPUs that could otherwise continue training. We present Leto, a fault-tolerant training system that leverages surviving hardware to enable efficient in-place recovery. Our key insight is that the state needed to resume training can be retained or prepared outside the active training process while remaining on the same hardware. Leto retains the working model state and the reusable process state, and preinitializes the remaining state in a shadow trainer. We devise two-tier erasure protection and chunk-level transactional updates to keep the retained model state recoverable and consistent, and reclaim the shadow state when active training needs its GPU memory. Evaluation on 6- and 72-GPU NVIDIA A100 clusters shows that Leto recovers 3.6--6.5$\\times$ faster than the best-performing checkpointing baselines and improves productive training time by up to 13.7 percentage points. Large-scale simulation shows over 95% productive training time on a 131,072-GPU cluster.",
+      "canonical_id": "arXiv:2610.00687",
+      "arxiv_id": "2610.00687",
+      "authors": [
+        "Geon-Woo Kim",
+        "Joonseok Kim",
+        "Daehyeok Kim"
+      ]
+    },
+    {
+      "title": "CARE-MoE: Conflict-Aware Routing-Guided Expert Mixture-of-Experts for Continual Learning",
+      "source_url": "https://doi.org/10.3390/math14193557",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Continual learning (CL) aims to learn new tasks sequentially while retaining prior knowledge. Although recent mixture-of-experts (MoE) architectures mitigate catastrophic forgetting by reducing global parameter sharing, they introduce a new bottleneck: expert-level interference. Because multiple tasks inevitably share a subset of experts, these shared parameters are repeatedly exposed to heterogeneous task updates, which may contribute to the degradation of previously encoded knowledge. To tackle this, we propose CARE-MoE (Conflict-Aware Routing-Guided Expert Mixture-of-Experts), a unified framework designed to limit repeated expert sharing, characterize expert utilization, and regulate expert-level updates. First, CARE-MoE aims to limit excessive expert sharing via dual-granularity routing, which leverages both task-level structural and input-level semantic information to distribute representations effectively. Second, rather than using routing merely for expert selection, it diagnoses highly exposed experts via multi-dimensional routing signal aggregation, quantifying expert importance through selection frequency, cross-task overlap, and routing consistency. Finally, conflict-aware expert stabilization translates this diagnosis into targeted optimization, selectively directing preservation updates to the routing parameters associated with heavily shared experts and modulating their strength according to the directional agreement between adaptation and preservation, while allowing task-specific experts to flexibly adapt. Extensive experiments on standard and long-sequence CL benchmarks show that CARE-MoE achieves higher overall performance than the results reported for existing methods. In-depth analyses further indicate that our framework bridges routing behavior with parameter optimization, achieving a favorable balance between stability and plasticity in long-term continual learning.",
+      "doi": "10.3390/math14193557",
+      "canonical_id": "DOI:10.3390/math14193557",
+      "authors": [
+        "SeonGyoung Lee",
+        "DaeHo Kim",
+        "SoYeop Yoo",
+        "O. Jeong"
+      ]
+    },
+    {
+      "title": "Emergent Specialization in Populations of Self-Supervised Collaborative Vision Experts Without a Shared Gate or Cross-Agent Gradients",
+      "source_url": "https://arxiv.org/abs/2609.36770",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Can a population of neural networks develop a useful division of labor without a shared gate or gradients between agents? We study a setting where each network has its own weights, trains independently on the same heterogeneous data, and can ask another agent for help through a forward pass. Unlike mixtures of experts, where a jointly trained gate assigns inputs to experts, specialization here must emerge without central control. We test this in a small scale proxy for predictive visual pretraining. Initially identical agents are finetuned on an unlabeled mixture of six visual domains using masked prediction of frozen DINOv3 features. We measure specialization by asking whether the best agent for an input aligns with its latent domain, and utilization by asking whether responsibility is distributed across agents. We progressively remove central control, ending with DISCO (DIStributed COllaboration) where each agent locally selects a helper, reads its internal state through a gradient free channel, and rewards its router only for the improvement that help provides. Specialization emerges and is useful. Randomly routed populations underperform a single generalist, while semantically routed populations outperform it, showing that specialization rather than population size drives the gain. Specialization persists without a central router, and gradient free communication lets nonexperts exploit emergent expertise. In DISCO, a random agent helped by the expert matches the solo generalist, while experts surpass it, including on data outside the specialization mixture. Local routers select the emergent expert for 98% of inputs. These effects persist across population size, model capacity, data imbalance, and finetuning seeds, providing measurable evidence for the dynamics needed by decentralized predictive pretraining.",
+      "canonical_id": "arXiv:2609.36770",
+      "arxiv_id": "2609.36770",
+      "authors": [
+        "Aram Davtyan",
+        "Pablo Acuaviva",
+        "Sebastian Stapf",
+        "Paolo Favaro"
+      ]
+    },
+    {
+      "title": "Cobalt: Leveraging Expert Co-activation for Efficient Distributed MoE Training",
+      "source_url": "https://arxiv.org/abs/2609.36959",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Mixture-of-Experts (MoE) has increasingly become a mainstream approach for scaling large language models, as it expands model capacity while keeping computation cost nearly constant. Training large-scale MoE models relies on Expert Parallelism (EP), which distributes expert replicas across GPUs and exchanges tokens through all-to-all communication. The efficiency of EP is often constrained by two system bottlenecks: cross-node token transfers are limited by inter-node bandwidth, while skewed expert workloads lead to imbalanced computation across GPUs. Prior work mitigates these bottlenecks based on per-expert workload statistics, but overlooks the fact that experts could share the communication. In this work, we empirically present the observation that many pairs of experts are frequently co-activated by individual tokens. Motivated by this, we present Cobalt, an efficient MoE training framework that leverages expert co-activation to reduce cross-node traffic and workload imbalance. Cobalt adopts a two-stage expert layout planner that adapts expert layout to the evolving expert co-activation and workload conditions. It periodically co-locates frequently co-activated experts on the same node to reduce the cross-node communication, and performs per-step intra-node adjustment to rebalance the workloads. Subsequently, we develop a communication-aware task assignment method that routes tokens to fewer remote nodes based on the current expert layout. Experiments on 32 B200 GPUs show that Cobalt achieves up to 1.53-2.41 times (1.28-1.89 times on average) of speedup compared to existing MoE training frameworks, while reducing cross-node token traffic by 75.74%-99.26%.",
+      "canonical_id": "arXiv:2609.36959",
+      "arxiv_id": "2609.36959",
+      "authors": [
+        "Jun-Kang Zhou",
+        "Xin-Yi Liu",
+        "Fang-Cheng Fu"
+      ]
+    },
+    {
+      "title": "Cross-Entropy Guided Routing in Mixture-of-Experts Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.37751",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Sparse mixture-of-experts (MoE) large language models scale model capacity by routing each token to a small subset of experts. Their routers are regularized with load balancing terms and learn affinity scores through the language-model objective. However, these objectives do not provide direct alignment between routing affinities and token-level error. We introduce token-error supervision for sparse routing in two forms. The first form predicts an error score per expert. The affinity-weighted aggregate of these scores is aligned to the next-token cross-entropy loss, while the individual scores attenuate affinity before top-$K$ selection. The second directly aligns the router's affinities to the model's objective without requiring an additional head or inference-time modification. Both formulations use the Itakura--Saito divergence or an exponential negative log-likelihood for aligning affinities and token errors. Across two sparse MoE backbones and four multiple-choice question-answering benchmarks, we evaluate both supervision mechanisms. On Granite, our method improves accuracy by approximately 2.3 percentage points on average over a parameter-matched routing baseline. With stronger supervision, the gain on ARC-Challenge reaches 2.94 points. Both mechanisms preserve the native sparse execution budget and aggregation policy. Our code is available in the supplementary materials.",
+      "canonical_id": "arXiv:2609.37751",
+      "arxiv_id": "2609.37751",
+      "authors": [
+        "Yury Nahshan",
+        "Nati Daniel",
+        "Jacob Goldberger",
+        "Yoli Shavit"
+      ]
+    },
+    {
+      "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+      "source_url": "https://doi.org/10.1145/3830418.3843857",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+      "doi": "10.1145/3830418.3843857",
+      "canonical_id": "DOI:10.1145/3830418.3843857",
+      "authors": [
+        "Jing-Kai He",
+        "Guang-Da Sun",
+        "Tian-Jian Li",
+        "Dong Du",
+        "Yu-Bin Xia",
+        "Hai-Bo Chen"
+      ]
+    },
+    {
+      "title": "TopoEP: Topology-Aware Load Balancing for Expert-Parallel MoE Training",
+      "source_url": "https://arxiv.org/abs/2609.35481",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Dynamic routing creates severe load imbalance in large-scale expert-parallel Mixture-of-Experts (MoE) training, turning GPUs that host hot experts into stragglers. As each MoE layer waits for its slowest rank, these stragglers prolong the expert-parallel stage and reduce overall training efficiency. Existing expert-parallelism load-balancing (EPLB) systems commonly compute load-balancing plans on the CPU, incurring device--host data transfers and cross-rank synchronization that make scheduling at every layer and microbatch expensive. Their planning formulations also overlook the hierarchical communication costs of modern scale-up and scale-out GPU clusters. We present \\textit{TopoEP}, a GPU-native, topology-aware load-balancing system for large-scale MoE training. At each MoE layer and training microbatch, \\textit{TopoEP} converts the current routing result into hot-expert replication and token-rerouting decisions and executes the resulting plan without data-dependent host synchronization, reducing critical-path overhead. To generate these decisions, \\textit{TopoEP} uses a deterministic GPU solver that performs inter-node placement followed by intra-node refinement, allowing all ranks to independently produce bitwise-identical plans. On a 32-GPU NVIDIA H800 cluster, integrating \\textit{TopoEP} with Megatron-LM improves end-to-end training throughput by 6.2\\%--11.4\\% across three representative MoE models.",
+      "canonical_id": "arXiv:2609.35481",
+      "arxiv_id": "2609.35481",
+      "authors": [
+        "Jia-Cheng Zhu",
+        "Xie Zhao",
+        "Gong-Ming Zhao",
+        "Hong-Li Xu",
+        "Yao Fei",
+        "Jin Fang"
+      ]
+    },
+    {
+      "title": "SAGE: Subspace Alignment for Classifier-Free Guidance in Mixture-of-Experts Diffusion Models",
+      "source_url": "https://arxiv.org/abs/2609.34525",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Diffusion Transformers with Mixture-of-Experts (MoE) routing are a leading recipe for scaling generative models. Classifier-Free Guidance (CFG) is essential for generation quality, yet excessively high guidance scales trigger collapse. We identify a previously unreported failure mode in their combination: the two CFG branches route independently, so their realized activations occupy different subspaces. The unconditional write then leaves the conditional subspace, and CFG amplifies that residual linearly in the guidance scale. We propose SAGE, a training-time regularizer that aligns unconditional MoE activations to the conditional subspace without restricting routing diversity, at zero inference cost. Toy experiments show that SAGE dramatically suppresses extreme drift by 9.2x. When scaled to a 1B-parameter text-to-image model, SAGE significantly improves generation quality, delivering a 9.3% boost in peak DPG-Bench performance. Extensive experiments demonstrate that SAGE consistently outperforms the baseline.",
+      "canonical_id": "arXiv:2609.34525",
+      "arxiv_id": "2609.34525",
+      "authors": [
+        "Bo-Yuan Zhang",
+        "Yang-Ming Cheng",
+        "Ning-Yi Zhang",
+        "Peng-Fei Liu",
+        "Wei-Jie Li",
+        "Yi-Fan Gao",
+        "Hang-Yu Li",
+        "Li-Tong Gong"
+      ]
+    },
+    {
+      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36222",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+      "canonical_id": "arXiv:2609.36222",
+      "arxiv_id": "2609.36222",
+      "authors": [
+        "Ali Abbasi",
+        "Justin Shi",
+        "Soheil Kolouri"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.robot.2026.105616",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.robot.2026.105616",
+        "title:mixtureofexperts action chunking transformers for highprecision robot imitation learning",
+        "url:https://doi.org/10.1016/j.robot.2026.105616"
+      ],
+      "record": {
+        "title": "Mixture-of-experts action chunking transformers for high-precision robot imitation learning",
+        "source_url": "https://doi.org/10.1016/j.robot.2026.105616",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.robot.2026.105616",
+        "canonical_id": "DOI:10.1016/j.robot.2026.105616",
+        "authors": [
+          "H. Mai",
+          "N. Islam"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.enconman.2026.122015",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.enconman.2026.122015",
+        "title:weatheradaptive reinforcement learning framework for heat pump control under timeofuse tariffs",
+        "url:https://doi.org/10.1016/j.enconman.2026.122015"
+      ],
+      "record": {
+        "title": "Weather-adaptive reinforcement learning framework for heat pump control under time-of-use tariffs",
+        "source_url": "https://doi.org/10.1016/j.enconman.2026.122015",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "doi": "10.1016/j.enconman.2026.122015",
+        "canonical_id": "DOI:10.1016/j.enconman.2026.122015",
+        "authors": [
+          "Gustavo L. Aschidamini",
+          "Bradley A. Reinholz",
+          "Malcolm S. Metcalfe",
+          "Xue-Bin Peng",
+          "Mariana Resener"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134404",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134404",
+        "title:esslmmoe a mixtureofexpertsenhanced framework for protein essentiality prediction using fused protein language models",
+        "url:https://doi.org/10.1016/j.neucom.2026.134404"
+      ],
+      "record": {
+        "title": "EssLM-MoE: A mixture-of-experts-enhanced framework for protein essentiality prediction using fused protein language models",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134404",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.neucom.2026.134404",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134404",
+        "authors": [
+          "Min Zeng",
+          "Xu Liu",
+          "Yi-Ming Li",
+          "Qianpei Liu",
+          "Wen-Kang Wang",
+          "Fuhao Zhang",
+          "Fei Guo",
+          "Min Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.knosys.2026.116734",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.knosys.2026.116734",
+        "title:seeking commonality while preserving diversity a differential dualpath moe solution for multilingual neural machine translation",
+        "url:https://doi.org/10.1016/j.knosys.2026.116734"
+      ],
+      "record": {
+        "title": "Seeking commonality while preserving diversity: A differential dual-path MoE solution for Multilingual Neural Machine Translation",
+        "source_url": "https://doi.org/10.1016/j.knosys.2026.116734",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "doi": "10.1016/j.knosys.2026.116734",
+        "canonical_id": "DOI:10.1016/j.knosys.2026.116734",
+        "authors": [
+          "WenYi Li",
+          "Jin-Yu Guo",
+          "Yuang Li",
+          "Xin Chen",
+          "Wenxiang Liu",
+          "Zhao-Kun Wang",
+          "Wenhong Tian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01296",
+      "identity_tokens": [
+        "id:arXiv:2610.01296",
+        "title:itcmoe importanceguided tokenaware compression for moe diffusion language models",
+        "url:https://arxiv.org/abs/2610.01296"
+      ],
+      "record": {
+        "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.01296",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Mixture-of-Experts (MoE) Diffusion Language Models (DLMs) offer flexible parallel decoding and increased model capacity, but their large number of expert parameters incurs substantial computation and storage costs. Existing low-rank MoE compression methods largely rely on static factorization and fixed rank allocation, which overlook the distinctive properties of MoE DLMs. Specifically, we identify two properties: cross-mode non-uniform redundancy, where parameter redundancy and sensitivity to rank truncation vary across the input, output, and expert modes, and token-wise utilization variation, where hot and cold tokens exhibit distinct spectral characteristics and expert activation patterns. To address these challenges, we propose ITC-MoE, an Importance-guided Token-aware Compression framework for MoE DLMs. ITC-MoE consists of two complementary components. First, Importance-guided Adaptive Tucker Compression (IATC) incorporates activation and gradient importance into expert weight transformation, jointly factorizes expert weights across multiple modes, and adaptively allocates ranks under a fixed parameter budget. Second, Token-aware Compensation and Routing (TCR) applies lightweight low-rank compensation to compression-sensitive hot tokens and restricts the candidate expert set for cold tokens with concentrated routing patterns. By jointly adapting compression capacity and inference execution to both parameter redundancy and token-wise variation, ITC-MoE substantially reduces the computation and storage costs of MoE DLMs while preserving their generation quality. For example, on SDAR-30B-A3B-Chat-b32, ITC-MoE maintains an accuracy of 96.33% on MultiArith under a 30% compression budget, while achieving up to a 7.22x end-to-end speedup. The code is publicly available at https://github.com/lianjunl13-sudo/ITC-MoE.",
+        "canonical_id": "arXiv:2610.01296",
+        "arxiv_id": "2610.01296",
+        "authors": [
+          "Lian Liu",
+          "Shi-Peng Li",
+          "You Huang",
+          "Wei-Qi Yan",
+          "Ming-Te Qiu",
+          "Hua-Zhong Liu",
+          "Xiao-Feng Zhu",
+          "Yunshan Zhong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39052",
+      "identity_tokens": [
+        "id:arXiv:2609.39052",
+        "title:a robustified greedy algorithm for online transportation with improved competitive guarantees",
+        "url:https://arxiv.org/abs/2609.39052"
+      ],
+      "record": {
+        "title": "A Robustified Greedy Algorithm for Online Transportation with Improved Competitive Guarantees",
+        "source_url": "https://arxiv.org/abs/2609.39052",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "We study the \\emph{online transportation problem}, in which $n$ requests arriving sequentially in a metric space must be irrevocably assigned to $k$ capacitated facilities. Beyond classical logistics applications, this problem models resource-allocation tasks arising in machine learning, including online facility assignments, recommender systems, and mixture-of-experts routing. We introduce \\emph{Robustified Greedy} (RG), a deterministic generalization of the Robust Matching algorithm that achieves a competitive ratio of $6.6604k-2.89$, improving upon the state-of-the-art bounds of $8k-7$ (Arndt et al., SOSA 2026) and $8k-5$ (Harada and Itoh, ICALP 2025). RG also retains the metric-sensitive guarantee established for Robust Matching (RM) (Nayyar and Raghvendra, FOCS 2017), achieving a competitive ratio of $O(k^{1-1/d}\\log^2 n)$ in $d$-dimensional Euclidean spaces for fixed $d>1$. No comparable metric-sensitive guarantee is known for the transportation algorithms of Arndt et al.\\ or Harada and Itoh. Beyond these competitive guarantees, RG provides a simple explanation for its decisions. It favors the natural nearest-neighbor assignment and, for suitable parameters, departs from this choice only when it identifies a reassignment that reduces the cost of its maintained auxiliary matching, thereby correcting accumulated assignment costs. We also prove that nearest-neighbor assignments account for a guaranteed fraction of RG's total cost, approaching one-half for appropriate parameters, even under adversarial arrivals. Experiments on real-world datasets corroborate the theory: RG achieves lower cost-to-\\textsc{Opt} ratios than the competing algorithms while retaining a substantial nearest-neighbor component in its cost.",
+        "canonical_id": "arXiv:2609.39052",
+        "arxiv_id": "2609.39052",
+        "authors": [
+          "Ritesh Seth",
+          "Syamantak Das",
+          "S. Raghvendra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39445",
+      "identity_tokens": [
+        "id:arXiv:2609.39445",
+        "title:rawrouted mixture of adapters a causal intervention for routing collapse in time series foundation models",
+        "url:https://arxiv.org/abs/2609.39445"
+      ],
+      "record": {
+        "title": "Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models",
+        "source_url": "https://arxiv.org/abs/2609.39445",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router's input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router.",
+        "canonical_id": "arXiv:2609.39445",
+        "arxiv_id": "2609.39445",
+        "authors": [
+          "Hung D. Phan",
+          "T. T. Nguyen",
+          "M. Dinh",
+          "Nhat-Quang Tran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39350",
+      "identity_tokens": [
+        "id:arXiv:2609.39350",
+        "title:hapmoe heterogeneityaware automatic parallelism planning for mixtureofexperts models training",
+        "url:https://arxiv.org/abs/2609.39350"
+      ],
+      "record": {
+        "title": "HAPMoE: Heterogeneity-Aware Automatic Parallelism Planning for Mixture-of-Experts Models Training",
+        "source_url": "https://arxiv.org/abs/2609.39350",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "As model sizes continue to scale, distributed training has become inevitable. Automatic parallelization techniques can derive efficient training parallelism strategies at low cost while achieving superior performance. The difficulty of this problem is jointly determined by the complexity of the model and the underlying compute cluster. Meanwhile, mixture-of-experts (MoE) models are increasingly emerging as the dominant architecture and the rapid evolution of accelerator hardware has made cluster heterogeneity commonplace, posing substantial challenges to automatic parallelization. However, existing approaches typically target either MoE architectures or heterogeneous clusters, failing to generalize to scenarios where both challenges coexist. To this end, we present HAPMoE, a heterogeneity-aware automatic parallelism planner for MoE training. HAPMoE builds a lightweight MoE-aware cost model and efficiently searches a six-dimensional parallel space, producing parallel plans directly deployable on Megatron-LM. Experiments show that HAPMoE improves end-to-end training throughput by up to 3.2$\\times$ over baselines across heterogeneous clusters. Its non-uniform pipeline partitioning yields an additional up to 78% gains, and its pruning-enhanced dynamic programming algorithm completes the search within 1 minute, demonstrating high efficiency and practical value in complex hardware environments.",
+        "canonical_id": "arXiv:2609.39350",
+        "arxiv_id": "2609.39350",
+        "authors": [
+          "Meng-Yuan Fan",
+          "Pei-Zhuang Cong",
+          "Zi-Xiao Huang",
+          "Si Xu",
+          "Tong Qiao",
+          "Yang-Hao Li",
+          "Jing Yang",
+          "Tong Yang",
+          "Quan-Lu Zhang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00493",
+      "identity_tokens": [
+        "id:arXiv:2610.00493",
+        "title:score the update not the token descentaligned routing for combinatorial lora experts",
+        "url:https://arxiv.org/abs/2610.00493"
+      ],
+      "record": {
+        "title": "Score the Update, Not the Token: Descent-Aligned Routing for Combinatorial LoRA Experts",
+        "source_url": "https://arxiv.org/abs/2610.00493",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Mixture-of-LoRA-experts methods raise the capacity of low-rank adaptation by routing each token to a few low-rank experts. Nearly all of them tie one input-side factor to one output-side factor per expert, and nearly all of them route by scoring the token: the router picks experts without seeing what any of them would write. We argue that the router should score the update. To first order, adding an expert's update to a layer output lowers the loss by the inner product between that update and the negative loss gradient at the output. This usefulness is quadratic in the token, so a router that is linear in the token sees only the part of it that runs through the token mean, and routers that rank experts by the norm of their own activations never see the output factor. If each expert is split into a reader (down-projection) and a writer (up-projection), the usefulness of every reader--writer pair becomes an inner product in the shared rank-$r$ space, and all $N_AN_B$ pairs can be scored from $N_A+N_B$ vectors. We build VANE on this identity. A low-rank compass predicts the descent direction of each token. VANE scores every pair by the alignment between its update and the compass without forming any update, activates the top-$k$ pairs with additive gates, and gives every pair its exact first-order router gradient. On single-domain commonsense reasoning and a four-domain multi-task mixture with Llama-3.2-3B and Llama-3.1-8B, VANE attains the best average among twelve PEFT and MoE-LoRA baselines, by 0.9--1.1 and 1.3--1.5 points respectively, with less than half the trainable parameters of an 8-expert MoE-LoRA. Its router scores also track the measured usefulness of experts far more closely than token routers do.",
+        "canonical_id": "arXiv:2610.00493",
+        "arxiv_id": "2610.00493",
+        "authors": [
+          "Priya Nair",
+          "Lukas Brenner",
+          "Maya Lindqvist",
+          "D. Whitmore",
+          "Wen-Hsuan Liu",
+          "Tom Saliencro",
+          "Amara Okonkwo",
+          "Rohan Desai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00558",
+      "identity_tokens": [
+        "id:arXiv:2610.00558",
+        "title:redundancy meets synergy dependencyaware expert selection for moe via submodular optimization",
+        "url:https://arxiv.org/abs/2610.00558"
+      ],
+      "record": {
+        "title": "Redundancy Meets Synergy: Dependency-aware Expert Selection for MoE via Submodular Optimization",
+        "source_url": "https://arxiv.org/abs/2610.00558",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "While Mixture-of-Experts (MoE) models effectively scale model capacity through sparse activation, their deployment is often bottlenecked by prohibitive memory requirements. Extracting a compact subset of experts presents a promising solution. However, existing expert selection heuristics predominantly rely on Top-k ranking, which isolates the evaluation of individual experts and ignores the intricate inter-expert dependencies introduced by the MoE gating network. In this paper, we propose DS-MoE, a theoretically grounded framework that redefines expert selection via difference-of-submodular (DS) optimization. By analyzing the second-order Taylor expansion of the loss degradation, we reveal functional duality within expert combinations: redundancy (where experts encode overlapping representations) and synergy (where experts provide complementary error cancellation). To navigate this duality, we mathematically decouple redundancy reduction from synergy maximization by formulating the selection objective as a DS function. Furthermore, we devise a tailored majorization-minimization (MM) algorithm with provable monotonicity guarantees to efficiently identify the optimal expert subset. Extensive experiments demonstrate that DS-MoE effectively preserves indispensable expert combinations, achieving superior performance compared to the state-of-the-art baselines.",
+        "canonical_id": "arXiv:2610.00558",
+        "arxiv_id": "2610.00558",
+        "authors": [
+          "Zheng Lin",
+          "Shao-Ke Fang",
+          "Yu-Xin Zhang",
+          "Jin-Feng Xu",
+          "Zi-Han Fang",
+          "Zhe Chen",
+          "Wei Ni",
+          "Jun Luo",
+          "S. Chatzinotas"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00541",
+      "identity_tokens": [
+        "id:arXiv:2610.00541",
+        "title:random recursive models",
+        "url:https://arxiv.org/abs/2610.00541"
+      ],
+      "record": {
+        "title": "Random Recursive Models",
+        "source_url": "https://arxiv.org/abs/2610.00541",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Recursive models create computational depth through parameter reuse, offering a parameter-efficient alternative to increasing model size. However, most recursive models repeatedly apply one learned transformation or a prescribed sequence of transformations, restricting computation to a fixed layer order. We introduce the Random Recursive Model (RRM), which maintains a pool of $L$ learned layers and performs $T$ recursive steps by sampling one layer independently with replacement for each example and step. This enables flexible layer reuse while retaining the parameter efficiency of recurrence. We evaluate RRM on challenging reasoning tasks, where it matches or exceeds the baselines, often with 50-75 % fewer parameters. RRM can vary its depth at inference, including beyond that seen during training, without retraining or adding parameters, improving tasks that benefit from deeper iterative computation. RRM also supports Monte Carlo inference and probabilistic test-time scaling, both of which improve performance without retraining. These insights may open new directions in neural network architecture design.",
+        "canonical_id": "arXiv:2610.00541",
+        "arxiv_id": "2610.00541",
+        "authors": [
+          "J. Mohamud",
+          "M. Ravanelli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00687",
+      "identity_tokens": [
+        "id:arXiv:2610.00687",
+        "title:leto fast inplace recovery for llm training on surviving hardware",
+        "url:https://arxiv.org/abs/2610.00687"
+      ],
+      "record": {
+        "title": "Leto: Fast In-Place Recovery for LLM Training on Surviving Hardware",
+        "source_url": "https://arxiv.org/abs/2610.00687",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Hardware-operable failures (HOFs) interrupt large language model (LLM) training but permit recovery on the same hardware without reset, repair, or replacement. Existing recovery systems nevertheless reload checkpoints, recompute lost progress, and rebuild process state, idling GPUs that could otherwise continue training. We present Leto, a fault-tolerant training system that leverages surviving hardware to enable efficient in-place recovery. Our key insight is that the state needed to resume training can be retained or prepared outside the active training process while remaining on the same hardware. Leto retains the working model state and the reusable process state, and preinitializes the remaining state in a shadow trainer. We devise two-tier erasure protection and chunk-level transactional updates to keep the retained model state recoverable and consistent, and reclaim the shadow state when active training needs its GPU memory. Evaluation on 6- and 72-GPU NVIDIA A100 clusters shows that Leto recovers 3.6--6.5$\\times$ faster than the best-performing checkpointing baselines and improves productive training time by up to 13.7 percentage points. Large-scale simulation shows over 95% productive training time on a 131,072-GPU cluster.",
+        "canonical_id": "arXiv:2610.00687",
+        "arxiv_id": "2610.00687",
+        "authors": [
+          "Geon-Woo Kim",
+          "Joonseok Kim",
+          "Daehyeok Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/math14193557",
+      "identity_tokens": [
+        "id:DOI:10.3390/math14193557",
+        "title:caremoe conflictaware routingguided expert mixtureofexperts for continual learning",
+        "url:https://doi.org/10.3390/math14193557"
+      ],
+      "record": {
+        "title": "CARE-MoE: Conflict-Aware Routing-Guided Expert Mixture-of-Experts for Continual Learning",
+        "source_url": "https://doi.org/10.3390/math14193557",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Continual learning (CL) aims to learn new tasks sequentially while retaining prior knowledge. Although recent mixture-of-experts (MoE) architectures mitigate catastrophic forgetting by reducing global parameter sharing, they introduce a new bottleneck: expert-level interference. Because multiple tasks inevitably share a subset of experts, these shared parameters are repeatedly exposed to heterogeneous task updates, which may contribute to the degradation of previously encoded knowledge. To tackle this, we propose CARE-MoE (Conflict-Aware Routing-Guided Expert Mixture-of-Experts), a unified framework designed to limit repeated expert sharing, characterize expert utilization, and regulate expert-level updates. First, CARE-MoE aims to limit excessive expert sharing via dual-granularity routing, which leverages both task-level structural and input-level semantic information to distribute representations effectively. Second, rather than using routing merely for expert selection, it diagnoses highly exposed experts via multi-dimensional routing signal aggregation, quantifying expert importance through selection frequency, cross-task overlap, and routing consistency. Finally, conflict-aware expert stabilization translates this diagnosis into targeted optimization, selectively directing preservation updates to the routing parameters associated with heavily shared experts and modulating their strength according to the directional agreement between adaptation and preservation, while allowing task-specific experts to flexibly adapt. Extensive experiments on standard and long-sequence CL benchmarks show that CARE-MoE achieves higher overall performance than the results reported for existing methods. In-depth analyses further indicate that our framework bridges routing behavior with parameter optimization, achieving a favorable balance between stability and plasticity in long-term continual learning.",
+        "doi": "10.3390/math14193557",
+        "canonical_id": "DOI:10.3390/math14193557",
+        "authors": [
+          "SeonGyoung Lee",
+          "DaeHo Kim",
+          "SoYeop Yoo",
+          "O. Jeong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36770",
+      "identity_tokens": [
+        "id:arXiv:2609.36770",
+        "title:emergent specialization in populations of selfsupervised collaborative vision experts without a shared gate or crossagent gradients",
+        "url:https://arxiv.org/abs/2609.36770"
+      ],
+      "record": {
+        "title": "Emergent Specialization in Populations of Self-Supervised Collaborative Vision Experts Without a Shared Gate or Cross-Agent Gradients",
+        "source_url": "https://arxiv.org/abs/2609.36770",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Can a population of neural networks develop a useful division of labor without a shared gate or gradients between agents? We study a setting where each network has its own weights, trains independently on the same heterogeneous data, and can ask another agent for help through a forward pass. Unlike mixtures of experts, where a jointly trained gate assigns inputs to experts, specialization here must emerge without central control. We test this in a small scale proxy for predictive visual pretraining. Initially identical agents are finetuned on an unlabeled mixture of six visual domains using masked prediction of frozen DINOv3 features. We measure specialization by asking whether the best agent for an input aligns with its latent domain, and utilization by asking whether responsibility is distributed across agents. We progressively remove central control, ending with DISCO (DIStributed COllaboration) where each agent locally selects a helper, reads its internal state through a gradient free channel, and rewards its router only for the improvement that help provides. Specialization emerges and is useful. Randomly routed populations underperform a single generalist, while semantically routed populations outperform it, showing that specialization rather than population size drives the gain. Specialization persists without a central router, and gradient free communication lets nonexperts exploit emergent expertise. In DISCO, a random agent helped by the expert matches the solo generalist, while experts surpass it, including on data outside the specialization mixture. Local routers select the emergent expert for 98% of inputs. These effects persist across population size, model capacity, data imbalance, and finetuning seeds, providing measurable evidence for the dynamics needed by decentralized predictive pretraining.",
+        "canonical_id": "arXiv:2609.36770",
+        "arxiv_id": "2609.36770",
+        "authors": [
+          "Aram Davtyan",
+          "Pablo Acuaviva",
+          "Sebastian Stapf",
+          "Paolo Favaro"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36959",
+      "identity_tokens": [
+        "id:arXiv:2609.36959",
+        "title:cobalt leveraging expert coactivation for efficient distributed moe training",
+        "url:https://arxiv.org/abs/2609.36959"
+      ],
+      "record": {
+        "title": "Cobalt: Leveraging Expert Co-activation for Efficient Distributed MoE Training",
+        "source_url": "https://arxiv.org/abs/2609.36959",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Mixture-of-Experts (MoE) has increasingly become a mainstream approach for scaling large language models, as it expands model capacity while keeping computation cost nearly constant. Training large-scale MoE models relies on Expert Parallelism (EP), which distributes expert replicas across GPUs and exchanges tokens through all-to-all communication. The efficiency of EP is often constrained by two system bottlenecks: cross-node token transfers are limited by inter-node bandwidth, while skewed expert workloads lead to imbalanced computation across GPUs. Prior work mitigates these bottlenecks based on per-expert workload statistics, but overlooks the fact that experts could share the communication. In this work, we empirically present the observation that many pairs of experts are frequently co-activated by individual tokens. Motivated by this, we present Cobalt, an efficient MoE training framework that leverages expert co-activation to reduce cross-node traffic and workload imbalance. Cobalt adopts a two-stage expert layout planner that adapts expert layout to the evolving expert co-activation and workload conditions. It periodically co-locates frequently co-activated experts on the same node to reduce the cross-node communication, and performs per-step intra-node adjustment to rebalance the workloads. Subsequently, we develop a communication-aware task assignment method that routes tokens to fewer remote nodes based on the current expert layout. Experiments on 32 B200 GPUs show that Cobalt achieves up to 1.53-2.41 times (1.28-1.89 times on average) of speedup compared to existing MoE training frameworks, while reducing cross-node token traffic by 75.74%-99.26%.",
+        "canonical_id": "arXiv:2609.36959",
+        "arxiv_id": "2609.36959",
+        "authors": [
+          "Jun-Kang Zhou",
+          "Xin-Yi Liu",
+          "Fang-Cheng Fu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37751",
+      "identity_tokens": [
+        "id:arXiv:2609.37751",
+        "title:crossentropy guided routing in mixtureofexperts large language models",
+        "url:https://arxiv.org/abs/2609.37751"
+      ],
+      "record": {
+        "title": "Cross-Entropy Guided Routing in Mixture-of-Experts Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.37751",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Sparse mixture-of-experts (MoE) large language models scale model capacity by routing each token to a small subset of experts. Their routers are regularized with load balancing terms and learn affinity scores through the language-model objective. However, these objectives do not provide direct alignment between routing affinities and token-level error. We introduce token-error supervision for sparse routing in two forms. The first form predicts an error score per expert. The affinity-weighted aggregate of these scores is aligned to the next-token cross-entropy loss, while the individual scores attenuate affinity before top-$K$ selection. The second directly aligns the router's affinities to the model's objective without requiring an additional head or inference-time modification. Both formulations use the Itakura--Saito divergence or an exponential negative log-likelihood for aligning affinities and token errors. Across two sparse MoE backbones and four multiple-choice question-answering benchmarks, we evaluate both supervision mechanisms. On Granite, our method improves accuracy by approximately 2.3 percentage points on average over a parameter-matched routing baseline. With stronger supervision, the gain on ARC-Challenge reaches 2.94 points. Both mechanisms preserve the native sparse execution budget and aggregation policy. Our code is available in the supplementary materials.",
+        "canonical_id": "arXiv:2609.37751",
+        "arxiv_id": "2609.37751",
+        "authors": [
+          "Yury Nahshan",
+          "Nati Daniel",
+          "Jacob Goldberger",
+          "Yoli Shavit"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843857",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843857",
+        "title:taming dynamism on gpus crosssm kernel fusion via sm cooperation and justintime reduction",
+        "url:https://doi.org/10.1145/3830418.3843857"
+      ],
+      "record": {
+        "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction",
+        "source_url": "https://doi.org/10.1145/3830418.3843857",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Modern LLM architectures and systems render GPU kernel input shapes increasingly dynamic, e.g., conditional expert routing in MoE and batches with variable-length sequences. This dynamism degrades performance in both expert-tuned kernels and compiler frameworks. We identify the root cause as dynamic cross-SM data dependencies across execution phases, which force distinct phases into separate kernels for correctness. The resulting kernel boundaries amplify intra-phase workload imbalance across SMs, and compel intermediate states to expensive round trips through off-chip memory. We propose cross-SM kernel fusion, which pushes kernel fusion boundary from traditional intra-SM scope to the entire GPU. Instead of enforcing dependencies via kernel boundaries, it utilizes dynamic SM cooperation and just-in-time reduction. We present MeldKernel (Meld for short), a compiler framework realizing cross-SM fusion for dynamic workloads. First, utilizing GPU on-chip interconnects, Meld enables finegrained SM cooperation, which decomposes coarse-grained, phase-level dependencies into sub-task-level ones, transforming sequential kernels into a fluid, cross-SM pipeline. This further enables just-in-time reduction, facilitating waiting-free and localized state reduction via asynchronous communication. Second, to handle workload dynamism, we propose a decoupled execution model. Developers declaratively define computation logic, while the hardware mapping and inter-SM cooperation are deferred to runtime and adapted to input shapes. Meld accelerates critical workloads like decoding attention by 1.3× on average over the best solutions. Meld shifts GPU execution from a BSP-centric model toward fine-grained, dataflow-driven execution.",
+        "doi": "10.1145/3830418.3843857",
+        "canonical_id": "DOI:10.1145/3830418.3843857",
+        "authors": [
+          "Jing-Kai He",
+          "Guang-Da Sun",
+          "Tian-Jian Li",
+          "Dong Du",
+          "Yu-Bin Xia",
+          "Hai-Bo Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35481",
+      "identity_tokens": [
+        "id:arXiv:2609.35481",
+        "title:topoep topologyaware load balancing for expertparallel moe training",
+        "url:https://arxiv.org/abs/2609.35481"
+      ],
+      "record": {
+        "title": "TopoEP: Topology-Aware Load Balancing for Expert-Parallel MoE Training",
+        "source_url": "https://arxiv.org/abs/2609.35481",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Dynamic routing creates severe load imbalance in large-scale expert-parallel Mixture-of-Experts (MoE) training, turning GPUs that host hot experts into stragglers. As each MoE layer waits for its slowest rank, these stragglers prolong the expert-parallel stage and reduce overall training efficiency. Existing expert-parallelism load-balancing (EPLB) systems commonly compute load-balancing plans on the CPU, incurring device--host data transfers and cross-rank synchronization that make scheduling at every layer and microbatch expensive. Their planning formulations also overlook the hierarchical communication costs of modern scale-up and scale-out GPU clusters. We present \\textit{TopoEP}, a GPU-native, topology-aware load-balancing system for large-scale MoE training. At each MoE layer and training microbatch, \\textit{TopoEP} converts the current routing result into hot-expert replication and token-rerouting decisions and executes the resulting plan without data-dependent host synchronization, reducing critical-path overhead. To generate these decisions, \\textit{TopoEP} uses a deterministic GPU solver that performs inter-node placement followed by intra-node refinement, allowing all ranks to independently produce bitwise-identical plans. On a 32-GPU NVIDIA H800 cluster, integrating \\textit{TopoEP} with Megatron-LM improves end-to-end training throughput by 6.2\\%--11.4\\% across three representative MoE models.",
+        "canonical_id": "arXiv:2609.35481",
+        "arxiv_id": "2609.35481",
+        "authors": [
+          "Jia-Cheng Zhu",
+          "Xie Zhao",
+          "Gong-Ming Zhao",
+          "Hong-Li Xu",
+          "Yao Fei",
+          "Jin Fang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34525",
+      "identity_tokens": [
+        "id:arXiv:2609.34525",
+        "title:sage subspace alignment for classifierfree guidance in mixtureofexperts diffusion models",
+        "url:https://arxiv.org/abs/2609.34525"
+      ],
+      "record": {
+        "title": "SAGE: Subspace Alignment for Classifier-Free Guidance in Mixture-of-Experts Diffusion Models",
+        "source_url": "https://arxiv.org/abs/2609.34525",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Diffusion Transformers with Mixture-of-Experts (MoE) routing are a leading recipe for scaling generative models. Classifier-Free Guidance (CFG) is essential for generation quality, yet excessively high guidance scales trigger collapse. We identify a previously unreported failure mode in their combination: the two CFG branches route independently, so their realized activations occupy different subspaces. The unconditional write then leaves the conditional subspace, and CFG amplifies that residual linearly in the guidance scale. We propose SAGE, a training-time regularizer that aligns unconditional MoE activations to the conditional subspace without restricting routing diversity, at zero inference cost. Toy experiments show that SAGE dramatically suppresses extreme drift by 9.2x. When scaled to a 1B-parameter text-to-image model, SAGE significantly improves generation quality, delivering a 9.3% boost in peak DPG-Bench performance. Extensive experiments demonstrate that SAGE consistently outperforms the baseline.",
+        "canonical_id": "arXiv:2609.34525",
+        "arxiv_id": "2609.34525",
+        "authors": [
+          "Bo-Yuan Zhang",
+          "Yang-Ming Cheng",
+          "Ning-Yi Zhang",
+          "Peng-Fei Liu",
+          "Wei-Jie Li",
+          "Yi-Fan Gao",
+          "Hang-Yu Li",
+          "Li-Tong Gong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36222",
+      "identity_tokens": [
+        "id:arXiv:2609.36222",
+        "title:base batchaware selection of experts using predicted removal error for efficient moe decoding",
+        "url:https://arxiv.org/abs/2609.36222"
+      ],
+      "record": {
+        "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+        "source_url": "https://arxiv.org/abs/2609.36222",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+        "canonical_id": "arXiv:2609.36222",
+        "arxiv_id": "2609.36222",
+        "authors": [
+          "Ali Abbasi",
+          "Justin Shi",
+          "Soheil Kolouri"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8fee8409b3864b941c2763a9a595e87fdac6260309743e1528a259854b322b16",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
