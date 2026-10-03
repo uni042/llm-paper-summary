@@ -66,26 +66,21 @@ class ValidationIssueCollectionTests(unittest.TestCase):
             },
         }
 
-    def test_collects_all_current_issues_in_one_preflight(self):
+    def test_semantic_depth_is_not_a_github_publication_gate(self):
         record = self._record()
         record["problem_method"]["method_overview"] = "short"
         record["problem_method"]["components"][0]["description"] = "short"
         record["problem_method"]["components"][1]["description"] = "short"
 
         issues = assemble.collect_validation_issues(record)
+        self.assertEqual(issues, [])
 
-        self.assertIn("problem_method.method_overview must explain the end-to-end mechanism", issues)
-        self.assertIn("problem_method.components[0].description is too short", issues)
-        self.assertIn("problem_method.components[1].description is too short", issues)
-        self.assertGreaterEqual(len(issues), 3)
-
-    def test_validate_record_keeps_first_error_compatibility(self):
+    def test_validate_record_rejects_publication_integrity_failure(self):
         record = self._record()
-        record["problem_method"]["method_overview"] = "short"
-        record["problem_method"]["components"][0]["description"] = "short"
+        record["metadata"]["canonical_id"] = ""
         with self.assertRaisesRegex(
             ValueError,
-            "problem_method.method_overview must explain the end-to-end mechanism",
+            "metadata.canonical_id is required for rendering/publication",
         ):
             assemble.validate_record(record)
 
