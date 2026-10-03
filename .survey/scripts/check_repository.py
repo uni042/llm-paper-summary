@@ -189,7 +189,7 @@ def check(root, inventory):
         schedule = maintenance.get("schedule")
         if not isinstance(pending, bool):
             issue("maintenance_pending", maintenance_name, f"Invalid maintenance_pending={pending!r}")
-        if schedule_owner != "scheduled_chat_0830_jst_30_worker":
+        if schedule_owner != "github_actions_schedule":
             issue("maintenance_schedule_owner", maintenance_name, f"Unexpected schedule_owner={schedule_owner!r}")
         if schedule != "daily_0830_jst":
             issue("maintenance_schedule", maintenance_name, f"Unexpected schedule={schedule!r}")
