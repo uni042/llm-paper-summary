@@ -1,11 +1,11 @@
 ---
-canonical_id: "DOI:10.1145/3620665.3640422"
-doi: "10.1145/3620665.3640422"
-last_audited: "2026-09-28"
+canonical_id: DOI:10.1145/3620665.3640422
+doi: 10.1145/3620665.3640422
+last_audited: '2026-09-28'
 audit_version: 2
-title: "AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference"
-summary: "バッチ推論では全結合層（Fully Connected layer; FC）は重み再利用でGPU利用率を上げられる一方、生成段階の注意は各要求固有のKVキャッシュを毎トークン読み、バッチを増やしても低い演算/バイト比が残る。AttAccはこの非対称性に合わせ、FCをxPU、注意をHBMベースのメモリ内処理（Processing-In-Memory; PIM）へ分担する異種システムを設計する。PIMではGEMV演算器をDRAM bank近傍、softmaxをbuffer dieへ置き、head-level pipelineとFFN co-processingでxPU/PIMの空きを重ねる。Ramulator系シミュレータと実GPU検証を組み合わせたASPLOS 2024評価では、同一1280GB容量の従来GPU系に対し175Bモデルで最大2.81倍の性能、2.67倍のエネルギー効率を報告する。"
-list_summary: "GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level pipeline、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。"
+title: AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference
+summary: バッチ推論では全結合層（Fully Connected layer; FC）は重み再利用でGPU利用率を上げられる一方、生成段階の注意は各要求固有のKVキャッシュを毎トークン読み、バッチを増やしても低い演算/バイト比が残る。AttAccはこの非対称性に合わせ、FCをxPU、注意をHBMベースのメモリ内処理（Processing-In-Memory; PIM）へ分担する異種システムを設計する。PIMではGEMV演算器をDRAM bank近傍、softmaxをbuffer dieへ置き、head-level pipelineとFFN co-processingでxPU/PIMの空きを重ねる。Ramulator系シミュレータと実GPU検証を組み合わせたASPLOS 2024評価では、同一1280GB容量の従来GPU系に対し175Bモデルで最大2.81倍の性能、2.67倍のエネルギー効率を報告する。
+list_summary: GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level pipeline、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 authors:
 - Jaehyun Park
 - Jaewan Choi
@@ -14,24 +14,155 @@ authors:
 - Yongsuk Kwon
 - Nam Sung Kim
 - Jung Ho Ahn
-published: "2024-04-27"
-publication: "ASPLOS 2024, pp. 103-119"
-publication_type: "peer-reviewed-conference"
-publication_status: "Published"
-lineage: "inference-systems"
-topics: ["PIM","HBM","KVキャッシュ","注意高速化","異種推論"]
-source: "https://doi.org/10.1145/3620665.3640422"
+published: '2024-04-27'
+publication: ASPLOS 2024, pp. 103-119
+publication_type: peer-reviewed-conference
+publication_status: Published
+lineage: inference-systems
+topics:
+- PIM
+- HBM
+- KVキャッシュ
+- 注意高速化
+- 異種推論
+source: https://doi.org/10.1145/3620665.3640422
 sources:
-- "https://doi.org/10.1145/3620665.3640422"
-- "https://github.com/scale-snu/attacc_simulator"
-last_checked: "2026-09-28"
-code: "https://github.com/scale-snu/attacc_simulator"
-implementation: "xPU側のGPUシミュレータと、Ramulator 2.0を拡張したHBM3-PIMシミュレータを公開。bank、bank-group、buffer-dieの3配置、電力制約、head-level pipeline、FFN co-processingを切り替えて評価できる。"
-implementation_status: "official-public-simulator"
-hardware_evaluation: "simulation-with-real-GPU-validation"
-hardware_details: "DGX A100を基準とするシミュレーション。HBM3 5.2Gbps/pin、DGXBase 640GB、DGXLargeおよびDGX+AttAccは1280GB級容量で比較。PIM算術器はASAP7 7nmで合成し、DRAM側面積は1z-nmプロセスへ換算。シミュレータはOPT-66Bの実DGX A100結果で検証。"
-quality_effect: "モデル演算を近似・量子化しないFP16主評価では生成品質を変えない。別途INT8感度評価も行うが、中心主張は実行配置の変更である。"
-evidence_locations: ["§2","§3","§4-6","Figures 7-13","§7.1-7.5","Figures 14-17"]
+- https://doi.org/10.1145/3620665.3640422
+- https://github.com/scale-snu/attacc_simulator
+last_checked: '2026-09-28'
+code: https://github.com/scale-snu/attacc_simulator
+implementation: xPU側のGPUシミュレータと、Ramulator 2.0を拡張したHBM3-PIMシミュレータを公開。bank、bank-group、buffer-dieの3配置、電力制約、head-level pipeline、FFN co-processingを切り替えて評価できる。
+implementation_status: official-public-simulator
+hardware_evaluation: simulation-with-real-GPU-validation
+hardware_details: DGX A100を基準とするシミュレーション。HBM3 5.2Gbps/pin、DGXBase 640GB、DGXLargeおよびDGX+AttAccは1280GB級容量で比較。PIM算術器はASAP7 7nmで合成し、DRAM側面積は1z-nmプロセスへ換算。シミュレータはOPT-66Bの実DGX A100結果で検証。
+quality_effect: モデル演算を近似・量子化しないFP16主評価では生成品質を変えない。別途INT8感度評価も行うが、中心主張は実行配置の変更である。
+evidence_locations:
+- §2
+- §3
+- §4-6
+- Figures 7-13
+- §7.1-7.5
+- Figures 14-17
+references:
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.1109/tcsi.2019.2945617
+  doi: 10.1109/tcsi.2019.2945617
+- canonical_id: DOI:10.1109/hpca51647.2021.00080
+  doi: 10.1109/hpca51647.2021.00080
+- canonical_id: DOI:10.1109/micro.2016.7783753
+  doi: 10.1109/micro.2016.7783753
+- canonical_id: DOI:10.48550/arxiv.2005.14165
+  doi: 10.48550/arxiv.2005.14165
+- canonical_id: DOI:10.1109/isscc.2017.7870333
+  doi: 10.1109/isscc.2017.7870333
+- canonical_id: DOI:10.1109/hpca.2016.7446095
+  doi: 10.1109/hpca.2016.7446095
+- canonical_id: DOI:10.1145/3458817.3476146
+  doi: 10.1145/3458817.3476146
+- canonical_id: DOI:10.1109/lca.2023.3305386
+  doi: 10.1109/lca.2023.3305386
+- canonical_id: DOI:10.1016/j.mejo.2016.04.006
+  doi: 10.1016/j.mejo.2016.04.006
+- canonical_id: DOI:10.1109/hotchips.2019.8875680
+  doi: 10.1109/hotchips.2019.8875680
+- canonical_id: DOI:10.1109/hpca.2015.7056040
+  doi: 10.1109/hpca.2015.7056040
+- canonical_id: DOI:10.1145/3352460.3358260
+  doi: 10.1145/3352460.3358260
+- canonical_id: DOI:10.1145/3037697.3037702
+  doi: 10.1145/3037697.3037702
+- canonical_id: DOI:10.1109/isca45697.2020.00071
+  doi: 10.1109/isca45697.2020.00071
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: DOI:10.1145/3445814.3446749
+  doi: 10.1145/3445814.3446749
+- canonical_id: DOI:10.1109/hpca47549.2020.00035
+  doi: 10.1109/hpca47549.2020.00035
+- canonical_id: DOI:10.1109/isca52012.2021.00060
+  doi: 10.1109/isca52012.2021.00060
+- canonical_id: DOI:10.1109/micro50266.2020.00040
+  doi: 10.1109/micro50266.2020.00040
+- canonical_id: DOI:10.1109/micro56248.2022.00051
+  doi: 10.1109/micro56248.2022.00051
+- canonical_id: DOI:10.1145/3307650.3322237
+  doi: 10.1145/3307650.3322237
+- canonical_id: DOI:10.1109/vlsit.2018.8510682
+  doi: 10.1109/vlsit.2018.8510682
+- canonical_id: DOI:10.1145/3579371.3589350
+  doi: 10.1145/3579371.3589350
+- canonical_id: DOI:10.1109/isca52012.2021.00010
+  doi: 10.1109/isca52012.2021.00010
+- canonical_id: DOI:10.1109/imw.2017.7939084
+  doi: 10.1109/imw.2017.7939084
+- canonical_id: DOI:10.1109/tc.2020.2984496
+  doi: 10.1109/tc.2020.2984496
+- canonical_id: DOI:10.1109/isca.2016.41
+  doi: 10.1109/isca.2016.41
+- canonical_id: DOI:10.1145/2366231.2337202
+  doi: 10.1145/2366231.2337202
+- canonical_id: DOI:10.1109/lca.2015.2414456
+  doi: 10.1109/lca.2015.2414456
+- canonical_id: DOI:10.1145/3352460.3358284
+  doi: 10.1145/3352460.3358284
+- canonical_id: DOI:10.1109/isca52012.2021.00013
+  doi: 10.1109/isca52012.2021.00013
+- canonical_id: DOI:10.1109/isscc42614.2022.9731711
+  doi: 10.1109/isscc42614.2022.9731711
+- canonical_id: DOI:10.1145/3123939.3123977
+  doi: 10.1145/3123939.3123977
+- canonical_id: DOI:10.1145/3466752.3480125
+  doi: 10.1145/3466752.3480125
+- canonical_id: DOI:10.1109/isbi.2008.4541126
+  doi: 10.1109/isbi.2008.4541126
+- canonical_id: DOI:10.1145/3123939.3124545
+  doi: 10.1145/3123939.3124545
+- canonical_id: DOI:10.1145/3466752.3480080
+  doi: 10.1145/3466752.3480080
+- canonical_id: DOI:10.1109/isscc42614.2022.9731562
+  doi: 10.1109/isscc42614.2022.9731562
+- canonical_id: DOI:10.1109/jssc.2022.3193354
+  doi: 10.1109/jssc.2022.3193354
+- canonical_id: DOI:10.1145/3460971
+  doi: 10.1145/3460971
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: DOI:10.1145/3579371.3589057
+  doi: 10.1145/3579371.3589057
+- canonical_id: DOI:10.1109/jssc.2022.3232096
+  doi: 10.1109/jssc.2022.3232096
+- canonical_id: DOI:10.1145/3123939.3124544
+  doi: 10.1145/3123939.3124544
+- canonical_id: DOI:10.1109/isvlsi.2014.94
+  doi: 10.1109/isvlsi.2014.94
+- canonical_id: DOI:10.1109/hoti51249.2020.00016
+  doi: 10.1109/hoti51249.2020.00016
+- canonical_id: arXiv:1911.02150
+- canonical_id: DOI:10.1109/tcad.2018.2857044
+  doi: 10.1109/tcad.2018.2857044
+- canonical_id: DOI:10.1109/isscc.2018.8310252
+  doi: 10.1109/isscc.2018.8310252
+- canonical_id: DOI:10.1109/mcse.2010.69
+  doi: 10.1109/mcse.2010.69
+- canonical_id: DOI:10.48550/arxiv.1706.03762
+  doi: 10.48550/arxiv.1706.03762
+- canonical_id: arXiv:2012.09852
+  doi: 10.1109/hpca51647.2021.00018
+- canonical_id: DOI:10.1109/jssc.2019.2939682
+  doi: 10.1109/jssc.2019.2939682
+- canonical_id: DOI:10.1109/iedm.2016.7838333
+  doi: 10.1109/iedm.2016.7838333
+- canonical_id: arXiv:2211.10438
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1109/lca.2022.3182387
+  doi: 10.1109/lca.2022.3182387
+- canonical_id: DOI:10.1109/micro50266.2020.00071
+  doi: 10.1109/micro50266.2020.00071
+- canonical_id: DOI:10.1109/hpca53966.2022.00082
+  doi: 10.1109/hpca53966.2022.00082
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 68
 ---
 
 # AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference

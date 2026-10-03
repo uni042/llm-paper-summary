@@ -27,6 +27,76 @@ implementation: CPUへ専門家を退避するメモリ制約下MoE推論を前�
 implementation_status: official-code-not-confirmed
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2401.06066
+  arxiv_id: '2401.06066'
+- canonical_id: DOI:10.1109/comst.2025.3580745
+  doi: 10.1109/comst.2025.3580745
+- canonical_id: arXiv:2312.17238
+  arxiv_id: '2312.17238'
+- canonical_id: arXiv:2408.10284
+  doi: 10.1145/3676536.3676741
+- canonical_id: arXiv:2410.22134
+  arxiv_id: '2410.22134'
+- canonical_id: arXiv:2501.10375
+- canonical_id: arXiv:2308.15030
+  doi: 10.18653/v1/2024.acl-long.363
+- canonical_id: arXiv:2211.17192
+  arxiv_id: '2211.17192'
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: DOI:10.1145/3589334.3645416
+  doi: 10.1145/3589334.3645416
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2502.16982
+  arxiv_id: '2502.16982'
+- canonical_id: arXiv:2401.07851
+  doi: 10.18653/v1/2024.findings-acl.456
+- canonical_id: DOI:10.52202/075280-2020
+  doi: 10.52202/075280-2020
+- canonical_id: DOI:10.3115/v1/w14-3302
+  doi: 10.3115/v1/w14-3302
+- canonical_id: DOI:10.18653/v1/k16-1028
+  doi: 10.18653/v1/k16-1028
+- canonical_id: DOI:10.1162/tacl_a_00276
+  doi: 10.1162/tacl_a_00276
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.550
+  doi: 10.18653/v1/2020.emnlp-main.550
+- canonical_id: arXiv:2109.07958
+  arxiv_id: '2109.07958'
+- canonical_id: arXiv:2402.07033
+  arxiv_id: '2402.07033'
+- canonical_id: arXiv:2412.15296
+  arxiv_id: '2412.15296'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2310.01334
+  openreview_id: eFWG9Cy3WK.
+- canonical_id: arXiv:2504.02658
+  openreview_id: NXVXiJmhe1.
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2505.19645
+  arxiv_id: '2505.19645'
+- canonical_id: arXiv:2601.11676
+  arxiv_id: '2601.11676'
+- canonical_id: arXiv:2203.14685
+  arxiv_id: '2203.14685'
+- canonical_id: arXiv:2404.05019
+  arxiv_id: '2404.05019'
+- canonical_id: DOI:10.1145/3695053.3731025
+  doi: 10.1145/3695053.3731025
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 42
 ---
 
 # Self-Speculative Decoding for On-device MoE Acceleration

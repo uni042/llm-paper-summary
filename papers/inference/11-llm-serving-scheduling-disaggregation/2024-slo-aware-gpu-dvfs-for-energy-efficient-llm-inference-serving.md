@@ -1,34 +1,61 @@
 ---
-canonical_id: "DOI:10.1109/LCA.2024.3406038"
-doi: "10.1109/LCA.2024.3406038"
-last_audited: "2026-09-28"
+canonical_id: DOI:10.1109/LCA.2024.3406038
+doi: 10.1109/LCA.2024.3406038
+last_audited: '2026-09-28'
 audit_version: 2
-title: "SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving"
-summary: "大規模言語モデル（Large Language Model; LLM）の配信では、最大GPU周波数を常用すると負荷が低い時間帯にも遅延余裕を電力へ使い切ってしまう。一方、固定電力制限は要求到着率や実行中バッチサイズの変動へ追従できず、尾部遅延のサービス水準目標（Service-Level Objective; SLO）を破りやすい。本論文は、GPU周波数と要求毎秒（Requests Per Second; RPS）からp95/p99エンドツーエンド遅延を予測する3次多項式を疎なオフライン計測から構築し、実行時に約25生成反復ごとにSLOを満たす最小周波数を選ぶ。NVIDIA Triton Inference Server＋TensorRT-LLM上のGPT-J-6BをA100/A30で評価し、7〜10秒の尾部遅延SLOを保ちながら既定最大周波数比22.8〜45.5%のエネルギー削減を報告する。"
-list_summary: "RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。"
+title: SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving
+summary: 大規模言語モデル（Large Language Model; LLM）の配信では、最大GPU周波数を常用すると負荷が低い時間帯にも遅延余裕を電力へ使い切ってしまう。一方、固定電力制限は要求到着率や実行中バッチサイズの変動へ追従できず、尾部遅延のサービス水準目標（Service-Level Objective; SLO）を破りやすい。本論文は、GPU周波数と要求毎秒（Requests Per Second; RPS）からp95/p99エンドツーエンド遅延を予測する3次多項式を疎なオフライン計測から構築し、実行時に約25生成反復ごとにSLOを満たす最小周波数を選ぶ。NVIDIA Triton Inference Server＋TensorRT-LLM上のGPT-J-6BをA100/A30で評価し、7〜10秒の尾部遅延SLOを保ちながら既定最大周波数比22.8〜45.5%のエネルギー削減を報告する。
+list_summary: RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
 authors:
 - Andreas Kosmas Kakolyris
 - Dimosthenis Masouros
 - Sotirios Xydis
 - Dimitrios Soudris
-published: "2024-07-01"
-publication: "IEEE Computer Architecture Letters 23(2), 150-153"
-publication_type: "peer-reviewed-journal"
-publication_status: "Published"
-lineage: "inference-systems"
-topics: ["LLM配信","GPU電力制御","DVFS","SLO","尾部遅延"]
-source: "https://doi.org/10.1109/LCA.2024.3406038"
+published: '2024-07-01'
+publication: IEEE Computer Architecture Letters 23(2), 150-153
+publication_type: peer-reviewed-journal
+publication_status: Published
+lineage: inference-systems
+topics:
+- LLM配信
+- GPU電力制御
+- DVFS
+- SLO
+- 尾部遅延
+source: https://doi.org/10.1109/LCA.2024.3406038
 sources:
-- "https://doi.org/10.1109/LCA.2024.3406038"
-- "https://ieeexplore.ieee.org/document/10540202/"
-last_checked: "2026-09-28"
+- https://doi.org/10.1109/LCA.2024.3406038
+- https://ieeexplore.ieee.org/document/10540202/
+last_checked: '2026-09-28'
 code: null
-implementation: "少数のGPU周波数×RPS組合せをオフライン計測し、p95/p99エンドツーエンド遅延を3次多項式で近似する。実行時はRPSを一定反復ごとに再観測し、候補周波数の予測遅延からSLOを満たす最小周波数を選択する。"
-implementation_status: "paper-prototype-no-official-code-confirmed"
-hardware_evaluation: "real-hardware-serving"
-hardware_details: "NVIDIA A100 SXM 40GBおよびA30 24GB。NVIDIA Triton Inference ServerとTensorRT-LLMのinflight batchingを使用し、GPT-J-6Bを配信。"
-quality_effect: "モデル演算や重みを変更しないため出力品質そのものは変えない。交換条件はGPU周波数低下による尾部遅延であり、SLO違反を避けることが制約になる。"
-evidence_locations: ["method","offline profiling","online controller","evaluation","figures 2-4"]
+implementation: 少数のGPU周波数×RPS組合せをオフライン計測し、p95/p99エンドツーエンド遅延を3次多項式で近似する。実行時はRPSを一定反復ごとに再観測し、候補周波数の予測遅延からSLOを満たす最小周波数を選択する。
+implementation_status: paper-prototype-no-official-code-confirmed
+hardware_evaluation: real-hardware-serving
+hardware_details: NVIDIA A100 SXM 40GBおよびA30 24GB。NVIDIA Triton Inference ServerとTensorRT-LLMのinflight batchingを使用し、GPT-J-6Bを配信。
+quality_effect: モデル演算や重みを変更しないため出力品質そのものは変えない。交換条件はGPU周波数低下による尾部遅延であり、SLO違反を避けることが制約になる。
+evidence_locations:
+- method
+- offline profiling
+- online controller
+- evaluation
+- figures 2-4
+references:
+- canonical_id: DOI:10.1109/isca52012.2021.00033
+  doi: 10.1109/isca52012.2021.00033
+- canonical_id: DOI:10.1109/hpec58863.2023.10363447
+  doi: 10.1109/hpec58863.2023.10363447
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3638757
+  doi: 10.1145/3638757
+- canonical_id: DOI:10.1109/tpds.2022.3144614
+  doi: 10.1109/tpds.2022.3144614
+- canonical_id: DOI:10.1145/3581784.3607034
+  doi: 10.1145/3581784.3607034
+- canonical_id: DOI:10.1109/isca45697.2020.00045
+  doi: 10.1109/isca45697.2020.00045
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 15
 ---
 
 # SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving

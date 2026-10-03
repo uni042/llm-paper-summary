@@ -1,32 +1,81 @@
 ---
-canonical_id: "DOI:10.1145/3676641.3716245"
-doi: "10.1145/3676641.3716245"
-last_audited: "2026-09-28"
+canonical_id: DOI:10.1145/3676641.3716245
+doi: 10.1145/3676641.3716245
+last_audited: '2026-09-28'
 audit_version: 2
-title: "Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management"
-summary: "多輪対話では各ターンのpromptに過去会話が再び含まれるため、通常のLLM配信基盤は同じ履歴トークンの鍵・値キャッシュ（Key-Value cache; KVキャッシュ）を毎回再計算しやすい。同時に、履歴の累積でprompt長がばらつき、先着順（First-Come-First-Served; FCFS）では巨大promptが先頭にいるだけで、残りGPUメモリへ収まる短い要求まで待たせるhead-of-line blockingが起こる。FlashGenはGPUメモリ・host DRAM・NVMe SSDの多段KVキャッシュFlashGen-Cacheと、メモリへ収まる要求を先に差し込みつつ飢餓を防ぐFlashGen-Schedを組み合わせる。2×A100 80GB、224GB host cache、RAID-0 NVMe SSD、ShareGPTでOPT/Llama-2を評価し、同程度のlatency boundaryでOPT-30BはvLLM比1.63倍、Llama-2 70Bは2.85倍のthroughputを報告する。"
-list_summary: "多輪会話の履歴KV再計算と長promptによるFCFS head-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のthroughputを報告する。"
+title: Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management
+summary: 多輪対話では各ターンのpromptに過去会話が再び含まれるため、通常のLLM配信基盤は同じ履歴トークンの鍵・値キャッシュ（Key-Value cache; KVキャッシュ）を毎回再計算しやすい。同時に、履歴の累積でprompt長がばらつき、先着順（First-Come-First-Served; FCFS）では巨大promptが先頭にいるだけで、残りGPUメモリへ収まる短い要求まで待たせるhead-of-line blockingが起こる。FlashGenはGPUメモリ・host DRAM・NVMe SSDの多段KVキャッシュFlashGen-Cacheと、メモリへ収まる要求を先に差し込みつつ飢餓を防ぐFlashGen-Schedを組み合わせる。2×A100 80GB、224GB host cache、RAID-0 NVMe SSD、ShareGPTでOPT/Llama-2を評価し、同程度のlatency boundaryでOPT-30BはvLLM比1.63倍、Llama-2 70Bは2.85倍のthroughputを報告する。
+list_summary: 多輪会話の履歴KV再計算と長promptによるFCFS head-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のthroughputを報告する。
 authors:
 - Jinwoo Jeong
 - Jeongseob Ahn
-published: "2025"
-publication: "ASPLOS 2025, pp. 1-15"
-publication_type: "peer-reviewed-conference"
-publication_status: "Published"
-lineage: "inference-systems"
-topics: ["多輪対話","KVキャッシュ","階層メモリ","SSD","LLM配信スケジューリング"]
-source: "https://doi.org/10.1145/3676641.3716245"
+published: '2025'
+publication: ASPLOS 2025, pp. 1-15
+publication_type: peer-reviewed-conference
+publication_status: Published
+lineage: inference-systems
+topics:
+- 多輪対話
+- KVキャッシュ
+- 階層メモリ
+- SSD
+- LLM配信スケジューリング
+source: https://doi.org/10.1145/3676641.3716245
 sources:
-- "https://doi.org/10.1145/3676641.3716245"
-- "https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf"
-last_checked: "2026-09-28"
+- https://doi.org/10.1145/3676641.3716245
+- https://jeongseob.github.io/assets/talks/jeong_asplos2025_talk.pdf
+last_checked: '2026-09-28'
 code: null
-implementation: "vLLMを基盤に、GPU/host DRAM/SSDの多段KV cache managerと要求reordering schedulerを追加。storageからの復元が待ち時間に隠せない場合は再計算へ切り替える。"
-implementation_status: "paper-and-author-materials-confirmed; official-code-url-not-recorded-here"
-hardware_evaluation: "real-hardware-serving"
-hardware_details: "Azure Standard_NC48ads_A100_v4、NVIDIA A100 80GB×2、DRAM 440GB中224GBをKV cacheへ使用、NVMe SSD 960GB×2をRAID-0。"
-quality_effect: "KV値やモデル計算を近似しないため出力品質は変えない。主な交換条件はKV復元I/O、GPUメモリ占有、要求公平性、tail latency。"
-evidence_locations: ["motivation","FlashGen-Cache","FlashGen-Sched","evaluation","author ASPLOS 2025 slides"]
+implementation: vLLMを基盤に、GPU/host DRAM/SSDの多段KV cache managerと要求reordering schedulerを追加。storageからの復元が待ち時間に隠せない場合は再計算へ切り替える。
+implementation_status: paper-and-author-materials-confirmed; official-code-url-not-recorded-here
+hardware_evaluation: real-hardware-serving
+hardware_details: Azure Standard_NC48ads_A100_v4、NVIDIA A100 80GB×2、DRAM 440GB中224GBをKV cacheへ使用、NVMe SSD 960GB×2をRAID-0。
+quality_effect: KV値やモデル計算を近似しないため出力品質は変えない。主な交換条件はKV復元I/O、GPUメモリ占有、要求公平性、tail latency。
+evidence_locations:
+- motivation
+- FlashGen-Cache
+- FlashGen-Sched
+- evaluation
+- author ASPLOS 2025 slides
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+  doi: 10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1145/3620665.3640366
+  doi: 10.1145/3620665.3640366
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2403.19708
+- canonical_id: arXiv:2406.17565
+  arxiv_id: '2406.17565'
+- canonical_id: arXiv:2309.14509
+  arxiv_id: '2309.14509'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2401.02669
+  arxiv_id: '2401.02669'
+- canonical_id: arXiv:2401.08671
+- canonical_id: DOI:10.1037/0033--2909.85.3.618
+  doi: 10.1037/0033--2909.85.3.618
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.623
+  doi: 10.18653/v1/2024.acl-long.623
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 39
 ---
 
 # Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management

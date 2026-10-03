@@ -11,7 +11,7 @@ authors:
 - Xin Liu
 - Xuanzhe Liu
 - Xin Jin
-published: '2025-09'
+published: 2025-09
 publication: IEEE Transactions on Parallel and Distributed Systems 36(9), 1972-1984
 publication_type: 査読付きジャーナル論文
 publication_status: Published
@@ -27,6 +27,44 @@ implementation_status: official-code-not-confirmed
 last_checked: '2026-10-03'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2310.18547
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2403.02310
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2404.16283
+- canonical_id: arXiv:2404.08509
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2405.06856
+- canonical_id: arXiv:2401.00588
+- canonical_id: DOI:10.1145/3732941
+  doi: 10.1145/3732941
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1145/3437801.3441578
+  doi: 10.1145/3437801.3441578
+- canonical_id: arXiv:2405.19888
+- canonical_id: arXiv:2312.12456
+  doi: 10.1145/3694715.3695964
+- canonical_id: arXiv:2308.16369
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2302.11665
+- canonical_id: DOI:10.1145/3341301.3359658
+  doi: 10.1145/3341301.3359658
+- canonical_id: arXiv:2404.02015
+- canonical_id: DOI:10.1145/3567955.3567960
+  doi: 10.1145/3567955.3567960
+- canonical_id: DOI:10.1109/infocom48880.2022.9796962
+  doi: 10.1109/infocom48880.2022.9796962
+- canonical_id: DOI:10.1145/2486001.2486012
+  doi: 10.1145/2486001.2486012
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 55
 ---
 
 ## 書誌

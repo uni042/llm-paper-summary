@@ -16,7 +16,7 @@ authors:
 - Mengwei Xu
 - Gang Huang
 published: '2026-06-20'
-publication: "MobiSys '26: Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services, 854-867"
+publication: 'MobiSys ''26: Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services, 854-867'
 publication_type: 査読付き国際会議論文
 publication_status: published
 year: 2026
@@ -32,6 +32,126 @@ implementation_status: official-code-not-confirmed
 last_checked: '2026-09-26'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3725273
+  doi: 10.1145/3725273
+- canonical_id: DOI:10.2196/59505
+  doi: 10.2196/59505
+- canonical_id: DOI:10.1145/3240765.3240799
+  doi: 10.1145/3240765.3240799
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2502.13923
+  arxiv_id: '2502.13923'
+- canonical_id: arXiv:2402.12451
+  arxiv_id: '2402.12451'
+- canonical_id: DOI:10.1145/3731569.3764808
+  doi: 10.1145/3731569.3764808
+- canonical_id: arXiv:2312.16886
+  arxiv_id: '2312.16886'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2401.08281
+  arxiv_id: '2401.08281'
+- canonical_id: DOI:10.1109/iccv48922.2021.01151
+  doi: 10.1109/iccv48922.2021.01151
+- canonical_id: DOI:10.1109/iccv51701.2025.01433
+  doi: 10.1109/iccv51701.2025.01433
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2311.04934
+- canonical_id: DOI:10.1155/2022/4255220
+  doi: 10.1155/2022/4255220
+- canonical_id: arXiv:2509.23324
+  arxiv_id: '2509.23324'
+- canonical_id: DOI:10.18653/v1/2025.acl-long.1305
+  doi: 10.18653/v1/2025.acl-long.1305
+- canonical_id: arXiv:2410.15332
+  arxiv_id: '2410.15332'
+- canonical_id: DOI:10.3390/machines11070677
+  doi: 10.3390/machines11070677
+- canonical_id: DOI:10.1145/3768628
+  doi: 10.1145/3768628
+- canonical_id: arXiv:2505.23416
+  arxiv_id: '2505.23416'
+- canonical_id: DOI:10.1109/iccv51070.2023.00371
+  doi: 10.1109/iccv51070.2023.00371
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2412.19442
+  arxiv_id: '2412.19442'
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.20
+  doi: 10.18653/v1/2023.emnlp-main.20
+- canonical_id: DOI:10.3389/fnbot.2024.1513354
+  doi: 10.3389/fnbot.2024.1513354
+- canonical_id: arXiv:2411.04996
+  arxiv_id: '2411.04996'
+- canonical_id: DOI:10.1109/tcsvt.2018.2884203
+  doi: 10.1109/tcsvt.2018.2884203
+- canonical_id: DOI:10.1007/978-3-319-10602-1_48
+  doi: 10.1007/978-3-319-10602-1_48
+- canonical_id: DOI:10.1109/cvpr52733.2024.02484
+  doi: 10.1109/cvpr52733.2024.02484
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: DOI:10.1109/cvpr52734.2025.00392
+  doi: 10.1109/cvpr52734.2025.00392
+- canonical_id: arXiv:2503.06019
+  arxiv_id: '2503.06019'
+- canonical_id: arXiv:2407.18003
+  arxiv_id: '2407.18003'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.1016/j.ipm.2025.104297
+  doi: 10.1016/j.ipm.2025.104297
+- canonical_id: DOI:10.1109/cvpr52733.2024.01202
+  doi: 10.1109/cvpr52733.2024.01202
+- canonical_id: DOI:10.1145/3214306
+  doi: 10.1145/3214306
+- canonical_id: arXiv:2504.00595
+  arxiv_id: '2504.00595'
+- canonical_id: DOI:10.1109/cvpr52734.2025.02766
+  doi: 10.1109/cvpr52734.2025.02766
+- canonical_id: DOI:10.18653/v1/2025.emnlp-main.1079
+  doi: 10.18653/v1/2025.emnlp-main.1079
+- canonical_id: DOI:10.1609/aaai.v39i8.32945
+  doi: 10.1609/aaai.v39i8.32945
+- canonical_id: DOI:10.18653/v1/2024.findings-acl.296
+  doi: 10.18653/v1/2024.findings-acl.296
+- canonical_id: arXiv:2407.05858
+  doi: 10.1145/3669940.3707239
+- canonical_id: DOI:10.1145/3241539.3241563
+  doi: 10.1145/3241539.3241563
+- canonical_id: arXiv:2502.16002
+  arxiv_id: '2502.16002'
+- canonical_id: DOI:10.1145/3613904.3642517
+  doi: 10.1145/3613904.3642517
+- canonical_id: arXiv:2405.16444
+  doi: 10.1145/3689031.3696098
+- canonical_id: DOI:10.1038/s41467-025-61040-5
+  doi: 10.1038/s41467-025-61040-5
+- canonical_id: arXiv:2402.15220
+  arxiv_id: '2402.15220'
+- canonical_id: DOI:10.1145/3643832.3661407
+  doi: 10.1145/3643832.3661407
+- canonical_id: DOI:10.1145/3636534.3649361
+  doi: 10.1145/3636534.3649361
+- canonical_id: arXiv:2401.13601
+  arxiv_id: '2401.13601'
+- canonical_id: DOI:10.1145/3447993.3448628
+  doi: 10.1145/3447993.3448628
+- canonical_id: arXiv:2502.01960
+  arxiv_id: '2502.01960'
+- canonical_id: DOI:10.1109/cvpr52734.2025.02250
+  doi: 10.1109/cvpr52734.2025.02250
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2402.14289
+  arxiv_id: '2402.14289'
+- canonical_id: DOI:10.1145/3688863.3689575
+  doi: 10.1145/3688863.3689575
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 71
 ---
 
 # VLMCache — 効率的な端末上視覚言語モデル推論
