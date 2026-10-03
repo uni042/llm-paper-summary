@@ -86,12 +86,16 @@ lineage: test-lineage
                 third = forward_citation_sweep.sweep(
                     root, now=first_now + dt.timedelta(days=1), sleep_fn=lambda _: None
                 )
+                fourth = forward_citation_sweep.sweep(
+                    root, now=first_now + dt.timedelta(days=31), sleep_fn=lambda _: None
+                )
 
             self.assertEqual(first["candidate_count"], 1)
             self.assertEqual(first["completed_cycles"], 0)
             self.assertEqual(second["completed_cycles"], 1)
             self.assertEqual(third["selected_seed_count"], 0)
-            self.assertEqual(cursors, [None, "100"])
+            self.assertEqual(fourth["selected_seed_count"], 1)
+            self.assertEqual(cursors, [None, "100", None])
 
             state = json.loads(
                 (root / ".survey/work-queue/forward-citation-sweep.json").read_text(encoding="utf-8")
