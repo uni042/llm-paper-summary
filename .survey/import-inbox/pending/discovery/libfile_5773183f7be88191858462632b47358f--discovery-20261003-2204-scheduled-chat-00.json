@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261003-2204-scheduled-chat-00",
+  "reference_main_sha": "d753a0e8a929c39710f9c359b6fe6fcd944cef1b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.31",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-eacl.31"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "自己投機的復号で入力ドメインごとに最適なスキップ層集合を動的選択し、LLM自己回帰復号を直接高速化するため対象。",
+      "source_url": "https://aclanthology.org/2026.findings-eacl.31/",
+      "body_check": "本文の方式・評価を確認。各ドメインでベイズ最適化によりスキップ層マスクを探索し、最終隠れ表現のK近傍探索で新規入力に対応するマスクを選択してドラフト生成し、完全モデルで並列検証する。LLaMA-2-13B/Qwen-2.5-14B系列と要約・推論・翻訳・物語生成・Text2SQLで評価し、自己回帰復号比1.3〜1.6倍、Qwen-2.5-14Bでは11.16→18.08 token/sを報告。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.08354",
+      "identity_tokens": [
+        "arXiv:2304.08354",
+        "DOI:10.48550/arXiv.2304.08354"
+      ],
+      "title": "Tool Learning with Foundation Models",
+      "reason": "基盤モデルのツール利用を体系化する能力・エージェント研究で、推論サービングやランタイム効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2304.08354",
+      "body_check": "本文の調査枠組みと評価範囲を確認。ユーザー指示理解、タスク分解、推論による計画調整、ツール選択・利用をtool-augmented/tool-oriented learningとして整理し、18種類の代表ツールで基盤モデルのtool-use能力を評価する。KVキャッシュ、推論カーネル、スケジューラ、オフロード等のシステム効率化は主要対象でない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.11305",
+      "identity_tokens": [
+        "arXiv:2410.11305",
+        "DOI:10.48550/arXiv.2410.11305"
+      ],
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "reason": "低精度ドラフトと高精度検証を重み・KVキャッシュ共有で切替える投機的復号により、メモリ制約下のLLMサービングを直接高速化するため対象。",
+      "source_url": "https://arxiv.org/abs/2410.11305",
+      "body_check": "本文の方式・評価を確認。低精度activation-weight joint quantizationをドラフト、高精度weight-only quantizationを検証に用い、量子化重みとKVキャッシュを再利用して追加モデル・再学習なしで切替える。高精度基準比最大1.64倍、バッチ設定で既存投機的復号比最大1.55倍の高速化を品質劣化なしで報告。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5555/3291168.3291211",
+      "identity_tokens": [
+        "DOI:10.5555/3291168.3291211",
+        "arXiv:1802.04799"
+      ],
+      "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning",
+      "reason": "深層学習全般のグラフ・演算子最適化と性能可搬性を狙う汎用コンパイラで、LLM/Transformer推論固有の最適化を最終対象としない。",
+      "source_url": "https://www.usenix.org/conference/osdi18/presentation/chen",
+      "body_check": "本文相当のシステム設計・評価を確認。計算グラフ最適化とtensor expressionのschedule探索を分離し、CPU/GPU/組込みアクセラレータ向けに演算子を自動生成・チューニングする。深層学習推論高速化の基盤技術だが、LLMサービング、KVキャッシュ、MoE、Transformer復号を対象にした研究ではない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1202.3974",
+      "identity_tokens": [
+        "arXiv:1202.3974",
+        "DOI:10.48550/arXiv.1202.3974"
+      ],
+      "title": "A versatile and accurate approximation for LRU cache performance",
+      "reason": "LRUキャッシュのヒット率を近似するネットワークキャッシュ理論で、LLM推論キャッシュを対象としない。",
+      "source_url": "https://arxiv.org/abs/1202.3974",
+      "body_check": "本文の問題設定・理論結果を確認。Cheらのcharacteristic-time近似が一般的なobject popularity分布や階層キャッシュでも高精度になる理由を数学的に説明し、information-centric networkの巨大object population評価を主用途とする。LLMのKVキャッシュやモデル重みキャッシュの実装・評価はない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1205.6711",
+      "identity_tokens": [
+        "arXiv:1205.6711",
+        "DOI:10.48550/arXiv.1205.6711"
+      ],
+      "title": "On the Convergence of the Empirical Distribution",
+      "reason": "可算集合上の経験分布が真の分布へ収束する際の全変動距離の確率界を扱う統計理論で、LLM推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/1205.6711",
+      "body_check": "本文の定理・境界を確認。経験分布と真の分布のtotal variation distanceのtail boundを一般化し、有限集合に対するDevroyeの偏差界を鋭くするとともに可算supportへ拡張し、対応する下界も示す。推論システム・ニューラルネットの効率評価はない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.703",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.703"
+      ],
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "reason": "denoising seq2seq事前学習と下流タスク品質が主題で、推論runtime効率化ではない。",
+      "source_url": "https://aclanthology.org/2020.acl-main.703/",
+      "body_check": "本文の事前学習方式と評価を確認。入力文をsentence permutationやtext infillingで破壊し、Transformer encoder-decoderで原文復元を学習する。GLUE/SQuAD、要約、対話、翻訳で品質を評価し、要約で最大3.5 ROUGE、翻訳で1.1 BLEU改善を報告するが、推論速度・メモリ・サービングは主要評価でない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:cs/9809099",
+      "identity_tokens": [
+        "arXiv:cs/9809099",
+        "DOI:10.48550/arXiv.cs/9809099"
+      ],
+      "title": "A Quantitative Measure Of Fairness And Discrimination For Resource Allocation In Shared Computer Systems",
+      "reason": "共有計算機資源の割当公平性を0〜1で測るJain公平性指標の研究で、LLM推論システム固有ではない。",
+      "source_url": "https://arxiv.org/abs/cs/9809099",
+      "body_check": "本文の指標定義と性質を確認。資源量に依存せず0〜1に収まるfairness indexを導入し、1-fairnessをdiscriminationとして解釈する一般的な資源配分評価尺度を与える。LLMサービングのスケジューリング方式や推論性能改善を提案する研究ではない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08027",
+      "identity_tokens": [
+        "arXiv:2506.08027",
+        "DOI:10.48550/arXiv.2506.08027"
+      ],
+      "title": "Recipes for Pre-training LLMs with MXFP8",
+      "reason": "MXFP8を用いたLLM事前学習の数値形式・変換法を検証する研究で、最終適用先が学習高速化・効率化の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2506.08027",
+      "body_check": "本文の問題設定・実験範囲を確認。Blackwell世代GPUのmicroscaling formatでMXFP8-E4M3と数値変換方式を選び、最大8Bモデル・最大15T tokenの事前学習でBF16相当の学習品質を狙う。低bit演算の効率性は扱うが主要対象はpre-training sessionであり推論runtimeではない。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.19732",
+      "identity_tokens": [
+        "arXiv:2502.19732",
+        "DOI:10.48550/arXiv.2502.19732"
+      ],
+      "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+      "reason": "LLM自己回帰生成の投機的復号を中心に高速化手法を体系化する推論効率サーベイで、対象範囲に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2502.19732",
+      "body_check": "本文の分類体系・比較節を確認。draft-then-verify型投機的復号を中心に、draft model、self-speculative、retrieval/parallel prediction、verification、tree構築などの技法を整理し、速度・受理率・追加メモリ・品質保持のトレードオフと適用条件を比較する。最終適用先はLLM推論高速化そのもの。",
+      "first_checked_at": "2026-10-03T22:18:00+09:00",
+      "last_checked_at": "2026-10-03T22:18:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 457
+    }
+  ]
+}
