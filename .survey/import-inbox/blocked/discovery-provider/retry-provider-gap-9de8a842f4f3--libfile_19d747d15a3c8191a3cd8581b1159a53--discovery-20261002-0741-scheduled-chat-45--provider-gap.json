@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-0741-scheduled-chat-45::provider-gap",
+  "reference_main_sha": "7dc18713e79781d3f31ed3a35366d2adf4b1cbca",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:P0GOk5wslg",
+      "identity_tokens": [
+        "OpenReview:P0GOk5wslg"
+      ],
+      "title": "Speculative Actions: A Lossless Framework for Faster AI Agents",
+      "reason": "fast speculatorが将来のagent action/API callを予測して並列実行し、authoritative actor一致時だけcommitすることでagentic inferenceのwall-clock latencyを削減するruntime手法で対象。",
+      "source_url": "https://openreview.net/forum?id=P0GOk5wslg",
+      "body_check": "著者公開本文の結論・評価でActor/Speculator構成、breadth/depth speculation、予測一致時のみcommitするlossless executionを確認。gaming/e-commerce/web search/OS環境で逐次API callの待ちを並列化し、cost-latency tradeoffも解析する。",
+      "worklist_rank": 322,
+      "first_checked_at": "2026-10-02T07:41:51+09:00",
+      "last_checked_at": "2026-10-02T07:41:51+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ]
+    }
+  ],
+  "parent_run_key": "20261002-0741-scheduled-chat-45",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-9de8a842f4f3--libfile_19d747d15a3c8191a3cd8581b1159a53--discovery-20261002-0741-scheduled-chat-45.json",
+  "provider_gap_ids": [
+    "OpenReview:P0GOk5wslg"
+  ]
+}
