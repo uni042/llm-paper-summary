@@ -195,6 +195,7 @@ def process_pending(repo_root: Path, max_requests: int | None = None) -> dict[st
         # can starve every unsettled request behind it forever.
         result_path = repo_root / RESULT_DIR / f"{request_path.stem}.json"
         if result_path.exists():
+            outcomes.append(process_request(repo_root, request_path))
             continue
 
         if max_requests is not None and processed_requests >= max(0, max_requests):
