@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc80dc48f644cc40-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:5NTt8GFjUHkr",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:5NTt8GFjUHkr",
+    "identity_tokens": [
+      "OpenReview:5NTt8GFjUHkr",
+      "arXiv:2210.03493"
+    ],
+    "reason": "質問クラスタから代表例を選びzero-shot CoTでdemonstrationを自動生成するprompting手法で、推論システムの速度・メモリ・サービング最適化を扱わないため除外。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-10-03T18:35:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json",
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md"
+    ],
+    "title": "Automatic Chain of Thought Prompting in Large Language Models"
+  },
+  "processed_at": "2026-10-03T18:35:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc80dc48f644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

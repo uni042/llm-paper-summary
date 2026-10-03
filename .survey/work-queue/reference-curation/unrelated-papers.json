@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:31:04+00:00",
-  "record_count": 844,
+  "updated_at": "2026-10-03T18:35:14+00:00",
+  "record_count": 843,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4464,9 +4464,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.findings-emnlp.360"
       ],
-      "reason": "多言語要約データセットとクロスリンガル要約法が主貢献で、LLM推論基盤の高速化・省メモリ化ではないため対象外。",
+      "reason": "多言語・言語横断要約のデータセット／評価研究であり、LLM推論基盤の効率化ではない。",
       "first_checked_at": "2026-09-30T01:35:07+00:00",
-      "last_checked_at": "2026-10-02T19:21:28+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4582,9 +4582,9 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "dense checkpointからMoEへupcycleして追加事前学習を効率化する学習手法が主題で、凍結対象の学習高速化に該当するため対象外。",
+      "reason": "dense checkpointからMoEを初期化して追加事前学習コストを削減する学習手法が主目的で、最終適用先が凍結対象の学習高速化であるため除外。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4841,9 +4841,9 @@
       "identity_tokens": [
         "DOI:10.4230/lipics.icalp.2019.63"
       ],
-      "reason": "未知job sizeとprecedence制約を持つ一般オンラインスケジューリングの理論研究で、LLM推論・GPUサービングを対象としないため対象外。",
+      "reason": "未知ジョブ長と依存関係を持つ一般オンラインスケジューリング理論であり、LLMサービング固有のスケジューラではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:25:46+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
@@ -4875,9 +4875,9 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "chain-of-thought demonstration自動構築による推論能力向上が主題で計算・メモリ・serving高速化ではない。",
+      "reason": "質問クラスタから代表例を選びzero-shot CoTでdemonstrationを自動生成するprompting手法で、推論システムの速度・メモリ・サービング最適化を扱わないため除外。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
@@ -4925,9 +4925,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/n18-2002"
       ],
-      "reason": "共参照解析システムの性別バイアスをWinogender schemasで測る公平性評価研究であり、LLM推論効率・サービング・メモリ・MoE・カーネル最適化とは無関係。",
+      "reason": "共参照解析におけるジェンダーバイアスの評価研究であり、LLM推論システム最適化とは無関係。",
       "first_checked_at": "2026-09-30T09:02:37+00:00",
-      "last_checked_at": "2026-10-02T11:13:19+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
@@ -5628,7 +5628,7 @@
       ],
       "reason": "コードLLM向け大規模instruction tuningデータセットの構築が主目的で、推論時の速度・メモリ・サービング最適化を扱わない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T01:38:15+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
@@ -6907,10 +6907,11 @@
       "identity_tokens": [
         "DOI:10.1145/3695053.3731079"
       ],
-      "reason": "dense retrievalの専用algorithm-hardware codesignでありRAG前段には利用可能だが、LLM推論runtime・KV cache・decode高速化そのものを扱わない。",
+      "reason": "dense retrieval自体のアルゴリズム・ハードウェア協調高速化が主目的で、LLM推論ランタイムやRAG生成段の最適化ではない。",
       "first_checked_at": "2026-10-02T11:13:19+00:00",
-      "last_checked_at": "2026-10-02T23:09:34+00:00",
+      "last_checked_at": "2026-10-03T18:35:14+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
       ],
@@ -12408,21 +12409,6 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
       ],
       "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
-    },
-    "DOI:10.57967/hf/3372": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.57967/hf/3372",
-      "identity_tokens": [
-        "DOI:10.57967/hf/3372"
-      ],
-      "reason": "1M token級へ拡張したLlama 3派生モデルのモデル配布・長文脈能力が中心で、推論システム最適化手法そのものではないため対象外。",
-      "first_checked_at": "2026-10-03T18:25:46+00:00",
-      "last_checked_at": "2026-10-03T18:25:46+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
-      ],
-      "title": "Llama 3 Gradient: A Series of Long Context Models"
     },
     "arXiv:2305.02309": {
       "classification": "unrelated",

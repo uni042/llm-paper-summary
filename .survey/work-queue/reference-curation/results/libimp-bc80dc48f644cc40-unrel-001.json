@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc80dc48f644cc40-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:T5nUQDrM4u",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:T5nUQDrM4u",
+    "identity_tokens": [
+      "OpenReview:T5nUQDrM4u",
+      "arXiv:2212.05055"
+    ],
+    "reason": "dense checkpointからMoEを初期化して追加事前学習コストを削減する学習手法が主目的で、最終適用先が凍結対象の学習高速化であるため除外。",
+    "first_checked_at": "2026-09-27T05:26:49+00:00",
+    "last_checked_at": "2026-10-03T18:35:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-45.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
+    ],
+    "title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints"
+  },
+  "processed_at": "2026-10-03T18:35:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc80dc48f644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
