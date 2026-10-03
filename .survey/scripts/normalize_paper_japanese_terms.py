@@ -9,6 +9,7 @@ lower-case generic prose terms while preserving capitalized named systems.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 from pathlib import Path
 from typing import Iterable
@@ -147,19 +148,28 @@ def replace_generic_terms(text: str) -> str:
     return text
 
 
-def split_frontmatter(raw: str) -> tuple[dict, str]:
+def split_frontmatter(raw: str) -> tuple[dict, str, str]:
     if not raw.startswith("---\n"):
-        return {}, raw
-    parts = raw.split("---", 2)
-    if len(parts) < 3:
-        return {}, raw
-    return yaml.safe_load(parts[1]) or {}, parts[2]
+        return {}, "", raw
+    end = raw.find("\n---", 4)
+    if end < 0:
+        return {}, "", raw
+    front = raw[4:end]
+    body = raw[end + 4:]
+    return yaml.safe_load(front) or {}, front, body
 
 
-def render(meta: dict, body: str) -> str:
-    front = yaml.safe_dump(
-        meta, allow_unicode=True, sort_keys=False, default_flow_style=False, width=1000
-    ).rstrip()
+def render(front: str, body: str, list_summary: str | None = None) -> str:
+    if list_summary is not None:
+        encoded = json.dumps(list_summary, ensure_ascii=False)
+        front, count = re.subn(
+            r"(?m)^list_summary:\s*.*$",
+            "list_summary: " + encoded,
+            front,
+            count=1,
+        )
+        if count != 1:
+            raise ValueError("frontmatter has no scalar list_summary field to repair")
     return f"---\n{front}\n---{body}"
 
 
@@ -204,7 +214,7 @@ def iter_papers(root: Path) -> Iterable[Path]:
 
 def normalize_file(path: Path, repo_root: Path, apply: bool) -> tuple[bool, bool]:
     raw = path.read_text(encoding="utf-8")
-    meta, body = split_frontmatter(raw)
+    meta, front, body = split_frontmatter(raw)
     if not meta or body.lstrip().startswith("# Moved"):
         return False, False
 
@@ -215,7 +225,7 @@ def normalize_file(path: Path, repo_root: Path, apply: bool) -> tuple[bool, bool
     body_new = normalize_body(body) if paper_ratio_failure else body
     body_changed = body_new != body
     if body_changed:
-        new_ratio, _, _ = audit_paper_quality._japanese_ratio(render(meta, body_new))
+        new_ratio, _, _ = audit_paper_quality._japanese_ratio(render(front, body_new))
         if new_ratio <= old_paper.japanese_ratio:
             body_new = body
             body_changed = False
@@ -233,7 +243,10 @@ def normalize_file(path: Path, repo_root: Path, apply: bool) -> tuple[bool, bool
 
     changed = body_changed or list_changed
     if changed and apply:
-        path.write_text(render(meta, body_new), encoding="utf-8")
+        path.write_text(
+            render(front, body_new, str(meta["list_summary"]) if list_changed else None),
+            encoding="utf-8",
+        )
     return changed, list_changed
 
 
