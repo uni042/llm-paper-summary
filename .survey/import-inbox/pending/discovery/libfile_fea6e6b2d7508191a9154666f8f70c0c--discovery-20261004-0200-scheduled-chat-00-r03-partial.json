@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-0200-scheduled-chat-00/r03",
+  "reference_main_sha": "7d82075428e9636d189e19652ff5e56182378b15",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/dsn.2015.49",
+      "identity_tokens": [
+        "DOI:10.1109/dsn.2015.49"
+      ],
+      "title": "Read Disturb Errors in MLC NAND Flash Memory: Characterization, Mitigation, and Recovery",
+      "reason": "MLC NANDフラッシュのread disturb errorを実機で特徴付け、緩和・回復するストレージ信頼性研究で、LLM推論を対象としない。",
+      "source_url": "https://arxiv.org/abs/1805.03283",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T02:17:00+09:00",
+      "last_checked_at": "2026-10-04T02:17:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2016.11",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.11"
+      ],
+      "title": "Cnvlutin: Ineffectual-Neuron-Free Deep Neural Network Computing",
+      "reason": "値がゼロのニューロン計算を省くDNNアクセラレータ研究で、CNN等の一般深層学習推論が対象でありLLM/Transformer推論固有ではない。",
+      "source_url": "https://doi.org/10.1109/isca.2016.11",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T02:17:00+09:00",
+      "last_checked_at": "2026-10-04T02:17:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2018.00063",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2018.00063"
+      ],
+      "title": "Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation",
+      "reason": "外れ値を考慮した低精度ニューラルネットアクセラレータの研究で、LLM/Transformer向け量子化・推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/ISCA.2018.00063",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T02:17:00+09:00",
+      "last_checked_at": "2026-10-04T02:17:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-662-44415-3_4",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-662-44415-3_4"
+      ],
+      "title": "Balanced K-Means for Clustering",
+      "reason": "クラスタサイズの均衡制約を持つk-meansクラスタリングアルゴリズム研究で、LLM推論システムとは無関係。",
+      "source_url": "https://doi.org/10.1007/978-3-662-44415-3_4",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T02:17:00+09:00",
+      "last_checked_at": "2026-10-04T02:17:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2022.3174101",
+      "identity_tokens": [
+        "DOI:10.1109/access.2022.3174101"
+      ],
+      "title": "Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System",
+      "reason": "実PIMシステムの一般的な性能特性をベンチマークする研究で、LLM推論やTransformerを最終適用先とした方式・評価ではない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2022.3174101",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T02:17:00+09:00",
+      "last_checked_at": "2026-10-04T02:17:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 48
+    }
+  ]
+}
