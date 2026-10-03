@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:48:53+00:00",
-  "record_count": 422,
+  "updated_at": "2026-10-03T18:50:23+00:00",
+  "record_count": 421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5033,7 +5033,7 @@
       ],
       "reason": "後続KVキャッシュ研究からメモリ効率技術として参照されるが、取得できた本文情報だけではLLM推論が最終適用先か、汎用モデル/学習側の寄与が中心かを十分に確定できないため境界扱い。",
       "first_checked_at": "2026-10-02T07:05:48+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-03T18:50:23+00:00",
       "linked_from": [],
       "title": "Memory-efficient LLM-related method (ICML 2025 reference candidate)"
     },
@@ -6046,23 +6046,6 @@
         "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
       ],
       "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
-    },
-    "OpenReview:r8H7xhYPwz": {
-      "classification": "borderline",
-      "canonical_id": "OpenReview:r8H7xhYPwz",
-      "identity_tokens": [
-        "OpenReview:r8H7xhYPwz",
-        "arXiv:2412.06464"
-      ],
-      "reason": "ゲーティングとdelta ruleを統合した線形系列モデルで、長文脈の効率性と高速な並列実装は関連する一方、主貢献は推論システム最適化ではなくモデルアーキテクチャと学習アルゴリズムにあるため境界扱い。",
-      "first_checked_at": "2026-10-03T18:12:42+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
-      ],
-      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
     },
     "arXiv:2601.06123": {
       "classification": "borderline",

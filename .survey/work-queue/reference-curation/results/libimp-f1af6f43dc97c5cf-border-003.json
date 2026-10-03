@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1af6f43dc97c5cf-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:SuYO70ZxZX",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:SuYO70ZxZX",
+    "identity_tokens": [
+      "OpenReview:SuYO70ZxZX"
+    ],
+    "reason": "後続KVキャッシュ研究からメモリ効率技術として参照されるが、取得できた本文情報だけではLLM推論が最終適用先か、汎用モデル/学習側の寄与が中心かを十分に確定できないため境界扱い。",
+    "first_checked_at": "2026-10-02T07:05:48+00:00",
+    "last_checked_at": "2026-10-03T18:50:23+00:00",
+    "linked_from": [],
+    "title": "Memory-efficient LLM-related method (ICML 2025 reference candidate)"
+  },
+  "processed_at": "2026-10-03T18:50:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1af6f43dc97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
