@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（10本）
+## 自動生成の論文一覧（11本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -71,6 +71,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   SamuLLMは、1つのアプリケーションが複数のLLMを使うオフライン推論を対象にする。単一LLMの最適化と異なり、GPU群へ複数モデルを同時に置くと、モデルごとのテンソル並列・パイプライン並列等の選択と、同時実行モデル集合が互いに干渉する。
 
 ### 3年前（2023-11〜2024-10）
+
+- **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  
+  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：6  
+  自己回帰サービングを反復単位で追跡しつつ、Transformerブロックのコンパイル・演算結果を再利用して異種アクセラレータ構成を高速に協調シミュレーションする。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
   実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：3  
