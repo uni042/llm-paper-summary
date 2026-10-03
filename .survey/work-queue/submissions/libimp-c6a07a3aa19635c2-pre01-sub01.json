@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference",
+      "source_url": "https://arxiv.org/abs/2402.10076",
+      "year": 2024,
+      "published": "2024-02-15",
+      "abstract": "We introduce QUICK, a group of novel optimized CUDA kernels for the efficient inference of quantized Large Language Models (LLMs). QUICK addresses the shared memory bank-conflict problem of state-of-the-art mixed precision matrix multiplication kernels. Our method interleaves the quantized weight matrices of LLMs offline to skip the shared memory write-back after the dequantization. We demonstrate up to 1.91x speedup over existing kernels of AutoAWQ on larger batches and up to 1.94x throughput gain on representative LLM models on various NVIDIA GPU devices.",
+      "canonical_id": "arXiv:2402.10076",
+      "arxiv_id": "2402.10076",
+      "doi": "10.48550/arXiv.2402.10076",
+      "authors": [
+        "Taesu Kim",
+        "Jongho Lee",
+        "Daehyun Ahn",
+        "Sarang Kim",
+        "Jiwoong Choi",
+        "Minkyu Kim",
+        "Hyungjun Kim"
+      ],
+      "reason": "量子化重みの逆量子化とTensor Core入力配置のデータ移動を融合・削減するGPUカーネルで、LLM推論を直接高速化する。",
+      "library_body_check": "本文のカーネル設計・評価を確認。量子化対応インターリーブ配置によりshared-memory bank conflictとdequantize後の再配置を避け、GPTQ系重みのみ量子化のGEMMを高速化する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2402.11960",
+      "year": 2024,
+      "published": "2024-02-19",
+      "abstract": "Large language models (LLMs) have significantly advanced the field of natural language processing, while the expensive memory and computation consumption impede their practical deployment. Quantization emerges as one of the most effective methods for improving the computational efficiency of LLMs. However, existing ultra-low-bit quantization always causes severe accuracy drops. In this paper, we empirically relieve the micro and macro characteristics of ultra-low bit quantization and present a novel Dual-Binarization method for LLMs, namely DB-LLM. For the micro-level, we take both the accuracy advantage of 2-bit-width and the efficiency advantage of binarization into account, introducing Flexible Dual Binarization (FDB). By splitting 2-bit quantized weights into two independent sets of binaries, FDB ensures the accuracy of representations and introduces flexibility, utilizing the efficient bitwise operations of binarization while retaining the inherent high sparsity of ultra-low bit quantization. For the macro-level, we find the distortion that exists in the prediction of LLM after quantization, which is specified as the deviations related to the ambiguity of samples. We propose the Deviation-Aware Distillation (DAD) method, enabling the model to focus differently on various samples. Comprehensive experiments show that our DB-LLM not only significantly surpasses the current State-of-The-Art (SoTA) in ultra-low bit quantization (eg, perplexity decreased from 9.64 to 7.23), but also achieves an additional 20\\% reduction in computational consumption compared to the SOTA method under the same bit-width. Our code will be released soon.",
+      "canonical_id": "arXiv:2402.11960",
+      "arxiv_id": "2402.11960",
+      "doi": "10.48550/arXiv.2402.11960",
+      "authors": [
+        "Hong Chen",
+        "Cheng-Tao Lv",
+        "Liang Ding",
+        "Haotong Qin",
+        "Xiabin Zhou",
+        "Yifu Ding",
+        "Xue-Bo Liu",
+        "Min Zhang",
+        "Jinyang Guo",
+        "Xianglong Liu",
+        "D. Tao"
+      ],
+      "reason": "LLMの重みを二値化して推論メモリと演算を削減する低ビット推論向け圧縮研究。",
+      "library_body_check": "本文の方式・実験節を確認。重み分布を二つの二値成分へ分けるdual-binarizationと誤差補正を用い、LLaMA/OPT系で困惑度・下流性能と効率を比較する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement",
+      "source_url": "https://arxiv.org/abs/2402.14160",
+      "year": 2024,
+      "published": "2024-02-21",
+      "abstract": "Speculative decoding is an inference-acceleration method for large language models (LLMs) where a small language model generates a draft-token sequence which is further verified by the target LLM in parallel. Recent works have advanced this method by establishing a draft-token tree, achieving superior performance over a single-sequence speculative decoding. However, those works independently generate tokens at each level of the tree, not leveraging the tree's entire diversifiability. Besides, their empirical superiority has been shown for fixed length of sequences, implicitly granting more computational resource to LLM for the tree-based methods. None of the existing works has conducted empirical studies with fixed target computational budgets despite its importance to resource-bounded devices. We present Recursive Speculative Decoding (RSD), a novel tree-based method that samples draft tokens without replacement and maximizes the diversity of the tree. During RSD's drafting, the tree is built by either Gumbel-Top-$k$ trick that draws tokens without replacement in parallel or Stochastic Beam Search that samples sequences without replacement while early-truncating unlikely draft sequences and reducing the computational cost of LLM. We empirically evaluate RSD with Llama 2 and OPT models, showing that RSD outperforms the baseline methods, consistently for fixed draft sequence length and in most cases for fixed computational budgets at LLM.",
+      "canonical_id": "arXiv:2402.14160",
+      "arxiv_id": "2402.14160",
+      "doi": "10.48550/arXiv.2402.14160",
+      "authors": [
+        "Wonseok Jeon",
+        "Mukul Gagrani",
+        "Raghavv Goel",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Christopher Lott"
+      ],
+      "reason": "ドラフト木を重複なしサンプリングで多様化し、再帰的棄却サンプリングで標的分布を保つ投機的復号の推論高速化研究。",
+      "library_body_check": "本文§2–3と評価を確認。RSD-Cは固定分岐、RSD-Sは確率的ビーム探索で木を構築し、標的モデルが木を並列検証する。Llama 2/OPTで固定系列長および固定標的計算予算の双方を比較する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.17463",
+      "year": 2024,
+      "published": "2024-02-27",
+      "abstract": "The ability of Large Language Models (LLMs) to process and generate coherent text is markedly weakened when the number of input tokens exceeds their pretraining length. Given the expensive overhead of finetuning large-scale models with longer sequences, we propose Dual Chunk Attention (DCA), which enables Llama2 70B to support context windows of more than 100k tokens without continual training. By decomposing the attention computation for long sequences into chunk-based modules, DCA manages to effectively capture the relative positional information of tokens within the same chunk (Intra-Chunk) and across distinct chunks (Inter-Chunk), as well as integrates seamlessly with Flash Attention. In addition to its impressive extrapolation capability, DCA achieves performance on practical long-context tasks that is comparable to or even better than that of finetuned models. When compared with proprietary models, our training-free 70B model attains 94% of the performance of gpt-3.5-16k, indicating it is a viable open-source alternative. All code and data used in this work are released at \\url{https://github.com/HKUNLP/ChunkLlama}.",
+      "canonical_id": "arXiv:2402.17463",
+      "arxiv_id": "2402.17463",
+      "doi": "10.48550/arXiv.2402.17463",
+      "authors": [
+        "Chen An",
+        "Fei Huang",
+        "Jun Zhang",
+        "Shansan Gong",
+        "Xipeng Qiu",
+        "Chang Zhou",
+        "Ling-Peng Kong"
+      ],
+      "reason": "追加学習なしでLlama 2の文脈長を100K超へ拡張するDual Chunk Attentionで、FlashAttention互換の長文脈推論方式として対象範囲に入る。",
+      "library_body_check": "本文を確認。長系列をチャンク化し、同一チャンク内・異なるチャンク間・連続チャンクの相対位置を別経路で扱うDCAを提案。Llama2-70Bで100K超文脈と長文脈課題を評価する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlattenQuant: Breaking through the Inference Compute-bound for Large Language Models with Per-tensor Quantization",
+      "source_url": "https://arxiv.org/abs/2402.17985",
+      "year": 2024,
+      "published": "2024-02-28",
+      "abstract": "Large language models (LLMs) have demonstrated state-of-the-art accuracies across various tasks. However, the latency of inference and the large GPU memory consumption of LLMs restrict their deployment performance. Recently, there have been some efficient attempts to quantize LLMs, yet inference with large batch size or long sequence still has the issue of being compute-bound. Fine-grained quantization methods have showcased their proficiency in achieving low-bit quantization for LLMs, while requiring FP16 data type for linear layer computations, which is time-consuming when dealing with large batch size or long sequence. In this paper, we introduce a method called FlattenQuant, which significantly reduces the maximum value of the tensor by flattening the larger channels in the tensor, to achieve low bit per-tensor quantization with minimal accuracy loss. Our experiments show that FlattenQuant can directly use 4 bits to achieve 48.29% of the linear layer calculation in LLMs, with the remaining layer using 8 bits. The 4-bit matrix multiplication introduced in the FlattenQuant method can effectively address the compute-bound caused by large matrix calculation. Our work achieves up to 2× speedup and 2.3× memory reduction for LLMs with negligible loss in accuracy.",
+      "canonical_id": "arXiv:2402.17985",
+      "arxiv_id": "2402.17985",
+      "doi": "10.48550/arXiv.2402.17985",
+      "authors": [
+        "Yi Zhang",
+        "Fei Yang",
+        "Shuang Peng",
+        "Fangyu Wang",
+        "Ai-Min Pan"
+      ],
+      "reason": "LLM推論の大バッチ・長系列で生じる計算律速を、INT4/INT8のテンソル単位量子化と低ビットGEMMで直接高速化する推論向け量子化研究。",
+      "library_body_check": "本文§3–5を確認。外れ値チャネルを分割・反復してテンソルを平坦化し、KL誤差で層ごとにINT4/INT8を選択。48.29%の線形層をINT4化し、最大2×高速化・2.3×メモリ削減を評価する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c6a07a3aa196",
+    "round": "libimp-c6a07a3aa19635c2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c6a07a3aa19635c2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c6a07a3aa19635c2-pre01.json",
+    "receipt": "sha256:f808f646e5396ca1f4ebe6a6c9596b408f83bb055a23643e32134217aab6a417"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c6a07a3aa196",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

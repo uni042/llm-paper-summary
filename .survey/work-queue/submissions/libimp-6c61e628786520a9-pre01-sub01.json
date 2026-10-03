@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
+      "source_url": "https://arxiv.org/abs/2402.10631",
+      "year": 2024,
+      "published": "2024-02-16",
+      "abstract": "The upscaling of Large Language Models (LLMs) has yielded impressive advances in natural language processing, yet it also poses significant deployment challenges. Weight quantization has emerged as a widely embraced solution to reduce memory and computational demands. This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit). Specifically, BitDistiller first incorporates a tailored asymmetric quantization and clipping technique to maximally preserve the fidelity of quantized weights, and then proposes a novel Confidence-Aware Kullback-Leibler Divergence (CAKLD) objective, which is employed in a self-distillation manner to enable faster convergence and superior model performance. Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks. Notably, BitDistiller is shown to be more cost-effective, demanding fewer data and training resources. The code is available at https://github.com/DD-DuDa/BitDistiller.",
+      "canonical_id": "arXiv:2402.10631",
+      "arxiv_id": "2402.10631",
+      "doi": "10.48550/arXiv.2402.10631",
+      "authors": [
+        "Da-You Du",
+        "Yijia Zhang",
+        "Shijie Cao",
+        "Jia-Qi Guo",
+        "Ting Cao",
+        "Xiao-Wen Chu",
+        "Ningyi Xu"
+      ],
+      "reason": "2/3-bit重み量子化で配備時のモデル容量と低ビット推論を可能にする量子化研究。量子化対応学習を用いるが最終成果物は低ビット推論モデルであり対象範囲。",
+      "library_body_check": "本文§3–5を確認。非対称量子化+clippingと、full-precision teacher/quantized student間のconfidence-aware KLによる自己蒸留を組み合わせる。LLaMA-2/WizardCoder等の2/3-bit評価を行い、WizardCoder-7B量子化はA100-80GB 1台換算でLLM-QAT約280.64時間に対し約3.02時間と報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers",
+      "source_url": "https://arxiv.org/abs/2402.11700",
+      "year": 2024,
+      "published": "2024-02-18",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional language understanding and generation capabilities by learning from context. Leveraging the strong in-context learning (ICL) abilities of LLMs, prompt-based fine-tuning has proven to be effective for enhancing the adaptability and alignment of LLMs, especially in low-data scenarios. However, the billions of parameters resulting from layer stacking in LLMs present significant computational challenges, limiting the practicality of fine-tuning. To tackle this problem, we explore the application of layer-wise model pruning in prompt-based fine-tuning of LLMs for few-shot learning scenarios. Our approach involves dropping certain model layers and fine-tuning the model with the remaining layers. Surprisingly, we observe that even with fewer layers, LLMs maintain similar or better performance levels, particularly in prompt-based fine-tuning for text classification tasks. Remarkably, in certain cases, models with a single layer outperform their fully layered counterparts. These findings offer valuable insights for future work aimed at mitigating the size constraints of LLMs while preserving their performance, thereby opening avenues for significantly more efficient use of LLMs.",
+      "canonical_id": "arXiv:2402.11700",
+      "arxiv_id": "2402.11700",
+      "doi": "10.1109/IJCNN64981.2025.11228532",
+      "authors": [
+        "Shuzhou Yuan",
+        "Ercong Nie",
+        "Bolei Ma",
+        "Michael Farber"
+      ],
+      "reason": "上位decoder layerを構造的に削除してモデル容量と推論計算を減らす圧縮研究。prompt-based fine-tuningを伴うが、保存・推論効率削減を明示的な最終目的に含むため対象とする。",
+      "library_body_check": "本文§III–Vを確認。GPT-2 XLの48層を24/12/2/1層、OPT-1.3Bの24層を12/6/2/1層へ上位から削り、200 training examplesのfew-shot prompt fine-tuningで4分類課題を評価。GPT-2 XL 1層は1.6B→112M、OPT 1層は1.3B→157Mへ縮小しつつ平均精度を維持/改善する条件を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Plato: Plan to Efficiently Decode for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2402.12280",
+      "year": 2024,
+      "published": "2024-02-19",
+      "abstract": "Large language models (LLMs) have achieved remarkable success in natural language tasks, but their inference incurs substantial computational and memory overhead. To improve efficiency, parallel decoding methods like Skeleton-of-Thought (SoT) decompose prompts into sub-problems for concurrent processing. However, these methods significantly compromise answer quality by treating semantically linked sub-problems as independent. We propose Plato, a novel approach that co-designs algorithms and systems for semantic-aware parallel decoding. Plato leverages LLMs to organize sub-problems into a dependency graph based on logical and causal relationships, enabling concurrent decoding of non-dependent nodes while preserving answer coherence and quality. To further enhance efficiency, Plato pipelines planning and node decoding stages, implements a global context cache, and carefully structures node inference prompts to maximize key-value cache reuse and minimize overhead. Our evaluations show that Plato improves throughput by 68% over autoregressive decoding while achieving a 40% net win rate in answer quality. Compared to SoT, Plato demonstrates a remarkable 90% quality net-win rate. Ablation studies reveal that our pipeline design improves speedup by 29%, while our KV cache reuse optimization reduces overhead by 75%.",
+      "canonical_id": "arXiv:2402.12280",
+      "arxiv_id": "2402.12280",
+      "authors": [
+        "Shuowei Jin",
+        "Xue-Shen Liu",
+        "Yongji Wu",
+        "Hai-Zhong Zheng",
+        "Qingzhao Zhang",
+        "Atul Prakash",
+        "Matthew Lentz",
+        "Dan-Yang Zhuo",
+        "Feng Qian",
+        "Z. Mao"
+      ],
+      "reason": "回答を依存関係付きサブタスクへ計画し、独立部分を並列生成して自己回帰復号の逐次ボトルネックを減らすLLM推論高速化方式で、対象範囲に直接該当する。",
+      "library_body_check": "本文方式・評価を確認。計画段階で依存関係を付けたサブタスクへ分解し、依存のない生成を並列化して最後に統合する。Phi-4-14B/Qwen2.5-32B/Llama3.1-70BでAR/SoTと比較し、カテゴリ別に約1.1–2.0倍級以上の速度向上を示す一方、coding/mathでは逐次依存が強く品質・速度利得が小さい。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6c61e6287865",
+    "round": "libimp-6c61e628786520a9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6c61e628786520a9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6c61e628786520a9-pre01.json",
+    "receipt": "sha256:bb3b59870dd84d26ccc9087c10cb1c345ba3021f06da3722b99818ddbca92355"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6c61e6287865",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
