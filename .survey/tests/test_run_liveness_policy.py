@@ -63,7 +63,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         self.assertIn("run中に在庫が変化してもモードは固定する", router)
         self.assertIn("保存後はLibraryから再取得", router)
-        self.assertIn("Research runでは新規完成Research Markdownを5件", router)
+        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", router)
 
 
 if __name__ == "__main__":
