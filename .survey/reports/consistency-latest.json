@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-03T09:00:29.506273+00:00",
-  "status": "issues_found",
+  "checked_at": "2026-10-03T09:10:21.794013+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
   "inventory_file_count": 14923,
   "checked_file_count": 14923,
@@ -26,36 +26,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 2719,
-  "findings": [
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    }
-  ]
+  "findings": []
 }
