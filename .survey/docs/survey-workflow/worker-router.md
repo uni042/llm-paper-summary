@@ -126,7 +126,7 @@ Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WO
 
 ### 5.1 ノルマ
 
-新規canonical identity 10件を本文確認まで行い、各件を次のどれかへ最終分類する。
+Discoveryは**1ラウンドにつき**新規canonical identity 10件を本文確認まで行い、各件を次のどれかへ最終分類する。
 
 - \`accept\`
 - \`unrelated\`
@@ -140,9 +140,9 @@ v12以降のDiscovery通常runは、**1ラウンド = 1 immutable JSON**だけ�
 
 推奨path:
 
-\`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>.json\`
+\`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>-rNN.json\`
 
-1ファイルにそのrunの10件すべてを \`records[]\` として含める。accept / unrelated / borderlineを別Library台帳へ分割しない。
+各完了ラウンドは1ファイルに10件すべてを \`records[]\` として含める。最後のpartialラウンドは本文確認・最終分類まで完了したrecordだけを含め、\`record_count\` を実数に合わせる。accept / unrelated / borderlineを別Library台帳へ分割しない。
 
 必須top-level:
 
@@ -173,9 +173,9 @@ v12以降のDiscovery通常runは、**1ラウンド = 1 immutable JSON**だけ�
 
 ### 5.3 保存直前
 
-同run内重複とLibrary内の明白な重複だけを除く。GitHub最新mainに同一identityが存在するかの最終判定はここで必須にしない。GitHub側precheckへ委譲する。
+同ラウンド内重複とLibrary内の明白な重複だけを除く。GitHub最新mainに同一identityが存在するかの最終判定はここで必須にしない。GitHub側precheckへ委譲する。
 
-保存後はLibraryから再取得し、JSON parse、\`record_count == len(records)\`、10件のidentity一意性を確認する。
+保存後はLibraryから再取得し、JSON parse、\`record_count == len(records)\`、保存した全recordのidentity一意性を確認する。完了ラウンドは10件、partialラウンドはその時点の完了件数を正本とする。
 
 ## 6. Research / Audit
 
