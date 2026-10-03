@@ -8,13 +8,6 @@ on:
         required: false
         default: '0'
         type: string
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/library-import.yml'
-      - '.survey/scripts/process_library_import_inbox.py'
-      - '.survey/tests/test_library_import_inbox.py'
-
 permissions:
   contents: write
   actions: write
