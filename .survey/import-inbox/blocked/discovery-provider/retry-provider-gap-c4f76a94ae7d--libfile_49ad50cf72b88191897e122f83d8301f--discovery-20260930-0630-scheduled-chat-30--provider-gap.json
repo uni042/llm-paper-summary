@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260930-0630-scheduled-chat-30::provider-gap",
+  "reference_main_sha": "8809ea0a9d371b2eb0779d7d488085499bcb601b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:rAcgDBdKnP",
+      "identity_tokens": [
+        "OpenReview:rAcgDBdKnP"
+      ],
+      "title": "OSTQuant: Refining Large Language Model Quantization with Orthogonal and Scaling Transformations for Better Distribution Fitting",
+      "reason": "直交変換とスケーリング変換でLLMの重み・活性分布を量子化しやすく整形し、変換を重みに融合して実行時オーバーヘッドを抑える後学習量子化方式で、低ビット推論を直接対象とするため収録。",
+      "source_url": "https://openreview.net/forum?id=rAcgDBdKnP",
+      "body_check": "本文・公式実装では全体直交変換R_resとattention/FFN向けスケーリングS_attn/S_ffnを計算不変性を保つ変換対として各ブロックへ適用し、量子化空間利用率を改善する。変換は実行時に重みへ融合でき、LLaMA系列でW4A16や低ビット重み・活性量子化をSmoothQuant、GPTQ、OmniQuant、AWQ、QuaRot、SpinQuant等と比較してperplexityとゼロショット精度を評価する。",
+      "first_checked_at": "2026-09-30T06:30:00+09:00",
+      "last_checked_at": "2026-09-30T06:30:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.06346-ban-pick-smarter-routing.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md"
+      ],
+      "worklist_rank": 404
+    }
+  ],
+  "parent_run_key": "20260930-0630-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-c4f76a94ae7d--libfile_49ad50cf72b88191897e122f83d8301f--discovery-20260930-0630-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:rAcgDBdKnP"
+  ]
+}
