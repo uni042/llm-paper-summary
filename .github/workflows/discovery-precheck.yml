@@ -16,10 +16,11 @@ permissions:
   contents: write
   actions: write
 
-# Foreground worker runs never share a concurrency lane. Background preload warming
-# is owned by discovery-preload-warm.yml.
+# Library-first import may create several precheck requests close together. Each run
+# processes all unsettled requests from latest main, so one shared queue avoids duplicate
+# work and push races while preserving every durable request.
 concurrency:
-  group: discovery-precheck-foreground-${{ github.sha }}
+  group: discovery-precheck-main
   cancel-in-progress: false
 
 jobs:
