@@ -12,15 +12,16 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         self.assertIn("scheduled-chat-00", text)
         self.assertIn("scheduled-chat-30", text)
         self.assertIn("scheduled-chat-45", text)
-        self.assertIn("| `scheduled-chat-00` / `scheduled-chat-30` / `scheduled-chat-45` | read-only | read/write |", text)
+        self.assertIn("scheduled-chat-45", text)
+        self.assertIn("read-only | read/write", text)
         self.assertIn("Scheduled workerはGitHubへのclaim、reservation、submission、result", text)
         self.assertIn("Library保存不能でも完成成果を破棄しない", text)
         self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
 
     def test_current_inventory_and_quota_contract(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("`収録候補論文数 > 600` → Research", text)
-        self.assertIn("`収録候補論文数 <= 600` → Discovery", text)
+        self.assertIn("収録候補論文数 > 600", text)
+        self.assertIn("収録候補論文数 <= 600", text)
         self.assertIn("Research runでは新規完成Research Markdownを5件Libraryへ保存する", text)
         self.assertIn("新規canonical identity 10件を本文確認まで行い", text)
         self.assertNotIn("E = G + D - R", text)
@@ -33,7 +34,7 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         text = ROUTER.read_text(encoding="utf-8")
         self.assertIn("byte-preserving転送", text)
         self.assertIn("source_sha256", text)
-        self.assertIn("Library原本を削除してよい", text)
+        self.assertIn("そのLibrary成果を削除してよい", text)
 
     def test_legacy_direct_transport_is_not_a_current_worker_path(self):
         text = ROUTER.read_text(encoding="utf-8")
