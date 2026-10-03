@@ -1,0 +1,254 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-307aa1cda65824b0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-307aa1cda658",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2404.03605",
+    "arXiv:2404.04793",
+    "arXiv:2404.06954",
+    "arXiv:2404.10308"
+  ],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "02c8e8bd620a7d011bf7210d03c6aa4313246b69",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T13:21:38.688026+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2404.03605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.04793",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.06954",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.10308",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization",
+      "source_url": "https://arxiv.org/abs/2404.03605",
+      "year": 2024,
+      "published": "2024-04-04",
+      "abstract": "We consider the problem of accurate quantization for language models, where both the weights and activations are uniformly quantized to 4 bits per parameter, the lowest bitwidth format natively supported by GPU hardware. In this context, the key challenge is activation quantization: it is known that language models contain outlier channels whose values on average are orders of magnitude higher than than other channels, which prevents accurate low-bitwidth quantization with known techniques. We systematically study this phenomena and find that these outlier channels emerge early in training, and that they occur more frequently in layers with residual streams. We then propose a simple strategy which regularizes a layer's inputs via quantization-aware training (QAT) and its outputs via activation kurtosis regularization. We show that regularizing both the inputs and outputs is crucial for preventing a model's\"migrating\"the difficulty in input quantization to the weights, which makes post-training quantization (PTQ) of weights more difficult. When combined with weight PTQ, we show that our approach can obtain a W4A4 model that performs competitively to the standard-precision W16A16 baseline.",
+      "canonical_id": "arXiv:2404.03605",
+      "arxiv_id": "2404.03605",
+      "doi": "10.48550/arXiv.2404.03605",
+      "authors": [
+        "Aniruddha Nrusimha",
+        "Mayank Mishra",
+        "Naigang Wang",
+        "Dan Alistarh",
+        "Rameswar Panda",
+        "Yoon Kim"
+      ]
+    },
+    {
+      "title": "SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget",
+      "source_url": "https://arxiv.org/abs/2404.04793",
+      "year": 2024,
+      "published": "2024-04-07",
+      "abstract": "Optimizing the Key-Value (KV) cache of the Large Language Model (LLM) has been considered critical to saving the cost of inference. Most of the existing KV-cache compression algorithms attempted to sparsify the sequence of tokens by taking advantage of the different importance of tokens. However, most of these methods treat all layers equally, allocating the same KV budget to each layer. This approach is suboptimal, as some layers may be less sensitive to input tokens yet still receive the same budget as others. In this work, we found that by identifying the importance of attention layers, we could optimize the KV-cache jointly from two dimensions, i.e., sequence-wise and layer-wise. Based on our observations regarding layer-wise importance in inference, we propose SqueezeAttention to precisely optimize the allocation of KV-cache budget among layers on-the-fly and then incorporate three representative sequence-wise algorithms to compress the KV-cache for each layer with its very own budget. Specifically, we first measure each layer's importance by calculating the cosine similarity of the input prompt differences before and after the self-attention layers. Based on this similarity, we then categorize the layers into two groups and adjust their KV budgets accordingly. By optimizing the KV-cache from both sequence's and layer's dimensions, SqueezeAttention achieves around 30% to 70% of the memory reductions and up to 2.2 times of throughput improvements in a wide range of LLMs and benchmarks. The code is available at https://github.com/hetailang/SqueezeAttention.",
+      "canonical_id": "arXiv:2404.04793",
+      "arxiv_id": "2404.04793",
+      "doi": "10.48550/arXiv.2404.04793",
+      "authors": [
+        "Zihao Wang",
+        "Bin Cui",
+        "Shaoduo Gan"
+      ]
+    },
+    {
+      "title": "Accelerating Inference in Large Language Models with a Unified Layer Skipping Strategy",
+      "source_url": "https://arxiv.org/abs/2404.06954",
+      "year": 2024,
+      "published": "2024-04-10",
+      "abstract": "Recently, dynamic computation methods have shown notable acceleration for Large Language Models (LLMs) by skipping several layers of computations through elaborate heuristics or additional predictors. However, in the decoding process of existing approaches, different samples are assigned different computational budgets, which cannot guarantee a stable and precise acceleration effect. Furthermore, existing approaches generally skip multiple contiguous layers at the bottom or top of the layers, leading to a drastic change in the model's layer-wise representations, and thus a consequent performance degeneration. Therefore, we propose a Unified Layer Skipping strategy, which selects the number of layers to skip computation based solely on the target speedup ratio, and then skips the corresponding number of intermediate layer computations in a balanced manner. Since the Unified Layer Skipping strategy is independent of input samples, it naturally supports popular acceleration techniques such as batch decoding and KV caching, thus demonstrating more practicality for real-world applications. Experimental results on two common tasks, i.e., machine translation and text summarization, indicate that given a target speedup ratio, the Unified Layer Skipping strategy significantly enhances both the inference performance and the actual model throughput over existing dynamic approaches.",
+      "canonical_id": "arXiv:2404.06954",
+      "arxiv_id": "2404.06954",
+      "doi": "10.48550/arXiv.2404.06954",
+      "authors": [
+        "Yijin Liu",
+        "Fan-Dong Meng",
+        "Jie Zhou"
+      ]
+    },
+    {
+      "title": "Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs",
+      "source_url": "https://arxiv.org/abs/2404.10308",
+      "year": 2024,
+      "published": "2024-04-16",
+      "abstract": "Large language models (LLMs) have shown remarkable performance in various natural language processing tasks. However, a primary constraint they face is the context limit, i.e., the maximum number of tokens they can process. Previous works have explored architectural changes and modifications in positional encoding to relax the constraint, but they often require expensive training or do not address the computational demands of self-attention. In this paper, we present Hierarchical cOntext MERging (HOMER), a new training-free scheme designed to overcome the limitations. HOMER uses a divide-and-conquer algorithm, dividing long inputs into manageable chunks. Each chunk is then processed collectively, employing a hierarchical strategy that merges adjacent chunks at progressive transformer layers. A token reduction technique precedes each merging, ensuring memory usage efficiency. We also propose an optimized computational order reducing the memory requirement to logarithmically scale with respect to input length, making it especially favorable for environments with tight memory restrictions. Our experiments demonstrate the proposed method's superior performance and memory efficiency, enabling the broader use of LLMs in contexts requiring extended context. Code is available at https://github.com/alinlab/HOMER.",
+      "canonical_id": "arXiv:2404.10308",
+      "arxiv_id": "2404.10308",
+      "doi": "10.48550/arXiv.2404.10308",
+      "authors": [
+        "Woo-Min Song",
+        "Seunghyuk Oh",
+        "Sangwoo Mo",
+        "Jaehyung Kim",
+        "Sukmin Yun",
+        "Jung-Woo Ha",
+        "Jinwoo Shin"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.03605",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.03605",
+        "id:arXiv:2404.03605",
+        "title:mitigating the impact of outlier channels for language model quantization with activation regularization",
+        "url:https://arxiv.org/abs/2404.03605"
+      ],
+      "record": {
+        "title": "Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization",
+        "source_url": "https://arxiv.org/abs/2404.03605",
+        "year": 2024,
+        "published": "2024-04-04",
+        "abstract": "We consider the problem of accurate quantization for language models, where both the weights and activations are uniformly quantized to 4 bits per parameter, the lowest bitwidth format natively supported by GPU hardware. In this context, the key challenge is activation quantization: it is known that language models contain outlier channels whose values on average are orders of magnitude higher than than other channels, which prevents accurate low-bitwidth quantization with known techniques. We systematically study this phenomena and find that these outlier channels emerge early in training, and that they occur more frequently in layers with residual streams. We then propose a simple strategy which regularizes a layer's inputs via quantization-aware training (QAT) and its outputs via activation kurtosis regularization. We show that regularizing both the inputs and outputs is crucial for preventing a model's\"migrating\"the difficulty in input quantization to the weights, which makes post-training quantization (PTQ) of weights more difficult. When combined with weight PTQ, we show that our approach can obtain a W4A4 model that performs competitively to the standard-precision W16A16 baseline.",
+        "canonical_id": "arXiv:2404.03605",
+        "arxiv_id": "2404.03605",
+        "doi": "10.48550/arXiv.2404.03605",
+        "authors": [
+          "Aniruddha Nrusimha",
+          "Mayank Mishra",
+          "Naigang Wang",
+          "Dan Alistarh",
+          "Rameswar Panda",
+          "Yoon Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.04793",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.04793",
+        "id:arXiv:2404.04793",
+        "title:squeezeattention 2d management of kvcache in llm inference via layerwise optimal budget",
+        "url:https://arxiv.org/abs/2404.04793"
+      ],
+      "record": {
+        "title": "SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget",
+        "source_url": "https://arxiv.org/abs/2404.04793",
+        "year": 2024,
+        "published": "2024-04-07",
+        "abstract": "Optimizing the Key-Value (KV) cache of the Large Language Model (LLM) has been considered critical to saving the cost of inference. Most of the existing KV-cache compression algorithms attempted to sparsify the sequence of tokens by taking advantage of the different importance of tokens. However, most of these methods treat all layers equally, allocating the same KV budget to each layer. This approach is suboptimal, as some layers may be less sensitive to input tokens yet still receive the same budget as others. In this work, we found that by identifying the importance of attention layers, we could optimize the KV-cache jointly from two dimensions, i.e., sequence-wise and layer-wise. Based on our observations regarding layer-wise importance in inference, we propose SqueezeAttention to precisely optimize the allocation of KV-cache budget among layers on-the-fly and then incorporate three representative sequence-wise algorithms to compress the KV-cache for each layer with its very own budget. Specifically, we first measure each layer's importance by calculating the cosine similarity of the input prompt differences before and after the self-attention layers. Based on this similarity, we then categorize the layers into two groups and adjust their KV budgets accordingly. By optimizing the KV-cache from both sequence's and layer's dimensions, SqueezeAttention achieves around 30% to 70% of the memory reductions and up to 2.2 times of throughput improvements in a wide range of LLMs and benchmarks. The code is available at https://github.com/hetailang/SqueezeAttention.",
+        "canonical_id": "arXiv:2404.04793",
+        "arxiv_id": "2404.04793",
+        "doi": "10.48550/arXiv.2404.04793",
+        "authors": [
+          "Zihao Wang",
+          "Bin Cui",
+          "Shaoduo Gan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.06954",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.06954",
+        "id:arXiv:2404.06954",
+        "title:accelerating inference in large language models with a unified layer skipping strategy",
+        "url:https://arxiv.org/abs/2404.06954"
+      ],
+      "record": {
+        "title": "Accelerating Inference in Large Language Models with a Unified Layer Skipping Strategy",
+        "source_url": "https://arxiv.org/abs/2404.06954",
+        "year": 2024,
+        "published": "2024-04-10",
+        "abstract": "Recently, dynamic computation methods have shown notable acceleration for Large Language Models (LLMs) by skipping several layers of computations through elaborate heuristics or additional predictors. However, in the decoding process of existing approaches, different samples are assigned different computational budgets, which cannot guarantee a stable and precise acceleration effect. Furthermore, existing approaches generally skip multiple contiguous layers at the bottom or top of the layers, leading to a drastic change in the model's layer-wise representations, and thus a consequent performance degeneration. Therefore, we propose a Unified Layer Skipping strategy, which selects the number of layers to skip computation based solely on the target speedup ratio, and then skips the corresponding number of intermediate layer computations in a balanced manner. Since the Unified Layer Skipping strategy is independent of input samples, it naturally supports popular acceleration techniques such as batch decoding and KV caching, thus demonstrating more practicality for real-world applications. Experimental results on two common tasks, i.e., machine translation and text summarization, indicate that given a target speedup ratio, the Unified Layer Skipping strategy significantly enhances both the inference performance and the actual model throughput over existing dynamic approaches.",
+        "canonical_id": "arXiv:2404.06954",
+        "arxiv_id": "2404.06954",
+        "doi": "10.48550/arXiv.2404.06954",
+        "authors": [
+          "Yijin Liu",
+          "Fan-Dong Meng",
+          "Jie Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.10308",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.10308",
+        "id:arXiv:2404.10308",
+        "title:hierarchical context merging better long context understanding for pretrained llms",
+        "url:https://arxiv.org/abs/2404.10308"
+      ],
+      "record": {
+        "title": "Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs",
+        "source_url": "https://arxiv.org/abs/2404.10308",
+        "year": 2024,
+        "published": "2024-04-16",
+        "abstract": "Large language models (LLMs) have shown remarkable performance in various natural language processing tasks. However, a primary constraint they face is the context limit, i.e., the maximum number of tokens they can process. Previous works have explored architectural changes and modifications in positional encoding to relax the constraint, but they often require expensive training or do not address the computational demands of self-attention. In this paper, we present Hierarchical cOntext MERging (HOMER), a new training-free scheme designed to overcome the limitations. HOMER uses a divide-and-conquer algorithm, dividing long inputs into manageable chunks. Each chunk is then processed collectively, employing a hierarchical strategy that merges adjacent chunks at progressive transformer layers. A token reduction technique precedes each merging, ensuring memory usage efficiency. We also propose an optimized computational order reducing the memory requirement to logarithmically scale with respect to input length, making it especially favorable for environments with tight memory restrictions. Our experiments demonstrate the proposed method's superior performance and memory efficiency, enabling the broader use of LLMs in contexts requiring extended context. Code is available at https://github.com/alinlab/HOMER.",
+        "canonical_id": "arXiv:2404.10308",
+        "arxiv_id": "2404.10308",
+        "doi": "10.48550/arXiv.2404.10308",
+        "authors": [
+          "Woo-Min Song",
+          "Seunghyuk Oh",
+          "Sangwoo Mo",
+          "Jaehyung Kim",
+          "Sukmin Yun",
+          "Jung-Woo Ha",
+          "Jinwoo Shin"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:2ff1477f72f6432131ef0ce96a81bd733cb1acedc11a832d27092931e4a5b7c6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

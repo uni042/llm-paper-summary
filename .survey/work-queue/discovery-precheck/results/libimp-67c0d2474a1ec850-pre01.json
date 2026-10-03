@@ -1,0 +1,414 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-67c0d2474a1ec850-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-67c0d2474a1e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.13048",
+    "arXiv:2305.16300",
+    "arXiv:2309.04255",
+    "arXiv:2405.14366",
+    "arXiv:2405.16406",
+    "arXiv:2407.12391"
+  ],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "02c8e8bd620a7d011bf7210d03c6aa4313246b69",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T13:21:38.721471+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.13048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.16300",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2309.04255",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.14366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.16406",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.12391",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RWKV: Reinventing RNNs for the Transformer Era",
+      "source_url": "https://arxiv.org/abs/2305.13048",
+      "year": 2023,
+      "published": "2023-05-22",
+      "abstract": "Transformers have revolutionized almost all natural language processing (NLP) tasks but suffer from memory and computational complexity that scales quadratically with sequence length. In contrast, recurrent neural networks (RNNs) exhibit linear scaling in memory and computational requirements but struggle to match the same performance as Transformers due to limitations in parallelization and scalability. We propose a novel model architecture, Receptance Weighted Key Value (RWKV), that combines the efficient parallelizable training of transformers with the efficient inference of RNNs. Our approach leverages a linear attention mechanism and allows us to formulate the model as either a Transformer or an RNN, thus parallelizing computations during training and maintains constant computational and memory complexity during inference. We scale our models as large as 14 billion parameters, by far the largest dense RNN ever trained, and find RWKV performs on par with similarly sized Transformers, suggesting future work can leverage this architecture to create more efficient models. This work presents a significant step towards reconciling trade-offs between computational efficiency and model performance in sequence processing tasks.",
+      "canonical_id": "arXiv:2305.13048",
+      "arxiv_id": "2305.13048",
+      "doi": "10.18653/v1/2023.findings-emnlp.936",
+      "authors": [
+        "Bo Peng",
+        "Eric Alcaide",
+        "Quentin Anthony",
+        "Alon Albalak",
+        "Samuel Arcadinho",
+        "Stella Biderman",
+        "Huanqi Cao",
+        "Xin Cheng",
+        "Michael Chung",
+        "Matteo Grella",
+        "G. Kranthikiran",
+        "Xingjian Du",
+        "Xuzheng He",
+        "Haowen Hou",
+        "Przemyslaw Kazienko",
+        "Jan Kocoń",
+        "Jiaming Kong",
+        "Bartlomiej Koptyra",
+        "Hayden Lau",
+        "Krishna Sri Ipsit Mantri",
+        "Ferdinand Mom",
+        "Atsushi Saito",
+        "Xiangru Tang",
+        "Bo-Lun Wang",
+        "J. S. Wind",
+        "Stansilaw Wozniak",
+        "Rui-Chong Zhang",
+        "Zhenyuan Zhang",
+        "Qihang Zhao",
+        "P. Zhou",
+        "Jian Zhu",
+        "Rui Zhu"
+      ]
+    },
+    {
+      "title": "Landmark Attention: Random-Access Infinite Context Length for Transformers",
+      "source_url": "https://arxiv.org/abs/2305.16300",
+      "year": 2023,
+      "published": "2023-05-25",
+      "abstract": "While Transformers have shown remarkable success in natural language processing, their attention mechanism's large memory requirements have limited their ability to handle longer contexts. Prior approaches, such as recurrent memory or retrieval-based augmentation, have either compromised the random-access flexibility of attention (i.e., the capability to select any token in the entire context) or relied on separate mechanisms for relevant context retrieval, which may not be compatible with the model's attention. In this paper, we present a novel approach that allows access to the complete context while retaining random-access flexibility, closely resembling running attention on the entire context. Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting relevant blocks, enabling retrieval of blocks directly through the attention mechanism instead of by relying on a separate mechanism. Our approach seamlessly integrates with specialized data structures and the system's memory hierarchy, enabling processing of arbitrarily long context lengths. We demonstrate that our method can obtain comparable performance with Transformer-XL while significantly reducing the number of retrieved tokens in each step. Finally, we show that fine-tuning LLaMA 7B with our method successfully extends its context length capacity to over 32k tokens, allowing for inference at the context lengths of GPT-4. We release the implementation of landmark attention and the code to reproduce our experiments at https://github.com/epfml/landmark-attention/.",
+      "canonical_id": "arXiv:2305.16300",
+      "arxiv_id": "2305.16300",
+      "doi": "10.48550/arXiv.2305.16300",
+      "authors": [
+        "Amirkeivan Mohtashami",
+        "Martin Jaggi"
+      ]
+    },
+    {
+      "title": "LLMCad: Fast and Scalable On-device Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2309.04255",
+      "year": 2023,
+      "published": "2023-09-08",
+      "abstract": "Generative tasks, such as text generation and question answering, hold a crucial position in the realm of mobile applications. Due to their sensitivity to privacy concerns, there is a growing demand for their execution directly on mobile devices. Currently, the execution of these generative tasks heavily depends on Large Language Models (LLMs). Nevertheless, the limited memory capacity of these devices presents a formidable challenge to the scalability of such models. In our research, we introduce LLMCad, an innovative on-device inference engine specifically designed for efficient generative Natural Language Processing (NLP) tasks. The core idea behind LLMCad revolves around model collaboration: a compact LLM, residing in memory, takes charge of generating the most straightforward tokens, while a high-precision LLM steps in to validate these tokens and rectify any identified errors. LLMCad incorporates three novel techniques: (1) Instead of generating candidate tokens in a sequential manner, LLMCad employs the smaller LLM to construct a token tree, encompassing a wider range of plausible token pathways. Subsequently, the larger LLM can efficiently validate all of these pathways simultaneously. (2) It employs a self-adjusting fallback strategy, swiftly initiating the verification process whenever the smaller LLM generates an erroneous token. (3) To ensure a continuous flow of token generation, LLMCad speculatively generates tokens during the verification process by implementing a compute-IO pipeline. Through an extensive series of experiments, LLMCad showcases an impressive token generation speed, achieving rates up to 9.3x faster than existing inference engines.",
+      "canonical_id": "arXiv:2309.04255",
+      "arxiv_id": "2309.04255",
+      "doi": "10.48550/arXiv.2309.04255",
+      "authors": [
+        "Da-Liang Xu",
+        "Wang-Song Yin",
+        "Xin Jin",
+        "Y. Zhang",
+        "Shiyun Wei",
+        "Mengwei Xu",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.14366",
+      "year": 2024,
+      "published": "2024-05-23",
+      "abstract": "A critical approach for efficiently deploying computationally demanding large language models (LLMs) is Key-Value (KV) caching. The KV cache stores key-value states of previously generated tokens, significantly reducing the need for repetitive computations and thereby lowering latency in autoregressive generation. However, the size of the KV cache grows linearly with sequence length, posing challenges for applications requiring long context input and extensive sequence generation. In this paper, we present a simple yet effective approach, called MiniCache, to compress the KV cache across layers from a novel depth perspective, significantly reducing the memory footprint for LLM inference. Our approach is based on the observation that KV cache states exhibit high similarity between the adjacent layers in the middle-to-deep portion of LLMs. To facilitate merging, we propose disentangling the states into the magnitude and direction components, interpolating the directions of the state vectors while preserving their lengths unchanged. Furthermore, we introduce a token retention strategy to keep highly distinct state pairs unmerged, thus preserving the information with minimal additional storage overhead. Our MiniCache is training-free and general, complementing existing KV cache compression strategies, such as quantization and sparsity. We conduct a comprehensive evaluation of MiniCache utilizing various models including LLaMA-2, LLaMA-3, Phi-3, Mistral, and Mixtral across multiple benchmarks, demonstrating its exceptional performance in achieving superior compression ratios and high throughput. On the ShareGPT dataset, LLaMA-2-7B with 4-bit MiniCache achieves a remarkable compression ratio of up to 5.02x, enhances inference throughput by approximately 5x, and reduces the memory footprint by 41% compared to the FP16 full cache baseline, all while maintaining near-lossless performance.",
+      "canonical_id": "arXiv:2405.14366",
+      "arxiv_id": "2405.14366",
+      "doi": "10.48550/arXiv.2405.14366",
+      "authors": [
+        "Akide Liu",
+        "Jing Liu",
+        "Zizheng Pan",
+        "Ye-Fei He",
+        "Gholamreza Haffari",
+        "Bo-Han Zhuang"
+      ]
+    },
+    {
+      "title": "SpinQuant: LLM quantization with learned rotations",
+      "source_url": "https://arxiv.org/abs/2405.16406",
+      "year": 2024,
+      "published": "2024-05-26",
+      "abstract": "Post-training quantization (PTQ) techniques applied to weights, activations, and the KV cache greatly reduce memory usage, latency, and power consumption of Large Language Models (LLMs), but may lead to large quantization errors when outliers are present. Rotating activation or weight matrices helps remove outliers and benefits quantization. In this work, we identify a collection of applicable rotation parameterizations that lead to identical outputs in full-precision Transformer architectures while enhancing quantization accuracy. In addition, we find that some random rotations lead to much better quantization than others, with an up to 13 points difference in downstream zero-shot reasoning performance. As a result, we propose SpinQuant, a novel approach that incorporates learned rotation matrices for optimal quantized network accuracy. With 4-bit quantization of weight, activation, and KV-cache, SpinQuant narrows the accuracy gap on zero-shot reasoning tasks with full precision to merely 2.9 points on the LLaMA-2 7B model, surpassing LLM-QAT by 19.1 points and SmoothQuant by 25.0 points. Furthermore, SpinQuant also outperforms concurrent work QuaRot, which applies random rotations to remove outliers. In particular, for LLaMA-3 8B models that are hard to quantize, SpinQuant reduces the gap to full precision by up to 45.1% relative to QuaRot. Code is available at https://github.com/facebookresearch/SpinQuant.",
+      "canonical_id": "arXiv:2405.16406",
+      "arxiv_id": "2405.16406",
+      "doi": "10.48550/arXiv.2405.16406",
+      "authors": [
+        "Zechun Liu",
+        "Changsheng Zhao",
+        "Igor Fedorov",
+        "Bilge Soran",
+        "Dhruv Choudhary",
+        "Raghuraman Krishnamoorthi",
+        "Vikas Chandra",
+        "Yuandong Tian",
+        "Tijmen Blankevoort"
+      ]
+    },
+    {
+      "title": "LLM Inference Serving: Survey of Recent Advances and Opportunities",
+      "source_url": "https://arxiv.org/abs/2407.12391",
+      "year": 2024,
+      "published": "2024-07-17",
+      "abstract": "This survey offers a comprehensive overview of recent advancements in Large Language Model (LLM) serving systems, focusing on research since the year 2023. We specifically examine system-level enhancements that improve performance and efficiency without altering the core LLM decoding mechanisms. By selecting and reviewing high-quality papers from prestigious ML and system venues, we highlight key innovations and practical considerations for deploying and scaling LLMs in real-world production environments. This survey serves as a valuable resource for LLM practitioners seeking to stay abreast of the latest developments in this rapidly evolving field.",
+      "canonical_id": "arXiv:2407.12391",
+      "arxiv_id": "2407.12391",
+      "doi": "10.1109/HPEC62836.2024.10938426",
+      "authors": [
+        "Baolin Li",
+        "Yan-Kai Jiang",
+        "V. Gadepally",
+        "Devesh Tiwari"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.13048",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2023.findings-emnlp.936",
+        "id:arXiv:2305.13048",
+        "title:rwkv reinventing rnns for the transformer era",
+        "url:https://arxiv.org/abs/2305.13048"
+      ],
+      "record": {
+        "title": "RWKV: Reinventing RNNs for the Transformer Era",
+        "source_url": "https://arxiv.org/abs/2305.13048",
+        "year": 2023,
+        "published": "2023-05-22",
+        "abstract": "Transformers have revolutionized almost all natural language processing (NLP) tasks but suffer from memory and computational complexity that scales quadratically with sequence length. In contrast, recurrent neural networks (RNNs) exhibit linear scaling in memory and computational requirements but struggle to match the same performance as Transformers due to limitations in parallelization and scalability. We propose a novel model architecture, Receptance Weighted Key Value (RWKV), that combines the efficient parallelizable training of transformers with the efficient inference of RNNs. Our approach leverages a linear attention mechanism and allows us to formulate the model as either a Transformer or an RNN, thus parallelizing computations during training and maintains constant computational and memory complexity during inference. We scale our models as large as 14 billion parameters, by far the largest dense RNN ever trained, and find RWKV performs on par with similarly sized Transformers, suggesting future work can leverage this architecture to create more efficient models. This work presents a significant step towards reconciling trade-offs between computational efficiency and model performance in sequence processing tasks.",
+        "canonical_id": "arXiv:2305.13048",
+        "arxiv_id": "2305.13048",
+        "doi": "10.18653/v1/2023.findings-emnlp.936",
+        "authors": [
+          "Bo Peng",
+          "Eric Alcaide",
+          "Quentin Anthony",
+          "Alon Albalak",
+          "Samuel Arcadinho",
+          "Stella Biderman",
+          "Huanqi Cao",
+          "Xin Cheng",
+          "Michael Chung",
+          "Matteo Grella",
+          "G. Kranthikiran",
+          "Xingjian Du",
+          "Xuzheng He",
+          "Haowen Hou",
+          "Przemyslaw Kazienko",
+          "Jan Kocoń",
+          "Jiaming Kong",
+          "Bartlomiej Koptyra",
+          "Hayden Lau",
+          "Krishna Sri Ipsit Mantri",
+          "Ferdinand Mom",
+          "Atsushi Saito",
+          "Xiangru Tang",
+          "Bo-Lun Wang",
+          "J. S. Wind",
+          "Stansilaw Wozniak",
+          "Rui-Chong Zhang",
+          "Zhenyuan Zhang",
+          "Qihang Zhao",
+          "P. Zhou",
+          "Jian Zhu",
+          "Rui Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.16300",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.16300",
+        "id:arXiv:2305.16300",
+        "title:landmark attention randomaccess infinite context length for transformers",
+        "url:https://arxiv.org/abs/2305.16300"
+      ],
+      "record": {
+        "title": "Landmark Attention: Random-Access Infinite Context Length for Transformers",
+        "source_url": "https://arxiv.org/abs/2305.16300",
+        "year": 2023,
+        "published": "2023-05-25",
+        "abstract": "While Transformers have shown remarkable success in natural language processing, their attention mechanism's large memory requirements have limited their ability to handle longer contexts. Prior approaches, such as recurrent memory or retrieval-based augmentation, have either compromised the random-access flexibility of attention (i.e., the capability to select any token in the entire context) or relied on separate mechanisms for relevant context retrieval, which may not be compatible with the model's attention. In this paper, we present a novel approach that allows access to the complete context while retaining random-access flexibility, closely resembling running attention on the entire context. Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting relevant blocks, enabling retrieval of blocks directly through the attention mechanism instead of by relying on a separate mechanism. Our approach seamlessly integrates with specialized data structures and the system's memory hierarchy, enabling processing of arbitrarily long context lengths. We demonstrate that our method can obtain comparable performance with Transformer-XL while significantly reducing the number of retrieved tokens in each step. Finally, we show that fine-tuning LLaMA 7B with our method successfully extends its context length capacity to over 32k tokens, allowing for inference at the context lengths of GPT-4. We release the implementation of landmark attention and the code to reproduce our experiments at https://github.com/epfml/landmark-attention/.",
+        "canonical_id": "arXiv:2305.16300",
+        "arxiv_id": "2305.16300",
+        "doi": "10.48550/arXiv.2305.16300",
+        "authors": [
+          "Amirkeivan Mohtashami",
+          "Martin Jaggi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.04255",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2309.04255",
+        "id:arXiv:2309.04255",
+        "title:llmcad fast and scalable ondevice large language model inference",
+        "url:https://arxiv.org/abs/2309.04255"
+      ],
+      "record": {
+        "title": "LLMCad: Fast and Scalable On-device Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2309.04255",
+        "year": 2023,
+        "published": "2023-09-08",
+        "abstract": "Generative tasks, such as text generation and question answering, hold a crucial position in the realm of mobile applications. Due to their sensitivity to privacy concerns, there is a growing demand for their execution directly on mobile devices. Currently, the execution of these generative tasks heavily depends on Large Language Models (LLMs). Nevertheless, the limited memory capacity of these devices presents a formidable challenge to the scalability of such models. In our research, we introduce LLMCad, an innovative on-device inference engine specifically designed for efficient generative Natural Language Processing (NLP) tasks. The core idea behind LLMCad revolves around model collaboration: a compact LLM, residing in memory, takes charge of generating the most straightforward tokens, while a high-precision LLM steps in to validate these tokens and rectify any identified errors. LLMCad incorporates three novel techniques: (1) Instead of generating candidate tokens in a sequential manner, LLMCad employs the smaller LLM to construct a token tree, encompassing a wider range of plausible token pathways. Subsequently, the larger LLM can efficiently validate all of these pathways simultaneously. (2) It employs a self-adjusting fallback strategy, swiftly initiating the verification process whenever the smaller LLM generates an erroneous token. (3) To ensure a continuous flow of token generation, LLMCad speculatively generates tokens during the verification process by implementing a compute-IO pipeline. Through an extensive series of experiments, LLMCad showcases an impressive token generation speed, achieving rates up to 9.3x faster than existing inference engines.",
+        "canonical_id": "arXiv:2309.04255",
+        "arxiv_id": "2309.04255",
+        "doi": "10.48550/arXiv.2309.04255",
+        "authors": [
+          "Da-Liang Xu",
+          "Wang-Song Yin",
+          "Xin Jin",
+          "Y. Zhang",
+          "Shiyun Wei",
+          "Mengwei Xu",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14366",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.14366",
+        "id:arXiv:2405.14366",
+        "title:minicache kv cache compression in depth dimension for large language models",
+        "url:https://arxiv.org/abs/2405.14366"
+      ],
+      "record": {
+        "title": "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2405.14366",
+        "year": 2024,
+        "published": "2024-05-23",
+        "abstract": "A critical approach for efficiently deploying computationally demanding large language models (LLMs) is Key-Value (KV) caching. The KV cache stores key-value states of previously generated tokens, significantly reducing the need for repetitive computations and thereby lowering latency in autoregressive generation. However, the size of the KV cache grows linearly with sequence length, posing challenges for applications requiring long context input and extensive sequence generation. In this paper, we present a simple yet effective approach, called MiniCache, to compress the KV cache across layers from a novel depth perspective, significantly reducing the memory footprint for LLM inference. Our approach is based on the observation that KV cache states exhibit high similarity between the adjacent layers in the middle-to-deep portion of LLMs. To facilitate merging, we propose disentangling the states into the magnitude and direction components, interpolating the directions of the state vectors while preserving their lengths unchanged. Furthermore, we introduce a token retention strategy to keep highly distinct state pairs unmerged, thus preserving the information with minimal additional storage overhead. Our MiniCache is training-free and general, complementing existing KV cache compression strategies, such as quantization and sparsity. We conduct a comprehensive evaluation of MiniCache utilizing various models including LLaMA-2, LLaMA-3, Phi-3, Mistral, and Mixtral across multiple benchmarks, demonstrating its exceptional performance in achieving superior compression ratios and high throughput. On the ShareGPT dataset, LLaMA-2-7B with 4-bit MiniCache achieves a remarkable compression ratio of up to 5.02x, enhances inference throughput by approximately 5x, and reduces the memory footprint by 41% compared to the FP16 full cache baseline, all while maintaining near-lossless performance.",
+        "canonical_id": "arXiv:2405.14366",
+        "arxiv_id": "2405.14366",
+        "doi": "10.48550/arXiv.2405.14366",
+        "authors": [
+          "Akide Liu",
+          "Jing Liu",
+          "Zizheng Pan",
+          "Ye-Fei He",
+          "Gholamreza Haffari",
+          "Bo-Han Zhuang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.16406",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.16406",
+        "id:arXiv:2405.16406",
+        "title:spinquant llm quantization with learned rotations",
+        "url:https://arxiv.org/abs/2405.16406"
+      ],
+      "record": {
+        "title": "SpinQuant: LLM quantization with learned rotations",
+        "source_url": "https://arxiv.org/abs/2405.16406",
+        "year": 2024,
+        "published": "2024-05-26",
+        "abstract": "Post-training quantization (PTQ) techniques applied to weights, activations, and the KV cache greatly reduce memory usage, latency, and power consumption of Large Language Models (LLMs), but may lead to large quantization errors when outliers are present. Rotating activation or weight matrices helps remove outliers and benefits quantization. In this work, we identify a collection of applicable rotation parameterizations that lead to identical outputs in full-precision Transformer architectures while enhancing quantization accuracy. In addition, we find that some random rotations lead to much better quantization than others, with an up to 13 points difference in downstream zero-shot reasoning performance. As a result, we propose SpinQuant, a novel approach that incorporates learned rotation matrices for optimal quantized network accuracy. With 4-bit quantization of weight, activation, and KV-cache, SpinQuant narrows the accuracy gap on zero-shot reasoning tasks with full precision to merely 2.9 points on the LLaMA-2 7B model, surpassing LLM-QAT by 19.1 points and SmoothQuant by 25.0 points. Furthermore, SpinQuant also outperforms concurrent work QuaRot, which applies random rotations to remove outliers. In particular, for LLaMA-3 8B models that are hard to quantize, SpinQuant reduces the gap to full precision by up to 45.1% relative to QuaRot. Code is available at https://github.com/facebookresearch/SpinQuant.",
+        "canonical_id": "arXiv:2405.16406",
+        "arxiv_id": "2405.16406",
+        "doi": "10.48550/arXiv.2405.16406",
+        "authors": [
+          "Zechun Liu",
+          "Changsheng Zhao",
+          "Igor Fedorov",
+          "Bilge Soran",
+          "Dhruv Choudhary",
+          "Raghuraman Krishnamoorthi",
+          "Vikas Chandra",
+          "Yuandong Tian",
+          "Tijmen Blankevoort"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.12391",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpec62836.2024.10938426",
+        "id:arXiv:2407.12391",
+        "title:llm inference serving survey of recent advances and opportunities",
+        "url:https://arxiv.org/abs/2407.12391"
+      ],
+      "record": {
+        "title": "LLM Inference Serving: Survey of Recent Advances and Opportunities",
+        "source_url": "https://arxiv.org/abs/2407.12391",
+        "year": 2024,
+        "published": "2024-07-17",
+        "abstract": "This survey offers a comprehensive overview of recent advancements in Large Language Model (LLM) serving systems, focusing on research since the year 2023. We specifically examine system-level enhancements that improve performance and efficiency without altering the core LLM decoding mechanisms. By selecting and reviewing high-quality papers from prestigious ML and system venues, we highlight key innovations and practical considerations for deploying and scaling LLMs in real-world production environments. This survey serves as a valuable resource for LLM practitioners seeking to stay abreast of the latest developments in this rapidly evolving field.",
+        "canonical_id": "arXiv:2407.12391",
+        "arxiv_id": "2407.12391",
+        "doi": "10.1109/HPEC62836.2024.10938426",
+        "authors": [
+          "Baolin Li",
+          "Yan-Kai Jiang",
+          "V. Gadepally",
+          "Devesh Tiwari"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:4c8d9b03d6db2837543b65b5233034d8ff419183178377e0ee81891008b5dd9b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

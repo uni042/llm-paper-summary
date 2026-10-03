@@ -1,0 +1,182 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-539d2f7dc8ad90b4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-539d2f7dc8ad",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2403.15447",
+    "arXiv:2403.16971"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "02c8e8bd620a7d011bf7210d03c6aa4313246b69",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T13:21:38.774460+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2403.15447",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.16971",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+      "source_url": "https://arxiv.org/abs/2403.15447",
+      "year": 2024,
+      "published": "2024-03-18",
+      "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+      "canonical_id": "arXiv:2403.15447",
+      "arxiv_id": "2403.15447",
+      "doi": "10.48550/arXiv.2403.15447",
+      "authors": [
+        "Junyuan Hong",
+        "Jinhao Duan",
+        "Chen-Hui Zhang",
+        "Zhangheng Li",
+        "Chulin Xie",
+        "Kelsey Lieberman",
+        "James Diffenderfer",
+        "B. Bartoldson",
+        "A. Jaiswal",
+        "Kai-Di Xu",
+        "B. Kailkhura",
+        "Dan Hendrycks",
+        "D. Song",
+        "Zhang-Yang Wang",
+        "Bo Li"
+      ]
+    },
+    {
+      "title": "AIOS: LLM Agent Operating System",
+      "source_url": "https://arxiv.org/abs/2403.16971",
+      "year": 2024,
+      "published": "2024-03-25",
+      "abstract": "LLM-based intelligent agents face significant deployment challenges, particularly related to resource management. Allowing unrestricted access to LLM or tool resources can lead to inefficient or even potentially harmful resource allocation and utilization for agents. Furthermore, the absence of proper scheduling and resource management mechanisms in current agent designs hinders concurrent processing and limits overall system efficiency. To address these challenges, this paper proposes the architecture of AIOS (LLM-based AI Agent Operating System) under the context of managing LLM-based agents. It introduces a novel architecture for serving LLM-based agents by isolating resources and LLM-specific services from agent applications into an AIOS kernel. This AIOS kernel provides fundamental services (e.g., scheduling, context management, memory management, storage management, access control) for runtime agents. To enhance usability, AIOS also includes an AIOS SDK, a comprehensive suite of APIs designed for utilizing functionalities provided by the AIOS kernel. Experimental results demonstrate that using AIOS can achieve up to 2.1x faster execution for serving agents built by various agent frameworks. The source code is available at https://github.com/agiresearch/AIOS.",
+      "canonical_id": "arXiv:2403.16971",
+      "arxiv_id": "2403.16971",
+      "doi": "10.48550/arXiv.2403.16971",
+      "authors": [
+        "Kai Mei",
+        "Wujiang Xu",
+        "Zelong Li",
+        "Shuyuan Xu",
+        "Ruo-Song Ye",
+        "Ying-Qiang Ge",
+        "Yongfeng Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.15447",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.15447",
+        "id:arXiv:2403.15447",
+        "title:decoding compressed trust scrutinizing the trustworthiness of efficient llms under compression",
+        "url:https://arxiv.org/abs/2403.15447"
+      ],
+      "record": {
+        "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+        "source_url": "https://arxiv.org/abs/2403.15447",
+        "year": 2024,
+        "published": "2024-03-18",
+        "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+        "canonical_id": "arXiv:2403.15447",
+        "arxiv_id": "2403.15447",
+        "doi": "10.48550/arXiv.2403.15447",
+        "authors": [
+          "Junyuan Hong",
+          "Jinhao Duan",
+          "Chen-Hui Zhang",
+          "Zhangheng Li",
+          "Chulin Xie",
+          "Kelsey Lieberman",
+          "James Diffenderfer",
+          "B. Bartoldson",
+          "A. Jaiswal",
+          "Kai-Di Xu",
+          "B. Kailkhura",
+          "Dan Hendrycks",
+          "D. Song",
+          "Zhang-Yang Wang",
+          "Bo Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.16971",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.16971",
+        "id:arXiv:2403.16971",
+        "title:aios llm agent operating system",
+        "url:https://arxiv.org/abs/2403.16971"
+      ],
+      "record": {
+        "title": "AIOS: LLM Agent Operating System",
+        "source_url": "https://arxiv.org/abs/2403.16971",
+        "year": 2024,
+        "published": "2024-03-25",
+        "abstract": "LLM-based intelligent agents face significant deployment challenges, particularly related to resource management. Allowing unrestricted access to LLM or tool resources can lead to inefficient or even potentially harmful resource allocation and utilization for agents. Furthermore, the absence of proper scheduling and resource management mechanisms in current agent designs hinders concurrent processing and limits overall system efficiency. To address these challenges, this paper proposes the architecture of AIOS (LLM-based AI Agent Operating System) under the context of managing LLM-based agents. It introduces a novel architecture for serving LLM-based agents by isolating resources and LLM-specific services from agent applications into an AIOS kernel. This AIOS kernel provides fundamental services (e.g., scheduling, context management, memory management, storage management, access control) for runtime agents. To enhance usability, AIOS also includes an AIOS SDK, a comprehensive suite of APIs designed for utilizing functionalities provided by the AIOS kernel. Experimental results demonstrate that using AIOS can achieve up to 2.1x faster execution for serving agents built by various agent frameworks. The source code is available at https://github.com/agiresearch/AIOS.",
+        "canonical_id": "arXiv:2403.16971",
+        "arxiv_id": "2403.16971",
+        "doi": "10.48550/arXiv.2403.16971",
+        "authors": [
+          "Kai Mei",
+          "Wujiang Xu",
+          "Zelong Li",
+          "Shuyuan Xu",
+          "Ruo-Song Ye",
+          "Ying-Qiang Ge",
+          "Yongfeng Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:fb1c59d1b5aa44c7831e8974bb154a4f2037b2d6e73f1dab9a983fd11e7e3888",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

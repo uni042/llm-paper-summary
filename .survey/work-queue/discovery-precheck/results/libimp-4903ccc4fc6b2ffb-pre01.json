@@ -1,0 +1,204 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4903ccc4fc6b2ffb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4903ccc4fc6b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2403.01632",
+    "arXiv:2403.09054",
+    "arXiv:2403.12844"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "02c8e8bd620a7d011bf7210d03c6aa4313246b69",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T13:21:38.791950+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2403.01632",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.09054",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.12844",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SynCode: LLM Generation with Grammar Augmentation",
+      "source_url": "https://arxiv.org/abs/2403.01632",
+      "year": 2024,
+      "published": "2024-03-03",
+      "abstract": "LLMs are widely used in complex AI applications. These applications underscore the need for LLM outputs to adhere to a specific format, for their integration with other components in the systems. Typically the format rules e.g., for data serialization formats such as JSON, YAML, or Code in Programming Language are expressed as context-free grammar (CFG). Due to the hallucinations and unreliability of LLMs, instructing LLMs to adhere to specified syntax becomes an increasingly important challenge. We present SynCode, a novel framework for efficient and general syntactical decoding with LLMs, to address this challenge. SynCode ensures soundness and completeness with respect to the CFG of a formal language, effectively retaining valid tokens while filtering out invalid ones. SynCode uses an offline-constructed, efficient lookup table, the DFA mask store, derived from the DFA of the language's grammar for efficient generation. SynCode seamlessly integrates with any language defined by CFG, as evidenced by experiments focusing on generating JSON, Python, and Go outputs. Our experiments evaluating the effectiveness of SynCode for JSON generation demonstrate that SynCode eliminates all syntax errors and significantly outperforms state-of-the-art baselines. Furthermore, our results underscore how SynCode significantly reduces 96.07% of syntax errors in generated Python and Go code, showcasing its substantial impact on enhancing syntactical precision in LLM generation. Our code is available at https://github.com/uiuc-focal-lab/syncode",
+      "canonical_id": "arXiv:2403.01632",
+      "arxiv_id": "2403.01632",
+      "authors": [
+        "Shubham Ugare",
+        "Tarun Suresh",
+        "Hangoo Kang",
+        "Sasa Misailovic",
+        "Gagandeep Singh"
+      ]
+    },
+    {
+      "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
+      "source_url": "https://arxiv.org/abs/2403.09054",
+      "year": 2024,
+      "published": "2024-03-14",
+      "abstract": "Transformers have emerged as the underpinning architecture for Large Language Models (LLMs). In generative language models, the inference process involves two primary phases: prompt processing and token generation. Token generation, which constitutes the majority of the computational workload, primarily entails vector-matrix multiplications and interactions with the Key-Value (KV) Cache. This phase is constrained by memory bandwidth due to the overhead of transferring weights and KV cache values from the memory system to the computing units. This memory bottleneck becomes particularly pronounced in applications that require long-context and extensive text generation, both of which are increasingly crucial for LLMs. This paper introduces\"Keyformer\", an innovative inference-time approach, to mitigate the challenges associated with KV cache size and memory bandwidth utilization. Keyformer leverages the observation that approximately 90% of the attention weight in generative inference focuses on a specific subset of tokens, referred to as\"key\"tokens. Keyformer retains only the key tokens in the KV cache by identifying these crucial tokens using a novel score function. This approach effectively reduces both the KV cache size and memory bandwidth usage without compromising model accuracy. We evaluate Keyformer's performance across three foundational models: GPT-J, Cerebras-GPT, and MPT, which employ various positional embedding algorithms. Our assessment encompasses a variety of tasks, with a particular emphasis on summarization and conversation tasks involving extended contexts. Keyformer's reduction of KV cache reduces inference latency by 2.1x and improves token generation throughput by 2.4x, while preserving the model's accuracy.",
+      "canonical_id": "arXiv:2403.09054",
+      "arxiv_id": "2403.09054",
+      "doi": "10.48550/arXiv.2403.09054",
+      "authors": [
+        "Muhammad Adnan",
+        "Akhil Arunkumar",
+        "Gaurav Jain",
+        "Prashant J. Nair",
+        "Ilya Soloveychik",
+        "Purushotham Kamath"
+      ]
+    },
+    {
+      "title": "MELTing Point: Mobile Evaluation of Language Transformers",
+      "source_url": "https://arxiv.org/abs/2403.12844",
+      "year": 2024,
+      "published": "2024-03-19",
+      "abstract": "Transformers have recently revolutionized the machine learning (ML) landscape, gradually making their way into everyday tasks and equipping our computers with \"sparks of intelligence\". However, their runtime requirements have prevented them from being broadly deployed on mobile. As personal devices become increasingly powerful at the consumer edge and prompt privacy becomes an ever more pressing issue, we explore the current state of mobile execution of Large Language Models (LLMs). To achieve this, we have created our own automation infrastructure, MELT, which supports the headless execution and benchmarking of LLMs on device, supporting different models, devices and frameworks, including Android, iOS and Nvidia Jetson devices. We evaluate popular instruction fine-tuned LLMs and leverage different frameworks to measure their end-to-end and granular performance, tracing their memory and energy requirements along the way. Our analysis is the first systematic study of on-device LLM execution, quantifying performance, energy efficiency and accuracy across various state-of-the-art models and showcases the state of on-device intelligence in the era of hyperscale models. Results highlight the performance heterogeneity across targets and corroborates that LLM inference is largely memory-bound. Quantization drastically reduces memory requirements and renders execution viable, but at a non-negligible accuracy cost. Drawing from its energy footprint and thermal behavior, the continuous execution of LLMs remains elusive, as both factors negatively affect user experience. Last, our experience shows that the ecosystem is still in its infancy, and algorithmic as well as hardware break-throughs can significantly shift the execution cost. We expect NPU acceleration, and framework-hardware co-design to be the biggest bet towards efficient standalone execution, with the alternative of offloading tailored towards edge deployments.",
+      "canonical_id": "arXiv:2403.12844",
+      "arxiv_id": "2403.12844",
+      "doi": "10.1145/3636534.3690668",
+      "authors": [
+        "Stefanos Laskaridis",
+        "Kleomenis Katevas",
+        "Lorenzo Minto",
+        "Hamed Haddadi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.01632",
+      "identity_tokens": [
+        "id:arXiv:2403.01632",
+        "title:syncode llm generation with grammar augmentation",
+        "url:https://arxiv.org/abs/2403.01632"
+      ],
+      "record": {
+        "title": "SynCode: LLM Generation with Grammar Augmentation",
+        "source_url": "https://arxiv.org/abs/2403.01632",
+        "year": 2024,
+        "published": "2024-03-03",
+        "abstract": "LLMs are widely used in complex AI applications. These applications underscore the need for LLM outputs to adhere to a specific format, for their integration with other components in the systems. Typically the format rules e.g., for data serialization formats such as JSON, YAML, or Code in Programming Language are expressed as context-free grammar (CFG). Due to the hallucinations and unreliability of LLMs, instructing LLMs to adhere to specified syntax becomes an increasingly important challenge. We present SynCode, a novel framework for efficient and general syntactical decoding with LLMs, to address this challenge. SynCode ensures soundness and completeness with respect to the CFG of a formal language, effectively retaining valid tokens while filtering out invalid ones. SynCode uses an offline-constructed, efficient lookup table, the DFA mask store, derived from the DFA of the language's grammar for efficient generation. SynCode seamlessly integrates with any language defined by CFG, as evidenced by experiments focusing on generating JSON, Python, and Go outputs. Our experiments evaluating the effectiveness of SynCode for JSON generation demonstrate that SynCode eliminates all syntax errors and significantly outperforms state-of-the-art baselines. Furthermore, our results underscore how SynCode significantly reduces 96.07% of syntax errors in generated Python and Go code, showcasing its substantial impact on enhancing syntactical precision in LLM generation. Our code is available at https://github.com/uiuc-focal-lab/syncode",
+        "canonical_id": "arXiv:2403.01632",
+        "arxiv_id": "2403.01632",
+        "authors": [
+          "Shubham Ugare",
+          "Tarun Suresh",
+          "Hangoo Kang",
+          "Sasa Misailovic",
+          "Gagandeep Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.09054",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.09054",
+        "id:arXiv:2403.09054",
+        "title:keyformer kv cache reduction through key tokens selection for efficient generative inference",
+        "url:https://arxiv.org/abs/2403.09054"
+      ],
+      "record": {
+        "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
+        "source_url": "https://arxiv.org/abs/2403.09054",
+        "year": 2024,
+        "published": "2024-03-14",
+        "abstract": "Transformers have emerged as the underpinning architecture for Large Language Models (LLMs). In generative language models, the inference process involves two primary phases: prompt processing and token generation. Token generation, which constitutes the majority of the computational workload, primarily entails vector-matrix multiplications and interactions with the Key-Value (KV) Cache. This phase is constrained by memory bandwidth due to the overhead of transferring weights and KV cache values from the memory system to the computing units. This memory bottleneck becomes particularly pronounced in applications that require long-context and extensive text generation, both of which are increasingly crucial for LLMs. This paper introduces\"Keyformer\", an innovative inference-time approach, to mitigate the challenges associated with KV cache size and memory bandwidth utilization. Keyformer leverages the observation that approximately 90% of the attention weight in generative inference focuses on a specific subset of tokens, referred to as\"key\"tokens. Keyformer retains only the key tokens in the KV cache by identifying these crucial tokens using a novel score function. This approach effectively reduces both the KV cache size and memory bandwidth usage without compromising model accuracy. We evaluate Keyformer's performance across three foundational models: GPT-J, Cerebras-GPT, and MPT, which employ various positional embedding algorithms. Our assessment encompasses a variety of tasks, with a particular emphasis on summarization and conversation tasks involving extended contexts. Keyformer's reduction of KV cache reduces inference latency by 2.1x and improves token generation throughput by 2.4x, while preserving the model's accuracy.",
+        "canonical_id": "arXiv:2403.09054",
+        "arxiv_id": "2403.09054",
+        "doi": "10.48550/arXiv.2403.09054",
+        "authors": [
+          "Muhammad Adnan",
+          "Akhil Arunkumar",
+          "Gaurav Jain",
+          "Prashant J. Nair",
+          "Ilya Soloveychik",
+          "Purushotham Kamath"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.12844",
+      "identity_tokens": [
+        "id:DOI:10.1145/3636534.3690668",
+        "id:arXiv:2403.12844",
+        "title:melting point mobile evaluation of language transformers",
+        "url:https://arxiv.org/abs/2403.12844"
+      ],
+      "record": {
+        "title": "MELTing Point: Mobile Evaluation of Language Transformers",
+        "source_url": "https://arxiv.org/abs/2403.12844",
+        "year": 2024,
+        "published": "2024-03-19",
+        "abstract": "Transformers have recently revolutionized the machine learning (ML) landscape, gradually making their way into everyday tasks and equipping our computers with \"sparks of intelligence\". However, their runtime requirements have prevented them from being broadly deployed on mobile. As personal devices become increasingly powerful at the consumer edge and prompt privacy becomes an ever more pressing issue, we explore the current state of mobile execution of Large Language Models (LLMs). To achieve this, we have created our own automation infrastructure, MELT, which supports the headless execution and benchmarking of LLMs on device, supporting different models, devices and frameworks, including Android, iOS and Nvidia Jetson devices. We evaluate popular instruction fine-tuned LLMs and leverage different frameworks to measure their end-to-end and granular performance, tracing their memory and energy requirements along the way. Our analysis is the first systematic study of on-device LLM execution, quantifying performance, energy efficiency and accuracy across various state-of-the-art models and showcases the state of on-device intelligence in the era of hyperscale models. Results highlight the performance heterogeneity across targets and corroborates that LLM inference is largely memory-bound. Quantization drastically reduces memory requirements and renders execution viable, but at a non-negligible accuracy cost. Drawing from its energy footprint and thermal behavior, the continuous execution of LLMs remains elusive, as both factors negatively affect user experience. Last, our experience shows that the ecosystem is still in its infancy, and algorithmic as well as hardware break-throughs can significantly shift the execution cost. We expect NPU acceleration, and framework-hardware co-design to be the biggest bet towards efficient standalone execution, with the alternative of offloading tailored towards edge deployments.",
+        "canonical_id": "arXiv:2403.12844",
+        "arxiv_id": "2403.12844",
+        "doi": "10.1145/3636534.3690668",
+        "authors": [
+          "Stefanos Laskaridis",
+          "Kleomenis Katevas",
+          "Lorenzo Minto",
+          "Hamed Haddadi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:9bff0df6f452ed49a941439ab3d785800e6fa17bb6b10a80dcd38ab0080225d6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
