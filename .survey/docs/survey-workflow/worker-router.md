@@ -170,6 +170,8 @@ Research runでは新規完成Research Markdownを5件Libraryへ保存する。
 
 一次資料読解 → 固有事実抽出 → 執筆 → 固有性セルフレビュー → Library保存の順を守る。
 
+一次資料取得は特定のfront-endや固定順へ縛らない。arXiv HTML / PDF / e-print、OpenReview、会議・出版社、著者・研究機関・公式project site等から同一論文の一次資料へ到達できる経路を柔軟に使う。1経路のHTTP失敗、PDF text extraction失敗、HTML未生成だけで取得不能と判定せず、論文タイトル、arXiv ID、DOI、OpenReview ID、著者名等から別の一次資料経路を確認する。**固定された4経路を各1回だけ試して打ち切る方式は使わない。** 検索断片や第三者解説は本文の代用にせず、合理的に利用可能な一次資料経路を尽くしても必要な一次証拠を得られない場合だけ取得不能として扱う。
+
 Research worker自身は厳密な機械監査をノルマにしない。ただし、極端に短い原稿、汎用テンプレート文、比較条件のない数値、主要機構の説明不足を完成扱いにしない。
 
 GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全性・日本語率の機械監査を行う。FAILした原稿はGitHub側blockedへ保全される。
