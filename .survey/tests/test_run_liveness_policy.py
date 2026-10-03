@@ -17,23 +17,40 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertNotIn("continuation_gate.py", router)
         self.assertNotIn("run_finalization_gate.py", router)
 
-    def test_central_scheduler_periodically_dispatches_async_github_lanes(self):
-        scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("cron: '3/10 * * * *'", scheduler)
+    def test_central_scheduler_periodically_dispatches_library_first_lanes(self):
+        scheduler = (WORKFLOWS / "survey-orchestrator.yml").read_text(encoding="utf-8")
+        self.assertIn("cron: '7/10 * * * *'", scheduler)
         self.assertIn(".survey/scheduler/library-import-kick.json", scheduler)
         for workflow in (
-            "survey-run-state.yml",
             "library-import.yml",
-            "survey-reference-relevance-fast.yml",
-            "status-dashboard.yml",
-            "survey-submission-fast.yml",
-            "survey-research-quality-preflight.yml",
-            "survey-completed-builder-fast.yml",
             "forward-citation-sweep.yml",
             "candidate-priority-refresh.yml",
         ):
             with self.subTest(workflow=workflow):
-                self.assertIn(f"dispatch {workflow}", scheduler)
+                self.assertIn(f"dispatch_if_idle {workflow}", scheduler)
+
+        retired_auto = (
+            "survey-claim-fast.yml",
+            "survey-run-state.yml",
+            "survey-submission-fast.yml",
+            "survey-research-quality-preflight.yml",
+            "survey-completed-builder-fast.yml",
+            "survey-discovery-recovery.yml",
+            "survey-helper.yml",
+            "survey-reference-relevance-fast.yml",
+            "retry-adopted-library-checkpoints.yml",
+            "library-publication-ack.yml",
+            "discovery-preload-local-fast.yml",
+            "discovery-preload-warm.yml",
+        )
+        for workflow in retired_auto:
+            with self.subTest(retired=workflow):
+                text = (WORKFLOWS / workflow).read_text(encoding="utf-8")
+                trigger = text.split("permissions:", 1)[0]
+                self.assertIn("workflow_dispatch:", trigger)
+                self.assertNotIn("schedule:", trigger)
+                self.assertNotIn("push:", trigger)
+                self.assertNotIn("workflow_run:", trigger)
 
     def test_event_driven_fallbacks_are_freshness_gated(self):
         for workflow_name, state_path in (
