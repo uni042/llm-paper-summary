@@ -15,6 +15,8 @@ import tempfile
 import time
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 import candidate_priority
 import discovery_provider_adapter
@@ -149,6 +151,99 @@ def _is_due(
     return (now - checked).total_seconds() >= ttl_hours * 3600
 
 
+def _normalize_doi(value: Any) -> str | None:
+    text = str(value or "").strip()
+    if text.lower().startswith("doi:"):
+        text = text.split(":", 1)[1]
+    if text.lower().startswith("https://doi.org/"):
+        text = text[len("https://doi.org/"):]
+    return text.lower() if text.startswith("10.") else None
+
+
+def _doi_for_row(row: dict[str, Any]) -> str | None:
+    for ident in sorted(paper_identity.record_identifiers(row)):
+        if ident.startswith("DOI:"):
+            return _normalize_doi(ident)
+    return _normalize_doi(row.get("doi"))
+
+
+def _openalex_fallback(
+    rows_by_id: dict[str, dict[str, Any]],
+    requested_ids: list[str],
+    *,
+    timeout: int = 30,
+    sleeper=time.sleep,
+) -> dict[str, dict[str, Any]]:
+    """Resolve citation metadata by exact DOI when Semantic Scholar misses.
+
+    OpenAlex is deliberately only an exact-ID fallback here: no title search or
+    fuzzy matching is allowed to influence priority.
+    """
+    doi_to_requested: dict[str, list[str]] = {}
+    for requested_id in requested_ids:
+        row = rows_by_id.get(requested_id)
+        if not isinstance(row, dict):
+            continue
+        doi = _doi_for_row(row)
+        if doi:
+            doi_to_requested.setdefault(doi, []).append(requested_id)
+    if not doi_to_requested:
+        return {}
+
+    out: dict[str, dict[str, Any]] = {}
+    dois = sorted(doi_to_requested)
+    for start in range(0, len(dois), 100):
+        batch = dois[start:start + 100]
+        filter_value = "|".join("https://doi.org/" + doi for doi in batch)
+        query = urlencode({
+            "filter": "doi:" + filter_value,
+            "per-page": 100,
+            "select": "id,doi,display_name,publication_date,publication_year,cited_by_count,primary_location",
+        })
+        request = Request(
+            "https://api.openalex.org/works?" + query,
+            headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-priority/1.0"},
+        )
+        try:
+            payload = discovery_provider_adapter._explicit_json_request(
+                request,
+                timeout=timeout,
+                opener=urlopen,
+                sleeper=sleeper,
+            )
+        except Exception:
+            continue
+        results = payload.get("results") if isinstance(payload, dict) else None
+        if not isinstance(results, list):
+            continue
+        for item in results:
+            if not isinstance(item, dict):
+                continue
+            doi = _normalize_doi(item.get("doi"))
+            if not doi or doi not in doi_to_requested:
+                continue
+            primary_location = item.get("primary_location") if isinstance(item.get("primary_location"), dict) else {}
+            source = primary_location.get("source") if isinstance(primary_location.get("source"), dict) else {}
+            openalex_id = str(item.get("id") or "").rsplit("/", 1)[-1] or None
+            record = {
+                "canonical_id": "DOI:" + doi,
+                "doi": doi,
+                "title": item.get("display_name"),
+                "source_url": "https://doi.org/" + doi,
+                "published": item.get("publication_date"),
+                "year": item.get("publication_year"),
+                "venue": source.get("display_name"),
+                "citation_count": max(int(item.get("cited_by_count") or 0), 0),
+                "citation_count_source": "openalex",
+                "openalex_id": openalex_id,
+            }
+            for requested_id in doi_to_requested[doi]:
+                out[requested_id] = record
+        if start + 100 < len(dois):
+            sleeper(1.0)
+    return out
+
+
 def _store_found(
     cache: dict[str, Any],
     requested_id: str,
@@ -230,6 +325,13 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         batch = selected[start:start + batch_size]
         identifiers = [str(row["_lookup_id"]) for row in batch]
         outcomes = discovery_provider_adapter.lookup_identifiers(identifiers)
+        rows_by_id = {str(row["_lookup_id"]): row for row in batch}
+        missing_ids = [
+            str(outcome.get("requested_id") or "")
+            for outcome in outcomes
+            if outcome.get("status") != "found"
+        ]
+        openalex = _openalex_fallback(rows_by_id, missing_ids, sleeper=sleep_fn)
         checked_at = now.replace(microsecond=0).isoformat()
         for outcome in outcomes:
             requested_id = str(outcome.get("requested_id") or "")
@@ -237,6 +339,10 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
             record = outcome.get("record")
             if status == "found" and isinstance(record, dict):
                 _store_found(cache, requested_id, record, checked_at=checked_at)
+                failures.pop(requested_id, None)
+                found += 1
+            elif requested_id in openalex:
+                _store_found(cache, requested_id, openalex[requested_id], checked_at=checked_at)
                 failures.pop(requested_id, None)
                 found += 1
             elif status == "unresolved":
