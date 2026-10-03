@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1845-scheduled-chat-45",
+  "reference_main_sha": "f98485a60a0e3abf63f51be407f20eec31ca9268",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12793",
+      "identity_tokens": [
+        "arXiv:2406.12793",
+        "DOI:10.48550/arXiv.2406.12793"
+      ],
+      "title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools",
+      "reason": "GLM-4系列のモデル構築・学習・能力を報告する技術報告で、推論基盤の新規高速化方式が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2406.12793",
+      "body_check": "本文のモデル構成・学習・評価を確認。GLM-4/4-Air/4-9B、10T token事前学習、128K/1M長文脈やAll Tools能力を扱う。推論機能への言及はあるが、KV管理・サービング・カーネル・オフロード等の独立した推論システム最適化を主要評価していない。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.00071",
+      "identity_tokens": [
+        "arXiv:2309.00071",
+        "DOI:10.48550/arXiv.2309.00071"
+      ],
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+      "reason": "RoPEを拡張して長文脈へ適応させる方式だが、主要な効率主張はcontext extensionの学習token数・学習step削減であり、現行の学習高速化凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2309.00071",
+      "body_check": "本文の方式と評価を確認。YaRNはRoPE interpolationへNTK-aware scalingとattention temperature scalingを組み合わせ、従来法より10倍少ないtoken・2.5倍少ないtraining stepsでcontext extensionを行う。推論時のserving/runtime最適化が主要貢献ではない。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.13048",
+      "identity_tokens": [
+        "arXiv:2305.13048",
+        "DOI:10.48550/arXiv.2305.13048"
+      ],
+      "title": "RWKV: Reinventing RNNs for the Transformer Era",
+      "reason": "Transformer並列学習とRNN型の定数メモリ自己回帰推論を両立し、長系列推論の計算・メモリ複雑度を直接下げるモデル/推論方式。",
+      "source_url": "https://arxiv.org/abs/2305.13048",
+      "body_check": "本文のRNN-like inference、WKV operator、custom kernel、推論実験を確認。time-sequential modeでWKVを再帰更新し、Transformerの過去token全保持を避ける。論文の複雑度表ではRWKV推論が時間O(Td)、空間O(d)で、通常TransformerのO(T^2 d)/O(T^2+Td)と対比される。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.16406",
+      "identity_tokens": [
+        "arXiv:2405.16406",
+        "DOI:10.48550/arXiv.2405.16406"
+      ],
+      "title": "SpinQuant: LLM quantization with learned rotations",
+      "reason": "重み・活性・KV cacheを4bit化する際のoutlierを学習回転で抑え、低bit LLM推論のメモリ・遅延・電力削減へ直接つなげる量子化方式。",
+      "source_url": "https://arxiv.org/abs/2405.16406",
+      "body_check": "本文のrotation parameterization、Cayley optimization、W4A4KV4評価を確認。full-precision出力を変えない回転自由度を最適化し、LLaMA-2 7Bの4bit weight/activation/KV-cacheでfull precisionとの差を2.9点まで縮小、LLM-QAT比19.1点、SmoothQuant比25.0点改善する。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12307",
+      "identity_tokens": [
+        "arXiv:2309.12307",
+        "DOI:10.48550/arXiv.2309.12307"
+      ],
+      "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+      "reason": "長文脈化のための効率的fine-tuningが主目的で、推論時はdense global attentionが必要と明記されるため学習高速化凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2309.12307",
+      "body_check": "本文のS²-AttnとLoRA構成を確認。shifted sparse attentionはfine-tuning時の計算削減に使い、Llama2 7Bを4Kから100K、70Bを32Kへ拡張する。一方で推論にはdense global attentionが必要で、推論runtime削減方式ではない。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.16300",
+      "identity_tokens": [
+        "arXiv:2305.16300",
+        "DOI:10.48550/arXiv.2305.16300"
+      ],
+      "title": "Landmark Attention: Random-Access Infinite Context Length for Transformers",
+      "reason": "landmark tokenで長文脈をblock単位検索し、通常tokenのKVをCPU/ディスクへ退避して必要blockだけ戻すため、長文脈推論の計算・メモリを直接削減する。",
+      "source_url": "https://arxiv.org/abs/2305.16300",
+      "body_check": "本文のinference節・memory/computation節・評価を確認。各block末尾のlandmarkをattention gateとしてtop-k blockを検索し、通常KVはslow memoryへoffload可能。block size 50では全attention比で演算・即時メモリを約50倍削減し得ると解析し、PG-19/arXiv MathおよびLLaMA-7B 32K超で検証する。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.04255",
+      "identity_tokens": [
+        "arXiv:2309.04255",
+        "DOI:10.48550/arXiv.2309.04255"
+      ],
+      "title": "LLMCad: Fast and Scalable On-device Large Language Model Inference",
+      "reason": "小型LLMのtoken tree生成と大型LLMの並列検証、誤り時fallback、compute-I/O pipelineで端末内生成を高速化する推論エンジン。",
+      "source_url": "https://arxiv.org/abs/2309.04255",
+      "body_check": "本文の設計・実験を確認。residentな小型modelがtoken treeを作り、memory-constrainedな大型modelが複数経路を一括検証する。self-adjusting fallbackと検証中のspeculative generationを組み合わせ、既存on-device inference engine比でtoken generationを最大9.3倍高速化する。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.12391",
+      "identity_tokens": [
+        "arXiv:2407.12391",
+        "DOI:10.48550/arXiv.2407.12391"
+      ],
+      "title": "LLM Inference Serving: Survey of Recent Advances and Opportunities",
+      "reason": "2023年以降のLLM servingをKV cache、長文脈、batching、prefill/decode分離、並列化、cloud、MoE推論まで体系化した推論システム専用サーベイ。",
+      "source_url": "https://arxiv.org/abs/2407.12391",
+      "body_check": "本文の対象範囲と各節を確認。decoding algorithm自体を変える研究を除外し、system-level servingに限定してPagedAttention/vAttention、KV offload/compression、continuous batching、Splitwise/DistServe、heterogeneous parallelism、serverless、MoE offload等を整理する。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.00190",
+      "identity_tokens": [
+        "arXiv:2101.00190",
+        "DOI:10.48550/arXiv.2101.00190"
+      ],
+      "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+      "reason": "task-specificな連続prefixだけを学習するparameter-efficient tuning方式で、主要貢献は学習・適応効率であり推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2101.00190",
+      "body_check": "本文の学習方式とGPT-2/BART評価を確認。LM本体をfreezeし、全parameterの0.1%程度のcontinuous prefixのみ最適化してtable-to-textとsummarizationへ適応する。保存容量削減には寄与するが、KV/cache/kernel/scheduler等の推論高速化は主題でない。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.14366",
+      "identity_tokens": [
+        "arXiv:2405.14366",
+        "DOI:10.48550/arXiv.2405.14366"
+      ],
+      "title": "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models",
+      "reason": "隣接layer間のKV類似性を利用してdepth方向に共有表現へ統合し、training-freeにKV cache容量と生成throughputを改善する推論圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2405.14366",
+      "body_check": "本文のdepth-wise merge、magnitude/direction分離、token retention、実験を確認。LLaMA-2/3、Phi-3、Mistral、Mixtralで評価し、ShareGPT上のLLaMA-2-7B 4-bit MiniCacheはFP16 full cache比で最大5.02倍圧縮、約5倍throughput、41% memory削減をnear-lossless品質で報告する。",
+      "first_checked_at": "2026-10-03T18:45:00+09:00",
+      "last_checked_at": "2026-10-03T19:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
+      ],
+      "worklist_rank": 23
+    }
+  ]
+}
