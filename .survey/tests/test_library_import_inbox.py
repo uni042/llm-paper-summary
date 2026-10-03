@@ -231,6 +231,133 @@ last_checked: '2026-10-03'
             finally:
                 os.chdir(original_cwd)
 
+    def test_requeues_historical_provider_only_discovery_block_once(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery/source.json"
+                blocked.parent.mkdir(parents=True)
+                blocked_payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "20261002T120000JST-scheduled-chat-00",
+                    "record_count": 2,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "OpenReview:abcdefghij",
+                            "identity_tokens": ["OpenReview:abcdefghij"],
+                            "reason": "provider gap",
+                        },
+                        {
+                            "classification": "unrelated",
+                            "canonical_id": "arXiv:2609.00002",
+                            "reason": "irrelevant",
+                        },
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(blocked_payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+                result = root / ".survey/import-inbox/results/discovery/source.json"
+                result.parent.mkdir(parents=True)
+                result.write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_downstream",
+                            "retained_payload": ".survey/import-inbox/blocked/discovery/source.json",
+                            "failures": ["OpenReview:abcdefghij"],
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(inbox.recover_candidate_provider_gap_blocks(root), 1)
+                retries = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-provider-gap-*--source.json"
+                    )
+                )
+                self.assertEqual(len(retries), 1)
+                self.assertEqual(retries[0].read_bytes(), blocked.read_bytes())
+                self.assertEqual(inbox.recover_candidate_provider_gap_blocks(root), 0)
+            finally:
+                os.chdir(original_cwd)
+
+    def test_provider_error_is_candidate_gap_not_whole_run_failure(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                token = "provider-gap-test"
+                record = {
+                    "classification": "accept",
+                    "canonical_id": "OpenReview:abcdefghij",
+                    "identity_tokens": ["OpenReview:abcdefghij"],
+                    "reason": "provider gap",
+                }
+                request_id = inbox.candidate_request_id(token, 1)
+                result_path = root / inbox.PRECHECK_RESULTS / f"{request_id}.json"
+                result_path.parent.mkdir(parents=True)
+                result_path.write_text(
+                    json.dumps(
+                        {
+                            "ok": True,
+                            "evaluation_allowed": True,
+                            "candidate_statuses": [
+                                {
+                                    "requested_id": "OpenReview:abcdefghij",
+                                    "status": "provider_error",
+                                    "lookup_route": "openreview_notes",
+                                    "error": "HTTP Error 403: Forbidden",
+                                }
+                            ],
+                            "allowed_records": [],
+                            "receipt": "sha256:test",
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                waiting, submission_waiting, failures, gaps, counts = (
+                    inbox.create_accept_pipeline(root, token, [record])
+                )
+                self.assertEqual(waiting, [])
+                self.assertEqual(submission_waiting, [])
+                self.assertEqual(failures, [])
+                self.assertEqual(gaps, ["OpenReview:abcdefghij"])
+                self.assertEqual(counts["submitted"], 0)
+
+                source = root / ".survey/import-inbox/waiting/discovery/source.json"
+                source.parent.mkdir(parents=True)
+                payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "provider-gap-parent",
+                    "record_count": 1,
+                    "records": [record],
+                }
+                source.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+                gap_path = inbox.retain_provider_gap_payload(
+                    root, source, payload, gaps
+                )
+                self.assertIsNotNone(gap_path)
+                retained = json.loads((root / gap_path).read_text(encoding="utf-8"))
+                self.assertEqual(retained["record_count"], 1)
+                self.assertEqual(retained["provider_gap_ids"], gaps)
+            finally:
+                os.chdir(original_cwd)
+
     def test_oversized_discovery_run_is_retained_and_split_by_record_count(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as tmpdir:
