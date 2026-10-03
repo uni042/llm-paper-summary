@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-03T06:07:33+00:00",
-  "last_run_key": "library-import-a49adc3cd584",
-  "last_round": "libimp-a49adc3cd584adaa-pre01",
+  "updated_at": "2026-10-03T07:49:49+00:00",
+  "last_run_key": "library-import-c6a07a3aa196",
+  "last_round": "libimp-c6a07a3aa19635c2-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,70 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T20:00:00+09:00",
-      "round": "specialist-memory-paths-1",
-      "axis": "SSD-backed KV・remote-memory direct access・PNM sparse attention・cold MoE memory pooling",
-      "query_summary": "直近runのsecurity/co-execution軸から離れ、SSD/NVMe、remote memory、PNM、MoE/KV memory poolを横断して探索。軽量なarXiv一次情報で実装・評価を確認し、投入直前にcanonical arXiv IDをdefault branchで照合して未収録4件のみ送信した。",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 4,
-      "final_duplicate_filtered_count": 4,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.42857142857142855,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.16892",
-        "arXiv:2606.29986",
-        "arXiv:2607.28150"
-      ],
-      "next_axis_hint": "次はGPU kernel/runtime compilation、collective communication、異種GPU資源制御へ軸を移す",
-      "source_submission": "work-queue/submissions/20260919T2008JST-discovery-specialist-memory-paths-1.json"
-    },
-    {
-      "run_key": "2026-09-19T20:00:00+09:00",
-      "round": "specialist-energy-heterogeneity-2",
-      "axis": "energy-aware serving・heterogeneous GPU・shared-GPU resource control",
-      "query_summary": "前roundのmemory pathから独立して、異種GPU、serverless/shared GPU、DVFS、電力・SLO協調制御を探索。AFlexは直近探索済みのため再投入せず、default branch canonical ID検索で未収録の実装・評価が強い3件を送信した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.4,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.01891",
-        "arXiv:2609.03335"
-      ],
-      "next_axis_hint": "次はmulti-tenant isolation、GPU interference、request preemption/interception、agentic serving runtimeへ移る",
-      "source_submission": "work-queue/submissions/20260919T2015JST-discovery-specialist-energy-heterogeneity-2.json"
-    },
-    {
-      "run_key": "2026-09-19T20:00:00+09:00",
-      "round": "specialist-agent-runtime-3",
-      "axis": "agentic workflow physical planning・agent-aware serving runtime",
-      "query_summary": "multi-tenant isolationからagentic runtimeへ軸を移し、workflow compiler/runtimeとagent-aware policy layerを探索。FairInferenceとAgentSysBenchは既探索のため除外し、default branch canonical ID検索で未収録の2件を送信した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "final_duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.18112",
-        "arXiv:2608.15127"
-      ],
-      "next_axis_hint": "次はspeculative decoding runtime、draft scheduling、verification resource sharingへ移る",
-      "source_submission": "work-queue/submissions/20260919T2022JST-discovery-specialist-agent-runtime-3.json"
-    },
     {
       "run_key": "2026-09-19T20:00:00+09:00",
       "round": "specialist-lowbit-storage-4",
@@ -10942,6 +10878,108 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-319cd3ab5b4ae707-pre01",
+      "precheck_request_id": "libimp-319cd3ab5b4ae707-pre01",
+      "run_key": "library-import-319cd3ab5b4a",
+      "round": "libimp-319cd3ab5b4ae707-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-319cd3ab5b4ae707-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-319cd3ab5b4ae707-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-6c61e628786520a9-pre01",
+      "precheck_request_id": "libimp-6c61e628786520a9-pre01",
+      "run_key": "library-import-6c61e6287865",
+      "round": "libimp-6c61e628786520a9-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-6c61e628786520a9-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-6c61e628786520a9-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-c6a07a3aa19635c2-pre01",
+      "precheck_request_id": "libimp-c6a07a3aa19635c2-pre01",
+      "run_key": "library-import-c6a07a3aa196",
+      "round": "libimp-c6a07a3aa19635c2-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-c6a07a3aa19635c2-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-c6a07a3aa19635c2-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19313,16 +19351,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-a49adc3cd584",
-      "rounds": 44,
-      "candidate_count": 212,
+      "last_run_key": "library-import-c6a07a3aa196",
+      "rounds": 47,
+      "candidate_count": 222,
       "duplicate_filtered_count": 95,
-      "novel_candidate_count": 117,
+      "novel_candidate_count": 127,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 114,
-      "accepted_count": 114,
-      "duplicate_ratio": 0.4481132075471698,
-      "final_duplicate_ratio": 0.02564102564102564,
+      "post_final_dedupe_count": 124,
+      "accepted_count": 124,
+      "duplicate_ratio": 0.42792792792792794,
+      "final_duplicate_ratio": 0.023622047244094488,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
