@@ -16,6 +16,7 @@ class ValidationIssueCollectionTests(unittest.TestCase):
                 "canonical_id": "arXiv:0000.00000",
                 "title": "test",
                 "summary": jp,
+                "list_summary": jp,
                 "source": "https://arxiv.org/abs/0000.00000",
                 "sources": ["https://arxiv.org/abs/0000.00000"],
                 "authors": ["A"],
