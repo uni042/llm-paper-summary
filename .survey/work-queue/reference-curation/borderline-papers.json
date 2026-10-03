@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T15:16:50+00:00",
-  "record_count": 409,
+  "updated_at": "2026-10-03T15:20:46+00:00",
+  "record_count": 410,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5918,6 +5918,21 @@
         "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[6]"
       ],
       "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems"
+    },
+    "arXiv:1406.7362": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1406.7362",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1406.7362",
+        "arXiv:1406.7362"
+      ],
+      "reason": "入力ごとに一部parameterだけを有効化して容量対計算比を指数的に高める条件付き計算の基礎研究で、MoE/動的推論に直接つながるが、LLM以前の概念提案で現代LLM推論runtimeの実測評価を持たないため境界扱い。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Exponentially Increasing the Capacity-to-Computation Ratio for Conditional Computation in Deep Learning"
     }
   }
 }

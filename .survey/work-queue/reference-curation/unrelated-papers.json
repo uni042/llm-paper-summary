@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T15:16:51+00:00",
-  "record_count": 705,
+  "updated_at": "2026-10-03T15:20:46+00:00",
+  "record_count": 714,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10409,6 +10409,141 @@
         "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[8]"
       ],
       "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling"
+    },
+    "arXiv:1601.06733": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1601.06733",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1601.06733",
+        "arXiv:1601.06733"
+      ],
+      "reason": "LSTM内部にメモリネットワークと注意機構を組み込み、長系列の記憶とトークン間関係の学習を改善する自然言語処理モデル研究で、LLM/Transformerの推論サービング効率化ではない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Long Short-Term Memory-Networks for Machine Reading"
+    },
+    "arXiv:1511.08228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.08228",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1511.08228",
+        "arXiv:1511.08228"
+      ],
+      "reason": "畳み込み型ゲート付き再帰ユニットで並列なニューラル計算機を構成しアルゴリズム学習を行う研究で、LLM推論基盤を対象としない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Neural GPUs Learn Algorithms"
+    },
+    "arXiv:1511.05950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.05950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1511.05950",
+        "arXiv:1511.05950"
+      ],
+      "reason": "分散深層学習で古い勾配に応じて学習率を調整する非同期SGD研究で、最終適用先は凍結中の学習工程。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ],
+      "title": "Staleness-aware Async-SGD for Distributed Deep Learning"
+    },
+    "arXiv:1508.04025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1508.04025",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1508.04025",
+        "arXiv:1508.04025"
+      ],
+      "reason": "ニューラル機械翻訳のglobal/local attention構造を比較し翻訳品質を改善する研究で、現代LLMの疎注意カーネルや推論サービング最適化を目的としない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.16187-hashevict-a-pre-attention-kv-cache-eviction-strategy-using-locality-sensitive-hashing.md"
+      ],
+      "title": "Effective Approaches to Attention-based Neural Machine Translation"
+    },
+    "arXiv:1506.03099": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1506.03099",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1506.03099",
+        "arXiv:1506.03099"
+      ],
+      "reason": "訓練時のteacher forcingと推論時自己生成入力の不一致をcurriculum learningで緩和する学習手法で、推論高速化ではない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "title": "Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks"
+    },
+    "arXiv:1505.05571": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1505.05571",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1505.05571",
+        "arXiv:1505.05571"
+      ],
+      "reason": "浮動小数点配列を正確かつ高速に加算する数値計算アルゴリズムで、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md"
+      ],
+      "title": "Fast Exact Summation Using Small and Large Superaccumulators"
+    },
+    "arXiv:1411.1792": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1411.1792",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1411.1792",
+        "arXiv:1411.1792"
+      ],
+      "reason": "CNNの層ごとの特徴一般性・特異性と転移学習を分析する研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "How transferable are features in deep neural networks?"
+    },
+    "arXiv:1307.2118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1307.2118",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1307.2118",
+        "arXiv:1307.2118"
+      ],
+      "reason": "PAC-Bayes一般化理論、Occam bound、dropout boundを整理する学習理論チュートリアルで、推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "A PAC-Bayesian Tutorial with A Dropout Bound"
+    },
+    "arXiv:1211.5590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1211.5590",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1211.5590",
+        "arXiv:1211.5590"
+      ],
+      "reason": "機械学習向け数式コンパイラTheanoの汎用最適化・GPU実行改善研究で、LLM推論専用runtimeやサービング基盤ではない。",
+      "first_checked_at": "2026-10-03T15:20:46+00:00",
+      "last_checked_at": "2026-10-03T15:20:46+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Theano: new features and speed improvements"
     }
   }
 }
