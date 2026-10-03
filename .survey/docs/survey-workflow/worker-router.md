@@ -231,12 +231,26 @@ Library `research/*.md` は1件ずつ先頭から末尾まで全文を読む。�
 
 汎用テンプレート文が本文の中心、論文名や方式名だけを差し替えれば別論文にも成立する長文、主要機構の具体説明欠落、headline結果だけで評価条件なし、プレースホルダー・未完全文、極端に薄い本文など、現行品質ガイドを明らかに満たさない原稿はアップロードワーカー自身の判断でrejectし、GitHubへ転送せずLibraryから削除する。判断が微妙なものは削除せずLibraryに保留し、転送もしない。
 
-Research MarkdownのYAML frontmatterには、日次進捗をGitHub単独で再構成できるよう次を必須で保持する。
+Research MarkdownのYAML frontmatterは、**本文が完成していても書誌・実装メタデータが不足していれば未完成扱い**とする。Research workerは一次資料を読んだ同じrunで、少なくとも次を埋める。
 
+- `canonical_id`, `title`, `summary`, `list_summary`
+- `authors`: 1名以上の配列。文字列1本のまま保存しない
+- `published`: `YYYY-MM` または `YYYY-MM-DD`
+- `publication`, `publication_type`, `publication_status`
+- `source`: 主一次URL
+- `sources`: 1件以上の一次URL配列
+- `implementation`: 論文での実装・評価形態と、公式実装公開状況を文章で記録
+- `code`: 公式コードURL。確認できなければキー自体を省略せず `null`
+- `last_checked`: 一次資料を確認した日
+- arXiv論文では `arxiv_id` と `arxiv_categories.primary`、`arxiv_categories.cross_list`
 - `worker_completed_at`: Research完成時刻（ISO 8601、タイムゾーン付き）
 - `worker_run_key`: 元Scheduled worker runを一意に示すキー
 
-この2項目は論文の出版日時ではなく、workerが実際にResearchを完了した時刻・runを表す。GitHub import inbox processorは内容を変更せずpaperへ保存し、import resultにも同値を転記する。
+`last_audited` / `audit_version` は後段監査が更新してよい。引用監査済みなら `references`, `references_checked_at`, `references_source`, `references_total` も保持するが、引用を未確認のまま値を捏造して埋めてはならない。引用メタデータはGitHub側の一次資料citation backfillで後から補完できる。
+
+Research workerのセルフレビューでは本文だけでなく上記frontmatterを読み直す。Survey GitHub Importも転送前に同じ必須項目を確認し、不足原稿は完成Researchとして転送しない。GitHub import inbox processorは最終防衛線として同じcanonical metadata監査を実行し、不足が1項目でもあればpaperへ保存せず `blocked_metadata` として保全する。
+
+`worker_completed_at` と `worker_run_key` は論文の出版日時ではなく、workerが実際にResearchを完了した時刻・runを表す。GitHub import inbox processorはpaperとimport resultへ同値を保持する。
 
 品質確認を通ったResearchだけを内容変更せず:
 
