@@ -77,6 +77,15 @@ jobs:
             --apply \
             --report .survey/reports/full-gc-latest.json
 
+      - name: Backfill incomplete canonical paper metadata
+        if: steps.pending.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python .survey/scripts/backfill_paper_metadata.py \
+            --repo-root . \
+            --missing-only \
+            --metadata-cache /tmp/arxiv-metadata-cache.json
+
       - name: Rebuild derived paper indexes
         if: steps.pending.outputs.run == 'true'
         shell: bash
@@ -96,15 +105,23 @@ jobs:
           python .survey/scripts/audit_paper_quality.py \
             --no-fail-exit \
             --markdown-out /tmp/paper-quality-audit.md \
-            --json-out /tmp/paper-quality-audit.json
+            --json-out .survey/reports/paper-quality-latest.json
           python .survey/scripts/audit_list_summary_quality.py \
             --no-fail-exit \
             --markdown-out /tmp/list-summary-quality-audit.md \
-            --json-out /tmp/list-summary-quality-audit.json
+            --json-out .survey/reports/list-summary-quality-latest.json
           python .survey/scripts/audit_overview_results.py \
             --no-fail-exit \
             --markdown-out /tmp/overview-result-quality-audit.md \
-            --json-out /tmp/overview-result-quality-audit.json
+            --json-out .survey/reports/overview-result-quality-latest.json
+
+      - name: Refresh citation coverage from current paper metadata
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/citation_graph.py \
+            --root . \
+            --graph-report .survey/reports/citation-graph-latest.json \
+            --coverage-report .survey/reports/citation-coverage-latest.json
 
       - name: Refresh metadata coverage
         if: steps.pending.outputs.run == 'true'
@@ -120,9 +137,9 @@ jobs:
           set +e
           python .survey/scripts/maintenance_health.py \
             --root . \
-            --paper-quality /tmp/paper-quality-audit.json \
-            --list-quality /tmp/list-summary-quality-audit.json \
-            --overview-quality /tmp/overview-result-quality-audit.json \
+            --paper-quality .survey/reports/paper-quality-latest.json \
+            --list-quality .survey/reports/list-summary-quality-latest.json \
+            --overview-quality .survey/reports/overview-result-quality-latest.json \
             --index-drift-file /tmp/derived-index-drift.txt \
             --repair-snapshot \
             --fail-on-error \
