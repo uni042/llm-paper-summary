@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1448-scheduled-chat-45::provider-gap",
+  "reference_main_sha": "d83521043b100be1dcf9cfcf738d0aadef28b351",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3769102.3770614",
+      "identity_tokens": [
+        "DOI:10.1145/3769102.3770614"
+      ],
+      "title": "lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models",
+      "reason": "端末上LLM推論をphase/kernel粒度でonline profilingし実行時ボトルネックを低overheadで可視化する。",
+      "source_url": "https://doi.org/10.1145/3769102.3770614",
+      "body_check": "commercial mobile platformでembedding/prefill/decode/softmax/samplingとkernel latencyを計測。Powersaveでもprefill throughput低下2.58%、decode 0.99%。推論基盤profilingに直接該当。",
+      "first_checked_at": "2026-10-02T14:48:39+09:00",
+      "last_checked_at": "2026-10-02T14:48:39+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 310
+    }
+  ],
+  "parent_run_key": "20261002-1448-scheduled-chat-45",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-f81d0828d4d3--libfile_433f7aff3e0481919d2355dda4166bed--discovery-20261002-1448-scheduled-chat-45.json",
+  "provider_gap_ids": [
+    "DOI:10.1145/3769102.3770614"
+  ]
+}
