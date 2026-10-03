@@ -173,6 +173,7 @@ def _openalex_fallback(
     *,
     timeout: int = 30,
     sleeper=time.sleep,
+    max_rate_limit_retries: int = 0,
 ) -> dict[str, dict[str, Any]]:
     """Resolve citation metadata by exact DOI when Semantic Scholar misses.
 
@@ -210,6 +211,7 @@ def _openalex_fallback(
                 timeout=timeout,
                 opener=urlopen,
                 sleeper=sleeper,
+                max_rate_limit_retries=max_rate_limit_retries,
             )
         except Exception:
             continue
@@ -338,7 +340,12 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
             for outcome in outcomes
             if outcome.get("status") != "found"
         ]
-        openalex = _openalex_fallback(rows_by_id, missing_ids, sleeper=sleep_fn)
+        openalex = _openalex_fallback(
+            rows_by_id,
+            missing_ids,
+            sleeper=sleep_fn,
+            max_rate_limit_retries=rate_limit_retries,
+        )
         checked_at = now.replace(microsecond=0).isoformat()
         for outcome in outcomes:
             requested_id = str(outcome.get("requested_id") or "")
