@@ -1,15 +1,9 @@
 name: Survey claim fast lane
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/claim-requests/*.json'
-      - '.survey/work-queue/direct-takes/research/*.json'
-      - '.survey/scheduler/library-import-kick.json'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
-  schedule:
-    - cron: '3/10 * * * *'
 
 permissions:
   contents: write
