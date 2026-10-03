@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2607.08215",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T17:32:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T12:03:00+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-d25d8ba3df3c88ae",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2607.08215-on-the-limitations-of-non-gpu-ai-accelerators-for-large-model-inference-a-field-study-of-moe-and-multimodal-serving-on-h.md",
   "parent_job_id": "job-d95074768a0a885f",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 86,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-07-09",
   "schema_version": 1,
   "selection_reason": "Ascend 910上でMoE/マルチモーダル大規模推論を実運用する際のruntime・operator・parallelism・graph compilation・observability上の制約を実機検証するfield study。vLLM-Ascend/CANNの移植・serving system観点で、GPU以外の推論基盤に関する実証的systems資料として有用。",
+  "semantic_scholar_id": "7c6518c81a9476592dc03372076035fcd641d5a7",
   "source_url": "https://arxiv.org/abs/2607.08215",
   "status": "ready",
   "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2026
 }

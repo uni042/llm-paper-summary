@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3676641.3716009",
+  "citation_count": 61,
+  "citation_count_checked_at": "2026-10-03T14:36:33+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-27T05:06:15+00:00",
   "doi": null,
@@ -15,23 +18,27 @@
   "job_id": "job-research-aee70f0b3c5dd213",
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/0000-71a3fb195e7b-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-with-a-processing-in-memory-enabled-computing-syste.md",
-  "priority": 0,
+  "priority": 61,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 61,
+    "citations": 61,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 589,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 61
   },
+  "published": "2025-02-21",
   "schema_version": 1,
   "selection_reason": "GPUと複数PIMをオンラインkernel特性で動的配置し、LLMデコードを既存GPU+PIM比1.8倍、PIM-only比11.1倍高速化する直接的ハードウェア・ランタイム共同設計。",
+  "semantic_scholar_id": "958764de5f17d5477901cda94fc7cbf730be30cd",
   "source_url": "https://doi.org/10.1145/3676641.3716009",
   "status": "ready",
   "title": "PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System",
   "type": "research",
-  "workflow_version": 10
+  "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+  "workflow_version": 10,
+  "year": 2025
 }

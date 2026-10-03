@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3832810.3832865",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T17:38:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-20T20:36:10+00:00",
   "doi": "10.1145/3832810.3832865",
@@ -11,23 +14,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-eb0724db43f1-waq-llm-optimizing-multi-instance-llm-deployment-via-workload-aware-queueing-model.md",
   "parent_job_id": "job-99746c3421d040c0",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 6,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-09-27",
   "schema_version": 1,
   "selection_reason": "Recent analytical deployment optimizer for aggregated/disaggregated multi-instance LLM serving; directly relevant to scheduling, disaggregation and SLO-aware configuration.",
+  "semantic_scholar_id": "68cf1cb8ac2c7ae30ce12d81626f0310c6a7ebfb",
   "source_url": "https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056",
   "status": "ready",
   "title": "WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model",
   "type": "research",
-  "workflow_version": 10
+  "venue": "Proceedings of the International Conference on Parallel Processing",
+  "workflow_version": 10,
+  "year": 2026
 }

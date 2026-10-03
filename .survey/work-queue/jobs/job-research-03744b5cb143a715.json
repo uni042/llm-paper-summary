@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2512.22195",
+  "citation_count": 2,
+  "citation_count_checked_at": "2026-10-03T14:36:33+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-18T17:02:08+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-03744b5cb143a715",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md",
   "parent_job_id": "job-19b9378212c1c3a7",
-  "priority": 0,
+  "priority": 2,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 2,
+    "citations": 2,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 287,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 2
   },
+  "published": "2025-12-20",
   "schema_version": 1,
   "selection_reason": "RAG文書のKVを事前計算してflash SSDへmaterializeし、prefill再計算をstorage readへ置換するLLM inference system。GPU計算とflash容量・帯域を明示的に交換し、KV loadとdecodeのoverlap、低性能GPU活用まで評価しており、SSDを単なるspill先ではなく再利用可能な計算状態層として使う点が既存offload系と差別化される。",
+  "semantic_scholar_id": "12a747c5ebd22557fcb5e05bb7f507f245a470c2",
   "source_url": "https://arxiv.org/abs/2512.22195",
   "status": "ready",
   "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
   "type": "research",
-  "workflow_version": 10
+  "venue": "IEEE International Conference on Data Engineering",
+  "workflow_version": 10,
+  "year": 2025
 }

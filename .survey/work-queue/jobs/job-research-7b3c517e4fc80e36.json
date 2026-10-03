@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2609.26425",
   "canonical_id": "arXiv:2609.26425",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T17:38:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-24T22:22:00+00:00",
   "doi": null,
@@ -12,23 +15,26 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26425-quantwm-temporally-consistent-2-bit-kv-cache-quantization-for-world-models-and-video-generation.md",
   "parent_job_id": "job-63678e2665e743d8",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 11,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-09-22",
   "schema_version": 1,
   "selection_reason": "Recent 2-bit KV-cache quantization directly targets deployment memory bottlenecks.",
+  "semantic_scholar_id": "b6f74d970088140f053af583a73a19d59f0657ad",
   "source_url": "https://arxiv.org/abs/2609.26425",
   "status": "ready",
   "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "year": 2026
 }

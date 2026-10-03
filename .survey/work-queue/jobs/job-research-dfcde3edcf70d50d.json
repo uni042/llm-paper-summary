@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3820441.3820479",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T14:36:33+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-25T01:11:27+00:00",
   "doi": "10.1145/3820441.3820479",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/0000-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md",
   "parent_job_id": "job-fe1bbc1571772ef9",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 59,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-08-05",
   "schema_version": 1,
   "selection_reason": "Targets distributed KV-cache transmission bottlenecks in network-intensive long-context LLM serving.",
+  "semantic_scholar_id": "1b82afcafc66c2a308f90cf45a289886152c0753",
   "source_url": "https://doi.org/10.1145/3820441.3820479",
   "status": "ready",
   "title": "Towards Efficient Serving of Network-intensive LLM Inferences",
   "type": "research",
-  "workflow_version": 10
+  "venue": "Asia-Pacific Workshop on Networking",
+  "workflow_version": 10,
+  "year": 2026
 }

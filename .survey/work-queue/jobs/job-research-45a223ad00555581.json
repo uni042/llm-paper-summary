@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2510.14392",
+  "citation_count": 8,
+  "citation_count_checked_at": "2026-10-03T14:34:33+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T10:01:50+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-45a223ad00555581",
   "paper_path": "papers/inference/99-other-inference-systems/2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md",
   "parent_job_id": "job-78174755e89d23c3",
-  "priority": 0,
+  "priority": 8,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 8,
+    "citations": 8,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 352,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 8
   },
+  "published": "2025-10-16",
   "schema_version": 1,
   "selection_reason": "Implemented LLM inference scheduling work that jointly addresses prefill/decode fairness, adaptive batch capacity, SLO preservation, and cluster load estimation. Trace-based evaluation reports tail-latency and capacity improvements, making it a useful scheduling-lineage omission despite being older than the newest papers.",
+  "semantic_scholar_id": "a44828f5e61dd7bf2b0bfff64146dc5aa13dc516",
   "source_url": "https://arxiv.org/abs/2510.14392",
   "status": "ready",
   "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2025
 }

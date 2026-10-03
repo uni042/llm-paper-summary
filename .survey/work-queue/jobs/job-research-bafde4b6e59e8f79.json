@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2509.21301",
   "canonical_id": "arXiv:2509.21301",
+  "citation_count": 5,
+  "citation_count_checked_at": "2026-10-03T14:36:33+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-23T17:08:03+00:00",
   "doi": null,
@@ -11,23 +14,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross-stage-parallelization.md",
   "parent_job_id": "job-205c59ff3bb87e9e",
-  "priority": 0,
+  "priority": 5,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 5,
+    "citations": 5,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 373,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 5
   },
+  "published": "2025-09-25",
   "schema_version": 1,
   "selection_reason": "Agentic VLM serving system that pipelines vision encode, LLM prefill, and decode with elastic GPU partitioning and lightweight encoder-weight offload; reports up to 23.3% lower maximum latency.",
+  "semantic_scholar_id": "b05b7d27be48acd1f8f474a0a41e97613936bc87",
   "source_url": "https://www.semanticscholar.org/paper/b05b7d27be48acd1f8f474a0a41e97613936bc87",
   "status": "ready",
   "title": "Nova: Real-Time Agentic Vision-Language Model Serving With Adaptive Cross-Stage Parallelization",
   "type": "research",
-  "workflow_version": 10
+  "venue": "IEEE Real-Time Systems Symposium",
+  "workflow_version": 10,
+  "year": 2025
 }

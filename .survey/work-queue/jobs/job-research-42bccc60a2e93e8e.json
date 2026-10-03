@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2609.33184",
   "canonical_id": "arXiv:2609.33184",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T17:38:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-02T11:02:08+00:00",
   "doi": null,
@@ -12,23 +15,26 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.33184-resource-efficient-speculative-decoding-for-long-context-llm-serving.md",
   "parent_job_id": "job-ec5ac3e1b42f73c7",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 6,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-09-27",
   "schema_version": 1,
   "selection_reason": "KVオフロード中に全履歴復元を待たず検証を開始し、転送待ちのGPU計算空白でドラフトを並行実行するSpecStreamにより、長文脈投機復号のメモリとスループットを同時改善する。",
+  "semantic_scholar_id": "50ed352cd8831541caa4c633b798bd3b180076e2",
   "source_url": "https://arxiv.org/abs/2609.33184",
   "status": "ready",
   "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "year": 2026
 }

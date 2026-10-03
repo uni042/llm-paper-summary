@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2603.04797",
+  "citation_count": 4,
+  "citation_count_checked_at": "2026-10-03T17:32:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T10:01:11+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-a1311273f29408ef",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md",
   "parent_job_id": "job-7181bafc0df2e4c1",
-  "priority": 0,
+  "priority": 4,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 4,
+    "citations": 4,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 212,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 4
   },
+  "published": "2026-03-05",
   "schema_version": 1,
   "selection_reason": "Systems/hardware-software co-design for dynamic LLM serving on near-memory processing. It includes spatially aware KV allocation, distributed tiled attention, inter-PE communication primitives, and quantitative GPU/NMP comparisons, making it relevant to hierarchical memory and inference-system architecture.",
+  "semantic_scholar_id": "fe46909294e80eb16db3d23e901c9d5cf849a8c7",
   "source_url": "https://arxiv.org/abs/2603.04797",
   "status": "ready",
   "title": "Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2026
 }

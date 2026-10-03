@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3832810.3832811",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-03T17:38:36+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-24T16:02:36+00:00",
   "doi": "10.1145/3832810.3832811",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/0000-3a2365c53c29-migmoe-task-aware-expert-migration-for-faster-and-more-balanced-expert-parallel-moe-inference.md",
   "parent_job_id": "job-9d4d1882093158af",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 6,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-09-27",
   "schema_version": 1,
   "selection_reason": "マルチタスクMoE推論でタスク別ルーティング特性に応じてexpert配置を動的移行し、EPLB/HarMoEny比で最大56.4%/68.4%のthroughput改善を報告。expert配置・負荷分散・分散MoE推論の重点系統に直接該当する。",
+  "semantic_scholar_id": "cf5869642dcb88f30250b04c1e22e8e72c24a588",
   "source_url": "https://www.semanticscholar.org/paper/4310ab210922d45d4073a99eec23c66e8b21f8d2",
   "status": "ready",
   "title": "MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference",
   "type": "research",
-  "workflow_version": 10
+  "venue": "Proceedings of the International Conference on Parallel Processing",
+  "workflow_version": 10,
+  "year": 2026
 }
