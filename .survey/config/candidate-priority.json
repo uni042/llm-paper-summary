@@ -54,8 +54,9 @@
     "fresh_ttl_hours": 48,
     "default_ttl_hours": 168,
     "max_lookup_batch": 100,
-    "max_lookup_papers_per_run": 600,
-    "request_spacing_seconds": 2
+    "max_lookup_papers_per_run": 300,
+    "request_spacing_seconds": 2,
+    "failure_ttl_hours": 168
   },
   "fallback_priority": 0
 }
