@@ -54,28 +54,40 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
+          git fetch origin main
+          git reset --hard origin/main
+
+          # External providers are queried exactly once per workflow run. A push
+          # race is resolved by rebasing this generated commit, not by repeating
+          # Semantic Scholar/OpenAlex traffic.
+          python .survey/scripts/forward_citation_sweep.py --repo-root . | tee /tmp/forward-citation-sweep.json
+          python .survey/scripts/refresh_candidate_priority.py --repo-root . | tee /tmp/candidate-priority-refresh.json
+
+          git add -A \
+            .survey/work-queue/forward-citation-sweep.json \
+            .survey/work-queue/candidate-priority-cache.json \
+            .survey/work-queue/jobs
+
+          if git diff --cached --quiet; then
+            echo 'Forward-citation coverage and candidate priorities already current.'
+            exit 0
+          fi
+
+          git commit -m 'survey: refresh forward citations and candidate priorities'
+
           for attempt in 1 2 3 4; do
-            git fetch origin main
-            git reset --hard origin/main
-
-            python .survey/scripts/forward_citation_sweep.py --repo-root . | tee /tmp/forward-citation-sweep.json
-            python .survey/scripts/refresh_candidate_priority.py --repo-root . | tee /tmp/candidate-priority-refresh.json
-            python .survey/scripts/build_worker_worklist.py --repo-root .
-
-            git add -A               .survey/work-queue/forward-citation-sweep.json               .survey/work-queue/candidate-priority-cache.json               .survey/work-queue/jobs               .survey/work-queue/WORKLIST-00.md               .survey/work-queue/WORKLIST-30.md               .survey/work-queue/WORKLIST-45.md               .survey/work-queue/worker-worklist-00.json               .survey/work-queue/worker-worklist-30.json               .survey/work-queue/worker-worklist-45.json
-
-            if git diff --cached --quiet; then
-              echo 'Forward-citation coverage and candidate priorities already current.'
-              exit 0
-            fi
-
-            git commit -m 'survey: refresh forward citations and candidate priorities'
             if git push origin HEAD:main; then
               exit 0
             fi
-            echo "Push conflict on attempt ${attempt}; recomputing from latest main."
-            sleep $((attempt * 2))
+
+            echo "Push race on attempt ${attempt}; rebasing generated state onto latest main."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Generated state conflicts with newer canonical queue state; leave it for the next scheduled sweep rather than repeating provider calls.' >&2
+              exit 1
+            fi
           done
 
-          echo 'Failed to publish forward-citation sweep after retries.' >&2
+          echo 'Failed to publish forward-citation sweep after rebasing retries.' >&2
           exit 1
