@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T14:28:53+00:00",
-  "record_count": 652,
+  "updated_at": "2026-10-03T15:16:51+00:00",
+  "record_count": 705,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -115,19 +115,6 @@
       "last_checked_at": "2026-09-19T18:25:00+00:00",
       "linked_from": [],
       "title": "Program Synthesis with Large Language Models"
-    },
-    "DOI:10.48550/arxiv.2308.12950": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.48550/arxiv.2308.12950",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2308.12950",
-        "arXiv:2308.12950"
-      ],
-      "reason": "Code-model technical report rather than a focused inference/training systems contribution.",
-      "first_checked_at": "2026-09-19T18:25:00+00:00",
-      "last_checked_at": "2026-09-19T18:25:00+00:00",
-      "linked_from": [],
-      "title": "Code Llama: Open Foundation Models for Code"
     },
     "arXiv:1810.04805": {
       "classification": "unrelated",
@@ -897,13 +884,15 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2305.14314",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.14314",
         "arXiv:2305.14314"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 3. **QLoRA: Efficient Finetuning of Quantized LLMs** — `arXiv:2305.14314` ([paper](https://arxiv.org/abs/2305.14314)). NF4, double quantization and paged optimizers enable 65B fine-tuning below 48 GB versus over 780 GB for full fine-tuning. Included as memory-efficient LLM training.",
+      "reason": "4bit量子化モデルへLoRAを学習する省メモリfine-tuning方式で、最終適用先が学習工程そのものの高速化・省メモリ化である凍結対象。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
       ],
       "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
     },
@@ -5560,11 +5549,12 @@
       "identity_tokens": [
         "DOI:10.1145/3600006.3613145"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: CPUメモリへの分散インメモリcheckpointで大規模学習の障害復旧を高速化し、毎iteration checkpointを実用化する学習システム研究。",
+      "reason": "GEMINI is a distributed training system for checkpointing model states in host CPU memory and recovering training after failures. Its checkpoint placement and network-traffic scheduling improve recovery speed while preserving training throughput; the paper explicitly targets static synchronous training. It does not study inference-time execution or serving and is outside the inference-focused scope.",
       "first_checked_at": "2026-09-30T09:52:33+00:00",
-      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
       "linked_from": [
-        "worker-worklist-30 discovery_review rank 264"
+        "worker-worklist-30 discovery_review rank 264",
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[8]"
       ],
       "title": "GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints"
     },
@@ -9611,6 +9601,814 @@
         "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[2]"
       ],
       "title": "Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs"
+    },
+    "arXiv:2311.17042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17042",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.17042",
+        "arXiv:2311.17042"
+      ],
+      "reason": "画像拡散モデルを1–4 stepへ蒸留する学習方式で、LLM/言語モデル推論システムを対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Adversarial Diffusion Distillation"
+    },
+    "arXiv:2308.12950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.12950",
+        "arXiv:2308.12950"
+      ],
+      "reason": "コード向け基盤LLM系列の構築・学習・能力報告が主目的で、推論runtimeの効率化方式を提案しない。",
+      "first_checked_at": "2026-09-19T18:25:00+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md"
+      ],
+      "title": "Code Llama: Open Foundation Models for Code"
+    },
+    "arXiv:2309.16609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.16609",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.16609",
+        "arXiv:2309.16609"
+      ],
+      "reason": "Qwen/Qwen-Chatおよび派生モデルの構築・学習・能力を報告する技術報告で、LLM推論基盤最適化が主題ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Qwen Technical Report"
+    },
+    "arXiv:2303.18223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.18223",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.18223",
+        "arXiv:2303.18223"
+      ],
+      "reason": "LLM全般のpre-training・adaptation・利用・能力評価を整理する総合サーベイで、推論システム効率化に特化した調査ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "A Survey of Large Language Models"
+    },
+    "arXiv:2307.05968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.05968",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2307.05968",
+        "arXiv:2307.05968"
+      ],
+      "reason": "等方幾何・微分幾何における主曲率比一定曲面の数学研究で、LLMや機械学習推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Surfaces of constant principal-curvatures ratio in isotropic geometry"
+    },
+    "arXiv:2305.17166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17166",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.17166",
+        "arXiv:2305.17166"
+      ],
+      "reason": "高エネルギー量子場理論の波散乱・event shapeに関する理論物理研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "title": "Wave scattering event shapes at high energies"
+    },
+    "arXiv:1703.04247": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1703.04247",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1703.04247",
+        "arXiv:1703.04247"
+      ],
+      "reason": "推薦システムのクリック率予測で低次・高次特徴相互作用を同時学習するモデル研究で、LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+      ],
+      "title": "DeepFM: A Factorization-Machine based Neural Network for CTR Prediction"
+    },
+    "arXiv:1702.02815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1702.02815",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1702.02815",
+        "arXiv:1702.02815"
+      ],
+      "reason": "ガウス行列と独立ガウスベクトルの積の確率分布を特徴付ける確率論研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md"
+      ],
+      "title": "Multiplying a Gaussian Matrix by a Gaussian Vector"
+    },
+    "arXiv:1612.07837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1612.07837",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1612.07837",
+        "arXiv:1612.07837"
+      ],
+      "reason": "音声波形をサンプル単位で生成する階層型自己回帰RNNで、LLM/Transformer推論基盤ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "SampleRNN: An Unconditional End-to-End Neural Audio Generation Model"
+    },
+    "arXiv:1611.01600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.01600",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1611.01600",
+        "arXiv:1611.01600"
+      ],
+      "reason": "深層ネットワークの二値化を損失関数へ直接最適化する学習アルゴリズムで、対象も一般的なfeedforward/recurrent networkでありLLM推論ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "Loss-aware Binarization of Deep Networks"
+    },
+    "arXiv:1611.00712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.00712",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1611.00712",
+        "arXiv:1611.00712"
+      ],
+      "reason": "離散確率変数を連続緩和して勾配ベース学習を可能にする確率・学習手法で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables"
+    },
+    "arXiv:1609.05140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1609.05140",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1609.05140",
+        "arXiv:1609.05140"
+      ],
+      "reason": "階層型強化学習でoption policyとterminationを勾配法で同時学習する研究で、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
+      ],
+      "title": "The Option-Critic Architecture"
+    },
+    "arXiv:1606.02891": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.02891",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1606.02891",
+        "arXiv:1606.02891"
+      ],
+      "reason": "WMT16向けニューラル機械翻訳システムのモデル・訓練・アンサンブル構成を報告する研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Edinburgh Neural Machine Translation Systems for WMT 16"
+    },
+    "arXiv:1603.05691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1603.05691",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1603.05691",
+        "arXiv:1603.05691"
+      ],
+      "reason": "畳み込みネットワークを浅い全結合モデルで模倣できるかを知識蒸留的に検証する画像認識研究で、LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Do Deep Convolutional Nets Really Need to be Deep and Convolutional?"
+    },
+    "arXiv:1602.07360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1602.07360",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1602.07360",
+        "arXiv:1602.07360"
+      ],
+      "reason": "CNNを小型化する画像認識モデル研究で、圧縮・配備効率には関係するがLLM/Transformer推論を対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md"
+      ],
+      "title": "SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size"
+    },
+    "arXiv:1602.02068": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1602.02068",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1602.02068",
+        "arXiv:1602.02068"
+      ],
+      "reason": "softmaxの代替として疎な確率分布を返すsparsemaxを提案する機械学習手法で、LLM推論時の注意計算削減を実装・評価する研究ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+      ],
+      "title": "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification"
+    },
+    "arXiv:1704.04497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.04497",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1704.04497",
+        "arXiv:1704.04497"
+      ],
+      "reason": "動画VQAの時空間推論データセットとdual-LSTMモデルが主題で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "title": "TGIF-QA: Toward Spatio-Temporal Reasoning in Visual Question Answering"
+    },
+    "arXiv:1705.03122": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.03122",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1705.03122",
+        "arXiv:1705.03122"
+      ],
+      "reason": "畳み込み型seq2seqモデルのアーキテクチャと翻訳性能が主題で、現行LLM/Transformer推論サービングのシステム最適化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Convolutional Sequence to Sequence Learning"
+    },
+    "arXiv:1705.06963": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.06963",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1705.06963",
+        "arXiv:1705.06963"
+      ],
+      "reason": "ニューロモーフィック計算の歴史・モデル・デバイス・システム・応用を扱う一般ハードウェアサーベイで、LLM推論システム専用ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "title": "A Survey of Neuromorphic Computing and Neural Networks in Hardware"
+    },
+    "arXiv:1706.03471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1706.03471",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1706.03471",
+        "arXiv:1706.03471"
+      ],
+      "reason": "SGDのlearning rateとmomentumを自動調整して学習収束を高速化するoptimizer研究で、最終適用先が学習工程のため凍結範囲。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md"
+      ],
+      "title": "YellowFin and the Art of Momentum Tuning"
+    },
+    "arXiv:1707.01873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.01873",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1707.01873",
+        "arXiv:1707.01873"
+      ],
+      "reason": "permissioned blockchainの合意プロトコルとByzantine fault耐性を比較する分散システム研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md"
+      ],
+      "title": "Blockchain Consensus Protocols in the Wild"
+    },
+    "arXiv:1708.04552": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1708.04552",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1708.04552",
+        "arXiv:1708.04552"
+      ],
+      "reason": "CNN学習時の入力領域マスキングによる正則化・データ拡張研究で、推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Improved Regularization of Convolutional Neural Networks with Cutout"
+    },
+    "arXiv:1709.02755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.02755",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1709.02755",
+        "arXiv:1709.02755"
+      ],
+      "reason": "RNNの再帰計算を軽量化・並列化するSRUアーキテクチャ研究で高速性はあるが、現行LLM/Transformer推論基盤を最終対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Simple Recurrent Units for Highly Parallelizable Recurrence"
+    },
+    "arXiv:1710.10903": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1710.10903",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1710.10903",
+        "arXiv:1710.10903"
+      ],
+      "reason": "graph-structured data向けmasked self-attentionモデルの提案で、LLM推論時のattention計算削減やサービングを目的としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ],
+      "title": "Graph Attention Networks"
+    },
+    "arXiv:1711.03936": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.03936",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1711.03936",
+        "arXiv:1711.03936"
+      ],
+      "reason": "blockchain consensus protocolをPoW/PoX/hybridへ体系化する分散システム・暗号サーベイで、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md"
+      ],
+      "title": "Consensus in the Age of Blockchains"
+    },
+    "arXiv:1712.01208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.01208",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1712.01208",
+        "arXiv:1712.01208"
+      ],
+      "reason": "B-tree/hash/Bloom等のデータベース索引を学習モデルで置換するDBシステム研究で、LLM推論のexpert prefetchやcache索引を対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md"
+      ],
+      "title": "The Case for Learned Index Structures"
+    },
+    "arXiv:2304.08354": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.08354",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.08354",
+        "arXiv:2304.08354"
+      ],
+      "reason": "基盤モデルのツール利用を体系化する能力・エージェント研究で、推論サービングやランタイム効率化を主題としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Tool Learning with Foundation Models"
+    },
+    "DOI:10.5555/3291168.3291211": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5555/3291168.3291211",
+      "identity_tokens": [
+        "DOI:10.5555/3291168.3291211",
+        "arXiv:1802.04799"
+      ],
+      "reason": "深層学習全般のグラフ・演算子最適化と性能可搬性を狙う汎用コンパイラで、LLM/Transformer推論固有の最適化を最終対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning"
+    },
+    "arXiv:1202.3974": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1202.3974",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1202.3974",
+        "arXiv:1202.3974"
+      ],
+      "reason": "LRUキャッシュのヒット率を近似するネットワークキャッシュ理論で、LLM推論キャッシュを対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A versatile and accurate approximation for LRU cache performance"
+    },
+    "arXiv:1205.6711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1205.6711",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1205.6711",
+        "arXiv:1205.6711"
+      ],
+      "reason": "可算集合上の経験分布が真の分布へ収束する際の全変動距離の確率界を扱う統計理論で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "On the Convergence of the Empirical Distribution"
+    },
+    "DOI:10.18653/v1/2020.acl-main.703": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.703",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.703"
+      ],
+      "reason": "denoising seq2seq事前学習と下流タスク品質が主題で、推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension"
+    },
+    "arXiv:cs/9809099": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:cs/9809099",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.cs/9809099",
+        "arXiv:cs/9809099"
+      ],
+      "reason": "共有計算機資源の割当公平性を0〜1で測るJain公平性指標の研究で、LLM推論システム固有ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Quantitative Measure Of Fairness And Discrimination For Resource Allocation In Shared Computer Systems"
+    },
+    "arXiv:2506.08027": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08027",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.08027",
+        "arXiv:2506.08027"
+      ],
+      "reason": "MXFP8を用いたLLM事前学習の数値形式・変換法を検証する研究で、最終適用先が学習高速化・効率化の凍結範囲。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Recipes for Pre-training LLMs with MXFP8"
+    },
+    "arXiv:1211.3711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1211.3711",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1211.3711",
+        "arXiv:1211.3711"
+      ],
+      "reason": "RNN Transducerによる系列変換モデルの提案で、音声認識等のモデル能力が主題。LLM推論サービングや推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+      ],
+      "title": "Sequence Transduction with Recurrent Neural Networks"
+    },
+    "arXiv:1301.3781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1301.3781",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1301.3781",
+        "arXiv:1301.3781"
+      ],
+      "reason": "CBOW/Skip-gramによる単語埋め込みの学習効率化が主題で、LLM推論runtimeの効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ],
+      "title": "Efficient Estimation of Word Representations in Vector Space"
+    },
+    "arXiv:1402.3511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1402.3511",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1402.3511",
+        "arXiv:1402.3511"
+      ],
+      "reason": "異なる時間周期でRNNモジュールを更新する系列モデル研究で、現行LLM/Transformer推論基盤の最適化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "A Clockwork RNN"
+    },
+    "arXiv:1410.0510": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1410.0510",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1410.0510",
+        "arXiv:1410.0510"
+      ],
+      "reason": "入力ごとに層内の候補写像を逐次選択するDAG型ニューラルネットとpolicy-gradient学習が主題で、LLM推論システムではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Deep Sequential Neural Network"
+    },
+    "arXiv:1504.00325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1504.00325",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1504.00325",
+        "arXiv:1504.00325"
+      ],
+      "reason": "画像キャプションの大規模データセットと評価サーバ構築が主題で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Microsoft COCO Captions: Data Collection and Evaluation Server"
+    },
+    "arXiv:1506.02640": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1506.02640",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1506.02640",
+        "arXiv:1506.02640"
+      ],
+      "reason": "単一ネットワークでリアルタイム物体検出を行うコンピュータビジョン研究で、LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md"
+      ],
+      "title": "You Only Look Once: Unified, Real-Time Object Detection"
+    },
+    "arXiv:1508.03619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1508.03619",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1508.03619",
+        "arXiv:1508.03619"
+      ],
+      "reason": "グラフ処理システム向けbenchmark suiteの標準化研究で、LLM推論システムではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+      ],
+      "title": "The GAP Benchmark Suite"
+    },
+    "arXiv:1511.05641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.05641",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1511.05641",
+        "arXiv:1511.05641"
+      ],
+      "reason": "既学習ネットワークからより大きいstudentへ関数を保ったまま変換して学習を高速化する手法で、最終適用先が学習工程のため凍結範囲。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "Net2Net: Accelerating Learning via Knowledge Transfer"
+    },
+    "arXiv:1511.07289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.07289",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1511.07289",
+        "arXiv:1511.07289"
+      ],
+      "reason": "ELU活性化関数による深層ネットワークの学習収束・精度改善が主題で、LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)"
+    },
+    "arXiv:1512.06890": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1512.06890",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1512.06890",
+        "arXiv:1512.06890"
+      ],
+      "reason": "線形方程式を解く確率的双対上昇法の数値最適化研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md"
+      ],
+      "title": "Stochastic Dual Ascent for Solving Linear Systems"
+    },
+    "arXiv:1703.03664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1703.03664",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1703.03664",
+        "arXiv:1703.03664"
+      ],
+      "reason": "画像密度推定向け自己回帰生成モデルで、LLM/Transformer推論基盤ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Parallel Multiscale Autoregressive Density Estimation"
+    },
+    "arXiv:1701.05517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1701.05517",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1701.05517",
+        "arXiv:1701.05517"
+      ],
+      "reason": "画像生成用PixelCNNの尤度モデル・アーキテクチャ改善が主題で、LLM推論システムではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture Likelihood and Other Modifications"
+    },
+    "arXiv:1611.07409": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.07409",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1611.07409",
+        "arXiv:1611.07409"
+      ],
+      "reason": "異種計算基盤における性能可搬性を定量化する一般HPC指標研究で、LLM固有の推論方式を提案しない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Metric for Performance Portability"
+    },
+    "arXiv:1611.01576": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.01576",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1611.01576",
+        "arXiv:1611.01576"
+      ],
+      "reason": "畳み込みと要素単位のrecurrent poolingを組み合わせるQRNNアーキテクチャ研究で、現行LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Quasi-Recurrent Neural Networks"
+    },
+    "arXiv:1610.02136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1610.02136",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1610.02136",
+        "arXiv:1610.02136"
+      ],
+      "reason": "ニューラルネットの誤分類・分布外入力検出をsoftmax確率で評価する信頼性研究で、推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks"
+    },
+    "arXiv:1609.00076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1609.00076",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1609.00076",
+        "arXiv:1609.00076"
+      ],
+      "reason": "GEMM実装を教育・最適化する汎用線形代数sandboxで、LLM固有の推論カーネル研究ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "BLISlab: A Sandbox for Optimizing GEMM"
+    },
+    "arXiv:1604.01696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1604.01696",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1604.01696",
+        "arXiv:1604.01696"
+      ],
+      "reason": "常識物語理解のコーパスと評価枠組みを構築するNLPデータセット研究で、推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Corpus and Evaluation Framework for Deeper Understanding of Commonsense Stories"
+    },
+    "arXiv:1603.05118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1603.05118",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1603.05118",
+        "arXiv:1603.05118"
+      ],
+      "reason": "RNN/LSTMの学習時正則化として長期記憶を壊さないrecurrent dropoutを提案する学習アルゴリズム研究。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Recurrent Dropout without Memory Loss"
+    },
+    "arXiv:1602.02830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1602.02830",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1602.02830",
+        "arXiv:1602.02830"
+      ],
+      "reason": "実行時の二値重み・活性化で演算/メモリを削減するが、対象は古典的DNN/CNNでありLLM/Transformer推論サーベイの範囲外。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Binarized Neural Networks: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1"
+    },
+    "arXiv:1602.01528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1602.01528",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1602.01528",
+        "arXiv:1602.01528"
+      ],
+      "reason": "圧縮済みDNNの疎行列ベクトル積を専用ハードウェアで高速化する推論研究だが、対象はAlexNet/VGG等の全結合層でLLM/Transformer推論ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network"
+    },
+    "DOI:10.1145/3600006.3613175": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3600006.3613175",
+      "identity_tokens": [
+        "DOI:10.1145/3600006.3613175"
+      ],
+      "reason": "The primary paper identifies its subject as a scheduler for resource-adaptive deep-learning training jobs; its keywords state deep-learning training. Evaluations focus on job completion time, makespan and GPU-hours for DL-cluster training traces. It does not target LLM inference or serving; unrelated despite the worklist's inference destination.",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[8]"
+      ],
+      "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling"
     }
   }
 }

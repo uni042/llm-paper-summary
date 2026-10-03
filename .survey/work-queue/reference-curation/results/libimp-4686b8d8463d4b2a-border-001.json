@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4686b8d8463d4b2a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.04371",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.04371",
+    "identity_tokens": [
+      "arXiv:2510.04371"
+    ],
+    "reason": "Speculative Actions accelerates general agentic systems by predicting and executing likely future API actions in parallel, with LLM calls among a broader set of tool/MCP/human actions. Its evaluations cover gaming, e-commerce, web search and an OS setting, reporting up to 20% latency reduction, but do not isolate LLM inference latency or serving throughput. Retained as borderline because it includes LLM-agent loops while its objective/evaluation extends well beyond LLM inference.",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[6]"
+    ],
+    "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4686b8d8463d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

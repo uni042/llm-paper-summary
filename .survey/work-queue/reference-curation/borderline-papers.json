@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T14:28:53+00:00",
-  "record_count": 412,
+  "updated_at": "2026-10-03T15:16:50+00:00",
+  "record_count": 409,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -182,18 +182,6 @@
       ],
       "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     },
-    "arXiv:2309.16609": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2309.16609",
-      "identity_tokens": [
-        "arXiv:2309.16609"
-      ],
-      "reason": "Broad model technical report rather than a focused inference/training system paper.",
-      "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
-      "linked_from": [],
-      "title": "Qwen Technical Report"
-    },
     "arXiv:2004.05150": {
       "classification": "borderline",
       "canonical_id": "arXiv:2004.05150",
@@ -257,18 +245,6 @@
       "last_checked_at": "2026-09-19T18:25:30+00:00",
       "linked_from": [],
       "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
-    },
-    "DOI:10.48550/arxiv.2308.12950": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.48550/arxiv.2308.12950",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2308.12950"
-      ],
-      "reason": "Model-family report focused on code capability and training rather than systems implementation.",
-      "first_checked_at": "2026-09-19T18:22:00+00:00",
-      "last_checked_at": "2026-09-19T18:22:00+00:00",
-      "linked_from": [],
-      "title": "Code Llama: Open Foundation Models for Code"
     },
     "arXiv:2204.02311": {
       "classification": "borderline",
@@ -1171,20 +1147,6 @@
         "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
       ],
       "title": "ParetoQ"
-    },
-    "arXiv:1802.04799": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1802.04799",
-      "identity_tokens": [
-        "arXiv:1802.04799"
-      ],
-      "reason": "深層学習コンパイラとして基盤価値は高いがLLM固有の推論研究ではない。",
-      "first_checked_at": "2026-09-27T04:02:01+09:00",
-      "last_checked_at": "2026-09-30T09:45:55+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning"
     },
     "DOI:10.1145/3575693.3578835": {
       "classification": "borderline",
@@ -4898,20 +4860,6 @@
       ],
       "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model"
     },
-    "arXiv:2303.18223": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2303.18223",
-      "identity_tokens": [
-        "arXiv:2303.18223"
-      ],
-      "reason": "3. **A Survey of Large Language Models** — `arXiv:2303.18223` ([paper](https://arxiv.org/abs/2303.18223)). Broad survey that discusses efficiency among many topics; no new systems method.",
-      "first_checked_at": "2026-09-30T09:46:42+00:00",
-      "last_checked_at": "2026-09-30T09:46:42+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "A Survey of Large Language Models"
-    },
     "DOI:10.1038/s41586-025-09422-z": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1038/s41586-025-09422-z",
@@ -5956,6 +5904,20 @@
         "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[0]"
       ],
       "title": "On Evaluating Performance of LLM Inference Systems"
+    },
+    "arXiv:2510.04371": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.04371",
+      "identity_tokens": [
+        "arXiv:2510.04371"
+      ],
+      "reason": "Speculative Actions accelerates general agentic systems by predicting and executing likely future API actions in parallel, with LLM calls among a broader set of tool/MCP/human actions. Its evaluations cover gaming, e-commerce, web search and an OS setting, reporting up to 20% latency reduction, but do not isolate LLM inference latency or serving throughput. Retained as borderline because it includes LLM-agent loops while its objective/evaluation extends well beyond LLM inference.",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[6]"
+      ],
+      "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems"
     }
   }
 }

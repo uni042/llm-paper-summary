@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5774abf10decee30-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1706.03471",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1706.03471",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1706.03471",
+      "arXiv:1706.03471"
+    ],
+    "reason": "SGDのlearning rateとmomentumを自動調整して学習収束を高速化するoptimizer研究で、最終適用先が学習工程のため凍結範囲。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md"
+    ],
+    "title": "YellowFin and the Art of Momentum Tuning"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5774abf10dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

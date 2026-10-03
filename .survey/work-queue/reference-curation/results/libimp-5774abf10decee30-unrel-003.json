@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5774abf10decee30-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1705.06963",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1705.06963",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1705.06963",
+      "arXiv:1705.06963"
+    ],
+    "reason": "ニューロモーフィック計算の歴史・モデル・デバイス・システム・応用を扱う一般ハードウェアサーベイで、LLM推論システム専用ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+    ],
+    "title": "A Survey of Neuromorphic Computing and Neural Networks in Hardware"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5774abf10dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

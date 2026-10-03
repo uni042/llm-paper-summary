@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65319545f088050a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1301.3781",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1301.3781",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1301.3781",
+      "arXiv:1301.3781"
+    ],
+    "reason": "CBOW/Skip-gramによる単語埋め込みの学習効率化が主題で、LLM推論runtimeの効率化ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+    ],
+    "title": "Efficient Estimation of Word Representations in Vector Space"
+  },
+  "processed_at": "2026-10-03T15:16:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65319545f088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

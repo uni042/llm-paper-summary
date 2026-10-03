@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a045b18ae22b8ec-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.18223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.18223",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2303.18223",
+      "arXiv:2303.18223"
+    ],
+    "reason": "LLM全般のpre-training・adaptation・利用・能力評価を整理する総合サーベイで、推論システム効率化に特化した調査ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "A Survey of Large Language Models"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a045b18ae22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a045b18ae22b8ec-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.12950",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.12950",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.12950",
+      "arXiv:2308.12950"
+    ],
+    "reason": "コード向け基盤LLM系列の構築・学習・能力報告が主目的で、推論runtimeの効率化方式を提案しない。",
+    "first_checked_at": "2026-09-19T18:25:00+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md"
+    ],
+    "title": "Code Llama: Open Foundation Models for Code"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a045b18ae22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

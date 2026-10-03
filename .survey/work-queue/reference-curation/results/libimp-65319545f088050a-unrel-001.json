@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65319545f088050a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1211.3711",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1211.3711",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1211.3711",
+      "arXiv:1211.3711"
+    ],
+    "reason": "RNN Transducerによる系列変換モデルの提案で、音声認識等のモデル能力が主題。LLM推論サービングや推論効率化ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+    ],
+    "title": "Sequence Transduction with Recurrent Neural Networks"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65319545f088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

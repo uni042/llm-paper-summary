@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65319545f088050a-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.05641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.05641",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1511.05641",
+      "arXiv:1511.05641"
+    ],
+    "reason": "既学習ネットワークからより大きいstudentへ関数を保ったまま変換して学習を高速化する手法で、最終適用先が学習工程のため凍結範囲。",
+    "first_checked_at": "2026-10-03T15:16:51+00:00",
+    "last_checked_at": "2026-10-03T15:16:51+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+    ],
+    "title": "Net2Net: Accelerating Learning via Knowledge Transfer"
+  },
+  "processed_at": "2026-10-03T15:16:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65319545f088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
