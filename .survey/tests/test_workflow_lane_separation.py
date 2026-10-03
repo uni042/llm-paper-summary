@@ -68,20 +68,18 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn("DISCOVERY_PRECHECK_PARALLELISM: '4'", text)
         self.assertIn("process_discovery_precheck_batch.py", text)
         self.assertIn('--parallelism "$DISCOVERY_PRECHECK_PARALLELISM"', text)
-        self.assertIn("discovery-precheck-foreground-${{ github.sha }}", text)
+        self.assertIn("group: discovery-precheck-main", text)
         self.assertNotIn("discovery-preload-background-main", text)
         self.assertNotIn("discovery_preload_queue.py --repo-root . top-up", text)
         self.assertIn("git commit -m 'survey: publish discovery precheck results and preload stock'", text)
         self.assertIn("git push origin HEAD:main", text)
 
         warm = self._text("discovery-preload-warm.yml")
-        self.assertIn("workflow_run:", warm)
-        self.assertIn("Discovery precheck gate", warm)
+        warm_trigger = warm.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", warm_trigger)
+        self.assertNotIn("workflow_run:", warm_trigger)
+        self.assertNotIn("push:", warm_trigger)
         self.assertIn("group: discovery-preload-background-main", warm)
-        self.assertIn("--target 32 --max-new 32", warm)
-        self.assertIn("process_discovery_precheck_batch.py", warm)
-        self.assertIn("preload-semantic-scholar.txt", warm)
-        self.assertIn("git commit -m 'survey: warm discovery preload stock'", warm)
 
         batch = (ROOT / ".survey/scripts/process_discovery_precheck_batch.py").read_text(encoding="utf-8")
         self.assertIn("DEFAULT_PARALLELISM = 4", batch)
@@ -93,19 +91,23 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
 
     def test_background_helper_no_longer_owns_claim_or_immutable_submission_triggers(self):
         text = self._text("survey-helper.yml")
-        self.assertIn("group: survey-background-main", text)
+        self.assertIn("workflow_dispatch:", text.split("permissions:", 1)[0])
         self.assertNotIn(".survey/work-queue/claim-requests/*.json", text)
         self.assertNotIn(".survey/work-queue/submissions/research/*.json", text)
         self.assertNotIn(".survey/work-queue/submissions/audit/*.json", text)
         self.assertNotIn("Allocate repository-backed worker claims", text)
         self.assertNotIn("claim_worker.py --repo-root", text)
 
-    def test_heavy_writer_workflows_share_background_lock_not_fast_lanes(self):
-        for name in ("maintenance.yml", "citation-graph-backfill.yml", "rebuild-paper-indexes.yml"):
+    def test_heavy_writer_workflows_use_independent_concurrency_queues(self):
+        expected = {
+            "maintenance.yml": "group: survey-maintenance-main",
+            "citation-graph-backfill.yml": "group: citation-graph-backfill-main",
+            "rebuild-paper-indexes.yml": "group: rebuild-paper-indexes-main",
+        }
+        for name, group in expected.items():
             text = self._text(name)
-            self.assertIn("group: survey-background-main", text, name)
-            self.assertNotIn("group: survey-claim-main", text, name)
-            self.assertNotIn("group: survey-submission-main", text, name)
+            self.assertIn(group, text, name)
+            self.assertNotIn("group: survey-background-main", text, name)
 
     def test_citation_schema_is_persistent_for_current_queue_contract(self):
         workflow = self._text("citation-graph-backfill.yml")
