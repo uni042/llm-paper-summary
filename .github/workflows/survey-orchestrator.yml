@@ -1,0 +1,56 @@
+name: Survey orchestrator
+
+on:
+  # GitHub scheduled events are best-effort. Run off-minute and provide six
+  # independent chances per hour; the Library handoff push below is the durable
+  # event-driven fallback when scheduled delivery is delayed or dropped.
+  schedule:
+    - cron: '7/10 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.survey/scheduler/library-import-kick.json'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+# Keep scheduler delivery independent from claim/import/background writer queues.
+# This job only dispatches idempotent/freshness-gated workers and never writes main.
+concurrency:
+  group: survey-orchestrator-main
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Dispatch current Library-first lanes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dispatch_if_idle() {
+            local workflow="$1"
+            local active
+            active="$(gh run list               --repo "${GITHUB_REPOSITORY}"               --workflow "$workflow"               --limit 20               --json status               --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${active:-0}" -gt 0 ]; then
+              echo "${workflow}: already active (${active}); skip duplicate dispatch."
+              return 0
+            fi
+            echo "Dispatching ${workflow}"
+            gh api               --method POST               "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches"               -f ref=main
+          }
+
+          # Canonical Library-first inbox processor. It self-drains bounded work
+          # and explicitly dispatches Discovery precheck when required.
+          dispatch_if_idle library-import.yml
+
+          # Hourly metadata/coverage workers have their own durable freshness
+          # gates, so extra orchestrator ticks are cheap no-ops.
+          dispatch_if_idle forward-citation-sweep.yml
+          dispatch_if_idle candidate-priority-refresh.yml
