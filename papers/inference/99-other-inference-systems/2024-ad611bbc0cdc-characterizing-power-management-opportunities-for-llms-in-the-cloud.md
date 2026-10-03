@@ -1,22 +1,31 @@
 ---
-canonical_id: "DOI:10.1145/3620666.3651329"
-title: "Characterizing Power Management Opportunities for LLMs in the Cloud"
-summary: "LLM訓練と推論の電力特性を実機・本番クラスタで分析し、推論クラスタには約21%の電力余裕があると示す。POLCAは優先度付き二段階周波数制御で電力超過を防ぎ、同じ電力設備に30%多いサーバを収容する。"
-list_summary: "LLM推論クラスタの電力余裕を実測し、二段階周波数制御POLCAでSLOを守りながら同一電力予算へ30%多いサーバを収容する。"
-authors: [Pratyush Patel, Esha Choukse, Chaojie Zhang, Íñigo Goiri, Brijesh Warrier, Nithish Mahalingam, Ricardo Bianchini]
-published: "2024-04-27"
-publication: "ASPLOS 2024"
-publication_type: "conference"
-publication_status: "published"
-source: "https://doi.org/10.1145/3620666.3651329"
+canonical_id: DOI:10.1145/3620666.3651329
+title: Characterizing Power Management Opportunities for LLMs in the Cloud
+summary: LLM訓練と推論の電力特性を実機・本番クラスタで分析し、推論クラスタには約21%の電力余裕があると示す。POLCAは優先度付き二段階周波数制御で電力超過を防ぎ、同じ電力設備に30%多いサーバを収容する。
+list_summary: LLM推論クラスタの電力余裕を実測し、二段階周波数制御POLCAでSLOを守りながら同一電力予算へ30%多いサーバを収容する。
+authors:
+- Pratyush Patel
+- Esha Choukse
+- Chaojie Zhang
+- Íñigo Goiri
+- Brijesh Warrier
+- Nithish Mahalingam
+- Ricardo Bianchini
+published: '2024-04-27'
+publication: ASPLOS 2024
+publication_type: conference
+publication_status: published
+source: https://doi.org/10.1145/3620666.3651329
 sources:
-  - "https://doi.org/10.1145/3620666.3651329"
-  - "https://foci.uw.edu/papers/asplos24-llmpower.pdf"
-implementation: "DGX-A100実機と本番クラスタ電力トレースで特性を測定し、POLCAを40サーバ行モデルと6週間トレースでシミュレーション評価。公開一次資料から公式コード配布は確認できなかった。"
+- https://doi.org/10.1145/3620666.3651329
+- https://foci.uw.edu/papers/asplos24-llmpower.pdf
+implementation: DGX-A100実機と本番クラスタ電力トレースで特性を測定し、POLCAを40サーバ行モデルと6週間トレースでシミュレーション評価。公開一次資料から公式コード配布は確認できなかった。
 code: null
-last_checked: "2026-10-03"
-worker_completed_at: "2026-10-03T22:50:00+09:00"
-worker_run_key: "20261003-2233-scheduled-chat-30"
+last_checked: '2026-10-03'
+worker_completed_at: '2026-10-03T22:50:00+09:00'
+worker_run_key: 20261003-2233-scheduled-chat-30
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要
