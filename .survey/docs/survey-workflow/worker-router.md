@@ -1,4 +1,4 @@
-# Worker router — Library-first workflow v13
+# Worker router — Library-first workflow v14
 
 この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v13ではLibrary-first責務分離を維持したまま、Discovery / Research候補の重要度優先と全収録論文の前方引用カバレッジ巡回をGitHub側自動化へ追加する。
 
@@ -99,7 +99,7 @@ run中に在庫が変化してもモードは固定する。
 
 ### 4.1 通常runの反復ラウンド（必須）
 
-通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは本文確認・最終分類10件で1ラウンド完了とする。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。
+通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは最終分類10件で1ラウンド完了とする。Discoveryでは、タイトル・abstract・書誌情報だけで**明らかに対象外**と確定できた候補は本文確認を省略して `unrelated` として完了件数へ数えてよい。`accept` / `borderline` および対象外か判断不能な候補は本文確認を必須とする。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。
 
 1. 第1ラウンドが所定ノルマを達成したら、まずそのラウンドの完成成果をLibraryへ保存し、再取得して内容・件数・identity一意性等の所定確認を完了する。
 2. 保存・再取得確認まで成功した場合、**同じScheduled起動の中で次ラウンドを必ず開始する。** 「ノルマ達成済み」「残り時間が少ない」「追加ラウンドを完遂できる保証がない」ことだけを終了理由にしてはならない。
@@ -107,7 +107,7 @@ run中に在庫が変化してもモードは固定する。
 4. モードは起動開始時に選択したResearch / Discoveryを全ラウンドで固定する。追加ラウンドごとに在庫境界を再判定しない。worklistは前ラウンドの続きから進め、完了済み・重複・既処理候補を再処理しない。
 5. 各ラウンドは独立して耐久保存する。次ラウンドを始めるために前ラウンドの保存を遅らせない。
 6. 最後の追加ラウンドは、時間切れ、ツール制約、外部取得不能、候補枯渇、hard stop等で途中終了してよい。ただし、前ラウンドが正常完了したなら**次ラウンドの実作業を少なくとも開始すること自体は必須**とし、開始だけ記録して即終了せず可能な範囲で実処理を進める。
-7. 途中ラウンドがノルマ未達でも、現行手順で完成扱いできる成果は破棄しない。Researchは品質基準を満たしたMarkdownを個別保存し、Discoveryは本文確認・最終分類まで完了したrecordだけをpartial round JSONとして保存し、未完候補は完成扱いしない。
+7. 途中ラウンドがノルマ未達でも、現行手順で完成扱いできる成果は破棄しない。Researchは品質基準を満たしたMarkdownを個別保存し、Discoveryはpre-screenまたは本文確認で最終分類まで完了したrecordだけをpartial round JSONとして保存し、未完候補は完成扱いしない。
 8. 同一起動内で各ラウンドを識別できるようround番号を付ける。必要なら基底run keyへ `/r01`, `/r02`, ... のsuffixを付ける。最終報告では完了ラウンド数、partialラウンドの有無・処理件数、最終停止理由を示す。
 
 ## 5. Discovery
@@ -126,13 +126,15 @@ Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WO
 
 ### 5.1 ノルマ
 
-Discoveryは**1ラウンドにつき**新規canonical identity 10件を本文確認まで行い、各件を次のどれかへ最終分類する。
+Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し、各件を次のどれかへ最終分類する。
 
 - \`accept\`
 - \`unrelated\`
 - \`borderline\`
 
-タイトル・要旨だけで確定しない。本文取得不能で判定未完了の候補は10件へ数えず補充する。acceptだけを10件集めるために基準を緩めない。
+各候補はまずタイトル・abstract・書誌情報で軽量pre-screenする。そこで、このサーベイの対象外であることが**論文固有の根拠付きで明白**なら、その時点で \`unrelated\` を確定し、本文読解を省略してよい。このabstract-only除外も10件へ数える。\`reason\` にはabstract上の具体的な除外根拠を記録し、\`body_check\` には \`abstract_screen_only\` と本文未読であることを明記する。
+
+一方、\`accept\` / \`borderline\`、または対象外か少しでも判断が残る候補は本文確認必須とする。曖昧な候補をabstractだけで捨てない。本文取得不能で判定未完了の候補は10件へ数えず補充する。acceptだけを10件集めるために基準を緩めない。複数候補をまとめて要旨だけで一括分類せず、1候補ずつpre-screenまたは本文確認による最終分類を完了してから次へ進む。
 
 ### 5.2 Library保存形式
 
@@ -142,7 +144,7 @@ v12以降のDiscovery通常runは、**1ラウンド = 1 immutable JSON**だけ�
 
 \`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>-rNN.json\`
 
-各完了ラウンドは1ファイルに10件すべてを \`records[]\` として含める。最後のpartialラウンドは本文確認・最終分類まで完了したrecordだけを含め、\`record_count\` を実数に合わせる。accept / unrelated / borderlineを別Library台帳へ分割しない。
+各完了ラウンドは1ファイルに10件すべてを \`records[]\` として含める。最後のpartialラウンドはpre-screenまたは本文確認で最終分類まで完了したrecordだけを含め、\`record_count\` を実数に合わせる。accept / unrelated / borderlineを別Library台帳へ分割しない。
 
 必須top-level:
 
