@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -73,6 +74,29 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         urls = recovery.primary_pdf_urls("DOI:10.1145/3688351.3689164")
         self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
         self.assertIn("https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf", urls)
+
+    def test_crossref_reference_entries_preserve_doi_and_title_metadata(self) -> None:
+        payload = {
+            "message": {
+                "reference": [
+                    {
+                        "DOI": "10.1000/example",
+                        "article-title": "Example Repository Paper",
+                        "author": "A. Author",
+                        "year": "2025",
+                    },
+                    {
+                        "unstructured": "B. Author. Another paper. arXiv:2303.06865.",
+                    },
+                ]
+            }
+        }
+        with patch.object(recovery, "fetch_bytes", return_value=__import__("json").dumps(payload).encode()):
+            entries, url = recovery.crossref_reference_entries("DOI:10.1145/1234.5678")
+        self.assertEqual(len(entries), 2)
+        self.assertIn("https://doi.org/10.1000/example", entries[0]["hrefs"])
+        self.assertIn("Example Repository Paper", entries[0]["text"])
+        self.assertIn("api.crossref.org", url)
 
     def test_bibtex_blocks_keep_complete_entries(self) -> None:
         text = """
