@@ -41,13 +41,13 @@ Scheduled workerはGitHubへのclaim、reservation、submission、result、hando
 - \`worker_id=scheduled-chat-30\`
 - 通常 \`scheduled_slot=30\`
 - worklist: \`.survey/work-queue/worker-worklist-30.json\`
-- 08:30 JSTはmaintenance専用run
+- 08:30 JSTはLLM / framework日次更新専用run
 
 ### :45
 - \`worker_id=scheduled-chat-45\`
 - \`scheduled_slot=45\`
 - worklist: \`.survey/work-queue/worker-worklist-45.json\`
-- :00 と同じ通常Research / Discoveryフローを使う。maintenance専用分岐は持たない
+- :00 と同じ通常Research / Discoveryフローを使う。08:30日次更新専用分岐は持たない
 
 3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
