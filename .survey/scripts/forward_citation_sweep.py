@@ -2,8 +2,9 @@
 """Fair, low-frequency forward-citation coverage sweep over all collected papers.
 
 This is intentionally separate from the hot Discovery preload lane. Every collected
-paper with a Semantic Scholar-compatible stable ID eventually receives a complete
-/citations scan. Long citation lists resume from their saved cursor; after a complete
+paper with a Semantic Scholar-compatible stable ID or resolvable primary URL eventually
+receives a complete /citations scan. Long citation lists resume from their saved cursor;
+after a complete
 cycle, the next due cycle starts again at page 1 so newly added citations are seen.
 """
 from __future__ import annotations
@@ -223,6 +224,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
     max_seeds = int(config.get("max_seeds_per_run", 20) or 20)
     max_pages = int(config.get("max_pages_per_seed_per_run", 2) or 2)
     page_size = int(config.get("page_size", 100) or 100)
+    max_provider_errors = max(int(config.get("max_provider_errors_per_run", 3) or 3), 1)
     spacing = max(float(config.get("request_spacing_seconds", 2) or 0), 0.0)
 
     papers = citation_graph.load_records(root)
@@ -261,7 +263,16 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         # Fairness first: an in-progress high-citation seed keeps its cursor but
         # does not monopolize every run. Seeds least recently touched are selected
         # first, so the initial all-paper sweep converges across the whole corpus.
-        touched = _parse_time(row.get("last_page_at")) or _parse_time(row.get("last_completed_at"))
+        touches = [
+            value
+            for value in (
+                _parse_time(row.get("last_page_at")),
+                _parse_time(row.get("last_attempt_at")),
+                _parse_time(row.get("last_completed_at")),
+            )
+            if value is not None
+        ]
+        touched = max(touches) if touches else None
         return (0 if touched is None else 1, touched.isoformat() if touched else "", canonical)
 
     due: list[tuple[str, dict[str, Any]]] = []
@@ -278,10 +289,13 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
     due.sort(key=due_key)
     selected = due[:max(max_seeds, 0)]
 
-    pages_fetched = new_observations = completed_cycles = errors = 0
+    pages_fetched = new_observations = completed_cycles = errors = attempted_seeds = 0
+    provider_error_budget_exhausted = False
     for index, (canonical, seed_state) in enumerate(selected):
         paper = paper_by_canonical[canonical]
         identifier = str(seed_state["seed_identifier"])
+        attempted_seeds += 1
+        seed_state["last_attempt_at"] = now_text
         fetch = discovery_provider_adapter.semantic_scholar_fetcher(
             _source_url(identifier, page_size),
             page_size=page_size,
@@ -321,6 +335,9 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
             seed_state["last_error"] = f"{type(exc).__name__}: {exc}"
             seed_state["last_error_at"] = now_text
         seeds[canonical] = seed_state
+        if errors >= max_provider_errors:
+            provider_error_budget_exhausted = True
+            break
         if spacing and index + 1 < len(selected):
             sleep_fn(spacing)
 
@@ -367,10 +384,13 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         "unsupported_seed_count": state["unsupported_seed_count"],
         "due_seed_count_before_run": len(due),
         "selected_seed_count": len(selected),
+        "attempted_seed_count": attempted_seeds,
         "pages_fetched": pages_fetched,
         "candidate_observations": new_observations,
         "completed_cycles": completed_cycles,
         "errors": errors,
+        "max_provider_errors_per_run": max_provider_errors,
+        "provider_error_budget_exhausted": provider_error_budget_exhausted,
         "represented_candidates_removed": represented_removed,
         "classified_candidates_removed": len(rejected_keys),
         "candidate_count": state["candidate_count"],
