@@ -1,0 +1,248 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dc42ed0ea43b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2311.01927",
+    "arXiv:2402.01771",
+    "arXiv:2403.15388",
+    "arXiv:2404.08856"
+  ],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T10:59:35.047740+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2311.01927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.01771",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.15388",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.08856",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2311.01927",
+      "year": 2023,
+      "published": "2023-11-03",
+      "abstract": "Linear Recurrence has proven to be a powerful tool for modeling long sequences efficiently. In this work, we show that existing models fail to take full advantage of its potential. Motivated by this finding, we develop GateLoop, a foundational sequence model that generalizes linear recurrent models such as S4, S5, LRU and RetNet, by employing data-controlled state transitions. Utilizing this theoretical advance, GateLoop empirically outperforms existing models for auto-regressive language modeling. Our method comes with a low-cost $O(l)$ recurrent mode and an efficient $O(l \\log_{2} l)$ parallel mode making use of highly optimized associative scan implementations. Furthermore, we derive an $O(l^2)$ surrogate attention mode, revealing remarkable implications for Transformer and recently proposed architectures. Specifically, we prove that our approach can be interpreted as providing data-controlled relative-positional information to Attention. While many existing models solely rely on data-controlled cumulative sums for context aggregation, our findings suggest that incorporating data-controlled complex cumulative products may be a crucial step towards more powerful sequence models.",
+      "canonical_id": "arXiv:2311.01927",
+      "arxiv_id": "2311.01927",
+      "doi": "10.48550/arXiv.2311.01927",
+      "authors": [
+        "Tobias Katsch"
+      ]
+    },
+    {
+      "title": "BlackMamba: Mixture of Experts for State-Space Models",
+      "source_url": "https://arxiv.org/abs/2402.01771",
+      "year": 2024,
+      "published": "2024-02-01",
+      "abstract": "State-space models (SSMs) have recently demonstrated competitive performance to transformers at large-scale language modeling benchmarks while achieving linear time and memory complexity as a function of sequence length. Mamba, a recently released SSM model, shows impressive performance in both language modeling and long sequence processing tasks. Simultaneously, mixture-of-expert (MoE) models have shown remarkable performance while significantly reducing the compute and latency costs of inference at the expense of a larger memory footprint. In this paper, we present BlackMamba, a novel architecture that combines the Mamba SSM with MoE to obtain the benefits of both. We demonstrate that BlackMamba performs competitively against both Mamba and transformer baselines, and outperforms in inference and training FLOPs. We fully train and open-source 340M/1.5B and 630M/2.8B BlackMamba models on 300B tokens of a custom dataset. We show that BlackMamba inherits and combines both of the benefits of SSM and MoE architectures, combining linear-complexity generation from SSM with cheap and fast inference from MoE. We release all weights, checkpoints, and inference code open-source. Inference code at: https://github.com/Zyphra/BlackMamba",
+      "canonical_id": "arXiv:2402.01771",
+      "arxiv_id": "2402.01771",
+      "doi": "10.48550/arXiv.2402.01771",
+      "authors": [
+        "Quentin Anthony",
+        "Yury Tokpanov",
+        "Paolo Glorioso",
+        "Beren Millidge"
+      ]
+    },
+    {
+      "title": "LLaVA-Prumerge: Adaptive Token Reduction for Efficient Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2403.15388",
+      "year": 2024,
+      "published": "2024-03-22",
+      "abstract": "Large Multimodal Models (LMMs) have shown significant visual reasoning capabilities by connecting a visual encoder and a large language model. LMMs typically take in a fixed and large amount of visual tokens, such as the penultimate layer features in the CLIP visual encoder, as the prefix content. Recent LMMs incorporate more complex visual inputs, such as high-resolution images and videos, which further increases the number of visual tokens significantly. However, due to the inherent design of the Transformer architecture, the computational costs of these models tend to increase quadratically with the number of input tokens. To tackle this problem, we explore a token reduction mechanism that identifies significant spatial redundancy among visual tokens. In response, we propose PruMerge, a novel adaptive visual token reduction strategy that significantly reduces the number of visual tokens without compromising the performance of LMMs. Specifically, to metric the importance of each token, we exploit the sparsity observed in the visual encoder, characterized by the sparse distribution of attention scores between the class token and visual tokens. This sparsity enables us to dynamically select the most crucial visual tokens to retain. Subsequently, we cluster the selected (unpruned) tokens based on their key similarity and merge them with the unpruned tokens, effectively supplementing and enhancing their informational content. Empirically, when applied to LLaVA-1.5 [28] and VideoLLaVA [26], our approach can reduce the number of visual tokens by 4 times, and achieve comparable or better performance across diverse visual question-answering and reasoning tasks.",
+      "canonical_id": "arXiv:2403.15388",
+      "arxiv_id": "2403.15388",
+      "doi": "10.1109/ICCV51701.2025.02122",
+      "authors": [
+        "Yuzhang Shang",
+        "Mu Cai",
+        "Bing-Xin Xu",
+        "Yong Jae Lee",
+        "Yan Yan"
+      ]
+    },
+    {
+      "title": "On Speculative Decoding for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.08856",
+      "year": 2024,
+      "published": "2024-04-13",
+      "abstract": "Inference with Multimodal Large Language Models (MLLMs) is slow due to their large-language-model backbone which suffers from memory bandwidth bottleneck and generates tokens auto-regressively. In this paper, we explore the application of speculative decoding to enhance the inference efficiency of MLLMs, specifically the LLaVA 7B model. We show that a language-only model can serve as a good draft model for speculative decoding with LLaVA 7B, bypassing the need for image tokens and their associated processing components from the draft model. Our experiments across three different tasks show that speculative decoding can achieve a memory-bound speedup of up to 2.37$\\times$ using a 115M parameter language model that we trained from scratch. Additionally, we introduce a compact LLaVA draft model incorporating an image adapter, which shows marginal performance gains in image captioning while maintaining comparable results in other tasks.",
+      "canonical_id": "arXiv:2404.08856",
+      "arxiv_id": "2404.08856",
+      "doi": "10.48550/arXiv.2404.08856",
+      "authors": [
+        "Mukul Gagrani",
+        "Raghavv Goel",
+        "Wonseok Jeon",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Christopher Lott"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2311.01927",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2311.01927",
+        "id:arXiv:2311.01927",
+        "title:gateloop fully datacontrolled linear recurrence for sequence modeling",
+        "url:https://arxiv.org/abs/2311.01927"
+      ],
+      "record": {
+        "title": "GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2311.01927",
+        "year": 2023,
+        "published": "2023-11-03",
+        "abstract": "Linear Recurrence has proven to be a powerful tool for modeling long sequences efficiently. In this work, we show that existing models fail to take full advantage of its potential. Motivated by this finding, we develop GateLoop, a foundational sequence model that generalizes linear recurrent models such as S4, S5, LRU and RetNet, by employing data-controlled state transitions. Utilizing this theoretical advance, GateLoop empirically outperforms existing models for auto-regressive language modeling. Our method comes with a low-cost $O(l)$ recurrent mode and an efficient $O(l \\log_{2} l)$ parallel mode making use of highly optimized associative scan implementations. Furthermore, we derive an $O(l^2)$ surrogate attention mode, revealing remarkable implications for Transformer and recently proposed architectures. Specifically, we prove that our approach can be interpreted as providing data-controlled relative-positional information to Attention. While many existing models solely rely on data-controlled cumulative sums for context aggregation, our findings suggest that incorporating data-controlled complex cumulative products may be a crucial step towards more powerful sequence models.",
+        "canonical_id": "arXiv:2311.01927",
+        "arxiv_id": "2311.01927",
+        "doi": "10.48550/arXiv.2311.01927",
+        "authors": [
+          "Tobias Katsch"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.01771",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.01771",
+        "id:arXiv:2402.01771",
+        "title:blackmamba mixture of experts for statespace models",
+        "url:https://arxiv.org/abs/2402.01771"
+      ],
+      "record": {
+        "title": "BlackMamba: Mixture of Experts for State-Space Models",
+        "source_url": "https://arxiv.org/abs/2402.01771",
+        "year": 2024,
+        "published": "2024-02-01",
+        "abstract": "State-space models (SSMs) have recently demonstrated competitive performance to transformers at large-scale language modeling benchmarks while achieving linear time and memory complexity as a function of sequence length. Mamba, a recently released SSM model, shows impressive performance in both language modeling and long sequence processing tasks. Simultaneously, mixture-of-expert (MoE) models have shown remarkable performance while significantly reducing the compute and latency costs of inference at the expense of a larger memory footprint. In this paper, we present BlackMamba, a novel architecture that combines the Mamba SSM with MoE to obtain the benefits of both. We demonstrate that BlackMamba performs competitively against both Mamba and transformer baselines, and outperforms in inference and training FLOPs. We fully train and open-source 340M/1.5B and 630M/2.8B BlackMamba models on 300B tokens of a custom dataset. We show that BlackMamba inherits and combines both of the benefits of SSM and MoE architectures, combining linear-complexity generation from SSM with cheap and fast inference from MoE. We release all weights, checkpoints, and inference code open-source. Inference code at: https://github.com/Zyphra/BlackMamba",
+        "canonical_id": "arXiv:2402.01771",
+        "arxiv_id": "2402.01771",
+        "doi": "10.48550/arXiv.2402.01771",
+        "authors": [
+          "Quentin Anthony",
+          "Yury Tokpanov",
+          "Paolo Glorioso",
+          "Beren Millidge"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.15388",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.02122",
+        "id:arXiv:2403.15388",
+        "title:llavaprumerge adaptive token reduction for efficient large multimodal models",
+        "url:https://arxiv.org/abs/2403.15388"
+      ],
+      "record": {
+        "title": "LLaVA-Prumerge: Adaptive Token Reduction for Efficient Large Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2403.15388",
+        "year": 2024,
+        "published": "2024-03-22",
+        "abstract": "Large Multimodal Models (LMMs) have shown significant visual reasoning capabilities by connecting a visual encoder and a large language model. LMMs typically take in a fixed and large amount of visual tokens, such as the penultimate layer features in the CLIP visual encoder, as the prefix content. Recent LMMs incorporate more complex visual inputs, such as high-resolution images and videos, which further increases the number of visual tokens significantly. However, due to the inherent design of the Transformer architecture, the computational costs of these models tend to increase quadratically with the number of input tokens. To tackle this problem, we explore a token reduction mechanism that identifies significant spatial redundancy among visual tokens. In response, we propose PruMerge, a novel adaptive visual token reduction strategy that significantly reduces the number of visual tokens without compromising the performance of LMMs. Specifically, to metric the importance of each token, we exploit the sparsity observed in the visual encoder, characterized by the sparse distribution of attention scores between the class token and visual tokens. This sparsity enables us to dynamically select the most crucial visual tokens to retain. Subsequently, we cluster the selected (unpruned) tokens based on their key similarity and merge them with the unpruned tokens, effectively supplementing and enhancing their informational content. Empirically, when applied to LLaVA-1.5 [28] and VideoLLaVA [26], our approach can reduce the number of visual tokens by 4 times, and achieve comparable or better performance across diverse visual question-answering and reasoning tasks.",
+        "canonical_id": "arXiv:2403.15388",
+        "arxiv_id": "2403.15388",
+        "doi": "10.1109/ICCV51701.2025.02122",
+        "authors": [
+          "Yuzhang Shang",
+          "Mu Cai",
+          "Bing-Xin Xu",
+          "Yong Jae Lee",
+          "Yan Yan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.08856",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.08856",
+        "id:arXiv:2404.08856",
+        "title:on speculative decoding for multimodal large language models",
+        "url:https://arxiv.org/abs/2404.08856"
+      ],
+      "record": {
+        "title": "On Speculative Decoding for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2404.08856",
+        "year": 2024,
+        "published": "2024-04-13",
+        "abstract": "Inference with Multimodal Large Language Models (MLLMs) is slow due to their large-language-model backbone which suffers from memory bandwidth bottleneck and generates tokens auto-regressively. In this paper, we explore the application of speculative decoding to enhance the inference efficiency of MLLMs, specifically the LLaVA 7B model. We show that a language-only model can serve as a good draft model for speculative decoding with LLaVA 7B, bypassing the need for image tokens and their associated processing components from the draft model. Our experiments across three different tasks show that speculative decoding can achieve a memory-bound speedup of up to 2.37$\\times$ using a 115M parameter language model that we trained from scratch. Additionally, we introduce a compact LLaVA draft model incorporating an image adapter, which shows marginal performance gains in image captioning while maintaining comparable results in other tasks.",
+        "canonical_id": "arXiv:2404.08856",
+        "arxiv_id": "2404.08856",
+        "doi": "10.48550/arXiv.2404.08856",
+        "authors": [
+          "Mukul Gagrani",
+          "Raghavv Goel",
+          "Wonseok Jeon",
+          "Junyoung Park",
+          "Mingu Lee",
+          "Christopher Lott"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c41e9cee6dd30fed6b13d2fea345de0e375b1885dd1c3d9f785d8b273f66d2d1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
