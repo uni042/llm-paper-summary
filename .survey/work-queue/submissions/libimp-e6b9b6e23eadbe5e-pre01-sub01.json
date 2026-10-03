@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Synergistic Tensor and Pipeline Parallelism",
+      "source_url": "https://arxiv.org/abs/2510.27257",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the machine learning system, the hybrid model parallelism combining tensor parallelism (TP) and pipeline parallelism (PP) has become the dominant solution for distributed training of Large Language Models~(LLMs) and Multimodal LLMs (MLLMs). However, TP introduces significant collective communication overheads, while PP suffers from synchronization inefficiencies such as pipeline bubbles. Existing works primarily address these challenges from isolated perspectives, focusing either on overlapping TP communication or on flexible PP scheduling to mitigate pipeline bubbles. In this paper, we propose a new synergistic tensor and pipeline parallelism schedule that simultaneously reduces both types of bubbles. Our proposed schedule decouples the forward and backward passes in PP into fine-grained computation units, which are then braided to form a composite computation sequence. This compositional structure enables near-complete elimination of TP-related bubbles. Building upon this structure, we further design the PP schedule to minimize PP bubbles. Experimental results demonstrate that our approach improves training throughput by up to 12% for LLMs and 16% for MLLMs compared to existing scheduling methods. Our source code is avaiable at https://github.com/MICLAB-BUPT/STP.",
+      "identifiers": [
+        "SemanticScholar:820526f9baccb9d5beb5d8aea1ae663e0be6dd96"
+      ],
+      "semantic_scholar_id": "820526f9baccb9d5beb5d8aea1ae663e0be6dd96",
+      "canonical_id": "arXiv:2510.27257",
+      "arxiv_id": "2510.27257",
+      "doi": "10.48550/arXiv.2510.27257",
+      "authors": [
+        "Mengshi Qi",
+        "Jiaxuan Peng",
+        "Jie Zhang",
+        "Juan Zhu",
+        "Yong Li",
+        "Huadong Ma"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "テンソル並列とパイプライン並列を協調させるLLM推論並列化研究。",
+      "library_body_check": "本文の並列化方式・スケジューリング・評価節を確認し、異種端末/アクセラレータ上の推論効率化を確認。",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/scheduled-chat-00/discovery-20260928-1608-scheduled-chat-00.json"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e6b9b6e23ead",
+    "round": "libimp-e6b9b6e23eadbe5e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e6b9b6e23eadbe5e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e6b9b6e23eadbe5e-pre01.json",
+    "receipt": "sha256:5d7bcf95ca747129150fbc390e67e366206ed6376295aff739302fb2cb9c5984"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e6b9b6e23ead",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
