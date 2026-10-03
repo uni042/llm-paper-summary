@@ -106,10 +106,6 @@ jobs:
             --markdown-out /tmp/overview-result-quality-audit.md \
             --json-out /tmp/overview-result-quality-audit.json
 
-      - name: Normalize nullable required metadata
-        if: steps.pending.outputs.run == 'true'
-        run: python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
-
       - name: Refresh metadata coverage
         if: steps.pending.outputs.run == 'true'
         id: metadata
