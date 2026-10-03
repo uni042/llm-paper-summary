@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-1457-scheduled-chat-00::provider-gap",
+  "reference_main_sha": "d83521043b100be1dcf9cfcf738d0aadef28b351",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:ulCAPXYXfa",
+      "identity_tokens": [
+        "OpenReview:ulCAPXYXfa"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
+      "reason": "全KVをCPU側に保持しつつfilter layerで動的に重要tokenを選択して必要部分だけGPUへ読み込む、長文脈LLMのKV offload・sparse attention推論方式。",
+      "source_url": "https://openreview.net/forum?id=ulCAPXYXfa",
+      "body_check": "本文/公式実装で、同一decode stepの連続層間で重要tokenが似る観測を利用し、filter layerの選択集合を後続層で再利用、CPU context bankから非同期prefetchする構成を確認。1.68倍speedup、KV GPU memory最大75%削減、単一A100でLlama-3-8Bのcontextを128Kから450Kへ拡張。LongBench/InfiniteBenchとmulti-step reasoningを評価。",
+      "first_checked_at": "2026-10-02T14:57:52+09:00",
+      "last_checked_at": "2026-10-02T14:57:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 327
+    }
+  ],
+  "parent_run_key": "20261002-1457-scheduled-chat-00",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-f4009a9fd105--libfile_c797ac71def8819188cf9173606cffbe--discovery-20261002-1457-scheduled-chat-00.json",
+  "provider_gap_ids": [
+    "OpenReview:ulCAPXYXfa"
+  ]
+}
