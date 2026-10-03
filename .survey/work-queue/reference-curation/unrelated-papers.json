@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:16:44+00:00",
+  "updated_at": "2026-10-03T18:18:27+00:00",
   "record_count": 844,
   "records": {
     "arXiv:2303.08774": {
@@ -5201,7 +5201,7 @@
       ],
       "reason": "投機的復号を利用するが主目的はRL post-trainingのrolloutとend-to-end学習時間の短縮で、凍結対象である学習工程そのものの高速化が最終適用先。通常推論サービングの改善を主目的としないため対象外。",
       "first_checked_at": "2026-09-30T09:12:10+00:00",
-      "last_checked_at": "2026-09-30T09:12:10+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "fresh-discovery"
       ],
@@ -8192,7 +8192,7 @@
       ],
       "reason": "LLMで表形式データ分析を案内・自動化するno-code analytics/AutoMLプラットフォームで、LLM推論基盤の高速化・省メモリ化を扱わない。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md"
       ],
@@ -8207,7 +8207,7 @@
       ],
       "reason": "SoRAはLoRAのrankを学習中に動的最適化するparameter-efficient fine-tuning手法が主題で、推論時にはzero rank blockを除去するものの最終目的・主要評価は微調整効率と品質のため凍結範囲。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
       ],
@@ -8222,7 +8222,7 @@
       ],
       "reason": "LLMをロボットのperception・planning・control・interactionへ利用する応用サーベイで、LLM推論システム効率化を主題としない。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md"
       ],
@@ -8237,7 +8237,7 @@
       ],
       "reason": "LoRA-MoE decoderでマルチモーダルinstruction tuningのtask interferenceを抑える学習・品質改善研究で、推論効率化を最終目的としない。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
       ],

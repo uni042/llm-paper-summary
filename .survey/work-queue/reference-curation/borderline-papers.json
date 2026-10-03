@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:16:44+00:00",
+  "updated_at": "2026-10-03T18:18:27+00:00",
   "record_count": 421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -4698,7 +4698,7 @@
       ],
       "reason": "KV量子化・eviction・paging・prefix sharing・heterogeneous tieringを統一条件で整理するSoKで、推論最適化そのものには強く関連するが、新規の実装方式より分析・設計指針が主貢献のためborderline。",
       "first_checked_at": "2026-09-30T09:12:10+00:00",
-      "last_checked_at": "2026-09-30T09:12:10+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "fresh-discovery"
       ],
@@ -5649,7 +5649,7 @@
       ],
       "reason": "Attention Bucketsは推論時に複数のRoPE基準角で並列処理し文脈位置の見落としを補うため推論方式には該当するが、主目的はtool-use/RAGの品質改善であり、速度・メモリ・throughput削減を狙う効率化方式ではないため境界扱い。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
       ],
@@ -5664,7 +5664,7 @@
       ],
       "reason": "主貢献はモバイル端末群でのLLM分割・pipeline trainingだが、異種CPU/GPUへのattention-head配置を行うbackend schedulerと最大8.03倍のinference speedupも含むため、学習凍結範囲とedge inferenceの境界に位置する。",
       "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T18:18:27+00:00",
       "linked_from": [
         "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
       ],
