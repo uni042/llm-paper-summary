@@ -107,8 +107,20 @@ def reference_section(text: str) -> str:
         # Common numbered heading variants such as "9 References".
         matches = list(re.finditer(r"(?im)^\s*\d+(?:\.\d+)*\.?\s+(?:references|bibliography)\s*$", text))
     if not matches:
-        raise ValueError("PDF text contained no recognizable References/Bibliography heading")
-    section = text[matches[-1].end():]
+        # Some two-column PDFs lose the "References" heading during extraction
+        # while preserving numbered entries. Accept only a conservative tail
+        # region that contains at least three monotonically increasing bracketed
+        # entries, and starts in the last 40% of the document.
+        numbered = list(re.finditer(r"(?m)^\s*\[(\d{1,3})\]\s+", text))
+        for idx in range(len(numbered) - 2):
+            nums = [int(numbered[idx + off].group(1)) for off in range(3)]
+            if nums[1] == nums[0] + 1 and nums[2] == nums[1] + 1 and numbered[idx].start() >= int(len(text) * 0.60):
+                section = text[numbered[idx].start():]
+                break
+        else:
+            raise ValueError("PDF text contained no recognizable References/Bibliography heading")
+    else:
+        section = text[matches[-1].end():]
     # Remove appendices if they clearly start after the references section.
     appendix = re.search(r"(?im)^\s*(?:appendix|appendices)(?:\s+[A-Z0-9].*)?\s*$", section)
     if appendix:
