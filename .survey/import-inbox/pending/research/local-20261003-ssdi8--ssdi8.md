@@ -1,0 +1,182 @@
+---
+canonical_id: "arXiv:2608.21952"
+arxiv_id: "2608.21952"
+doi: null
+openreview_id: null
+arxiv_categories:
+  primary: cs.AI
+  cross_list: []
+last_audited: "2026-09-27"
+audit_version: 0
+storage_targets:
+  - "papers/inference/99-other-inference-systems/2026-2608.21952-ssdi8-accurate-and-efficient-8-bit-quantization-for-state-space-duality.md"
+bottlenecks:
+  - "Mamba-2 SSD内の反復活性値のDRAMアクセス"
+  - "再帰状態の低精度化に伴う誤差蓄積"
+  - "要素積が分断するINT8行列演算の実行経路"
+hardware_details: "Mamba-2 1.3B/2.7B/8Bを主にNVIDIA A5000で評価し、2.7BはNVIDIA Orin NX 16Gでも測定。推論速度評価は量子化後のSSDモジュールを中心とし、Nemotron-H-8Bでは全体forward時間も比較。"
+quality_effect: "LAMBADA、WinoGrande、PIQA、HellaSwag、ARC-Easy/Challengeの6ゼロショット精度とWikiText2/Pile perplexityを評価。W8A8/W4A8でFP16に近いが同一ではない。"
+evidence_locations:
+  - "arXiv HTML v1: Abstract and authors, lines 47-55"
+  - "arXiv HTML v1: Motivation and quantization failure modes, lines 56-77"
+  - "arXiv HTML v1: SSD structure and five modules, lines 103-133"
+  - "arXiv HTML v1: SSDi8 persistent INT8 path and correction, lines 134-188"
+  - "arXiv HTML v1: Experimental setup and core results, lines 189-225"
+  - "arXiv HTML v1: Ablations, hybrid-model evaluation, and conclusion, lines 226-265"
+  - "arXiv HTML v1: Complete references, lines 268-300"
+references:
+  - "arXiv:2411.11843"
+  - "arXiv:2302.13971"
+references_checked_at: "2026-09-27"
+references_source: "primary-reference-section"
+references_total: 32
+title: "SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality"
+summary: "Mamba-2の構造化状態空間双対（SSD）は再帰計算と注意機構型の並列計算を統合するが、要素積や再帰状態のためにテンソルごとに量子化・復元を繰り返し、メモリ転送と遅延が増える。SSDi8は学習後量子化でSSD内部の状態をINT8表現のまま引き継ぐ。チャネル依存のB・C活性値をグループ軸で早期量子化して複数モジュールで再利用し、状態更新では減衰係数をB側からX側へ移す等価な式変形を使って疎なX_scaledを作り、INT8行列積へつなぐ。頭数とチャネル次元ごとの外れ値を考慮したスケールと逐次平均誤差補正で精度を保つ。A5000でのMamba-2 2.7B・長さ2048・バッチ32のSSD処理はFP16比1.47倍、Quamba2比1.38倍、Orin NX 16Gでも2.7BのSSD遅延を全評価長で改善した。これらはSSD処理中心の数値で、全モデルの端末応答が同倍率で速くなる意味ではない。"
+list_summary: "Mamba-2のSSD内部で活性値をINT8のまま再利用し、要素積を等価変形して疎な入力を低精度行列積へつなぐ。A5000のMamba-2 2.7BではSSD処理がFP16比最大1.47倍となり、Orin NXでも遅延を減らす。"
+authors:
+  - "Hyunwoo Kim"
+  - "Byoungchan Ko"
+  - "Minseok Kang"
+  - "Minwoo Kim"
+  - "Dongjin Lee"
+  - "Jaehoon Lee"
+  - "Sungroh Yoon"
+  - "Dahuin Jung"
+authors_affiliations: "Chung-Ang University; Soongsil University; Seoul National University"
+published: "2026-08-22"
+publication: "arXiv preprint arXiv:2608.21952v1"
+publication_type: "preprint"
+publication_status: "Preprint"
+lineage: "選択的状態空間モデルのMamba-2に特化した、SSD内部の活性値経路を対象とする学習後量子化。"
+topics:
+  - "Mamba-2推論"
+  - "状態空間モデル"
+  - "INT8量子化"
+  - "再帰状態の低精度実行"
+importance: "重み量子化だけでなく、Mamba-2のSSD内部状態と反復活性値の表現を対象にし、量子化・復元で切れていたINT8演算経路をつなぐ。数学的な式変形、次元ごとの量子化、誤差補正を組み合わせ、精度・SSD遅延・端末実測を同時に評価する。"
+hardware_evaluation: "Mamba-2 1.3B/2.7B/8B、対称静的W8A8およびW4A8を評価。主にNVIDIA A5000で6種類のゼロショット課題とWikiText2/Pile perplexity、バッチ・系列長別SSD遅延を測定。2.7BをNVIDIA Orin NX 16Gでバッチ16、系列長256〜2048でも測定。Nemotron-H-8B-ReasoningではSSD経路だけをINT8化し、全体forward時間も報告。"
+source: "https://arxiv.org/html/2608.21952"
+sources:
+  - "https://arxiv.org/html/2608.21952"
+  - "https://arxiv.org/abs/2608.21952"
+code: "https://github.com/cau-hai-lab/SSDi8"
+implementation: "著者公開コード: https://github.com/cau-hai-lab/SSDi8"
+last_checked: "2026-09-27"
+worker_completed_at: "2026-10-03T13:34:23+00:00"
+worker_run_key: "codex-local-revalidation-20261003-ssdi8"
+worker_completion_basis: "2026-09-27の読解済みローカル原稿を2026-10-03に全文再確認し、既存本文の条件と数値を表へ整理。一次資料の再読ではない。"
+---
+
+# SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality
+
+> Mamba-2の構造化状態空間双対の内部状態をINT8のまま受け渡すため、再帰計算の式を並べ替え、異なる軸の分布に合わせて量子化する方式を示す。
+
+## 概要
+
+SSDi8はMamba-2の構造化状態空間双対（Structured State Space Duality; SSD）に特化した学習後量子化である。SSDは状態空間モデルの再帰計算を、チャンク内の並列行列計算とチャンク間の状態受け渡しに分ける。ところが内部では要素ごとの積、複数軸へ広がる活性値、再帰状態が組み合わさり、一般的なTransformer向け量子化を当てると精度が落ちるだけでなく、低精度行列演算の間にFP16の演算や変換が挟まる。
+
+SSDi8は、要素積を等価な形へ移して入力の疎性を活かし、同じ活性値を量子化してSSD内の複数モジュールで再利用することで、INT8の実行経路を長く保つ。状態や活性値は頭数・ヘッド次元・グループ軸の分布に合わせて量子化し、層ごとの平均誤差補正で後段へ伝わるずれを抑える。主にNVIDIA A5000でMamba-2 1.3B、2.7B、8Bを評価し、2.7B・系列長2048・バッチ32ではSSDモジュールがFP16比1.47倍、Quamba2比1.38倍となる。Orin NX 16Gでも2.7BのSSD遅延が改善する。ただし主な速度値はSSD内部の処理区間に対するものであり、全モデルのエンドツーエンド応答が同じ倍率で短縮されるわけではない。
+
+## 書誌情報
+
+- 著者: Hyunwoo Kim、Byoungchan Ko、Minseok Kang、Minwoo Kim、Dongjin Lee、Jaehoon Lee、Sungroh Yoon、Dahuin Jung。
+- 公開: 2026年8月22日、arXiv:2608.21952v1。分野はarXiv cs.AI。
+- 公開実装: https://github.com/cau-hai-lab/SSDi8
+- 参考文献: 一次資料の参考文献節は32件。metadataには参考文献節でarXiv識別子が明記された2件のみを登録し、残りを題名から推定していない。
+
+## 問題設定
+
+Mambaは状態空間モデル（SSM）を使い、長い系列をTransformerの自己注意より線形に扱う系列モデルである。Mamba-2のSSDは、状態空間モデルの再帰表現と線形注意の行列計算を結び付け、長い系列の状態更新を複数の計算単位へ分解しやすくする。系列はチャンクに分割され、チャンク内で並列計算する部分と、チャンク間で過去状態を減衰させて渡す部分を組み合わせる。
+
+SSDが高効率でも、実装上は`ChunkState`、`StatePassing`、`ChunkBMM`、`ChunkScan`など複数のモジュールをまたいで同じ活性値を何度も使う。チャネル依存のB・Cはグループ数Gからヘッド数Hへ広げられ、状態更新には系列位置ごとに変化する減衰係数が要素ごとに掛かる。各段で量子化をやり直すと、DRAMアクセスや量子化・復元が増える。逆に、量子化済み値をそのまま再利用しようとすると、形状・分布の違いが累積誤差となり、精度を大きく落とす。
+
+論文の予備評価では、Mamba-2 2.7Bの投影層にW4A8を適用した時点で平均精度はFP16の63.8%から63.6%と近いが、SSD層も通常の方法で量子化すると58.4%、出力投影も含めると54.6%まで下がる例を示す。したがって課題は、単に重みを小さくすることではない。SSD内部の異なる軸・再帰状態に合う精度配分を行い、モジュール間のデータ移動を抑えながら低精度実行を持続させる必要がある。
+
+## 手法
+
+### SSD内部の量子化単位を分ける
+
+Mamba-2ではモデル次元Dをヘッド数Hとヘッド次元Pへ分ける。入力依存のB・Cはグループ軸Gで表現され、計算時にはHへ広げられる。HとPは同じ分布ではなく、さらに系列長やチャンクごとに状態のスケールも変わる。このため、テンソル全体に一つの尺度を当てると外れ値に合わせて刻み幅が粗くなり、重要な値の量子化誤差が増える。
+
+SSDi8は状態入力XをHとPの軸ごとに量子化し、B・Cや状態に対しても演算上の共有単位に沿ったスケールを使う。B・Cは複数のSSDモジュールで参照されるため、各モジュールで別々に変換せず、層の冒頭でG軸に沿ってINT8化し、その後の処理で同じ低精度テンソルを使い回す。先にHへ展開してから量子化すると最大4倍の変換仕事になるが、GはHよりかなり小さく、早期量子化の追加コストはSSD全体の約3%と報告される。
+
+### 要素積を移してINT8経路を保つ
+
+状態更新の基本式は、入力Xと、Bに減衰係数を掛けた値との行列積である。減衰係数はチャンク内の系列軸lに沿って変化し、BとXが同じl軸を共有する。従来の順序だとBへFP16の減衰値を掛けた後に量子化する必要があり、要素積が低精度行列演算を中断する。Hへの展開後に変換すると同じ値を何度も処理し、l軸の急な分布変化を一つの尺度で吸収するのも難しい。
+
+そこで、等価性を保ったまま減衰係数をX側へ移し、`X_scaled = LUT_state ⊙ X`を作ってから`Q(X_scaled) × Q(B)`を行う。論文の証明では、減衰係数が共有軸へ掛かる性質を使って元の状態計算と同じ結果を得られることを示す。またX_scaledはゼロ値が多い疎な分布となり、量子化誤差が従来の「量子化したXへ減衰係数を掛ける」方法より小さくなる十分条件を導く。証明の仮定と実データの分布は別なので、この理論結果だけであらゆるSSD入力の誤差が必ず小さくなるとまでは言えない。
+
+行列積の部分和はINT32で蓄積し、レジスタ内で尺度を使ってINT8へ変換し直す。こうして再帰状態も後続のSSDモジュールへ低精度のまま渡し、保存量と読み戻し量を減らす。すべてをINT8へ押し込むのではなく、ChunkCumsumの出力`dA_cs`は小さいためFP16に残し、ChunkScan2も量子化後の値を安定して復元しにくいためFP16で処理する。例外を小さく限定し、変換・再読出しが大きなテンソルに集中しないようにする。
+
+### モジュールをまたいで活性値を再利用する
+
+SSDは、減衰の累積値を作るChunkCumsum、各チャンクの状態を計算するChunkState、チャンク間の状態を渡すStatePassing、BとCから対角項を作るChunkBMM、対角・非対角寄与を出すChunkScanから成る。SSDi8はB・Cを一度量子化して再利用し、状態値をINT8として受け渡すことで、各段に入るたびFP16へ戻してから再量子化する経路を避ける。ChunkBMMも重み付けされた低精度活性値で扱い、SSD内部の行列積を低精度のまま接続する。
+
+論文は重み側に対称静的量子化のW8A8またはW4A8を使う。4ビット重みではGPTQとHadamard変換を併用し、RMSNorm由来の外れ値には尺度パラメータの移動と平均補正を使う。W4A4は量子化ビット数を下げても対象ハードウェアでは遅くなるため評価対象から除外されている。つまり、精度と速度の両方が得られる構成としてW4A8/W8A8を選び、低ビット化自体を目的にはしていない。
+
+### 層ごとの平均ずれを補正する
+
+量子化誤差は一層内で終わらず、後続層の入力分布も変える。SSDi8はFP16出力と量子化出力の差のチャネル別平均を補正ベクトルとして求め、層を順番に通しながら前段の補正後活性値を次層の推定へ渡す。全層の補正を同じ最初の入力分布から独立に算出すると、実際の推論で後段が受け取る分布とずれてしまうためである。
+
+補正は誤差が目立つ出力投影層で適用する。ここは入力投影の半分の次元となるため、逐次校正を行っても追加レイテンシは約1〜2%に抑えられる。著者らはLAMBADAのアブレーションで、Mamba-2 2.7BのW4A8精度がSSD量子化なしの51.2%からSSD量子化で67.2%、平均補正を加えると67.4%へ改善する例を示す。これは特定モデル・設定の結果で、補正だけでFP16と同じ精度になることを意味しない。
+
+## 評価
+
+### モデル・指標・測定条件
+
+主な対象はMamba-2の1.3B、2.7B、8Bである。評価には主に24 GBのNVIDIA A5000を使用し、対称静的なW8A8/W4A8量子化を行う。精度はLAMBADA、WinoGrande、PIQA、HellaSwag、ARC-Easy、ARC-Challengeの6つのゼロショット課題で測り、言語モデリングの流暢さと一般化をWikiText2およびPileのperplexityで確認する。比較対象はFP16、Quamba、Quamba2、投影層にHadamard回転を使うHADなどである。
+
+速度比較の主要値はSSDモジュールの処理時間であり、系列長・バッチサイズを変えて測定する。A5000上のMamba-2 2.7B、系列長2048、バッチ32では、100回のウォームアップ後測定の平均として、SSDi8はFP16比1.47倍、Quamba2比1.38倍の高速化を報告する。ChunkScanはFP16比最大1.77倍、StatePassingはFP16比2.25倍とされる。より大きいバッチや長い系列ほど行列演算とメモリの利点が表れやすく、短い系列ではFP16の実行効率が高く、量子化による相対効果が小さい場合がある。
+
+### 精度・メモリ効率
+
+6課題の平均ではSSDi8が各モデル規模・ビット幅でQuamba2を上回る。例として2.7BのW4A8では平均精度62.6%対62.1%、8BのW8A8では70.2%対69.8%である。FP16と同値ではないが、通常のSSD量子化で大きく落ちる精度を、内部構造に合わせた軸選択と平均補正で抑える。
+
+WikiText2の系列長2048では、2.7BのFP16 perplexity 9.06に対して、SSDi8はW8A8で9.22、W4A8で9.43となる。Quamba2の9.32、9.54より小さいが、FP16よりは大きい。8BでもFP16 7.25、SSDi8 W8A8 7.49、W4A8 7.62であり、評価指標上の劣化は残る。2.7BのW8A8モデルサイズは2.953 GBで、Quamba2の2.948 GBより約0.17%大きい。SSDi8は量子化尺度などを追加するため、同じビット幅の基準方式より常にモデルファイルが小さくなるわけではない。
+
+### Orin NXとハイブリッドモデル
+
+端末GPUでの測定では、16 GB NVIDIA Orin NX上でMamba-2 2.7Bをバッチ16、系列長256〜2048で評価する。W4A8の系列長2048ではQuamba2のSSD遅延262.90 msに対しSSDi8は240.54 ms、W8A8では249.29 msに対し217.69 msとなる。系列長の全設定でSSDi8がQuamba2より低いSSD遅延を示す。ただしこの表もSSD区間の計測であり、アプリケーション全体の応答時間ではない。
+
+MambaとTransformerを組み合わせたNemotron-H-8B-Reasoningでは、SSD経路だけをINT8化し、他の部分はFP16のまま残す。ゼロショット平均精度は73.1%から73.0%、perplexityは8.42から8.65へ変化する一方、SSD遅延は19.834 msから9.156 ms、全体forward時間は109.873 msから98.904 msとなる。SSDがほぼ半分の時間になっても全体の短縮は約10%である。この差は、最適化対象外の投影・注意機構などが全体時間に残るためであり、モジュール内倍率とエンドツーエンド倍率を分けて読む必要がある。
+
+### 評価条件と代表結果の対応
+
+次の表は上記本文にある条件と数値を整理したもの。追加測定ではない。
+
+| 評価軸 | 条件 | 指標・対象範囲 |
+| --- | --- | --- |
+| 主GPU | NVIDIA A5000 24 GB、Mamba-2 1.3B/2.7B/8B、W8A8/W4A8 | 6種類のゼロショット精度、WikiText2/Pile perplexity、SSD遅延 |
+| 主な速度比較 | Mamba-2 2.7B、系列長2048、バッチ32、100回ウォームアップ後の平均 | SSDモジュール。全アプリケーション応答時間ではない |
+| 端末GPU | Orin NX 16 GB、Mamba-2 2.7B、バッチ16、系列長256〜2048 | SSDモジュール遅延 |
+| ハイブリッドモデル | Nemotron-H-8B-Reasoning、SSDだけINT8、他はFP16 | SSD遅延と全体forward時間を別々に測定 |
+
+| 条件 | 指標 | 比較対象 | SSDi8 | 改善・差と読み取れること |
+| --- | --- | --- | --- | --- |
+| A5000、2.7B、長さ2048、バッチ32 | SSD処理速度 | FP16 / Quamba2 | 各基準比1.47倍 / 1.38倍 | SSD内の効果であり全モデルの同倍率高速化ではない |
+| Orin NX、2.7B、長さ2048、バッチ16、W4A8 | SSD遅延 | Quamba2 262.90 ms | 240.54 ms | 対象端末構成でSSD遅延を削減 |
+| 同端末条件、W8A8 | SSD遅延 | Quamba2 249.29 ms | 217.69 ms | 同ビット幅の基準より低遅延 |
+| 2.7B、WikiText2、長さ2048 | perplexity（低いほど良い） | FP16 9.06 | W8A8 9.22 / W4A8 9.43 | 精度指標上の劣化が残る |
+| 2.7B、W8A8 | モデルサイズ | Quamba2 2.948 GB | 2.953 GB | 約0.17%大きく、常に同ビット基準より省容量ではない |
+| ハイブリッド8B | SSD遅延 / 全体forward時間 | 19.834 ms / 109.873 ms | 9.156 ms / 98.904 ms | SSD約2.17倍に対し全体短縮は約10% |
+
+## 既存研究との差
+
+既存の低ビット化はLLMの線形射影やTransformerの重みに主眼を置くことが多い。Mamba-2のSSDには、時間方向の減衰、頭数・ヘッド次元・グループの異なる統計、複数計算段で再利用される再帰状態があるため、単純に一般的な重み量子化を移植すると精度低下やFP16往復を招く。
+
+SSDi8は量子化軸の選択だけでなく、状態更新の式変形で疎な入力を作り、活性値と再帰状態をモジュール間でINT8のまま受け渡す点に特徴がある。さらに平均誤差補正を層の実行順に沿って推定し、精度を保つ。アブレーションで再定式化と複数活性値の量子化が低遅延経路を可能にすることを分けて評価し、A5000だけでなくOrin NX上のSSD遅延も示している。
+
+## 限界
+
+- 中心となる最大1.47倍・1.38倍の速度値はMamba-2 2.7BのSSDモジュールに対する測定である。全体モデルの遅延短縮は、SSDが全処理時間に占める割合に制限される。ハイブリッド8Bの例ではSSDが約2.17倍速くなってもforward時間は約10%の短縮にとどまる。
+- A5000での評価が中心であり、Orin NXはMamba-2 2.7BのSSD区間について系列長を変えた測定に限られる。幅広い端末・サービング構成における電力、トークン毎のエネルギー、同時要求の尾部遅延は網羅していない。
+- 精度はFP16に近いものの一致しない。W4A8/W8A8でもタスク平均とperplexityに差が残り、校正データや系列長への感度が実運用に影響しうる。
+- W4A4は対象ハードウェアで速度低下を招くため除外されている。より低いビット幅へ適用したときに同じ性能利得が続く保証はない。
+- 数学的な再定式化の誤差保証は論文が置く分布・量子化雑音などの条件の下で成り立つ。異なるモデルや実データ分布への一般化は実験で確認する必要がある。
+- 端末評価はOrin NX 16Gの一構成であり、電力・温度・長時間稼働や実アプリケーションのエンドツーエンド負荷での実地検証は限定的である。
+
+## 一次資料
+
+- 論文HTML（v1、本文・付録・全32参考文献）: https://arxiv.org/html/2608.21952
+- arXiv書誌情報: https://arxiv.org/abs/2608.21952
+- 著者公開コード: https://github.com/cau-hai-lab/SSDi8
