@@ -5,7 +5,7 @@ last_audited: '2026-09-28'
 audit_version: 2
 title: AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference
 summary: バッチ推論では全結合層（Fully Connected layer; FC）は重み再利用でGPU利用率を上げられる一方、生成段階の注意は各要求固有のKVキャッシュを毎トークン読み、バッチを増やしても低い演算/バイト比が残る。AttAccはこの非対称性に合わせ、FCをxPU、注意をHBMベースのメモリ内処理（Processing-In-Memory; PIM）へ分担する異種システムを設計する。PIMではGEMV演算器をDRAM bank近傍、softmaxをbuffer dieへ置き、head-level pipelineとFFN co-processingでxPU/PIMの空きを重ねる。Ramulator系シミュレータと実GPU検証を組み合わせたASPLOS 2024評価では、同一1280GB容量の従来GPU系に対し175Bモデルで最大2.81倍の性能、2.67倍のエネルギー効率を報告する。
-list_summary: GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level pipeline、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
+list_summary: "GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、ヘッド-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。"
 authors:
 - Jaehyun Park
 - Jaewan Choi

@@ -170,7 +170,7 @@
 
 - **2024-06 · [Mixture of Attention Spans: Optimizing LLM Inference Efficiency with Heterogeneous Sliding-Window Lengths](2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md)**  
   実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：9  
-  headごとの局所性と入力長への伸び方を勾配で測り、異種sliding-window規則を自動探索して静的KV maskへ落とすMoA。
+  ヘッドごとの局所性と入力長への伸び方を勾配で測り、異種sliding-window規則を自動探索して静的KV maskへ落とすMoA。
 
 - **2024-09 · [Block-Attention for Efficient Prefilling](2024-2409.15355-block-attention-for-efficient-prefilling.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Block-Attention) ・ リポジトリ内被引用：6  

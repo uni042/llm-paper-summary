@@ -1034,7 +1034,7 @@
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
-  UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応的 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+  UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
 
 ### 8年前（2018-11〜2019-10）
 

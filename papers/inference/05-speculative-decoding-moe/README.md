@@ -14,7 +14,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2026-02 · [DFlash: Block Diffusion for Flash Speculative Decoding](2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md)**  
   実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：21  
-  target hidden featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機下書き自身の逐次待ちを除くDFlash。
+  対象 隠れ featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機ドラフト自身の逐次待ちを除くDFlash。
 
 - **2026-07 · [DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation](2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md)**  
   実装：[✓](https://github.com/deepseek-ai/DeepSpec) ・ リポジトリ内被引用：11  
@@ -234,7 +234,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-04 · [PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation](2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md)**  
   実装：[✓](https://github.com/AMD-AIG-AIMA/PARD) ・ リポジトリ内被引用：6  
-  小型AR 下書きをmask-トークン型の並列下書きへ変換し、KV整合性を保つConditional Dropで学習費を抑えつつモデル family内で再利用するPARD。
+  小型AR ドラフトをmask-トークン型の並列ドラフトへ変換し、KV整合性を保つConditional Dropで学習費を抑えつつモデル family内で再利用するPARD。
 
 - **2025-09 · [Set Block Decoding is a Language Model Inference Accelerator](2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -246,7 +246,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-05 · [Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits](2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  Cloud targetの早期出口から暫定トークンを返し、edge 下書きを最終検証と並行して先行生成することで待ち時間を隠し、Jetson Nano＋A100でpre-drafting単体最大11%級の追加改善を示す。
+  Cloud 対象の早期出口から暫定トークンを返し、edge ドラフトを最終検証と並行して先行生成することで待ち時間を隠し、Jetson Nano＋A100でpre-drafting単体最大11%級の追加改善を示す。
 
 - **2025-03 · [ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts](2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -336,7 +336,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
   実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：10  
-  下書きモデル自身をさらに投機するVertical Cascadeと、後方トークンほど小さい下書きへ切替えるHorizontal Cascadeで投機的復号の下書き費用を削る。
+  下書きモデル自身をさらに投機するVertical Cascadeと、後方トークンほど小さいドラフトへ切替えるHorizontal Cascadeで投機的復号のドラフト費用を削る。
 
 - **2024-08 · [Learning Harmonized Representations for Speculative Sampling](2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/HArmonizedSS/HASS) ・ リポジトリ内被引用：9  

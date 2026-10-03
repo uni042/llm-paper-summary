@@ -22,7 +22,7 @@ authors:
 published: 2025-10-12
 publication_status: SOSP 2025
 summary: KTransformersは巨大な混合専門家（MoE）モデルを少数GPUで動かすCPU/GPU混成推論で、CPU演算性能不足と同期待ちを解く。AMX/AVX-512専用カーネル、単一CUDA Graphを用いる非同期CPU-GPU実行、NUMAを考慮した重み配置を組み合わせ、さらに一部expert出力を次層へ遅延注入するExpert DeferralでCPUとGPUを重畳する。既存方式比でプリフィル4.62〜19.74倍、デコード1.25〜4.09倍、Expert Deferral込みではデコード最大4.90倍を示し、追加高速化時の平均精度低下を0.5%以内に抑える。
-list_summary: 巨大MoEのrouted expertをCPUで高速実行し、非同期CPU-GPUスケジューリングとExpert Deferralで同期待ちを隠して少数GPU推論を高速化する。
+list_summary: "巨大MoEのrouted 専門家をCPUで高速実行し、非同期CPU-GPUスケジューリングとExpert Deferralで同期待ちを隠して少数GPU推論を高速化する。"
 source: https://doi.org/10.1145/3731569.3764843
 worker_completed_at: '2026-09-30T17:06:39+09:00'
 worker_run_key: 20260930-1700-scheduled-chat-00

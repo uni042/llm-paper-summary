@@ -108,7 +108,7 @@
 
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  無線edge上の分散MoEでtask relevanceとchannel/energyを同時に考え、DESで専門家、JESAで専門家＋OFDMA subcarrierを共同選択し、Top-kに近い性能で最大約50%のenergy削減を示す。
+  無線edge上の分散MoEでタスク relevanceとchannel/energyを同時に考え、DESで専門家、JESAで専門家＋OFDMA subcarrierを共同選択し、Top-kに近い性能で最大約50%のenergy削減を示す。
 
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

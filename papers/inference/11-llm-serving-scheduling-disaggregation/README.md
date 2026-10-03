@@ -924,7 +924,7 @@
 
 - **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  断片化したserverless GPU上でパイプライン stageを実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
+  断片化したserverless GPU上でパイプライン 段を実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
 
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

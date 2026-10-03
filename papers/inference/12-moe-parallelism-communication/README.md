@@ -175,7 +175,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  専門家単位にトークンをhorizontal splitし、負荷別GEMM選択とSM制限で全対全通信を計算へ重畳するMoE向け専門家 パイプライン スケジューラ。
+  専門家単位にトークンを水平 分割し、負荷別GEMM選択とSM制限で全対全通信通信を計算へ重畳するMoE向け専門家 パイプライン スケジューラ。
 
 ### 4年前（2022-11〜2023-10）
 
