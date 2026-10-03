@@ -288,7 +288,23 @@ jobs:
           echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
           if [ "$backlog_total" -gt 0 ] && [ "${unsettled_library_prechecks:-0}" -gt 0 ]; then
-            echo "Library backlog is waiting on ${unsettled_library_prechecks} dedicated Discovery precheck result(s); precheck completion will resume import."
+            # Stage 3 can create a fresh precheck after the earlier dispatch check.
+            # Recheck liveness here so a just-finished precheck run cannot leave
+            # Library waiting work with no workflow responsible for it.
+            active_precheck_runs="$(gh run list \
+              --repo "${GITHUB_REPOSITORY}" \
+              --workflow discovery-precheck.yml \
+              --limit 20 \
+              --json status \
+              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${active_precheck_runs:-0}" -eq 0 ]; then
+              echo "Library backlog is waiting on ${unsettled_library_prechecks} precheck result(s); dispatching the dedicated gate."
+              gh workflow run discovery-precheck.yml \
+                --repo "${GITHUB_REPOSITORY}" \
+                --ref main
+            else
+              echo "Library backlog is waiting on ${unsettled_library_prechecks} precheck result(s); Discovery precheck is already active."
+            fi
           elif [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ]; then
             next_generation=$((generation + 1))
             echo "Queueing bounded Library import continuation generation ${next_generation}."
