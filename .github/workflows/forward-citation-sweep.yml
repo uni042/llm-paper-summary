@@ -7,7 +7,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/forward-citation-sweep.yml'
+      - 'STATUS.md'
       - '.survey/config/forward-citation-sweep.json'
+      - '.survey/scripts/refresh_due.py'
       - '.survey/scripts/discovery_provider_adapter.py'
       - '.survey/scripts/forward_citation_sweep.py'
       - '.survey/tests/test_forward_citation_sweep.py'
@@ -33,13 +35,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check whether forward citation refresh is due
+        id: due
+        shell: bash
+        run: |
+          set -euo pipefail
+          due=$(python .survey/scripts/refresh_due.py \
+            --state .survey/work-queue/forward-citation-sweep.json \
+            --max-age-seconds 3000)
+          echo "run=${due}" >> "$GITHUB_OUTPUT"
+          echo "forward_citation_refresh_due=${due}"
       - name: Install runtime dependencies
+        if: steps.due.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check PyYAML
       - name: Forward citation coverage regression tests
+        if: steps.due.outputs.run == 'true'
         run: |
           python -m unittest discover -s .survey/tests -p 'test_forward_citation_sweep.py'
           python -m unittest discover -s .survey/tests -p 'test_discovery_provider_adapter.py'
       - name: Refresh full forward-citation coverage
+        if: steps.due.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
