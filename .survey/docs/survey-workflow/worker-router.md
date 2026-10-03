@@ -1,4 +1,4 @@
-# Worker router — Library-first workflow v14
+# Worker router — Library-first workflow v15
 
 この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v13ではLibrary-first責務分離を維持したまま、Discovery / Research候補の重要度優先と全収録論文の前方引用カバレッジ巡回をGitHub側自動化へ追加する。
 
@@ -264,7 +264,7 @@ Survey GitHub ImportはLibrary成果をGitHub受信箱へ転送するアップ�
 
 ### 9.1 Research品質確認と転送
 
-Library `research/*.md` は1件ずつ先頭から末尾まで全文を読む。タイトル・概要だけで判定しない。問題設定、主要機構、入力→処理→出力、評価条件、比較対象、主要結果、限界、既存研究との差が論文固有に記述されているかを確認する。
+Library `research/*.md` は**今回の転送対象候補を全件検査**し、必ず1件ずつ先頭から末尾まで全文を読む。サンプリング、抜き取り、代表例だけの確認、一括要約、タイトル・概要・検索snippet・機械ゲート結果だけによる代替は禁止する。1件の品質判定を `pass` / `reject` / `hold` のいずれかに確定するまで次のResearchへ進まず、未検査・判定未完了のResearchはGitHubへ転送しない。問題設定、主要機構、入力→処理→出力、評価条件、比較対象、主要結果、限界、既存研究との差が論文固有に記述されているかを確認する。
 
 汎用テンプレート文が本文の中心、論文名や方式名だけを差し替えれば別論文にも成立する長文、主要機構の具体説明欠落、headline結果だけで評価条件なし、プレースホルダー・未完全文、極端に薄い本文など、現行品質ガイドを明らかに満たさない原稿はアップロードワーカー自身の判断でrejectし、GitHubへ転送せずLibraryから削除する。判断が微妙なものは削除せずLibraryに保留し、転送もしない。
 
@@ -515,6 +515,7 @@ Scheduled worker:
 
 Survey GitHub Import:
 
+- Research検査対象件数・全文検査件数・pass/reject/hold/未検査件数
 - Research/Discovery転送数
 - GitHub pending再取得・hash一致数
 - Library削除数
