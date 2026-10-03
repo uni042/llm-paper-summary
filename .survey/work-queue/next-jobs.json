@@ -9,17 +9,17 @@
       "ready": 2
     },
     "research": {
-      "ready": 603,
-      "superseded": 408,
+      "ready": 598,
+      "superseded": 413,
       "deferred": 8,
       "completed": 22,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 605,
+    "ready_research_audit": 600,
     "actively_claimed": 144,
-    "claimable": 461
+    "claimable": 456
   },
   "next_jobs": [
     {
@@ -31,6 +31,34 @@
       "title": "YaRN: Efficient Context Window Extension of Large Language Models",
       "source_url": "https://arxiv.org/abs/2309.00071",
       "paper_path": "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
+      "job_id": "job-research-42ffc93f203d3a23",
+      "type": "research",
+      "lane": null,
+      "priority": 366,
+      "canonical_id": "arXiv:2310.03003",
+      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2310.03003",
+      "paper_path": "papers/inference/99-other-inference-systems/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-model-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
+      "job_id": "job-research-f4af9d97e0e75b64",
+      "type": "research",
+      "lane": null,
+      "priority": 109,
+      "canonical_id": "DOI:10.1109/isca59077.2024.00082",
+      "title": "LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/isca59077.2024.00082",
+      "paper_path": "papers/inference/99-other-inference-systems/0000-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-inference.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -119,21 +147,7 @@
       "artifact_transport": null,
       "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
       "completion": "Submit 0-5 strong candidates. Empty is valid."
-    },
-    {
-      "job_id": "job-research-a51bbbc368770d68",
-      "type": "research",
-      "lane": null,
-      "priority": 0,
-      "canonical_id": "arXiv:2603.07810",
-      "title": "Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization",
-      "source_url": "https://arxiv.org/abs/2603.07810",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07810-temperature-aware-geo-distributed-llm-scheduling.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-10-03T14:49:30+00:00"
+  "generated_at": "2026-10-03T15:16:54+00:00"
 }
