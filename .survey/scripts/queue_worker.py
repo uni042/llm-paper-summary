@@ -22,6 +22,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import paper_identity  # noqa: E402
 import survey  # noqa: E402
+import candidate_priority  # noqa: E402
 import claim_state  # noqa: E402
 import discovery_preload_queue  # noqa: E402
 import discovery_search_history  # noqa: E402
@@ -951,11 +952,13 @@ def existing_represented_resolver() -> dict[str, Any]:
 
 
 def candidate_priority_value(candidate: dict) -> int:
-    """Return canonical 0-100 Candidate priority."""
-    raw = candidate.get("priority")
-    if raw is None:
-        raw = 50
-    return max(0, min(100, int(raw)))
+    """Return configurable, unbounded Candidate importance priority."""
+    return int(
+        candidate_priority.score_record(
+            candidate,
+            repo_root=ROOT.parent,
+        )["total"]
+    )
 
 
 def make_research_job(c: dict, parent: str):
@@ -983,7 +986,14 @@ def make_research_job(c: dict, parent: str):
         "paper_path": paper_path,
         "lineage": c.get("lineage"),
         "selection_reason": c.get("reason"),
-        "priority_breakdown": c.get("priority_breakdown"),
+        "priority_breakdown": candidate_priority.score_record(c, repo_root=ROOT.parent),
+        "published": c.get("published"),
+        "year": c.get("year"),
+        "venue": c.get("venue") or c.get("publication"),
+        "citation_count": candidate_priority.citation_count(c),
+        "citation_count_source": c.get("citation_count_source"),
+        "citation_count_checked_at": c.get("citation_count_checked_at"),
+        "semantic_scholar_id": c.get("semantic_scholar_id"),
         "status": "ready",
         "workflow_version": 10,
         "artifact_transport": "structured_record_v10",
@@ -1356,8 +1366,6 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
             )
         if tokens & seen or represented_match or local_match:
             final_duplicate_filtered_count += 1
-            continue
-        if candidate_priority_value(candidate) < 40:
             continue
         if make_research_job(candidate, job["job_id"]):
             added += 1
