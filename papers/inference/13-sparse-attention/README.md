@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（33本）
+## 自動生成の論文一覧（34本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -105,6 +105,10 @@
 - **2025-02 · [Tactic: Adaptive Sparse Attention with Clustering and Distribution Fitting for Long-Context LLMs](2025-2502.12216-tactic-adaptive-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   累積注意質量を目標にKV数を動的決定し、K-meansと分布当てはめで選択費用を抑えて注意を最大7.29倍高速化するTactic。
+
+- **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
+  実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：3  
+  完全KVを保持したまま通常は小さな部分KVへ注意し、クエリ類似度低下時だけ完全注意して重要トークン集合を更新することで長文生成の固定削除失敗を避ける。
 
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：— ・ リポジトリ内被引用：2  
