@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-03T15:21:28+00:00",
-  "last_run_key": "library-import-5b981275d04d",
-  "last_round": "libimp-5b981275d04dc112-pre01",
+  "updated_at": "2026-10-03T16:33:09+00:00",
+  "last_run_key": "library-import-32c7097f153d",
+  "last_round": "libimp-32c7097f153dafdd-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,26 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T22:00:00+09:00",
-      "round": "specialist-moe-cxl-history-2",
-      "axis": "2025-2026未収録・MoE expert on-demand loading・CXL rack-scale KV transfer",
-      "query_summary": "新着Flash/HBF軸から独立して、2025-2026のMoE expert offload/SSDとCXL KV servingを期間指定で逆引きした。fMoEは直近runで既知候補として扱われているため再投入せず、OD-MoEとTraCTのcanonical ID/titleをdefault branchで再検索して未収録を確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2502.05370"
-      ],
-      "next_axis_hint": "2025-2026のGPU direct storage・near-storage compute・KV transfer networking、または重要offload論文のforward citationへ移る",
-      "source_submission": "work-queue/submissions/20260919T2215JST-discovery-specialist-moe-cxl-history-2.json"
-    },
     {
       "run_key": "2026-09-19T22:00:00+09:00",
       "round": "specialist-thermal-energy-3",
@@ -11168,6 +11148,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-32c7097f153dafdd-pre01",
+      "precheck_request_id": "libimp-32c7097f153dafdd-pre01",
+      "run_key": "library-import-32c7097f153d",
+      "round": "libimp-32c7097f153dafdd-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-32c7097f153dafdd-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-32c7097f153dafdd-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19539,16 +19553,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-5b981275d04d",
-      "rounds": 61,
-      "candidate_count": 261,
+      "last_run_key": "library-import-32c7097f153d",
+      "rounds": 62,
+      "candidate_count": 262,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 161,
+      "novel_candidate_count": 162,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 158,
-      "accepted_count": 158,
-      "duplicate_ratio": 0.3831417624521073,
-      "final_duplicate_ratio": 0.018633540372670808,
+      "post_final_dedupe_count": 159,
+      "accepted_count": 159,
+      "duplicate_ratio": 0.3816793893129771,
+      "final_duplicate_ratio": 0.018518518518518517,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
