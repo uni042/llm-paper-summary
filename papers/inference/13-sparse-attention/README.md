@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（28本）
+## 自動生成の論文一覧（30本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -47,6 +47,10 @@
   疎注意は実際に参照するKVだけを減らせるが、全KVキャッシュ容量は文脈長に比例して増え、GPUからCPUへ退避するとPCIe転送が律速になる。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-09 · [SANTA++: Sampling Attention through Representative Keys](2026-2609.35629-santa-sampling-attention-through-representative-keys.md)**  
+  実装：— ・ リポジトリ内被引用：0  
+  全キー走査を避け、代表キーでチームを確率選択して包含確率補正する学習不要疎注意。32K文脈でKV読み出し16〜22%に抑え、Triton実装はFlash SDPA比1.69倍高速。
 
 - **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -93,6 +97,10 @@
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：— ・ リポジトリ内被引用：2  
   長動画や画像列を扱う視覚言語モデル（Vision-Language モデル; VLM）では、最初の出力を生成する前のプリフィルで全入力トークン間の注意を計算するため、入力長が100万トークン級になると二乗計算量が支配的になる。テキストLLM向け疎注意をそのまま使うと、動画トークンの時空間構造や、テキストと映像の境界で注意パターンが変わる性質を取り逃す。
+
+- **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  固定長文脈のキーをオフラインで意味クラスタ化し、実行時クエリに関連するクラスタの元KVだけを読み込んで正確な注意を計算し、長文脈の帯域と演算を削減する。
 
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：0  

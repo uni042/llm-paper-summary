@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1358本**。
+収録論文: **1363本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,28 +34,28 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1358本**。
+推論論文：**1363本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 109 |
-| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 105 |
+| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 106 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 17 |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 94 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 141 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 29 |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 36 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 37 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 102 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 301 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 35 |
-| [13-sparse-attention](13-sparse-attention/README.md) | 28 |
+| [13-sparse-attention](13-sparse-attention/README.md) | 30 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 31 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 10 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 33 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 16 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 13 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 223 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 224 |
 <!-- survey:auto:end -->
