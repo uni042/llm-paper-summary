@@ -66,7 +66,15 @@ jobs:
           import_backlog=$((research_pending + discovery_pending + discovery_waiting))
           echo "Library import backlog: research=${research_pending}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}"
 
-          if [ "$import_backlog" -gt 0 ]; then
+          recovery_tick=0
+          if [ $((GITHUB_RUN_NUMBER % 6)) -eq 0 ]; then
+            recovery_tick=1
+          fi
+
+          if [ "$import_backlog" -gt 0 ] || [ "$recovery_tick" -eq 1 ]; then
+            if [ "$import_backlog" -eq 0 ]; then
+              echo 'Hourly-equivalent recovery tick: run one empty-inbox recovery pass.'
+            fi
             dispatch_if_idle library-import.yml
           else
             echo 'Library import inbox is empty; skip processor dispatch.'
