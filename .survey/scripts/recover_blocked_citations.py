@@ -73,6 +73,15 @@ PRIMARY_PDF_FALLBACKS = {
     "DOI:10.1109/HPCA61900.2025.00103": [
         "https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf",
     ],
+    "DOI:10.1145/3315508.3329973": [
+        "https://www.eecs.harvard.edu/~htk/publication/2019-mapl-tillet-kung-cox.pdf",
+    ],
+    "DOI:10.1145/3731569.3764843": [
+        "https://madsys.cs.tsinghua.edu.cn/publication/ktransformers-unleashing-the-full-potential-of-cpu/gpu-hybrid-inference-for-moe-models/SOSP25-chen.pdf",
+    ],
+    "DOI:10.1145/3579371.3589038": [
+        "https://arxiv.org/pdf/2304.07493",
+    ],
 }
 
 
