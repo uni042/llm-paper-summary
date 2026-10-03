@@ -243,10 +243,8 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
     def test_router_keeps_flexible_primary_source_retrieval_policy(self) -> None:
         text = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
         self.assertIn("固定された4経路を各1回だけ試して打ち切る方式は使わない", text)
-        self.assertIn("blocked Researchは原則7日後に再確認", text)
-        self.assertIn("取得失敗だけを永久除外理由にしない", text)
-        self.assertIn("platform_content_write_rejected_after_bundle_fallback", text)
-        self.assertIn("次のstandbyへ進む", text)
+        self.assertIn("合理的に利用可能な一次資料経路を尽くしても", text)
+        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
         self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
 
     def test_helper_reacts_immediately_to_blocked_retry_changes(self) -> None:
