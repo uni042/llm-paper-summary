@@ -213,13 +213,27 @@ jobs:
           echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Run regression tests
+      - name: Run citation and metadata regression tests
         id: tests
         shell: bash
         run: |
           set +e
-          python -m unittest discover -s .survey/tests -p 'test_*.py'
-          rc=$?
+          python .survey/tests/test_backfill_paper_metadata.py
+          rc1=$?
+          python .survey/tests/test_citation_graph.py
+          rc2=$?
+          python .survey/tests/test_pdf_citation_fallback.py
+          rc3=$?
+          python .survey/tests/test_recover_blocked_citations.py
+          rc4=$?
+          python .survey/tests/test_render_paper_metadata.py
+          rc5=$?
+          python .survey/tests/test_render_paper_required_metadata.py
+          rc6=$?
+          rc=0
+          for value in "$rc1" "$rc2" "$rc3" "$rc4" "$rc5" "$rc6"; do
+            if [ "$value" != '0' ]; then rc=1; fi
+          done
           echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
           exit 0
 
