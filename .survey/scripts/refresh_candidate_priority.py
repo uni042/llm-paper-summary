@@ -314,6 +314,10 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         int(cache_policy.get("rate_limit_retries_per_request", 0) or 0),
         0,
     )
+    provider_timeout = max(
+        int(cache_policy.get("provider_timeout_seconds", 10) or 10),
+        1,
+    )
     now = _now()
 
     cache = candidate_priority.load_cache(root)
@@ -332,6 +336,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         identifiers = [str(row["_lookup_id"]) for row in batch]
         outcomes = discovery_provider_adapter.lookup_identifiers(
             identifiers,
+            timeout=provider_timeout,
             max_rate_limit_retries=rate_limit_retries,
         )
         rows_by_id = {str(row["_lookup_id"]): row for row in batch}
@@ -343,6 +348,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         openalex = _openalex_fallback(
             rows_by_id,
             missing_ids,
+            timeout=provider_timeout,
             sleeper=sleep_fn,
             max_rate_limit_retries=rate_limit_retries,
         )
@@ -387,6 +393,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         "candidate_count_seen": len(rows),
         "due_count_before_run": len(due),
         "selected_count": len(selected),
+        "provider_timeout_seconds": provider_timeout,
         "rate_limit_retries_per_request": rate_limit_retries,
         "found": found,
         "unresolved": unresolved,
