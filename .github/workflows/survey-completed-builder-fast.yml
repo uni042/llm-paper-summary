@@ -1,13 +1,8 @@
 name: Survey completed descriptor builder fast lane
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/completed-submission-requests/*.json'
-      - '.survey/scripts/advance_research_submission_pipeline.py'
-      - '.github/workflows/survey-completed-builder-fast.yml'
-
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
