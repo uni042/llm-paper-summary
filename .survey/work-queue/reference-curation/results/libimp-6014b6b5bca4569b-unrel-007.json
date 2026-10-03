@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6014b6b5bca4569b-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1705.09786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1705.09786",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1705.09786",
+      "arXiv:1705.09786"
+    ],
+    "reason": "動的ニューラルネットワークの非同期モデル並列学習を高速化するtraining systemで、最終適用先が凍結中の学習工程。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md"
+    ],
+    "title": "AMPNet: Asynchronous Model-Parallel Training for Dynamic Neural Networks"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6014b6b5bca4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

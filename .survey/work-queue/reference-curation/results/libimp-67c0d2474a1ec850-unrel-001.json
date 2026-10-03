@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67c0d2474a1ec850-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.12793",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.12793",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2406.12793",
+      "arXiv:2406.12793"
+    ],
+    "reason": "GLM-4系列のモデル構築・学習・能力を報告する技術報告で、推論基盤の新規高速化方式が主目的ではない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md"
+    ],
+    "title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67c0d2474a1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

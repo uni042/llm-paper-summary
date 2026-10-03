@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6014b6b5bca4569b-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.02147",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.02147",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1704.02147",
+      "arXiv:1704.02147"
+    ],
+    "reason": "階層クラスタリングの目的関数と近似アルゴリズムを扱う理論計算機科学研究で、LLM推論とは無関係。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.13692-prefix-sharing-sorting-problem.md"
+    ],
+    "title": "Hierarchical Clustering: Objective Functions and Algorithms"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6014b6b5bca4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

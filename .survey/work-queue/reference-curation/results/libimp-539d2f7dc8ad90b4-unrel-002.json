@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-539d2f7dc8ad90b4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.18814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.18814",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.18814",
+      "arXiv:2403.18814"
+    ],
+    "reason": "高解像度視覚トークン、高品質データ、VLM誘導生成によってマルチモーダル能力を高める視覚言語モデル研究で、推論効率化が最終目的ではない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md"
+    ],
+    "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-539d2f7dc8ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4903ccc4fc6b2ffb-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.14541",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.14541",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.14541",
+      "arXiv:2403.14541"
+    ],
+    "reason": "tokenごとのentropyからtemperatureを動的変更する推論時decoding方式でruntimeへ直接入る一方、主目的は生成品質と多様性のtrade-off改善であり計算削減は中心ではないため境界扱い。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+    ],
+    "title": "EDT: Improving Large Language Models' Generation by Entropy-based Dynamic Temperature Sampling"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4903ccc4fc6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4903ccc4fc6b2ffb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.03218",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.03218",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.03218",
+      "arXiv:2403.03218"
+    ],
+    "reason": "危険知識を測るWMDP benchmarkとRepresentation Misdirection for Unlearningを提案するAI安全・unlearning研究で、推論効率化が最終目的ではない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+    ],
+    "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4903ccc4fc6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

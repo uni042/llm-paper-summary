@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T11:02:04+00:00",
-  "record_count": 405,
+  "updated_at": "2026-10-03T13:20:50+00:00",
+  "record_count": 410,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5852,6 +5852,82 @@
         "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
       ],
       "title": "Junk DNA Hypothesis: Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs \"Difficult\" Downstream Tasks in LLMs"
+    },
+    "arXiv:2403.14541": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.14541",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.14541",
+        "arXiv:2403.14541"
+      ],
+      "reason": "tokenごとのentropyからtemperatureを動的変更する推論時decoding方式でruntimeへ直接入る一方、主目的は生成品質と多様性のtrade-off改善であり計算削減は中心ではないため境界扱い。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+      ],
+      "title": "EDT: Improving Large Language Models' Generation by Entropy-based Dynamic Temperature Sampling"
+    },
+    "arXiv:2403.11322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.11322",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.11322",
+        "arXiv:2403.11322"
+      ],
+      "reason": "LLMエージェントの複雑タスクを状態機械へ分解し、不要なLLM呼出しを減らして実行コストを下げるため推論効率には隣接するが、主貢献はtask-solving workflow設計でありサービング基盤・scheduler/runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ],
+      "title": "StateFlow: Enhancing LLM Task-Solving through State-Driven Workflows"
+    },
+    "arXiv:2403.04797": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.04797",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.04797",
+        "arXiv:2403.04797"
+      ],
+      "reason": "推論時に位置埋め込みをhead別に再スケールするplug-and-play方式で長文脈のlost-in-the-middleを改善するため推論時手法ではあるが、目的は品質改善であり計算量・メモリ・サービング効率化は主題でない。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding"
+    },
+    "arXiv:2305.04044": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.04044",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.04044",
+        "arXiv:2305.04044"
+      ],
+      "reason": "BARTの推論と離散拡散のdenoisingを非自己回帰のmasked-token recoveryへ統合するため生成方式として推論に直結するが、主目的・主要結果は生成品質であり実測latency/throughput削減が中心ではないため境界扱い。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md"
+      ],
+      "title": "Diffusion-NAT: Self-Prompting Discrete Diffusion for Non-Autoregressive Text Generation"
+    },
+    "arXiv:2305.02633": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.02633",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.findings-acl.3",
+        "DOI:10.48550/arxiv.2305.02633",
+        "arXiv:2305.02633"
+      ],
+      "reason": "推論時のtop-p samplingをentropy依存で校正するdecoding方式で推論経路には直接入るが、目的は確率的coverageの校正であり計算量・メモリ・throughput削減を主題としないため境界扱い。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md"
+      ],
+      "title": "Conformal Nucleus Sampling"
     }
   }
 }

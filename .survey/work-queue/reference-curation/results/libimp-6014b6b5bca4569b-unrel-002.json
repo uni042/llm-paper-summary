@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6014b6b5bca4569b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1711.02782",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1711.02782",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1711.02782",
+      "arXiv:1711.02782"
+    ],
+    "reason": "ブロック疎性でRNNの計算・メモリを削減する効率化研究だが、対象は2017年のRNNでありLLM/Transformer推論を最終適用先としない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Block-Sparse Recurrent Neural Networks"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6014b6b5bca4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

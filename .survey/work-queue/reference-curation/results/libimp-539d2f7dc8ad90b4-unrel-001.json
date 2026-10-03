@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-539d2f7dc8ad90b4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.00859",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.00859",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.00859",
+      "arXiv:2404.00859"
+    ],
+    "reason": "将来トークン用特徴の事前計算が言語モデル内部で生じるかを機構解釈・学習信号の観点から検証する研究で、推論ランタイムの高速化・省メモリ化を提案しない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+    ],
+    "title": "Do Language Models Plan Ahead for Future Tokens?"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-539d2f7dc8ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
