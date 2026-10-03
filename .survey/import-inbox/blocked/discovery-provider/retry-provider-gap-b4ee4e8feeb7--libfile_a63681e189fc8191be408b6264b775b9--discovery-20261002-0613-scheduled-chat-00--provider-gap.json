@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-0613-scheduled-chat-00::provider-gap",
+  "reference_main_sha": "7703f53fad5b62238a40e2c0e3c66eb15c309eaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:7zNYY1E2fq",
+      "identity_tokens": [
+        "OpenReview:7zNYY1E2fq"
+      ],
+      "title": "Block-Attention for Efficient Prefilling",
+      "reason": "RAG推論のプリフィル計算を直接削減する方式。検索文書を独立ブロックとしてKV状態を再利用し、再登場するpassageの再計算を避けるため、推論時KV再利用の対象に合致する。",
+      "source_url": "https://openreview.net/forum?id=7zNYY1E2fq",
+      "body_check": "本文情報では、取得文書をblockへ分割し、最終block以外は独立にKV状態を計算する。block segmentation、position re-encoding、LLMのfine-tuningでBlock-attentionへ適応し、RAGで既出passageのKVを再利用してprefill latencyと計算量を削減する設計を確認した。",
+      "first_checked_at": "2026-10-02T06:13:00+09:00",
+      "last_checked_at": "2026-10-02T06:13:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 480
+    }
+  ],
+  "parent_run_key": "20261002-0613-scheduled-chat-00",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-b4ee4e8feeb7--libfile_a63681e189fc8191be408b6264b775b9--discovery-20261002-0613-scheduled-chat-00.json",
+  "provider_gap_ids": [
+    "OpenReview:7zNYY1E2fq"
+  ]
+}

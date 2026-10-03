@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-0234-scheduled-chat-30::provider-gap",
+  "reference_main_sha": "8f8766cdb4b0e87d6589c4cbfd052c1c01f76b0d",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tVConYid20",
+      "identity_tokens": [
+        "OpenReview:tVConYid20"
+      ],
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "reason": "Direct inference-kernel work: FlashAttention-3 redesigns attention for Hopper GPUs using asynchronous execution and low-precision paths, making it central to the kernel/runtime-compilation lineage.",
+      "source_url": "https://openreview.net/forum?id=tVConYid20",
+      "body_check": "The paper introduces Hopper-aware attention kernels that overlap tensor-core GEMM and softmax work and exploit FP8 while controlling numerical error. Evaluation is explicitly on attention throughput/accuracy and the kernel is used by later LLM serving systems for prefill/decode execution.",
+      "first_checked_at": "2026-10-02T02:34:59+09:00",
+      "last_checked_at": "2026-10-02T02:34:59+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tcisuhGsQZ",
+      "identity_tokens": [
+        "OpenReview:tcisuhGsQZ"
+      ],
+      "title": "Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference",
+      "reason": "Direct KV-cache inference optimization: Ada-KV allocates cache budgets per attention head instead of uniformly and plugs into existing eviction methods.",
+      "source_url": "https://openreview.net/forum?id=tcisuhGsQZ",
+      "body_check": "The paper derives a loss upper bound for post-eviction attention, uses it to motivate head-wise adaptive KV budgets, and evaluates the method on RULER and LongBench in question-aware and question-agnostic settings. The final target is reduced KV memory during LLM inference while preserving quality.",
+      "first_checked_at": "2026-10-02T02:34:59+09:00",
+      "last_checked_at": "2026-10-02T02:34:59+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:RlqYCpTu1P",
+      "identity_tokens": [
+        "OpenReview:RlqYCpTu1P"
+      ],
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "reason": "Long-context LLM efficiency work: MoBA dynamically routes each query to selected context blocks, reducing attention computation while retaining the ability to switch between sparse and full attention.",
+      "source_url": "https://openreview.net/forum?id=RlqYCpTu1P",
+      "body_check": "The paper partitions context into blocks and applies learned query-to-block routing inspired by MoE, yielding sub-quadratic attention and reporting up to 16x speedup at very long context while maintaining full-attention-level performance; it also reports production long-context deployment.",
+      "first_checked_at": "2026-10-02T02:34:59+09:00",
+      "last_checked_at": "2026-10-02T02:34:59+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:P0GOk5wslg",
+      "identity_tokens": [
+        "OpenReview:P0GOk5wslg"
+      ],
+      "title": "Speculative Actions: A Lossless Framework for Faster AI Agents",
+      "reason": "Direct agentic inference/runtime acceleration: it predicts likely future agent actions with faster models and executes API calls speculatively in parallel while preserving correctness.",
+      "source_url": "https://openreview.net/forum?id=P0GOk5wslg",
+      "body_check": "The paper targets sequential tool/API latency in AI-agent execution, uses speculative action prediction plus verification to parallelize otherwise serial calls, and evaluates gaming, e-commerce, web-search and operating-system environments with reported speedups up to 30%. This fits agentic inference serving/runtime optimization.",
+      "first_checked_at": "2026-10-02T02:34:59+09:00",
+      "last_checked_at": "2026-10-02T02:34:59+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md"
+      ],
+      "worklist_rank": 483
+    }
+  ],
+  "parent_run_key": "20261002-0234-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-c388dfcc1f7e--libfile_ca3411e6dcfc8191a89f172c17b15ac7--discovery-20261002-0234-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:P0GOk5wslg",
+    "OpenReview:RlqYCpTu1P",
+    "OpenReview:tVConYid20",
+    "OpenReview:tcisuhGsQZ"
+  ]
+}
