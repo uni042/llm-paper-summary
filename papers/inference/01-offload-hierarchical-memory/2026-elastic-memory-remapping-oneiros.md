@@ -18,11 +18,12 @@ publication_status: published
 source: https://doi.org/10.1145/3830422.3830427
 sources:
 - https://doi.org/10.1145/3830422.3830427
+- https://github.com/UT-SysML/Oneiros/
 lineage: 01-offload-hierarchical-memory
-code: null
-implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
-implementation_status: official-code-not-confirmed
-last_checked: '2026-09-26'
+code: https://github.com/UT-SysML/Oneiros/
+implementation: vLLMへ実装してGH200実機で評価しており、著者らの公式Oneirosリポジトリでソースコードを公開している。
+implementation_status: official-code-available
+last_checked: '2026-10-03'
 last_audited: '2026-09-28'
 audit_version: 1
 ---
