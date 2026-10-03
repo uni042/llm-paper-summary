@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2793dbcac51605b5-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.06128",
+  "reason": "The paper exposes inference as a workflow primitive so one agent graph can use streaming, durable asynchronous, or cross-invocation batch inference. It reports no detectable output-quality difference across bindings and describes batch pricing as the primary workflow-level cost lever. However, measured Flink execution has 33–152× end-to-end latency versus streaming, and the primary contribution is workflow portability and access to provider batch pricing rather than reducing inference computation or improving serving efficiency. Relevant to inference deployment economics but indirect under the inference-optimization focus.",
+  "title": "Substrate-Portable Execution for Production LLM Workflows",
+  "identity_tokens": [
+    "arXiv:2609.06128"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[9]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "source_precheck_request_id": null
+}

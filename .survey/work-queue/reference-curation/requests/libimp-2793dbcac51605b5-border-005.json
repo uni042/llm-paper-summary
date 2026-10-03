@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2793dbcac51605b5-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.00363",
+  "reason": "power-of-two INT8 scaleを使う配備条件とcross-kernel bitwise determinism/conformanceが主目的で、主な結果は同一出力保証とfault-detection suite。throughputは1.7Bのみ・6設定でprefill -9.6%～+1.4%、decode -1.6%～+0.9%と混在し、8B/14Bは未測定。計算削減・速度向上研究とは確認できず、推論効率への接点はquantization尺度と限定的cost測定に留まる。",
+  "title": "Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance",
+  "identity_tokens": [
+    "arXiv:2609.00363"
+  ],
+  "linked_from": [
+    "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[7]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2793dbcac51605b5-unrel-010",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.18526",
+  "reason": "The worklist title differs from the current arXiv v1 title for the same listed arXiv ID; the primary manuscript studies prompt confidentiality across local serving boundaries, including residual allocator memory and sanitization. Its core contribution is a security/privacy audit, not inference computation or serving efficiency. Sanitization reduces recovered prompt residue at less than about 0.5% latency difference, but does not restore confidentiality; that overhead measurement does not change the paper's unrelated scope disposition.",
+  "title": "Running an LLM Locally Doesn't Keep Prompts Private: They Survive in Allocator Memory After Inference",
+  "identity_tokens": [
+    "arXiv:2609.18526"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[7]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "source_precheck_request_id": null
+}
