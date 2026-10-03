@@ -658,10 +658,13 @@ def semantic_scholar_fetcher(
     timeout: int = 30,
     opener: Callable[..., Any] = urlopen,
     sleeper: Callable[[float], Any] = time.sleep,
+    max_rate_limit_retries: int = S2_MAX_RATE_LIMIT_RETRIES,
 ) -> Callable[[str | None], dict[str, Any]]:
     """Build a page fetcher for one fixed Semantic Scholar result set."""
     if page_size <= 0 or page_size > 100:
         raise ValueError("page_size must be between 1 and 100")
+    if max_rate_limit_retries < 0:
+        raise ValueError("max_rate_limit_retries must be >= 0")
 
     api_url = _normalize_semantic_scholar_source(source_url)
     parsed = urlparse(api_url)
@@ -697,13 +700,13 @@ def semantic_scholar_fetcher(
             },
         )
         payload = None
-        for attempt in range(S2_MAX_RATE_LIMIT_RETRIES + 1):
+        for attempt in range(max_rate_limit_retries + 1):
             try:
                 with opener(req, timeout=timeout) as response:
                     payload = json.loads(response.read().decode("utf-8"))
                 break
             except HTTPError as exc:
-                if exc.code != 429 or attempt >= S2_MAX_RATE_LIMIT_RETRIES:
+                if exc.code != 429 or attempt >= max_rate_limit_retries:
                     raise DiscoveryProviderError(
                         f"Semantic Scholar page fetch failed at offset {offset}: {exc}"
                     ) from exc
