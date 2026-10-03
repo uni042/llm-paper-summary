@@ -23,6 +23,20 @@
   },
   "next_jobs": [
     {
+      "job_id": "job-research-b7a2adb5677451d0",
+      "type": "research",
+      "lane": null,
+      "priority": 414,
+      "canonical_id": "DOI:10.1109/tkde.2025.3554028",
+      "title": "A Survey on Mixture of Experts in Large Language Models",
+      "source_url": "https://doi.org/10.1109/TKDE.2025.3554028",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-9d9dc7b7bf03-a-survey-on-mixture-of-experts-in-large-language-models.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
       "job_id": "job-research-42ffc93f203d3a23",
       "type": "research",
       "lane": null,
@@ -37,6 +51,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
+      "job_id": "job-research-be6432c24996c4d2",
+      "type": "research",
+      "lane": null,
+      "priority": 340,
+      "canonical_id": "arXiv:2206.03382",
+      "title": "Tutel: Adaptive Mixture-of-Experts at Scale",
+      "source_url": "https://arxiv.org/abs/2206.03382",
+      "paper_path": "papers/inference/99-other-inference-systems/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
       "job_id": "job-research-2ed4065d529d7338",
       "type": "research",
       "lane": null,
@@ -45,6 +73,34 @@
       "title": "Gemma 4 Technical Report",
       "source_url": "https://arxiv.org/abs/2607.02770",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2607.02770-gemma-4-technical-report.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
+      "job_id": "job-research-3c0018659a66f214",
+      "type": "research",
+      "lane": null,
+      "priority": 271,
+      "canonical_id": "arXiv:2404.14294",
+      "title": "A Survey on Efficient Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.14294",
+      "paper_path": "papers/survey/03-inference-engines/2024-2404.14294-survey-efficient-inference-llms.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-673b3841fc632962",
+      "type": "research",
+      "lane": null,
+      "priority": 201,
+      "canonical_id": "arXiv:2312.15234",
+      "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+      "source_url": "https://arxiv.org/abs/2312.15234",
+      "paper_path": "papers/inference/99-other-inference-systems/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-algorithms-to-systems.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -79,62 +135,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
-      "job_id": "job-research-ed2755beb06dc43b",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
-      "title": "DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models",
-      "source_url": "https://doi.org/10.1016/j.neunet.2026.109469",
-      "paper_path": "papers/training/01-training-offload-memory-systems/2026-dr-eft-domain-representative-expert-finetuning.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-3ef5cc2d28abc041",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.1016/j.parco.2026.103216",
-      "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
-      "source_url": "https://doi.org/10.1016/j.parco.2026.103216",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-smartbatchllm-adaptive-hybrid-batching.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
-    },
-    {
-      "job_id": "job-audit-618273aae59f5cd7",
-      "type": "audit",
-      "lane": null,
-      "priority": 74,
-      "canonical_id": "arXiv:2503.03777",
-      "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
-      "source_url": "https://arxiv.org/abs/2503.03777",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, arXiv primary/cross-list categories, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing."
-    },
-    {
-      "job_id": "job-audit-bc50ab844f1e2ebf",
-      "type": "audit",
-      "lane": null,
-      "priority": 72,
-      "canonical_id": "arXiv:2504.03775",
-      "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
-      "source_url": "https://arxiv.org/abs/2504.03775",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, arXiv primary/cross-list categories, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-03T16:33:09+00:00"
+  "generated_at": "2026-10-03T18:16:47+00:00"
 }
