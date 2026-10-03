@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3598c6551fc3e91d-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icassp.2012.6289079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icassp.2012.6289079",
+    "identity_tokens": [
+      "DOI:10.1109/icassp.2012.6289079"
+    ],
+    "reason": "日本語・韓国語の音声検索/音声認識システムが主題で、LLM投機的復号や推論実行系の研究ではない。",
+    "first_checked_at": "2026-10-03T17:52:21+00:00",
+    "last_checked_at": "2026-10-03T17:52:21+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "Japanese and Korean voice search"
+  },
+  "processed_at": "2026-10-03T17:52:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3598c6551fc3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

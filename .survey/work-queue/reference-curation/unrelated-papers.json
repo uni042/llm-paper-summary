@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T17:51:24+00:00",
-  "record_count": 836,
+  "updated_at": "2026-10-03T17:52:22+00:00",
+  "record_count": 847,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -11137,11 +11137,12 @@
       "identity_tokens": [
         "DOI:10.1109/access.2025.3532853"
       ],
-      "reason": "自律エージェントの概念、強化学習、目標指向アーキテクチャ、応用・倫理を広く整理するサーベイで、LLMエージェントの推論ランタイム/サービング効率を主対象としない。",
+      "reason": "自律エージェントAIの概念・方法・応用・倫理課題を広く整理する総合サーベイで、LLMエージェント推論サービングの一次システム研究ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
       "linked_from": [
-        "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md"
+        "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+        "worker-worklist-30"
       ],
       "title": "Agentic AI: Autonomous Intelligence for Complex Goals—A Comprehensive Survey"
     },
@@ -11168,11 +11169,12 @@
         "DOI:10.1109/comst.2023.3239220",
         "arXiv:2202.01032"
       ],
-      "reason": "Open RANのアーキテクチャ、インターフェース、制御アルゴリズム、セキュリティを整理する通信ネットワークサーベイで、LLM推論システムではない。",
+      "reason": "Open RANのアーキテクチャ、インターフェース、アルゴリズム、セキュリティを整理する通信システムサーベイで、LLM推論基盤ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
       "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md"
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
+        "worker-worklist-30"
       ],
       "title": "Understanding O-RAN: Architecture, Interfaces, Algorithms, Security, and Research Challenges"
     },
@@ -11183,11 +11185,12 @@
         "DOI:10.1007/978-3-319-49487-6_4",
         "arXiv:1311.3144"
       ],
-      "reason": "グラフ分割アルゴリズム、マルチレベル法、局所探索等を整理するアルゴリズム研究で、LLM分散推論やモデル分割を直接対象としない。",
+      "reason": "グラフ分割アルゴリズムとその高速化を整理するアルゴリズム工学研究で、LLM推論・分散サービングを直接対象としない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
       "linked_from": [
-        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
+        "worker-worklist-30"
       ],
       "title": "Recent Advances in Graph Partitioning"
     },
@@ -11198,11 +11201,12 @@
         "DOI:10.1109/isca.2018.00069",
         "arXiv:1712.01507"
       ],
-      "reason": "任意ビット幅DNN演算へ動的構成できるビットレベルアクセラレータで、CNN等の一般DNN推論を対象としLLM/Transformer推論固有ではない。",
+      "reason": "可変ビット幅DNNをBitBrickの動的融合で高速化する汎用DNNアクセラレータで、LLM推論を最終適用先としない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
       "linked_from": [
-        "papers/inference/99-other-inference-systems/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md"
+        "papers/inference/99-other-inference-systems/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+        "worker-worklist-30"
       ],
       "title": "Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network"
     },
@@ -11677,11 +11681,12 @@
         "DOI:10.1016/j.aiopen.2023.08.012",
         "arXiv:2103.10385"
       ],
-      "reason": "P-Tuningで連続prompt embeddingを学習しNLU性能・安定性を改善するprompt tuning研究で、推論runtimeの高速化・省メモリ化ではない。",
+      "reason": "自然言語理解タスクを生成問題として統一するPET系の学習・プロンプティング研究で、LLM推論ランタイム効率化ではない。",
       "first_checked_at": "2026-10-03T17:49:34+00:00",
-      "last_checked_at": "2026-10-03T17:49:34+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
       "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "worker-worklist-30"
       ],
       "title": "GPT Understands, Too"
     },
@@ -12315,6 +12320,161 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
       ],
       "title": "The log-structured merge-tree (LSM-tree)"
+    },
+    "DOI:10.1109/iccv48922.2021.00986": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv48922.2021.00986",
+      "identity_tokens": [
+        "DOI:10.1109/iccv48922.2021.00986",
+        "arXiv:2103.14030"
+      ],
+      "reason": "階層型・shifted-window自己注意で画像分類・検出・セグメンテーションを改善する汎用コンピュータビジョンTransformerで、LLM推論システムを最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
+    },
+    "DOI:10.1002/nav.3800020109": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/nav.3800020109",
+      "identity_tokens": [
+        "DOI:10.1002/nav.3800020109"
+      ],
+      "reason": "人と仕事の割当総得点を最大化する組合せ最適化アルゴリズムの古典で、LLM推論・サービングの方式研究ではない。",
+      "first_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "The Hungarian method for the assignment problem"
+    },
+    "DOI:10.1038/nature20101": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/nature20101",
+      "identity_tokens": [
+        "DOI:10.1038/nature20101"
+      ],
+      "reason": "Differentiable Neural Computerの外部読書きメモリと学習能力を評価するモデル研究で、LLM推論時のメモリ階層・KVキャッシュ最適化ではない。",
+      "first_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Hybrid computing using a neural network with dynamic external memory"
+    },
+    "DOI:10.1109/isvlsi.2002.1016885": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isvlsi.2002.1016885",
+      "identity_tokens": [
+        "DOI:10.1109/isvlsi.2002.1016885"
+      ],
+      "reason": "システムオンチップ向けNetwork-on-Chipのアーキテクチャと設計方法論が主題で、LLM/NPU推論を直接対象としない。",
+      "first_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A network on chip architecture and design methodology"
+    },
+    "DOI:10.1109/icassp.2012.6289079": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp.2012.6289079",
+      "identity_tokens": [
+        "DOI:10.1109/icassp.2012.6289079"
+      ],
+      "reason": "日本語・韓国語の音声検索/音声認識システムが主題で、LLM投機的復号や推論実行系の研究ではない。",
+      "first_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Japanese and Korean voice search"
+    },
+    "DOI:10.1109/dsn.2015.49": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/dsn.2015.49",
+      "identity_tokens": [
+        "DOI:10.1109/dsn.2015.49"
+      ],
+      "reason": "MLC NANDフラッシュのread disturb errorを実機で特徴付け、緩和・回復するストレージ信頼性研究で、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Read Disturb Errors in MLC NAND Flash Memory: Characterization, Mitigation, and Recovery"
+    },
+    "DOI:10.1109/isca.2016.11": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2016.11",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.11"
+      ],
+      "reason": "値がゼロのニューロン計算を省くDNNアクセラレータ研究で、CNN等の一般深層学習推論が対象でありLLM/Transformer推論固有ではない。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Cnvlutin: Ineffectual-Neuron-Free Deep Neural Network Computing"
+    },
+    "DOI:10.1109/isca.2018.00063": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2018.00063",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2018.00063"
+      ],
+      "reason": "外れ値を考慮した低精度ニューラルネットアクセラレータの研究で、LLM/Transformer向け量子化・推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation"
+    },
+    "DOI:10.1007/978-3-662-44415-3_4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-662-44415-3_4",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-662-44415-3_4"
+      ],
+      "reason": "クラスタサイズの均衡制約を持つk-meansクラスタリングアルゴリズム研究で、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Balanced K-Means for Clustering"
+    },
+    "DOI:10.1109/access.2022.3174101": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2022.3174101",
+      "identity_tokens": [
+        "DOI:10.1109/access.2022.3174101"
+      ],
+      "reason": "実PIMシステムの一般的な性能特性をベンチマークする研究で、LLM推論やTransformerを最終適用先とした方式・評価ではない。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System"
+    },
+    "DOI:10.1109/hotchips.2019.8875654": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hotchips.2019.8875654",
+      "identity_tokens": [
+        "DOI:10.1109/hotchips.2019.8875654"
+      ],
+      "reason": "汎用ニューラルネットワーク計算向けDaVinci NPUアーキテクチャのハードウェア研究で、LLM推論・KVキャッシュ・LLMサービングを直接対象とした一次研究ではない。",
+      "first_checked_at": "2026-10-03T17:52:22+00:00",
+      "last_checked_at": "2026-10-03T17:52:22+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "DaVinci: A Scalable Architecture for Neural Network Computing"
     }
   }
 }
