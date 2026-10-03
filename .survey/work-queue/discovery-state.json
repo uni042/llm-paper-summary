@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-03T18:30:16+00:00",
-  "last_run_key": "library-import-878e140f1c87",
-  "last_round": "libimp-878e140f1c87aa55-pre01",
+  "updated_at": "2026-10-03T18:35:40+00:00",
+  "last_run_key": "library-import-bc80dc48f644",
+  "last_round": "libimp-bc80dc48f644cc40-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T22:00:00+09:00",
-      "round": "specialist-vmm-memory-7",
-      "axis": "GPU virtual memory・KV fragmentation・memory allocator lineage",
-      "query_summary": "2025-2026だけでなく重要未収録の可能性があるVMM/fragmentation系へ範囲を広げた。vAttention/GMLakeは既知基礎系統として扱い、vTensorはcanonical ID/titleのdefault-branch検索で未収録だったため候補化した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2405.04437",
-        "arXiv:2401.08156"
-      ],
-      "next_axis_hint": "prefix caching/data placementのOS・DB隣接研究、次いでedge/local inference runtimeの未収録重要論文へ移る",
-      "source_submission": "work-queue/submissions/20260919T2246JST-discovery-specialist-vmm-memory-7.json"
-    },
     {
       "run_key": "2026-09-19T22:00:00+09:00",
       "round": "specialist-agent-kvflow-8",
@@ -11233,6 +11212,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-bc80dc48f644cc40-pre01",
+      "precheck_request_id": "libimp-bc80dc48f644cc40-pre01",
+      "run_key": "library-import-bc80dc48f644",
+      "round": "libimp-bc80dc48f644cc40-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-bc80dc48f644cc40-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-bc80dc48f644cc40-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19604,16 +19617,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-878e140f1c87",
-      "rounds": 66,
-      "candidate_count": 269,
+      "last_run_key": "library-import-bc80dc48f644",
+      "rounds": 67,
+      "candidate_count": 270,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 169,
+      "novel_candidate_count": 170,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 166,
-      "accepted_count": 166,
-      "duplicate_ratio": 0.37174721189591076,
-      "final_duplicate_ratio": 0.01775147928994083,
+      "post_final_dedupe_count": 167,
+      "accepted_count": 167,
+      "duplicate_ratio": 0.37037037037037035,
+      "final_duplicate_ratio": 0.01764705882352941,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
