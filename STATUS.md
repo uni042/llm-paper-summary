@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-03 11:03:49 JST**
+> 自動生成: **2026-10-03 11:05:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **617** |
-| 未claim Research job | **473** |
-| 直近24hのResearch処理完了 | **24** |
+| 収録候補論文数 | **613** |
+| 未claim Research job | **469** |
+| 直近24hのResearch処理完了 | **28** |
 | 最終Research処理完了 | **10-03 08:55:13 JST** |
 | 最終Discovery探索完了 | **10-02 20:01:20 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **617** |
+| canonical_id確認済みの一意な候補論文 | **613** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **617** |
+| 非終端Research job合計 | **613** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **7445** |
-| 処理済み | **1753** |
-| 未処理 | **5692** |
-| 収録済みとして除外 | **889** |
-| 無関係として除外 | **498** |
+| 処理済み | **1755** |
+| 未処理 | **5690** |
+| 収録済みとして除外 | **892** |
+| 無関係として除外 | **497** |
 | 微妙として除外 | **366** |
 
-- 消化率: **23.5%**
+- 消化率: **23.6%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（218時間27分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（218時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -200,7 +200,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **617** |
+| ready | **613** |
 
 ### 候補の重複・識別情報欠損
 
@@ -220,7 +220,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1417** |
+| inference/training/survey配下の論文Markdown実体 | **1421** |
 
 ### immutable submissionの未照合
 
