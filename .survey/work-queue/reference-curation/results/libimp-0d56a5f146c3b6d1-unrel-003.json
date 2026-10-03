@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0d56a5f146c3b6d1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/p19-1452",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/p19-1452",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1452",
+      "arXiv:1905.05950"
+    ],
+    "reason": "BERT内部表現がPOS・構文解析・NER等の言語処理段階をどこで表現するかを解析する研究で、推論効率化ではない。",
+    "first_checked_at": "2026-09-30T09:02:37+00:00",
+    "last_checked_at": "2026-10-03T18:43:34+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md"
+    ],
+    "title": "BERT Rediscovers the Classical NLP Pipeline"
+  },
+  "processed_at": "2026-10-03T18:43:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0d56a5f146c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
