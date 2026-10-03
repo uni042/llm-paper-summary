@@ -28,6 +28,8 @@ class RunLivenessPolicyTests(unittest.TestCase):
         ):
             with self.subTest(workflow=workflow):
                 self.assertIn(f"dispatch_if_idle {workflow}", scheduler)
+        self.assertIn("GITHUB_RUN_NUMBER % 6", scheduler)
+        self.assertIn("Library import inbox is empty; skip processor dispatch.", scheduler)
 
         retired_auto = (
             "survey-claim-fast.yml",
@@ -42,6 +44,9 @@ class RunLivenessPolicyTests(unittest.TestCase):
             "library-publication-ack.yml",
             "discovery-preload-local-fast.yml",
             "discovery-preload-warm.yml",
+            "discovery-identity-snapshot.yml",
+            "paper-metadata-reconciliation.yml",
+            "paper-quality-audit.yml",
         )
         for workflow in retired_auto:
             with self.subTest(retired=workflow):
@@ -51,6 +56,13 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertNotIn("schedule:", trigger)
                 self.assertNotIn("push:", trigger)
                 self.assertNotIn("workflow_run:", trigger)
+
+    def test_repository_tests_skip_paper_only_main_pushes(self):
+        text = (WORKFLOWS / "repository-tests.yml").read_text(encoding="utf-8")
+        push_block, rest = text.split("  pull_request:", 1)
+        pull_block = rest.split("  workflow_dispatch:", 1)[0]
+        self.assertNotIn("papers/**/*.md", push_block)
+        self.assertIn("papers/**/*.md", pull_block)
 
     def test_event_driven_fallbacks_are_freshness_gated(self):
         for workflow_name, state_path in (
