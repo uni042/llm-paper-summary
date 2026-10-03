@@ -1,9 +1,9 @@
-# Worker router — Library-first workflow v15
+# Worker router — Library-first workflow v16
 
 この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v13ではLibrary-first責務分離を維持したまま、Discovery / Research候補の重要度優先と全収録論文の前方引用カバレッジ巡回をGitHub側自動化へ追加する。
 
 1. Scheduled workerは探索・読解・分類を行い、完成成果をChatGPT Libraryへ保存する。
-2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。
+2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。現在はScheduled Task枠上限のため、独立Import taskではなく `scheduled-chat-45` の 04:45 / 10:45 / 16:45 / 22:45 JST 起動冒頭に搬送フェーズとして統合する。
 3. GitHub側の受信箱プロセッサが、最新mainでidentity解決、重複排除、正規配置、precheck、relevance反映を行う。
 
 旧direct-GitHub worker運用は履歴資料であり、新規通常runへ復活させない。
@@ -28,7 +28,7 @@
 | GitHub import inbox processor | Actions内read/write | なし | 最新mainでidentity解決、Research配置、Discovery precheck/relevance/submission、GitHub側掃除 |
 | 通常チャット | 原則read-only | read/write | 明示された監査・回収・保守 |
 
-Scheduled workerはGitHubへのclaim、reservation、submission、result、handoff、health-probe、worker-control、制御ファイル更新を行わない。Survey GitHub Importも論文内容や候補の意味判定を行わず、受信箱への転送だけを担当する。
+通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result、handoff、health-probe、worker-control、制御ファイル更新を行わない。例外は `scheduled-chat-45` の4つのImport枠だけで、`github-import-procedure.md` が要求するpending create、handoff確認、バッチ末尾のscheduler kickに限ってGitHub writeを許可する。Importフェーズは論文内容や候補の意味判定を行わず、受信箱への転送だけを担当する。
 
 ## 1. 固定identityと開始時読取
 
@@ -48,6 +48,7 @@ Scheduled workerはGitHubへのclaim、reservation、submission、result、hando
 - \`scheduled_slot=45\`
 - worklist: \`.survey/work-queue/worker-worklist-45.json\`
 - :00 と同じ通常Research / Discoveryフローを使う。08:30日次更新専用分岐は持たない
+- 04:45 / 10:45 / 16:45 / 22:45 JSTだけは、通常Research / Discoveryより先にSurvey GitHub Import搬送フェーズを実行する。搬送フェーズでは `github-import-procedure.md` に従う範囲だけGitHub create/readを許可し、完了後はread-onlyの通常フェーズへ戻る
 
 3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
@@ -120,7 +121,7 @@ run中に在庫が変化してもモードは固定する。
 2. `.github/workflows/forward-citation-sweep.yml` は `.survey/config/forward-citation-sweep.json` に従い、**収録済み全論文**を公平に低頻度巡回するカバレッジレーンとする。arXiv / DOI / Semantic Scholar IDを優先し、それらがなくてもSemantic Scholarが解決可能な安定した一次資料URLを持つ論文は `URL:` seedとして台帳へ載せる。未巡回・前回巡回が古いseedから順に処理し、長い引用一覧はprovider cursorを次回runへ持ち越す。1周を完了した後は所定期間後に先頭ページから新しい周回を開始するため、過去の収録論文を後日引用した新論文も再発見できる。
 3. カバレッジ巡回で見つかった未収録候補は既存のDiscovery候補面へ合流させ、別のrelevance正本を作らない。
 
-外部API失敗やrate limitで1seedを取得できなくても、そのseedを処理済みにせず状態を保持して後続runで再試行する。1 runで許容するprovider失敗数は `.survey/config/forward-citation-sweep.json` の `max_provider_errors_per_run` を正本とし、上限到達時はそのrunを早期終了して状態を保存する。失敗seedにも最終試行時刻を残して公平選択へ戻すため、同じ失敗seedだけが先頭を占有し続けない。安定ID・解決可能な一次資料URLのどちらもない等、provider照会不能な収録論文はunsupportedとして可視化し、全件巡回済みと偽装しない。
+外部API失敗でもそのseedを処理済みにせず状態を保持して後続runで再試行する。HTTP 404等の**論文固有4xx（429を除く）**はseed固有失敗として記録して次のseedへ進み、run全体のprovider error budgetを消費しない。HTTP 429は設定回数だけ指数バックオフ等で再試行し、再試行枯渇・5xx・network/provider障害だけをprovider-wide failureとして数える。1 runで許容するprovider-wide失敗数は `.survey/config/forward-citation-sweep.json` の `max_provider_errors_per_run` を正本とし、上限到達時だけrunを早期終了する。失敗seedにも最終試行時刻を残して公平選択へ戻すため、同じ失敗seedだけが先頭を占有し続けない。安定ID・解決可能な一次資料URLのどちらもない等、provider照会不能な収録論文はunsupportedとして可視化し、全件巡回済みと偽装しない。
 
 Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` の現行Discovery手順を必須とする。具体的には、候補本文確認前の**開始前重複ゲート**と、成果保存直前の**保存直前重複ゲート**の両方で、Libraryのimmutable Discovery成果群（必要な未転送Research成果を含む）を完全列挙してidentity集合を再構成し、GitHub mainのread-only canonical stateと統合する。意味検索だけを重複排除の正本にせず、共有可変台帳、claim、reservation、GitHub writeをScheduled workerへ追加しない。詳細な列挙・identity比較・並列worker時の再確認手順はLibrary正本へ委譲する。
 
