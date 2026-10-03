@@ -1,10 +1,8 @@
 name: Library import kick
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/scheduler/library-import-kick.json'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
