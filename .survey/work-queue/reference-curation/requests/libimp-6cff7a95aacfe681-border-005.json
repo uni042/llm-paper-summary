@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6cff7a95aacfe681-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2305.02633",
+  "reason": "推論時のtop-p samplingをentropy依存で校正するdecoding方式で推論経路には直接入るが、目的は確率的coverageの校正であり計算量・メモリ・throughput削減を主題としないため境界扱い。",
+  "title": "Conformal Nucleus Sampling",
+  "identity_tokens": [
+    "arXiv:2305.02633",
+    "DOI:10.48550/arXiv.2305.02633",
+    "DOI:10.18653/v1/2023.findings-acl.3"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cff7a95aacf",
+  "source_precheck_request_id": null
+}
