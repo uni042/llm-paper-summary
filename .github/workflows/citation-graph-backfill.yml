@@ -156,7 +156,14 @@ jobs:
             fi
           done
 
-      - name: Retry blocked references from primary PDFs
+      - name: Recover publisher and withdrawn-arXiv citation blockers
+        run: |
+          python .survey/scripts/recover_blocked_citations.py \
+            --root . \
+            --limit 200 \
+            --apply
+
+      - name: Retry remaining blocked references from primary PDFs
         run: |
           python .survey/scripts/backfill_citation_pdfs.py \
             --root . \
@@ -164,13 +171,6 @@ jobs:
             --delay 0.75 \
             --apply \
             --retry-blocked
-
-      - name: Recover publisher and withdrawn-arXiv citation blockers
-        run: |
-          python .survey/scripts/recover_blocked_citations.py \
-            --root . \
-            --limit 200 \
-            --apply
 
       - name: Rebuild final graph and indexes
         run: |
