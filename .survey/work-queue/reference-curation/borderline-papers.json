@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-02T23:09:34+00:00",
-  "record_count": 383,
+  "updated_at": "2026-10-03T01:49:35+00:00",
+  "record_count": 385,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5526,6 +5526,32 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+    },
+    "arXiv:2609.36322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36322",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.36322",
+        "arXiv:2609.36322"
+      ],
+      "reason": "chunked KV圧縮の品質失敗モードを直接解析するため推論KV研究に強く関連するが、新しい推論高速化方式より評価・機構解析が主貢献なので境界扱い。",
+      "first_checked_at": "2026-10-03T01:49:35+00:00",
+      "last_checked_at": "2026-10-03T01:49:35+00:00",
+      "linked_from": [],
+      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression"
+    },
+    "arXiv:2609.31415": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31415",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.31415",
+        "arXiv:2609.31415"
+      ],
+      "reason": "位置非依存KV再利用の評価方法とBoxoffice stress testを提案し推論システム評価には重要だが、KV再利用自体を高速化する新規runtime方式ではないため境界扱い。",
+      "first_checked_at": "2026-10-03T01:49:35+00:00",
+      "last_checked_at": "2026-10-03T01:49:35+00:00",
+      "linked_from": [],
+      "title": "Evaluating the accuracy of KV cache reuse techniques"
     }
   }
 }
