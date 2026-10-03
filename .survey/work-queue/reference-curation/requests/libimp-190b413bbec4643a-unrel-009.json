@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-009",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2110.03888",
+  "reason": "The paper's method, system design and reported result are about pretraining: Pseudo-to-Real cross-layer sharing/delinking and CPU offloading enable a 10-trillion-parameter model to be pretrained on 512 GPUs over 10 days. It does not evaluate inference-time efficiency, inference serving or decoding. Training efficiency is outside the requested inference-focused scope.",
+  "title": "M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining",
+  "identity_tokens": [
+    "arXiv:2110.03888"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[4]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "legacy-local-migration",
+  "run_key": "legacy-discovery-20261003-batch-02::chunk-0003-of-0003",
+  "reference_main_sha": "884b5fad4638d8fba245e4b0715e035d74704f8d",
+  "record_count": 20,
+  "records": [
+    {
+      "canonical_id": "arXiv:2608.14376",
+      "identity_tokens": [
+        "arXiv:2608.14376"
+      ],
+      "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2608.14376",
+      "reason": "最終目的が決定的なLLM推論サービングの実行効率化。要求ごとのprefill分離と固定形状CUDA Graph decodeで動的batch起因の非決定性を抑え、batch-invariant kernel全面利用の性能低下を避ける推論scheduler。",
+      "body_check": "status=primary_fulltext_partial_review; 13-page primary PDF. Abstract, introduction, design and invariance explanation, evaluation setup/results (§V), latency discussion, and conclusion checked; appendix/references not reviewed. arXiv HTML unavailable, PDF used.; sections=Abstract, §I Introduction, §III Motivation, §V Evaluation, §VI Latency Analysis, Conclusion",
+      "linked_from": [
+        "workers/discovery-01/ready/discovery-01-20260927-corun-v2/candidate-list.json#candidate[0]"
+      ],
+      "classification": "accept",
+      "first_checked_at": null,
+      "last_checked_at": null
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15118",
+      "identity_tokens": [
+        "arXiv:2608.15118"
+      ],
+      "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination",
+      "reason": "一次本文はLLM training/servingのcollective communicationに関するtutorial-style taxonomy / surveyで、inference pipelineとcommunication visibilityを含む直接関連の体系整理である。ただし独自の新規runtime/system評価を行うResearch paperではなく、対象は有用なsurveyとしての背景・索引価値に留まるためborderline。",
+      "source_url": "https://arxiv.org/html/2608.15118",
+      "body_check": "status=primary_full_text_relevant_sections_reviewed; reviewed_sections=Abstract, §I Introduction, §III-VII taxonomy, §VI-B Communication Integration in Inference Pipelines, §VIII Conclusion; source_ranges=lines 36-42, lines 173-205, lines 208-213; confirmed=本文自身がtutorial-style taxonomyと分類軸を明記し、推論ではrequest batchやsequence lengthの変動によりcommunicationがTTFT、TPOT、tail latencyへ可視化されると説明。概説論文の役割と独自実証研究でない点からborderline。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.18147",
+      "identity_tokens": [
+        "arXiv:2608.18147"
+      ],
+      "title": "Entropy-Constrained Adaptive Stochastic Quantization",
+      "reason": "The method jointly controls quantization error and encoded size and explicitly includes KV-cache footprint reduction and disaggregated inference among its applications. Evaluation includes 30 real-model KV-cache tensors from five model families, alongside weights and activations.",
+      "source_url": "https://arxiv.org/html/2608.18147",
+      "body_check": "review_scope=Full primary HTML reviewed: entropy-constrained quantization formulation, exact and approximate dynamic programs, refinement, real-model tensor evaluation, and appendices describing protocol and measured tensors.; evidence=The method jointly controls quantization error and encoded size and explicitly includes KV-cache footprint reduction and disaggregated inference among its applications. Evaluation includes 30 real-model KV-cache tensors from five model families, alongside weights and activations.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21952",
+      "identity_tokens": [
+        "arXiv:2608.21952"
+      ],
+      "title": "SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality",
+      "reason": "For Mamba-2 2.7B, the paper reports up to 1.47x speedup over FP16 and 1.38x over Quamba2 while retaining near-FP16 quality; the paper explicitly targets efficient inference and also reports Orin NX results.",
+      "source_url": "https://arxiv.org/html/2608.21952",
+      "body_check": "review_scope=Full primary HTML reviewed: SSD-specific quantization design, INT8 execution path, accuracy and latency evaluations including Orin NX, ablations, and conclusion.; evidence=For Mamba-2 2.7B, the paper reports up to 1.47x speedup over FP16 and 1.38x over Quamba2 while retaining near-FP16 quality; the paper explicitly targets efficient inference and also reports Orin NX results.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22503",
+      "identity_tokens": [
+        "arXiv:2608.22503"
+      ],
+      "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains",
+      "reason": "The LLM use case and collective synchronization analysis are framed around distributed LLM training iterations (including tensor parallelism and FSDP); its final objective is training/collective-system characterization rather than reducing inference work.",
+      "source_url": "https://arxiv.org/pdf/2608.22503",
+      "body_check": "review_scope=Full primary PDF reviewed: problem framing, LLM workload setup, trace analysis, model and experiments, limitations, and conclusion.; evidence=The LLM use case and collective synchronization analysis are framed around distributed LLM training iterations (including tensor parallelism and FSDP); its final objective is training/collective-system characterization rather than reducing inference work.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25431",
+      "identity_tokens": [
+        "arXiv:2608.25431"
+      ],
+      "title": "Here is a GIFT: Enforcing User Data Isolation in LLM Serving via GPU Information Flow Tracking",
+      "reason": "GIFT and GIFT-CC enforce user-data isolation during LLM serving using GPU information-flow tracking and encryption. The primary objective is privacy/security, not inference efficiency. The authors evaluate effects on serving throughput and latency (including up to 4-10.7% throughput overhead in the abstract and optimization-specific overheads), leaving a narrow but direct systems-performance connection; retained as borderline.",
+      "source_url": "https://arxiv.org/html/2608.25431",
+      "body_check": "review_scope=Full primary arXiv HTML: isolation design, vLLM/DistServe implementation, throughput/latency and overhead evaluation, optimizations and conclusion.; evidence=GIFT and GIFT-CC enforce user-data isolation during LLM serving using GPU information-flow tracking and encryption. The primary objective is privacy/security, not inference efficiency. The authors evaluate effects on serving throughput and latency (including up to 4-10.7% throughput overhead in the abstract and optimization-specific overheads), leaving a narrow but direct systems-performance connection; retained as borderline.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28444",
+      "identity_tokens": [
+        "arXiv:2608.28444"
+      ],
+      "title": "Sliding-window beats linear attention",
+      "reason": "attention sink付きsliding-window attentionをlinearized attentionと比較し、追加学習なしの推論時代替としてdecode speedとKV memoryを下げる。本文のspeed/memory microbenchmarkは4-layer Transformer、batch=1、RTX PRO 6000 Blackwellであり、全規模の実用LLMへそのまま一般化できない。",
+      "source_url": "https://arxiv.org/html/2608.28444",
+      "body_check": "status=primary_full_text_partial_review; reviewed_sections=Abstract, §4.1-4.3 Experiments, §5 Limitations / Future Work, §6 Conclusion; source_ranges=lines 39-50, lines 103-152, lines 152-158; confirmed=本文の表はknowledge/reasoning・needle-in-haystack精度を比較し、speed/memory節はdecoding throughputとKV/recurrent-state memoryの比較を記述。SWAはwindow sizeに達するとKV memoryが一定でwindow 64が最速と記載。評価は4-layer, embedding 1024, batch 1, fp16, RTX PRO 6000 Blackwellで、hybrid full-attention modelは未評価。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29745",
+      "identity_tokens": [
+        "arXiv:2608.29745"
+      ],
+      "title": "JITterFlip: Uncovering Fault Attack Surfaces in JIT-Compiled LLM Serving",
+      "reason": "JITterFlip studies a Rowhammer fault attack on the JIT serving control plane. It demonstrates corrupt-output and correct-output latency-amplification attacks (up to 124.97x) against inference execution; its objective is to expose and characterize a vulnerability, not to improve inference efficiency or serving performance. The latency result is an attack impact, not an optimization gain.",
+      "source_url": "https://arxiv.org/html/2608.29745",
+      "body_check": "review_scope=Full primary arXiv HTML: fault-attack model, host-side JIT control-flow target, end-to-end Rowhammer attacks, latency/data effects, mitigations, limitations, and conclusion.; evidence=JITterFlip studies a Rowhammer fault attack on the JIT serving control plane. It demonstrates corrupt-output and correct-output latency-amplification attacks (up to 124.97x) against inference execution; its objective is to expose and characterize a vulnerability, not to improve inference efficiency or serving performance. The latency result is an attack impact, not an optimization gain.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00363",
+      "identity_tokens": [
+        "arXiv:2609.00363"
+      ],
+      "title": "Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance",
+      "reason": "power-of-two INT8 scaleを使う配備条件とcross-kernel bitwise determinism/conformanceが主目的で、主な結果は同一出力保証とfault-detection suite。throughputは1.7Bのみ・6設定でprefill -9.6%～+1.4%、decode -1.6%～+0.9%と混在し、8B/14Bは未測定。計算削減・速度向上研究とは確認できず、推論効率への接点はquantization尺度と限定的cost測定に留まる。",
+      "source_url": "https://arxiv.org/html/2609.00363",
+      "body_check": "status=primary_full_text_partial_review; reviewed_sections=Abstract, §V Power-of-Two Scales as a Deployable Condition, §V-C The Cost, §VI Limitations, §VII Conclusion; source_ranges=lines 43-55, lines 238-247, lines 249-253; confirmed=本文はfault-check sensitivityとkernel equivalenceを主題にし、power-of-two scalesでtwo tested kernelsのoutputがbitwise一致する条件を調べる。throughputは1.7Bだけ測定し範囲は混在、8B/14B throughput未測定。測定はsingle RTX 4090/software stack。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04875",
+      "identity_tokens": [
+        "arXiv:2609.04875"
+      ],
+      "title": "Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents",
+      "reason": "選択的replayでfull resetより再計算tokenを最大9×減らす効率上の結果はあるが、論文の中心問題はforget要求後のexact execution-state unlearning、情報漏えい評価、プライバシー保証。推論高速化はunlearning手段のコスト最適化で付随的であるため、中心スコープに対してborderline。",
+      "source_url": "https://arxiv.org/html/2609.04875",
+      "body_check": "status=primary_full_text_partial_review; reviewed_sections=Abstract, §1 framing / findings, Selective replay results, Limitations; source_ranges=lines 50-59, lines 71-81, lines 256-260, lines 284-286; confirmed=本文は目的をforget request後にtarget情報を観測していないagent同等のbehaviorを実現することと定義する。selective replayはmax9× fewer recomputed tokensと報告する一方、guaranteeはreconstructible runtime stateに限定される。削減はunlearning処理内のrecompute量である。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06128",
+      "identity_tokens": [
+        "arXiv:2609.06128"
+      ],
+      "title": "Substrate-Portable Execution for Production LLM Workflows",
+      "reason": "The paper exposes inference as a workflow primitive so one agent graph can use streaming, durable asynchronous, or cross-invocation batch inference. It reports no detectable output-quality difference across bindings and describes batch pricing as the primary workflow-level cost lever. However, measured Flink execution has 33–152× end-to-end latency versus streaming, and the primary contribution is workflow portability and access to provider batch pricing rather than reducing inference computation or improving serving efficiency. Relevant to inference deployment economics but indirect under the inference-optimization focus.",
+      "source_url": "https://arxiv.org/html/2609.06128",
+      "body_check": "review_scope=Full primary arXiv HTML: production workflow problem, typed dataflow/system design, Local/SWF/Flink bindings, quality/cost evaluation, portability limits, related work and conclusion (§§1–6).; evidence=The paper exposes inference as a workflow primitive so one agent graph can use streaming, durable asynchronous, or cross-invocation batch inference. It reports no detectable output-quality difference across bindings and describes batch pricing as the primary workflow-level cost lever. However, measured Flink execution has 33–152× end-to-end latency versus streaming, and the primary contribution is workflow portability and access to provider batch pricing rather than reducing inference computation or improving serving efficiency. Relevant to inference deployment economics but indirect under the inference-optimization focus.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08115",
+      "identity_tokens": [
+        "arXiv:2609.08115"
+      ],
+      "title": "Router Prior Bias: Preserving Base Routing Structure in MoE Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.08115",
+      "reason": "The primary source defines Router Prior Bias as a training-time bias that anchors router logits to a prior from a frozen base router while leaving the router trainable (abstract and §3). The paper compares post-training objectives on Moonlight-16B-A3B and Qwen3-30B-A3B-Base; its results are downstream task accuracy and routing retention, not inference latency, memory, or compute savings (§4-5). The evaluation removes the training-time prior hook and probes in inference mode to measure the trained router; inference mode is an evaluation protocol, not an inference-efficiency method.",
+      "body_check": "arXiv metadata and full HTML: abstract, method and objective descriptions (§3), model/data/evaluation setup (§4), main results and control descriptions (§5 and appendices).",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08307",
+      "identity_tokens": [
+        "arXiv:2609.08307"
+      ],
+      "title": "A Measurement Study of LLM Inference Trade-offs Across Edge Continuum Hardware",
+      "reason": "This controlled study compares LLM inference, quantization and deployment platform across Jetson Orin, server GPU and server CPU, measuring accuracy, latency, model footprint and energy. It uses Pareto analysis to help select local-versus-remote execution, but does not introduce a new inference optimization or serving system; it is an empirical deployment-selection study, making the fit borderline.",
+      "source_url": "https://arxiv.org/html/2609.08307",
+      "body_check": "review_scope=Full primary arXiv HTML: benchmarking methodology, edge and near-edge configurations, accuracy/latency/energy/model-size results, Pareto analysis, limitations, and conclusion.; evidence=This controlled study compares LLM inference, quantization and deployment platform across Jetson Orin, server GPU and server CPU, measuring accuracy, latency, model footprint and energy. It uses Pareto analysis to help select local-versus-remote execution, but does not introduce a new inference optimization or serving system; it is an empirical deployment-selection study, making the fit borderline.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.12378",
+      "identity_tokens": [
+        "arXiv:2609.12378"
+      ],
+      "title": "An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference",
+      "reason": "Odin implements end-to-end fully homomorphic Llama-3-8B inference. Although privacy is the deployment premise, the paper directly optimizes the encrypted inference execution path: on one H100 with a 128-token input, it reports full 32-layer ciphertext computation falling from 1651.9 s with THOR to 366.4 s (4.51x); it also reports 58.9 GiB peak memory. Cross-paper FHE latency numbers are explicitly not directly comparable due to different models/protocols/hardware.",
+      "source_url": "https://arxiv.org/html/2609.12378",
+      "body_check": "review_scope=Full primary v2 arXiv HTML: FHE packing/layout, operator implementation, optimization, runtime/memory measurements, cross-system comparison caveats, and conclusion.; evidence=Odin implements end-to-end fully homomorphic Llama-3-8B inference. Although privacy is the deployment premise, the paper directly optimizes the encrypted inference execution path: on one H100 with a 128-token input, it reports full 32-layer ciphertext computation falling from 1651.9 s with THOR to 366.4 s (4.51x); it also reports 58.9 GiB peak memory. Cross-paper FHE latency numbers are explicitly not directly comparable due to different models/protocols/hardware.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.14850",
+      "identity_tokens": [
+        "arXiv:2609.14850"
+      ],
+      "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference",
+      "reason": "長い回答の独立タスクを言語モデルが並列化するPASTA、依存関係に基づくKV cache evictionのTIP、計画拡散系デコードを扱う学位論文。PASTAはAlpacaEvalで速度・品質trade-offを実測し、TIPは同精度比較でlive KV tokensを54–59%減らすなど、中心に推論効率の方法と評価がある。個別章で異なるモデル・設定を使う大部の学位論文であり、全結果を一つの比較条件と扱えない。",
+      "source_url": "https://arxiv.org/html/2609.14850",
+      "body_check": "status=primary_full_text_partial_review; reviewed_sections=Abstract/early chapters, PASTA §3.5 Evaluation and Conclusion, TIP §4.2-4.3 and results, Chapter 7 Conclusion; source_ranges=lines 423-445, lines 682-710, lines 835-863, lines 924-924, lines 1393-1397; confirmed=一次全文にPASTA asynchronous parallel decoding、TIP page-granular KV eviction、Planned Diffusionを確認。PASTAは1.21–1.93× realized speedupと品質変化を報告。TIPはAIME 2024/2025でdense decoding比live KV cacheを59%/54%削減しaccuracyを6.4/2.1 point改善。Planned Diffusionは1.27–1.81× speedupと品質変化を報告。各々は異なる章・評価設定であり一つの比較条件ではない。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18526",
+      "identity_tokens": [
+        "arXiv:2609.18526"
+      ],
+      "title": "Running an LLM Locally Doesn't Keep Prompts Private: They Survive in Allocator Memory After Inference",
+      "reason": "The worklist title differs from the current arXiv v1 title for the same listed arXiv ID; the primary manuscript studies prompt confidentiality across local serving boundaries, including residual allocator memory and sanitization. Its core contribution is a security/privacy audit, not inference computation or serving efficiency. Sanitization reduces recovered prompt residue at less than about 0.5% latency difference, but does not restore confidentiality; that overhead measurement does not change the paper's unrelated scope disposition.",
+      "source_url": "https://arxiv.org/html/2609.18526",
+      "body_check": "review_scope=Full primary arXiv HTML: confidentiality-boundary framework, local serving experiments, prompt residue/persistence, runtime sanitization, costs, and conclusion.; evidence=The worklist title differs from the current arXiv v1 title for the same listed arXiv ID; the primary manuscript studies prompt confidentiality across local serving boundaries, including residual allocator memory and sanitization. Its core contribution is a security/privacy audit, not inference computation or serving efficiency. Sanitization reduces recovered prompt residue at less than about 0.5% latency difference, but does not restore confidentiality; that overhead measurement does not change the paper's unrelated scope disposition.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.21672",
+      "identity_tokens": [
+        "arXiv:2609.21672"
+      ],
+      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
+      "reason": "The method transforms dense LLM checkpoints into sparsely activated MoEs using L0 regularization, with the explicit goal of accelerating inference. Across Llama-3-8B, Mistral-7B, and Qwen2-7B, it reports up to 2-2.5x inference speedup under a common SGLang evaluation setup while retaining comparable quality. Limitations include no 70B evaluation and limited comparison with large MoEs.",
+      "source_url": "https://arxiv.org/html/2609.21672",
+      "body_check": "review_scope=Full primary arXiv HTML: sparse-MoE conversion objective and method, inference framework/benchmark evaluation, results, discussion, and limitations.; evidence=The method transforms dense LLM checkpoints into sparsely activated MoEs using L0 regularization, with the explicit goal of accelerating inference. Across Llama-3-8B, Mistral-7B, and Qwen2-7B, it reports up to 2-2.5x inference speedup under a common SGLang evaluation setup while retaining comparable quality. Limitations include no 70B evaluation and limited comparison with large MoEs.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23585",
+      "identity_tokens": [
+        "arXiv:2609.23585"
+      ],
+      "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization",
+      "reason": "This empirical study tests whether attention-sink head maps transfer from bf16 to 4-bit quantized models and gives calibration guidance for sink-aware edge deployment. It finds global rank correlations >=0.980 while top-k membership retention is 76.5-88.5%, and the authors explicitly state STC measures topology, not task impact. It is relevant to deploying quantized inference-time attention policies, but does not demonstrate inference latency, throughput or end-task gains; retained as borderline.",
+      "source_url": "https://arxiv.org/html/2609.23585",
+      "body_check": "review_scope=Full primary arXiv HTML: sink-topology consistency metrics, 4-bit quantization and calibration-transfer measurements, edge-device feasibility, limitations and conclusion.; evidence=This empirical study tests whether attention-sink head maps transfer from bf16 to 4-bit quantized models and gives calibration guidance for sink-aware edge deployment. It finds global rank correlations >=0.980 while top-k membership retention is 76.5-88.5%, and the authors explicitly state STC measures topology, not task impact. It is relevant to deploying quantized inference-time attention policies, but does not demonstrate inference latency, throughput or end-task gains; retained as borderline.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.25916",
+      "identity_tokens": [
+        "arXiv:2609.25916"
+      ],
+      "title": "Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement",
+      "reason": "CASA is a post-training quantization allocation method targeting a fixed low-bit model budget. It uses activation-aware sensitivity and cross-layer refinement; on five LLMs it compares perplexity and six-task accuracy, with gains over the scalar-proxy baseline particularly at 2.25–2.75 bits per weight. Weight quantization under a memory budget enables smaller inference models. Evidence demonstrates model quality under quantization rather than serving latency or tokens/s.",
+      "source_url": "https://arxiv.org/html/2609.25916",
+      "body_check": "review_scope=Full primary arXiv HTML: bit-allocation method, cross-layer refinement, model/bit-budget setup, perplexity/accuracy evaluation, appendices and conclusion (§§1–6 and appendices).; evidence=CASA is a post-training quantization allocation method targeting a fixed low-bit model budget. It uses activation-aware sensitivity and cross-layer refinement; on five LLMs it compares perplexity and six-task accuracy, with gains over the scalar-proxy baseline particularly at 2.25–2.75 bits per weight. Weight quantization under a memory budget enables smaller inference models. Evidence demonstrates model quality under quantization rather than serving latency or tokens/s.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3341301.3359646",
+      "identity_tokens": [
+        "DOI:10.1145/3341301.3359646"
+      ],
+      "title": "PipeDream: generalized pipeline parallelism for DNN training",
+      "reason": "The paper's abstract and introduction describe PipeDream as pipeline parallelism for faster DNN training; its forward/backward pipeline and experiments measure training throughput and time-to-accuracy. It does not target LLM inference or inference-serving efficiency. The full primary paper was available from the author-hosted Berkeley PDF after the DOI resolver itself returned an internal error.",
+      "source_url": "https://people.eecs.berkeley.edu/~matei/papers/2019/sosp_pipedream.pdf",
+      "body_check": "review_scope=Full 15-page author-hosted SOSP primary PDF: pipeline parallel design, training scheduling and evaluation, limitations and conclusion.; evidence=The paper's abstract and introduction describe PipeDream as pipeline parallelism for faster DNN training; its forward/backward pipeline and experiments measure training throughput and time-to-accuracy. It does not target LLM inference or inference-serving efficiency. The full primary paper was available from the author-hosted Berkeley PDF after the DOI resolver itself returned an internal error.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[1]"
+      ]
+    }
+  ],
+  "parent_run_key": "legacy-discovery-20261003-batch-02",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 60
+}

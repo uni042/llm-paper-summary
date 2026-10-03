@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-006",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2101.03961",
+  "reason": "Switch Transformers use sparse expert routing with roughly constant FLOPs per token, but the paper's main goal and measured speedups are pretraining scalability and training stability (up to 7x pretraining speed in its abstract). The manuscript evaluates training/fine-tuning quality and training regimes, not inference-serving efficiency or inference-time optimization. Under the workflow's training-only exclusion it is unrelated.",
+  "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+  "identity_tokens": [
+    "arXiv:2101.03961"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[2]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

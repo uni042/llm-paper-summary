@@ -409,7 +409,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-08 · [Accelerating LLM Inference with Staged Speculative Decoding](2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   小バッチの自己回帰デコードでは、1トークン生成のたびにモデル重みをGPUへ供給する必要がある一方、行列演算のバッチが小さいため演算器を使い切れない。標準的な投機的復号は小さなドラフトモデルが複数トークンを先読みし、大きな対象モデル（論文ではoracleと呼ぶ）が一括検証することで、重み読み出し1回あたりの確定トークン数を増やす。
 
 - **2023-02 · [Speculative Decoding with Big Little Decoder](2023-2302.07863-speculative-decoding-with-big-little-decoder.md)**  

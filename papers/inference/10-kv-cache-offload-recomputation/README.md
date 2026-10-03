@@ -84,6 +84,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   Swarmは共に参照されるKVを事前にグループ化し、複数SSDへ分散して並列読込みすることで、単一SSDの帯域上限と長文KVのI/O待ちを減らす方式。
 
+- **2026-02 · [ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution](2026-2602.03203-foresightkv-long-term-contribution-eviction.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
+
 - **2026-02 · [Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices](2026-2603.04428-persistent-q4-agent-kv-cache.md)**  
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：3  
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
@@ -115,10 +119,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning](2026-2602.23592-keep-kv-cache-centric-embodied-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   KEEPは更新頻度で具身記憶を群分けし、文脈依存の重要度伝播で必要KVだけを再計算し、層をまたぐ先読みでCPU→GPU読込み待ちを減らす方式。
-
-- **2026-02 · [ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution](2026-2602.03203-foresightkv-long-term-contribution-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
 
 - **2025-11 · [SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation](2025-swiftkv.md)**  
   実装：[✓](https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference) ・ リポジトリ内被引用：2  

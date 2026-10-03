@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:1909.08053",
+  "reason": "The primary source explicitly presents an intra-layer model-parallel method for training large Transformer models; experiments train models up to 8.3B parameters using 512 NVIDIA V100 GPUs (§1, §3-5). Its 15.1 PFLOP/s application throughput and 76% scaling efficiency describe distributed training. The conclusion's future work remains larger-scale pretraining and optimizer memory efficiency (§6). No inference-time efficiency method or evaluation is presented in the reviewed paper.",
+  "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+  "identity_tokens": [
+    "arXiv:1909.08053"
+  ],
+  "linked_from": [
+    "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

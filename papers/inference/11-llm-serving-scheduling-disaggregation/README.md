@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（307本）
+## 自動生成の論文一覧（308本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -97,6 +97,10 @@
 - **2025-12 · [Cornserve: Efficiently Serving Any-to-Any Multimodal Models](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
   実装：[✓](https://github.com/cornserve-ai/cornserve) ・ リポジトリ内被引用：3  
   Cornserveは、テキスト・画像・動画・音声を入力にも出力にも持つAny-to-Anyマルチモーダルモデルで、要求種別ごとに異なる計算経路と構成要素ごとのスケーリング特性を明示し、モノリシック配置・分離配置・混合配置を自動探索する配信システムである。
+
+- **2025-11 · [Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models](2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  そのため演算量を抑えられるが、選択後に必要な重みがGPUに載っていない場合はストレージまたはホストメモリから転送する必要がある。従来の予測方式は前層の状態から次層の選択を予測するため、層をまたぐ変化が誤りになり、最初の層では参照できる前層出力もない。
 
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
