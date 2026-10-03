@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-0100-scheduled-chat-00/r01",
+  "reference_main_sha": "9d4c67a22127ca48e754639ea9cc6b975f48eba2",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1512.03385",
+      "identity_tokens": [
+        "arXiv:1512.03385"
+      ],
+      "title": "Deep Residual Learning for Image Recognition",
+      "reason": "画像認識向け残差学習により152層級CNNを学習しやすくする研究で、ImageNet/COCOの視覚認識精度が主目的。LLM推論・サービングではない。",
+      "source_url": "https://arxiv.org/abs/1512.03385",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2015.7298594",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2015.7298594"
+      ],
+      "title": "Going deeper with convolutions",
+      "reason": "Inceptionモジュールによる画像分類CNNの計算効率と精度を扱うコンピュータビジョン研究で、LLM/Transformer推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/1409.4842",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/0471200611",
+      "identity_tokens": [
+        "DOI:10.1002/0471200611"
+      ],
+      "title": "Elements of Information Theory",
+      "reason": "エントロピー、符号化、通信路容量、レート歪み等を体系化した情報理論の教科書で、LLM推論システムを提案・評価する研究ではない。",
+      "source_url": "https://doi.org/10.1002/0471200611",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-020-2649-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-020-2649-2"
+      ],
+      "title": "Array programming with NumPy",
+      "reason": "NumPyの配列プログラミング概念と科学計算エコシステムを解説する論文で、LLM推論ランタイムや専用最適化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2006.10256",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-024-07487-w",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-024-07487-w"
+      ],
+      "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+      "reason": "タンパク質・核酸・低分子等の生体分子相互作用の構造予測が主目的で、LLM推論効率化とは対象領域が異なる。",
+      "source_url": "https://doi.org/10.1038/s41586-024-07487-w",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-1-4684-2001-2_9",
+      "identity_tokens": [
+        "DOI:10.1007/978-1-4684-2001-2_9"
+      ],
+      "title": "Reducibility among Combinatorial Problems",
+      "reason": "NP完全性と多項式時間帰着を扱う計算複雑性理論の古典研究で、LLM推論システムの方式・実装・評価ではない。",
+      "source_url": "https://doi.org/10.1007/978-1-4684-2001-2_9",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2003.1238663",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2003.1238663"
+      ],
+      "title": "Video Google: a text retrieval approach to object matching in videos",
+      "reason": "局所画像特徴をvisual wordsとして索引し動画中の物体照合を行うコンピュータビジョン/検索研究で、LLM推論とは無関係。",
+      "source_url": "https://doi.org/10.1109/ICCV.2003.1238663",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cgo.2004.1281665",
+      "identity_tokens": [
+        "DOI:10.1109/cgo.2004.1281665"
+      ],
+      "title": "LLVM: a compilation framework for lifelong program analysis & transformation",
+      "reason": "SSA中間表現を中心とする汎用コンパイラ基盤LLVMの設計研究で、後年のLLMカーネル基盤の背景にはなるが、LLM推論そのものを対象としない。",
+      "source_url": "https://doi.org/10.1109/CGO.2004.1281665",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf02295996",
+      "identity_tokens": [
+        "DOI:10.1007/bf02295996"
+      ],
+      "title": "Note on the sampling error of the difference between correlated proportions or percentages",
+      "reason": "対応のある比率差の標本誤差を扱う統計学研究で、LLM・ニューラルネット推論とは無関係。",
+      "source_url": "https://doi.org/10.1007/BF02295996",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2018.00781",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2018.00781"
+      ],
+      "title": "Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+      "reason": "同質的不確実性で複数タスク損失を重み付けして画像の深度・意味/インスタンス分割を共同学習する研究で、学習手法かつコンピュータビジョンが主目的。",
+      "source_url": "https://arxiv.org/abs/1705.07115",
+      "body_check": "abstract_screen_only: タイトル・abstract・書誌情報から対象外であることが論文固有の根拠付きで明白なため、router v15 / Library手順v24のpre-screen hard gateに従い本文読解を省略。",
+      "first_checked_at": "2026-10-04T01:00:00+09:00",
+      "last_checked_at": "2026-10-04T01:00:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 10
+    }
+  ]
+}
