@@ -408,6 +408,7 @@ def lookup_identifiers(
         s2_api_ids = [_semantic_scholar_id(identifier) for identifier in s2_ids]
         batch_rows: list[Any] = []
         batch_error: str | None = None
+        batch_allow_single_fallback = False
         try:
             request = Request(
                 S2_PAPER_BATCH_URL + "?" + urlencode({"fields": S2_EXPLICIT_FIELDS}),
@@ -425,10 +426,26 @@ def lookup_identifiers(
             if not isinstance(payload, list):
                 raise DiscoveryProviderError("Semantic Scholar batch response must be a list")
             batch_rows = payload
+        except DiscoveryProviderError as exc:
+            batch_error = str(exc)
+            # A permanent "batch endpoint unsupported" response may still be
+            # recoverable through exact single-ID lookups. Provider-wide
+            # throttling/outage/network errors must not fan out N batch items
+            # into N separately retried requests.
+            batch_allow_single_fallback = exc.status_code == 405
         except Exception as exc:
             batch_error = str(exc)
 
         for index, requested_id in enumerate(s2_ids):
+            if batch_error is not None and not batch_allow_single_fallback:
+                outcomes[requested_id] = {
+                    "requested_id": requested_id,
+                    "status": "error",
+                    "record": None,
+                    "lookup_route": "semantic_scholar_batch",
+                    "error": batch_error,
+                }
+                continue
             row = batch_rows[index] if index < len(batch_rows) else None
             record = _paper_record(row) if isinstance(row, dict) else None
             if record and _identifier_matches_record(requested_id, record):
