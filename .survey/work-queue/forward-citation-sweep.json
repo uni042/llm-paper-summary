@@ -867,7 +867,6 @@
     "DOI:10.48550/arxiv.2604.26388": "arXiv:2604.26388",
     "DOI:10.48550/arxiv.2604.26821": "arXiv:2604.26821",
     "DOI:10.48550/arxiv.2604.26963": "arXiv:2604.26963",
-    "DOI:10.48550/arxiv.2605.01106": "arXiv:2605.01106",
     "DOI:10.48550/arxiv.2605.01837": "arXiv:2605.01837",
     "DOI:10.48550/arxiv.2605.05519": "arXiv:2605.05519",
     "DOI:10.48550/arxiv.2605.05676": "arXiv:2605.05676",
@@ -2251,7 +2250,6 @@
     "SemanticScholar:dbc57324658bd1db89e28fbf7d05d4466c501bcf": "arXiv:2409.19488",
     "SemanticScholar:dc6cd35cc981573e85b5c85e86ec916da74384ac": "DOI:10.1109/acpee69242.2026.11524710",
     "SemanticScholar:dcbfb6c605dace48d8bf87cd9c774e7930bb8c9a": "DOI:10.1016/j.procs.2026.04.254",
-    "SemanticScholar:dcc66cbfba7f76cc4f2ed58d34c3cd9e09f1acb5": "arXiv:2605.01106",
     "SemanticScholar:dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a": "arXiv:2608.19147",
     "SemanticScholar:dd313bde76bf9668e0e09a040e5d6285c1909aa4": "arXiv:2512.00083",
     "SemanticScholar:dd403e44b44e9c56d1fbb9f580634fd7797d51e2": "arXiv:2609.40118",
@@ -2785,7 +2783,6 @@
     "arXiv:2604.26821": "arXiv:2604.26821",
     "arXiv:2604.26963": "arXiv:2604.26963",
     "arXiv:2604.27396": "arXiv:2604.27396",
-    "arXiv:2605.01106": "arXiv:2605.01106",
     "arXiv:2605.01837": "arXiv:2605.01837",
     "arXiv:2605.04074": "arXiv:2605.04074",
     "arXiv:2605.05519": "arXiv:2605.05519",
@@ -3291,7 +3288,7 @@
     "arXiv:2610.02046": "arXiv:2610.02046",
     "arXiv:2610.02057": "arXiv:2610.02057"
   },
-  "candidate_count": 1389,
+  "candidate_count": 1388,
   "candidates": {
     "DOI:10.1002/cpe.70565": {
       "abstract": "Although energy has become a major concern in data processing systems, it is usually hard to get a deep understanding of how performance and energy consumption relate to each other when planning how to configure a computing environment to execute a specific data‐oriented workload. In this paper, we propose a multi‐layered methodology to analyze the energy consumption of big data workloads executed using Apache Spark in virtualized cloud environments. The approach is structured into three layers: Resource provisioning, system‐level resource utilization, and application‐level resource utilization. Using direct energy measurements using a Power Distribution Unit (PDU) and detailed system monitoring, the study investigates how infrastructure choices and workload characteristics influence energy consumption. Results show that optimal virtual machine configurations depend on workload type and input size; while provisioning decisions affect energy consumption, system‐level metrics such as CPU utilization and disk I/O offer a deeper understanding of the final performance versus energy consumption results. By applying our methodology, our results reveal the impact of task distribution and resource under‐utilization on overall energy efficiency. The findings demonstrate that energy optimization in big data environments requires a comprehensive understanding of factors across infrastructure, system, and application layers. The proposed methodology serves as a practical guide for energy‐aware design and decision‐making in cloud‐based data processing systems.",
@@ -40243,46 +40240,6 @@
       "venue": "arXiv.org",
       "year": 2026
     },
-    "arXiv:2605.01106": {
-      "abstract": "Speculative decoding accelerates autoregressive inference by drafting candidate tokens with a fast model and verifying them in parallel with the target. Self-speculative methods avoid the need for an external drafter but have been studied exclusively in homogeneous Transformer architectures. We introduce component-aware self-speculative decoding, the first method to exploit the internal architectural heterogeneity of hybrid language models, isolating the SSM/linear-attention subgraph as a zero-cost internal draft. We evaluate this on two architecturally distinct hybrid families: Falcon-H1 (parallel: Mamba-2 + attention per layer) and Qwen3.5 (sequential: interleaved linear and attention layers), with a pure Transformer control (Qwen2.5). Parallel hybrids achieve acceptance rates of alpha = 0.68 at draft length k=2 under greedy decoding, while sequential hybrids yield only alpha = 0.038 -- an 18x gap attributable to how each architecture integrates its components. The property is scale-invariant: Falcon-H1 at 3B reproduces the rates observed at 0.5B. We further show that perplexity degradation from a companion ablation study predicts speculative viability without running speculative decoding: a 3.15x ratio (Falcon) maps to alpha = 0.37 at k=4, while 81.96x (Qwen) maps to alpha = 0.019. For sequential hybrids, generic LayerSkip achieves 12x higher acceptance rates than the component-aware strategy. The composition pattern of hybrid models -- not merely the presence of alternative components -- determines whether component-level self-speculation is viable.",
-      "arxiv_id": "2605.01106",
-      "authors": [
-        "Hector Borobia",
-        "Elies Seguí-Mas",
-        "Guillermina Tormo-Carbó"
-      ],
-      "canonical_id": "arXiv:2605.01106",
-      "citation_count": 1,
-      "citation_count_source": "semantic_scholar",
-      "discovery_routes": [
-        "forward_citation_sweep"
-      ],
-      "doi": "10.48550/arXiv.2605.01106",
-      "first_seen_at": "2026-10-03T14:34:33+00:00",
-      "forward_seed_ids": [
-        "ACL:2024.acl-long.681"
-      ],
-      "identifiers": [
-        "SemanticScholar:dcc66cbfba7f76cc4f2ed58d34c3cd9e09f1acb5"
-      ],
-      "last_seen_at": "2026-10-03T14:34:33+00:00",
-      "linked_from": [
-        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
-      ],
-      "linked_from_lineages": [
-        "Conditional Computation"
-      ],
-      "linked_from_titles": [
-        "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding"
-      ],
-      "published": "2026-05-01",
-      "relation_count": 1,
-      "semantic_scholar_id": "dcc66cbfba7f76cc4f2ed58d34c3cd9e09f1acb5",
-      "source_url": "https://arxiv.org/abs/2605.01106",
-      "title": "Component-Aware Self-Speculative Decoding in Hybrid Language Models",
-      "venue": "arXiv.org",
-      "year": 2026
-    },
     "arXiv:2605.01837": {
       "abstract": "Power oversubscription is increasingly central to datacenter operation as power density grows, making it necessary to dynamically allocate limited power budgets across devices based on real-time demand. Existing approaches typically assume flat power domains, whereas in practice power distribution is hierarchical and allocation decisions must additionally respect tenant-level contractual constraints. We present nvPAX, a constrained-optimization policy that computes feasible power allocations at every control step via a three-phase hybrid QP/LP procedure. Phase I allocates power with minimum deviation from each device's power request, while respecting job priorities. Phase II fairly distributes excess power among active devices. Phase III fairly distributes any remaining power to idle devices. The rationale behind the three phases is to allow power oversubscription while maximizing datacenter utilization. On a trace-driven large-scale simulation using GPU power telemetry from a production datacenter, nvPAX runs with a mean wall-clock time of 264.69 ms per allocation interval and achieves a mean satisfaction ratio of 98.92%, outperforming static equal-share allocation and providing robustness beyond greedy proportional allocation in the presence of non-uniform hierarchical bottlenecks.",
       "arxiv_id": "2605.01837",
@@ -61398,8 +61355,8 @@
       "year": 2026
     }
   },
-  "due_seed_count_before_run": 1466,
-  "paper_count": 1507,
+  "due_seed_count_before_run": 1471,
+  "paper_count": 1513,
   "policy": "forward-citation-coverage-v1",
   "schema_version": 1,
   "seeds": {
@@ -62163,8 +62120,11 @@
     },
     "DOI:10.18653/v1/2025.naacl-long.601": {
       "canonical_id": "DOI:10.18653/v1/2025.naacl-long.601",
-      "cycle_started_at": null,
+      "cycle_started_at": "2026-10-03T17:04:31+00:00",
+      "last_attempt_at": "2026-10-03T17:04:31+00:00",
       "last_completed_at": null,
+      "last_error": "DiscoveryProviderError: Semantic Scholar page fetch failed at offset 0: HTTP Error 404: Not Found",
+      "last_error_at": "2026-10-03T17:04:31+00:00",
       "next_cursor": null,
       "paper_path": "papers/inference/05-speculative-decoding-moe/2025-speculative-diffusion-decoding.md",
       "published": "2025-04-29",
@@ -62556,6 +62516,18 @@
       "seed_identifier": "arXiv:2202.09368",
       "supported": true,
       "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    "arXiv:2203.16487": {
+      "canonical_id": "arXiv:2203.16487",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "published": "2022-03-30",
+      "rescan_days": 90,
+      "seed_identifier": "arXiv:2203.16487",
+      "supported": true,
+      "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation"
     },
     "arXiv:2205.10034": {
       "canonical_id": "arXiv:2205.10034",
@@ -63949,6 +63921,18 @@
       "supported": true,
       "title": "Decoding Speculative Decoding"
     },
+    "arXiv:2402.01771": {
+      "canonical_id": "arXiv:2402.01771",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
+      "published": "2024-02-01",
+      "rescan_days": 90,
+      "seed_identifier": "arXiv:2402.01771",
+      "supported": true,
+      "title": "BlackMamba: Mixture of Experts for State-Space Models"
+    },
     "arXiv:2402.01869": {
       "canonical_id": "arXiv:2402.01869",
       "cycle_started_at": null,
@@ -64092,6 +64076,18 @@
       "seed_identifier": "arXiv:2402.12065",
       "supported": true,
       "title": "WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More"
+    },
+    "arXiv:2402.14160": {
+      "canonical_id": "arXiv:2402.14160",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md",
+      "published": "2024-02-21",
+      "rescan_days": 90,
+      "seed_identifier": "arXiv:2402.14160",
+      "supported": true,
+      "title": "Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement"
     },
     "arXiv:2402.14800": {
       "canonical_id": "arXiv:2402.14800",
@@ -64477,6 +64473,18 @@
       "supported": true,
       "title": "Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction"
     },
+    "arXiv:2404.08856": {
+      "canonical_id": "arXiv:2404.08856",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+      "published": "2024-04-13",
+      "rescan_days": 90,
+      "seed_identifier": "arXiv:2404.08856",
+      "supported": true,
+      "title": "On Speculative Decoding for Multimodal Large Language Models"
+    },
     "arXiv:2404.09529": {
       "canonical_id": "arXiv:2404.09529",
       "cycle_started_at": null,
@@ -64680,6 +64688,18 @@
       "seed_identifier": "arXiv:2405.05254",
       "supported": true,
       "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models"
+    },
+    "arXiv:2405.05465": {
+      "canonical_id": "arXiv:2405.05465",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+      "published": "2024-05-21",
+      "rescan_days": 90,
+      "seed_identifier": "arXiv:2405.05465",
+      "supported": true,
+      "title": "Vidur: A Large-Scale Simulation Framework For LLM Inference"
     },
     "arXiv:2405.05751": {
       "canonical_id": "arXiv:2405.05751",
@@ -73345,6 +73365,18 @@
       "supported": true,
       "title": "GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving"
     },
+    "arXiv:2605.01106": {
+      "canonical_id": "arXiv:2605.01106",
+      "cycle_started_at": null,
+      "last_completed_at": null,
+      "next_cursor": null,
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.01106-component-aware-self-speculative-decoding-in-hybrid-language-models.md",
+      "published": "2026-05-01",
+      "rescan_days": 7,
+      "seed_identifier": "arXiv:2605.01106",
+      "supported": true,
+      "title": "Component-Aware Self-Speculative Decoding in Hybrid Language Models"
+    },
     "arXiv:2605.01708": {
       "canonical_id": "arXiv:2605.01708",
       "cycle_started_at": null,
@@ -79670,7 +79702,7 @@
       "title": "IFMoE: An Inference Framework Design for Fine-grained MoE"
     }
   },
-  "supported_seed_count": 1503,
+  "supported_seed_count": 1509,
   "unsupported_seed_count": 4,
-  "updated_at": "2026-10-03T16:10:17+00:00"
+  "updated_at": "2026-10-03T17:04:31+00:00"
 }
