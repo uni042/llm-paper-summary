@@ -1,0 +1,184 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-0145-scheduled-chat-45/r01",
+  "reference_main_sha": "170588afb4072ec24c3d1fccd5db606af0d6417c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/0471200611",
+      "identity_tokens": [
+        "DOI:10.1002/0471200611"
+      ],
+      "title": "Elements of Information Theory",
+      "reason": "情報理論のエントロピー・通信路容量・率歪み等を体系化した教科書で、LLM推論システム固有の方式・実装・評価ではない。",
+      "source_url": "https://doi.org/10.1002/0471200611",
+      "body_check": "abstract_screen_only: 出版社の書誌・内容紹介で情報理論の教科書であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/ct700301q",
+      "identity_tokens": [
+        "DOI:10.1021/ct700301q"
+      ],
+      "title": "GROMACS 4: Algorithms for Highly Efficient, Load-Balanced, and Scalable Molecular Simulation.",
+      "reason": "分子動力学シミュレーション向けGROMACSの領域分割・動的負荷分散・並列制約解法を扱うHPC研究で、LLM推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1021/ct700301q",
+      "body_check": "abstract_screen_only: 要旨で分子シミュレーションの並列化・負荷分散・PME最適化が主題と確認でき、LLM推論固有でないため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2003.1238663",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2003.1238663"
+      ],
+      "title": "Video Google: a text retrieval approach to object matching in videos",
+      "reason": "局所特徴のベクトル量子化と転置索引で動画内の物体・場面を検索する古典的コンピュータビジョン研究で、LLM推論基盤ではない。",
+      "source_url": "https://doi.org/10.1109/ICCV.2003.1238663",
+      "body_check": "abstract_screen_only: 要旨で動画の物体検索、viewpoint-invariant descriptor、vector quantization、inverted fileが主題と確認でき対象外が明白なため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2018.00286",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2018.00286",
+        "arXiv:1712.05877"
+      ],
+      "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+      "reason": "整数演算のみの量子化推論を提案するが、MobileNet等のCNNをImageNet分類・COCO検出で評価する一般DNN向け研究で、LLM推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/CVPR.2018.00286",
+      "body_check": "abstract_screen_only: IEEE要旨でinteger-only quantization、MobileNet、ImageNet/COCO、CPU上のon-device inferenceが主題と確認でき、LLM固有でないため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
+        "papers/inference/16-weight-quantization-compression/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/30.125072",
+      "identity_tokens": [
+        "DOI:10.1109/30.125072"
+      ],
+      "title": "The JPEG still picture compression standard",
+      "reason": "連続階調静止画像のDCTベース損失圧縮と予測型可逆圧縮を規定するJPEG標準の解説で、LLM推論圧縮とは対象が異なる。",
+      "source_url": "https://doi.org/10.1109/30.125072",
+      "body_check": "abstract_screen_only: IEEE要旨でJPEG静止画像圧縮標準とBaseline DCT方式が主題と確認でき対象外が明白なため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2022.11.139",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2022.11.139"
+      ],
+      "title": "K-means clustering algorithms: A comprehensive review, variants analysis, and advances in the era of big data",
+      "reason": "K-meansと派生クラスタリング手法の分類・応用・課題を整理する総合レビューで、LLM推論システムの方式研究ではない。",
+      "source_url": "https://doi.org/10.1016/j.ins.2022.11.139",
+      "body_check": "abstract_screen_only: 要旨でK-means variantsのtaxonomy、応用領域、open issuesを整理するreviewと確認でき対象外が明白なため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-45465-9_59",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-45465-9_59"
+      ],
+      "title": "Finding frequent items in data streams",
+      "reason": "データストリームから頻出要素を小メモリで検出するストリーミングアルゴリズム研究で、LLMの疎注意やKVキャッシュを直接設計・評価しない。",
+      "source_url": "https://doi.org/10.1007/3-540-45465-9_59",
+      "body_check": "abstract_screen_only: 書誌・関連要旨情報からfrequent-items/heavy-hittersのdata-stream algorithmが主題で、LLM推論固有でないため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2012.02.016",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2012.02.016"
+      ],
+      "title": "Man vs. computer: Benchmarking machine learning algorithms for traffic sign recognition",
+      "reason": "ドイツ道路標識5万枚超・43クラスを用いて画像認識アルゴリズムと人間性能を比較するベンチマーク研究で、LLM推論基盤ではない。",
+      "source_url": "https://doi.org/10.1016/j.neunet.2012.02.016",
+      "body_check": "abstract_screen_only: PubMed要旨でtraffic-sign recognition datasetと画像処理/機械学習アルゴリズム比較が主題と確認でき対象外が明白なため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.automatica.2004.08.019",
+      "identity_tokens": [
+        "DOI:10.1016/j.automatica.2004.08.019"
+      ],
+      "title": "Robust model predictive control of constrained linear systems with bounded disturbances",
+      "reason": "有界外乱下の制約付き線形離散時間系に対するロバストモデル予測制御の理論研究で、LLMサービングや推論資源制御を直接対象としない。",
+      "source_url": "https://doi.org/10.1016/j.automatica.2004.08.019",
+      "body_check": "abstract_screen_only: 書誌・要旨情報でbounded disturbanceを受けるconstrained linear systemsのrobust MPCが主題と確認でき、LLM推論固有でないため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.13549",
+      "identity_tokens": [
+        "arXiv:2306.13549"
+      ],
+      "title": "A survey on multimodal large language models",
+      "reason": "マルチモーダル大規模言語モデルのアーキテクチャ・学習・データ・評価・幻覚等を広く整理する総合サーベイで、推論システム効率化を主対象としない。",
+      "source_url": "https://arxiv.org/abs/2306.13549",
+      "body_check": "abstract_screen_only: arXiv要旨でMLLMのarchitecture、training strategy/data、evaluation、multimodal ICL/CoT等を整理するsurveyと確認でき、推論基盤専用研究でないため本文未読。",
+      "first_checked_at": "2026-10-04T01:52:00+09:00",
+      "last_checked_at": "2026-10-04T01:52:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 10
+    }
+  ]
+}
