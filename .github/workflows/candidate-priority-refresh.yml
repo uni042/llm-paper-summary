@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: candidate-priority-refresh-main-v5
@@ -87,6 +88,10 @@ jobs:
 
           for attempt in 1 2 3 4; do
             if git push origin HEAD:main; then
+              echo 'State published; dispatching STATUS dashboard refresh.'
+              GH_TOKEN="${{ github.token }}" gh api --method POST \
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/status-dashboard.yml/dispatches" \
+                -f ref=main
               exit 0
             fi
             echo "Push race on attempt ${attempt}; rebasing generated priority state onto latest main."
