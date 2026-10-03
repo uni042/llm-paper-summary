@@ -47,6 +47,66 @@ lineage: test-lineage
             encoding="utf-8",
         )
 
+    def test_in_progress_seed_does_not_starve_never_scanned_seed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.write_fixture(root)
+            second_paper = root / "papers/inference/test/paper2.md"
+            second_paper.write_text(
+                """---
+canonical_id: arXiv:2401.00002
+arxiv_id: 2401.00002
+title: Second Seed
+published: 2024-01-16
+lineage: test-lineage
+---
+# Second Seed
+""",
+                encoding="utf-8",
+            )
+            state_path = root / ".survey/work-queue/forward-citation-sweep.json"
+            state_path.parent.mkdir(parents=True, exist_ok=True)
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 1,
+                        "seeds": {
+                            "arXiv:2401.00001": {
+                                "canonical_id": "arXiv:2401.00001",
+                                "seed_identifier": "arXiv:2401.00001",
+                                "supported": True,
+                                "cycle_started_at": "2026-10-01T00:00:00+00:00",
+                                "last_page_at": "2026-10-02T00:00:00+00:00",
+                                "next_cursor": "100",
+                                "rescan_days": 30,
+                            }
+                        },
+                        "candidates": {},
+                        "candidate_aliases": {},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            seen_sources = []
+
+            def fake_fetcher(source_url, *, page_size=100, **kwargs):
+                seen_sources.append(source_url)
+                return lambda cursor: {"records": [], "next_cursor": None}
+
+            with patch.object(
+                forward_citation_sweep.discovery_provider_adapter,
+                "semantic_scholar_fetcher",
+                side_effect=fake_fetcher,
+            ):
+                result = forward_citation_sweep.sweep(
+                    root,
+                    now=dt.datetime(2026, 10, 3, tzinfo=dt.timezone.utc),
+                    sleep_fn=lambda _: None,
+                )
+
+            self.assertEqual(result["selected_seed_count"], 1)
+            self.assertIn("2401.00002", seen_sources[0])
+
     def test_cursor_resumes_until_cycle_completion_then_waits_for_rescan(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
