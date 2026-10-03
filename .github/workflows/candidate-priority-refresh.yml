@@ -7,7 +7,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/candidate-priority-refresh.yml'
+      - 'STATUS.md'
       - '.survey/config/candidate-priority.json'
+      - '.survey/scripts/refresh_due.py'
       - '.survey/scripts/candidate_priority.py'
       - '.survey/scripts/refresh_candidate_priority.py'
       - '.survey/scripts/discovery_provider_adapter.py'
@@ -37,14 +39,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check whether candidate priority refresh is due
+        id: due
+        shell: bash
+        run: |
+          set -euo pipefail
+          due=$(python .survey/scripts/refresh_due.py \
+            --state .survey/work-queue/candidate-priority-cache.json \
+            --max-age-seconds 3000)
+          echo "run=${due}" >> "$GITHUB_OUTPUT"
+          echo "candidate_priority_refresh_due=${due}"
       - name: Install runtime dependencies
+        if: steps.due.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check PyYAML
       - name: Candidate priority regression tests
+        if: steps.due.outputs.run == 'true'
         run: |
           python -m unittest discover -s .survey/tests -p 'test_candidate_priority.py'
           python -m unittest discover -s .survey/tests -p 'test_discovery_provider_adapter.py'
           python -m unittest discover -s .survey/tests -p 'test_queue_worker_metadata.py'
       - name: Refresh candidate importance metadata
+        if: steps.due.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
