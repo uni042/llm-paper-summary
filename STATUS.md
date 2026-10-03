@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 01:33:11 JST**
+> 自動生成: **2026-10-04 01:34:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **589** |
 | 未claim Research job | **445** |
-| 直近24hのResearch処理完了 | **88** |
+| 直近24hのResearch処理完了 | **90** |
 | 最終Research処理完了 | **10-04 00:27:00 JST** |
 | 最終Discovery探索完了 | **10-04 01:00:00 JST** |
 | 整合性異常 | **0** |
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9303** |
-| 処理済み | **2135** |
-| 未処理 | **7168** |
-| 収録済みとして除外 | **981** |
+| 処理済み | **2136** |
+| 未処理 | **7167** |
+| 収録済みとして除外 | **982** |
 | 無関係として除外 | **760** |
 | 微妙として除外 | **394** |
 
-- 消化率: **22.9%**
+- 消化率: **23.0%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 01:16:35 JST（16分前）** |
+| 最終maintenance完了 | **10-04 01:16:35 JST（18分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **24** |
+| 直近6hのResearch完了 | **26** |
 | 直近6hのDiscovery run | **16** |
 | 直近6hのDiscovery本文確認・分類 | **135** |
 | 最終Research完了 | **10-04 00:27:00 JST** |
@@ -96,7 +96,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### 最新Library-first run
 
-- Research: **10-04 00:27:00 JST** / worker scheduled-chat-00 / run 20261004-0000-scheduled-chat-00 / 成果 **3件**
+- Research: **10-04 00:27:00 JST** / worker scheduled-chat-00 / run 20261004-0000-scheduled-chat-00 / 成果 **4件**
   - evidence: .survey/import-inbox/results/research/libfile_12e86e564b7481918242d66a79b31cf2--2020-2010.13887-lightseq.json
 - Discovery: **10-04 01:00:00 JST** / worker scheduled-chat-00 / run 20261004-0100-scheduled-chat-00/r03
   - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **3件**
@@ -258,7 +258,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1512** |
+| inference/training/survey配下の論文Markdown実体 | **1513** |
 
 ### immutable submissionの未照合
 
