@@ -82,6 +82,9 @@ PRIMARY_PDF_FALLBACKS = {
     "DOI:10.1145/3579371.3589038": [
         "https://arxiv.org/pdf/2304.07493",
     ],
+    "DOI:10.1145/3620665.3640422": [
+        "https://scale.snu.ac.kr/papers/2024-04-Conference-ASPLOS-AttAcc.pdf",
+    ],
 }
 
 
