@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LQER: Low-Rank Quantization Error Reconstruction for LLMs",
+      "source_url": "https://arxiv.org/abs/2402.02446",
+      "year": 2024,
+      "published": "2024-02-04",
+      "abstract": "Post-training quantization of Large Language Models (LLMs) is challenging. In this work, we introduce Low-rank Quantization Error Reduction (LQER), which combines quantization and low-rank approximation to recover the model capability. LQER leverages an activation-induced scale matrix to drive the singular value distribution of quantization error towards a desirable distribution, which enables nearly-lossless W4A8 quantization on various LLMs and downstream tasks without the need for knowledge distillation, grid search, or gradient-base iterative optimization. Unlike existing methods, the computation pattern of LQER eliminates the need for specialized Scatter and Gather processes to collect high-precision weights from irregular memory locations. Our W4A8 LLMs achieve near-lossless performance on six popular downstream tasks, while using 1.36$\\times$ fewer hardware resources than the leading state-of-the-art method. We open-source our framework at https://github.com/ChengZhang-98/lqer",
+      "canonical_id": "arXiv:2402.02446",
+      "arxiv_id": "2402.02446",
+      "doi": "10.48550/arXiv.2402.02446",
+      "authors": [
+        "Cheng Zhang",
+        "Jianyi Cheng",
+        "G. Constantinides",
+        "Yi-Ren Zhao"
+      ],
+      "reason": "量子化誤差を低ランク経路で再構成し、W4A8のLLM推論を高品質・規則的計算パターンで実装する推論向け量子化研究。",
+      "library_body_check": "本文Method/Hardware Evaluation/Conclusionを確認。activation-induced scale matrixでquantization errorの特異値分布を低ランク近似しやすくし、irregular scatter/gatherなしの主量子化経路+低ランク補正へ分解する。6 downstream taskで平均accuracy drop約0.3%、FP16比perplexity差約0.15、FP16より67%小さいcircuit areaを報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.04902",
+      "year": 2024,
+      "published": "2024-02-07",
+      "abstract": "Due to the high memory and computational costs associated with large language models (LLMs), model compression techniques such as quantization, which reduces inference costs, and parameter-efficient fine-tuning (PEFT) methods like Low-Rank Adaptation (LoRA), which reduce training costs, have gained significant popularity. This trend has spurred active research into quantization-aware PEFT techniques, aimed at maintaining model accuracy while minimizing memory overhead during both inference and training. Previous quantization-aware PEFT methods typically apply post-training quantization (PTQ) to pre-trained LLMs, followed by PEFT to recover accuracy loss. Meanwhile, this approach has limitations in recovering the accuracy loss. In this paper, we propose L4Q, a method that integrates Quantization-Aware Training (QAT) with LoRA. By employing a memory-optimized layer design, L4Q significantly reduces QAT's memory overhead, making its training cost comparable to LoRA, while preserving the advantage of QAT in producing fully quantized LLMs with high accuracy. Our experiments demonstrate that this combined approach to quantization and fine-tuning achieves superior accuracy compared to decoupled fine-tuning schemes, particularly in 4-bit and 3-bit quantization, positioning L4Q as an efficient QAT solution. Using the LLaMA and Mistral models with instructional datasets, we showcase L4Q's capabilities in language tasks and few-shot learning.",
+      "canonical_id": "arXiv:2402.04902",
+      "arxiv_id": "2402.04902",
+      "doi": "10.18653/v1/2025.acl-long.99",
+      "authors": [
+        "Hyesung Jeon",
+        "Yulhwa Kim",
+        "Jae-Joon Kim"
+      ],
+      "reason": "量子化対応学習とLoRAを統合し、最終的に混合精度アダプタを残さない完全低ビットLLMを生成する。学習効率だけでなく4-bitモデルの実推論を1.8–2.3倍高速化しており推論向け量子化として対象。",
+      "library_body_check": "本文Method/Experiments/Conclusionを確認。LoRA更新を基礎重みへ統合しquantization parameterと同時最適化、推論時はLoRAを分離保持しない完全量子化重みを使用する。batch 1–64で4-bitがpretrained比1.8–2.3倍、mixed-precision量子化比1.4–1.6倍高速化し、4-bit品質を16-bit近傍に維持する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Survey on Transformer Compression",
+      "source_url": "https://arxiv.org/abs/2402.05964",
+      "year": 2024,
+      "published": "2024-02-05",
+      "abstract": "Transformer plays a vital role in the realms of natural language processing (NLP) and computer vision (CV), specially for constructing large language models (LLM) and large vision models (LVM). Model compression methods reduce the memory and computational cost of Transformer, which is a necessary step to implement large language/vision models on practical devices. Given the unique architecture of Transformer, featuring alternative attention and feedforward neural network (FFN) modules, specific compression techniques are usually required. The efficiency of these compression methods is also paramount, as retraining large models on the entire training dataset is usually impractical. This survey provides a comprehensive review of recent compression methods, with a specific focus on their application to Transformer-based models. The compression methods are primarily categorized into pruning, quantization, knowledge distillation, and efficient architecture design (Mamba, RetNet, RWKV, etc.). In each category, we discuss compression methods for both language and vision tasks, highlighting common underlying principles. Finally, we delve into the relation between various compression methods, and discuss further directions in this domain.",
+      "canonical_id": "arXiv:2402.05964",
+      "arxiv_id": "2402.05964",
+      "doi": "10.48550/arXiv.2402.05964",
+      "authors": [
+        "Ye-Hui Tang",
+        "Yunhe Wang",
+        "Jian-Yuan Guo",
+        "Zhi-Jun Tu",
+        "Kai Han",
+        "Hailin Hu",
+        "Dacheng Tao"
+      ],
+      "reason": "Transformer/LLMのメモリ・計算費を減らすpruning、quantization、knowledge distillation、efficient architectureを体系化し、実デバイスへの低コスト配備を直接対象とする圧縮サーベイ。",
+      "library_body_check": "本文全体のtaxonomyを確認。圧縮をpruning、quantization、knowledge distillation、efficient architecture（Mamba/RetNet/RWKV等）へ分類し、attention/FFN固有の圧縮、再学習コスト、言語・視覚モデルへの適用を比較する。推論向け圧縮系の関連サーベイとして対象。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8c570c90d7a9",
+    "round": "libimp-8c570c90d7a92531-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8c570c90d7a92531-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8c570c90d7a92531-pre01.json",
+    "receipt": "sha256:cdd3574936bf73e404731a5fce785a284832562896999bbbafa61462eca02822"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8c570c90d7a9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

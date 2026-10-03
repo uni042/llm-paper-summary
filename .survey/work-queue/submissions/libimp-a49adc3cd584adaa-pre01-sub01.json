@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time",
+      "source_url": "https://arxiv.org/abs/2312.09193",
+      "year": 2023,
+      "published": "2023-12-14",
+      "abstract": "Discrete diffusion models have emerged as powerful tools for high-quality data generation. Despite their success in discrete spaces, such as text generation tasks, the acceleration of discrete diffusion models remains under-explored. In this paper, we propose discrete non-Markov diffusion models (DNDM), which naturally induce the predetermined transition time set. This enables a training-free sampling algorithm that significantly reduces the number of function evaluations (i.e., calls to the neural network), making the sampling process much faster. Furthermore, we study the transition from finite to infinite step sampling, offering new insights into bridging the gap between discrete and continuous-time processes for discrete diffusion models. Extensive experiments on natural language generation and machine translation tasks demonstrate the superior performance of our method in terms of both generation speed and sample quality compared to existing methods for discrete diffusion models.",
+      "canonical_id": "arXiv:2312.09193",
+      "arxiv_id": "2312.09193",
+      "doi": "10.52202/079017-3393",
+      "authors": [
+        "Zixiang Chen",
+        "Huizhuo Yuan",
+        "Yongqian Li",
+        "Y. Kou",
+        "Junkai Zhang",
+        "Quanquan Gu"
+      ],
+      "reason": "離散拡散モデルのsampling時ニューラルネット呼出し回数をtraining-freeに削減し、自然言語生成・翻訳の生成速度を直接高める推論時高速化方式。",
+      "library_body_check": "本文のDNDM定式化・sampling algorithm・実験を確認。non-Markov forward processからpredetermined transition time setを導き、追加学習なしで必要なfunction evaluationsを削減する。自然言語生成と機械翻訳で既存discrete diffusion samplerより生成速度とsample qualityを比較し、有限stepから無限stepへの関係も解析する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
+      "source_url": "https://arxiv.org/abs/2312.12682",
+      "year": 2023,
+      "published": "2023-12-20",
+      "abstract": "In AI research, the optimization of Large Language Models (LLMs) remains a significant challenge, crucial for advancing the field's practical applications and sustainability. Building upon the foundational work of Professor Song Han's lab at MIT, this paper introduces a novel approach in developing Mini-GPTs via contextual pruning. Our methodology strategically prunes the computational architecture of traditional LLMs, like Phi-1.5, focusing on retaining core functionalities while drastically reducing model sizes. We employ the technique across diverse and complex datasets, including US law, Medical Q&A, Skyrim dialogue, English-Taiwanese translation, and Economics articles. The results underscore the efficiency and effectiveness of contextual pruning, not merely as a theoretical concept but as a practical tool in developing domain-specific, resource-efficient LLMs. Contextual pruning is a promising method for building domain-specific LLMs, and this research is a building block towards future development with more hardware compute, refined fine-tuning, and quantization.",
+      "canonical_id": "arXiv:2312.12682",
+      "arxiv_id": "2312.12682",
+      "doi": "10.48550/arXiv.2312.12682",
+      "authors": [
+        "Tim Valicenti",
+        "Justice Vidal",
+        "Ritik Patnaik"
+      ],
+      "reason": "Phi-1.5等のLLMを用途文脈に合わせて枝刈りし、モデルサイズと計算資源を削減してdomain-specific deploymentを可能にする推論向け圧縮研究。",
+      "library_body_check": "本文のcontextual pruning方式と実験を確認。US law、Medical Q&A、Skyrim dialogue、英語-台湾語翻訳、Economics記事など用途別データを用い、不要なモデル構造を削ってcore functionalityを保持するMini-GPTを構築する。fine-tuning/quantizationは将来改善として位置付け、主眼は小型・資源効率のよいdomain-specific LLM deploymentにある。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a49adc3cd584",
+    "round": "libimp-a49adc3cd584adaa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a49adc3cd584adaa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a49adc3cd584adaa-pre01.json",
+    "receipt": "sha256:296dbc54e150515299d5539913ceaebae2dbdddb16e31abe23d8acf7f2b184ab"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a49adc3cd584",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

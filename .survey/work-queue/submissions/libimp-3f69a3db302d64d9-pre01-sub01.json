@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.11295",
+      "year": 2024,
+      "published": "2024-02-17",
+      "abstract": "Model quantification uses low bit-width values to represent the weight matrices of existing models to be quantized, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, current quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit model compressing framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the quantization framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 81% of the non-quantized performance on LLaMA models) with robust training processes when only using 1-bit weight matrices.",
+      "canonical_id": "arXiv:2402.11295",
+      "arxiv_id": "2402.11295",
+      "doi": "10.48550/arXiv.2402.11295",
+      "authors": [
+        "Yuzhuang Xu",
+        "Xu Han",
+        "Zonghan Yang",
+        "Shuo Wang",
+        "Qing-Fu Zhu",
+        "Zhi-Yuan Liu",
+        "Wei-Dong Liu",
+        "Wanxiang Che"
+      ],
+      "reason": "LLM重みを1bitへ圧縮して保存・推論計算量を削減する極低bit量子化方式で、学習過程を伴うものの最終適用先は明示的にLLM deployment/inference compressionであるため対象。",
+      "library_body_check": "本文のparameterization・initialization・実験を確認。重み行列を1bit符号行列と高精度vectorへ分解する表現を使い、matrix decomposition由来の初期化で収束を改善する。LLaMA系で1bit weight matricesのみでも非量子化性能の少なくとも81%を維持し、storage/computation削減をdeployment目的として評価する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact",
+      "source_url": "https://arxiv.org/abs/2403.01241",
+      "year": 2024,
+      "published": "2024-03-02",
+      "abstract": "Large language models (LLMs) excel in natural language processing but demand intensive computation. To mitigate this, various quantization methods have been explored, yet they compromise LLM performance. This paper unveils a previously overlooked type of outliers in LLMs. Such outliers are found to allocate most of the attention scores on initial tokens of input, termed as pivot tokens, which are crucial to the performance of quantized LLMs. Given that, we propose IntactKV to generate the KV cache of pivot tokens losslessly from the full-precision model. The approach is simple and easy to combine with existing quantization solutions with no extra inference overhead. Besides, IntactKV can be calibrated as additional LLM parameters to boost the quantized LLMs further with minimal training costs. Mathematical analysis also proves that IntactKV effectively reduces the upper bound of quantization error. Empirical results show that IntactKV brings consistent improvement over various quantization methods across different LLMs and downstream tasks, leading to the new state-of-the-art for LLM quantization. The codes are available at https://github.com/ruikangliu/IntactKV.",
+      "canonical_id": "arXiv:2403.01241",
+      "arxiv_id": "2403.01241",
+      "doi": "10.48550/arXiv.2403.01241",
+      "authors": [
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Haokun Lin",
+        "Yue-Ning Li",
+        "Han Gao",
+        "Zheng-Jun Xu",
+        "Lu Hou",
+        "Jun Yao",
+        "Chun Yuan"
+      ],
+      "reason": "量子化LLMの推論品質低下を、初期pivot tokenのKVだけ全精度で保持して抑える推論向け量子化補助手法。既存PTQへ追加でき、通常のデコード時に追加計算を要求しないため対象範囲。",
+      "library_body_check": "本文の方式・実験を確認。初期tokenへ注意が集中するpivot-token outlierを同定し、full-precision modelで生成したpivot KVを量子化modelへ注入する。calibrated IntactKVでは128 calibration samplesでKV自体を最適化し、LLaMA/Vicuna系のweight-only/weight-activation量子化、WikiText2/C4/MMLU/MT-Bench等で改善を評価している。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3f69a3db302d",
+    "round": "libimp-3f69a3db302d64d9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3f69a3db302d64d9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3f69a3db302d64d9-pre01.json",
+    "receipt": "sha256:ea311270494d783ae547b6c435e059c4ee6c12b9a070df65f51d9592b63badd4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3f69a3db302d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
