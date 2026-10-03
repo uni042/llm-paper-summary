@@ -4,6 +4,17 @@ list_summary: multi-LoRA同居時に各サービスの期限と相互干渉を�
 source: https://doi.org/10.1109/TPDS.2025.3590014
 summary: Cannikinは複数LoRAサービスを同一GPU群で同時提供する際、各サービスのSLO達成率の最小値であるlagger-SLO attainmentを直接最大化する。実トレースで人気サービスの入出力長が安定することを利用して期限を推定し、SLO余裕に基づく優先度付けとサービス間干渉の偏り補正を行う。実トレース評価では各サービス90%超のSLO達成を維持しながら、既存multi-LoRA基盤比で最大3.6倍の到着率または2.8倍のバースト性を処理する。
 title: 'Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving'
+authors:
+- Ruidong Zhu
+- Ziyue Jiang
+- Zhi Zhang
+- Xin Liu
+- Xuanzhe Liu
+- Xin Jin
+published: '2025-09'
+publication: IEEE Transactions on Parallel and Distributed Systems 36(9), 1972-1984
+publication_type: 査読付きジャーナル論文
+publication_status: Published
 worker_completed_at: '2026-10-03T02:31:44+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: 20261003-0231-scheduled-chat-30
