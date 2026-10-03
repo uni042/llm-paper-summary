@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T17:48:37+00:00",
-  "record_count": 791,
+  "updated_at": "2026-10-03T17:49:35+00:00",
+  "record_count": 801,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -11206,11 +11206,12 @@
       "identity_tokens": [
         "arXiv:2305.07895"
       ],
-      "reason": "大規模マルチモーダルモデルのOCR能力を評価するベンチマーク構築とモデル比較が主題で、マルチモーダルLLM推論の実行効率化ではない。",
+      "reason": "大規模マルチモーダルモデルのOCR能力を測るベンチマーク構築・評価が主題で、推論実行効率化ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
       "linked_from": [
-        "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md"
+        "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+        "worker-worklist-30"
       ],
       "title": "OCRBench: on the hidden mystery of OCR in large multimodal models"
     },
@@ -11220,11 +11221,12 @@
       "identity_tokens": [
         "DOI:10.1016/j.jpdc.2008.09.002"
       ],
-      "reason": "ワークステーションクラスタ上の汎用all-reduce集合通信について帯域最適アルゴリズムを扱う研究で、LLM推論通信や専門家並列を直接評価するものではない。",
+      "reason": "ワークステーションクラスタ一般の帯域最適all-reduceアルゴリズムで、LLM推論を直接対象としない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
       "linked_from": [
-        "papers/inference/15-inference-simulation-emulation/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md"
+        "papers/inference/15-inference-simulation-emulation/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md",
+        "worker-worklist-30"
       ],
       "title": "Bandwidth optimal all-reduce algorithms for clusters of workstations"
     },
@@ -11234,11 +11236,12 @@
       "identity_tokens": [
         "DOI:10.1007/b97479"
       ],
-      "reason": "確率過程極限定理と待ち行列への応用を扱う理論書で、LLMエージェント推論ランタイムやサービング方式の研究ではない。",
+      "reason": "待ち行列等への確率過程極限定理を扱う専門書で、LLMエージェント推論サービングの一次研究ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
       "linked_from": [
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md"
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md",
+        "worker-worklist-30"
       ],
       "title": "Stochastic-process limits : an introduction to stochastic-process limits and their application to queues"
     },
@@ -11660,6 +11663,148 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "3D-ICE: Fast compact transient thermal modeling for 3D ICs with inter-tier liquid cooling"
+    },
+    "DOI:10.1016/j.aiopen.2023.08.012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.aiopen.2023.08.012",
+      "identity_tokens": [
+        "DOI:10.1016/j.aiopen.2023.08.012",
+        "arXiv:2103.10385"
+      ],
+      "reason": "P-Tuningで連続prompt embeddingを学習しNLU性能・安定性を改善するprompt tuning研究で、推論runtimeの高速化・省メモリ化ではない。",
+      "first_checked_at": "2026-10-03T17:49:34+00:00",
+      "last_checked_at": "2026-10-03T17:49:34+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "GPT Understands, Too"
+    },
+    "DOI:10.1038/s41586-023-06924-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-023-06924-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-023-06924-6"
+      ],
+      "reason": "FunSearchでLLM生成プログラムを進化的評価し数学・組合せ最適化の新解を探索する科学発見/アルゴリズム研究で、LLM推論サービング効率化が主目的ではない。",
+      "first_checked_at": "2026-10-03T17:49:34+00:00",
+      "last_checked_at": "2026-10-03T17:49:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md"
+      ],
+      "title": "Mathematical discoveries from program search with large language models"
+    },
+    "DOI:10.1109/jas.2023.123618": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jas.2023.123618",
+      "identity_tokens": [
+        "DOI:10.1109/jas.2023.123618"
+      ],
+      "reason": "ChatGPTの歴史、基盤技術、利点・欠点、将来展望を概説する総説で、推論システムの新規最適化方式を提案・評価しない。",
+      "first_checked_at": "2026-10-03T17:49:34+00:00",
+      "last_checked_at": "2026-10-03T17:49:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development"
+    },
+    "DOI:10.1109/71.642949": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/71.642949",
+      "identity_tokens": [
+        "DOI:10.1109/71.642949"
+      ],
+      "reason": "マルチポート・メッセージパッシング系のall-to-all通信アルゴリズムで、MoE/LLM推論を直接設計・評価しない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Efficient Algorithms for All-to-All Communications in Multiport Message-Passing Systems"
+    },
+    "DOI:10.1016/j.enpol.2010.05.053": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.enpol.2010.05.053",
+      "identity_tokens": [
+        "DOI:10.1016/j.enpol.2010.05.053"
+      ],
+      "reason": "国家電力系統の限界CO2排出係数推定が主題で、LLMサービングの炭素最適化方式ではない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Estimating marginal CO2 emissions rates for national electricity systems"
+    },
+    "DOI:10.1109/hotchips.2019.8875680": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hotchips.2019.8875680",
+      "identity_tokens": [
+        "DOI:10.1109/hotchips.2019.8875680"
+      ],
+      "reason": "汎用的なProcessing-in-Memoryアクセラレータのハードウェア研究で、LLM推論を直接対象とした評価ではない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "The true Processing In Memory accelerator"
+    },
+    "DOI:10.1109/ijcnn.2015.7280459": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn.2015.7280459",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn.2015.7280459"
+      ],
+      "reason": "Softplus活性化関数による深層ニューラルネットワーク学習・性能改善が主題で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Improving deep neural networks using softplus units"
+    },
+    "DOI:10.1016/j.dajour.2023.100344": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.dajour.2023.100344",
+      "identity_tokens": [
+        "DOI:10.1016/j.dajour.2023.100344"
+      ],
+      "reason": "ブロックチェーン技術の原理・歴史・課題を整理するレビューで、LLM推論サービングとは無関係。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A comprehensive review of blockchain technology: Underlying principles and historical background with future challenges"
+    },
+    "DOI:10.1109/ispass48437.2020.00016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass48437.2020.00016",
+      "identity_tokens": [
+        "DOI:10.1109/ispass48437.2020.00016"
+      ],
+      "reason": "SCALE-SimでDNNアクセラレータのスケーラビリティを一般評価する方法論で、LLM推論専用システムではない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A Systematic Methodology for Characterizing Scalability of DNN Accelerators using SCALE-Sim"
+    },
+    "DOI:10.1016/j.csl.2019.06.009": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.csl.2019.06.009",
+      "identity_tokens": [
+        "DOI:10.1016/j.csl.2019.06.009",
+        "arXiv:1901.07931"
+      ],
+      "reason": "データからテキストを生成するE2E NLG Challengeのデータ・評価・参加システム総括で、LLM推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-03T17:49:35+00:00",
+      "last_checked_at": "2026-10-03T17:49:35+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Evaluating the State-of-the-Art of End-to-End Natural Language Generation: The E2E NLG Challenge"
     }
   }
 }
