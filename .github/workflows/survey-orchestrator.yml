@@ -46,9 +46,31 @@ jobs:
             gh api               --method POST               "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches"               -f ref=main
           }
 
-          # Canonical Library-first inbox processor. It self-drains bounded work
-          # and explicitly dispatches Discovery precheck when required.
-          dispatch_if_idle library-import.yml
+          count_dir() {
+            local path="$1"
+            local payload
+            if ! payload="$(gh api "repos/${GITHUB_REPOSITORY}/contents/${path}?ref=main" 2>/dev/null)"; then
+              printf '0\n'
+              return 0
+            fi
+            jq -r 'if type == "array" then length else 0 end' <<< "$payload"
+          }
+
+          # The import processor is comparatively heavy (checkout, Python setup,
+          # validation and bounded processing). Do not start it when its durable
+          # inbox is empty. A Library handoff push triggers this orchestrator
+          # immediately; the ten-minute schedule is only a missed-event recovery.
+          research_pending="$(count_dir .survey/import-inbox/pending/research)"
+          discovery_pending="$(count_dir .survey/import-inbox/pending/discovery)"
+          discovery_waiting="$(count_dir .survey/import-inbox/waiting/discovery)"
+          import_backlog=$((research_pending + discovery_pending + discovery_waiting))
+          echo "Library import backlog: research=${research_pending}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}"
+
+          if [ "$import_backlog" -gt 0 ]; then
+            dispatch_if_idle library-import.yml
+          else
+            echo 'Library import inbox is empty; skip processor dispatch.'
+          fi
 
           # Hourly metadata/coverage workers have their own durable freshness
           # gates, so extra orchestrator ticks are cheap no-ops.
