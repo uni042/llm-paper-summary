@@ -159,6 +159,36 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual(sleeps, [2.0, 4.0])
         self.assertEqual(page["records"], [])
 
+    def test_semantic_scholar_records_expose_venue_citation_count_and_paper_id(self) -> None:
+        paper_id = "a" * 40
+
+        def opener(request, timeout=30):
+            return _Response(
+                {
+                    "offset": 0,
+                    "data": [
+                        {
+                            "paperId": paper_id,
+                            "title": "Priority Metadata Paper",
+                            "venue": "OSDI",
+                            "citationCount": 123,
+                            "externalIds": {"ArXiv": "2609.12345"},
+                        }
+                    ],
+                }
+            )
+
+        fetch = discovery_provider_adapter.semantic_scholar_fetcher(
+            "https://www.semanticscholar.org/search?q=priority",
+            opener=opener,
+        )
+        record = fetch(None)["records"][0]
+        self.assertEqual(record["venue"], "OSDI")
+        self.assertEqual(record["citation_count"], 123)
+        self.assertEqual(record["citation_count_source"], "semantic_scholar")
+        self.assertEqual(record["semantic_scholar_id"], paper_id)
+        self.assertIn("SemanticScholar:" + paper_id, record["identifiers"])
+
     def test_semantic_scholar_citations_unwraps_citing_paper(self) -> None:
         paper_id = "d" * 40
 
