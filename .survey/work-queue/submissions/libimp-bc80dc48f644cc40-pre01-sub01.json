@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ICaRus: Identical Cache Reuse for Efficient Multi Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.13281",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi model inference has recently emerged as a prominent paradigm, particularly in the development of agentic AI systems. However, in such scenarios, each model must maintain its own Key-Value (KV) cache for the identical prompt, leading to substantial memory consumption. This explosive growth of KV caches forces LLM serving systems to evict previously stored caches, which in turn introduces significant recomputation overhead whenever the evicted caches are required again. Moreover, prefix caching is inherently infeasible across different models, forcing each model to recompute KV cache for the identical prompt, which leads to significant overhead. To alleviate these issues, we propose Identical Cache Reuse (ICaRus), a novel architecture that allows multiple models to share identical KV caches across all layers. ICaRus is based on the key observation that a decoder-only Transformer can be conceptually decomposed into a logical encoder, which generates KV caches, and a logical decoder, which predicts output tokens from the KV caches. ICaRus fine-tunes only the logical decoder while freezing the logical encoder, enabling multiple models to share an identical KV cache. This eliminates cache memory explosion and unexpected evictions while also allowing cross-model reuse of KV caches for new input tokens, thereby removing redundant recomputation in multi model inference achieving both efficiency and scalability. Moreover, by incorporating lightweight adapters such as LoRA, ICaRus parallelizes KV cache generation and next-token prediction during decoding. ICaRus achieves comparable accuracy to task-specific fine-tuned model across a diverse set of tasks, while allowing multiple specialized models to fully share KV caches. ICaRus achieves up to 11.1x lower P95 latency and 3.8x higher throughput in multi agent workflow with 8 different models, compared to conventional multi model system.",
+      "identifiers": [
+        "SemanticScholar:e9ca610521067c3270e3283809ba6d4d15c13d03"
+      ],
+      "semantic_scholar_id": "e9ca610521067c3270e3283809ba6d4d15c13d03",
+      "canonical_id": "arXiv:2603.13281",
+      "arxiv_id": "2603.13281",
+      "doi": "10.48550/arXiv.2603.13281",
+      "authors": [
+        "Sunghyeon Woo",
+        "J. Kil",
+        "Hoseung Kim",
+        "Minsub Kim",
+        "Joonghoon Kim",
+        "A. Seo",
+        "Sungjae Lee",
+        "M. Jo",
+        "Jiwon Ryu",
+        "Baeseong Park",
+        "Sehoon Kwon",
+        "Dongsoo Lee"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数task-specific LLM間で全層KV cacheを共有し、multi-model/agentic servingのprefill再計算とcache explosionを抑える推論システム研究で直接対象。",
+      "library_body_check": "本文でdecoder-only Transformerを論理encoder(KV生成)と論理decoder(token予測)へ分け、encoderをfreezeしてdecoderのみtask適応することで同一KVを全層共有する設計を確認。8モデルworkflowでP95 latency最大11.1x低減、throughput最大3.8xを報告する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bc80dc48f644",
+    "round": "libimp-bc80dc48f644cc40-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bc80dc48f644cc40-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bc80dc48f644cc40-pre01.json",
+    "receipt": "sha256:235713ff1cbaefbaeb9c44b765634185b08ff1347845fb15073c89d004bad7d9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bc80dc48f644",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
