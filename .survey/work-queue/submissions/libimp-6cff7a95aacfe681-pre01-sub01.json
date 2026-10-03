@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs",
+      "source_url": "https://arxiv.org/abs/2305.11860",
+      "year": 2023,
+      "published": "2023-05-19",
+      "abstract": "A popular approach for improving the correctness of output from large language models (LLMs) is Self-Consistency - poll the LLM multiple times and output the most frequent solution. Existing Self-Consistency techniques always generate a constant number of samples per question, where a better approach will be to non-uniformly distribute the available budget based on the amount of agreement in the samples generated so far. In response, we introduce Adaptive-Consistency, a cost-efficient, model-agnostic technique that dynamically adjusts the number of samples per question using a lightweight stopping criterion. Our experiments over 17 reasoning and code generation datasets and three LLMs demonstrate that Adaptive-Consistency reduces sample budget by up to 7.9 times with an average accuracy drop of less than 0.1%. Our code and data are available at https://www.sample-step-by-step.info",
+      "canonical_id": "arXiv:2305.11860",
+      "arxiv_id": "2305.11860",
+      "doi": "10.18653/v1/2023.emnlp-main.761",
+      "authors": [
+        "Pranjal Aggarwal",
+        "Aman Madaan",
+        "Yiming Yang",
+        "Mausam"
+      ],
+      "reason": "自己整合性推論のサンプル数を問題ごとに動的停止し、推論時の生成回数・計算費を直接削減する学習不要の条件付き計算方式で対象範囲。",
+      "library_body_check": "本文の停止基準・実験を確認。回答分布をDirichletでモデル化し、実用版では上位2回答の安定性をBeta分布で近似する軽量停止基準を使う。数学・常識・記号推論・コード生成の17データセット、GPT-3.5-Turbo/Vicuna-13B/Code-Davinci-002で評価し、平均精度低下0.1%未満のままサンプル予算を最大7.9倍削減する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6cff7a95aacf",
+    "round": "libimp-6cff7a95aacfe681-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6cff7a95aacfe681-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6cff7a95aacfe681-pre01.json",
+    "receipt": "sha256:c2f19da21c868d3d5a41b749860daef59a2598e13ff588e493e3ecdcfee81bbb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6cff7a95aacf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

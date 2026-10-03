@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Cherry on Top: Parameter Heterogeneity and Quantization in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.02837",
+      "year": 2024,
+      "published": "2024-04-03",
+      "abstract": "This paper reveals the phenomenon of parameter heterogeneity in large language models (LLMs). We find that a small subset of\"cherry\"parameters exhibit a disproportionately large influence on model performance, while the vast majority of parameters have minimal impact. This heterogeneity is found to be prevalent across different model families, scales, and types. Motivated by this observation, we propose CherryQ, a novel quantization method that unifies the optimization of mixed-precision parameters. CherryQ identifies and preserves the critical cherry parameters in high precision while aggressively quantizing the remaining parameters to low precision. Extensive experiments demonstrate the effectiveness of CherryQ. CherryQ outperforms existing quantization approaches in terms of perplexity and downstream task performance. Notably, our 3-bit quantized Vicuna-1.5 exhibits competitive performance compared to their 16-bit counterparts.",
+      "canonical_id": "arXiv:2404.02837",
+      "arxiv_id": "2404.02837",
+      "doi": "10.48550/arXiv.2404.02837",
+      "authors": [
+        "Wanyun Cui",
+        "Qianle Wang"
+      ],
+      "reason": "少数の重要parameterだけ高精度に保持し残りを低bit化するCherryQでLLM配備を軽量化する推論向け混合精度量子化研究。",
+      "library_body_check": "本文情報・実験結果を確認。parameter heterogeneityを利用して性能寄与の大きいcherry parameterを高精度保存し、その他を積極的に低bit量子化する。複数model family/scale/typeで比較し、perplexityとdownstream性能で既存量子化を上回り、3-bit Vicuna-1.5が16-bit counterpartに競争的な性能を示す。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping",
+      "source_url": "https://arxiv.org/abs/2404.03865",
+      "year": 2024,
+      "published": "2024-04-05",
+      "abstract": "Autoregressive Large Language Models (e.g., LLaMa, GPTs) are omnipresent achieving remarkable success in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges for autoregressive token-by-token generation. To mitigate computation overload incurred during generation, several early-exit and layer-dropping strategies have been proposed. Despite some promising success due to the redundancy across LLMs layers on metrics like Rough-L/BLUE, our careful knowledge-intensive evaluation unveils issues such as generation collapse, hallucination, and noticeable performance drop even at the trivial exit ratio of ~10-15% of layers. We attribute these errors primarily to ineffective handling of the KV cache through state copying during early exit. In this work, we observe the saturation of computationally expensive feed-forward blocks of LLM layers and propose FFN-SkipLLM, which is a novel fine-grained skip strategy for autoregressive LLMs. FFN-SkipLLM leverages an input-adaptive feed-forward skipping approach that can skip ~25-30% of FFN blocks of LLMs with marginal change in performance on knowledge-intensive generation tasks without any requirement to handle the KV cache. Our extensive experiments and ablation studies across benchmarks like MT-Bench, Factoid-QA, and variable-length text summarization illustrate how our simple and easy-to-use method can facilitate faster autoregressive decoding.",
+      "canonical_id": "arXiv:2404.03865",
+      "arxiv_id": "2404.03865",
+      "doi": "10.48550/arXiv.2404.03865",
+      "authors": [
+        "A. Jaiswal",
+        "Bo-Dun Hu",
+        "Lu Yin",
+        "Yeonju Ro",
+        "Tian-Long Chen",
+        "Shi-Wei Liu",
+        "Aditya Akella"
+      ],
+      "reason": "自己回帰復号時に入力適応でFFN blockを選択的にskipし、attention/KV cacheを壊さず計算を減らす推論時conditional-computation方式で対象範囲に直接該当する。",
+      "library_body_check": "本文相当の手法・実験・ablationを確認。early-exitでattention層まで飛ばすとKV state copyingが生成崩壊やhallucinationを招くため、cold regionを保持しつつFFN入出力cosine similarityで冗長なFFNだけをskipする。MT-Bench、Factoid-QA、可変長要約で25–30%程度のFFN blockをskipして品質変化を小さく抑える。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e873459c7a7f",
+    "round": "libimp-e873459c7a7f4f92-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e873459c7a7f4f92-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e873459c7a7f4f92-pre01.json",
+    "receipt": "sha256:aeaee13e09952f3cae6e6d0d0ba4a9c8dc89353e35759c13f52992322077e7f9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e873459c7a7f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

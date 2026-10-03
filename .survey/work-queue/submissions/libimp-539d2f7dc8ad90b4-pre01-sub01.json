@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+      "source_url": "https://arxiv.org/abs/2403.15447",
+      "year": 2024,
+      "published": "2024-03-18",
+      "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+      "canonical_id": "arXiv:2403.15447",
+      "arxiv_id": "2403.15447",
+      "doi": "10.48550/arXiv.2403.15447",
+      "authors": [
+        "Junyuan Hong",
+        "Jinhao Duan",
+        "Chen-Hui Zhang",
+        "Zhangheng Li",
+        "Chulin Xie",
+        "Kelsey Lieberman",
+        "James Diffenderfer",
+        "B. Bartoldson",
+        "A. Jaiswal",
+        "Kai-Di Xu",
+        "B. Kailkhura",
+        "Dan Hendrycks",
+        "D. Song",
+        "Zhang-Yang Wang",
+        "Bo Li"
+      ],
+      "reason": "量子化・枝刈りで作る推論向け圧縮LLMについて、効率だけでなく安全性・頑健性・公平性等の劣化を体系評価する研究で、推論向け圧縮方式の実運用上の選択条件を直接扱う。",
+      "library_body_check": "本文実験・結論を確認。GPTQ/AWQ等の量子化とpruningを複数bit/圧縮率で比較し、3-bit GPTQではinstruction-following崩壊やtrustworthinessの大幅分散が起こる一方、4/8-bit量子化は元13Bモデルのtrustworthinessを概ね回復する傾向を報告する。圧縮率だけでなくcalibration set依存やAWQ/GPTQ差をdeployment上の注意点として分析する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AIOS: LLM Agent Operating System",
+      "source_url": "https://arxiv.org/abs/2403.16971",
+      "year": 2024,
+      "published": "2024-03-25",
+      "abstract": "LLM-based intelligent agents face significant deployment challenges, particularly related to resource management. Allowing unrestricted access to LLM or tool resources can lead to inefficient or even potentially harmful resource allocation and utilization for agents. Furthermore, the absence of proper scheduling and resource management mechanisms in current agent designs hinders concurrent processing and limits overall system efficiency. To address these challenges, this paper proposes the architecture of AIOS (LLM-based AI Agent Operating System) under the context of managing LLM-based agents. It introduces a novel architecture for serving LLM-based agents by isolating resources and LLM-specific services from agent applications into an AIOS kernel. This AIOS kernel provides fundamental services (e.g., scheduling, context management, memory management, storage management, access control) for runtime agents. To enhance usability, AIOS also includes an AIOS SDK, a comprehensive suite of APIs designed for utilizing functionalities provided by the AIOS kernel. Experimental results demonstrate that using AIOS can achieve up to 2.1x faster execution for serving agents built by various agent frameworks. The source code is available at https://github.com/agiresearch/AIOS.",
+      "canonical_id": "arXiv:2403.16971",
+      "arxiv_id": "2403.16971",
+      "doi": "10.48550/arXiv.2403.16971",
+      "authors": [
+        "Kai Mei",
+        "Wujiang Xu",
+        "Zelong Li",
+        "Shuyuan Xu",
+        "Ruo-Song Ye",
+        "Ying-Qiang Ge",
+        "Yongfeng Zhang"
+      ],
+      "reason": "LLMエージェントを並行実行するためのOS型サービング基盤で、LLM呼出し・メモリ・ストレージ・ツールをsystem call化し、スケジューリングとcontext interruptで資源競合を管理するため、エージェント推論サービングの対象に直接該当する。",
+      "library_body_check": "本文§2–4を確認。AIOS kernelがLLM core、中央scheduler、context manager、memory/storage/tool managerを提供し、FIFO/Round-Robinでsyscallを調停する。単一RTX A5000、Llama-3.1-8B/Mistral-7B、最大250並行agentの既定条件で評価し、Reflexion+Llama-3.1-8Bではsystem-call throughput最大2.1倍、平均待ち時間も低下。250〜2000 agentのscalabilityも評価する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-539d2f7dc8ad",
+    "round": "libimp-539d2f7dc8ad90b4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-539d2f7dc8ad90b4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-539d2f7dc8ad90b4-pre01.json",
+    "receipt": "sha256:fb1c59d1b5aa44c7831e8974bb154a4f2037b2d6e73f1dab9a983fd11e7e3888"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-539d2f7dc8ad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

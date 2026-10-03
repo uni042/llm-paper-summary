@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SynCode: LLM Generation with Grammar Augmentation",
+      "source_url": "https://arxiv.org/abs/2403.01632",
+      "year": 2024,
+      "published": "2024-03-03",
+      "abstract": "LLMs are widely used in complex AI applications. These applications underscore the need for LLM outputs to adhere to a specific format, for their integration with other components in the systems. Typically the format rules e.g., for data serialization formats such as JSON, YAML, or Code in Programming Language are expressed as context-free grammar (CFG). Due to the hallucinations and unreliability of LLMs, instructing LLMs to adhere to specified syntax becomes an increasingly important challenge. We present SynCode, a novel framework for efficient and general syntactical decoding with LLMs, to address this challenge. SynCode ensures soundness and completeness with respect to the CFG of a formal language, effectively retaining valid tokens while filtering out invalid ones. SynCode uses an offline-constructed, efficient lookup table, the DFA mask store, derived from the DFA of the language's grammar for efficient generation. SynCode seamlessly integrates with any language defined by CFG, as evidenced by experiments focusing on generating JSON, Python, and Go outputs. Our experiments evaluating the effectiveness of SynCode for JSON generation demonstrate that SynCode eliminates all syntax errors and significantly outperforms state-of-the-art baselines. Furthermore, our results underscore how SynCode significantly reduces 96.07% of syntax errors in generated Python and Go code, showcasing its substantial impact on enhancing syntactical precision in LLM generation. Our code is available at https://github.com/uiuc-focal-lab/syncode",
+      "canonical_id": "arXiv:2403.01632",
+      "arxiv_id": "2403.01632",
+      "authors": [
+        "Shubham Ugare",
+        "Tarun Suresh",
+        "Hangoo Kang",
+        "Sasa Misailovic",
+        "Gagandeep Singh"
+      ],
+      "reason": "文脈自由文法に従うLLM生成を、事前計算したDFA mask storeと増分parserで高速に制約する推論時デコード方式で、生成runtimeの効率化を明示的に扱うため対象。",
+      "library_body_check": "一次資料本文相当の手法・実装・評価を確認。partial outputからincremental parserがaccept sequenceとremainderを求め、offline構築したDFA mask storeから有効token maskをlookupして次token分布へ適用する。JSONではsyntax errorを除去し、Python/Goでは96.07%削減。mask storeは一度だけ生成し、Llama-2-7B-chat/JSON例で113.72秒・181MB、実装はPython/Goで低いgeneration overheadを狙う。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
+      "source_url": "https://arxiv.org/abs/2403.09054",
+      "year": 2024,
+      "published": "2024-03-14",
+      "abstract": "Transformers have emerged as the underpinning architecture for Large Language Models (LLMs). In generative language models, the inference process involves two primary phases: prompt processing and token generation. Token generation, which constitutes the majority of the computational workload, primarily entails vector-matrix multiplications and interactions with the Key-Value (KV) Cache. This phase is constrained by memory bandwidth due to the overhead of transferring weights and KV cache values from the memory system to the computing units. This memory bottleneck becomes particularly pronounced in applications that require long-context and extensive text generation, both of which are increasingly crucial for LLMs. This paper introduces\"Keyformer\", an innovative inference-time approach, to mitigate the challenges associated with KV cache size and memory bandwidth utilization. Keyformer leverages the observation that approximately 90% of the attention weight in generative inference focuses on a specific subset of tokens, referred to as\"key\"tokens. Keyformer retains only the key tokens in the KV cache by identifying these crucial tokens using a novel score function. This approach effectively reduces both the KV cache size and memory bandwidth usage without compromising model accuracy. We evaluate Keyformer's performance across three foundational models: GPT-J, Cerebras-GPT, and MPT, which employ various positional embedding algorithms. Our assessment encompasses a variety of tasks, with a particular emphasis on summarization and conversation tasks involving extended contexts. Keyformer's reduction of KV cache reduces inference latency by 2.1x and improves token generation throughput by 2.4x, while preserving the model's accuracy.",
+      "canonical_id": "arXiv:2403.09054",
+      "arxiv_id": "2403.09054",
+      "doi": "10.48550/arXiv.2403.09054",
+      "authors": [
+        "Muhammad Adnan",
+        "Akhil Arunkumar",
+        "Gaurav Jain",
+        "Prashant J. Nair",
+        "Ilya Soloveychik",
+        "Purushotham Kamath"
+      ],
+      "reason": "注意重みを集中して受けるkey tokenだけをKV cacheへ残し、長文脈生成のKV容量とmemory bandwidthを直接削減するLLM推論最適化方式。",
+      "library_body_check": "一次資料本文の観測・score function・評価を確認。生成時attention weightのおよそ90%が一部tokenへ集中する観測からkey tokenを選び、それ以外のKVを除去する。GPT-J、Cerebras-GPT、MPTと要約/会話を含む長文脈taskで精度を維持しつつ、KV削減によりinference latency 2.1倍改善、token generation throughput 2.4倍改善を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MELTing Point: Mobile Evaluation of Language Transformers",
+      "source_url": "https://arxiv.org/abs/2403.12844",
+      "year": 2024,
+      "published": "2024-03-19",
+      "abstract": "Transformers have recently revolutionized the machine learning (ML) landscape, gradually making their way into everyday tasks and equipping our computers with \"sparks of intelligence\". However, their runtime requirements have prevented them from being broadly deployed on mobile. As personal devices become increasingly powerful at the consumer edge and prompt privacy becomes an ever more pressing issue, we explore the current state of mobile execution of Large Language Models (LLMs). To achieve this, we have created our own automation infrastructure, MELT, which supports the headless execution and benchmarking of LLMs on device, supporting different models, devices and frameworks, including Android, iOS and Nvidia Jetson devices. We evaluate popular instruction fine-tuned LLMs and leverage different frameworks to measure their end-to-end and granular performance, tracing their memory and energy requirements along the way. Our analysis is the first systematic study of on-device LLM execution, quantifying performance, energy efficiency and accuracy across various state-of-the-art models and showcases the state of on-device intelligence in the era of hyperscale models. Results highlight the performance heterogeneity across targets and corroborates that LLM inference is largely memory-bound. Quantization drastically reduces memory requirements and renders execution viable, but at a non-negligible accuracy cost. Drawing from its energy footprint and thermal behavior, the continuous execution of LLMs remains elusive, as both factors negatively affect user experience. Last, our experience shows that the ecosystem is still in its infancy, and algorithmic as well as hardware break-throughs can significantly shift the execution cost. We expect NPU acceleration, and framework-hardware co-design to be the biggest bet towards efficient standalone execution, with the alternative of offloading tailored towards edge deployments.",
+      "canonical_id": "arXiv:2403.12844",
+      "arxiv_id": "2403.12844",
+      "doi": "10.1145/3636534.3690668",
+      "authors": [
+        "Stefanos Laskaridis",
+        "Kleomenis Katevas",
+        "Lorenzo Minto",
+        "Hamed Haddadi"
+      ],
+      "reason": "Android/iOS/Jetson上のLLM推論をframework横断で自動benchmarkし、throughput・memory・energy・thermal・量子化を実測するon-device inference基盤/評価研究で対象範囲。",
+      "library_body_check": "一次資料本文・公式実装/著者解説の評価内容を確認。MELTはllama.cpp、MLC-LLM、LLMFarm等を含む複数backendでheadless execution、電力監視、prefill/generation throughput、memory、energyを収集する。device/model/frameworkで性能が大きく異なり、低bit量子化にはaccuracy trade-offがあり、Jetson offloadではZephyr-7B 4-bitのprefill/generationがmobile比で約3.3倍/1.78倍高い例を示す。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4903ccc4fc6b",
+    "round": "libimp-4903ccc4fc6b2ffb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4903ccc4fc6b2ffb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4903ccc4fc6b2ffb-pre01.json",
+    "receipt": "sha256:9bff0df6f452ed49a941439ab3d785800e6fa17bb6b10a80dcd38ab0080225d6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4903ccc4fc6b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
