@@ -49,6 +49,109 @@ evidence_locations:
 arxiv_categories:
   primary: cs.AR
   cross_list: []
+references:
+- canonical_id: DOI:10.1109/ieeestd.2019.8766229
+  doi: 10.1109/ieeestd.2019.8766229
+- canonical_id: DOI:10.1109/isscc.2017.7870333
+  doi: 10.1109/isscc.2017.7870333
+- canonical_id: DOI:10.1109/iedm13553.2020.9371905
+  doi: 10.1109/iedm13553.2020.9371905
+- canonical_id: arXiv:2403.04132
+  arxiv_id: '2403.04132'
+- canonical_id: arXiv:1904.10509
+  arxiv_id: '1904.10509'
+- canonical_id: DOI:10.1109/isscc49657.2024.10454327
+  doi: 10.1109/isscc49657.2024.10454327
+- canonical_id: DOI:10.1109/vlsitechnologyandcir46783.2024.10631471
+  doi: 10.1109/vlsitechnologyandcir46783.2024.10631471
+- canonical_id: DOI:10.1109/mm.2023.3256796
+  doi: 10.1109/mm.2023.3256796
+- canonical_id: DOI:10.1109/mm.2021.3061394
+  doi: 10.1109/mm.2021.3061394
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2401.06066
+  arxiv_id: '2401.06066'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2112.06905
+  arxiv_id: '2112.06905'
+- canonical_id: arXiv:2101.03961
+  arxiv_id: '2101.03961'
+- canonical_id: arXiv:2502.06643
+  arxiv_id: '2502.06643'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: DOI:10.23919/vlsitechnologyandcir57934.2023.10185290
+  doi: 10.23919/vlsitechnologyandcir57934.2023.10185290
+- canonical_id: arXiv:2410.17954
+  arxiv_id: '2410.17954'
+- canonical_id: DOI:10.1109/mnano.2025.3533815
+  doi: 10.1109/mnano.2025.3533815
+- canonical_id: DOI:10.1109/iedm50854.2024.10873439
+  doi: 10.1109/iedm50854.2024.10873439
+- canonical_id: DOI:10.1109/hcs55958.2022.9895480
+  doi: 10.1109/hcs55958.2022.9895480
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: arXiv:2402.07871
+  arxiv_id: '2402.07871'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/tcsi.2024.3362822
+  doi: 10.1109/tcsi.2024.3362822
+- canonical_id: DOI:10.1145/3123939.3123977
+  doi: 10.1145/3123939.3123977
+- canonical_id: arXiv:2409.02060
+  arxiv_id: '2409.02060'
+- canonical_id: DOI:10.1145/3123939.3124545
+  doi: 10.1145/3123939.3124545
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.1145/3620665.3640422
+  doi: 10.1145/3620665.3640422
+- canonical_id: DOI:10.1109/isscc42614.2022.9731562
+  doi: 10.1109/isscc42614.2022.9731562
+- canonical_id: DOI:10.1145/3460971
+  doi: 10.1145/3460971
+- canonical_id: DOI:10.1109/isscc49661.2025.10904543
+  doi: 10.1109/isscc49661.2025.10904543
+- canonical_id: arXiv:2411.19799
+  arxiv_id: '2411.19799'
+- canonical_id: DOI:10.1109/isvlsi.2014.94
+  doi: 10.1109/isvlsi.2014.94
+- canonical_id: arXiv:2409.16040
+  arxiv_id: '2409.16040'
+- canonical_id: arXiv:2507.20534
+  arxiv_id: '2507.20534'
+- canonical_id: DOI:10.1109/ectc.2016.155
+  doi: 10.1109/ectc.2016.155
+- canonical_id: arXiv:1706.03762
+  arxiv_id: '1706.03762'
+- canonical_id: DOI:10.18653/v1/w17-4413
+  doi: 10.18653/v1/w17-4413
+- canonical_id: DOI:10.1109/ted.2024.3520074
+  doi: 10.1109/ted.2024.3520074
+- canonical_id: arXiv:2401.14361
+  arxiv_id: '2401.14361'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2401.08383
+  arxiv_id: '2401.08383'
+- canonical_id: arXiv:2409.01141
+  arxiv_id: '2409.01141'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 92
 ---
 
 # Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving

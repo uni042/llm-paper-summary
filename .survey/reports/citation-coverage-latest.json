@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-03T08:10:36+00:00",
+  "checked_at": "2026-10-03T08:12:08+00:00",
   "summary": {
     "total": 1489,
-    "complete": 1404,
-    "incomplete": 85
+    "complete": 1427,
+    "incomplete": 62
   },
   "families": {
     "inference": {
       "total": 1450,
-      "complete": 1365
+      "complete": 1388
     },
     "training": {
       "total": 25,
@@ -88,123 +88,8 @@
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md",
-      "canonical_id": "DOI:10.1145/3725843.3756043",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md",
-      "canonical_id": "arXiv:2404.02852",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md",
-      "canonical_id": "arXiv:2411.08982",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
-      "canonical_id": "arXiv:2412.15605",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
-      "canonical_id": "arXiv:2506.09501",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md",
-      "canonical_id": "arXiv:2507.14397",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
-      "canonical_id": "arXiv:2511.20639",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
-      "canonical_id": "arXiv:2505.09999",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
-      "canonical_id": "arXiv:2208.01313",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
-      "canonical_id": "arXiv:2304.08467",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
-      "canonical_id": "arXiv:2305.05176",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-      "canonical_id": "arXiv:2305.11627",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
-      "canonical_id": "arXiv:2307.02486",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
-      "canonical_id": "arXiv:2307.05908",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md",
-      "canonical_id": "arXiv:2307.08045",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
-      "canonical_id": "arXiv:2307.08621",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
-      "canonical_id": "arXiv:2307.09702",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
-      "canonical_id": "arXiv:2307.15337",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
-      "canonical_id": "arXiv:2308.16137",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md",
-      "canonical_id": "arXiv:2309.09507",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
-      "canonical_id": "arXiv:2310.01382",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md",
-      "canonical_id": "arXiv:2310.06178",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
-      "canonical_id": "arXiv:2310.06201",
       "reason": "missing structured reference audit metadata"
     },
     {
