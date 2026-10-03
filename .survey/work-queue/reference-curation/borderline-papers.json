@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T10:59:05+00:00",
-  "record_count": 403,
+  "updated_at": "2026-10-03T11:02:04+00:00",
+  "record_count": 405,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5822,6 +5822,36 @@
         "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
       ],
       "title": "Differentially Private Attention Computation"
+    },
+    "arXiv:2309.16739": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.16739",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.16739",
+        "arXiv:2309.16739"
+      ],
+      "reason": "6G MEC上のLLM edge inferenceを明示的に扱い、split inference・quantization・parameter-sharing inferenceを整理するため対象領域に近いが、新規推論システムやアルゴリズムの提案・実装評価ではないposition paper。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md"
+      ],
+      "title": "Pushing Large Language Models to the 6G Edge: Vision, Challenges, and Opportunities"
+    },
+    "arXiv:2310.02277": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.02277",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.02277",
+        "arXiv:2310.02277"
+      ],
+      "reason": "LLM pruningの限界を実証する圧縮関連研究だが、新しい推論高速化手法よりも小振幅重み削除が難しいタスクの知識を不可逆に損なうという分析が主貢献。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ],
+      "title": "Junk DNA Hypothesis: Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs \"Difficult\" Downstream Tasks in LLMs"
     }
   }
 }

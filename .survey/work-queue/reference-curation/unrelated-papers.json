@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T10:59:05+00:00",
-  "record_count": 591,
+  "updated_at": "2026-10-03T11:02:04+00:00",
+  "record_count": 596,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8698,6 +8698,81 @@
         "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md"
       ],
       "title": "Emergent autonomous scientific research capabilities of large language models"
+    },
+    "arXiv:2308.12043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12043",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.12043",
+        "arXiv:2308.12043"
+      ],
+      "reason": "LoRAの学習時ランク配分を適応化するパラメータ効率的微調整手法で、主目的・評価とも学習効率と下流品質。推論サービングや推論runtime高速化を提案しない。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+      ],
+      "title": "IncreLoRA: Incremental Parameter Allocation Method for Parameter-Efficient Fine-tuning"
+    },
+    "arXiv:2309.07418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07418",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.07418",
+        "arXiv:2309.07418"
+      ],
+      "reason": "単層attentionの回帰目的をテンソル/SVM的に再定式化し学習目的を高速に最適化する理論研究で、推論時attention計算の高速化方式ではない。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "A Fast Optimization View: Reformulating Single Layer Attention in LLM Based on Tensor and SVM Trick, and Solving It in Matrix Multiplication Time"
+    },
+    "arXiv:2310.12036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12036",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.12036",
+        "arXiv:2310.12036"
+      ],
+      "reason": "人間選好からの学習を統一的に理解するΨPO理論とDPO/RLHF系最適化が主題で、推論runtime・サービング効率化ではない。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "A General Theoretical Paradigm to Understand Learning from Human Preferences"
+    },
+    "arXiv:2310.15123": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.15123",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.15123",
+        "arXiv:2310.15123"
+      ],
+      "reason": "複雑タスクをbranch/solve/mergeへ分解してLLM品質を改善するprogramming/prompting手法で、複数LLM呼出しを伴い推論資源削減を主目的としない。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Branch-Solve-Merge Improves Large Language Model Evaluation and Generation"
+    },
+    "arXiv:2310.19233": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.19233",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.19233",
+        "arXiv:2310.19233"
+      ],
+      "reason": "会議要約用途でGPT-4/3.5、PaLM-2、LLaMA-2の品質・費用・privacyを比較する応用評価で、新規LLM推論システム最適化を提案しない。",
+      "first_checked_at": "2026-10-03T11:02:04+00:00",
+      "last_checked_at": "2026-10-03T11:02:04+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md"
+      ],
+      "title": "Building Real-World Meeting Summarization Systems using Large Language Models: A Practical Perspective"
     }
   }
 }
