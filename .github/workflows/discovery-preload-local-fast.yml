@@ -1,17 +1,8 @@
 name: Discovery preload local fast lane
 
 on:
-  workflow_run:
-    workflows: ['Discovery precheck gate']
-    types: [completed]
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/discovery-preload-local-fast.yml'
-      - '.survey/scripts/discovery_preload_queue.py'
-      - '.survey/scripts/process_discovery_precheck.py'
-      - '.survey/scripts/process_discovery_precheck_batch.py'
-      - '.survey/scripts/hot_dispatch.py'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
