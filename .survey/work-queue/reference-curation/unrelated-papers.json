@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T13:20:50+00:00",
-  "record_count": 634,
+  "updated_at": "2026-10-03T13:23:14+00:00",
+  "record_count": 642,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -9345,6 +9345,126 @@
         "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
       ],
       "title": "API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs"
+    },
+    "arXiv:2404.14396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14396",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.14396",
+        "arXiv:2404.14396"
+      ],
+      "reason": "マルチモーダル基盤モデルの画像理解・画像生成能力と実世界適用性の向上が主目的で、LLM推論runtimeの速度・メモリ・サービング最適化を扱わない。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "SEED-X: Multimodal Models with Unified Multi-granularity Comprehension and Generation"
+    },
+    "arXiv:2404.13236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13236",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.13236",
+        "arXiv:2404.13236"
+      ],
+      "reason": "ブロックチェーン上でLLMの評判・信頼性を共有評価する分散reputation systemであり、LLM推論サービングの性能最適化ではない。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "LLMChain: Blockchain-based Reputation System for Sharing and Evaluating Large Language Models"
+    },
+    "arXiv:2404.10719": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.10719",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.10719",
+        "arXiv:2404.10719"
+      ],
+      "reason": "DPOとPPOの理論・実証比較によるRLHF/alignment training研究で、最終適用先が学習工程のため凍結範囲。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study"
+    },
+    "arXiv:2404.08335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08335",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.08335",
+        "arXiv:2404.08335"
+      ],
+      "reason": "tokenizationがTransformerの学習・一般化・cross-entropyへ与える効果を理論化する研究で、推論runtime効率化を最終目的としない。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Toward a Theory of Tokenization in LLMs"
+    },
+    "arXiv:2404.07470": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.07470",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.07470",
+        "arXiv:2404.07470"
+      ],
+      "reason": "継続学習で知識・技能を追加するJARe/DTKR方式が主貢献で、最終適用先はモデル更新・学習。推論高速化の対象外。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Scalable Language Model with Generalized Continual Learning"
+    },
+    "arXiv:2404.06091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06091",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.06091",
+        "arXiv:2404.06091"
+      ],
+      "reason": "feature map再利用で3D diffusion生成を1.3–4倍高速化するが、対象は3D画像生成でありLLM推論システムではない。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Hash3D: Training-free Acceleration for 3D Generation"
+    },
+    "arXiv:2404.04841": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04841",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.04841",
+        "arXiv:2404.04841"
+      ],
+      "reason": "Bitcoin/Ethereum/Solanaの分散化技術を比較するblockchainサーベイで、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Unveiling Decentralization: A Comprehensive Review of Technologies, Comparison, Challenges in Bitcoin, Ethereum, and Solana Blockchain"
+    },
+    "arXiv:2404.03413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03413",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.03413",
+        "arXiv:2404.03413"
+      ],
+      "reason": "動画理解向けマルチモーダルLLMの能力拡張が主目的で、推論runtime効率化を提案しない。",
+      "first_checked_at": "2026-10-03T13:23:14+00:00",
+      "last_checked_at": "2026-10-03T13:23:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "MiniGPT4-Video: Advancing Multimodal LLMs for Video Understanding with Interleaved Visual-Textual Tokens"
     }
   }
 }

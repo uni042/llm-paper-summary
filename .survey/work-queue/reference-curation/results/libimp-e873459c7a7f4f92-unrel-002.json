@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e873459c7a7f4f92-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.13236",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.13236",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.13236",
+      "arXiv:2404.13236"
+    ],
+    "reason": "ブロックチェーン上でLLMの評判・信頼性を共有評価する分散reputation systemであり、LLM推論サービングの性能最適化ではない。",
+    "first_checked_at": "2026-10-03T13:23:14+00:00",
+    "last_checked_at": "2026-10-03T13:23:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "LLMChain: Blockchain-based Reputation System for Sharing and Evaluating Large Language Models"
+  },
+  "processed_at": "2026-10-03T13:23:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e873459c7a7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
