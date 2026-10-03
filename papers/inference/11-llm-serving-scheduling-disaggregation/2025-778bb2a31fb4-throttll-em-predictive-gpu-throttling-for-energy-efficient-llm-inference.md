@@ -20,6 +20,7 @@ reference_main_sha: 6b02faee2b755ab277a4737be7abbab1fc431249
 doi: 10.1109/HPCA61900.2025.00103
 sources:
 - https://doi.org/10.1109/HPCA61900.2025.00103
+- https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf
 code: null
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
 implementation_status: official-code-not-confirmed
