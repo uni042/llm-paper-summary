@@ -9,9 +9,12 @@ citation databases:
 * withdrawn arXiv papers whose PDF/HTML is unavailable but whose source archive
   still contains a BibTeX bibliography.
 
-Only verified primary-source URLs are hard-coded. The resulting references are
-normalized against the repository identity index in the same way as the regular
-backfill.
+Verified primary-source URLs are tried first. If every primary-source route is
+blocked by the publisher/CDN, DOI papers may fall back to Crossref reference
+metadata deposited by the publisher/member. That provenance is recorded
+explicitly and is never labeled as a primary-source extraction. The resulting
+references are normalized against the repository identity index in the same way
+as the regular backfill.
 """
 from __future__ import annotations
 
@@ -24,6 +27,7 @@ import tarfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from backfill_citations import (
     entries_to_references,
@@ -165,6 +169,54 @@ def arxiv_bibtex_entries(arxiv_id: str) -> tuple[list[dict[str, Any]], str]:
     raise ValueError("unable to recover arXiv source bibliography: " + " | ".join(errors))
 
 
+def crossref_reference_entries(canonical_id: str) -> tuple[list[dict[str, Any]], str]:
+    """Return publisher/member-deposited Crossref reference metadata for a DOI."""
+    if not canonical_id.startswith("DOI:"):
+        raise ValueError("Crossref fallback requires a DOI canonical identifier")
+    doi = canonical_id.removeprefix("DOI:").strip()
+    if not doi:
+        raise ValueError("Crossref fallback received an empty DOI")
+    url = f"https://api.crossref.org/works/{quote(doi, safe='')}"
+    raw = fetch_bytes(url, timeout=45)
+    payload = json.loads(raw.decode("utf-8", errors="replace"))
+    message = payload.get("message") if isinstance(payload, dict) else None
+    refs = message.get("reference") if isinstance(message, dict) else None
+    if not isinstance(refs, list) or not refs:
+        raise ValueError("Crossref record contained no deposited references")
+
+    entries: list[dict[str, Any]] = []
+    for ref in refs:
+        if not isinstance(ref, dict):
+            continue
+        hrefs: list[str] = []
+        ref_doi = str(ref.get("DOI") or ref.get("doi") or "").strip()
+        if ref_doi:
+            hrefs.append(f"https://doi.org/{ref_doi}")
+        parts: list[str] = []
+        for key in (
+            "unstructured",
+            "article-title",
+            "series-title",
+            "journal-title",
+            "volume-title",
+            "author",
+            "year",
+            "volume",
+            "first-page",
+        ):
+            value = str(ref.get(key) or "").strip()
+            if value and value not in parts:
+                parts.append(value)
+        if ref_doi and ref_doi not in parts:
+            parts.append(ref_doi)
+        text = ". ".join(parts)
+        if text or hrefs:
+            entries.append({"text": text, "hrefs": hrefs})
+    if not entries:
+        raise ValueError("Crossref deposited references were not parseable")
+    return entries, url
+
+
 def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
     records = load_records(repo_root)
     aliases = alias_index(records)
@@ -225,6 +277,16 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
                 success = True
             except Exception as exc:
                 errors.append(f"arXiv source BibTeX: {type(exc).__name__}: {exc}")
+
+        if not success and canonical.startswith("DOI:"):
+            try:
+                entries, source_url = crossref_reference_entries(canonical)
+                references = entries_to_references(entries, aliases, title_targets)
+                total = len(entries)
+                source_label = "crossref-deposited-reference-metadata"
+                success = True
+            except Exception as exc:
+                errors.append(f"Crossref deposited references: {type(exc).__name__}: {exc}")
 
         if success:
             meta["references"] = references
