@@ -3,6 +3,21 @@ name: Forward citation coverage sweep
 on:
   schedule:
     - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/forward-citation-sweep.yml'
+      - '.survey/config/candidate-priority.json'
+      - '.survey/config/forward-citation-sweep.json'
+      - '.survey/scripts/candidate_priority.py'
+      - '.survey/scripts/discovery_provider_adapter.py'
+      - '.survey/scripts/forward_citation_sweep.py'
+      - '.survey/scripts/refresh_candidate_priority.py'
+      - '.survey/scripts/build_worker_worklist.py'
+      - '.survey/tests/test_candidate_priority.py'
+      - '.survey/tests/test_forward_citation_sweep.py'
+      - '.survey/tests/test_discovery_provider_adapter.py'
+      - '.survey/tests/test_queue_worker_metadata.py'
   workflow_dispatch:
 
 permissions:
@@ -26,6 +41,13 @@ jobs:
           python-version: '3.12'
       - name: Install runtime dependencies
         run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Citation priority regression tests
+        run: |
+          python -m unittest \
+            .survey.tests.test_candidate_priority \
+            .survey.tests.test_forward_citation_sweep \
+            .survey.tests.test_discovery_provider_adapter \
+            .survey.tests.test_queue_worker_metadata
       - name: Refresh full forward-citation coverage and priority metadata
         shell: bash
         run: |
