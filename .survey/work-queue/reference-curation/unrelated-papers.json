@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T22:18:12+00:00",
-  "record_count": 866,
+  "updated_at": "2026-10-03T22:19:08+00:00",
+  "record_count": 871,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -12750,6 +12750,76 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "184QPS/W 64Mb/mm2 3D Logic-to-DRAM Hybrid Bonding with Process-Near-Memory Engine for Recommendation System"
+    },
+    "DOI:10.1109/iccv51070.2023.01092": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.01092",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.01092"
+      ],
+      "reason": "コード生成モデルが視覚・言語モジュールをPythonプログラムとして合成し視覚推論を行う方式で、LLM推論ランタイム効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:19:08+00:00",
+      "last_checked_at": "2026-10-03T22:19:08+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "ViperGPT: Visual Inference via Python Execution for Reasoning"
+    },
+    "DOI:10.1109/lca.2015.2414456": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lca.2015.2414456",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2015.2414456"
+      ],
+      "reason": "複数DRAM規格をサイクル精度で評価する汎用DRAMシミュレータで、LLM推論を直接対象としない。",
+      "first_checked_at": "2026-10-03T22:19:08+00:00",
+      "last_checked_at": "2026-10-03T22:19:08+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Ramulator: A Fast and Extensible DRAM Simulator"
+    },
+    "DOI:10.1109/hpca.2008.4658633": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2008.4658633",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2008.4658633"
+      ],
+      "reason": "オンチップ電圧レギュレータによるCMPのコア別DVFSと省エネルギーを解析する汎用プロセッサ研究で、LLM/NPU推論専用ではない。",
+      "first_checked_at": "2026-10-03T22:19:08+00:00",
+      "last_checked_at": "2026-10-03T22:19:08+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "System level analysis of fast, per-core DVFS using on-chip switching regulators"
+    },
+    "DOI:10.1109/9780470544242.ch21": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/9780470544242.ch21",
+      "identity_tokens": [
+        "DOI:10.1109/9780470544242.ch21"
+      ],
+      "reason": "許容歪みと符号化率の基本限界を定式化するレート歪み理論の基礎研究で、KVキャッシュ圧縮やLLM推論方式そのものではない。",
+      "first_checked_at": "2026-10-03T22:19:08+00:00",
+      "last_checked_at": "2026-10-03T22:19:08+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Coding Theorems for a Discrete Source With a Fidelity Criterion"
+    },
+    "DOI:10.1109/ispass.2019.00042": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass.2019.00042",
+      "identity_tokens": [
+        "DOI:10.1109/ispass.2019.00042"
+      ],
+      "reason": "DNNアクセラレータのアーキテクチャ設計空間・データフロー・メモリ階層を評価する汎用インフラで、LLM推論を最終適用先とする一次研究ではない。",
+      "first_checked_at": "2026-10-03T22:19:08+00:00",
+      "last_checked_at": "2026-10-03T22:19:08+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
     }
   }
 }

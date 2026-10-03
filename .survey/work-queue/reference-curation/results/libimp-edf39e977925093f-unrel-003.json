@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edf39e977925093f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/hpca.2008.4658633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/hpca.2008.4658633",
+    "identity_tokens": [
+      "DOI:10.1109/hpca.2008.4658633"
+    ],
+    "reason": "オンチップ電圧レギュレータによるCMPのコア別DVFSと省エネルギーを解析する汎用プロセッサ研究で、LLM/NPU推論専用ではない。",
+    "first_checked_at": "2026-10-03T22:19:08+00:00",
+    "last_checked_at": "2026-10-03T22:19:08+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "System level analysis of fast, per-core DVFS using on-chip switching regulators"
+  },
+  "processed_at": "2026-10-03T22:19:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edf39e977925",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
