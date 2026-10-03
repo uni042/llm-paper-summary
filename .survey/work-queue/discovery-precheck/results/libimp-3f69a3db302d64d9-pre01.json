@@ -1,0 +1,172 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3f69a3db302d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.11295",
+    "arXiv:2403.01241"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "076e48215212df370a7dc7589914cfc9fa7db66f",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T06:05:35.669682+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.11295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.01241",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.11295",
+      "year": 2024,
+      "published": "2024-02-17",
+      "abstract": "Model quantification uses low bit-width values to represent the weight matrices of existing models to be quantized, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, current quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit model compressing framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the quantization framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 81% of the non-quantized performance on LLaMA models) with robust training processes when only using 1-bit weight matrices.",
+      "canonical_id": "arXiv:2402.11295",
+      "arxiv_id": "2402.11295",
+      "doi": "10.48550/arXiv.2402.11295",
+      "authors": [
+        "Yuzhuang Xu",
+        "Xu Han",
+        "Zonghan Yang",
+        "Shuo Wang",
+        "Qing-Fu Zhu",
+        "Zhi-Yuan Liu",
+        "Wei-Dong Liu",
+        "Wanxiang Che"
+      ]
+    },
+    {
+      "title": "IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact",
+      "source_url": "https://arxiv.org/abs/2403.01241",
+      "year": 2024,
+      "published": "2024-03-02",
+      "abstract": "Large language models (LLMs) excel in natural language processing but demand intensive computation. To mitigate this, various quantization methods have been explored, yet they compromise LLM performance. This paper unveils a previously overlooked type of outliers in LLMs. Such outliers are found to allocate most of the attention scores on initial tokens of input, termed as pivot tokens, which are crucial to the performance of quantized LLMs. Given that, we propose IntactKV to generate the KV cache of pivot tokens losslessly from the full-precision model. The approach is simple and easy to combine with existing quantization solutions with no extra inference overhead. Besides, IntactKV can be calibrated as additional LLM parameters to boost the quantized LLMs further with minimal training costs. Mathematical analysis also proves that IntactKV effectively reduces the upper bound of quantization error. Empirical results show that IntactKV brings consistent improvement over various quantization methods across different LLMs and downstream tasks, leading to the new state-of-the-art for LLM quantization. The codes are available at https://github.com/ruikangliu/IntactKV.",
+      "canonical_id": "arXiv:2403.01241",
+      "arxiv_id": "2403.01241",
+      "doi": "10.48550/arXiv.2403.01241",
+      "authors": [
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Haokun Lin",
+        "Yue-Ning Li",
+        "Han Gao",
+        "Zheng-Jun Xu",
+        "Lu Hou",
+        "Jun Yao",
+        "Chun Yuan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.11295",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.11295",
+        "id:arXiv:2402.11295",
+        "title:onebit towards extremely lowbit large language models",
+        "url:https://arxiv.org/abs/2402.11295"
+      ],
+      "record": {
+        "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+        "source_url": "https://arxiv.org/abs/2402.11295",
+        "year": 2024,
+        "published": "2024-02-17",
+        "abstract": "Model quantification uses low bit-width values to represent the weight matrices of existing models to be quantized, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, current quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit model compressing framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the quantization framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 81% of the non-quantized performance on LLaMA models) with robust training processes when only using 1-bit weight matrices.",
+        "canonical_id": "arXiv:2402.11295",
+        "arxiv_id": "2402.11295",
+        "doi": "10.48550/arXiv.2402.11295",
+        "authors": [
+          "Yuzhuang Xu",
+          "Xu Han",
+          "Zonghan Yang",
+          "Shuo Wang",
+          "Qing-Fu Zhu",
+          "Zhi-Yuan Liu",
+          "Wei-Dong Liu",
+          "Wanxiang Che"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.01241",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.01241",
+        "id:arXiv:2403.01241",
+        "title:intactkv improving large language model quantization by keeping pivot tokens intact",
+        "url:https://arxiv.org/abs/2403.01241"
+      ],
+      "record": {
+        "title": "IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact",
+        "source_url": "https://arxiv.org/abs/2403.01241",
+        "year": 2024,
+        "published": "2024-03-02",
+        "abstract": "Large language models (LLMs) excel in natural language processing but demand intensive computation. To mitigate this, various quantization methods have been explored, yet they compromise LLM performance. This paper unveils a previously overlooked type of outliers in LLMs. Such outliers are found to allocate most of the attention scores on initial tokens of input, termed as pivot tokens, which are crucial to the performance of quantized LLMs. Given that, we propose IntactKV to generate the KV cache of pivot tokens losslessly from the full-precision model. The approach is simple and easy to combine with existing quantization solutions with no extra inference overhead. Besides, IntactKV can be calibrated as additional LLM parameters to boost the quantized LLMs further with minimal training costs. Mathematical analysis also proves that IntactKV effectively reduces the upper bound of quantization error. Empirical results show that IntactKV brings consistent improvement over various quantization methods across different LLMs and downstream tasks, leading to the new state-of-the-art for LLM quantization. The codes are available at https://github.com/ruikangliu/IntactKV.",
+        "canonical_id": "arXiv:2403.01241",
+        "arxiv_id": "2403.01241",
+        "doi": "10.48550/arXiv.2403.01241",
+        "authors": [
+          "Rui-Kang Liu",
+          "Hao-Li Bai",
+          "Haokun Lin",
+          "Yue-Ning Li",
+          "Han Gao",
+          "Zheng-Jun Xu",
+          "Lu Hou",
+          "Jun Yao",
+          "Chun Yuan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ea311270494d783ae547b6c435e059c4ee6c12b9a070df65f51d9592b63badd4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
