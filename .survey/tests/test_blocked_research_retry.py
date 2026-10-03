@@ -247,12 +247,13 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
         self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
         self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
 
-    def test_helper_reacts_immediately_to_blocked_retry_changes(self) -> None:
+    def test_helper_is_manual_recovery_for_blocked_retry(self) -> None:
         workflow = (
             ROOT / ".github/workflows/survey-helper.yml"
         ).read_text(encoding="utf-8")
-        self.assertIn("'.survey/scripts/blocked_retry.py'", workflow)
-        self.assertIn("'.github/workflows/survey-helper.yml'", workflow)
+        trigger = workflow.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", trigger)
+        self.assertNotIn("push:", trigger)
         self.assertIn("python .survey/scripts/blocked_retry.py --root .survey", workflow)
 
     def test_submission_fast_lane_records_blocked_retry_before_advancing(self) -> None:
