@@ -30,6 +30,10 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  動的に複製するエキスパート重みと、移動させない巨大な最適化状態を分離配置し、ルーティング負荷に応じて重みの複製数だけを毎反復調整するMoE学習システム。
+
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：2  
   注意機構とMoEで異なるGPU並列化グループを組み、同じGPU集合を処理ごとに組み替えて、エキスパートの不要なノード間通信を減らす大規模学習方式。
@@ -42,10 +46,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：1  
   大規模MoEで実トークンだけを詰めて通信し、同一ノード宛ての重複送信をまとめ、MoE部分の系列分割も変えて、paddingとノード間通信を減らすHPC学習システム。
 
-- **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  動的に複製するエキスパート重みと、移動させない巨大な最適化状態を分離配置し、ルーティング負荷に応じて重みの複製数だけを毎反復調整するMoE学習システム。
-
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](2024-2404.19429-lancet.md)**  
@@ -55,7 +55,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 4年前（2022-11〜2023-10）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：18  
   MoEのルーティング偏りを監視し、負荷の高いエキスパートだけを必要なGPUへ複製・移動して、トークンを捨てずにGPU間の待ち時間を減らす学習システム。
 
 ### 6年前（2020-11〜2021-10）
@@ -67,6 +67,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-11〜2020-10）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：147  
+  実装：✓ ・ リポジトリ内被引用：151  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->
