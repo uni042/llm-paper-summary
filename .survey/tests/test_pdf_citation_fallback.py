@@ -25,6 +25,17 @@ class PdfCitationFallbackTest(unittest.TestCase):
         self.assertIn("https://arxiv.org/pdf/2608.00577.pdf", urls)
         self.assertIn("https://aclanthology.org/2025.findings-acl.377.pdf", urls)
 
+    def test_reference_section_recovers_numbered_tail_when_heading_is_lost(self) -> None:
+        text = ("Body text " * 200) + """
+[1] A. Author. First Paper.
+[2] B. Author. Second Paper.
+[3] C. Author. Third Paper.
+[4] D. Author. Fourth Paper.
+"""
+        section = pdfs.reference_section(text)
+        self.assertTrue(section.lstrip().startswith("[1]"))
+        self.assertIn("[4] D. Author", section)
+
     def test_numbered_reference_section_splits_entries(self) -> None:
         section = """
 [1] A. Author. First Paper. arXiv:2303.06865.
