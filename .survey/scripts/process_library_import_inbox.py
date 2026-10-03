@@ -200,6 +200,26 @@ def parse_frontmatter(text: str) -> dict[str, Any]:
     return meta
 
 
+def normalize_research_audit_metadata(text: str, meta: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    """Add structural audit placeholders without claiming that an audit occurred."""
+    additions: list[str] = []
+    normalized = dict(meta)
+    if "last_audited" not in normalized:
+        normalized["last_audited"] = None
+        additions.append("last_audited: null")
+    if "audit_version" not in normalized:
+        normalized["audit_version"] = 0
+        additions.append("audit_version: 0")
+    if not additions:
+        return text, normalized
+
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        raise ValueError("Research Markdown frontmatter is not closed")
+    frontmatter = parts[1].rstrip("\n") + "\n" + "\n".join(additions) + "\n"
+    return "---" + frontmatter + "---" + parts[2], normalized
+
+
 def research_metadata_failures(source: Path, meta: dict[str, Any], repo_root: Path) -> list[str]:
     failures = list(audit_metadata_coverage.findings(source, repo_root))
     for key in ("list_summary", "worker_completed_at", "worker_run_key"):
@@ -364,6 +384,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
 
         try:
             meta = parse_frontmatter(raw)
+            raw, meta = normalize_research_audit_metadata(raw, meta)
             metadata_failures = research_metadata_failures(source, meta, repo_root)
             if metadata_failures:
                 blocked_path = block_payload(source, BLOCKED_RESEARCH)
