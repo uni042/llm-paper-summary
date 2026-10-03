@@ -22,8 +22,8 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         text = ROUTER.read_text(encoding="utf-8")
         self.assertIn("収録候補論文数 > 600", text)
         self.assertIn("収録候補論文数 <= 600", text)
-        self.assertIn("Research runでは新規完成Research Markdownを5件Libraryへ保存する", text)
-        self.assertIn("新規canonical identity 10件を本文確認まで行い", text)
+        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", text)
+        self.assertIn("Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し", text)
         self.assertNotIn("E = G + D - R", text)
 
     def test_worklist_order_is_highest_priority_first(self):
