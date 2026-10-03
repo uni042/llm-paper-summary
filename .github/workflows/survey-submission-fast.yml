@@ -4,6 +4,11 @@ on:
   # Retained for explicit recovery only. The current Library-first path does not
   # auto-trigger this legacy worker.
   workflow_dispatch:
+    inputs:
+      submission:
+        description: 'Optional repository-relative immutable descriptor; omit to drain all unsettled descriptors'
+        required: false
+        type: string
 
 permissions:
   contents: write
