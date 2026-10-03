@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:03:21+00:00",
-  "record_count": 420,
+  "updated_at": "2026-10-03T18:12:42+00:00",
+  "record_count": 421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6077,6 +6077,21 @@
         "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
       ],
       "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
+    },
+    "OpenReview:r8H7xhYPwz": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:r8H7xhYPwz",
+      "identity_tokens": [
+        "OpenReview:r8H7xhYPwz"
+      ],
+      "reason": "線形注意の状態更新にgatingとdelta ruleを統合し長文脈を線形時間で扱えるため推論効率との関連は強いが、主貢献は新しいsequence-model architectureと学習アルゴリズムであり、既存LLM推論基盤の最適化そのものではないためborderline。",
+      "first_checked_at": "2026-10-03T18:12:42+00:00",
+      "last_checked_at": "2026-10-03T18:12:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
     }
   }
 }
