@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9034734898f29fcf-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/hpca.2015.7056062",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/hpca.2015.7056062",
+    "identity_tokens": [
+      "DOI:10.1109/hpca.2015.7056062"
+    ],
+    "reason": "MLC NANDフラッシュの保持誤り特性・最適化・データ回復を扱うストレージ研究で、LLM KVキャッシュのフラッシュ階層化を直接設計・評価するものではない。",
+    "first_checked_at": "2026-10-03T17:47:42+00:00",
+    "last_checked_at": "2026-10-03T17:47:42+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md"
+    ],
+    "title": "Data retention in MLC NAND flash memory: Characterization, optimization, and recovery"
+  },
+  "processed_at": "2026-10-03T17:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9034734898f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
