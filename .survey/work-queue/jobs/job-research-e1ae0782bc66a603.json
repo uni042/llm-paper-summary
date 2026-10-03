@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-e1ae0782bc66a603",
+  "type": "research",
+  "parent_job_id": "job-e55eefc0e7620036",
+  "priority": 54,
+  "canonical_id": "arXiv:2006.03274",
+  "arxiv_id": "2006.03274",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:63857190aaf5aab1d94b54bb257b7b03b8cb5a50"
+  ],
+  "title": "GMAT: Global Memory Augmentation for Transformers",
+  "source_url": "https://arxiv.org/abs/2006.03274",
+  "paper_path": "papers/inference/99-other-inference-systems/2020-2006.03274-gmat-global-memory-augmentation-for-transformers.md",
+  "lineage": null,
+  "selection_reason": "長系列Transformerの二乗attentionを避けるglobal memory augmentationで長文脈処理効率に関係する。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 0,
+    "prestigious_venue": 0,
+    "citations": 54,
+    "citation_count": 54,
+    "total": 54,
+    "is_fresh": false,
+    "freshness_age_days": 2311,
+    "matched_prestigious_venue": null
+  },
+  "published": "2020-06-05",
+  "year": 2020,
+  "venue": "arXiv.org",
+  "citation_count": 54,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "63857190aaf5aab1d94b54bb257b7b03b8cb5a50",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-03T18:42:34+00:00"
+}
