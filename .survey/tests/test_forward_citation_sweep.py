@@ -183,6 +183,59 @@ lineage: test-lineage
             self.assertIn("2401.00001", seen_sources[0])
             self.assertIn("2401.00002", seen_sources[1])
 
+    def test_seed_specific_404_does_not_abort_remaining_selected_seeds(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.write_fixture(root)
+            second_paper = root / "papers/inference/test/paper2.md"
+            second_paper.write_text(
+                """---
+canonical_id: arXiv:2401.00002
+arxiv_id: 2401.00002
+title: Second Seed
+published: 2024-01-16
+lineage: test-lineage
+---
+# Second Seed
+""",
+                encoding="utf-8",
+            )
+            config_path = root / ".survey/config/forward-citation-sweep.json"
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            config["max_seeds_per_run"] = 2
+            config["max_provider_errors_per_run"] = 1
+            config_path.write_text(json.dumps(config), encoding="utf-8")
+
+            calls = []
+
+            def mixed_fetcher(source_url, *, page_size=100, **kwargs):
+                calls.append(source_url)
+                if "2401.00001" in source_url:
+                    def fail(cursor):
+                        raise forward_citation_sweep.discovery_provider_adapter.DiscoveryProviderError(
+                            "not found", status_code=404
+                        )
+                    return fail
+                return lambda cursor: {"records": [], "next_cursor": None}
+
+            with patch.object(
+                forward_citation_sweep.discovery_provider_adapter,
+                "semantic_scholar_fetcher",
+                side_effect=mixed_fetcher,
+            ):
+                result = forward_citation_sweep.sweep(
+                    root,
+                    now=dt.datetime(2026, 10, 3, tzinfo=dt.timezone.utc),
+                    sleep_fn=lambda _: None,
+                )
+
+            self.assertEqual(result["attempted_seed_count"], 2)
+            self.assertEqual(result["seed_errors"], 1)
+            self.assertEqual(result["provider_errors"], 0)
+            self.assertFalse(result["provider_error_budget_exhausted"])
+            self.assertEqual(result["completed_cycles"], 1)
+            self.assertEqual(len(calls), 2)
+
     def test_cursor_resumes_until_cycle_completion_then_waits_for_rescan(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
