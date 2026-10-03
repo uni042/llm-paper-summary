@@ -59,7 +59,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         ):
             with self.subTest(workflow=workflow_name):
                 text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
-                self.assertIn("- 'STATUS.md'", text)
+                self.assertNotIn("- 'STATUS.md'", text)
                 self.assertIn(".survey/scripts/refresh_due.py", text)
                 self.assertIn(state_path, text)
                 self.assertIn("--max-age-seconds 3000", text)
