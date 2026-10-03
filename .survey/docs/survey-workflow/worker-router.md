@@ -41,13 +41,13 @@ Scheduled workerはGitHubへのclaim、reservation、submission、result、hando
 - \`worker_id=scheduled-chat-30\`
 - 通常 \`scheduled_slot=30\`
 - worklist: \`.survey/work-queue/worker-worklist-30.json\`
-- 08:30 JSTはmaintenance専用run
+- 08:30 JSTはLLM / framework日次更新専用run
 
 ### :45
 - \`worker_id=scheduled-chat-45\`
 - \`scheduled_slot=45\`
 - worklist: \`.survey/work-queue/worker-worklist-45.json\`
-- :00 と同じ通常Research / Discoveryフローを使う。maintenance専用分岐は持たない
+- :00 と同じ通常Research / Discoveryフローを使う。08:30日次更新専用分岐は持たない
 
 3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
@@ -338,7 +338,9 @@ Researchの既定操作は **insert-if-absent**。既収録本文の更新は通
 
 別途移行を依頼されたとき、canonical identityで重複排除し、v12のimmutable Discovery JSONへ変換してから受信箱へ転送する。変換元は、GitHub pending copyのhash一致確認後にだけ削除する。
 
-## 13. 08:30 maintenance — LLM / LLMフレームワーク日次更新
+## 13. 08:30 日次更新 — LLM / LLMフレームワーク
+
+リポジトリのGC・品質監査・整合性確認を行うrepository maintenanceはScheduled Chatに依存させない。`.github/workflows/maintenance.yml` がGitHub Actionsのscheduleにより毎日08:30 JST（23:30 UTC）に自動実行する。08:30の`scheduled-chat-30`はrepository maintenanceの起動責任を持たず、以下のLLM / LLMフレームワーク日次更新だけを担当する。
 
 08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、**LLMとLLM推論フレームワークの最新情報を調査し、GitHubへ反映できる完成差分をLibraryへ作る日次更新run**とする。候補在庫や通常モード判定でResearch / Discoveryへ置換しない。
 
