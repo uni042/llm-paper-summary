@@ -49,6 +49,9 @@ from citation_graph import (
 # landing-page HTML, so keep the small exception table explicit and auditable.
 PRIMARY_PDF_OVERRIDES = {
     "DOI:10.1145/3688351.3689164": "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164",
+    "DOI:10.1145/3830422.3830427": "https://dl.acm.org/doi/pdf/10.1145/3830422.3830427",
+    "DOI:10.1145/3745756.3809243": "https://dl.acm.org/doi/pdf/10.1145/3745756.3809243",
+    "DOI:10.1145/3816440.3818602": "https://dl.acm.org/doi/pdf/10.1145/3816440.3818602",
     "AAAI:39816": "https://ojs.aaai.org/index.php/AAAI/article/download/39816/43777",
     "AAAI:39454": "https://ojs.aaai.org/index.php/AAAI/article/download/39454/43415",
     "AAAI:39106": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
@@ -60,6 +63,9 @@ PRIMARY_PDF_OVERRIDES = {
 PRIMARY_PDF_FALLBACKS = {
     "DOI:10.1145/3688351.3689164": [
         "https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf",
+    ],
+    "DOI:10.1145/3830422.3830427": [
+        "https://lca.ece.utexas.edu/pubs/li_sigopsreview26.pdf",
     ],
 }
 
