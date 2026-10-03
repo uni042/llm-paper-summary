@@ -10509,13 +10509,10 @@
       "checked_at": "2026-09-25T23:54:35+00:00"
     },
     "papers/inference/02-adaptive-expert-computation-compression/2026-moep-modular-expert-paths.md": {
-      "status": "complete",
-      "source_fingerprint": "6e6293890a21c8a1004223e457155a69c6cf637687af84efb7e51b04ab3fa3cc",
-      "references_total": 3,
-      "normalized_references": 3,
-      "source": "primary-pdf-reference-section",
-      "source_url": "https://oulurepo.oulu.fi/bitstream/handle/10024/65293/nbnfioulu-202609186152.pdf",
-      "checked_at": "2026-09-26T00:10:52+00:00"
+      "status": "blocked",
+      "source_fingerprint": "1695f40f3a9b7d2fbafe8cb30d1b52fdeba3562a70747197084066a5f92157e6",
+      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
+      "checked_at": "2026-10-03T07:55:46+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2026-2607.14647-d-cut-adaptive-verification-depth-pruning.md": {
       "status": "complete",
@@ -10677,11 +10674,11 @@
     },
     "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md": {
       "status": "complete",
-      "source_fingerprint": "33640b7ed41c2f8380232ecf1e5682a895d2f85eeef1ddfaab1d517ee59281d2",
+      "source_fingerprint": "9126a3ed49b30f4b7694172e6b3d839273958cf28322e87d62a4451bfb7bf516",
       "references_total": 23,
-      "normalized_references": 9,
+      "normalized_references": 10,
       "source": "arxiv-html-reference-section",
-      "checked_at": "2026-09-26T12:26:30+00:00"
+      "checked_at": "2026-10-03T07:55:36+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md": {
       "status": "complete",
@@ -10939,9 +10936,9 @@
     },
     "papers/inference/01-offload-hierarchical-memory/2026-elastic-memory-remapping-oneiros.md": {
       "status": "blocked",
-      "source_fingerprint": "af340c19959b24ea40c47d5fb76d5cef2ebb008211fc1c71cc203006a64a87e8",
-      "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-09-27T16:00:58+00:00"
+      "source_fingerprint": "153c72a246bbb255da5dad8f65ded65d67670f9eb60e53bb1875b0801959c419",
+      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
+      "checked_at": "2026-10-03T07:55:38+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md": {
       "status": "complete",
@@ -11505,7 +11502,183 @@
       "normalized_references": 32,
       "source": "arxiv-html-reference-section",
       "checked_at": "2026-09-27T15:30:48+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": {
+      "status": "complete",
+      "source_fingerprint": "fa5fba812028becf338e6bb69968405c45ce95454b90c3bde86241e62ff48da2",
+      "references_total": 61,
+      "normalized_references": 21,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:33+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md": {
+      "status": "complete",
+      "source_fingerprint": "889789ed20be6f6ecd3be9c1f35976991d74fa6f7e850c576685b821df059401",
+      "references_total": 14,
+      "normalized_references": 10,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:34+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md": {
+      "status": "complete",
+      "source_fingerprint": "6326833aec1b3890a0b456799a78f4d79438c7989423733604c59de7d43d7c51",
+      "references_total": 32,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:35+00:00"
+    },
+    "papers/inference/01-offload-hierarchical-memory/2026-2609.33385-oled-moe-accelerating-moe-based-dllm-inference-via-inter-iteration-local.md": {
+      "status": "complete",
+      "source_fingerprint": "219679dde18e7f1bf3af49df6cf393a437ee229faee948299047e75cb02c63a4",
+      "references_total": 68,
+      "normalized_references": 59,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:37+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md": {
+      "status": "complete",
+      "source_fingerprint": "e36a660bcfac738175262fea9997c52b35f95e761c2e3e6687445cfa3623201f",
+      "references_total": 33,
+      "normalized_references": 15,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:39+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md": {
+      "status": "complete",
+      "source_fingerprint": "743fc703e4b961ca5e0dde3d9e8624c40968174052d1fd18e587251bd0f48c45",
+      "references_total": 67,
+      "normalized_references": 42,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:40+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md": {
+      "status": "complete",
+      "source_fingerprint": "c9a70defbadbda719152417fec189ca1279e70786021934128e8436410c064f9",
+      "references_total": 42,
+      "normalized_references": 32,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:41+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md": {
+      "status": "complete",
+      "source_fingerprint": "daaca9d3db31f186189661b924234042ce2aa9fe119accaaf515d87b0b0638c6",
+      "references_total": 45,
+      "normalized_references": 33,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:42+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md": {
+      "status": "complete",
+      "source_fingerprint": "3d645575d3174ea3cb20dcd94abd5940f064b28e7a630b3be98b5abbe82ccd81",
+      "references_total": 33,
+      "normalized_references": 8,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:43+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md": {
+      "status": "complete",
+      "source_fingerprint": "299818e6b73aceb10f5e8c729820e00744272a0303f8730b0ad186e2ad2ac77b",
+      "references_total": 60,
+      "normalized_references": 47,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:44+00:00"
+    },
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2606.27866-flexmoe-one-for-all-nested-intra-expert-pruning-for-moe-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "289f5d61224243b86acb2be76cbcd52a20dfb5df2525a2e1a615ea6bc507c660",
+      "references_total": 38,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:45+00:00"
+    },
+    "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md": {
+      "status": "complete",
+      "source_fingerprint": "eb5868d3f55a5ca315e6c7dcd4f62e4b0698ffd4ddeef52a6362b30d5a351672",
+      "references_total": 25,
+      "normalized_references": 6,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:47+00:00"
+    },
+    "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md": {
+      "status": "complete",
+      "source_fingerprint": "4a3717ac7c6e19557f3370cd00fc3a96f7a06b7789346f0fd13702a35bf811f4",
+      "references_total": 43,
+      "normalized_references": 32,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:48+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "489941005117b8b3dc06f0d67eac025bc5d1b987d34d28864c19e4ccc959aa85",
+      "references_total": 58,
+      "normalized_references": 30,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:49+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md": {
+      "status": "complete",
+      "source_fingerprint": "9962caa2f6bb227bcca141b8a19b529be6b90ccd82e860fec7e7b54ae46b140b",
+      "references_total": 70,
+      "normalized_references": 34,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:50+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "51da2d10a8c4cabfc039632c267e1ab36b1845a5cae7802196abf62b3a7ffae1",
+      "references_total": 93,
+      "normalized_references": 58,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:51+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "160e287e782b03ebd32c0a0f8b46270c09a08b3a1b8a803f500cc3a42b197ed9",
+      "references_total": 78,
+      "normalized_references": 71,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:52+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md": {
+      "status": "complete",
+      "source_fingerprint": "22f5f21541715cf0fd8765ea6acc0dc6a33e3307523d4469ee7d850d33c5e2bc",
+      "references_total": 99,
+      "normalized_references": 39,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:53+00:00"
+    },
+    "papers/inference/04-conditional-computation/2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "a40f1fa05471cfa3c4966cd4c3345d7c0ef9fc3de0639d9ce7f014d350ac2abd",
+      "references_total": 25,
+      "normalized_references": 11,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:54+00:00"
+    },
+    "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md": {
+      "status": "complete",
+      "source_fingerprint": "536fecff37d8bdcbf908a7e65570a37ce17b96ebe1b9210c0811d77386c89f57",
+      "references_total": 84,
+      "normalized_references": 53,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:55+00:00"
+    },
+    "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md": {
+      "status": "complete",
+      "source_fingerprint": "2d70c206ae9bf649506f914393cbaad06d101681cba774ecf7ea4682f9050e75",
+      "references_total": 24,
+      "normalized_references": 11,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:56+00:00"
+    },
+    "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md": {
+      "status": "complete",
+      "source_fingerprint": "796acc1b856d3cfe437b0c8840b888c867635906abc2649f81d30fc05ca3bdeb",
+      "references_total": 23,
+      "normalized_references": 3,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-03T07:55:57+00:00"
     }
   },
-  "updated_at": "2026-09-27T16:01:38+00:00"
+  "updated_at": "2026-10-03T07:56:06+00:00"
 }

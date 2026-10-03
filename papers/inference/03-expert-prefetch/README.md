@@ -20,6 +20,18 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：[✓](https://github.com/axonn-ai/yalis/tree/offload_prefetch) ・ リポジトリ内被引用：1  
   Speculating Expertsは次層の専門家を予測し、重み転送だけでなくFFN計算まで現在層と並行して先行実行する。元ルータと一致した結果だけ再利用し、外れれば正しく再計算する。
 
+- **2026-03 · [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FIRM-MoEは専門家FFNを射影行列単位へ分解し、複数前層の予測が一致した部分を優先して先読みする。VRAM容量とPCIe帯域に合わせて先読み距離・量を調整する。
+
+- **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  CommitMoEは次層専門家を先読みして実行対象に確定し、予測が外れても正しい重みを待たず準備済み専門家へ出力重みを再配分し、オフロード待ちをなくす近似方式。
+
+- **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  OD-MoEは常設キャッシュを持たず、軽量化モデルで数層先の専門家を予測して複数GPUへ実行直前に読み込む。予測が外れれば元ルータの専門家を追加ロードする分散エッジ方式である。
+
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md)**  
@@ -30,30 +42,18 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
   SPICEは予測した専門家を低ランク近似・CPU正確計算・GPU正確計算へ振り分け、低ランク代替で予測外れの転送を避けつつ、MoEオフロードのPCIe待ちを減らす。
 
-- **2026-03 · [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  FIRM-MoEは専門家FFNを射影行列単位へ分解し、複数前層の予測が一致した部分を優先して先読みする。VRAM容量とPCIe帯域に合わせて先読み距離・量を調整する。
-
-- **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  CommitMoEは次層専門家を先読みして実行対象に確定し、予測が外れても正しい重みを待たず準備済み専門家へ出力重みを再配分し、オフロード待ちをなくす近似方式。
-
 - **2026-03 · [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CasMoEは類似入力の過去ルーティング履歴を検索し、見つからない場合だけ学習予測器で全層の専門家を予測して、CPUからGPUへの先読みを早く始める。
 
-- **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  OD-MoEは常設キャッシュを持たず、軽量化モデルで数層先の専門家を予測して複数GPUへ実行直前に読み込む。予測が外れれば元ルータの専門家を追加ロードする分散エッジ方式である。
-
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
-  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：16  
   DAOPはプリフィルでリクエスト固有の専門家をGPU配置へ反映し、デコードでは次層のCPU専門家を1ブロック前に予測・計算して、単一GPUの転送待ちを減らす。
 
 - **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   Fateは隣接層のルータ入力から次層専門家を予測し、層ごとのGPU常駐数と利用履歴を調整する。低頻度専門家の低ビット化も組み合わせ、エッジMoEの転送と容量を抑える。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
