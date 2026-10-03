@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-03 15:34:16 JST**
+> 自動生成: **2026-10-03 15:46:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -49,18 +49,18 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **true** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（222時間58分前）** |
+| maintenance pending | **false** |
+| 最終maintenance完了 | **10-03 15:43:06 JST（2分前）** |
 | 最終maintenance status | **issues_found** |
-| consistency | **passed** |
+| consistency | **issues_found** |
 | health | **issues_found** |
-| health errors / warnings | **2 / 0** |
-| metadata | **passed** |
-| metadata incomplete | **0** |
-| GC削除件数 | **631** |
+| health errors / warnings | **4 / 2** |
+| metadata | **issues_found** |
+| metadata incomplete | **177** |
+| GC削除件数 | **2055** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
-| quality regressions | **3** |
+| quality regressions | **59** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -92,8 +92,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **8** | **8** | **0** | **0** | **0** | **25** |
-| 合計 | **0** | **9** | **8** | **0** | **144** | **0** | **25** |
+| Discovery | **0** | **8** | **0** | **8** | **0** | **0** | **25** |
+| 合計 | **0** | **9** | **0** | **8** | **144** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -131,40 +131,40 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-26 04:31 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **25件**
+- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **8件** / 候補: **25件**
 - 探索軸: preload-backward-structured-references / forward citations of LMCache enterprise-scale KV cache layer / forward citations of FlexGen offload and hierarchical-memory LLM inference / forward citations of FlashAttention for recent attention kernels and serving systems / forward citations of Splitwise for disaggregated LLM serving / forward citations of Sequoia hardware-aware speculative decoding / forward citations of DistServe disaggregated prefill-decode LLM serving
 - round `round-1` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r1.json`
   - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r1.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-10` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r10.json`
   - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r10.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-12` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r12.json`
   - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r12.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-14` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r14.json`
   - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r14.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-2` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r2.json`
   - 探索軸: forward citations of Splitwise for disaggregated LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r2.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-4` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r4.json`
   - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r4.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-7` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r7.json`
   - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r7.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 - round `round-9` / 候補 **4件**
   - submission: `.survey/work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r9.json`
   - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/take-scheduled-chat-30-20260926T043136JST-r9.json` (`ok=true`)
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -248,11 +248,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **403** |
-| └ Research | **192** |
+| 成功result未照合のimmutable submission | **345** |
+| └ Research | **142** |
 | └ Audit | **2** |
-| └ Discovery | **75** |
-| └ Other/Unknown | **134** |
+| └ Discovery | **143** |
+| └ Other/Unknown | **58** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -260,7 +260,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 | 指標 | 件数 |
 |---|---:|
-| completed Research/Audit jobで厳格検証未成立 | **338** |
+| completed Research/Audit jobで厳格検証未成立 | **22** |
 
 ### 整合性異常
 
