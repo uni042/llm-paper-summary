@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261003-1334-scheduled-chat-30",
+  "reference_main_sha": "14dd6ab9334b652e0c72c32a1c11fcbbec54c89e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.08138",
+      "identity_tokens": [
+        "arXiv:2401.08138",
+        "DOI:10.48550/arXiv.2401.08138"
+      ],
+      "title": "LLMs for Test Input Generation for Semantic Caches",
+      "reason": "VaryGenはLLMアプリの意味キャッシュを題材にするが、主貢献はキャッシュ自体の高速化ではなく、キャッシュの誤ヒット・誤ミスを検証するテスト入力生成。推論効率に隣接するため境界領域。",
+      "source_url": "https://arxiv.org/abs/2401.08138",
+      "body_check": "本文§2–4を確認。文書から質問を生成し、hard negative/近似質問を合成・検証してGPTCacheを試験する。Assignment/Qasperで質問品質を評価し、GPTCacheのDistilBERT/SBERT/ONNX構成の失敗例を検出するが、新しいcache runtimeやlatency最適化は提案しない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07159",
+      "identity_tokens": [
+        "arXiv:2401.07159",
+        "DOI:10.48550/arXiv.2401.07159"
+      ],
+      "title": "Quantized Side Tuning: Fast and Memory-Efficient Tuning of Quantized Large Language Models",
+      "reason": "4bit基盤モデルとside networkで微調整時の重み・activation・optimizer memoryを削減する方式で、最終目的と主要評価がfine-tuning高速化・省メモリ化のため凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2401.07159",
+      "body_check": "本文Method/Experimentsを確認。基盤LLMを4bitで凍結し、gradient-free downsampleと低ランクadapterを持つside networkだけへ逆伝播する。最大2.3倍のfine-tuning memory削減、3倍のfine-tuning高速化（full fine-tuning比では最大7倍memory削減）を主結果とし、推論runtimeは主評価しない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.06761",
+      "identity_tokens": [
+        "arXiv:2401.06761",
+        "DOI:10.48550/arXiv.2401.06761"
+      ],
+      "title": "APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding",
+      "reason": "自己回帰出力を階層構造へ分岐して独立部分を並列生成し、生成step、KV cache、attention計算を削減するLLM推論高速化方式。",
+      "source_url": "https://arxiv.org/abs/2401.06761",
+      "body_check": "本文方式・実験を確認。階層構造を含む一般データでinstruction tuningし、モデル自身がfork/mergeを計画して複数枝を並列復号する。APAR単独で最大2倍、投機的復号との併用で最大4倍、サービング条件でthroughput 20–70%増・latency 20–35%減を報告する。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06914-taper-regulating-branch-parallelism.md"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.04883",
+      "identity_tokens": [
+        "arXiv:2401.04883",
+        "DOI:10.48550/arXiv.2401.04883"
+      ],
+      "title": "Multi-User Chat Assistant (MUCA): a Framework Using LLMs to Facilitate Group Conversations",
+      "reason": "複数ユーザー会話で何を・いつ・誰に答えるかを決める対話エージェント設計が主題で、LLM推論基盤の速度・メモリ最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2401.04883",
+      "body_check": "本文のMUCA/MUS構成と評価を確認。Sub-topic Generator、Dialog Analyzer、Conversational Strategies Arbitratorで発話内容・タイミング・宛先を決定し、LLMベースのMulti-User Simulatorで開発を補助する。評価はグループ会話の応答適切性・engagement中心。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.02731",
+      "identity_tokens": [
+        "arXiv:2401.02731",
+        "DOI:10.48550/arXiv.2401.02731"
+      ],
+      "title": "Parameter-Efficient Sparsity Crafting from Dense to Mixture-of-Experts for Instruction Tuning on General Tasks",
+      "reason": "dense LLMをMoEへupcycleしadapterだけでexpertを差別化するinstruction-tuning手法で、主目的が学習時の容量拡張・微調整効率のため凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2401.02731",
+      "body_check": "本文Method/Experimentsを確認。PESCはMoE層へadapterを挿入して元expert重みを固定し、sparse upcyclingの近似品質を保ちながらinstruction tuningのtrainable parameter/GPU memoryを削減する。評価はCamelidaeの一般タスク品質とtuning costで、推論serving最適化は主題でない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.01312",
+      "identity_tokens": [
+        "arXiv:2401.01312",
+        "DOI:10.48550/arXiv.2401.01312"
+      ],
+      "title": "LLM Harmony: Multi-Agent Communication for Problem Solving",
+      "reason": "複数LLMエージェントのpersona付きrole-playing通信で問題解決能力を高めるagentic reasoning研究で、推論サービングや計算・メモリ効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2401.01312",
+      "body_check": "本文のmulti-agent frameworkと実験を確認。異なるpersonaのagent間通信をCAMEL型に構成し、単独LLMやpromptingに対する問題解決・適応性を比較する。主評価は回答能力で、KV/cache/kernel/scheduler最適化はない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.16733",
+      "identity_tokens": [
+        "arXiv:2312.16733",
+        "DOI:10.48550/arXiv.2312.16733"
+      ],
+      "title": "SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads",
+      "reason": "予測不能・burstyなML推論を対象に、weight-shared SuperNetworkからsubnetを瞬時切替するserving system。LLM専用ではないが、推論サービングのSLO/accuracy schedulingに直接隣接するため境界領域。",
+      "source_url": "https://arxiv.org/abs/2312.16733",
+      "body_check": "本文方式・評価を確認。SubNetActが同一SuperNetwork内の複数subnetを低追加memoryで同時提供し、SlackFitがrequest slackに応じてlatency-accuracy点を選ぶ。最大2.6倍少ないmemory、同SLO達成率で4.67%高accuracy、同accuracyで2.85倍高SLO attainmentを報告するがLLM workloadは主対象でない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.13211",
+      "identity_tokens": [
+        "arXiv:2312.13211",
+        "DOI:10.48550/arXiv.2312.13211"
+      ],
+      "title": "DSFormer: Effective Compression of Text-Transformers by Dense-Sparse Weight Factorization",
+      "reason": "Transformer重みを小さいdense行列と半構造化sparse行列の積へ因数分解し、配備時のモデル容量・演算を削減する圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2312.13211",
+      "body_check": "本文Method/Experimentsを確認。低rankだけでは表現力不足になる点をdense×semi-structured sparse factorizationで補い、Straight-Through Factorizerで全層のfactorizationを下流目的へ共同最適化する。低rank基準より最大40%高い圧縮、既存distilled/layer-shared/quantized Transformerへ最大50%追加圧縮を報告する。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.12379",
+      "identity_tokens": [
+        "arXiv:2312.12379",
+        "DOI:10.48550/arXiv.2312.12379"
+      ],
+      "title": "Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning",
+      "reason": "視覚言語モデルの多タスクinstruction tuningでtask conflictを抑えるLoRA-MoE学習手法が主題で、推論効率化が最終目的ではない。",
+      "source_url": "https://arxiv.org/abs/2312.12379",
+      "body_check": "本文Method/Experimentsを確認。instruction embeddingをk-meansでcluster化し、cluster条件付きLoRA expertとuniversal expertをroutingしてInstructBLIP/LLaVAのtask specializationとgeneralizationを両立する。評価はVQA等の品質で、serving latency/memoryの主評価はない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.08935",
+      "identity_tokens": [
+        "arXiv:2312.08935",
+        "DOI:10.48550/arXiv.2312.08935"
+      ],
+      "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations",
+      "reason": "数学推論の各stepへ自動ラベルを付けるprocess reward modelと、それを用いた学習・候補選択の品質向上研究で、推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2312.08935",
+      "body_check": "本文Method/Experimentsを確認。各中間stepから複数completionをsamplingし最終正答率でstep labelを構成、process reward modelを学習してreranking/reinforcementへ利用する。GSM8K/MATHの正答率改善が主結果で、推論latency/KV/scheduler最適化は扱わない。",
+      "first_checked_at": "2026-10-03T13:34:31+09:00",
+      "last_checked_at": "2026-10-03T13:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md"
+      ],
+      "worklist_rank": 468
+    }
+  ]
+}
