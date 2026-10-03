@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（33本）
+## 自動生成の論文一覧（34本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -75,6 +75,10 @@
 - **2025-08 · [Efficient Mixed-Precision Large Language Model Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
   実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：5  
   TurboMindは、重み・活性値・キー・バリュー（Key-Value; KV）キャッシュの精度が混在するLLM推論を、単に低ビットカーネルへ置き換えるのではなく、GPUメモリ階層とテンソルコア命令に合わせて二つのパイプラインへ再設計する。
+
+- **2025-04 · [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md)**  
+  実装：— ・ リポジトリ内被引用：4  
+  3ビットMoEの量子化残差を専門家特性に応じた低ランク補償器で回復し、校正不要の精度改善とテンソル Core向けW3A16実測高速化を両立する。
 
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
   実装：[✓](https://github.com/HeXiao-55/PTQTP) ・ リポジトリ内被引用：3  
