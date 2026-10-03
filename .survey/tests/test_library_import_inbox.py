@@ -17,6 +17,74 @@ import process_library_import_inbox as inbox
 
 
 class LibraryImportInboxTests(unittest.TestCase):
+    def test_research_metadata_gate_rejects_incomplete_frontmatter(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2609.99999
+title: Incomplete
+summary: 不足メタデータの検査用。
+list_summary: 不足メタデータの検査用。
+source: https://arxiv.org/abs/2609.99999
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Incomplete
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            failures = inbox.research_metadata_failures(source, meta, root)
+            self.assertIn("authors", failures)
+            self.assertIn("published", failures)
+            self.assertIn("publication", failures)
+            self.assertIn("publication_type", failures)
+            self.assertIn("publication_status", failures)
+            self.assertIn("sources", failures)
+            self.assertIn("implementation", failures)
+            self.assertIn("code", failures)
+            self.assertIn("last_checked", failures)
+
+    def test_research_metadata_gate_accepts_complete_library_frontmatter(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2609.99999
+arxiv_id: '2609.99999'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+title: Complete
+summary: 必須メタデータが揃ったResearch原稿。
+list_summary: 必須メタデータが揃ったResearch原稿を取り込み前に検証する。
+authors:
+- Example Author
+published: '2026-09-01'
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+source: https://arxiv.org/abs/2609.99999
+sources:
+- https://arxiv.org/abs/2609.99999
+implementation: 論文中で実装・評価済み。公式コードURLは確認できない。
+code: null
+last_checked: '2026-10-03'
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Complete
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            self.assertEqual(inbox.research_metadata_failures(source, meta, root), [])
+
     def test_repo_relative_accepts_relative_and_absolute_paths(self) -> None:
         repo_root = Path("/tmp/example-repo").resolve()
         rel = Path(".survey/import-inbox/pending/research/paper.md")
