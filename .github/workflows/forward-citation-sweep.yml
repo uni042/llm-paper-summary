@@ -40,9 +40,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          due=$(python .survey/scripts/refresh_due.py \
-            --state .survey/work-queue/forward-citation-sweep.json \
-            --max-age-seconds 3000)
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            due=true
+            echo "Implementation/config push: force one real citation sweep for validation."
+          else
+            due=$(python .survey/scripts/refresh_due.py \
+              --state .survey/work-queue/forward-citation-sweep.json \
+              --max-age-seconds 3000)
+          fi
           echo "run=${due}" >> "$GITHUB_OUTPUT"
           echo "forward_citation_refresh_due=${due}"
       - name: Install runtime dependencies
