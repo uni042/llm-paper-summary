@@ -9,7 +9,7 @@ list_summary: 多輪会話の履歴KV再計算と長promptによるFCFS head-of-
 authors:
 - Jinwoo Jeong
 - Jeongseob Ahn
-published: '2025'
+published: '2025-03'
 publication: ASPLOS 2025, pp. 1-15
 publication_type: peer-reviewed-conference
 publication_status: Published
