@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-03 17:32:32 JST**
+> 自動生成: **2026-10-03 18:08:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -34,14 +34,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **9119** |
+| 構造化references総候補 | **9208** |
 | 処理済み | **1905** |
-| 未処理 | **7214** |
+| 未処理 | **7303** |
 | 収録済みとして除外 | **961** |
 | 無関係として除外 | **566** |
 | 微妙として除外 | **378** |
 
-- 消化率: **20.9%**
+- 消化率: **20.7%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-03 15:43:06 JST（1時間49分前）** |
+| 最終maintenance完了 | **10-03 15:43:06 JST（2時間25分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -71,8 +71,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **11** |
-| 直近6hのDiscovery本文確認・分類 | **110** |
+| 直近6hのDiscovery run | **8** |
+| 直近6hのDiscovery本文確認・分類 | **80** |
 | 最終Research完了 | **10-03 10:58:30 JST** |
 | 最終Discovery完了 | **10-03 14:45:00 JST** |
 
