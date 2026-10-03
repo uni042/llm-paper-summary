@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "JetMoE: Reaching Llama2 Performance with 0.1M Dollars",
+      "source_url": "https://arxiv.org/abs/2404.07413",
+      "year": 2024,
+      "published": "2024-04-11",
+      "venue": "arXiv.org",
+      "citation_count": 56,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable results, but their increasing resource demand has become a major obstacle to the development of powerful and accessible super-human intelligence. This report introduces JetMoE-8B, a new LLM trained with less than $0.1 million, using 1.25T tokens from carefully mixed open-source corpora and 30,000 H100 GPU hours. Despite its low cost, the JetMoE-8B demonstrates impressive performance, with JetMoE-8B outperforming the Llama2-7B model and JetMoE-8B-Chat surpassing the Llama2-13B-Chat model. These results suggest that LLM training can be much more cost-effective than generally thought. JetMoE-8B is based on an efficient Sparsely-gated Mixture-of-Experts (SMoE) architecture, composed of attention and feedforward experts. Both layers are sparsely activated, allowing JetMoE-8B to have 8B parameters while only activating 2B for each input token, reducing inference computation by about 70% compared to Llama2-7B. Moreover, JetMoE-8B is highly open and academia-friendly, using only public datasets and training code. All training parameters and data mixtures have been detailed in this report to facilitate future efforts in the development of open foundation models. This transparency aims to encourage collaboration and further advancements in the field of accessible and efficient LLMs. The model weights are publicly available at https://github.com/myshell-ai/JetMoE.",
+      "identifiers": [
+        "SemanticScholar:c9ff9fbbe21985b35d6a070b67f22a0e065c4328"
+      ],
+      "semantic_scholar_id": "c9ff9fbbe21985b35d6a070b67f22a0e065c4328",
+      "canonical_id": "arXiv:2404.07413",
+      "arxiv_id": "2404.07413",
+      "doi": "10.48550/arXiv.2404.07413",
+      "authors": [
+        "Yikang Shen",
+        "Zhen Guo",
+        "Tianle Cai",
+        "Zengyi Qin"
+      ],
+      "priority": 56,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 56,
+        "citation_count": 56,
+        "total": 56,
+        "is_fresh": false,
+        "freshness_age_days": 905,
+        "matched_prestigious_venue": null
+      },
+      "reason": "20. **JetMoE: Reaching Llama2 Performance with 0.1M Dollars** — `DOI:10.48550/arxiv.2404.07413` ([arXiv paper](https://arxiv.org/abs/2404.07413)). Sparse 8B-total/2B-active MoE targets low-cost training and efficient inference; report states under 30K H100-hours / $100K and about 70% less inference compute than Llama2-7B.",
+      "library_body_check": "legacy migration: body_check was not recorded in the source artifact; no new content-check claim is added.",
+      "library_source_run_file": "/LLM-paper-summary-library-first/discovery/discovery-20260927-0010-scheduled-chat-00.md"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-878e140f1c87",
+    "round": "libimp-878e140f1c87aa55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-878e140f1c87aa55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-878e140f1c87aa55-pre01.json",
+    "receipt": "sha256:03a1a06da1908ed29d49589fdb4de0f28e8b03b914d6e1888dfe650dca1839a5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-878e140f1c87",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
