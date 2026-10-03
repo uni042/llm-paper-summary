@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1245-scheduled-chat-45",
+  "reference_main_sha": "14dd6ab9334b652e0c72c32a1c11fcbbec54c89e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.10462",
+      "identity_tokens": [
+        "arXiv:2402.10462",
+        "DOI:10.48550/arXiv.2402.10462"
+      ],
+      "title": "QDyLoRA: Quantized Dynamic Low-Rank Adaptation for Efficient Large Language Model Tuning",
+      "reason": "4bit量子化と動的LoRAを組み合わせ、複数rankを1回のfine-tuningで学習することが主目的。推論時のrank選択柔軟性はあるが、主要貢献と評価は学習メモリ・fine-tuning効率なので凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2402.10462",
+      "body_check": "本文Method/Experiments/Conclusionを確認。NF4で凍結基盤重みを保存し、各iterationでLoRA rank bをsampleして切り詰めたWdw/Wupだけ更新する。Falcon-40Bを32GB V100 1枚でrank 1〜64へ1回のfine-tuningで対応させ、MMLU/GSM8K等のtask品質を比較する研究であり、推論runtime高速化を主評価しない。",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": 490,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.09589",
+      "identity_tokens": [
+        "arXiv:2402.09589",
+        "DOI:10.48550/arXiv.2402.09589"
+      ],
+      "title": "MLCC: A Congestion Control Technique to Accelerate ML Training",
+      "reason": "共有GPUクラスタでDNN training flowの送信率を調整して通信をcompute区間へinterleaveする輻輳制御で、最終適用先が分散学習高速化のため凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2402.09589",
+      "body_check": "本文の方式・評価内容を確認。既存congestion controlへ約60行の変更でML training flowのrateを調整し、testbedで平均/99p training iterationを最大1.9x/2.7x、36-node 288-GPU simulationでtraining throughput 1.35xを報告する。LLM inference servingではない。",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "worklist_rank": 489,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07839",
+      "identity_tokens": [
+        "arXiv:2402.07839",
+        "DOI:10.48550/arXiv.2402.07839"
+      ],
+      "title": "Towards Meta-Pruning via Optimal Transport",
+      "reason": "Optimal Transportとmodel fusionを使う一般ニューラルネットの構造化pruning研究で、CIFAR/ImageNet等が中心。LLM推論向け圧縮・kernel・servingを対象にしない。",
+      "source_url": "https://arxiv.org/abs/2402.07839",
+      "body_check": "本文のIntra-Fusion方式と実験を確認。任意importance metricで残すneuronへpruned neuronの情報をOptimal Transportで融合し、fine-tuningなしのaccuracy recoveryを狙う。評価対象は各種vision networkとCIFAR-10/100、ImageNetで、LLM固有の推論経路はない。",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.14436-mergemoe-output-merging.md"
+      ],
+      "worklist_rank": 488,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05939",
+      "identity_tokens": [
+        "arXiv:2402.05939",
+        "DOI:10.48550/arXiv.2402.05939"
+      ],
+      "title": "Uncertainty Awareness of Large Language Models Under Code Distribution Shifts: A Benchmark Study",
+      "reason": "CodeLlamaのcode distribution shift下でuncertainty calibration/estimationを評価するbenchmark研究。推論効率・サービング・メモリ管理の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.05939",
+      "body_check": "本文のbenchmark construction、probabilistic methods、evaluationを確認。3種類の現実的code shiftを複数強度で生成し、CodeLlamaへuncertainty calibration/estimation法を適用してcalibration errorやmisclassification detectionを測る。効率とのtrade-offは論じるがruntime高速化方式は提案しない。",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md"
+      ],
+      "worklist_rank": 487,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04792",
+      "identity_tokens": [
+        "arXiv:2402.04792",
+        "DOI:10.48550/arXiv.2402.04792"
+      ],
+      "title": "Direct Language Model Alignment from Online AI Feedback",
+      "reason": "online AI feedbackを使うdirect preference alignmentの学習手法が主題で、推論高速化・推論サービングを最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2402.04792",
+      "body_check": "本文のonline DAP学習loopと実験を確認。現在policyからresponseをsampleし、AI feedbackでpreference pairを生成してDPO系objectiveをonline更新する。offline DAP/RLHFとのalignment品質比較が中心で、推論runtimeやKV/cache管理は扱わない。",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+      ],
+      "worklist_rank": 486,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03701",
+      "identity_tokens": [
+        "arXiv:2402.03701",
+        "DOI:10.48550/arXiv.2402.03701"
+      ],
+      "title": "Unified Discrete Diffusion for Categorical Data",
+      "reason": "離散時間・連続時間のcategorical diffusionを統一し、学習objectiveとsampling式を簡素化する生成モデル研究。LLM推論基盤の高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.03701",
+      "body_check": "本文のUSD3導出と実験を確認。variational lower boundを簡約し、任意noise distributionに対応するexact/accelerated backward denoisingを導出してdiscrete-time/continuous-time diffusionを統一する。言語を含むcategorical data生成が対象だが、LLM serving/KV/kernelの研究ではない。",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "worklist_rank": 485,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03564",
+      "identity_tokens": [
+        "arXiv:2402.03564",
+        "DOI:10.48550/arXiv.2402.03564"
+      ],
+      "title": "SkipPredict: When to Invest in Predictions for Scheduling",
+      "reason": "予測コストを明示した一般queue scheduling理論であり、LLM request schedulingを対象とした研究ではない。",
+      "source_url": "https://arxiv.org/abs/2402.03564",
+      "body_check": "本文のSkipPredict/DelayPredictと解析を確認。cheap 1-bit predictionでshort/longを分け、long jobだけexpensive size predictionを行いSPRPTへ近づけ、SOAP frameworkでmean response timeを導出する。対象は一般queueing systemでLLM固有評価はない。",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md"
+      ],
+      "worklist_rank": 484,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.01173",
+      "identity_tokens": [
+        "arXiv:2402.01173",
+        "DOI:10.48550/arXiv.2402.01173"
+      ],
+      "title": "Efficient Prompt Caching via Embedding Similarity",
+      "reason": "意味的に同等なpromptをembeddingで検出し、過去responseを再利用してLLM呼出し自体を省くprompt cache方式で、推論資源消費を直接削減するため対象。",
+      "source_url": "https://arxiv.org/abs/2402.01173",
+      "body_check": "本文のdistillation-based cache predictorと評価を確認。prompt semantic similarityではなく『同じresponseで答えられるか』をteacher signalとしてembeddingをfine-tuneし、hard QA datasetでcache prediction AUCを0.51から0.81へ改善。simulationで既存embeddingより高いcache efficiencyを示し、LLM inference call削減を直接目的とする。",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "worklist_rank": 483,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.15347",
+      "identity_tokens": [
+        "arXiv:2401.15347",
+        "DOI:10.48550/arXiv.2401.15347"
+      ],
+      "title": "A Comprehensive Survey of Compression Algorithms for Language Models",
+      "reason": "言語モデルのpruning、quantization、knowledge distillation、low-rank approximation、parameter sharing、efficient architectureを体系化し、モデル圧縮・低コスト配備を直接扱うsurveyとして対象。",
+      "source_url": "https://arxiv.org/abs/2401.15347",
+      "body_check": "本文の分類体系と代表手法比較を確認。圧縮手法をpruning/quantization/distillation/low-rank/parameter sharing/efficient architectureへ整理し、圧縮率・品質・計算費の観点とLLM時代のlow-cost compression要件、今後の研究方向を論じる。個別system提案ではないが推論向け圧縮系surveyとして関連する。",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "worklist_rank": 482,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.13920",
+      "identity_tokens": [
+        "arXiv:2401.13920",
+        "DOI:10.48550/arXiv.2401.13920"
+      ],
+      "title": "LocMoE: A Low-Overhead MoE for Large Language Model Training",
+      "reason": "locality-aware routingでAll-to-All通信とexpert capacityを最適化するが、PanGu-Sigmaの分散training時間短縮を主目的・主評価とするため学習高速化の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2401.13920",
+      "body_check": "本文のrouting、expert-capacity解析、Ascend cluster評価を確認。load balanceとlocalityを組み合わせてinter-node通信の一部をintra-nodeへ変換し、MindSpore/PanGu-Sigma trainingでepoch時間を12.68〜22.24%削減する。推論servingの評価は主貢献ではない。",
+      "linked_from": [
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "worklist_rank": 481,
+      "first_checked_at": "2026-10-03T12:44:00+09:00",
+      "last_checked_at": "2026-10-03T12:44:00+09:00"
+    }
+  ]
+}
