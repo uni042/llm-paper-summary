@@ -239,26 +239,62 @@ jobs:
           set -euo pipefail
           git config user.name 'survey-maintenance[bot]'
           git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+
+          # STATUS.md is a derived, high-churn view updated by other writers.
+          # Keep it out of the broad maintenance commit so a harmless dashboard
+          # refresh cannot make the maintenance transaction fail during rebase.
           git add -A
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-          git commit -m 'survey-maintenance: GC, reconcile, and health audit'
-          for push_attempt in 1 2 3 4 5; do
-            git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort || true
-              echo 'Maintenance results conflict with newer main; rerun maintenance from the new state.' >&2
+          git reset -- STATUS.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'survey-maintenance: GC, reconcile, and health audit'
+            maintenance_pushed=0
+            for push_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo 'Maintenance data conflicts with newer main; rerun maintenance from the new state.' >&2
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                maintenance_pushed=1
+                break
+              fi
+              echo "Maintenance push race on attempt ${push_attempt}; retrying after refetch."
+              sleep $((push_attempt * 2))
+            done
+            if [ "$maintenance_pushed" -ne 1 ]; then
+              echo 'Failed to publish maintenance results after 5 retries.' >&2
               exit 1
             fi
-            if git push origin HEAD:main; then
-              exit 0
+          fi
+
+          # Regenerate the derived dashboard from the latest main after the
+          # canonical maintenance state/reports are durable. Retry from scratch
+          # on a concurrent dashboard update instead of rebasing STATUS.md.
+          status_pushed=0
+          for status_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
+            git add STATUS.md
+            if git diff --cached --quiet; then
+              status_pushed=1
+              break
             fi
-            echo "Maintenance push race on attempt ${push_attempt}; retrying after refetch."
-            sleep $((push_attempt * 2))
+            git commit -m 'chore: refresh survey status dashboard'
+            if git push origin HEAD:main; then
+              status_pushed=1
+              break
+            fi
+            echo "STATUS refresh push race on attempt ${status_attempt}; regenerating from latest main."
+            sleep $((status_attempt * 2))
           done
-          echo 'Failed to publish maintenance results after 5 retries.' >&2
-          exit 1
+          if [ "$status_pushed" -ne 1 ]; then
+            echo 'Failed to publish refreshed STATUS.md after 5 retries.' >&2
+            exit 1
+          fi
 
       - name: Surface maintenance audit failures
         if: always() && steps.pending.outputs.run == 'true'
