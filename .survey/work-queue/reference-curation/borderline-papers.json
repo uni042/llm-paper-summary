@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:20:06+00:00",
-  "record_count": 421,
+  "updated_at": "2026-10-03T18:25:46+00:00",
+  "record_count": 420,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6047,21 +6047,6 @@
       ],
       "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving"
     },
-    "DOI:10.57967/hf/3372": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.57967/hf/3372",
-      "identity_tokens": [
-        "DOI:10.57967/hf/3372"
-      ],
-      "reason": "Llama 3を長文脈へ拡張したモデル系列のモデルカード/成果物で、1Mトークン級文脈という推論上重要な性質を持つ一方、主成果はモデル公開と長文脈学習であり、独立した推論システム最適化手法ではない。関連性はあるがサーベイ本体への収録可否は境界的。",
-      "first_checked_at": "2026-10-03T18:03:21+00:00",
-      "last_checked_at": "2026-10-03T18:03:21+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
-      ],
-      "title": "Llama 3 Gradient: A Series of Long Context Models"
-    },
     "DOI:10.18653/v1/n19-4009": {
       "classification": "borderline",
       "canonical_id": "DOI:10.18653/v1/n19-4009",
@@ -6085,9 +6070,9 @@
         "OpenReview:r8H7xhYPwz",
         "arXiv:2412.06464"
       ],
-      "reason": "線形時間系列処理により長文脈効率へつながるアーキテクチャだが、論文の中心はgated delta ruleのモデル設計・並列学習と品質評価で、既存LLMの推論ランタイム高速化を直接扱う研究ではない。",
+      "reason": "gatingとdelta ruleを統合した線形注意/再帰型アーキテクチャで、長系列を線形時間・固定状態で扱えるため推論効率との関連は強い。一方、主貢献は新しい系列モデルアーキテクチャと並列学習アルゴリズムであり、既存LLM推論システム最適化そのものではないため境界扱い。",
       "first_checked_at": "2026-10-03T18:12:42+00:00",
-      "last_checked_at": "2026-10-03T18:16:44+00:00",
+      "last_checked_at": "2026-10-03T18:25:45+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
