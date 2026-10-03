@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:57:22+00:00",
-  "record_count": 845,
+  "updated_at": "2026-10-03T18:59:03+00:00",
+  "record_count": 846,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5517,7 +5517,7 @@
       ],
       "reason": "MMLU評価ベンチマークの論文であり、推論ランタイム、KVキャッシュ、MoE配置、サービング高速化を提案しない。",
       "first_checked_at": "2026-09-30T09:52:34+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "Measuring Massive Multitask Language Understanding"
     },
@@ -5607,7 +5607,7 @@
       ],
       "reason": "ソフトウェア工学エージェント向けのエージェント・コンピュータ・インターフェース設計が主題で、LLM推論基盤の高速化ではない。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     },
@@ -5620,7 +5620,7 @@
       ],
       "reason": "Gemma 2B/7Bのモデル公開・学習・能力・安全性をまとめた技術報告で、推論基盤の新規最適化方式ではない。",
       "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "Gemma: Open Models Based on Gemini Research and Technology"
     },
@@ -5633,7 +5633,7 @@
       ],
       "reason": "リポジトリ単位コード補完の検索・補完・統合パイプラインを測るベンチマークで、LLM推論基盤高速化ではない。",
       "first_checked_at": "2026-10-02T06:58:22+00:00",
-      "last_checked_at": "2026-10-02T06:58:22+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
     },
@@ -12457,6 +12457,19 @@
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
       ],
       "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
+    },
+    "arXiv:2104.09864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.09864",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2104.09864",
+        "arXiv:2104.09864"
+      ],
+      "reason": "回転位置埋め込み（RoPE）によるモデル表現・位置符号化が主題で、推論システム最適化が最終適用先ではない。",
+      "first_checked_at": "2026-10-03T18:59:03+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
+      "linked_from": [],
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
     }
   }
 }

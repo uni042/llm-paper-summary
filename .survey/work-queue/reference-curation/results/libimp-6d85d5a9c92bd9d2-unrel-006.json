@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d85d5a9c92bd9d2-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.03091",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.03091",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2306.03091",
+      "arXiv:2306.03091"
+    ],
+    "reason": "リポジトリ単位コード補完の検索・補完・統合パイプラインを測るベンチマークで、LLM推論基盤高速化ではない。",
+    "first_checked_at": "2026-10-02T06:58:22+00:00",
+    "last_checked_at": "2026-10-03T18:59:03+00:00",
+    "linked_from": [],
+    "title": "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+  },
+  "processed_at": "2026-10-03T18:59:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d85d5a9c92b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

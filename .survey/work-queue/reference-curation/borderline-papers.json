@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:57:22+00:00",
-  "record_count": 420,
+  "updated_at": "2026-10-03T18:59:03+00:00",
+  "record_count": 419,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4881,7 +4881,7 @@
       ],
       "reason": "低ビットのマイクロスケーリング数値形式はLLM推論量子化・ハードウェア設計へ強く関係するが、論文自体は深層学習全般の数値形式を対象としLLM推論専用ではない。",
       "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "Microscaling Data Formats for Deep Learning"
     },
@@ -5388,20 +5388,6 @@
       "last_checked_at": "2026-10-02T10:58:58+00:00",
       "linked_from": [],
       "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs"
-    },
-    "arXiv:2104.09864": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2104.09864",
-      "identity_tokens": [
-        "arXiv:2104.09864"
-      ],
-      "reason": "RoPEは推論時にも使われる重要機構だが、主目的は位置表現のモデル設計。",
-      "first_checked_at": "2026-10-02T11:03:19+00:00",
-      "last_checked_at": "2026-10-02T11:03:19+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
     },
     "arXiv:2609.36322": {
       "classification": "borderline",
