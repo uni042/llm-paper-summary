@@ -26,7 +26,14 @@ def _read_json(path: Path, default: Any = None) -> Any:
 
 
 def load_config(repo_root: Path) -> dict[str, Any]:
-    value = _read_json(Path(repo_root) / CONFIG_PATH, {})
+    path = Path(repo_root) / CONFIG_PATH
+    value = _read_json(path, None)
+    # Unit/maintenance callers sometimes operate on a temporary repository root.
+    # In that case reuse the policy shipped beside this module instead of reviving
+    # the retired hard-coded scoring formula.
+    if value is None:
+        module_root = Path(__file__).resolve().parents[2]
+        value = _read_json(module_root / CONFIG_PATH, None)
     if not isinstance(value, dict) or value.get("schema_version") != 1:
         raise ValueError(f"invalid candidate priority config: {CONFIG_PATH}")
     return value
