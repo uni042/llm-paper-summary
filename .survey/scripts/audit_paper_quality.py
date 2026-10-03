@@ -10,12 +10,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
 import yaml
+
+HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
 
 from japanese_style import JP_RE, LATIN_RE, clean_for_language_ratio
 
