@@ -15,6 +15,7 @@ from typing import Iterable
 
 import yaml
 
+import audit_paper_quality
 from japanese_style import PREFERRED_TERMS
 from list_summary import LIST_TERM_REPLACEMENTS, audit_list_summary
 
@@ -201,14 +202,23 @@ def iter_papers(root: Path) -> Iterable[Path]:
             yield path
 
 
-def normalize_file(path: Path, apply: bool) -> tuple[bool, bool]:
+def normalize_file(path: Path, repo_root: Path, apply: bool) -> tuple[bool, bool]:
     raw = path.read_text(encoding="utf-8")
     meta, body = split_frontmatter(raw)
     if not meta or body.lstrip().startswith("# Moved"):
         return False, False
 
-    body_new = normalize_body(body)
+    old_paper = audit_paper_quality.audit_file(path, repo_root)
+    paper_ratio_failure = any(
+        reason.startswith("日本語比率 ") for reason in old_paper.failures
+    )
+    body_new = normalize_body(body) if paper_ratio_failure else body
     body_changed = body_new != body
+    if body_changed:
+        new_ratio, _, _ = audit_paper_quality._japanese_ratio(render(meta, body_new))
+        if new_ratio <= old_paper.japanese_ratio:
+            body_new = body
+            body_changed = False
 
     list_changed = False
     current = meta.get("list_summary")
@@ -216,10 +226,8 @@ def normalize_file(path: Path, apply: bool) -> tuple[bool, bool]:
         candidate = replace_generic_terms(current)
         old_audit = audit_list_summary(current)
         new_audit = audit_list_summary(candidate)
-        if candidate != current and (
-            new_audit.japanese_ratio > old_audit.japanese_ratio
-            or (old_audit.status == "FAIL" and new_audit.status != "FAIL")
-        ):
+        ratio_failure = any(reason.startswith("日本語比率 ") for reason in old_audit.failures)
+        if ratio_failure and candidate != current and new_audit.japanese_ratio > old_audit.japanese_ratio:
             meta["list_summary"] = candidate
             list_changed = True
 
@@ -238,7 +246,7 @@ def main() -> int:
     changed: list[str] = []
     list_changed: list[str] = []
     for path in iter_papers(root):
-        did_change, did_list = normalize_file(path, args.apply)
+        did_change, did_list = normalize_file(path, root, args.apply)
         if did_change:
             rel = path.relative_to(root).as_posix()
             changed.append(rel)
