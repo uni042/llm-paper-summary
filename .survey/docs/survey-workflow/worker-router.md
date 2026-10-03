@@ -338,7 +338,9 @@ Researchの既定操作は **insert-if-absent**。既収録本文の更新は通
 
 別途移行を依頼されたとき、canonical identityで重複排除し、v12のimmutable Discovery JSONへ変換してから受信箱へ転送する。変換元は、GitHub pending copyのhash一致確認後にだけ削除する。
 
-## 13. 08:30 maintenance — LLM / LLMフレームワーク日次更新
+## 13. 08:30 日次更新 — LLM / LLMフレームワーク
+
+リポジトリのGC・品質監査・整合性確認を行うrepository maintenanceはScheduled Chatに依存させない。`.github/workflows/maintenance.yml` がGitHub Actionsのscheduleにより毎日08:30 JST（23:30 UTC）に自動実行する。08:30の`scheduled-chat-30`はrepository maintenanceの起動責任を持たず、以下のLLM / LLMフレームワーク日次更新だけを担当する。
 
 08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、**LLMとLLM推論フレームワークの最新情報を調査し、GitHubへ反映できる完成差分をLibraryへ作る日次更新run**とする。候補在庫や通常モード判定でResearch / Discoveryへ置換しない。
 
