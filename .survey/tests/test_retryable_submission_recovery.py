@@ -11,6 +11,7 @@ import isolate_failed_immutable_submission as isolation  # noqa: E402
 import list_unsettled_immutable_submissions as lister  # noqa: E402
 
 WORKFLOW = Path(__file__).resolve().parents[2] / ".github/workflows/survey-submission-fast.yml"
+SCHEDULER = Path(__file__).resolve().parents[2] / ".github/workflows/survey-claim-fast.yml"
 
 
 def write_json(path: Path, value):
@@ -94,12 +95,15 @@ class RetryableSubmissionRecoveryTests(unittest.TestCase):
             self.assertEqual(third["recovery_failures"], 3)
             self.assertEqual(lister.unsettled_paths(root), [])
 
-    def test_submission_fast_lane_has_periodic_backlog_sweep(self):
+    def test_submission_fast_lane_has_central_scheduler_backlog_sweep(self):
         text = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("schedule:", text)
-        self.assertIn("cron: '7/10 * * * *'", text)
+        scheduler = SCHEDULER.read_text(encoding="utf-8")
+        self.assertIn("workflow_dispatch:", text)
+        self.assertNotIn("schedule:", text)
         self.assertIn("list_unsettled_immutable_submissions.py", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)
+        self.assertIn("cron: '3/10 * * * *'", scheduler)
+        self.assertIn("dispatch survey-submission-fast.yml", scheduler)
 
 
 if __name__ == "__main__":

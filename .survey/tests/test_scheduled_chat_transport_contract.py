@@ -9,32 +9,37 @@ ROUTER = ROOT / ".survey" / "docs" / "survey-workflow" / "worker-router.md"
 class ScheduledChatTransportContractTests(unittest.TestCase):
     def test_scheduled_worker_is_library_first_and_github_read_only(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("Scheduled workerがGitHubをread-onlyで参照", text)
-        self.assertIn("GitHub writeを試してLibrary失敗を回避することは禁止する。", text)
-        self.assertIn("Survey GitHub ImportのWorkタスク", text)
-        self.assertIn("Scheduled workerはGitHubへの `write`、`claim`", text)
+        self.assertIn("scheduled-chat-00", text)
+        self.assertIn("scheduled-chat-30", text)
+        self.assertIn("scheduled-chat-45", text)
+        self.assertIn("scheduled-chat-45", text)
+        self.assertIn("read-only | read/write", text)
+        self.assertIn("Scheduled workerはGitHubへのclaim、reservation、submission、result", text)
+        self.assertIn("Library保存不能でも完成成果を破棄しない", text)
+        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
 
     def test_current_inventory_and_quota_contract(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("E = G + D - R", text)
-        self.assertIn("E > 500", text)
-        self.assertIn("E <= 500", text)
-        self.assertIn("完成論文を10件", text)
-        self.assertIn("新規canonical identity 40件", text)
+        self.assertIn("収録候補論文数 > 600", text)
+        self.assertIn("収録候補論文数 <= 600", text)
+        self.assertIn("Research runでは新規完成Research Markdownを5件Libraryへ保存する", text)
+        self.assertIn("新規canonical identity 10件を本文確認まで行い", text)
+        self.assertNotIn("E = G + D - R", text)
 
     def test_worklist_order_is_tail_first(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("専用リストの末尾から上方向", text)
+        self.assertIn("候補はリスト末尾から上方向", text)
 
-    def test_work_task_verifies_before_library_cleanup(self):
+    def test_import_verifies_durable_handoff_before_library_cleanup(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("再取得確認できた後だけ対応Library原本を削除する", text)
-        self.assertIn("1件の失敗で他の独立成果を止めない", text)
+        self.assertIn("byte-preserving転送", text)
+        self.assertIn("source_sha256", text)
+        self.assertIn("そのLibrary成果を削除してよい", text)
 
-    def test_legacy_direct_transport_is_archived_not_active(self):
+    def test_legacy_direct_transport_is_not_a_current_worker_path(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("worker-router-legacy-v10.22-direct-github.md", text)
-        self.assertIn("新規Scheduled worker runの実行手順として旧資料を補完利用しない", text)
+        self.assertIn("旧direct-GitHub worker運用は履歴資料", text)
+        self.assertIn("新規通常runへ復活させない", text)
 
 
 if __name__ == "__main__":

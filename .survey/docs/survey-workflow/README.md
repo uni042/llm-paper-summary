@@ -6,12 +6,12 @@ Scheduled Chat / Workのワーカーが実行判断のために読む**唯一の
 
 現行はLibrary-firstです。
 
-- `LLM論文ワーカー :00` / `:30` はGitHub `main` をread-onlyで参照し、探索・読解・分類の完成成果をChatGPT Libraryへ保存します。
+- `LLM論文ワーカー :00` / `:30` / `:45` はGitHub `main` をread-onlyで参照し、探索・読解・分類の完成成果をChatGPT Libraryへ保存します。
 - GitHubへの反映はSurvey GitHub ImportのWorkタスクが担当します。
 - Scheduled workerはGitHubのclaim / reservation / submission / control-file等を書きません。
-- WorkタスクはLibrary成果を最新mainへ正規化して反映し、GitHubから再取得して確認できた後だけ対応Library原本を整理します。
-- モード判定はLibrary未反映分を補正した `E = G + D - R` を使い、`E > 600` ならResearch、`E <= 600` ならDiscoveryです。
-- Researchは10件、Discoveryは新規canonical identity 40件を現在の標準ノルマとします。
+- Survey GitHub ImportはLibrary成果をGitHub受信箱へbyte-preservingで転送し、GitHub側が同一bytesまたは同一source SHAを耐久保持したことを確認できた後だけ対応Library原本を整理します。
+- モード判定は同じ最新main HEADの `STATUS.md` にある `収録候補論文数` を使い、`収録候補論文数 > 600` ならResearch、`収録候補論文数 <= 600` ならDiscoveryです。Library未転送成果を足し引きして別の実効値を再計算しません。
+- Researchは完成Markdown 5件、Discoveryは本文確認済みの新規canonical identity 10件を現在の標準ノルマとします。
 
 Library側の詳細HOWは `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` とSurvey GitHub Import用 `github-import-procedure.md` を読みます。本書とLibrary手順が矛盾する場合は最新mainの `worker-router.md` を優先し、Library側手順を後で整合させます。
 
