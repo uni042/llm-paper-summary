@@ -16,7 +16,7 @@ import tempfile
 import time
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 import candidate_priority
 import citation_graph
@@ -26,6 +26,7 @@ import reference_pool
 
 CONFIG_PATH = Path(".survey/config/forward-citation-sweep.json")
 STATE_PATH = Path(".survey/work-queue/forward-citation-sweep.json")
+S2_URL_DOMAINS = ("semanticscholar.org", "arxiv.org", "aclweb.org", "acm.org", "biorxiv.org")
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -103,12 +104,18 @@ def _seed_identifier(record: citation_graph.PaperRecord) -> str | None:
     cid = str(record.canonical_id or "")
     if cid.startswith("SemanticScholar:"):
         return cid
-    # Semantic Scholar Graph accepts URL:<paper-url> as a paper lookup key.
-    # Every canonical paper is therefore enrolled in the sweep when it has a
-    # stable primary URL, even if no arXiv/DOI/S2 identifier is available.
+    # Semantic Scholar accepts URL:<paper-url> only for a documented set
+    # of scholarly hosts. Unsupported primary URLs stay visible as unsupported
+    # rather than entering a permanent 404 retry loop.
     for field in ("source", "source_url", "canonical_url"):
         value = record.meta.get(field)
-        if isinstance(value, str) and value.startswith(("https://", "http://")):
+        if not isinstance(value, str) or not value.startswith(("https://", "http://")):
+            continue
+        try:
+            host = urlparse(value).netloc.casefold().split(":", 1)[0]
+        except ValueError:
+            continue
+        if any(host == domain or host.endswith("." + domain) for domain in S2_URL_DOMAINS):
             return "URL:" + value
     return None
 
