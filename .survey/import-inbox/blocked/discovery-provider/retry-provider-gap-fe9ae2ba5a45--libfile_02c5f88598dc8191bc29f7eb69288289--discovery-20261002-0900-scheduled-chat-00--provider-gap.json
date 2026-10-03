@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-0900-scheduled-chat-00::provider-gap",
+  "reference_main_sha": "66bba239746282ae7027b79456c50beab3f8aabb",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:cFu7ze7xUm",
+      "identity_tokens": [
+        "OpenReview:cFu7ze7xUm"
+      ],
+      "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+      "reason": "注意ヘッドを長文脈を必要とする検索ヘッドと短い履歴で足りるストリーミングヘッドへ分け、KVキャッシュと注意計算を直接削減する長文脈推論方式。",
+      "source_url": "https://openreview.net/forum?id=cFu7ze7xUm",
+      "body_check": "本文情報で一部のretrieval headsだけに完全KV履歴を保持し、残りのstreaming headsは限定的なKVだけを使う設計を確認。長文脈LLMのKVメモリと注意計算を削減する推論時最適化であり、対象範囲の中心にある。",
+      "first_checked_at": "2026-10-02T09:00:00+09:00",
+      "last_checked_at": "2026-10-02T09:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    }
+  ],
+  "parent_run_key": "20261002-0900-scheduled-chat-00",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-fe9ae2ba5a45--libfile_02c5f88598dc8191bc29f7eb69288289--discovery-20261002-0900-scheduled-chat-00.json",
+  "provider_gap_ids": [
+    "OpenReview:cFu7ze7xUm"
+  ]
+}
