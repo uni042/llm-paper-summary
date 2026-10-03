@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1545-scheduled-chat-45",
+  "reference_main_sha": "894700d91c1d452c17b926e3cecc81a108d697f6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00376",
+      "identity_tokens": [
+        "arXiv:2403.00376",
+        "DOI:10.48550/arXiv.2403.00376"
+      ],
+      "title": "Spurious Feature Eraser: Stabilizing Test-Time Adaptation for Vision-Language Foundation Model",
+      "reason": "CLIP系視覚言語基盤モデルの決定ショートカットをtest-time prompt tuningで抑える視覚認識の頑健性研究で、LLM推論基盤の速度・メモリ・サービング最適化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2403.00376",
+      "body_check": "一次資料本文の問題設定・手法・評価を確認。SEraserは補助画像上の予測分布を一様分布へ近づけるKL損失で連続promptをtest-time最適化し、spurious featureへの依存を消す。Waterbirds等でworst-group accuracyを改善するが、対象はCLIPのzero-shot画像分類でありLLM serving/KV/kernelの評価はない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01632",
+      "identity_tokens": [
+        "arXiv:2403.01632",
+        "DOI:10.48550/arXiv.2403.01632"
+      ],
+      "title": "SynCode: LLM Generation with Grammar Augmentation",
+      "reason": "文脈自由文法に従うLLM生成を、事前計算したDFA mask storeと増分parserで高速に制約する推論時デコード方式で、生成runtimeの効率化を明示的に扱うため対象。",
+      "source_url": "https://arxiv.org/abs/2403.01632",
+      "body_check": "一次資料本文相当の手法・実装・評価を確認。partial outputからincremental parserがaccept sequenceとremainderを求め、offline構築したDFA mask storeから有効token maskをlookupして次token分布へ適用する。JSONではsyntax errorを除去し、Python/Goでは96.07%削減。mask storeは一度だけ生成し、Llama-2-7B-chat/JSON例で113.72秒・181MB、実装はPython/Goで低いgeneration overheadを狙う。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03218",
+      "identity_tokens": [
+        "arXiv:2403.03218",
+        "DOI:10.48550/arXiv.2403.03218"
+      ],
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+      "reason": "危険知識を測るWMDP benchmarkとRepresentation Misdirection for Unlearningを提案するAI安全・unlearning研究で、推論効率化が最終目的ではない。",
+      "source_url": "https://arxiv.org/abs/2403.03218",
+      "body_check": "一次資料本文のbenchmark、RMU手法、評価を確認。3,668問をbio/cyber/chemicalへ分け、RMUはhazardous dataの中間表現を固定random directionへ誘導しつつretain dataの表現を元モデルへ近づける。Zephyr-7BのWMDP-Bio等を大幅低下させMMLUを概ね保持することを評価するが、serving latency/KV/memory最適化は扱わない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03952",
+      "identity_tokens": [
+        "arXiv:2403.03952",
+        "DOI:10.48550/arXiv.2403.03952"
+      ],
+      "title": "Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders",
+      "reason": "LLMを推薦・商品検索用semantic encoderとして比較するBLaIR benchmarkとAmazon Reviews 2023 datasetが主貢献で、推論runtime最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2403.03952",
+      "body_check": "一次資料本文のtask定義・dataset・実験を確認。LLMでitem textをembedding化し、sequential recommendation、collaborative filtering、short/complex-query product searchへ入力する。11 LLMのBLaIR順位とMTEB順位の低相関等を分析する研究で、KV cache、offload、kernel、serving throughputの新規方式はない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06840",
+      "identity_tokens": [
+        "arXiv:2403.06840",
+        "DOI:10.48550/arXiv.2403.06840"
+      ],
+      "title": "RA-ISF: Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback",
+      "reason": "検索拡張生成でtask分解と反復self-feedbackを用いて事実推論・hallucinationを改善する品質向上方式で、推論基盤の効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2403.06840",
+      "body_check": "一次資料本文のframework・実験を確認。RA-ISFはretrievalを用いた複数submoduleで問題を反復分解・処理し、retrieved textが不適切な場合もself-feedbackで回答を改善する。GPT-3.5/Llama2等でfactual reasoningとhallucination低減を評価するが、追加反復を伴いserving latencyやmemory削減は主評価でない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.09054",
+      "identity_tokens": [
+        "arXiv:2403.09054",
+        "DOI:10.48550/arXiv.2403.09054"
+      ],
+      "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
+      "reason": "注意重みを集中して受けるkey tokenだけをKV cacheへ残し、長文脈生成のKV容量とmemory bandwidthを直接削減するLLM推論最適化方式。",
+      "source_url": "https://arxiv.org/abs/2403.09054",
+      "body_check": "一次資料本文の観測・score function・評価を確認。生成時attention weightのおよそ90%が一部tokenへ集中する観測からkey tokenを選び、それ以外のKVを除去する。GPT-J、Cerebras-GPT、MPTと要約/会話を含む長文脈taskで精度を維持しつつ、KV削減によりinference latency 2.1倍改善、token generation throughput 2.4倍改善を報告する。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.10779",
+      "identity_tokens": [
+        "arXiv:2403.10779",
+        "DOI:10.48550/arXiv.2403.10779"
+      ],
+      "title": "LLM-based Conversational AI Therapist for Daily Functioning Screening and Psychotherapeutic Intervention via Everyday Smart Devices",
+      "reason": "LLMを用いた会話型心理支援・日常機能screeningシステムの応用研究で、推論システム高速化・メモリ管理を提案しない。",
+      "source_url": "https://arxiv.org/abs/2403.10779",
+      "body_check": "一次資料本文のsystem design、会話flow、評価を確認。スマートデバイス上の対話を介してdaily functioning assessmentとpsychotherapeutic interventionを提供する構成を扱い、LLMの臨床応用・ユーザーinteractionを評価する。KV/cache/offload/kernel/schedulerの推論基盤新規機構はない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.12844",
+      "identity_tokens": [
+        "arXiv:2403.12844",
+        "DOI:10.48550/arXiv.2403.12844"
+      ],
+      "title": "MELTing point: Mobile Evaluation of Language Transformers",
+      "reason": "Android/iOS/Jetson上のLLM推論をframework横断で自動benchmarkし、throughput・memory・energy・thermal・量子化を実測するon-device inference基盤/評価研究で対象範囲。",
+      "source_url": "https://arxiv.org/abs/2403.12844",
+      "body_check": "一次資料本文・公式実装/著者解説の評価内容を確認。MELTはllama.cpp、MLC-LLM、LLMFarm等を含む複数backendでheadless execution、電力監視、prefill/generation throughput、memory、energyを収集する。device/model/frameworkで性能が大きく異なり、低bit量子化にはaccuracy trade-offがあり、Jetson offloadではZephyr-7B 4-bitのprefill/generationがmobile比で約3.3倍/1.78倍高い例を示す。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.13787",
+      "identity_tokens": [
+        "arXiv:2403.13787",
+        "DOI:10.48550/arXiv.2403.13787"
+      ],
+      "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+      "reason": "RLHF等で用いるreward modelをchallenge prompt上で比較するbenchmark研究で、推論サービング・LLM runtimeの効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2403.13787",
+      "body_check": "一次資料本文のdataset構成・scoring・実験を確認。RewardBenchはchat、reasoning、safety等のchosen/rejected response pairを集め、reward modelが好ましい応答を高くscoreできるかをaccuracyで評価し、DPO/sequence classifier等のreward modeling方式を比較する。目的はalignment評価であり推論効率化ではない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.14541",
+      "identity_tokens": [
+        "arXiv:2403.14541",
+        "DOI:10.48550/arXiv.2403.14541"
+      ],
+      "title": "EDT: Improving Large Language Models' Generation by Entropy-based Dynamic Temperature Sampling",
+      "reason": "tokenごとのentropyからtemperatureを動的変更する推論時decoding方式でruntimeへ直接入る一方、主目的は生成品質と多様性のtrade-off改善であり計算削減は中心ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2403.14541",
+      "body_check": "一次資料本文のtemperature mapping・4 benchmark評価を確認。各stepの出力entropyをモデルconfidenceとしてtemperatureへ写像し、固定temperatureでは一律になるexploration/exploitationをtoken単位で調整する。LLaMA2-13BをXLSum、QuAC、MS MARCO、WMT19で評価しquality/diversityを改善するが、主要貢献は生成品質制御でserving throughput削減ではない。",
+      "first_checked_at": "2026-10-03T15:45:00+09:00",
+      "last_checked_at": "2026-10-03T16:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+      ],
+      "worklist_rank": 486
+    }
+  ]
+}
