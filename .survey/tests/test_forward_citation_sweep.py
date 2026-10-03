@@ -40,6 +40,7 @@ lineage: test-lineage
                     "max_seeds_per_run": 1,
                     "max_pages_per_seed_per_run": 1,
                     "page_size": 100,
+                    "max_provider_errors_per_run": 3,
                     "request_spacing_seconds": 0,
                     "cadence": [{"max_paper_age_days": None, "rescan_days": 30}],
                 }
@@ -106,6 +107,62 @@ lineage: test-lineage
 
             self.assertEqual(result["selected_seed_count"], 1)
             self.assertIn("2401.00002", seen_sources[0])
+
+
+    def test_provider_error_budget_rotates_failed_seed_instead_of_starving_pool(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.write_fixture(root)
+            second_paper = root / "papers/inference/test/paper2.md"
+            second_paper.write_text(
+                """---
+canonical_id: arXiv:2401.00002
+arxiv_id: 2401.00002
+title: Second Seed
+published: 2024-01-16
+lineage: test-lineage
+---
+# Second Seed
+""",
+                encoding="utf-8",
+            )
+            config_path = root / ".survey/config/forward-citation-sweep.json"
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            config["max_provider_errors_per_run"] = 1
+            config_path.write_text(json.dumps(config), encoding="utf-8")
+
+            seen_sources = []
+
+            def failing_fetcher(source_url, *, page_size=100, **kwargs):
+                seen_sources.append(source_url)
+
+                def fetch(cursor):
+                    raise RuntimeError("provider unavailable")
+
+                return fetch
+
+            first_now = dt.datetime(2026, 10, 3, tzinfo=dt.timezone.utc)
+            with patch.object(
+                forward_citation_sweep.discovery_provider_adapter,
+                "semantic_scholar_fetcher",
+                side_effect=failing_fetcher,
+            ):
+                first = forward_citation_sweep.sweep(
+                    root, now=first_now, sleep_fn=lambda _: None
+                )
+                second = forward_citation_sweep.sweep(
+                    root,
+                    now=first_now + dt.timedelta(hours=6),
+                    sleep_fn=lambda _: None,
+                )
+
+            self.assertTrue(first["provider_error_budget_exhausted"])
+            self.assertEqual(first["attempted_seed_count"], 1)
+            self.assertTrue(second["provider_error_budget_exhausted"])
+            self.assertEqual(second["attempted_seed_count"], 1)
+            self.assertEqual(len(seen_sources), 2)
+            self.assertIn("2401.00001", seen_sources[0])
+            self.assertIn("2401.00002", seen_sources[1])
 
     def test_cursor_resumes_until_cycle_completion_then_waits_for_rescan(self) -> None:
         with tempfile.TemporaryDirectory() as td:
