@@ -34,6 +34,7 @@ HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
+import audit_metadata_coverage  # noqa: E402
 import audit_paper_quality  # noqa: E402
 import paper_quality_gate  # noqa: E402
 import paper_identity  # noqa: E402
@@ -199,6 +200,15 @@ def parse_frontmatter(text: str) -> dict[str, Any]:
     return meta
 
 
+def research_metadata_failures(source: Path, meta: dict[str, Any], repo_root: Path) -> list[str]:
+    failures = list(audit_metadata_coverage.findings(source, repo_root))
+    for key in ("list_summary", "worker_completed_at", "worker_run_key"):
+        value = meta.get(key)
+        if value is None or (isinstance(value, str) and not value.strip()):
+            failures.append(key)
+    return sorted(set(str(item) for item in failures))
+
+
 def publication_year(meta: dict[str, Any]) -> str:
     published = str(meta.get("published") or "")
     match = re.search(r"\b(19\d{2}|20\d{2})\b", published)
@@ -334,6 +344,27 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
 
         try:
             meta = parse_frontmatter(raw)
+            metadata_failures = research_metadata_failures(source, meta, repo_root)
+            if metadata_failures:
+                blocked_path = block_payload(source, BLOCKED_RESEARCH)
+                replace_json(
+                    result_path,
+                    {
+                        "schema_version": 1,
+                        "artifact_type": "research",
+                        "status": "blocked_metadata",
+                        "source_sha256": payload_hash,
+                        "blocked_path": repo_relative(blocked_path, repo_root),
+                        "canonical_id": meta.get("canonical_id"),
+                        "worker_completed_at": meta.get("worker_completed_at"),
+                        "worker_run_key": meta.get("worker_run_key"),
+                        "failures": metadata_failures,
+                        "processed_at": now(),
+                    },
+                )
+                terminal += 1
+                continue
+
             audit = paper_quality_gate.inspect_rendered_paper(
                 repo_root,
                 repo_relative(source, repo_root),
