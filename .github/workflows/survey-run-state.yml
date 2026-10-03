@@ -1,18 +1,8 @@
 name: Survey worker run-state derivation
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/run-state/requests/*.json'
-      - '.survey/work-queue/transport/health-probe.json'
-      - '.survey/work-queue/transport/worker-control/*.json'
-      - '.survey/scripts/apply_worker_control.py'
-      - '.survey/scripts/apply_transport_health_probe.py'
-      - '.survey/scripts/derive_worker_run_state.py'
-      - '.survey/scripts/repair_run_state_requests.py'
-      - '.survey/scripts/worker_run_state_cache.py'
-      - '.survey/scripts/auto_discovery_from_run_state.py'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
