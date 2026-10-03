@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1701.06538",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1701.06538",
+    "identity_tokens": [
+      "OpenReview:B1ckMDqlg",
+      "arXiv:1701.06538"
+    ],
+    "reason": "一次本文はsparse gatingで1例当たりの計算を減らす条件付き計算を示す。一方、2017年のLSTM言語モデル・機械翻訳で最大137B parameterの容量を扱う基礎モデル研究であり、現代LLM推論配信の独立システム評価ではない。既存のborderline台帳の正規identityに一致するため再追加しない。",
+    "first_checked_at": "2026-09-26T17:49:24+00:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      "worker-worklist-30 reference-review candidate",
+      "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[1]"
+    ],
+    "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

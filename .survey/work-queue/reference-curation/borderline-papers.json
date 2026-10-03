@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T13:20:50+00:00",
-  "record_count": 410,
+  "updated_at": "2026-10-03T14:28:53+00:00",
+  "record_count": 412,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -842,46 +842,17 @@
       "classification": "borderline",
       "canonical_id": "arXiv:1701.06538",
       "identity_tokens": [
+        "OpenReview:B1ckMDqlg",
         "arXiv:1701.06538"
       ],
-      "reason": "MoEの基礎的モデル／学習手法が中心。分散実装・通信帯域・負荷分散の議論はあるが、LLMシステム最適化への直接寄与は限定的。",
+      "reason": "一次本文はsparse gatingで1例当たりの計算を減らす条件付き計算を示す。一方、2017年のLSTM言語モデル・機械翻訳で最大137B parameterの容量を扱う基礎モデル研究であり、現代LLM推論配信の独立システム評価ではない。既存のborderline台帳の正規identityに一致するため再追加しない。",
       "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
       "linked_from": [
-        "worker-worklist-30 reference-review candidate"
+        "worker-worklist-30 reference-review candidate",
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[1]"
       ],
-      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
-      "source_url": "https://arxiv.org/abs/1701.06538"
-    },
-    "arXiv:2409.02060": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2409.02060",
-      "identity_tokens": [
-        "arXiv:2409.02060"
-      ],
-      "reason": "公開MoEモデルの学習・ルーティング分析が中心で、主貢献はモデル／学習側。",
-      "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-09-26T17:49:24+00:00",
-      "linked_from": [
-        "worker-worklist-30 reference-review candidate"
-      ],
-      "title": "OLMoE: Open Mixture-of-Experts Language Models",
-      "source_url": "https://arxiv.org/abs/2409.02060"
-    },
-    "arXiv:2101.03961": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2101.03961",
-      "identity_tokens": [
-        "arXiv:2101.03961"
-      ],
-      "reason": "大規模MoEの単純化と学習スケーリングが中心で、推論・配信システム自体は主題ではない。",
-      "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-09-26T17:49:24+00:00",
-      "linked_from": [
-        "worker-worklist-30 reference-review candidate"
-      ],
-      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
-      "source_url": "https://arxiv.org/abs/2101.03961"
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
     },
     "arXiv:2408.15664": {
       "classification": "borderline",
@@ -5928,6 +5899,63 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md"
       ],
       "title": "Conformal Nucleus Sampling"
+    },
+    "arXiv:1911.02972": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.02972",
+      "identity_tokens": [
+        "arXiv:1911.02972"
+      ],
+      "reason": "BlockBERT replaces dense self-attention with blockwise sparse attention and reports 27.8% lower inference time than RoBERTa at batch 8 and sequence length 1,024, with comparable QA accuracy. The evidence is for encoder-only BERT-family models and long-document QA rather than decoder-only LLM generation or serving. The attention idea is adjacent and potentially transferable, but the evaluated workload is outside core LLM inference, so it is retained as borderline.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[5]"
+      ],
+      "title": "Blockwise Self-Attention for Long Document Understanding"
+    },
+    "arXiv:2201.11903": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.11903",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2201.11903",
+        "arXiv:2201.11903"
+      ],
+      "reason": "Chain-of-Thought prompting is performed at inference and improves reasoning accuracy by adding intermediate generated reasoning steps. The primary paper evaluates task accuracy, not inference serving, runtime efficiency, or memory/compression; longer reasoning can increase token generation. It is adjacent to inference-time methods but does not establish an inference-efficiency contribution, so retain as borderline rather than treating it as an in-scope systems paper.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[8]"
+      ],
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+    },
+    "arXiv:2412.14711": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.14711",
+      "identity_tokens": [
+        "arXiv:2412.14711"
+      ],
+      "reason": "ReMoE replaces TopK+Softmax with differentiable ReLU routing and dynamically allocates experts. Its central motivation and experiments focus on differentiability and training scalability; it reports inference throughput within −2.29% to +3.89% of conventional TopK MoE, i.e. roughly comparable speed rather than an inference-efficiency gain. Relevant MoE serving architecture, but evidence does not show inference reduction as its primary objective.",
+      "first_checked_at": "2026-10-03T14:28:53+00:00",
+      "last_checked_at": "2026-10-03T14:28:53+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[2]"
+      ],
+      "title": "ReMoE: Fully Differentiable Mixture-of-Experts with ReLU Routing"
+    },
+    "arXiv:2507.09019": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09019",
+      "identity_tokens": [
+        "arXiv:2507.09019"
+      ],
+      "reason": "This paper directly studies how LLM inference serving systems should be evaluated: it identifies baseline fairness, workload selection, latency/SLO and metric-design pitfalls, then demonstrates the issues through speculative decoding. It contributes an evaluation checklist and empirical analysis rather than an inference-serving mechanism or an efficiency improvement itself. Retained as borderline because its object is LLM inference-system performance and reproducibility, while its contribution is methodological evaluation rather than system optimization.",
+      "first_checked_at": "2026-10-03T14:28:53+00:00",
+      "last_checked_at": "2026-10-03T14:28:53+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[0]"
+      ],
+      "title": "On Evaluating Performance of LLM Inference Systems"
     }
   }
 }

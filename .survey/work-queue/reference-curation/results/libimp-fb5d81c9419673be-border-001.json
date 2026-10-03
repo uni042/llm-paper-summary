@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb5d81c9419673be-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.14711",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.14711",
+    "identity_tokens": [
+      "arXiv:2412.14711"
+    ],
+    "reason": "ReMoE replaces TopK+Softmax with differentiable ReLU routing and dynamically allocates experts. Its central motivation and experiments focus on differentiability and training scalability; it reports inference throughput within −2.29% to +3.89% of conventional TopK MoE, i.e. roughly comparable speed rather than an inference-efficiency gain. Relevant MoE serving architecture, but evidence does not show inference reduction as its primary objective.",
+    "first_checked_at": "2026-10-03T14:28:53+00:00",
+    "last_checked_at": "2026-10-03T14:28:53+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[2]"
+    ],
+    "title": "ReMoE: Fully Differentiable Mixture-of-Experts with ReLU Routing"
+  },
+  "processed_at": "2026-10-03T14:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb5d81c94196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb5d81c9419673be-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.15940",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.15940",
+    "identity_tokens": [
+      "arXiv:2509.15940"
+    ],
+    "reason": "The primary title and abstract identify Arnold as a scheduler for LLM pre-training jobs across thousands of GPUs; the conclusion evaluates topology-aware scheduling for those pre-training jobs. The paper reports a 10.6% end-to-end improvement in production training, not inference. It is outside the inference-efficiency scope. The live worklist title field is a placeholder identity string rather than the primary paper title; the arXiv source was used to correct the reviewed title.",
+    "first_checked_at": "2026-10-03T14:28:53+00:00",
+    "last_checked_at": "2026-10-03T14:28:53+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[2]"
+    ],
+    "title": "Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs"
+  },
+  "processed_at": "2026-10-03T14:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb5d81c94196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

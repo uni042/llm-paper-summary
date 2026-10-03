@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.08053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.08053",
+    "identity_tokens": [
+      "arXiv:1909.08053"
+    ],
+    "reason": "The primary source explicitly presents an intra-layer model-parallel method for training large Transformer models; experiments train models up to 8.3B parameters using 512 NVIDIA V100 GPUs (§1, §3-5). Its 15.1 PFLOP/s application throughput and 76% scaling efficiency describe distributed training. The conclusion's future work remains larger-scale pretraining and optimizer memory efficiency (§6). No inference-time efficiency method or evaluation is presented in the reviewed paper.",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
+    ],
+    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

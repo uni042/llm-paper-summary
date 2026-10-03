@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1712.05889",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1712.05889",
+    "identity_tokens": [
+      "arXiv:1712.05889"
+    ],
+    "reason": "Ray is a general-purpose distributed framework for interactive AI applications. The paper's conclusion notes a training/serving/simulation loop, but the motivating applications and reported evaluation focus on reinforcement-learning workloads and distributed task throughput (up to 1.8 million tasks/s), not LLM inference or LLM-serving efficiency. General framework applicability alone does not establish the required LLM-inference focus, so this is unrelated to the assigned scope.",
+    "first_checked_at": "2026-10-03T14:28:52+00:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[3]"
+    ],
+    "title": "Ray: A Distributed Framework for Emerging AI Applications"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

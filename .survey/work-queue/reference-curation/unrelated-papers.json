@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T13:23:14+00:00",
-  "record_count": 642,
+  "updated_at": "2026-10-03T14:28:53+00:00",
+  "record_count": 652,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -785,11 +785,12 @@
       "identity_tokens": [
         "arXiv:1909.08053"
       ],
-      "reason": "大規模Transformerの学習用モデル並列化が主題。最終適用先が学習高速化であり、現在凍結中の学習系統には追加しない。",
+      "reason": "The primary source explicitly presents an intra-layer model-parallel method for training large Transformer models; experiments train models up to 8.3B parameters using 512 NVIDIA V100 GPUs (§1, §3-5). Its 15.1 PFLOP/s application throughput and 76% scaling efficiency describe distributed training. The conclusion's future work remains larger-scale pretraining and optimizer memory efficiency (§6). No inference-time efficiency method or evaluation is presented in the reviewed paper.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
       ],
       "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
     },
@@ -799,13 +800,14 @@
       "identity_tokens": [
         "arXiv:2202.08906"
       ],
-      "reason": "MoEの学習安定性と転移性能を主題とする設計研究で、推論システム最適化が主目的ではない。",
+      "reason": "The primary title is ST-MoE: Designing Stable and Transferable Sparse Expert Models. Its abstract and main sections focus on training instabilities, transfer/fine-tuning quality and scaling a 269B sparse model; the paper reports a 4x pretraining speedup as context but does not study inference-serving efficiency. Its central contribution is sparse-model training stability and transfer, so it is outside the inference-efficiency scope.",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[9]"
       ],
-      "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
+      "title": "ST-MoE"
     },
     "arXiv:2507.06261": {
       "classification": "unrelated",
@@ -4173,15 +4175,17 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2506.07982",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.07982",
         "arXiv:2506.07982"
       ],
-      "reason": "会話エージェント評価ベンチマークで推論効率化手法ではない。",
+      "reason": "τ²-Bench is a benchmark for evaluating conversational agents that coordinate with users in shared tool environments. Its primary contribution and experiments concern task/environment design and agent reasoning/communication performance; the paper does not propose or evaluate LLM inference, serving, decoding, or inference-time compression optimizations. It is outside this inference-efficiency collection.",
       "first_checked_at": "2026-09-29T23:39:46+00:00",
-      "last_checked_at": "2026-10-02T11:03:20+00:00",
+      "last_checked_at": "2026-10-03T14:28:53+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[6]"
       ],
-      "title": "tau2-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
+      "title": "τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
     },
     "arXiv:2006.15704": {
       "classification": "unrelated",
@@ -5409,11 +5413,12 @@
       "identity_tokens": [
         "arXiv:2110.03888"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 10兆パラメータ級学習を512 GPUで実現するPseudo-to-Realと細粒度CPU退避を提案し、GPU利用率とCPUメモリを直接管理する学習システム研究。",
+      "reason": "The paper's method, system design and reported result are about pretraining: Pseudo-to-Real cross-layer sharing/delinking and CPU offloading enable a 10-trillion-parameter model to be pretrained on 512 GPUs over 10 days. It does not evaluate inference-time efficiency, inference serving or decoding. Training efficiency is outside the requested inference-focused scope.",
       "first_checked_at": "2026-09-30T09:50:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
       "linked_from": [
-        "worker-worklist-30 discovery_review rank 493"
+        "worker-worklist-30 discovery_review rank 493",
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[4]"
       ],
       "title": "M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining"
     },
@@ -9218,11 +9223,12 @@
         "DOI:10.48550/arxiv.2309.12307",
         "arXiv:2309.12307"
       ],
-      "reason": "長文脈化のための効率的fine-tuningが主目的で、推論時はdense global attentionが必要と明記されるため学習高速化凍結範囲。",
+      "reason": "LongLoRA's efficiency contribution is reducing compute and GPU memory for fine-tuning long-context models using shifted sparse attention and LoRA. The paper explicitly retains full dense attention for inference and says the sparse attention is optional at inference; it presents no inference-time serving or decoding optimization. The workflow excludes training-only efficiency work, so this is unrelated to the current scope.",
       "first_checked_at": "2026-10-03T13:20:50+00:00",
-      "last_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
       "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[9]"
       ],
       "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models"
     },
@@ -9465,6 +9471,146 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "MiniGPT4-Video: Advancing Multimodal LLMs for Video Understanding with Interleaved Visual-Textual Tokens"
+    },
+    "arXiv:1712.05889": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.05889",
+      "identity_tokens": [
+        "arXiv:1712.05889"
+      ],
+      "reason": "Ray is a general-purpose distributed framework for interactive AI applications. The paper's conclusion notes a training/serving/simulation loop, but the motivating applications and reported evaluation focus on reinforcement-learning workloads and distributed task throughput (up to 1.8 million tasks/s), not LLM inference or LLM-serving efficiency. General framework applicability alone does not establish the required LLM-inference focus, so this is unrelated to the assigned scope.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[3]"
+      ],
+      "title": "Ray: A Distributed Framework for Emerging AI Applications"
+    },
+    "arXiv:2008.12260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.12260",
+      "identity_tokens": [
+        "arXiv:2008.12260"
+      ],
+      "reason": "Pollux is explicitly a deep-learning cluster scheduler that jointly tunes resources, batch sizes and learning rates for distributed DL training jobs. Its goodput metric combines training system throughput and statistical efficiency; the experiments and conclusion address training-job scheduling, not LLM inference or serving. Excluded under the training-only scope rule.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[2]"
+      ],
+      "title": "Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning"
+    },
+    "arXiv:2101.03961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.03961",
+      "identity_tokens": [
+        "arXiv:2101.03961"
+      ],
+      "reason": "Switch Transformers use sparse expert routing with roughly constant FLOPs per token, but the paper's main goal and measured speedups are pretraining scalability and training stability (up to 7x pretraining speed in its abstract). The manuscript evaluates training/fine-tuning quality and training regimes, not inference-serving efficiency or inference-time optimization. Under the workflow's training-only exclusion it is unrelated.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[2]"
+      ],
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
+    },
+    "arXiv:2101.06840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.06840",
+      "identity_tokens": [
+        "arXiv:2101.06840"
+      ],
+      "reason": "ZeRO-Offload places optimizer states and computation on CPU to make billion-parameter DNN training feasible with a single GPU. The paper's stated goal and measured speedups concern model training and training throughput; it does not optimize LLM inference or serving. Excluded under the workflow's training-process-only rule.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
+      ],
+      "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training"
+    },
+    "arXiv:2109.01611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.01611",
+      "identity_tokens": [
+        "arXiv:2109.01611"
+      ],
+      "reason": "The paper presents a general multi-model machine-learning inference server and evaluates it on GoogLeNet, LeNet, ResNet-50, SSD-MobileNet and VGG-16, including image/game/traffic workloads. Its gpu-let spatial partitioning improves throughput for these classical ML models, but the primary paper does not target LLM inference, LLM serving, or LLM-specific memory/compute costs. It is outside this LLM-inference-focused scope.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[7]"
+      ],
+      "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning"
+    },
+    "arXiv:2110.14895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.14895",
+      "identity_tokens": [
+        "arXiv:2110.14895"
+      ],
+      "reason": "EdgePipe is an inference system for large deep neural networks split across heterogeneous edge devices, but its empirical evaluation focuses on image-classification/computer-vision models including ViT-Base, ViT-Large and ViT-Huge, with throughput measured in images per second. The primary paper does not evaluate LLM or language-model serving, KV state, or text generation. Its generic inference partitioning is outside this LLM-inference candidate scope.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[2]"
+      ],
+      "title": "Pipeline Parallelism for Inference on Heterogeneous Edge Computing"
+    },
+    "arXiv:2210.12924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.12924",
+      "identity_tokens": [
+        "arXiv:2210.12924"
+      ],
+      "reason": "OLLA formulates tensor lifetime and placement optimization to reduce neural-network memory, but the abstract and conclusion frame the method around training models and its experiments measure training memory/runtime. Inference is mentioned in related work, not evaluated as OLLA's target. The main reported 30.4%/36.1% peak-memory reduction is for training workloads, so this is outside the inference-efficiency scope.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[4]"
+      ],
+      "title": "OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks"
+    },
+    "arXiv:2409.02060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02060",
+      "identity_tokens": [
+        "arXiv:2409.02060"
+      ],
+      "reason": "Although the model uses 1.3B active parameters out of 6.9B total and discusses compute per forward pass, the stated contribution is an open MoE model and extensive MoE training experiments. The paper's conclusion centers on releasing model/data/code and training analyses, not an inference-reduction method.",
+      "first_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[4]"
+      ],
+      "title": "OLMoE: Open Mixture-of-Experts Language Models"
+    },
+    "arXiv:2502.10517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10517",
+      "identity_tokens": [
+        "arXiv:2502.10517"
+      ],
+      "reason": "KernelBench measures whether LLMs can generate correct and fast GPU kernels for a broad set of ML workloads. Although efficient kernels may be used by LLM inference systems, the paper's evaluated object is LLM-generated kernel code quality; it does not optimize LLM inference execution or serving. Therefore it is outside this collection's inference-efficiency scope.",
+      "first_checked_at": "2026-10-03T14:28:53+00:00",
+      "last_checked_at": "2026-10-03T14:28:53+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[5]"
+      ],
+      "title": "KernelBench: Can LLMs Write Efficient GPU Kernels?"
+    },
+    "arXiv:2509.15940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15940",
+      "identity_tokens": [
+        "arXiv:2509.15940"
+      ],
+      "reason": "The primary title and abstract identify Arnold as a scheduler for LLM pre-training jobs across thousands of GPUs; the conclusion evaluates topology-aware scheduling for those pre-training jobs. The paper reports a 10.6% end-to-end improvement in production training, not inference. It is outside the inference-efficiency scope. The live worklist title field is a placeholder identity string rather than the primary paper title; the arXiv source was used to correct the reviewed title.",
+      "first_checked_at": "2026-10-03T14:28:53+00:00",
+      "last_checked_at": "2026-10-03T14:28:53+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[2]"
+      ],
+      "title": "Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs"
     }
   }
 }
