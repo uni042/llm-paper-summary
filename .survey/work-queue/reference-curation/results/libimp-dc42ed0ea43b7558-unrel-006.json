@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.14196",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.14196",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.14196",
+      "arXiv:2305.14196"
+    ],
+    "reason": "長文理解能力を測るゼロショット評価ベンチマークで、長文脈LLMを対象にするものの推論計算・KVメモリ・サービングを効率化する方式は提案しない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "worker-worklist-30 rank 448"
+    ],
+    "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc42ed0ea43b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1710.09412",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1710.09412",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1710.09412",
+      "arXiv:1710.09412"
+    ],
+    "reason": "入力とラベルの凸結合を学習例として用いるデータ拡張・正則化手法で、目的は汎化性能・ラベルノイズ耐性・敵対的頑健性の改善。推論効率化とは無関係。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "worker-worklist-30 rank 444"
+    ],
+    "title": "mixup: Beyond Empirical Risk Minimization"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc42ed0ea43b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

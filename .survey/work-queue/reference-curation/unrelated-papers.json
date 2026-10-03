@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T07:46:12+00:00",
-  "record_count": 553,
+  "updated_at": "2026-10-03T10:59:05+00:00",
+  "record_count": 591,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8142,6 +8142,562 @@
         "worker-worklist-00 discovery_review rank 470"
       ],
       "title": "AgentCoder: Multi-Agent Code Generation with Effective Testing and Self-optimisation"
+    },
+    "DOI:10.5281/zenodo.10256836": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5281/zenodo.10256836",
+      "identity_tokens": [
+        "DOI:10.5281/zenodo.10256836"
+      ],
+      "reason": "言語モデル評価ハーネスのv0.4.0ソフトウェアリリースであり、LLM推論runtimeの高速化・省メモリ化を提案する研究成果ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+      ],
+      "title": "EleutherAI/lm-evaluation-harness: Major refactor"
+    },
+    "arXiv:2203.14685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.14685",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2203.14685",
+        "arXiv:2203.14685"
+      ],
+      "reason": "MoEの階層AllToAllとGPU kernelで大規模分散学習を高速化するシステムで、最終適用先が学習工程そのもののため凍結範囲。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.06823-emoe.md"
+      ],
+      "title": "HetuMoE: An Efficient Trillion-scale Mixture-of-Expert Distributed Training System"
+    },
+    "DOI:10.1147/sj.52.0078": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1147/sj.52.0078",
+      "identity_tokens": [
+        "DOI:10.1147/sj.52.0078"
+      ],
+      "reason": "1966年の仮想記憶ページ置換アルゴリズム研究で、現代のLLM推論を対象とする論文ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md",
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "title": "A study of replacement algorithms for a virtual-storage computer"
+    },
+    "arXiv:2110.04260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.04260",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2110.04260",
+        "arXiv:2110.04260"
+      ],
+      "reason": "THORのrandom expert activationとconsistency-regularized trainingでMoEのparameter efficiency・翻訳品質を改善するモデル学習研究で、推論runtime最適化が主目的ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.06823-emoe.md"
+      ],
+      "title": "Taming Sparsely Activated Transformer with Stochastic Experts"
+    },
+    "arXiv:2404.14662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14662",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.14662",
+        "arXiv:2404.14662"
+      ],
+      "reason": "実行トレースと自己学習でコード修復能力を高める学習手法が主目的で、推論サービング・メモリ・カーネル高速化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "NExT: Teaching Large Language Models to Reason about Code Execution"
+    },
+    "arXiv:2404.13506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13506",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.13506",
+        "arXiv:2404.13506"
+      ],
+      "reason": "PEFT手法の訓練計算量・訓練メモリと応用を整理するサーベイで、凍結中の学習系が中心。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "Parameter Efficient Fine Tuning: A Comprehensive Analysis Across Applications"
+    },
+    "arXiv:2404.11027": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11027",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.11027",
+        "arXiv:2404.11027"
+      ],
+      "reason": "LLMをロボットの高水準計画・低水準制御へ用いるaffordance prompting研究で、推論効率化とは無関係。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "Empowering Large Language Models on Robotic Manipulation with Affordance Prompting"
+    },
+    "arXiv:2404.06411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06411",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.06411",
+        "arXiv:2404.06411"
+      ],
+      "reason": "LLMエージェントの進捗率・反復率を測る評価基盤が主貢献で、サービングruntimeの効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "AgentQuest: A Modular Benchmark Framework to Measure Progress and Improve LLM Agents"
+    },
+    "arXiv:2404.05221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05221",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.05221",
+        "arXiv:2404.05221"
+      ],
+      "reason": "推論連鎖の評価AutoRaceと推論アルゴリズム実装ライブラリが中心で、計算・メモリ・サービング効率化が主目的ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "LLM Reasoners: New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models"
+    },
+    "arXiv:2404.04392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04392",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.04392",
+        "arXiv:2404.04392"
+      ],
+      "reason": "量子化を扱うが、主題はfine-tuning/quantizationがjailbreak耐性へ与える安全性影響であり、推論効率方式の提案ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "Fine-Tuning, Quantization, and LLMs: Navigating Unintended Outcomes"
+    },
+    "arXiv:2404.03543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03543",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.03543",
+        "arXiv:2404.03543"
+      ],
+      "reason": "コード編集能力を測るベンチマーク・データセットであり、LLM推論基盤最適化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "CodeEditorBench: Evaluating Code Editing Capability of Large Language Models"
+    },
+    "arXiv:2404.02882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.02882",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.02882",
+        "arXiv:2404.02882"
+      ],
+      "reason": "線形注意の長系列sequence parallelismをGPUクラスタで高速化するが、主経路はforward/backwardを含む分散訓練であり、凍結中の学習系。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [],
+      "title": "Linear Attention Sequence Parallelism"
+    },
+    "arXiv:2312.02213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.02213",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.02213",
+        "arXiv:2312.02213"
+      ],
+      "reason": "LLMで表形式データ分析を案内・自動化するno-code analytics/AutoMLプラットフォームで、LLM推論基盤の高速化・省メモリ化を扱わない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md"
+      ],
+      "title": "JarviX: A LLM No code Platform for Tabular Data Analysis and Optimization"
+    },
+    "arXiv:2311.11696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.11696",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.11696",
+        "arXiv:2311.11696"
+      ],
+      "reason": "SoRAはLoRAのrankを学習中に動的最適化するparameter-efficient fine-tuning手法が主題で、推論時にはzero rank blockを除去するものの最終目的・主要評価は微調整効率と品質のため凍結範囲。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+      ],
+      "title": "Sparse Low-rank Adaptation of Pre-trained Language Models"
+    },
+    "arXiv:2311.07226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.07226",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.07226",
+        "arXiv:2311.07226"
+      ],
+      "reason": "LLMをロボットのperception・planning・control・interactionへ利用する応用サーベイで、LLM推論システム効率化を主題としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md"
+      ],
+      "title": "Large Language Models for Robotics: A Survey"
+    },
+    "arXiv:2311.02684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.02684",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.02684",
+        "arXiv:2311.02684"
+      ],
+      "reason": "LoRA-MoE decoderでマルチモーダルinstruction tuningのtask interferenceを抑える学習・品質改善研究で、推論効率化を最終目的としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+      ],
+      "title": "Octavius: Mitigating Task Interference in MLLMs via LoRA-MoE"
+    },
+    "arXiv:1608.03983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1608.03983",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1608.03983",
+        "arXiv:1608.03983"
+      ],
+      "reason": "確率的勾配降下法へ周期的なwarm restartを導入して深層ネットワーク学習のanytime性能を改善する最適化研究で、最終適用先は学習工程そのもの。LLM推論サービング、KVキャッシュ、推論カーネル等は扱わない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 443"
+      ],
+      "title": "SGDR: Stochastic Gradient Descent with Warm Restarts"
+    },
+    "arXiv:1710.09412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1710.09412",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1710.09412",
+        "arXiv:1710.09412"
+      ],
+      "reason": "入力とラベルの凸結合を学習例として用いるデータ拡張・正則化手法で、目的は汎化性能・ラベルノイズ耐性・敵対的頑健性の改善。推論効率化とは無関係。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 444"
+      ],
+      "title": "mixup: Beyond Empirical Risk Minimization"
+    },
+    "arXiv:2012.01266": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.01266",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2012.01266",
+        "arXiv:2012.01266"
+      ],
+      "reason": "複数ドメインにまたがる言語モデル圧縮のための知識蒸留学習枠組みで、圧縮モデル生成には関係するが主貢献はteacher/studentの学習方法。推論runtimeの高速化・省メモリ実装を主評価しない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 445"
+      ],
+      "title": "Meta-KD: A Meta Knowledge Distillation Framework for Language Model Compression across Domains"
+    },
+    "arXiv:2305.14196": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14196",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.14196",
+        "arXiv:2305.14196"
+      ],
+      "reason": "長文理解能力を測るゼロショット評価ベンチマークで、長文脈LLMを対象にするものの推論計算・KVメモリ・サービングを効率化する方式は提案しない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 448"
+      ],
+      "title": "ZeroSCROLLS: A Zero-Shot Benchmark for Long Text Understanding"
+    },
+    "arXiv:1711.04291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.04291",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1711.04291",
+        "arXiv:1711.04291"
+      ],
+      "reason": "ImageNet上のResNet-50大規模分散学習を高速化する研究で、最終適用先が学習工程そのものの高速化であり凍結範囲。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "Scale out for large minibatch SGD: Residual network training on ImageNet-1K with improved accuracy and reduced time to train"
+    },
+    "arXiv:1711.00123": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.00123",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1711.00123",
+        "arXiv:1711.00123"
+      ],
+      "reason": "ブラックボックス確率変数の勾配推定器を低分散化する学習アルゴリズム研究で、LLM推論効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Backpropagation through the Void: Optimizing control variates for black-box gradient estimation"
+    },
+    "arXiv:1709.04571": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.04571",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1709.04571",
+        "arXiv:1709.04571"
+      ],
+      "reason": "階層型強化学習でoption切替のdeliberation costを導入する学習研究で、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
+      ],
+      "title": "When Waiting is not an Option: Learning Options with a Deliberation Cost"
+    },
+    "arXiv:1708.06519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1708.06519",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1708.06519",
+        "arXiv:1708.06519"
+      ],
+      "reason": "CNNのチャネル枝刈りによるモデル圧縮研究で推論時のメモリ・演算削減を含むが、対象はCNNでありLLM/Transformer推論サーベイの範囲外。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ],
+      "title": "Learning Efficient Convolutional Networks through Network Slimming"
+    },
+    "arXiv:1707.08514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.08514",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1707.08514",
+        "arXiv:1707.08514"
+      ],
+      "reason": "LinuxファイルシステムのI/O増幅を測定するOS・ストレージ研究で、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md"
+      ],
+      "title": "Analyzing IO Amplification in Linux File Systems"
+    },
+    "arXiv:1706.09254": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1706.09254",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1706.09254",
+        "arXiv:1706.09254"
+      ],
+      "reason": "レストラン領域のend-to-end自然言語生成データセット構築・分析が主題で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+      ],
+      "title": "The E2E Dataset: New Challenges For End-to-End Generation"
+    },
+    "arXiv:1705.07565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.07565",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1705.07565",
+        "arXiv:1705.07565"
+      ],
+      "reason": "深層ニューラルネット一般の層別Optimal Brain Surgeon枝刈り研究で、LLM以前の非Transformer圧縮であり現行LLM推論サーベイの対象外。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Learning to Prune Deep Neural Networks via Layer-wise Optimal Brain Surgeon"
+    },
+    "arXiv:1705.05249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.05249",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1705.05249",
+        "arXiv:1705.05249"
+      ],
+      "reason": "OpenCL向け汎用BLASライブラリと自動チューニングの研究で、LLM固有の推論カーネル/runtime研究ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "CLBlast: A Tuned OpenCL BLAS Library"
+    },
+    "arXiv:1704.04684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.04684",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1704.04684",
+        "arXiv:1704.04684"
+      ],
+      "reason": "角距離向け局所性鋭敏ハッシュ（LSH）の一般アルゴリズム研究で、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md"
+      ],
+      "title": "Generic LSH Families for the Angular Distance Based on Johnson-Lindenstrauss Projections and Feature Hashing LSH"
+    },
+    "arXiv:1703.06114": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1703.06114",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1703.06114",
+        "arXiv:1703.06114"
+      ],
+      "reason": "集合入力に対する順列不変・同変ニューラルネットの理論とアーキテクチャ研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
+      ],
+      "title": "Deep Sets"
+    },
+    "arXiv:2305.12870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.12870",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.12870",
+        "arXiv:2305.12870"
+      ],
+      "reason": "ChatGPTから13B級studentへ知識を移す敵対的知識蒸留が主題で、最終適用先は学習・instruction tuning。推論runtimeの速度・メモリ・サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Lion: Adversarial Distillation of Proprietary Large Language Models"
+    },
+    "arXiv:2305.10266": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10266",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.10266",
+        "arXiv:2305.10266"
+      ],
+      "reason": "PaLMの事前学習データ中の偶発的な対訳データがゼロショット翻訳能力へ与える影響を分析するデータ・能力研究で、推論効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ],
+      "title": "Searching for Needles in a Haystack: On the Role of Incidental Bilingualism in PaLM's Translation Capability"
+    },
+    "arXiv:2305.08367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.08367",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.08367",
+        "arXiv:2305.08367"
+      ],
+      "reason": "submodular function maximizationを行列計算・近似データ構造で高速化する一般最適化アルゴリズム研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "Fast Submodular Function Maximization"
+    },
+    "arXiv:2305.03653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.03653",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.03653",
+        "arXiv:2305.03653"
+      ],
+      "reason": "LLMで検索queryを拡張してretrieval品質を上げる情報検索研究で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "title": "Query Expansion by Prompting Large Language Models"
+    },
+    "arXiv:2304.14979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.14979",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.14979",
+        "arXiv:2304.14979"
+      ],
+      "reason": "過去の機械学習タスク経験をLLMへ提示して新規MLタスクの解法・ハイパーパラメータを生成するAutoML支援研究で、LLM推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "MLCopilot: Unleashing the Power of Large Language Models in Solving Machine Learning Tasks"
+    },
+    "arXiv:2304.10592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.10592",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.10592",
+        "arXiv:2304.10592"
+      ],
+      "reason": "凍結visual encoderとVicunaを線形projectionで接続し、画像理解・マルチモーダル生成能力を獲得するVLM研究。学習が軽量でも最終目的は能力向上で、推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+      ],
+      "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models"
+    },
+    "arXiv:2304.08442": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.08442",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.08442",
+        "arXiv:2304.08442"
+      ],
+      "reason": "The Pileから6GB/約100万文書の多様な事前学習データを作るdataset・pretraining研究で、学習系凍結範囲。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md"
+      ],
+      "title": "The MiniPile Challenge for Data-Efficient Language Models"
+    },
+    "arXiv:2304.05332": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.05332",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.05332",
+        "arXiv:2304.05332"
+      ],
+      "reason": "複数LLMと検索・コード実行・ロボット実験を統合して化学研究を自律化するagent応用研究で、エージェント推論サービングの効率化ではない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md"
+      ],
+      "title": "Emergent autonomous scientific research capabilities of large language models"
     }
   }
 }

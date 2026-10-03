@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b180754aa406f0ed-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.02684",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.02684",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.02684",
+      "arXiv:2311.02684"
+    ],
+    "reason": "LoRA-MoE decoderでマルチモーダルinstruction tuningのtask interferenceを抑える学習・品質改善研究で、推論効率化を最終目的としない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+    ],
+    "title": "Octavius: Mitigating Task Interference in MLLMs via LoRA-MoE"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b180754aa406",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

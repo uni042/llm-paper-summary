@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed2bfb45dc03dec9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1708.06519",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1708.06519",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1708.06519",
+      "arXiv:1708.06519"
+    ],
+    "reason": "CNNのチャネル枝刈りによるモデル圧縮研究で推論時のメモリ・演算削減を含むが、対象はCNNでありLLM/Transformer推論サーベイの範囲外。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+    ],
+    "title": "Learning Efficient Convolutional Networks through Network Slimming"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed2bfb45dc03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

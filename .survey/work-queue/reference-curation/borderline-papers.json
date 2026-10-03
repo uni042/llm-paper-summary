@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T07:46:12+00:00",
-  "record_count": 398,
+  "updated_at": "2026-10-03T10:59:05+00:00",
+  "record_count": 403,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5747,6 +5747,81 @@
         "worker-worklist-00 discovery_review rank 473"
       ],
       "title": "LLaVA-Phi: Efficient Multi-Modal Assistant with Small Language Model"
+    },
+    "arXiv:2312.04455": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.04455",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.04455",
+        "arXiv:2312.04455"
+      ],
+      "reason": "Attention Bucketsは推論時に複数のRoPE基準角で並列処理し文脈位置の見落としを補うため推論方式には該当するが、主目的はtool-use/RAGの品質改善であり、速度・メモリ・throughput削減を狙う効率化方式ではないため境界扱い。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use"
+    },
+    "arXiv:2311.13381": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.13381",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.13381",
+        "arXiv:2311.13381"
+      ],
+      "reason": "主貢献はモバイル端末群でのLLM分割・pipeline trainingだが、異種CPU/GPUへのattention-head配置を行うbackend schedulerと最大8.03倍のinference speedupも含むため、学習凍結範囲とedge inferenceの境界に位置する。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Confidant: Customizing Transformer-based LLMs via Collaborative Edge Training"
+    },
+    "arXiv:2104.08682": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.08682",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2104.08682",
+        "arXiv:2104.08682"
+      ],
+      "reason": "BERTを資源制約下へ配備するため20倍のweight/FLOPs圧縮を狙うため推論圧縮に近いが、中心的な新規性はpre-train/fine-tune/pruning間の知識移送を利用するknowledge-aware sparse pruning学習手順で、実測serving runtime評価は主題でないため境界扱い。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 446"
+      ],
+      "title": "Rethinking Network Pruning -- under the Pre-train and Fine-tune Paradigm"
+    },
+    "arXiv:2211.04236": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.04236",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2211.04236",
+        "arXiv:2211.04236"
+      ],
+      "reason": "自己回帰生成を置き換える連続拡散型テキスト生成で、推論時にアクセラレータ上で並列化しやすい可能性を明示するが、主要貢献・評価は生成モデル構造と品質であり、実測LLM推論高速化システムではないため境界扱い。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "worker-worklist-30 rank 447"
+      ],
+      "title": "Self-conditioned Embedding Diffusion for Text Generation"
+    },
+    "arXiv:2305.04701": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.04701",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.04701",
+        "arXiv:2305.04701"
+      ],
+      "reason": "LLM attention matrixを近似して差分プライバシー保証を与える高速attention理論で推論計算には接するが、主目的はprivacy保証であり実LLMサービングの速度・メモリ削減を主要評価にしない。",
+      "first_checked_at": "2026-10-03T10:59:05+00:00",
+      "last_checked_at": "2026-10-03T10:59:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "Differentially Private Attention Computation"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.01266",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.01266",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2012.01266",
+      "arXiv:2012.01266"
+    ],
+    "reason": "複数ドメインにまたがる言語モデル圧縮のための知識蒸留学習枠組みで、圧縮モデル生成には関係するが主貢献はteacher/studentの学習方法。推論runtimeの高速化・省メモリ実装を主評価しない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "worker-worklist-30 rank 445"
+    ],
+    "title": "Meta-KD: A Meta Knowledge Distillation Framework for Language Model Compression across Domains"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc42ed0ea43b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

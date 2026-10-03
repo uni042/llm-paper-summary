@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8927ce320296e5c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.04701",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.04701",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.04701",
+      "arXiv:2305.04701"
+    ],
+    "reason": "LLM attention matrixを近似して差分プライバシー保証を与える高速attention理論で推論計算には接するが、主目的はprivacy保証であり実LLMサービングの速度・メモリ削減を主要評価にしない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "Differentially Private Attention Computation"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8927ce32029",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

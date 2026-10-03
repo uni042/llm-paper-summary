@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8927ce320296e5c-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.08442",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.08442",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2304.08442",
+      "arXiv:2304.08442"
+    ],
+    "reason": "The Pileから6GB/約100万文書の多様な事前学習データを作るdataset・pretraining研究で、学習系凍結範囲。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md"
+    ],
+    "title": "The MiniPile Challenge for Data-Efficient Language Models"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8927ce32029",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

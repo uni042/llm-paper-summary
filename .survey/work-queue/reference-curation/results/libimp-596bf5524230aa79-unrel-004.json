@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-596bf5524230aa79-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2110.04260",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2110.04260",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2110.04260",
+      "arXiv:2110.04260"
+    ],
+    "reason": "THORのrandom expert activationとconsistency-regularized trainingでMoEのparameter efficiency・翻訳品質を改善するモデル学習研究で、推論runtime最適化が主目的ではない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2503.06823-emoe.md"
+    ],
+    "title": "Taming Sparsely Activated Transformer with Stochastic Experts"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-596bf5524230",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

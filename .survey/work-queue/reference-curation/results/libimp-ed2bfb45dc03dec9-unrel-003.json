@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed2bfb45dc03dec9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1709.04571",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1709.04571",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1709.04571",
+      "arXiv:1709.04571"
+    ],
+    "reason": "階層型強化学習でoption切替のdeliberation costを導入する学習研究で、LLM推論システムとは無関係。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
+    ],
+    "title": "When Waiting is not an Option: Learning Options with a Deliberation Cost"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed2bfb45dc03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

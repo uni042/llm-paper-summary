@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8927ce320296e5c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.10592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.10592",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2304.10592",
+      "arXiv:2304.10592"
+    ],
+    "reason": "凍結visual encoderとVicunaを線形projectionで接続し、画像理解・マルチモーダル生成能力を獲得するVLM研究。学習が軽量でも最終目的は能力向上で、推論基盤効率化ではない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+    ],
+    "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8927ce32029",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

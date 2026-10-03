@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8927ce320296e5c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.12870",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.12870",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.12870",
+      "arXiv:2305.12870"
+    ],
+    "reason": "ChatGPTから13B級studentへ知識を移す敵対的知識蒸留が主題で、最終適用先は学習・instruction tuning。推論runtimeの速度・メモリ・サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "Lion: Adversarial Distillation of Proprietary Large Language Models"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8927ce32029",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
