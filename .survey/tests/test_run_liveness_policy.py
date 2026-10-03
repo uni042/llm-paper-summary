@@ -20,6 +20,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
     def test_central_scheduler_periodically_dispatches_async_github_lanes(self):
         scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
         self.assertIn("cron: '3/10 * * * *'", scheduler)
+        self.assertIn(".survey/scheduler/library-import-kick.json", scheduler)
         for workflow in (
             "survey-run-state.yml",
             "library-import.yml",
