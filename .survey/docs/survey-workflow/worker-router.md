@@ -23,8 +23,10 @@
 
 | 実行主体 | GitHub | Library | 主責務 |
 |---|---|---|---|
-| \`scheduled-chat-00\` / \`scheduled-chat-30\` / \`scheduled-chat-45\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
-| Survey GitHub Import | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、転送確認後にLibrary原本を整理 |
+| \`scheduled-chat-00\` / \`scheduled-chat-30\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
+| \`scheduled-chat-45\` 通常フェーズ | read-only | read/write | :00と同じ探索・読解・分類・完成成果保存 |
+| \`scheduled-chat-45\` 04:45 / 10:45 / 16:45 / 22:45 Importフェーズ | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、handoff確認後にLibrary原本を整理 |
+| Survey GitHub Import（独立Scheduled Task） | disabled | なし | タスク枠上限回避のため通常運用では使わず、重複再有効化しない |
 | GitHub import inbox processor | Actions内read/write | なし | 最新mainでidentity解決、Research配置、Discovery precheck/relevance/submission、GitHub側掃除 |
 | 通常チャット | 原則read-only | read/write | 明示された監査・回収・保守 |
 
@@ -505,7 +507,7 @@ Survey GitHub Importはmaintenanceを `checked_at` の古い順に直列処理�
 
 Scheduled worker:
 
-- Library-first / GitHub read-only
+- Library-first / 通常フェーズはGitHub read-only（:45の4つのImport枠だけ搬送用write例外）
 - 確認main SHA
 - モードと在庫判定根拠
 - 完了ラウンド数と、Research完成件数またはDiscovery分類内訳
