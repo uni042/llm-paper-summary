@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2311.08692",
+      "year": 2023,
+      "published": "2023-11-15",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 166,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The complementary potential of Large Language Models (LLM) assumes off-the-shelf LLMs have heterogeneous expertise in a wide range of domains and tasks so that an ensemble of LLMs can achieve consistently better performance. Existing ensemble methods for LLMs mainly focus on reward model ranking of outputs, leading to significant computation overhead. To combat this issue, we revisit the complementary potential of LLMs and further elaborate on it by mining latent expertise with off-the-shelf reward models. We propose ZOOTER, a reward-guided routing method distilling rewards on training queries to train a routing function, which can precisely distribute each query to the LLM with expertise about it. We also integrate a tag-based label enhancement to mitigate noise from uncertainty when using rewards as silver supervision. ZOOTER shows computation efficiency in inference as it only introduces minor computation overhead of a routing function compared with reward model ranking methods. We evaluate ZOOTER on a comprehensive benchmark collection with 26 subsets in different domains and tasks. ZOOTER outperforms the best single model on average and ranks first on 44% of tasks, even surpassing multiple reward model ranking methods.",
+      "identifiers": [
+        "SemanticScholar:215de09ac6e5de81187c85065b5ace8bc01f2862"
+      ],
+      "semantic_scholar_id": "215de09ac6e5de81187c85065b5ace8bc01f2862",
+      "canonical_id": "arXiv:2311.08692",
+      "arxiv_id": "2311.08692",
+      "doi": "10.48550/arXiv.2311.08692",
+      "authors": [
+        "Ke-Ming Lu",
+        "Hongyi Yuan",
+        "Run-Ji Lin",
+        "Jun-Yang Lin",
+        "Zheng Yuan",
+        "Chang Zhou",
+        "Jing-Ren Zhou"
+      ],
+      "priority": 176,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 166,
+        "citation_count": 166,
+        "total": 176,
+        "is_fresh": false,
+        "freshness_age_days": 1053,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "複数LLMを全実行してreward rankingする高コストensembleを、軽量routerで問い合わせごとに1モデルだけ選ぶselect-then-generateへ変え、推論計算量を直接削減するmodel routing方式。",
+      "library_body_check": "一次資料本文/HTMLを確認。training query上のrewardを蒸留してrouting functionを学習し、tag-based label enhancementでreward uncertainty由来noiseを抑える。26 benchmark subsetで評価し、単一best modelを平均で上回り44%のtaskで1位。86M級router+1つの13B LLMだけを推論する構成でgeneration-and-rankingの複数LLM実行を回避する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compressed Context Memory For Online Language Model Interaction",
+      "source_url": "https://arxiv.org/abs/2312.03414",
+      "year": 2023,
+      "published": "2023-12-06",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 46,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents a context key/value compression method for Transformer language models in online scenarios, where the context continually expands. As the context lengthens, the attention process demands increasing memory and computations, which in turn reduces the throughput of the language model. To address this challenge, we propose a compressed context memory system that continually compresses the accumulating attention key/value pairs into a compact memory space, facilitating language model inference in a limited memory space of computing environments. Our compression process involves integrating a lightweight conditional LoRA into the language model's forward pass during inference, without the need for fine-tuning the model's entire set of weights. We achieve efficient training by modeling the recursive compression process as a single parallelized forward computation. Through evaluations on conversation, personalization, and multi-task learning, we demonstrate that our approach achieves the performance level of a full context model with $5\\times$ smaller context memory size. We further demonstrate the applicability of our approach in a streaming setting with an unlimited context length, outperforming the sliding window approach. Codes are available at https://github.com/snu-mllab/context-memory.",
+      "identifiers": [
+        "SemanticScholar:4e2a3ddeaf5defb9318b43c364b9a9efe3847dcf"
+      ],
+      "semantic_scholar_id": "4e2a3ddeaf5defb9318b43c364b9a9efe3847dcf",
+      "canonical_id": "arXiv:2312.03414",
+      "arxiv_id": "2312.03414",
+      "doi": "10.48550/arXiv.2312.03414",
+      "authors": [
+        "Jang-Hyun Kim",
+        "Junyoung Yeom",
+        "Sangdoo Yun",
+        "H. Song"
+      ],
+      "priority": 56,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 46,
+        "citation_count": 46,
+        "total": 56,
+        "is_fresh": false,
+        "freshness_age_days": 1032,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "増大する会話文脈のKVを継続的に圧縮し、注意計算とメモリ使用量を直接削減する長文脈LLM推論向けKV圧縮方式で対象範囲に直接該当する。",
+      "library_body_check": "一次資料本文/HTMLを確認。軽量conditional LoRAをforward passへ組み込み、蓄積するattention key/valueをcompact memoryへ再帰圧縮する。conversation/personalization/multi-task評価でfull-context相当性能を5倍小さいcontext memoryで達成し、streamingのunlimited contextでもsliding windowを上回る。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Divergent Token Metrics: Measuring degradation to prune away LLM components – and optimize quantization",
+      "source_url": "https://arxiv.org/abs/2311.01544",
+      "year": 2023,
+      "published": "2023-11-02",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have reshaped natural language processing with their impressive capabilities. However, their ever-increasing size has raised concerns about their effective deployment and the need for LLM compression. This study introduces the Divergent Token Metrics (DTMs), a novel approach to assessing compressed LLMs, addressing the limitations of traditional perplexity or accuracy measures that fail to accurately reflect text generation quality. DTMs measure token divergences that allow deeper insights into the subtleties of model compression, in particular, when evaluating components’ impacts individually. Utilizing the First Divergent Token Metric (FDTM) in model sparsification reveals that 25% of all attention components can be pruned beyond 90% on the Llama-2 model family, still keeping SOTA performance. For quantization, FDTM suggests that more than 80% of parameters can be naively transformed to int8 without special outlier management. These evaluations indicate the necessity of choosing appropriate compressions for parameters individually—and that FDTM can identify those—while standard metrics result in deteriorated outcomes.",
+      "identifiers": [
+        "SemanticScholar:61a76cdf1778ce280cabdc972adb7aebea9d45da"
+      ],
+      "semantic_scholar_id": "61a76cdf1778ce280cabdc972adb7aebea9d45da",
+      "canonical_id": "arXiv:2311.01544",
+      "arxiv_id": "2311.01544",
+      "doi": "10.18653/v1/2024.naacl-long.377",
+      "authors": [
+        "Bjorn Deiseroth",
+        "Max Meuer",
+        "Nikolas Gritsch",
+        "C. Eichenberg",
+        "P. Schramowski",
+        "Matthias Aßenmacher",
+        "K. Kersting"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "freshness_age_days": 1066,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "LLM配備向け圧縮でcomponent単位のpruning/quantization判断を行い、attention componentの大幅疎化と大部分parameterのint8化を可能にする推論向け圧縮研究。",
+      "library_body_check": "一次資料本文/HTMLを確認。perplexity/accuracyでは捉えにくい圧縮劣化をtoken divergenceで測るDivergent Token Metricsを導入し、FDTMでLlama-2のattention componentの25%を90%以上pruneしても高性能を維持できる条件を示す。quantizationでは80%以上のparameterを特別なoutlier managementなしにint8へ変換可能と示す。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space",
+      "source_url": "https://arxiv.org/abs/2311.14652",
+      "year": 2023,
+      "published": "2023-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention computation takes both the time complexity of $O(n^2)$ and the space complexity of $O(n^2)$ simultaneously, which makes deploying Large Language Models (LLMs) in streaming applications that involve long contexts requiring substantial computational resources. In recent OpenAI DevDay (Nov 6, 2023), OpenAI released a new model that is able to support a 128K-long document, in our paper, we focus on the memory-efficient issue when context length $n$ is much greater than 128K ($n \\gg 2^d$). Considering a single-layer self-attention with Query, Key, and Value matrices $Q, K, V \\in \\mathbb{R}^{n \\times d}$, the polynomial method approximates the attention output $T \\in \\mathbb{R}^{n \\times d}$. It accomplishes this by constructing $U_1, U_2 \\in \\mathbb{R}^{n \\times t}$ to expedite attention ${\\sf Attn}(Q, K, V)$ computation within $n^{1+o(1)}$ time executions. Despite this, computing the approximated attention matrix $U_1U_2^\\top \\in \\mathbb{R}^{n \\times n}$ still necessitates $O(n^2)$ space, leading to significant memory usage. In response to these challenges, we introduce a new algorithm that only reads one pass of the data in a streaming fashion. This method employs sublinear space $o(n)$ to store three sketch matrices, alleviating the need for exact $K, V$ storage. Notably, our algorithm exhibits exceptional memory-efficient performance with super-long tokens. As the token length $n$ increases, our error guarantee diminishes while the memory usage remains nearly constant. This unique attribute underscores the potential of our technique in efficiently handling LLMs in streaming applications.",
+      "identifiers": [
+        "SemanticScholar:5a41001f766f07484de4590134b695abd5fb4251"
+      ],
+      "semantic_scholar_id": "5a41001f766f07484de4590134b695abd5fb4251",
+      "canonical_id": "arXiv:2311.14652",
+      "arxiv_id": "2311.14652",
+      "doi": "10.48550/arXiv.2311.14652",
+      "authors": [
+        "Raghavendra Addanki",
+        "Chenyang Li",
+        "Zhao Song",
+        "Chi-Wun Yang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "freshness_age_days": 1044,
+        "matched_prestigious_venue": null
+      },
+      "reason": "超長文脈LLMのattentionを1-pass streamingとsketchで近似し、K/V全保持を避けてsublinear spaceへ落とすメモリ効率化方式で、長文脈推論の対象範囲に該当する。",
+      "library_body_check": "一次資料本文/HTMLを確認。polynomial attention approximationがU1U2^TのO(n^2)空間を要する問題に対し、データを1回だけ読み3つのsketch matrixを保持する方式を導出し、exact K,V保存を不要にする。nが128Kを大きく超える領域を想定し、メモリはほぼ一定のまま誤差保証が改善する性質を示す。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a4c53f29cd85",
+    "round": "libimp-a4c53f29cd851708-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a4c53f29cd851708-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a4c53f29cd851708-pre01.json",
+    "receipt": "sha256:0ad9e7fa37895b00e897e3bb788cb6e4c95ddb469f2840034ca3dcb5cd5addad"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a4c53f29cd85",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

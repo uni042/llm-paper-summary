@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Acceptance-Aware Draft Model Training for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.24150",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight draft model to generate multiple candidate tokens that are verified by the target model in a single forward pass. Its speedup is largely determined by the acceptance length, yet existing draft-model training methods mainly optimize cross-entropy or Kullback-Leibler (KL) divergence as proxies. These objectives encourage distribution matching but do not directly optimize acceptance length, and the acceptance mechanism also differs between greedy and sampling-based decoding. In this work, we propose acceptance-length-aware training losses that directly optimize the expected number of accepted tokens within a speculative window. For greedy verification, we derive an expected accepted length (EAL) loss that explicitly maximizes expected acceptance length. For sampling-based decoding, we introduce a window total variation (WTV) loss that optimizes the overlap between temperature-scaled draft and target distributions while accounting for sequential acceptance dependencies. Both objectives can be further combined with a group-relative reinforcement learning stage (GRPO) using simulated acceptance length as the reward. Experiments across different target and draft models, tasks, and decoding settings show that our losses consistently improve acceptance length over KL-based training. WTV provides particularly strong gains under sampling-based decoding, while EAL better matches greedy verification. These results show that directly optimizing the acceptance objective, with losses tailored to the decoding mode, is more effective than conventional distribution-matching objectives.",
+      "identifiers": [
+        "SemanticScholar:aefcf1cc0fd8ce4c95dc7ffedfffac074d9a8cbc"
+      ],
+      "semantic_scholar_id": "aefcf1cc0fd8ce4c95dc7ffedfffac074d9a8cbc",
+      "canonical_id": "arXiv:2609.24150",
+      "arxiv_id": "2609.24150",
+      "authors": [
+        "Tian-Hua Xia",
+        "M. Ganesan",
+        "Yi-Fei Feng",
+        "Hai-Yu Wang",
+        "Maximilian Egger",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "draft学習を行うが最終適用先は投機的復号の受理長と推論速度で、greedy/samplingそれぞれのverification規則に直接整合するlossを設計する推論高速化研究。",
+      "library_body_check": "greedy向けExpected Accepted Length lossとsampling向けWindow Total Variation lossを導出し、必要に応じてsimulated acceptance lengthをrewardとするGRPOを追加。複数target/draft/task/decoding条件でKL-based trainingよりacceptance lengthを一貫して改善し、WTVはsampling、EALはgreedyで特に有効。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0e171e96040a",
+    "round": "libimp-0e171e96040ae83a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0e171e96040ae83a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0e171e96040ae83a-pre01.json",
+    "receipt": "sha256:efb6601d91083105a1d509d81a07dcd131f480828af7ade522a91e27891ddc04"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0e171e96040a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
