@@ -8,35 +8,35 @@ WORKFLOWS = ROOT / ".github" / "workflows"
 
 
 class RunStateHotPathWorkflowContractTests(unittest.TestCase):
-    def test_submission_lane_recomputes_after_push_races_and_is_centrally_dispatched(self):
-        text = (WORKFLOWS / "survey-submission-fast.yml").read_text(encoding="utf-8")
-        scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("for attempt in $(seq 1 12)", text)
-        self.assertIn("git fetch origin main", text)
-        self.assertIn("git reset --hard origin/main", text)
-        self.assertIn("--auto-from-descriptors-file /tmp/immutable-submissions.txt", text)
-        self.assertIn("request fast lane will recover", text)
-        self.assertNotIn("schedule:", text)
-        self.assertIn("dispatch survey-submission-fast.yml", scheduler)
+    def _trigger(self, name: str) -> str:
+        text = (WORKFLOWS / name).read_text(encoding="utf-8")
+        return text.split("permissions:", 1)[0]
 
-    def test_run_state_lane_recomputes_and_is_centrally_dispatched(self):
-        text = (WORKFLOWS / "survey-run-state.yml").read_text(encoding="utf-8")
-        scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
+    def test_submission_lane_is_manual_recovery_only(self):
+        text = (WORKFLOWS / "survey-submission-fast.yml").read_text(encoding="utf-8")
         self.assertIn("for attempt in $(seq 1 12)", text)
-        self.assertIn("git fetch origin main", text)
-        self.assertIn("git reset --hard origin/main", text)
+        self.assertIn("list_unsettled_immutable_submissions.py", text)
+        trigger = self._trigger("survey-submission-fast.yml")
+        self.assertIn("workflow_dispatch:", trigger)
+        self.assertNotIn("push:", trigger)
+        self.assertNotIn("schedule:", trigger)
+
+    def test_run_state_lane_is_manual_recovery_only(self):
+        text = (WORKFLOWS / "survey-run-state.yml").read_text(encoding="utf-8")
+        self.assertIn("for attempt in $(seq 1 12)", text)
         self.assertIn("auto_claim_from_run_state.py", text)
         self.assertIn("auto_discovery_from_run_state.py", text)
-        self.assertIn("changed-run-state-results.txt", text)
-        self.assertIn("group: survey-run-state-main", text)
-        self.assertNotIn("schedule:", text)
-        self.assertIn("dispatch survey-run-state.yml", scheduler)
+        trigger = self._trigger("survey-run-state.yml")
+        self.assertIn("workflow_dispatch:", trigger)
+        self.assertNotIn("push:", trigger)
+        self.assertNotIn("schedule:", trigger)
 
     def test_discovery_precheck_repairs_missing_run_state_before_publication(self):
         text = (WORKFLOWS / "discovery-precheck.yml").read_text(encoding="utf-8")
         self.assertIn("ensure_discovery_run_state.py", text)
         self.assertIn("derive_worker_run_state.py --repo-root .", text)
         self.assertIn(".survey/work-queue/run-state", text)
+        self.assertIn("group: discovery-precheck-main", text)
 
     def test_discovery_precheck_recovers_normal_provider_failure_in_same_lane(self):
         text = (WORKFLOWS / "discovery-precheck.yml").read_text(encoding="utf-8")
@@ -45,31 +45,29 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("--verify-only", text)
         self.assertIn("provider-failover batch", text)
 
-    def test_claim_and_run_state_lanes_do_not_share_actions_concurrency_group(self):
-        run_state = (WORKFLOWS / "survey-run-state.yml").read_text(encoding="utf-8")
+    def test_legacy_direct_worker_lanes_are_not_periodically_dispatched(self):
+        orchestrator = (WORKFLOWS / "survey-orchestrator.yml").read_text(encoding="utf-8")
+        for retired in (
+            "survey-run-state.yml",
+            "survey-submission-fast.yml",
+            "survey-research-quality-preflight.yml",
+            "survey-completed-builder-fast.yml",
+        ):
+            with self.subTest(retired=retired):
+                self.assertNotIn(f"dispatch_if_idle {retired}", orchestrator)
+                trigger = self._trigger(retired)
+                self.assertNotIn("push:", trigger)
+                self.assertNotIn("schedule:", trigger)
+
+    def test_dedicated_orchestrator_owns_periodic_schedule(self):
+        text = (WORKFLOWS / "survey-orchestrator.yml").read_text(encoding="utf-8")
         claim = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("group: survey-run-state-main", run_state)
-        self.assertIn("group: survey-claim-main", claim)
-        self.assertNotIn("group: survey-claim-main", run_state)
-
-    def test_preflight_and_descriptor_builder_use_central_periodic_recovery(self):
-        preflight = (WORKFLOWS / "survey-research-quality-preflight.yml").read_text(encoding="utf-8")
-        builder = (WORKFLOWS / "survey-completed-builder-fast.yml").read_text(encoding="utf-8")
-        scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("for attempt in $(seq 1 12)", preflight)
-        self.assertIn("for attempt in $(seq 1 12)", builder)
-        self.assertNotIn("schedule:", preflight)
-        self.assertNotIn("schedule:", builder)
-        self.assertIn("dispatch survey-research-quality-preflight.yml", scheduler)
-        self.assertIn("dispatch survey-completed-builder-fast.yml", scheduler)
-
-    def test_claim_lane_owns_periodic_orchestration_schedule(self):
-        text = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("claim_fast_path.py", text)
-        self.assertIn("group: survey-claim-main", text)
-        self.assertIn("cron: '3/10 * * * *'", text)
-        self.assertIn("for attempt in $(seq 1 12)", text)
-        self.assertIn("Dispatch scheduled survey lanes", text)
+        self.assertIn("group: survey-orchestrator-main", text)
+        self.assertIn("cron: '7/10 * * * *'", text)
+        self.assertIn(".survey/scheduler/library-import-kick.json", text)
+        self.assertIn("dispatch_if_idle library-import.yml", text)
+        self.assertNotIn("schedule:", self._trigger("survey-claim-fast.yml"))
+        self.assertIn("claim_fast_path.py", claim)
 
 
 if __name__ == "__main__":
