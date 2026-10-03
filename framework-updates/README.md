@@ -96,6 +96,16 @@
 
   一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.30.0
 
+### 2026-10-02
+
+#### SGLang v0.5.21
+
+- **PD role switching / Rust prefix cache / long-context・speculative・MoE経路を大幅更新 — released 2026-10-02**
+
+  prefill / decode instanceを再起動なしで動的切替できるようにし、prefix cacheのRust coreを既定化。DeepSeek-V4.1 long-prompt first-tokenを22%短縮、Kimi K3のPD prefill throughputを20.6%改善。SM100ではNVFP4 KV GenMHA + speculative decodingにより1M contextのdecode-attention kernelを1.355倍高速化。DeepSeek-V4-ProのPD bootstrapではMI355X・1P1D・concurrency 256でmean TTFT 19.4→15.1秒。詳細はSGLang個別ページ。
+
+  一次資料: https://github.com/sgl-project/sglang/releases/tag/v0.5.21
+
 ### 2026-09-20
 
 #### vLLM

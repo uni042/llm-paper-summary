@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261002T0859-a0287cda-r2",
+  "attempt_id": "library-import-maint-20261003T1013-sglang0521",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md"
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md"
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/README.md"
   ],
-  "summary": "2026-10-02 08:30 maintenance: Ollama v0.35.0 decision model APIを集約READMEへ同期し、TensorRT-LLM v1.3.0rc29の投機・低bit MLA/MoE・分散経路更新を集約/個別ページへ追加。"
+  "summary": "2026-10-03 08:30 maintenance: SGLang v0.5.21のPD role switching、Rust prefix cache、long-context/speculative/MoE経路の主要更新を個別・集約ページへ反映。"
 }

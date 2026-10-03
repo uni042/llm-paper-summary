@@ -29,6 +29,21 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-10-02 — v0.5.21（released）
+
+- **prefill / decodeを再起動なしで動的切替**: PD instanceがruntimeでprefill roleとdecode roleを切り替え可能になった。固定P/D fleetより負荷変動へ追従しやすい。
+- **prefix cacheのRust coreをdefault化**: prefix reuseの中心経路をRust実装へ移行。
+- **DeepSeek-V4.1 long-prompt TTFTを22%改善**: 長promptのfirst-token経路を最適化。
+- **Kimi K3 PD prefill throughput +20.6%**: PD servingでprefill側の処理効率を改善。
+- **GLM-5.3-Flash / AMD MI355X**: FP8 / MXFP4 MoEとMTP投機的デコード（speculative decoding）を追加。
+- **CUDA Graph capture memory削減**: DeepSeek-V4のC4 Indexerでbreakable CUDA Graph時のcapture memoryを58%削減し18 GB。
+- **NVFP4 KV attention**: SM100のNVFP4 GenMHA + speculative decodingで1M contextのdecode-attention kernelを1.355倍高速化。
+- **PD / DCP転送改善**: DeepSeek-V4-Pro、1P1D、MI355X、concurrency 256でmean TTFTを19.4→15.1秒。Kimi Linear、8×B200、concurrency 8のcached-prefix条件ではDCP転送経路を約10.9倍高速化。
+- **投機的デコード拡張**: LFM2-VLのDSparkでbatch 1時1.66〜2.56倍。Kimi K3のDFlash、pipeline parallelism + EAGLE/MTP互換等も追加。
+- **MoE / DeepEP v2拡張**: BF16とbatch-invariant inference、MXFP8、deferred route weighting等を追加。
+
+[release v0.5.21](https://github.com/sgl-project/sglang/releases/tag/v0.5.21)
+
 ## 2026-09-20
 
 - **Ascend A5向けKimi-K3 servingを追加・MoE/DSpark/prefill経路をまとめて最適化 — merged 2026-09-18 UTC**: compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-streamと専用TP size、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、MTP branch向けFIA v2、prefill branch向けchunk KDA kernel、DSpark P/D分離修正を導入。4-node・TP32/EP32・128K input/1K output・DSpark block 7の提示条件ではmean TTFT **5604.54 ms**、mean TPOT **23.02 ms**、throughput **47 tok/s**。GSM8K 200問ではaccuracy **0.98**。比較対象を揃えたbefore/after速度差はPRにないため、改善率は未確定。[PR #39589](https://github.com/sgl-project/sglang/pull/39589)
