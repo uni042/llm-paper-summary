@@ -127,6 +127,14 @@ def _is_due(
     key = _cache_key_for(cache, identifier)
     cached = cache.get("records", {}).get(key) if key else None
     if not isinstance(cached, dict):
+        failures = cache.get("lookup_failures") if isinstance(cache.get("lookup_failures"), dict) else {}
+        failure = failures.get(identifier)
+        if isinstance(failure, dict):
+            failed_at = _parse_time(failure.get("checked_at"))
+            cache_policy = config.get("cache") if isinstance(config.get("cache"), dict) else {}
+            failure_ttl = int(cache_policy.get("failure_ttl_hours", 168) or 168)
+            if failed_at is not None and (now - failed_at).total_seconds() < failure_ttl * 3600:
+                return False
         return True
     checked = _parse_time(cached.get("citation_count_checked_at"))
     if checked is None:
