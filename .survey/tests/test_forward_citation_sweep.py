@@ -48,6 +48,25 @@ lineage: test-lineage
             encoding="utf-8",
         )
 
+    def test_url_seed_is_used_only_for_semantic_scholar_supported_hosts(self) -> None:
+        record = forward_citation_sweep.citation_graph.PaperRecord(
+            path="papers/inference/test/url.md",
+            canonical_id="Custom:paper",
+            identifiers=("Custom:paper",),
+            meta={"source": "https://dl.acm.org/doi/10.1145/example"},
+        )
+        unsupported = forward_citation_sweep.citation_graph.PaperRecord(
+            path="papers/inference/test/unsupported.md",
+            canonical_id="Custom:unsupported",
+            identifiers=("Custom:unsupported",),
+            meta={"source": "https://example.org/paper"},
+        )
+        self.assertEqual(
+            forward_citation_sweep._seed_identifier(record),
+            "URL:https://dl.acm.org/doi/10.1145/example",
+        )
+        self.assertIsNone(forward_citation_sweep._seed_identifier(unsupported))
+
     def test_in_progress_seed_does_not_starve_never_scanned_seed(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
