@@ -20,6 +20,12 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertIn("AAAI:39454", recovery.PRIMARY_PDF_OVERRIDES)
         self.assertIn("AAAI:39106", recovery.PRIMARY_PDF_OVERRIDES)
 
+    def test_acm_doi_generically_derives_official_pdf_route(self) -> None:
+        self.assertIn(
+            "https://dl.acm.org/doi/pdf/10.1145/3315508.3329973",
+            recovery.primary_pdf_urls("DOI:10.1145/3315508.3329973"),
+        )
+
     def test_current_acm_blockers_have_primary_pdf_routes(self) -> None:
         expected = {
             "DOI:10.1145/3830422.3830427",
