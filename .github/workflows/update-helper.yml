@@ -10,9 +10,10 @@ on:
 permissions:
   contents: write
 
-# Serialize all broad background writers that may mutate queue, paper, or update state.
+# Keep framework/LLM updates in their own queue; cross-workflow shared concurrency
+# can silently replace pending runs.
 concurrency:
-  group: survey-background-main
+  group: framework-llm-update-main
   cancel-in-progress: false
 
 jobs:
