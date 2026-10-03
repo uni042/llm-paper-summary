@@ -80,12 +80,16 @@ jobs:
             echo 'Library import inbox is empty; skip processor dispatch.'
           fi
 
-          # These workers have ~50-minute durable freshness gates. Dispatch them
-          # only on the hourly-equivalent tick instead of creating ten-minute
-          # no-op workflow runs.
-          if [ "$recovery_tick" -eq 1 ]; then
+          # Push/manual events are sparse and should always pass through the
+          # workers' own durable ~50-minute freshness gates. Scheduled ticks are
+          # reduced to roughly hourly to avoid ten-minute no-op workflow runs.
+          metadata_tick="$recovery_tick"
+          if [ "$GITHUB_EVENT_NAME" != "schedule" ]; then
+            metadata_tick=1
+          fi
+          if [ "$metadata_tick" -eq 1 ]; then
             dispatch_if_idle forward-citation-sweep.yml
             dispatch_if_idle candidate-priority-refresh.yml
           else
-            echo 'Metadata/citation refresh is not due on this scheduler tick.'
+            echo 'Metadata/citation refresh is not checked on this scheduler tick.'
           fi
