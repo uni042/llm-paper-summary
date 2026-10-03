@@ -122,6 +122,27 @@ worker_run_key: 20261003-1600-scheduled-chat-00
             meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
             self.assertEqual(inbox.research_metadata_failures(source, meta, root), [])
 
+    def test_research_import_adds_structural_audit_placeholders_without_claiming_audit(self) -> None:
+        raw = """---
+canonical_id: arXiv:2609.99999
+title: Complete
+last_checked: '2026-10-03'
+---
+# Complete
+"""
+        meta = inbox.parse_frontmatter(raw)
+        normalized_raw, normalized_meta = inbox.normalize_research_audit_metadata(raw, meta)
+        self.assertIsNone(normalized_meta["last_audited"])
+        self.assertEqual(normalized_meta["audit_version"], 0)
+        self.assertIn("last_audited: null", normalized_raw)
+        self.assertIn("audit_version: 0", normalized_raw)
+
+        unchanged_raw, unchanged_meta = inbox.normalize_research_audit_metadata(
+            normalized_raw, normalized_meta
+        )
+        self.assertEqual(unchanged_raw, normalized_raw)
+        self.assertEqual(unchanged_meta, normalized_meta)
+
     def test_repo_relative_accepts_relative_and_absolute_paths(self) -> None:
         repo_root = Path("/tmp/example-repo").resolve()
         rel = Path(".survey/import-inbox/pending/research/paper.md")
