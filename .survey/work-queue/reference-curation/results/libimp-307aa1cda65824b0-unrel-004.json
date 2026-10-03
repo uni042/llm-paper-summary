@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-307aa1cda65824b0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.08189",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.08189",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.08189",
+      "arXiv:2404.08189"
+    ],
+    "reason": "RAGでenterprise workflow生成のhallucinationとOOD一般化を改善する応用・品質研究で、推論システム効率化は副次的。",
+    "first_checked_at": "2026-10-03T13:20:22+00:00",
+    "last_checked_at": "2026-10-03T13:20:22+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md"
+    ],
+    "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-03T13:20:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-307aa1cda658",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

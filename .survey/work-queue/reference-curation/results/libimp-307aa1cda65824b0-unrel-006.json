@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-307aa1cda65824b0-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.03245",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.03245",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.03245",
+      "arXiv:2404.03245"
+    ],
+    "reason": "CXL 2.0/3.0による汎用memory pooling/sharingのハードウェア・ソフトウェア設計比較で、LLM推論への適用・評価がない。",
+    "first_checked_at": "2026-10-03T13:20:22+00:00",
+    "last_checked_at": "2026-10-03T13:20:22+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md"
+    ],
+    "title": "Memory Sharing with CXL: Hardware and Software Design Approaches"
+  },
+  "processed_at": "2026-10-03T13:20:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-307aa1cda658",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

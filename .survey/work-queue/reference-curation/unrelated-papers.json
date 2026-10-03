@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T11:02:04+00:00",
-  "record_count": 596,
+  "updated_at": "2026-10-03T13:20:22+00:00",
+  "record_count": 602,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8773,6 +8773,96 @@
         "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md"
       ],
       "title": "Building Real-World Meeting Summarization Systems using Large Language Models: A Practical Perspective"
+    },
+    "arXiv:2404.15045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.15045",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.15045",
+        "arXiv:2404.15045"
+      ],
+      "reason": "MH-MoEはトークンを複数サブトークンへ分割して別expertへroutingし、expert activationと表現能力を高めるMoEモデル構造研究。主評価はlanguage/multilingual/multimodal modeling品質で、推論runtime削減を最終目的としない。",
+      "first_checked_at": "2026-10-03T13:20:21+00:00",
+      "last_checked_at": "2026-10-03T13:20:21+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "Multi-Head Mixture-of-Experts"
+    },
+    "arXiv:2404.13813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13813",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.13813",
+        "arXiv:2404.13813"
+      ],
+      "reason": "低資源機械翻訳の品質評価とClaudeから小型NMTへの知識蒸留が主目的で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-03T13:20:21+00:00",
+      "last_checked_at": "2026-10-03T13:20:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+      ],
+      "title": "From LLM to NMT: Advancing Low-Resource Machine Translation with Claude"
+    },
+    "arXiv:2404.12387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.12387",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.12387",
+        "arXiv:2404.12387"
+      ],
+      "reason": "Reka Core/Flash/Edgeというマルチモーダル基盤モデル系列の構築・能力報告で、推論runtimeの新規最適化方式を提案しない。",
+      "first_checked_at": "2026-10-03T13:20:22+00:00",
+      "last_checked_at": "2026-10-03T13:20:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models"
+    },
+    "arXiv:2404.08189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08189",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.08189",
+        "arXiv:2404.08189"
+      ],
+      "reason": "RAGでenterprise workflow生成のhallucinationとOOD一般化を改善する応用・品質研究で、推論システム効率化は副次的。",
+      "first_checked_at": "2026-10-03T13:20:22+00:00",
+      "last_checked_at": "2026-10-03T13:20:22+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md"
+      ],
+      "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation"
+    },
+    "arXiv:2404.05952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05952",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.05952",
+        "arXiv:2404.05952"
+      ],
+      "reason": "動的環境でのロボット障害物回避用MPC/CBF制御研究で、LLMとは無関係。",
+      "first_checked_at": "2026-10-03T13:20:22+00:00",
+      "last_checked_at": "2026-10-03T13:20:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Robot Safe Planning In Dynamic Environments Based On Model Predictive Control Using Control Barrier Function"
+    },
+    "arXiv:2404.03245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03245",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.03245",
+        "arXiv:2404.03245"
+      ],
+      "reason": "CXL 2.0/3.0による汎用memory pooling/sharingのハードウェア・ソフトウェア設計比較で、LLM推論への適用・評価がない。",
+      "first_checked_at": "2026-10-03T13:20:22+00:00",
+      "last_checked_at": "2026-10-03T13:20:22+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md"
+      ],
+      "title": "Memory Sharing with CXL: Hardware and Software Design Approaches"
     }
   }
 }
