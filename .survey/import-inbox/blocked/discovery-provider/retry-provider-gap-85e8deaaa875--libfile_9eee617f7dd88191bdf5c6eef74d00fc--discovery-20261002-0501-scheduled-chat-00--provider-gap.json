@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-0501-scheduled-chat-00::provider-gap",
+  "reference_main_sha": "7703f53fad5b62238a40e2c0e3c66eb15c309eaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:ulCAPXYXfa",
+      "identity_tokens": [
+        "OpenReview:ulCAPXYXfa"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
+      "reason": "長文脈LLMのKVキャッシュをfilter layerで動的選択し、非filter layerのKVをCPUへ退避して必要部分だけロードする直接的な推論メモリ最適化。",
+      "source_url": "https://openreview.net/forum?id=ulCAPXYXfa",
+      "body_check": "公開実装・論文情報でprefill後に非filter層KVをCPUへoffloadし、decode時にfilter層のTop-K token indexを共有してpacked/asynchronous loadする構成を確認。最大75% KV memory削減、1.68x speedup、Llama-3-8Bを単一A100で128Kから450Kへ拡張する評価が報告される。",
+      "worklist_rank": 490,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    }
+  ],
+  "parent_run_key": "20261002-0501-scheduled-chat-00",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-85e8deaaa875--libfile_9eee617f7dd88191bdf5c6eef74d00fc--discovery-20261002-0501-scheduled-chat-00.json",
+  "provider_gap_ids": [
+    "OpenReview:ulCAPXYXfa"
+  ]
+}
