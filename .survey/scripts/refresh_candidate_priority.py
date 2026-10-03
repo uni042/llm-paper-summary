@@ -273,6 +273,68 @@ def _store_found(
         aliases[alias] = primary
 
 
+def _seed_cache_from_embedded_metadata(
+    cache: dict[str, Any],
+    rows: list[dict[str, Any]],
+) -> int:
+    """Reuse fresh provider metadata already carried by candidate records.
+
+    Forward-citation Discovery already receives citation count, venue, and publication
+    metadata from Semantic Scholar. Querying the same identifier again only to fill the
+    priority cache wastes provider quota and makes the refresh queue diverge.
+    """
+    seeded = 0
+    for row in rows:
+        requested_id = str(row.get("_lookup_id") or "").strip()
+        if not requested_id:
+            continue
+        source = str(row.get("citation_count_source") or "").strip().casefold()
+        if source not in {"semantic_scholar", "openalex"}:
+            continue
+        try:
+            citation_count = int(row.get("citation_count"))
+        except (TypeError, ValueError):
+            continue
+        if citation_count < 0:
+            continue
+
+        observed = None
+        for field in ("citation_count_checked_at", "last_seen_at", "observed_at"):
+            observed = _parse_time(row.get(field))
+            if observed is not None:
+                break
+        if observed is None:
+            continue
+
+        existing_key = _cache_key_for(cache, requested_id)
+        existing = cache.get("records", {}).get(existing_key) if existing_key else None
+        existing_checked = (
+            _parse_time(existing.get("citation_count_checked_at"))
+            if isinstance(existing, dict)
+            else None
+        )
+        if existing_checked is not None and existing_checked >= observed:
+            continue
+
+        record = {
+            key: value
+            for key, value in row.items()
+            if key != "_lookup_id" and value not in (None, "", [], {})
+        }
+        record["citation_count"] = citation_count
+        _store_found(
+            cache,
+            requested_id,
+            record,
+            checked_at=observed.replace(microsecond=0).isoformat(),
+        )
+        failures = cache.get("lookup_failures")
+        if isinstance(failures, dict):
+            failures.pop(requested_id, None)
+        seeded += 1
+    return seeded
+
+
 def _refresh_ready_jobs(root: Path, cache: dict[str, Any], config: dict[str, Any], now: dt.datetime) -> int:
     changed = 0
     jobs_dir = root / ".survey/work-queue/jobs"
@@ -327,6 +389,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
     failures = cache.setdefault("lookup_failures", {})
 
     rows = _candidate_records(root)
+    embedded_metadata_seeded = _seed_cache_from_embedded_metadata(cache, rows)
     due = [row for row in rows if _is_due(row, cache, now=now, config=config)]
     selected = due[:max(max_papers, 0)]
     found = unresolved = errors = 0
@@ -391,6 +454,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
     jobs_changed = _refresh_ready_jobs(root, cache, config, now)
     return {
         "candidate_count_seen": len(rows),
+        "embedded_metadata_seeded": embedded_metadata_seeded,
         "due_count_before_run": len(due),
         "selected_count": len(selected),
         "provider_timeout_seconds": provider_timeout,
