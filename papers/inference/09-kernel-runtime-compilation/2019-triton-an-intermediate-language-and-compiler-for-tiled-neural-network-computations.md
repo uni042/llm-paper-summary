@@ -3,6 +3,11 @@ canonical_id: DOI:10.1145/3315508.3329973
 title: 'Triton: an intermediate language and compiler for tiled neural network computations'
 summary: タイルを第一級抽象としてテンソル計算を記述する言語・中間表現とタイル単位最適化を導入し、専門家がCUDAを手書きせず高性能GPUカーネルを生成できるようにする。
 list_summary: タイルを第一級抽象としてテンソル計算を記述する言語・中間表現とタイル単位最適化を導入し、専門家がCUDAを手書きせず高性能GPUカーネルを生成できるようにする。
+authors:
+- Philippe Tillet
+- Hsiang-Tsung Kung
+- David D. Cox
+published: '2019-06-22'
 publication: MAPL/PLDI 2019, pp.10-19
 publication_status: Published/Preprint as primary source
 lineage: inference-systems
