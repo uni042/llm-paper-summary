@@ -718,12 +718,13 @@ def semantic_scholar_fetcher(
             except HTTPError as exc:
                 if exc.code != 429 or attempt >= max_rate_limit_retries:
                     raise DiscoveryProviderError(
-                        f"Semantic Scholar page fetch failed at offset {offset}: {exc}"
+                        f"Semantic Scholar page fetch failed at offset {offset}: {exc}",
+                        status_code=exc.code,
                     ) from exc
                 delay = _semantic_scholar_retry_delay(exc, attempt)
                 print(
                     "[WORKER-GUIDE][Discovery] Semantic Scholar rate limited "
-                    f"at offset {offset}; retry {attempt + 1}/{S2_MAX_RATE_LIMIT_RETRIES} "
+                    f"at offset {offset}; retry {attempt + 1}/{max_rate_limit_retries} "
                     f"after {delay:.1f}s.",
                     file=sys.stderr,
                 )
