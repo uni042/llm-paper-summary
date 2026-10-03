@@ -10,7 +10,8 @@ WORKFLOWS = ROOT / ".github" / "workflows"
 class RunLivenessPolicyTests(unittest.TestCase):
     def test_scheduled_worker_has_no_direct_github_wait_protocol(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("Scheduled workerはGitHubへのclaim、reservation、submission、result", router)
+        self.assertIn("通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result", router)
+        self.assertIn("例外は `scheduled-chat-45` の4つのImport枠だけ", router)
         self.assertIn("Library保存不能でも完成成果を破棄しない", router)
         self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", router)
         self.assertNotIn("MONITOR_CLAIM_FAST_LANE", router)
