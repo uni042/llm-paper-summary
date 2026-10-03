@@ -319,7 +319,7 @@ Survey GitHub Importは1回の転送バッチを終えたら、`.survey/schedule
 
 正本仕様は \`.survey/import-inbox/README.md\`。実行workflowは \`.github/workflows/library-import.yml\` の1本だけとする。
 
-受信箱processor自身はcronを持たず、`.github/workflows/survey-orchestrator.yml` の中央schedulerから10分周期で `workflow_dispatch` され、最新mainから再計算する。schedulerは `07,17,27,37,47,57` 分（UTC基準のcron分）に起動し、`.survey/scheduler/library-import-kick.json` のpushも同じ入口へ入るため、scheduled eventの遅延・drop時にも次のLibrary handoffで回復できる。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
+受信箱processor自身はcronを持たない。`.github/workflows/survey-orchestrator.yml` は `07,17,27,37,47,57` 分に10分周期で受信箱を確認し、pending/waitingがある場合だけ `library-import.yml` を `workflow_dispatch` する。空受信箱では通常runを省略し、約6 tickに1回だけ再試行可能な残存状態を拾う回復passを実行する。`.survey/scheduler/library-import-kick.json` のpushも同じ入口へ入るため、scheduled eventの遅延・drop時にも次のLibrary handoffで即時回復できる。processorは毎回最新mainから再計算する。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
 
 ### Research
 
