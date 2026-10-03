@@ -45,9 +45,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          due=$(python .survey/scripts/refresh_due.py \
-            --state .survey/work-queue/candidate-priority-cache.json \
-            --max-age-seconds 3000)
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            due=true
+          else
+            due=$(python .survey/scripts/refresh_due.py \
+              --state .survey/work-queue/candidate-priority-cache.json \
+              --max-age-seconds 3000)
+          fi
           echo "run=${due}" >> "$GITHUB_OUTPUT"
           echo "candidate_priority_refresh_due=${due}"
       - name: Install runtime dependencies
