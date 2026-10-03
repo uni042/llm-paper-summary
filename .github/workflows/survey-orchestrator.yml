@@ -80,7 +80,12 @@ jobs:
             echo 'Library import inbox is empty; skip processor dispatch.'
           fi
 
-          # Hourly metadata/coverage workers have their own durable freshness
-          # gates, so extra orchestrator ticks are cheap no-ops.
-          dispatch_if_idle forward-citation-sweep.yml
-          dispatch_if_idle candidate-priority-refresh.yml
+          # These workers have ~50-minute durable freshness gates. Dispatch them
+          # only on the hourly-equivalent tick instead of creating ten-minute
+          # no-op workflow runs.
+          if [ "$recovery_tick" -eq 1 ]; then
+            dispatch_if_idle forward-citation-sweep.yml
+            dispatch_if_idle candidate-priority-refresh.yml
+          else
+            echo 'Metadata/citation refresh is not due on this scheduler tick.'
+          fi
