@@ -160,7 +160,7 @@ jobs:
         run: |
           python .survey/scripts/backfill_citation_pdfs.py \
             --root . \
-            --limit 50 \
+            --limit 200 \
             --delay 0.75 \
             --apply \
             --retry-blocked
@@ -169,7 +169,7 @@ jobs:
         run: |
           python .survey/scripts/recover_blocked_citations.py \
             --root . \
-            --limit 50 \
+            --limit 200 \
             --apply
 
       - name: Rebuild final graph and indexes
