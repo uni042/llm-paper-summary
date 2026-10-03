@@ -13,7 +13,7 @@
   "source_url": "https://arxiv.org/abs/2601.21473",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2601.21473-arxiv-2601-21473.md",
   "selection_reason": "一次資料本文でLLM推論・配信効率への直接的なシステム寄与を確認したため収録候補。",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -24,5 +24,10 @@
     "source": "chatgpt_library",
     "source_file": "discovery-20260927-1229-scheduled-chat-30.json",
     "imported_at": "2026-09-27T05:03:56+00:00"
-  }
+  },
+  "superseded_at": "2026-10-03T02:53:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
+  "represented_canonical_id": "arXiv:2601.21473",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（12本）
+## 自動生成の論文一覧（13本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -45,6 +45,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
   実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：3  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
+
+- **2026-01 · [ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management](2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md)**  
+  実装：— ・ リポジトリ内被引用：3  
+  それでもLoRAアダプタ、接頭辞キャッシュ、専用モデル、検索状態などのエージェント固有メモリを全員分GPUへ常駐させると、エージェント数の増加に伴って容量を超える。一般的なSGLang等はアプリケーションの将来実行順を知らず、要求が来てから必要状態をCPUからGPUへロードし、LRU等で過去の利用履歴に基づき退避する。
 
 - **2026-03 · [DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
   実装：— ・ リポジトリ内被引用：2  
