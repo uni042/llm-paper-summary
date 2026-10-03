@@ -3,6 +3,20 @@ canonical_id: DOI:10.1145/3579371.3589038
 title: 'OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization'
 summary: 外れ値を高精度の疎経路へ分離する従来量子化は、座標リスト・別データパス・演算統合の制御が必要でハードウェア効率を落とす。OliVeは隣接2値を組にし、外れ値の隣の重要度が低い通常値を「犠牲値」として捨て、その4ビット格納位置を外れ値表現に利用するOutlier-Victim Pair方式を提案する。RTX 2080 Ti相当GPUシミュレーションではGOBO比平均4.5倍高速・4.0倍省エネルギー、4ビットOliVeはGPT2-XL/BLOOM-7B1/OPT-6.7Bでも単純INT4より大幅に低いパープレキシティを維持する。
 list_summary: 外れ値と隣接する低重要度値を固定幅のペアへ局所符号化し、疎な外れ値リストを廃してメモリアラインメントを保つ量子化・アーキテクチャ協調設計。
+authors:
+- Cong Guo
+- Jiaming Tang
+- Weiming Hu
+- Jingwen Leng
+- Chen Zhang
+- Fan Yang
+- Yunxin Liu
+- Minyi Guo
+- Yuhao Zhu
+published: '2023-06-17'
+publication: Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA '23)
+publication_type: 査読付き国際会議論文
+publication_status: Published
 source: https://doi.org/10.1145/3579371.3589038
 sources:
 - https://doi.org/10.1145/3579371.3589038
