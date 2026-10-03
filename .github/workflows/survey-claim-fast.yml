@@ -111,6 +111,10 @@ jobs:
           dispatch discovery-preload-local-fast.yml
           dispatch discovery-preload-warm.yml
           dispatch survey-helper.yml
+          # Redundant hourly metadata lanes. Their own durable freshness gates
+          # make these dispatches no-ops when a recent cron/event run succeeded.
+          dispatch forward-citation-sweep.yml
+          dispatch candidate-priority-refresh.yml
 
           sleep 60
 
