@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T17:50:30+00:00",
-  "record_count": 817,
+  "updated_at": "2026-10-03T17:51:24+00:00",
+  "record_count": 836,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -11047,13 +11047,15 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/cvpr.2015.7298594",
       "identity_tokens": [
-        "DOI:10.1109/cvpr.2015.7298594"
+        "DOI:10.1109/cvpr.2015.7298594",
+        "arXiv:1409.4842"
       ],
-      "reason": "Inceptionモジュールによる画像分類CNNの計算効率と精度を扱うコンピュータビジョン研究で、LLM/Transformer推論基盤ではない。",
+      "reason": "Inception/GoogLeNetを用いたImageNet画像分類・物体検出の精度向上が主目的で、計算資源利用を意識したCNN設計ではあるがLLM推論・サービング・KVキャッシュ・MoE推論の最終適用先ではない。",
       "first_checked_at": "2026-10-03T16:32:28+00:00",
-      "last_checked_at": "2026-10-03T16:32:28+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md"
       ],
       "title": "Going deeper with convolutions"
     },
@@ -12042,6 +12044,277 @@
         "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
       ],
       "title": "A survey on multimodal large language models"
+    },
+    "DOI:10.1109/hpca.2018.00067": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00067",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00067"
+      ],
+      "reason": "疎行列積専用アクセラレータのデータフロー研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "OuterSPACE: An Outer Product Based Sparse Matrix Multiplication Accelerator"
+    },
+    "arXiv:2002.10941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.10941",
+      "identity_tokens": [
+        "arXiv:2002.10941"
+      ],
+      "reason": "注意機構を近似して高速化する専用アクセラレータ研究だが、対象は一般ニューラルネットのattentionであり、LLM推論サービングやKVキャッシュ最適化を扱わない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation"
+    },
+    "DOI:10.1109/hpca47549.2020.00030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca47549.2020.00030",
+      "identity_tokens": [
+        "DOI:10.1109/hpca47549.2020.00030"
+      ],
+      "reason": "疎行列積の汎用ハードウェアアーキテクチャ研究で、LLM推論固有の方式・評価を持たない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "SpArch: Efficient Architecture for Sparse Matrix Multiplication"
+    },
+    "DOI:10.1109/hpca.2018.00052": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00052",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00052"
+      ],
+      "reason": "ReRAMを用いたグラフ処理アクセラレータで、グラフ解析が最終適用先でありLLM推論ではない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "GraphR: Accelerating Graph Processing Using ReRAM"
+    },
+    "DOI:10.1007/11736790_9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11736790_9",
+      "identity_tokens": [
+        "DOI:10.1007/11736790_9"
+      ],
+      "reason": "自然言語推論のRecognizing Textual Entailment評価チャレンジを扱うデータセット・評価研究で、推論システム効率化ではない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "The Third PASCAL Recognizing Textual Entailment Challenge"
+    },
+    "DOI:10.1109/isca45697.2020.00070": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca45697.2020.00070",
+      "identity_tokens": [
+        "DOI:10.1109/isca45697.2020.00070"
+      ],
+      "reason": "推薦モデルの埋め込み参照を近傍メモリ処理で高速化する研究で、最終適用先は推薦推論でありLLM推論ではない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "RecNMP: Accelerating Personalized Recommendation with Near-Memory Processing"
+    },
+    "DOI:10.1002/spe.4380240306": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/spe.4380240306",
+      "identity_tokens": [
+        "DOI:10.1002/spe.4380240306"
+      ],
+      "reason": "累積頻度表のデータ構造を扱うアルゴリズム研究で、LLM推論・KVキャッシュ等を対象としない。",
+      "first_checked_at": "2026-10-03T17:51:23+00:00",
+      "last_checked_at": "2026-10-03T17:51:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A new data structure for cumulative frequency tables"
+    },
+    "DOI:10.1109/imw.2017.7939084": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/imw.2017.7939084",
+      "identity_tokens": [
+        "DOI:10.1109/imw.2017.7939084"
+      ],
+      "reason": "HBM DRAMの技術・アーキテクチャを解説するメモリ技術研究で、LLM推論システムを最終適用先とする方式ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "HBM (High Bandwidth Memory) DRAM Technology and Architecture"
+    },
+    "DOI:10.1109/isca52012.2021.00060": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca52012.2021.00060",
+      "identity_tokens": [
+        "DOI:10.1109/isca52012.2021.00060"
+      ],
+      "reason": "一般ニューラルネット向け軽量self-attentionのハードウェア・ソフトウェア協調設計で、LLM推論サービングやKVキャッシュを対象としない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ELSA: Hardware-Software Co-design for Efficient, Lightweight Self-Attention Mechanism in Neural Networks"
+    },
+    "DOI:10.1109/inpar.2012.6339596": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/inpar.2012.6339596",
+      "identity_tokens": [
+        "DOI:10.1109/inpar.2012.6339596"
+      ],
+      "reason": "Persistent Threads型GPUプログラミングを一般GPGPUワークロードで評価する研究で、LLM/Transformer推論固有ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A study of Persistent Threads style GPU programming for GPGPU workloads"
+    },
+    "arXiv:2304.02643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.02643",
+      "identity_tokens": [
+        "arXiv:2304.02643"
+      ],
+      "reason": "画像セグメンテーション用のプロンプト可能モデルSAMと11M画像・1Bマスク規模のデータエンジン/データセット構築が主題で、LLM推論システム効率化ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
+      ],
+      "title": "Segment Anything"
+    },
+    "DOI:10.1109/iccv51070.2023.00387": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.00387",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.00387",
+        "arXiv:2212.09748"
+      ],
+      "reason": "潜在画像拡散モデルのU-NetをTransformerへ置換したDiTのスケーリングと画像生成FID改善が主題で、LLM推論ランタイムやサービング効率化を対象としない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md"
+      ],
+      "title": "Scalable Diffusion Models with Transformers"
+    },
+    "arXiv:2310.03744": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03744",
+      "identity_tokens": [
+        "arXiv:2310.03744"
+      ],
+      "reason": "LLaVAの視覚言語コネクタ、学習データ、画像解像度を改善してマルチモーダルモデル品質を高める学習・モデル研究で、推論システム高速化が主目的ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Improved Baselines with Visual Instruction Tuning"
+    },
+    "DOI:10.1109/ijcnn.1993.716791": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn.1993.716791",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn.1993.716791"
+      ],
+      "reason": "木構造の階層的混合専門家モデルを教師あり学習し、EM法でパラメータ推定する学習アルゴリズムが主題で、現代LLMのMoE推論配置・キャッシュ・通信・サービング効率化ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Hierarchical Mixtures of Experts and the EM Algorithm"
+    },
+    "DOI:10.1109/itw.2015.7133169": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/itw.2015.7133169",
+      "identity_tokens": [
+        "DOI:10.1109/itw.2015.7133169",
+        "arXiv:1503.02406"
+      ],
+      "reason": "深層ニューラルネットワークを情報ボトルネック原理と相互情報量で解析し、表現・一般化・ネットワーク構造を理論化する研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md"
+      ],
+      "title": "Deep learning and the information bottleneck principle"
+    },
+    "DOI:10.1109/isscc.2014.6757323": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isscc.2014.6757323",
+      "identity_tokens": [
+        "DOI:10.1109/isscc.2014.6757323"
+      ],
+      "reason": "電圧スケーリング終焉後の計算機全般の電力制約と専用計算エンジンの必要性を論じるISSCC基調論文で、LLM固有の推論システムや低ビット実行方式を提案・評価しない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md"
+      ],
+      "title": "1.1 Computing's energy problem (and what we can do about it)"
+    },
+    "DOI:10.1109/cvpr.2001.990517": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2001.990517",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2001.990517"
+      ],
+      "reason": "積分画像、AdaBoost特徴選択、段階的分類器で高速な顔/物体検出を実現する古典的コンピュータビジョン研究で、LLM推論システムとは対象が異なる。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Rapid object detection using a boosted cascade of simple features"
+    },
+    "DOI:10.1109/ispass.2009.4919648": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass.2009.4919648",
+      "identity_tokens": [
+        "DOI:10.1109/ispass.2009.4919648"
+      ],
+      "reason": "CUDAアプリケーションをPTX対応GPUマイクロアーキテクチャシミュレータで解析し、インターコネクト・キャッシュ・メモリ制御等を評価する汎用GPU研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md"
+      ],
+      "title": "Analyzing CUDA workloads using a detailed GPU simulator"
+    },
+    "DOI:10.1007/s002360050048": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s002360050048",
+      "identity_tokens": [
+        "DOI:10.1007/s002360050048"
+      ],
+      "reason": "高挿入量ファイル向けにメモリ/ディスク階層をrolling mergeするデータベース索引構造の研究で、LLM推論のKVキャッシュ・ベクトル格納等への直接適用研究ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+      ],
+      "title": "The log-structured merge-tree (LSM-tree)"
     }
   }
 }

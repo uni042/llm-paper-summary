@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cb298aa060858490-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isca45697.2020.00070",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isca45697.2020.00070",
+    "identity_tokens": [
+      "DOI:10.1109/isca45697.2020.00070"
+    ],
+    "reason": "推薦モデルの埋め込み参照を近傍メモリ処理で高速化する研究で、最終適用先は推薦推論でありLLM推論ではない。",
+    "first_checked_at": "2026-10-03T17:51:23+00:00",
+    "last_checked_at": "2026-10-03T17:51:23+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "RecNMP: Accelerating Personalized Recommendation with Near-Memory Processing"
+  },
+  "processed_at": "2026-10-03T17:51:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cb298aa06085",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
