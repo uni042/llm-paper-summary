@@ -15,6 +15,9 @@ on:
       - '.survey/tests/test_candidate_priority.py'
       - '.survey/tests/test_discovery_provider_adapter.py'
       - '.survey/tests/test_queue_worker_metadata.py'
+  schedule:
+    # Redundant low-frequency fallback for GitHub scheduler delivery issues.
+    - cron: '43 * * * *'
   workflow_dispatch:
 
 permissions:
