@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1145-scheduled-chat-45",
+  "reference_main_sha": "58ae5e1e2cc9b10fcf7fc17705f4fd221aa36a4c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01241",
+      "identity_tokens": [
+        "arXiv:2403.01241",
+        "DOI:10.48550/arXiv.2403.01241"
+      ],
+      "title": "IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact",
+      "reason": "量子化LLMの推論品質低下を、初期pivot tokenのKVだけ全精度で保持して抑える推論向け量子化補助手法。既存PTQへ追加でき、通常のデコード時に追加計算を要求しないため対象範囲。",
+      "source_url": "https://arxiv.org/abs/2403.01241",
+      "body_check": "本文の方式・実験を確認。初期tokenへ注意が集中するpivot-token outlierを同定し、full-precision modelで生成したpivot KVを量子化modelへ注入する。calibrated IntactKVでは128 calibration samplesでKV自体を最適化し、LLaMA/Vicuna系のweight-only/weight-activation量子化、WikiText2/C4/MMLU/MT-Bench等で改善を評価している。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00176",
+      "identity_tokens": [
+        "arXiv:2403.00176",
+        "DOI:10.48550/arXiv.2403.00176"
+      ],
+      "title": "SoD²: Statically Optimizing Dynamic Deep Neural Network",
+      "reason": "動的DNN一般のコンパイラ最適化であり、LLM推論・KVキャッシュ・MoE・LLMサービングを最終対象にしていない。",
+      "source_url": "https://arxiv.org/abs/2403.00176",
+      "body_check": "本文の問題設定と方式を確認。動的DNNの入力依存実行を静的解析・コード生成で最適化するSoD²を提案し、動的ネットワーク実行の分岐・演算削減を扱う。LLM固有の推論経路やサービング評価はないため対象外。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19255",
+      "identity_tokens": [
+        "arXiv:2402.19255",
+        "DOI:10.48550/arXiv.2402.19255"
+      ],
+      "title": "GSM-Plus: A Comprehensive Benchmark for Evaluating the Robustness of LLMs as Mathematical Problem Solvers",
+      "reason": "数学推論の頑健性評価用benchmark研究で、推論システム高速化・サービング・メモリ管理を扱わない。",
+      "source_url": "https://arxiv.org/abs/2402.19255",
+      "body_check": "本文のdataset構築・評価節を確認。GSM8Kへ数値変更、条件追加、質問対象変更等のperturbationを加え、25 LLMと4 prompting方式の数学推論頑健性を測る。主要出力はaccuracy/robustnessでシステム推論最適化ではない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.17702",
+      "identity_tokens": [
+        "arXiv:2402.17702",
+        "DOI:10.48550/arXiv.2402.17702"
+      ],
+      "title": "The SCIP Optimization Suite 9.0",
+      "reason": "数理最適化ソフトウェアSCIP 9.0の機能・性能報告であり、LLMとは無関係。",
+      "source_url": "https://arxiv.org/abs/2402.17702",
+      "body_check": "本文の機能更新と評価を確認。symmetry handling、nonlinear handler、primal heuristic、cut generator、LP interface、SoPlex/PaPILO/GCG等の改良とMIP/CIP solving性能を扱う。LLM推論への適用はない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.14516-ampd-multi-round-disaggregated-serving.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16819",
+      "identity_tokens": [
+        "arXiv:2402.16819",
+        "DOI:10.48550/arXiv.2402.16819"
+      ],
+      "title": "Nemotron-4 15B Technical Report",
+      "reason": "15B多言語基盤モデルの学習・能力technical reportが主目的で、GQA等の推論効率設計は含むが推論最適化研究そのものではない。",
+      "source_url": "https://arxiv.org/abs/2402.16819",
+      "body_check": "本文のarchitecture、training、evaluationを確認。32層・hidden 6144・48 attention heads・8 KV headsのGQAを持ち、8T tokensで学習し、英語/多言語/coding能力を主要benchmarkで評価する。主要貢献はモデル構築と能力であり推論システム評価ではない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.14852",
+      "identity_tokens": [
+        "arXiv:2402.14852",
+        "DOI:10.48550/arXiv.2402.14852"
+      ],
+      "title": "HumanEval on Latest GPT Models -- 2024",
+      "reason": "GPT系モデルのコード生成能力をHumanEvalで評価するbenchmark/分析で、推論効率化・サービングは扱わない。",
+      "source_url": "https://arxiv.org/abs/2402.14852",
+      "body_check": "本文のbenchmark構成と実験を確認。HumanEval 160問題を用いたzero-shot Python生成とmulti-step promptによるprogram synthesis改善を評価する。評価対象は生成正確性であり、latency、memory、kernel、serving最適化は主題でない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.13717",
+      "identity_tokens": [
+        "arXiv:2402.13717",
+        "DOI:10.48550/arXiv.2402.13717"
+      ],
+      "title": "Neeko: Leveraging Dynamic LoRA for Efficient Multi-Character Role-Playing Agent",
+      "reason": "複数キャラクター模倣のためのLoRA切替・逐次学習が主目的で、効率性はアプリケーション側のmulti-character adaptationに関するもの。LLMサービングや推論基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.13717",
+      "body_check": "本文の3段階構成を確認。agent pre-trainingでrole embeddings/LoRA blocksを準備し、inference時はrole embeddingに基づくgatingでLoRAを動的選択、未見roleはfusion/expansionでincremental learningする。主要評価はrole-playing品質・human evaluationで、推論基盤最適化は主題でない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12354",
+      "identity_tokens": [
+        "arXiv:2402.12354",
+        "DOI:10.48550/arXiv.2402.12354"
+      ],
+      "title": "LoRA+: Efficient Low Rank Adaptation of Large Models",
+      "reason": "LoRAのA/B行列へ異なる学習率を与えてfine-tuningを高速・高品質化する学習手法で、最終適用先が学習工程そのものの高速化である凍結対象。",
+      "source_url": "https://arxiv.org/abs/2402.12354",
+      "body_check": "本文の理論と実験を確認。width scaling解析からLoRA A/Bの同一learning rateがfeature learningを阻害するとし、学習率比を分けるLoRA+を提案。1–2%性能改善と最大約2倍のfine-tuning speedupが主結果で、推論最適化ではない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12052",
+      "identity_tokens": [
+        "arXiv:2402.12052",
+        "DOI:10.48550/arXiv.2402.12052",
+        "DOI:10.18653/v1/2024.acl-long.242"
+      ],
+      "title": "Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs",
+      "reason": "小型proxy modelでLLMが知らない知識を推定し必要時だけ検索するRAG/QA手法で、LLM呼出し費削減は副次効果。最終目的は知識獲得・QA性能で推論基盤最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.12052",
+      "body_check": "本文のSlimPLM pipelineと5 dataset評価を確認。proxy modelのheuristic answerからknown/unknown knowledgeと必要検索内容を推定し、未知質問だけretrieveして本体LLMへ渡す。主要評価はQA end-to-end performanceとLLM inference costであり、runtime/kernel/KV管理の研究ではない。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.11295",
+      "identity_tokens": [
+        "arXiv:2402.11295",
+        "DOI:10.48550/arXiv.2402.11295"
+      ],
+      "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+      "reason": "LLM重みを1bitへ圧縮して保存・推論計算量を削減する極低bit量子化方式で、学習過程を伴うものの最終適用先は明示的にLLM deployment/inference compressionであるため対象。",
+      "source_url": "https://arxiv.org/abs/2402.11295",
+      "body_check": "本文のparameterization・initialization・実験を確認。重み行列を1bit符号行列と高精度vectorへ分解する表現を使い、matrix decomposition由来の初期化で収束を改善する。LLaMA系で1bit weight matricesのみでも非量子化性能の少なくとも81%を維持し、storage/computation削減をdeployment目的として評価する。",
+      "first_checked_at": "2026-10-03T11:55:00+09:00",
+      "last_checked_at": "2026-10-03T12:08:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md"
+      ],
+      "worklist_rank": 491
+    }
+  ]
+}
