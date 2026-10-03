@@ -3,9 +3,11 @@ title:dak directaccessenabled gpu memory offloading with optimal efficiency for 
 title:dali a workloadaware offloading framework for efficient moe inference on local pcs
 title:daop dataaware offloading and predictive precalculation for efficient moe inference
 title:dart diffusioninspired speculative decoding for fast llm inference
+title:dartree speculative diffusion decoding with autoregressive draft trees
 title:dasc decayaware state compression for hybrid linearattention serving
 title:dash beyond capacity scalable moe llm inference via highbandwidth flash with direct gpu and hbm paths
 title:dashkv accelerating longcontext llm inference via asymmetric kv cache hashing
+title:dbllm accurate dualbinarization for efficient llms
 title:dcut adaptive verification depth pruning for batched speculative decoding
 title:deadlineaware adaptive prefill chunking for efficient large language model serving
 title:deco sparse mixtureofexperts with densecomparable performance on endside devices
@@ -23,12 +25,16 @@ title:deepspeed inference enabling efficient inference of transformer models at 
 title:deepspeedfastgen highthroughput text generation for llms via mii and deepspeedinference
 title:deepspeedinference enabling efficient inference of transformer models at unprecedented scale
 title:deepspeedmoe advancing mixtureofexperts inference and training to power nextgeneration ai scale
+title:deer draft with diffusion verify with autoregressive models
+title:deferred continuous batching in resourceefficient large language model serving
+title:deft decoding with flash treeattention for efficient treestructured llm inference
 title:delta decompression for moebased llms compression
 title:delta dynamic layeraware token attention for efficient longcontext reasoning
 title:deltabox scaling stateful ai agents with millisecondlevel sandbox checkpointrollback
 title:deltalog deferred materialization of recurrent states for linear attention decoding
 title:deltaserve hostagnostic coserving of inference and finetuning for llms
 title:demystifying ai platform design for distributed inference of nextgeneration llm models
+title:demystifying costefficiency in llm serving over heterogeneous gpus
 title:demystifying the design space and best practices for heterogeneous llm inference and serving
 title:dense to moe adaptation for compact vision language action policies
 title:depthaware sensitivity analysis of mixtureofexperts models via magnitudebased expert masking
@@ -42,12 +48,14 @@ title:diep adaptive mixtureofexperts compression through differentiable expert p
 title:diffkv differentiated memory management for large language models with parallel kv compaction
 title:diffmoe efficient batched moe inference with prioritydriven differential expert caching
 title:diffskip differential layer skipping in large language models
+title:diffusion llms can do fasterthanar inference via discrete diffusion forcing
 title:diffuspec unlocking diffusion language models for speculative decoding
 title:dinfer an efficient inference framework for diffusion language models
 title:director accelerating distributed moe serving via online proactive expert placement
 title:disagfusion asynchronous pipeline parallelism and elastic scheduling for disaggregated diffusion serving
 title:disaggregated llm serving with cxl shared memory kv cache at rackscale
 title:disaggregated quantization specializing llm prefill and decode
+title:discovering the gems in early layers accelerating longcontext llms with 1000x input token reduction
 title:disdp disaggregating compute network and storage for modelsharded dataparallel training
 title:dissecting gpu utilization for llm inference on nvidia hopper
 title:distillcache klguided adaptive kvcache eviction for memoryefficient llm inference
@@ -66,6 +74,7 @@ title:dmoe dllms with learnable block experts
 title:dnova instorage retrieval accelerator via dualbound 3d nandoptimized similarity search with vector adaptation
 title:do dynamic routers need memory hero historyaware routing for efficient llm inference
 title:do large language models need a content delivery network
+title:do not think that much for 23 on the overthinking of o1like llms
 title:does a global perspective help prune sparse moes elegantly
 title:domain specific pruning of large mixtureofexperts models with fewshot demonstrations
 title:domainspecific pruning of large mixtureofexperts models with fewshot demonstrations
@@ -73,6 +82,7 @@ title:domino decoupling causal modeling from autoregressive drafting in speculat
 title:domoe domainaware semantic expert prediction for efficient moe inference under expert offloading
 title:dont do rag when cacheaugmented generation is all you need for knowledge tasks
 title:dont stop me now embedding based scheduling for llms
+title:dont waste bits adaptive kvcache quantization for lightweight ondevice llms
 title:dopd a dynamic pddisaggregation architecture for maximizing goodput in llm inference serving
 title:dora a scalable asynchronous reinforcement learning system for language model training
 title:double breaking the acceleration limit via double retrieval speculative parallelism
@@ -80,6 +90,7 @@ title:dovetail a cpugpu heterogeneous speculative decoding for llm inference
 title:dpace dynamic positionaware crossentropy for parallel speculative drafting
 title:dquant driftable entropy coding for kv cache quantization
 title:draft less retrieve more hybrid tree construction for speculative decoding
+title:draft model knows when to stop a selfverification length policy for speculative decoding
 title:draft model knows when to stop selfverification speculative decoding for longform generation
 title:draft verify lossless large language model acceleration via selfspeculative decoding
 title:draftexpert expansionaware selfspeculative decoding for enddevice moe inference
@@ -90,14 +101,15 @@ title:driftsched adaptive qosaware scheduling under runtime token drift for mult
 title:droidspeak kv cache sharing for crossllm communication and multillm serving
 title:dropping experts recombining neurons retrainingfree pruning for sparse mixtureofexperts llms
 title:dsd a distributed speculative decoding solution for edgecloud agile large model serving
+title:dsformer effective compression of texttransformers by densesparse weight factorization
 title:dsla an energyefficient dualsparsity llm accelerator with himixbfp
 title:dspark confidencescheduled speculative decoding with semiautoregressive generation
 title:dssd efficient edgedevice llm deployment and collaborative inference via distributed split speculative decoding
 title:dtopp moe sparsitycontrolled dynamic topp moe for foundation model pretraining
+title:dual grained quantization efficient finegrained quantization for llm
 title:dualblade dualpath nvmedirect kvcache offloading for edge llm inference
 title:dualdecoder accelerate long context llm inference by predictive prefetch
 title:dualmap enabling both cache affinity and load balancing for distributed llm serving
-title:dualpath accelerating agentic llm inference by harvesting disaggregated kvcache storage io
 title:dualpath breaking the storage bandwidth bottleneck in agentic llm inference
 title:dualpool tokenbudget routing for costefficient and reliable llm serving
 title:dualscale energyefficient disaggregated llm serving via phaseaware placement and dvfs
@@ -119,19 +131,23 @@ title:dynamic early exit in reasoning models
 title:dynamic expert quantization for scalable mixtureofexperts inference
 title:dynamic expert sharing decoupling memory from parallelism in mixtureofexperts diffusion llms
 title:dynamic experts search enhancing reasoning in mixtureofexperts llms at test time
+title:dynamic flow static graph kv cache reuse for efficient llm serving on mobile npus
 title:dynamic hbm repartitioning for multiturn moe serving
 title:dynamic memory compression retrofitting llms for accelerated inference
 title:dynamic mixture of experts an autotuning approach for efficient transformer models
 title:dynamic semantic compression for efficient latentspace inference in large language models
+title:dynamic sparse no training trainingfree finetuning for sparse llms
 title:dynamic speculation lookahead accelerates speculative decoding of large language models
 title:dynamic tensor rematerialization
 title:dynamicdllm dynamic cachebudget and adaptive parallel decoding for trainingfree acceleration of diffusion llm
 title:dynamickv taskaware adaptive kv cache compression for long context llms
+title:dynamicllava efficient multimodal large language models via dynamic visionlanguage context sparsification
 title:dynamo runtime switchable quantization for moe with crossdataset adaptation旧題 moqa
 title:dynamollm designing llm inference clusters for performance and energy efficiency
 title:dynamomoe accelerating sparse large model inference with dynamic parallelization
 title:dynamoserve a distributed tiered memory system for multitenant llm serving
 title:dynande dynamic neardata expert scheduling for batched moe inference
+title:dyqvla temporaldynamicaware quantization for embodied visionlanguageaction models
 title:dyspec faster speculative decoding with dynamic token tree structure
 title:d²cache accelerating diffusionbased llms via dual adaptive caching
 title:d²moe dual routing and dynamic scheduling for efficient ondevice moebased llm serving

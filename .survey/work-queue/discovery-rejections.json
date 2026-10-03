@@ -7,9 +7,9 @@
   ],
   "updated_at": "scheduled-20260921T0330JST",
   "submission_count": 5,
-  "research_terminal_rejection_count": 5,
-  "rejection_observation_count": 56,
-  "rejection_record_count": 55,
+  "research_terminal_rejection_count": 1,
+  "rejection_observation_count": 52,
+  "rejection_record_count": 51,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -210,72 +210,6 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
-    "id:DOI:10.1145/3779212.3790187": {
-      "primary_identity": "id:DOI:10.1145/3779212.3790187",
-      "identity_tokens": [
-        "id:DOI:10.1145/3779212.3790187",
-        "title:moeapex an efficient moe inference system with adaptive precision expert offloading",
-        "url:https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645"
-      ],
-      "canonical_id": "DOI:10.1145/3779212.3790187",
-      "arxiv_id": null,
-      "doi": "10.1145/3779212.3790187",
-      "openreview_id": null,
-      "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
-      "source_url": "https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645",
-      "rejection_reason": "Duplicate/renamed publication confirmed against the existing repository record arXiv:2411.01433 (HOBBIT). MoE-APEX has the same eight authors in the same order and the same core token-level dynamic expert loading, layer-level adaptive prefetching, sequence-level expert caching, llama.cpp implementation, and mixed-precision expert-offloading mechanism; the ASPLOS version reports the same system lineage with revised naming/results. Creating a second independent paper record would duplicate the existing HOBBIT work.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T14:45:27+00:00",
-      "last_rejected_at": "2026-09-21T14:45:27+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-03edf77672f1f3e7f3668290.json",
-      "origin": "research_terminal_rejection"
-    },
-    "id:DOI:10.1145/3789240.3829159": {
-      "primary_identity": "id:DOI:10.1145/3789240.3829159",
-      "identity_tokens": [
-        "id:DOI:10.1145/3789240.3829159",
-        "title:dualpath accelerating agentic llm inference by harvesting disaggregated kvcache storage io",
-        "url:https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8"
-      ],
-      "canonical_id": "DOI:10.1145/3789240.3829159",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
-      "source_url": "https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
-      "rejection_reason": "Duplicate identity confirmed after post-validation identity conflict: arXiv:2602.21548 is already the canonical repository record at papers/inference/05-kv-cache-offloading/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md. The SIGCOMM DOI candidate resolves to the same DualPath work and must not create a second paper artifact.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T14:35:07+00:00",
-      "last_rejected_at": "2026-09-21T14:35:07+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-5cf1c03ea60873ea0ec61254-duplicate-terminal.json",
-      "origin": "research_terminal_rejection"
-    },
-    "id:DOI:10.1145/3832810.3832922": {
-      "primary_identity": "id:DOI:10.1145/3832810.3832922",
-      "identity_tokens": [
-        "id:DOI:10.1145/3832810.3832922",
-        "title:heterogeneous slo guaranteed multiresourceaware batching in llm serving",
-        "url:https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650"
-      ],
-      "canonical_id": "DOI:10.1145/3832810.3832922",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
-      "source_url": "https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650",
-      "rejection_reason": "Canonical processing for the repaired record identifies arXiv:2503.13737 as already represented by the existing AccelGen identity, producing a durable identifier conflict on prior validated submission attempt-885c7b91c948ae3e1ef817e0. Treat this queue entry as a duplicate identity rather than creating a second paper artifact.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T16:09:02+00:00",
-      "last_rejected_at": "2026-09-21T16:09:02+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-40292cf55942948afc9f4f0a.json",
-      "origin": "research_terminal_rejection"
-    },
     "id:DOI:10.20944/preprints202512.1908.v1": {
       "primary_identity": "id:DOI:10.20944/preprints202512.1908.v1",
       "identity_tokens": [
@@ -451,28 +385,6 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
-    },
-    "id:arXiv:2505.03780": {
-      "primary_identity": "id:arXiv:2505.03780",
-      "identity_tokens": [
-        "id:arXiv:2505.03780",
-        "title:an io characterizing study of offloading llm models and kv caches to nvme ssd",
-        "url:https://arxiv.org/abs/2505.03780"
-      ],
-      "canonical_id": "arXiv:2505.03780",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD",
-      "source_url": "https://arxiv.org/abs/2505.03780",
-      "rejection_reason": "Canonical identity is invalid for the queued title. The job declares arXiv:2505.03780 as 'An I/O Characterizing Study of Offloading LLM Models and KV Caches to NVMe SSD', but the official arXiv primary PDF for arXiv:2505.03780 is 'GPU Performance Portability Needs Autotuning' by Burkhard Ringlein, Thomas Parnell, and Radu Stoica (arXiv v3, cs.AR). This is a different paper and cannot be used as source evidence for the queued NVMe-offload title. Because the canonical primary identity itself resolves to another work, retrying this job under the same identity would be meaningless; no five-slot record was generated.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-19T09:49:40+00:00",
-      "last_rejected_at": "2026-09-19T09:49:40+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-158b34272885fa400b854050.json",
-      "origin": "research_terminal_rejection"
     },
     "id:arXiv:2512.24637": {
       "primary_identity": "id:arXiv:2512.24637",

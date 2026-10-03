@@ -11,6 +11,7 @@ title:sampleguided exact topk selection for longcontext sparse attention
 title:sandwichquant which parameters matter before and after quantization
 title:sangam chipletbased drampim accelerator with cxl integration for llm inferencing
 title:sangam efficiently serving diffusion llms with the ar stack
+title:santa sampling attention through representative keys
 title:sara sloaware resource allocation for disaggregated agentic llm services
 title:sarathi efficient llm inference by piggybacking decodes with chunked prefills
 title:sas simple attention sparsification via endtoend optimization of context ranking
@@ -18,10 +19,12 @@ title:saving gpu hours in llm inference system development and online workloads 
 title:scalable and efficient moe training for multitask multilingual models
 title:scalable processingnearmemory for 1mtoken llm inference cxlenabled kvcache management beyond gpu limits
 title:scaleqlora codeinvariant adapter merging for native 4bit microscaling llms
+title:scalesim serving largescale multiagent simulation with invocation distancebased memory management
 title:scaling attention beyond gpus for llm inference
 title:scaling graph chainofthought reasoning a multiagent framework with efficient llm serving
 title:scaling inference prefill with highradix photonic interconnects
 title:scaling laws for speculative decoding
+title:scaling llm testtime compute optimally can be more effective than scaling model parameters
 title:scaling llm testtime compute with mobile npu on smartphones
 title:scaling multinode mixtureofexperts inference using expert activation patterns
 title:scaling posttraining ternarisation to qwen38b capability retention reproduction lossless packing and packed execution
@@ -35,6 +38,7 @@ title:scissorhands exploiting the persistence of importance hypothesis for llm k
 title:scorpio serving right requests at the right time for heterogeneous slos in llm inference
 title:scoutattention efficient kv cache offloading via layerahead cpu precomputation for llm inference
 title:seallm serviceaware and latencyoptimized resource sharing for large language model inference
+title:seap sparse expert activation pruning unlocks the brainpower of large language models
 title:seap trainingfree sparse expert activation pruning unlock the brainpower of large language models
 title:seerattention learning intrinsic sparse attention in your llms
 title:seerattentionr sparse attention adaptation for long reasoning
@@ -44,6 +48,7 @@ title:sekv resolutionadaptive kv cache with hierarchical semantic memory for lon
 title:selectinfer selective neuron loading and computation for ondevice llms
 title:selective kv cache protection for noiseresilient llm inference on analog computeinmemory systems
 title:selfattention does not need on² memory
+title:selfindexing attention for compressioncompatible sparse longcontext llm inference
 title:selforchestrating language models leveraging semantic dependence for efficient inference
 title:selfspeculative decoding for ondevice moe acceleration
 title:semantic parallelism redefining efficient moe inference via modeldata coscheduling
@@ -72,14 +77,15 @@ title:set block decoding is a language model inference accelerator
 title:sgdkv summarization guided kv cache compression
 title:sglang efficient execution of structured language model programs
 title:shadowkv kv cache in shadows for highthroughput longcontext llm inference
+title:shadownpu system and algorithm codesign for npucentric ondevice llm inference
 title:shadowserve interferencefree kv cache fetching for distributed prefix caching
 title:shape coalitionaware expert pruning for sparse mixtureofexperts llms
 title:shape mutating expert compression lorexperts and btexperts
-title:shape mutating expert compressionlorexperts and btexperts
 title:share first route what remains a unified framework for tokenadaptive moe computation
 title:shared disk kv cache management for efficient multiinstance inference in ragpowered llms
 title:shared kv caching for replicated 27b inference correctness failures and performance boundaries
 title:sharedprefix kv reuse across standard lora adapters quality and serving tradeoffs
+title:sheared llama accelerating language model pretraining via structured pruning
 title:sherlock reliable and efficient agentic workflow execution
 title:shield a segmented hierarchical memory architecture for energyefficient llm inference on edge npus
 title:shortcutconnected expert parallelism for accelerating mixtureofexperts
@@ -96,12 +102,15 @@ title:siftmoe similarityaware energyefficient expert selection for wireless dist
 title:sigmoid attention as a better substrate for learned kv cache eviction
 title:signed rescue routing harmaware cascades for efficient llm inference
 title:siliconbench speed memory and fidelity for llm serving on unifiedmemory desktops
+title:simple linear attention language models balance the recallthroughput tradeoff
 title:simthesizer an agentdriven simulation framework for llm serving systems
 title:skeletonofthought prompting llms for efficient parallel generation
 title:skipdecode autoregressive skip decoding with batching and caching for efficient llm inference
 title:skvq slidingwindow key and value cache quantization for large language models
 title:skywalker a localityaware crossregion load balancer for llm inference
+title:sled a speculative llm decoding framework for efficient edge serving
 title:slicegpt compress large language models by deleting rows and columns
+title:slicelevel scheduling for high throughput and load balanced llm serving
 title:slicemoe bitsliced expert caching under missrate constraints for efficient moe inference
 title:slidingwindow beats linear attention
 title:slim a heterogeneous accelerator for edge inference of sparse large language model via adaptive thresholding
@@ -131,6 +140,7 @@ title:sparkv overheadaware kv cache loading for efficient ondevice llm inference
 title:sparse attention across multiplecontext kv cache
 title:sparse moe as the new dropout scaling dense and selfslimmable transformers
 title:sparse prefix caching for hybrid and recurrent llm serving
+title:sparse universal transformer
 title:sparsedllm accelerating diffusion llms with dynamic cache eviction
 title:sparsegpt massive language models can be accurately pruned in oneshot
 title:sparseinfer trainingfree prediction of activation sparsity for fast llm inference
@@ -140,7 +150,6 @@ title:spatial llm workload shifting needs foresight model commitment for ai data
 title:spatten efficient sparse attention architecture with cascade token and head pruning
 title:spear a system for postquantization erroradaptive recovery enabling efficient lowbit llm serving
 title:specache speculative keyvalue caching for efficient generation of llms
-title:specattn codesigning sparse attention with selfspeculative decoding
 title:specbox speculative sandbox scheduling for efficient llm agent serving
 title:specbranch speculative decoding via hybrid drafting and rollbackaware branch parallelism
 title:speccache speculative kv cache reuse for efficient rag serving
@@ -162,7 +171,9 @@ title:spectrumkv pertoken mixedprecision kv cache transfer for prefilldecode dis
 title:speculating experts accelerates inference for mixtureofexperts
 title:speculative actions a lossless framework for faster agentic systems
 title:speculative decoding exploiting speculative execution for accelerating seq2seq generation
+title:speculative decoding in decentralized llm inference turning communication latency into computation throughput
 title:speculative decoding performance or illusion
+title:speculative decoding with a speculative vocabulary
 title:speculative decoding with big little decoder
 title:speculative diffusion decoding accelerating language generation through diffusion
 title:speculative macro commit for faster toolusing agents
@@ -201,6 +212,7 @@ title:stateful large language model serving with pensieve
 title:stbllm breaking the 1bit barrier with structured binary llms
 title:step adaptive spatiotemporal expert prefetching for lowlatency and memoryefficient moe inference
 title:step3 is large yet affordable modelsystem codesign for costeffective decoding
+title:stepkv stepaware kv cache compression for llm agents
 title:sticky routing training moe models for memoryefficient inference
 title:stmoe
 title:storellm energy efficient large language model inference with permanently prestored attention matrices
@@ -211,6 +223,7 @@ title:streamserve adaptive speculative flows for lowlatency disaggregated llm se
 title:striped attention faster ring attention for causal transformers
 title:structured transforms for lowoverhead quantization of language models
 title:sts efficient sparse attention with speculative token sparsity
+title:stun structuredthenunstructured pruning for scalable moe pruning
 title:submoe efficient mixtureofexpert llms compression via subspace expert merging
 title:substrateportable execution for production llm workflows
 title:suffixdecoding a modelfree approach to speeding up large language model inference
@@ -224,6 +237,7 @@ title:swarm coactivation aware kvcache offloading across multiple ssds
 title:swift onthefly selfspeculative decoding for llm inference acceleration
 title:swiftcache efficient llm serving for multiturn conversations with heterogeneous kv cache sharing
 title:swiftkv fast prefilloptimized inference with knowledgepreserving model transformation
+title:swiftspec disaggregated speculative decoding and fused kernels for lowlatency llm inference
 title:swiftspec ultralow latency llm decoding by scaling asynchronous speculative decoding
 title:switch transformers scaling to trillion parameter models with simple and efficient sparsity
 title:symi efficient mixtureofexperts training via model and optimizer state decoupling
