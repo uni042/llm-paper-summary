@@ -1,0 +1,184 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-0045-scheduled-chat-45/r01",
+  "reference_main_sha": "5c6f51da2c1604e672d7d0a9f36b3f96d1653068",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-10602-1_48",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-10602-1_48",
+        "arXiv:1405.0312"
+      ],
+      "title": "Microsoft COCO: Common Objects in Context",
+      "reason": "画像認識・場面理解向けデータセットの構築と物体検出/セグメンテーション評価が主題で、LLM推論基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1405.0312",
+      "body_check": "本文で91物体カテゴリ、328k画像、約250万instanceの収集・instance segmentation注釈、PASCAL/ImageNet/SUNとの統計比較、DPMによるbounding-box/segmentation baselineを確認。最終適用先はコンピュータビジョン用データセット。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-021-03819-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-021-03819-2"
+      ],
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "reason": "アミノ酸配列から高精度な3次元タンパク質構造を予測する生物情報学モデル研究で、LLM推論・サービング効率化ではない。",
+      "source_url": "https://doi.org/10.1038/s41586-021-03819-2",
+      "body_check": "Nature本文でEvoformer、MSA/pair表現、structure module、CASP14評価を確認。CASP14でmedian backbone 0.96 Å RMSD95、次点2.8 Åなど構造予測精度を主評価し、LLM serving/KV cache最適化は対象外。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-020-2649-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-020-2649-2",
+        "arXiv:2006.10256"
+      ],
+      "title": "Array programming with NumPy",
+      "reason": "科学計算向け配列プログラミングライブラリNumPyの設計・エコシステムを扱うレビューで、LLM推論システム研究ではない。",
+      "source_url": "https://doi.org/10.1038/s41586-020-2649-2",
+      "body_check": "Nature本文/公開版でndarrayを中心とする配列計算、Python科学計算エコシステム、相互運用性と性能上の役割を確認。LLM、Transformer、KV cache、推論サービングを研究対象としていない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/01621459.1968.10480934",
+      "identity_tokens": [
+        "DOI:10.1080/01621459.1968.10480934"
+      ],
+      "title": "Estimates of the Regression Coefficient Based on Kendall's Tau",
+      "reason": "Kendallの順位相関に基づく頑健な回帰係数推定の統計理論研究で、LLM推論とは無関係。",
+      "source_url": "https://doi.org/10.1080/01621459.1968.10480934",
+      "body_check": "論文本文/出版社記載で点推定をpairwise slopeの中央値として構成し、順序統計量から信頼区間を作り、最小二乗等と性質を比較することを確認。推論システムの実行効率は対象外。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-1-4615-3626-0",
+      "identity_tokens": [
+        "DOI:10.1007/978-1-4615-3626-0"
+      ],
+      "title": "Vector Quantization and Signal Compression",
+      "reason": "ベクトル量子化による音声・画像等の信号圧縮を体系化した書籍で、LLM推論向け量子化・実行系を対象としない。",
+      "source_url": "https://doi.org/10.1007/978-1-4615-3626-0",
+      "body_check": "書籍の構成と記述範囲を確認し、vector quantizerの設計、rate-distortion、codebook、音声・画像・映像などの信号圧縮が中心。LLM/Transformerの重み・活性・KV cache量子化や推論kernel評価はない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cgo.2004.1281665",
+      "identity_tokens": [
+        "DOI:10.1109/cgo.2004.1281665"
+      ],
+      "title": "LLVM: a compilation framework for lifelong program analysis & transformation",
+      "reason": "LLVMの中間表現とlifelong program analysis/optimizationを提案する汎用コンパイラ基盤研究で、LLM推論専用のkernel/runtime最適化ではない。",
+      "source_url": "https://doi.org/10.1109/CGO.2004.1281665",
+      "body_check": "公式LLVM/IEEE本文でSSA形式の言語非依存IR、compile/link/run/idle-timeの解析・変換、型システムとアドレス演算等を確認。評価は表現・interprocedural analysis・compiler problemsで、LLM workloadを扱わない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf02295996",
+      "identity_tokens": [
+        "DOI:10.1007/bf02295996"
+      ],
+      "title": "Note on the sampling error of the difference between correlated proportions or percentages",
+      "reason": "対応のある比率差の有意性検定を導く古典的統計研究で、LLM推論とは無関係。",
+      "source_url": "https://doi.org/10.1007/BF02295996",
+      "body_check": "Psychometrika本文/出版社情報でcorrelated proportionsの差を判定する2式と、その一つのchi-square equivalentを導く内容を確認。モデル推論、計算基盤、メモリ最適化を扱わない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2018.00781",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2018.00781",
+        "arXiv:1705.07115"
+      ],
+      "title": "Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+      "reason": "homoscedastic uncertaintyで複数タスクの学習loss重みを自動調整するコンピュータビジョン学習手法で、推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1705.07115",
+      "body_check": "本文でclassification/regressionのjoint likelihoodからtask uncertaintyに応じたloss weightingを導き、単眼画像のdepth、semantic/instance segmentationで評価することを確認。主目的はmulti-task training品質。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/9781108571401",
+      "identity_tokens": [
+        "DOI:10.1017/9781108571401"
+      ],
+      "title": "Bandit Algorithms",
+      "reason": "確率的・敵対的・文脈付きbandit等の意思決定理論を体系化した教科書で、LLM推論サービング研究ではない。",
+      "source_url": "https://doi.org/10.1017/9781108571401",
+      "body_check": "Cambridgeの本文構成でfinite-armed stochastic/adversarial bandits、lower bounds、contextual/linear bandits、combinatorial bandits、partial monitoring等を確認。LLM inference runtimeやservingを対象としない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-46493-0_39",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-46493-0_39",
+        "arXiv:1603.09382"
+      ],
+      "title": "Deep Networks with Stochastic Depth",
+      "reason": "学習時にResidual Networkの層を確率的にdropして深層CNNの学習を容易にする手法で、推論時は深い全ネットワークを使うため学習高速化の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/1603.09382",
+      "body_check": "本文でmini-batchごとにresidual layerをBernoulliによりbypassし、test timeでは全layerをactiveにする設計を確認。CIFAR-10で1202層4.91% error等を評価し、推論時conditional depth削減は行わない。",
+      "first_checked_at": "2026-10-04T00:40:00+09:00",
+      "last_checked_at": "2026-10-04T00:40:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 10
+    }
+  ]
+}
