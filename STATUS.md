@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-03 23:28:56 JST**
+> 自動生成: **2026-10-03 23:37:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -47,15 +47,28 @@
 
 ## 全収録論文の前方引用巡回
 
-- .survey/work-queue/forward-citation-sweep.json はまだ生成されていません。
-- 初回のcoverage workflow成功後、この節に全件巡回の直接証拠を表示します。
+| 指標 | 件数 |
+|---|---:|
+| 収録論文seed台帳 | **1492** |
+| provider巡回可能 | **1488** |
+| provider巡回不能 | **4** |
+| 1周以上完了 | **22** |
+| 巡回中 | **6** |
+| 未巡回 | **1460** |
+| 今回run開始時due | **1472** |
+| 前方引用から保持中の未処理候補 | **1151** |
+| エラー状態保持seed | **1** |
+
+- 初回カバレッジ完了率: **1.5%**
+- state最終更新: **10-03 23:36:33 JST**
+- 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
 
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-03 18:14:00 JST（5時間14分前）** |
+| 最終maintenance完了 | **10-03 18:14:00 JST（5時間23分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -253,11 +266,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **335** |
+| 成功result未照合のimmutable submission | **336** |
 | └ Research | **142** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **48** |
+| └ Other/Unknown | **49** |
 
 ### 厳格検証が未成立のcompleted job
 
