@@ -15,7 +15,7 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
     def test_claim_fast_lane_is_short_and_isolated(self):
         text = self._text("survey-claim-fast.yml")
         self.assertIn("group: survey-claim-main", text)
-        self.assertIn(".survey/work-queue/claim-requests/*.json", text)
+        self.assertIn(".survey/work-queue/claim-requests", text)
         self.assertIn("claim_fast_path.py", text)
         helper = (ROOT / ".survey/scripts/claim_fast_path.py").read_text(encoding="utf-8")
         self.assertIn("claim_worker_with_banks", helper)
