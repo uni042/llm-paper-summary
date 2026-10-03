@@ -58,6 +58,16 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertNotIn("push:", trigger)
                 self.assertNotIn("workflow_run:", trigger)
 
+    def test_library_import_rechecks_precheck_liveness_at_handoff(self):
+        workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
+        self.assertIn("unsettled_library_prechecks", workflow)
+        self.assertIn("active_precheck_runs", workflow)
+        self.assertIn("gh workflow run discovery-precheck.yml", workflow)
+        self.assertIn(
+            "dispatching the dedicated gate",
+            workflow,
+        )
+
     def test_repository_tests_skip_paper_only_main_pushes(self):
         text = (WORKFLOWS / "repository-tests.yml").read_text(encoding="utf-8")
         push_block, rest = text.split("  pull_request:", 1)
