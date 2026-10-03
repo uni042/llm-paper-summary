@@ -2,105 +2,47 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).parents[1]
-DOCS = ROOT / "docs" / "survey-workflow"
-SCRIPTS = ROOT / "scripts"
+ROOT = Path(__file__).resolve().parents[2]
+DOCS = ROOT / ".survey" / "docs" / "survey-workflow"
+WORKFLOWS = ROOT / ".github" / "workflows"
 
 
 class RunLivenessPolicyTests(unittest.TestCase):
-    def test_router_and_gates_use_productive_wait_microtasks_until_terminal(self):
+    def test_scheduled_worker_has_no_direct_github_wait_protocol(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
+        self.assertIn("Scheduled workerはGitHubへのclaim、reservation、submission、result", router)
+        self.assertIn("Library保存不能でも完成成果を破棄しない", router)
+        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", router)
+        self.assertNotIn("MONITOR_CLAIM_FAST_LANE", router)
+        self.assertNotIn("continuation_gate.py", router)
+        self.assertNotIn("run_finalization_gate.py", router)
 
-        self.assertIn("待機ミクロタスク", router)
-        self.assertIn("固定時間sleep", router)
-        self.assertIn("同一target", router)
-        self.assertIn("PRODUCTIVE_WAIT_RECHECK_SECONDS = 0", continuation)
-        self.assertIn("run_one_wait_microtask", continuation)
-        self.assertIn("repeat_until_result_or_terminal_hard_stop", continuation)
-        self.assertIn("PRODUCTIVE_WAIT_RECHECK_SECONDS = 0", finalization)
-        self.assertIn("RUN_WAIT_MICROTASK_AND_RECHECK", finalization)
-        self.assertIn("terminal state", finalization)
+    def test_central_scheduler_periodically_dispatches_async_github_lanes(self):
+        scheduler = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
+        self.assertIn("cron: '3/10 * * * *'", scheduler)
+        for workflow in (
+            "survey-run-state.yml",
+            "library-import.yml",
+            "survey-reference-relevance-fast.yml",
+            "status-dashboard.yml",
+            "survey-submission-fast.yml",
+            "survey-research-quality-preflight.yml",
+            "survey-completed-builder-fast.yml",
+        ):
+            with self.subTest(workflow=workflow):
+                self.assertIn(f"dispatch {workflow}", scheduler)
 
-    def test_claim_wait_is_productive_fast_lane_monitoring(self):
+    def test_scheduled_task_is_not_disabled_by_worker_failure(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        guidance = (SCRIPTS / "worker_guidance.py").read_text(encoding="utf-8")
-        finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
+        self.assertIn("ユーザーの明示指示なしにScheduled Taskを停止・無効化・削除せず", router)
 
-        self.assertIn("MONITOR_CLAIM_FAST_LANE", router)
-        self.assertIn("request commitから60秒未満", router)
-        self.assertIn("Actions run", router)
-        self.assertIn("MONITOR_CLAIM_FAST_LANE", continuation)
-        self.assertIn("claim_result_pending_age_seconds", continuation)
-        self.assertIn("inspect_survey_claim_fast_actions_run_for_request_commit", continuation)
-        self.assertIn("MONITOR_CLAIM_FAST_LANE", guidance)
-        self.assertIn("Pending claim results also require fast-lane monitoring", finalization)
-
-    def test_submission_pending_never_blocks_new_research_claims(self):
+    def test_library_failure_uses_durable_chat_fallback_not_github_write(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        self.assertIn("submission result待ちは**foreground進行やclaim window補充の同期障壁にしない**", router)
-        self.assertIn("既確保standby", router)
-        self.assertIn("pipeline_ahead_count", router)
-        self.assertIn("観測用テレメトリ", router)
-        self.assertIn("CLAIM_NEXT_RESEARCH_AUDIT", continuation)
-        self.assertIn("MONITOR_SUBMISSION_RESULTS", continuation)
-        self.assertNotIn("MAX_PIPELINE_AHEAD_COUNT", continuation)
-        self.assertNotIn("最大2本先行", router)
+        self.assertIn("Research: 完成MarkdownをScheduled Chatへ完全添付", router)
+        self.assertIn("Discovery: 10件全件を含む完成JSONをScheduled Chatへ完全添付", router)
+        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", router)
 
-    def test_repeated_30_second_polling_contract_is_absent(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
-        self.assertIn("最大30秒の単発猶予待ちを1回だけ", router)
-        self.assertIn("同じ短時間sleepを繰り返さない", router)
-        self.assertNotIn("30-second", continuation)
-        self.assertNotIn("30-second", finalization)
-
-    def test_async_fast_lanes_have_periodic_orphan_recovery(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        workflows = Path(__file__).resolve().parents[2] / ".github" / "workflows"
-        claim = (workflows / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        run_state = (workflows / "survey-run-state.yml").read_text(encoding="utf-8")
-        precheck = (workflows / "discovery-precheck.yml").read_text(encoding="utf-8")
-        preload_warm = (workflows / "discovery-preload-warm.yml").read_text(encoding="utf-8")
-        self.assertIn("3/10", claim)
-        self.assertIn("4/10", run_state)
-        self.assertNotIn("schedule:", precheck)
-        self.assertIn("workflow_run:", preload_warm)
-        self.assertIn("1/5", preload_warm)
-        self.assertIn("5分周期", router)
-        self.assertIn("10分周期", router)
-
-    def test_run_state_snapshots_require_unique_request_ids(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        guidance = (SCRIPTS / "worker_guidance.py").read_text(encoding="utf-8")
-        self.assertIn("各再判定snapshotでは新しい一意な `request_id`", router)
-        self.assertIn("resultが既に存在するrequest_idを再利用", guidance)
-        self.assertIn("同じrequest_idを追跡", guidance)
-
-    def test_worker_manual_forbids_disabling_scheduled_task_on_failure(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("Scheduled Task自体を一時停止・無効化してはならない", router)
-        self.assertIn("enabled状態は維持", router)
-        self.assertIn("将来runのスケジュール停止を意味しない", router)
-
-    def test_final_report_is_mandatory_and_not_permit_gated(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
-        self.assertIn("run_finalization_gate.py", router)
-        self.assertIn("次の2系統以外を理由に終了してはならない", router)
-        self.assertIn("終了時刻・次回予定時刻・run経過時間は終了理由に含めない", router)
-        self.assertIn("必ず最終報告を残してから終了する", router)
-        self.assertIn("報告許可として扱わない", router)
-        self.assertIn("MAY_FINALIZE", finalization)
-        self.assertIn("finalization_permit", finalization)
-        self.assertNotIn("required_for_final_response", finalization)
-        self.assertNotIn("Final response is forbidden without an issued permit", finalization)
-
-    def test_router_does_not_depend_on_retired_worker_policy_docs(self):
+    def test_router_does_not_depend_on_retired_direct_worker_policy_docs(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         retired = (
             "always-on-worker.md",
@@ -109,14 +51,19 @@ class RunLivenessPolicyTests(unittest.TestCase):
             "candidate-buffer-policy.md",
             "discovery-specialist-worker.md",
             "run-liveness-policy.md",
+            "queue-v10.md",
         )
         for name in retired:
             with self.subTest(name=name):
                 self.assertNotIn(name, router)
-        self.assertNotIn("queue-v10.md", router)
-        self.assertIn("実装リファレンス", router)
-        self.assertIn("補完しない", router)
-        self.assertIn("continuation_gate.py", router)
+        self.assertIn("旧direct-GitHub worker運用は履歴資料", router)
+        self.assertIn("新規通常runへ復活させない", router)
+
+    def test_run_mode_is_fixed_and_completion_is_library_durable(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        self.assertIn("run中に在庫が変化してもモードは固定する", router)
+        self.assertIn("保存後はLibraryから再取得", router)
+        self.assertIn("Research runでは新規完成Research Markdownを5件", router)
 
 
 if __name__ == "__main__":
