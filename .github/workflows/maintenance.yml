@@ -90,6 +90,10 @@ jobs:
         if: steps.pending.outputs.run == 'true'
         run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
 
+      - name: Normalize Japanese terminology in legacy quality failures
+        if: steps.pending.outputs.run == 'true'
+        run: python .survey/scripts/normalize_paper_japanese_terms.py --root . --apply
+
       - name: Rebuild derived paper indexes
         if: steps.pending.outputs.run == 'true'
         shell: bash
