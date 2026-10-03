@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b703aca1b19c1066-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.02309",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.02309",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.02309",
+      "arXiv:2305.02309"
+    ],
+    "reason": "コード・自然言語LLMの事前学習設計、prefix-LM、infilling、データ混合の検討が主題で、推論システム最適化ではない。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-10-03T18:57:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
+  },
+  "processed_at": "2026-10-03T18:57:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b703aca1b19c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

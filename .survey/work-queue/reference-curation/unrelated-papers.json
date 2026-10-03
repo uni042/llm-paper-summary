@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:53:31+00:00",
+  "updated_at": "2026-10-03T18:57:22+00:00",
   "record_count": 845,
   "records": {
     "arXiv:2303.08774": {
@@ -4601,9 +4601,9 @@
         "arXiv:1609.02907",
         "arXiv:1611.01144"
       ],
-      "reason": "離散潜在変数を微分可能にする勾配推定法の研究で、LLM推論・サービング・メモリ効率化を対象としない。",
+      "reason": "離散確率変数を微分可能に近似するGumbel-Softmax推定器の学習手法で、LLM推論システム研究ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
@@ -4618,9 +4618,9 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "Web操作エージェントの現実的・再現可能な環境と能力ベンチマークが主目的で、エージェント型LLMのサービングruntimeや推論効率を最適化する研究ではない。",
+      "reason": "ウェブ操作エージェントの現実的な実行環境・ベンチマーク構築が主題で、LLM推論ランタイム最適化ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
@@ -4892,9 +4892,9 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4という汎用系列モデルの新アーキテクチャが主題であり、LLM推論時のメモリ階層・サービング・KV管理・ランタイム最適化を扱う研究ではない。",
+      "reason": "S4という汎用系列モデルのアーキテクチャ研究で、LLM推論・サービング最適化を最終適用先としない。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -6802,7 +6802,7 @@
       ],
       "reason": "可変expert数のゲーティングだが主要最適化対象は学習時間で凍結中の学習高速化側。",
       "first_checked_at": "2026-10-02T10:58:58+00:00",
-      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -6816,7 +6816,7 @@
       ],
       "reason": "層ごとのLoRA expert数配分を最適化するPEFT方式で、推論runtime最適化ではない。",
       "first_checked_at": "2026-10-02T10:58:58+00:00",
-      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -6830,7 +6830,7 @@
       ],
       "reason": "NLP深層学習のエネルギー・環境・政策コスト分析で、LLM推論高速化方式を提案しない。",
       "first_checked_at": "2026-10-02T10:58:58+00:00",
-      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -6845,7 +6845,7 @@
       ],
       "reason": "competition routingを学習してSparse MoEの学習を改善する方式で、最終主貢献はtraining。",
       "first_checked_at": "2026-10-02T10:58:58+00:00",
-      "last_checked_at": "2026-10-02T10:58:58+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json"
       ],
@@ -12295,41 +12295,6 @@
       ],
       "title": "DaVinci: A Scalable Architecture for Neural Network Computing"
     },
-    "OpenReview:EvDeiLv7qc": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:EvDeiLv7qc",
-      "identity_tokens": [
-        "OpenReview:EvDeiLv7qc",
-        "arXiv:2309.05444"
-      ],
-      "reason": "Parameter-efficient instruction-tuning work: it uses MoE-style adapters to reduce trainable parameters, but its final objective is fine-tuning efficiency rather than MoE inference routing, expert placement, offload, or serving.",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:43:35+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
-        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
-      ],
-      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
-    },
-    "OpenReview:sY5N0zY5Od": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:sY5N0zY5Od",
-      "identity_tokens": [
-        "OpenReview:sY5N0zY5Od",
-        "arXiv:2310.03714"
-      ],
-      "reason": "LMパイプラインの宣言的プログラミングとプロンプト・few-shot例の自動最適化が中心で、LLM推論ランタイムやサービング資源の高速化研究ではない。",
-      "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
-        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
-      ],
-      "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines"
-    },
     "OpenReview:pZiyCaVuti": {
       "classification": "unrelated",
       "canonical_id": "OpenReview:pZiyCaVuti",
@@ -12337,9 +12302,9 @@
         "OpenReview:pZiyCaVuti",
         "arXiv:2410.10813"
       ],
-      "reason": "長期対話記憶の能力評価ベンチマークと検索・読解設計の品質改善が主題で、KVキャッシュや推論ランタイムのメモリ/速度最適化とは異なる。",
+      "reason": "長期間対話記憶能力を測る評価ベンチマークが主貢献で、推論基盤の効率化機構を提案しない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:48:53+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -12355,9 +12320,9 @@
         "DOI:10.48550/arxiv.2305.02309",
         "arXiv:2305.02309"
       ],
-      "reason": "prefix-LM、学習目的、infilling、データ分布を統合してコードLLMの学習を効率化する研究で、最終適用先が学習工程のため対象外。",
+      "reason": "コード・自然言語LLMの事前学習設計、prefix-LM、infilling、データ混合の検討が主題で、推論システム最適化ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:25:46+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
@@ -12457,6 +12422,41 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "Llama 3 Gradient: A Series of Long Context Models"
+    },
+    "arXiv:2310.03714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03714",
+      "identity_tokens": [
+        "OpenReview:sY5N0zY5Od",
+        "arXiv:2310.03714"
+      ],
+      "reason": "LM呼出しを宣言的モジュールとして構成しプロンプト・実演例等をコンパイル最適化するプログラミングモデルで、推論ランタイム高速化ではない。",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+    },
+    "arXiv:2309.05444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05444",
+      "identity_tokens": [
+        "OpenReview:EvDeiLv7qc",
+        "arXiv:2309.05444"
+      ],
+      "reason": "軽量PEFTアダプタを専門家として用いるMoEの指示調整・パラメータ効率が最終適用先で、凍結対象の学習効率研究に当たる。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-10-03T18:57:22+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
     }
   }
 }
