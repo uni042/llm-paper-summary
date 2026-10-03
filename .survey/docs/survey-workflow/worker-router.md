@@ -107,7 +107,7 @@ run中に在庫が変化してもモードは固定する。
 2. `.github/workflows/forward-citation-sweep.yml` は `.survey/config/forward-citation-sweep.json` に従い、**収録済み全論文**を公平に低頻度巡回するカバレッジレーンとする。arXiv / DOI / Semantic Scholar IDを優先し、それらがなくてもSemantic Scholarが解決可能な安定した一次資料URLを持つ論文は `URL:` seedとして台帳へ載せる。未巡回・前回巡回が古いseedから順に処理し、長い引用一覧はprovider cursorを次回runへ持ち越す。1周を完了した後は所定期間後に先頭ページから新しい周回を開始するため、過去の収録論文を後日引用した新論文も再発見できる。
 3. カバレッジ巡回で見つかった未収録候補は既存のDiscovery候補面へ合流させ、別のrelevance正本を作らない。
 
-外部API失敗やrate limitで1seedを取得できなくても、そのseedを処理済みにせず状態を保持して後続runで再試行する。安定ID・解決可能な一次資料URLのどちらもない等、provider照会不能な収録論文はunsupportedとして可視化し、全件巡回済みと偽装しない。
+外部API失敗やrate limitで1seedを取得できなくても、そのseedを処理済みにせず状態を保持して後続runで再試行する。1 runで許容するprovider失敗数は `.survey/config/forward-citation-sweep.json` の `max_provider_errors_per_run` を正本とし、上限到達時はそのrunを早期終了して状態を保存する。失敗seedにも最終試行時刻を残して公平選択へ戻すため、同じ失敗seedだけが先頭を占有し続けない。安定ID・解決可能な一次資料URLのどちらもない等、provider照会不能な収録論文はunsupportedとして可視化し、全件巡回済みと偽装しない。
 
 Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` の現行Discovery手順を必須とする。具体的には、候補本文確認前の**開始前重複ゲート**と、成果保存直前の**保存直前重複ゲート**の両方で、Libraryのimmutable Discovery成果群（必要な未転送Research成果を含む）を完全列挙してidentity集合を再構成し、GitHub mainのread-only canonical stateと統合する。意味検索だけを重複排除の正本にせず、共有可変台帳、claim、reservation、GitHub writeをScheduled workerへ追加しない。詳細な列挙・identity比較・並列worker時の再確認手順はLibrary正本へ委譲する。
 
