@@ -1,25 +1,8 @@
 name: Paper publication integrity audit
 
 on:
-  push:
-    paths:
-      - ".survey/scripts/audit_paper_quality.py"
-      - ".survey/scripts/audit_list_summary_quality.py"
-      - ".survey/scripts/list_summary.py"
-      - ".survey/scripts/render_paper.py"
-      - ".survey/scripts/japanese_style.py"
-      - ".survey/scripts/paper_quality_gate.py"
-      - ".survey/scripts/assemble_research_record.py"
-      - ".survey/templates/paper.md"
-      - ".survey/docs/survey-workflow/paper-quality-audit.md"
-      - ".survey/tests/test_audit_paper_quality.py"
-      - ".survey/tests/test_paper_quality_gate.py"
-      - ".survey/tests/test_list_summary_quality.py"
-      - ".survey/tests/test_render_paper_metadata.py"
-      - "papers/inference/**/*.md"
-      - "papers/training/**/*.md"
-      - "papers/survey/**/*.md"
-      - ".github/workflows/paper-quality-audit.yml"
+  # Retained for explicit maintenance/recovery only. Normal Library-first imports
+  # are validated by the inbox processor and daily maintenance.
   workflow_dispatch:
 
 permissions:
