@@ -245,6 +245,7 @@ jobs:
           # refresh cannot make the maintenance transaction fail during rebase.
           git add -A
           git reset -- STATUS.md
+          git restore -- STATUS.md
           if ! git diff --cached --quiet; then
             git commit -m 'survey-maintenance: GC, reconcile, and health audit'
             maintenance_pushed=0
