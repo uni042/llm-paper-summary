@@ -28,9 +28,24 @@ class RunLivenessPolicyTests(unittest.TestCase):
             "survey-submission-fast.yml",
             "survey-research-quality-preflight.yml",
             "survey-completed-builder-fast.yml",
+            "forward-citation-sweep.yml",
+            "candidate-priority-refresh.yml",
         ):
             with self.subTest(workflow=workflow):
                 self.assertIn(f"dispatch {workflow}", scheduler)
+
+    def test_event_driven_fallbacks_are_freshness_gated(self):
+        for workflow_name, state_path in (
+            ("forward-citation-sweep.yml", ".survey/work-queue/forward-citation-sweep.json"),
+            ("candidate-priority-refresh.yml", ".survey/work-queue/candidate-priority-cache.json"),
+        ):
+            with self.subTest(workflow=workflow_name):
+                text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
+                self.assertIn("- 'STATUS.md'", text)
+                self.assertIn(".survey/scripts/refresh_due.py", text)
+                self.assertIn(state_path, text)
+                self.assertIn("--max-age-seconds 3000", text)
+                self.assertIn("steps.due.outputs.run == 'true'", text)
 
     def test_scheduled_task_is_not_disabled_by_worker_failure(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
