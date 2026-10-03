@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-0045-scheduled-chat-45/r02",
+  "reference_main_sha": "5c6f51da2c1604e672d7d0a9f36b3f96d1653068",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/cpe.938",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.938"
+      ],
+      "title": "Distributed computing in practice: the Condor experience",
+      "reason": "Condorの協調型分散計算基盤の歴史・設計・運用経験を扱う一般分散システム研究で、LLM推論サービングを最終適用先としない。",
+      "source_url": "https://doi.org/10.1002/CPE.938",
+      "body_check": "Wiley本文でCondorのdesktopからGrid規模までのcooperative computing、core components、社会構造と計算資源管理の対応、研究アイデアからproduction systemへの発展を確認。LLM、Transformer、KV cache、MoE、生成推論の評価はない。",
+      "first_checked_at": "2026-10-04T00:43:00+09:00",
+      "last_checked_at": "2026-10-04T00:43:00+09:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "worklist_rank": 11
+    }
+  ]
+}
