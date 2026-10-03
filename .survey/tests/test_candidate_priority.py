@@ -9,6 +9,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import candidate_priority  # noqa: E402
+import refresh_candidate_priority  # noqa: E402
 
 
 class CandidatePriorityTest(unittest.TestCase):
@@ -71,6 +72,50 @@ class CandidatePriorityTest(unittest.TestCase):
         )
         self.assertFalse(got["is_fresh"])
         self.assertEqual(got["total"], 2)
+
+    def test_embedded_provider_metadata_seeds_priority_cache_without_lookup(self):
+        cache = {
+            "schema_version": 1,
+            "records": {},
+            "aliases": {},
+            "lookup_failures": {
+                "arXiv:2609.00001": {
+                    "status": "error",
+                    "checked_at": "2026-10-01T00:00:00+00:00",
+                }
+            },
+        }
+        rows = [
+            {
+                "_lookup_id": "arXiv:2609.00001",
+                "canonical_id": "arXiv:2609.00001",
+                "arxiv_id": "2609.00001",
+                "title": "Forward candidate",
+                "published": "2026-09-30",
+                "venue": "OSDI",
+                "citation_count": 17,
+                "citation_count_source": "semantic_scholar",
+                "last_seen_at": "2026-10-03T17:38:36+00:00",
+            }
+        ]
+        seeded = refresh_candidate_priority._seed_cache_from_embedded_metadata(
+            cache, rows
+        )
+        self.assertEqual(seeded, 1)
+        stored = cache["records"]["arXiv:2609.00001"]
+        self.assertEqual(stored["citation_count"], 17)
+        self.assertEqual(
+            stored["citation_count_checked_at"],
+            "2026-10-03T17:38:36+00:00",
+        )
+        self.assertNotIn("arXiv:2609.00001", cache["lookup_failures"])
+
+        self.assertEqual(
+            refresh_candidate_priority._seed_cache_from_embedded_metadata(
+                cache, rows
+            ),
+            0,
+        )
 
     def test_weights_are_configuration_driven(self):
         policy = self.policy()
