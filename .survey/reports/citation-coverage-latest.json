@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-03T08:12:08+00:00",
+  "checked_at": "2026-10-03T08:13:41+00:00",
   "summary": {
     "total": 1489,
-    "complete": 1427,
-    "incomplete": 62
+    "complete": 1451,
+    "incomplete": 38
   },
   "families": {
     "inference": {
       "total": 1450,
-      "complete": 1388
+      "complete": 1412
     },
     "training": {
       "total": 25,
@@ -90,126 +90,6 @@
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md",
-      "canonical_id": "arXiv:2311.15436",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
-      "canonical_id": "arXiv:2312.05821",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md",
-      "canonical_id": "arXiv:2312.12728",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
-      "canonical_id": "arXiv:2310.04564",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md",
-      "canonical_id": "arXiv:2401.06706",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.08294-inferflow-an-efficient-and-highly-configurable-inference-engine-for-larg.md",
-      "canonical_id": "arXiv:2401.08294",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md",
-      "canonical_id": "arXiv:2401.15347",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md",
-      "canonical_id": "arXiv:2402.01173",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
-      "canonical_id": "arXiv:2402.05445",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
-      "canonical_id": "arXiv:2402.12065",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
-      "canonical_id": "arXiv:2403.00835",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md",
-      "canonical_id": "arXiv:2403.05676",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
-      "canonical_id": "arXiv:2403.14123",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md",
-      "canonical_id": "arXiv:2404.05089",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
-      "canonical_id": "arXiv:2404.05892",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
-      "canonical_id": "arXiv:2404.19737",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
-      "canonical_id": "arXiv:2406.07522",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md",
-      "canonical_id": "arXiv:2406.14963",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
-      "canonical_id": "arXiv:2407.08608",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md",
-      "canonical_id": "arXiv:2409.17422",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md",
-      "canonical_id": "arXiv:2410.10759",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.13846-lighttransfer-your-long-context-llm-is-secretly-a-hybrid-model-with-effo.md",
-      "canonical_id": "arXiv:2410.13846",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md",
-      "canonical_id": "arXiv:2410.18311",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
-      "canonical_id": "arXiv:2411.01783",
       "reason": "missing structured reference audit metadata"
     },
     {

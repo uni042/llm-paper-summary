@@ -34,7 +34,7 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
 ### 3年前（2023-11〜2024-10）
 
 - **2023-11 · [Striped Attention: Faster Ring Attention for Causal Transformers](2023-2311.09431-striped-attention.md)**  
-  実装：[✓](https://github.com/exists-forall/striped_attention) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/exists-forall/striped_attention) ・ リポジトリ内被引用：13  
   Ring 注意機構の連続分割を縞状のトークン配置へ変え、因果マスクで省略できる計算を全装置へ均等化して長文Transformer学習を高速化する厳密注意方式。
 
 - **2024-05 · [NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment](2024-2405.01481-nemo-aligner.md)**  
