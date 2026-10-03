@@ -9,7 +9,10 @@ on:
       - '.survey/scripts/render_status_dashboard_core.py'
       - '.survey/scripts/reference_pool.py'
       - '.survey/scripts/candidate_priority.py'
+      - '.survey/scripts/refresh_candidate_priority.py'
+      - '.survey/scripts/forward_citation_sweep.py'
       - '.survey/config/candidate-priority.json'
+      - '.survey/config/forward-citation-sweep.json'
       - '.survey/work-queue/candidate-priority-cache.json'
       - '.survey/work-queue/forward-citation-sweep.json'
       - '.survey/scripts/build_worker_worklist.py'
@@ -17,6 +20,10 @@ on:
       - '.survey/scripts/research_job_reconciliation.py'
       - '.survey/scripts/reconcile_represented_research_jobs.py'
       - '.survey/tests/test_research_job_reconciliation.py'
+      - '.survey/tests/test_candidate_priority.py'
+      - '.survey/tests/test_forward_citation_sweep.py'
+      - '.survey/tests/test_discovery_provider_adapter.py'
+      - '.survey/tests/test_queue_worker_metadata.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   push:
@@ -29,7 +36,10 @@ on:
       - '.survey/scripts/render_status_dashboard_core.py'
       - '.survey/scripts/reference_pool.py'
       - '.survey/scripts/candidate_priority.py'
+      - '.survey/scripts/refresh_candidate_priority.py'
+      - '.survey/scripts/forward_citation_sweep.py'
       - '.survey/config/candidate-priority.json'
+      - '.survey/config/forward-citation-sweep.json'
       - '.survey/work-queue/candidate-priority-cache.json'
       - '.survey/work-queue/forward-citation-sweep.json'
       - '.survey/scripts/build_worker_worklist.py'
@@ -37,6 +47,10 @@ on:
       - '.survey/scripts/research_job_reconciliation.py'
       - '.survey/scripts/reconcile_represented_research_jobs.py'
       - '.survey/tests/test_research_job_reconciliation.py'
+      - '.survey/tests/test_candidate_priority.py'
+      - '.survey/tests/test_forward_citation_sweep.py'
+      - '.survey/tests/test_discovery_provider_adapter.py'
+      - '.survey/tests/test_queue_worker_metadata.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   # Queue-only pushes stay decoupled so STATUS publication does not amplify the
@@ -67,6 +81,12 @@ jobs:
         run: python -m unittest discover -s .survey/tests -p 'test_status*.py'
       - name: Paper/job reconciliation regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_research_job_reconciliation.py'
+      - name: Candidate-priority and citation-coverage regression tests
+        run: |
+          python -m unittest discover -s .survey/tests -p 'test_candidate_priority.py'
+          python -m unittest discover -s .survey/tests -p 'test_forward_citation_sweep.py'
+          python -m unittest discover -s .survey/tests -p 'test_discovery_provider_adapter.py'
+          python -m unittest discover -s .survey/tests -p 'test_queue_worker_metadata.py'
       - name: Render dashboard in check mode
         run: python .survey/scripts/render_status_dashboard.py --output /tmp/STATUS.md
       - name: Render dedicated worker worklists in check mode
