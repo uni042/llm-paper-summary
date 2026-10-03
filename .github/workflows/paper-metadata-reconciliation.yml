@@ -1,13 +1,8 @@
 name: Paper metadata reconciliation
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'papers/**/*.md'
-      - '.survey/scripts/backfill_paper_metadata.py'
-      - '.survey/tests/test_backfill_paper_metadata.py'
-      - '.github/workflows/paper-metadata-reconciliation.yml'
+  # Retained for explicit maintenance/recovery only. Normal Library-first imports
+  # are validated by the inbox processor and daily maintenance.
   workflow_dispatch:
 
 permissions:
