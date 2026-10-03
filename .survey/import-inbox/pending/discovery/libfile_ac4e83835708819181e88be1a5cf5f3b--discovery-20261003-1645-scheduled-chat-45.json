@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1645-scheduled-chat-45",
+  "reference_main_sha": "894700d91c1d452c17b926e3cecc81a108d697f6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.15045",
+      "identity_tokens": [
+        "arXiv:2404.15045",
+        "DOI:10.48550/arXiv.2404.15045"
+      ],
+      "title": "Multi-Head Mixture-of-Experts",
+      "reason": "MH-MoEはトークンを複数サブトークンへ分割して別expertへroutingし、expert activationと表現能力を高めるMoEモデル構造研究。主評価はlanguage/multilingual/multimodal modeling品質で、推論runtime削減を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2404.15045",
+      "body_check": "本文の方式・実験を確認。multi-head projection→sub-token分割→expert routing→再統合でexpert activationを8.33%から90.71%へ高め、perplexity等を改善する。FLOPsを同程度に保つ設計だが主要貢献はexpert utilizationとモデル品質で、serving/offload/kernel最適化ではない。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13813",
+      "identity_tokens": [
+        "arXiv:2404.13813",
+        "DOI:10.48550/arXiv.2404.13813"
+      ],
+      "title": "From LLM to NMT: Advancing Low-Resource Machine Translation with Claude",
+      "reason": "低資源機械翻訳の品質評価とClaudeから小型NMTへの知識蒸留が主目的で、LLM推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.13813",
+      "body_check": "本文のbenchmark・蒸留実験を確認。Claude 3 Opusの低資源翻訳をFLORES/BBC等で評価し、Yoruba-EnglishではClaude生成synthetic dataでNLLB-1.3Bをfine-tuneしてchrF++ 44.15を得る。小型化はあるが最終目的は翻訳品質と学習による知識移植。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.12387",
+      "identity_tokens": [
+        "arXiv:2404.12387",
+        "DOI:10.48550/arXiv.2404.12387"
+      ],
+      "title": "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models",
+      "reason": "Reka Core/Flash/Edgeというマルチモーダル基盤モデル系列の構築・能力報告で、推論runtimeの新規最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2404.12387",
+      "body_check": "本文のモデル系列と評価を確認。text/image/video入力を扱うCore/Flash/EdgeをMMLU、GSM8K、MMMU、VQAv2、video QA、人手評価等で比較し、frontier modelとの能力差を報告するtechnical report。KV/cache/offload/scheduler/kernelの新規方式は主題でない。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.10308",
+      "identity_tokens": [
+        "arXiv:2404.10308",
+        "DOI:10.48550/arXiv.2404.10308"
+      ],
+      "title": "Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs",
+      "reason": "HOMERは長文入力をchunk分割し階層的にmergeしながらtoken reductionを行い、再学習なしでself-attentionの計算・メモリ負荷を抑える長文脈推論方式。",
+      "source_url": "https://arxiv.org/abs/2404.10308",
+      "body_check": "本文のアルゴリズム・評価を確認。長文をmanageable chunkへ分割し、Transformerの進行に合わせ隣接chunkを階層merge、その前にtoken reductionを適用する。計算順序を最適化して入力長に対するmemory requirementをlogarithmic scalingへ落とし、64K超文脈を既存pretrained LLMで扱う。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08189",
+      "identity_tokens": [
+        "arXiv:2404.08189",
+        "DOI:10.48550/arXiv.2404.08189"
+      ],
+      "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation",
+      "reason": "RAGでenterprise workflow生成のhallucinationとOOD一般化を改善する応用・品質研究で、推論システム効率化は副次的。",
+      "source_url": "https://arxiv.org/abs/2404.08189",
+      "body_check": "本文のRAG構成・評価を確認。retrieverで関連workflow知識を取得してLLMへ与え、structured outputのhallucinationを低減する。小型retrieverにより伴うLLMを小さくできる点も述べるが、主要評価は生成品質・一般化でruntime/KV/serving方式の提案ではない。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.06954",
+      "identity_tokens": [
+        "arXiv:2404.06954",
+        "DOI:10.48550/arXiv.2404.06954"
+      ],
+      "title": "Accelerating Inference in Large Language Models with a Unified Layer Skipping Strategy",
+      "reason": "目標speedup比からskip layer数を決め、中間層を均等に飛ばして安定した実推論高速化を行うconditional-computation方式。batch decodingとKV cacheにも互換。",
+      "source_url": "https://arxiv.org/abs/2404.06954",
+      "body_check": "本文の方式・評価を確認。sample依存predictorを使わずtarget speedup ratioだけからskip数を固定し、連続した上下層ではなく中間層をbalancedにskipする。machine translationとsummarizationで既存dynamic approachより同一target speedup時の品質と実throughputを改善し、batch/KV cachingを自然に利用できる。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05952",
+      "identity_tokens": [
+        "arXiv:2404.05952",
+        "DOI:10.48550/arXiv.2404.05952"
+      ],
+      "title": "Robot Safe Planning In Dynamic Environments Based On Model Predictive Control Using Control Barrier Function",
+      "reason": "動的環境でのロボット障害物回避用MPC/CBF制御研究で、LLMとは無関係。",
+      "source_url": "https://arxiv.org/abs/2404.05952",
+      "body_check": "本文の制御方式・simulation/実機評価を確認。prediction horizon全体のhard CBF constraintをsoftenしexact penaltyを導入、generalized CBFをsingle-step safety constraintとして用いる。double-integrator/unicycle simulationとMR1000実機で安全性・feasibility・navigation efficiencyを評価する。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.04793",
+      "identity_tokens": [
+        "arXiv:2404.04793",
+        "DOI:10.48550/arXiv.2404.04793"
+      ],
+      "title": "SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget",
+      "reason": "token方向だけでなくlayer重要度も用いてKV cache budgetを非均等配分し、memoryとthroughputを直接改善するLLM推論方式。",
+      "source_url": "https://arxiv.org/abs/2404.04793",
+      "body_check": "本文のlayer-importance計測と評価を確認。self-attention前後のprompt差分のcosine similarityでlayerを重要度分類し、layerごとに異なるKV budgetを割当て、既存sequence-wise圧縮と組み合わせる。複数LLM/benchmarkでmemoryを約30–70%削減し、throughputを最大2.2倍改善する。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.03605",
+      "identity_tokens": [
+        "arXiv:2404.03605",
+        "DOI:10.48550/arXiv.2404.03605"
+      ],
+      "title": "Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization",
+      "reason": "4bit weight/activation量子化を可能にしてGPU推論の低bit実行へ繋げる圧縮研究。QATを用いるが最終適用先はW4A4推論であるため対象。",
+      "source_url": "https://arxiv.org/abs/2404.03605",
+      "body_check": "本文のoutlier分析・regularization・量子化評価を確認。入力へquantization-aware training、出力へactivation kurtosis regularizationを適用してoutlier channelを抑え、weight PTQと組み合わせる。W4A4モデルを標準W16A16 baselineと競争的な品質に保つことを示し、GPUがnative supportする低bit推論を狙う。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03245",
+      "identity_tokens": [
+        "arXiv:2404.03245",
+        "DOI:10.48550/arXiv.2404.03245"
+      ],
+      "title": "Memory Sharing with CXL: Hardware and Software Design Approaches",
+      "reason": "CXL 2.0/3.0による汎用memory pooling/sharingのハードウェア・ソフトウェア設計比較で、LLM推論への適用・評価がない。",
+      "source_url": "https://arxiv.org/abs/2404.03245",
+      "body_check": "本文の設計比較を確認。CXL世代ごとにhost/device間のmemory sharingを実現するarchitecture、coherence、device hardware/software上の課題を整理する。LLM workload、KV cache、MoE、serving throughput等を対象にした方式・評価はない。",
+      "first_checked_at": "2026-10-03T16:46:18+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md"
+      ],
+      "worklist_rank": 491
+    }
+  ]
+}
