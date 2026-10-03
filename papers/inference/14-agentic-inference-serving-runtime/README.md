@@ -32,16 +32,16 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
-  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：13  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
+
+- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
 
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：5  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
-
-- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
 
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -51,6 +51,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
 
+- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
+  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：4  
+  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
+
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
@@ -58,10 +62,6 @@
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
-
-- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
-  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：3  
-  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
 - **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -136,27 +136,27 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：29  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
-  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：10  
+  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：11  
   会話から重要事実だけを抽出・統合し、意味検索と矛盾更新で永続記憶を保つことで、全文履歴を毎回読むエージェント推論のトークン量と遅延を削る。
 
 - **2025-06 · [The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective](2025-2506.04301-cost-dynamic-reasoning.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   この構造は能力を上げる一方、通常の単一ターン推論を前提に設計されたGPUサービングでは、長い逐次依存、外部ツール待ち、繰り返しプリフィル、可変長生成を生み、平均利用率だけでは実コストを捉えにくい。代表結果では、HotpotQAやMATHのCPU・外部ツール待ちが実行時間の最大54.5%を占める条件があり、LLM実行中も復号がGPU時間の74.1%を占める。
+
+- **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
+  実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：6  
+  Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
 
 - **2025-05 · [Hexgen-Flow: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
   実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：6  
   依存するText-to-SQLのLLM呼び出しを、異種GPUへの大域負荷分散と残り期限に基づく局所優先度制御で協調し、問い合わせ全体のSLOを守る。
 
-- **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
-  実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：5  
-  Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
-
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   長期エージェントの記憶を、単なる「過去文書の検索」ではなく「時間とともに変わる事実の履歴」として扱う。LongMemEvalsではgpt-4oの全履歴投入60.2%に対して71.2%へ精度を上げつつ、平均文脈長を115k→1.6kトークン、応答遅延を28.9→2.58秒へ削減した。
 
 - **2025-10 · [FlowMesh: A Service Fabric for Composable LLM Workflows](2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md)**  

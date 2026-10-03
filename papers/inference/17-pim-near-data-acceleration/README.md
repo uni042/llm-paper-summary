@@ -98,6 +98,6 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：11  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 <!-- survey:auto:end -->

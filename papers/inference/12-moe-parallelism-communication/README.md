@@ -155,13 +155,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：4  
   テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
 
+- **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  垂直スケーリングで既存複製の並列度を変える方式は細粒度だが、プロセス再起動、重み再読込、KVキャッシュ再構築が発生し、短時間のバーストに間に合わない。Ascend NPU上で3種のMoE LLMを評価し、従来方式に対してスケールアップ遅延を最大9倍短縮し、スケール処理中の推論処理量を最大2倍にした。
+
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
-
-- **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  垂直スケーリングで既存複製の並列度を変える方式は細粒度だが、プロセス再起動、重み再読込、KVキャッシュ再構築が発生し、短時間のバーストに間に合わない。Ascend NPU上で3種のMoE LLMを評価し、従来方式に対してスケールアップ遅延を最大9倍短縮し、スケール処理中の推論処理量を最大2倍にした。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  

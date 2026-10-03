@@ -35,7 +35,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
-  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：5  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
@@ -75,13 +75,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   APEXは、LLMサービングのデータ並列・パイプライン並列・テンソル並列の組合せを、実機へ総当たり配備せずCPU上で探索するシミュレータである。APEXはこの動的状態を明示的に模擬し、TTFT、TPOT、電力を計画ごとに推定する。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   SamuLLMは、1つのアプリケーションが複数のLLMを使うオフライン推論を対象にする。単一LLMの最適化と異なり、GPU群へ複数モデルを同時に置くと、モデルごとのテンソル並列・パイプライン並列等の選択と、同時実行モデル集合が互いに干渉する。
 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  
-  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：8  
   自己回帰サービングを反復単位で追跡しつつ、Transformerブロックのコンパイル・演算結果を再利用して異種アクセラレータ構成を高速に協調シミュレーションする。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  

@@ -70,6 +70,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は1兆パラメータ級の混合専門家モデルの重みを専用管理器でなくLinuxカーネルのページキャッシュに任せ、再利用性と先読み助言を比較してDRAM不足時の管理負担を減らす。
 
+- **2026-08 · [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  DASHは将来型High-Bandwidth FlashをGPU/HBM近傍へ接続し、専門家重みをGPUへ直送する経路とHBM経由経路を並行利用して、大容量MoEのフラッシュ転送待ちを減らす。
+
 - **2026-07 · [ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels](2026-2607.18002-expertplex-disaggregated-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意計算だけを相分離し巨大MoEエキスパートを共有、タイル単位の適応型永続カーネルと注意側起動の片側通信で相間干渉を抑え、H800上でインスタンス単位P/D分離比最大2.01倍の有効スループットを達成する。
@@ -191,10 +195,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DynaNDEは、専門家ごとのトークン数・演算性能・重み転送・キャッシュ再利用を遅延モデルで比較し、各層をNPU実行とNDP実行へ動的分割して転送待ちを減らす。
-
-- **2026-08 · [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  DASHは将来型High-Bandwidth FlashをGPU/HBM近傍へ接続し、専門家重みをGPUへ直送する経路とHBM経由経路を並行利用して、大容量MoEのフラッシュ転送待ちを減らす。
 
 - **2026-08 · [Cacheable by Design? Training Mixture-of-Experts Routers for Locality Against the Edge Memory-Bandwidth Wall: A Pre-Registered Negative Result with a Systems Measurement Study](2026-2608.18261-cacheable-by-design-expert-locality.md)**  
   実装：[✓](https://github.com/Shriniwas410/cacheable-by-design) ・ リポジトリ内被引用：0  
@@ -382,6 +382,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
 
+- **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
+  実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
+  SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
+
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
@@ -389,10 +393,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBM3とLPDDR5Xを両側計算器付きで並列利用し、動的なヘッド単位割当とハードウェアメモリ抽象化によりLPDDRのみ比で最大2.94倍高速化する。
-
-- **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
-  実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：0  
-  SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
 
 ### 3年前（2023-11〜2024-10）
 
@@ -455,7 +455,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：284  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：287  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
