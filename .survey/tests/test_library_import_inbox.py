@@ -47,6 +47,43 @@ worker_run_key: 20261003-1600-scheduled-chat-00
             self.assertIn("implementation", failures)
             self.assertIn("code", failures)
             self.assertIn("last_checked", failures)
+            self.assertIn("arxiv_id", failures)
+            self.assertIn("arxiv_categories.primary", failures)
+            self.assertIn("arxiv_categories.cross_list", failures)
+
+    def test_research_metadata_gate_rejects_invalid_published_format(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: DOI:10.1000/example
+title: Example
+summary: 完成原稿。
+list_summary: 完成原稿の一文要約。
+authors:
+- Example Author
+published: '2026'
+publication: Example Venue
+publication_type: 査読付き学術論文
+publication_status: Published
+source: https://doi.org/10.1000/example
+sources:
+- https://doi.org/10.1000/example
+implementation: 論文中で実装・評価済み。
+code: null
+last_checked: '2026-10-03'
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Example
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            failures = inbox.research_metadata_failures(source, meta, root)
+            self.assertIn("published:format", failures)
 
     def test_research_metadata_gate_accepts_complete_library_frontmatter(self) -> None:
         with tempfile.TemporaryDirectory() as td:
