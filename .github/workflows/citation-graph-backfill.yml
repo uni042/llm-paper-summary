@@ -66,7 +66,13 @@ jobs:
             .survey/scripts/render_paper.py \
             .survey/scripts/assemble_research_record.py \
             .survey/scripts/survey.py
-          python -m unittest discover -s .survey/tests -p 'test_*.py'
+          python -m unittest \
+            .survey.tests.test_backfill_paper_metadata \
+            .survey.tests.test_citation_graph \
+            .survey.tests.test_pdf_citation_fallback \
+            .survey.tests.test_recover_blocked_citations \
+            .survey.tests.test_render_paper_metadata \
+            .survey.tests.test_render_paper_required_metadata
 
       - name: Backfill incomplete paper metadata once
         shell: bash
