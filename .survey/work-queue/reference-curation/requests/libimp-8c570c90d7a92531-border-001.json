@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8c570c90d7a92531-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2402.09727",
+  "reason": "長文脈をgist memoryへ圧縮して必要箇所だけ再参照するため処理トークンを減らせるが、主目的は長文読解エージェントの品質・有効文脈長拡張であり、KVキャッシュや推論ランタイム自体の最適化ではない。",
+  "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+  "identity_tokens": [
+    "arXiv:2402.09727",
+    "DOI:10.48550/arXiv.2402.09727"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c570c90d7a9",
+  "source_precheck_request_id": null
+}
