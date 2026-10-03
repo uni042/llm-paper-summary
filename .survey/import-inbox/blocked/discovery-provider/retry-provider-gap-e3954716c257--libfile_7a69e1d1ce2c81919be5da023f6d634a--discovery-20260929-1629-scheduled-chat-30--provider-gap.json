@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-1629-scheduled-chat-30::provider-gap",
+  "reference_main_sha": "acae770620c368d3a31e522caedf824e300cde2b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:P0GOk5wslg",
+      "identity_tokens": [
+        "OpenReview:P0GOk5wslg"
+      ],
+      "title": "Speculative Actions: A Lossless Framework for Faster AI Agents",
+      "reason": "LLMエージェントの逐次API呼出し待ちを推測実行で隠す実行時高速化方式。高速モデルで将来アクションを予測し、複数API呼出しを並列化して正しさを保ったままレイテンシを削減する。",
+      "source_url": "https://openreview.net/forum?id=P0GOk5wslg",
+      "body_check": "本文のpredict-and-verify型speculative actions、top-k候補、ゲーム・e-commerce・web search・OSの4環境評価を確認。損失なしで最大約30%の高速化を報告し、agentic inference serving/runtime系に直接該当。",
+      "first_checked_at": "2026-09-29T16:29:00+09:00",
+      "last_checked_at": "2026-09-29T16:29:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md"
+      ],
+      "worklist_rank": 485
+    }
+  ],
+  "parent_run_key": "20260929-1629-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-e3954716c257--libfile_7a69e1d1ce2c81919be5da023f6d634a--discovery-20260929-1629-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:P0GOk5wslg"
+  ]
+}
