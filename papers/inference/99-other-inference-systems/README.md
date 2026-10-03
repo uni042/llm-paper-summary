@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（235本）
+## 自動生成の論文一覧（236本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -855,6 +855,10 @@
 - **2024-10 · [CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation](2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md)**  
   実装：— ・ リポジトリ内被引用：2  
   しかし既存方式はトークンごとに補助MLPで活性集合を予測することが多く、予測計算に加え、毎トークン異なる重み断片を呼び出すため実機では理論疎性ほど速くならない。
+
+- **2024-09 · [Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction](2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  長文脈の自己回帰推論では、生成前のプリフィルで入力全体を全層へ通すため、文脈が128K級になると注意計算と中間状態が大きな負担になる。SnapKVやH2Oは生成時に保持するKVキャッシュを減らすが、長い入力を全層で一度処理するプリフィル自体は残る。第一走査ではフィルタ層rまでだけ長文脈を実行し、最終クエリと全キーの内積から上位kトークンを選ぶ。
 
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
   実装：— ・ リポジトリ内被引用：2  
