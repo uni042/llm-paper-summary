@@ -206,6 +206,26 @@ def research_metadata_failures(source: Path, meta: dict[str, Any], repo_root: Pa
         value = meta.get(key)
         if value is None or (isinstance(value, str) and not value.strip()):
             failures.append(key)
+
+    published = str(meta.get("published") or "").strip()
+    if published and not re.fullmatch(r"\d{4}-\d{2}(?:-\d{2})?", published):
+        failures.append("published:format")
+
+    canonical = str(meta.get("canonical_id") or "").strip().casefold()
+    source_url = str(meta.get("source") or "").strip().casefold()
+    is_arxiv = canonical.startswith("arxiv:") or "arxiv.org/" in source_url
+    if is_arxiv:
+        if not str(meta.get("arxiv_id") or "").strip():
+            failures.append("arxiv_id")
+        categories = meta.get("arxiv_categories")
+        if not isinstance(categories, dict):
+            failures.extend(("arxiv_categories.primary", "arxiv_categories.cross_list"))
+        else:
+            if not str(categories.get("primary") or "").strip():
+                failures.append("arxiv_categories.primary")
+            if "cross_list" not in categories or not isinstance(categories.get("cross_list"), list):
+                failures.append("arxiv_categories.cross_list")
+
     return sorted(set(str(item) for item in failures))
 
 
