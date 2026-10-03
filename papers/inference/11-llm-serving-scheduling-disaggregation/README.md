@@ -946,6 +946,10 @@
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：4  
   KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。
 
+- **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LLM推論サーバーは常にGPUを最高周波数で動かせば遅延を抑えやすいが、要求到着率、バッチサイズ、KVキャッシュ占有量によって必要性能は時々刻々変わる。throttLL’eMは、次の反復でのKVキャッシュ使用量とバッチサイズを予測し、それらを機械学習の性能モデルへ与えて、SLOを満たせる最低側のGPU動作点を選ぶ。
+
 - **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
@@ -993,6 +997,10 @@
 - **2025-09 · [FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving](2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   混合精度モデル間で共有できるKVスラブと、精度別の限界メモリ効率・TTFT期限を使う二段スケジューリングにより、Prism相当方式比でSLO達成率最大2.2倍、生成スループット最大1.8倍を実現する。
+
+- **2025-09 · [Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving](2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  低ランク適応（Low-Rank Adaptation; LoRA）では大きな基盤モデルを共有し、サービスごとに小さなアダプタだけを切り替えられる。実トレース評価では、各LoRAサービスのSLO達成率を90%超に維持したまま、既存multi-LoRAサービング基盤に対して最大3.6倍高い要求到着率、または2.8倍大きいバースト性を処理できると報告する。
 
 - **2025-08 · [HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling](2025-2508.15919-hfx-joint-design-of-algorithms-and-systems-for-multi-slo-serving-and-fas.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1241,12 +1249,4 @@
 - **2024 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
-
-- **2025 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  LLM推論サーバーは常にGPUを最高周波数で動かせば遅延を抑えやすいが、要求到着率、バッチサイズ、KVキャッシュ占有量によって必要性能は時々刻々変わる。throttLL’eMは、次の反復でのKVキャッシュ使用量とバッチサイズを予測し、それらを機械学習の性能モデルへ与えて、SLOを満たせる最低側のGPU動作点を選ぶ。
-
-- **2020 · [Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving](2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  低ランク適応（Low-Rank Adaptation; LoRA）では大きな基盤モデルを共有し、サービスごとに小さなアダプタだけを切り替えられる。実トレース評価では、各LoRAサービスのSLO達成率を90%超に維持したまま、既存multi-LoRAサービング基盤に対して最大3.6倍高い要求到着率、または2.8倍大きいバースト性を処理できると報告する。
 <!-- survey:auto:end -->

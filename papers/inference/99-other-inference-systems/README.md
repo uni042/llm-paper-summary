@@ -848,6 +848,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   要求ごとの品質差を予測して小型LLMへの振り分け率を調整し、推論費を削減する。モデル間の品質差が大きいときは無品質低下での削減幅が限られる。
 
+- **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
+  実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：7  
+  一般的な疎な混合専門家モデル（MoE）はTop-1やTop-2のように、全トークンへ同じ数の専門家を割り当てる。推論時の最大専門家数を2へ制限した設定で、動的方式はTop-2より平均活性専門家数を減らし、活性パラメータを90%未満へ抑えながら下流タスク平均を0.7ポイント上回る。
+
 - **2024-07 · [Mixture of A Million Experts：百万専門家を扱うPEER層](2024-2407.04153-mixture-of-a-million-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
@@ -1037,10 +1041,4 @@
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：70  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
-
-### 公開時期未分類
-
-- **未記録 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  一般的な疎な混合専門家モデル（MoE）はTop-1やTop-2のように、全トークンへ同じ数の専門家を割り当てる。推論時の最大専門家数を2へ制限した設定で、動的方式はTop-2より平均活性専門家数を減らし、活性パラメータを90%未満へ抑えながら下流タスク平均を0.7ポイント上回る。
 <!-- survey:auto:end -->
