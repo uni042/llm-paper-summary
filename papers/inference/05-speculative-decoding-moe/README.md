@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（97本）
+## 自動生成の論文一覧（98本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -353,6 +353,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-08 · [Learning Harmonized Representations for Speculative Sampling](2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/HArmonizedSS/HASS) ・ リポジトリ内被引用：4  
   EAGLE系ドラフトの学習時／復号時の文脈差と蒸留目的のずれをTop-K蒸留＋multi-step context alignmentで揃えるHASS。
+
+- **2024-02 · [Speculative Streaming: Fast LLM Inference without Auxiliary Models](2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md)**  
+  実装：— ・ リポジトリ内被引用：4  
+  対象モデル内部へ将来n-gram予測ストリームと候補木枝刈りを組み込み、別ドラフトモデルなしで生成と検証を同一順伝播へ重ねる投機的復号。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
   実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：4  
