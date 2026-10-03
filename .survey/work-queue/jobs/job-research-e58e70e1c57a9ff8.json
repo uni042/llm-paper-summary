@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "Transformerの増大するKVキャッシュを避ける固定状態の線形再帰モデルを、外積による状態拡張で高容量化し、効率的推論を狙うモデル構造研究。",
   "source_url": "https://arxiv.org/abs/2404.07904",
-  "status": "ready",
+  "status": "superseded",
   "title": "HGRN2: Gated Linear RNNs with State Expansion",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:20:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+  "represented_canonical_id": "arXiv:2404.07904",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

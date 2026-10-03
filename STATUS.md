@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 00:16:56 JST**
+> 自動生成: **2026-10-04 00:20:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **598** |
-| 未claim Research job | **454** |
-| 直近24hのResearch処理完了 | **82** |
+| 収録候補論文数 | **593** |
+| 未claim Research job | **449** |
+| 直近24hのResearch処理完了 | **86** |
 | 最終Research処理完了 | **10-03 23:57:00 JST** |
 | 最終Discovery探索完了 | **10-03 22:04:00 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **598** |
+| canonical_id確認済みの一意な候補論文 | **593** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **598** |
+| 非終端Research job合計 | **593** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,9 +35,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9218** |
-| 処理済み | **2072** |
-| 未処理 | **7146** |
-| 収録済みとして除外 | **966** |
+| 処理済み | **2077** |
+| 未処理 | **7141** |
+| 収録済みとして除外 | **971** |
 | 無関係として除外 | **715** |
 | 微妙として除外 | **391** |
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-03 18:14:00 JST（6時間2分前）** |
+| 最終maintenance完了 | **10-03 18:14:00 JST（6時間6分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **8** |
+| 直近6hのResearch完了 | **12** |
 | 直近6hのDiscovery run | **13** |
 | 直近6hのDiscovery本文確認・分類 | **130** |
 | 最終Research完了 | **10-03 23:57:00 JST** |
@@ -238,7 +238,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **598** |
+| ready | **593** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,7 +258,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1497** |
+| inference/training/survey配下の論文Markdown実体 | **1502** |
 
 ### immutable submissionの未照合
 
@@ -266,11 +266,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **336** |
+| 成功result未照合のimmutable submission | **338** |
 | └ Research | **142** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **49** |
+| └ Other/Unknown | **51** |
 
 ### 厳格検証が未成立のcompleted job
 
