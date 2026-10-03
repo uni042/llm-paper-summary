@@ -27,6 +27,73 @@ implementation_status: official-code-not-confirmed
 last_checked: '2026-10-03'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2207.00032
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: DOI:10.1145/2939672.2939785
+  doi: 10.1145/2939672.2939785
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: DOI:10.1109/mm.2022.3163226
+  doi: 10.1109/mm.2022.3163226
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: DOI:10.1109/lca.2024.3406038
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2311.15566
+  doi: 10.1145/3620665.3640411
+- canonical_id: DOI:10.1109/tpds.2022.3144614
+  doi: 10.1109/tpds.2022.3144614
+- canonical_id: DOI:10.1145/3620666.3651329
+  doi: 10.1145/3620666.3651329
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2407.00047
+  doi: 10.1145/3698038.3698523
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2404.08509
+  arxiv_id: '2404.08509'
+- canonical_id: DOI:10.1109/hpec58863.2023
+  doi: 10.1109/hpec58863.2023
+- canonical_id: arXiv:1910.01108
+  arxiv_id: '1910.01108'
+- canonical_id: arXiv:2401.00588
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2312.12456
+  arxiv_id: '2312.12456'
+- canonical_id: arXiv:2403.20306
+  arxiv_id: '2403.20306'
+- canonical_id: DOI:10.48550/arxiv.2302.13971
+  doi: 10.48550/arxiv.2302.13971
+- canonical_id: arXiv:2401.17644
+  arxiv_id: '2401.17644'
+- canonical_id: arXiv:2407.04014
+  arxiv_id: '2407.04014'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: arXiv:2401.07851
+  arxiv_id: '2401.07851'
+- canonical_id: DOI:10.1145/3638757
+  doi: 10.1145/3638757
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2404.14294
+  arxiv_id: '2404.14294'
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 80
 ---
 
 # throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving

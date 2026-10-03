@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-03T08:21:20.003674+00:00",
+  "checked_at": "2026-10-03T08:39:40.026937+00:00",
   "status": "issues_found",
   "scope": "repository-wide structural consistency",
   "inventory_file_count": 14923,
@@ -25,7 +25,7 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 2718,
+  "external_url_count": 2719,
   "findings": [
     {
       "code": "paper_invalid_metadata",
@@ -38,68 +38,8 @@
       "detail": "published must use YYYY-MM or YYYY-MM-DD"
     },
     {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
-      "detail": "authors"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
-      "detail": "published"
-    },
-    {
       "code": "paper_invalid_metadata",
       "path": "papers/inference/10-kv-cache-offload-recomputation/2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
-      "detail": "authors"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
-      "detail": "published"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
-      "detail": "publication"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
-      "detail": "publication_type"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
-      "detail": "publication_status"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
-      "detail": "publication"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
-      "detail": "publication_type"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
-      "detail": "publication_status"
-    },
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
       "detail": "published must use YYYY-MM or YYYY-MM-DD"
     },
     {
@@ -113,54 +53,9 @@
       "detail": "published must use YYYY-MM or YYYY-MM-DD"
     },
     {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-      "detail": "authors"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-      "detail": "published"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-      "detail": "publication"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-      "detail": "publication_type"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-      "detail": "publication_status"
-    },
-    {
       "code": "paper_invalid_metadata",
       "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
       "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
-      "detail": "published"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
-      "detail": "publication"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
-      "detail": "publication_type"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
-      "detail": "publication_status"
     }
   ]
 }
