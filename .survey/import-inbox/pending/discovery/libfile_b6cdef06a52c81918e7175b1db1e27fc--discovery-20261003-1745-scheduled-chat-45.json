@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-1745-scheduled-chat-45",
+  "reference_main_sha": "37f118ceabb6e25960687c39621d4a247bc18195",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13412",
+      "identity_tokens": [
+        "arXiv:2305.13412",
+        "DOI:10.48550/arXiv.2305.13412"
+      ],
+      "title": "Element-aware Summarization with Large Language Models: Expert-aligned Evaluation and Chain-of-Thought Method",
+      "reason": "要約評価用の要素指向テストセットとSummary Chain-of-Thoughtによる要約品質改善が主目的で、LLM推論基盤の高速化・省メモリ化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.13412",
+      "body_check": "適格性事前選別で明確に対象外。論文の問題設定・手法・実験概要を確認し、Lasswell Communication Modelに沿うexpert-written test setとSumCoTを導入し、CNN/DailyMail・XSum系でROUGE-Lを既存fine-tuned PLM/zero-shot LLMより改善する。評価軸は要約品質であり、推論runtime、KV cache、serving throughputは扱わない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.11860",
+      "identity_tokens": [
+        "arXiv:2305.11860",
+        "DOI:10.48550/arXiv.2305.11860",
+        "DOI:10.18653/v1/2023.emnlp-main.761"
+      ],
+      "title": "Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs",
+      "reason": "自己整合性推論のサンプル数を問題ごとに動的停止し、推論時の生成回数・計算費を直接削減する学習不要の条件付き計算方式で対象範囲。",
+      "source_url": "https://arxiv.org/abs/2305.11860",
+      "body_check": "本文の停止基準・実験を確認。回答分布をDirichletでモデル化し、実用版では上位2回答の安定性をBeta分布で近似する軽量停止基準を使う。数学・常識・記号推論・コード生成の17データセット、GPT-3.5-Turbo/Vicuna-13B/Code-Davinci-002で評価し、平均精度低下0.1%未満のままサンプル予算を最大7.9倍削減する。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10010",
+      "identity_tokens": [
+        "arXiv:2305.10010",
+        "DOI:10.48550/arXiv.2305.10010"
+      ],
+      "title": "AD-KD: Attribution-Driven Knowledge Distillation for Language Model Compression",
+      "reason": "Integrated Gradientsを用いてteacherの帰属情報をstudentへ蒸留する学習手法で、最終適用は圧縮モデルでも主要貢献・評価が知識蒸留学習の改善であるため現行の学習系凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2305.10010",
+      "body_check": "適格性事前選別で凍結対象と判定。teacher/student間でmulti-view attributionを蒸留しBERT系studentのGLUE等の性能を改善する構成を確認。推論時に動作する新規runtime、KV管理、offload、scheduler、kernelは提案しない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06984",
+      "identity_tokens": [
+        "arXiv:2305.06984",
+        "DOI:10.48550/arXiv.2305.06984"
+      ],
+      "title": "Evaluating Open-Domain Question Answering in the Era of Large Language Models",
+      "reason": "open-domain QAの評価指標と人手評価のずれを分析する評価研究で、LLM推論システム最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2305.06984",
+      "body_check": "適格性事前選別で明確に対象外。NQ-openの301問について12モデルの回答を人手再評価し、InstructGPT zero-shotの真の正答率が12.6%から71.4%相当へ上がる等、lexical matchingの過小評価を分析する。主要論点はQA評価の妥当性であり推論効率ではない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.04044",
+      "identity_tokens": [
+        "arXiv:2305.04044",
+        "DOI:10.48550/arXiv.2305.04044"
+      ],
+      "title": "Diffusion-NAT: Self-Prompting Discrete Diffusion for Non-Autoregressive Text Generation",
+      "reason": "BARTの推論と離散拡散のdenoisingを非自己回帰のmasked-token recoveryへ統合するため生成方式として推論に直結するが、主目的・主要結果は生成品質であり実測latency/throughput削減が中心ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2305.04044",
+      "body_check": "論文の方式・7データセット評価を確認。BART decodingとDDM denoisingを同じNAR masked-token recoveryへ統合し、iterative self-promptingで生成品質を改善する。競合NAR方式と一部autoregressive方式を品質で上回るが、サービング性能やGPU実測高速化を主要評価としていない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.02633",
+      "identity_tokens": [
+        "arXiv:2305.02633",
+        "DOI:10.48550/arXiv.2305.02633",
+        "DOI:10.18653/v1/2023.findings-acl.3"
+      ],
+      "title": "Conformal Nucleus Sampling",
+      "reason": "推論時のtop-p samplingをentropy依存で校正するdecoding方式で推論経路には直接入るが、目的は確率的coverageの校正であり計算量・メモリ・throughput削減を主題としないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2305.02633",
+      "body_check": "本文・ACL版の手法と実験を確認。next-token分布のentropy binごとにconformal predictionで必要なnucleus thresholdを校正し、OPT 125M〜30Bでnominal top-pと実coverageのずれを測る。OPTはoverconfidentでmodel sizeに対しmoderate inverse scalingを示すが、主要評価はcalibration/coverageで推論速度ではない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.00660",
+      "identity_tokens": [
+        "arXiv:2305.00660",
+        "DOI:10.48550/arXiv.2305.00660"
+      ],
+      "title": "An Iterative Algorithm for Rescaled Hyperbolic Functions Regression",
+      "reason": "exp/cosh/sinhを用いるrescaled regressionの入力疎性時間アルゴリズムを解析する理論最適化研究で、LLM推論runtimeを最終適用先にしていない。",
+      "source_url": "https://arxiv.org/abs/2305.00660",
+      "body_check": "適格性事前選別で対象外。softmax regression等との関係を動機に、rescaled exp/cosh/sinh regressionを定式化してinput-sparsity-time algorithmを与える。in-context learningへの適用可能性は述べるが、LLM inference servingの実装・latency・memory評価はない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.13712",
+      "identity_tokens": [
+        "arXiv:2304.13712",
+        "DOI:10.48550/arXiv.2304.13712"
+      ],
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "reason": "LLMのモデル・データ・下流NLP用途・実務上の制約を横断整理する一般サーベイで、推論システム最適化の専門サーベイではない。",
+      "source_url": "https://arxiv.org/abs/2304.13712",
+      "body_check": "適格性事前選別で対象外。GPT/BERT系モデル、pre-training/training/test data、knowledge-intensive/NLU/NLG/emergent ability、bias、cost/latency等を実務ガイドとして整理する。効率性への言及はあるが、KV/offload/kernel/scheduler等の推論方式を体系的な主題としていない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.10411",
+      "identity_tokens": [
+        "arXiv:2304.10411",
+        "DOI:10.48550/arXiv.2304.10411"
+      ],
+      "title": "Attention Scheme Inspired Softmax Regression",
+      "reason": "attentionのsoftmaxに着想した回帰問題と近似Newton法の理論研究で、LLM推論エンジン・attention kernelの実行高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2304.10411",
+      "body_check": "適格性事前選別で対象外。正規化expを用いるsoftmax regressionを定式化し、Hessian近似・sketchingを用いる反復最適化と収束/計算量を解析する。LLM trainingの理論的動機はあるが、実モデルのinference latency、KV cache、serving throughputを評価しない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.08244",
+      "identity_tokens": [
+        "arXiv:2304.08244",
+        "DOI:10.48550/arXiv.2304.08244"
+      ],
+      "title": "API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs",
+      "reason": "ツール利用LLMの評価benchmarkと学習データ、Lynxのfine-tuningが主貢献で、エージェント推論サービングruntimeの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2304.08244",
+      "body_check": "適格性事前選別で対象外。73 API、314評価dialogue/753 API callと、2,138 APIから1,888 training dialogueを構築し、calling/retrieving/planning能力を評価する。LynxはAlpacaをfine-tuneしてtool-use性能を改善するが、GPU scheduler、KV cache、agent serving throughputの新規方式はない。",
+      "first_checked_at": "2026-10-03T17:49:00+09:00",
+      "last_checked_at": "2026-10-03T18:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ],
+      "worklist_rank": 491
+    }
+  ]
+}
