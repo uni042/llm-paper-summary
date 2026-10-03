@@ -1,17 +1,9 @@
 name: Survey submission fast lane
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/submissions/research/*.json'
-      - '.survey/work-queue/submissions/audit/*.json'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
-    inputs:
-      submission:
-        description: 'Optional repository-relative immutable descriptor; omit to drain all unsettled descriptors'
-        required: false
-        type: string
 
 permissions:
   contents: write
