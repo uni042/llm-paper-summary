@@ -23,10 +23,10 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("git config user.name 'citation-graph[bot]'", workflow)
         self.assertIn("git config user.email 'citation-graph[bot]@users.noreply.github.com'", workflow)
 
-    def test_update_helper_shares_background_writer_concurrency(self):
+    def test_update_helper_has_dedicated_concurrency_queue(self):
         workflow = (ROOT / ".github/workflows/update-helper.yml").read_text(encoding="utf-8")
-        self.assertIn("group: survey-background-main", workflow)
-        self.assertNotIn("group: survey-helper-main", workflow)
+        self.assertIn("group: framework-llm-update-main", workflow)
+        self.assertNotIn("group: survey-background-main", workflow)
 
     def test_survey_helper_has_no_retired_transport_paths(self):
         workflow = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
