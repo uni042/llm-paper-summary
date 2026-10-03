@@ -21,14 +21,14 @@ from urllib.request import Request, urlopen
 import paper_identity
 import reference_pool
 
-DEFAULT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
+DEFAULT_FIELDS = "paperId,title,url,year,authors,venue,citationCount,externalIds,publicationDate,abstract"
 S2_API_HOST = "api.semanticscholar.org"
 S2_WEB_HOSTS = {"www.semanticscholar.org", "semanticscholar.org"}
 S2_MAX_RATE_LIMIT_RETRIES = 4
 S2_RATE_LIMIT_BASE_SECONDS = 2.0
 S2_RATE_LIMIT_MAX_SECONDS = 30.0
 S2_PAPER_BATCH_URL = "https://api.semanticscholar.org/graph/v1/paper/batch"
-S2_EXPLICIT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
+S2_EXPLICIT_FIELDS = "paperId,title,url,year,authors,venue,citationCount,externalIds,publicationDate,abstract"
 OPENREVIEW_NOTES_URL = "https://api2.openreview.net/notes"
 EXPLICIT_ID_MAX_ITEMS = 100
 EXPLICIT_ID_NETWORK_RETRIES = 2
@@ -231,13 +231,20 @@ def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
     if not title:
         return None
     external = paper.get("externalIds") if isinstance(paper.get("externalIds"), dict) else {}
+    paper_id = str(paper.get("paperId") or "").strip() or None
     record: dict[str, Any] = {
         "title": title,
         "source_url": paper.get("url") or None,
         "year": paper.get("year"),
         "published": paper.get("publicationDate") or None,
+        "venue": paper.get("venue") or None,
+        "citation_count": max(int(paper.get("citationCount") or 0), 0),
+        "citation_count_source": "semantic_scholar",
         "abstract": paper.get("abstract") or None,
+        "identifiers": (["SemanticScholar:" + paper_id] if paper_id else []),
     }
+    if paper_id:
+        record["semantic_scholar_id"] = paper_id
     arxiv = str(external.get("ArXiv") or "").strip() or None
     doi = str(external.get("DOI") or "").strip() or None
     if arxiv:
@@ -249,8 +256,8 @@ def _paper_record(paper: dict[str, Any]) -> dict[str, Any] | None:
         if not arxiv:
             record["canonical_id"] = f"DOI:{doi}"
             record["source_url"] = f"https://doi.org/{doi}"
-    if not record.get("canonical_id") and paper.get("paperId"):
-        record["canonical_id"] = "SemanticScholar:" + str(paper["paperId"]).strip()
+    if not record.get("canonical_id") and paper_id:
+        record["canonical_id"] = "SemanticScholar:" + paper_id
     authors = paper.get("authors")
     if isinstance(authors, list):
         names = []
@@ -278,6 +285,11 @@ def _explicit_identifier(value: Any) -> tuple[str, str]:
         if not re.fullmatch(r"10\.\d{4,9}/\S+", suffix, re.I):
             raise DiscoveryProviderError(f"unsupported DOI identifier: {raw!r}")
         return normalized, "semantic_scholar"
+    if normalized.startswith("SemanticScholar:"):
+        suffix = normalized.split(":", 1)[1]
+        if not re.fullmatch(r"[0-9a-f]{40}", suffix, re.I):
+            raise DiscoveryProviderError(f"unsupported Semantic Scholar identifier: {raw!r}")
+        return "SemanticScholar:" + suffix.casefold(), "semantic_scholar"
     if normalized.startswith("OpenReview:"):
         suffix = normalized.split(":", 1)[1]
         if not re.fullmatch(r"[A-Za-z0-9]{10}", suffix):
@@ -290,6 +302,8 @@ def _semantic_scholar_id(normalized: str) -> str:
     prefix, suffix = normalized.split(":", 1)
     if prefix == "arXiv":
         return "ARXIV:" + suffix
+    if prefix == "SemanticScholar":
+        return suffix
     return "DOI:" + suffix
 
 
