@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0af2e267839ec504-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.neucom.2024.128111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.neucom.2024.128111",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2024.128111",
+      "arXiv:2409.00265"
+    ],
+    "reason": "説明可能AIの必要性・手法・応用を整理するサーベイで、端末LLM推論システム効率化の一次研究ではない。",
+    "first_checked_at": "2026-10-03T17:50:29+00:00",
+    "last_checked_at": "2026-10-03T17:50:29+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "Explainable artificial intelligence: A survey of needs, techniques, applications, and future direction"
+  },
+  "processed_at": "2026-10-03T17:50:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0af2e267839e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

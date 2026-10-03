@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f376ec2afa400443-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/0471200611",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/0471200611",
+    "identity_tokens": [
+      "DOI:10.1002/0471200611"
+    ],
+    "reason": "情報理論のエントロピー・通信路容量・率歪み等を体系化した教科書で、LLM推論システム固有の方式・実装・評価ではない。",
+    "first_checked_at": "2026-10-03T16:32:28+00:00",
+    "last_checked_at": "2026-10-03T17:50:29+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
+    ],
+    "title": "Elements of Information Theory"
+  },
+  "processed_at": "2026-10-03T17:50:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f376ec2afa40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
