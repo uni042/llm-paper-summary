@@ -50,6 +50,20 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
             recovery.primary_pdf_urls("DOI:10.1145/3830422.3830427"),
         )
 
+    def test_verified_author_and_arxiv_fallbacks_cover_legacy_acm_blockers(self) -> None:
+        self.assertIn(
+            "https://www.eecs.harvard.edu/~htk/publication/2019-mapl-tillet-kung-cox.pdf",
+            recovery.primary_pdf_urls("DOI:10.1145/3315508.3329973"),
+        )
+        self.assertIn(
+            "https://madsys.cs.tsinghua.edu.cn/publication/ktransformers-unleashing-the-full-potential-of-cpu/gpu-hybrid-inference-for-moe-models/SOSP25-chen.pdf",
+            recovery.primary_pdf_urls("DOI:10.1145/3731569.3764843"),
+        )
+        self.assertIn(
+            "https://arxiv.org/pdf/2304.07493",
+            recovery.primary_pdf_urls("DOI:10.1145/3579371.3589038"),
+        )
+
     def test_twinpilots_has_author_hosted_primary_pdf_fallback(self) -> None:
         urls = recovery.primary_pdf_urls("DOI:10.1145/3688351.3689164")
         self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
