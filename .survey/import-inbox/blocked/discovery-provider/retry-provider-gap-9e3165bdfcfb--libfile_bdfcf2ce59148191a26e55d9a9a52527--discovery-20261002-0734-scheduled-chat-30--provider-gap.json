@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261002-0734-scheduled-chat-30::provider-gap",
+  "reference_main_sha": "be08e79465a2be4f852208622c1b9948890a4a3e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tDRYrAkOB7",
+      "identity_tokens": [
+        "OpenReview:tDRYrAkOB7"
+      ],
+      "title": "Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference",
+      "reason": "既存LLMへ動的メモリ圧縮を後付けし、推論時に保持する文脈状態を削減して長文脈復号を高速化する直接的な推論効率化研究。",
+      "source_url": "https://openreview.net/forum?id=tDRYrAkOB7",
+      "body_check": "ICML 2024本文・引用情報でDynamic Memory Compressionとして、既存LLMの記憶状態を動的に圧縮してaccelerated inferenceを狙うことを確認。KV圧縮・長文脈推論の後続研究でも推論時memory compression baselineとして扱われる。",
+      "first_checked_at": "2026-10-02T07:34:16+09:00",
+      "last_checked_at": "2026-10-02T07:34:16+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-30.json"
+      ],
+      "worklist_rank": 326
+    }
+  ],
+  "parent_run_key": "20261002-0734-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-9e3165bdfcfb--libfile_bdfcf2ce59148191a26e55d9a9a52527--discovery-20261002-0734-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:tDRYrAkOB7"
+  ]
+}
