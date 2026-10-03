@@ -24,14 +24,19 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-805ee7ad7ae4-inkubeator-pre-warming-in-memory-kv-caches-from-disk-for-elastic-llm-serving.md",
   "parent_job_id": "job-205b78df2854f187",
-  "priority": 100,
+  "priority": 0,
   "priority_breakdown": {
-    "base": 55,
-    "lineage": 20,
-    "recency": 15,
-    "total": 100,
-    "venue": 10
+    "citation_count": 0,
+    "citations": 0,
+    "freshness": 0,
+    "freshness_age_days": null,
+    "is_fresh": false,
+    "matched_prestigious_venue": null,
+    "policy": "candidate-priority-v1",
+    "prestigious_venue": 0,
+    "total": 0
   },
+  "retry_queued_at": "2026-10-02T06:52:30+00:00",
   "schema_version": 1,
   "selection_reason": "InKubeator proactively pre-warms newly scaled serving instances from disk-backed KV state to remove cold-start prefill latency, directly connecting disk storage, KV movement and elastic serving.",
   "source_url": "https://doi.org/10.1109/ICC59461.2026.11587970",
@@ -41,6 +46,5 @@
   "workflow_version": 10,
   "write_blocked_attempt_id": "attempt-preload-c1733e1a707d4c1b7021fcd6",
   "write_blocked_run_state_request_id": "worker-control-scheduled-chat-30-1",
-  "write_blocked_transport_reason": "platform_content_write_rejected_after_bundle_fallback",
-  "retry_queued_at": "2026-10-02T06:52:30+00:00"
+  "write_blocked_transport_reason": "platform_content_write_rejected_after_bundle_fallback"
 }
