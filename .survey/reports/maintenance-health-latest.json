@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-03T16:07:34+00:00",
-  "status": "issues_found",
-  "error_count": 1,
+  "checked_at": "2026-10-03T16:16:16+00:00",
+  "status": "passed",
+  "error_count": 0,
   "warning_count": 0,
   "paper_count": 1507,
-  "latest_paper_commit": "2026-10-03T16:01:54+00:00",
+  "latest_paper_commit": "2026-10-03T16:13:55+00:00",
   "queue": {
     "job_count": 1077,
-    "snapshot_drift": true,
-    "snapshot_repaired": true,
+    "snapshot_drift": false,
+    "snapshot_repaired": false,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
@@ -66,46 +66,25 @@
     },
     "resolved_failures": {
       "paper": [],
-      "list_summary": [
-        "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
-        "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md",
-        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
-        "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
-        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
-        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md"
-      ],
+      "list_summary": [],
       "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-03T16:07:21+00:00",
+      "checked_at": "2026-10-03T16:16:03+00:00",
       "total": 1507,
-      "incomplete": 15,
-      "findings": [
-        {
-          "severity": "error",
-          "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 15 incomplete paper(s)",
-          "incomplete": 15
-        }
-      ]
+      "incomplete": 0,
+      "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-03T16:07:21+00:00",
+      "checked_at": "2026-10-03T16:16:03+00:00",
       "total": 1507,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": [
-    {
-      "severity": "error",
-      "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 15 incomplete paper(s)",
-      "incomplete": 15
-    }
-  ]
+  "findings": []
 }
