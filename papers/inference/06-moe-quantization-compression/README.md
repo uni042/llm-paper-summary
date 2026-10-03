@@ -37,7 +37,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-08 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   EAC-MoEは、量子化でルータが選ぶ専門家がずれる誤差を重点補正し、プリフィルで低頻度専門家を入力単位に枝刈りして、品質と容量を両立する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
@@ -71,7 +71,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：33  
   MC-MoEは、専門家ごとの混合精度で保存重みを圧縮し、トークンごとに寄与の小さい専門家を動的枝刈りして、容量と実行FLOPsを別々に減らす。
 
 - **2024-06 · [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
@@ -79,7 +79,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   このベンチマークは、MoEの平均ビット予算を専門家頻度・ブロック位置・線形層へ割り当てて比較し、モデル別に量子化誤差へ効く保護対象を測定する。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   事前学習からファインチューニングまでのルーター変化を専門家重要度として使い、視覚MoEで専門家を大きく削減しながら精度を保つ、理論付きの専門家枝刈り法を示す。
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  

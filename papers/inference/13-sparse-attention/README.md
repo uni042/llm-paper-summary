@@ -177,7 +177,7 @@
   検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した各文書を互いに独立した注意ブロックとして事前計算し、同じ文書が別質問で再利用されたらKVキャッシュを再計算しない。
 
 - **2024-10 · [TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention](2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   系列長に比例してKVが増えるため、演算量だけでなく高帯域メモリからの読み出しが支配的になる。選択型疎注意は重要トークンだけを読むが、従来方式では各層で重要度を推定し直す費用と、近似選択の誤りが問題になる。
 
 ### 4年前（2022-11〜2023-10）
