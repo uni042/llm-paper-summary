@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "LLaVA 7Bへ投機的復号を適用し、画像処理を省いた小型language-only draft modelで複数tokenを先行生成・検証してMLLM推論を直接高速化する。",
   "source_url": "https://arxiv.org/abs/2404.08856",
-  "status": "ready",
+  "status": "superseded",
   "title": "On Speculative Decoding for Multimodal Large Language Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T16:32:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+  "represented_canonical_id": "arXiv:2404.08856",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

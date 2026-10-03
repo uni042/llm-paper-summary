@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "LLM推論のlatency/throughputを高精度に模擬し、deployment構成探索をGPU実験なしで行う推論simulation基盤で対象範囲。",
   "source_url": "https://arxiv.org/abs/2405.05465",
-  "status": "ready",
+  "status": "superseded",
   "title": "Vidur: A Large-Scale Simulation Framework For LLM Inference",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T16:32:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+  "represented_canonical_id": "arXiv:2405.05465",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

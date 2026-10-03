@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（100本）
+## 自動生成の論文一覧（103本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -378,6 +378,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：3  
   投機的復号は小型ドラフトモデルが複数トークンを提案し、大型対象モデルが一括検証することで自己回帰step数を減らす。
 
+- **2024-02 · [Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement](2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  投機木の候補を非復元抽出して枝の重複を減らし、固定LLM計算予算でも多くの条件で既存木型投機デコードを上回る。
+
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
   実装：[✓](https://github.com/cteant/SPACE) ・ リポジトリ内被引用：3  
   SPACE（Smart Parallel Auto-Correct デコード）は、通常は1位置しか予測しない自己回帰LLMを半自己回帰教師あり微調整で「複数位置を同時予測できるモデル」へ変え、候補生成と検証を1回のモデル呼出しに同居させる。HumanEval-Xで出力品質を保ちながら2.7〜4.0倍の推論高速化を報告する。
@@ -385,6 +389,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [Nearest Neighbor Speculative Decoding for LLM Generation and Attribution](2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   k近傍言語モデル（kNN-LM）は、生成中の隠れ状態に近い外部コーパス中のトークンを検索し、その近傍分布とLLMの分布を混ぜることで、モデル重みにない事実を生成へ反映できる。しかし毎トークン検索と分布構築を行うため遅く、検索された実文書の連続spanをそのまま活用しにくい。
+
+- **2024-04 · [On Speculative Decoding for Multimodal Large Language Models](2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  LLaVA 7Bのドラフトを画像非依存の115M言語モデルへ簡略化し、投機的デコードで出力分布を変えず最大2.37倍のメモリ律速高速化を示した。
 
 - **2024-04 · [BASS: Batched Attention-optimized Speculative Sampling](2024-2404.15778-bass.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -419,4 +427,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2023-10 · [SPEED: Speculative Pipelined Execution for Efficient Decoding](2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   周期パラメータ共有モデルの早い層から将来トークンを予測して同じ共有層へ並行投入し、重み読出しを償却することで、浅いT5に近い遅延のまま深いモデルの精度を得る。
+
+### 5年前（2021-11〜2022-10）
+
+- **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
+  実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：10  
+  論文の特徴は、ドラフトモデルを単純に小さくするのではなく、系列変換モデルの構造に合わせて設計した点にある。機械翻訳と抽象型要約などで、通常のビーム探索と同程度の品質を保ちながら約5倍の高速化を報告した。
 <!-- survey:auto:end -->
