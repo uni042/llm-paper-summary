@@ -22,6 +22,7 @@ concurrency:
 jobs:
   maintenance:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -57,11 +58,6 @@ jobs:
       - name: Install survey dependencies
         if: steps.pending.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
-
-      - name: Rebuild worker run-state cache from canonical facts
-        if: steps.pending.outputs.run == 'true'
-        continue-on-error: true
-        run: python .survey/scripts/derive_worker_run_state.py --repo-root . --rebuild-cache
 
       - name: Compact settled worker transport
         if: steps.pending.outputs.run == 'true'
