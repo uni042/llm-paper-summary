@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261003-1700-scheduled-chat-00",
+  "reference_main_sha": "dcabf7e4a205b97a9f34f2379493136a28588f68",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00859",
+      "identity_tokens": [
+        "arXiv:2404.00859",
+        "DOI:10.48550/arXiv.2404.00859"
+      ],
+      "title": "Do Language Models Plan Ahead for Future Tokens?",
+      "reason": "将来トークン用特徴の事前計算が言語モデル内部で生じるかを機構解釈・学習信号の観点から検証する研究で、推論ランタイムの高速化・省メモリ化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2404.00859",
+      "body_check": "本文の理論・実験を確認。off-diagonal gradientを除くmyopic trainingを定義し、合成課題とGPT-2/Pythiaでpre-cachingとbreadcrumbs仮説を検証する。将来トークン予測が投機的復号へ応用可能という関連研究には触れるが、本論文自身の評価軸はmyopia gap・線形probe等であり推論性能ではない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18814",
+      "identity_tokens": [
+        "arXiv:2403.18814",
+        "DOI:10.48550/arXiv.2403.18814"
+      ],
+      "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+      "reason": "高解像度視覚トークン、高品質データ、VLM誘導生成によってマルチモーダル能力を高める視覚言語モデル研究で、推論効率化が最終目的ではない。",
+      "source_url": "https://arxiv.org/abs/2403.18814",
+      "body_check": "本文方式・評価を確認。追加visual encoderで高解像度refinementを行い、visual token数を増やさず画像理解を強化し、2B〜34Bのdense/MoE LLMと接続してzero-shot VLM benchmarkを評価する。主結果はマルチモーダル品質で、latency・KV・memory・throughput最適化は主要評価ではない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.16971",
+      "identity_tokens": [
+        "arXiv:2403.16971",
+        "DOI:10.48550/arXiv.2403.16971"
+      ],
+      "title": "AIOS: LLM Agent Operating System",
+      "reason": "LLMエージェントを並行実行するためのOS型サービング基盤で、LLM呼出し・メモリ・ストレージ・ツールをsystem call化し、スケジューリングとcontext interruptで資源競合を管理するため、エージェント推論サービングの対象に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2403.16971",
+      "body_check": "本文§2–4を確認。AIOS kernelがLLM core、中央scheduler、context manager、memory/storage/tool managerを提供し、FIFO/Round-Robinでsyscallを調停する。単一RTX A5000、Llama-3.1-8B/Mistral-7B、最大250並行agentの既定条件で評価し、Reflexion+Llama-3.1-8Bではsystem-call throughput最大2.1倍、平均待ち時間も低下。250〜2000 agentのscalabilityも評価する。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.15447",
+      "identity_tokens": [
+        "arXiv:2403.15447",
+        "DOI:10.48550/arXiv.2403.15447"
+      ],
+      "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+      "reason": "量子化・枝刈りで作る推論向け圧縮LLMについて、効率だけでなく安全性・頑健性・公平性等の劣化を体系評価する研究で、推論向け圧縮方式の実運用上の選択条件を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2403.15447",
+      "body_check": "本文実験・結論を確認。GPTQ/AWQ等の量子化とpruningを複数bit/圧縮率で比較し、3-bit GPTQではinstruction-following崩壊やtrustworthinessの大幅分散が起こる一方、4/8-bit量子化は元13Bモデルのtrustworthinessを概ね回復する傾向を報告する。圧縮率だけでなくcalibration set依存やAWQ/GPTQ差をdeployment上の注意点として分析する。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14097",
+      "identity_tokens": [
+        "arXiv:2403.14097",
+        "DOI:10.48550/arXiv.2403.14097"
+      ],
+      "title": "Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances",
+      "reason": "preemptible instance上の分散DNN学習を、将来の資源変動予測と並列構成切替で高速化する学習システムであり、最終適用先が学習高速化の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2403.14097",
+      "body_check": "本文architecture/evaluationを確認。spot/preemptible instanceの加入・離脱を予測し、pipeline/data parallel構成とmigrationをproactiveに計画してtraining liveputを最大化する。評価対象はDNN/LLMのtraining throughput・costで、推論サービングやKV管理を目的としない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.12945",
+      "identity_tokens": [
+        "arXiv:2403.12945",
+        "DOI:10.48550/arXiv.2403.12945"
+      ],
+      "title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+      "reason": "実環境ロボット操作データセットの収集・多様性・模倣学習への有効性が主題で、LLM推論システムとは無関係。",
+      "source_url": "https://arxiv.org/abs/2403.12945",
+      "body_check": "本文のdataset construction・policy learning評価を確認。複数サイト・ロボット環境から大規模な操作軌跡を集め、視覚/言語条件付きrobot policyの汎化を評価する。推論エンジン、LLMサービング、KV/メモリ階層、量子化等は研究対象ではない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.12688-mstar-modular-composite-model-serving.md"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.11322",
+      "identity_tokens": [
+        "arXiv:2403.11322",
+        "DOI:10.48550/arXiv.2403.11322"
+      ],
+      "title": "StateFlow: Enhancing LLM Task-Solving through State-Driven Workflows",
+      "reason": "LLMエージェントの複雑タスクを状態機械へ分解し、不要なLLM呼出しを減らして実行コストを下げるため推論効率には隣接するが、主貢献はtask-solving workflow設計でありサービング基盤・scheduler/runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2403.11322",
+      "body_check": "本文方式・評価を確認。state/state transitionでprocess groundingとsub-task solvingを分離し、状態内でLLM callと外部toolを実行する。InterCode SQLとALFWorldでReAct比success rateを13/28ポイント改善しつつcostを5倍/3倍削減するが、GPU throughput・latency・KV管理ではなくエージェントの呼出し回数/課金コストが中心。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09629",
+      "identity_tokens": [
+        "arXiv:2403.09629",
+        "DOI:10.48550/arXiv.2403.09629"
+      ],
+      "title": "Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking",
+      "reason": "各トークン間に内部rationaleを生成するよう言語モデルを自己学習させ、推論能力を向上させる学習アルゴリズムが主題で、推論高速化・省メモリ化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2403.09629",
+      "body_check": "本文method/experimentsを確認。複数rationaleを並列sampleし、mixing headでrationale有無の予測を混合し、REINFORCE型信号でthought generationを学習する。GSM8K等の推論性能向上が主結果で、追加思考はむしろ推論計算を増やす側面があり、runtime効率化の研究ではない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06963",
+      "identity_tokens": [
+        "arXiv:2403.06963",
+        "DOI:10.48550/arXiv.2403.06963"
+      ],
+      "title": "The pitfalls of next-token prediction",
+      "reason": "次トークン予測で学習する言語モデルが計算・推論タスクを学習する際の統計的・計算論的限界を理論/合成実験で解析する研究で、推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2403.06963",
+      "body_check": "本文の理論設定・実験を確認。next-token predictionが容易な局所統計へ適合しても、生成時に必要なglobal computationを学べない構成を示し、データ量・モデル能力とタスク学習の関係を分析する。推論時のlatency、memory、KV、serving throughputを改善する方式は提案しない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.04797",
+      "identity_tokens": [
+        "arXiv:2403.04797",
+        "DOI:10.48550/arXiv.2403.04797"
+      ],
+      "title": "Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding",
+      "reason": "推論時に位置埋め込みをhead別に再スケールするplug-and-play方式で長文脈のlost-in-the-middleを改善するため推論時手法ではあるが、目的は品質改善であり計算量・メモリ・サービング効率化は主題でない。",
+      "source_url": "https://arxiv.org/abs/2403.04797",
+      "body_check": "本文method/ablation/conclusionを確認。Multi-scale Positional Encoding (Ms-PoE) はhead-wise position-awarenessに基づきRoPE scaling ratioを1.2〜1.8等で割り当て、追加fine-tuningなしに中間位置への注意を改善する。Vicuna-7Bのmulti-document QA ablationでは平均62.1→65.3だが、速度・GPU memory・KV削減の主要評価はない。",
+      "first_checked_at": "2026-10-03T17:08:00+09:00",
+      "last_checked_at": "2026-10-03T17:08:00+09:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "worklist_rank": 481
+    }
+  ]
+}
