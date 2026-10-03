@@ -26,8 +26,8 @@ class CommonThresholdRoutingTests(unittest.TestCase):
         self.assertIn("scheduled-chat-30", router)
         self.assertIn("scheduled-chat-45", router)
         self.assertIn("3-way round-robin", router)
-        self.assertIn("Research runでは新規完成Research Markdownを5件", router)
-        self.assertIn("新規canonical identity 10件を本文確認まで行い", router)
+        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", router)
+        self.assertIn("Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し", router)
         self.assertNotIn("E = G + D - R", router)
         self.assertNotIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
 
