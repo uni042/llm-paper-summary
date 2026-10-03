@@ -116,6 +116,96 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
     ])
     return lines
 
+def _forward_citation_coverage(repo_root: Path) -> dict[str, Any]:
+    """Read the durable all-paper forward-citation sweep state without inference."""
+    path = repo_root / ".survey/work-queue/forward-citation-sweep.json"
+    payload = evidence._load_json(path)
+    if not isinstance(payload, dict) or payload.get("schema_version") != 1:
+        return {"available": False, "path": path}
+
+    seeds = payload.get("seeds")
+    if not isinstance(seeds, dict):
+        return {
+            "available": False,
+            "path": path,
+            "error": "forward-citation sweep state is missing seeds",
+        }
+
+    supported_rows = [
+        row for row in seeds.values()
+        if isinstance(row, dict) and row.get("supported") is True
+    ]
+    unsupported = sum(
+        1 for row in seeds.values()
+        if isinstance(row, dict) and row.get("supported") is not True
+    )
+    completed = sum(
+        1 for row in supported_rows
+        if row.get("last_completed_at")
+        or int(row.get("completed_cycles") or 0) > 0
+    )
+    in_progress = sum(
+        1 for row in supported_rows
+        if row.get("cycle_started_at")
+    )
+    never_started = sum(
+        1 for row in supported_rows
+        if not row.get("cycle_started_at")
+        and not row.get("last_completed_at")
+        and int(row.get("completed_cycles") or 0) <= 0
+    )
+    errors = sum(1 for row in supported_rows if row.get("last_error"))
+    return {
+        "available": True,
+        "path": path,
+        "updated_at": evidence._parse_dt(payload.get("updated_at")),
+        "paper_count": int(payload.get("paper_count") or len(seeds)),
+        "supported": len(supported_rows),
+        "unsupported": unsupported,
+        "completed": completed,
+        "in_progress": in_progress,
+        "never_started": never_started,
+        "due": int(payload.get("due_seed_count_before_run") or 0),
+        "candidate_count": int(payload.get("candidate_count") or 0),
+        "errors": errors,
+    }
+
+
+def _render_forward_citation_coverage(status: dict[str, Any]) -> list[str]:
+    lines = ["## 全収録論文の前方引用巡回", ""]
+    if status.get("available") is not True:
+        lines.extend([
+            "- .survey/work-queue/forward-citation-sweep.json はまだ生成されていません。",
+            "- 初回のcoverage workflow成功後、この節に全件巡回の直接証拠を表示します。",
+            "",
+        ])
+        return lines
+
+    supported = int(status.get("supported") or 0)
+    completed = int(status.get("completed") or 0)
+    ratio = (completed / supported * 100.0) if supported else 100.0
+    updated = status.get("updated_at")
+    updated_text = evidence._fmt_time(updated) if updated is not None else "—"
+    lines.extend([
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 収録論文seed台帳 | **{status.get('paper_count', 0)}** |",
+        f"| provider巡回可能 | **{supported}** |",
+        f"| provider巡回不能 | **{status.get('unsupported', 0)}** |",
+        f"| 1周以上完了 | **{completed}** |",
+        f"| 巡回中 | **{status.get('in_progress', 0)}** |",
+        f"| 未巡回 | **{status.get('never_started', 0)}** |",
+        f"| 今回run開始時due | **{status.get('due', 0)}** |",
+        f"| 前方引用から保持中の未処理候補 | **{status.get('candidate_count', 0)}** |",
+        f"| エラー状態保持seed | **{status.get('errors', 0)}** |",
+        "",
+        f"- 初回カバレッジ完了率: **{ratio:.1f}%**",
+        f"- state最終更新: **{updated_text}**",
+        "- 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。",
+        "",
+    ])
+    return lines
+
 def _maintenance_status(repo_root: Path) -> dict[str, Any]:
     """Read the maintenance workflow's durable canonical state."""
     path = repo_root / ".survey/work-queue/maintenance-cycle.json"
@@ -746,6 +836,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     active = evidence._active_claims(repo_root, jobs, now)
     candidate_backlog = _durable_candidate_backlog(jobs)
     reference_progress = _structured_reference_progress(repo_root)
+    forward_citation_coverage = _forward_citation_coverage(repo_root)
     maintenance_status = _maintenance_status(repo_root)
     direct_metrics = _direct_evidence_metrics(
         repo_root,
@@ -844,6 +935,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "`canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。",
         "",
         *_render_structured_reference_progress(reference_progress),
+        *_render_forward_citation_coverage(forward_citation_coverage),
         *_render_maintenance_status(maintenance_status, now),
         "## 件数サマリー",
         "",
