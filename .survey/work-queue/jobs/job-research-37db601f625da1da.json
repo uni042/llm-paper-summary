@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-37db601f625da1da",
+  "type": "research",
+  "parent_job_id": "job-7bb934362f989341",
+  "priority": 44,
+  "canonical_id": "arXiv:2507.11851",
+  "arxiv_id": "2507.11851",
+  "doi": "10.48550/arXiv.2507.11851",
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:eb2ecffa7b8e6575f3da98835f3890a92835a4a8"
+  ],
+  "title": "Your LLM Knows the Future: Uncovering Its Multi-Token Prediction Potential",
+  "source_url": "https://arxiv.org/abs/2507.11851",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2507.11851-your-llm-knows-the-future-uncovering-its-multi-token-prediction-potential.md",
+  "lineage": null,
+  "selection_reason": "複数将来tokenを同時予測・検証して自己回帰復号を直接高速化する。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 0,
+    "prestigious_venue": 0,
+    "citations": 44,
+    "citation_count": 44,
+    "total": 44,
+    "is_fresh": false,
+    "freshness_age_days": 444,
+    "matched_prestigious_venue": null
+  },
+  "published": "2025-07-16",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "citation_count": 44,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "eb2ecffa7b8e6575f3da98835f3890a92835a4a8",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-03T18:57:37+00:00"
+}
