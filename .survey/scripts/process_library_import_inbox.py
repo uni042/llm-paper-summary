@@ -387,6 +387,71 @@ def recover_candidate_provider_gap_blocks(repo_root: Path) -> int:
     return recovered
 
 
+def recover_provider_gap_alias_blocks(repo_root: Path) -> int:
+    """Retry candidate-level provider gaps when a better stable alias is available."""
+    recovered = 0
+    blocked_root = repo_root / BLOCKED_DISCOVERY_PROVIDER
+    pending_root = repo_root / PENDING_DISCOVERY
+    waiting_root = repo_root / WAITING_DISCOVERY
+    results_root = repo_root / RESULT_DISCOVERY
+    pending_root.mkdir(parents=True, exist_ok=True)
+
+    if not blocked_root.is_dir():
+        return 0
+
+    for source in sorted(blocked_root.glob("*.json")):
+        try:
+            payload = read_json(source)
+            records = discovery_records(payload)
+        except Exception:
+            continue
+
+        old_ids = {
+            str(value).strip()
+            for value in (payload.get("provider_gap_ids") or [])
+            if isinstance(value, str) and value.strip()
+        }
+        retry_records: list[dict[str, Any]] = []
+        for record in records:
+            preferred = preferred_candidate_id(record)
+            if preferred and preferred not in old_ids:
+                retry_records.append(record)
+        if not retry_records:
+            continue
+
+        retry_tag = hashlib.sha256(
+            source.relative_to(repo_root).as_posix().encode("utf-8")
+        ).hexdigest()[:12]
+        retry_name = f"retry-provider-alias-{retry_tag}--{source.name}"
+        retry_pending = pending_root / retry_name
+        retry_waiting = waiting_root / retry_name
+        retry_result = results_root / result_filename(Path(retry_name))
+        if retry_result.is_file():
+            continue
+
+        retry_payload = dict(payload)
+        retry_payload["records"] = retry_records
+        retry_payload["record_count"] = len(retry_records)
+        parent = str(payload.get("parent_run_key") or payload.get("run_key") or source.stem)
+        retry_payload["parent_run_key"] = parent
+        retry_payload["run_key"] = f"{parent}::provider-alias-retry"
+        retry_payload["provider_alias_retry_from"] = repo_relative(source, repo_root)
+
+        text = json.dumps(retry_payload, ensure_ascii=False, indent=2, sort_keys=False) + "\n"
+        if retry_pending.is_file():
+            if retry_pending.read_text(encoding="utf-8") != text:
+                raise RuntimeError(f"retry payload collision: {retry_pending}")
+            continue
+        if retry_waiting.is_file():
+            if retry_waiting.read_text(encoding="utf-8") != text:
+                raise RuntimeError(f"retry payload collision: {retry_waiting}")
+            continue
+        retry_pending.write_text(text, encoding="utf-8")
+        recovered += 1
+
+    return recovered
+
+
 def recover_retryable_precheck_provenance_blocks(repo_root: Path) -> int:
     """Requeue Library Discovery payloads blocked only by invalid precheck provenance.
 
@@ -718,11 +783,24 @@ def select_discovery_sources(max_records: int | None) -> list[Path]:
 
 
 def preferred_candidate_id(record: dict[str, Any]) -> str | None:
-    identifiers = sorted(paper_identity.record_identifiers(record))
-    for prefix in ("arXiv:", "DOI:", "OpenReview:"):
-        for value in identifiers:
-            if value.startswith(prefix):
-                return value
+    identifiers = set(paper_identity.record_identifiers(record))
+    aliases = record.get("identity_tokens")
+    if isinstance(aliases, list):
+        for value in aliases:
+            normalized = paper_identity.safe_norm_id(value)
+            if normalized:
+                identifiers.add(normalized)
+    elif aliases:
+        normalized = paper_identity.safe_norm_id(aliases)
+        if normalized:
+            identifiers.add(normalized)
+
+    # Prefer stable public-paper identifiers that avoid provider-specific
+    # anti-bot failures. OpenReview remains the last exact-ID route.
+    for prefix in ("arXiv:", "DOI:", "SemanticScholar:", "OpenReview:"):
+        matches = sorted(value for value in identifiers if value.startswith(prefix))
+        if matches:
+            return matches[0]
     return None
 
 
@@ -978,6 +1056,7 @@ def process_discovery(
 ) -> tuple[int, int]:
     recover_retryable_precheck_provenance_blocks(repo_root)
     recover_candidate_provider_gap_blocks(repo_root)
+    recover_provider_gap_alias_blocks(repo_root)
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
