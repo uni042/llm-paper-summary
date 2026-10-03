@@ -64,6 +64,11 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
             recovery.primary_pdf_urls("DOI:10.1145/3579371.3589038"),
         )
 
+        self.assertIn(
+            "https://scale.snu.ac.kr/papers/2024-04-Conference-ASPLOS-AttAcc.pdf",
+            recovery.primary_pdf_urls("DOI:10.1145/3620665.3640422"),
+        )
+
     def test_twinpilots_has_author_hosted_primary_pdf_fallback(self) -> None:
         urls = recovery.primary_pdf_urls("DOI:10.1145/3688351.3689164")
         self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
