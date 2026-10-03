@@ -20,6 +20,18 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertIn("AAAI:39454", recovery.PRIMARY_PDF_OVERRIDES)
         self.assertIn("AAAI:39106", recovery.PRIMARY_PDF_OVERRIDES)
 
+    def test_ieee_blockers_have_primary_pdf_routes(self) -> None:
+        expected = {
+            "DOI:10.1109/TPDS.2025.3590014",
+            "DOI:10.1109/LCA.2024.3406038",
+            "DOI:10.1109/HPCA61900.2025.00103",
+        }
+        self.assertTrue(expected.issubset(recovery.PRIMARY_PDF_OVERRIDES))
+        self.assertIn(
+            "https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf",
+            recovery.primary_pdf_urls("DOI:10.1109/HPCA61900.2025.00103"),
+        )
+
     def test_acm_doi_generically_derives_official_pdf_route(self) -> None:
         self.assertIn(
             "https://dl.acm.org/doi/pdf/10.1145/3315508.3329973",
