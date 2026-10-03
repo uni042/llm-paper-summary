@@ -1,8 +1,6 @@
 name: Forward citation coverage sweep
 
 on:
-  schedule:
-    - cron: '17 * * * *'
   push:
     branches: [main]
     paths:
