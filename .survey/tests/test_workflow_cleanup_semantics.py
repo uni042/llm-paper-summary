@@ -152,8 +152,14 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("cadence_runs", checker)
         self.assertNotIn("runs_since_maintenance", checker)
         self.assertIn("maintenance_pending", checker)
-        self.assertIn("scheduled_chat_0830_jst_30_worker", checker)
+        self.assertIn("github_actions_schedule", checker)
         self.assertIn("daily_0830_jst", checker)
+
+        workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
+        self.assertIn("cron: '30 23 * * *'", workflow)
+        self.assertIn("GITHUB_EVENT_NAME", workflow)
+        self.assertIn("event_name in {'schedule', 'workflow_dispatch'}", workflow)
+        self.assertIn("steps.pending.outputs.run == 'true'", workflow)
 
     def test_maintenance_refreshes_metadata_coverage_before_health(self):
         workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
