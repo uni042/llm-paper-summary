@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2311.01927",
+      "year": 2023,
+      "published": "2023-11-03",
+      "abstract": "Linear Recurrence has proven to be a powerful tool for modeling long sequences efficiently. In this work, we show that existing models fail to take full advantage of its potential. Motivated by this finding, we develop GateLoop, a foundational sequence model that generalizes linear recurrent models such as S4, S5, LRU and RetNet, by employing data-controlled state transitions. Utilizing this theoretical advance, GateLoop empirically outperforms existing models for auto-regressive language modeling. Our method comes with a low-cost $O(l)$ recurrent mode and an efficient $O(l \\log_{2} l)$ parallel mode making use of highly optimized associative scan implementations. Furthermore, we derive an $O(l^2)$ surrogate attention mode, revealing remarkable implications for Transformer and recently proposed architectures. Specifically, we prove that our approach can be interpreted as providing data-controlled relative-positional information to Attention. While many existing models solely rely on data-controlled cumulative sums for context aggregation, our findings suggest that incorporating data-controlled complex cumulative products may be a crucial step towards more powerful sequence models.",
+      "canonical_id": "arXiv:2311.01927",
+      "arxiv_id": "2311.01927",
+      "doi": "10.48550/arXiv.2311.01927",
+      "authors": [
+        "Tobias Katsch"
+      ],
+      "reason": "自己回帰言語モデル向けにdata-controlled state transitionを持つ線形再帰を導入し、推論時O(l)の低コストrecurrent modeを提供するため、Transformer attention代替による推論計算・状態効率化の対象範囲に入る。",
+      "library_body_check": "一次資料の再帰式・parallel/recurrent modeとlanguage-modeling評価を確認。S4/S5/LRU/RetNetを一般化して状態遷移自体を入力依存にし、逐次推論ではO(l) recurrent mode、学習/並列計算ではassociative scanを使うO(l log l) modeを持つ。自己回帰言語モデリングで既存linear recurrent modelを上回ることを評価している。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BlackMamba: Mixture of Experts for State-Space Models",
+      "source_url": "https://arxiv.org/abs/2402.01771",
+      "year": 2024,
+      "published": "2024-02-01",
+      "abstract": "State-space models (SSMs) have recently demonstrated competitive performance to transformers at large-scale language modeling benchmarks while achieving linear time and memory complexity as a function of sequence length. Mamba, a recently released SSM model, shows impressive performance in both language modeling and long sequence processing tasks. Simultaneously, mixture-of-expert (MoE) models have shown remarkable performance while significantly reducing the compute and latency costs of inference at the expense of a larger memory footprint. In this paper, we present BlackMamba, a novel architecture that combines the Mamba SSM with MoE to obtain the benefits of both. We demonstrate that BlackMamba performs competitively against both Mamba and transformer baselines, and outperforms in inference and training FLOPs. We fully train and open-source 340M/1.5B and 630M/2.8B BlackMamba models on 300B tokens of a custom dataset. We show that BlackMamba inherits and combines both of the benefits of SSM and MoE architectures, combining linear-complexity generation from SSM with cheap and fast inference from MoE. We release all weights, checkpoints, and inference code open-source. Inference code at: https://github.com/Zyphra/BlackMamba",
+      "canonical_id": "arXiv:2402.01771",
+      "arxiv_id": "2402.01771",
+      "doi": "10.48550/arXiv.2402.01771",
+      "authors": [
+        "Quentin Anthony",
+        "Yury Tokpanov",
+        "Paolo Glorioso",
+        "Beren Millidge"
+      ],
+      "reason": "Mamba状態空間モデルと疎な専門家混合を組み合わせ、系列長に対する線形計算・メモリとMoEの低推論FLOPs/latencyを両立する効率的言語モデル構造で、推論効率を明示的に評価する。",
+      "library_body_check": "一次資料のarchitectureと評価を確認。Mamba SSM blockとSwitch-style MoE blockを組み合わせ、340M/1.5Bおよび630M/2.8B構成を300B tokensで学習してMamba/Transformerと比較する。SSMの線形複雑度生成とMoEの疎計算を組み合わせ、推論・学習FLOPsで比較対象を上回ることを示し、推論コードも公開する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLaVA-Prumerge: Adaptive Token Reduction for Efficient Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2403.15388",
+      "year": 2024,
+      "published": "2024-03-22",
+      "abstract": "Large Multimodal Models (LMMs) have shown significant visual reasoning capabilities by connecting a visual encoder and a large language model. LMMs typically take in a fixed and large amount of visual tokens, such as the penultimate layer features in the CLIP visual encoder, as the prefix content. Recent LMMs incorporate more complex visual inputs, such as high-resolution images and videos, which further increases the number of visual tokens significantly. However, due to the inherent design of the Transformer architecture, the computational costs of these models tend to increase quadratically with the number of input tokens. To tackle this problem, we explore a token reduction mechanism that identifies significant spatial redundancy among visual tokens. In response, we propose PruMerge, a novel adaptive visual token reduction strategy that significantly reduces the number of visual tokens without compromising the performance of LMMs. Specifically, to metric the importance of each token, we exploit the sparsity observed in the visual encoder, characterized by the sparse distribution of attention scores between the class token and visual tokens. This sparsity enables us to dynamically select the most crucial visual tokens to retain. Subsequently, we cluster the selected (unpruned) tokens based on their key similarity and merge them with the unpruned tokens, effectively supplementing and enhancing their informational content. Empirically, when applied to LLaVA-1.5 [28] and VideoLLaVA [26], our approach can reduce the number of visual tokens by 4 times, and achieve comparable or better performance across diverse visual question-answering and reasoning tasks.",
+      "canonical_id": "arXiv:2403.15388",
+      "arxiv_id": "2403.15388",
+      "doi": "10.1109/ICCV51701.2025.02122",
+      "authors": [
+        "Yuzhang Shang",
+        "Mu Cai",
+        "Bing-Xin Xu",
+        "Yong Jae Lee",
+        "Yan Yan"
+      ],
+      "reason": "視覚トークンの空間冗長性をattention sparsityから検出し、選択・クラスタ統合してLLMへ渡すtoken数を大幅削減する、マルチモーダルLLMのprefill計算・メモリ高速化研究。",
+      "library_body_check": "一次資料のPruMerge/PruMerge+処理と効率評価を確認。CLIP class-token attentionから重要tokenを選び、key similarityでpruned tokenを重要tokenへmergeする。LLaVA-1.5で平均約14倍のvisual-token圧縮をしつつVQA/推論性能を維持し、Vicuna-7B FP16のprefill FLOPsを9.3TB→0.91TB、prefill時間を88.6ms→15.3msへ削減する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On Speculative Decoding for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.08856",
+      "year": 2024,
+      "published": "2024-04-13",
+      "abstract": "Inference with Multimodal Large Language Models (MLLMs) is slow due to their large-language-model backbone which suffers from memory bandwidth bottleneck and generates tokens auto-regressively. In this paper, we explore the application of speculative decoding to enhance the inference efficiency of MLLMs, specifically the LLaVA 7B model. We show that a language-only model can serve as a good draft model for speculative decoding with LLaVA 7B, bypassing the need for image tokens and their associated processing components from the draft model. Our experiments across three different tasks show that speculative decoding can achieve a memory-bound speedup of up to 2.37$\\times$ using a 115M parameter language model that we trained from scratch. Additionally, we introduce a compact LLaVA draft model incorporating an image adapter, which shows marginal performance gains in image captioning while maintaining comparable results in other tasks.",
+      "canonical_id": "arXiv:2404.08856",
+      "arxiv_id": "2404.08856",
+      "doi": "10.48550/arXiv.2404.08856",
+      "authors": [
+        "Mukul Gagrani",
+        "Raghavv Goel",
+        "Wonseok Jeon",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Christopher Lott"
+      ],
+      "reason": "LLaVA 7Bへ投機的復号を適用し、画像処理を省いた小型language-only draft modelで複数tokenを先行生成・検証してMLLM推論を直接高速化する。",
+      "library_body_check": "一次資料のdraft構成・block efficiency・3タスク評価を確認。115M parameterのtext-only draftは画像token/vision adapterを持たずに候補tokenを生成し、LLaVA 7B targetが検証する。LLaVA-eval等でdraft lengthを変えて評価し、memory-bound speedup最大2.37倍を報告。画像adapter付きdraftの利得はcaptioningで小さく、他タスクではtext-onlyと同程度。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dc42ed0ea43b",
+    "round": "libimp-dc42ed0ea43b7558-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dc42ed0ea43b7558-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dc42ed0ea43b7558-pre01.json",
+    "receipt": "sha256:c41e9cee6dd30fed6b13d2fea345de0e375b1885dd1c3d9f785d8b273f66d2d1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dc42ed0ea43b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

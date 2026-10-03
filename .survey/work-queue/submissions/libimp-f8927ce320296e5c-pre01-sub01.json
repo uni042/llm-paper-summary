@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
+      "source_url": "https://arxiv.org/abs/2305.01625",
+      "year": 2023,
+      "published": "2023-05-02",
+      "abstract": "Since the proposal of transformers, these models have been limited to bounded input lengths, because of their need to attend to every token in the input. In this work, we propose Unlimiformer: a general approach that wraps any existing pretrained encoder-decoder transformer, and offloads the cross-attention computation to a single k-nearest-neighbor (kNN) index, while the returned kNN distances are the attention dot-product scores. This kNN index can be kept on either the GPU or CPU memory and queried in sub-linear time; this way, we can index practically unlimited input sequences, while every attention head in every decoder layer retrieves its top-k keys, instead of attending to every key. We evaluate Unlimiformer on several long-document and book-summarization benchmarks, showing that it can process even 500k token-long inputs from the BookSum dataset, without any input truncation at test time. We demonstrate that Unlimiformer improves pretrained models such as BART and Longformer by extending them to unlimited inputs without additional learned weights and without modifying their code. We make our code and models publicly available at https://github.com/abertsch72/unlimiformer .",
+      "canonical_id": "arXiv:2305.01625",
+      "arxiv_id": "2305.01625",
+      "doi": "10.48550/arXiv.2305.01625",
+      "authors": [
+        "Amanda Bertsch",
+        "Uri Alon",
+        "Graham Neubig",
+        "Matthew R. Gormley"
+      ],
+      "reason": "encoder-decoder Transformerのcross-attentionをCPU/GPU上のk近傍探索索引へ退避し、各headが全keyではなくtop-kだけを読むことで長文脈のメモリ・attention計算を抑える推論方式で対象範囲。",
+      "library_body_check": "本文相当の方式・評価を確認。全encoder hidden stateを単一kNN indexへ登録し、decoder各層・各headのqueryでtop-k keyをsub-linearに検索し、その距離をattention dot-product scoreとして使う。追加学習重みなしでBART/Longformerを拡張し、BookSumで500K token入力を切り捨てず処理する。indexはCPUまたはGPU memoryへ置ける。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f8927ce32029",
+    "round": "libimp-f8927ce320296e5c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f8927ce320296e5c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f8927ce320296e5c-pre01.json",
+    "receipt": "sha256:ea347a1a1913a977f00089ef8be0220bd4ebe36f6889bed5ba03b12e678c732e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f8927ce32029",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

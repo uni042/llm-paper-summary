@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.05015",
+      "year": 2023,
+      "published": "2023-10-08",
+      "abstract": "Despite the remarkable success of Large Language Models (LLMs), the massive size poses significant deployment challenges, particularly on resource-constrained hardware. While existing LLM compression methods focus on quantization, pruning remains relatively unexplored due to the high cost of training-based approaches and data collection challenges. One-shot pruning methods, although cost-effective and data-free, have become dominant in LLM pruning, but lead to performance decline under the structured pruning setting. In this work, we introduce a new paradigm for structurally pruning LLMs, called Compresso. Our approach, through the collaboration of the proposed resource-efficient pruning algorithm and the LLM itself, learns optimal pruning decisions during the training process. Compresso addresses the challenges of expensive training costs and data collection by incorporating Low-Rank Adaptation (LoRA) into the $L_0$ regularization during the instruction tuning process. Then, we further augment the pruning algorithm by introducing a collaborative prompt that fosters collaboration between the LLM and the pruning algorithm, significantly boosting the overall performance. To this end, Compresso prunes LLaMA-7B to 5.4B, maintaining original performance and even surpassing LLaMA-7B in reading comprehension by 2.62%. Extensive experiments demonstrate that Compresso significantly outperforms one-shot pruning baselines across various sparsity ratios, achieving up to 2.21%, 11.43%, 7.04%, and 4.81% higher scores on the commonsense reasoning, reading comprehension, MMLU, and BBH benchmarks, respectively.",
+      "canonical_id": "arXiv:2310.05015",
+      "arxiv_id": "2310.05015",
+      "doi": "10.48550/arXiv.2310.05015",
+      "authors": [
+        "Song Guo",
+        "Jiahang Xu",
+        "L. Zhang",
+        "Mao Yang"
+      ],
+      "reason": "LLM配備時のモデル規模・計算量を減らすstructured pruningを提案し、LLaMA-7Bを5.4Bへ縮小しながら品質を維持する推論向けモデル圧縮研究。",
+      "library_body_check": "本文の方式・評価を確認。instruction tuning中にLoRAとL0 regularizationを組み合わせて構造的なpruning decisionを学習し、collaborative promptで元LLMの能力をprunerへ利用する。LLaMA-7B→5.4Bで元性能を維持し、複数sparsityでone-shot pruningより高精度を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sparse Fine-tuning for Inference Acceleration of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.06927",
+      "year": 2023,
+      "published": "2023-10-10",
+      "abstract": "We consider the problem of accurate sparse fine-tuning of large language models (LLMs), that is, fine-tuning pretrained LLMs on specialized tasks, while inducing sparsity in their weights. On the accuracy side, we observe that standard loss-based fine-tuning may fail to recover accuracy, especially at high sparsities. To address this, we perform a detailed study of distillation-type losses, determining an L2-based distillation approach we term SquareHead which enables accurate recovery even at higher sparsities, across all model types. On the practical efficiency side, we show that sparse LLMs can be executed with speedups by taking advantage of sparsity, for both CPU and GPU runtimes. While the standard approach is to leverage sparsity for computational reduction, we observe that in the case of memory-bound LLMs sparsity can also be leveraged for reducing memory bandwidth. We exhibit end-to-end results showing speedups due to sparsity, while recovering accuracy, on T5 (language translation), Whisper (speech translation), and open GPT-type (MPT for text generation). For MPT text generation, we show for the first time that sparse fine-tuning can reach 75% sparsity without accuracy drops, provide notable end-to-end speedups for both CPU and GPU inference, and highlight that sparsity is also compatible with quantization approaches. Models and software for reproducing our results are provided in Section 6.",
+      "canonical_id": "arXiv:2310.06927",
+      "arxiv_id": "2310.06927",
+      "doi": "10.48550/arXiv.2310.06927",
+      "authors": [
+        "Eldar Kurtic",
+        "Denis Kuznedelev",
+        "Elias Frantar",
+        "M. Goin",
+        "Dan Alistarh"
+      ],
+      "reason": "疎なLLMをCPU/GPU runtimeで実際に高速化し、メモリ帯域削減も利用することを主目的に含むため推論高速化の対象範囲に直接該当する。",
+      "library_body_check": "本文のSquareHead distillationとruntime評価を確認。SparseGPT等で疎化後、内部表現の正規化L2 distillationで高sparsity精度を回復する。DeepSparse CPUではMPT-7Bが70% sparsityで2.62倍、80%で3.35倍、INT8併用で最大9.08倍、GPUの16:32 QKV kernelで1.82倍を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.09259",
+      "year": 2023,
+      "published": "2023-10-13",
+      "abstract": "Large Language Models (LLMs) from the GPT family have become extremely popular, leading to a race towards reducing their inference costs to allow for efficient local computation. However, the vast majority of existing work focuses on weight-only quantization, which can reduce runtime costs in the memory-bound one-token-at-a-time generative setting, but does not address costs in compute-bound scenarios, such as batched inference or prompt processing.In this paper, we address the general quantization problem, where both weights and activations should be quantized, which leads to computational improvements in general. We show that the majority of inference computations for large generative models can be performed with both weights and activations being cast to 4 bits, while at the same time maintaining good accuracy. We achieve this via a hybrid quantization strategy called QUIK that compresses most of the weights and activations to 4-bit, while keeping a small fraction of “outlier” weights and activations in higher-precision. QUIK is that it is designed with computational efficiency in mind: we provide GPU kernels matching the QUIK format with highly-efficient layer-wise runtimes, which lead to practical end-to-end throughput improvements of up to 3.4x relative to FP16 execution. We provide detailed studies for models from the OPT, LLaMA-2 and Falcon families, as well as a first instance of accurate inference using quantization plus 2:4 sparsity.Anonymized code is available.",
+      "canonical_id": "arXiv:2310.09259",
+      "arxiv_id": "2310.09259",
+      "doi": "10.48550/arXiv.2310.09259",
+      "authors": [
+        "Saleh Ashkboos",
+        "Ilia Markov",
+        "Elias Frantar",
+        "Tingxuan Zhong",
+        "Xincheng Wang",
+        "Jie Ren",
+        "T. Hoefler",
+        "Dan Alistarh"
+      ],
+      "reason": "重みだけでなくactivationも4bit化し、prompt処理やbatch推論のcompute-bound領域まで含めてLLM推論を高速化する量子化・GPUカーネル研究。",
+      "library_body_check": "本文の量子化構成と実装評価を確認。少数outlier列を高精度で分離し、残りのweight/activationをINT4 Tensor Coreで計算、quantization fusionとdequantization epilogueを実装する。LLaMA2-70Bでメモリ147.1GB→49.1GB、throughput 480→1632 token/s（約3.4倍）を報告する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2ff7504eb0ab",
+    "round": "libimp-2ff7504eb0ab3966-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2ff7504eb0ab3966-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2ff7504eb0ab3966-pre01.json",
+    "receipt": "sha256:b0f57e1d1de065773e97fe87d56ff92058cbc269164d9e038a8345c2f0b3fccb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2ff7504eb0ab",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

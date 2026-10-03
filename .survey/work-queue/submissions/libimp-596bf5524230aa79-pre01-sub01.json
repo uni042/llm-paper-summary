@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Characterizing Power Management Opportunities for LLMs in the Cloud",
+      "source_url": "https://doi.org/10.1145/3620666.3651329",
+      "year": 2024,
+      "published": "2024-04-27",
+      "abstract": "Recent innovation in large language models (LLMs), and their myriad use cases have rapidly driven up the compute demand for datacenter GPUs. Several cloud providers and other enterprises plan to substantially grow their datacenter capacity to support these new workloads. A key bottleneck resource in datacenters is power, which LLMs are quickly saturating due to their rapidly increasing model sizes. We extensively characterize the power consumption patterns of a variety of LLMs and their configurations. We identify the differences between the training and inference power consumption patterns. Based on our analysis, we claim that the average and peak power utilization in LLM inference clusters should not be very high. Our deductions align with data from production LLM clusters, revealing that inference workloads offer substantial headroom for power oversubscription. However, the stringent set of telemetry and controls that GPUs offer in a virtualized environment make it challenging to build a reliable and robust power management framework. We leverage the insights from our characterization to identify opportunities for better power management. As a detailed use case, we propose a new framework called POLCA, which enables power oversubscription in LLM inference clouds. POLCA is robust, reliable, and readily deployable. Using open-source models to replicate the power patterns observed in production, we simulate POLCA and demonstrate that we can deploy 30% more servers in existing clusters with minimal performance loss.",
+      "doi": "10.1145/3620666.3651329",
+      "canonical_id": "DOI:10.1145/3620666.3651329",
+      "authors": [
+        "P. Patel",
+        "Esha Choukse",
+        "Chaojie Zhang",
+        "Íñigo Goiri",
+        "Brijesh Warrier",
+        "Nithish Mahalingam",
+        "Ricardo Bianchini"
+      ],
+      "reason": "LLM推論cloudの電力特性を実測し、POLCAでpower oversubscriptionを可能にするserving/datacenter resource management研究。",
+      "library_body_check": "公開一次情報と論文記録からLLM/configuration別のpower behavior解析とPOLCA設計を確認。datacenter powerがLLM deploymentの制約になる問題に対し、推論cloudで安全なpower oversubscriptionを可能にするresource-management frameworkを提案・評価しており、LLM serving infrastructureの対象範囲に入る。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+      "source_url": "https://arxiv.org/abs/2303.08302",
+      "year": 2023,
+      "published": "2023-03-15",
+      "abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+      "canonical_id": "arXiv:2303.08302",
+      "arxiv_id": "2303.08302",
+      "authors": [
+        "Z. Yao",
+        "Xiaoxia Wu",
+        "Cheng Li",
+        "Stephen Youn",
+        "Yuxiong He"
+      ],
+      "reason": "LLMのpost-training quantizationを体系評価し、低rank補償で低bit推論時のmemory/computation削減と品質維持を狙う推論向け圧縮研究。",
+      "library_body_check": "一次資料のPTQ比較とLoRCを確認。OPT/BLOOM 125M〜176Bでweight-only、activation-only、W+A量子化を評価し、INT4/W4A8の精度劣化を分析する。量子化誤差行列をSVD由来のlow-rank行列で補償するLoRCを提案し、少量parameter overheadで低bit deployment品質を改善する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2306.02272",
+      "year": 2023,
+      "published": "2023-06-04",
+      "abstract": "Large language models (LLMs) with hundreds of billions of parameters require powerful server-grade GPUs for inference, limiting their practical deployment. To address this challenge, we introduce the outlier-aware weight quantization (OWQ) method, which aims to minimize LLM's footprint through low-precision representation. OWQ prioritizes a small subset of structured weights sensitive to quantization, storing them in high-precision, while applying highly tuned quantization to the remaining dense weights. This sensitivity-aware mixed-precision scheme reduces the quantization error notably, and extensive experiments demonstrate that 3.1-bit models using OWQ perform comparably to 4-bit models optimized by OPTQ. Furthermore, OWQ incorporates a parameter-efficient fine-tuning for task-specific adaptation, called weak column tuning (WCT), enabling accurate task-specific LLM adaptation with minimal memory overhead in the optimized format. OWQ represents a notable advancement in the flexibility, efficiency, and practicality of LLM optimization literature. The source code is available at https://github.com/xvyaward/owq.",
+      "canonical_id": "arXiv:2306.02272",
+      "arxiv_id": "2306.02272",
+      "doi": "10.1609/aaai.v38i12.29237",
+      "authors": [
+        "Changhun Lee",
+        "Jungyu Jin",
+        "Taesu Kim",
+        "Hyungjun Kim",
+        "Eunhyeok Park"
+      ],
+      "reason": "量子化感度の高い構造化weightだけ高精度保持し残りを低bit化することでLLM推論footprintを直接削減する混合精度量子化方式。",
+      "library_body_check": "一次資料のoutlier-aware sensitivity selectionと量子化評価を確認。量子化に敏感な少数weight columnを高精度で保持し、残りを低精度化する。3.1-bit OWQがOPTQの4-bit modelと同程度の品質を示し、task adaptation用WCTもoptimized format上で低memory overheadに実行できる。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Long Context Compression with Activation Beacon",
+      "source_url": "https://arxiv.org/abs/2401.03462",
+      "year": 2024,
+      "published": "2024-01-07",
+      "abstract": "Long context compression is a critical research problem due to its significance in reducing the high computational and memory costs associated with LLMs. In this paper, we propose Activation Beacon, a plug-in module for transformer-based LLMs that targets effective, efficient, and flexible compression of long contexts. To achieve this, our method introduces the following technical designs. 1) We directly compress the activations (i.e. keys and values at every layer), rather than leveraging soft prompts to relay information (which constitute a major bottleneck to encapsulate the complex information within long contexts). 2) We tailor the compression workflow, where each fine-grained input unit is progressively compressed, enabling high-quality compression and efficient computation during both training and inference. 3) We train the model through compression-based auto-regression, making full use of plain texts and instructional data to optimize the model's compression performance. 4) During training, we randomly sample a compression ratio at each step, teaching the model to support a wide range of compression configurations. Extensive evaluations are conducted on various long-context tasks whose lengths (e.g., 128K) may far exceed the maximum training length (20K), such as document understanding, few-shot learning, and Needle-in-a-Haystack. Whilst existing methods struggle to handle these challenging tasks, Activation Beacon maintains a comparable performance to the uncompressed baseline across various scenarios, achieving a 2x acceleration in inference time and an 8x reduction of memory costs for KV cache. Our data, model, and code have been released at \\url{https://github.com/FlagOpen/FlagEmbedding/}.",
+      "canonical_id": "arXiv:2401.03462",
+      "arxiv_id": "2401.03462",
+      "authors": [
+        "Peitian Zhang",
+        "Zheng Liu",
+        "Shi-Tao Xiao",
+        "Ninglu Shao",
+        "Qi-Wei Ye",
+        "Zhi-Cheng Dou"
+      ],
+      "reason": "各層のkey/value activationを圧縮するplug-inで長文脈推論のKV cache容量と計算量を直接削減するため対象範囲。",
+      "library_body_check": "一次資料の圧縮workflowと評価を確認。fine-grained input unitを段階的に圧縮し、soft promptではなく各層のK/V activation自体を縮約する。最大128K級の長文脈taskで非圧縮baselineに近い品質を維持し、推論時間2倍高速化、KV cache memory 8倍削減を報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Vidur: A Large-Scale Simulation Framework For LLM Inference",
+      "source_url": "https://arxiv.org/abs/2405.05465",
+      "year": 2024,
+      "published": "2024-05-08",
+      "abstract": "Optimizing the deployment of Large language models (LLMs) is expensive today since it requires experimentally running an application workload against an LLM implementation while exploring large configuration space formed by system knobs such as parallelization strategies, batching techniques, and scheduling policies. To address this challenge, we present Vidur - a large-scale, high-fidelity, easily-extensible simulation framework for LLM inference performance. Vidur models the performance of LLM operators using a combination of experimental profiling and predictive modeling, and evaluates the end-to-end inference performance for different workloads by estimating several metrics of interest such as latency and throughput. We validate the fidelity of Vidur on several LLMs and show that it estimates inference latency with less than 9% error across the range. Further, we present Vidur-Search, a configuration search tool that helps optimize LLM deployment. Vidur-Search uses Vidur to automatically identify the most cost-effective deployment configuration that meets application performance constraints. For example, Vidur-Search finds the best deployment configuration for LLaMA2-70B in one hour on a CPU machine, in contrast to a deployment-based exploration which would require 42K GPU hours - costing ~218K dollars. Source code for Vidur is available at https://github.com/microsoft/vidur.",
+      "canonical_id": "arXiv:2405.05465",
+      "arxiv_id": "2405.05465",
+      "doi": "10.48550/arXiv.2405.05465",
+      "authors": [
+        "Amey Agrawal",
+        "Nitin Kedia",
+        "Jayashree Mohan",
+        "A. Panwar",
+        "Nipun Kwatra",
+        "Bhargav S. Gulavani",
+        "R. Ramjee",
+        "Alexey Tumanov"
+      ],
+      "reason": "LLM推論のlatency/throughputを高精度に模擬し、deployment構成探索をGPU実験なしで行う推論simulation基盤で対象範囲。",
+      "library_body_check": "一次資料のoperator profiling/predictive model、end-to-end simulator、Vidur-Searchを確認。複数LLMで推論latencyを9%未満の誤差で推定し、LLaMA2-70Bの最適deployment探索をCPU 1時間で行い、実機探索なら約42K GPU-hours・約218Kドル相当と比較する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-596bf5524230",
+    "round": "libimp-596bf5524230aa79-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-596bf5524230aa79-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-596bf5524230aa79-pre01.json",
+    "receipt": "sha256:d347ec1a3f9bc3cf5e46df0445bbc5e05d24afe5238681f79777a14770e0f5e8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-596bf5524230",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
