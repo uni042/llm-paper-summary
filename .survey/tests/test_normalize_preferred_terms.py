@@ -21,16 +21,13 @@ class PreferredTermNormalizationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.module = _load(SCRIPT, "assemble_research_record_normalize_test")
 
-    def test_preserves_parenthetical_formal_name_after_japanese(self):
+    def test_publication_path_preserves_worker_written_parenthetical_form(self):
         text = "混合専門家（Mixture-of-Experts; MoE）のroutingを改善する。"
-        normalized = self.module.normalize_preferred_terms(text)
-        self.assertIn("（Mixture-of-Experts; MoE）", normalized)
-        self.assertIn("ルーティング", normalized)
+        self.assertEqual(self.module.normalize_preferred_terms(text), text)
 
-    def test_normalizes_bare_english_outside_parentheses(self):
+    def test_publication_path_does_not_rewrite_worker_prose(self):
         text = "このroutingはexpertを2個使う。"
-        normalized = self.module.normalize_preferred_terms(text)
-        self.assertEqual(normalized, "このルーティングはエキスパートを2個使う。")
+        self.assertEqual(self.module.normalize_preferred_terms(text), text)
 
 
 if __name__ == "__main__":
