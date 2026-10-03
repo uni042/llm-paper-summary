@@ -525,7 +525,107 @@ def _library_first_status(repo_root: Path, now=None) -> str:
               "---", "", "表示生成: `.survey/scripts/render_status_dashboard.py`", ""]
     return "\n".join(lines)
 
-build_dashboard = _core.build_dashboard
+def _render_library_first_activity_section(repo_root: Path, now) -> str:
+    activity = _import_progress_activity(repo_root, now)
+    research = activity["research"]
+    discovery = activity["discovery"]
+    if not research and not discovery:
+        return ""
+
+    cutoff = now - timedelta(hours=_core.evidence.RECENT_HOURS)
+    recent_research = [
+        row for row in research if cutoff <= row["completed_at"] <= now
+    ]
+    recent_discovery = [
+        row for row in discovery if cutoff <= row["completed_at"] <= now
+    ]
+    latest_research = research[0] if research else None
+    latest_discovery = discovery[0] if discovery else None
+
+    lines = [
+        "## Library-first稼働状況",
+        "",
+        "現在の通常Scheduled workerはLibrary-first経路で成果を渡すため、"
+        "現行の進捗判定はこちらを使用します。下のimmutable transport表は旧経路の診断情報です。",
+        "",
+        "| 指標 | 現在値 |",
+        "|---|---:|",
+        f"| 直近{_core.evidence.RECENT_HOURS}hのResearch完了 | **{len(recent_research)}** |",
+        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery run | **{len(recent_discovery)}** |",
+        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery本文確認・分類 | "
+        f"**{sum(int(row.get('record_count') or 0) for row in recent_discovery)}** |",
+        f"| 最終Research完了 | **{_core.evidence._fmt_time(latest_research['completed_at']) if latest_research else '—'}** |",
+        f"| 最終Discovery完了 | **{_core.evidence._fmt_time(latest_discovery['completed_at']) if latest_discovery else '—'}** |",
+        "",
+        "### 最新Library-first run",
+        "",
+    ]
+
+    if latest_research is None:
+        lines.append("- Research: GitHubへ到達済みの成功receiptなし。")
+    else:
+        run_key = str(latest_research.get("run_key") or "").strip()
+        same_run = [
+            row for row in research
+            if run_key and row.get("run_key") == run_key
+        ] or [latest_research]
+        worker = str(latest_research.get("worker_id") or "—")
+        lines.append(
+            f"- Research: **{_core.evidence._fmt_time(latest_research['completed_at'])}**"
+            f" / worker {worker} / run {run_key or '—'} / 成果 **{len(same_run)}件**"
+        )
+        lines.append(
+            f"  - evidence: {_core.evidence._rel(repo_root, latest_research.get('path'))}"
+        )
+
+    if latest_discovery is None:
+        lines.append("- Discovery: GitHubへ到達済みのrun receiptなし。")
+    else:
+        run_key = str(latest_discovery.get("run_key") or "").strip()
+        worker = str(latest_discovery.get("worker_id") or "—")
+        lines.append(
+            f"- Discovery: **{_core.evidence._fmt_time(latest_discovery['completed_at'])}**"
+            f" / worker {worker} / run {run_key or '—'}"
+        )
+        lines.append(
+            f"  - 本文確認・分類 **{int(latest_discovery.get('record_count') or 0)}件**"
+            f" / accept **{int(latest_discovery.get('accept_count') or 0)}件**"
+            f" / unrelated+borderline **{int(latest_discovery.get('relevance_count') or 0)}件**"
+        )
+        lines.append(
+            f"  - evidence: {_core.evidence._rel(repo_root, latest_discovery.get('path'))}"
+        )
+
+    return "\n".join(lines)
+
+
+def build_dashboard(repo_root: Path, now=None) -> str:
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now = now.astimezone(timezone.utc)
+
+    text = _core.build_dashboard(repo_root, now=now)
+    section = _render_library_first_activity_section(repo_root, now)
+    if not section:
+        return text
+
+    text = text.replace(
+        "## 件数サマリー",
+        section + "\n\n## 件数サマリー（旧immutable transport診断）",
+        1,
+    )
+    text = text.replace(
+        f"直近{_core.evidence.RECENT_HOURS}時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。",
+        f"旧immutable transportについて、直近{_core.evidence.RECENT_HOURS}時間、最新run、現在処理中を種類別に分けています。現行Library-firstの稼働判定には上の表を使用します。",
+        1,
+    )
+    text = text.replace(
+        "## 詳細証拠",
+        "## 詳細証拠（旧immutable transport）",
+        1,
+    )
+    return text
 
 
 def main() -> int:
