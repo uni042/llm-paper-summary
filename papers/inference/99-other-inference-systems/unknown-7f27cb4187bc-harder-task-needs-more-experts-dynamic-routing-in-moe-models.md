@@ -14,6 +14,10 @@ authors:
 - Yansong Feng
 summary: 固定Top-kルーティングが簡単なトークンにも難しいトークンにも同数の専門家を使う問題に対し、ルータ確率の累積信頼度が閾値を満たすまで専門家を動的に選ぶ。推論時は最大2専門家に制限しつつ平均活性専門家数を2未満に抑え、Top-2より活性パラメータを10%以上減らしながら下流タスク平均を0.7ポイント改善する。
 list_summary: ルータの確率信頼度に応じてトークンごとの活性専門家数を変え、難しい入力へだけ追加計算を配分する動的MoEルーティング。
+published: '2024-08'
+publication: Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)
+publication_type: 査読付き国際会議論文
+publication_status: Published
 worker_completed_at: '2026-10-01T18:00:00+09:00'
 worker_run_key: 20261001-1800-scheduled-chat-00
 reference_main_sha: fa54a051161e0811cbff448a28d5d1667189963c
@@ -21,9 +25,9 @@ source: https://aclanthology.org/2024.acl-long.696/
 doi: 10.18653/v1/2024.acl-long.696
 sources:
 - https://aclanthology.org/2024.acl-long.696/
-code: null
-implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
-implementation_status: official-code-not-confirmed
+code: https://github.com/ZhenweiAn/Dynamic_MoE
+implementation: 公式リポジトリでDynamic MoEのコードとモデルを公開している。
+implementation_status: official-code-available
 last_checked: '2026-10-03'
 references:
 - canonical_id: arXiv:2401.04088
