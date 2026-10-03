@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:29:50+00:00",
-  "record_count": 420,
+  "updated_at": "2026-10-03T18:31:04+00:00",
+  "record_count": 421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4440,9 +4440,9 @@
         "DOI:10.48550/arxiv.2505.00949",
         "arXiv:2505.00949"
       ],
-      "reason": "推論スループット・メモリ効率を強く意識したreasoning model群だが、主貢献はモデル設計・学習レシピも大きく、純粋な推論システム研究との境界。",
+      "reason": "推論スループット・メモリ効率を目的にNASでLlama 3を異種ブロック構成へ変換するが、論文全体はモデル系列の構築・蒸留・事後学習を扱う技術報告であり、純粋な推論システム研究との境界にある。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -6079,6 +6079,21 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
       ],
       "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule"
+    },
+    "arXiv:2601.06123": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.06123",
+        "arXiv:2601.06123"
+      ],
+      "reason": "異種LLM間でKVキャッシュを共有潜在空間へ翻訳して直接通信するため、cross-model KV reuseには強く関連するが、主目的はサービング性能ではなくモデル間知識・技能通信である。",
+      "first_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Latent Space Communication via K-V Cache Alignment"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:25:46+00:00",
-  "record_count": 845,
+  "updated_at": "2026-10-03T18:31:04+00:00",
+  "record_count": 844,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -4564,9 +4564,9 @@
         "OpenReview:xtaX3WyCj1",
         "arXiv:2306.01708"
       ],
-      "reason": "複数fine-tuned modelの重みを干渉を抑えて統合するmodel merging手法で、MoE推論時のexpert merging/offloadではなくモデル統合が主目的。",
+      "reason": "複数の微調整済みモデルを重み空間で統合するモデルマージ手法で、推論時の実行速度・メモリ階層・KVキャッシュ・サービングを改善する方式ではないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T01:38:16+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4582,9 +4582,9 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "dense checkpointからSparse MoEを構築して追加学習するupcycling方式が主題。",
+      "reason": "dense checkpointからMoEへupcycleして追加事前学習を効率化する学習手法が主題で、凍結対象の学習高速化に該当するため対象外。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4601,9 +4601,9 @@
         "arXiv:1609.02907",
         "arXiv:1611.01144"
       ],
-      "reason": "離散確率変数を微分可能に近似するGumbel-Softmax推定器の学習手法で、LLM推論システム研究ではない。",
+      "reason": "離散カテゴリ変数の微分可能な連続緩和を提案する汎用学習手法で、LLM推論基盤を対象としないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
@@ -4618,9 +4618,9 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "ウェブ操作エージェントの現実的な実行環境・ベンチマーク構築が主題で、LLM推論ランタイム最適化ではない。",
+      "reason": "Web操作エージェントの能力を測る環境・ベンチマークが主貢献で、LLM推論実行系の高速化を提案しないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
@@ -4634,9 +4634,9 @@
       "identity_tokens": [
         "OpenReview:HyUNwulC-"
       ],
-      "reason": "linear recurrenceをsequence方向に並列化する一般RNN algorithmで現行LLM servingを直接対象としない。",
+      "reason": "線形再帰ニューラルネットを系列方向に並列化する一般的な学習・系列計算アルゴリズムで、LLM推論基盤を最終適用先としないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-02T07:00:17+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
@@ -4752,9 +4752,9 @@
         "DOI:10.48550/arxiv.2503.14487",
         "arXiv:2503.14487"
       ],
-      "reason": "主対象は画像生成用Diffusion Transformerであり、LLM推論サーベイの範囲外。",
+      "reason": "MoEの動的計算配分を扱うが、対象は画像生成Diffusion TransformerでありLLM推論ではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T11:10:18+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4770,9 +4770,9 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "対象は画像生成Diffusion TransformerのMoE拡張で、LLM推論システムではない。",
+      "reason": "expert-choice routingによるMoE効率化だが、対象はtext-to-image Diffusion Transformerの学習・生成品質でありLLM推論サーベイの対象外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T08:18:21+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4789,9 +4789,9 @@
         "DOI:10.48550/arxiv.2409.12941",
         "arXiv:2409.12941"
       ],
-      "reason": "RAGの事実性・検索・推論能力を測るFRAMES評価データセットが主貢献で、推論基盤の効率化ではない。",
+      "reason": "RAGのfactuality・retrieval・reasoningを測るFRAMES評価データセットで、推論ランタイムやメモリ・スケジューリング最適化を提案しない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T11:10:18+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4808,9 +4808,9 @@
         "DOI:10.48550/arxiv.2308.11432",
         "arXiv:2308.11432"
       ],
-      "reason": "LLMエージェントの構成・応用・評価を体系化するサーベイで、推論基盤の速度・メモリ・サービング最適化は主題ではない。",
+      "reason": "LLMエージェントの構成・応用・評価を整理する総合サーベイで、agentic inference runtimeの効率化手法そのものではない。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-02T11:03:19+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -5544,9 +5544,9 @@
       "identity_tokens": [
         "DOI:10.1109/rtas58335.2023.00012"
       ],
-      "reason": "NVIDIA GPUのSM計算資源を空間分割する汎用リアルタイムGPU管理研究で、LLM推論を直接対象としない。",
+      "reason": "NVIDIA GPUのSMを空間分割するlibsmctrlを提案する一般GPU共有研究で、LLM推論・サービングを対象にしていない。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-02T11:10:18+00:00",
+      "last_checked_at": "2026-10-03T18:31:04+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
@@ -5635,18 +5635,6 @@
         "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
       ],
       "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
-    },
-    "arXiv:2601.06123": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.06123",
-      "identity_tokens": [
-        "arXiv:2601.06123"
-      ],
-      "reason": "複数LLM間でKV内部状態を共有潜在空間へ整列しモデル間通信・skill transferを可能にする研究で、推論速度・メモリ容量・サービング効率の改善が最終目的ではない。",
-      "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-02T11:03:19+00:00",
-      "linked_from": [],
-      "title": "Latent Space Communication via K-V Cache Alignment"
     },
     "DOI:10.1145/3373376.3378508": {
       "classification": "unrelated",

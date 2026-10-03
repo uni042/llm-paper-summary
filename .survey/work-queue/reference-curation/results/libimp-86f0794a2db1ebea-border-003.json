@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86f0794a2db1ebea-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00949",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.00949",
+      "arXiv:2505.00949"
+    ],
+    "reason": "推論スループット・メモリ効率を目的にNASでLlama 3を異種ブロック構成へ変換するが、論文全体はモデル系列の構築・蒸留・事後学習を扱う技術報告であり、純粋な推論システム研究との境界にある。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-10-03T18:31:04+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Llama-Nemotron: Efficient Reasoning Models"
+  },
+  "processed_at": "2026-10-03T18:31:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86f0794a2db1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
