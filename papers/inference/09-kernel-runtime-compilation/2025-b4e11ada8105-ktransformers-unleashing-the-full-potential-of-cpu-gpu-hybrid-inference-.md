@@ -38,6 +38,71 @@ implementation_status: official-code-not-confirmed
 last_checked: '2026-10-03'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2108.07732
+  arxiv_id: '2108.07732'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2312.17238
+  arxiv_id: '2312.17238'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2408.11743
+  arxiv_id: '2408.11743'
+- canonical_id: arXiv:2410.17954
+  arxiv_id: '2410.17954'
+- canonical_id: arXiv:2410.06270
+  arxiv_id: '2410.06270'
+- canonical_id: arXiv:2308.12066
+  doi: 10.1109/isca59077.2024.00078
+- canonical_id: arXiv:2407.14417
+  arxiv_id: '2407.14417'
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2402.07033
+  arxiv_id: '2402.07033'
+- canonical_id: arXiv:2310.02410
+  arxiv_id: '2310.02410'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2402.14800
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2410.22134
+  arxiv_id: '2410.22134'
+- canonical_id: arXiv:2312.12456
+  doi: 10.1145/3694715.3695964
+- canonical_id: arXiv:2406.02532
+- canonical_id: arXiv:2411.01433
+  arxiv_id: '2411.01433'
+- canonical_id: arXiv:2507.20534
+  arxiv_id: '2507.20534'
+- canonical_id: arXiv:2310.11453
+  arxiv_id: '2310.11453'
+- canonical_id: arXiv:2406.06282
+  arxiv_id: '2406.06282'
+- canonical_id: arXiv:2407.10671
+  arxiv_id: '2407.10671'
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2408.10284
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 58
 ---
 
 # KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models

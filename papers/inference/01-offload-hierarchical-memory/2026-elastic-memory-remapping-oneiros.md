@@ -11,7 +11,7 @@ authors:
 - Jeeho Ryoo
 - Lizy K. John
 - Neeraja J. Yadwadkar
-published: '2026-07'
+published: 2026-07
 publication: ACM SIGOPS Operating Systems Review 60(1), 41-49
 publication_type: 学術誌論文
 publication_status: published
@@ -26,6 +26,27 @@ implementation_status: official-code-available
 last_checked: '2026-10-03'
 last_audited: '2026-09-28'
 audit_version: 1
+references:
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2410.03065
+  arxiv_id: '2410.03065'
+- canonical_id: arXiv:2507.11507
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2405.04437
+- canonical_id: arXiv:1910.02054
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2408.00741
+  arxiv_id: '2408.00741'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2411.09317
+  arxiv_id: '2411.09317'
+- canonical_id: arXiv:2505.04021
+  arxiv_id: '2505.04021'
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 26
 ---
 
 ## 一文解説

@@ -25,6 +25,38 @@ implementation: Triton言語・コンパイラの公開実装を参照。
 implementation_status: official-code-available
 last_audited: '2026-09-28'
 audit_version: 1
+references:
+- canonical_id: DOI:10.1147/rd.395.0575
+  doi: 10.1147/rd.395.0575
+- canonical_id: arXiv:1512.02595
+  arxiv_id: '1512.02595'
+- canonical_id: DOI:10.1145/1772954
+  doi: 10.1145/1772954
+- canonical_id: DOI:10.1145/178243.178259
+  doi: 10.1145/178243.178259
+- canonical_id: DOI:10.1145/3211346.3211354
+  doi: 10.1145/3211346.3211354
+- canonical_id: DOI:10.1109/pact.1998.727179
+  doi: 10.1109/pact.1998.727179
+- canonical_id: DOI:10.1109/cvpr
+  doi: 10.1109/cvpr
+- canonical_id: arXiv:1704.04861
+  arxiv_id: '1704.04861'
+- canonical_id: arXiv:1609.00076
+  arxiv_id: '1609.00076'
+- canonical_id: DOI:10.1145/364995.365000
+  doi: 10.1145/364995.365000
+- canonical_id: DOI:10.1145/1365490.1365500
+  doi: 10.1145/1365490.1365500
+- canonical_id: arXiv:1705.05249
+  arxiv_id: '1705.05249'
+- canonical_id: arXiv:1706.03762
+  arxiv_id: '1706.03762'
+- canonical_id: DOI:10.1145/1498765.1498785
+  doi: 10.1145/1498765.1498785
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 48
 ---
 
 # Triton: an intermediate language and compiler for tiled neural network computations

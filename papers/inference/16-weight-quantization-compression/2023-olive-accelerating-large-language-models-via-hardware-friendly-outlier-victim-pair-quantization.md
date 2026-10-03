@@ -27,6 +27,72 @@ implementation: 公式再現コードにOliVe量子化実装と性能・エネ�
 implementation_status: official-code
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1109/ispass.2009.4919648
+- canonical_id: arXiv:1308.3432
+  arxiv_id: '1308.3432'
+- canonical_id: DOI:10.1145/3037697.3037700
+  doi: 10.1145/3037697.3037700
+- canonical_id: DOI:10.1145/2872362.2872368
+  doi: 10.1145/2872362.2872368
+- canonical_id: DOI:10.5555/3291168.3291211
+  doi: 10.5555/3291168.3291211
+- canonical_id: arXiv:1805.06085
+  arxiv_id: '1805.06085'
+- canonical_id: DOI:10.1109/hpca51647.2021.00049
+  doi: 10.1109/hpca51647.2021.00049
+- canonical_id: DOI:10.1109/iccd46524.2019.00075
+  doi: 10.1109/iccd46524.2019.00075
+- canonical_id: arXiv:2208.07339
+  arxiv_id: '2208.07339'
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2104.08758
+  arxiv_id: '2104.08758'
+- canonical_id: arXiv:2011.00943
+  arxiv_id: '2011.00943'
+- canonical_id: arXiv:2205.07324
+  arxiv_id: '2205.07324'
+- canonical_id: OpenReview:JXhROKNZzOc
+  openreview_id: JXhROKNZzOc
+- canonical_id: arXiv:1510.00149
+  arxiv_id: '1510.00149'
+- canonical_id: DOI:10.1109/isca45697.2020.00047
+  doi: 10.1109/isca45697.2020.00047
+- canonical_id: DOI:10.1145/2508148.2485964
+  doi: 10.1145/2508148.2485964
+- canonical_id: arXiv:1910.13461
+  arxiv_id: '1910.13461'
+- canonical_id: arXiv:2208.11945
+  arxiv_id: '2208.11945'
+- canonical_id: DOI:10.1145/3503222.3507752
+  doi: 10.1145/3503222.3507752
+- canonical_id: DOI:10.1145/2749469.2749475
+  doi: 10.1145/2749469.2749475
+- canonical_id: DOI:10.1145/2155620.2155650
+  doi: 10.1145/2155620.2155650
+- canonical_id: arXiv:2106.08295
+  arxiv_id: '2106.08295'
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: arXiv:1804.07461
+  arxiv_id: '1804.07461'
+- canonical_id: OpenReview:yW5zeRSFdZ
+  openreview_id: yW5zeRSFdZ
+- canonical_id: DOI:10.1145/2485922.2485974
+  doi: 10.1145/2485922.2485974
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: DOI:10.5555/3488766.3488815
+  doi: 10.5555/3488766.3488815
+- canonical_id: DOI:10.1145/3373376.3378508
+  doi: 10.1145/3373376.3378508
+- canonical_id: arXiv:1606.06160
+  arxiv_id: '1606.06160'
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 99
 ---
 
 # OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization
