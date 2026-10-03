@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling Transformer to 1M tokens and beyond with RMT",
+      "source_url": "https://arxiv.org/abs/2304.11062",
+      "year": 2023,
+      "published": "2023-04-19",
+      "venue": "arXiv.org",
+      "citation_count": 118,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A major limitation for the broader scope of problems solvable by transformers is the quadratic scaling of computational complexity with input size. In this study, we investigate the recurrent memory augmentation of pre-trained transformer models to extend input context length while linearly scaling compute. Our approach demonstrates the capability to store information in memory for sequences of up to an unprecedented two million tokens while maintaining high retrieval accuracy. Experiments with language modeling tasks show perplexity improvement as the number of processed input segments increases. These results underscore the effectiveness of our method, which has significant potential to enhance long-term dependency handling in natural language understanding and generation tasks, as well as enable large-scale context processing for memory-intensive applications.",
+      "identifiers": [
+        "SemanticScholar:594d8e1696619f3cebb7c6bffdad8e0a5592f006"
+      ],
+      "semantic_scholar_id": "594d8e1696619f3cebb7c6bffdad8e0a5592f006",
+      "canonical_id": "arXiv:2304.11062",
+      "arxiv_id": "2304.11062",
+      "doi": "10.48550/arXiv.2304.11062",
+      "authors": [
+        "A. Bulatov",
+        "Yuri Kuratov",
+        "Yermek Kapushev",
+        "M. Burtsev"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 118,
+        "citation_count": 118,
+        "total": 118,
+        "is_fresh": false,
+        "freshness_age_days": 1263,
+        "matched_prestigious_venue": null
+      },
+      "reason": "再帰メモリで長文脈Transformerの計算量を入力長に対して線形化し、巨大文脈処理の推論計算・状態保持を変える方式で対象。",
+      "library_body_check": "一次資料本文の方式・評価を確認。Recurrent Memory Transformerはsegment間で専用memory tokenを再帰的に受け渡し、各segment内部だけでattentionを行うことで全履歴への二乗attentionを避ける。最大200万tokenまで情報保持・検索を検証し、処理segment増加に伴うlanguage-modeling perplexity改善も報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2308.09723",
+      "year": 2023,
+      "published": "2023-08-16",
+      "venue": "arXiv.org",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across various language tasks but pose challenges for practical deployment due to their substantial memory requirements. Furthermore, the latest generative models suffer from high inference costs caused by the memory bandwidth bottleneck in the auto-regressive decoding process. To address these issues, we propose an efficient weight-only quantization method that reduces memory consumption and accelerates inference for LLMs. To ensure minimal quality degradation, we introduce a simple and effective heuristic approach that utilizes only the model weights of a pre-trained model. This approach is applicable to both Mixture-of-Experts (MoE) and dense models without requiring additional fine-tuning. To demonstrate the effectiveness of our proposed method, we first analyze the challenges and issues associated with LLM quantization. Subsequently, we present our heuristic approach, which adaptively finds the granularity of quantization, effectively addressing these problems. Furthermore, we implement highly efficient GPU GEMMs that perform on-the-fly matrix multiplication and dequantization, supporting the multiplication of fp16 or bf16 activations with int8 or int4 weights. We evaluate our approach on large-scale open source models such as OPT-175B and internal MoE models, showcasing minimal accuracy loss while achieving up to 3.65 times higher throughput on the same number of GPUs.",
+      "identifiers": [
+        "SemanticScholar:7ac38c3398f2696754bec69f296468e7a8237a64"
+      ],
+      "semantic_scholar_id": "7ac38c3398f2696754bec69f296468e7a8237a64",
+      "canonical_id": "arXiv:2308.09723",
+      "arxiv_id": "2308.09723",
+      "doi": "10.48550/arXiv.2308.09723",
+      "authors": [
+        "Young Jin Kim",
+        "Rawn Henry",
+        "Raffy Fahim",
+        "H. Awadalla"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "freshness_age_days": 1144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰復号のメモリ帯域ボトルネックを対象に、細粒度weight-only量子化と専用GPU GEMMでLLM推論のメモリ・throughputを直接改善するため対象。",
+      "library_body_check": "一次資料本文の問題設定・方式・評価を確認。事前学習済み重みだけから量子化粒度を適応選択し、追加fine-tuningなしでdense/MoEへ適用する。fp16/bf16 activation×int8/int4 weightをon-the-fly dequantizationするGPU GEMMを実装し、OPT-175Bと内部MoEで同一GPU数のthroughputを最大3.65倍へ高め、精度低下を小さく抑える。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0a045b18ae22",
+    "round": "libimp-0a045b18ae22b8ec-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0a045b18ae22b8ec-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0a045b18ae22b8ec-pre01.json",
+    "receipt": "sha256:5a8175d2e868184cef87a9071fff8f39ae9b657759cc288ada25a06ee41b87f9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0a045b18ae22",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

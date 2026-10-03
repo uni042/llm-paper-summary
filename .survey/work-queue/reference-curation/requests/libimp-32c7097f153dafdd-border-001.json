@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-32c7097f153dafdd-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.09721",
+  "reason": "The paper analyzes Attention-FFN Disaggregation (AFD) specifically for large MoE inference. It extends a roofline/HFU analysis with communication budget constraints, identifies conditions where network bandwidth or imbalance prevents AFD from improving utilization, and describes when Superpod-class interconnects and coarser, less sparse experts can benefit. It offers useful deployment guidance and an analysis method, but no new serving implementation or directly evaluated optimization, so it is retained as borderline for root review.",
+  "title": "Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems",
+  "identity_tokens": [
+    "arXiv:2602.09721"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[0]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32c7097f153d",
+  "source_precheck_request_id": null
+}

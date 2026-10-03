@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-32c7097f153dafdd-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2606.19025",
+  "reason": "The primary source states that FoMoE partitions expert layers across workers and skips non-resident experts during local training; its stated target is cross-site MoE training over constrained WAN links (abstract and §1). The reported communication reductions and skip-token throughput gains are training-system outcomes; §6 separates trained proxy quality runs and measured training throughput from modeled larger-scale results. §7 says XL/XXL and 100B-scale results are projections rather than end-to-end pretraining runs, and that the evaluation is controlled around homogeneous workers and synchronous rounds.",
+  "title": "FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs",
+  "identity_tokens": [
+    "arXiv:2606.19025"
+  ],
+  "linked_from": [
+    "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[1]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32c7097f153d",
+  "source_precheck_request_id": null
+}
