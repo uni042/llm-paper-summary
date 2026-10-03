@@ -102,6 +102,13 @@ def _seed_identifier(record: citation_graph.PaperRecord) -> str | None:
     cid = str(record.canonical_id or "")
     if cid.startswith("SemanticScholar:"):
         return cid
+    # Semantic Scholar Graph accepts URL:<paper-url> as a paper lookup key.
+    # Every canonical paper is therefore enrolled in the sweep when it has a
+    # stable primary URL, even if no arXiv/DOI/S2 identifier is available.
+    for field in ("source", "source_url", "canonical_url"):
+        value = record.meta.get(field)
+        if isinstance(value, str) and value.startswith(("https://", "http://")):
+            return "URL:" + value
     return None
 
 
@@ -110,6 +117,8 @@ def _s2_api_id(identifier: str) -> str:
         return "ARXIV:" + identifier.split(":", 1)[1]
     if identifier.startswith("SemanticScholar:"):
         return identifier.split(":", 1)[1]
+    if identifier.startswith("URL:"):
+        return identifier
     return "DOI:" + identifier.split(":", 1)[1]
 
 
