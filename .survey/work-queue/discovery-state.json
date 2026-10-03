@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-03T18:35:40+00:00",
-  "last_run_key": "library-import-bc80dc48f644",
-  "last_round": "libimp-bc80dc48f644cc40-pre01",
+  "updated_at": "2026-10-03T18:39:20+00:00",
+  "last_run_key": "library-import-211294159b09",
+  "last_round": "libimp-211294159b091db9-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T22:00:00+09:00",
-      "round": "specialist-agent-kvflow-8",
-      "axis": "agentic workflow prefix cache・future-aware eviction/prefetch・OS/DB cache policy",
-      "query_summary": "VMM軸からprefix-cache placement/evictionへ移り、2025-2026のagent workflow-aware cache管理を探索した。KVFlowは一次arXiv abstractで明確なsystems設計・SGLang比較を持ち、default branchのcanonical ID/title検索で未収録を確認した。ServerlessLLM/SLIMは既知系統として再投入しなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.6666666666666666,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2401.14351",
-        "arXiv:2507.09201"
-      ],
-      "next_axis_hint": "edge/mobile runtime、次いでspeculative decoding serving scheduling、最後にDB/OS adjacent cache policiesを走査する",
-      "source_submission": "work-queue/submissions/20260919T2252JST-discovery-specialist-agent-kvflow-8.json"
-    },
     {
       "run_key": "2026-09-19T22:00:00+09:00",
       "round": "specialist-mobile-runtime-9",
@@ -11246,6 +11225,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-211294159b091db9-pre01",
+      "precheck_request_id": "libimp-211294159b091db9-pre01",
+      "run_key": "library-import-211294159b09",
+      "round": "libimp-211294159b091db9-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-211294159b091db9-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-211294159b091db9-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19617,16 +19630,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-bc80dc48f644",
-      "rounds": 67,
-      "candidate_count": 270,
+      "last_run_key": "library-import-211294159b09",
+      "rounds": 68,
+      "candidate_count": 271,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 170,
+      "novel_candidate_count": 171,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 167,
-      "accepted_count": 167,
-      "duplicate_ratio": 0.37037037037037035,
-      "final_duplicate_ratio": 0.01764705882352941,
+      "post_final_dedupe_count": 168,
+      "accepted_count": 168,
+      "duplicate_ratio": 0.36900369003690037,
+      "final_duplicate_ratio": 0.017543859649122806,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
