@@ -13,10 +13,10 @@ on:
 permissions:
   contents: write
 
-# Maintenance mutates broad queue/index state. Serialize it with other heavyweight
-# background writers without blocking claim or immutable-submission fast lanes.
+# Maintenance has its own queue. Sharing a concurrency group across unrelated workflows
+# can replace pending runs, so cross-workflow serialization is handled by push retries.
 concurrency:
-  group: survey-background-main
+  group: survey-maintenance-main
   cancel-in-progress: false
 
 jobs:
