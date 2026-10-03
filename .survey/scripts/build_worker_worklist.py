@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import candidate_priority
+import citation_graph
 import claim_state
 import paper_identity
 import reference_pool
@@ -67,11 +68,25 @@ def _jobs(root: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def _published_rank(row: dict[str, Any]) -> int:
+    text = str(row.get("published") or "").strip()
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if len(digits) >= 8:
+        return int(digits[:8])
+    if len(digits) >= 6:
+        return int(digits[:6] + "00")
+    year = row.get("year")
+    try:
+        return int(year) * 10000
+    except (TypeError, ValueError):
+        return 0
+
+
 def _priority_sort_key(row: dict[str, Any]) -> tuple[Any, ...]:
     return (
         -int(row.get("priority") or 0),
         -candidate_priority.citation_count(row),
-        str(row.get("published") or ""),
+        -_published_rank(row),
         str(row.get("canonical_id") or "").casefold(),
     )
 
@@ -150,6 +165,21 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     forward_source = forward_state.get("candidates") if isinstance(forward_state, dict) else {}
     forward = list(forward_source.values()) if isinstance(forward_source, dict) else []
 
+    represented = {
+        identifier
+        for paper in citation_graph.load_records(root)
+        for identifier in paper.identifiers
+    }
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    borderline = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_BORDERLINE_LEDGER,
+        label="borderline-paper",
+    )
+    excluded = represented | unrelated | borderline
+
     cache = candidate_priority.load_cache(root)
     config = candidate_priority.load_config(root)
     rows: list[dict[str, Any]] = []
@@ -160,6 +190,10 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
         for row in candidates:
             if not isinstance(row, dict):
                 continue
+            if source_kind == "forward_citation_candidate":
+                identities = paper_identity.record_identifiers(row)
+                if identities and identities.intersection(excluded):
+                    continue
             scored = _score_row(row, root=root, cache=cache, config=config)
             scored["source_kind"] = source_kind
             rows.append(scored)
