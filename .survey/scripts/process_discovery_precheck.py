@@ -24,6 +24,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import discovery_provider_adapter  # noqa: E402
+import candidate_priority
 import discovery_preload_queue  # noqa: E402
 import discovery_search_filter  # noqa: E402
 import paper_identity  # noqa: E402
@@ -208,6 +209,24 @@ def _manifest_source_commit(snapshot_dir: Path) -> str | None:
     return str(value) if value else None
 
 
+def _score_results(records: list[dict[str, Any]], repo_root: Path) -> list[dict[str, Any]]:
+    """Attach the configured importance score before human candidate evaluation."""
+    config = candidate_priority.load_config(repo_root)
+    scored = [
+        candidate_priority.apply_priority(record, repo_root=repo_root, config=config)
+        for record in records
+    ]
+    scored.sort(
+        key=lambda row: (
+            -int(row.get("priority") or 0),
+            -candidate_priority.citation_count(row),
+            str(row.get("published") or ""),
+            str(row.get("canonical_id") or ""),
+        )
+    )
+    return scored
+
+
 def _allowed_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     out = []
     for record in records:
@@ -231,6 +250,7 @@ def _process_explicit_identifiers(
     *,
     snapshot_dir: Path,
     rejection_ledger_path: Path,
+    repo_root: Path,
 ) -> dict[str, Any]:
     lookups = discovery_provider_adapter.lookup_identifiers(request["identifiers"])
     classified = discovery_search_filter.classify_explicit_identifier_lookups(
@@ -253,6 +273,7 @@ def _process_explicit_identifiers(
         if outcome.get("status") == "allowed" and isinstance(outcome.get("record"), dict):
             results.append(outcome["record"])
 
+    results = _score_results(results, repo_root)
     allowed = _allowed_records(results)
     source_commit = _manifest_source_commit(Path(snapshot_dir))
     status_counts = {
@@ -410,7 +431,7 @@ def _process_v3(
         initial_cursor=request["initial_cursor"],
         max_pages=request["max_pages"],
     )
-    results = list(collected["results"])
+    results = _score_results(list(collected["results"]), repo_root)
     allowed = _allowed_records(results)
     source_commit = _manifest_source_commit(snapshot_dir)
     receipt = _receipt(
@@ -519,6 +540,7 @@ def process_request(
             request,
             snapshot_dir=snapshot_dir,
             rejection_ledger_path=rejection_ledger_path,
+            repo_root=Path(repo_root),
         )
     return _process_v3(
         request,

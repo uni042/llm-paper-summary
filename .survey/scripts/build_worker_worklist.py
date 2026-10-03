@@ -18,6 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import candidate_priority
+import citation_graph
 import claim_state
 import paper_identity
 import reference_pool
@@ -66,10 +68,46 @@ def _jobs(root: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def _published_rank(row: dict[str, Any]) -> int:
+    text = str(row.get("published") or "").strip()
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if len(digits) >= 8:
+        return int(digits[:8])
+    if len(digits) >= 6:
+        return int(digits[:6] + "00")
+    year = row.get("year")
+    try:
+        return int(year) * 10000
+    except (TypeError, ValueError):
+        return 0
+
+
+def _priority_sort_key(row: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        -int(row.get("priority") or 0),
+        -candidate_priority.citation_count(row),
+        -_published_rank(row),
+        str(row.get("canonical_id") or "").casefold(),
+    )
+
+
+def _score_row(
+    row: dict[str, Any],
+    *,
+    root: Path,
+    cache: dict[str, Any],
+    config: dict[str, Any],
+) -> dict[str, Any]:
+    enriched = candidate_priority.merge_cached_metadata(row, cache)
+    return candidate_priority.apply_priority(enriched, repo_root=root, config=config)
+
+
 def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[dict[str, Any]]]:
     jobs = _jobs(root)
     claims = claim_state.current_claims(root)
     paper_index = research_job_reconciliation.build_paper_index(root)
+    cache = candidate_priority.load_cache(root)
+    config = candidate_priority.load_config(root)
     ready = [
         row
         for row in jobs
@@ -87,15 +125,16 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
         for row in ready
         if not claims.get(str(row.get("job_id") or ""), {}).get("active")
     ]
-    claimable.sort(
-        key=lambda row: (
-            -int(row.get("priority") or 0),
-            str(row.get("created_at") or ""),
-            str(row.get("job_id") or ""),
-        )
-    )
+    scored_claimable: list[dict[str, Any]] = []
+    for row in claimable:
+        if row.get("type") == "research":
+            scored_claimable.append(_score_row(row, root=root, cache=cache, config=config))
+        else:
+            scored_claimable.append(dict(row))
+    scored_claimable.sort(key=_priority_sort_key)
+
     out: list[dict[str, Any]] = []
-    for source_rank, row in enumerate(claimable, start=1):
+    for source_rank, row in enumerate(scored_claimable, start=1):
         out.append(
             {
                 "source_rank": source_rank,
@@ -103,10 +142,14 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
                 "job_id": row.get("job_id"),
                 "type": row.get("type"),
                 "priority": row.get("priority"),
+                "priority_breakdown": row.get("priority_breakdown"),
                 "canonical_id": row.get("canonical_id"),
                 "title": row.get("title"),
                 "source_url": row.get("source_url"),
                 "paper_path": row.get("paper_path"),
+                "published": row.get("published"),
+                "venue": row.get("venue"),
+                "citation_count": row.get("citation_count"),
                 "created_at": row.get("created_at"),
             }
         )
@@ -116,27 +159,75 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
 def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     pool = reference_pool.build_reference_pool(root)
     source = pool.get("candidates")
-    candidates = source if isinstance(source, list) else []
+    backward = source if isinstance(source, list) else []
+
+    forward_state = _read(root / ".survey/work-queue/forward-citation-sweep.json", {})
+    forward_source = forward_state.get("candidates") if isinstance(forward_state, dict) else {}
+    forward = list(forward_source.values()) if isinstance(forward_source, dict) else []
+
+    represented = {
+        identifier
+        for paper in citation_graph.load_records(root)
+        for identifier in paper.identifiers
+    }
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    borderline = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_BORDERLINE_LEDGER,
+        label="borderline-paper",
+    )
+    excluded = represented | unrelated | borderline
+
+    cache = candidate_priority.load_cache(root)
+    config = candidate_priority.load_config(root)
+    rows: list[dict[str, Any]] = []
+    for source_kind, candidates in (
+        ("reference_review_candidate", backward),
+        ("forward_citation_candidate", forward),
+    ):
+        for row in candidates:
+            if not isinstance(row, dict):
+                continue
+            if source_kind == "forward_citation_candidate":
+                identities = paper_identity.record_identifiers(row)
+                if identities and identities.intersection(excluded):
+                    continue
+            scored = _score_row(row, root=root, cache=cache, config=config)
+            scored["source_kind"] = source_kind
+            rows.append(scored)
+
+    # Put the strongest representation of an alias-equivalent paper first, then
+    # reuse the existing exact identity deduper. This avoids forcing a paper to
+    # appear twice merely because it was found by backward and forward citation.
+    rows.sort(key=_priority_sort_key)
+    rows = _dedupe_rows_by_identity(rows)
+
     out: list[dict[str, Any]] = []
-    for source_rank, row in enumerate(candidates, start=1):
-        if not isinstance(row, dict):
-            continue
+    for source_rank, row in enumerate(rows, start=1):
         out.append(
             {
                 "source_rank": source_rank,
-                "source_kind": "reference_review_candidate",
+                "source_kind": row.get("source_kind"),
+                "priority": row.get("priority"),
+                "priority_breakdown": row.get("priority_breakdown"),
                 "canonical_id": row.get("canonical_id"),
                 "identity_tokens": row.get("identity_tokens"),
                 "title": row.get("title"),
                 "source_url": row.get("source_url"),
                 "year": row.get("year"),
                 "published": row.get("published"),
+                "venue": row.get("venue"),
+                "citation_count": row.get("citation_count"),
+                "citation_count_checked_at": row.get("citation_count_checked_at"),
                 "relation_count": row.get("relation_count"),
                 "linked_from_lineages": row.get("linked_from_lineages"),
                 "linked_from": row.get("linked_from"),
+                "discovery_routes": row.get("discovery_routes"),
             }
         )
-    return out, int(pool.get("candidate_count") or len(candidates))
+    return out, len(out)
 
 
 def _worklist_identity_tokens(row: dict[str, Any]) -> set[str]:
@@ -267,6 +358,7 @@ def build(
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
+                "Process both Research and Discovery rows from rank 1 upward. rank 1 has the highest current configurable importance score; do not reverse the list and do not reserve a forced-aging quota.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -316,13 +408,14 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
         "",
         f"ready総数: **{research['ready_total']}** / 未claim総数: **{research['claimable_total']}** / このworker向け: **{research['displayed']}**",
         "",
-        "| # | 種別 | identity | title | source | 想定配置先 |",
-        "|---:|---|---|---|---|---|",
+        "| # | score | 種別 | identity | title | source | 想定配置先 |",
+        "|---:|---:|---|---|---|---|---|",
     ]
     for row in research["rows"]:
         out.append(
-            "| {rank} | {kind} | {identity} | {title} | {source} | {path} |".format(
+            "| {rank} | {score} | {kind} | {identity} | {title} | {source} | {path} |".format(
                 rank=row["rank"],
+                score=_esc(row.get("priority")),
                 kind=_esc(row.get("type")),
                 identity=_esc(row.get("canonical_id")),
                 title=_esc(row.get("title")),
@@ -338,18 +431,21 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
             "",
             f"未判定総数: **{discovery['pending_total']}** / このworker向け: **{discovery['displayed']}**",
             "",
-            "| # | identity | title | year | 関連数 | 系統候補 | source |",
-            "|---:|---|---|---:|---:|---|---|",
+            "| # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |",
+            "|---:|---:|---|---|---|---|---:|---:|---|---|",
         ]
     )
     for row in discovery["rows"]:
         lineages = ", ".join(row.get("linked_from_lineages") or [])
         out.append(
-            "| {rank} | {identity} | {title} | {year} | {relations} | {lineages} | {source} |".format(
+            "| {rank} | {score} | {identity} | {title} | {published} | {venue} | {citations} | {relations} | {lineages} | {source} |".format(
                 rank=row["rank"],
+                score=_esc(row.get("priority")),
                 identity=_esc(row.get("canonical_id")),
                 title=_esc(row.get("title")),
-                year=_esc(row.get("year") or row.get("published")),
+                published=_esc(row.get("published") or row.get("year")),
+                venue=_esc(row.get("venue")),
+                citations=_esc(row.get("citation_count")),
                 relations=_esc(row.get("relation_count")),
                 lineages=_esc(lineages),
                 source=_link("source", row.get("source_url")),

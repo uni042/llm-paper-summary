@@ -26,9 +26,11 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         self.assertIn("新規canonical identity 10件を本文確認まで行い", text)
         self.assertNotIn("E = G + D - R", text)
 
-    def test_worklist_order_is_tail_first(self):
+    def test_worklist_order_is_highest_priority_first(self):
         text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("候補はリスト末尾から上方向", text)
+        self.assertIn("rank 1がその生成時点で最も重要度スコアの高い候補", text)
+        self.assertIn("rank 1から上から下へ", text)
+        self.assertNotIn("候補はリスト末尾から上方向", text)
 
     def test_import_verifies_durable_handoff_before_library_cleanup(self):
         text = ROUTER.read_text(encoding="utf-8")

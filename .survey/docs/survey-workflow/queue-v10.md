@@ -29,6 +29,12 @@ Survey GitHub ImportのWorkタスクやリポジトリ保守では、必要に�
 - 論文品質監査: `.survey/scripts/audit_paper_quality.py`
 - 日本語文体検査: `.survey/scripts/japanese_style.py`
 - 引用・候補pool: `.survey/scripts/reference_pool.py`
+- 候補重要度設定: `.survey/config/candidate-priority.json`
+- 候補重要度計算: `.survey/scripts/candidate_priority.py`
+- venue / 被引用数cache更新: `.survey/scripts/refresh_candidate_priority.py`
+- 全収録論文の前方引用巡回設定: `.survey/config/forward-citation-sweep.json`
+- 全収録論文の前方引用巡回: `.survey/scripts/forward_citation_sweep.py`
+- 前方引用巡回workflow: `.github/workflows/forward-citation-sweep.yml`
 - relevance分類台帳: `.survey/scripts/reference_relevance_ledger.py`
 - relevance request処理: `.survey/scripts/process_reference_relevance_requests.py`
 - Discovery事前検査: `.survey/scripts/process_discovery_precheck.py`

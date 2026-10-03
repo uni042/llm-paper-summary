@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "policy_name": "candidate-priority-v1",
+  "freshness": {
+    "enabled": true,
+    "max_age_days": 120,
+    "score": 100,
+    "year_only_is_fresh": false
+  },
+  "prestigious_venue": {
+    "enabled": true,
+    "score": 10,
+    "aliases": [
+      "NeurIPS",
+      "Neural Information Processing Systems",
+      "ICML",
+      "International Conference on Machine Learning",
+      "ICLR",
+      "International Conference on Learning Representations",
+      "MLSys",
+      "Machine Learning and Systems",
+      "OSDI",
+      "Operating Systems Design and Implementation",
+      "SOSP",
+      "Symposium on Operating Systems Principles",
+      "NSDI",
+      "Networked Systems Design and Implementation",
+      "USENIX ATC",
+      "USENIX Annual Technical Conference",
+      "EuroSys",
+      "ASPLOS",
+      "ISCA",
+      "International Symposium on Computer Architecture",
+      "MICRO",
+      "International Symposium on Microarchitecture",
+      "HPCA",
+      "High-Performance Computer Architecture",
+      "SC",
+      "Supercomputing",
+      "ACL",
+      "Association for Computational Linguistics",
+      "EMNLP",
+      "Empirical Methods in Natural Language Processing",
+      "SIGCOMM",
+      "FAST"
+    ]
+  },
+  "citations": {
+    "enabled": true,
+    "score_per_citation": 1,
+    "max_score": null
+  },
+  "cache": {
+    "fresh_ttl_hours": 48,
+    "default_ttl_hours": 168,
+    "max_lookup_batch": 100,
+    "max_lookup_papers_per_run": 300,
+    "request_spacing_seconds": 2,
+    "failure_ttl_hours": 168
+  },
+  "fallback_priority": 0
+}

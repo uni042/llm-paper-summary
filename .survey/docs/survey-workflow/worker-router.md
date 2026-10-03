@@ -1,6 +1,6 @@
-# Worker router — Library-first workflow v12
+# Worker router — Library-first workflow v13
 
-この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v12では責務を次の3段に分離する。
+この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v13ではLibrary-first責務分離を維持したまま、Discovery / Research候補の重要度優先と全収録論文の前方引用カバレッジ巡回をGitHub側自動化へ追加する。
 
 1. Scheduled workerは探索・読解・分類を行い、完成成果をChatGPT Libraryへ保存する。
 2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。
@@ -57,7 +57,17 @@ Scheduled workerはGitHubへのclaim、reservation、submission、result、hando
 
 ## 2. 候補順序
 
-Research / Audit候補はworker専用worklistを入口にする。候補はリスト末尾から上方向、すなわちrankの大きいものから処理する。skip、重複、既処理、取得不能があってもその位置から上方向の次候補へ進む。
+Research / Audit / Discovery候補はworker専用worklistを入口にし、**rank 1から上から下へ**処理する。rank 1がその生成時点で最も重要度スコアの高い候補である。skip、重複、既処理、取得不能があれば、その次のrankへ進む。旧「末尾から上方向」は使わない。
+
+重要度スコアは `.survey/config/candidate-priority.json` を機械正本とし、`.survey/scripts/candidate_priority.py` がResearchとDiscoveryの双方へ同一式を適用する。初期設定は次の加点で、後から設定値だけを変更できる。
+
+- 公開から設定期間内の最新論文: `+100`
+- 設定allowlistにある主要査読venue: `+10`
+- 外部被引用数: 1件につき `+1`、上限なし
+
+スコアは**重要度・処理順だけ**を表し、accept / unrelated / borderline の関連性判定とは独立する。低得点を理由に候補を削除せず、Research投入下限も設けない。古い候補を一定割合で強制消化するaging枠も設けない。低得点候補でも後から被引用数が増えれば自動再取得後に上位へ浮上できる。
+
+venue・被引用数はPDF本文を読むためだけに取得せず、Semantic Scholar等から得られる書誌メタデータをキャッシュする。取得不能時は未知項目を0点として候補を保持し、後続更新で再評価する。
 
 専用worklistが欠損・古い・空の場合だけ最新mainの正規poolをread-onlyで参照する。
 
@@ -88,6 +98,16 @@ Libraryの未転送成果を足し引きして別の実効値を再計算しな�
 run中に在庫が変化してもモードは固定する。
 
 ## 5. Discovery
+
+### 5.0 引用探索の二層構成
+
+前方引用（forward citation）は二層で追跡する。
+
+1. 既存のDiscovery preloadは、有望・高yieldな引用源を短い周期で追う高速レーンとして維持する。
+2. `.github/workflows/forward-citation-sweep.yml` は `.survey/config/forward-citation-sweep.json` に従い、**収録済み全論文**を公平に低頻度巡回するカバレッジレーンとする。Semantic Scholar互換のarXiv / DOI / Semantic Scholar IDを持つ全論文をseed台帳へ載せ、未巡回・前回巡回が古いseedから順に処理する。長い引用一覧はprovider cursorを次回runへ持ち越し、1周を完了した後は所定期間後に先頭ページから新しい周回を開始する。これにより、過去の収録論文を後日引用した新論文も再発見できる。
+3. カバレッジ巡回で見つかった未収録候補は既存のDiscovery候補面へ合流させ、別のrelevance正本を作らない。
+
+外部API失敗やrate limitで1seedを取得できなくても、そのseedを処理済みにせず状態を保持して後続runで再試行する。ID不足でprovider照会不能な収録論文はunsupportedとして可視化し、全件巡回済みと偽装しない。
 
 Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` の現行Discovery手順を必須とする。具体的には、候補本文確認前の**開始前重複ゲート**と、成果保存直前の**保存直前重複ゲート**の両方で、Libraryのimmutable Discovery成果群（必要な未転送Research成果を含む）を完全列挙してidentity集合を再構成し、GitHub mainのread-only canonical stateと統合する。意味検索だけを重複排除の正本にせず、共有可変台帳、claim、reservation、GitHub writeをScheduled workerへ追加しない。詳細な列挙・identity比較・並列worker時の再確認手順はLibrary正本へ委譲する。
 
