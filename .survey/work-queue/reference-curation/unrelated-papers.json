@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T17:47:42+00:00",
-  "record_count": 773,
+  "updated_at": "2026-10-03T17:48:37+00:00",
+  "record_count": 791,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10352,21 +10352,6 @@
       ],
       "title": "Binarized Neural Networks: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1"
     },
-    "arXiv:1602.01528": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1602.01528",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1602.01528",
-        "arXiv:1602.01528"
-      ],
-      "reason": "圧縮済みDNNの疎行列ベクトル積を専用ハードウェアで高速化する推論研究だが、対象はAlexNet/VGG等の全結合層でLLM/Transformer推論ではない。",
-      "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-03T15:16:51+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network"
-    },
     "DOI:10.1145/3600006.3613175": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3600006.3613175",
@@ -11019,11 +11004,12 @@
       "identity_tokens": [
         "DOI:10.1073/pnas.0903616106"
       ],
-      "reason": "10言語の会話ターン交替時間を比較して人間会話の普遍性と文化差を分析する言語・行動研究で、LLMサービングとは無関係。",
+      "reason": "10言語の自然会話における発話交替の応答遅延と文化差を分析する言語・社会行動研究で、LLM推論サービングとは無関係。",
       "first_checked_at": "2026-10-03T16:32:28+00:00",
-      "last_checked_at": "2026-10-03T16:32:28+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md"
       ],
       "title": "Universals and cultural variation in turn-taking in conversation"
     },
@@ -11400,6 +11386,280 @@
         "papers/inference/01-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md"
       ],
       "title": "Data retention in MLC NAND flash memory: Characterization, optimization, and recovery"
+    },
+    "DOI:10.1109/85.238389": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/85.238389",
+      "identity_tokens": [
+        "DOI:10.1109/85.238389"
+      ],
+      "reason": "蓄積プログラム方式コンピュータの論理設計を記述した歴史的文書で、LLM推論システムの方式・実装・評価研究ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ],
+      "title": "First draft of a report on the EDVAC"
+    },
+    "DOI:10.1007/bfb0109870": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bfb0109870",
+      "identity_tokens": [
+        "DOI:10.1007/bfb0109870"
+      ],
+      "reason": "不確実性下のロバストモデル予測制御を整理する制御理論サーベイで、LLM推論・サービング・計算資源制御への直接適用研究ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md"
+      ],
+      "title": "Robust model predictive control: A survey"
+    },
+    "DOI:10.1109/jetcas.2019.2910232": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jetcas.2019.2910232",
+      "identity_tokens": [
+        "DOI:10.1109/jetcas.2019.2910232",
+        "arXiv:1807.07928"
+      ],
+      "reason": "MobileNet等のコンパクト/疎DNNを対象に階層メッシュNoCと圧縮領域処理を備えるモバイル向けDNNアクセラレータで、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ],
+      "title": "Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices"
+    },
+    "DOI:10.1109/cvpr46437.2021.00965": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr46437.2021.00965",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr46437.2021.00965",
+        "arXiv:2105.08276"
+      ],
+      "reason": "動画の因果・時間推論を測る質問応答データセット/ベンチマーク構築が主題で、視覚言語モデルの推論システム高速化ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+      ],
+      "title": "NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions"
+    },
+    "DOI:10.1109/isca.2016.30": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2016.30",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.30",
+        "DOI:10.48550/arxiv.1602.01528",
+        "arXiv:1602.01528"
+      ],
+      "reason": "AlexNet/VGG等の圧縮済み全結合DNNをSRAM上で疎行列ベクトル積として実行する専用アクセラレータで、LLM/Transformer推論を対象とする研究ではない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ],
+      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network"
+    },
+    "DOI:10.1109/9.284868": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/9.284868",
+      "identity_tokens": [
+        "DOI:10.1109/9.284868"
+      ],
+      "reason": "高速通信ネットワークの待ち行列安定性、最小包絡率、遅延境界を理論解析する研究で、LLMサービングのスケジューラを直接設計・評価するものではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13499-opscale-operator-level-autoscaling.md"
+      ],
+      "title": "Stability, queue length, and delay of deterministic and stochastic queueing networks"
+    },
+    "DOI:10.1109/date.2009.5090700": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/date.2009.5090700",
+      "identity_tokens": [
+        "DOI:10.1109/date.2009.5090700"
+      ],
+      "reason": "ネットワークオンチップの電力・面積モデルを用いた初期設計空間探索が主題で、LLM推論/PIMシステムそのものの方式・評価ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md"
+      ],
+      "title": "ORION 2.0: A fast and accurate NoC power and area model for early-stage design space exploration"
+    },
+    "DOI:10.1109/isca45697.2020.00045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca45697.2020.00045",
+      "identity_tokens": [
+        "DOI:10.1109/isca45697.2020.00045",
+        "arXiv:1911.02549"
+      ],
+      "reason": "画像分類・物体検出・翻訳等を含む機械学習推論ハードウェア/ソフトウェアの汎用ベンチマーク標準化が主題で、LLM推論システム固有の新方式を提案する研究ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
+      ],
+      "title": "MLPerf Inference Benchmark"
+    },
+    "DOI:10.1038/s41467-024-45563-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-024-45563-x",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-024-45563-x"
+      ],
+      "reason": "GPT-3/Llama-2を微調整して材料科学文献からエンティティ・関係をJSON等へ抽出する応用研究で、LLM推論の実行効率・メモリ・サービング最適化は主題ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+      ],
+      "title": "Structured information extraction from scientific text with large language models"
+    },
+    "DOI:10.1109/icmla.2015.141": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icmla.2015.141",
+      "identity_tokens": [
+        "DOI:10.1109/icmla.2015.141"
+      ],
+      "reason": "時系列異常検知アルゴリズムを実時間ストリーム上で比較するベンチマーク研究であり、LLM推論・サービング・KVキャッシュ等を対象としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark"
+    },
+    "DOI:10.1007/s11432-024-4222-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-024-4222-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4222-0"
+      ],
+      "reason": "LLMエージェントの構成、応用、評価、課題を俯瞰する一般サーベイであり、エージェント推論サービングのスケジューラやランタイム効率化を主題としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "The rise and potential of large language model based agents: a survey"
+    },
+    "DOI:10.1109/ipdpsw.2018.00091": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdpsw.2018.00091",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw.2018.00091"
+      ],
+      "reason": "Volta Tensor Coreのプログラミング、数値精度、GEMM性能を評価する汎用GPU/HPC研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "NVIDIA Tensor Core Programmability, Performance & Precision"
+    },
+    "arXiv:2202.05924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.05924",
+      "identity_tokens": [
+        "arXiv:2202.05924"
+      ],
+      "reason": "機械学習研究で使われる訓練計算量の歴史的増加傾向を分析する研究で、推論ランタイムの高速化・省メモリ化を提案しない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Compute Trends Across Three Eras of Machine Learning"
+    },
+    "DOI:10.1080/03610928908830127": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/03610928908830127",
+      "identity_tokens": [
+        "DOI:10.1080/03610928908830127"
+      ],
+      "reason": "確率分布間の重なり係数と正規分布の重なり推定を扱う統計学研究で、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "The overlapping coefficient as a measure of agreement between probability distributions and point estimation of the overlap of two normal densities"
+    },
+    "DOI:10.1093/qmath/17.1.367": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/qmath/17.1.367",
+      "identity_tokens": [
+        "DOI:10.1093/qmath/17.1.367"
+      ],
+      "reason": "K理論に関する純粋数学研究であり、機械学習・LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "K -THEORY AND REALITY"
+    },
+    "arXiv:2305.10435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10435",
+      "identity_tokens": [
+        "arXiv:2305.10435"
+      ],
+      "reason": "GPTの技術、応用、課題、将来方向を広く整理する一般レビューで、推論サービングやKV/メモリ階層等のシステム最適化を主要貢献としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions"
+    },
+    "DOI:10.1109/dac18074.2021.9586216": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/dac18074.2021.9586216",
+      "identity_tokens": [
+        "DOI:10.1109/dac18074.2021.9586216"
+      ],
+      "reason": "RISC-V SoCへ統合可能なDNNアクセラレータ生成・評価基盤Gemminiの研究で、一般深層学習アクセラレータが対象でありLLM/Transformer推論固有ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration"
+    },
+    "DOI:10.1021/es300145v": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/es300145v",
+      "identity_tokens": [
+        "DOI:10.1021/es300145v"
+      ],
+      "reason": "米国電力系統の限界排出係数を推定する環境・エネルギー研究であり、LLM推論やサービングとは無関係。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Marginal emissions factors for the U.S. electricity system."
+    },
+    "DOI:10.1109/iccad.2010.5653749": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccad.2010.5653749",
+      "identity_tokens": [
+        "DOI:10.1109/iccad.2010.5653749"
+      ],
+      "reason": "3D ICと層間液冷の過渡熱モデルを高速計算するEDA/熱設計研究で、LLM推論・メモリ階層の最適化を対象としない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "3D-ICE: Fast compact transient thermal modeling for 3D ICs with inter-tier liquid cooling"
     }
   }
 }

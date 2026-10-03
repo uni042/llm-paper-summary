@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7edca7daf491e7b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11432-024-4222-0",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11432-024-4222-0",
+    "identity_tokens": [
+      "DOI:10.1007/s11432-024-4222-0"
+    ],
+    "reason": "LLMエージェントの構成、応用、評価、課題を俯瞰する一般サーベイであり、エージェント推論サービングのスケジューラやランタイム効率化を主題としない。",
+    "first_checked_at": "2026-10-03T17:48:37+00:00",
+    "last_checked_at": "2026-10-03T17:48:37+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "The rise and potential of large language model based agents: a survey"
+  },
+  "processed_at": "2026-10-03T17:48:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7edca7daf49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

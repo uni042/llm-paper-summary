@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-674839c6e6209613-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41467-024-45563-x",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41467-024-45563-x",
+    "identity_tokens": [
+      "DOI:10.1038/s41467-024-45563-x"
+    ],
+    "reason": "GPT-3/Llama-2を微調整して材料科学文献からエンティティ・関係をJSON等へ抽出する応用研究で、LLM推論の実行効率・メモリ・サービング最適化は主題ではない。",
+    "first_checked_at": "2026-10-03T17:48:37+00:00",
+    "last_checked_at": "2026-10-03T17:48:37+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md",
+      "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+    ],
+    "title": "Structured information extraction from scientific text with large language models"
+  },
+  "processed_at": "2026-10-03T17:48:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-674839c6e620",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
