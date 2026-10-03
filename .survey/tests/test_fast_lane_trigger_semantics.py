@@ -52,29 +52,30 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
             })
             self.assertEqual(select_record_bank.pending_immutable_bank_owners(root), {})
 
-    def test_claim_fast_push_trigger_accepts_transport_and_library_scheduler_kick(self):
+    def test_claim_fast_is_manual_only_under_library_first(self):
         text = (ROOT / ".github/workflows/survey-claim-fast.yml").read_text(encoding="utf-8")
-        trigger = text.split("  workflow_dispatch:", 1)[0]
-        self.assertIn(".survey/work-queue/claim-requests/*.json", trigger)
-        self.assertIn(".survey/work-queue/direct-takes/research/*.json", trigger)
-        self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
-        self.assertNotIn(".survey/scripts/", trigger)
-        self.assertNotIn(".github/workflows/survey-claim-fast.yml", trigger)
+        trigger = text.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", trigger)
+        self.assertNotIn("push:", trigger)
+        self.assertNotIn("schedule:", trigger)
 
-    def test_library_import_kick_has_dedicated_path_trigger(self):
-        text = (ROOT / ".github/workflows/library-import-kick.yml").read_text(encoding="utf-8")
-        trigger = text.split("  workflow_dispatch:", 1)[0]
-        self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
-        self.assertIn("library-import.yml/dispatches", text)
-        self.assertNotIn("head_commit.message", text)
+    def test_library_import_kick_is_manual_only_and_orchestrator_owns_kick(self):
+        legacy = (ROOT / ".github/workflows/library-import-kick.yml").read_text(encoding="utf-8")
+        legacy_trigger = legacy.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", legacy_trigger)
+        self.assertNotIn("push:", legacy_trigger)
 
-    def test_submission_fast_push_trigger_is_descriptor_only(self):
+        orchestrator = (ROOT / ".github/workflows/survey-orchestrator.yml").read_text(encoding="utf-8")
+        trigger = orchestrator.split("permissions:", 1)[0]
+        self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
+        self.assertIn("dispatch_if_idle library-import.yml", orchestrator)
+
+    def test_submission_fast_is_manual_only(self):
         text = (ROOT / ".github/workflows/survey-submission-fast.yml").read_text(encoding="utf-8")
-        trigger = text.split("  workflow_dispatch:", 1)[0]
-        self.assertIn(".survey/work-queue/submissions/research/*.json", trigger)
-        self.assertIn(".survey/work-queue/submissions/audit/*.json", trigger)
-        self.assertNotIn(".survey/scripts/", trigger)
-        self.assertNotIn(".github/workflows/survey-submission-fast.yml", trigger)
+        trigger = text.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", trigger)
+        self.assertNotIn("push:", trigger)
+        self.assertNotIn("schedule:", trigger)
 
     def test_survey_helper_routes_record_fallback_to_immutable_replay(self):
         text = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
