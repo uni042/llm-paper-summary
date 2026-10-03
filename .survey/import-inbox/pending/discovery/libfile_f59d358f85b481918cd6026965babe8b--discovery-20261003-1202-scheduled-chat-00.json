@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261003-1202-scheduled-chat-00",
+  "reference_main_sha": "14dd6ab9334b652e0c72c32a1c11fcbbec54c89e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00376",
+      "identity_tokens": [
+        "arXiv:2403.00376",
+        "DOI:10.48550/arXiv.2403.00376"
+      ],
+      "title": "Spurious Feature Eraser: Stabilizing Test-Time Adaptation for Vision-Language Foundation Model",
+      "reason": "視覚言語基盤モデルの分類頑健性を改善するテスト時プロンプト適応が主題で、LLM推論サービング、KVキャッシュ、推論カーネル等の効率化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2403.00376",
+      "body_check": "本文Method/Experimentsを確認。補助画像上の予測を一様分布へ近づけるKL損失でCLIPの学習可能promptをテスト時最適化し、Waterbirds等の分類精度・worst-group accuracyを評価する。推論基盤の速度・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19282",
+      "identity_tokens": [
+        "arXiv:2402.19282",
+        "DOI:10.48550/arXiv.2402.19282"
+      ],
+      "title": "WanJuan-CC: A Safe and High-Quality Open-sourced English Webtext Dataset",
+      "reason": "Common Crawl由来の事前学習データセット構築・品質/安全フィルタリングが主題で、最終適用先は学習データ整備。推論高速化の対象外。",
+      "source_url": "https://arxiv.org/abs/2402.19282",
+      "body_check": "本文データ処理節を確認。MinHash-LSHによる重複除去、約1300万unsafe domain、36,289 unsafe words、toxicity/pornography classifier、PII masking等でWeb事前学習コーパスを構築する。推論runtime評価はない。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.17753",
+      "identity_tokens": [
+        "arXiv:2402.17753",
+        "DOI:10.48550/arXiv.2402.17753"
+      ],
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "reason": "長期会話エージェントの記憶方式として長文脈・RAG・要約を比較するためエージェント記憶との関連はあるが、主貢献は評価ベンチマークでありKV管理や推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.17753",
+      "body_check": "本文実験節を確認。LoCoMo上でbase LLM、16K長文脈、DRAGON+GPT-3.5-turbo-16k RAG、incremental summarizationをQA/イベント要約/マルチモーダル対話生成で比較する。システム遅延・KV/I/O最適化は評価しない。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16843",
+      "identity_tokens": [
+        "arXiv:2402.16843",
+        "DOI:10.48550/arXiv.2402.16843"
+      ],
+      "title": "Multi-LoRA Composition for Image Generation",
+      "reason": "複数LoRAを組み合わせた画像生成とその評価が主題で、LLM推論システムの対象範囲外。",
+      "source_url": "https://arxiv.org/abs/2402.16843",
+      "body_check": "本文のComposLoRA節と評価を確認。Civitai由来の22 LoRAをcharacter/clothing/style/background/objectに分け、複数要素のtext-to-image composition品質をGPT-4V等で評価する。LLMサービングや推論効率化ではない。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16197",
+      "identity_tokens": [
+        "arXiv:2402.16197",
+        "DOI:10.48550/arXiv.2402.16197"
+      ],
+      "title": "Language Models for Code Completion: A Practical Evaluation",
+      "reason": "コード補完モデルの実利用品質を評価するソフトウェア工学研究で、推論サービングや高速化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2402.16197",
+      "body_check": "本文を確認。Code4Me IDE拡張で1200人超から1年以上・60万件超の補完を収集し、3公開code LMを12言語・6指標でオンライン/オフライン比較、1690要求を失敗要因分析する。主要評価は補完品質と実利用妥当性。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.13991",
+      "identity_tokens": [
+        "arXiv:2402.13991",
+        "DOI:10.48550/arXiv.2402.13991"
+      ],
+      "title": "Analysing The Impact of Sequence Composition on Language Model Pre-Training",
+      "reason": "文書packingと因果maskが事前学習品質へ与える影響の研究で、主目的が学習工程・学習データ構成にあるため凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2402.13991",
+      "body_check": "本文§3–4を確認。1.3B LLaMA系を2K/8K文脈でMix/Uni/BM25 Chunkとintra-document causal maskingにより事前学習し、PPL、ICL、知識記憶、文脈利用を比較する。intra-document maskingは実装上4.0%学習効率低下も報告する。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12991",
+      "identity_tokens": [
+        "arXiv:2402.12991",
+        "DOI:10.48550/arXiv.2402.12991"
+      ],
+      "title": "TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification",
+      "reason": "LLMのブラックボックス同一性検証・モデル盗用検知が主題で、推論基盤の性能最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.12991",
+      "body_check": "本文Solution/Experimentsを確認。GCGでadversarial suffixを最適化し、参照モデルだけ特定targetを生成し他モデルはランダム応答になるTRAPを構成してblack-box identity verificationを行う。latency/KV/scheduler最適化は扱わない。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.12280",
+      "identity_tokens": [
+        "arXiv:2402.12280",
+        "DOI:10.48550/arXiv.2402.12280"
+      ],
+      "title": "Plato: Plan to Efficiently Decode for Large Language Model Inference",
+      "reason": "回答を依存関係付きサブタスクへ計画し、独立部分を並列生成して自己回帰復号の逐次ボトルネックを減らすLLM推論高速化方式で、対象範囲に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2402.12280",
+      "body_check": "本文方式・評価を確認。計画段階で依存関係を付けたサブタスクへ分解し、依存のない生成を並列化して最後に統合する。Phi-4-14B/Qwen2.5-32B/Llama3.1-70BでAR/SoTと比較し、カテゴリ別に約1.1–2.0倍級以上の速度向上を示す一方、coding/mathでは逐次依存が強く品質・速度利得が小さい。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.03065-cake-compute-or-load-kv-cache.md"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.11700",
+      "identity_tokens": [
+        "arXiv:2402.11700",
+        "DOI:10.48550/arXiv.2402.11700"
+      ],
+      "title": "Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers",
+      "reason": "上位decoder layerを構造的に削除してモデル容量と推論計算を減らす圧縮研究。prompt-based fine-tuningを伴うが、保存・推論効率削減を明示的な最終目的に含むため対象とする。",
+      "source_url": "https://arxiv.org/abs/2402.11700",
+      "body_check": "本文§III–Vを確認。GPT-2 XLの48層を24/12/2/1層、OPT-1.3Bの24層を12/6/2/1層へ上位から削り、200 training examplesのfew-shot prompt fine-tuningで4分類課題を評価。GPT-2 XL 1層は1.6B→112M、OPT 1層は1.3B→157Mへ縮小しつつ平均精度を維持/改善する条件を報告する。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.10631",
+      "identity_tokens": [
+        "arXiv:2402.10631",
+        "DOI:10.48550/arXiv.2402.10631"
+      ],
+      "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
+      "reason": "2/3-bit重み量子化で配備時のモデル容量と低ビット推論を可能にする量子化研究。量子化対応学習を用いるが最終成果物は低ビット推論モデルであり対象範囲。",
+      "source_url": "https://arxiv.org/abs/2402.10631",
+      "body_check": "本文§3–5を確認。非対称量子化+clippingと、full-precision teacher/quantized student間のconfidence-aware KLによる自己蒸留を組み合わせる。LLaMA-2/WizardCoder等の2/3-bit評価を行い、WizardCoder-7B量子化はA100-80GB 1台換算でLLM-QAT約280.64時間に対し約3.02時間と報告する。",
+      "first_checked_at": "2026-10-03T12:02:12+09:00",
+      "last_checked_at": "2026-10-03T12:02:12+09:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": 491
+    }
+  ]
+}
