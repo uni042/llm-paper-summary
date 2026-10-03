@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cb5c760f4eb5710-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/0471200611",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/0471200611",
+    "identity_tokens": [
+      "DOI:10.1002/0471200611"
+    ],
+    "reason": "エントロピー、符号化、通信路容量、レート歪み等を体系化した情報理論の教科書で、LLM推論システムを提案・評価する研究ではない。",
+    "first_checked_at": "2026-10-03T16:32:28+00:00",
+    "last_checked_at": "2026-10-03T16:32:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Elements of Information Theory"
+  },
+  "processed_at": "2026-10-03T16:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cb5c760f4eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
