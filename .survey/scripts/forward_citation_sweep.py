@@ -21,6 +21,7 @@ import candidate_priority
 import citation_graph
 import discovery_provider_adapter
 import paper_identity
+import reference_pool
 
 CONFIG_PATH = Path(".survey/config/forward-citation-sweep.json")
 STATE_PATH = Path(".survey/work-queue/forward-citation-sweep.json")
@@ -248,11 +249,11 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
 
     def due_key(item: tuple[str, dict[str, Any]]) -> tuple[Any, ...]:
         canonical, row = item
-        in_progress = row.get("cycle_started_at") is not None
-        completed = _parse_time(row.get("last_completed_at"))
-        never = completed is None
-        completed_key = completed.isoformat() if completed else ""
-        return (0 if in_progress else 1, 0 if never else 1, completed_key, canonical)
+        # Fairness first: an in-progress high-citation seed keeps its cursor but
+        # does not monopolize every run. Seeds least recently touched are selected
+        # first, so the initial all-paper sweep converges across the whole corpus.
+        touched = _parse_time(row.get("last_page_at")) or _parse_time(row.get("last_completed_at"))
+        return (0 if touched is None else 1, touched.isoformat() if touched else "", canonical)
 
     due: list[tuple[str, dict[str, Any]]] = []
     for canonical, row in seeds.items():
@@ -315,6 +316,33 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
             sleep_fn(spacing)
 
     represented_removed = _drop_represented_candidates(state, represented)
+
+    # Candidates already durably classified as unrelated/borderline no longer
+    # need to stay in the sweep candidate surface. Their exclusion evidence
+    # remains in the canonical ledgers and future sightings will be filtered.
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    borderline = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_BORDERLINE_LEDGER,
+        label="borderline-paper",
+    )
+    rejected = unrelated | borderline
+    candidates = state.get("candidates") if isinstance(state.get("candidates"), dict) else {}
+    rejected_keys = [
+        key for key, row in candidates.items()
+        if isinstance(row, dict) and paper_identity.record_identifiers(row).intersection(rejected)
+    ]
+    for key in rejected_keys:
+        candidates.pop(key, None)
+    if rejected_keys:
+        live_keys = set(candidates)
+        aliases = state.get("candidate_aliases") if isinstance(state.get("candidate_aliases"), dict) else {}
+        state["candidate_aliases"] = {
+            alias: key for alias, key in aliases.items() if key in live_keys
+        }
+
     state["schema_version"] = 1
     state["policy"] = config.get("policy_name")
     state["updated_at"] = now_text
@@ -335,6 +363,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         "completed_cycles": completed_cycles,
         "errors": errors,
         "represented_candidates_removed": represented_removed,
+        "classified_candidates_removed": len(rejected_keys),
         "candidate_count": state["candidate_count"],
         "state_changed": changed,
     }
