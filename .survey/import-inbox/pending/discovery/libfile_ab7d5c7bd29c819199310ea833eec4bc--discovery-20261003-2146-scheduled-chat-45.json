@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261003-2146-scheduled-chat-45",
+  "reference_main_sha": "d753a0e8a929c39710f9c359b6fe6fcd944cef1b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2308.09723",
+      "identity_tokens": [
+        "arXiv:2308.09723",
+        "DOI:10.48550/arXiv.2308.09723"
+      ],
+      "title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+      "reason": "自己回帰復号のメモリ帯域ボトルネックを対象に、細粒度weight-only量子化と専用GPU GEMMでLLM推論のメモリ・throughputを直接改善するため対象。",
+      "source_url": "https://arxiv.org/abs/2308.09723",
+      "body_check": "一次資料本文の問題設定・方式・評価を確認。事前学習済み重みだけから量子化粒度を適応選択し、追加fine-tuningなしでdense/MoEへ適用する。fp16/bf16 activation×int8/int4 weightをon-the-fly dequantizationするGPU GEMMを実装し、OPT-175Bと内部MoEで同一GPU数のthroughputを最大3.65倍へ高め、精度低下を小さく抑える。",
+      "first_checked_at": "2026-10-03T21:52:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2304.11062",
+      "identity_tokens": [
+        "arXiv:2304.11062",
+        "DOI:10.48550/arXiv.2304.11062"
+      ],
+      "title": "Scaling Transformer to 1M tokens and beyond with RMT",
+      "reason": "再帰メモリで長文脈Transformerの計算量を入力長に対して線形化し、巨大文脈処理の推論計算・状態保持を変える方式で対象。",
+      "source_url": "https://arxiv.org/abs/2304.11062",
+      "body_check": "一次資料本文の方式・評価を確認。Recurrent Memory Transformerはsegment間で専用memory tokenを再帰的に受け渡し、各segment内部だけでattentionを行うことで全履歴への二乗attentionを避ける。最大200万tokenまで情報保持・検索を検証し、処理segment増加に伴うlanguage-modeling perplexity改善も報告する。",
+      "first_checked_at": "2026-10-03T21:53:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17042",
+      "identity_tokens": [
+        "arXiv:2311.17042",
+        "DOI:10.48550/arXiv.2311.17042"
+      ],
+      "title": "Adversarial Diffusion Distillation",
+      "reason": "画像拡散モデルを1–4 stepへ蒸留する学習方式で、LLM/言語モデル推論システムを対象としない。",
+      "source_url": "https://arxiv.org/abs/2311.17042",
+      "body_check": "一次資料本文の方式・評価を確認。score distillationとadversarial lossを組み合わせて大規模画像diffusion modelをfew-step生成へ学習し、1 stepで既存few-step法を上回り4 stepでSDXL級品質を狙う。対象は画像生成であり、LLM serving、KV cache、MoE inference、言語復号runtimeは扱わない。",
+      "first_checked_at": "2026-10-03T21:54:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12950",
+      "identity_tokens": [
+        "arXiv:2308.12950",
+        "DOI:10.48550/arXiv.2308.12950"
+      ],
+      "title": "Code Llama: Open Foundation Models for Code",
+      "reason": "コード向け基盤LLM系列の構築・学習・能力報告が主目的で、推論runtimeの効率化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2308.12950",
+      "body_check": "一次資料本文のモデル系列・学習設定・評価を確認。Llama 2を基に7B/13B/34B/70BのCode Llama、Python、Instruct系列を構築し、16K学習・最大100K入力、infilling、HumanEval/MBPP/MultiPL-E等のコード能力を評価する。主貢献はコード生成モデルであり、推論memory/kernel/schedulerの新規最適化はない。",
+      "first_checked_at": "2026-10-03T21:55:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2309.08168-draft-verify.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.16609",
+      "identity_tokens": [
+        "arXiv:2309.16609",
+        "DOI:10.48550/arXiv.2309.16609"
+      ],
+      "title": "Qwen Technical Report",
+      "reason": "Qwen/Qwen-Chatおよび派生モデルの構築・学習・能力を報告する技術報告で、LLM推論基盤最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2309.16609",
+      "body_check": "一次資料本文の系列構成・学習・評価を確認。複数parameter規模のQwen base/chat、RLHF、tool use/planning、Code-Qwen、Math-Qwenを多数のdownstream benchmarkで評価する。モデル配備に関係する記述はあっても、KV cache、offload、serving scheduler、推論kernelの新規方式と実測改善を主要貢献としていない。",
+      "first_checked_at": "2026-10-03T21:56:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.18223",
+      "identity_tokens": [
+        "arXiv:2303.18223",
+        "DOI:10.48550/arXiv.2303.18223"
+      ],
+      "title": "A Survey of Large Language Models",
+      "reason": "LLM全般のpre-training・adaptation・利用・能力評価を整理する総合サーベイで、推論システム効率化に特化した調査ではない。",
+      "source_url": "https://arxiv.org/abs/2303.18223",
+      "body_check": "一次資料本文の調査範囲を確認。LLMの背景、pre-training、adaptation tuning、utilization、capacity evaluation、開発資源、課題を横断的に整理する。推論効率への部分的言及はあるが、KV cache、offload、serving、kernel、MoE inferenceを中心に体系化するサーベイではない。",
+      "first_checked_at": "2026-10-03T21:57:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14314",
+      "identity_tokens": [
+        "arXiv:2305.14314",
+        "DOI:10.48550/arXiv.2305.14314"
+      ],
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "reason": "4bit量子化モデルへLoRAを学習する省メモリfine-tuning方式で、最終適用先が学習工程そのものの高速化・省メモリ化である凍結対象。",
+      "source_url": "https://arxiv.org/abs/2305.14314",
+      "body_check": "一次資料本文の方式・評価を確認。frozen 4-bit pretrained modelを通してLoRAへgradientを流し、NF4、double quantization、paged optimizerで65Bを単一48GB GPU上でfine-tune可能にする。Guanacoのinstruction/chat品質と1,000超モデルのfine-tuningを評価し、CUDA kernelも4-bit training向けで、推論runtime最適化が主要貢献ではない。",
+      "first_checked_at": "2026-10-03T21:58:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.05968",
+      "identity_tokens": [
+        "arXiv:2307.05968",
+        "DOI:10.48550/arXiv.2307.05968"
+      ],
+      "title": "Surfaces of constant principal-curvatures ratio in isotropic geometry",
+      "reason": "等方幾何・微分幾何における主曲率比一定曲面の数学研究で、LLMや機械学習推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2307.05968",
+      "body_check": "一次資料本文の問題設定・手法・結論を確認。Euclidean/単純等方幾何でprincipal curvatures比が一定の回転・channel・ruled・helical・translational surfaceを、line geometry、Lie sphere geometry、ODE、代数幾何で特徴付ける。LLM/Transformerや計算機推論システムは研究対象でない。",
+      "first_checked_at": "2026-10-03T21:59:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17166",
+      "identity_tokens": [
+        "arXiv:2305.17166",
+        "DOI:10.48550/arXiv.2305.17166"
+      ],
+      "title": "Wave scattering event shapes at high energies",
+      "reason": "高エネルギー量子場理論の波散乱・event shapeに関する理論物理研究で、LLM推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2305.17166",
+      "body_check": "一次資料本文の問題設定・理論解析を確認。高エネルギー散乱で波束状態とenergy-flow/event-shape observableを扱い、場の理論・散乱振幅の構造を解析する。ニューラルネット、LLM、推論サービング、メモリ管理は対象外。",
+      "first_checked_at": "2026-10-03T22:00:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2308.13137",
+      "identity_tokens": [
+        "arXiv:2308.13137",
+        "DOI:10.48550/arXiv.2308.13137"
+      ],
+      "title": "OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models",
+      "reason": "低bit事後学習量子化でLLM配備時のメモリと計算を削減し、実機の推論速度・メモリ改善まで評価するため対象。",
+      "source_url": "https://arxiv.org/abs/2308.13137",
+      "body_check": "一次資料本文のLWC/LET、block-wise calibration、実験を確認。Learnable Weight Clippingでweight clipping thresholdを最適化し、Learnable Equivalent Transformationでactivation outlierの量子化難度をweight側へ移す。LLaMA-2 7–70Bを128 calibration samplesで単一A100-40G上1–16時間処理し、W4A4/W6A6/W4A16/W3A16/W2A16を評価、実機でinference speedとmemory reductionも改善する。",
+      "first_checked_at": "2026-10-03T22:01:00+09:00",
+      "last_checked_at": "2026-10-03T22:11:00+09:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "worklist_rank": null
+    }
+  ]
+}
