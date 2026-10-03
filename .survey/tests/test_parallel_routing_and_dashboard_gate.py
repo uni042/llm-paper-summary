@@ -17,25 +17,19 @@ LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
 class CommonThresholdRoutingTests(unittest.TestCase):
-    def test_canonical_router_uses_candidate_inventory_not_schedule_identity(self):
+    def test_canonical_router_uses_status_candidate_inventory_for_all_workers(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
-        self.assertIn("candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD", router)
-        self.assertIn("同じ論文処理規約・同じ手順", router)
-        self.assertIn("288件", router)
-        self.assertNotIn("同じタスク・同じ手順", router)
-        self.assertIn("Research / Audit 合計で成功完了を最低5件", router)
-        self.assertIn("今回のrunで最低8つの**成功した正規schema v3 precheck**", router)
-        self.assertIn("1つのprecheck `request_id` = 1ラウンド", router)
-        self.assertIn("Audit starvation防止の3件ブロック", router)
-        self.assertIn("runの成功完了ノルマ5件とは別", router)
-        self.assertIn("foreground 1件 + standby N件", router)
-        self.assertIn("max_jobs=1", router)
-        self.assertNotIn("Research / Audit 合計3件ノルマ", router)
-        self.assertNotIn("未提出のactive claimを複数保持しない", router)
-        self.assertIn("priority = min(100, base + lineage + recency + venue)", router)
-        self.assertNotIn("読解 3 : 探索 1", router)
-        self.assertNotIn("overflow research mode", router)
+        self.assertIn("収録候補論文数 > 600", router)
+        self.assertIn("収録候補論文数 <= 600", router)
+        self.assertIn("run中に在庫が変化してもモードは固定する", router)
+        self.assertIn("scheduled-chat-00", router)
+        self.assertIn("scheduled-chat-30", router)
+        self.assertIn("scheduled-chat-45", router)
+        self.assertIn("3-way round-robin", router)
+        self.assertIn("Research runでは新規完成Research Markdownを5件", router)
+        self.assertIn("新規canonical identity 10件を本文確認まで行い", router)
+        self.assertNotIn("E = G + D - R", router)
+        self.assertNotIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
 
     def test_repository_tests_watch_single_worker_router(self):
         text = REPOSITORY_TESTS.read_text(encoding="utf-8")
