@@ -220,8 +220,17 @@ jobs:
               else 'issues_found'
           )
           state['last_maintenance_status_source'] = 'maintenance_workflow'
+          state.pop('maintenance_request_token', None)
+          state.pop('maintenance_request_reason', None)
           state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
           PY
+
+      - name: Refresh STATUS from finalized maintenance evidence
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/render_status_dashboard.py \
+            --repo-root . \
+            --output STATUS.md
 
       - name: Commit maintenance results
         if: steps.pending.outputs.run == 'true'
