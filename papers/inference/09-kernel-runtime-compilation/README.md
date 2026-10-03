@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（41本）
+## 自動生成の論文一覧（43本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -197,6 +197,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
   実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：2  
   注意だけでなくFFNまで系列ブロック内で融合して学習時活性を保持しないBPT。A100/TPU v4でメモリ効率型注意より2〜4倍長い文脈を学習可能にし、1B・16Kでは通常Transformer比1.20倍の学習スループットを示す。
+
+- **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  この研究は、LLMの重みを疎にするだけでは実際の高速化にならないという問題を、精度回復と実行系の両側から扱う。T5翻訳、Whisper音声翻訳にも対象を広げ、疎性と量子化の併用も検証する点が、単なる枝刈り精度論文との差である。
+
+### 7年前（2019-11〜2020-10）
+
+- **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：7  
+  モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）
 

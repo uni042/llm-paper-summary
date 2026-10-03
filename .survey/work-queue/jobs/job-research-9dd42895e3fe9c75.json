@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "視覚トークンの空間冗長性をattention sparsityから検出し、選択・クラスタ統合してLLMへ渡すtoken数を大幅削減する、マルチモーダルLLMのprefill計算・メモリ高速化研究。",
   "source_url": "https://arxiv.org/abs/2403.15388",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLaVA-Prumerge: Adaptive Token Reduction for Efficient Large Multimodal Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+  "represented_canonical_id": "arXiv:2403.15388",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

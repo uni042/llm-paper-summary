@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "Transformer並列学習とRNN型の定数メモリ自己回帰推論を両立し、長系列推論の計算・メモリ複雑度を直接下げるモデル/推論方式。",
   "source_url": "https://arxiv.org/abs/2305.13048",
-  "status": "ready",
+  "status": "superseded",
   "title": "RWKV: Reinventing RNNs for the Transformer Era",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+  "represented_canonical_id": "arXiv:2305.13048",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

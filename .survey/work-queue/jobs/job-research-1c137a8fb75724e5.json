@@ -26,8 +26,13 @@
   "schema_version": 1,
   "selection_reason": "Early high-performance Transformer inference library with GPU kernel and memory optimizations; useful historical systems baseline for serving/runtime lineages, reporting up to 14x speedup over TensorFlow and 1.4x over FasterTransformer.",
   "source_url": "https://arxiv.org/abs/2010.13887",
-  "status": "ready",
+  "status": "superseded",
   "title": "LightSeq: A High Performance Inference Library for Sequence Processing and Generation",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md",
+  "represented_canonical_id": "arXiv:2010.13887",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

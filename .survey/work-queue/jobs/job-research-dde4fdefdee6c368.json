@@ -39,9 +39,14 @@
   "schema_version": 1,
   "selection_reason": "Kashin分解のdense random transformを符号ランダム化DCTへ置換してO(N log N)化し、2-bit factor codeをnative 2-bit hardware向けに構造化。",
   "source_url": "https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-32ac40905164328636c42caa.json",
   "title": "Structured Transforms for Low-Overhead Quantization of Language Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md",
+  "represented_canonical_id": "arXiv:2609.11687",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

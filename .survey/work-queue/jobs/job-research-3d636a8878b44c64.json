@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "疎なLLMをCPU/GPU runtimeで実際に高速化し、メモリ帯域削減も利用することを主目的に含むため推論高速化の対象範囲に直接該当する。",
   "source_url": "https://arxiv.org/abs/2310.06927",
-  "status": "ready",
+  "status": "superseded",
   "title": "Sparse Fine-tuning for Inference Acceleration of Large Language Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T15:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md",
+  "represented_canonical_id": "arXiv:2310.06927",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
