@@ -53,7 +53,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   新しい注意方式を提案しても、実用速度を得るには専用GPUカーネルを書く必要がある。RTX 3090のRoPE付き因果注意では柔軟注意に対して2.10倍高速化し、H100ではLlama-3-8Bの訓練ステップをPyTorchの手調整済み後端との差5%以内で実行した。
 
 - **2026-09 · [Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures](2026-2609.25624-accelerating-the-mitigation-of-llm-inference-nondeterminism-across-gpu-a.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   BF16重みをレジスタ内FP32化し固定順序のIEEE-754 FMAで積算するTriton GEMMにより、GPU世代を跨ぐbitwise再現性と既存対策比1.17〜3.1倍の推論高速化を両立する。
 
 - **2026-08 · [UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge](2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md)**  
@@ -119,7 +119,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：— ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：5  
   この疎性は、注意や共有専門家をGPUに置き、多数のrouted 専門家を大容量CPUメモリへ置く混成推論と相性がよい。しかし単純なオフロードではCPU側の小さな行列演算が遅く、MoE層の結果を待つ間GPUが停止するため、PCIe転送だけでなくCPU計算と同期が律速になる。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
@@ -155,17 +155,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高水準PyTorchからCUDAを一から生成するのではなく、SGLangに既に存在する正しいCUDAカーネルを出発点にし、試験・プロファイル・計画・実装を別々の大規模言語モデル（Large Language モデル; LLM）エージェントへ分担する。
 
 - **2025-04 · [70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)](2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   DFloat11は量子化ではなく、BFloat16重みの情報エントロピーを利用する可逆圧縮方式である。
 
 - **2025-10 · [lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models](2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   端末内LLMでは、GPUのピーク性能だけでなく動的周波数制御、熱、限られたメモリ、閉じたGPUドライバが実行時間を左右する。しかし通常のアプリケーション側計測は推論全体しか見えず、オフラインGPUプロファイラは外部ホストへのログ転送や後処理を必要とする。
 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：— ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：14  
   しかしサービングでは、アダプタ数が増えるほど「小さいから全部GPUへ置く」という前提が崩れ、異なるrank・異なる要求長のアダプタとKVキャッシュがGPUメモリを断片化する。スケジューラが実行する要求に必要なアダプタだけをGPUへ取り込み、LoRA重みとKVキャッシュをUnified Pagingで統合管理する。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
@@ -177,15 +177,15 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   LeanAttentionが減らすのは注意の数学的な計算量ではない。まったく同じ厳密注意を、長いKV文脈方向へ細かく分割し、GPUの全SMへ端数なく近い形で仕事を割り振る。デコードでは問い合わせが1トークンしかないため従来のタイル並列性が不足する、というハードウェア利用率の問題を解く。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   AI演算をGPUへ効率良く写像するには、共有メモリ配置、テンソル Core命令、非同期コピー、ワープ間同期などを同時に調整する必要がある。ThunderKittens（TK）は、GPUの階層そのものに合わせた少数の抽象化へ設計を絞り、記述量を抑えながら高性能を得る枠組みである。
 
 - **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   活性疎化は小さい中間値をゼロにし、後続行列積で対応する演算を省く。しかしLLMのFFNではチャネルごとに活性分布と後段重みへの影響が異なり、全チャネルへ同じ閾値を置くと「値は小さいが出力へ重要」な成分まで落とす。注意層もQ/K/V/O投影を同じように疎化すると品質感度が異なる。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   KVキャッシュ削減、oneCCL分散通信、CPU命令・モデル別カーネル最適化をxFasterTransformerへ統合し、GPUなしのLLM推論を実用化する。
 
 ### 4年前（2022-11〜2023-10）

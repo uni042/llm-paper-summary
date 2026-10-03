@@ -3,28 +3,31 @@ authors:
 - Fangyuan Xu
 - Tanya Goyal
 - Eunsol Choi
-canonical_id: "DOI:10.18653/v1/2025.acl-long.1211"
-code: "https://github.com/carriex/refreshkv"
+canonical_id: DOI:10.18653/v1/2025.acl-long.1211
+code: https://github.com/carriex/refreshkv
 doi: 10.18653/v1/2025.acl-long.1211
 list_summary: 完全KVを保持したまま通常は小さな部分KVへ注意し、クエリ類似度低下時だけ完全注意して重要トークン集合を更新することで長文生成の固定削除失敗を避ける。
 publication: ACL 2025
 published: 2025-07
 reference_main_sha: 56b868025d112b179597495c3ec0105adface8c2
-source: "https://aclanthology.org/2025.acl-long.1211/"
+source: https://aclanthology.org/2025.acl-long.1211/
 sources:
-- "https://aclanthology.org/2025.acl-long.1211/"
-- "https://aclanthology.org/2025.acl-long.1211.pdf"
-summary: RefreshKVは、KVキャッシュを一度だけ圧縮する方式が長文生成の途中で後から必要になる入力トークンを復元できない問題を扱う。完全KVキャッシュ自体は保持し、通常は上位Kトークンだけの部分キャッシュへ注意し、現在のクエリと直近の完全注意時クエリの類似度が下がった時だけ完全注意を実行して部分キャッシュを再構築する。16K文脈でLlama-3.1-8BのArxiv
-  PPLをSnapKV
-  2.54から2.32へ改善しつつ時間6.77対6.33、HTML→TSVではH2O/SnapKVがF1=0の条件でRefreshKVが17を得る。
-title: "RefreshKV: Updating Small KV Cache During Long-form Generation"
+- https://aclanthology.org/2025.acl-long.1211/
+- https://aclanthology.org/2025.acl-long.1211.pdf
+summary: RefreshKVは、KVキャッシュを一度だけ圧縮する方式が長文生成の途中で後から必要になる入力トークンを復元できない問題を扱う。完全KVキャッシュ自体は保持し、通常は上位Kトークンだけの部分キャッシュへ注意し、現在のクエリと直近の完全注意時クエリの類似度が下がった時だけ完全注意を実行して部分キャッシュを再構築する。16K文脈でLlama-3.1-8BのArxiv PPLをSnapKV 2.54から2.32へ改善しつつ時間6.77対6.33、HTML→TSVではH2O/SnapKVがF1=0の条件でRefreshKVが17を得る。
+title: 'RefreshKV: Updating Small KV Cache During Long-form Generation'
 topics:
 - KV cache
 - long-context inference
 - sparse attention
 - long-form generation
-worker_completed_at: "2026-10-02T22:46:34+09:00"
+worker_completed_at: '2026-10-02T22:46:34+09:00'
 worker_run_key: 20261002-2245-scheduled-chat-45
+publication_type: 査読付き学術論文
+publication_status: published
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コード公開あり（https://github.com/carriex/refreshkv）。
+implementation_status: official-code-available
+last_checked: '2026-10-03'
 ---
 
 # RefreshKV: Updating Small KV Cache During Long-form Generation

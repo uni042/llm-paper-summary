@@ -47,7 +47,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
 
 - **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   GPUメモリに収まらない場合、使う専門家をCPUからPCIe経由で読み込むため、特に復号では「重み待ち」が逐次生成のクリティカルパスへ入る。静的な量子化は転送量を減らせる一方、全専門家を同じ精度へ落とすと品質を損ねやすい。
 
 - **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
@@ -59,7 +59,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   FlashMoEはMoEの専門家重みをNVMe SSDへ置き、VRAMには必要なものだけを読み込む。最近度と利用頻度から次回利用の遠さを予測してキャッシュを置換し、SSD読み出し待ちを減らす。
 
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   MoE専門家の活性化局所性を測定し、LRUをLFUへ置換するキャッシュと投機的専門家事前取得を比較して、メモリ制約下オフロードの改善余地を定量分析。
 
 - **2026-08 · [Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference](2026-2608.12103-kernel-managed-expert-cache-tiering.md)**  
@@ -125,7 +125,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   vLLMの論理KVブロックを汎用PIMの物理配置・命令へ変換し、階層グラニュール割当とCommit Zoneで動的キャッシュ管理・GEMV効率・毎トークン書き込み効率を両立するPIMランタイム。
 
 - **2026-09 · [OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading](2026-2609.33385-oled-moe-accelerating-moe-based-dllm-inference-via-inter-iteration-local.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   dLLMの隣接デノイズ反復で専門家経路が再利用される性質を、確信度予測・層別保持・CPU/GPU協調へ利用するMoEオフロード。既存方式比TPOTを1.23〜7.93倍改善。
 
 - **2026-09 · [LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism](2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md)**  
@@ -217,7 +217,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   方式は積層SRAM、ローカルHBM、共有DRAMを階層的な常駐先として扱い、専門家複製を昇格・維持・降格・追い出しする遅い制御と、現在の複製へトークン群を割り当てる速い制御を分離する。
 
 - **2026-07 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：[✓](https://github.com/UT-SysML/Oneiros/) ・ リポジトリ内被引用：0  
   大規模言語モデル配信では、生成が進むほど鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）が増え、GPUメモリ不足が同時処理数を制約する。従来のCPUメモリへのKV退避は容量を増やせるが、KVは復号中も更新されるため、GPUとCPUの双方向転送と同期が実行経路へ入りやすい。
 
 - **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  

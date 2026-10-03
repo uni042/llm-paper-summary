@@ -1,15 +1,41 @@
 ---
-canonical_id: "DOI:10.1145/3731569.3764843"
-title: "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models"
-authors: ["Hongtao Chen","Weiyu Xie","Boxin Zhang","Jingqi Tang","Jiahao Wang","Jianwei Dong","Shaoyuan Chen","Ziwei Yuan","Chen Lin","Chengyu Qiu","Yuening Zhu","Qingliang Ou","Jiaqi Liao","Xianglin Chen","Zhiyuan Ai","Yongwei Wu","Mingxing Zhang"]
+canonical_id: DOI:10.1145/3731569.3764843
+title: 'KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models'
+authors:
+- Hongtao Chen
+- Weiyu Xie
+- Boxin Zhang
+- Jingqi Tang
+- Jiahao Wang
+- Jianwei Dong
+- Shaoyuan Chen
+- Ziwei Yuan
+- Chen Lin
+- Chengyu Qiu
+- Yuening Zhu
+- Qingliang Ou
+- Jiaqi Liao
+- Xianglin Chen
+- Zhiyuan Ai
+- Yongwei Wu
+- Mingxing Zhang
 published: 2025-10-12
-publication_status: "SOSP 2025"
-summary: "KTransformersは巨大な混合専門家（MoE）モデルを少数GPUで動かすCPU/GPU混成推論で、CPU演算性能不足と同期待ちを解く。AMX/AVX-512専用カーネル、単一CUDA Graphを用いる非同期CPU-GPU実行、NUMAを考慮した重み配置を組み合わせ、さらに一部expert出力を次層へ遅延注入するExpert DeferralでCPUとGPUを重畳する。既存方式比でプリフィル4.62〜19.74倍、デコード1.25〜4.09倍、Expert Deferral込みではデコード最大4.90倍を示し、追加高速化時の平均精度低下を0.5%以内に抑える。"
-list_summary: "巨大MoEのrouted expertをCPUで高速実行し、非同期CPU-GPUスケジューリングとExpert Deferralで同期待ちを隠して少数GPU推論を高速化する。"
-source: "https://doi.org/10.1145/3731569.3764843"
-worker_completed_at: "2026-09-30T17:06:39+09:00"
-worker_run_key: "20260930-1700-scheduled-chat-00"
-reference_main_sha: "d2dffadff91fadaa048ba44ad3dd399c7b9794c0"
+publication_status: SOSP 2025
+summary: KTransformersは巨大な混合専門家（MoE）モデルを少数GPUで動かすCPU/GPU混成推論で、CPU演算性能不足と同期待ちを解く。AMX/AVX-512専用カーネル、単一CUDA Graphを用いる非同期CPU-GPU実行、NUMAを考慮した重み配置を組み合わせ、さらに一部expert出力を次層へ遅延注入するExpert DeferralでCPUとGPUを重畳する。既存方式比でプリフィル4.62〜19.74倍、デコード1.25〜4.09倍、Expert Deferral込みではデコード最大4.90倍を示し、追加高速化時の平均精度低下を0.5%以内に抑える。
+list_summary: 巨大MoEのrouted expertをCPUで高速実行し、非同期CPU-GPUスケジューリングとExpert Deferralで同期待ちを隠して少数GPU推論を高速化する。
+source: https://doi.org/10.1145/3731569.3764843
+worker_completed_at: '2026-09-30T17:06:39+09:00'
+worker_run_key: 20260930-1700-scheduled-chat-00
+reference_main_sha: d2dffadff91fadaa048ba44ad3dd399c7b9794c0
+doi: 10.1145/3731569.3764843
+publication: SOSP 2025
+publication_type: 査読付き学術論文
+sources:
+- https://doi.org/10.1145/3731569.3764843
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-10-03'
 ---
 
 # KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models

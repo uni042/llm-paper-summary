@@ -77,7 +77,7 @@
   TurboMindは、重み・活性値・キー・バリュー（Key-Value; KV）キャッシュの精度が混在するLLM推論を、単に低ビットカーネルへ置き換えるのではなく、GPUメモリ階層とテンソルコア命令に合わせて二つのパイプラインへ再設計する。
 
 - **2025-04 · [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md)**  
-  実装：— ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：4  
   3ビットMoEの量子化残差を専門家特性に応じた低ランク補償器で回復し、校正不要の精度改善とテンソル Core向けW3A16実測高速化を両立する。
 
 - **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
@@ -139,7 +139,7 @@
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-05 · [PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression](2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   極端量子化の連続値と離散コードをP/V交互最適化し、STE依存を避けて既存量子化表現のまま1〜2bit LLMの精度を改善する。
 
 ### 4年前（2022-11〜2023-10）

@@ -85,7 +85,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
 
 - **2026-01 · [Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference](2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md)**  
-  実装：— ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：3  
   次のプロンプトのうちツール結果を待たずに確定できる部分を先にプレフィルし、生成ストリームから完成したツール呼出しを即時実行し、さらにKVブロックへ意味カテゴリを付けて退避優先度を変える。
 
 - **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  

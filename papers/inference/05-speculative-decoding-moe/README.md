@@ -163,7 +163,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   MemSpecは、入力と生成履歴から有望なドラフトを予測し、上位モデルを常駐集合へ先読みして、エッジ端末のSSD読み込み待ちを隠し適応投機を高速化する。
 
 - **2026-08 · [LiLiCorr: Lightweight Likelihood Correlation of Parallel Drafts for Speculative Decoding](2026-2608.20530-lilicorr-lightweight-likelihood-correlation-of-parallel-drafts-for-specu.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   並列ドラフターの位置別周辺分布から上位候補格子を作り、全候補を一括相関付けして追加の逐次ネットワーク通過なしに整合した投機系列を選ぶ。
 
 - **2026-08 · [AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding](2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md)**  
@@ -199,7 +199,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
 
 - **2025-11 · [Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput](2025-2511.11733-speculative-decoding-in-decentralized-llm-inference-turning-communicatio.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   通常の投機的復号は小さなドラフトモデルが複数トークンを提案し、大きな対象モデルが一括検証することで対象モデル呼出し回数を減らす。
 
 ### 2年前（2024-11〜2025-10）
@@ -209,7 +209,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   特徴回帰制約を外して直接トークン予測し、訓練時に自己生成入力を再投入することでドラフト学習のデータ規模拡大を有効化したEAGLE系投機的復号。
 
 - **2025-04 · [MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md)**  
-  実装：— ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：11  
   投機的復号は小さなドラフトが複数トークンを提案し、大きな対象モデルが一括検証することで対象モデル呼出し回数を減らす。Llama-3.1-8Bでは8枚H100、10万トークン級の長文脈で最大2.51倍を報告する。
 
 - **2025-10 · [SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference](2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md)**  
@@ -253,7 +253,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   BF16対象の直接MXFP4版を第一段ドラフトにし、その生成を小型ドラフトで再び投機して、専用ドラフト学習なしに最大2.72倍高速化する。
 
 - **2025-09 · [SpecVLM: Fast Speculative Decoding in Vision-Language Models](2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   SpecVLMはこのVLM固有の律速へ、EAGLE-2型のEagleVLM、弾力的視覚圧縮器、オンラインlogit蒸留を組み合わせる。対象モデルによる最終検証は維持するため、投機部分は対象分布を変えない。
 
 - **2025-09 · [Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding](2025-2509.04576-communication-efficient-distributed-speculative-decoding.md)**  
@@ -261,23 +261,19 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   分散投機的デコードの上り通信を語彙全体分布から上位K疎ロジットへ圧縮し、出力分布を維持したまま通信量と最適ドラフト長を共同最適化する。
 
 - **2025-07 · [Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding](2025-2507.00605-quantize-sample-and-verify-llm-acceleration-via-adaptive-edge-cloud-spec.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   Q-SVは、量子化された確率情報からサンプルしてもクラウド側の目標分布を厳密に保存する量子化・サンプル戦略と、通信状態・意味的不確実性に応じてドラフト長と量子化精度を同時調整する制御を組み合わせる。
 
 - **2025-05 · [Scaling Laws for Speculative Decoding](2025-2505.07858-scaling-laws-for-speculative-decoding.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   この則でScyllaを設計し、Llama 2/3とQwen2.5でEAGLE2より高い受理性能を示し、産業向け推論エンジンではEAGLE2比2倍の復号スループットを報告する。
 
 - **2024-11 · [Draft Model Knows When to Stop: A Self-Verification Length Policy for Speculative Decoding](2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   固定長でドラフトすると、簡単な区間では短すぎて一括検証の機会を失い、難しい区間では長すぎて後半が棄却され、無駄なドラフト計算が増える。低エントロピーならドラフトを続け、高エントロピーになった位置で検証へ切り替える。
 
-- **2024-11 · [A Theoretical Perspective for Speculative Decoding Algorithm](2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md)**  
-  実装：— ・ リポジトリ内被引用：2  
-  投機的復号は小型ドラフトモデルが複数トークンを提案し、大型対象モデルが一括検証することで自己回帰step数を減らす。
-
 - **2025-10 · [HiSpec: Hierarchical Speculative Decoding for LLMs](2025-2510.01336-hispec-hierarchical-speculative-decoding-for-llms.md)**  
-  実装：— ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：1  
   早期退出モデルの浅層をドラフト、中間層を安価な検証器、全層を最終検証器として階層化し、KVと隠れ状態を再利用して投機的復号の検証費用を減らす。
 
 - **2025-05 · [SpecMemo: Speculative Decoding is in Your Pocket](2025-2506.01986-specmemo-memory-aware-speculative-decoding.md)**  
@@ -289,7 +285,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   ターゲットLLMをCPU、深くした小型ドラフトをGPUへ分離し、候補数削減・動的ゲート融合・複数Transformerブロックで低VRAM環境の投機的デコードを高速化する。
 
 - **2025-08 · [CARD: Cache-Assisted Parallel Speculative Decoding for Efficient Large Language Model Inference](2025-2508.04462-card-cache-assisted-parallel-speculative-decoding-for-efficient-large-la.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   共有候補キャッシュを介してドラフト生成と対象検証を重ね、対象側の修正信号で先行候補を訂正するquery-and-correct型の並列投機復号。
 
 - **2025-03 · [SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models](2025-2503.15921-spin-heterogeneous-speculative-model-serving.md)**  
@@ -323,11 +319,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   RESTは、現在文脈末尾と一致する過去トークン列を接尾辞索引から検索し、その続き候補を木構造へ集約して対象LLMで一括検証し、ドラフトモデルなしで反復的なコードの対象重み読出しを減らす。
 
 - **2024-04 · [TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding](2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md)**  
-  実装：— ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：13  
   文脈が128K以上になるとKV読出しがメモリ帯域を圧迫し、GPU演算器が十分使われない。KVを削除・量子化する方式は帯域を減らせる一方、最終出力を変える可能性がある。
 
 - **2024-05 · [SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths](2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md)**  
-  実装：— ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：7  
   ドラフト候補の棄却確率を逐次予測し、対象モデルへ渡す候補長を固定せず停止判定することで、投機的復号の無駄な候補生成と検証回数を両立して減らす。
 
 - **2024-03 · [Block Verification Accelerates Speculative Decoding](2024-2403.10444-block-verification-accelerates-speculative-decoding.md)**  
@@ -359,7 +355,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE系ドラフトの学習時／復号時の文脈差と蒸留目的のずれをTop-K蒸留＋multi-step context alignmentで揃えるHASS。
 
 - **2024-02 · [Speculative Streaming: Fast LLM Inference without Auxiliary Models](2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md)**  
-  実装：— ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：4  
   対象モデル内部へ将来n-gram予測ストリームと候補木枝刈りを組み込み、別ドラフトモデルなしで生成と検証を同一順伝播へ重ねる投機的復号。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
@@ -371,7 +367,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   ドラフト確率を対象モデルの受理確率の代理にして投機木を実行時に動的構築し、限られた検証予算を高確率枝へ集中して固定木より長い受理系列と低遅延を狙う。
 
 - **2024-10 · [AMUSD: Asynchronous Multi-Device Speculative Decoding for LLM Acceleration](2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md)**  
-  実装：— ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：3  
   ドラフト生成と対象モデル検証を別装置で非同期に連続実行し、互いの待ち時間を重ねることで、出力を変えず通常の投機的復号より平均29%高速化する。
 
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
@@ -379,11 +375,15 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   SPACE（Smart Parallel Auto-Correct デコード）は、通常は1位置しか予測しない自己回帰LLMを半自己回帰教師あり微調整で「複数位置を同時予測できるモデル」へ変え、候補生成と検証を1回のモデル呼出しに同居させる。HumanEval-Xで出力品質を保ちながら2.7〜4.0倍の推論高速化を報告する。
 
 - **2024-10 · [AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability](2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   ドラフト分布のエントロピーから受理確率下限を推定し、投機的復号のドラフトを早期停止して無駄な小型モデル計算を削減する学習不要方式。
 
+- **2024-10 · [A Theoretical Perspective for Speculative Decoding Algorithm](2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  投機的復号は小型ドラフトモデルが複数トークンを提案し、大型対象モデルが一括検証することで自己回帰step数を減らす。
+
 - **2024-05 · [Nearest Neighbor Speculative Decoding for LLM Generation and Attribution](2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   k近傍言語モデル（kNN-LM）は、生成中の隠れ状態に近い外部コーパス中のトークンを検索し、その近傍分布とLLMの分布を混ぜることで、モデル重みにない事実を生成へ反映できる。しかし毎トークン検索と分布構築を行うため遅く、検索された実文書の連続spanをそのまま活用しにくい。
 
 - **2024-04 · [BASS: Batched Attention-optimized Speculative Sampling](2024-2404.15778-bass.md)**  
@@ -409,7 +409,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-08 · [Accelerating LLM Inference with Staged Speculative Decoding](2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md)**  
-  実装：— ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：16  
   小バッチの自己回帰デコードでは、1トークン生成のたびにモデル重みをGPUへ供給する必要がある一方、行列演算のバッチが小さいため演算器を使い切れない。標準的な投機的復号は小さなドラフトモデルが複数トークンを先読みし、大きな対象モデル（論文ではoracleと呼ぶ）が一括検証することで、重み読み出し1回あたりの確定トークン数を増やす。
 
 - **2023-10 · [SPEED: Speculative Pipelined Execution for Efficient Decoding](2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md)**  

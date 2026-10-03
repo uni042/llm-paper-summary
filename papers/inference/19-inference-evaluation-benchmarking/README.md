@@ -7,11 +7,11 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：— ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：15  
   提案するServeGenは負荷全体へ単一分布を当てず、顧客ごとに到着過程と入出力データ分布をモデル化して最後に合成する。
 
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   従来の複数LLMエージェントは、各エージェントが推論結果をテキストへデコードし、次のエージェントがそのテキストをtokenizeして再びプリフィルする。LatentMASはこの離散テキスト境界を外し、エージェント内部の連続表現を直接共有する。次のエージェントはその表現を再エンコードせず受け取る。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
@@ -39,7 +39,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
-  実装：— ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：11  
   MoEは各トークンが少数専門家だけを通るため、密モデルより少ない計算でモデル容量を増やせる。しかしサービングでは複数要求の復号トークンを同一バッチへまとめる。個々のトークンの選択専門家が異なると、バッチ全体の和集合はほぼ全専門家へ広がり、結局すべての専門家重みをGPUメモリから読む。計算疎性がメモリ帯域削減へつながらないことがLYNXの出発点である。
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
@@ -51,7 +51,7 @@
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   キャッシュ拡張生成（CAG）は、知識集合が限定され長文脈へ収まる場合、検索拡張生成（RAG）の実時間検索を省き、知識文書を事前にプリフィルしてKVキャッシュを保持する。質問時はこのキャッシュを再利用して検索待ちと検索誤りを除き、複数QAベンチマークでRAGと同等以上の品質と低遅延を示す。
 
 ### 3年前（2023-11〜2024-10）

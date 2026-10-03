@@ -1,14 +1,26 @@
 ---
-canonical_id: "DOI:10.1109/HPCA61900.2025.00103"
-title: "throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving"
-authors: "Andreas Kosmas Kakolyris, Dimosthenis Masouros, Petros Vavaroutsos, Sotirios Xydis, Dimitrios Soudris"
-published: "2025"
-source: "https://doi.org/10.1109/HPCA61900.2025.00103"
-summary: "LLM推論サーバーのサービス水準目標（SLO）を守りつつGPU電力を下げるため、throttLL’eMは将来のKVキャッシュ使用量とバッチサイズを予測し、その値を機械学習性能モデルへ入力して、反復単位でGPU周波数とインスタンス構成を制御する。性能予測はR²>0.97、平均誤差1 iteration/s未満で、NVIDIA Triton Server比で最大43.8%のエネルギー削減、SLO下で少なくとも1.71倍のエネルギー効率改善を報告する。"
-list_summary: "KVキャッシュ量とバッチサイズから反復性能を予測し、SLO余裕に合わせてGPU周波数・インスタンスを動的制御して、Triton比で最大43.8%の推論エネルギーを削減する。"
-worker_completed_at: "2026-10-03T08:55:13+09:00"
-worker_run_key: "scheduled-chat-00-20261003T085513JST"
-reference_main_sha: "6b02faee2b755ab277a4737be7abbab1fc431249"
+canonical_id: DOI:10.1109/HPCA61900.2025.00103
+title: 'throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving'
+authors:
+- Andreas Kosmas Kakolyris
+- Dimosthenis Masouros
+- Petros Vavaroutsos
+- Sotirios Xydis
+- Dimitrios Soudris
+published: '2025'
+source: https://doi.org/10.1109/HPCA61900.2025.00103
+summary: LLM推論サーバーのサービス水準目標（SLO）を守りつつGPU電力を下げるため、throttLL’eMは将来のKVキャッシュ使用量とバッチサイズを予測し、その値を機械学習性能モデルへ入力して、反復単位でGPU周波数とインスタンス構成を制御する。性能予測はR²>0.97、平均誤差1 iteration/s未満で、NVIDIA Triton Server比で最大43.8%のエネルギー削減、SLO下で少なくとも1.71倍のエネルギー効率改善を報告する。
+list_summary: KVキャッシュ量とバッチサイズから反復性能を予測し、SLO余裕に合わせてGPU周波数・インスタンスを動的制御して、Triton比で最大43.8%の推論エネルギーを削減する。
+worker_completed_at: '2026-10-03T08:55:13+09:00'
+worker_run_key: scheduled-chat-00-20261003T085513JST
+reference_main_sha: 6b02faee2b755ab277a4737be7abbab1fc431249
+doi: 10.1109/HPCA61900.2025.00103
+sources:
+- https://doi.org/10.1109/HPCA61900.2025.00103
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-10-03'
 ---
 
 # throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving

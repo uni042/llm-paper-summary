@@ -1,14 +1,19 @@
 ---
-canonical_id: "DOI:10.1109/TPDS.2025.3590014"
+canonical_id: DOI:10.1109/TPDS.2025.3590014
 list_summary: multi-LoRA同居時に各サービスの期限と相互干渉を推定し、最もSLO達成率の低いサービスを底上げする公平な要求スケジューリングを行う。
-source: "https://doi.org/10.1109/TPDS.2025.3590014"
-summary: Cannikinは複数LoRAサービスを同一GPU群で同時提供する際、各サービスのSLO達成率の最小値であるlagger-SLO
-  attainmentを直接最大化する。実トレースで人気サービスの入出力長が安定することを利用して期限を推定し、SLO余裕に基づく優先度付けとサービス間干渉の偏り補正を行う。実トレース評価では各サービス90%超のSLO達成を維持しながら、既存multi-LoRA基盤比で最大3.6倍の到着率または2.8倍のバースト性を処理する。
-title: "Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM
-  Serving"
-worker_completed_at: "2026-10-03T02:31:44+09:00"
+source: https://doi.org/10.1109/TPDS.2025.3590014
+summary: Cannikinは複数LoRAサービスを同一GPU群で同時提供する際、各サービスのSLO達成率の最小値であるlagger-SLO attainmentを直接最大化する。実トレースで人気サービスの入出力長が安定することを利用して期限を推定し、SLO余裕に基づく優先度付けとサービス間干渉の偏り補正を行う。実トレース評価では各サービス90%超のSLO達成を維持しながら、既存multi-LoRA基盤比で最大3.6倍の到着率または2.8倍のバースト性を処理する。
+title: 'Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving'
+worker_completed_at: '2026-10-03T02:31:44+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: 20261003-0231-scheduled-chat-30
+doi: 10.1109/TPDS.2025.3590014
+sources:
+- https://doi.org/10.1109/TPDS.2025.3590014
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-10-03'
 ---
 
 ## 書誌

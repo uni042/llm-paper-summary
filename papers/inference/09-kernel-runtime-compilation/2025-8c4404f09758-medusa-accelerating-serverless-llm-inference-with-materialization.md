@@ -5,11 +5,10 @@ authors:
 - Shiwei Gao
 - Youmin Chen
 - Youyou Lu
-canonical_id: "DOI:10.1145/3669940.3707285"
-code: "https://github.com/thustorage/Medusa"
+canonical_id: DOI:10.1145/3669940.3707285
+code: https://github.com/thustorage/Medusa
 doi: 10.1145/3669940.3707285
-hardware_evaluation: A100 40GB、Optane P5800X SSD、CUDA 12.4、PyTorch
-  2.2.0。
+hardware_evaluation: A100 40GB、Optane P5800X SSD、CUDA 12.4、PyTorch 2.2.0。
 importance: 重みロード以外のLLM固有コールドスタート状態を再利用可能にする。
 last_checked: 2026-10-02
 list_summary: KV容量プロファイルとCUDAグラフをオフライン物化し、割当順序索引とカーネル再解決で別インスタンスへ復元してサーバーレスLLMのコールドスタートを短縮する。
@@ -17,21 +16,21 @@ publication: ASPLOS 2025
 publication_status: Published
 publication_type: Conference
 published: 2025-03-30
-source: "https://doi.org/10.1145/3669940.3707285"
+source: https://doi.org/10.1145/3669940.3707285
 sources:
-- "https://minhui-xie.github.io/papers/asplos25-medusa.pdf"
-- "https://doi.org/10.1145/3669940.3707285"
-summary: Medusaは、サーバーレスLLMのコールドスタートでKVキャッシュ容量のプロファイル実行とCUDAグラフ捕捉がロード時間の平均47%を占める問題に対し、それらの状態をオフラインで物化して復元する。CUDAグラフ内の実行時アドレスはバッファ割当順序の間接索引で再構成し、隠れたCUDAカーネルは第1層を実行してモジュールを読み込んだ後に名前から解決する。10モデルでロード段階を平均42.5%、全コールドスタートを34.9%短縮し、ShareGPT負荷のP99
-  TTFTを最大53.0%削減した。
-title: "Medusa: Accelerating Serverless LLM Inference with
-  Materialization"
+- https://minhui-xie.github.io/papers/asplos25-medusa.pdf
+- https://doi.org/10.1145/3669940.3707285
+summary: Medusaは、サーバーレスLLMのコールドスタートでKVキャッシュ容量のプロファイル実行とCUDAグラフ捕捉がロード時間の平均47%を占める問題に対し、それらの状態をオフラインで物化して復元する。CUDAグラフ内の実行時アドレスはバッファ割当順序の間接索引で再構成し、隠れたCUDAカーネルは第1層を実行してモジュールを読み込んだ後に名前から解決する。10モデルでロード段階を平均42.5%、全コールドスタートを34.9%短縮し、ShareGPT負荷のP99 TTFTを最大53.0%削減した。
+title: 'Medusa: Accelerating Serverless LLM Inference with Materialization'
 topics:
 - serverless inference
 - cold start
 - CUDA Graph
 - state materialization
-worker_completed_at: "2026-10-02T21:45:00+09:00"
+worker_completed_at: '2026-10-02T21:45:00+09:00'
 worker_run_key: 20261002-2145-scheduled-chat-45
+implementation: 論文ではA100 40GB、Optane P5800X SSD、CUDA 12.4、PyTorch 2.2.0。による提案手法の実装・評価を報告。公式コード公開あり（https://github.com/thustorage/Medusa）。
+implementation_status: official-code-available
 ---
 
 # Medusa: Accelerating Serverless LLM Inference with Materialization

@@ -65,7 +65,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
 
 - **2026-03 · [EvoESAP: Non-Uniform Expert Pruning for Sparse MoE](2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   疎な混合専門家モデル（Sparse Mixture-of-Experts; SMoE）は1トークン当たりの実行専門家を少数にしても、配備時には専門家プール全体を保持するためメモリ負担が残る。専門家枝刈りはこの総容量を直接減らせるが、従来研究の多くは「各層でどの専門家を消すか」に集中し、層ごとの削除割合は一様に置いてきた。
 
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
@@ -203,7 +203,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   3種の高冗長MoEで観測的なルーティング統計と専門家除去の因果効果を直接照合し、60条件すべてで重要度予測が成立せず、既存剪定の成功は主に初期層の冗長性で説明できると示した。
 
 - **2026-06 · [FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models](2026-2606.27866-flexmoe-one-for-all-nested-intra-expert-pruning-for-moe-language-models.md)**  
-  実装：— ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：0  
   従来の圧縮は「40%削減版」「50%削減版」のように目標予算ごとに枝刈り・回復処理をやり直すことが多く、異なるGPUメモリ量やサービス負荷へ柔軟に切り替えにくい。
 
 - **2026-06 · [Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking](2026-2608.13565-depth-aware-moe-sensitivity.md)**  
@@ -325,7 +325,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   MoE内の似たエキスパートを層ごとにクラスタ化し、層横断の冗長性も見ながらクラスタ単位で枝刈り・統合して、20%圧縮時の性能低下を既存方式より抑える。
 
 - **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
-  実装：— ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：2  
   タスク別の隠れ状態・ニューロン活性から重要計算経路を特定し、再学習なしの構造化枝刈りで20%疎性の品質をほぼ維持しつつ高疎性で既存法を大幅に上回る。
 
 - **2025-10 · [Expert Merging in Sparse Mixture of Experts with Nash Bargaining](2025-2510.16138-namex-nash-expert-merging.md)**  
@@ -407,7 +407,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   共有入力上の専門家知識類似度で冗長専門家をグループ化し、専門家とルータを同時統合することで、タスク非依存にMoEのメモリと推論時間を削減する。
 
 - **2024-09 · [STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning](2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md)**  
-  実装：— ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：8  
   STUNは「非構造化枝刈りの方が自由度が高いので常に有利」という直感に反し、まず専門家全体を削る構造化枝刈りを行い、その後で残った専門家内部の重みを非構造化枝刈りする方が高疎性で品質を保てることを示す。
 
 ### 4年前（2022-11〜2023-10）
