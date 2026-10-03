@@ -38,7 +38,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Decide whether maintenance should run
+      - name: Check whether maintenance is pending
         id: pending
         shell: bash
         run: |
