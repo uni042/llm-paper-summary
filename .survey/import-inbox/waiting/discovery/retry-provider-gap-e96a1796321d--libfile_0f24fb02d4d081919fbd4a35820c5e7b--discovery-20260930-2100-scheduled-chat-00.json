@@ -1,0 +1,198 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20260930-2100-scheduled-chat-00",
+  "reference_main_sha": "b52dbf0837873f4dc50fda13afed86e9b95f5544",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/rtas58335.2023.00012",
+      "identity_tokens": [
+        "DOI:10.1109/rtas58335.2023.00012"
+      ],
+      "title": "Hardware Compute Partitioning on NVIDIA GPUs",
+      "reason": "NVIDIA GPUのSMを空間分割してリアルタイム/組込みワークロードを安全に共有する汎用GPU資源管理研究で、LLM推論・LLMサービングを最終適用先としていないため対象外。",
+      "source_url": "https://doi.org/10.1109/RTAS58335.2023.00012",
+      "body_check": "論文情報と本文記述を確認。libsmctrlで2013年以降のNVIDIA GPUの計算ユニットを透過的に分割し、YOLOv2物体検出のケーススタディで共有を評価する。LLM、KVキャッシュ、生成推論の評価はなく、一般リアルタイムGPU共有が主題。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+        "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:xtaX3WyCj1",
+      "identity_tokens": [
+        "OpenReview:xtaX3WyCj1",
+        "arXiv:2306.01708"
+      ],
+      "title": "TIES-Merging: Resolving Interference When Merging Models",
+      "reason": "複数のタスク別微調整モデルを追加学習なしで統合するモデルマージ手法であり、推論時のメモリ・サービング・カーネル・スケジューリングの効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2306.01708",
+      "body_check": "本文の問題設定・手法・評価を確認。task vectorの小変化をTRIMし、符号競合をELECTして同符号成分だけDISJOINT MERGEする。T5/ViT等のマルチタスク性能を評価するモデル統合研究で、推論速度やKV/実行系のシステム評価は中心でない。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:ulCAPXYXfa",
+      "identity_tokens": [
+        "OpenReview:ulCAPXYXfa"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
+      "reason": "長文脈LLMのデコードで層間の重要token集合の類似性を利用し、tokenを捨てずに少数contextだけをGPUで計算しつつKVをオフロードする推論最適化。KVメモリとデコード速度を直接対象とする。",
+      "source_url": "https://openreview.net/forum?id=ulCAPXYXfa",
+      "body_check": "ICLR本文/公式実装の手法・評価を確認。filter layerで重要tokenを選び、連続層がそのsubsetを再利用する。全KV自体は保持して情報損失を避け、Llama-3-8Bの単一A100最大文脈を128Kから450Kへ拡張、KV GPUメモリ最大75%削減、約1.68〜1.7倍高速化を報告。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:tDRYrAkOB7",
+      "identity_tokens": [
+        "OpenReview:tDRYrAkOB7",
+        "arXiv:2403.09636"
+      ],
+      "title": "Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference",
+      "reason": "KVキャッシュをオンラインで動的圧縮し、head/layerごとに圧縮率を学習して長文脈・大batchの自己回帰推論を高速化する研究で、推論メモリ最適化そのものが主題。",
+      "source_url": "https://arxiv.org/abs/2403.09636",
+      "body_check": "本文の方法・評価を確認。Llama 2 7B/13B/70Bへ追加parameterなしでDMCを導入し、少量の継続事前学習で圧縮挙動を獲得する。最大4倍のKV圧縮で下流性能を維持し、H100上の自己回帰推論で大幅なthroughput向上を報告。GQAやH2O/TOVAとの比較も行う。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:T5nUQDrM4u",
+      "identity_tokens": [
+        "OpenReview:T5nUQDrM4u",
+        "arXiv:2212.05055"
+      ],
+      "title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints",
+      "reason": "既存dense checkpointをMoEへ変換して追加事前学習費用を減らす学習効率化が主目的であり、最終適用先が凍結対象の学習工程そのもの。",
+      "source_url": "https://arxiv.org/abs/2212.05055",
+      "body_check": "本文の手法・評価を確認。dense TransformerのMLPを複数expertへ複製しrouterを追加して学習を継続する。T5/ViTでdense事前学習費用の約50%の追加計算で性能向上を評価しており、推論サービングやKV/メモリ階層の最適化研究ではない。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:qrMo6R7lOS",
+      "identity_tokens": [
+        "OpenReview:qrMo6R7lOS",
+        "arXiv:2603.13281"
+      ],
+      "title": "ICaRus: Identical Cache Reuse for Efficient Multi-Model Inference",
+      "reason": "複数のタスク特化LLMが同一KVキャッシュを共有できるよう論理encoder側を固定しdecoder側だけを適応させ、マルチモデル推論の重複prefillとcache爆発を除く方式。推論サービングとKV再利用が中心。",
+      "source_url": "https://arxiv.org/abs/2603.13281",
+      "body_check": "本文/論文情報を確認。decoder-only TransformerをKV生成側とtoken予測側へ論理分割し、前者を共有して後者のみ微調整する。8モデルのagentic workflowで従来multi-model serving比P95 latency最大11.1倍低減、throughput最大3.8倍向上を報告し、LoRAでKV生成と次token予測の並列化も行う。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:PxoFut3dWW",
+      "identity_tokens": [
+        "OpenReview:PxoFut3dWW",
+        "arXiv:2306.11695"
+      ],
+      "title": "A Simple and Effective Pruning Approach for Large Language Models",
+      "reason": "Wandaは事前学習済みLLMを再学習・weight updateなしでone-shot枝刈りし、そのまま推論可能な疎モデルへ圧縮する。推論時モデルサイズ/演算削減を最終適用先とするpost-training圧縮として対象。",
+      "source_url": "https://arxiv.org/abs/2306.11695",
+      "body_check": "本文の手法・評価を確認。各出力ごとにweight magnitudeと対応input activation normの積が小さいweightを枝刈りする。LLaMA/LLaMA-2でmagnitude pruningを上回り、より高価なweight-update型SparseGPT等と競合する精度を、再学習なしで評価している。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:oKn9c6ytLx",
+      "identity_tokens": [
+        "OpenReview:oKn9c6ytLx",
+        "arXiv:2307.13854"
+      ],
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "reason": "Web操作エージェントの現実的・再現可能な環境と能力ベンチマークが主目的で、エージェント型LLMのサービングruntimeや推論効率を最適化する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2307.13854",
+      "body_check": "本文の環境設計・task・baseline評価を確認。e-commerce、forum、GitLab、CMS等の実サイト相当環境で長期Web操作taskを評価し、最良GPT-4 agent成功率14.41%、人間78.24%を報告。評価対象はtask成功率であり推論速度・KV lifecycle・schedulerではない。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:7zNYY1E2fq",
+      "identity_tokens": [
+        "OpenReview:7zNYY1E2fq",
+        "arXiv:2409.15355"
+      ],
+      "title": "Block-Attention for Efficient Prefilling",
+      "reason": "RAG文書を独立blockとしてKV状態を事前計算・再利用し、再利用不能な最終blockだけ通常依存を持たせることでprefill計算と最初のtokenまでの時間を削減する推論方式。",
+      "source_url": "https://arxiv.org/abs/2409.15355",
+      "body_check": "本文/ICLR論文ページを確認。block segmentation、position re-encoding、block fine-tuningでpassage単位KV再利用を可能にする。11 benchmarkでfull attention相当の品質を示し、32K入力でTTFT 45 ms、full attention比TTFT 98.7%、FLOPs 99.8%削減を報告。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md"
+      ],
+      "worklist_rank": 480
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:5NTt8GFjUHkr",
+      "identity_tokens": [
+        "OpenReview:5NTt8GFjUHkr",
+        "arXiv:2210.03493"
+      ],
+      "title": "Automatic Chain of Thought Prompting in Large Language Models",
+      "reason": "多様な質問をクラスタリングしてzero-shot Chain-of-Thoughtからfew-shot実演を自動生成するprompting研究で、推論システムの速度・メモリ・サービング効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2210.03493",
+      "body_check": "本文の方法・評価を確認。質問をクラスタ化して代表例を選び、'Let's think step by step'でreasoning chainを生成してAuto-CoT demonstrationを構成する。GPT-3で10 reasoning benchmarkを評価しmanual CoTに匹敵/上回る能力を示すが、システム効率指標は対象外。",
+      "first_checked_at": "2026-09-30T21:00:47+09:00",
+      "last_checked_at": "2026-09-30T21:00:47+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md"
+      ],
+      "worklist_rank": 479
+    }
+  ]
+}

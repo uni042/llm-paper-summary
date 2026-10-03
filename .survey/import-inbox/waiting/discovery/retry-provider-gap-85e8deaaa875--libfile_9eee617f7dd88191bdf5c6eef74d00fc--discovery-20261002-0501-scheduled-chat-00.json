@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261002-0501-scheduled-chat-00",
+  "reference_main_sha": "7703f53fad5b62238a40e2c0e3c66eb15c309eaf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.sustainlp-1.5"
+      ],
+      "title": "Memory-efficient Transformers via Top-k Attention",
+      "reason": "Transformerの長系列推論で二次メモリを生む完全注意を、query chunkingと正確なtop-k選択で置換する直接的なメモリ効率化手法。事前学習済みモデルにも補正事前学習なしで適用でき、推論時のFFNにも適用する。",
+      "source_url": "https://aclanthology.org/2021.sustainlp-1.5/",
+      "body_check": "一次PDF本文で、query chunkingにより推論時ピークメモリをO(C·L_K)へ抑え、top-k(QK^T)を保持する実装、UnifiedQAで99%以上のkeysを削減するzero-shot inference評価まで確認した。",
+      "worklist_rank": 500,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/RTAS58335.2023.00012",
+      "identity_tokens": [
+        "DOI:10.1109/RTAS58335.2023.00012"
+      ],
+      "title": "Hardware Compute Partitioning on NVIDIA GPUs",
+      "reason": "NVIDIA GPUのSMを空間分割するlibsmctrlを提案する一般GPU共有研究で、LLM推論・サービングを対象にしていない。",
+      "source_url": "https://doi.org/10.1109/RTAS58335.2023.00012",
+      "body_check": "論文の中心はGPUハードウェアスケジューリングを解析し、任意のNVIDIA GPUで計算ユニットを透明に分割するユーザー空間ライブラリとYOLOv2事例を評価すること。LLM、KVキャッシュ、デコード、LLMサービング固有機構はない。",
+      "worklist_rank": 499,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06123",
+      "identity_tokens": [
+        "arXiv:2601.06123",
+        "DOI:10.48550/arXiv.2601.06123"
+      ],
+      "title": "Latent Space Communication via K-V Cache Alignment",
+      "reason": "異種LLM間でKVキャッシュを共有潜在空間へ翻訳して直接通信するため、cross-model KV reuseには強く関連するが、主目的はサービング性能ではなくモデル間知識・技能通信である。",
+      "source_url": "https://arxiv.org/abs/2601.06123",
+      "body_check": "一次HTML本文で各モデルにshared-space入出力translatorを学習し、Gemma-2 100M〜400Mのprefix KVをモデル間変換してsuffix LMとsoft-prompt移植を評価することを確認。実サービングのTTFT/TPOTやメモリ削減は主要評価ではない。",
+      "worklist_rank": 498,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00949",
+      "identity_tokens": [
+        "arXiv:2505.00949",
+        "DOI:10.48550/arXiv.2505.00949"
+      ],
+      "title": "Llama-Nemotron: Efficient Reasoning Models",
+      "reason": "推論スループット・メモリ効率を目的にNASでLlama 3を異種ブロック構成へ変換するが、論文全体はモデル系列の構築・蒸留・事後学習を扱う技術報告であり、純粋な推論システム研究との境界にある。",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "body_check": "一次HTML本文でPuzzle系のblock-wise distillationと混合整数最適化による推論最適化アーキテクチャ探索、Nano/Super/Ultraの構築、蒸留・SFT・RLを統合したモデル開発を確認。最終成果は推論器ではなくモデルfamily。",
+      "worklist_rank": 497,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14487",
+      "identity_tokens": [
+        "arXiv:2503.14487",
+        "DOI:10.48550/arXiv.2503.14487"
+      ],
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "reason": "MoEの動的計算配分を扱うが、対象は画像生成Diffusion TransformerでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2503.14487",
+      "body_check": "一次HTML本文でglobal token poolとcapacity predictorを用い、noise level/sample complexityに応じて画像Diffusion Transformerのexpert容量を割り当て、ImageNet/text-to-image品質を評価する研究と確認した。",
+      "worklist_rank": 496,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02098",
+      "identity_tokens": [
+        "arXiv:2410.02098",
+        "DOI:10.48550/arXiv.2410.02098"
+      ],
+      "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing",
+      "reason": "expert-choice routingによるMoE効率化だが、対象はtext-to-image Diffusion Transformerの学習・生成品質でありLLM推論サーベイの対象外。",
+      "source_url": "https://arxiv.org/abs/2410.02098",
+      "body_check": "一次HTML本文で画像patch/text条件の計算不均一性をexpert-choice routingで利用し、最大97BのEC-DiTを学習してGenEval等の画像生成品質・スケーリングを評価することを確認した。",
+      "worklist_rank": 494,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12941",
+      "identity_tokens": [
+        "arXiv:2409.12941",
+        "DOI:10.18653/v1/2025.naacl-long.243"
+      ],
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "reason": "RAGのfactuality・retrieval・reasoningを測るFRAMES評価データセットで、推論ランタイムやメモリ・スケジューリング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2409.12941",
+      "body_check": "一次HTML本文で824件のmulti-hop質問からなるFRAMESを構築し、LLM/RAG systemの事実性・検索・推論能力を評価するbenchmark研究と確認。推論高速化機構はない。",
+      "worklist_rank": 493,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11432",
+      "identity_tokens": [
+        "arXiv:2308.11432",
+        "DOI:10.48550/arXiv.2308.11432"
+      ],
+      "title": "A Survey on Large Language Model based Autonomous Agents",
+      "reason": "LLMエージェントの構成・応用・評価を整理する総合サーベイで、agentic inference runtimeの効率化手法そのものではない。",
+      "source_url": "https://arxiv.org/abs/2308.11432",
+      "body_check": "一次HTML本文でagent construction、applications、evaluationを体系化するsurveyであることを確認。GPU scheduling、KV管理、tool-call実行並列化等の新規ランタイム機構を提案する論文ではない。",
+      "worklist_rank": 492,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:xtaX3WyCj1",
+      "identity_tokens": [
+        "OpenReview:xtaX3WyCj1"
+      ],
+      "title": "TIES-Merging: Resolving Interference When Merging Models",
+      "reason": "複数fine-tuned modelの重みを干渉を抑えて統合するmodel merging手法で、MoE推論時のexpert merging/offloadではなくモデル統合が主目的。",
+      "source_url": "https://openreview.net/forum?id=xtaX3WyCj1",
+      "body_check": "公開論文記録・引用情報から、タスク別fine-tuned modelのparameter interferenceをtrim/elect/sign-aware mergeで解くNeurIPS 2023のmodel-merging研究と確認。推論時expert配置・キャッシュ・サービング機構ではない。",
+      "worklist_rank": 491,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:ulCAPXYXfa",
+      "identity_tokens": [
+        "OpenReview:ulCAPXYXfa"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
+      "reason": "長文脈LLMのKVキャッシュをfilter layerで動的選択し、非filter layerのKVをCPUへ退避して必要部分だけロードする直接的な推論メモリ最適化。",
+      "source_url": "https://openreview.net/forum?id=ulCAPXYXfa",
+      "body_check": "公開実装・論文情報でprefill後に非filter層KVをCPUへoffloadし、decode時にfilter層のTop-K token indexを共有してpacked/asynchronous loadする構成を確認。最大75% KV memory削減、1.68x speedup、Llama-3-8Bを単一A100で128Kから450Kへ拡張する評価が報告される。",
+      "worklist_rank": 490,
+      "first_checked_at": "2026-10-02T05:01:20+09:00",
+      "last_checked_at": "2026-10-02T05:01:20+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261002-1540-scheduled-chat-45",
+  "reference_main_sha": "2c0faa9f0438228913cbb1509f11af1e75790f75",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.findings-acl.189"
+      ],
+      "title": "A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation",
+      "reason": "HashEEは追加分類器なしでトークンごとの退出層を固定し、推論FLOPsと時間を削減する。",
+      "source_url": "https://aclanthology.org/2022.findings-acl.189/",
+      "body_check": "本文では分類・回帰・生成で従来の早期退出法より少ないFLOPsと推論時間で高い性能を示す。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.217",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.217"
+      ],
+      "title": "Adaptive Gating in Mixture-of-Experts based Language Models",
+      "reason": "可変expert数のゲーティングだが主要最適化対象は学習時間で凍結中の学習高速化側。",
+      "source_url": "https://aclanthology.org/2023.emnlp-main.217/",
+      "body_check": "本文ではexpert確率に応じてtokenごとのexpert数を変え、curriculum learningと組み合わせ最大22.5%のtraining time削減を報告。推論runtimeは主評価でない。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-acl.57",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-acl.57"
+      ],
+      "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
+      "reason": "入力プロンプトを忠実に圧縮してLLMへ渡すtoken数を減らし、E2E推論遅延を直接短縮する。",
+      "source_url": "https://aclanthology.org/2024.findings-acl.57/",
+      "body_check": "本文では双方向encoderによるtoken classificationとして圧縮を学習。圧縮器自体3–6倍高速、2–5倍圧縮時のE2E latencyを1.6–2.9倍高速化。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.284",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-naacl.284"
+      ],
+      "title": "MoLA: MoE LoRA with Layer-wise Expert Allocation",
+      "reason": "層ごとのLoRA expert数配分を最適化するPEFT方式で、推論runtime最適化ではない。",
+      "source_url": "https://aclanthology.org/2025.findings-naacl.284/",
+      "body_check": "本文では中間層に多く下層に少なくLoRA expertを配るMoLAを提案し、Llama-2/Mistral/Gemma上でtuning性能を評価。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1355",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1355"
+      ],
+      "title": "Energy and Policy Considerations for Deep Learning in NLP",
+      "reason": "NLP深層学習のエネルギー・環境・政策コスト分析で、LLM推論高速化方式を提案しない。",
+      "source_url": "https://aclanthology.org/P19-1355/",
+      "body_check": "本文は大規模NLPモデルの訓練に伴う計算・電力・炭素コストを定量化し政策的含意を論じる。推論kernel/KV/schedulerの新規機構はない。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.02526",
+      "identity_tokens": [
+        "arXiv:2402.02526",
+        "DOI:10.48550/arxiv.2402.02526"
+      ],
+      "title": "CompeteSMoE -- Effective Training of Sparse Mixture of Experts via Competition",
+      "reason": "competition routingを学習してSparse MoEの学習を改善する方式で、最終主貢献はtraining。",
+      "source_url": "https://arxiv.org/abs/2402.02526",
+      "body_check": "本文系資料ではrepresentation collapseを避けるcompetition mechanismとrouter学習を提案。visual instruction tuningと言語pretraining中心で推論cache/offloadは扱わない。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.11851",
+      "identity_tokens": [
+        "arXiv:2507.11851",
+        "DOI:10.48550/arxiv.2507.11851"
+      ],
+      "title": "Your LLM Knows the Future: Uncovering Its Multi-Token Prediction Potential",
+      "reason": "複数将来tokenを同時予測・検証して自己回帰復号を直接高速化する。",
+      "source_url": "https://arxiv.org/abs/2507.11851",
+      "body_check": "masked-input、gated LoRA、軽量sampler、consistency loss、speculative generationを組み合わせ、code/math約5倍、chat/knowledge約2.5倍高速化を品質低下なしで報告。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/068431-0805",
+      "identity_tokens": [
+        "DOI:10.52202/068431-0805"
+      ],
+      "title": "Recurrent Memory Transformer",
+      "reason": "memory tokenによる長系列architectureで計算量問題に関係するが、主評価は長期依存能力で推論system実装ではない。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/47e288629a6996a17ce50b90a056a0e1-Abstract-Conference.html",
+      "body_check": "本文ではsegment間でmemory tokenを再帰的に渡すRMTを提案し、Transformer-XLとのlanguage modeling等を評価。serving latency/throughputは主貢献でない。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/075280-1506",
+      "identity_tokens": [
+        "DOI:10.52202/075280-1506"
+      ],
+      "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+      "reason": "重要tokenと直近tokenを優先保持するKV cache evictionで生成推論のメモリと遅延を直接削減する。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6ceefa7b15572587b78ecfcebb2827f8-Abstract.html",
+      "body_check": "H2Oはheavy hitterを保持するdynamic submodular eviction。20% heavy hittersでDeepSpeed Zero-Inference/Accelerate比最大29倍、FlexGen比最大3倍throughput、同一batchで最大1.9倍latency削減。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/079017-3180",
+      "identity_tokens": [
+        "DOI:10.52202/079017-3180"
+      ],
+      "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+      "reason": "重み・activation・KV cacheを含むLLM全体を4bit化し低ビット推論を直接実現する。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/b5b939436789f76f08b9d0da5e81af7c-Abstract-Conference.html",
+      "body_check": "出力を変えないrotationでoutlierを除去し全matrix multiplicationを4bit化。Llama2-70BでWikiText-2 perplexity損失最大0.47、zero-shot性能99%保持。",
+      "first_checked_at": "2026-10-02T15:40:40+09:00",
+      "last_checked_at": "2026-10-02T15:40:40+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-45.json"
+      ],
+      "worklist_rank": 259
+    }
+  ]
+}
