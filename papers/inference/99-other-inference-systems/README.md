@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（227本）
+## 自動生成の論文一覧（228本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -33,6 +33,10 @@
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：— ・ リポジトリ内被引用：2  
   複数LLMを協調させる通常の方法は、あるモデルの結果をテキスト化し、次のモデルがそのテキストを再びプリフィルする。しかし長いprefixでは同じ文脈をモデルごとに再計算し、テキスト化できない内部表現も失う。各モデルには共有空間へ書くout-translatorと、共有空間から自分のKVへ読むin-translatorを一つずつ持たせる。
+
+- **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
+  実装：— ・ リポジトリ内被引用：2  
+  投機的復号は軽いドラフト器が将来トークンを提案し、対象LLMが一括検証する。評価では受理長が最大32 トークンに達し、比較対象EAGLE-3の最大10 トークンを上回る。
 
 - **2025-11 · [FlexiCache: Leveraging Temporal Stability of Attention Heads for Efficient KV Cache Management](2025-2511.00868-flexicache-leveraging-temporal-stability-of-attention-heads-for-efficient-kv-cache-management.md)**  
   実装：[✓](https://github.com/NazmulTakbir/FlexiCache) ・ リポジトリ内被引用：2  
