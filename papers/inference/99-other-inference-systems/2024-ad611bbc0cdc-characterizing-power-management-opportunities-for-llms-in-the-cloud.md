@@ -26,6 +26,63 @@ worker_completed_at: '2026-10-03T22:50:00+09:00'
 worker_run_key: 20261003-2233-scheduled-chat-30
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1145/3442188.3445922
+  doi: 10.1145/3442188.3445922
+- canonical_id: arXiv:2210.11416
+  arxiv_id: '2210.11416'
+- canonical_id: arXiv:2208.07339
+- canonical_id: DOI:10.1145/1250662.1250665
+  doi: 10.1145/1250662.1250665
+- canonical_id: DOI:10.1145/1998582.1998589
+  doi: 10.1145/1998582.1998589
+- canonical_id: DOI:10.1145/1519065.1519099
+  doi: 10.1145/1519065.1519099
+- canonical_id: DOI:10.1109/hpca.2018.00059
+  doi: 10.1109/hpca.2018.00059
+- canonical_id: DOI:10.1109/bigdata47090.2019.9005632
+  doi: 10.1109/bigdata47090.2019.9005632
+- canonical_id: DOI:10.1145/3458817.3476223
+  doi: 10.1145/3458817.3476223
+- canonical_id: DOI:10.1109/lca.2020.3023723
+  doi: 10.1109/lca.2020.3023723
+- canonical_id: DOI:10.1145/3177754
+  doi: 10.1145/3177754
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/hpca53966.2022.00093
+  doi: 10.1109/hpca53966.2022.00093
+- canonical_id: DOI:10.14778/3415478.3415530
+  doi: 10.14778/3415478.3415530
+- canonical_id: DOI:10.1109/hpca.2019.00067
+  doi: 10.1109/hpca.2019.00067
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: DOI:10.1109/tpds.2022.3144614
+  doi: 10.1109/tpds.2022.3144614
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: arXiv:2308.12908
+  arxiv_id: '2308.12908'
+- canonical_id: DOI:10.1109/lca.2023.3278652
+  doi: 10.1109/lca.2023.3278652
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2202.07848
+  arxiv_id: '2202.07848'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: DOI:10.1109/hpca56546.2023.10070943
+  doi: 10.1109/hpca56546.2023.10070943
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+references_checked_at: '2026-10-03'
+references_source: crossref-deposited-reference-metadata
+references_total: 74
 ---
 
 ## 概要
