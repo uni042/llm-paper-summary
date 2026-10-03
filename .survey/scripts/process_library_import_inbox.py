@@ -52,6 +52,7 @@ RETAINED_DISCOVERY_SOURCE = INBOX / "retained/discovery-source"
 DISCOVERY_CHUNK_RECORDS = 20
 BLOCKED_RESEARCH = INBOX / "blocked/research"
 BLOCKED_DISCOVERY = INBOX / "blocked/discovery"
+BLOCKED_DISCOVERY_PROVIDER = INBOX / "blocked/discovery-provider"
 RESULT_RESEARCH = INBOX / "results/research"
 RESULT_DISCOVERY = INBOX / "results/discovery"
 
@@ -299,6 +300,91 @@ def _retryable_precheck_provenance_failure(repo_root: Path, failure_id: str) -> 
         and payload.get("retryable") is True
         and str(payload.get("error_code") or "") == "discovery_precheck_required"
     )
+
+
+def recover_candidate_provider_gap_blocks(repo_root: Path) -> int:
+    """Requeue historical Discovery runs blocked only by candidate-level lookup gaps.
+
+    Older importer revisions treated one provider_error/provider_unresolved candidate
+    as a failure of the whole Library Discovery artifact. Requeue those artifacts once
+    so the current importer can publish the successfully resolved candidates and retain
+    only the unresolved candidate subset. Infrastructure/submission failures are not
+    recovered here.
+    """
+    recovered = 0
+    results_root = repo_root / RESULT_DISCOVERY
+    blocked_root = repo_root / BLOCKED_DISCOVERY
+    pending_root = repo_root / PENDING_DISCOVERY
+    waiting_root = repo_root / WAITING_DISCOVERY
+    pending_root.mkdir(parents=True, exist_ok=True)
+
+    if not results_root.is_dir():
+        return 0
+
+    for result_path in sorted(results_root.glob("*.json")):
+        try:
+            result = read_json(result_path)
+        except Exception:
+            continue
+        if str(result.get("status") or "") != "blocked_downstream":
+            continue
+        failures = result.get("failures")
+        if not isinstance(failures, list) or not failures:
+            continue
+        failure_ids = {
+            str(item).strip()
+            for item in failures
+            if isinstance(item, str) and item.strip()
+        }
+        if not failure_ids:
+            continue
+
+        retained = result.get("retained_payload")
+        if not isinstance(retained, str) or not retained.strip():
+            continue
+        source = repo_root / retained
+        if not source.is_file() or blocked_root not in source.parents:
+            continue
+        try:
+            payload = read_json(source)
+            accepts = [
+                record
+                for record in discovery_records(payload)
+                if record.get("classification") == "accept"
+            ]
+        except Exception:
+            continue
+        candidate_ids = {
+            preferred_candidate_id(record) or str(record.get("canonical_id") or "").strip()
+            for record in accepts
+        }
+        candidate_ids.discard("")
+        if not failure_ids.issubset(candidate_ids):
+            continue
+
+        retry_tag = hashlib.sha256(
+            result_path.relative_to(repo_root).as_posix().encode("utf-8")
+        ).hexdigest()[:12]
+        retry_name = f"retry-provider-gap-{retry_tag}--{source.name}"
+        retry_pending = pending_root / retry_name
+        retry_waiting = waiting_root / retry_name
+        retry_result = results_root / result_filename(Path(retry_name))
+
+        if retry_result.is_file():
+            continue
+        if retry_pending.is_file():
+            if retry_pending.read_bytes() != source.read_bytes():
+                raise RuntimeError(f"retry payload collision: {retry_pending}")
+            continue
+        if retry_waiting.is_file():
+            if retry_waiting.read_bytes() != source.read_bytes():
+                raise RuntimeError(f"retry payload collision: {retry_waiting}")
+            continue
+
+        retry_pending.write_bytes(source.read_bytes())
+        recovered += 1
+
+    return recovered
 
 
 def recover_retryable_precheck_provenance_blocks(repo_root: Path) -> int:
@@ -698,7 +784,11 @@ def create_relevance_requests(repo_root: Path, token: str, records: list[dict[st
     return waiting, failures
 
 
-def create_accept_pipeline(repo_root: Path, token: str, records: list[dict[str, Any]]) -> tuple[list[str], list[str], list[str], dict[str, int]]:
+def create_accept_pipeline(
+    repo_root: Path,
+    token: str,
+    records: list[dict[str, Any]],
+) -> tuple[list[str], list[str], list[str], list[str], dict[str, int]]:
     id_to_records: dict[str, list[dict[str, Any]]] = {}
     missing_ids: list[str] = []
     for record in records:
@@ -712,6 +802,7 @@ def create_accept_pipeline(repo_root: Path, token: str, records: list[dict[str, 
     batches = [identifiers[i : i + 100] for i in range(0, len(identifiers), 100)]
     waiting: list[str] = []
     failures: list[str] = []
+    candidate_gaps: list[str] = []
     submission_waiting: list[str] = []
     counts = {"allowed": 0, "filtered": 0, "submitted": 0}
 
@@ -751,9 +842,12 @@ def create_accept_pipeline(repo_root: Path, token: str, records: list[dict[str, 
             unresolved = [
                 row
                 for row in statuses
-                if isinstance(row, dict) and row.get("status") in {"provider_unresolved", "provider_error"}
+                if isinstance(row, dict)
+                and row.get("status") in {"provider_unresolved", "provider_error"}
             ]
-            failures.extend(str(row.get("requested_id") or request_id) for row in unresolved)
+            candidate_gaps.extend(
+                str(row.get("requested_id") or request_id) for row in unresolved
+            )
 
         allowed_rows = result.get("allowed_records")
         if not isinstance(allowed_rows, list):
@@ -808,8 +902,43 @@ def create_accept_pipeline(repo_root: Path, token: str, records: list[dict[str, 
             if queue_result.get("ok") is not True:
                 failures.append(submission_id)
 
-    failures.extend(missing_ids)
-    return waiting, submission_waiting, failures, counts
+    candidate_gaps.extend(missing_ids)
+    return waiting, submission_waiting, failures, sorted(set(candidate_gaps)), counts
+
+
+def retain_provider_gap_payload(
+    repo_root: Path,
+    source: Path,
+    payload: dict[str, Any],
+    failed_ids: list[str],
+) -> str | None:
+    """Retain only unresolved accept candidates without blocking successful peers."""
+    failed = {str(item).strip() for item in failed_ids if str(item).strip()}
+    if not failed:
+        return None
+
+    gap_records: list[dict[str, Any]] = []
+    for record in discovery_records(payload):
+        if record.get("classification") != "accept":
+            continue
+        identity = preferred_candidate_id(record) or str(record.get("canonical_id") or "").strip()
+        if identity in failed:
+            gap_records.append(record)
+    if not gap_records:
+        return None
+
+    parent_run_key = str(payload.get("parent_run_key") or payload.get("run_key") or source.stem)
+    gap_payload = dict(payload)
+    gap_payload["records"] = gap_records
+    gap_payload["record_count"] = len(gap_records)
+    gap_payload["parent_run_key"] = parent_run_key
+    gap_payload["run_key"] = f"{parent_run_key}::provider-gap"
+    gap_payload["provider_gap_from"] = repo_relative(source, repo_root)
+    gap_payload["provider_gap_ids"] = sorted(failed)
+
+    target = repo_root / BLOCKED_DISCOVERY_PROVIDER / f"{source.stem}--provider-gap.json"
+    write_json_if_absent(target, gap_payload)
+    return repo_relative(target, repo_root)
 
 
 def terminalize_discovery(
@@ -848,6 +977,7 @@ def process_discovery(
     max_records: int | None = None,
 ) -> tuple[int, int]:
     recover_retryable_precheck_provenance_blocks(repo_root)
+    recover_candidate_provider_gap_blocks(repo_root)
     PENDING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     WAITING_DISCOVERY.mkdir(parents=True, exist_ok=True)
     advanced = 0
@@ -891,7 +1021,7 @@ def process_discovery(
 
         try:
             rel_waiting, rel_failures = create_relevance_requests(repo_root, token, relevance)
-            pre_waiting, sub_waiting, accept_failures, counts = create_accept_pipeline(
+            pre_waiting, sub_waiting, accept_failures, candidate_gaps, counts = create_accept_pipeline(
                 repo_root, token, accepts
             )
         except Exception as exc:
@@ -931,12 +1061,15 @@ def process_discovery(
             advanced += 1
             continue
 
+        provider_gap_path = retain_provider_gap_payload(
+            repo_root, source, payload, candidate_gaps
+        )
         terminalize_discovery(
             repo_root,
             source,
             token,
             payload_hash,
-            "imported",
+            "imported_with_provider_gaps" if provider_gap_path else "imported",
             {
                 "record_count": len(records),
                 "run_key": payload.get("run_key"),
@@ -946,6 +1079,9 @@ def process_discovery(
                 "worker_id": payload.get("worker_id"),
                 "accept_count": len(accepts),
                 "relevance_count": len(relevance),
+                "provider_gap_count": len(candidate_gaps),
+                "provider_gap_ids": candidate_gaps,
+                "provider_gap_payload": provider_gap_path,
                 "counts": counts,
             },
             blocked=False,
