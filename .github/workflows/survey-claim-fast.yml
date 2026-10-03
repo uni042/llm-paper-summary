@@ -4,8 +4,10 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/survey-claim-fast.yml'
       - '.survey/work-queue/claim-requests/*.json'
       - '.survey/work-queue/direct-takes/research/*.json'
+      - '.survey/scheduler/library-import-kick.json'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
