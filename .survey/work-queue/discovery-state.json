@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-03T18:24:48+00:00",
-  "last_run_key": "library-import-3dc067cf0acf",
-  "last_round": "libimp-3dc067cf0acf09cb-pre01",
+  "updated_at": "2026-10-03T18:30:16+00:00",
+  "last_run_key": "library-import-878e140f1c87",
+  "last_round": "libimp-878e140f1c87aa55-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T22:00:00+09:00",
-      "round": "specialist-lora-serving-6",
-      "axis": "multi-LoRA/adapter co-serving・cross-model KV reuse・agent workflow cache sharing",
-      "query_summary": "collective/network軸からmulti-model/LoRA co-servingへ切り替え、2025-2026のadapter cache・multi-agent shared contextを探索した。Punicaは既知基礎系統、SwiftCacheは既知候補として除外し、ForkKVとActivated-LoRA servingをdefault branchのcanonical ID/title検索で未収録確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2310.18547",
-        "arXiv:2606.16135"
-      ],
-      "next_axis_hint": "speculative decoding runtime・draft/verification schedulingではなく、memory allocator/fragmentation・GPU virtual memoryへ移る",
-      "source_submission": "work-queue/submissions/20260919T2240JST-discovery-specialist-lora-serving-6.json"
-    },
     {
       "run_key": "2026-09-19T22:00:00+09:00",
       "round": "specialist-vmm-memory-7",
@@ -11220,6 +11199,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-878e140f1c87aa55-pre01",
+      "precheck_request_id": "libimp-878e140f1c87aa55-pre01",
+      "run_key": "library-import-878e140f1c87",
+      "round": "libimp-878e140f1c87aa55-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-878e140f1c87aa55-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-878e140f1c87aa55-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19591,16 +19604,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-3dc067cf0acf",
-      "rounds": 65,
-      "candidate_count": 268,
+      "last_run_key": "library-import-878e140f1c87",
+      "rounds": 66,
+      "candidate_count": 269,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 168,
+      "novel_candidate_count": 169,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 165,
-      "accepted_count": 165,
-      "duplicate_ratio": 0.373134328358209,
-      "final_duplicate_ratio": 0.017857142857142856,
+      "post_final_dedupe_count": 166,
+      "accepted_count": 166,
+      "duplicate_ratio": 0.37174721189591076,
+      "final_duplicate_ratio": 0.01775147928994083,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
