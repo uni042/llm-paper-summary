@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T15:20:46+00:00",
-  "record_count": 410,
+  "updated_at": "2026-10-03T16:01:59+00:00",
+  "record_count": 420,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -4438,11 +4438,12 @@
       "identity_tokens": [
         "arXiv:2608.09225"
       ],
-      "reason": "KV prefix cache設計に直接関係するが主目的はマルチテナントsecurity。",
+      "reason": "KVGov binds KV-cache keys to authenticated tenants to prevent prompt reconstruction through timing attacks; the paper reports HMAC salting reduces attack success to zero. Its primary objective is security, not inference efficiency. It nevertheless quantifies serving-path overhead (+1.3 microseconds per cache-key lookup) and lost cross-tenant prefix reuse, so it is closely related to KV-cache serving trade-offs but is only borderline for this inference-optimization collection.",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json"
+        ".survey/work-queue/worker-worklist-30.json",
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[2]"
       ],
       "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference"
     },
@@ -5933,6 +5934,146 @@
         "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
       ],
       "title": "Exponentially Increasing the Capacity-to-Computation Ratio for Conditional Computation in Deep Learning"
+    },
+    "arXiv:2608.15118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15118",
+      "identity_tokens": [
+        "arXiv:2608.15118"
+      ],
+      "reason": "一次本文はLLM training/servingのcollective communicationに関するtutorial-style taxonomy / surveyで、inference pipelineとcommunication visibilityを含む直接関連の体系整理である。ただし独自の新規runtime/system評価を行うResearch paperではなく、対象は有用なsurveyとしての背景・索引価値に留まるためborderline。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[5]"
+      ],
+      "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination"
+    },
+    "arXiv:2608.25431": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25431",
+      "identity_tokens": [
+        "arXiv:2608.25431"
+      ],
+      "reason": "GIFT and GIFT-CC enforce user-data isolation during LLM serving using GPU information-flow tracking and encryption. The primary objective is privacy/security, not inference efficiency. The authors evaluate effects on serving throughput and latency (including up to 4-10.7% throughput overhead in the abstract and optimization-specific overheads), leaving a narrow but direct systems-performance connection; retained as borderline.",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[4]"
+      ],
+      "title": "Here is a GIFT: Enforcing User Data Isolation in LLM Serving via GPU Information Flow Tracking"
+    },
+    "arXiv:2609.00363": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00363",
+      "identity_tokens": [
+        "arXiv:2609.00363"
+      ],
+      "reason": "power-of-two INT8 scaleを使う配備条件とcross-kernel bitwise determinism/conformanceが主目的で、主な結果は同一出力保証とfault-detection suite。throughputは1.7Bのみ・6設定でprefill -9.6%～+1.4%、decode -1.6%～+0.9%と混在し、8B/14Bは未測定。計算削減・速度向上研究とは確認できず、推論効率への接点はquantization尺度と限定的cost測定に留まる。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[7]"
+      ],
+      "title": "Deterministic LLM Inference Across GPU Kernels: Power-of-Two INT8 Quantization Scales and the Limits of Tolerance-Based Conformance"
+    },
+    "arXiv:2609.04875": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04875",
+      "identity_tokens": [
+        "arXiv:2609.04875"
+      ],
+      "reason": "選択的replayでfull resetより再計算tokenを最大9×減らす効率上の結果はあるが、論文の中心問題はforget要求後のexact execution-state unlearning、情報漏えい評価、プライバシー保証。推論高速化はunlearning手段のコスト最適化で付随的であるため、中心スコープに対してborderline。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[6]"
+      ],
+      "title": "Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents"
+    },
+    "arXiv:2609.06128": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06128",
+      "identity_tokens": [
+        "arXiv:2609.06128"
+      ],
+      "reason": "The paper exposes inference as a workflow primitive so one agent graph can use streaming, durable asynchronous, or cross-invocation batch inference. It reports no detectable output-quality difference across bindings and describes batch pricing as the primary workflow-level cost lever. However, measured Flink execution has 33–152× end-to-end latency versus streaming, and the primary contribution is workflow portability and access to provider batch pricing rather than reducing inference computation or improving serving efficiency. Relevant to inference deployment economics but indirect under the inference-optimization focus.",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[9]"
+      ],
+      "title": "Substrate-Portable Execution for Production LLM Workflows"
+    },
+    "arXiv:2609.08307": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08307",
+      "identity_tokens": [
+        "arXiv:2609.08307"
+      ],
+      "reason": "This controlled study compares LLM inference, quantization and deployment platform across Jetson Orin, server GPU and server CPU, measuring accuracy, latency, model footprint and energy. It uses Pareto analysis to help select local-versus-remote execution, but does not introduce a new inference optimization or serving system; it is an empirical deployment-selection study, making the fit borderline.",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[3]"
+      ],
+      "title": "A Measurement Study of LLM Inference Trade-offs Across Edge Continuum Hardware"
+    },
+    "arXiv:2609.23585": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23585",
+      "identity_tokens": [
+        "arXiv:2609.23585"
+      ],
+      "reason": "This empirical study tests whether attention-sink head maps transfer from bf16 to 4-bit quantized models and gives calibration guidance for sink-aware edge deployment. It finds global rank correlations >=0.980 while top-k membership retention is 76.5-88.5%, and the authors explicitly state STC measures topology, not task impact. It is relevant to deploying quantized inference-time attention policies, but does not demonstrate inference latency, throughput or end-task gains; retained as borderline.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[7]"
+      ],
+      "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization"
+    },
+    "arXiv:2602.09721": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09721",
+      "identity_tokens": [
+        "arXiv:2602.09721"
+      ],
+      "reason": "The paper analyzes Attention-FFN Disaggregation (AFD) specifically for large MoE inference. It extends a roofline/HFU analysis with communication budget constraints, identifies conditions where network bandwidth or imbalance prevents AFD from improving utilization, and describes when Superpod-class interconnects and coarser, less sparse experts can benefit. It offers useful deployment guidance and an analysis method, but no new serving implementation or directly evaluated optimization, so it is retained as borderline for root review.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[0]"
+      ],
+      "title": "Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems"
+    },
+    "arXiv:2604.26412": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26412",
+      "identity_tokens": [
+        "arXiv:2604.26412"
+      ],
+      "reason": "KV reuse improves long-range draft acceptance, but in the matched end-to-end proxy the hybrid drafter raises mean accepted tokens only 0.6% (5.01 to 5.04) and adds 5-10% draft latency; the paper says the current pipeline does not support a meaningful speedup claim.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[0]"
+      ],
+      "title": "When Hidden States Drift: Can KV Caches Rescue Long-Range Speculative Decoding?"
+    },
+    "arXiv:2606.30560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.30560",
+      "identity_tokens": [
+        "arXiv:2606.30560"
+      ],
+      "reason": "The paper is explicitly system-focused and identifies redundant prefill/KV-cache management opportunities, including an upper-bound estimate for reducing append-prefill tokens; however, it characterizes traces rather than implementing or validating an inference-serving optimization.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[10]"
+      ],
+      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving"
     }
   }
 }

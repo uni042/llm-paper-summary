@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11217ec4bbb4e791-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1017/9781108571401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1017/9781108571401",
+    "identity_tokens": [
+      "DOI:10.1017/9781108571401"
+    ],
+    "reason": "確率的・敵対的・文脈付きbandit等の意思決定理論を体系化した教科書で、LLM推論サービング研究ではない。",
+    "first_checked_at": "2026-10-03T16:01:58+00:00",
+    "last_checked_at": "2026-10-03T16:01:58+00:00",
+    "linked_from": [
+      "worker-worklist-45"
+    ],
+    "title": "Bandit Algorithms"
+  },
+  "processed_at": "2026-10-03T16:01:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11217ec4bbb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

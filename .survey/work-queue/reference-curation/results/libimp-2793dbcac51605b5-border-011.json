@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2793dbcac51605b5-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.23585",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.23585",
+    "identity_tokens": [
+      "arXiv:2609.23585"
+    ],
+    "reason": "This empirical study tests whether attention-sink head maps transfer from bf16 to 4-bit quantized models and gives calibration guidance for sink-aware edge deployment. It finds global rank correlations >=0.980 while top-k membership retention is 76.5-88.5%, and the authors explicitly state STC measures topology, not task impact. It is relevant to deploying quantized inference-time attention policies, but does not demonstrate inference latency, throughput or end-task gains; retained as borderline.",
+    "first_checked_at": "2026-10-03T16:01:59+00:00",
+    "last_checked_at": "2026-10-03T16:01:59+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[7]"
+    ],
+    "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization"
+  },
+  "processed_at": "2026-10-03T16:01:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

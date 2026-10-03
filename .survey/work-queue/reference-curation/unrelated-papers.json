@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T15:20:46+00:00",
-  "record_count": 714,
+  "updated_at": "2026-10-03T16:01:59+00:00",
+  "record_count": 741,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -1124,21 +1124,6 @@
         "worker-worklist-30 discovery_review rank 470"
       ],
       "title": "A Systematic Classification of Knowledge, Reasoning, and Context within the ARC Dataset"
-    },
-    "arXiv:1702.03118": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1702.03118",
-      "identity_tokens": [
-        "arXiv:1702.03118"
-      ],
-      "reason": "強化学習向け活性化関数が主題でLLMシステム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "worker-worklist-30 discovery_review rank 469"
-      ],
-      "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning"
     },
     "arXiv:1609.03499": {
       "classification": "unrelated",
@@ -5507,11 +5492,12 @@
       "identity_tokens": [
         "arXiv:2604.26256"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 複数方策版を並行維持するストリーミング展開で生成と学習を重畳し、バブルを除去してRL学習処理量を2–4倍改善する分散学習システム。",
+      "reason": "DORA is explicitly an asynchronous reinforcement-learning system for language-model training and post-training. Its system contributions concern rollout collection, learner updates, training scalability and training throughput; the primary evaluation does not target inference-time serving or decoding efficiency. It is excluded because the worklist's candidate scope covers inference.",
       "first_checked_at": "2026-09-30T09:52:33+00:00",
-      "last_checked_at": "2026-09-30T09:52:33+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
       "linked_from": [
-        "worker-worklist-30 discovery_review rank 429"
+        "worker-worklist-30 discovery_review rank 429",
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[5]"
       ],
       "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
     },
@@ -9647,21 +9633,6 @@
       ],
       "title": "Qwen Technical Report"
     },
-    "arXiv:2303.18223": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2303.18223",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2303.18223",
-        "arXiv:2303.18223"
-      ],
-      "reason": "LLM全般のpre-training・adaptation・利用・能力評価を整理する総合サーベイで、推論システム効率化に特化した調査ではない。",
-      "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-03T15:16:50+00:00",
-      "linked_from": [
-        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-      ],
-      "title": "A Survey of Large Language Models"
-    },
     "arXiv:2307.05968": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2307.05968",
@@ -10544,6 +10515,425 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "Theano: new features and speed improvements"
+    },
+    "DOI:10.1007/978-3-319-10602-1_48": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-10602-1_48",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-10602-1_48",
+        "arXiv:1405.0312"
+      ],
+      "reason": "画像認識・場面理解向けデータセットの構築と物体検出/セグメンテーション評価が主題で、LLM推論基盤の最適化ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Microsoft COCO: Common Objects in Context"
+    },
+    "DOI:10.1038/s41586-021-03819-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-021-03819-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-021-03819-2"
+      ],
+      "reason": "アミノ酸配列から高精度な3次元タンパク質構造を予測する生物情報学モデル研究で、LLM推論・サービング効率化ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Highly accurate protein structure prediction with AlphaFold"
+    },
+    "DOI:10.1038/s41586-020-2649-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-020-2649-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-020-2649-2",
+        "arXiv:2006.10256"
+      ],
+      "reason": "科学計算向け配列プログラミングライブラリNumPyの設計・エコシステムを扱うレビューで、LLM推論システム研究ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Array programming with NumPy"
+    },
+    "DOI:10.1080/01621459.1968.10480934": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/01621459.1968.10480934",
+      "identity_tokens": [
+        "DOI:10.1080/01621459.1968.10480934"
+      ],
+      "reason": "Kendallの順位相関に基づく頑健な回帰係数推定の統計理論研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Estimates of the Regression Coefficient Based on Kendall's Tau"
+    },
+    "DOI:10.1007/978-1-4615-3626-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-1-4615-3626-0",
+      "identity_tokens": [
+        "DOI:10.1007/978-1-4615-3626-0"
+      ],
+      "reason": "ベクトル量子化による音声・画像等の信号圧縮を体系化した書籍で、LLM推論向け量子化・実行系を対象としない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Vector Quantization and Signal Compression"
+    },
+    "DOI:10.1109/cgo.2004.1281665": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cgo.2004.1281665",
+      "identity_tokens": [
+        "DOI:10.1109/cgo.2004.1281665"
+      ],
+      "reason": "LLVMの中間表現とlifelong program analysis/optimizationを提案する汎用コンパイラ基盤研究で、LLM推論専用のkernel/runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "LLVM: a compilation framework for lifelong program analysis & transformation"
+    },
+    "DOI:10.1007/bf02295996": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf02295996",
+      "identity_tokens": [
+        "DOI:10.1007/bf02295996"
+      ],
+      "reason": "対応のある比率差の有意性検定を導く古典的統計研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Note on the sampling error of the difference between correlated proportions or percentages"
+    },
+    "DOI:10.1109/cvpr.2018.00781": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2018.00781",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2018.00781",
+        "arXiv:1705.07115"
+      ],
+      "reason": "homoscedastic uncertaintyで複数タスクの学習loss重みを自動調整するコンピュータビジョン学習手法で、推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics"
+    },
+    "DOI:10.1017/9781108571401": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/9781108571401",
+      "identity_tokens": [
+        "DOI:10.1017/9781108571401"
+      ],
+      "reason": "確率的・敵対的・文脈付きbandit等の意思決定理論を体系化した教科書で、LLM推論サービング研究ではない。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Bandit Algorithms"
+    },
+    "DOI:10.1007/978-3-319-46493-0_39": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-46493-0_39",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-46493-0_39",
+        "arXiv:1603.09382"
+      ],
+      "reason": "学習時にResidual Networkの層を確率的にdropして深層CNNの学習を容易にする手法で、推論時は深い全ネットワークを使うため学習高速化の凍結範囲。",
+      "first_checked_at": "2026-10-03T16:01:58+00:00",
+      "last_checked_at": "2026-10-03T16:01:58+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Deep Networks with Stochastic Depth"
+    },
+    "arXiv:2608.22503": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22503",
+      "identity_tokens": [
+        "arXiv:2608.22503"
+      ],
+      "reason": "The LLM use case and collective synchronization analysis are framed around distributed LLM training iterations (including tensor parallelism and FSDP); its final objective is training/collective-system characterization rather than reducing inference work.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[2]"
+      ],
+      "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains"
+    },
+    "arXiv:2608.29745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29745",
+      "identity_tokens": [
+        "arXiv:2608.29745"
+      ],
+      "reason": "JITterFlip studies a Rowhammer fault attack on the JIT serving control plane. It demonstrates corrupt-output and correct-output latency-amplification attacks (up to 124.97x) against inference execution; its objective is to expose and characterize a vulnerability, not to improve inference efficiency or serving performance. The latency result is an attack impact, not an optimization gain.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[8]"
+      ],
+      "title": "JITterFlip: Uncovering Fault Attack Surfaces in JIT-Compiled LLM Serving"
+    },
+    "arXiv:2609.08115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08115",
+      "identity_tokens": [
+        "arXiv:2609.08115"
+      ],
+      "reason": "The primary source defines Router Prior Bias as a training-time bias that anchors router logits to a prior from a frozen base router while leaving the router trainable (abstract and §3). The paper compares post-training objectives on Moonlight-16B-A3B and Qwen3-30B-A3B-Base; its results are downstream task accuracy and routing retention, not inference latency, memory, or compute savings (§4-5). The evaluation removes the training-time prior hook and probes in inference mode to measure the trained router; inference mode is an evaluation protocol, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[2]"
+      ],
+      "title": "Router Prior Bias: Preserving Base Routing Structure in MoE Post-Training"
+    },
+    "arXiv:2609.18526": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18526",
+      "identity_tokens": [
+        "arXiv:2609.18526"
+      ],
+      "reason": "The worklist title differs from the current arXiv v1 title for the same listed arXiv ID; the primary manuscript studies prompt confidentiality across local serving boundaries, including residual allocator memory and sanitization. Its core contribution is a security/privacy audit, not inference computation or serving efficiency. Sanitization reduces recovered prompt residue at less than about 0.5% latency difference, but does not restore confidentiality; that overhead measurement does not change the paper's unrelated scope disposition.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[7]"
+      ],
+      "title": "Running an LLM Locally Doesn't Keep Prompts Private: They Survive in Allocator Memory After Inference"
+    },
+    "DOI:10.1145/3341301.3359646": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3341301.3359646",
+      "identity_tokens": [
+        "DOI:10.1145/3341301.3359646"
+      ],
+      "reason": "The paper's abstract and introduction describe PipeDream as pipeline parallelism for faster DNN training; its forward/backward pipeline and experiments measure training throughput and time-to-accuracy. It does not target LLM inference or inference-serving efficiency. The full primary paper was available from the author-hosted Berkeley PDF after the DOI resolver itself returned an internal error.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[1]"
+      ],
+      "title": "PipeDream: generalized pipeline parallelism for DNN training"
+    },
+    "arXiv:2606.19025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19025",
+      "identity_tokens": [
+        "arXiv:2606.19025"
+      ],
+      "reason": "The primary source states that FoMoE partitions expert layers across workers and skips non-resident experts during local training; its stated target is cross-site MoE training over constrained WAN links (abstract and §1). The reported communication reductions and skip-token throughput gains are training-system outcomes; §6 separates trained proxy quality runs and measured training throughput from modeled larger-scale results. §7 says XL/XXL and 100B-scale results are projections rather than end-to-end pretraining runs, and that the evaluation is controlled around homogeneous workers and synchronous rounds.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[1]"
+      ],
+      "title": "FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs"
+    },
+    "arXiv:2608.13966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13966",
+      "identity_tokens": [
+        "arXiv:2608.13966"
+      ],
+      "reason": "The contribution changes the training procedure to improve the quality of low-bit checkpoints and states no inference-time overhead. Its direct objective is QAT loss and model quality rather than a reduction in inference work; the workflow excludes training-only work unless inference reduction is the final objective.",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[8]"
+      ],
+      "title": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction"
+    },
+    "DOI:10.1109/cvpr.2009.5206848": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2009.5206848",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2009.5206848"
+      ],
+      "reason": "画像認識用大規模データセットの構築・収集・階層化が主題で、LLM推論・サービング・メモリ階層・MoE推論の最終適用先ではない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "ImageNet: A large-scale hierarchical image database"
+    },
+    "DOI:10.1007/s11263-015-0816-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-015-0816-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-015-0816-y",
+        "arXiv:1409.0575"
+      ],
+      "reason": "ILSVRCデータセット・競技・画像分類/検出性能の総括であり、LLM推論効率化研究ではない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "ImageNet Large Scale Visual Recognition Challenge"
+    },
+    "DOI:10.1007/s11263-019-01228-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-019-01228-7",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-019-01228-7",
+        "arXiv:1610.02391"
+      ],
+      "reason": "CNN等の判断根拠可視化が主目的で、推論ランタイムの速度・メモリ・配置最適化ではない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization"
+    },
+    "DOI:10.1038/s41586-024-07487-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-024-07487-w",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-024-07487-w"
+      ],
+      "reason": "生体分子複合体の構造予測精度を改善するモデル研究で、LLM推論システム最適化を目的としない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3"
+    },
+    "DOI:10.1007/978-1-4684-2001-2_9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-1-4684-2001-2_9",
+      "identity_tokens": [
+        "DOI:10.1007/978-1-4684-2001-2_9"
+      ],
+      "reason": "NP完全性と多項式時間還元に関する計算量理論の古典であり、LLM推論・サービング研究ではない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Reducibility among Combinatorial Problems"
+    },
+    "DOI:10.1016/0098-3004(84)90020-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/0098-3004(84)90020-7",
+      "identity_tokens": [
+        "DOI:10.1016/0098-3004(84)90020-7"
+      ],
+      "reason": "ファジィc-meansクラスタリングのアルゴリズムと数値評価が主題で、LLM/MoE推論の圧縮や実行系そのものを扱わない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "FCM: The fuzzy c-means clustering algorithm"
+    },
+    "DOI:10.1007/s11704-026-60308-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11704-026-60308-3",
+      "identity_tokens": [
+        "DOI:10.1007/s11704-026-60308-3",
+        "DOI:10.48550/arxiv.2303.18223",
+        "arXiv:2303.18223"
+      ],
+      "reason": "LLM全般の事前学習・適応・利用・能力評価を整理する総合サーベイで、推論システム効率化を主対象とする論文ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "worker-worklist-30"
+      ],
+      "title": "A Survey of Large Language Models"
+    },
+    "DOI:10.1038/s41586-019-1724-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-019-1724-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-019-1724-z"
+      ],
+      "reason": "StarCraft II向けマルチエージェント強化学習と競技性能が主題で、LLM推論基盤とは無関係。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
+    },
+    "DOI:10.1109/34.655647": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/34.655647",
+      "identity_tokens": [
+        "DOI:10.1109/34.655647"
+      ],
+      "reason": "画像中の顔検出器のニューラルネットワーク設計・探索処理が主題で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Neural network-based face detection"
+    },
+    "DOI:10.1016/j.neunet.2017.12.012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2017.12.012",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2017.12.012",
+        "arXiv:1702.03118"
+      ],
+      "reason": "SiLU/dSiLU活性化関数と強化学習性能が主題で、投機的復号やLLM推論ランタイムの研究ではない。",
+      "first_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30",
+        "worker-worklist-30 discovery_review rank 469"
+      ],
+      "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning"
+    },
+    "DOI:10.1002/cpe.938": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/cpe.938",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.938"
+      ],
+      "reason": "Condorの協調型分散計算基盤の歴史・設計・運用経験を扱う一般分散システム研究で、LLM推論サービングを最終適用先としない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-45"
+      ],
+      "title": "Distributed computing in practice: the Condor experience"
+    },
+    "arXiv:2311.16502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.16502",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.16502",
+        "arXiv:2311.16502"
+      ],
+      "reason": "大規模マルチモーダルモデルの専門知識・知覚・推論能力を測るベンチマーク構築とモデル評価が主題で、LLM推論サービング、メモリ階層、カーネル、量子化、MoE実行などの効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-03T16:01:59+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI"
     }
   }
 }
