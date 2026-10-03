@@ -1,8 +1,6 @@
 name: Candidate priority refresh
 
 on:
-  schedule:
-    - cron: '37 * * * *'
   push:
     branches: [main]
     paths:
