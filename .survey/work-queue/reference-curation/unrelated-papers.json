@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:12:42+00:00",
+  "updated_at": "2026-10-03T18:16:44+00:00",
   "record_count": 844,
   "records": {
     "arXiv:2303.08774": {
@@ -4892,9 +4892,9 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4という汎用系列モデルのアーキテクチャ研究で、LLM推論・サービング最適化を最終適用先としない。",
+      "reason": "構造化状態空間モデル（S4）の汎用系列モデリング研究で高速生成も示すが、LLM推論システムを対象とした研究ではなく、非LLM中心の基盤アーキテクチャ研究に当たる。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-03T18:16:44+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -5561,10 +5561,11 @@
         "OpenReview:Yacmpz84TH",
         "arXiv:2302.04761"
       ],
-      "reason": "API呼び出しを自己教師ありで学習するモデル能力・学習方式が主題で、LLM推論の速度・メモリ・サービング効率化ではない。",
+      "reason": "外部APIをいつ・どう呼ぶかを自己教師ありで学習させる言語モデル学習法であり、推論サービング、メモリ階層、推論カーネル、推論時圧縮・スケジューリングの高速化が最終適用先ではない。",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-03T18:16:44+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
       ],
@@ -5605,12 +5606,14 @@
       "classification": "unrelated",
       "canonical_id": "OpenReview:KnqiC0znVF",
       "identity_tokens": [
-        "OpenReview:KnqiC0znVF"
+        "OpenReview:KnqiC0znVF",
+        "arXiv:2502.09992"
       ],
-      "reason": "LLaDAという大規模拡散言語モデルを自己回帰モデルの代替として事前学習・教師あり微調整し、一般・数学・コード能力を検証するモデルアーキテクチャ研究。推論時のサービング、KVキャッシュ、メモリ階層、カーネル、スケジューリングの効率化が主貢献ではないため対象外。",
+      "reason": "LLaDAという拡散型大規模言語モデルを事前学習から構築し、生成原理・scaling・能力を示すモデル研究で、推論高速化方式そのものは提案していない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:03:21+00:00",
+      "last_checked_at": "2026-10-03T18:16:44+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
         "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
       ],
@@ -6909,23 +6912,6 @@
         ".survey/work-queue/worker-worklist-45.json"
       ],
       "title": "CompeteSMoE -- Effective Training of Sparse Mixture of Experts via Competition"
-    },
-    "arXiv:2410.10813": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2410.10813",
-      "identity_tokens": [
-        "OpenReview:pZiyCaVuti",
-        "arXiv:2410.10813"
-      ],
-      "reason": "長期会話memoryのbenchmarkとretrieval評価が主題で、推論runtime最適化ではない。",
-      "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-02T11:07:29+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-30.json",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
-      ],
-      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
     },
     "DOI:10.1145/3695053.3731079": {
       "classification": "unrelated",
@@ -12424,15 +12410,34 @@
         "OpenReview:sY5N0zY5Od",
         "arXiv:2310.03714"
       ],
-      "reason": "LMパイプラインのprompt/デモ最適化を宣言的に行うプログラミングモデルが主題で、推論実行系の速度・メモリ・サービング最適化を主目的としないため対象外。",
+      "reason": "宣言的な言語モデルパイプラインをデモや評価指標から自動最適化するプログラミング／コンパイル枠組みであり、LLM推論ランタイムの計算・メモリ・サービング高速化が主題ではない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:12:42+00:00",
+      "last_checked_at": "2026-10-03T18:16:44+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
       ],
       "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+    },
+    "OpenReview:pZiyCaVuti": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:pZiyCaVuti",
+      "identity_tokens": [
+        "OpenReview:pZiyCaVuti",
+        "arXiv:2410.10813"
+      ],
+      "reason": "長期対話メモリ能力の評価ベンチマークと検索・読解設計の分析が主題であり、LLM推論の速度・GPUメモリ・サービング最適化手法ではない。",
+      "first_checked_at": "2026-10-01T22:26:28+00:00",
+      "last_checked_at": "2026-10-03T18:16:44+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        ".survey/work-queue/worker-worklist-30.json",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+      ],
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
     }
   }
 }
