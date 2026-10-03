@@ -308,6 +308,10 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         discovery_provider_adapter.EXPLICIT_ID_MAX_ITEMS,
     )
     spacing = max(float(cache_policy.get("request_spacing_seconds", 2) or 0), 0.0)
+    rate_limit_retries = max(
+        int(cache_policy.get("rate_limit_retries_per_request", 0) or 0),
+        0,
+    )
     now = _now()
 
     cache = candidate_priority.load_cache(root)
@@ -324,7 +328,10 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
     for start in range(0, len(selected), max(batch_size, 1)):
         batch = selected[start:start + batch_size]
         identifiers = [str(row["_lookup_id"]) for row in batch]
-        outcomes = discovery_provider_adapter.lookup_identifiers(identifiers)
+        outcomes = discovery_provider_adapter.lookup_identifiers(
+            identifiers,
+            max_rate_limit_retries=rate_limit_retries,
+        )
         rows_by_id = {str(row["_lookup_id"]): row for row in batch}
         missing_ids = [
             str(outcome.get("requested_id") or "")
@@ -373,6 +380,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
         "candidate_count_seen": len(rows),
         "due_count_before_run": len(due),
         "selected_count": len(selected),
+        "rate_limit_retries_per_request": rate_limit_retries,
         "found": found,
         "unresolved": unresolved,
         "errors": errors,
