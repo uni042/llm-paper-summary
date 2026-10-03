@@ -30,8 +30,9 @@ It runs every 10 minutes from the latest main branch and executes
 
 ### Research
 
-1. Parse and machine-audit the Markdown.
-2. Run the repository-wide stable-identity resolver against the current main.
+1. Parse the Markdown and require complete canonical frontmatter before any identity/publication step. Required bibliographic/implementation fields are `canonical_id`, `title`, `summary`, `list_summary`, non-empty list `authors`, `published`, `publication`, `publication_type`, `publication_status`, `source`, non-empty list `sources`, `implementation`, explicit nullable `code`, and `last_checked`. arXiv papers additionally require `arxiv_categories.primary`; Library-first artifacts also require `worker_completed_at` and `worker_run_key`. Missing metadata is retained under `blocked/research/` as `blocked_metadata`, never published and never guessed by the inbox processor.
+2. Run the publication-integrity/quality machine audit.
+3. Run the repository-wide stable-identity resolver against the current main.
 3. If already represented, record \`already_represented\` and do not overwrite
    the existing paper.
 4. If not represented, canonicalize the inference lineage, write one paper,
