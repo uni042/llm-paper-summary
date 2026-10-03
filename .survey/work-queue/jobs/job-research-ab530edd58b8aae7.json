@@ -35,12 +35,17 @@
   "schema_version": 1,
   "selection_reason": "OptR targets the post-attention output error that matters to the model while preserving paged KV-cache layout, directly extending ultra-low-bit KV-cache quantization and efficient decoding lineages.",
   "source_url": "https://arxiv.org/abs/2608.02691",
-  "status": "ready",
+  "status": "superseded",
   "title": "Output-Aware Rotation for INT2 KV-Cache Quantization",
   "type": "research",
   "workflow_version": 10,
   "write_blocked_attempt_id": "attempt-preload-eafe60d7f49bdb3af62d3b54",
   "write_blocked_run_state_request_id": "health-probe-probe-scheduled-chat-30-20260926T122723JST-optr",
   "write_blocked_transport_reason": "platform_content_write_rejected_after_bundle_fallback",
-  "retry_queued_at": "2026-10-03T13:16:42+00:00"
+  "retry_queued_at": "2026-10-03T13:16:42+00:00",
+  "superseded_at": "2026-10-03T13:22:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.02691-output-aware-rotation-int2-kv-cache.md",
+  "represented_canonical_id": "arXiv:2608.02691",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

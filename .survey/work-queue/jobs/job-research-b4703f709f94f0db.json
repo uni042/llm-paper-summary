@@ -35,7 +35,7 @@
   "schema_version": 1,
   "selection_reason": "Queueing-theoretic prefill/KV-transfer/decode resource models and cost-constrained SLO allocation directly extend disaggregated serving, KV transfer, and goodput optimization lineages.",
   "source_url": "https://www.semanticscholar.org/paper/378875b9e688b02c17c87f6270544d016cc03ae3",
-  "status": "ready",
+  "status": "superseded",
   "title": "SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services",
   "type": "research",
   "workflow_version": 10,
@@ -43,5 +43,10 @@
   "write_blocked_run_state_request_id": "health-probe-probe-scheduled-chat-30-20260926T1135JST",
   "write_blocked_source_reason": "platform_content_write_rejected_after_bundle_fallback",
   "write_blocked_transport_reason": "platform_content_write_rejected_after_bundle_fallback",
-  "retry_queued_at": "2026-10-03T13:16:42+00:00"
+  "retry_queued_at": "2026-10-03T13:16:42+00:00",
+  "superseded_at": "2026-10-03T13:22:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md",
+  "represented_canonical_id": "arXiv:2609.26763",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
