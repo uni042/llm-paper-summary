@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c61e628786520a9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.19282",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.19282",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.19282",
+      "arXiv:2402.19282"
+    ],
+    "reason": "Common Crawl由来の事前学習データセット構築・品質/安全フィルタリングが主題で、最終適用先は学習データ整備。推論高速化の対象外。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+    ],
+    "title": "WanJuan-CC: A Safe and High-Quality Open-sourced English Webtext Dataset"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c61e6287865",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

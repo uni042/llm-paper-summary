@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T06:06:41+00:00",
-  "record_count": 392,
+  "updated_at": "2026-10-03T07:46:12+00:00",
+  "record_count": 398,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5657,6 +5657,96 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md"
       ],
       "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts"
+    },
+    "arXiv:2401.08138": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.08138",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.08138",
+        "arXiv:2401.08138"
+      ],
+      "reason": "VaryGenはLLMアプリの意味キャッシュを題材にするが、主貢献はキャッシュ自体の高速化ではなく、キャッシュの誤ヒット・誤ミスを検証するテスト入力生成。推論効率に隣接するため境界領域。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+      ],
+      "title": "LLMs for Test Input Generation for Semantic Caches"
+    },
+    "arXiv:2312.16733": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.16733",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.16733",
+        "arXiv:2312.16733"
+      ],
+      "reason": "予測不能・burstyなML推論を対象に、weight-shared SuperNetworkからsubnetを瞬時切替するserving system。LLM専用ではないが、推論サービングのSLO/accuracy schedulingに直接隣接するため境界領域。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ],
+      "title": "SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads"
+    },
+    "arXiv:2402.17753": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.17753",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.17753",
+        "arXiv:2402.17753"
+      ],
+      "reason": "長期会話エージェントの記憶方式として長文脈・RAG・要約を比較するためエージェント記憶との関連はあるが、主貢献は評価ベンチマークでありKV管理や推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+      ],
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents"
+    },
+    "arXiv:2402.07939": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.07939",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.07939",
+        "arXiv:2402.07939"
+      ],
+      "reason": "LLMを使うWindows操作エージェントだが、主貢献はUI理解・アプリ選択・操作計画であり、LLM推論サービング基盤の最適化ではない。エージェント実行系との境界領域としてborderline。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md"
+      ],
+      "title": "UFO: A UI-Focused Agent for Windows OS Interaction"
+    },
+    "arXiv:2401.06201": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.06201",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.06201",
+        "arXiv:2401.06201"
+      ],
+      "reason": "長いtool documentationを統一・簡潔なtool instructionへ圧縮してエージェントの入力トークン消費を減らすため推論費削減に隣接するが、主貢献はツール利用能力と指示整形であり推論基盤そのものではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 475"
+      ],
+      "title": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction"
+    },
+    "arXiv:2401.02330": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.02330",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.02330",
+        "arXiv:2401.02330"
+      ],
+      "reason": "2.7BのPhi-2を使う小型マルチモーダル助手で資源効率・リアルタイム用途を狙うため配備効率に隣接するが、主貢献は小型VLMの学習と能力評価であり推論システム最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 473"
+      ],
+      "title": "LLaVA-Phi: Efficient Multi-Modal Assistant with Small Language Model"
     }
   }
 }

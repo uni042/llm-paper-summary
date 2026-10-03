@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce7baae0f060e711-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.09149",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.09149",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.09149",
+      "arXiv:2401.09149"
+    ],
+    "reason": "長系列LLMの学習をhybrid parallelism、redundant sharding、通信重畳で高速化する学習システムで、最終適用先が学習高速化の凍結範囲。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "worker-worklist-00 discovery_review rank 479"
+    ],
+    "title": "InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce7baae0f060",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-319cd3ab5b4ae707-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.08138",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.08138",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.08138",
+      "arXiv:2401.08138"
+    ],
+    "reason": "VaryGenはLLMアプリの意味キャッシュを題材にするが、主貢献はキャッシュ自体の高速化ではなく、キャッシュの誤ヒット・誤ミスを検証するテスト入力生成。推論効率に隣接するため境界領域。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+    ],
+    "title": "LLMs for Test Input Generation for Semantic Caches"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-319cd3ab5b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

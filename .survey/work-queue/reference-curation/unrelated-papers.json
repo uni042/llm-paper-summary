@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T06:06:41+00:00",
-  "record_count": 529,
+  "updated_at": "2026-10-03T07:46:12+00:00",
+  "record_count": 553,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -7782,6 +7782,366 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md"
       ],
       "title": "ACS: Concurrent Kernel Execution on Irregular, Input-Dependent Computational Graphs"
+    },
+    "arXiv:2401.07159": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07159",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.07159",
+        "arXiv:2401.07159"
+      ],
+      "reason": "4bit基盤モデルとside networkで微調整時の重み・activation・optimizer memoryを削減する方式で、最終目的と主要評価がfine-tuning高速化・省メモリ化のため凍結範囲。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "Quantized Side Tuning: Fast and Memory-Efficient Tuning of Quantized Large Language Models"
+    },
+    "arXiv:2401.04883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.04883",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.04883",
+        "arXiv:2401.04883"
+      ],
+      "reason": "複数ユーザー会話で何を・いつ・誰に答えるかを決める対話エージェント設計が主題で、LLM推論基盤の速度・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md"
+      ],
+      "title": "Multi-User Chat Assistant (MUCA): a Framework Using LLMs to Facilitate Group Conversations"
+    },
+    "arXiv:2401.02731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.02731",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.02731",
+        "arXiv:2401.02731"
+      ],
+      "reason": "dense LLMをMoEへupcycleしadapterだけでexpertを差別化するinstruction-tuning手法で、主目的が学習時の容量拡張・微調整効率のため凍結範囲。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md"
+      ],
+      "title": "Parameter-Efficient Sparsity Crafting from Dense to Mixture-of-Experts for Instruction Tuning on General Tasks"
+    },
+    "arXiv:2401.01312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.01312",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.01312",
+        "arXiv:2401.01312"
+      ],
+      "reason": "複数LLMエージェントのpersona付きrole-playing通信で問題解決能力を高めるagentic reasoning研究で、推論サービングや計算・メモリ効率化を提案しない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md"
+      ],
+      "title": "LLM Harmony: Multi-Agent Communication for Problem Solving"
+    },
+    "arXiv:2312.12379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.12379",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.12379",
+        "arXiv:2312.12379"
+      ],
+      "reason": "視覚言語モデルの多タスクinstruction tuningでtask conflictを抑えるLoRA-MoE学習手法が主題で、推論効率化が最終目的ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+      ],
+      "title": "Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning"
+    },
+    "arXiv:2312.08935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.08935",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.08935",
+        "arXiv:2312.08935"
+      ],
+      "reason": "数学推論の各stepへ自動ラベルを付けるprocess reward modelと、それを用いた学習・候補選択の品質向上研究で、推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md"
+      ],
+      "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations"
+    },
+    "arXiv:2403.00376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00376",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.00376",
+        "arXiv:2403.00376"
+      ],
+      "reason": "視覚言語基盤モデルの分類頑健性を改善するテスト時プロンプト適応が主題で、LLM推論サービング、KVキャッシュ、推論カーネル等の効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Spurious Feature Eraser: Stabilizing Test-Time Adaptation for Vision-Language Foundation Model"
+    },
+    "arXiv:2402.19282": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19282",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.19282",
+        "arXiv:2402.19282"
+      ],
+      "reason": "Common Crawl由来の事前学習データセット構築・品質/安全フィルタリングが主題で、最終適用先は学習データ整備。推論高速化の対象外。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "WanJuan-CC: A Safe and High-Quality Open-sourced English Webtext Dataset"
+    },
+    "arXiv:2402.16843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16843",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.16843",
+        "arXiv:2402.16843"
+      ],
+      "reason": "複数LoRAを組み合わせた画像生成とその評価が主題で、LLM推論システムの対象範囲外。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md"
+      ],
+      "title": "Multi-LoRA Composition for Image Generation"
+    },
+    "arXiv:2402.16197": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16197",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.16197",
+        "arXiv:2402.16197"
+      ],
+      "reason": "コード補完モデルの実利用品質を評価するソフトウェア工学研究で、推論サービングや高速化方式を提案しない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
+      ],
+      "title": "Language Models for Code Completion: A Practical Evaluation"
+    },
+    "arXiv:2402.13991": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.13991",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.13991",
+        "arXiv:2402.13991"
+      ],
+      "reason": "文書packingと因果maskが事前学習品質へ与える影響の研究で、主目的が学習工程・学習データ構成にあるため凍結範囲。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ],
+      "title": "Analysing The Impact of Sequence Composition on Language Model Pre-Training"
+    },
+    "arXiv:2402.12991": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12991",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.12991",
+        "arXiv:2402.12991"
+      ],
+      "reason": "LLMのブラックボックス同一性検証・モデル盗用検知が主題で、推論基盤の性能最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
+      ],
+      "title": "TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification"
+    },
+    "arXiv:2403.00801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00801",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.00801",
+        "arXiv:2403.00801"
+      ],
+      "reason": "LLMで索引・検索・再ランキングを統合する情報検索手法で、主目的は検索精度とRAG性能。推論サービング、KVキャッシュ、オフロード、推論カーネル等の高速化が最終適用先ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "title": "Self-Retrieval: End-to-End Information Retrieval with One Large Language Model"
+    },
+    "arXiv:2403.00001": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00001",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.00001",
+        "arXiv:2403.00001"
+      ],
+      "reason": "微生物の代謝率と細胞サイズの物理モデルであり、LLM・推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md"
+      ],
+      "title": "Metabolic scaling in small life forms"
+    },
+    "arXiv:2402.12345": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12345",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.12345",
+        "arXiv:2402.12345"
+      ],
+      "reason": "シンプレクティック幾何・Floerホモロジーの数学研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md"
+      ],
+      "title": "Homoclinic Floer homology via direct limits"
+    },
+    "arXiv:2402.06967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.06967",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.06967",
+        "arXiv:2402.06967"
+      ],
+      "reason": "複数ターン対話の指示追従を改善する学習・チューニング枠組みが主目的で、推論高速化・サービング・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md"
+      ],
+      "title": "Instruct Once, Chat Consistently in Multiple Rounds: An Efficient Tuning Framework for Dialogue"
+    },
+    "arXiv:2401.10491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10491",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.10491",
+        "arXiv:2401.10491"
+      ],
+      "reason": "複数LLMの生成分布を統合して対象LLMへ継続学習で知識移転するモデル融合研究で、最終適用先はモデル学習・能力統合。推論サービング最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 480"
+      ],
+      "title": "Knowledge Fusion of Large Language Models"
+    },
+    "arXiv:2401.09149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.09149",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.09149",
+        "arXiv:2401.09149"
+      ],
+      "reason": "長系列LLMの学習をhybrid parallelism、redundant sharding、通信重畳で高速化する学習システムで、最終適用先が学習高速化の凍結範囲。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 479"
+      ],
+      "title": "InternEvo: Efficient Long-sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding"
+    },
+    "arXiv:2401.08329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.08329",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.08329",
+        "arXiv:2401.08329"
+      ],
+      "reason": "LLMサービスの利用意図・満足度・懸念をユーザー調査から分析するHCI研究で、推論runtime、KV、scheduler、kernel等の効率化を提案しない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 478"
+      ],
+      "title": "Understanding User Experience in Large Language Model Interactions"
+    },
+    "arXiv:2401.06915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06915",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.06915",
+        "arXiv:2401.06915"
+      ],
+      "reason": "長大な金融文書を用いたQAデータセットと長文脈/RAGモデルの能力評価が主目的で、長文脈推論の効率化方式を提案しない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 476"
+      ],
+      "title": "DocFinQA: A Long-Context Financial Reasoning Dataset"
+    },
+    "arXiv:2401.04842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.04842",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.04842",
+        "arXiv:2401.04842"
+      ],
+      "reason": "検索ベンチマークのrelevance judgmentやretrieved passageを用いてLLM生成回答を自動評価する評価方法研究で、推論効率化とは無関係。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 474"
+      ],
+      "title": "Adapting Standard Retrieval Benchmarks to Evaluate Generated Answers"
+    },
+    "arXiv:2401.00368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.00368",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.00368",
+        "arXiv:2401.00368"
+      ],
+      "reason": "LLMで合成した多言語データを使ってdecoder-onlyモデルをcontrastive fine-tuningしtext embedding品質を高める学習研究で、推論効率化を最終目的としない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 472"
+      ],
+      "title": "Improving Text Embeddings with Large Language Models"
+    },
+    "arXiv:2312.15166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.15166",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.15166",
+        "arXiv:2312.15166"
+      ],
+      "reason": "depth up-scalingと継続事前学習で7B級モデルを10.7Bへ拡張するモデル構築・学習研究。推論を複雑化しない点は述べるが、推論効率改善を提案する研究ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 471"
+      ],
+      "title": "SOLAR 10.7B: Scaling Large Language Models with Simple yet Effective Depth Up-Scaling"
+    },
+    "arXiv:2312.13010": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.13010",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.13010",
+        "arXiv:2312.13010"
+      ],
+      "reason": "3エージェント構成でコード生成品質を高め、他multi-agent方式よりtoken overheadも減らすが、最終目的はcode generation品質でありLLM推論サービング基盤の最適化ではない。",
+      "first_checked_at": "2026-10-03T07:46:12+00:00",
+      "last_checked_at": "2026-10-03T07:46:12+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 470"
+      ],
+      "title": "AgentCoder: Multi-Agent Code Generation with Effective Testing and Self-optimisation"
     }
   }
 }

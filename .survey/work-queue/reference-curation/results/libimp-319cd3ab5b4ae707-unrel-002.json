@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-319cd3ab5b4ae707-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.07159",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.07159",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.07159",
+      "arXiv:2401.07159"
+    ],
+    "reason": "4bit基盤モデルとside networkで微調整時の重み・activation・optimizer memoryを削減する方式で、最終目的と主要評価がfine-tuning高速化・省メモリ化のため凍結範囲。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "Quantized Side Tuning: Fast and Memory-Efficient Tuning of Quantized Large Language Models"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-319cd3ab5b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

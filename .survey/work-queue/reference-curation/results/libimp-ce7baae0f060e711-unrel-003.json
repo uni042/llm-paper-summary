@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce7baae0f060e711-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.08329",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.08329",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.08329",
+      "arXiv:2401.08329"
+    ],
+    "reason": "LLMサービスの利用意図・満足度・懸念をユーザー調査から分析するHCI研究で、推論runtime、KV、scheduler、kernel等の効率化を提案しない。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "worker-worklist-00 discovery_review rank 478"
+    ],
+    "title": "Understanding User Experience in Large Language Model Interactions"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce7baae0f060",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

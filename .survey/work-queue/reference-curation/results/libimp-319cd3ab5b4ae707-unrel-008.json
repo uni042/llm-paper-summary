@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-319cd3ab5b4ae707-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.08935",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.08935",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.08935",
+      "arXiv:2312.08935"
+    ],
+    "reason": "数学推論の各stepへ自動ラベルを付けるprocess reward modelと、それを用いた学習・候補選択の品質向上研究で、推論基盤の効率化ではない。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md"
+    ],
+    "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-319cd3ab5b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
