@@ -290,6 +290,66 @@ last_checked: '2026-10-03'
             finally:
                 os.chdir(original_cwd)
 
+    def test_preferred_candidate_id_uses_stable_alias_before_openreview(self) -> None:
+        record = {
+            "canonical_id": "OpenReview:abcdefghij",
+            "identity_tokens": [
+                "OpenReview:abcdefghij",
+                "arXiv:2402.15220",
+                "DOI:10.18653/v1/2024.acl-long.623",
+            ],
+        }
+        self.assertEqual(inbox.preferred_candidate_id(record), "arXiv:2402.15220")
+
+    def test_provider_gap_alias_is_requeued_as_reduced_retry(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery-provider/gap.json"
+                blocked.parent.mkdir(parents=True)
+                payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "provider-gap-parent::provider-gap",
+                    "provider_gap_ids": ["OpenReview:abcdefghij"],
+                    "record_count": 1,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "OpenReview:abcdefghij",
+                            "identity_tokens": [
+                                "OpenReview:abcdefghij",
+                                "arXiv:2402.15220",
+                            ],
+                            "reason": "provider gap",
+                        }
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(inbox.recover_provider_gap_alias_blocks(root), 1)
+                retries = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-provider-alias-*--gap.json"
+                    )
+                )
+                self.assertEqual(len(retries), 1)
+                retry = json.loads(retries[0].read_text(encoding="utf-8"))
+                self.assertEqual(retry["record_count"], 1)
+                self.assertEqual(
+                    inbox.preferred_candidate_id(retry["records"][0]),
+                    "arXiv:2402.15220",
+                )
+                self.assertEqual(inbox.recover_provider_gap_alias_blocks(root), 0)
+            finally:
+                os.chdir(original_cwd)
+
     def test_provider_error_is_candidate_gap_not_whole_run_failure(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as tmpdir:
