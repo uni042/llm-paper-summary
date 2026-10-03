@@ -1,4 +1,4 @@
-name: Survey claim fast lane
+name: Survey claim fast lane (manual legacy recovery)
 
 on:
   # Retained for explicit recovery only. The current Library-first path does not
@@ -72,71 +72,3 @@ jobs:
 
           echo 'Failed to publish claim results after 12 retries.' >&2
           exit 1
-
-
-  orchestrate:
-    needs: claim
-    if: >-
-      always() &&
-      (
-        github.event_name == 'schedule' ||
-        github.event_name == 'workflow_dispatch' ||
-        (
-          github.event_name == 'push' &&
-          (github.event.head_commit.message == 'Enable central survey orchestrator' || startsWith(github.event.head_commit.message, 'survey-orchestrator: kick'))
-        )
-      )
-    runs-on: ubuntu-latest
-    timeout-minutes: 9
-    env:
-      GH_TOKEN: ${{ github.token }}
-    steps:
-      - name: Dispatch scheduled survey lanes
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          dispatch() {
-            local workflow="$1"
-            echo "Dispatching ${workflow}"
-            gh api               --method POST               "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches"               -f ref=main
-          }
-
-          # :03-equivalent lanes. Claim itself is the current workflow.
-          dispatch discovery-preload-local-fast.yml
-          dispatch discovery-preload-warm.yml
-          dispatch survey-helper.yml
-          # Redundant hourly metadata lanes. Their own durable freshness gates
-          # make these dispatches no-ops when a recent cron/event run succeeded.
-          dispatch forward-citation-sweep.yml
-          dispatch candidate-priority-refresh.yml
-
-          sleep 60
-
-          # :04-equivalent lanes.
-          dispatch survey-run-state.yml
-          dispatch retry-adopted-library-checkpoints.yml
-
-          sleep 60
-
-          # :05-equivalent lane.
-          dispatch survey-discovery-recovery.yml
-
-          sleep 120
-
-          # :07-equivalent lanes.
-          dispatch library-import.yml
-          dispatch library-publication-ack.yml
-          dispatch survey-reference-relevance-fast.yml
-          dispatch status-dashboard.yml
-          dispatch survey-submission-fast.yml
-
-          sleep 60
-
-          # :08-equivalent lane.
-          dispatch survey-research-quality-preflight.yml
-
-          sleep 60
-
-          # :09-equivalent lane.
-          dispatch survey-completed-builder-fast.yml
