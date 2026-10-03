@@ -378,6 +378,26 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual(rows[1]["record"]["canonical_id"], "DOI:10.1000/batch")
         self.assertEqual(rows[0]["lookup_route"], "semantic_scholar_batch")
 
+    def test_lookup_identifiers_does_not_fan_out_after_batch_rate_limit(self) -> None:
+        methods = []
+
+        def opener(request, timeout=30):
+            methods.append(request.get_method())
+            raise HTTPError(request.full_url, 429, "Too Many Requests", {}, None)
+
+        rows = self._lookup_ids(
+            ["arXiv:2609.10002", "arXiv:2609.10003"],
+            opener=opener,
+            sleeper=lambda seconds: None,
+        )
+
+        self.assertEqual(methods, ["POST"] * 5)
+        self.assertEqual([row["status"] for row in rows], ["error", "error"])
+        self.assertEqual(
+            [row["lookup_route"] for row in rows],
+            ["semantic_scholar_batch", "semantic_scholar_batch"],
+        )
+
     def test_lookup_identifiers_falls_back_to_single_id_after_batch_rejection(self) -> None:
         methods = []
 
