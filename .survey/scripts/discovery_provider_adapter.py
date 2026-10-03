@@ -125,7 +125,7 @@ def _fetch_arxiv_abs_record(
         except HTTPError as exc:
             if exc.code == 404:
                 return None, None
-            if exc.code == 429 and rate_attempt < S2_MAX_RATE_LIMIT_RETRIES:
+            if exc.code == 429 and rate_attempt < max_rate_limit_retries:
                 sleeper(_semantic_scholar_retry_delay(exc, rate_attempt))
                 rate_attempt += 1
                 continue
@@ -314,6 +314,7 @@ def _explicit_json_request(
     opener: Callable[..., Any],
     sleeper: Callable[[float], Any],
     not_found_is_empty: bool = False,
+    max_rate_limit_retries: int = S2_MAX_RATE_LIMIT_RETRIES,
 ) -> Any:
     network_attempt = 0
     rate_attempt = 0
@@ -389,6 +390,7 @@ def lookup_identifiers(
     timeout: int = 30,
     opener: Callable[..., Any] = urlopen,
     sleeper: Callable[[float], Any] = time.sleep,
+    max_rate_limit_retries: int = S2_MAX_RATE_LIMIT_RETRIES,
 ) -> list[dict[str, Any]]:
     """Resolve a bounded list of stable paper IDs through fixed official APIs.
 
@@ -421,7 +423,11 @@ def lookup_identifiers(
                 method="POST",
             )
             payload = _explicit_json_request(
-                request, timeout=timeout, opener=opener, sleeper=sleeper
+                request,
+                timeout=timeout,
+                opener=opener,
+                sleeper=sleeper,
+                max_rate_limit_retries=max_rate_limit_retries,
             )
             if not isinstance(payload, list):
                 raise DiscoveryProviderError("Semantic Scholar batch response must be a list")
@@ -467,8 +473,12 @@ def lookup_identifiers(
                     headers={"Accept": "application/json", "User-Agent": "llm-paper-summary-discovery/1.0"},
                 )
                 single_payload = _explicit_json_request(
-                    single_request, timeout=timeout, opener=opener, sleeper=sleeper,
+                    single_request,
+                    timeout=timeout,
+                    opener=opener,
+                    sleeper=sleeper,
                     not_found_is_empty=True,
+                    max_rate_limit_retries=max_rate_limit_retries,
                 )
                 single_record = _paper_record(single_payload) if isinstance(single_payload, dict) else None
                 if single_record and _identifier_matches_record(requested_id, single_record):
