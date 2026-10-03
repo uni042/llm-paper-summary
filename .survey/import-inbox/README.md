@@ -57,9 +57,17 @@ GitHub.
   \`submit_discovery_round\` submissions, in batches of at most five.
 - \`unrelated\` and \`borderline\` records are converted to the existing
   reference-relevance request lane.
-- Provider/validation/downstream failures move the original run JSON to
-  \`blocked/discovery/\`. Successful runs are removed from \`waiting/discovery/\`
-  after all canonical downstream results succeed.
+- Candidate-level provider lookup gaps (for example a temporary OpenReview/API error)
+  do **not** block unrelated candidates from the same Library run. Successfully resolved
+  candidates continue through the normal queue; only the unresolved accept subset is
+  retained under \`blocked/discovery-provider/\` and the source result is recorded as
+  \`imported_with_provider_gaps\`.
+- Infrastructure/provenance/submission failures that invalidate the downstream operation
+  still move the original run JSON to \`blocked/discovery/\`. Historical runs blocked
+  only by candidate-level provider gaps are requeued once and converted to the
+  candidate-level isolation model above.
+- Successful runs are removed from \`waiting/discovery/\` after all canonical
+  downstream results succeed.
 
 ## Ownership and cleanup
 
