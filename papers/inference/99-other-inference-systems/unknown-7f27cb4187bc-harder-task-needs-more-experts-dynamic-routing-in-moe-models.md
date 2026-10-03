@@ -15,7 +15,7 @@ authors:
 summary: 固定Top-kルーティングが簡単なトークンにも難しいトークンにも同数の専門家を使う問題に対し、ルータ確率の累積信頼度が閾値を満たすまで専門家を動的に選ぶ。推論時は最大2専門家に制限しつつ平均活性専門家数を2未満に抑え、Top-2より活性パラメータを10%以上減らしながら下流タスク平均を0.7ポイント改善する。
 list_summary: ルータの確率信頼度に応じてトークンごとの活性専門家数を変え、難しい入力へだけ追加計算を配分する動的MoEルーティング。
 published: '2024-08'
-publication: Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)
+publication: 'Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)'
 publication_type: 査読付き国際会議論文
 publication_status: Published
 worker_completed_at: '2026-10-01T18:00:00+09:00'
