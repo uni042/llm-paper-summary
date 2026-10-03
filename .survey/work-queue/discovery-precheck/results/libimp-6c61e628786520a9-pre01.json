@@ -1,0 +1,216 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6c61e628786520a9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6c61e6287865",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.10631",
+    "arXiv:2402.11700",
+    "arXiv:2402.12280"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1c6e74bcd74614f2d8e7ea3cc5f57c65abf933b0",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T07:47:58.121864+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.10631",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.11700",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.12280",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
+      "source_url": "https://arxiv.org/abs/2402.10631",
+      "year": 2024,
+      "published": "2024-02-16",
+      "abstract": "The upscaling of Large Language Models (LLMs) has yielded impressive advances in natural language processing, yet it also poses significant deployment challenges. Weight quantization has emerged as a widely embraced solution to reduce memory and computational demands. This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit). Specifically, BitDistiller first incorporates a tailored asymmetric quantization and clipping technique to maximally preserve the fidelity of quantized weights, and then proposes a novel Confidence-Aware Kullback-Leibler Divergence (CAKLD) objective, which is employed in a self-distillation manner to enable faster convergence and superior model performance. Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks. Notably, BitDistiller is shown to be more cost-effective, demanding fewer data and training resources. The code is available at https://github.com/DD-DuDa/BitDistiller.",
+      "canonical_id": "arXiv:2402.10631",
+      "arxiv_id": "2402.10631",
+      "doi": "10.48550/arXiv.2402.10631",
+      "authors": [
+        "Da-You Du",
+        "Yijia Zhang",
+        "Shijie Cao",
+        "Jia-Qi Guo",
+        "Ting Cao",
+        "Xiao-Wen Chu",
+        "Ningyi Xu"
+      ]
+    },
+    {
+      "title": "Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers",
+      "source_url": "https://arxiv.org/abs/2402.11700",
+      "year": 2024,
+      "published": "2024-02-18",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional language understanding and generation capabilities by learning from context. Leveraging the strong in-context learning (ICL) abilities of LLMs, prompt-based fine-tuning has proven to be effective for enhancing the adaptability and alignment of LLMs, especially in low-data scenarios. However, the billions of parameters resulting from layer stacking in LLMs present significant computational challenges, limiting the practicality of fine-tuning. To tackle this problem, we explore the application of layer-wise model pruning in prompt-based fine-tuning of LLMs for few-shot learning scenarios. Our approach involves dropping certain model layers and fine-tuning the model with the remaining layers. Surprisingly, we observe that even with fewer layers, LLMs maintain similar or better performance levels, particularly in prompt-based fine-tuning for text classification tasks. Remarkably, in certain cases, models with a single layer outperform their fully layered counterparts. These findings offer valuable insights for future work aimed at mitigating the size constraints of LLMs while preserving their performance, thereby opening avenues for significantly more efficient use of LLMs.",
+      "canonical_id": "arXiv:2402.11700",
+      "arxiv_id": "2402.11700",
+      "doi": "10.1109/IJCNN64981.2025.11228532",
+      "authors": [
+        "Shuzhou Yuan",
+        "Ercong Nie",
+        "Bolei Ma",
+        "Michael Farber"
+      ]
+    },
+    {
+      "title": "Plato: Plan to Efficiently Decode for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2402.12280",
+      "year": 2024,
+      "published": "2024-02-19",
+      "abstract": "Large language models (LLMs) have achieved remarkable success in natural language tasks, but their inference incurs substantial computational and memory overhead. To improve efficiency, parallel decoding methods like Skeleton-of-Thought (SoT) decompose prompts into sub-problems for concurrent processing. However, these methods significantly compromise answer quality by treating semantically linked sub-problems as independent. We propose Plato, a novel approach that co-designs algorithms and systems for semantic-aware parallel decoding. Plato leverages LLMs to organize sub-problems into a dependency graph based on logical and causal relationships, enabling concurrent decoding of non-dependent nodes while preserving answer coherence and quality. To further enhance efficiency, Plato pipelines planning and node decoding stages, implements a global context cache, and carefully structures node inference prompts to maximize key-value cache reuse and minimize overhead. Our evaluations show that Plato improves throughput by 68% over autoregressive decoding while achieving a 40% net win rate in answer quality. Compared to SoT, Plato demonstrates a remarkable 90% quality net-win rate. Ablation studies reveal that our pipeline design improves speedup by 29%, while our KV cache reuse optimization reduces overhead by 75%.",
+      "canonical_id": "arXiv:2402.12280",
+      "arxiv_id": "2402.12280",
+      "authors": [
+        "Shuowei Jin",
+        "Xue-Shen Liu",
+        "Yongji Wu",
+        "Hai-Zhong Zheng",
+        "Qingzhao Zhang",
+        "Atul Prakash",
+        "Matthew Lentz",
+        "Dan-Yang Zhuo",
+        "Feng Qian",
+        "Z. Mao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.10631",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.10631",
+        "id:arXiv:2402.10631",
+        "title:bitdistiller unleashing the potential of sub4bit llms via selfdistillation",
+        "url:https://arxiv.org/abs/2402.10631"
+      ],
+      "record": {
+        "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
+        "source_url": "https://arxiv.org/abs/2402.10631",
+        "year": 2024,
+        "published": "2024-02-16",
+        "abstract": "The upscaling of Large Language Models (LLMs) has yielded impressive advances in natural language processing, yet it also poses significant deployment challenges. Weight quantization has emerged as a widely embraced solution to reduce memory and computational demands. This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit). Specifically, BitDistiller first incorporates a tailored asymmetric quantization and clipping technique to maximally preserve the fidelity of quantized weights, and then proposes a novel Confidence-Aware Kullback-Leibler Divergence (CAKLD) objective, which is employed in a self-distillation manner to enable faster convergence and superior model performance. Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks. Notably, BitDistiller is shown to be more cost-effective, demanding fewer data and training resources. The code is available at https://github.com/DD-DuDa/BitDistiller.",
+        "canonical_id": "arXiv:2402.10631",
+        "arxiv_id": "2402.10631",
+        "doi": "10.48550/arXiv.2402.10631",
+        "authors": [
+          "Da-You Du",
+          "Yijia Zhang",
+          "Shijie Cao",
+          "Jia-Qi Guo",
+          "Ting Cao",
+          "Xiao-Wen Chu",
+          "Ningyi Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.11700",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn64981.2025.11228532",
+        "id:arXiv:2402.11700",
+        "title:why lift so heavy slimming large language models by cutting off the layers",
+        "url:https://arxiv.org/abs/2402.11700"
+      ],
+      "record": {
+        "title": "Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers",
+        "source_url": "https://arxiv.org/abs/2402.11700",
+        "year": 2024,
+        "published": "2024-02-18",
+        "abstract": "Large Language Models (LLMs) demonstrate exceptional language understanding and generation capabilities by learning from context. Leveraging the strong in-context learning (ICL) abilities of LLMs, prompt-based fine-tuning has proven to be effective for enhancing the adaptability and alignment of LLMs, especially in low-data scenarios. However, the billions of parameters resulting from layer stacking in LLMs present significant computational challenges, limiting the practicality of fine-tuning. To tackle this problem, we explore the application of layer-wise model pruning in prompt-based fine-tuning of LLMs for few-shot learning scenarios. Our approach involves dropping certain model layers and fine-tuning the model with the remaining layers. Surprisingly, we observe that even with fewer layers, LLMs maintain similar or better performance levels, particularly in prompt-based fine-tuning for text classification tasks. Remarkably, in certain cases, models with a single layer outperform their fully layered counterparts. These findings offer valuable insights for future work aimed at mitigating the size constraints of LLMs while preserving their performance, thereby opening avenues for significantly more efficient use of LLMs.",
+        "canonical_id": "arXiv:2402.11700",
+        "arxiv_id": "2402.11700",
+        "doi": "10.1109/IJCNN64981.2025.11228532",
+        "authors": [
+          "Shuzhou Yuan",
+          "Ercong Nie",
+          "Bolei Ma",
+          "Michael Farber"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.12280",
+      "identity_tokens": [
+        "id:arXiv:2402.12280",
+        "title:plato plan to efficiently decode for large language model inference",
+        "url:https://arxiv.org/abs/2402.12280"
+      ],
+      "record": {
+        "title": "Plato: Plan to Efficiently Decode for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2402.12280",
+        "year": 2024,
+        "published": "2024-02-19",
+        "abstract": "Large language models (LLMs) have achieved remarkable success in natural language tasks, but their inference incurs substantial computational and memory overhead. To improve efficiency, parallel decoding methods like Skeleton-of-Thought (SoT) decompose prompts into sub-problems for concurrent processing. However, these methods significantly compromise answer quality by treating semantically linked sub-problems as independent. We propose Plato, a novel approach that co-designs algorithms and systems for semantic-aware parallel decoding. Plato leverages LLMs to organize sub-problems into a dependency graph based on logical and causal relationships, enabling concurrent decoding of non-dependent nodes while preserving answer coherence and quality. To further enhance efficiency, Plato pipelines planning and node decoding stages, implements a global context cache, and carefully structures node inference prompts to maximize key-value cache reuse and minimize overhead. Our evaluations show that Plato improves throughput by 68% over autoregressive decoding while achieving a 40% net win rate in answer quality. Compared to SoT, Plato demonstrates a remarkable 90% quality net-win rate. Ablation studies reveal that our pipeline design improves speedup by 29%, while our KV cache reuse optimization reduces overhead by 75%.",
+        "canonical_id": "arXiv:2402.12280",
+        "arxiv_id": "2402.12280",
+        "authors": [
+          "Shuowei Jin",
+          "Xue-Shen Liu",
+          "Yongji Wu",
+          "Hai-Zhong Zheng",
+          "Qingzhao Zhang",
+          "Atul Prakash",
+          "Matthew Lentz",
+          "Dan-Yang Zhuo",
+          "Feng Qian",
+          "Z. Mao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:bb3b59870dd84d26ccc9087c10cb1c345ba3021f06da3722b99818ddbca92355",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
