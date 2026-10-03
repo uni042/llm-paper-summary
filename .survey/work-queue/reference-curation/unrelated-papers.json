@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:43:35+00:00",
+  "updated_at": "2026-10-03T18:46:43+00:00",
   "record_count": 843,
   "records": {
     "arXiv:2303.08774": {
@@ -4601,15 +4601,15 @@
         "arXiv:1609.02907",
         "arXiv:1611.01144"
       ],
-      "reason": "グラフ畳み込みネットワークによる半教師ありノード分類の基礎研究であり、LLM推論・サービングとは別分野。",
+      "reason": "離散潜在変数を微分可能にする勾配推定法の研究で、LLM推論・サービング・メモリ効率化を対象としない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md"
       ],
-      "title": "Semi-Supervised Classification with Graph Convolutional Networks"
+      "title": "Categorical Reparameterization with Gumbel-Softmax"
     },
     "OpenReview:oKn9c6ytLx": {
       "classification": "unrelated",
@@ -4618,9 +4618,9 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "Web操作エージェントを評価する実環境・ベンチマーク研究で、agentic inference runtimeの計算・メモリ・スケジューリング最適化を提案しない。",
+      "reason": "Webエージェントの現実的な実行環境とベンチマーク構築が主題で、LLM推論基盤の高速化・省メモリ化を扱わない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
@@ -4708,7 +4708,7 @@
       ],
       "reason": "吸収型離散拡散の目的関数とクリーンデータ条件分布の理論的関係を解析する生成モデル研究であり、LLM推論サービング、KVキャッシュ、カーネル、メモリ階層の実行効率化を直接提案しないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
         "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
@@ -4723,7 +4723,7 @@
       ],
       "reason": "疎な専門家混合モデルの学習中に生じる表現崩壊を分析しcosine router等で学習品質を改善する研究で、最終適用先がMoE学習・ルーティング学習であり凍結対象のため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md"
@@ -4738,7 +4738,7 @@
       ],
       "reason": "学習可能ルータの代わりにハッシュでtokenを専門家へ割り当てる疎モデルの学習・アーキテクチャ研究であり、LLM推論ランタイムの速度・メモリ・サービングを直接最適化する研究ではないため対象外。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
         "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
@@ -4770,9 +4770,9 @@
         "DOI:10.48550/arxiv.2410.02098",
         "arXiv:2410.02098"
       ],
-      "reason": "本文はtext-to-image向けDiffusion Transformerを最大97Bへ拡張するためのexpert-choiceルーティングを提案し、GenEval等の画像生成品質と学習収束を評価する。LLM推論が最終適用先ではないため対象外。",
+      "reason": "MoEによる適応計算を扱うが最終対象はテキスト画像生成用Diffusion Transformerで、LLM推論の対象範囲外。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4859,9 +4859,9 @@
         "OpenReview:1PL1NIMMrw",
         "arXiv:2203.11171"
       ],
-      "reason": "推論時に複数の思考経路をサンプリングして多数決する推論アルゴリズムだが、主目的は推論品質向上であり、サービング・メモリ・カーネル・推論効率の改善ではない。",
+      "reason": "複数の推論経路をサンプリングして多数決することで推論精度を上げる復号戦略だが、計算量削減ではなく追加サンプリングで精度を上げる研究であり、効率化サーベイの主対象外。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-02T07:05:48+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
@@ -4875,9 +4875,9 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "質問クラスタから代表例を選びzero-shot CoTでdemonstrationを自動生成するprompting手法で、推論システムの速度・メモリ・サービング最適化を扱わないため除外。",
+      "reason": "多様な質問をクラスタリングして自動CoTデモを構成するプロンプト手法であり、推論資源・ランタイム効率化ではない。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:35:14+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
@@ -5334,23 +5334,6 @@
       ],
       "title": "OpenCompass: A Universal Evaluation Platform for Large Language Models"
     },
-    "arXiv:1904.09751": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1904.09751",
-      "identity_tokens": [
-        "OpenReview:rygGQyrFvH",
-        "arXiv:1904.09751"
-      ],
-      "reason": "nucleus samplingを含む生成品質・デコード戦略の研究で、システム上の推論効率化を主目的としない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
-        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
-      ],
-      "title": "The Curious Case of Neural Text Degeneration"
-    },
     "arXiv:1706.03762": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1706.03762",
@@ -5585,22 +5568,6 @@
         "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ],
       "title": "Keep the Cost Down: A Review on Methods to Optimize LLM’s KV-Cache Consumption"
-    },
-    "arXiv:2302.11382": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2302.11382",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2302.11382",
-        "arXiv:2302.11382"
-      ],
-      "reason": "LLMとの対話を改善するprompt engineeringパターン集であり、推論システムの速度・メモリ・サービング機構を提案しない。",
-      "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:43:34+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
-      ],
-      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
     },
     "OpenReview:KnqiC0znVF": {
       "classification": "unrelated",
@@ -12414,22 +12381,55 @@
       ],
       "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
     },
-    "arXiv:2504.04030": {
+    "DOI:10.48550/arxiv.2302.11382": {
       "classification": "unrelated",
-      "canonical_id": "arXiv:2504.04030",
+      "canonical_id": "DOI:10.48550/arxiv.2302.11382",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.11382",
+        "arXiv:2302.11382"
+      ],
+      "reason": "LLMとの対話を改善するプロンプト設計パターンの体系化が主題で、推論ランタイム、サービング、KVキャッシュ、メモリ階層、推論カーネルの効率化を扱わない。",
+      "first_checked_at": "2026-09-30T02:28:00+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
+    },
+    "DOI:10.48550/arxiv.2504.04030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2504.04030",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2504.04030",
         "arXiv:2504.04030"
       ],
-      "reason": "コードLLM向け大規模instruction-tuningデータセットの構築が主目的で、推論ランタイム、KV、オフロード、カーネル、サービング最適化ではない。",
+      "reason": "5百万件規模のコード指示調整データセット構築と教師あり微調整が主目的で、最終適用先が学習工程のため凍結範囲。",
       "first_checked_at": "2026-09-30T02:28:00+00:00",
-      "last_checked_at": "2026-10-03T18:43:34+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
         "papers/inference/05-speculative-decoding-moe/2026-2607.25852-angelspec.md"
       ],
       "title": "OpenCodeInstruct: A Large-scale Instruction Tuning Dataset for Code LLMs"
+    },
+    "OpenReview:rygGQyrFvH": {
+      "classification": "unrelated",
+      "canonical_id": "OpenReview:rygGQyrFvH",
+      "identity_tokens": [
+        "OpenReview:rygGQyrFvH",
+        "arXiv:1904.09751"
+      ],
+      "reason": "ニュークリアスサンプリング等を通じて言語生成の反復・退化と品質を扱う復号品質研究で、推論の速度・メモリ・サービング効率を改善する方式ではないため対象外。",
+      "first_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "title": "The Curious Case of Neural Text Degeneration"
     }
   }
 }

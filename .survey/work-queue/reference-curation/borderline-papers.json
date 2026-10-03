@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:43:35+00:00",
+  "updated_at": "2026-10-03T18:46:43+00:00",
   "record_count": 422,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -4352,7 +4352,7 @@
       ],
       "reason": "Transformerで自然に生じる活性化疎性を大規模実験で分析し推論時の条件付き計算へつながる重要な基礎知見だが、疎性を実際のLLM推論ランタイム高速化へ変換する新規システムやカーネル自体は提案しないため境界扱い。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md"
@@ -4367,7 +4367,7 @@
       ],
       "reason": "専門家統合でMoEのモデルサイズ・配備負担を下げる点は推論効率化に近いが、主評価がGPT-2/T5等での言語モデリング・分類・質問応答と統合後の品質で、現代LLM推論の実時間・メモリ・サービング評価が中心ではないため境界扱い。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-09-30T01:46:01+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
@@ -4440,9 +4440,9 @@
         "DOI:10.48550/arxiv.2505.00949",
         "arXiv:2505.00949"
       ],
-      "reason": "推論スループット・メモリ効率を目的にNASでLlama 3を異種ブロック構成へ変換するが、論文全体はモデル系列の構築・蒸留・事後学習を扱う技術報告であり、純粋な推論システム研究との境界にある。",
+      "reason": "推論効率を明示目標とし、Llama 3から推論最適化アーキテクチャを探索して高throughputモデルを構築するが、論文全体はモデル系列の学習・推論・公開を扱う技術報告で、純粋な推論システム研究との境界にある。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:46:43+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
