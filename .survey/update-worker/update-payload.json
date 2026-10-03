@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261002T0859-a0287cda-r2",
+  "attempt_id": "library-import-maint-20261003T1013-sglang0521",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "a4ed5ab9e61492e8ece0e8dd65d58913a4cc49b6",
+      "path": "framework-updates/inference-engines/sglang/README.md",
+      "expected_blob_sha": "c1aa3c361e346456fb42c08f5a399d95bf2023c5",
       "edits": [
         {
-          "op": "insert_after_once",
-          "anchor": "## 最新更新",
-          "text": "\n\n### 2026-10-02\n\n#### TensorRT-LLM\n\n- **v1.3.0rc29 — released 2026-09-29 UTC / pre-release**\n\n  MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8・FP4 MLA・DSpark groupへ拡張。DeepSeek V4向けNVFP4 MLA residual、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combine、MLA context FP8 Q量子化のBMM epilogue fusion、Ray orchestrator経由MNNVL all-reduceも追加した。一方、AutoDeploy統合と公開entry pointは削除されたbreaking changeを含む。正式版前のRCとして扱う。\n\n  一次資料: https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29\n\n#### Ollama\n\n- **v0.35.0 — released 2026-09-28 UTC**\n\n  `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。\n\n  一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0"
+          "op": "insert_before_once",
+          "anchor": "## 2026-09-20",
+          "text": "## 2026-10-02 — v0.5.21（released）\n\n- **prefill / decodeを再起動なしで動的切替**: PD instanceがruntimeでprefill roleとdecode roleを切り替え可能になった。固定P/D fleetより負荷変動へ追従しやすい。\n- **prefix cacheのRust coreをdefault化**: prefix reuseの中心経路をRust実装へ移行。\n- **DeepSeek-V4.1 long-prompt TTFTを22%改善**: 長promptのfirst-token経路を最適化。\n- **Kimi K3 PD prefill throughput +20.6%**: PD servingでprefill側の処理効率を改善。\n- **GLM-5.3-Flash / AMD MI355X**: FP8 / MXFP4 MoEとMTP投機的デコード（speculative decoding）を追加。\n- **CUDA Graph capture memory削減**: DeepSeek-V4のC4 Indexerでbreakable CUDA Graph時のcapture memoryを58%削減し18 GB。\n- **NVFP4 KV attention**: SM100のNVFP4 GenMHA + speculative decodingで1M contextのdecode-attention kernelを1.355倍高速化。\n- **PD / DCP転送改善**: DeepSeek-V4-Pro、1P1D、MI355X、concurrency 256でmean TTFTを19.4→15.1秒。Kimi Linear、8×B200、concurrency 8のcached-prefix条件ではDCP転送経路を約10.9倍高速化。\n- **投機的デコード拡張**: LFM2-VLのDSparkでbatch 1時1.66〜2.56倍。Kimi K3のDFlash、pipeline parallelism + EAGLE/MTP互換等も追加。\n- **MoE / DeepEP v2拡張**: BF16とbatch-invariant inference、MXFP8、deferred route weighting等を追加。\n\n[release v0.5.21](https://github.com/sgl-project/sglang/releases/tag/v0.5.21)\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
-      "expected_blob_sha": "e3e6a4b22b428b4b5afac3ec1b4c6656e969a865",
+      "path": "framework-updates/README.md",
+      "expected_blob_sha": "4fd22105ac1971042308b8c41307d69b3ad89fa1",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 読み方の注意",
-          "text": "### 2026-09-29 — v1.3.0rc29（pre-release）\n\n- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。\n- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。\n- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。\n- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。\n\n[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)\n\n"
+          "anchor": "### 2026-09-20",
+          "text": "### 2026-10-02\n\n#### SGLang v0.5.21\n\n- **PD role switching / Rust prefix cache / long-context・speculative・MoE経路を大幅更新 — released 2026-10-02**\n\n  prefill / decode instanceを再起動なしで動的切替できるようにし、prefix cacheのRust coreを既定化。DeepSeek-V4.1 long-prompt first-tokenを22%短縮、Kimi K3のPD prefill throughputを20.6%改善。SM100ではNVFP4 KV GenMHA + speculative decodingにより1M contextのdecode-attention kernelを1.355倍高速化。DeepSeek-V4-ProのPD bootstrapではMI355X・1P1D・concurrency 256でmean TTFT 19.4→15.1秒。詳細はSGLang個別ページ。\n\n  一次資料: https://github.com/sgl-project/sglang/releases/tag/v0.5.21\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-02 08:30 maintenance: Ollama v0.35.0 decision model APIを集約READMEへ同期し、TensorRT-LLM v1.3.0rc29の投機・低bit MLA/MoE・分散経路更新を集約/個別ページへ追加。"
+  "summary": "2026-10-03 08:30 maintenance: SGLang v0.5.21のPD role switching、Rust prefix cache、long-context/speculative/MoE経路の主要更新を個別・集約ページへ反映。"
 }
