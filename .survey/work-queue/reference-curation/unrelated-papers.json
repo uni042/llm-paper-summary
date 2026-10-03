@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:46:43+00:00",
+  "updated_at": "2026-10-03T18:48:53+00:00",
   "record_count": 843,
   "records": {
     "arXiv:2303.08774": {
@@ -4528,15 +4528,15 @@
       "identity_tokens": [
         "DOI:10.1109/71.963420"
       ],
-      "reason": "多数サーバからd個を無作為に選び最短待ち行列へ投入するsupermarket modelの理論解析で、LLM推論・モデル実行・推論基盤を対象としないため対象外。",
+      "reason": "2001年の一般的なランダム化負荷分散理論であり、二択負荷分散の最大負荷改善を解析する。LLM推論、KVキャッシュ、MoE、推論カーネル、サービング実装を対象にした論文ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:12:42+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
         "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md"
       ],
-      "title": "The Power of Two Choices in Randomized Load Balancing"
+      "title": "The power of two choices in randomized load balancing"
     },
     "arXiv:2410.04199": {
       "classification": "unrelated",
@@ -4564,9 +4564,9 @@
         "OpenReview:xtaX3WyCj1",
         "arXiv:2306.01708"
       ],
-      "reason": "本文は複数のタスク別微調整モデルをTRIM・符号選択・整合パラメータ併合で一つのマルチタスクモデルへ統合するモデルマージ研究。主目的は能力統合であり、LLM推論速度・メモリ・サービング最適化ではないため対象外。",
+      "reason": "複数のタスク別微調整モデルを追加学習なしで統合するモデルマージ手法であり、推論時のメモリ・サービング・カーネル・スケジューリングの効率化を主目的としない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:37:26+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -4582,9 +4582,9 @@
         "OpenReview:T5nUQDrM4u",
         "arXiv:2212.05055"
       ],
-      "reason": "dense checkpointからMoEを初期化して追加事前学習コストを削減する学習手法が主目的で、最終適用先が凍結対象の学習高速化であるため除外。",
+      "reason": "既存dense checkpointをMoEへ変換して追加事前学習費用を減らす学習効率化が主目的であり、最終適用先が凍結対象の学習工程そのもの。",
       "first_checked_at": "2026-09-27T05:26:49+00:00",
-      "last_checked_at": "2026-10-03T18:35:14+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-45.json",
@@ -4618,9 +4618,9 @@
         "OpenReview:oKn9c6ytLx",
         "arXiv:2307.13854"
       ],
-      "reason": "Webエージェントの現実的な実行環境とベンチマーク構築が主題で、LLM推論基盤の高速化・省メモリ化を扱わない。",
+      "reason": "Web操作エージェントの現実的・再現可能な環境と能力ベンチマークが主目的で、エージェント型LLMのサービングruntimeや推論効率を最適化する研究ではない。",
       "first_checked_at": "2026-09-30T01:46:01+00:00",
-      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-30.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
@@ -4875,9 +4875,9 @@
         "OpenReview:5NTt8GFjUHkr",
         "arXiv:2210.03493"
       ],
-      "reason": "多様な質問をクラスタリングして自動CoTデモを構成するプロンプト手法であり、推論資源・ランタイム効率化ではない。",
+      "reason": "多様な質問をクラスタリングしてzero-shot Chain-of-Thoughtからfew-shot実演を自動生成するprompting研究で、推論システムの速度・メモリ・サービング効率化が主目的ではない。",
       "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:46:43+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-45.json",
         "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
@@ -4892,9 +4892,9 @@
         "OpenReview:uYLFoz1vlAC",
         "arXiv:2111.00396"
       ],
-      "reason": "S4 is a foundational general sequence-model architecture paper rather than an LLM inference/serving optimization paper; its main contribution is structured state-space sequence modeling and efficient training/evaluation across generic long-sequence tasks.",
+      "reason": "S4という汎用系列モデルの新アーキテクチャが主題であり、LLM推論時のメモリ階層・サービング・KV管理・ランタイム最適化を扱う研究ではない。",
       "first_checked_at": "2026-09-30T08:00:58+00:00",
-      "last_checked_at": "2026-10-03T18:43:35+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -5527,9 +5527,9 @@
       "identity_tokens": [
         "DOI:10.1109/rtas58335.2023.00012"
       ],
-      "reason": "NVIDIA GPUのSMを空間分割するlibsmctrlを提案する一般GPU共有研究で、LLM推論・サービングを対象にしていない。",
+      "reason": "NVIDIA GPUのSMを空間分割してリアルタイム/組込みワークロードを安全に共有する汎用GPU資源管理研究で、LLM推論・LLMサービングを最終適用先としていないため対象外。",
       "first_checked_at": "2026-09-30T14:04:48+00:00",
-      "last_checked_at": "2026-10-03T18:31:04+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
@@ -5544,9 +5544,9 @@
         "OpenReview:Yacmpz84TH",
         "arXiv:2302.04761"
       ],
-      "reason": "外部APIをいつ・どの引数で呼ぶかを自己教師ありで学習させるモデル能力・学習手法が主題で、LLM推論ランタイム、KVキャッシュ、サービング、カーネル等の実行効率化を主貢献としないため対象外。",
+      "reason": "外部APIをいつ・どの引数で呼ぶかを自己教師あり学習するモデル学習手法が中心で、推論サービングや実行基盤の高速化を主目的としない。",
       "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-03T18:25:45+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
@@ -12319,9 +12319,9 @@
         "OpenReview:sY5N0zY5Od",
         "arXiv:2310.03714"
       ],
-      "reason": "DSPy is a programming and prompt-optimization framework for compound LM pipelines; it optimizes task quality/program parameters rather than the inference serving/runtime stack covered by this survey.",
+      "reason": "LMパイプラインの宣言的プログラミングとプロンプト・few-shot例の自動最適化が中心で、LLM推論ランタイムやサービング資源の高速化研究ではない。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:43:35+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",
@@ -12337,9 +12337,9 @@
         "OpenReview:pZiyCaVuti",
         "arXiv:2410.10813"
       ],
-      "reason": "Benchmark/evaluation work for long-term conversational memory rather than a KV-cache or inference-memory optimization method.",
+      "reason": "長期対話記憶の能力評価ベンチマークと検索・読解設計の品質改善が主題で、KVキャッシュや推論ランタイムのメモリ/速度最適化とは異なる。",
       "first_checked_at": "2026-10-01T22:26:28+00:00",
-      "last_checked_at": "2026-10-03T18:43:35+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json",

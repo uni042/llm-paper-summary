@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:46:43+00:00",
+  "updated_at": "2026-10-03T18:48:53+00:00",
   "record_count": 422,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -6054,9 +6054,9 @@
         "OpenReview:r8H7xhYPwz",
         "arXiv:2412.06464"
       ],
-      "reason": "The gated-delta mechanism yields linear-time sequence processing and has clear inference-efficiency implications, but the paper's primary contribution is a new sequence-model architecture and hardware-efficient training rather than an LLM inference-system mechanism.",
+      "reason": "ゲーティングとdelta ruleを統合した線形系列モデルで、長文脈の効率性と高速な並列実装は関連する一方、主貢献は推論システム最適化ではなくモデルアーキテクチャと学習アルゴリズムにあるため境界扱い。",
       "first_checked_at": "2026-10-03T18:12:42+00:00",
-      "last_checked_at": "2026-10-03T18:43:35+00:00",
+      "last_checked_at": "2026-10-03T18:48:53+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
