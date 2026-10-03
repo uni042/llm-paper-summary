@@ -231,7 +231,8 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
     max_seeds = int(config.get("max_seeds_per_run", 20) or 20)
     max_pages = int(config.get("max_pages_per_seed_per_run", 2) or 2)
     page_size = int(config.get("page_size", 100) or 100)
-    max_provider_errors = max(int(config.get("max_provider_errors_per_run", 3) or 3), 1)
+    max_provider_errors = max(int(config.get("max_provider_errors_per_run", 1) or 1), 1)
+    rate_limit_retries = max(int(config.get("rate_limit_retries_per_request", 0) or 0), 0)
     spacing = max(float(config.get("request_spacing_seconds", 2) or 0), 0.0)
 
     papers = citation_graph.load_records(root)
@@ -306,6 +307,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         fetch = discovery_provider_adapter.semantic_scholar_fetcher(
             _source_url(identifier, page_size),
             page_size=page_size,
+            max_rate_limit_retries=rate_limit_retries,
         )
         cursor = seed_state.get("next_cursor")
         if seed_state.get("cycle_started_at") is None:
@@ -397,6 +399,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         "completed_cycles": completed_cycles,
         "errors": errors,
         "max_provider_errors_per_run": max_provider_errors,
+        "rate_limit_retries_per_request": rate_limit_retries,
         "provider_error_budget_exhausted": provider_error_budget_exhausted,
         "represented_candidates_removed": represented_removed,
         "classified_candidates_removed": len(rejected_keys),
