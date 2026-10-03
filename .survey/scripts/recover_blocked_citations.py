@@ -75,6 +75,13 @@ def primary_pdf_urls(canonical_id: str) -> list[str]:
     official = PRIMARY_PDF_OVERRIDES.get(canonical_id)
     if official:
         urls.append(official)
+
+    # ACM's canonical PDF endpoint is deterministic from the DOI. Derive it
+    # for every ACM paper so future imports do not need one-off overrides.
+    if canonical_id.startswith("DOI:10.1145/"):
+        doi = canonical_id.removeprefix("DOI:")
+        urls.append(f"https://dl.acm.org/doi/pdf/{doi}")
+
     urls.extend(PRIMARY_PDF_FALLBACKS.get(canonical_id, []))
     return list(dict.fromkeys(urls))
 
