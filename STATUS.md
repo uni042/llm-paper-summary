@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-03 15:07:35 JST**
+> 自動生成: **2026-10-03 15:34:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **418** |
 | 直近24hのResearch処理完了 | **106** |
 | 最終Research処理完了 | **10-03 10:58:30 JST** |
-| 最終Discovery探索完了 | **10-02 20:01:20 JST** |
+| 最終Discovery探索完了 | **10-03 14:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,8 +49,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（222時間31分前）** |
+| maintenance pending | **true** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（222時間58分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -64,9 +64,29 @@
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
-## 件数サマリー
+## Library-first稼働状況
 
-直近6時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。
+現在の通常Scheduled workerはLibrary-first経路で成果を渡すため、現行の進捗判定はこちらを使用します。下のimmutable transport表は旧経路の診断情報です。
+
+| 指標 | 現在値 |
+|---|---:|
+| 直近6hのResearch完了 | **11** |
+| 直近6hのDiscovery run | **11** |
+| 直近6hのDiscovery本文確認・分類 | **110** |
+| 最終Research完了 | **10-03 10:58:30 JST** |
+| 最終Discovery完了 | **10-03 14:45:00 JST** |
+
+### 最新Library-first run
+
+- Research: **10-03 10:58:30 JST** / worker — / run scheduled-chat-00-20261003T105830JST / 成果 **5件**
+  - evidence: .survey/import-inbox/results/research/libfile_06d581aec778819197968654476fa96a--2025-2509.24663-infllm-v2.json
+- Discovery: **10-03 14:45:00 JST** / worker scheduled-chat-45 / run 20261003-1445-scheduled-chat-45
+  - 本文確認・分類 **10件** / accept **2件** / unrelated+borderline **8件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_531e2a5779c48191bf969654936a8237--discovery-20261003-1445-scheduled-chat-45.json
+
+## 件数サマリー（旧immutable transport診断）
+
+旧immutable transportについて、直近6時間、最新run、現在処理中を種類別に分けています。現行Library-firstの稼働判定には上の表を使用します。
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -77,7 +97,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
-## 詳細証拠
+## 詳細証拠（旧immutable transport）
 
 ### 直近6時間の検証済み完了
 
