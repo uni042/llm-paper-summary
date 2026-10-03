@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-03T07:56:23+00:00",
+  "checked_at": "2026-10-03T07:57:43+00:00",
   "summary": {
     "total": 1489,
-    "complete": 1193,
-    "incomplete": 296
+    "complete": 1217,
+    "incomplete": 272
   },
   "families": {
     "inference": {
       "total": 1450,
-      "complete": 1154
+      "complete": 1178
     },
     "training": {
       "total": 25,
@@ -25,126 +25,6 @@
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-elastic-memory-remapping-oneiros.md",
       "canonical_id": "DOI:10.1145/3830422.3830427",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
-      "canonical_id": "arXiv:2312.11462",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md",
-      "canonical_id": "arXiv:2402.11131",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md",
-      "canonical_id": "arXiv:2402.11809",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
-      "canonical_id": "arXiv:2403.10444",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
-      "canonical_id": "arXiv:2404.11912",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
-      "canonical_id": "arXiv:2404.18911",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md",
-      "canonical_id": "arXiv:2405.04304",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md",
-      "canonical_id": "arXiv:2405.19325",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md",
-      "canonical_id": "arXiv:2405.19715",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
-      "canonical_id": "arXiv:2406.02532",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
-      "canonical_id": "arXiv:2406.17276",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
-      "canonical_id": "arXiv:2408.15766",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
-      "canonical_id": "arXiv:2410.11744",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md",
-      "canonical_id": "arXiv:2410.17375",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md",
-      "canonical_id": "arXiv:2410.18351",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md",
-      "canonical_id": "arXiv:2411.00841",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md",
-      "canonical_id": "arXiv:2411.18462",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md",
-      "canonical_id": "arXiv:2408.11049",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2502.15197-tetris-optimal-draft-token-selection-for-batch-speculative-decoding.md",
-      "canonical_id": "arXiv:2502.15197",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md",
-      "canonical_id": "arXiv:2503.13565",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
-      "canonical_id": "arXiv:2504.18583",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md",
-      "canonical_id": "arXiv:2505.07858",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
-      "canonical_id": "arXiv:2505.19645",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
-      "canonical_id": "arXiv:2505.21594",
       "reason": "missing structured reference audit metadata"
     },
     {

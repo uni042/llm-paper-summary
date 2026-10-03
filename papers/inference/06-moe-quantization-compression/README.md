@@ -83,7 +83,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   事前学習からファインチューニングまでのルーター変化を専門家重要度として使い、視覚MoEで専門家を大きく削減しながら精度を保つ、理論付きの専門家枝刈り法を示す。
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   Mixture of Precisionsは、専門家ごとの4/16ビット精度とCPU/GPU配置をVRAM予算に応じて切替え、品質低下とPCIe転送を抑えながらスループットを調整する。
 
 ### 4年前（2022-11〜2023-10）
@@ -93,6 +93,6 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：16  
   QMoEは、Switch Transformerの専門家重みをデータ依存に2ビット/三値圧縮し、圧縮表現を直接読むGPUカーネルで展開帯域を抑え、超大規模MoEの保存容量を減らす。
 <!-- survey:auto:end -->
