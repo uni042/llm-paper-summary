@@ -11,6 +11,9 @@ on:
       - '.survey/scripts/forward_citation_sweep.py'
       - '.survey/tests/test_forward_citation_sweep.py'
       - '.survey/tests/test_discovery_provider_adapter.py'
+  schedule:
+    # Redundant low-frequency fallback for GitHub scheduler delivery issues.
+    - cron: '23 * * * *'
   workflow_dispatch:
 
 permissions:
