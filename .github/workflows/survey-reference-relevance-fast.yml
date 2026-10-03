@@ -1,10 +1,8 @@
 name: Survey reference relevance fast lane
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/reference-curation/requests/*.json'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
