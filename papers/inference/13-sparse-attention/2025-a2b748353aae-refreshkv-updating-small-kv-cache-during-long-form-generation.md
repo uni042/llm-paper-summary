@@ -28,6 +28,29 @@ publication_status: published
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コード公開あり（https://github.com/carriex/refreshkv）。
 implementation_status: official-code-available
 last_checked: '2026-10-03'
+references:
+- canonical_id: arXiv:2307.11088
+  arxiv_id: '2307.11088'
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2408.03675
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2007.14062
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 1
+last_audited: null
+audit_version: 0
 ---
 
 # RefreshKV: Updating Small KV Cache During Long-form Generation

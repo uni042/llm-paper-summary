@@ -25,6 +25,8 @@ published: '2026-04-12'
 code: null
 implementation: CPUへ専門家を退避するメモリ制約下MoE推論を前提に、GPU常駐専門家をキャッシュとしてオンデマンド更新し、少数専門家による自己ドラフト生成と本来の経路による検証を統合する研究実装。公式コードURLは確認時点で確認できず。
 implementation_status: official-code-not-confirmed
+last_audited: null
+audit_version: 0
 ---
 
 # Self-Speculative Decoding for On-device MoE Acceleration

@@ -25,6 +25,18 @@ code: null
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
 implementation_status: official-code-not-confirmed
 last_checked: '2026-10-03'
+references:
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2402.14800
+- canonical_id: arXiv:2006.16668
+- canonical_id: arXiv:2109.10465
+- canonical_id: arXiv:2202.09368
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 1
+last_audited: null
+audit_version: 0
 ---
 
 # Harder Task Needs More Experts: Dynamic Routing in MoE Models

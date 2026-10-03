@@ -31,6 +31,65 @@ worker_completed_at: '2026-10-02T21:45:00+09:00'
 worker_run_key: 20261002-2145-scheduled-chat-45
 implementation: 論文ではA100 40GB、Optane P5800X SSD、CUDA 12.4、PyTorch 2.2.0。による提案手法の実装・評価を報告。公式コード公開あり（https://github.com/thustorage/Medusa）。
 implementation_status: official-code-available
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: DOI:10.1109/sc41405.2020.00073
+  doi: 10.1109/sc41405.2020.00073
+- canonical_id: DOI:10.14778/3547305
+  doi: 10.14778/3547305
+- canonical_id: arXiv:2311.16867
+  arxiv_id: '2311.16867'
+  doi: 10.48550/arxiv.2311.16867
+- canonical_id: DOI:10.1145/3620665.3640366
+  doi: 10.1145/3620665.3640366
+- canonical_id: DOI:10.1145/3492321
+  doi: 10.1145/3492321
+- canonical_id: DOI:10.1145/3342195.3392698
+  doi: 10.1145/3342195.3392698
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: DOI:10.1145/3373376.3378512
+  doi: 10.1145/3373376.3378512
+- canonical_id: arXiv:2401.14351
+- canonical_id: DOI:10.1145/3445814.3446757
+  doi: 10.1145/3445814.3446757
+- canonical_id: DOI:10.1145/3627703.3629567
+  doi: 10.1145/3627703.3629567
+- canonical_id: arXiv:1902.03383
+  arxiv_id: '1902.03383'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/icdcsw.2017.32
+  doi: 10.1109/icdcsw.2017.32
+- canonical_id: arXiv:2211.05102
+  arxiv_id: '2211.05102'
+  doi: 10.48550/arxiv.2211
+- canonical_id: arXiv:2407.00079
+  arxiv_id: '2407.00079'
+  doi: 10.48550/arxiv.2407.00079
+- canonical_id: DOI:10.1145/3510611
+  doi: 10.1145/3510611
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+  doi: 10.48550/arxiv.2307.09288
+- canonical_id: DOI:10.1145/3445814.3446714
+  doi: 10.1145/3445814.3446714
+- canonical_id: DOI:10.1145/3302424.3303978
+  doi: 10.1145/3302424.3303978
+- canonical_id: DOI:10.1145/3503222.3507709
+  doi: 10.1145/3503222.3507709
+- canonical_id: arXiv:2403.04652
+  arxiv_id: '2403.04652'
+- canonical_id: DOI:10.1145/3617232.3624871
+  doi: 10.1145/3617232.3624871
+- canonical_id: DOI:10.1109/icdcs51616.2021.00022
+  doi: 10.1109/icdcs51616.2021.00022
+- canonical_id: DOI:10.1145/3669940.3707285
+references_checked_at: '2026-10-03'
+references_source: primary-pdf-reference-section
+references_total: 59
+last_audited: null
+audit_version: 0
 ---
 
 # Medusa: Accelerating Serverless LLM Inference with Materialization

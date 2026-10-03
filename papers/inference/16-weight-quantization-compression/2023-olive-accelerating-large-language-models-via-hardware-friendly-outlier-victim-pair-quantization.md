@@ -11,6 +11,8 @@ doi: 10.1145/3579371.3589038
 code: https://github.com/clevercool/ANT-Quantization
 implementation: 公式再現コードにOliVe量子化実装と性能・エネルギー評価系が含まれる。論文ではOVPデコーダをVerilog RTLで実装し、GPUおよびシストリック配列型アクセラレータへ統合してシミュレーション評価する。
 implementation_status: official-code
+last_audited: null
+audit_version: 0
 ---
 
 # OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization
