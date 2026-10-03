@@ -20,6 +20,18 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertIn("AAAI:39454", recovery.PRIMARY_PDF_OVERRIDES)
         self.assertIn("AAAI:39106", recovery.PRIMARY_PDF_OVERRIDES)
 
+    def test_current_acm_blockers_have_primary_pdf_routes(self) -> None:
+        expected = {
+            "DOI:10.1145/3830422.3830427",
+            "DOI:10.1145/3745756.3809243",
+            "DOI:10.1145/3816440.3818602",
+        }
+        self.assertTrue(expected.issubset(recovery.PRIMARY_PDF_OVERRIDES))
+        self.assertIn(
+            "https://lca.ece.utexas.edu/pubs/li_sigopsreview26.pdf",
+            recovery.primary_pdf_urls("DOI:10.1145/3830422.3830427"),
+        )
+
     def test_twinpilots_has_author_hosted_primary_pdf_fallback(self) -> None:
         urls = recovery.primary_pdf_urls("DOI:10.1145/3688351.3689164")
         self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
