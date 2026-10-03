@@ -27,10 +27,10 @@ on:
 permissions:
   contents: write
 
-# Citation backfill is heavyweight background state. Serialize it with the
-# background helper/maintenance lane without blocking claim/submission fast lanes.
+# Citation backfill has its own queue so unrelated background workflows cannot
+# replace a pending citation run. Publication races are resolved against latest main.
 concurrency:
-  group: survey-background-main
+  group: citation-graph-backfill-main
   cancel-in-progress: false
 
 jobs:
