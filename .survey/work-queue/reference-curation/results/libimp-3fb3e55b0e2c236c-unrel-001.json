@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3fb3e55b0e2c236c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/j.1538-7305.1948.tb01338.x",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/j.1538-7305.1948.tb01338.x",
+    "identity_tokens": [
+      "DOI:10.1002/j.1538-7305.1948.tb01338.x"
+    ],
+    "reason": "通信路・雑音・情報源の統計構造を定式化する情報理論の基礎研究であり、LLM推論システムの実装・効率化を最終適用先としない。",
+    "first_checked_at": "2026-10-03T22:18:11+00:00",
+    "last_checked_at": "2026-10-03T22:18:11+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "A Mathematical Theory of Communication"
+  },
+  "processed_at": "2026-10-03T22:18:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3fb3e55b0e2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

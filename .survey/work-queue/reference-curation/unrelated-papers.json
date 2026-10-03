@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:59:03+00:00",
-  "record_count": 846,
+  "updated_at": "2026-10-03T22:18:12+00:00",
+  "record_count": 866,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -12470,6 +12470,286 @@
       "last_checked_at": "2026-10-03T18:59:03+00:00",
       "linked_from": [],
       "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+    },
+    "DOI:10.1002/j.1538-7305.1948.tb01338.x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/j.1538-7305.1948.tb01338.x",
+      "identity_tokens": [
+        "DOI:10.1002/j.1538-7305.1948.tb01338.x"
+      ],
+      "reason": "通信路・雑音・情報源の統計構造を定式化する情報理論の基礎研究であり、LLM推論システムの実装・効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A Mathematical Theory of Communication"
+    },
+    "DOI:10.1115/1.3662552": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1115/1.3662552",
+      "identity_tokens": [
+        "DOI:10.1115/1.3662552"
+      ],
+      "reason": "状態遷移表現による線形フィルタリング・予測と誤差共分散の最適推定を扱うカルマンフィルタの基礎研究で、LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A new approach to linear filtering and prediction problems"
+    },
+    "DOI:10.1109/tbdata.2019.2921572": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tbdata.2019.2921572",
+      "identity_tokens": [
+        "DOI:10.1109/tbdata.2019.2921572"
+      ],
+      "reason": "GPU上のk-selectionと近似最近傍探索を高速化するベクトル検索研究であり、LLM推論ランタイム自体を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Billion-Scale Similarity Search with GPUs"
+    },
+    "DOI:10.1109/tnnls.2021.3070843": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnnls.2021.3070843",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2021.3070843"
+      ],
+      "reason": "知識グラフの表現学習・獲得・時間知識グラフ・応用を整理する総合サーベイで、LLM推論効率化の一次研究ではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications"
+    },
+    "DOI:10.1002/nav.3800030106": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/nav.3800030106",
+      "identity_tokens": [
+        "DOI:10.1002/nav.3800030106"
+      ],
+      "reason": "単一段階生産の最適化問題を扱うオペレーションズ・リサーチ研究で、LLM推論・サービングを対象としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Various optimizers for single-stage production"
+    },
+    "DOI:10.1109/real.1989.63567": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/real.1989.63567",
+      "identity_tokens": [
+        "DOI:10.1109/real.1989.63567"
+      ],
+      "reason": "リアルタイムシステムのレート単調スケジューリング可能性を解析する古典研究で、LLMサービング向けスケジューラではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "The rate monotonic scheduling algorithm: exact characterization and average case behavior"
+    },
+    "DOI:10.1109/micro.2014.58": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2014.58",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2014.58"
+      ],
+      "reason": "CNN/DNN一般向けのマルチチップ機械学習アクセラレータを提案するハードウェア研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "DaDianNao: A Machine-Learning Supercomputer"
+    },
+    "DOI:10.1109/34.120331": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/34.120331",
+      "identity_tokens": [
+        "DOI:10.1109/34.120331"
+      ],
+      "reason": "画像復元で不連続性を回復する制約付き正則化・視覚処理研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Constrained Restoration and the Recovery of Discontinuities"
+    },
+    "DOI:10.1038/s41746-021-00455-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-021-00455-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-021-00455-y"
+      ],
+      "reason": "構造化電子健康記録をBERTで事前学習し疾患予測を改善する医療応用研究で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction"
+    },
+    "DOI:10.1016/0925-2312(91)90023-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/0925-2312(91)90023-5",
+      "identity_tokens": [
+        "DOI:10.1016/0925-2312(91)90023-5"
+      ],
+      "reason": "多層パーセプトロンの分類・回帰理論と実践を整理する研究で、LLM推論基盤を対象としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "title": "Multilayer perceptrons for classification and regression"
+    },
+    "DOI:10.1109/hpca56546.2023.10071047": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca56546.2023.10071047",
+      "identity_tokens": [
+        "DOI:10.1109/hpca56546.2023.10071047"
+      ],
+      "reason": "ImageNet向けVision Transformerをembedded FPGAで高速化するimage-adaptive token pruningで、DeiT/LV-ViTを対象とし、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "HeatViT: Hardware-Efficient Adaptive Token Pruning for Vision Transformers"
+    },
+    "DOI:10.1109/iccv51070.2023.01591": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.01591",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.01591"
+      ],
+      "reason": "複数の視覚タスク向けMixture-of-Expertsであり、LLMのMoE推論・expert offload/servingを対象としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "AdaMV-MoE: Adaptive Multi-Task Vision Mixture-of-Experts"
+    },
+    "DOI:10.1007/bf01194620": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf01194620",
+      "identity_tokens": [
+        "DOI:10.1007/bf01194620"
+      ],
+      "reason": "確率論の古典的数学研究であり、機械学習・LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Über eine Aufgabe der Wahrscheinlichkeitstheorie. I"
+    },
+    "DOI:10.1109/iccad45719.2019.8942127": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccad45719.2019.8942127",
+      "identity_tokens": [
+        "DOI:10.1109/iccad45719.2019.8942127"
+      ],
+      "reason": "AlexNet/ResNet/DriveNetの画像分類を対象にASIC neural-network acceleratorを生成・探索する汎用DNNアクセラレータ研究で、LLM/Transformer推論固有ではない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "MAGNet: A Modular Accelerator Generator for Neural Networks"
+    },
+    "DOI:10.1016/j.csl.2021.101276": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.csl.2021.101276",
+      "identity_tokens": [
+        "DOI:10.1016/j.csl.2021.101276"
+      ],
+      "reason": "abstractive text summarizationにおけるdeep reinforcement learningとtransfer learningを整理するタスク/学習手法レビューで、LLM推論システム効率化を扱わない。",
+      "first_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Deep reinforcement and transfer learning for abstractive text summarization: A review"
+    },
+    "DOI:10.1109/iedm.2016.7838333": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iedm.2016.7838333",
+      "identity_tokens": [
+        "DOI:10.1109/iedm.2016.7838333"
+      ],
+      "reason": "7nm FinFET CMOSと高密度6T SRAMセルを扱う半導体プロセス技術研究で、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-03T22:18:12+00:00",
+      "last_checked_at": "2026-10-03T22:18:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A 7nm CMOS platform technology featuring 4th generation FinFET transistors with a 0.027um2 high density 6-T SRAM cell for mobile SoC applications"
+    },
+    "DOI:10.1007/978-3-319-41321-1_2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-41321-1_2",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-41321-1_2"
+      ],
+      "reason": "LAPACK等の科学計算で使う小行列batch向けGEMM kernelとautotuningをK40c GPUで評価する汎用HPC研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:12+00:00",
+      "last_checked_at": "2026-10-03T22:18:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Performance, Design, and Autotuning of Batched GEMM for GPUs"
+    },
+    "DOI:10.1109/hpca51647.2021.00055": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca51647.2021.00055",
+      "identity_tokens": [
+        "DOI:10.1109/hpca51647.2021.00055"
+      ],
+      "reason": "疎行列ベクトル積をProcessing-in-Memoryで高速化する汎用SpMVアクセラレータ研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:12+00:00",
+      "last_checked_at": "2026-10-03T22:18:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "SpaceA: Sparse Matrix Vector Multiplication on Processing-in-Memory Accelerator"
+    },
+    "DOI:10.1109/les.2015.2402197": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/les.2015.2402197",
+      "identity_tokens": [
+        "DOI:10.1109/les.2015.2402197"
+      ],
+      "reason": "Network-on-Chip routerの電力・面積等を推定する一般的設計ツールで、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-03T22:18:12+00:00",
+      "last_checked_at": "2026-10-03T22:18:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ORION3.0: A Comprehensive NoC Router Estimation Tool"
+    },
+    "DOI:10.1109/isscc42614.2022.9731694": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isscc42614.2022.9731694",
+      "identity_tokens": [
+        "DOI:10.1109/isscc42614.2022.9731694"
+      ],
+      "reason": "3D logic-to-DRAM hybrid bondingとnear-memory engineを推薦システム向けに設計したハードウェア研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-03T22:18:12+00:00",
+      "last_checked_at": "2026-10-03T22:18:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "184QPS/W 64Mb/mm2 3D Logic-to-DRAM Hybrid Bonding with Process-Near-Memory Engine for Recommendation System"
     }
   }
 }
