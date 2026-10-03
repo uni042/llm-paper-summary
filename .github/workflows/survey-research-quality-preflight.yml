@@ -4,6 +4,11 @@ on:
   # Retained for explicit recovery only. The current Library-first path does not
   # auto-trigger this legacy worker.
   workflow_dispatch:
+    inputs:
+      request:
+        description: 'Repository-relative Research/Audit quality preflight request path'
+        required: false
+        type: string
 
 permissions:
   contents: write
