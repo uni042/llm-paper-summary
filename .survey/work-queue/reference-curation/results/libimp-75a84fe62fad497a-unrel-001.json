@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75a84fe62fad497a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.19662",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.19662",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.19662",
+      "DOI:10.52202/085713-3127",
+      "arXiv:2509.19662"
+    ],
+    "reason": "LLMサービングに応用可能な一般スケジューリング理論ではあるが、論文自体はLLM・KVキャッシュ・GPUサービングを対象とせず、最終適用先が汎用オンラインスケジューリング。",
+    "first_checked_at": "2026-10-02T07:05:49+00:00",
+    "last_checked_at": "2026-10-03T18:20:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+    ],
+    "title": "Non-Clairvoyant Scheduling with Progress Bars"
+  },
+  "processed_at": "2026-10-03T18:20:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75a84fe62fad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

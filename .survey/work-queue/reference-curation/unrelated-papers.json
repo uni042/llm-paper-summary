@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T18:18:27+00:00",
+  "updated_at": "2026-10-03T18:20:06+00:00",
   "record_count": 844,
   "records": {
     "arXiv:2303.08774": {
@@ -5961,7 +5961,7 @@
       ],
       "reason": "LLMサービングに応用可能な一般スケジューリング理論ではあるが、論文自体はLLM・KVキャッシュ・GPUサービングを対象とせず、最終適用先が汎用オンラインスケジューリング。",
       "first_checked_at": "2026-10-02T07:05:49+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-03T18:20:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
@@ -5977,7 +5977,7 @@
       ],
       "reason": "言語モデル事前学習の学習率スケジューラが主題で、凍結中の学習高速化・学習設定側に属する。",
       "first_checked_at": "2026-10-02T07:05:49+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-03T18:20:06+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
         "papers/inference/12-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md"
@@ -5992,7 +5992,7 @@
       ],
       "reason": "論文ではなくUNSWの共有HPC計算クラスタ自体を指す研究基盤DOIであり、LLM推論手法の候補ではない。",
       "first_checked_at": "2026-10-02T07:05:49+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-03T18:20:06+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.15021-shared-kv-caching-replicated-27b-inference.md",
         "papers/inference/99-other-inference-systems/2026-2609.15030-validating-hybrid-state-cache-recovery-for-glm-5-3-flash-with-vllm-and-lmcache.md"
@@ -6007,7 +6007,7 @@
       ],
       "reason": "質問応答データセット構築が主貢献で、LLM推論システムの速度・メモリ・サービングを改善しない。",
       "first_checked_at": "2026-10-02T07:05:49+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-03T18:20:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md"
@@ -6022,7 +6022,7 @@
       ],
       "reason": "系列並列化自体は推論へ関連し得るが、本文の最終適用先と評価は長系列Transformerの学習であり、凍結中の学習高速化系。",
       "first_checked_at": "2026-10-02T07:05:49+00:00",
-      "last_checked_at": "2026-10-02T07:05:49+00:00",
+      "last_checked_at": "2026-10-03T18:20:06+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
         "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
