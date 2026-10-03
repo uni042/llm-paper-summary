@@ -28,6 +28,7 @@ title:scaling llm testtime compute optimally can be more effective than scaling 
 title:scaling llm testtime compute with mobile npu on smartphones
 title:scaling multinode mixtureofexperts inference using expert activation patterns
 title:scaling posttraining ternarisation to qwen38b capability retention reproduction lossless packing and packed execution
+title:scaling transformer to 1m tokens and beyond with rmt
 title:scaling up ondevice llms via activeweight swapping between dram and flash
 title:scattered mixtureofexperts implementation
 title:scbench a kv cachecentric analysis of longcontext methods
@@ -96,7 +97,6 @@ title:sidamoe sparsityinspired dataaware serving for efficient and scalable larg
 title:sidequest modeldriven kv cache management for longhorizon agentic reasoning
 title:sidp memoryefficient data parallelism for offline llm inference
 title:sieve dynamic expertaware pim acceleration for evolving mixtureofexperts models
-title:sift selectiveindex for fast compute of rag prefill by exploiting attention invariance
 title:sift 注意不変性を利用したrag入力処理の選択索引
 title:siftmoe similarityaware energyefficient expert selection for wireless distributed moe inference
 title:sigmoid attention as a better substrate for learned kv cache eviction
@@ -138,6 +138,7 @@ title:sparda sparse decoupled attention for efficient longcontext llm inference
 title:spargeattention accurate and trainingfree sparse attention accelerating any model inference
 title:sparkv overheadaware kv cache loading for efficient ondevice llm inference
 title:sparse attention across multiplecontext kv cache
+title:sparse finetuning for inference acceleration of large language models
 title:sparse moe as the new dropout scaling dense and selfslimmable transformers
 title:sparse prefix caching for hybrid and recurrent llm serving
 title:sparse universal transformer
@@ -170,6 +171,7 @@ title:spectre hybrid ordinaryparallel speculative serving for resourceefficient 
 title:spectrumkv pertoken mixedprecision kv cache transfer for prefilldecode disaggregated llm serving
 title:speculating experts accelerates inference for mixtureofexperts
 title:speculative actions a lossless framework for faster agentic systems
+title:speculative decoding and beyond an indepth survey of techniques
 title:speculative decoding exploiting speculative execution for accelerating seq2seq generation
 title:speculative decoding in decentralized llm inference turning communication latency into computation throughput
 title:speculative decoding performance or illusion
@@ -187,6 +189,7 @@ title:speeding up model loading with fastsafetensors
 title:spend bits where queries look kv cache vector quantization with attentionpreserving transforms
 title:spice speculative prefetching with lowrank expert surrogates and heterogeneous orchestration for moe inference acceleration
 title:spin accelerating large language model inference with heterogeneous speculative models
+title:spinquant llm quantization with learned rotations
 title:spire boosting llm inference throughput with speculative decoding
 title:splash codesigning sparse attention with highbandwidth flash for efficient longcontext inference
 title:splitee improving llm inference on trusted hardware with differentially private gpu outsourcing
@@ -198,6 +201,7 @@ title:spmoe speculative decoding and prefetching for accelerating moebased model
 title:spork selfspeculative forking to accelerate agentic llm inference
 title:spotserve serving generative large language models on preemptible instances
 title:spqr a sparsequantized representation for nearlossless llm weight compression
+title:squeezeattention 2d management of kvcache in llm inference via layerwise optimal budget
 title:squeezed attention accelerating long context length llm inference
 title:squeezellm denseandsparse quantization
 title:ssd offloading for llm mixtureofexperts weights considered harmful in energy efficiency
@@ -242,3 +246,4 @@ title:swiftspec ultralow latency llm decoding by scaling asynchronous speculativ
 title:switch transformers scaling to trillion parameter models with simple and efficient sparsity
 title:symi efficient mixtureofexperts training via model and optimizer state decoupling
 title:symphony enabling computememory disaggregation in llm serving systems
+title:syncode llm generation with grammar augmentation
