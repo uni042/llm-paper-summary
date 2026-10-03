@@ -11,7 +11,7 @@ authors:
 - Dimosthenis Masouros
 - Sotirios Xydis
 - Dimitrios Soudris
-published: "2024"
+published: "2024-07-01"
 publication: "IEEE Computer Architecture Letters 23(2), 150-153"
 publication_type: "peer-reviewed-journal"
 publication_status: "Published"
@@ -20,6 +20,7 @@ topics: ["LLM配信","GPU電力制御","DVFS","SLO","尾部遅延"]
 source: "https://doi.org/10.1109/LCA.2024.3406038"
 sources:
 - "https://doi.org/10.1109/LCA.2024.3406038"
+- "https://ieeexplore.ieee.org/document/10540202/"
 last_checked: "2026-09-28"
 code: null
 implementation: "少数のGPU周波数×RPS組合せをオフライン計測し、p95/p99エンドツーエンド遅延を3次多項式で近似する。実行時はRPSを一定反復ごとに再観測し、候補周波数の予測遅延からSLOを満たす最小周波数を選択する。"
