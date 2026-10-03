@@ -30,6 +30,9 @@ _CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "3
 _CURRENT_RUN_KEY_RE = re.compile(
     r"(?P<stamp>\d{8}T\d{6})(?P<zone>Z|JST|[+-]\d{4})(?:-|$)"
 )
+_LIBRARY_RUN_KEY_RE = re.compile(
+    r"^(?P<date>\d{8})-(?P<hm>\d{4})(?:-(?P<rest>.+))?$"
+)
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
 _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
@@ -83,26 +86,48 @@ def _scheduled_slot_from_claimed_at(value: Any, worker_id: str):
 
 
 def _discovery_run_time_from_key(value: Any):
-    """Parse both ISO legacy run keys and current scheduled-chat run keys."""
+    """Parse legacy transport timestamps and current Library-first run keys."""
     parsed = _core.evidence._parse_dt(value)
     if parsed is not None:
         return parsed
-    match = _CURRENT_RUN_KEY_RE.search(str(value or "").strip())
+
+    text = str(value or "").strip()
+    match = _CURRENT_RUN_KEY_RE.search(text)
+    if match is not None:
+        try:
+            zone = match.group("zone")
+            if zone == "Z":
+                zone = "+0000"
+            elif zone == "JST":
+                zone = "+0900"
+            return datetime.strptime(
+                match.group("stamp") + zone,
+                "%Y%m%dT%H%M%S%z",
+            ).astimezone(timezone.utc)
+        except ValueError:
+            return None
+
+    # Library-first artifacts use e.g. 20261003-1445-scheduled-chat-45.
+    # Their compact clock is JST because the scheduled workers use Asia/Tokyo.
+    match = _LIBRARY_RUN_KEY_RE.match(text)
     if match is None:
         return None
     try:
-        zone = match.group("zone")
-        if zone == "Z":
-            zone = "+0000"
-        elif zone == "JST":
-            zone = "+0900"
-        return datetime.strptime(
-            match.group("stamp") + zone,
-            "%Y%m%dT%H%M%S%z",
-        ).astimezone(timezone.utc)
+        local = datetime.strptime(
+            match.group("date") + match.group("hm"),
+            "%Y%m%d%H%M",
+        ).replace(tzinfo=_core.evidence.JST)
     except ValueError:
         return None
+    return local.astimezone(timezone.utc)
 
+
+def _worker_from_run_key(value: Any) -> str:
+    text = str(value or "").strip()
+    for worker_id in _CURRENT_SCHEDULED_WORKERS:
+        if text.endswith(worker_id):
+            return worker_id
+    return ""
 
 def _explicit_worker_run_time(payload: dict[str, Any]):
     """Read the workflow-v10 run identity carried by the immutable submission."""
@@ -350,23 +375,33 @@ _core._discovery_round_identity = _discovery_round_identity
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
 
-def _import_progress_events(repo_root: Path, now):
-    """Read only GitHub-resident Library import evidence; never access ChatGPT Library."""
-    research_events = []
-    discovery_events = []
+def _import_progress_activity(repo_root: Path, now):
+    """Return current Library-first progress from GitHub-resident import receipts."""
+    research = []
+    discovery = []
 
-    # Research terminal results persist after pending payload cleanup.
-    for _, payload in _core.evidence._iter_json(repo_root / ".survey/import-inbox/results/research"):
+    for path, payload in _core.evidence._iter_json(
+        repo_root / ".survey/import-inbox/results/research"
+    ):
         if str(payload.get("status") or "") not in {"imported", "already_represented"}:
             continue
         stamp = _core.evidence._parse_dt(payload.get("worker_completed_at"))
         if stamp is None:
             stamp = _core.evidence._parse_dt(payload.get("processed_at"))
-        if stamp is not None and stamp <= now:
-            research_events.append(stamp)
+        if stamp is None or stamp > now:
+            continue
+        run_key = str(payload.get("worker_run_key") or "").strip()
+        research.append({
+            "path": path,
+            "payload": payload,
+            "completed_at": stamp,
+            "run_key": run_key,
+            "worker_id": str(payload.get("worker_id") or "").strip()
+                or _worker_from_run_key(run_key),
+            "canonical_id": str(payload.get("canonical_id") or "").strip(),
+            "status": str(payload.get("status") or "").strip(),
+        })
 
-    # Discovery: count each immutable Library run once. Active payloads retain
-    # the original run_key; terminal results preserve it for future imports.
     seen = set()
     roots = [
         repo_root / ".survey/import-inbox/pending/discovery",
@@ -376,12 +411,13 @@ def _import_progress_events(repo_root: Path, now):
     ]
     for root in roots:
         for path, payload in _core.evidence._iter_json(root):
+            status = str(payload.get("status") or "").strip()
+            if root.name == "results" and status not in {"imported", "already_represented"}:
+                continue
             run_key = str(payload.get("run_key") or "").strip()
             stamp = _discovery_run_time_from_key(run_key)
             count = int(payload.get("record_count") or 0)
             if not run_key:
-                # Legacy terminal results did not retain run_key. They are still
-                # GitHub evidence, but can only be assigned to import time.
                 stamp = _core.evidence._parse_dt(payload.get("processed_at"))
                 run_key = "legacy:" + str(path)
             if count <= 0:
@@ -391,9 +427,33 @@ def _import_progress_events(repo_root: Path, now):
             if stamp is None or stamp > now or count <= 0 or run_key in seen:
                 continue
             seen.add(run_key)
-            discovery_events.append((stamp, count))
-    return research_events, discovery_events
+            discovery.append({
+                "path": path,
+                "payload": payload,
+                "completed_at": stamp,
+                "run_key": run_key,
+                "worker_id": str(payload.get("worker_id") or "").strip()
+                    or _worker_from_run_key(run_key),
+                "record_count": count,
+                "accept_count": int(payload.get("accept_count") or 0),
+                "relevance_count": int(payload.get("relevance_count") or 0),
+                "status": status,
+            })
 
+    research.sort(key=lambda row: row["completed_at"], reverse=True)
+    discovery.sort(key=lambda row: row["completed_at"], reverse=True)
+    return {"research": research, "discovery": discovery}
+
+
+def _import_progress_events(repo_root: Path, now):
+    activity = _import_progress_activity(repo_root, now)
+    return (
+        [row["completed_at"] for row in activity["research"]],
+        [(row["completed_at"], row["record_count"]) for row in activity["discovery"]],
+    )
+
+
+_core._import_progress_activity = _import_progress_activity
 
 def _library_first_status(repo_root: Path, now=None) -> str:
     now = now or datetime.now(timezone.utc)
