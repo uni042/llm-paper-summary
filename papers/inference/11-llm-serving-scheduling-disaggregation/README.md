@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（301本）
+## 自動生成の論文一覧（302本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1225,4 +1225,8 @@
 - **2024 · [SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving](2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
+
+- **2025 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
+  実装：— ・ リポジトリ内被引用：3  
+  LLM推論サーバーは常にGPUを最高周波数で動かせば遅延を抑えやすいが、要求到着率、バッチサイズ、KVキャッシュ占有量によって必要性能は時々刻々変わる。throttLL’eMは、次の反復でのKVキャッシュ使用量とバッチサイズを予測し、それらを機械学習の性能モデルへ与えて、SLOを満たせる最低側のGPU動作点を選ぶ。
 <!-- survey:auto:end -->
