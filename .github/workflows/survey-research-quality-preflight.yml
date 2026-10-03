@@ -1,22 +1,9 @@
 name: Survey research quality preflight
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/research-preflight/requests/*.json'
-      - '.survey/scripts/research_quality_preflight.py'
-      - '.survey/scripts/paper_quality_gate.py'
-      - '.survey/scripts/prepare_completed_submission.py'
-      - '.survey/scripts/advance_research_submission_pipeline.py'
-      - '.survey/scripts/derive_worker_run_state.py'
-      - '.github/workflows/survey-research-quality-preflight.yml'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
-    inputs:
-      request:
-        description: 'Repository-relative Research/Audit quality preflight request path'
-        required: false
-        type: string
 
 permissions:
   contents: write
