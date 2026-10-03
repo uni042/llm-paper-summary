@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20260929-0730-scheduled-chat-30::provider-gap",
+  "reference_main_sha": "14c66ba715c66e9af7c267ea71038d0af0441c26",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:RlqYCpTu1P",
+      "identity_tokens": [
+        "OpenReview:RlqYCpTu1P"
+      ],
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "reason": "注意をblock単位の混合専門家として動的選択し、長文脈の二次計算量を削減する疎注意方式で推論効率化に直接関係する。",
+      "source_url": "https://openreview.net/forum?id=RlqYCpTu1P",
+      "body_check": "本文でcontextをblock分割しqueryを関連KV blockへ動的routingするMixture of Block Attentionを確認。固定sink/window biasを避け、full/sparse attention間を切替可能。最大10M token級で最大16倍の効率改善を報告し、実production long-context workloadにも展開。",
+      "first_checked_at": "2026-09-29T07:30:27+09:00",
+      "last_checked_at": "2026-09-29T07:30:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "worklist_rank": 488
+    }
+  ],
+  "parent_run_key": "20260929-0730-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-25371b6be642--libfile_5c6195ce2694819180a9a4d00f0e273d--discovery-20260929-0730-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:RlqYCpTu1P"
+  ]
+}

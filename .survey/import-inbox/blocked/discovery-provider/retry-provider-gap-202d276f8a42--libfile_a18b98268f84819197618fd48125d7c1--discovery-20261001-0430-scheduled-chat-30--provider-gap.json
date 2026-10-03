@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261001-0430-scheduled-chat-30",
+  "run_key": "20261001-0430-scheduled-chat-30::provider-gap",
   "reference_main_sha": "212ec496d93c3261761330a75942704e4ed5f626",
-  "record_count": 2,
+  "record_count": 1,
   "partial_run": true,
   "partial_reason": "静的worklist上位候補の大半がGitHub canonical stateまたは別識別子ですでに処理済み。完全照合と一次資料確認により新規identityとして確定できた2件のみ保存。",
   "records": [
@@ -25,24 +25,11 @@
         "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md"
       ],
       "worklist_rank": 397
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:8tKjqqMM5z",
-      "identity_tokens": [
-        "OpenReview:8tKjqqMM5z"
-      ],
-      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM’s KV-Cache Consumption",
-      "reason": "KVキャッシュ最適化そのものは対象分野だが、本候補は新規推論システム／手法を提案する一次研究ではなくレビュー論文。新規Research候補としては対象外。",
-      "source_url": "https://openreview.net/forum?id=8tKjqqMM5z",
-      "body_check": "COLM 2024の一次採録一覧で論文種別と題名を確認。題名どおりKVキャッシュ消費最適化手法を整理するレビューであり、pre-screen hard gateの『survey / review』に該当するため深読解を停止。",
-      "first_checked_at": "2026-10-01T04:25:15+09:00",
-      "last_checked_at": "2026-10-01T04:25:15+09:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
-        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
-      ],
-      "worklist_rank": 391
     }
+  ],
+  "parent_run_key": "20261001-0430-scheduled-chat-30",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-provider-gap-202d276f8a42--libfile_a18b98268f84819197618fd48125d7c1--discovery-20261001-0430-scheduled-chat-30.json",
+  "provider_gap_ids": [
+    "OpenReview:ho7ZUS1z8A"
   ]
 }
