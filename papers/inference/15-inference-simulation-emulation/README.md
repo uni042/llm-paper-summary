@@ -85,6 +85,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   自己回帰サービングを反復単位で追跡しつつ、Transformerブロックのコンパイル・演算結果を再利用して異種アクセラレータ構成を高速に協調シミュレーションする。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
-  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：4  
   operator-level rooflineとcollective通信モデルでLLM構造・serving最適化・分散方式からcompute/メモリ/network要件を逆算するGenZ。
 <!-- survey:auto:end -->

@@ -98,13 +98,13 @@
   実装：[✓](https://github.com/JasonNing96/DSSD-Efficient-Edge-Computing) ・ リポジトリ内被引用：4  
   分散分割投機的復号（Distributed Split 投機的復号; DSSD）は、端末の小型言語モデル（Small Language モデル; SLM）が候補を生成し、基地局・エッジの大規模言語モデル（Large Language モデル; LLM）が検証する協調推論で、検証に必要な計算自体も端末とエッジへ分割する。
 
+- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  複数サイズのモデルを別々に常駐させる方法は端末メモリを消費する。オフラインで重要ニューロンをメモリ上の前方へ並べ替え、実行時には読み出す接頭辞範囲を変えるだけで部分モデルへ切り替える。市販スマートフォン上で7つの強い比較方式に対し絶対精度を最大14.83ポイント、平均10.45ポイント改善し、切替によるTTFT追加分を1%未満にした。
+
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   無線edge上の分散MoEでtask relevanceとchannel/energyを同時に考え、DESで専門家、JESAで専門家＋OFDMA subcarrierを共同選択し、Top-kに近い性能で最大約50%のenergy削減を示す。
-
-- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  複数サイズのモデルを別々に常駐させる方法は端末メモリを消費する。オフラインで重要ニューロンをメモリ上の前方へ並べ替え、実行時には読み出す接頭辞範囲を変えるだけで部分モデルへ切り替える。市販スマートフォン上で7つの強い比較方式に対し絶対精度を最大14.83ポイント、平均10.45ポイント改善し、切替によるTTFT追加分を1%未満にした。
 
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -121,7 +121,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：36  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
@@ -135,6 +135,6 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：35  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 <!-- survey:auto:end -->

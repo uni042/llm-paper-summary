@@ -115,7 +115,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
-  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：25  
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -165,7 +165,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   しかしサービングでは、アダプタ数が増えるほど「小さいから全部GPUへ置く」という前提が崩れ、異なるrank・異なる要求長のアダプタとKVキャッシュがGPUメモリを断片化する。スケジューラが実行する要求に必要なアダプタだけをGPUへ取り込み、LoRA重みとKVキャッシュをUnified Pagingで統合管理する。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
@@ -201,6 +201,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 公開時期未分類
 
 - **2055-08 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：21  
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 <!-- survey:auto:end -->
