@@ -25,7 +25,7 @@ payload.
 ## GitHub-owned processing
 
 \`.github/workflows/library-import.yml\` is the single canonical processor workflow.
-It has no cron of its own. `.github/workflows/survey-orchestrator.yml` dispatches it every 10 minutes from the latest main branch, and a push to `.survey/scheduler/library-import-kick.json` triggers the same orchestrator as an event-driven fallback. It executes
+It has no cron of its own. `.github/workflows/survey-orchestrator.yml` checks the durable inbox every 10 minutes and dispatches this processor only when pending/waiting work exists, with a sparse recovery pass roughly once per six scheduler ticks. A push to `.survey/scheduler/library-import-kick.json` triggers the same orchestrator immediately as an event-driven fallback. Each processor run starts from the latest main branch and executes
 \`.survey/scripts/process_library_import_inbox.py\` in bounded batches.
 
 ### Research
