@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-03T13:58:01+00:00`
+Generated: `2026-10-03T14:42:41+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,88 +13,88 @@ Generated: `2026-10-03T13:58:01+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **606** / 未claim総数: **459** / このworker向け: **153**
+ready総数: **605** / 未claim総数: **458** / このworker向け: **153**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 72 | audit | arXiv:2504.03775 | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | [primary](https://arxiv.org/abs/2504.03775) | `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md` |
-| 2 | 0 | research | arXiv:1802.05799 | Horovod: fast and easy distributed deep learning in TensorFlow | [primary](https://arxiv.org/abs/1802.05799) | `papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md` |
-| 3 | 0 | research | arXiv:1911.02972 | Blockwise Self-Attention for Long Document Understanding | [primary](https://arxiv.org/abs/1911.02972) | `papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md` |
-| 4 | 0 | research | arXiv:2008.12260 | Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning | [primary](https://arxiv.org/abs/2008.12260) | `papers/inference/99-other-inference-systems/2020-2008.12260-pollux-co-adaptive-cluster-scheduling-for-goodput-optimized-deep-learning.md` |
-| 5 | 0 | research | arXiv:2010.13887 | LightSeq: A High Performance Inference Library for Sequence Processing and Generation | [primary](https://arxiv.org/abs/2010.13887) | `papers/inference/99-other-inference-systems/2020-2010.13887-lightseq-a-high-performance-inference-library-for-sequence-processing-and-generation.md` |
-| 6 | 0 | research | arXiv:2104.04473 | Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM | [primary](https://arxiv.org/abs/2104.04473) | `papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-megatron-lm.md` |
-| 7 | 0 | research | arXiv:2110.03888 | M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining | [primary](https://arxiv.org/abs/2110.03888) | `papers/inference/99-other-inference-systems/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-parameter-pretraining.md` |
-| 8 | 0 | research | arXiv:2112.06905 | GLaM: Efficient Scaling of Language Models with Mixture-of-Experts | [primary](https://arxiv.org/abs/2112.06905) | `papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md` |
-| 9 | 0 | research | arXiv:2203.16487 | Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation | [primary](https://arxiv.org/abs/2203.16487) | `papers/inference/99-other-inference-systems/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-seq2seq-generation.md` |
-| 10 | 0 | research | arXiv:2206.09557 | LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models | [primary](https://arxiv.org/abs/2206.09557) | `papers/inference/99-other-inference-systems/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inference-in-large-scale-generative-language-models.md` |
-| 11 | 0 | research | arXiv:2211.10017 | Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production | [primary](https://arxiv.org/abs/2211.10017) | `papers/inference/99-other-inference-systems/2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-scale-production.md` |
-| 12 | 0 | research | arXiv:2303.08302 | ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation | [primary](https://arxiv.org/abs/2303.08302) | `papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehensive-study-to-low-rank-compensation.md` |
-| 13 | 0 | research | arXiv:2305.13048 | RWKV: Reinventing RNNs for the Transformer Era | [primary](https://arxiv.org/abs/2305.13048) | `papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md` |
-| 14 | 0 | research | arXiv:2306.02272 | OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models | [primary](https://arxiv.org/abs/2306.02272) | `papers/inference/99-other-inference-systems/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-inference-of-large-language-models.md` |
-| 15 | 0 | research | arXiv:2306.11695 | A Simple and Effective Pruning Approach for Large Language Models | [primary](https://arxiv.org/abs/2306.11695) | `papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md` |
-| 16 | 0 | research | arXiv:2309.04255 | LLMCad: Fast and Scalable On-device Large Language Model Inference | [primary](https://arxiv.org/abs/2309.04255) | `papers/inference/99-other-inference-systems/2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md` |
-| 17 | 0 | research | arXiv:2310.04836 | Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM | [primary](https://arxiv.org/abs/2310.04836) | `papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md` |
-| 18 | 0 | research | arXiv:2310.06839 | LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression | [primary](https://arxiv.org/abs/2310.06839) | `papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-via-prompt-compression.md` |
-| 19 | 0 | research | arXiv:2310.07188 | Adaptive Gating in Mixture-of-Experts based Language Models | [primary](https://arxiv.org/abs/2310.07188) | `papers/inference/99-other-inference-systems/2023-2310.07188-adaptive-gating-in-mixture-of-experts-based-language-models.md` |
-| 20 | 0 | research | arXiv:2310.09832 | Merging Experts into One: Improving Computational Efficiency of Mixture of Experts | [primary](https://arxiv.org/abs/2310.09832) | `papers/inference/99-other-inference-systems/2023-2310.09832-merging-experts-into-one-improving-computational-efficiency-of-mixture-of-experts.md` |
-| 21 | 0 | research | arXiv:2312.06635 | Gated Linear Attention Transformers with Hardware-Efficient Training | [primary](https://arxiv.org/abs/2312.06635) | `papers/inference/99-other-inference-systems/2023-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md` |
-| 22 | 0 | research | arXiv:2312.13211 | DSFormer: Effective Compression of Text-Transformers by Dense-Sparse Weight Factorization | [primary](https://arxiv.org/abs/2312.13211) | `papers/inference/99-other-inference-systems/2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weight-factorization.md` |
-| 23 | 0 | research | arXiv:2401.03462 | Long Context Compression with Activation Beacon | [primary](https://arxiv.org/abs/2401.03462) | `papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md` |
-| 24 | 0 | research | arXiv:2401.06761 | APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding | [primary](https://arxiv.org/abs/2401.06761) | `papers/inference/99-other-inference-systems/2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md` |
-| 25 | 0 | research | arXiv:2402.01771 | BlackMamba: Mixture of Experts for State-Space Models | [primary](https://arxiv.org/abs/2402.01771) | `papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md` |
-| 26 | 0 | research | arXiv:2402.04396 | QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks | [primary](https://arxiv.org/abs/2402.04396) | `papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-codebooks.md` |
-| 27 | 0 | research | arXiv:2402.05964 | A Survey on Transformer Compression | [primary](https://arxiv.org/abs/2402.05964) | `papers/inference/99-other-inference-systems/2024-2402.05964-a-survey-on-transformer-compression.md` |
-| 28 | 0 | research | arXiv:2402.10631 | BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation | [primary](https://arxiv.org/abs/2402.10631) | `papers/inference/99-other-inference-systems/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distillation.md` |
-| 29 | 0 | research | arXiv:2402.11960 | DB-LLM: Accurate Dual-Binarization for Efficient LLMs | [primary](https://arxiv.org/abs/2402.11960) | `papers/inference/99-other-inference-systems/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md` |
-| 30 | 0 | research | arXiv:2402.14160 | Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement | [primary](https://arxiv.org/abs/2402.14160) | `papers/inference/99-other-inference-systems/2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-without-replacement.md` |
-| 31 | 0 | research | arXiv:2402.17762 | Massive Activations in Large Language Models | [primary](https://arxiv.org/abs/2402.17762) | `papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md` |
-| 32 | 0 | research | arXiv:2402.18668 | Simple linear attention language models balance the recall-throughput tradeoff | [primary](https://arxiv.org/abs/2402.18668) | `papers/inference/99-other-inference-systems/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tradeoff.md` |
-| 33 | 0 | research | arXiv:2403.01632 | SynCode: LLM Generation with Grammar Augmentation | [primary](https://arxiv.org/abs/2403.01632) | `papers/inference/99-other-inference-systems/2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md` |
-| 34 | 0 | research | arXiv:2403.07652 | Harder Tasks Need More Experts: Dynamic Routing in MoE Models | [primary](https://arxiv.org/abs/2403.07652) | `papers/inference/99-other-inference-systems/2024-2403.07652-harder-tasks-need-more-experts-dynamic-routing-in-moe-models.md` |
-| 35 | 0 | research | arXiv:2403.09919 | Recurrent Drafter for Fast Speculative Decoding in Large Language Models | [primary](https://arxiv.org/abs/2403.09919) | `papers/inference/99-other-inference-systems/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md` |
-| 36 | 0 | research | arXiv:2403.15447 | Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression | [primary](https://arxiv.org/abs/2403.15447) | `papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-llms-under-compression.md` |
-| 37 | 0 | research | arXiv:2404.00242 | DeFT: Decoding with Flash Tree-attention for Efficient Tree-structured LLM Inference | [primary](https://arxiv.org/abs/2404.00242) | `papers/inference/99-other-inference-systems/2024-2404.00242-deft-decoding-with-flash-tree-attention-for-efficient-tree-structured-llm-inference.md` |
-| 38 | 0 | research | arXiv:2404.02837 | Cherry on Top: Parameter Heterogeneity and Quantization in Large Language Models | [primary](https://arxiv.org/abs/2404.02837) | `papers/inference/99-other-inference-systems/2024-2404.02837-cherry-on-top-parameter-heterogeneity-and-quantization-in-large-language-models.md` |
-| 39 | 0 | research | arXiv:2404.04793 | SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget | [primary](https://arxiv.org/abs/2404.04793) | `papers/inference/99-other-inference-systems/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wise-optimal-budget.md` |
-| 40 | 0 | research | arXiv:2404.08698 | Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding | [primary](https://arxiv.org/abs/2404.08698) | `papers/inference/99-other-inference-systems/2024-2404.08698-lossless-acceleration-of-large-language-model-via-adaptive-n-gram-parallel-decoding.md` |
-| 41 | 0 | research | arXiv:2404.10308 | Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs | [primary](https://arxiv.org/abs/2404.10308) | `papers/inference/99-other-inference-systems/2024-2404.10308-hierarchical-context-merging-better-long-context-understanding-for-pre-trained-llms.md` |
-| 42 | 0 | research | arXiv:2404.14527 | Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity | [primary](https://arxiv.org/abs/2404.14527) | `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14527-melange-cost-efficient-llm-serving-gpu-heterogeneity.md` |
-| 43 | 0 | research | arXiv:2405.13019 | A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models | [primary](https://arxiv.org/abs/2405.13019) | `papers/survey/05-accelerated-generation/2024-2405.13019-accelerated-generation-survey.md` |
-| 44 | 0 | research | arXiv:2405.14636 | PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services | [primary](https://arxiv.org/abs/2405.14636) | `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.14636-perllm.md` |
-| 45 | 0 | research | arXiv:2406.03482 | QJL: 1-Bit Quantized JL Transform for KV Cache Quantization with Zero Overhead | [primary](https://arxiv.org/abs/2406.03482) | `papers/inference/99-other-inference-systems/2024-2406.03482-qjl-1-bit-quantized-jl-transform-for-kv-cache-quantization-with-zero-overhead.md` |
-| 46 | 0 | research | arXiv:2406.15486 | SampleAttention: Near-Lossless Acceleration of Long Context LLM Inference with Adaptive Structured Sparse Attention | [primary](https://arxiv.org/abs/2406.15486) | `papers/inference/99-other-inference-systems/2024-2406.15486-sampleattention-near-lossless-acceleration-of-long-context-llm-inference-with-adaptive-structured-sparse-attention.md` |
-| 47 | 0 | research | arXiv:2407.04656 | Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models | [primary](https://arxiv.org/abs/2407.04656) | `papers/inference/99-other-inference-systems/2024-2407.04656-lazarus-resilient-and-elastic-training-of-mixture-of-experts-models.md` |
-| 48 | 0 | research | arXiv:2407.09486 | ENOVA: Autoscaling towards Cost-effective and Stable Serverless LLM Serving | [primary](https://arxiv.org/abs/2407.09486) | `papers/inference/99-other-inference-systems/2024-2407.09486-enova-autoscaling-towards-cost-effective-and-stable-serverless-llm-serving.md` |
-| 49 | 0 | research | arXiv:2408.03314 | Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters | [primary](https://arxiv.org/abs/2408.03314) | `papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md` |
-| 50 | 0 | research | arXiv:2409.01143 | HexiScale: Facilitating Large Language Model Training over Heterogeneous Hardware | [primary](https://arxiv.org/abs/2409.01143) | `papers/inference/99-other-inference-systems/2024-2409.01143-hexiscale-facilitating-large-language-model-training-over-heterogeneous-hardware.md` |
-| 51 | 0 | research | arXiv:2409.17264 | No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha | [primary](https://arxiv.org/abs/2409.17264) | `papers/inference/99-other-inference-systems/2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-inference-with-medha.md` |
-| 52 | 0 | research | arXiv:2410.14731 | MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection | [primary](https://arxiv.org/abs/2410.14731) | `papers/inference/99-other-inference-systems/2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md` |
-| 53 | 0 | research | arXiv:2411.18424 | FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving | [primary](https://arxiv.org/abs/2411.18424) | `papers/inference/99-other-inference-systems/2024-2411.18424-fastswitch-optimizing-context-switching-efficiency-in-fairness-aware-large-language-model-serving.md` |
-| 54 | 0 | research | arXiv:2412.14711 | ReMoE: Fully Differentiable Mixture-of-Experts with ReLU Routing | [primary](https://arxiv.org/abs/2412.14711) | `papers/inference/99-other-inference-systems/2024-2412.14711-remoe-fully-differentiable-mixture-of-experts-with-relu-routing.md` |
-| 55 | 0 | research | arXiv:2412.19442 | A Survey on Large Language Model Acceleration based on KV Cache Management | [primary](https://arxiv.org/abs/2412.19442) | `papers/inference/99-other-inference-systems/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-management.md` |
-| 56 | 0 | research | arXiv:2502.07115 | Online Scheduling for LLM Inference with KV Cache Constraints | [primary](https://arxiv.org/abs/2502.07115) | `papers/inference/99-other-inference-systems/2025-2502.07115-online-scheduling-for-llm-inference-with-kv-cache-constraints.md` |
-| 57 | 0 | research | arXiv:2502.12110 | A-Mem: Agentic Memory for LLM Agents | [primary](https://arxiv.org/abs/2502.12110) | `papers/inference/99-other-inference-systems/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md` |
-| 58 | 0 | research | arXiv:2502.17421 | LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification | [primary](https://arxiv.org/abs/2502.17421) | `papers/inference/99-other-inference-systems/2025-2502.17421-longspec-long-context-lossless-speculative-decoding-with-efficient-drafting-and-verification.md` |
-| 59 | 0 | research | arXiv:2503.00634 | Efficiently Editing Mixture-of-Experts Models with Compressed Experts | [primary](https://arxiv.org/abs/2503.00634) | `papers/inference/99-other-inference-systems/2025-2503.00634-efficiently-editing-mixture-of-experts-models-with-compressed-experts.md` |
-| 60 | 0 | research | arXiv:2503.16428 | XAttention: Block Sparse Attention with Antidiagonal Scoring | [primary](https://arxiv.org/abs/2503.16428) | `papers/inference/99-other-inference-systems/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md` |
-| 61 | 0 | research | arXiv:2504.11750 | Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures | [primary](https://arxiv.org/abs/2504.11750) | `papers/inference/99-other-inference-systems/2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled-architectures.md` |
-| 62 | 0 | research | arXiv:2504.19519 | Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering | [primary](https://arxiv.org/abs/2504.19519) | `papers/inference/99-other-inference-systems/2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-via-signaling-and-reordering.md` |
-| 63 | 0 | research | arXiv:2505.17639 | PreMoE: Proactive Inference for Efficient Mixture-of-Experts | [primary](https://arxiv.org/abs/2505.17639) | `papers/inference/02-adaptive-expert-computation-compression/2025-2505.17639-premoe-proactive-sparse-specialists.md` |
-| 64 | 0 | research | arXiv:2505.24298 | AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning | [primary](https://arxiv.org/abs/2505.24298) | `papers/inference/99-other-inference-systems/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-language-reasoning.md` |
-| 65 | 0 | research | arXiv:2506.07530 | BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation | [primary](https://arxiv.org/abs/2506.07530) | `papers/inference/99-other-inference-systems/2025-2506.07530-bitvla-1-bit-vision-language-action-models-for-robotics-manipulation.md` |
-| 66 | 0 | research | arXiv:2506.24045 | Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC | [primary](https://arxiv.org/abs/2506.24045) | `papers/inference/99-other-inference-systems/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous-soc.md` |
-| 67 | 0 | research | arXiv:2507.11417 | Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations | [primary](https://arxiv.org/abs/2507.11417) | `papers/inference/99-other-inference-systems/2025-2507.11417-quantifying-the-energy-consumption-and-carbon-emissions-of-llm-inference-via-simulations.md` |
-| 68 | 0 | research | arXiv:2507.19635 | Efficient and Scalable Agentic AI with Heterogeneous Systems | [primary](https://arxiv.org/abs/2507.19635) | `papers/inference/99-other-inference-systems/2025-2507.19635-efficient-and-scalable-agentic-ai-with-heterogeneous-systems.md` |
-| 69 | 0 | research | arXiv:2508.08448 | Towards Efficient and Practical GPU Multitasking in the Era of LLM | [primary](https://arxiv.org/abs/2508.08448) | `papers/inference/99-other-inference-systems/2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md` |
-| 70 | 0 | research | arXiv:2508.18376 | DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction | [primary](https://arxiv.org/abs/2508.18376) | `papers/inference/02-adaptive-expert-computation-compression/2025-2508.18376-dualsparse-moe.md` |
-| 71 | 0 | research | arXiv:2509.12993 | HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference | [primary](https://arxiv.org/abs/2509.12993) | `papers/inference/99-other-inference-systems/2025-2509.12993-hpim-heterogeneous-pim-llm-inference.md` |
-| 72 | 0 | research | arXiv:2509.18362 | FastMTP: Accelerating LLM Inference with Enhanced Multi-Token Prediction | [primary](https://arxiv.org/abs/2509.18362) | `papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md` |
-| 73 | 0 | research | arXiv:2510.02758 | TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling | [primary](https://arxiv.org/abs/2510.02758) | `papers/inference/99-other-inference-systems/2025-2510.02758-tokenflow-responsive-llm-text-streaming-serving-under-request-burst-via-preemptive-scheduling.md` |
-| 74 | 0 | research | arXiv:2510.12357 | MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts | [primary](https://arxiv.org/abs/2510.12357) | `papers/inference/99-other-inference-systems/2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixture-of-big-little-experts.md` |
-| 75 | 0 | research | arXiv:2510.14392 | FairBatching: Fairness-Aware Batch Formation for LLM Inference | [primary](https://arxiv.org/abs/2510.14392) | `papers/inference/99-other-inference-systems/2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md` |
-| 76 | 0 | research | arXiv:2510.15312 | Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution | [primary](https://arxiv.org/abs/2510.15312) | `papers/inference/99-other-inference-systems/2025-2510.15312-accelerating-mobile-language-model-via-speculative-decoding-and-npu-coordinated-execution.md` |
-| 77 | 0 | research | arXiv:2511.00606 | SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding | [primary](https://arxiv.org/abs/2511.00606) | `papers/inference/99-other-inference-systems/2025-2511.00606-specdiff-2-scaling-diffusion-drafter-alignment-for-faster-speculative-decoding.md` |
-| 78 | 0 | research | arXiv:2511.07427 | DynaKV: Enabling Accurate and Efficient Long-Sequence LLM Decoding on Smartphones | [primary](https://arxiv.org/abs/2511.07427) | `papers/inference/99-other-inference-systems/2025-2511.07427-dynakv-enabling-accurate-and-efficient-long-sequence-llm-decoding-on-smartphones.md` |
+| 1 | 74 | audit | arXiv:2503.03777 | FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference | [primary](https://arxiv.org/abs/2503.03777) | `papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md` |
+| 2 | 0 | research | arXiv:1712.05889 | Ray: A Distributed Framework for Emerging AI Applications | [primary](https://arxiv.org/abs/1712.05889) | `papers/inference/99-other-inference-systems/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md` |
+| 3 | 0 | research | arXiv:1909.08053 | Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism | [primary](https://arxiv.org/abs/1909.08053) | `papers/training/03-pipeline-parallel-modular-training/2019-1909.08053-megatron-lm.md` |
+| 4 | 0 | research | arXiv:2006.09616 | Dynamic Tensor Rematerialization | [primary](https://arxiv.org/abs/2006.09616) | `papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md` |
+| 5 | 0 | research | arXiv:2010.05680 | TurboTransformers: an efficient GPU serving system for transformer models | [primary](https://arxiv.org/abs/2010.05680) | `papers/inference/99-other-inference-systems/2020-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md` |
+| 6 | 0 | research | arXiv:2101.06840 | ZeRO-Offload: Democratizing Billion-Scale Model Training | [primary](https://arxiv.org/abs/2101.06840) | `papers/inference/99-other-inference-systems/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md` |
+| 7 | 0 | research | arXiv:2110.02861 | 8-bit Optimizers via Block-wise Quantization | [primary](https://arxiv.org/abs/2110.02861) | `papers/training/01-training-offload-memory-systems/2021-2110.02861-8-bit-optimizers.md` |
+| 8 | 0 | research | arXiv:2110.15032 | OneFlow: Redesign the Distributed Deep Learning Framework from Scratch | [primary](https://arxiv.org/abs/2110.15032) | `papers/inference/99-other-inference-systems/2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md` |
+| 9 | 0 | research | arXiv:2202.08906 | ST-MoE | [primary](https://arxiv.org/abs/2202.08906) | `papers/inference/99-other-inference-systems/2022-2202.08906-st-moe.md` |
+| 10 | 0 | research | arXiv:2206.03382 | Tutel: Adaptive Mixture-of-Experts at Scale | [primary](https://arxiv.org/abs/2206.03382) | `papers/inference/99-other-inference-systems/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md` |
+| 11 | 0 | research | arXiv:2210.12924 | OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks | [primary](https://arxiv.org/abs/2210.12924) | `papers/inference/99-other-inference-systems/2022-2210.12924-olla-optimizing-the-lifetime-and-location-of-arrays-to-reduce-the-memory-usage-of-neural-networks.md` |
+| 12 | 0 | research | arXiv:2302.08007 | With Shared Microexponents, A Little Shifting Goes a Long Way | [primary](https://arxiv.org/abs/2302.08007) | `papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md` |
+| 13 | 0 | research | arXiv:2305.11860 | Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs | [primary](https://arxiv.org/abs/2305.11860) | `papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-and-coding-with-llms.md` |
+| 14 | 0 | research | arXiv:2305.17888 | LLM-QAT: Data-Free Quantization Aware Training for Large Language Models | [primary](https://arxiv.org/abs/2305.17888) | `papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md` |
+| 15 | 0 | research | arXiv:2306.10209 | ZeRO++: Extremely Efficient Collective Communication for Giant Model Training | [primary](https://arxiv.org/abs/2306.10209) | `papers/inference/99-other-inference-systems/2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-training.md` |
+| 16 | 0 | research | arXiv:2308.13137 | OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models | [primary](https://arxiv.org/abs/2308.13137) | `papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-models.md` |
+| 17 | 0 | research | arXiv:2310.03003 | From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference | [primary](https://arxiv.org/abs/2310.03003) | `papers/inference/99-other-inference-systems/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-model-inference.md` |
+| 18 | 0 | research | arXiv:2310.06694 | Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning | [primary](https://arxiv.org/abs/2310.06694) | `papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pruning.md` |
+| 19 | 0 | research | arXiv:2310.07096 | Sparse Universal Transformer | [primary](https://arxiv.org/abs/2310.07096) | `papers/inference/99-other-inference-systems/2023-2310.07096-sparse-universal-transformer.md` |
+| 20 | 0 | research | arXiv:2310.09259 | QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models | [primary](https://arxiv.org/abs/2310.09259) | `papers/inference/99-other-inference-systems/2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-models.md` |
+| 21 | 0 | research | arXiv:2311.01927 | GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling | [primary](https://arxiv.org/abs/2311.01927) | `papers/inference/99-other-inference-systems/2023-2311.01927-gateloop-fully-data-controlled-linear-recurrence-for-sequence-modeling.md` |
+| 22 | 0 | research | arXiv:2312.12682 | Mini-GPTs: Efficient Large Language Models through Contextual Pruning | [primary](https://arxiv.org/abs/2312.12682) | `papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md` |
+| 23 | 0 | research | arXiv:2401.00134 | Unicron: Economizing Self-Healing LLM Training at Scale | [primary](https://arxiv.org/abs/2401.00134) | `papers/inference/99-other-inference-systems/2024-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md` |
+| 24 | 0 | research | arXiv:2401.06118 | Extreme Compression of Large Language Models via Additive Quantization | [primary](https://arxiv.org/abs/2401.06118) | `papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md` |
+| 25 | 0 | research | arXiv:2401.10480 | Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning | [primary](https://arxiv.org/abs/2401.10480) | `papers/inference/99-other-inference-systems/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reasoning.md` |
+| 26 | 0 | research | arXiv:2402.02446 | LQER: Low-Rank Quantization Error Reconstruction for LLMs | [primary](https://arxiv.org/abs/2402.02446) | `papers/inference/99-other-inference-systems/2024-2402.02446-lqer-low-rank-quantization-error-reconstruction-for-llms.md` |
+| 27 | 0 | research | arXiv:2402.05109 | Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding | [primary](https://arxiv.org/abs/2402.05109) | `papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md` |
+| 28 | 0 | research | arXiv:2402.10517 | Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs | [primary](https://arxiv.org/abs/2402.10517) | `papers/inference/99-other-inference-systems/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md` |
+| 29 | 0 | research | arXiv:2402.11700 | Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers | [primary](https://arxiv.org/abs/2402.11700) | `papers/inference/99-other-inference-systems/2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-layers.md` |
+| 30 | 0 | research | arXiv:2402.13720 | Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding | [primary](https://arxiv.org/abs/2402.13720) | `papers/inference/99-other-inference-systems/2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculative-decoding.md` |
+| 31 | 0 | research | arXiv:2402.17463 | Training-Free Long-Context Scaling of Large Language Models | [primary](https://arxiv.org/abs/2402.17463) | `papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md` |
+| 32 | 0 | research | arXiv:2402.18096 | No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization | [primary](https://arxiv.org/abs/2402.18096) | `papers/inference/99-other-inference-systems/2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-mixed-precision-quantization.md` |
+| 33 | 0 | research | arXiv:2403.01241 | IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact | [primary](https://arxiv.org/abs/2403.01241) | `papers/inference/99-other-inference-systems/2024-2403.01241-intactkv-improving-large-language-model-quantization-by-keeping-pivot-tokens-intact.md` |
+| 34 | 0 | research | arXiv:2403.05821 | Optimizing LLM Queries in Relational Data Analytics Workloads | [primary](https://arxiv.org/abs/2403.05821) | `papers/inference/99-other-inference-systems/2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md` |
+| 35 | 0 | research | arXiv:2403.09054 | Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference | [primary](https://arxiv.org/abs/2403.09054) | `papers/inference/99-other-inference-systems/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-generative-inference.md` |
+| 36 | 0 | research | arXiv:2403.15388 | LLaVA-Prumerge: Adaptive Token Reduction for Efficient Large Multimodal Models | [primary](https://arxiv.org/abs/2403.15388) | `papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-models.md` |
+| 37 | 0 | research | arXiv:2403.20306 | Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference | [primary](https://arxiv.org/abs/2403.20306) | `papers/inference/99-other-inference-systems/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-inference.md` |
+| 38 | 0 | research | arXiv:2404.02258 | Mixture-of-Depths: Dynamically allocating compute in transformer-based language models | [primary](https://arxiv.org/abs/2404.02258) | `papers/inference/02-adaptive-expert-computation-compression/2024-2404.02258-mixture-of-depths-dynamic-compute.md` |
+| 39 | 0 | research | arXiv:2404.03865 | FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping | [primary](https://arxiv.org/abs/2404.03865) | `papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-forward-skipping.md` |
+| 40 | 0 | research | arXiv:2404.07904 | HGRN2: Gated Linear RNNs with State Expansion | [primary](https://arxiv.org/abs/2404.07904) | `papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md` |
+| 41 | 0 | research | arXiv:2404.08856 | On Speculative Decoding for Multimodal Large Language Models | [primary](https://arxiv.org/abs/2404.08856) | `papers/inference/99-other-inference-systems/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md` |
+| 42 | 0 | research | arXiv:2404.14294 | A Survey on Efficient Inference for Large Language Models | [primary](https://arxiv.org/abs/2404.14294) | `papers/survey/03-inference-engines/2024-2404.14294-survey-efficient-inference-llms.md` |
+| 43 | 0 | research | arXiv:2405.12532 | PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference | [primary](https://arxiv.org/abs/2405.12532) | `papers/inference/99-other-inference-systems/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-inference.md` |
+| 44 | 0 | research | arXiv:2405.14366 | MiniCache: KV Cache Compression in Depth Dimension for Large Language Models | [primary](https://arxiv.org/abs/2405.14366) | `papers/inference/99-other-inference-systems/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-models.md` |
+| 45 | 0 | research | arXiv:2406.02500 | Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques | [primary](https://arxiv.org/abs/2406.02500) | `papers/inference/02-adaptive-expert-computation-compression/2024-2406.02500-towards-efficient-mixture-of-experts-holistic-compression.md` |
+| 46 | 0 | research | arXiv:2406.14066 | TurboSpec: Closed-loop Speculation Control System for Optimizing LLM Serving Goodput | [primary](https://arxiv.org/abs/2406.14066) | `papers/inference/99-other-inference-systems/2024-2406.14066-turbospec-closed-loop-speculation-control-system-for-optimizing-llm-serving-goodput.md` |
+| 47 | 0 | research | arXiv:2407.00945 | Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs | [primary](https://arxiv.org/abs/2407.00945) | `papers/inference/02-adaptive-expert-computation-compression/2024-2407.00945-efficient-expert-pruning.md` |
+| 48 | 0 | research | arXiv:2407.08454 | Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks | [primary](https://arxiv.org/abs/2407.08454) | `papers/inference/99-other-inference-systems/2024-2407.08454-model-tells-you-where-to-merge-adaptive-kv-cache-merging-for-llms-on-long-context-tasks.md` |
+| 49 | 0 | research | arXiv:2408.01803 | STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs | [primary](https://arxiv.org/abs/2408.01803) | `papers/inference/99-other-inference-systems/2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md` |
+| 50 | 0 | research | arXiv:2409.01141 | Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching | [primary](https://arxiv.org/abs/2409.01141) | `papers/inference/99-other-inference-systems/2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-grouped-query-attention-and-continuous-batching.md` |
+| 51 | 0 | research | arXiv:2409.10516 | RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval | [primary](https://arxiv.org/abs/2409.10516) | `papers/inference/10-kv-cache-offload-recomputation/2024-2409.10516-retrievalattention-vector-retrieval.md` |
+| 52 | 0 | research | arXiv:2410.06916 | SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration | [primary](https://arxiv.org/abs/2410.06916) | `papers/inference/99-other-inference-systems/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleration.md` |
+| 53 | 0 | research | arXiv:2411.04975 | SuffixDecoding: A Model-Free Approach to Speeding Up Large Language Model Inference | [primary](https://arxiv.org/abs/2411.04975) | `papers/inference/99-other-inference-systems/2024-2411.04975-suffixdecoding-a-model-free-approach-to-speeding-up-large-language-model-inference.md` |
+| 54 | 0 | research | arXiv:2412.04964 | Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference | [primary](https://arxiv.org/abs/2412.04964) | `papers/inference/99-other-inference-systems/2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-large-language-model-inference.md` |
+| 55 | 0 | research | arXiv:2412.17246 | Fast and Live Model Auto Scaling with O(1) Host Caching | [primary](https://arxiv.org/abs/2412.17246) | `papers/inference/99-other-inference-systems/2024-2412.17246-fast-and-live-model-auto-scaling-with-o-1-host-caching.md` |
+| 56 | 0 | research | arXiv:2502.04420 | KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference | [primary](https://arxiv.org/abs/2502.04420) | `papers/inference/99-other-inference-systems/2025-2502.04420-kvtuner-sensitivity-aware-layer-wise-mixed-precision-kv-cache-quantization-for-efficient-and-nearly-lossless-llm-inferen.md` |
+| 57 | 0 | research | arXiv:2502.10517 | KernelBench: Can LLMs Write Efficient GPU Kernels? | [primary](https://arxiv.org/abs/2502.10517) | `papers/inference/99-other-inference-systems/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md` |
+| 58 | 0 | research | arXiv:2502.15734 | Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation | [primary](https://arxiv.org/abs/2502.15734) | `papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-generation.md` |
+| 59 | 0 | research | arXiv:2503.00392 | Progressive Sparse Attention: Algorithm and System Co-design for Efficient Attention in LLM Serving | [primary](https://arxiv.org/abs/2503.00392) | `papers/inference/99-other-inference-systems/2025-2503.00392-progressive-sparse-attention-algorithm-and-system-co-design-for-efficient-attention-in-llm-serving.md` |
+| 60 | 0 | research | arXiv:2503.05248 | Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching | [primary](https://arxiv.org/abs/2503.05248) | `papers/inference/99-other-inference-systems/2025-2503.05248-optimizing-llm-inference-throughput-via-memory-aware-and-sla-constrained-dynamic-batching.md` |
+| 61 | 0 | research | arXiv:2504.08378 | Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash | [primary](https://arxiv.org/abs/2504.08378) | `papers/inference/99-other-inference-systems/2025-2504.08378-scaling-up-on-device-llms-via-active-weight-swapping-between-dram-and-flash.md` |
+| 62 | 0 | research | arXiv:2504.15720 | SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference | [primary](https://arxiv.org/abs/2504.15720) | `papers/inference/99-other-inference-systems/2025-2504.15720-seallm-service-aware-and-latency-optimized-resource-sharing-for-large-language-model-inference.md` |
+| 63 | 0 | research | arXiv:2505.13109 | FreeKV: Boosting KV Cache Retrieval for Efficient LLM Inference | [primary](https://arxiv.org/abs/2505.13109) | `papers/inference/99-other-inference-systems/2025-2505.13109-freekv-boosting-kv-cache-retrieval-for-efficient-llm-inference.md` |
+| 64 | 0 | research | arXiv:2505.24133 | R-KV: Redundancy-aware KV Cache Compression for Reasoning Models | [primary](https://arxiv.org/abs/2505.24133) | `papers/inference/99-other-inference-systems/2025-2505.24133-r-kv-redundancy-aware-kv-cache-compression-for-reasoning-models.md` |
+| 65 | 0 | research | arXiv:2506.07366 | MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing | [primary](https://www.semanticscholar.org/paper/b3d726f638aad791664917fc471740ff5c41eef9) | `papers/inference/99-other-inference-systems/2025-2506.07366-moe-gps-guidlines-for-prediction-strategy-for-dynamic-expert-duplication-in-moe-load-balancing.md` |
+| 66 | 0 | research | arXiv:2506.20187 | Breaking the Boundaries of Long-Context LLM Inference: Adaptive KV Management on a Single Commodity GPU | [primary](https://arxiv.org/abs/2506.20187) | `papers/inference/99-other-inference-systems/2025-2506.20187-breaking-the-boundaries-of-long-context-llm-inference-adaptive-kv-management-on-a-single-commodity-gpu.md` |
+| 67 | 0 | research | arXiv:2507.09019 | On Evaluating Performance of LLM Inference Systems | [primary](https://arxiv.org/abs/2507.09019) | `papers/inference/99-other-inference-systems/2025-2507.09019-on-evaluating-performance-of-llm-inference-systems.md` |
+| 68 | 0 | research | arXiv:2507.19427 | Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding | [primary](https://arxiv.org/abs/2507.19427) | `papers/inference/99-other-inference-systems/2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective-decoding.md` |
+| 69 | 0 | research | arXiv:2508.02520 | Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod | [primary](https://arxiv.org/abs/2508.02520) | `papers/inference/99-other-inference-systems/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md` |
+| 70 | 0 | research | arXiv:2508.18265 | InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency | [primary](https://arxiv.org/abs/2508.18265) | `papers/inference/99-other-inference-systems/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reasoning-and-efficiency.md` |
+| 71 | 0 | research | arXiv:2509.09420 | HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing | [primary](https://arxiv.org/abs/2509.09420) | `papers/inference/99-other-inference-systems/2025-2509.09420-hd-moe-hybrid-and-dynamic-parallelism-for-mixture-of-expert-llms-with-3d-near-memory-processing.md` |
+| 72 | 0 | research | arXiv:2509.17396 | EpiCache: Episodic KV Cache Management for Long-Term Conversation on Resource-Constrained Environments | [primary](https://arxiv.org/abs/2509.17396) | `papers/inference/99-other-inference-systems/2025-2509.17396-epicache-episodic-kv-cache-management-for-long-term-conversation-on-resource-constrained-environments.md` |
+| 73 | 0 | research | arXiv:2510.00615 | ACON: Optimizing Context Compression for Long-horizon LLM Agents | [primary](https://arxiv.org/abs/2510.00615) | `papers/inference/99-other-inference-systems/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md` |
+| 74 | 0 | research | arXiv:2510.08731 | When to Reason: Semantic Router for vLLM | [primary](https://arxiv.org/abs/2510.08731) | `papers/inference/99-other-inference-systems/2025-2510.08731-when-to-reason-semantic-router-for-vllm.md` |
+| 75 | 0 | research | arXiv:2510.13602 | NOSA: Native and Offloadable Sparse Attention | [primary](https://arxiv.org/abs/2510.13602) | `papers/inference/99-other-inference-systems/2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md` |
+| 76 | 0 | research | arXiv:2510.14973 | Attention Is All You Need for KV Cache in Diffusion LLMs | [primary](https://arxiv.org/abs/2510.14973) | `papers/inference/99-other-inference-systems/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md` |
+| 77 | 0 | research | arXiv:2510.20171 | Collective Communication for 100k+ GPUs | [primary](https://arxiv.org/abs/2510.20171) | `papers/inference/99-other-inference-systems/2025-2510.20171-collective-communication-for-100k-gpus.md` |
+| 78 | 0 | research | arXiv:2511.04805 | PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference | [primary](https://arxiv.org/abs/2511.04805) | `papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-sparse-merging-bitpacked.md` |
 | 79 | 0 | research | arXiv:2511.17560 | A3: Attention-Aware Accurate KV Cache Fusion for Fast Large Language Model Serving | [primary](https://arxiv.org/abs/2511.17560) | `papers/inference/99-other-inference-systems/2025-2511.17560-a3-attention-aware-accurate-kv-cache-fusion-for-fast-large-language-model-serving.md` |
 | 80 | 0 | research | arXiv:2512.14080 | SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations | [primary](https://arxiv.org/abs/2512.14080) | `papers/inference/99-other-inference-systems/2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md` |
 | 81 | 0 | research | arXiv:2601.05109 | Nalar: A Serving Framework for Agent Workflows | [primary](https://arxiv.org/abs/2601.05109) | `papers/inference/99-other-inference-systems/2026-2601.05109-nalar-a-serving-framework-for-agent-workflows.md` |
@@ -134,549 +134,549 @@ ready総数: **606** / 未claim総数: **459** / このworker向け: **153**
 | 115 | 0 | research | arXiv:2609.11687 | Structured Transforms for Low-Overhead Quantization of Language Models | [primary](https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331) | `papers/inference/99-other-inference-systems/2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md` |
 | 116 | 0 | research | arXiv:2609.12378 | An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference | [primary](https://arxiv.org/abs/2609.12378) | `papers/inference/99-other-inference-systems/2026-2609.12378-odin-fhe-privacy-preserving-llama-inference.md` |
 | 117 | 0 | research | arXiv:2609.13846 | Affinity-Aware Sharding for Delayed Tensor Parallelism | [primary](https://arxiv.org/abs/2609.13846) | `papers/inference/99-other-inference-systems/2026-2609.13846-affinity-aware-sharding-for-delayed-tensor-parallelism.md` |
-| 118 | 0 | research | arXiv:2609.15810 | VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention | [primary](https://www.semanticscholar.org/paper/d26fb643c9c194cb4d34bd660b031a61d5f72f5d) | `papers/inference/99-other-inference-systems/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md` |
-| 119 | 0 | research | arXiv:2609.19702 | Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation | [primary](https://www.semanticscholar.org/paper/54db2b227072dcee4790de99c581d51c7d3c17f7) | `papers/inference/99-other-inference-systems/2026-2609.19702-understanding-and-exploiting-diagonal-attention-sparsity-in-autoregressive-image-generation.md` |
-| 120 | 0 | research | arXiv:2609.22106 | PRQuant: Permutation Residual Quantization for Low-Overhead Inference | [primary](https://arxiv.org/abs/2609.22106) | `papers/inference/99-other-inference-systems/2026-2609.22106-prquant-permutation-residual-quantization-for-low-overhead-inference.md` |
-| 121 | 0 | research | arXiv:2609.25442 | WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning | [primary](https://arxiv.org/abs/2609.25442) | `papers/inference/99-other-inference-systems/2026-2609.25442-weightbridge-an-efficient-weight-transfer-library-for-reinforcement-learning.md` |
-| 122 | 0 | research | arXiv:2609.31415 | Evaluating the accuracy of KV cache reuse techniques | [primary](https://arxiv.org/abs/2609.31415) | `papers/inference/99-other-inference-systems/2026-2609.31415-evaluating-the-accuracy-of-kv-cache-reuse-techniques.md` |
-| 123 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
-| 124 | 0 | research | DOI:10.1016/j.neunet.2026.109469 | DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models | [primary](https://doi.org/10.1016/j.neunet.2026.109469) | `papers/training/01-training-offload-memory-systems/2026-dr-eft-domain-representative-expert-finetuning.md` |
-| 125 | 0 | research | DOI:10.1109/CCGrid68966.2026.00014 | Quicktopia: Iteration-Level GPU Frequency Control for Energy–Latency Co-Optimization in LLM Inference | [primary](https://www.semanticscholar.org/paper/88a222b2340b8906e15edd5efd58293b25fc38ce) | `papers/inference/99-other-inference-systems/2020-2026.00014-quicktopia-iteration-level-gpu-frequency-control-for-energylatency-co-optimization-in-llm-inference.md` |
-| 126 | 0 | research | DOI:10.1109/ICC59461.2026.11587970 | InKubeator: Pre-warming In-Memory KV Caches from Disk for Elastic LLM Serving | [primary](https://doi.org/10.1109/ICC59461.2026.11587970) | `papers/inference/99-other-inference-systems/2026-805ee7ad7ae4-inkubeator-pre-warming-in-memory-kv-caches-from-disk-for-elastic-llm-serving.md` |
-| 127 | 0 | research | DOI:10.1109/IMNS67862.2026.11655252 | Characterizing Predictability–Latency Trade-offs of KV-Cache SSD Offloading in LMCache for LLM Serving Systems | [primary](https://doi.org/10.1109/IMNS67862.2026.11655252) | `papers/inference/10-kv-cache-offload-recomputation/2026-lmcache-kv-cache-ssd-offloading-predictability-latency.md` |
-| 128 | 0 | research | DOI:10.1109/INFOCOM59046.2026.11571717 | SemCache: Semantic-Aware Cache Sharing for Efficient Multi-User LoRA-Adapted LLM Inference at the Edge | [primary](https://doi.org/10.1109/INFOCOM59046.2026.11571717) | `papers/inference/99-other-inference-systems/2026-7056d9defe0d-semcache-semantic-aware-cache-sharing-for-efficient-multi-user-lora-adapted-llm-inference-at-the-edge.md` |
-| 129 | 0 | research | DOI:10.1109/JCC72984.2026.00058 | UNAS: Urgency- and Fairness-Aware Scheduling for SLO-Oriented LLM Serving | [primary](https://doi.org/10.1109/JCC72984.2026.00058) | `papers/inference/99-other-inference-systems/2020-2026.00058-unas-urgency-and-fairness-aware-scheduling-for-slo-oriented-llm-serving.md` |
-| 130 | 0 | research | DOI:10.1109/LCA.2026.3660969 | H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference | [primary](https://doi.org/10.1109/LCA.2026.3660969) | `papers/inference/99-other-inference-systems/2026-27b000808907-h3-hybrid-architecture-using-high-bandwidth-memory-and-high-bandwidth-flash-for-cost-efficient-llm-inference.md` |
-| 131 | 0 | research | DOI:10.1109/NVMSA71223.2026.11658877 | Poster: SAF: Semantic-Aware Flushing for Latency and Jitter Suppression in Continuous VLA Inference on Edge Devices | [primary](https://doi.org/10.1109/NVMSA71223.2026.11658877) | `papers/inference/10-kv-cache-offload-recomputation/2026-saf-semantic-aware-flushing-kv-nvme-edge.md` |
-| 132 | 0 | research | DOI:10.1109/TMC.2026.3697502 | CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving | [primary](https://www.semanticscholar.org/paper/b55f24c3e3257011b8dc6ea308c4f54242ab7e53) | `papers/inference/99-other-inference-systems/2026-392ca7562b95-calsi-context-aware-layer-skipping-inference-for-on-device-llm-serving.md` |
-| 133 | 0 | research | DOI:10.1109/TPDS.2026.3729988 | FairCache: Demystifying Cache-Induced Unfairness in Multi-Tenant Large Language Model Serving | [primary](https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a) | `papers/inference/99-other-inference-systems/2026-e490b2439d3f-faircache-demystifying-cache-induced-unfairness-in-multi-tenant-large-language-model-serving.md` |
-| 134 | 0 | research | DOI:10.1145/3552326.3587438 | Tabi: An Efficient Multi-Level Inference System for Large Language Models | [primary](https://doi.org/10.1145/3552326.3587438) | `papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md` |
-| 135 | 0 | research | DOI:10.1145/3600006.3613175 | Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling | [primary](https://doi.org/10.1145/3600006.3613175) | `papers/inference/99-other-inference-systems/2026-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md` |
-| 136 | 0 | research | DOI:10.1145/3620666.3651329 | Characterizing Power Management Opportunities for LLMs in the Cloud | [primary](https://doi.org/10.1145/3620666.3651329) | `papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md` |
-| 137 | 0 | research | DOI:10.1145/3642970.3655844 | ALTO: An Efficient Network Orchestrator for Compound AI Systems | [primary](https://doi.org/10.1145/3642970.3655844) | `papers/inference/99-other-inference-systems/2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md` |
-| 138 | 0 | research | DOI:10.1145/3689031.3696072 | Fast State Restoration in LLM Serving with HCache | [primary](https://doi.org/10.1145/3689031.3696072) | `papers/inference/99-other-inference-systems/0000-c57896a0996e-fast-state-restoration-in-llm-serving-with-hcache.md` |
-| 139 | 0 | research | DOI:10.1145/3712285.3759903 | Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching | [primary](https://doi.org/10.1145/3712285.3759903) | `papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md` |
-| 140 | 0 | research | DOI:10.1145/3731569.3764823 | Jenga: Effective Memory Management for Serving LLM with Heterogeneity | [primary](https://doi.org/10.1145/3731569.3764823) | `papers/inference/99-other-inference-systems/0000-c5994a53cb83-jenga-effective-memory-management-for-serving-llm-with-heterogeneity.md` |
-| 141 | 0 | research | DOI:10.1145/3772052.3772264 | Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment | [primary](https://doi.org/10.1145/3772052.3772264) | `papers/inference/99-other-inference-systems/2025-6987e5a4e5ec-cauchy-a-cost-efficient-llm-serving-system-through-adaptive-heterogeneous-deployment.md` |
-| 142 | 0 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
-| 143 | 0 | research | DOI:10.1145/3789240.3822569 | Memory as a First‑Class Resource in AI‑Factory Simulation | [primary](https://www.semanticscholar.org/paper/ab6071dcfef2e4a7092fdb5866e5a34485b28d51) | `papers/inference/99-other-inference-systems/2026-739d27a164e4-memory-as-a-firstclass-resource-in-aifactory-simulation.md` |
-| 144 | 0 | research | DOI:10.1145/3789240.3829347 | DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving | [primary](https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241) | `papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md` |
-| 145 | 0 | research | DOI:10.1145/3805621.3807651 | Hardware-Aware Co-Design of Multi-Chip LLM Serving via Performance Modeling | [primary](https://doi.org/10.1145/3805621.3807651) | `papers/inference/99-other-inference-systems/2026-dae506ee161c-hardware-aware-co-design-of-multi-chip-llm-serving-via-performance-modeling.md` |
-| 146 | 0 | research | DOI:10.1145/3821219 | AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism | [primary](https://doi.org/10.1145/3821219) | `papers/inference/99-other-inference-systems/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-memory-allocation-mechanism.md` |
-| 147 | 0 | research | DOI:10.1145/3832810.3832827 | ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape | [primary](https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80) | `papers/inference/99-other-inference-systems/2026-ef0cbb7f0917-reliefserve-relieving-gpu-pressure-in-multi-model-serving-via-selective-cpu-escape.md` |
-| 148 | 0 | research | DOI:10.1145/3832810.3832865 | WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model | [primary](https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056) | `papers/inference/99-other-inference-systems/2026-eb0724db43f1-waq-llm-optimizing-multi-instance-llm-deployment-via-workload-aware-queueing-model.md` |
-| 149 | 0 | research | DOI:10.1145/3832810.3832894 | Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference | [primary](https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb) | `papers/inference/99-other-inference-systems/2026-c4e6405cec16-cross-layer-performance-analysis-of-single-gpu-large-language-model-inference.md` |
-| 150 | 0 | research | DOI:10.18653/v1/2021.naacl-industry.15 | LightSeq: A High Performance Inference Library for Transformers | [primary](https://doi.org/10.18653/v1/2021.naacl-industry.15) | `papers/inference/99-other-inference-systems/0000-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md` |
-| 151 | 0 | research | DOI:10.21203/rs.3.rs-10952127/v1 | Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs | [primary](https://doi.org/10.21203/rs.3.rs-10952127/v1) | `papers/inference/99-other-inference-systems/2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.md` |
-| 152 | 0 | research | DOI:10.5281/zenodo.22339206 | A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026) | [primary](https://doi.org/10.5281/zenodo.22339206) | `papers/inference/99-other-inference-systems/2026-f8b8eb9da2fe-a-survey-of-inference-processing-units-for-large-language-model-inference-chips-systems-algorithms-and-paradigms-2024202.md` |
-| 153 | 0 | research | SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945 | LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation | [primary](https://www.semanticscholar.org/paper/7945684818786fcb32cf92bace2566d7d6bc8945) | `papers/inference/99-other-inference-systems/2026-6793b18ad544-legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation.md` |
+| 118 | 0 | research | arXiv:2609.16503 | Dense to MoE Adaptation for Compact Vision Language Action Policies | [primary](https://arxiv.org/abs/2609.16503) | `papers/inference/02-adaptive-expert-computation-compression/2026-2609.16503-adade-dynamic-expert-deactivation.md` |
+| 119 | 0 | research | arXiv:2609.21450 | Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals | [primary](https://www.semanticscholar.org/paper/4bc350d63aeade610b2ffccc236935ac34647a3d) | `papers/inference/99-other-inference-systems/2026-2609.21450-understanding-llm-quantization-through-activation-guided-compensation-and-orthogonal-residuals.md` |
+| 120 | 0 | research | arXiv:2609.22158 | StepKV: Step-Aware KV Cache Compression for LLM Agents | [primary](https://arxiv.org/abs/2609.22158) | `papers/inference/99-other-inference-systems/2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md` |
+| 121 | 0 | research | arXiv:2609.25916 | Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement | [primary](https://www.semanticscholar.org/paper/21bd7e3b09e4e1b7a72197bcca5e270539335449) | `papers/inference/99-other-inference-systems/2026-2609.25916-beyond-scalar-sensitivity-activation-aware-mixed-precision-llm-quantization-with-cross-layer-refinement.md` |
+| 122 | 0 | research | arXiv:2609.33184 | Resource-Efficient Speculative Decoding for Long-Context LLM Serving | [primary](https://arxiv.org/abs/2609.33184) | `papers/inference/99-other-inference-systems/2026-2609.33184-resource-efficient-speculative-decoding-for-long-context-llm-serving.md` |
+| 123 | 0 | research | DOI:10.1016/j.knosys.2026.116244 | RS-MoE: Coupled expert compression via activation-peak guided collaborative decomposition | [primary](https://doi.org/10.1016/j.knosys.2026.116244) | `papers/inference/02-adaptive-expert-computation-compression/2026-rs-moe-coupled-expert-compression.md` |
+| 124 | 0 | research | DOI:10.1016/j.parco.2026.103216 | SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving | [primary](https://doi.org/10.1016/j.parco.2026.103216) | `papers/inference/11-llm-serving-scheduling-disaggregation/2026-smartbatchllm-adaptive-hybrid-batching.md` |
+| 125 | 0 | research | DOI:10.1109/ICAISISAS68969.2026.11567792 | TDMoE: Tail-probability-based Dynamic-k MoE | [primary](https://doi.org/10.1109/ICAISISAS68969.2026.11567792) | `papers/inference/02-adaptive-expert-computation-compression/2026-tdmoe-tail-probability-dynamic-k.md` |
+| 126 | 0 | research | DOI:10.1109/ICWS72778.2026.00129 | QueueBreak: A Trace-to-Diagnosis Pipeline for Tail Latency in Agentic LLM Services | [primary](https://www.semanticscholar.org/paper/aa516e10879a6aa96b08ffd635832854788de3a5) | `papers/inference/99-other-inference-systems/2020-2026.00129-queuebreak-a-trace-to-diagnosis-pipeline-for-tail-latency-in-agentic-llm-services.md` |
+| 127 | 0 | research | DOI:10.1109/INFOCOM59046.2026.11571388 | CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference | [primary](https://www.semanticscholar.org/paper/cfe4e4e23b47ae91c7bcb42dba0236152645918a) | `papers/inference/99-other-inference-systems/2026-34f343c5dcff-cosine-enhancing-llm-serving-via-collaborative-and-decoupled-speculative-inference.md` |
+| 128 | 0 | research | DOI:10.1109/isca59077.2024.00082 | LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference | [primary](https://doi.org/10.1109/isca59077.2024.00082) | `papers/inference/99-other-inference-systems/0000-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-inference.md` |
+| 129 | 0 | research | DOI:10.1109/JIOT.2026.3709703 | Co-Optimizing Request Scheduling and KV Caching for Edge LLM Serving | [primary](https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2) | `papers/inference/99-other-inference-systems/2026-de817f8d0333-co-optimizing-request-scheduling-and-kv-caching-for-edge-llm-serving.md` |
+| 130 | 0 | research | DOI:10.1109/LCA.2026.3703982 | HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference | [primary](https://ieeexplore.ieee.org/document/11568525/) | `papers/inference/99-other-inference-systems/2026-a21e1445aad5-hbm-hbf-centric-memory-pooling-architecture-with-custom-base-die-for-terabyte-scale-llm-inference.md` |
+| 131 | 0 | research | DOI:10.1109/TCAD.2025.3648674 | DuoPIM: RRAM–DRAM Hybrid PIM Acceleration for Flexible-Batch LLM Decoding | [primary](https://www.semanticscholar.org/paper/bccca75ef45fe933f099b3ff1fd54d7a8077b8c1) | `papers/inference/99-other-inference-systems/2026-930e81a91eca-duopim-rramdram-hybrid-pim-acceleration-for-flexible-batch-llm-decoding.md` |
+| 132 | 0 | research | DOI:10.1109/TNET.2024.3355010 | DistMind: Efficient Resource Disaggregation for Deep Learning Workloads | [primary](https://www.semanticscholar.org/paper/1112ac74f9299838c8a354f778fbbfd951dfc50c) | `papers/inference/99-other-inference-systems/2026-d66009615d04-distmind-efficient-resource-disaggregation-for-deep-learning-workloads.md` |
+| 133 | 0 | research | DOI:10.1145/3341301.3359646 | PipeDream: generalized pipeline parallelism for DNN training | [primary](https://doi.org/10.1145/3341301.3359646) | `papers/inference/99-other-inference-systems/2026-ad68cc79ebe7-pipedream-generalized-pipeline-parallelism-for-dnn-training.md` |
+| 134 | 0 | research | DOI:10.1145/3600006.3613145 | GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints | [primary](https://doi.org/10.1145/3600006.3613145) | `papers/inference/99-other-inference-systems/0000-075d73797107-gemini-fast-failure-recovery-in-distributed-training-with-in-memory-checkpoints.md` |
+| 135 | 0 | research | DOI:10.1145/3606557.3606559 | Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center | [primary](https://doi.org/10.1145/3606557.3606559) | `papers/inference/99-other-inference-systems/0000-47de7e2f8a1f-make-it-real-an-end-to-end-implementation-of-a-physically-disaggregated-data-center.md` |
+| 136 | 0 | research | DOI:10.1145/3620666.3651380 | NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing | [primary](https://doi.org/10.1145/3620666.3651380) | `papers/inference/99-other-inference-systems/0000-53abd3a104f5-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md` |
+| 137 | 0 | research | DOI:10.1145/3662006.3662067 | Hybrid SLM and LLM for Edge-Cloud Collaborative Inference | [primary](https://doi.org/10.1145/3662006.3662067) | `papers/inference/99-other-inference-systems/2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md` |
+| 138 | 0 | research | DOI:10.1145/3690624.3709196 | ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration | [primary](https://doi.org/10.1145/3690624.3709196) | `papers/inference/99-other-inference-systems/0000-097fa558562e-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md` |
+| 139 | 0 | research | DOI:10.1145/3725338 | PQCache: Product Quantization-based KVCache for Long Context LLM Inference | [primary](https://doi.org/10.1145/3725338) | `papers/inference/99-other-inference-systems/0000-24362ae4b461-pqcache-product-quantization-based-kvcache-for-long-context-llm-inference.md` |
+| 140 | 0 | research | DOI:10.1145/3731569.3764834 | PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications | [primary](https://doi.org/10.1145/3731569.3764834) | `papers/inference/99-other-inference-systems/0000-cc54e0b027f8-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md` |
+| 141 | 0 | research | DOI:10.1145/3773772 | Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving | [primary](https://doi.org/10.1145/3773772) | `papers/inference/99-other-inference-systems/0000-aa24341e05f1-mooncake-a-kvcache-centric-disaggregated-architecture-for-llm-serving.md` |
+| 142 | 0 | research | doi:10.1145/3788106 | Towards Scalable Storage Architectures for GPU Clusters Running Large Language Models | [primary](https://doi.org/10.1145/3788106) | `papers/inference/99-other-inference-systems/2026-80288018997a-towards-scalable-storage-architectures-for-gpu-clusters-running-large-language-models.md` |
+| 143 | 0 | research | DOI:10.1145/3789240.3828750 | ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference | [primary](https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22) | `papers/inference/99-other-inference-systems/2026-5d556af29afc-ark-avoiding-routing-collisions-for-kv-cache-transfer-in-disaggregated-llm-inference.md` |
+| 144 | 0 | research | DOI:10.1145/3789240.3830285 | POSTER: Prediction-Enhanced Expert Prefetching and Eviction for MoE Offloading via PRED-MoE | [primary](https://doi.org/10.1145/3789240.3830285) | `papers/inference/03-expert-prefetch/2026-pred-moe-prefetch-eviction.md` |
+| 145 | 0 | research | DOI:10.1145/3806645.3807596 | Scaling Attention Beyond GPUs for LLM Inference | [primary](https://www.semanticscholar.org/paper/04f3ee7dd762dff9b6aad25bfb930e1984f74a09) | `papers/inference/99-other-inference-systems/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md` |
+| 146 | 0 | research | DOI:10.1145/3830086 | CELLServe: An SLO-Aware and Cost Efficient LLMs Serving System for Serverless Computing Environments | [primary](https://doi.org/10.1145/3830086) | `papers/inference/11-llm-serving-scheduling-disaggregation/2026-cellserve-serverless-pd-disaggregation.md` |
+| 147 | 0 | research | DOI:10.1145/3832810.3832840 | RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency | [primary](https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db) | `papers/inference/99-other-inference-systems/2026-a9f776eee2e3-rpsc-robust-llm-scheduling-by-tolerating-prediction-inaccuracy-and-mitigating-tail-latency.md` |
+| 148 | 0 | research | DOI:10.1145/3832810.3832866 | AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation | [primary](https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9) | `papers/inference/99-other-inference-systems/2026-c24278db090c-asymflow-enabling-long-context-llm-serving-via-cpu-gpu-prefill-decode-disaggregation.md` |
+| 149 | 0 | research | DOI:10.1145/3838177.3841735 | Congestion-Aware Serving of Agentic LLM Applications | [primary](https://www.semanticscholar.org/paper/adc66da23cd03d90f351c1db39703742f0ec85d9) | `papers/inference/99-other-inference-systems/2026-80e75f6f533b-congestion-aware-serving-of-agentic-llm-applications.md` |
+| 150 | 0 | research | DOI:10.18653/v1/2023.emnlp-main.298 | GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints | [primary](https://aclanthology.org/2023.emnlp-main.298/) | `papers/inference/99-other-inference-systems/0000-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-checkpoints.md` |
+| 151 | 0 | research | DOI:10.24963/ijcai.2026/657 | DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading | [primary](https://doi.org/10.24963/ijcai.2026/657) | `papers/inference/03-expert-prefetch/2026-domoe-domain-aware-semantic-expert-prediction.md` |
+| 152 | 0 | research | OpenAlex:W7165293849 | Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale | [primary](https://hdl.handle.net/10919/143438) | `papers/inference/99-other-inference-systems/2026-2f1f58b49e98-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-scale.md` |
+| 153 | 0 | research | SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38 | GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism | [primary](https://www.semanticscholar.org/paper/d79a26226393f687ddbc375e32055b40b8ad8d38) | `papers/inference/99-other-inference-systems/2026-e5d747247a09-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-parallelism.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **6875** / このworker向け: **500**
+未判定総数: **7909** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
-| 1 | 0 | arXiv:0902.0271 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/0902.0271) |
-| 2 | 0 | arXiv:1202.3974 |  |  |  |  | 1 | MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード | [source](https://arxiv.org/abs/1202.3974) |
-| 3 | 0 | arXiv:1205.6711 |  |  |  |  | 1 | kv-cache | [source](https://arxiv.org/abs/1205.6711) |
-| 4 | 0 | arXiv:1211.3711 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1211.3711) |
-| 5 | 0 | arXiv:1212.1609 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1212.1609) |
-| 6 | 0 | arXiv:1307.2118 |  |  |  |  | 1 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1307.2118) |
-| 7 | 0 | arXiv:1312.6114 |  |  |  |  | 2 | serving-disaggregation | [source](https://arxiv.org/abs/1312.6114) |
-| 8 | 0 | arXiv:1404.5997 |  |  |  |  | 2 | inference-systems, その他システム研究 | [source](https://arxiv.org/abs/1404.5997) |
-| 9 | 0 | arXiv:1406.7362 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1406.7362) |
-| 10 | 0 | arXiv:1410.0510 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1410.0510) |
-| 11 | 0 | arXiv:1411.1792 |  |  |  |  | 1 | MoE inference systems / expert parallelism / model compression / knowledge distillation | [source](https://arxiv.org/abs/1411.1792) |
-| 12 | 0 | arXiv:1412.6553 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1412.6553) |
-| 13 | 0 | arXiv:1502.05698 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1502.05698) |
-| 14 | 0 | arXiv:1505.05571 |  |  |  |  | 1 | MoE数値再現性・決定論的推論・実行時互換性 | [source](https://arxiv.org/abs/1505.05571) |
-| 15 | 0 | arXiv:1506.03099 |  |  |  |  | 1 | MoE expert offloading / predictive prefetch and cache management | [source](https://arxiv.org/abs/1506.03099) |
-| 16 | 0 | arXiv:1507.06149 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1507.06149) |
-| 17 | 0 | arXiv:1511.01837 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1511.01837) |
-| 18 | 0 | arXiv:1511.05950 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/1511.05950) |
-| 19 | 0 | arXiv:1511.06744 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1511.06744) |
-| 20 | 0 | arXiv:1511.08228 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1511.08228) |
-| 21 | 0 | arXiv:1512.06890 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/1512.06890) |
-| 22 | 0 | arXiv:1602.01528 |  |  |  |  | 1 | オフロード／階層メモリ | [source](https://arxiv.org/abs/1602.01528) |
-| 23 | 0 | arXiv:1602.02830 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/1602.02830) |
-| 24 | 0 | arXiv:1603.04467 |  |  |  |  | 2 | GPU Kernel Framework, inference-systems | [source](https://arxiv.org/abs/1603.04467) |
-| 25 | 0 | arXiv:1603.05691 |  |  |  |  | 1 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/1603.05691) |
-| 26 | 0 | arXiv:1604.01696 |  |  |  |  | 1 | MoE inference systems / expert parallelism / model compression / knowledge distillation | [source](https://arxiv.org/abs/1604.01696) |
-| 27 | 0 | arXiv:1606.02891 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/1606.02891) |
-| 28 | 0 | arXiv:1607.06450 |  |  |  |  | 14 | Conditional Computation, GPU Kernel Framework, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, adaptive expert computation / compression; end-side sparse MoE, confidential inference / trusted execution environment / split inference / differential privacy, inference-systems, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/1607.06450) |
-| 29 | 0 | arXiv:1608.08710 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/1608.08710) |
-| 30 | 0 | arXiv:1609.09548 |  |  |  |  | 1 | 先頭共有・鍵値キャッシュ・検索拡張生成・要求処理順・組合せ最適化 | [source](https://arxiv.org/abs/1609.09548) |
-| 31 | 0 | arXiv:1611.01540 |  |  |  |  | 1 | Adaptive Expert Computation / Compression | [source](https://arxiv.org/abs/1611.01540) |
-| 32 | 0 | arXiv:1611.01600 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1611.01600) |
-| 33 | 0 | arXiv:1612.04426 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1612.04426) |
-| 34 | 0 | arXiv:1701.03499 |  |  |  |  | 1 | NPU-PIM統合メモリ、近データ処理、LLM推論メモリ階層。NeuPIMs、IANUS、FACILの静的配置を動的実行へ拡張する。 | [source](https://arxiv.org/abs/1701.03499) |
-| 35 | 0 | arXiv:1702.03044 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1702.03044) |
-| 36 | 0 | arXiv:1703.03664 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1703.03664) |
-| 37 | 0 | arXiv:1703.09844 |  |  |  |  | 2 | Conditional Computation | [source](https://arxiv.org/abs/1703.09844) |
-| 38 | 0 | arXiv:1704.04683 |  |  |  |  | 7 | MoE inference systems / expert parallelism / model compression / knowledge distillation, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, early-exit-offloading-self-speculative-decoding, moe-parallelism-communication | [source](https://arxiv.org/abs/1704.04683) |
-| 39 | 0 | arXiv:1704.07535 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1704.07535) |
-| 40 | 0 | arXiv:1705.06963 |  |  |  |  | 1 | survey-moe-inference-optimization | [source](https://arxiv.org/abs/1705.06963) |
-| 41 | 0 | arXiv:1707.01873 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1707.01873) |
-| 42 | 0 | arXiv:1709.00103 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1709.00103) |
-| 43 | 0 | arXiv:1709.09582 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1709.09582) |
-| 44 | 0 | arXiv:1710.10723 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1710.10723) |
-| 45 | 0 | arXiv:1711.03936 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1711.03936) |
-| 46 | 0 | arXiv:1712.01312 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1712.01312) |
-| 47 | 0 | arXiv:1712.07040 |  |  |  |  | 2 | KV Cache Offload / Recomputation | [source](https://arxiv.org/abs/1712.07040) |
-| 48 | 0 | arXiv:1802.04730 |  |  |  |  | 2 | GPU Kernel Framework, 大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化 | [source](https://arxiv.org/abs/1802.04730) |
-| 49 | 0 | arXiv:1802.06509 |  |  |  |  | 1 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/1802.06509) |
-| 50 | 0 | arXiv:1802.08770 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1802.08770) |
-| 51 | 0 | arXiv:1803.05407 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1803.05407) |
-| 52 | 0 | arXiv:1803.08494 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1803.08494) |
-| 53 | 0 | arXiv:1804.06028 |  |  |  |  | 1 | CPU長文推論・近似注意 | [source](https://arxiv.org/abs/1804.06028) |
-| 54 | 0 | arXiv:1805.00907 |  |  |  |  | 2 | GPU Kernel Framework, inference-systems | [source](https://arxiv.org/abs/1805.00907) |
-| 55 | 0 | arXiv:1805.06085 |  |  |  |  | 7 | LLM inference surveys、roofline performance analysis, LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, cpu-ssd-offload, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/1805.06085) |
-| 56 | 0 | arXiv:1806.00187 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/1806.00187) |
-| 57 | 0 | arXiv:1806.08159 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/1806.08159) |
-| 58 | 0 | arXiv:1807.09810 |  |  |  |  | 1 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction | [source](https://arxiv.org/abs/1807.09810) |
-| 59 | 0 | arXiv:1808.04444 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1808.04444) |
-| 60 | 0 | arXiv:1808.08745 |  |  |  |  | 13 | KV cache eviction / heavy hitters / sparse attention / efficient inference, Offload / Hierarchical Memory, inference-systems, llm-serving-scheduling-disaggregation, offload-hierarchical-memory, オフロード／階層メモリ, 投機的デコード・バッチ推論, 端末LLM・ニューロン疎性・階層メモリ推論 | [source](https://arxiv.org/abs/1808.08745) |
-| 61 | 0 | arXiv:1808.10792 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1808.10792) |
-| 62 | 0 | arXiv:1809.08887 |  |  |  |  | 3 | 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/1809.08887) |
-| 63 | 0 | arXiv:1809.11096 |  |  |  |  | 1 | kv-cache-optimization-compression | [source](https://arxiv.org/abs/1809.11096) |
-| 64 | 0 | arXiv:1810.03264 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/1810.03264) |
-| 65 | 0 | arXiv:1810.09305 |  |  |  |  | 1 | other-inference-systems | [source](https://arxiv.org/abs/1810.09305) |
-| 66 | 0 | arXiv:1811.00783 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1811.00783) |
-| 67 | 0 | arXiv:1811.02883 |  |  |  |  | 6 | GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計, LLM inference simulation / disaggregated serving / performance modeling, Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation, hardware-accelerators, inference-systems | [source](https://arxiv.org/abs/1811.02883) |
-| 68 | 0 | arXiv:1811.05233 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/1811.05233) |
-| 69 | 0 | arXiv:1812.01608 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1812.01608) |
-| 70 | 0 | arXiv:1901.03429 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1901.03429) |
-| 71 | 0 | arXiv:1901.08634 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1901.08634) |
-| 72 | 0 | arXiv:1902.03383 |  |  |  |  | 2 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/1902.03383) |
-| 73 | 0 | arXiv:1902.06822 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1902.06822) |
-| 74 | 0 | arXiv:1902.09506 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/1902.09506) |
-| 75 | 0 | arXiv:1903.00089 |  |  |  |  | 1 | MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/1903.00089) |
-| 76 | 0 | arXiv:1903.04611 |  |  |  |  | 1 | 01-offload-hierarchical-memory | [source](https://arxiv.org/abs/1903.04611) |
-| 77 | 0 | arXiv:1903.09588 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1903.09588) |
-| 78 | 0 | arXiv:1904.01145 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/1904.01145) |
-| 79 | 0 | arXiv:1904.06376 |  |  |  |  | 1 | survey-low-bit-llm | [source](https://arxiv.org/abs/1904.06376) |
-| 80 | 0 | arXiv:1904.09675 |  |  |  |  | 2 | other-inference-systems | [source](https://arxiv.org/abs/1904.09675) |
-| 81 | 0 | arXiv:1905.00537 |  |  |  |  | 2 | MoE inference systems / expert parallelism / model compression / knowledge distillation | [source](https://arxiv.org/abs/1905.00537) |
-| 82 | 0 | arXiv:1905.05702 |  |  |  |  | 3 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計, Sparse Attention, inference-systems | [source](https://arxiv.org/abs/1905.05702) |
-| 83 | 0 | arXiv:1905.07799 |  |  |  |  | 2 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://arxiv.org/abs/1905.07799) |
-| 84 | 0 | arXiv:1905.11259 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1905.11259) |
-| 85 | 0 | arXiv:1906.00300 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1906.00300) |
-| 86 | 0 | arXiv:1906.02041 |  |  |  |  | 2 | LLM inference surveys、roofline performance analysis, inference-systems | [source](https://arxiv.org/abs/1906.02041) |
-| 87 | 0 | arXiv:1906.04284 |  |  |  |  | 2 | 10-kv-cache-offload-recomputation, Sparse Attention | [source](https://arxiv.org/abs/1906.04284) |
-| 88 | 0 | arXiv:1906.05714 |  |  |  |  | 1 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/1906.05714) |
-| 89 | 0 | arXiv:1906.08237 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1906.08237) |
-| 90 | 0 | arXiv:1906.12085 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1906.12085) |
-| 91 | 0 | arXiv:1907.02711 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1907.02711) |
-| 92 | 0 | arXiv:1907.06627 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1907.06627) |
-| 93 | 0 | arXiv:1908.03903 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1908.03903) |
-| 94 | 0 | arXiv:1908.08167 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1908.08167) |
-| 95 | 0 | arXiv:1908.09355 |  |  |  |  | 3 | Conditional Computation | [source](https://arxiv.org/abs/1908.09355) |
-| 96 | 0 | arXiv:1908.10084 |  |  |  |  | 3 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/1908.10084) |
-| 97 | 0 | arXiv:1908.11775 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1908.11775) |
-| 98 | 0 | arXiv:1909.03186 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1909.03186) |
-| 99 | 0 | arXiv:1909.06708 |  |  |  |  | 2 | LLM inference surveys、roofline performance analysis, inference-systems | [source](https://arxiv.org/abs/1909.06708) |
-| 100 | 0 | arXiv:1909.10351 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1909.10351) |
-| 101 | 0 | arXiv:1909.13271 |  |  |  |  | 1 | survey-low-bit-llm | [source](https://arxiv.org/abs/1909.13271) |
-| 102 | 0 | arXiv:1910.04732 |  |  |  |  | 2 | Conditional Computation | [source](https://arxiv.org/abs/1910.04732) |
-| 103 | 0 | arXiv:1910.06188 |  |  |  |  | 3 | Weight Quantization / Compression, dense-to-MoE conversion / conditional FFN computation / expert routing, inference-systems | [source](https://arxiv.org/abs/1910.06188) |
-| 104 | 0 | arXiv:1910.07475 |  |  |  |  | 1 | 端末LLM・ニューロン疎性・階層メモリ推論 | [source](https://arxiv.org/abs/1910.07475) |
-| 105 | 0 | arXiv:1910.13461 |  |  |  |  | 5 | inference-systems | [source](https://arxiv.org/abs/1910.13461) |
-| 106 | 0 | arXiv:1911.02685 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1911.02685) |
-| 107 | 0 | arXiv:1911.03584 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1911.03584) |
-| 108 | 0 | arXiv:1911.03894 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1911.03894) |
-| 109 | 0 | arXiv:1911.04997 |  |  |  |  | 1 | MoE expert parallelism / dynamic load balancing / expert prefetching | [source](https://arxiv.org/abs/1911.04997) |
-| 110 | 0 | arXiv:1911.08772 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/1911.08772) |
-| 111 | 0 | arXiv:1912.00818 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1912.00818) |
-| 112 | 0 | arXiv:1912.10077 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1912.10077) |
-| 113 | 0 | arXiv:2001.01969 |  |  |  |  | 1 | Conditional Computation | [source](https://arxiv.org/abs/2001.01969) |
-| 114 | 0 | arXiv:2001.04698 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2001.04698) |
-| 115 | 0 | arXiv:2002.00762 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2002.00762) |
-| 116 | 0 | arXiv:2002.07376 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2002.07376) |
-| 117 | 0 | arXiv:2002.08240 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2002.08240) |
-| 118 | 0 | arXiv:2002.09434 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2002.09434) |
-| 119 | 0 | arXiv:2002.10941 |  |  |  |  | 1 | Sparse Attention | [source](https://arxiv.org/abs/2002.10941) |
-| 120 | 0 | arXiv:2002.11985 |  |  |  |  | 1 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2002.11985) |
-| 121 | 0 | arXiv:2003.03033 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2003.03033) |
-| 122 | 0 | arXiv:2003.07013 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2003.07013) |
-| 123 | 0 | arXiv:2003.11535 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2003.11535) |
-| 124 | 0 | arXiv:2004.02984 |  |  |  |  | 4 | Conditional Computation, inference-systems | [source](https://arxiv.org/abs/2004.02984) |
-| 125 | 0 | arXiv:2004.05986 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2004.05986) |
-| 126 | 0 | arXiv:2004.08900 |  |  |  |  | 2 | その他システム研究 | [source](https://arxiv.org/abs/2004.08900) |
-| 127 | 0 | arXiv:2004.11867 |  |  |  |  | 1 | MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/2004.11867) |
-| 128 | 0 | arXiv:2004.14769 |  |  |  |  | 1 | MoE expert pruning / trajectory-aware compression / task-specific MoE compression | [source](https://arxiv.org/abs/2004.14769) |
-| 129 | 0 | arXiv:2005.00770 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2005.00770) |
-| 130 | 0 | arXiv:2005.04305 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2005.04305) |
-| 131 | 0 | arXiv:2005.08025 |  |  |  |  | 1 | serving-scheduling | [source](https://arxiv.org/abs/2005.08025) |
-| 132 | 0 | arXiv:2005.14187 |  |  |  |  | 2 | inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://arxiv.org/abs/2005.14187) |
-| 133 | 0 | arXiv:2006.03669 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2006.03669) |
-| 134 | 0 | arXiv:2006.08748 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2006.08748) |
-| 135 | 0 | arXiv:2006.11316 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2006.11316) |
-| 136 | 0 | arXiv:2006.16362 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2006.16362) |
-| 137 | 0 | arXiv:2007.01852 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2007.01852) |
-| 138 | 0 | arXiv:2007.04825 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2007.04825) |
-| 139 | 0 | arXiv:2007.12626 |  |  |  |  | 1 | offload-hierarchical-memory | [source](https://arxiv.org/abs/2007.12626) |
-| 140 | 0 | arXiv:2008.00401 |  |  |  |  | 1 | MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/2008.00401) |
-| 141 | 0 | arXiv:2008.05221 |  |  |  |  | 1 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://arxiv.org/abs/2008.05221) |
-| 142 | 0 | arXiv:2009.05647 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2009.05647) |
-| 143 | 0 | arXiv:2009.07118 |  |  |  |  | 2 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2009.07118) |
-| 144 | 0 | arXiv:2009.07268 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2009.07268) |
-| 145 | 0 | arXiv:2009.08065 |  |  |  |  | 1 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://arxiv.org/abs/2009.08065) |
-| 146 | 0 | arXiv:2009.12812 |  |  |  |  | 2 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2009.12812) |
-| 147 | 0 | arXiv:2009.14167 |  |  |  |  | 2 | Conditional Computation | [source](https://arxiv.org/abs/2009.14167) |
-| 148 | 0 | arXiv:2010.02502 |  |  |  |  | 2 | diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference | [source](https://arxiv.org/abs/2010.02502) |
-| 149 | 0 | arXiv:2010.03093 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2010.03093) |
-| 150 | 0 | arXiv:2010.03768 |  |  |  |  | 2 | augmented LLM serving / KV cache management / predictive scheduling / vLLM, inference-systems | [source](https://arxiv.org/abs/2010.03768) |
-| 151 | 0 | arXiv:2010.05478 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2010.05478) |
-| 152 | 0 | arXiv:2010.11125 |  |  |  |  | 1 | 分散MoE学習 / ZeRO / CPUオフロード / 多次元並列 | [source](https://arxiv.org/abs/2010.11125) |
-| 153 | 0 | arXiv:2010.14701 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/2010.14701) |
-| 154 | 0 | arXiv:2011.00943 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2011.00943) |
-| 155 | 0 | arXiv:2011.04006 |  |  |  |  | 2 | CPU長文推論・近似注意 | [source](https://arxiv.org/abs/2011.04006) |
-| 156 | 0 | arXiv:2011.06327 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2011.06327) |
-| 157 | 0 | arXiv:2011.13456 |  |  |  |  | 1 | Other Inference Systems / Lossless Parallel Decoding | [source](https://arxiv.org/abs/2011.13456) |
-| 158 | 0 | arXiv:2012.07463 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/2012.07463) |
-| 159 | 0 | arXiv:2012.15613 |  |  |  |  | 1 | kv-cache-memory-management | [source](https://arxiv.org/abs/2012.15613) |
-| 160 | 0 | arXiv:2012.15828 |  |  |  |  | 1 | offload-hierarchical-memory | [source](https://arxiv.org/abs/2012.15828) |
-| 161 | 0 | arXiv:2101.00234 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2101.00234) |
-| 162 | 0 | arXiv:2101.08744 |  |  |  |  | 1 | MoE inference / on-device LLM / expert offloading / expert caching | [source](https://arxiv.org/abs/2101.08744) |
-| 163 | 0 | arXiv:2101.11986 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2101.11986) |
-| 164 | 0 | arXiv:2102.03315 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2102.03315) |
-| 165 | 0 | arXiv:2102.07831 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2102.07831) |
-| 166 | 0 | arXiv:2102.08602 |  |  |  |  | 2 | training-memory-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2102.08602) |
-| 167 | 0 | arXiv:2102.11972 |  |  |  |  | 2 | distributed attention / sequence parallelism / blockwise attention / long-context transformers, training-memory-systems | [source](https://arxiv.org/abs/2102.11972) |
-| 168 | 0 | arXiv:2103.02143 |  |  |  |  | 2 | CPU長文推論・近似注意, inference-systems | [source](https://arxiv.org/abs/2103.02143) |
-| 169 | 0 | arXiv:2103.03841 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2103.03841) |
-| 170 | 0 | arXiv:2103.10427 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2103.10427) |
-| 171 | 0 | arXiv:2104.06022 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2104.06022) |
-| 172 | 0 | arXiv:2104.07091 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2104.07091) |
-| 173 | 0 | arXiv:2104.08663 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2104.08663) |
-| 174 | 0 | arXiv:2104.12470 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2104.12470) |
-| 175 | 0 | arXiv:2105.05233 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2105.05233) |
-| 176 | 0 | arXiv:2105.08306 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2105.08306) |
-| 177 | 0 | arXiv:2105.11098 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2105.11098) |
-| 178 | 0 | arXiv:2105.13878 |  |  |  |  | 3 | Conditional Computation | [source](https://arxiv.org/abs/2105.13878) |
-| 179 | 0 | arXiv:2105.14528 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2105.14528) |
-| 180 | 0 | arXiv:2106.03650 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2106.03650) |
-| 181 | 0 | arXiv:2106.04554 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2106.04554) |
-| 182 | 0 | arXiv:2106.06168 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2106.06168) |
-| 183 | 0 | arXiv:2106.08254 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2106.08254) |
-| 184 | 0 | arXiv:2106.15339 |  |  |  |  | 1 | MoE推論／CPU-GPU協調オフロード／階層メモリ／性能モデル／高スループットバッチ推論 | [source](https://arxiv.org/abs/2106.15339) |
-| 185 | 0 | arXiv:2107.00652 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2107.00652) |
-| 186 | 0 | arXiv:2107.03006 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2107.03006) |
-| 187 | 0 | arXiv:2107.07566 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2107.07566) |
-| 188 | 0 | arXiv:2107.11906 |  |  |  |  | 2 | inference-systems, long-context inference / dynamic sparse attention / hierarchical attention / post-hoc attention acceleration | [source](https://arxiv.org/abs/2107.11906) |
-| 189 | 0 | arXiv:2108.03298 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2108.03298) |
-| 190 | 0 | arXiv:2108.08877 |  |  |  |  | 1 | 07-kv-キャッシュ-optimization-compression | [source](https://arxiv.org/abs/2108.08877) |
-| 191 | 0 | arXiv:2109.00859 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/2109.00859) |
-| 192 | 0 | arXiv:2109.04404 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/2109.04404) |
-| 193 | 0 | arXiv:2109.05472 |  |  |  |  | 1 | 推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching | [source](https://arxiv.org/abs/2109.05472) |
-| 194 | 0 | arXiv:2109.08668 |  |  |  |  | 4 | 99-other-inference-systems, Conditional Computation, inference-systems | [source](https://arxiv.org/abs/2109.08668) |
-| 195 | 0 | arXiv:2109.11067 |  |  |  |  | 2 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2109.11067) |
-| 196 | 0 | arXiv:2109.15082 |  |  |  |  | 1 | survey-low-bit-llm | [source](https://arxiv.org/abs/2109.15082) |
-| 197 | 0 | arXiv:2110.03742 |  |  |  |  | 7 | Edge／on-device MoE, Mixture-of-Experts / differentiable routing / parameter merging / modular learning, MoE inference / expert pruning / language-specific expert specialization, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 適応的専門家計算 / 専門家統合 / オンラインMoE推論 / ニューラルバンディット | [source](https://arxiv.org/abs/2110.03742) |
-| 198 | 0 | arXiv:2110.06821 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2110.06821) |
-| 199 | 0 | arXiv:2110.07814 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2110.07814) |
-| 200 | 0 | arXiv:2110.08499 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2110.08499) |
-| 201 | 0 | arXiv:2110.12894 |  |  |  |  | 2 | Conditional Computation | [source](https://arxiv.org/abs/2110.12894) |
-| 202 | 0 | arXiv:2110.15191 |  |  |  |  | 2 | distributed attention / sequence parallelism / blockwise attention / long-context transformers, training-memory-systems | [source](https://arxiv.org/abs/2110.15191) |
-| 203 | 0 | arXiv:2111.00680 |  |  |  |  | 1 | offload-hierarchical-memory | [source](https://arxiv.org/abs/2111.00680) |
-| 204 | 0 | arXiv:2111.01697 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2111.01697) |
-| 205 | 0 | arXiv:2111.08915 |  |  |  |  | 1 | KV Cache Optimization / Compression | [source](https://arxiv.org/abs/2111.08915) |
-| 206 | 0 | arXiv:2112.00029 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2112.00029) |
-| 207 | 0 | arXiv:2112.02052 |  |  |  |  | 1 | unstructured sparsity / GPU inference kernels | [source](https://arxiv.org/abs/2112.02052) |
-| 208 | 0 | arXiv:2112.03097 |  |  |  |  | 1 | MoE routing / expert offloading / temporal expert persistence | [source](https://arxiv.org/abs/2112.03097) |
-| 209 | 0 | arXiv:2112.07210 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2112.07210) |
-| 210 | 0 | arXiv:2112.10508 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2112.10508) |
-| 211 | 0 | arXiv:2112.11446 |  |  |  |  | 8 | Adaptive computation／cache-aware MoE, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, オフロード／階層メモリ, 投機的デコード / 分布保存型デコード高速化, 推論ベンチマーク・推論大規模言語モデルのサービング評価 | [source](https://arxiv.org/abs/2112.11446) |
-| 212 | 0 | arXiv:2112.14938 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/2112.14938) |
-| 213 | 0 | arXiv:2201.06618 |  |  |  |  | 1 | survey-moe-inference-optimization | [source](https://arxiv.org/abs/2201.06618) |
-| 214 | 0 | arXiv:2201.11227 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2201.11227) |
-| 215 | 0 | arXiv:2202.01279 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2202.01279) |
-| 216 | 0 | arXiv:2202.05239 |  |  |  |  | 1 | Weight Quantization / Compression | [source](https://arxiv.org/abs/2202.05239) |
-| 217 | 0 | arXiv:2202.05924 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2202.05924) |
-| 218 | 0 | arXiv:2202.07848 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2202.07848) |
-| 219 | 0 | arXiv:2202.10447 |  |  |  |  | 1 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2202.10447) |
-| 220 | 0 | arXiv:2203.00091 |  |  |  |  | 1 | 13-sparse-attention | [source](https://arxiv.org/abs/2203.00091) |
-| 221 | 0 | arXiv:2203.02073 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2203.02073) |
-| 222 | 0 | arXiv:2203.05482 |  |  |  |  | 1 | MoE圧縮 / expert pruning / expert merging / post-compression adjustment | [source](https://arxiv.org/abs/2203.05482) |
-| 223 | 0 | arXiv:2203.06569 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2203.06569) |
-| 224 | 0 | arXiv:2203.08913 |  |  |  |  | 6 | LLM inference surveys、roofline performance analysis, inference-systems, survey-long-context-serving, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2203.08913) |
-| 225 | 0 | arXiv:2203.10705 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2203.10705) |
-| 226 | 0 | arXiv:2203.14680 |  |  |  |  | 1 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング | [source](https://arxiv.org/abs/2203.14680) |
-| 227 | 0 | arXiv:2204.00595 |  |  |  |  | 1 | GPU Kernel Framework | [source](https://arxiv.org/abs/2204.00595) |
-| 228 | 0 | arXiv:2204.03324 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2204.03324) |
-| 229 | 0 | arXiv:2204.05999 |  |  |  |  | 2 | inference-systems, 大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化 | [source](https://arxiv.org/abs/2204.05999) |
-| 230 | 0 | arXiv:2204.07675 |  |  |  |  | 3 | dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE, training-memory-systems | [source](https://arxiv.org/abs/2204.07675) |
-| 231 | 0 | arXiv:2204.09179 |  |  |  |  | 5 | Adaptive Expert Computation / Compression, Mixture-of-Experts / differentiable routing / parameter merging / modular learning, Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM, MoE inference / task-specific expert pruning / sparse-to-dense conversion | [source](https://arxiv.org/abs/2204.09179) |
-| 232 | 0 | arXiv:2204.13807 |  |  |  |  | 1 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/2204.13807) |
-| 233 | 0 | arXiv:2205.02209 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2205.02209) |
-| 234 | 0 | arXiv:2205.05131 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2205.05131) |
-| 235 | 0 | arXiv:2205.07324 |  |  |  |  | 3 | inference-systems | [source](https://arxiv.org/abs/2205.07324) |
-| 236 | 0 | arXiv:2205.10569 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2205.10569) |
-| 237 | 0 | arXiv:2205.11465 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2205.11465) |
-| 238 | 0 | arXiv:2205.12255 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2205.12255) |
-| 239 | 0 | arXiv:2205.12701 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2205.12701) |
-| 240 | 0 | arXiv:2205.14217 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2205.14217) |
-| 241 | 0 | arXiv:2206.03126 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2206.03126) |
-| 242 | 0 | arXiv:2206.08916 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2206.08916) |
-| 243 | 0 | arXiv:2206.14858 |  |  |  |  | 2 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2206.14858) |
-| 244 | 0 | arXiv:2207.05952 |  |  |  |  | 1 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/2207.05952) |
-| 245 | 0 | arXiv:2207.09238 |  |  |  |  | 1 | other-inference-systems | [source](https://arxiv.org/abs/2207.09238) |
-| 246 | 0 | arXiv:2207.12598 |  |  |  |  | 2 | 11-llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2207.12598) |
-| 247 | 0 | arXiv:2208.03299 |  |  |  |  | 3 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2208.03299) |
-| 248 | 0 | arXiv:2208.05395 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2208.05395) |
-| 249 | 0 | arXiv:2208.08124 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2208.08124) |
-| 250 | 0 | arXiv:2208.10041 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2208.10041) |
-| 251 | 0 | arXiv:2208.11663 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2208.11663) |
-| 252 | 0 | arXiv:2209.06794 |  |  |  |  | 1 | training-memory-systems | [source](https://arxiv.org/abs/2209.06794) |
-| 253 | 0 | arXiv:2209.08167 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2209.08167) |
-| 254 | 0 | arXiv:2209.11429 |  |  |  |  | 1 | agentic serving / workflow-aware scheduling / memory-aware dispatch | [source](https://arxiv.org/abs/2209.11429) |
-| 255 | 0 | arXiv:2209.12951 |  |  |  |  | 1 | GPU Kernel Framework | [source](https://arxiv.org/abs/2209.12951) |
-| 256 | 0 | arXiv:2209.15001 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2209.15001) |
-| 257 | 0 | arXiv:2209.15430 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2209.15430) |
-| 258 | 0 | arXiv:2210.02441 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2210.02441) |
-| 259 | 0 | arXiv:2210.03052 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2210.03052) |
-| 260 | 0 | arXiv:2210.03871 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2210.03871) |
-| 261 | 0 | arXiv:2210.06423 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2210.06423) |
-| 262 | 0 | arXiv:2210.07316 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2210.07316) |
-| 263 | 0 | arXiv:2210.08674 |  |  |  |  | 1 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2210.08674) |
-| 264 | 0 | arXiv:2210.10340 |  |  |  |  | 1 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2210.10340) |
-| 265 | 0 | arXiv:2210.11794 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2210.11794) |
-| 266 | 0 | arXiv:2210.13438 |  |  |  |  | 2 | 11-llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2210.13438) |
-| 267 | 0 | arXiv:2210.14793 |  |  |  |  | 1 | Edge／on-device MoE | [source](https://arxiv.org/abs/2210.14793) |
-| 268 | 0 | arXiv:2211.00107 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2211.00107) |
-| 269 | 0 | arXiv:2211.01095 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2211.01095) |
-| 270 | 0 | arXiv:2211.05322 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2211.05322) |
-| 271 | 0 | arXiv:2211.06033 |  |  |  |  | 1 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/2211.06033) |
-| 272 | 0 | arXiv:2211.08403 |  |  |  |  | 1 | Adaptive Expert Computation / Compression | [source](https://arxiv.org/abs/2211.08403) |
-| 273 | 0 | arXiv:2211.10435 |  |  |  |  | 1 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2211.10435) |
-| 274 | 0 | arXiv:2211.12588 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2211.12588) |
-| 275 | 0 | arXiv:2211.16750 |  |  |  |  | 2 | 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2211.16750) |
-| 276 | 0 | arXiv:2212.01378 |  |  |  |  | 2 | Adaptive Expert Computation / Compression, Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/2212.01378) |
-| 277 | 0 | arXiv:2212.04037 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2212.04037) |
-| 278 | 0 | arXiv:2212.05191 |  |  |  |  | 1 | MoE動的クラスタリング / shared-base low-rank residual / hierarchical routing / expert offloading | [source](https://arxiv.org/abs/2212.05191) |
-| 279 | 0 | arXiv:2212.06713 |  |  |  |  | 1 | Long-context serving / KV cache benchmark | [source](https://arxiv.org/abs/2212.06713) |
-| 280 | 0 | arXiv:2212.08153 |  |  |  |  | 4 | inference-systems | [source](https://arxiv.org/abs/2212.08153) |
-| 281 | 0 | arXiv:2212.10403 |  |  |  |  | 2 | attention-FC disaggregation / DIMM-PIM / KV-cache capacity-bandwidth scaling / heterogeneous inference | [source](https://arxiv.org/abs/2212.10403) |
-| 282 | 0 | arXiv:2212.10511 |  |  |  |  | 1 | 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/2212.10511) |
-| 283 | 0 | arXiv:2212.10560 |  |  |  |  | 7 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停, KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, adaptive-expert-computation-compression, inference-systems | [source](https://arxiv.org/abs/2212.10560) |
-| 284 | 0 | arXiv:2212.11468 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2212.11468) |
-| 285 | 0 | arXiv:2212.14052 |  |  |  |  | 4 | inference-systems | [source](https://arxiv.org/abs/2212.14052) |
-| 286 | 0 | arXiv:2301.02828 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2301.02828) |
-| 287 | 0 | arXiv:2301.05217 |  |  |  |  | 1 | KV cache sparsity / paged attention / query-aware selection / LLM serving | [source](https://arxiv.org/abs/2301.05217) |
-| 288 | 0 | arXiv:2301.06672 |  |  |  |  | 1 | 近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション | [source](https://arxiv.org/abs/2301.06672) |
-| 289 | 0 | arXiv:2301.08721 |  |  |  |  | 2 | inference-systems, kv-cache-memory | [source](https://arxiv.org/abs/2301.08721) |
-| 290 | 0 | arXiv:2301.11233 |  |  |  |  | 2 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2301.11233) |
-| 291 | 0 | arXiv:2301.12132 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2301.12132) |
-| 292 | 0 | arXiv:2301.12900 |  |  |  |  | 1 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction | [source](https://arxiv.org/abs/2301.12900) |
-| 293 | 0 | arXiv:2302.00083 |  |  |  |  | 5 |  | [source](https://arxiv.org/abs/2302.00083) |
-| 294 | 0 | arXiv:2302.02676 |  |  |  |  | 1 | training-memory-systems | [source](https://arxiv.org/abs/2302.02676) |
-| 295 | 0 | arXiv:2302.04089 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2302.04089) |
-| 296 | 0 | arXiv:2302.06476 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2302.06476) |
-| 297 | 0 | arXiv:2302.07080 |  |  |  |  | 1 | Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2302.07080) |
-| 298 | 0 | arXiv:2302.09210 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2302.09210) |
-| 299 | 0 | arXiv:2302.09664 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2302.09664) |
-| 300 | 0 | arXiv:2302.10870 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2302.10870) |
-| 301 | 0 | arXiv:2302.12066 |  |  |  |  | 1 | foundation-model deployment benchmarking / hardware-aware inference profiling / edge AI | [source](https://arxiv.org/abs/2302.12066) |
-| 302 | 0 | arXiv:2302.12480 |  |  |  |  | 1 | Adaptive Expert Computation / Compression | [source](https://arxiv.org/abs/2302.12480) |
-| 303 | 0 | arXiv:2302.14502 |  |  |  |  | 1 | survey-long-context-serving | [source](https://arxiv.org/abs/2302.14502) |
-| 304 | 0 | arXiv:2303.00001 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2303.00001) |
-| 305 | 0 | arXiv:2303.02141 |  |  |  |  | 2 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction | [source](https://arxiv.org/abs/2303.02141) |
-| 306 | 0 | arXiv:2303.04048 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2303.04048) |
-| 307 | 0 | arXiv:2303.05510 |  |  |  |  | 1 | Graph-CoT / multi-agent serving / KV-cache reuse | [source](https://arxiv.org/abs/2303.05510) |
-| 308 | 0 | arXiv:2303.06296 |  |  |  |  | 1 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2303.06296) |
-| 309 | 0 | arXiv:2303.07895 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2303.07895) |
-| 310 | 0 | arXiv:2303.10158 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2303.10158) |
-| 311 | 0 | arXiv:2303.11366 |  |  |  |  | 2 | inference-systems, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2303.11366) |
-| 312 | 0 | arXiv:2303.12557 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2303.12557) |
-| 313 | 0 | arXiv:2303.14524 |  |  |  |  | 1 | speculative-decoding | [source](https://arxiv.org/abs/2303.14524) |
-| 314 | 0 | arXiv:2303.16199 |  |  |  |  | 2 | inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2303.16199) |
-| 315 | 0 | arXiv:2303.16854 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2303.16854) |
-| 316 | 0 | arXiv:2303.17580 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2303.17580) |
-| 317 | 0 | arXiv:2304.01089 |  |  |  |  | 19 | Conditional Computation, Expert Prefetch, LLM inference surveys、roofline performance analysis, LLM推論メモリ階層／無損失圧縮／KVキャッシュ圧縮／動的量子化／メモリ制御器協調設計, MoE inference / on-device LLM / expert offloading / expert caching, Quantization × MoE × Offload, Weight Quantization / Compression, inference-systems, kv-cache-memory, survey-low-bit-llm, 端末内LLM推論・三次元NAND・フラッシュ内計算・KVキャッシュ配置, 端末内LLM推論／フラッシュ計算／チップレット／重み退避 | [source](https://arxiv.org/abs/2304.01089) |
-| 318 | 0 | arXiv:2304.01468 |  |  |  |  | 1 | SLO-aware LLM serving scheduling | [source](https://arxiv.org/abs/2304.01468) |
-| 319 | 0 | arXiv:2304.02017 |  |  |  |  | 2 | Speculative Decoding / Parallel Inference Systems | [source](https://arxiv.org/abs/2304.02017) |
-| 320 | 0 | arXiv:2304.03208 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2304.03208) |
-| 321 | 0 | arXiv:2304.04487 |  |  |  |  | 12 | LLM inference surveys、roofline performance analysis, Speculative Decoding, inference-systems, survey-speculative-decoding, エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系, 投機的デコード / 自己投機的デコード / 層スキップ | [source](https://arxiv.org/abs/2304.04487) |
-| 322 | 0 | arXiv:2304.04675 |  |  |  |  | 1 | LLM Serving / Reasoning | [source](https://arxiv.org/abs/2304.04675) |
-| 323 | 0 | arXiv:2304.08243 |  |  |  |  | 1 | オフロード／階層メモリ | [source](https://arxiv.org/abs/2304.08243) |
-| 324 | 0 | arXiv:2304.09433 |  |  |  |  | 2 | LLM serving scheduling / hybrid QoS / KV cache management | [source](https://arxiv.org/abs/2304.09433) |
-| 325 | 0 | arXiv:2304.12244 |  |  |  |  | 4 | inference-systems, multi-model LLM serving / prompt routing / resource allocation | [source](https://arxiv.org/abs/2304.12244) |
-| 326 | 0 | arXiv:2304.15004 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2304.15004) |
-| 327 | 0 | arXiv:2305.01505 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2305.01505) |
-| 328 | 0 | arXiv:2305.04859 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.04859) |
-| 329 | 0 | arXiv:2305.06942 |  |  |  |  | 2 | inference-systems, kernel-runtime-compilation | [source](https://arxiv.org/abs/2305.06942) |
-| 330 | 0 | arXiv:2305.07759 |  |  |  |  | 2 | KV cache sparsity / paged attention / query-aware selection / LLM serving, edge-on-device-llm-systems | [source](https://arxiv.org/abs/2305.07759) |
-| 331 | 0 | arXiv:2305.09098 |  |  |  |  | 1 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2305.09098) |
-| 332 | 0 | arXiv:2305.11175 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.11175) |
-| 333 | 0 | arXiv:2305.13246 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.13246) |
-| 334 | 0 | arXiv:2305.13655 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.13655) |
-| 335 | 0 | arXiv:2305.14160 |  |  |  |  | 2 | KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2305.14160) |
-| 336 | 0 | arXiv:2305.14387 |  |  |  |  | 1 | speculative-decoding | [source](https://arxiv.org/abs/2305.14387) |
-| 337 | 0 | arXiv:2305.14625 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.14625) |
-| 338 | 0 | arXiv:2305.14806 |  |  |  |  | 1 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停 | [source](https://arxiv.org/abs/2305.14806) |
-| 339 | 0 | arXiv:2305.14992 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.14992) |
-| 340 | 0 | arXiv:2305.15294 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2305.15294) |
-| 341 | 0 | arXiv:2305.15838 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.15838) |
-| 342 | 0 | arXiv:2305.16380 |  |  |  |  | 1 | KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://arxiv.org/abs/2305.16380) |
-| 343 | 0 | arXiv:2305.17126 |  |  |  |  | 1 | 投機的デコード / 知識蒸留 / ドラフトモデル整合 | [source](https://arxiv.org/abs/2305.17126) |
-| 344 | 0 | arXiv:2305.17455 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2305.17455) |
-| 345 | 0 | arXiv:2305.18403 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2305.18403) |
-| 346 | 0 | arXiv:2305.18846 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2305.18846) |
-| 347 | 0 | arXiv:2305.19466 |  |  |  |  | 3 | KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り | [source](https://arxiv.org/abs/2305.19466) |
-| 348 | 0 | arXiv:2306.00317 |  |  |  |  | 3 | Quantization × MoE × Offload, hardware-accelerators, inference-systems | [source](https://arxiv.org/abs/2306.00317) |
-| 349 | 0 | arXiv:2306.01200 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2306.01200) |
-| 350 | 0 | arXiv:2306.02295 |  |  |  |  | 2 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/2306.02295) |
-| 351 | 0 | arXiv:2306.02896 |  |  |  |  | 1 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/2306.02896) |
-| 352 | 0 | arXiv:2306.03805 |  |  |  |  | 2 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction | [source](https://arxiv.org/abs/2306.03805) |
-| 353 | 0 | arXiv:2306.04757 |  |  |  |  | 1 | オフロード／階層メモリ | [source](https://arxiv.org/abs/2306.04757) |
-| 354 | 0 | arXiv:2306.05424 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2306.05424) |
-| 355 | 0 | arXiv:2306.06624 |  |  |  |  | 1 | KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り | [source](https://arxiv.org/abs/2306.06624) |
-| 356 | 0 | arXiv:2306.09212 |  |  |  |  | 9 | Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling, MoE compression / expert matrix decomposition / shared basis reparameterization, MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next, adaptive-expert-computation-compression, dynamic top-k MoE routing / load-balanced routing / long-context hybrid attention / physical AI foundation models | [source](https://arxiv.org/abs/2306.09212) |
-| 357 | 0 | arXiv:2306.11089 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2306.11089) |
-| 358 | 0 | arXiv:2306.12420 |  |  |  |  | 1 | multi-model serving / disaggregated serving / cross-model KV reuse | [source](https://arxiv.org/abs/2306.12420) |
-| 359 | 0 | arXiv:2306.13596 |  |  |  |  | 2 | KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計 | [source](https://arxiv.org/abs/2306.13596) |
-| 360 | 0 | arXiv:2306.16837 |  |  |  |  | 1 | 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2306.16837) |
-| 361 | 0 | arXiv:2307.00198 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2307.00198) |
-| 362 | 0 | arXiv:2307.02419 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2307.02419) |
-| 363 | 0 | arXiv:2307.02839 |  |  |  |  | 1 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停 | [source](https://arxiv.org/abs/2307.02839) |
-| 364 | 0 | arXiv:2307.04251 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2307.04251) |
-| 365 | 0 | arXiv:2307.05300 |  |  |  |  | 1 | agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling | [source](https://arxiv.org/abs/2307.05300) |
-| 366 | 0 | arXiv:2307.06962 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2307.06962) |
-| 367 | 0 | arXiv:2307.07697 |  |  |  |  | 1 | Graph-CoT / multi-agent serving / KV-cache reuse | [source](https://arxiv.org/abs/2307.07697) |
-| 368 | 0 | arXiv:2307.08189 |  |  |  |  | 1 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2307.08189) |
-| 369 | 0 | arXiv:2307.08941 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2307.08941) |
-| 370 | 0 | arXiv:2307.10485 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2307.10485) |
-| 371 | 0 | arXiv:2307.12169 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2307.12169) |
-| 372 | 0 | arXiv:2307.12856 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2307.12856) |
-| 373 | 0 | arXiv:2307.14984 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2307.14984) |
-| 374 | 0 | arXiv:2307.16883 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2307.16883) |
-| 375 | 0 | arXiv:2308.02019 |  |  |  |  | 1 | LLMサービング／配備構成探索／自動並列化・圧縮選択／負荷対応配置 | [source](https://arxiv.org/abs/2308.02019) |
-| 376 | 0 | arXiv:2308.03421 |  |  |  |  | 1 | Expert Prefetch | [source](https://arxiv.org/abs/2308.03421) |
-| 377 | 0 | arXiv:2308.06093 |  |  |  |  | 2 | survey-moe-inference-optimization, 適応的専門家計算 / 専門家統合 / オンラインMoE推論 / ニューラルバンディット | [source](https://arxiv.org/abs/2308.06093) |
-| 378 | 0 | arXiv:2308.07107 |  |  |  |  | 2 | KV cache compression / sparse attention / long-context inference, serving-scheduling | [source](https://arxiv.org/abs/2308.07107) |
-| 379 | 0 | arXiv:2308.07201 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2308.07201) |
-| 380 | 0 | arXiv:2308.08469 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2308.08469) |
-| 381 | 0 | arXiv:2308.09583 |  |  |  |  | 1 | KV Cache Optimization / Compression | [source](https://arxiv.org/abs/2308.09583) |
-| 382 | 0 | arXiv:2308.10755 |  |  |  |  | 1 | latent-space inference / semantic compression | [source](https://arxiv.org/abs/2308.10755) |
-| 383 | 0 | arXiv:2308.12241 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2308.12241) |
-| 384 | 0 | arXiv:2308.13320 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2308.13320) |
-| 385 | 0 | arXiv:2308.14711 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2308.14711) |
-| 386 | 0 | arXiv:2308.16898 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2308.16898) |
-| 387 | 0 | arXiv:2309.02726 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2309.02726) |
-| 388 | 0 | arXiv:2309.05516 |  |  |  |  | 3 | Expert Prefetch, inference-systems, kv-cache-memory | [source](https://arxiv.org/abs/2309.05516) |
-| 389 | 0 | arXiv:2309.06342 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2309.06342) |
-| 390 | 0 | arXiv:2309.08520 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2309.08520) |
-| 391 | 0 | arXiv:2309.09117 |  |  |  |  | 1 | speculative decoding / context compression / agentic LLM inference | [source](https://arxiv.org/abs/2309.09117) |
-| 392 | 0 | arXiv:2309.10305 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2309.10305) |
-| 393 | 0 | arXiv:2309.11235 |  |  |  |  | 3 | KVキャッシュ動的メモリ管理／PagedAttention代替, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2309.11235) |
-| 394 | 0 | arXiv:2309.12499 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2309.12499) |
-| 395 | 0 | arXiv:2309.14021 |  |  |  |  | 2 | 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2309.14021) |
-| 396 | 0 | arXiv:2309.15531 |  |  |  |  | 3 | KV cache quantization / long-context inference / activation compression, inference-systems, survey-low-bit-llm | [source](https://arxiv.org/abs/2309.15531) |
-| 397 | 0 | arXiv:2309.17179 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2309.17179) |
-| 398 | 0 | arXiv:2310.00566 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2310.00566) |
-| 399 | 0 | arXiv:2310.00844 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2310.00844) |
-| 400 | 0 | arXiv:2310.01542 |  |  |  |  | 1 | survey-moe-inference-optimization | [source](https://arxiv.org/abs/2310.01542) |
-| 401 | 0 | arXiv:2310.02226 |  |  |  |  | 3 | kv-cache-optimization-compression, latent-space inference / semantic compression | [source](https://arxiv.org/abs/2310.02226) |
-| 402 | 0 | arXiv:2310.03533 |  |  |  |  | 3 | inference-systems | [source](https://arxiv.org/abs/2310.03533) |
-| 403 | 0 | arXiv:2310.03731 |  |  |  |  | 1 | KV Cache Optimization / Compression | [source](https://arxiv.org/abs/2310.03731) |
-| 404 | 0 | arXiv:2310.04607 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2310.04607) |
-| 405 | 0 | arXiv:2310.05421 |  |  |  |  | 1 | LLM inference surveys、roofline performance analysis | [source](https://arxiv.org/abs/2310.05421) |
-| 406 | 0 | arXiv:2310.06003 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2310.06003) |
-| 407 | 0 | arXiv:2310.06500 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2310.06500) |
-| 408 | 0 | arXiv:2310.07713 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2310.07713) |
-| 409 | 0 | arXiv:2310.08433 |  |  |  |  | 1 | LLM serving / global scheduling / predictive load balancing / KV-cache migration avoidance | [source](https://arxiv.org/abs/2310.08433) |
-| 410 | 0 | arXiv:2310.10436 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2310.10436) |
-| 411 | 0 | arXiv:2310.12541 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2310.12541) |
-| 412 | 0 | arXiv:2310.12962 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2310.12962) |
-| 413 | 0 | arXiv:2310.15141 |  |  |  |  | 7 | LLM inference surveys、roofline performance analysis, inference-systems, speculative decoding / draft-model design | [source](https://arxiv.org/abs/2310.15141) |
-| 414 | 0 | arXiv:2310.17157 |  |  |  |  | 2 | Conditional Computation, MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM | [source](https://arxiv.org/abs/2310.17157) |
-| 415 | 0 | arXiv:2310.19295 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2310.19295) |
-| 416 | 0 | arXiv:2311.00176 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2311.00176) |
-| 417 | 0 | arXiv:2311.01635 |  |  |  |  | 2 | LLMサービング／配備構成探索／自動並列化・圧縮選択／負荷対応配置, survey-distributed-training-systems | [source](https://arxiv.org/abs/2311.01635) |
-| 418 | 0 | arXiv:2311.04823 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.04823) |
-| 419 | 0 | arXiv:2311.05232 |  |  |  |  | 3 | LLM inference surveys、roofline performance analysis, LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。 | [source](https://arxiv.org/abs/2311.05232) |
-| 420 | 0 | arXiv:2311.07468 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.07468) |
-| 421 | 0 | arXiv:2311.08360 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.08360) |
-| 422 | 0 | arXiv:2311.08719 |  |  |  |  | 1 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2311.08719) |
-| 423 | 0 | arXiv:2311.09047 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.09047) |
-| 424 | 0 | arXiv:2311.11195 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.11195) |
-| 425 | 0 | arXiv:2311.12424 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.12424) |
-| 426 | 0 | arXiv:2311.13171 |  |  |  |  | 2 | MoE inference / expert offloading / expert cache / edge inference / CPU-GPU scheduling, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation | [source](https://arxiv.org/abs/2311.13171) |
-| 427 | 0 | arXiv:2311.14030 |  |  |  |  | 1 | MoE推論／SSDストリーミング／エキスパート先読み／ルーティング予測／量子化回復 | [source](https://arxiv.org/abs/2311.14030) |
-| 428 | 0 | arXiv:2311.16502 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2311.16502) |
-| 429 | 0 | arXiv:2311.17311 |  |  |  |  | 2 | llm-serving-scheduling-disaggregation, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2311.17311) |
-| 430 | 0 | arXiv:2312.00678 |  |  |  |  | 2 | LLM inference surveys、roofline performance analysis, Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2312.00678) |
-| 431 | 0 | arXiv:2312.03003 |  |  |  |  | 1 | 08-edge-on-device-llm-systems | [source](https://arxiv.org/abs/2312.03003) |
-| 432 | 0 | arXiv:2312.03414 |  |  |  |  | 1 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2312.03414) |
-| 433 | 0 | arXiv:2312.04257 |  |  |  |  | 1 | 検索拡張生成・三次元NAND・記憶内検索・ベクトル検索・計算ストレージ | [source](https://arxiv.org/abs/2312.04257) |
-| 434 | 0 | arXiv:2312.04927 |  |  |  |  | 4 |  | [source](https://arxiv.org/abs/2312.04927) |
-| 435 | 0 | arXiv:2312.05253 |  |  |  |  | 1 | 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2312.05253) |
-| 436 | 0 | arXiv:2312.06674 |  |  |  |  | 1 | MoE serving / expert offloading / prefill-only serving | [source](https://arxiv.org/abs/2312.06674) |
-| 437 | 0 | arXiv:2312.08583 |  |  |  |  | 1 | LLM inference surveys、roofline performance analysis | [source](https://arxiv.org/abs/2312.08583) |
-| 438 | 0 | arXiv:2312.08937 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2312.08937) |
-| 439 | 0 | arXiv:2312.11918 |  |  |  |  | 2 | KVキャッシュ動的メモリ管理／PagedAttention代替, survey-distributed-training-systems | [source](https://arxiv.org/abs/2312.11918) |
-| 440 | 0 | arXiv:2312.14238 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2312.14238) |
-| 441 | 0 | arXiv:2312.16862 |  |  |  |  | 2 | LLM inference surveys、roofline performance analysis, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2312.16862) |
-| 442 | 0 | arXiv:2312.17276 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2312.17276) |
-| 443 | 0 | arXiv:2401.00625 |  |  |  |  | 7 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference, System-aware KV cache, distributed LLM inference / communication-aware serving, llm-serving-systems, survey-moe-inference-optimization, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2401.00625) |
-| 444 | 0 | arXiv:2401.01923 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2401.01923) |
-| 445 | 0 | arXiv:2401.03868 |  |  |  |  | 6 | LLM inference surveys、roofline performance analysis, hierarchical-memory, kv-cache-memory | [source](https://arxiv.org/abs/2401.03868) |
-| 446 | 0 | arXiv:2401.04679 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2401.04679) |
-| 447 | 0 | arXiv:2401.06080 |  |  |  |  | 2 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2401.06080) |
-| 448 | 0 | arXiv:2401.07872 |  |  |  |  | 1 | survey-long-context-serving | [source](https://arxiv.org/abs/2401.07872) |
-| 449 | 0 | arXiv:2401.09486 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2401.09486) |
-| 450 | 0 | arXiv:2401.12522 |  |  |  |  | 3 | inference-systems, speculative-decoding, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2401.12522) |
-| 451 | 0 | arXiv:2401.13841 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2401.13841) |
-| 452 | 0 | arXiv:2401.14112 |  |  |  |  | 2 | LLM inference surveys、roofline performance analysis, survey-low-bit-llm | [source](https://arxiv.org/abs/2401.14112) |
-| 453 | 0 | arXiv:2401.15947 |  |  |  |  | 9 | Adaptive computation／cache-aware MoE, LLM inference surveys、roofline performance analysis, MoE expert pruning / expert clustering / task-specific model compression, Quantization × MoE × Offload, オフロード／階層メモリ, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2401.15947) |
-| 454 | 0 | arXiv:2401.17221 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2401.17221) |
-| 455 | 0 | arXiv:2402.00157 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/2402.00157) |
-| 456 | 0 | arXiv:2402.01108 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.01108) |
-| 457 | 0 | arXiv:2402.01680 |  |  |  |  | 5 | llm-serving-scheduling-disaggregation, multi-LLM communication / KV-cache semantic transfer, エージェント向けKVキャッシュ管理・階層メモリ・プログラム単位スケジューリング | [source](https://arxiv.org/abs/2402.01680) |
-| 458 | 0 | arXiv:2402.02716 |  |  |  |  | 2 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation, Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2402.02716) |
-| 459 | 0 | arXiv:2402.03563 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.03563) |
-| 460 | 0 | arXiv:2402.03898 |  |  |  |  | 1 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2402.03898) |
-| 461 | 0 | arXiv:2402.05201 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2402.05201) |
-| 462 | 0 | arXiv:2402.06082 |  |  |  |  | 4 | KV Cache Optimization / Compression, KV cache quantization / RoPE-aware compression / packed attention serving, other-inference-systems | [source](https://arxiv.org/abs/2402.06082) |
-| 463 | 0 | arXiv:2402.07754 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.07754) |
-| 464 | 0 | arXiv:2402.08178 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.08178) |
-| 465 | 0 | arXiv:2402.09353 |  |  |  |  | 3 | Conditional Computation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2402.09353) |
-| 466 | 0 | arXiv:2402.10685 |  |  |  |  | 1 | 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2402.10685) |
-| 467 | 0 | arXiv:2402.11684 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.11684) |
-| 468 | 0 | arXiv:2402.12289 |  |  |  |  | 2 | Expert Prefetch, survey-edge-llm | [source](https://arxiv.org/abs/2402.12289) |
-| 469 | 0 | arXiv:2402.13116 |  |  |  |  | 3 | Speculative Decoding, 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/2402.13116) |
-| 470 | 0 | arXiv:2402.13583 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.13583) |
-| 471 | 0 | arXiv:2402.14762 |  |  |  |  | 2 | Expert Prefetch, 投機的復号 / LLMサービング・ベンチマーク | [source](https://arxiv.org/abs/2402.14762) |
-| 472 | 0 | arXiv:2402.14866 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2402.14866) |
-| 473 | 0 | arXiv:2402.15758 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2402.15758) |
-| 474 | 0 | arXiv:2402.16775 |  |  |  |  | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2402.16775) |
-| 475 | 0 | arXiv:2402.16844 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.16844) |
-| 476 | 0 | arXiv:2402.17532 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.17532) |
-| 477 | 0 | arXiv:2402.18154 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.18154) |
-| 478 | 0 | arXiv:2402.18510 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/2402.18510) |
-| 479 | 0 | arXiv:2402.19047 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2402.19047) |
-| 480 | 0 | arXiv:2403.01273 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2403.01273) |
-| 481 | 0 | arXiv:2403.01969 |  |  |  |  | 1 | edge-on-device-llm-systems | [source](https://arxiv.org/abs/2403.01969) |
-| 482 | 0 | arXiv:2403.02901 |  |  |  |  | 1 | prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS | [source](https://arxiv.org/abs/2403.02901) |
-| 483 | 0 | arXiv:2403.03507 |  |  |  |  | 2 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction, その他システム研究 | [source](https://arxiv.org/abs/2403.03507) |
-| 484 | 0 | arXiv:2403.04690 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2403.04690) |
-| 485 | 0 | arXiv:2403.04951 |  |  |  |  | 1 | 先頭共有・鍵値キャッシュ・検索拡張生成・要求処理順・組合せ最適化 | [source](https://arxiv.org/abs/2403.04951) |
-| 486 | 0 | arXiv:2403.05826 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2403.05826) |
-| 487 | 0 | arXiv:2403.07816 |  |  |  |  | 2 | mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2403.07816) |
-| 488 | 0 | arXiv:2403.08763 |  |  |  |  | 1 | 投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用 | [source](https://arxiv.org/abs/2403.08763) |
-| 489 | 0 | arXiv:2403.09347 |  |  |  |  | 2 | survey-distributed-training-systems, survey-long-context-serving | [source](https://arxiv.org/abs/2403.09347) |
-| 490 | 0 | arXiv:2403.10266 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/2403.10266) |
-| 491 | 0 | arXiv:2403.10750 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2403.10750) |
-| 492 | 0 | arXiv:2403.12422 |  |  |  |  | 3 | survey-distributed-training-systems, survey-low-bit-llm | [source](https://arxiv.org/abs/2403.12422) |
-| 493 | 0 | arXiv:2403.14403 |  |  |  |  | 1 | LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。 | [source](https://arxiv.org/abs/2403.14403) |
-| 494 | 0 | arXiv:2403.15796 |  |  |  |  | 1 | survey-long-context-serving | [source](https://arxiv.org/abs/2403.15796) |
-| 495 | 0 | arXiv:2403.18802 |  |  |  |  | 1 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2403.18802) |
-| 496 | 0 | arXiv:2403.20041 |  |  |  |  | 2 | edge-on-device-llm-systems, モバイル端末内LLM推論／フラッシュ帯域を考慮したコールドスタート最適化 | [source](https://arxiv.org/abs/2403.20041) |
-| 497 | 0 | arXiv:2404.01744 |  |  |  |  | 2 | 08-edge-on-device-llm-systems | [source](https://arxiv.org/abs/2404.01744) |
-| 498 | 0 | arXiv:2404.02445 |  |  |  |  | 1 | LLMサービング／配備構成探索／自動並列化・圧縮選択／負荷対応配置 | [source](https://arxiv.org/abs/2404.02445) |
-| 499 | 0 | arXiv:2404.05446 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2404.05446) |
-| 500 | 0 | arXiv:2404.07204 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2404.07204) |
+| 1 | 111 | DOI:10.1145/3830418.3843904 | Efficient GPU Multitasking with Morphable Kernels | 2026-09-28 | Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles | 1 | 2 | LLM Serving / Scheduling / Disaggregation, kernel-runtime-compilation | [source](https://doi.org/10.1145/3830418.3843904) |
+| 2 | 110 | DOI:10.1145/3830418.3843856 | MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference | 2026-09-28 | Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles | 0 | 2 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://doi.org/10.1145/3830418.3843856) |
+| 3 | 110 | DOI:10.1145/3830418.3843869 | StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers | 2026-09-28 | Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3830418.3843869) |
+| 4 | 110 | DOI:10.1145/3830418.3843880 | DiFlow: A System for Micro-Serving Text-to-image Diffusion Workflows | 2026-09-28 | Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles | 0 | 2 |  | [source](https://doi.org/10.1145/3830418.3843880) |
+| 5 | 110 | DOI:10.1145/3830418.3843892 | Anchor: Mitigating GPU Shallow Disruptions with Decoupled Memory | 2026-09-28 | Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3830418.3843892) |
+| 6 | 110 | DOI:10.1145/3797905.3800515 | TenProf: A Tensor-Centric Profiler for Deep Learning Workload Analysis and Optimization | 2026-07-05 | International Conference on Supercomputing | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3797905.3800515) |
+| 7 | 110 | DOI:10.1145/3797905.3800536 | Aurora: A Disaggregated GPU-PNM-PIM System for High-Throughput Mixed-Length LLM Inference | 2026-07-05 | International Conference on Supercomputing | 0 | 2 | DRAM-PIMによるLLMデコード高速化 / 長文脈注意のチャネル並列化・KV容量管理, inference-systems | [source](https://doi.org/10.1145/3797905.3800536) |
+| 8 | 110 | DOI:10.1145/3797905.3815788 | Phase-aware Peak Power Reduction for Minimizing the Capital Expense of LLM Inference | 2026-07-05 | International Conference on Supercomputing | 0 | 2 | inference-systems, kernel-runtime-compilation | [source](https://doi.org/10.1145/3797905.3815788) |
+| 9 | 107 | arXiv:2607.20519 | Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts | 2026-07-08 | arXiv.org | 7 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2607.20519) |
+| 10 | 105 | arXiv:2607.26694 | Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation | 2026-07-29 | arXiv.org | 5 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.26694) |
+| 11 | 104 | arXiv:2608.12629 | CAKE: Compiler-Agent Co-Design for Frontier Kernel Evolution | 2026-08-12 |  | 4 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.12629) |
+| 12 | 104 | arXiv:2607.04031 | TileLens: Efficiently Using Large-Granularity Memory Systems with Transparent Two-Dimensional Memory Layout | 2026-07-04 | arXiv.org | 4 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.04031) |
+| 13 | 104 | arXiv:2606.19271 | TurboServe: Serving Streaming Video Generation Efficiently and Economically | 2026-06-17 | arXiv.org | 4 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2606.19271) |
+| 14 | 103 | DOI:10.1109/TMC.2026.3666311 | An Efficient Edge-Cloud Collaboration System With Foundational Models for Open-Set IoT Applications | 2026-07-01 | IEEE Transactions on Mobile Computing | 3 | 1 | Conditional Computation | [source](https://doi.org/10.1109/TMC.2026.3666311) |
+| 15 | 103 | arXiv:2606.11867 | Harnessing Routing Foresight for Micro-step-level MoE load balancing in RL Post-training | 2026-06-10 | arXiv.org | 3 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.11867) |
+| 16 | 102 | arXiv:2608.13756 | The Integer Alibi: Localizing Cross-Kernel Divergence in INT8-Quantized LLM Inference | 2026-08-13 |  | 2 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.13756) |
+| 17 | 102 | arXiv:2607.15846 | DSTAR: Accelerating Diffusion Transformers via Spatial and Temporal Redundancy Reduction | 2026-07-17 | arXiv.org | 2 | 1 |  | [source](https://arxiv.org/abs/2607.15846) |
+| 18 | 102 | arXiv:2607.03413 | Coalesced Matrix-Free Geometric Multigrid on Persistent Cell-Wise Storage | 2026-07-03 | arXiv.org | 2 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.03413) |
+| 19 | 102 | arXiv:2606.21906 | Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding | 2026-06-20 | arXiv.org | 2 | 2 | Conditional Computation | [source](https://arxiv.org/abs/2606.21906) |
+| 20 | 102 | arXiv:2606.13945 | LatentDx: Latent Multi-Agent Communication for Cross-Hospital Rare-Disease Diagnosis | 2026-06-11 |  | 2 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2606.13945) |
+| 21 | 102 | DOI:10.1145/3808280 | Kuiper: Correct and Efficient GPU Programming with Dependent Types and Separation Logic | 2026-06-08 | Proc. ACM Program. Lang. | 2 | 1 | inference-systems | [source](https://doi.org/10.1145/3808280) |
+| 22 | 101 | arXiv:2609.40098 | Pricing Time, Not Just Tokens: Latency-Aware Mechanism Design for LLM Inference | 2026-09-30 |  | 1 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.40098) |
+| 23 | 101 | arXiv:2609.36070 | Mixture-of-Kittens: MoE Megakernel for NVL72s | 2026-09-28 |  | 1 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36070) |
+| 24 | 101 | arXiv:2609.15160 | T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning with Dynamic Routing | 2026-09-14 |  | 1 | 1 |  | [source](https://arxiv.org/abs/2609.15160) |
+| 25 | 101 | DOI:10.1109/TIA.2026.3689464 | Flexibility-Enhanced Operation of Internet Data Centers With Operator-User Collaboration: A Bilevel Stackelberg Game Approach | 2026-09-01 | IEEE transactions on industry applications | 1 | 1 | inference-systems | [source](https://doi.org/10.1109/TIA.2026.3689464) |
+| 26 | 101 | arXiv:2608.17402 | MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding | 2026-08-18 |  | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.17402) |
+| 27 | 101 | arXiv:2608.08809 | Tevatron-Elastic: A Unified Abstraction for Training Elastic Retrievers and Rerankers | 2026-08-09 |  | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2608.08809) |
+| 28 | 101 | arXiv:2608.01169 | Think in Sets for Streaming Video Token Compression | 2026-08-02 |  | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.01169) |
+| 29 | 101 | arXiv:2607.28308 | Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing | 2026-07-30 | arXiv.org | 1 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2607.28308) |
+| 30 | 101 | arXiv:2607.22465 | ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback | 2026-07-24 |  | 1 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2607.22465) |
+| 31 | 101 | arXiv:2607.04454 | Correct but Slow: An Empirical Study of the GPU Kernel Evaluation Gap in Modern Domain-Specific Languages | 2026-07-05 | arXiv.org | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.04454) |
+| 32 | 101 | arXiv:2607.02391 | WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs | 2026-07-02 | arXiv.org | 1 | 1 |  | [source](https://arxiv.org/abs/2607.02391) |
+| 33 | 101 | arXiv:2606.19667 | CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference | 2026-06-18 | arXiv.org | 1 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2606.19667) |
+| 34 | 101 | arXiv:2607.22595 | xMIx: High-Performance Serving-Time Platform for Mechanistic Interpretability Apps | 2026-06-11 | arXiv.org | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.22595) |
+| 35 | 100 | arXiv:2610.00940 | ReHoPER: Receding-Horizon Planning for Enhanced Reasoning | 2026-10-01 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2610.00940) |
+| 36 | 100 | arXiv:2610.01014 | From Discovery to Decision: Finite-Budget Recoverability in LLM Voting | 2026-10-01 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2610.01014) |
+| 37 | 100 | arXiv:2610.01140 | ReSolve: Reusing Candidate Reasoning through Selective Generative Moderation | 2026-10-01 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2610.01140) |
+| 38 | 100 | arXiv:2610.01282 | Trustworthy Data- and ML-Ops for Intelligent Transportation Systems and Logistics | 2026-10-01 | IEEE transactions on intelligent transportation systems (Print) | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2610.01282) |
+| 39 | 100 | arXiv:2610.01768 | The Innocent Courier: Covert Exfiltration Through Legitimate LLM Web Fetching | 2026-10-01 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2610.01768) |
+| 40 | 100 | arXiv:2610.01950 | MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference | 2026-10-01 |  | 0 | 1 |  | [source](https://arxiv.org/abs/2610.01950) |
+| 41 | 100 | DOI:10.1016/j.comnet.2026.112609 | Profit-aware deployment of large language model-enabled inference chains in data centers | 2026-10-01 | Comput. Networks | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1016/j.comnet.2026.112609) |
+| 42 | 100 | DOI:10.1109/JSSC.2026.3708458 | PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications | 2026-10-01 | IEEE Journal of Solid-State Circuits | 0 | 2 | LLM Serving / Scheduling / Disaggregation, kernel-runtime-compilation | [source](https://doi.org/10.1109/JSSC.2026.3708458) |
+| 43 | 100 | DOI:10.1109/TCAD.2026.3663251 | Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models | 2026-10-01 | IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems | 0 | 1 |  | [source](https://doi.org/10.1109/TCAD.2026.3663251) |
+| 44 | 100 | DOI:10.1145/3832269 | Cracking Query Bottlenecks: Towards Efficiency-Oriented Text-to-SQL Generation | 2026-10-01 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3832269) |
+| 45 | 100 | arXiv:2609.38706 | Preserving Provenance in Shared KV Caches for LLM Serving | 2026-09-30 |  | 0 | 2 | KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38706) |
+| 46 | 100 | arXiv:2609.38799 | Overlap, Unique and Conflict: Can LLMs Extract What They Can Recognize? | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38799) |
+| 47 | 100 | arXiv:2609.38997 | Settle: Learning When to Stop Reasoning | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38997) |
+| 48 | 100 | arXiv:2609.39131 | Characterizing High Bandwidth Flash for LLM Serving | 2026-09-30 |  | 0 | 2 | KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.39131) |
+| 49 | 100 | arXiv:2609.39334 | Taming Speculative Search for Test-Time Scaling in LLM Serving | 2026-09-30 |  | 0 | 2 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.39334) |
+| 50 | 100 | arXiv:2609.39402 | Advancing Entropy-Level Credit Assignment in RLVR via Proximal Entropy Policy Optimization | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.39402) |
+| 51 | 100 | arXiv:2609.39645 | SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.39645) |
+| 52 | 100 | arXiv:2609.39819 | Capture the lifecycle: KV Cache management in ReAct Agents with KVTether | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.39819) |
+| 53 | 100 | arXiv:2609.39938 | LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception | 2026-09-30 |  | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2609.39938) |
+| 54 | 100 | arXiv:2609.40097 | AutoDataBench: A Data-centric Testbed for Accelerating Auto Research | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.40097) |
+| 55 | 100 | arXiv:2609.40284 | cua-speedrun: Standardized Benchmarking of the Speed of Computer-Use Agents | 2026-09-30 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.40284) |
+| 56 | 100 | arXiv:2610.00437 | JevSpawn: Adaptive Agentic Inference through Compositional Action Spaces | 2026-09-30 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2610.00437) |
+| 57 | 100 | arXiv:2610.00623 | HAWK: Rethinking Multimodal Drafting for Speculative Decoding | 2026-09-30 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2610.00623) |
+| 58 | 100 | arXiv:2609.36525 | Reliability Testing of Medical Model Performance under Distributed Deployment | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36525) |
+| 59 | 100 | arXiv:2609.36590 | SEED: Self-Speculative Decoding via Implicit Encoder-Decoder | 2026-09-29 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2609.36590) |
+| 60 | 100 | arXiv:2609.36651 | FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36651) |
+| 61 | 100 | arXiv:2609.36763 | SCORAS-MoE: Joint Compression and Resource-Adaptive Deployment of MoE-VLMs in LEO Satellite Networks | 2026-09-29 |  | 0 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2609.36763) |
+| 62 | 100 | arXiv:2609.36938 | Efficient Agentic LLM Serving over SSD-based Sparse KV Storage | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36938) |
+| 63 | 100 | arXiv:2609.36954 | Purlin: Separating Orchestration from the Datapath of Collectives | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36954) |
+| 64 | 100 | arXiv:2609.37190 | HaPRL: Human-Anchored Process Reinforcement Learning for Visual Search Agent | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.37190) |
+| 65 | 100 | arXiv:2609.37532 | DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification | 2026-09-29 |  | 0 | 2 | Conditional Computation, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.37532) |
+| 66 | 100 | arXiv:2609.37751 | Cross-Entropy Guided Routing in Mixture-of-Experts Large Language Models | 2026-09-29 |  | 0 | 1 |  | [source](https://arxiv.org/abs/2609.37751) |
+| 67 | 100 | arXiv:2609.37902 | You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.37902) |
+| 68 | 100 | arXiv:2609.38099 | Effective Dense Retrieval using Only In-Context Examples | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38099) |
+| 69 | 100 | arXiv:2609.38368 | Composition, Not Conversation: VLMs Lose the Scene, Not the Thread | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38368) |
+| 70 | 100 | arXiv:2609.38406 | Evaluating Whether LLMs Can Reliably Connect the DOTs? | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38406) |
+| 71 | 100 | arXiv:2609.38642 | ChartRevise: A Dataset and Evaluation Protocol for Exact Chart Editing via Code | 2026-09-29 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.38642) |
+| 72 | 100 | arXiv:2609.34054 | PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34054) |
+| 73 | 100 | arXiv:2609.34117 | SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34117) |
+| 74 | 100 | arXiv:2609.34240 | Coherence-Aware Distributional Evaluation of Open-Ended Text Generation | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34240) |
+| 75 | 100 | arXiv:2609.34370 | Spexis: Speculative Lookahead Scheduling for LLM Inference | 2026-09-28 |  | 0 | 2 | Conditional Computation, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34370) |
+| 76 | 100 | arXiv:2609.34442 | Making LLMs Truly Forget: Deep Unlearning by Searching, Selecting, and Severing Knowledge Paths | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34442) |
+| 77 | 100 | arXiv:2609.34555 | PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding | 2026-09-28 |  | 0 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2609.34555) |
+| 78 | 100 | arXiv:2609.34645 | Nereus: Adaptive Parallelism for LLM Post-Training | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34645) |
+| 79 | 100 | arXiv:2609.34857 | Beyond Verbalized Confidence: Calibrating Reasoners with Differentiable Readouts | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34857) |
+| 80 | 100 | arXiv:2609.34975 | Teach to Learn: Hint Annealing for Self-improving LLM Reasoning | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34975) |
+| 81 | 100 | arXiv:2609.35110 | Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.35110) |
+| 82 | 100 | arXiv:2609.35140 | AReaL-TIK: Stateful Agentic Optimization of Unified RL Kernels through an Optimization IR | 2026-09-28 |  | 0 | 2 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.35140) |
+| 83 | 100 | arXiv:2609.35263 | WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.35263) |
+| 84 | 100 | arXiv:2609.35433 | ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.35433) |
+| 85 | 100 | arXiv:2609.35561 | RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.35561) |
+| 86 | 100 | arXiv:2609.35639 | GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation | 2026-09-28 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.35639) |
+| 87 | 100 | arXiv:2609.35760 | TokenCast: Forecasting Token Consumption During LLM Agent Execution | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.35760) |
+| 88 | 100 | arXiv:2609.36069 | The Uneven Decline of Collective Knowledge Production: Evidence from Stack Overflow After Generative AI | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36069) |
+| 89 | 100 | arXiv:2609.36116 | Dyad: Extending Large Language Models with Native Typed Decision-Making | 2026-09-28 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.36116) |
+| 90 | 100 | DOI:10.1145/3831586.3838145 | Exploring the Design Space of Isolation Mechanisms | 2026-09-28 | Proceedings of the 14th Workshop on Programming Languages and Operating Systems | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3831586.3838145) |
+| 91 | 100 | arXiv:2609.33268 | LSTMem: Hierarchical Long Short-Term Online Memory for Large Language Models | 2026-09-27 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.33268) |
+| 92 | 100 | arXiv:2609.33711 | DuoOPD: Learning from Joint Teacher-Student Outcomes for Multi-Task On-Policy Distillation | 2026-09-27 |  | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.33711) |
+| 93 | 100 | arXiv:2609.33965 | Greenpixie's AI Token Methodology: Assessing the Energy, Water and CO2-eq Impact of AI Tokens for Open and Closed Weight Models | 2026-09-27 |  | 0 | 2 | LLM Serving / Scheduling / Disaggregation, 推論中のKVQ再計算をストレージ読出しへ置換し、階層キャッシュと遅延制約付きスケジューラを組み合わせるLLM推論省エネルギー化。 | [source](https://arxiv.org/abs/2609.33965) |
+| 94 | 100 | DOI:10.1145/3816891.3834844 | Repeated-Token Diagnostics for Transformer Cache Traces | 2026-09-27 | Workshop Proceedings of the 55th International Conference on Parallel Processing | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3816891.3834844) |
+| 95 | 100 | DOI:10.1145/3832810.3832818 | TileGEMM: Boosting the Performance of GEMM on AMX-Powered CPUs by Exploiting Data Reuse | 2026-09-27 | Proceedings of the International Conference on Parallel Processing | 0 | 1 |  | [source](https://doi.org/10.1145/3832810.3832818) |
+| 96 | 100 | DOI:10.1145/3832810.3832877 | BR-MoE: A Memory-Budget-Aware Co-Design Framework for Efficient MoE Inference on Resource-Constrained GPUs | 2026-09-27 | Proceedings of the International Conference on Parallel Processing | 0 | 1 | Expert Prefetch | [source](https://doi.org/10.1145/3832810.3832877) |
+| 97 | 100 | DOI:10.1145/3832810.3832915 | RapidGEMM: An Efficient Tile-agnostic GEMM for Mixture-of-Experts Training | 2026-09-27 | Proceedings of the International Conference on Parallel Processing | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3832810.3832915) |
+| 98 | 100 | DOI:10.1145/3837053.3837339 | Disaggregated LLM KV-Cache Storage Requires Coordination-Free Consistency Abstractions | 2026-09-27 | Proceedings of the 18th ACM Workshop on Hot Topics in Storage and File Systems | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3837053.3837339) |
+| 99 | 100 | DOI:10.1145/3837053.3837356 | CXL Memory for LLM Inference Staging via an On-Device DMA Controller | 2026-09-27 | Proceedings of the 18th ACM Workshop on Hot Topics in Storage and File Systems | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3837053.3837356) |
+| 100 | 100 | arXiv:2609.32704 | CoWindow Attention: Full Causal Coverage Is a Collective Property | 2026-09-26 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.32704) |
+| 101 | 100 | arXiv:2609.32922 | Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer | 2026-09-26 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.32922) |
+| 102 | 100 | arXiv:2609.31093 | Block Sparse Attention with Log-Linear Complexity | 2026-09-25 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.31093) |
+| 103 | 100 | arXiv:2609.31551 | EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models | 2026-09-25 |  | 0 | 2 | kernel-runtime-compilation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2609.31551) |
+| 104 | 100 | arXiv:2609.29382 | Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs | 2026-09-24 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2609.29382) |
+| 105 | 100 | arXiv:2609.30057 | KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity | 2026-09-24 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.30057) |
+| 106 | 100 | DOI:10.1145/3837104 | CatKV: Accelerating Position-Independent Caching with Context-Adaptive KV Cache Compression | 2026-09-24 | Proceedings of the ACM on Management of Data | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3837104) |
+| 107 | 100 | arXiv:2609.25809 | You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs | 2026-09-22 |  | 0 | 2 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2609.25809) |
+| 108 | 100 | DOI:10.1109/TIP.2026.3733352 | Memory-Efficient High-Ratio Model Compression for Image Super-Resolution via Hybrid Hashing | 2026-09-22 | IEEE Transactions on Image Processing | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/TIP.2026.3733352) |
+| 109 | 100 | arXiv:2609.24802 | Tiga: Compiling Graph Message Passing at Scale | 2026-09-21 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.24802) |
+| 110 | 100 | arXiv:2609.23085 | Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving | 2026-09-19 |  | 0 | 1 | 推論中のKVQ再計算をストレージ読出しへ置換し、階層キャッシュと遅延制約付きスケジューラを組み合わせるLLM推論省エネルギー化。 | [source](https://arxiv.org/abs/2609.23085) |
+| 111 | 100 | arXiv:2609.22506 | Rethinking Vision Architectures with Gated Linear Attention and KAN | 2026-09-18 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.22506) |
+| 112 | 100 | arXiv:2609.34977 | SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models. | 2026-09-17 | IEEE Transactions on Pattern Analysis and Machine Intelligence | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2609.34977) |
+| 113 | 100 | DOI:10.1145/3846171 | Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions | 2026-09-16 | ACM Computing Surveys | 0 | 1 | Conditional Computation | [source](https://doi.org/10.1145/3846171) |
+| 114 | 100 | arXiv:2609.16389 | Exo-GPU: Safe, Imperative, User-schedulable Programming for Tensor Cores | 2026-09-14 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.16389) |
+| 115 | 100 | arXiv:2609.12330 | Unleashing the Power of Equality Saturation for Tensor Program Superoptimization | 2026-09-11 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.12330) |
+| 116 | 100 | arXiv:2609.13585 | mKernel: Fast Multi-GPU, Multi-Node Fused Kernels | 2026-09-11 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.13585) |
+| 117 | 100 | arXiv:2609.10347 | CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives | 2026-09-09 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.10347) |
+| 118 | 100 | arXiv:2609.11989 | The Computational Primitives of Adaptation | 2026-09-08 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2609.11989) |
+| 119 | 100 | arXiv:2609.06784 | GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference | 2026-09-06 |  | 0 | 1 | 推論中のKVQ再計算をストレージ読出しへ置換し、階層キャッシュと遅延制約付きスケジューラを組み合わせるLLM推論省エネルギー化。 | [source](https://arxiv.org/abs/2609.06784) |
+| 120 | 100 | arXiv:2609.03844 | Flip, Don't Shuffle: Watermarking LLMs at the Speed of Inference | 2026-09-03 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.03844) |
+| 121 | 100 | arXiv:2609.04534 | Adaptive Multilevel Discontinuous Galerkin Methods on GPUs | 2026-09-03 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.04534) |
+| 122 | 100 | arXiv:2609.01807 | SPD: Single Pass Decoding for Generative Reranking | 2026-09-01 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2609.01807) |
+| 123 | 100 | DOI:10.1016/j.sysarc.2026.103992 | S-GPT: Shape-aware graph partitioning and tuning for sustainable inference of large-scale deep neural networks | 2026-09-01 | Journal of systems architecture | 0 | 1 | inference-systems | [source](https://doi.org/10.1016/j.sysarc.2026.103992) |
+| 124 | 100 | DOI:10.1109/TPDS.2026.3703757 | FlexiTensor: Adaptive Multi-Task Deployment of LLMs on Resource-Constrained Heterogeneous Edge Devices | 2026-09-01 | IEEE Transactions on Parallel and Distributed Systems | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/TPDS.2026.3703757) |
+| 125 | 100 | arXiv:2609.00450 | HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference | 2026-08-31 |  | 0 | 1 |  | [source](https://arxiv.org/abs/2609.00450) |
+| 126 | 100 | arXiv:2608.26222 | NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation | 2026-08-26 |  | 0 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2608.26222) |
+| 127 | 100 | arXiv:2608.21157 | HIERA: Workload-Aware Planning Across Implementation Spaces for GPU Kernel Optimization | 2026-08-21 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.21157) |
+| 128 | 100 | arXiv:2608.20566 | AgentDecarbonizer: Carbon-Aware Execution for AI Agents | 2026-08-20 |  | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2608.20566) |
+| 129 | 100 | arXiv:2608.17641 | rl-triton: High-Performance Triton GPU Kernels for Reinforcement Learning Credit Assignment | 2026-08-18 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.17641) |
+| 130 | 100 | arXiv:2608.15303 | Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis | 2026-08-15 |  | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2608.15303) |
+| 131 | 100 | DOI:10.64898/2026.08.10.744024 | Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction | 2026-08-14 | bioRxiv | 0 | 1 | inference-systems | [source](https://doi.org/10.64898/2026.08.10.744024) |
+| 132 | 100 | arXiv:2608.11015 | Sona Technical Report | 2026-08-11 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.11015) |
+| 133 | 100 | arXiv:2608.09307 | Linearized 2-Simplicial Attention | 2026-08-10 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.09307) |
+| 134 | 100 | arXiv:2608.08287 | What Irregularity Costs: CUDA C++, Rust, and Triton on a Hash-Blocked GPU Workload | 2026-08-08 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.08287) |
+| 135 | 100 | arXiv:2608.07361 | Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model | 2026-08-07 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2608.07361) |
+| 136 | 100 | DOI:10.1145/3816440.3818573 | MVP: A Mobile 3D-Stacked VLM Accelerator for Efficient Video Understanding by Leveraging Dynamic Sparse Attention Patterns | 2026-08-05 | International Symposium on Low Power Electronics and Design | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3816440.3818573) |
+| 137 | 100 | arXiv:2608.01563 | Meganeura: Portable GPU Training and Inference through Vulkan and Metal | 2026-08-03 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2608.01563) |
+| 138 | 100 | arXiv:2608.00573 | TrimMoE A communication aware and adaptive depth framework for distributed edge inference | 2026-08-01 |  | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2608.00573) |
+| 139 | 100 | DOI:10.14778/3827998.3828020 | TQP++: Bridging ML Compilers and Analytical Query Processing on GPUs | 2026-08-01 | Proceedings of the VLDB Endowment | 0 | 1 | inference-systems | [source](https://doi.org/10.14778/3827998.3828020) |
+| 140 | 100 | arXiv:2607.27744 | ROCS: Request-Oriented Compute Sharing for Efficient Large-Scale Recommendation | 2026-07-30 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.27744) |
+| 141 | 100 | arXiv:2607.25651 | Demystifying Deep Learning Compiler Frontend Bugs: An LLM-Aided Empirical Study | 2026-07-28 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.25651) |
+| 142 | 100 | arXiv:2607.23089 | Compiler-Grounded Hierarchical Diagnosis for LLM-Based Triton Kernel Optimization | 2026-07-25 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.23089) |
+| 143 | 100 | arXiv:2607.21686 | Persistent Computational State: A Session-Centric Runtime for Generative World Models | 2026-07-23 | arXiv.org | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2607.21686) |
+| 144 | 100 | arXiv:2607.18730 | Dual Attention Residuals | 2026-07-21 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.18730) |
+| 145 | 100 | arXiv:2607.18357 | Decode-Time Grammars: Constrained LLM Generation over a Refinement Order of Grammar Fragments | 2026-07-20 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.18357) |
+| 146 | 100 | arXiv:2607.17074 | ThAME: 3D Memory-Enabled Heterogeneous Accelerator for LLM Mixture of Experts | 2026-07-19 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.17074) |
+| 147 | 100 | arXiv:2607.12324 | EMO: Energy Efficiency Modeling and Optimization for AI Workloads | 2026-07-14 | arXiv.org | 0 | 2 |  | [source](https://arxiv.org/abs/2607.12324) |
+| 148 | 100 | arXiv:2607.12875 | Automatic Model-Hardware Co-Adaptation for Heterogeneous AI Accelerators | 2026-07-14 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2607.12875) |
+| 149 | 100 | arXiv:2607.10389 | Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models | 2026-07-11 | arXiv.org | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2607.10389) |
+| 150 | 100 | arXiv:2607.08399 | Prompt Compression via Activation Aggregation | 2026-07-09 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2607.08399) |
+| 151 | 100 | arXiv:2609.11938 | Hardware-Attributed Operator Profiling for PyTorch | 2026-07-04 |  | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.11938) |
+| 152 | 100 | DOI:10.1016/j.sysarc.2026.103933 | VMOC: MLIR-based memory optimization for CNN deployment on vector accelerators | 2026-07-01 | Journal of systems architecture | 0 | 1 | inference-systems | [source](https://doi.org/10.1016/j.sysarc.2026.103933) |
+| 153 | 100 | DOI:10.1109/COMPSAC69091.2026.00029 | Energy-Efficient LLM Inference with SLA-Constrained Adaptive GPU Power Capping | 2026-07-01 | Annual International Computer Software and Applications Conference | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/COMPSAC69091.2026.00029) |
+| 154 | 100 | DOI:10.1109/JCC72984.2026.00021 | GreenAlign: Aligning Mixed LLM Workloads with Intermittent Renewable Supply | 2026-07-01 | Fall Joint Computer Conference | 0 | 2 | inference-systems | [source](https://doi.org/10.1109/JCC72984.2026.00021) |
+| 155 | 100 | DOI:10.1109/LCA.2026.3716671 | SoftmaxPIM: An HBM-Based PIM Architecture for Accelerating GeMV–Softmax Execution Pipeline | 2026-07-01 | IEEE computer architecture letters | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/LCA.2026.3716671) |
+| 156 | 100 | DOI:10.1109/TC.2026.3689022 | Low Bit-Width LLM Acceleration via Symmetric Lookup Format and Compute-in-Decoding Paradigm | 2026-07-01 | IEEE transactions on computers | 0 | 1 |  | [source](https://doi.org/10.1109/TC.2026.3689022) |
+| 157 | 100 | arXiv:2607.00083 | Harnessing the Latent Space: From Steering Vectors to Model Calibrators for Control and Trust | 2026-06-30 | Proceedings of The Big Picture v2: Crafting a Research Narrative | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2607.00083) |
+| 158 | 100 | DOI:10.1145/3820016 | Optimizing Vulkan Dispatch Schedules for Real-Time U-Net Denoising | 2026-06-29 | Proceedings of the ACM on Computer Graphics and Interactive Techniques | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3820016) |
+| 159 | 100 | arXiv:2606.27743 | End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference | 2026-06-26 | arXiv.org | 0 | 2 | Conditional Computation | [source](https://arxiv.org/abs/2606.27743) |
+| 160 | 100 | arXiv:2606.26744 | HyperDFlash: Hyper-Connection-Aligned Block Speculative Decoding with Gated Residual Reduction | 2026-06-25 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2606.26744) |
+| 161 | 100 | arXiv:2606.26344 | Axon: A Synthesizing Superoptimizer for Tensor Programs | 2026-06-24 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.26344) |
+| 162 | 100 | DOI:10.1145/3787109.3815210 | MPiCO: Memory-Pool-Based XPU-PIM Cluster over Optical I/O with Load-Imbalance-Aware Assignment and Execution-Site-Matching Mapping Strategies for MoE Inference | 2026-06-22 | ACM Great Lakes Symposium on VLSI | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3787109.3815210) |
+| 163 | 100 | arXiv:2606.21638 | Toward Open Weight Models Without Risks: Separating Public and Private Capabilities in LLMs | 2026-06-19 | arXiv.org | 0 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2606.21638) |
+| 164 | 100 | DOI:10.1145/3805622.3810822 | Scaling Multimodal Retrieval and Generation for Long Documents through Visual Tiling and Context Compression | 2026-06-15 | International Conference on Multimedia Retrieval | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3805622.3810822) |
+| 165 | 100 | arXiv:2606.15991 | Fearless Concurrency on the GPU | 2026-06-14 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.15991) |
+| 166 | 100 | DOI:10.1145/3815001.3815003 | Leveraging AI Ecosystem for Portable and Sustainable GPU Kernels in HPC | 2026-06-11 | ARRAY@PLDI | 0 | 1 | inference-systems | [source](https://doi.org/10.1145/3815001.3815003) |
+| 167 | 100 | arXiv:2606.10896 | Flash-GMM: A Memory-Efficient Kernel for Scalable Soft Clustering | 2026-06-09 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.10896) |
+| 168 | 100 | arXiv:2606.09312 | Toward Compiler World Models: Learning Latent Dynamics for Efficient Tensor Program Search | 2026-06-08 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.09312) |
+| 169 | 100 | DOI:10.1145/3820171.3806878 | Optimal Scheduling Algorithms for LLM Inference: Theory and Practice | 2026-06-08 | ACM SIGMETRICS Performance Evaluation Review | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3820171.3806878) |
+| 170 | 91 | arXiv:2501.02600 | TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms | 2025-01-05 | International Conference on Architectural Support for Programming Languages and Operating Systems | 91 | 1 | inference-systems | [source](https://arxiv.org/abs/2501.02600) |
+| 171 | 69 | arXiv:2406.12930 | Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization | 2024-06-16 | International Symposium on Computer Architecture | 59 | 1 |  | [source](https://arxiv.org/abs/2406.12930) |
+| 172 | 56 | DOI:10.1016/j.cosrev.2025.100755 | Empowering large language models to edge intelligence: A survey of edge efficient LLMs and techniques | 2025-08-01 | Computer Science Review | 56 | 1 |  | [source](https://doi.org/10.1016/j.cosrev.2025.100755) |
+| 173 | 48 | DOI:10.1109/ISCA59077.2024.00070 | Cambricon-D: Full-Network Differential Acceleration for Diffusion Models | 2024-06-29 | International Symposium on Computer Architecture | 38 | 1 |  | [source](https://doi.org/10.1109/ISCA59077.2024.00070) |
+| 174 | 46 | arXiv:2408.06003 | LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference | 2024-08-12 | International Symposium on Computer Architecture | 36 | 1 |  | [source](https://arxiv.org/abs/2408.06003) |
+| 175 | 41 | arXiv:2409.06204 | PIM-MMU: A Memory Management Unit for Accelerating Data Transfers in Commercial PIM Systems | 2024-09-10 | Micro | 31 | 1 |  | [source](https://arxiv.org/abs/2409.06204) |
+| 176 | 36 | arXiv:2409.05227 | BBS: Bi-Directional Bit-Level Sparsity for Deep Learning Acceleration | 2024-09-08 | Micro | 26 | 1 |  | [source](https://arxiv.org/abs/2409.05227) |
+| 177 | 34 | arXiv:2502.16963 | Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM | 2025-02-24 | International Symposium on High-Performance Computer Architecture | 24 | 1 | inference-systems | [source](https://arxiv.org/abs/2502.16963) |
+| 178 | 32 | DOI:10.1145/3728636 | Efficient Compressing and Tuning Methods for Large Language Models: A Systematic Literature Review | 2025-04-08 | ACM Computing Surveys | 32 | 1 |  | [source](https://doi.org/10.1145/3728636) |
+| 179 | 31 | arXiv:2505.00458 | Memory-Centric Computing: Solving Computing’s Memory Problem | 2025-05-01 | International Memory Workshop | 31 | 1 | inference-systems | [source](https://arxiv.org/abs/2505.00458) |
+| 180 | 30 | arXiv:2405.12079 | PhoenixOS: Concurrent OS-level GPU Checkpoint and Restore with Validated Speculation | 2024-05-20 | Symposium on Operating Systems Principles | 20 | 1 |  | [source](https://arxiv.org/abs/2405.12079) |
+| 181 | 27 | arXiv:2511.04063 | DartQuant: Efficient Rotational Distribution Calibration for LLM Quantization | 2025-11-06 | Neural Information Processing Systems | 17 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2511.04063) |
+| 182 | 27 | arXiv:2501.14808 | HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location | 2025-01-15 | Neural Information Processing Systems | 17 | 1 |  | [source](https://arxiv.org/abs/2501.14808) |
+| 183 | 26 | DOI:10.1145/3725843.3756062 | LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention | 2025-10-17 | Micro | 16 | 1 | inference-systems | [source](https://doi.org/10.1145/3725843.3756062) |
+| 184 | 25 | DOI:10.1145/3695053.3731032 | In-Storage Acceleration of Retrieval Augmented Generation as a Service | 2025-06-20 | International Symposium on Computer Architecture | 15 | 1 | inference-systems | [source](https://doi.org/10.1145/3695053.3731032) |
+| 185 | 24 | arXiv:2511.07885 | Intelligence per Watt: Measuring Intelligence Efficiency of Local AI | 2025-11-11 | arXiv.org | 24 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2511.07885) |
+| 186 | 24 | arXiv:2503.03379 | Prosperity: Accelerating Spiking Neural Networks via Product Sparsity | 2025-03-01 | International Symposium on High-Performance Computer Architecture | 14 | 1 |  | [source](https://arxiv.org/abs/2503.03379) |
+| 187 | 23 | arXiv:2501.10658 | LUT-DLA: Lookup Table as Efficient Extreme Low-Bit Deep Learning Accelerator | 2025-01-18 | International Symposium on High-Performance Computer Architecture | 13 | 1 |  | [source](https://arxiv.org/abs/2501.10658) |
+| 188 | 22 | arXiv:2505.10909 | Phi: Leveraging Pattern-based Hierarchical Sparsity for High-Efficiency Spiking Neural Networks | 2025-05-16 | International Symposium on Computer Architecture | 12 | 1 |  | [source](https://arxiv.org/abs/2505.10909) |
+| 189 | 21 | arXiv:2601.06007 | Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks | 2026-01-09 | arXiv.org | 21 | 2 | KVキャッシュ再利用／圧縮／ネットワーク転送, inference-systems | [source](https://arxiv.org/abs/2601.06007) |
+| 190 | 20 | DOI:10.1145/3725843.3756020 | Accelerating Retrieval Augmented Language Model via PIM and PNM Integration | 2025-10-18 | Micro | 10 | 1 | inference-systems | [source](https://doi.org/10.1145/3725843.3756020) |
+| 191 | 19 | DOI:10.1109/ISPASS61541.2024.00033 | Towards Cognitive AI Systems: Workload and Characterization of Neuro-Symbolic AI | 2024-05-05 | IEEE International Symposium on Performance Analysis of Systems and Software | 19 | 1 |  | [source](https://doi.org/10.1109/ISPASS61541.2024.00033) |
+| 192 | 19 | SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4 | Resource Multiplexing in Tuning and Serving Large Language Models | 2025 | USENIX Annual Technical Conference | 9 | 1 | kernel-runtime-compilation | [source](https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4) |
+| 193 | 17 | arXiv:2601.17633 | Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives | 2026-01-24 | International Symposium on High-Performance Computer Architecture | 7 | 1 | inference-systems | [source](https://arxiv.org/abs/2601.17633) |
+| 194 | 17 | arXiv:2505.24593 | Decoding Knowledge Attribution in Mixture-of-Experts: A Framework of Basic-Refinement Collaboration and Efficiency Analysis | 2025-05-30 | Annual Meeting of the Association for Computational Linguistics | 7 | 1 |  | [source](https://arxiv.org/abs/2505.24593) |
+| 195 | 16 | DOI:10.1145/3725843.3756017 | ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration | 2025-10-17 | Micro | 6 | 1 | inference-systems | [source](https://doi.org/10.1145/3725843.3756017) |
+| 196 | 16 | arXiv:2510.15152 | Tail-Optimized Caching for LLM Inference | 2025-10-16 | Neural Information Processing Systems | 6 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2510.15152) |
+| 197 | 15 | arXiv:2512.01644 | A Systematic Characterization of LLM Inference on GPUs | 2025-12-01 | arXiv.org | 15 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2512.01644) |
+| 198 | 15 | DOI:10.1145/3725843.3756102 | Re-architecting End-host Networking with CXL: Coherence, Memory, and Offloading | 2025-10-17 | Micro | 5 | 1 |  | [source](https://doi.org/10.1145/3725843.3756102) |
+| 199 | 14 | DOI:10.1007/s11432-024-4137-4 | Hardware-oriented algorithms for softmax and layer normalization of large language models | 2024-09-12 | Science China Information Sciences | 14 | 1 |  | [source](https://doi.org/10.1007/s11432-024-4137-4) |
+| 200 | 14 | arXiv:2604.18137 | AQPIM: Breaking the PIM Capacity Wall for LLMs with in-Memory Activation Quantization | 2026-01-31 | International Symposium on High-Performance Computer Architecture | 4 | 1 | inference-systems | [source](https://arxiv.org/abs/2604.18137) |
+| 201 | 14 | arXiv:2512.12949 | FlashFuser: Expanding the Scale of Kernel Fusion for Compute-Intensive Operators via Inter-Core Connection | 2025-12-15 | International Symposium on High-Performance Computer Architecture | 4 | 1 |  | [source](https://arxiv.org/abs/2512.12949) |
+| 202 | 14 | arXiv:2507.00507 | Towards Resource-Efficient Serverless LLM Inference with SLINFER | 2025-07-01 | International Symposium on High-Performance Computer Architecture | 4 | 2 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2507.00507) |
+| 203 | 13 | arXiv:2508.07227 | LP-Spec: Leveraging LPDDR PIM for Efficient LLM Mobile Speculative Inference with Architecture-Dataflow Co-Optimization | 2025-08-10 | 2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD) | 13 | 1 | inference-systems | [source](https://arxiv.org/abs/2508.07227) |
+| 204 | 13 | arXiv:2603.09865 | GAST: Gradient-aligned Sparse Tuning of Large Language Models with Data-layer Selection | 2026-03-10 | Conference of the European Chapter of the Association for Computational Linguistics | 3 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2603.09865) |
+| 205 | 13 | arXiv:2511.15503 | DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures | 2025-11-19 | International Symposium on Computer Architecture | 3 | 2 | inference-systems, kernel-runtime-compilation | [source](https://arxiv.org/abs/2511.15503) |
+| 206 | 12 | arXiv:2511.22972 | Training-Free Loosely Speculative Decoding: Accepting Semantically Correct Drafts Beyond Exact Match | 2025-11-28 | arXiv.org | 12 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2511.22972) |
+| 207 | 12 | arXiv:2501.16909 | Understanding GPU Resource Interference One Level Deeper | 2025-01-28 | ACM Symposium on Cloud Computing | 12 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2501.16909) |
+| 208 | 12 | DOI:10.1109/ISCA66397.2026.00182 | Bridging Efficiency and Scalability in Llm System Via 3D Hybrid Pim With 2D in-Transit Computation | 2026-06-01 | International Symposium on Computer Architecture | 2 | 1 | inference-systems | [source](https://doi.org/10.1109/ISCA66397.2026.00182) |
+| 209 | 12 | arXiv:2607.27694 | GyRot: Leveraging Hidden Synergy Between Rotation and Fine-Grained Group Quantization for Low-Bit LLM Inference | 2026-01-31 | International Symposium on High-Performance Computer Architecture | 2 | 1 |  | [source](https://arxiv.org/abs/2607.27694) |
+| 210 | 12 | arXiv:2511.00056 | MISA: Memory-Efficient LLMs Optimization with Module-wise Importance Sampling | 2025-10-28 | Neural Information Processing Systems | 2 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2511.00056) |
+| 211 | 12 | arXiv:2503.20507 | Harmonia: Enhancing Data Placement and Migration in Hybrid Storage Systems via Multi-Agent Reinforcement Learning | 2025-03-26 | International Conference on Supercomputing | 2 | 1 | inference-systems | [source](https://arxiv.org/abs/2503.20507) |
+| 212 | 11 | arXiv:2512.24354 | SeedFold: Scaling Biomolecular Structure Prediction | 2025-12-30 |  | 11 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2512.24354) |
+| 213 | 11 | arXiv:2510.11400 | FedHybrid: Breaking the Memory Wall of Federated Learning via Hybrid Tensor Management | 2024-11-04 | ACM International Conference on Embedded Networked Sensor Systems | 11 | 1 |  | [source](https://arxiv.org/abs/2510.11400) |
+| 214 | 11 | arXiv:2606.30553 | COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices | 2026-06-01 | International Symposium on Computer Architecture | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.30553) |
+| 215 | 11 | DOI:10.1109/ISCA66397.2026.00167 | Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads | 2026-06-01 | International Symposium on Computer Architecture | 1 | 1 | inference-systems | [source](https://doi.org/10.1109/ISCA66397.2026.00167) |
+| 216 | 11 | arXiv:2605.05607 | Accelerating MoE with Dynamic In-Switch Computing on Multi-GPUs | 2026-05-07 | International Symposium on Computer Architecture | 1 | 1 | tensor parallelism / in-switch computing / NVLink SHARP / compute-communication overlap | [source](https://arxiv.org/abs/2605.05607) |
+| 217 | 11 | arXiv:2602.00477 | Intention-Adaptive LLM Fine-Tuning for Text Revision Generation | 2026-01-31 | Conference of the European Chapter of the Association for Computational Linguistics | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2602.00477) |
+| 218 | 11 | arXiv:2511.07665 | FractalCloud: A Fractal-Inspired Architecture for Efficient Large-Scale Point Cloud Processing | 2025-11-10 | International Symposium on High-Performance Computer Architecture | 1 | 1 |  | [source](https://arxiv.org/abs/2511.07665) |
+| 219 | 10 | arXiv:2605.09165 | Sparse Layers are Critical to Scaling Looped Language Models | 2026-05-09 | arXiv.org | 10 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2605.09165) |
+| 220 | 10 | DOI:10.1109/DAC63849.2025.11132528 | PIMoE: Towards Efficient MoE Transformer Deployment on NPU-PIM System through Throttle-Aware Task Offloading | 2025-06-22 | Design Automation Conference | 10 | 1 | inference-systems | [source](https://doi.org/10.1109/DAC63849.2025.11132528) |
+| 221 | 10 | DOI:10.1145/3649329.3656221 | Oltron: Software-Hardware Co-design for Outlier-Aware Quantization of LLMs with Inter-/Intra-Layer Adaptation | 2024-06-23 | Design Automation Conference | 10 | 1 |  | [source](https://doi.org/10.1145/3649329.3656221) |
+| 222 | 10 | DOI:10.1109/ISCA66397.2026.00043 | BAAP: Coupling Compute-in-SRAM with DRAM Banks for Near-Memory Processing | 2026-06-01 | International Symposium on Computer Architecture | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/ISCA66397.2026.00043) |
+| 223 | 10 | DOI:10.1109/ISCA66397.2026.00079 | SingularBit: Exploiting Synergy of Singular Value Decomposition and Low-Bit Quantization for Weight and KV Compression in LLM Inference | 2026-06-01 | International Symposium on Computer Architecture | 0 | 2 | kernel-runtime-compilation | [source](https://doi.org/10.1109/ISCA66397.2026.00079) |
+| 224 | 10 | DOI:10.1109/ISCA66397.2026.00174 | Dynamic Scheduling for AI Accelerators via TISA | 2026-06-01 | International Symposium on Computer Architecture | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/ISCA66397.2026.00174) |
+| 225 | 10 | arXiv:2605.31004 | He2: A Communication-Light Heterogeneous Architecture for Efficient Fully Homomorphic Encryption | 2026-05-29 | International Symposium on Computer Architecture | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2605.31004) |
+| 226 | 10 | DOI:10.1145/3805621.3807658 | Towards a Solution to the Management Scaling Paradox in Distributed LLM Inference | 2026-04-27 | EuroMLSys@EuroSys | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3805621.3807658) |
+| 227 | 10 | DOI:10.1109/HPCA68181.2026.11408477 | LEGO: Supporting LLM-Enhanced Games with One Gaming GPU | 2026-01-31 | International Symposium on High-Performance Computer Architecture | 0 | 2 | Conditional Computation | [source](https://doi.org/10.1109/HPCA68181.2026.11408477) |
+| 228 | 10 | arXiv:2512.23049 | Accelerating Language Model Workflows with Prompt Choreography | 2025-12-28 | Transactions of the Association for Computational Linguistics | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2512.23049) |
+| 229 | 9 | arXiv:2604.09048 | Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures | 2026-04-10 | arXiv.org | 9 | 1 |  | [source](https://arxiv.org/abs/2604.09048) |
+| 230 | 9 | DOI:10.1109/TCSI.2025.3547732 | OFQ-LLM: Outlier-Flexing Quantization for Efficient Low-Bit Large Language Model Acceleration | 2025-08-01 | IEEE Transactions on Circuits and Systems Part 1: Regular Papers | 9 | 1 |  | [source](https://doi.org/10.1109/TCSI.2025.3547732) |
+| 231 | 9 | arXiv:2409.11650 | Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview | 2024-09-18 | arXiv.org | 9 | 1 |  | [source](https://arxiv.org/abs/2409.11650) |
+| 232 | 8 | arXiv:2512.02337 | SpecPV: Improving Self-Speculative Decoding for Long-Context Generation via Partial Verification | 2025-12-02 | arXiv.org | 8 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2512.02337) |
+| 233 | 8 | arXiv:2508.16653 | H2EAL: Hybrid-Bonding Architecture with Hybrid Sparse Attention for Efficient Long-Context LLM Inference | 2025-08-20 | 2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD) | 8 | 1 | inference-systems | [source](https://arxiv.org/abs/2508.16653) |
+| 234 | 8 | DOI:10.1109/JETCAS.2025.3566929 | A Scalable and Energy-Efficient Processing-in-Memory Architecture for Gen-AI | 2025-06-01 | IEEE Journal on Emerging and Selected Topics in Circuits and Systems | 8 | 1 | inference-systems | [source](https://doi.org/10.1109/JETCAS.2025.3566929) |
+| 235 | 8 | DOI:10.1109/LCA.2025.3559738 | Pyramid: Accelerating LLM Inference With Cross-Level Processing-in-Memory | 2025-01-01 | IEEE computer architecture letters | 8 | 1 | inference-systems | [source](https://doi.org/10.1109/LCA.2025.3559738) |
+| 236 | 7 | DOI:10.1109/TMC.2025.3620352 | Distributed and Controllable Mobile Text-to-Image Generation With User Preference Guarantee | 2026-03-01 | IEEE Transactions on Mobile Computing | 7 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/TMC.2025.3620352) |
+| 237 | 7 | arXiv:2512.17914 | Q-KVComm: Efficient Multi-Agent Communication via Adaptive KV Cache Compression | 2025-11-27 | 2026 Second International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI) | 7 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2512.17914) |
+| 238 | 7 | arXiv:2510.16805 | Mixed-Precision Quantization for Language Models: Techniques and Prospects | 2025-10-19 | ACM Computing Surveys | 7 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2510.16805) |
+| 239 | 7 | arXiv:2504.15721 | BBAL: A Bidirectional Block Floating Point-Based Quantisation Accelerator for Large Language Models | 2025-04-22 | Design Automation Conference | 7 | 1 |  | [source](https://arxiv.org/abs/2504.15721) |
+| 240 | 7 | SemanticScholar:d1135ea508be501ec9cee6c7405d67908a671ba7 | : Fast and Live Large Model Autoscaling with O (1) Host Caching |  |  | 7 | 1 |  | [source](https://www.semanticscholar.org/paper/d1135ea508be501ec9cee6c7405d67908a671ba7) |
+| 241 | 6 | DOI:10.1080/20964471.2025.2600178 | An LLM-based multi-agent system for remote sensing analysis | 2026-01-08 | Big Earth Data | 6 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1080/20964471.2025.2600178) |
+| 242 | 6 | DOI:10.1145/3731599.3767396 | WAGES: Workload-Aware GPU Sharing System for Energy-Efficient Serverless LLM Serving | 2025-11-15 | SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis | 6 | 1 |  | [source](https://doi.org/10.1145/3731599.3767396) |
+| 243 | 6 | arXiv:2504.16112 | HPU: High-Bandwidth Processing Unit for Scalable, Cost-effective LLM Inference via GPU Co-processing | 2025-04-18 | arXiv.org | 6 | 1 | inference-systems | [source](https://arxiv.org/abs/2504.16112) |
+| 244 | 5 | arXiv:2606.05688 | Value-and-Structure Alignment for Routing-Consistent Quantization of Mixture-of-Experts Models | 2026-06-04 | arXiv.org | 5 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2606.05688) |
+| 245 | 5 | arXiv:2605.05676 | Decomposing the Basic Abilities of Large Language Models: Mitigating Cross-Task Interference in Multi-Task Instruct-Tuning | 2026-05-07 | arXiv.org | 5 | 1 |  | [source](https://arxiv.org/abs/2605.05676) |
+| 246 | 5 | arXiv:2603.14224 | Self-Indexing KVCache: Predicting Sparse Attention from Compressed Keys | 2026-03-14 | AAAI Conference on Artificial Intelligence | 5 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2603.14224) |
+| 247 | 5 | arXiv:2602.20217 | KnapSpec: Self-Speculative Decoding via Adaptive Layer Selection as a Knapsack Problem | 2026-02-23 | arXiv.org | 5 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2602.20217) |
+| 248 | 5 | DOI:10.1145/3769778 | DepCache: A KV Cache Management Framework for GraphRAG with Dependency Attention | 2025-12-04 | Proc. ACM Manag. Data | 5 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3769778) |
+| 249 | 5 | DOI:10.48550/arXiv.2504.09285 | DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving | 2025-04-12 | arXiv.org | 5 | 1 | kernel-runtime-compilation | [source](https://doi.org/10.48550/arXiv.2504.09285) |
+| 250 | 5 | arXiv:2501.13331 | Qrazor: Reliable and effortless 4-bit llm quantization by significant data razoring | 2025-01-23 | arXiv.org | 5 | 1 |  | [source](https://arxiv.org/abs/2501.13331) |
+| 251 | 5 | arXiv:2406.13868 | SDQ: Sparse Decomposed Quantization for LLM Inference | 2024-06-19 | arXiv.org | 5 | 1 |  | [source](https://arxiv.org/abs/2406.13868) |
+| 252 | 4 | arXiv:2605.07068 | WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems | 2026-05-08 | arXiv.org | 4 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2605.07068) |
+| 253 | 4 | arXiv:2604.18556 | GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling | 2026-04-20 | arXiv.org | 4 | 1 | Quantization × MoE × Offload | [source](https://arxiv.org/abs/2604.18556) |
+| 254 | 4 | arXiv:2604.07622 | DIVERSED: Relaxed Speculative Decoding via Dynamic Ensemble Verification | 2026-04-08 | arXiv.org | 4 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2604.07622) |
+| 255 | 4 | arXiv:2603.02023 | PonderLM-3: Adaptive Token-Wise Pondering with Differentiable Masking | 2026-03-02 | arXiv.org | 4 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2603.02023) |
+| 256 | 4 | arXiv:2601.21824 | DASH: Deterministic Attention Scheduling for High-throughput Reproducible LLM Training | 2026-01-29 | arXiv.org | 4 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2601.21824) |
+| 257 | 4 | arXiv:2511.21910 | Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication | 2025-11-26 | Asia and South Pacific Design Automation Conference | 4 | 1 |  | [source](https://arxiv.org/abs/2511.21910) |
+| 258 | 4 | DOI:10.1016/j.eswa.2025.130109 | A new benchmark dataset and mixture-of-experts language models for adversarial natural language inference in Vietnamese | 2025-10-01 | Expert systems with applications | 4 | 1 |  | [source](https://doi.org/10.1016/j.eswa.2025.130109) |
+| 259 | 4 | arXiv:2505.05772 | STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems | 2025-05-09 | International Conference on Architectural Support for Programming Languages and Operating Systems | 4 | 1 | inference-systems | [source](https://arxiv.org/abs/2505.05772) |
+| 260 | 4 | DOI:10.23919/DATE64628.2025.10992691 | DEAR-PIM: Processing-in-Memory Architecture with Disaggregated Execution of All-bank Requests | 2025-03-31 | Design, Automation and Test in Europe | 4 | 1 | inference-systems | [source](https://doi.org/10.23919/DATE64628.2025.10992691) |
+| 261 | 4 | arXiv:2410.19096 | Watermarking Large Language Models and the Generated Content: Opportunities and Challenges | 2024-10-24 | Asilomar Conference on Signals, Systems and Computers | 4 | 1 | Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2410.19096) |
+| 262 | 4 | DOI:10.1145/3617232.3624864 | Amanda: Unified Instrumentation Framework for Deep Neural Networks | 2024-04-17 | International Conference on Architectural Support for Programming Languages and Operating Systems | 4 | 1 |  | [source](https://doi.org/10.1145/3617232.3624864) |
+| 263 | 3 | arXiv:2604.21335 | Sub-Token Routing for KV Cache Compression | 2026-04-23 |  | 3 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2604.21335) |
+| 264 | 3 | arXiv:2603.22370 | FAAR: Format-Aware Adaptive Rounding for NVFP4 | 2026-03-23 | arXiv.org | 3 | 1 |  | [source](https://arxiv.org/abs/2603.22370) |
+| 265 | 3 | DOI:10.1109/TSC.2026.3665250 | Adaptive Request Scheduling and Load Balancing for Edge Deployed Large Language Models | 2026-03-01 | IEEE Transactions on Services Computing | 3 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/TSC.2026.3665250) |
+| 266 | 3 | arXiv:2601.14980 | Parallel Collaborative ADMM Privacy Computing and Adaptive GPU Acceleration for Distributed Edge Networks | 2026-01-21 | IEEE Transactions on Mobile Computing | 3 | 1 | Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2601.14980) |
+| 267 | 3 | DOI:10.1145/3760250.3762228 | XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads | 2025-12-11 | International Conference on Architectural Support for Programming Languages and Operating Systems | 3 | 1 | kernel-runtime-compilation | [source](https://doi.org/10.1145/3760250.3762228) |
+| 268 | 3 | DOI:10.1145/3746027.3755526 | ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process | 2025-10-27 | ACM Multimedia | 3 | 1 | Conditional Computation | [source](https://doi.org/10.1145/3746027.3755526) |
+| 269 | 3 | arXiv:2510.06107 | Distributional Semantics Tracing: A Framework for Explaining Hallucinations in Large Language Models | 2025-10-07 | arXiv.org | 3 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2510.06107) |
+| 270 | 3 | arXiv:2509.24328 | Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding | 2025-09-29 | arXiv.org | 3 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2509.24328) |
+| 271 | 3 | DOI:10.1109/LCA.2025.3597323 | AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM | 2025-07-01 | IEEE computer architecture letters | 3 | 1 | inference-systems | [source](https://doi.org/10.1109/LCA.2025.3597323) |
+| 272 | 3 | DOI:10.1109/DAC63849.2025.11133193 | BlockPIM: Optimizing Memory Management for PIM-enabled Long-Context LLM Inference | 2025-06-22 | Design Automation Conference | 3 | 1 | inference-systems | [source](https://doi.org/10.1109/DAC63849.2025.11133193) |
+| 273 | 3 | arXiv:2503.23817 | MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration | 2025-03-31 | arXiv.org | 3 | 2 | DRAM-PIMによるLLMデコード高速化 / 長文脈注意のチャネル並列化・KV容量管理, inference-systems | [source](https://arxiv.org/abs/2503.23817) |
+| 274 | 2 | DOI:10.1109/TPDS.2026.3668647 | UniOrch: A Unified Mixed Framework for High-Efficiency LLM Training on Heterogeneous AI Chips | 2026-06-01 | IEEE Transactions on Parallel and Distributed Systems | 2 | 1 | inference-systems | [source](https://doi.org/10.1109/TPDS.2026.3668647) |
+| 275 | 2 | arXiv:2605.21100 | NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding | 2026-05-20 | arXiv.org | 2 | 1 |  | [source](https://arxiv.org/abs/2605.21100) |
+| 276 | 2 | DOI:10.1016/j.sysarc.2026.103726 | SPARCAM: Sparse matrix multiplication accelerator using multi-port dynamic CAM | 2026-05-01 | Journal of systems architecture | 2 | 1 | inference-systems | [source](https://doi.org/10.1016/j.sysarc.2026.103726) |
+| 277 | 2 | DOI:10.1145/3767295.3803570 | High Throughput and Low Latency LLM Serving via Adaptive KV Caching | 2026-04-26 | European Conference on Computer Systems | 2 | 3 | KVキャッシュ再利用／圧縮／ネットワーク転送, inference-systems, kernel-runtime-compilation | [source](https://doi.org/10.1145/3767295.3803570) |
+| 278 | 2 | arXiv:2604.06613 | The Detection-Extraction Gap: Models Know the Answer Before They Can Say It | 2026-04-08 | arXiv.org | 2 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2604.06613) |
+| 279 | 2 | DOI:10.1145/3779212.3790174 | I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention | 2026-03-22 | International Conference on Architectural Support for Programming Languages and Operating Systems | 2 | 1 | inference-systems | [source](https://doi.org/10.1145/3779212.3790174) |
+| 280 | 2 | arXiv:2602.23828 | GenDRAM:Hardware-Software Co-Design of General Platform in DRAM | 2026-02-27 | arXiv.org | 2 | 1 | inference-systems | [source](https://arxiv.org/abs/2602.23828) |
+| 281 | 2 | arXiv:2602.13665 | HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating | 2026-02-14 | Knowledge Discovery and Data Mining | 2 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2602.13665) |
+| 282 | 2 | arXiv:2602.02680 | FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment | 2026-02-02 | arXiv.org | 2 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2602.02680) |
+| 283 | 2 | arXiv:2512.24637 | Towards Fully-fledged GPU Multitasking via Proactive Memory Scheduling | 2025-12-31 | arXiv.org | 2 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2512.24637) |
+| 284 | 2 | arXiv:2512.15705 | Dynamic Rebatching for Efficient Early-Exit Inference with DREX | 2025-12-17 | arXiv.org | 2 | 2 | Conditional Computation, KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2512.15705) |
+| 285 | 2 | DOI:10.1145/3760250.3762235 | Compositional AI Beyond LLMs: System Implications of Neuro-Symbolic-Probabilistic Architectures | 2025-12-11 | International Conference on Architectural Support for Programming Languages and Operating Systems | 2 | 1 |  | [source](https://doi.org/10.1145/3760250.3762235) |
+| 286 | 2 | arXiv:2511.20720 | DeeAD: Dynamic Early Exit of Vision-Language Action for Efficient Autonomous Driving | 2025-11-25 | arXiv.org | 2 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2511.20720) |
+| 287 | 2 | DOI:10.1145/3774909 | An Efficient DNN Model Serving System using Layer-wise Caching and Direct-Host-Access | 2025-11-06 | ACM Transactions on Computer Systems | 2 | 1 | Offload / Hierarchical Memory | [source](https://doi.org/10.1145/3774909) |
+| 288 | 2 | DOI:10.3389/fnbot.2025.1590994 | Adaptive-expert-weight-based load balance scheme for dynamic routing of MoE | 2025-10-14 | Frontiers Neurorobotics | 2 | 1 |  | [source](https://doi.org/10.3389/fnbot.2025.1590994) |
+| 289 | 2 | DOI:10.1109/DAC63849.2025.11132816 | DuoQ: A DSP Utilization-aware and Outlier-free Quantization for FPGA-based LLMs Acceleration | 2025-06-22 | Design Automation Conference | 2 | 1 |  | [source](https://doi.org/10.1109/DAC63849.2025.11132816) |
+| 290 | 2 | arXiv:2505.24551 | Melding the Serverless Control Plane with the Conventional Cluster Manager for Speed and Resource Efficiency | 2025-05-30 |  | 2 | 1 |  | [source](https://arxiv.org/abs/2505.24551) |
+| 291 | 2 | arXiv:2501.17466 | Proteus: Enabling High-Performance Processing-Using-DRAM with Dynamic Bit-Precision, Adaptive Data Representation, and Flexible Arithmetic | 2025-01-29 |  | 2 | 1 | inference-systems | [source](https://arxiv.org/abs/2501.17466) |
+| 292 | 2 | DOI:10.1109/ACCESS.2025.3609769 | A Component-Centric Perspective on Hardware Accelerators for LLMs | 2025 | IEEE Access | 2 | 1 | inference-systems | [source](https://doi.org/10.1109/ACCESS.2025.3609769) |
+| 293 | 2 | DOI:10.1145/3675417.3675487 | Advances and Challenges in Large Model Compression: A Survey | 2024-01-19 | Proceedings of the 2024 Guangdong-Hong Kong-Macao Greater Bay Area International Conference on Digital Economy and Artificial Intelligence | 2 | 1 |  | [source](https://doi.org/10.1145/3675417.3675487) |
+| 294 | 1 | DOI:10.1016/j.suscom.2026.101333 | A forecasting-based perception layer for energy-aware resource management in LLM serving deployed on high-performance computing clusters | 2026-06-01 | Sustainable Computing: Informatics and Systems | 1 | 1 | inference-systems | [source](https://doi.org/10.1016/j.suscom.2026.101333) |
+| 295 | 1 | DOI:10.1109/TPDS.2026.3683122 | Workload-Adapted Resource Allocation for LLM Distributed Serving in Serverless Clusters | 2026-06-01 | IEEE Transactions on Parallel and Distributed Systems | 1 | 1 |  | [source](https://doi.org/10.1109/TPDS.2026.3683122) |
+| 296 | 1 | arXiv:2605.29727 | Bastion: Budget-Aware Speculative Decoding with Tree-structured Block Diffusion Drafting | 2026-05-28 | arXiv.org | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2605.29727) |
+| 297 | 1 | DOI:10.1109/IPDPS65963.2026.00046 | I/O-Aware PIM Acceleration for Long-Sequence LLM Inference with Hybrid Sparse Attention | 2026-05-25 | IEEE International Parallel and Distributed Processing Symposium | 1 | 1 | inference-systems | [source](https://doi.org/10.1109/IPDPS65963.2026.00046) |
+| 298 | 1 | arXiv:2605.22884 | Tensor Cache: Eviction-conditioned Associative Memory for Transformers | 2026-05-21 | arXiv.org | 1 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2605.22884) |
+| 299 | 1 | arXiv:2605.11317 | SOMA: Efficient Multi-turn LLM Serving via Small Language Model | 2026-05-11 | arXiv.org | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2605.11317) |
+| 300 | 1 | arXiv:2604.27396 | VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling | 2026-04-30 | arXiv.org | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2604.27396) |
+| 301 | 1 | arXiv:2604.12782 | OSC: Hardware Efficient W4A4 Quantization via Outlier Separation in Channel Dimension | 2026-04-14 | arXiv.org | 1 | 1 |  | [source](https://arxiv.org/abs/2604.12782) |
+| 302 | 1 | arXiv:2604.04253 | Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture-Scheduling Co-Design | 2026-04-05 | arXiv.org | 1 | 2 | inference-systems | [source](https://arxiv.org/abs/2604.04253) |
+| 303 | 1 | arXiv:2603.23701 | The Diminishing Returns of Early-Exit Decoding in Modern LLMs | 2026-03-24 | arXiv.org | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2603.23701) |
+| 304 | 1 | arXiv:2603.01399 | Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification | 2026-03-02 | arXiv.org | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2603.01399) |
+| 305 | 1 | DOI:10.1109/TC.2025.3644935 | Q-VESA: Accelerating Quantization-Aware Vector Search for Fast Retrieval in Prompt Engineering | 2026-03-01 | IEEE transactions on computers | 1 | 1 | inference-systems | [source](https://doi.org/10.1109/TC.2025.3644935) |
+| 306 | 1 | arXiv:2602.05145 | TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference | 2026-02-05 | arXiv.org | 1 | 1 | マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2602.05145) |
+| 307 | 1 | arXiv:2601.23180 | TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification | 2026-01-30 | arXiv.org | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2601.23180) |
+| 308 | 1 | arXiv:2601.20706 | NPU Design for Diffusion Language Model Inference | 2026-01-28 |  | 1 | 1 |  | [source](https://arxiv.org/abs/2601.20706) |
+| 309 | 1 | arXiv:2601.12298 | CD-PIM: A High-Bandwidth and Compute-Efficient LPDDR5-Based PIM for Low-Batch LLM Acceleration on Edge-Device | 2026-01-18 | Design, Automation and Test in Europe | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2601.12298) |
+| 310 | 1 | DOI:10.1109/TASE.2026.3692157 | Blending Serverful and Serverless Cloud Resources for Cost-Effective Workflow Execution | 2026 | IEEE Transactions on Automation Science and Engineering | 1 | 1 |  | [source](https://doi.org/10.1109/TASE.2026.3692157) |
+| 311 | 1 | DOI:10.1038/s41598-025-33186-1 | FreFilterTST: a dynamic channel graph sparsification approach to multivariate time series anomaly detection with frequency-domain restoration | 2025-12-23 | Scientific Reports | 1 | 1 |  | [source](https://doi.org/10.1038/s41598-025-33186-1) |
+| 312 | 1 | arXiv:2601.11553 | PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices | 2025-12-10 | arXiv.org | 1 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2601.11553) |
+| 313 | 1 | DOI:10.1145/3772052.3772207 | Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism | 2025-11-19 | ACM Symposium on Cloud Computing | 1 | 1 |  | [source](https://doi.org/10.1145/3772052.3772207) |
+| 314 | 1 | arXiv:2510.22641 | FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference | 2025-10-26 | IJCNLP-AACL | 1 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2510.22641) |
+| 315 | 1 | arXiv:2510.18525 | From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing | 2025-10-21 | arXiv.org | 1 | 1 |  | [source](https://arxiv.org/abs/2510.18525) |
+| 316 | 1 | DOI:10.1109/HPEC67600.2025.11196684 | Towards Efficient Sparse Deep Neural Network Inference via Multi-level Concurrency Orchestration | 2025-09-15 | IEEE Conference on High Performance Extreme Computing | 1 | 1 | kernel-runtime-compilation | [source](https://doi.org/10.1109/HPEC67600.2025.11196684) |
+| 317 | 1 | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | 2025-08-04 | ACM SIGOPS Operating Systems Review | 1 | 1 | kernel-runtime-compilation | [source](https://doi.org/10.1145/3759441.3759448) |
+| 318 | 1 | DOI:10.1109/ITC-CSCC66376.2025.11137588 | Outlier Matters: A Statistical Analysis of LLM Tensor Distributions and Quantization Effects | 2025-07-07 | 2025 International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC) | 1 | 1 |  | [source](https://doi.org/10.1109/ITC-CSCC66376.2025.11137588) |
+| 319 | 1 | DOI:10.1109/DAC63849.2025.11133343 | DIAS: Distance-based Attention Sparsity for Ultra-Long-Sequence Transformer with Tree-like Processing-in-Memory Architecture | 2025-06-22 | Design Automation Conference | 1 | 1 | inference-systems | [source](https://doi.org/10.1109/DAC63849.2025.11133343) |
+| 320 | 1 | DOI:10.23919/DATE64628.2025.10992868 | Integer Unit-Based Outlier-Aware LLM Accelerator Preserving Numerical Accuracy of FP-FP GEMM | 2025-03-31 | Design, Automation and Test in Europe | 1 | 1 |  | [source](https://doi.org/10.23919/DATE64628.2025.10992868) |
+| 321 | 1 | DOI:10.1109/ISCSLP63861.2024.10800592 | Fusion Pruning for Large Language Models | 2024-11-07 | International Symposium on Chinese Spoken Language Processing | 1 | 1 |  | [source](https://doi.org/10.1109/ISCSLP63861.2024.10800592) |
+| 322 | 1 | arXiv:2402.04032 | ProactivePIM: Accelerating Weight-Sharing Embedding Layer With PIM for Scalable Recommendation System | 2024-02-06 | IEEE Access | 1 | 1 | inference-systems | [source](https://arxiv.org/abs/2402.04032) |
+| 323 | 0 | DOI:10.1016/j.future.2026.108697 | BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation | 2026-12-01 | Future generations computer systems | 0 | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1016/j.future.2026.108697) |
+| 324 | 0 | DOI:10.1016/j.compeleceng.2026.111406 | Tiny Large Language Models for IoT networks: Potentials and challenges | 2026-11-01 | Computers & electrical engineering | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1016/j.compeleceng.2026.111406) |
+| 325 | 0 | arXiv:2606.06697 | AgileOS: A GPU Operating System Layer for Protected CUDA Services | 2026-06-04 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2606.06697) |
+| 326 | 0 | arXiv:2606.03825 | Dynamic Short Convolutions Improve Transformers | 2026-06-02 | arXiv.org | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2606.03825) |
+| 327 | 0 | DOI:10.1016/j.eswa.2026.133092 | Dimension-free transformer: The semi-tensor product approach for heterogeneous sequence modeling | 2026-06-01 | Expert systems with applications | 0 | 1 | inference-systems | [source](https://doi.org/10.1016/j.eswa.2026.133092) |
+| 328 | 0 | DOI:10.1109/2575-8411.2026.00111 | BridgeLoRA: Privacy-Preserving Collaborative Skip-Layer Connectors for Efficient Transformer Fine-Tuning at the Edge | 2026-06-01 | IEEE International Conference on Distributed Computing Systems | 0 | 2 | Conditional Computation | [source](https://doi.org/10.1109/2575-8411.2026.00111) |
+| 329 | 0 | DOI:10.1109/IWQoS70441.2026.11661086 | It Takes Two: Embracing Sparsity and Speculative Decoding for Efficient LLM Inference | 2026-06-01 | International Workshop on Quality of Service | 0 | 1 | Conditional Computation | [source](https://doi.org/10.1109/IWQoS70441.2026.11661086) |
+| 330 | 0 | DOI:10.1109/JETCAS.2026.3657823 | A Coalesced Tensor Reduction Architecture for Scalable All-Bank PIM Execution | 2026-06-01 | IEEE Journal on Emerging and Selected Topics in Circuits and Systems | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/JETCAS.2026.3657823) |
+| 331 | 0 | DOI:10.1109/TPDS.2026.3683867 | ViDA: Lossless VideoQA Acceleration via Selective Sparse Self-Speculation With Parallel Computational Load Management | 2026-06-01 | IEEE Transactions on Parallel and Distributed Systems | 0 | 1 |  | [source](https://doi.org/10.1109/TPDS.2026.3683867) |
+| 332 | 0 | DOI:10.65109/YPTR3460 | GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference | 2026-05-25 | Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems | 0 | 1 | inference-systems | [source](https://doi.org/10.65109/YPTR3460) |
+| 333 | 0 | DOI:10.1109/ISCAS66217.2026.11563057 | 3D-TANoC: Thermal-Aware 3D LLM Accelerator with Hierarchical NoC and Operator-Aware Dataflow Mapping Strategy | 2026-05-24 | International Symposium on Circuits and Systems | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/ISCAS66217.2026.11563057) |
+| 334 | 0 | DOI:10.1145/3816433 | CPU-GPU Workload Distribution during Throughput-Oriented LLM Inference on Single-GPU Systems | 2026-05-23 | ACM Transactions on Architecture and Code Optimization (TACO) | 0 | 1 | Offload / Hierarchical Memory | [source](https://doi.org/10.1145/3816433) |
+| 335 | 0 | arXiv:2605.14217 | PreFT: Prefill-only finetuning for efficient inference | 2026-05-14 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2605.14217) |
+| 336 | 0 | arXiv:2605.10875 | Compute Where it Counts: Self Optimizing Language Models | 2026-05-11 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2605.10875) |
+| 337 | 0 | arXiv:2605.16360 | ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference | 2026-05-09 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2605.16360) |
+| 338 | 0 | arXiv:2605.05899 | VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading | 2026-05-07 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2605.05899) |
+| 339 | 0 | arXiv:2606.03113 | Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2606.03113) |
+| 340 | 0 | DOI:10.1109/icassp55912.2026.11463477 | Efficient Multi-Lora Deployment via Shared KV-Cache with Task-Adaptive Tokens | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/icassp55912.2026.11463477) |
+| 341 | 0 | DOI:10.1109/ICDE65706.2026.00082 | EC-RAG: Towards Efficient Edge-Cloud Retrieval-Augmented Generation Systems | 2026-05-01 | IEEE International Conference on Data Engineering | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/ICDE65706.2026.00082) |
+| 342 | 0 | arXiv:2604.26469 | An Empirical Study of Speculative Decoding on Software Engineering Tasks | 2026-04-29 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2604.26469) |
+| 343 | 0 | arXiv:2605.30728 | Reducing the GPU Memory Bottleneck with Lossless Compression for ML | 2026-04-26 | European Conference on Computer Systems | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2605.30728) |
+| 344 | 0 | DOI:10.1145/3767295.3769356 | LightDSA: Enabling Efficient DSA Through Hardware-Aware Transparent Optimization | 2026-04-26 | European Conference on Computer Systems | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3767295.3769356) |
+| 345 | 0 | arXiv:2604.17720 | FlashFPS: Efficient Farthest Point Sampling for Large-Scale Point Clouds via Pruning and Caching | 2026-04-20 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2604.17720) |
+| 346 | 0 | DOI:10.23919/DATE69613.2026.11539287 | Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration | 2026-04-20 | Design, Automation and Test in Europe | 0 | 1 |  | [source](https://doi.org/10.23919/DATE69613.2026.11539287) |
+| 347 | 0 | DOI:10.23919/DATE69613.2026.11539392 | SCARLET: A Scalable OPCM-Based Accelerator for Transformer Inference with Tiled Crossbars | 2026-04-20 | Design, Automation and Test in Europe | 0 | 1 | inference-systems | [source](https://doi.org/10.23919/DATE69613.2026.11539392) |
+| 348 | 0 | arXiv:2604.17286 | Depth Adaptive Efficient Visual Autoregressive Modeling | 2026-04-19 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2604.17286) |
+| 349 | 0 | arXiv:2604.11473 | Learning How Much to Think: Difficulty-Aware Dynamic MoEs for Graph Node Classification | 2026-04-13 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2604.11473) |
+| 350 | 0 | DOI:10.1145/3774904.3792593 | Dynamic Experts Synergy for Multi-Task Recommendation | 2026-04-12 | The Web Conference | 0 | 1 |  | [source](https://doi.org/10.1145/3774904.3792593) |
+| 351 | 0 | arXiv:2604.08123 | LegoDiffusion: Micro-Serving Text-to-Image Diffusion Workflows | 2026-04-09 | arXiv.org | 0 | 1 |  | [source](https://arxiv.org/abs/2604.08123) |
+| 352 | 0 | DOI:10.48550/arXiv.2604.04750 | DeepStack: Scalable and Accurate Design Space Exploration for Distributed 3D-Stacked AI Accelerators | 2026-04-06 | arXiv.org | 0 | 1 | inference-systems | [source](https://doi.org/10.48550/arXiv.2604.04750) |
+| 353 | 0 | arXiv:2604.18592 | Two-dimensional early exit optimisation of LLM inference | 2026-03-27 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2604.18592) |
+| 354 | 0 | DOI:10.1109/AAIML67890.2026.11498121 | CALM: Cost-efficient, model Agnostic, Low-latency Modular LLM Deployment framework | 2026-03-20 | 2026 International Conference on Advances in Artificial Intelligence and Machine Learning (AAIML) | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/AAIML67890.2026.11498121) |
+| 355 | 0 | DOI:10.48550/arXiv.2603.15202 | LMetric: Simple is Better - Multiplication May Be All You Need for LLM Request Scheduling | 2026-03-16 | arXiv.org | 0 | 2 | kernel-runtime-compilation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://doi.org/10.48550/arXiv.2603.15202) |
+| 356 | 0 | arXiv:2603.09215 | SPAR-K: Scheduled Periodic Alternating Early Exit for Spoken Language Models | 2026-03-10 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2603.09215) |
+| 357 | 0 | DOI:10.1109/JSSC.2025.3622515 | CCE: A Content Creation Engine With Outlier and Mixed-Representation Computing, Semantic-Defined Instruction Generation for Video Diffusion | 2026-03-01 | IEEE Journal of Solid-State Circuits | 0 | 1 |  | [source](https://doi.org/10.1109/JSSC.2025.3622515) |
+| 358 | 0 | DOI:10.1109/ICAIC67076.2026.11395678 | Securing the LLM Supply Chain: Analyzing Threats and Mitigation Strategies | 2026-02-18 | International Conference on Applied Informatics and Communication | 0 | 1 | Offload / Hierarchical Memory | [source](https://doi.org/10.1109/ICAIC67076.2026.11395678) |
+| 359 | 0 | DOI:10.1145/3795884 | NICE: Deep Neural Network Acceleration via Hardware-Friendly Index Assisted Compression | 2026-02-07 | ACM Transactions on Architecture and Code Optimization (TACO) | 0 | 1 |  | [source](https://doi.org/10.1145/3795884) |
+| 360 | 0 | DOI:10.1145/3803686.3803705 | HySemHash: A Hybrid Hash-Deep Learning Framework for Efficient and Robust Semantic Text Classification | 2026-02-06 | Proceedings of the 2026 International Conference on Artificial Intelligence and Digital Services | 0 | 1 | Conditional Computation | [source](https://doi.org/10.1145/3803686.3803705) |
+| 361 | 0 | DOI:10.1109/TCAD.2025.3585023 | Oiso: Outlier-Isolated Data Format for Low-Bit Large Language Model Quantization | 2026-02-01 | IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems | 0 | 1 |  | [source](https://doi.org/10.1109/TCAD.2025.3585023) |
+| 362 | 0 | DOI:10.1145/3785473 | MIX-PC: Enabling Efficient DNN Inference with Mixed Numeric Precision Compilation Optimization | 2026-01-23 | ACM Transactions on Architecture and Code Optimization (TACO) | 0 | 1 |  | [source](https://doi.org/10.1145/3785473) |
+| 363 | 0 | arXiv:2601.10953 | SwiftKV: An Edge-Oriented Attention Algorithm and Multi-Head Accelerator for Fast, Efficient LLM Decoding | 2026-01-16 | arXiv.org | 0 | 1 | kernel-runtime-compilation | [source](https://arxiv.org/abs/2601.10953) |
+| 364 | 0 | DOI:10.1109/LCA.2025.3646622 | Enabling Cost-Efficient LLM Inference on Mid-Tier GPUs With NMP DIMMs | 2026-01-01 | IEEE computer architecture letters | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/LCA.2025.3646622) |
+| 365 | 0 | DOI:10.1016/j.procs.2026.04.280 | Application of Reinforcement Learning-Driven DVFS Strategy in Dynamic Energy Management of Wearable Sensors: Adaptive Adjustment Based on Edge Computing | 2026 | Procedia Computer Science | 0 | 1 | inference-systems | [source](https://doi.org/10.1016/j.procs.2026.04.280) |
+| 366 | 0 | arXiv:2512.22925 | Argus: Token Aware Distributed LLM Inference Optimization | 2025-12-28 | arXiv.org | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2512.22925) |
+| 367 | 0 | arXiv:2512.15600 | How Smoothing is N-simplicial Attention? | 2025-12-17 | arXiv.org | 0 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2512.15600) |
+| 368 | 0 | DOI:10.1109/ICPADS67057.2025.11322966 | CacheMon: In-Network Cache Coordination for Massively Scalable Distributed Storage Systems | 2025-12-14 | International Conference on Parallel and Distributed Systems | 0 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1109/ICPADS67057.2025.11322966) |
+| 369 | 0 | DOI:10.1007/s10664-025-10750-x | TransLock: Securing LLM deployment for software applications via self-locking watermarks | 2025-12-05 | Empirical Software Engineering | 0 | 1 | Offload / Hierarchical Memory | [source](https://doi.org/10.1007/s10664-025-10750-x) |
+| 370 | 0 | DOI:10.1145/3770501.3770530 | Transformers-as-a-Jury: Mimicking LLM-as-a-Judge Text Evaluation on Edge Devices | 2025-11-18 | IoT | 0 | 1 | Offload / Hierarchical Memory | [source](https://doi.org/10.1145/3770501.3770530) |
+| 371 | 0 | arXiv:2511.12860 | Dissecting and Re-Architecting 3D NAND Flash PIM Arrays for Efficient Single-Batch Token Generation in LLMS | 2025-11-10 | ICCD | 0 | 1 | inference-systems | [source](https://arxiv.org/abs/2511.12860) |
+| 372 | 0 | arXiv:2511.02248 | From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models | 2025-11-04 | arXiv.org | 0 | 2 | kernel-runtime-compilation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2511.02248) |
+| 373 | 0 | arXiv:2510.26008 | Detecting Anomalies in Machine Learning Infrastructure via Hardware Telemetry | 2025-10-29 |  | 0 | 1 |  | [source](https://arxiv.org/abs/2510.26008) |
+| 374 | 0 | DOI:10.1109/CBASE67452.2025.11335478 | KVSpec: Efficient KV-Cache Reuse for Speculative Decoding | 2025-10-24 | 2025 4th International Conference on Cloud Computing, Big Data Application and Software Engineering (CBASE) | 0 | 1 | Conditional Computation | [source](https://doi.org/10.1109/CBASE67452.2025.11335478) |
+| 375 | 0 | DOI:10.1109/ASICON66040.2025.11326469 | A Hybrid Processing-in-Memory and Computing-in-Memory Architecture for Large Language Model Inference in Edge Devices | 2025-10-21 | International Conference on ASIC | 0 | 1 | inference-systems | [source](https://doi.org/10.1109/ASICON66040.2025.11326469) |
+| 376 | 0 | DOI:10.1109/APCCAS67402.2025.11376624 | CLCO-S1: Efficient Softmax1 Architecture of Cross Level Collaborative Optimization for Transformer | 2025-10-12 | Asia Pacific Conference on Circuits and Systems | 0 | 1 |  | [source](https://doi.org/10.1109/APCCAS67402.2025.11376624) |
+| 377 | 0 | DOI:10.1109/CCMCC67628.2025.11380554 | A Blueprint for Accurate, Energy-Efficient DNN Inference via Capacitive In-Memory Processing | 2025-10-08 | 2025 Cross-Disciplinary Conference on Memory-Centric Computing (CCMCC) | 0 | 1 |  | [source](https://doi.org/10.1109/CCMCC67628.2025.11380554) |
+| 378 | 0 | DOI:10.1145/3754598.3754660 | SmartBlock: Adaptive Block Floating Point Quantization for Efficient DNN Acceleration | 2025-09-08 | International Conference on Parallel Processing | 0 | 1 |  | [source](https://doi.org/10.1145/3754598.3754660) |
+| 379 | 0 | DOI:10.1109/ITC-CSCC66376.2025.11137596 | CPP: Clustered NPU-PIM Heterogeneous Computing Topology for LLM Inference | 2025-07-07 | 2025 International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC) | 0 | 3 | DRAM-PIMによるLLMデコード高速化 / 長文脈注意のチャネル並列化・KV容量管理, inference-systems | [source](https://doi.org/10.1109/ITC-CSCC66376.2025.11137596) |
+| 380 | 0 | DOI:10.1109/DAC63849.2025.11133363 | XShift: FPGA-efficient Binarized LLM with Joint Quantization and Sparsification | 2025-06-22 | Design Automation Conference | 0 | 1 |  | [source](https://doi.org/10.1109/DAC63849.2025.11133363) |
+| 381 | 0 | DOI:10.23919/DATE64628.2025.10993092 | DOTS: DRAM-PIM Optimization for Tall and Skinny GEMM Operations in LLM Inference | 2025-03-31 | Design, Automation and Test in Europe | 0 | 1 | inference-systems | [source](https://doi.org/10.23919/DATE64628.2025.10993092) |
+| 382 | 0 | arXiv:0811.3171 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/0811.3171) |
+| 383 | 0 | arXiv:1109.3843 |  |  |  |  | 1 | KV Cache Optimization / Compression | [source](https://arxiv.org/abs/1109.3843) |
+| 384 | 0 | arXiv:1205.2618 |  |  |  |  | 1 | 適応的エキスパート計算・圧縮、エキスパート統合、推薦向け混合エキスパート | [source](https://arxiv.org/abs/1205.2618) |
+| 385 | 0 | arXiv:1211.0361 |  |  |  |  | 1 | KV Cache Optimization / Compression | [source](https://arxiv.org/abs/1211.0361) |
+| 386 | 0 | arXiv:1212.0402 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1212.0402) |
+| 387 | 0 | arXiv:1305.0445 |  |  |  |  | 2 | Conditional Computation, dense-to-MoE conversion / conditional FFN computation / expert routing | [source](https://arxiv.org/abs/1305.0445) |
+| 388 | 0 | arXiv:1312.4461 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1312.4461) |
+| 389 | 0 | arXiv:1402.3511 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1402.3511) |
+| 390 | 0 | arXiv:1406.1078 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1406.1078) |
+| 391 | 0 | arXiv:1409.3215 |  |  |  |  | 2 | MoE expert offloading / predictive prefetch and cache management, inference-systems | [source](https://arxiv.org/abs/1409.3215) |
+| 392 | 0 | arXiv:1410.5401 |  |  |  |  | 3 | inference-systems | [source](https://arxiv.org/abs/1410.5401) |
+| 393 | 0 | arXiv:1412.6550 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1412.6550) |
+| 394 | 0 | arXiv:1502.05477 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1502.05477) |
+| 395 | 0 | arXiv:1505.00387 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1505.00387) |
+| 396 | 0 | arXiv:1506.02640 |  |  |  |  | 1 | on-device LLM inference / mobile inference / Flash offload | [source](https://arxiv.org/abs/1506.02640) |
+| 397 | 0 | arXiv:1507.05910 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1507.05910) |
+| 398 | 0 | arXiv:1508.04025 |  |  |  |  | 1 | other-inference-systems | [source](https://arxiv.org/abs/1508.04025) |
+| 399 | 0 | arXiv:1511.05946 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1511.05946) |
+| 400 | 0 | arXiv:1511.06530 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1511.06530) |
+| 401 | 0 | arXiv:1511.07289 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1511.07289) |
+| 402 | 0 | arXiv:1512.03385 |  |  |  |  | 2 | 11-llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1512.03385) |
+| 403 | 0 | arXiv:1601.06759 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1601.06759) |
+| 404 | 0 | arXiv:1602.02410 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1602.02410) |
+| 405 | 0 | arXiv:1603.01025 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1603.01025) |
+| 406 | 0 | arXiv:1603.05118 |  |  |  |  | 1 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1603.05118) |
+| 407 | 0 | arXiv:1603.08983 |  |  |  |  | 5 | 99-other-inference-systems, Mixture-of-Experts / differentiable routing / parameter merging / modular learning, MoE expert offloading / cross-layer expert prediction / adaptive prefetch / expert cache management / cache-aware routing, conditional computation / mixture-of-experts / mixture-of-depths / KV-cache quantization / adaptive inference | [source](https://arxiv.org/abs/1603.08983) |
+| 408 | 0 | arXiv:1606.02858 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1606.02858) |
+| 409 | 0 | arXiv:1607.03250 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1607.03250) |
+| 410 | 0 | arXiv:1608.03665 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1608.03665) |
+| 411 | 0 | arXiv:1609.05140 |  |  |  |  | 1 | MoE routing / expert offloading / temporal expert persistence | [source](https://arxiv.org/abs/1609.05140) |
+| 412 | 0 | arXiv:1611.00712 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1611.00712) |
+| 413 | 0 | arXiv:1611.01578 |  |  |  |  | 2 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/1611.01578) |
+| 414 | 0 | arXiv:1611.07409 |  |  |  |  | 1 | llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル | [source](https://arxiv.org/abs/1611.07409) |
+| 415 | 0 | arXiv:1612.08083 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1612.08083) |
+| 416 | 0 | arXiv:1702.02815 |  |  |  |  | 1 | Conditional Computation | [source](https://arxiv.org/abs/1702.02815) |
+| 417 | 0 | arXiv:1703.01365 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1703.01365) |
+| 418 | 0 | arXiv:1703.05160 |  |  |  |  | 1 | kv-cache-optimization-compression | [source](https://arxiv.org/abs/1703.05160) |
+| 419 | 0 | arXiv:1704.04497 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1704.04497) |
+| 420 | 0 | arXiv:1704.05426 |  |  |  |  | 2 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1704.05426) |
+| 421 | 0 | arXiv:1705.04146 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1705.04146) |
+| 422 | 0 | arXiv:1706.03471 |  |  |  |  | 1 | adaptive expert computation / expert merging / curvature-aware merging / game-theoretic optimization | [source](https://arxiv.org/abs/1706.03471) |
+| 423 | 0 | arXiv:1708.04552 |  |  |  |  | 1 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1708.04552) |
+| 424 | 0 | arXiv:1709.02755 |  |  |  |  | 1 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/1709.02755) |
+| 425 | 0 | arXiv:1710.09282 |  |  |  |  | 2 |  | [source](https://arxiv.org/abs/1710.09282) |
+| 426 | 0 | arXiv:1711.03016 |  |  |  |  | 2 | GPU Kernel Framework, inference-systems | [source](https://arxiv.org/abs/1711.03016) |
+| 427 | 0 | arXiv:1712.01208 |  |  |  |  | 1 | Expert Prefetch | [source](https://arxiv.org/abs/1712.01208) |
+| 428 | 0 | arXiv:1712.05382 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1712.05382) |
+| 429 | 0 | arXiv:1801.10198 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1801.10198) |
+| 430 | 0 | arXiv:1802.05751 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1802.05751) |
+| 431 | 0 | arXiv:1802.08760 |  |  |  |  | 1 | KV cache quantization / long-context inference / activation compression | [source](https://arxiv.org/abs/1802.08760) |
+| 432 | 0 | arXiv:1803.02155 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1803.02155) |
+| 433 | 0 | arXiv:1803.08240 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1803.08240) |
+| 434 | 0 | arXiv:1804.05058 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1804.05058) |
+| 435 | 0 | arXiv:1804.08198 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1804.08198) |
+| 436 | 0 | arXiv:1805.04833 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1805.04833) |
+| 437 | 0 | arXiv:1805.08166 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1805.08166) |
+| 438 | 0 | arXiv:1806.03822 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1806.03822) |
+| 439 | 0 | arXiv:1806.10779 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1806.10779) |
+| 440 | 0 | arXiv:1807.11205 |  |  |  |  | 1 | survey-distributed-training-systems | [source](https://arxiv.org/abs/1807.11205) |
+| 441 | 0 | arXiv:1808.08558 |  |  |  |  | 1 | adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection | [source](https://arxiv.org/abs/1808.08558) |
+| 442 | 0 | arXiv:1808.10583 |  |  |  |  | 1 | multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing | [source](https://arxiv.org/abs/1808.10583) |
+| 443 | 0 | arXiv:1809.04281 |  |  |  |  | 1 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/1809.04281) |
+| 444 | 0 | arXiv:1809.10853 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1809.10853) |
+| 445 | 0 | arXiv:1810.02340 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1810.02340) |
+| 446 | 0 | arXiv:1810.05291 |  |  |  |  | 1 | その他システム研究 | [source](https://arxiv.org/abs/1810.05291) |
+| 447 | 0 | arXiv:1811.00414 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1811.00414) |
+| 448 | 0 | arXiv:1811.01088 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1811.01088) |
+| 449 | 0 | arXiv:1811.04909 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1811.04909) |
+| 450 | 0 | arXiv:1812.01243 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1812.01243) |
+| 451 | 0 | arXiv:1812.09764 |  |  |  |  | 1 | adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection | [source](https://arxiv.org/abs/1812.09764) |
+| 452 | 0 | arXiv:1901.08544 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1901.08544) |
+| 453 | 0 | arXiv:1902.00751 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1902.00751) |
+| 454 | 0 | arXiv:1902.05613 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1902.05613) |
+| 455 | 0 | arXiv:1902.09113 |  |  |  |  | 1 | 疎注意／長文脈学習 | [source](https://arxiv.org/abs/1902.09113) |
+| 456 | 0 | arXiv:1902.10186 |  |  |  |  | 1 | MoE expert pruning / causal interpretability / expert importance metrics | [source](https://arxiv.org/abs/1902.10186) |
+| 457 | 0 | arXiv:1903.01699 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1903.01699) |
+| 458 | 0 | arXiv:1903.05662 |  |  |  |  | 2 | FPGA LLM acceleration / vector quantization / memory-based computation / heterogeneous inference, Weight Quantization / Compression | [source](https://arxiv.org/abs/1903.05662) |
+| 459 | 0 | arXiv:1904.01038 |  |  |  |  | 4 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/1904.01038) |
+| 460 | 0 | arXiv:1904.05862 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1904.05862) |
+| 461 | 0 | arXiv:1904.09324 |  |  |  |  | 6 | LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, inference-systems | [source](https://arxiv.org/abs/1904.09324) |
+| 462 | 0 | arXiv:1904.10631 |  |  |  |  | 1 | long-context training / hierarchical memory / activation recomputation / KV-cache offload | [source](https://arxiv.org/abs/1904.10631) |
+| 463 | 0 | arXiv:1905.03439 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1905.03439) |
+| 464 | 0 | arXiv:1905.07129 |  |  |  |  | 1 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/1905.07129) |
+| 465 | 0 | arXiv:1905.10650 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/1905.10650) |
+| 466 | 0 | arXiv:1906.00091 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1906.00091) |
+| 467 | 0 | arXiv:1906.01502 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1906.01502) |
+| 468 | 0 | arXiv:1906.04165 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1906.04165) |
+| 469 | 0 | arXiv:1906.04721 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1906.04721) |
+| 470 | 0 | arXiv:1906.08172 |  |  |  |  | 1 | llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル | [source](https://arxiv.org/abs/1906.08172) |
+| 471 | 0 | arXiv:1906.11024 |  |  |  |  | 3 | 99-other-inference-systems, inference-systems | [source](https://arxiv.org/abs/1906.11024) |
+| 472 | 0 | arXiv:1907.02684 |  |  |  |  | 1 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/1907.02684) |
+| 473 | 0 | arXiv:1907.05686 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1907.05686) |
+| 474 | 0 | arXiv:1907.12461 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1907.12461) |
+| 475 | 0 | arXiv:1908.06605 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1908.06605) |
+| 476 | 0 | arXiv:1908.08593 |  |  |  |  | 1 | adaptive-expert-computation-compression | [source](https://arxiv.org/abs/1908.08593) |
+| 477 | 0 | arXiv:1908.09791 |  |  |  |  | 2 | inference-systems | [source](https://arxiv.org/abs/1908.09791) |
+| 478 | 0 | arXiv:1908.11645 |  |  |  |  | 1 | LLM推論メモリ階層／無損失圧縮／KVキャッシュ圧縮／動的量子化／メモリ制御器協調設計 | [source](https://arxiv.org/abs/1908.11645) |
+| 479 | 0 | arXiv:1909.02480 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1909.02480) |
+| 480 | 0 | arXiv:1909.05803 |  |  |  |  | 1 | Mixture-of-Experts / differentiable routing / parameter merging / modular learning | [source](https://arxiv.org/abs/1909.05803) |
+| 481 | 0 | arXiv:1909.09577 |  |  |  |  | 1 | 推論エンジン／推論基盤 | [source](https://arxiv.org/abs/1909.09577) |
+| 482 | 0 | arXiv:1909.12486 |  |  |  |  | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization | [source](https://arxiv.org/abs/1909.12486) |
+| 483 | 0 | arXiv:1910.02610 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1910.02610) |
+| 484 | 0 | arXiv:1910.05316 |  |  |  |  | 1 | Offload / Hierarchical Memory | [source](https://arxiv.org/abs/1910.05316) |
+| 485 | 0 | arXiv:1910.06611 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/1910.06611) |
+| 486 | 0 | arXiv:1910.09700 |  |  |  |  | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/1910.09700) |
+| 487 | 0 | arXiv:1911.02116 |  |  |  |  | 1 | MoE inference / expert pruning / language-specific expert specialization | [source](https://arxiv.org/abs/1911.02116) |
+| 488 | 0 | arXiv:1911.03014 |  |  |  |  | 1 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/1911.03014) |
+| 489 | 0 | arXiv:1911.03829 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1911.03829) |
+| 490 | 0 | arXiv:1911.04610 |  |  |  |  | 1 | オフロード／階層メモリ | [source](https://arxiv.org/abs/1911.04610) |
+| 491 | 0 | arXiv:1911.08731 |  |  |  |  | 1 | moe-quantization-compression | [source](https://arxiv.org/abs/1911.08731) |
+| 492 | 0 | arXiv:1911.11641 |  |  |  |  | 10 | 16-weight-quantization-compression, Conditional Computation, adaptive-expert-computation-compression, kv-cache-memory, mixture-of-experts / modular pretraining / expert specialization / memory-efficient selective deployment, moe-quantization-compression | [source](https://arxiv.org/abs/1911.11641) |
+| 493 | 0 | arXiv:1912.08777 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/1912.08777) |
+| 494 | 0 | arXiv:2001.01072 |  |  |  |  | 1 | MoE compression / task-agnostic expert pruning / expert merging / representation similarity | [source](https://arxiv.org/abs/2001.01072) |
+| 495 | 0 | arXiv:2001.04246 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2001.04246) |
+| 496 | 0 | arXiv:2001.09977 |  |  |  |  | 6 | LLM Serving / Scheduling / Disaggregation, cross-layer LLM serving / SLO-aware scheduling / predictive routing / heterogeneous inference, inference-systems, serving-scheduling, speculative decoding / LLM serving / adaptive scheduling, その他システム研究 | [source](https://arxiv.org/abs/2001.09977) |
+| 497 | 0 | arXiv:2002.07106 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2002.07106) |
+| 498 | 0 | arXiv:2002.08155 |  |  |  |  | 1 | serving-scheduling | [source](https://arxiv.org/abs/2002.08155) |
+| 499 | 0 | arXiv:2002.08909 |  |  |  |  | 1 |  | [source](https://arxiv.org/abs/2002.08909) |
+| 500 | 0 | arXiv:2002.10345 |  |  |  |  | 1 | inference-systems | [source](https://arxiv.org/abs/2002.10345) |
 
 ## Machine-readable
 
