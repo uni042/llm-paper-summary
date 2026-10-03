@@ -26,8 +26,13 @@
   "schema_version": 1,
   "selection_reason": "Foundational production-oriented MoE inference optimization work combining sparse-model serving and expert-weight quantization; reports up to 26x throughput speedup and roughly 8x model-size reduction, directly filling the MoE quantization/serving lineage.",
   "source_url": "https://arxiv.org/abs/2211.10017",
-  "status": "ready",
+  "status": "superseded",
   "title": "Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T16:01:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md",
+  "represented_canonical_id": "arXiv:2211.10017",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

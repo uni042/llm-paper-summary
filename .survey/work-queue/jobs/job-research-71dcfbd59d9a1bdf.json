@@ -27,8 +27,13 @@
   "schema_version": 1,
   "selection_reason": "量子化感度の高い構造化weightだけ高精度保持し残りを低bit化することでLLM推論footprintを直接削減する混合精度量子化方式。",
   "source_url": "https://arxiv.org/abs/2306.02272",
-  "status": "ready",
+  "status": "superseded",
   "title": "OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T16:01:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+  "represented_canonical_id": "arXiv:2306.02272",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

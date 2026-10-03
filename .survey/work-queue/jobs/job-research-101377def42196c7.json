@@ -30,8 +30,13 @@
   "schema_version": 1,
   "selection_reason": "低ビット重み向けLUT行列積で逆量子化コストを避け、生成推論レイテンシを直接改善するカーネル研究。",
   "source_url": "https://arxiv.org/abs/2206.09557",
-  "status": "ready",
+  "status": "superseded",
   "title": "LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-03T16:01:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+  "represented_canonical_id": "arXiv:2206.09557",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
