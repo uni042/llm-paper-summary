@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T06:04:49+00:00",
-  "record_count": 523,
+  "updated_at": "2026-10-03T06:06:41+00:00",
+  "record_count": 529,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -7692,6 +7692,96 @@
         "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
       ],
       "title": "Reducing Energy Bloat in Large Model Training"
+    },
+    "arXiv:2402.07927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07927",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.07927",
+        "arXiv:2402.07927"
+      ],
+      "reason": "41種類のプロンプト工学を能力・用途別に整理するサーベイで、推論サービング、KV、メモリ階層、カーネル、量子化等の効率化を主題としない。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md"
+      ],
+      "title": "A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications"
+    },
+    "arXiv:2402.04497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04497",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.04497",
+        "arXiv:2402.04497"
+      ],
+      "reason": "attentionの勾配計算についてLLM学習時間の理論的上限・下限を解析する研究で、最終適用先が学習高速化のため凍結範囲。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+      ],
+      "title": "The Fine-Grained Complexity of Gradient Computation for Training Large Language Models"
+    },
+    "arXiv:2402.03687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03687",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.03687",
+        "arXiv:2402.03687"
+      ],
+      "reason": "分子等のグラフ生成を対象とする自己回帰拡散モデルで、LLM推論システムとは無関係。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "title": "Pard: Permutation-Invariant Autoregressive Diffusion for Graph Generation"
+    },
+    "arXiv:2401.17268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.17268",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.17268",
+        "arXiv:2401.17268"
+      ],
+      "reason": "創作・業務文章向け専用LLM系列の事前学習、fine-tuning、alignmentと能力評価が主貢献で、routingによる計算費調整は付随機能に留まり推論基盤研究ではない。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.21072-bloombee-internet-scale-distributed-inference.md"
+      ],
+      "title": "Weaver: Foundation Models for Creative Writing"
+    },
+    "arXiv:2401.14268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.14268",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.14268",
+        "arXiv:2401.14268"
+      ],
+      "reason": "LLMを用いたAndroid操作支援のHCIシステムで、効率はユーザーの操作時間・負荷を指し、LLM推論runtime効率ではない。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.12162-adaserve-multi-slo-speculative-serving.md"
+      ],
+      "title": "GPTVoiceTasker: Advancing Multi-step Mobile Task Efficiency Through Dynamic Interface Exploration and Learning"
+    },
+    "arXiv:2401.12377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.12377",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.12377",
+        "arXiv:2401.12377"
+      ],
+      "reason": "入力依存の不規則計算グラフでkernel間依存をruntime検出し並行実行するGPU一般フレームワークだが、評価対象は深層強化学習simulationとdynamic DNNでLLM固有推論を対象としない。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md"
+      ],
+      "title": "ACS: Concurrent Kernel Execution on Irregular, Input-Dependent Computational Graphs"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c570c90d7a92531-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.12377",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.12377",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.12377",
+      "arXiv:2401.12377"
+    ],
+    "reason": "入力依存の不規則計算グラフでkernel間依存をruntime検出し並行実行するGPU一般フレームワークだが、評価対象は深層強化学習simulationとdynamic DNNでLLM固有推論を対象としない。",
+    "first_checked_at": "2026-10-03T06:06:41+00:00",
+    "last_checked_at": "2026-10-03T06:06:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md"
+    ],
+    "title": "ACS: Concurrent Kernel Execution on Irregular, Input-Dependent Computational Graphs"
+  },
+  "processed_at": "2026-10-03T06:06:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c570c90d7a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

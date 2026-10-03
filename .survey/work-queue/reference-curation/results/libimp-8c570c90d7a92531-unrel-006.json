@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c570c90d7a92531-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.14268",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.14268",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.14268",
+      "arXiv:2401.14268"
+    ],
+    "reason": "LLMを用いたAndroid操作支援のHCIシステムで、効率はユーザーの操作時間・負荷を指し、LLM推論runtime効率ではない。",
+    "first_checked_at": "2026-10-03T06:06:41+00:00",
+    "last_checked_at": "2026-10-03T06:06:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.12162-adaserve-multi-slo-speculative-serving.md"
+    ],
+    "title": "GPTVoiceTasker: Advancing Multi-step Mobile Task Efficiency Through Dynamic Interface Exploration and Learning"
+  },
+  "processed_at": "2026-10-03T06:06:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c570c90d7a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

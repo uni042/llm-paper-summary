@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T06:04:49+00:00",
-  "record_count": 391,
+  "updated_at": "2026-10-03T06:06:41+00:00",
+  "record_count": 392,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5642,6 +5642,21 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md"
       ],
       "title": "TypeFly: Flying Drones with Large Language Model"
+    },
+    "arXiv:2402.09727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.09727",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.09727",
+        "arXiv:2402.09727"
+      ],
+      "reason": "長文脈をgist memoryへ圧縮して必要箇所だけ再参照するため処理トークンを減らせるが、主目的は長文読解エージェントの品質・有効文脈長拡張であり、KVキャッシュや推論ランタイム自体の最適化ではない。",
+      "first_checked_at": "2026-10-03T06:06:41+00:00",
+      "last_checked_at": "2026-10-03T06:06:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md"
+      ],
+      "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts"
     }
   }
 }
