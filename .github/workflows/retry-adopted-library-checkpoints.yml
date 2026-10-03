@@ -1,12 +1,8 @@
 name: Retry adopted Library checkpoints
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/retry-adopted-library-checkpoints.yml'
-      - '.survey/scripts/retry_adopted_checkpoint_submissions.py'
-      - '.survey/scripts/library_ack_manifest.py'
+  # Retained for explicit recovery only. The current Library-first path does not
+  # auto-trigger this legacy worker.
   workflow_dispatch:
 
 permissions:
