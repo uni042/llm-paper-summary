@@ -298,6 +298,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
     selected = due[:max(max_seeds, 0)]
 
     pages_fetched = new_observations = completed_cycles = errors = attempted_seeds = 0
+    provider_errors = seed_errors = 0
     provider_error_budget_exhausted = False
     for index, (canonical, seed_state) in enumerate(selected):
         paper = paper_by_canonical[canonical]
@@ -341,10 +342,22 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
                     sleep_fn(spacing)
         except Exception as exc:
             errors += 1
+            status_code = getattr(exc, "status_code", None)
             seed_state["last_error"] = f"{type(exc).__name__}: {exc}"
             seed_state["last_error_at"] = now_text
+            # A paper-specific lookup failure (notably 404) must not abort the
+            # corpus-wide sweep. It is rotated to the back by last_attempt_at
+            # and retried after other never-scanned/older seeds get a turn.
+            # Provider-wide throttling/outage/network failures consume the
+            # bounded run-level error budget instead.
+            if isinstance(status_code, int) and 400 <= status_code < 500 and status_code != 429:
+                seed_errors += 1
+                seed_state["coverage_status"] = "seed_error"
+            else:
+                provider_errors += 1
+                seed_state["coverage_status"] = "provider_error"
         seeds[canonical] = seed_state
-        if errors >= max_provider_errors:
+        if provider_errors >= max_provider_errors:
             provider_error_budget_exhausted = True
             break
         if spacing and index + 1 < len(selected):
@@ -398,6 +411,8 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         "candidate_observations": new_observations,
         "completed_cycles": completed_cycles,
         "errors": errors,
+        "seed_errors": seed_errors,
+        "provider_errors": provider_errors,
         "max_provider_errors_per_run": max_provider_errors,
         "rate_limit_retries_per_request": rate_limit_retries,
         "provider_error_budget_exhausted": provider_error_budget_exhausted,
