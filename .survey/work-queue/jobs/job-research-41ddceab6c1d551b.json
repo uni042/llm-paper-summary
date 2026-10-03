@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2502.07115",
   "canonical_id": "arXiv:2502.07115",
+  "citation_count": 23,
+  "citation_count_checked_at": "2026-10-03T19:20:27+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-23T16:21:07+00:00",
   "doi": null,
@@ -11,23 +14,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2025-2502.07115-online-scheduling-for-llm-inference-with-kv-cache-constraints.md",
   "parent_job_id": "job-0b60a71038c9617c",
-  "priority": 0,
+  "priority": 23,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 23,
+    "citations": 23,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 600,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 23
   },
+  "published": "2025-02-10",
   "schema_version": 1,
   "selection_reason": "The work formulates LLM batching and scheduling under explicit KV-cache memory constraints and evaluates an online scheduler against hindsight-optimal and real-workload baselines, directly extending serving-scheduling research.",
+  "semantic_scholar_id": "9a85d96bb9150844784557e8fd47e0220a0b9891",
   "source_url": "https://arxiv.org/abs/2502.07115",
   "status": "ready",
   "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2025
 }
