@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261004-0230-scheduled-chat-30/r04",
+  "reference_main_sha": "003b3e82d6a886894be80095e18eccbea56be419",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hotchips.2019.8875654",
+      "identity_tokens": [
+        "DOI:10.1109/hotchips.2019.8875654"
+      ],
+      "title": "DaVinci: A Scalable Architecture for Neural Network Computing",
+      "reason": "汎用ニューラルネットワーク計算向けDaVinci NPUアーキテクチャのハードウェア研究で、LLM推論・KVキャッシュ・LLMサービングを直接対象とした一次研究ではない。",
+      "source_url": "https://doi.org/10.1109/HOTCHIPS.2019.8875654",
+      "body_check": "abstract_screen_only: タイトル・書誌情報から汎用ニューラルネットワーク計算アクセラレータが主題で、LLM推論固有研究でないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-04T02:41:00+09:00",
+      "last_checked_at": "2026-10-04T02:41:00+09:00",
+      "linked_from": [
+        "worker-worklist-30"
+      ],
+      "worklist_rank": 53
+    }
+  ]
+}
