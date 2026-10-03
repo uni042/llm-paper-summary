@@ -171,6 +171,8 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
                             "citingPaper": {
                                 "paperId": "e" * 40,
                                 "title": "Citing Paper",
+                                "venue": "OSDI",
+                                "citationCount": 23,
                                 "externalIds": {"ArXiv": "2609.20001"},
                             }
                         }
@@ -184,6 +186,16 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         )
         page = fetch(None)
         self.assertEqual(page["records"][0]["canonical_id"], "arXiv:2609.20001")
+        self.assertEqual(page["records"][0]["venue"], "OSDI")
+        self.assertEqual(page["records"][0]["citation_count"], 23)
+        self.assertIn("SemanticScholar:" + "e" * 40, page["records"][0]["identifiers"])
+
+    def test_semantic_scholar_native_id_is_supported_for_batch_refresh(self) -> None:
+        ident = "SemanticScholar:" + "a" * 40
+        normalized, provider = discovery_provider_adapter._explicit_identifier(ident)
+        self.assertEqual(normalized, ident)
+        self.assertEqual(provider, "semantic_scholar")
+        self.assertEqual(discovery_provider_adapter._semantic_scholar_id(normalized), "a" * 40)
 
     def test_openalex_search_uses_cursor_pagination(self) -> None:
         calls = []
