@@ -86,6 +86,10 @@ jobs:
             --missing-only \
             --metadata-cache /tmp/arxiv-metadata-cache.json
 
+      - name: Normalize nullable canonical metadata keys
+        if: steps.pending.outputs.run == 'true'
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
+
       - name: Rebuild derived paper indexes
         if: steps.pending.outputs.run == 'true'
         shell: bash
