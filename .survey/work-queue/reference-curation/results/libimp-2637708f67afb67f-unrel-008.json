@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1905.07129",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1905.07129",
+    "identity_tokens": [
+      "arXiv:1905.07129"
+    ],
+    "reason": "knowledge graphのentity情報を言語表現へ統合してknowledge-driven NLP taskの精度を改善するpre-training/model quality研究で、推論runtime・cache・serving最適化を扱わない。",
+    "first_checked_at": "2026-10-04T21:37:52+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+    ],
+    "title": "ERNIE: Enhanced Language Representation with Informative Entities"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2637708f67af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

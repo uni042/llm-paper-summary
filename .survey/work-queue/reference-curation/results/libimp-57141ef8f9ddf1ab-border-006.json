@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-57141ef8f9ddf1ab-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1802.04730",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1802.04730",
+    "identity_tokens": [
+      "arXiv:1802.04730"
+    ],
+    "reason": "tensor computationを高水準表現からGPU codeへ生成・最適化するframeworkで、機械学習operatorの高性能実装を狙う。LLM kernel/runtimeの基盤技術には関連するが、最終評価が汎用ML workloadでLLM推論専用ではないためborderline。",
+    "first_checked_at": "2026-10-04T21:37:52+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [],
+    "title": "Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-57141ef8f9dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

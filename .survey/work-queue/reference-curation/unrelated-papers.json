@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T21:30:25+00:00",
-  "record_count": 1312,
+  "updated_at": "2026-10-04T21:37:53+00:00",
+  "record_count": 1327,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14283,20 +14283,6 @@
       ],
       "title": "Dense Passage Retrieval for Open-Domain Question Answering"
     },
-    "arXiv:2104.08691": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2104.08691",
-      "identity_tokens": [
-        "arXiv:2104.08691"
-      ],
-      "reason": "凍結言語モデルに学習可能なsoft promptを付与するparameter-efficient tuningが主題で、推論サービング・KVキャッシュ・MoE推論・推論カーネル等の実行系最適化を扱わない。",
-      "first_checked_at": "2026-10-04T12:52:29+00:00",
-      "last_checked_at": "2026-10-04T13:03:15+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md"
-      ],
-      "title": "The Power of Scale for Parameter-Efficient Prompt Tuning"
-    },
     "DOI:10.18653/v1/2021.naacl-main.41": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.41",
@@ -15203,20 +15189,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md"
       ],
       "title": "GPT-3: Its Nature, Scope, Limits, and Consequences"
-    },
-    "arXiv:1808.08745": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1808.08745",
-      "identity_tokens": [
-        "arXiv:1808.08745"
-      ],
-      "reason": "BBC記事からextreme summarizationデータセットを構築し、topic-aware CNNによる一文要約品質を改善するモデル・タスク研究で、LLM推論基盤の効率化を対象としない。",
-      "first_checked_at": "2026-10-04T13:07:30+00:00",
-      "last_checked_at": "2026-10-04T13:07:30+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
-      ],
-      "title": "Don’t Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization"
     },
     "DOI:10.18653/v1/d19-1259": {
       "classification": "unrelated",
@@ -18965,6 +18937,239 @@
       "last_checked_at": "2026-10-04T21:30:25+00:00",
       "linked_from": [],
       "title": "Decoupled Knowledge Distillation"
+    },
+    "DOI:10.18653/v1/2021.emnlp-main.243": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.243",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.emnlp-main.243",
+        "arXiv:2104.08691"
+      ],
+      "reason": "凍結した言語モデルに学習可能なsoft promptだけを追加し、下流タスク適応のパラメータ効率と品質を評価するprompt tuning研究。複数タスクで単一base modelを共有できserving負担軽減に言及するが、推論runtime・memory・schedulerそのものを最適化する研究ではない。",
+      "first_checked_at": "2026-10-04T12:52:29+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md"
+      ],
+      "title": "The Power of Scale for Parameter-Efficient Prompt Tuning"
+    },
+    "arXiv:2106.08254": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.08254",
+      "identity_tokens": [
+        "arXiv:2106.08254"
+      ],
+      "reason": "masked image modelingでVision Transformerを自己教師あり事前学習し、ImageNet分類・semantic segmentationの精度を改善する画像表現学習研究で、LLM推論systemを対象としない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "BEiT: BERT Pre-Training of Image Transformers"
+    },
+    "arXiv:2204.03458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.03458",
+      "identity_tokens": [
+        "arXiv:2204.03458"
+      ],
+      "reason": "時空間video diffusion modelと長時間・高解像度video生成用conditional samplingを提案する生成モデル研究で、LLM推論runtime/servingではない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Video Diffusion Models"
+    },
+    "arXiv:2101.11986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.11986",
+      "identity_tokens": [
+        "arXiv:2101.11986"
+      ],
+      "reason": "画像tokenを段階的に再構成するT2T moduleとdeep-narrow backboneでVision TransformerのImageNet精度・計算量を改善するcomputer vision研究。効率化は扱うが最終適用先が画像TransformerでLLM推論ではない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet"
+    },
+    "DOI:10.18653/v1/d18-1206": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1206",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1206",
+        "arXiv:1808.08745"
+      ],
+      "reason": "一文の極端要約（extreme summarization）datasetとtopic-aware convolutional summarizerを提案し、要約品質を評価するNLPタスク研究で、推論基盤効率化を扱わない。",
+      "first_checked_at": "2026-10-04T13:07:30+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Don’t Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization"
+    },
+    "arXiv:2205.10625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.10625",
+      "identity_tokens": [
+        "arXiv:2205.10625"
+      ],
+      "reason": "複雑問題を簡単なsubproblemへ分解して順番に解くprompting戦略によりLLMのreasoning accuracyを改善する能力誘導研究で、推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models"
+    },
+    "arXiv:2112.11446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.11446",
+      "identity_tokens": [
+        "arXiv:2112.11446"
+      ],
+      "reason": "44Mから280B parameterのGopher系列を学習し152 taskでscale・dataset・bias/toxicityを分析する大規模言語モデルの学習・能力研究。推論効率化の最終方式を提案する論文ではない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md"
+      ],
+      "title": "Scaling Language Models: Methods, Analysis & Insights from Training Gopher"
+    },
+    "arXiv:1905.07129": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.07129",
+      "identity_tokens": [
+        "arXiv:1905.07129"
+      ],
+      "reason": "knowledge graphのentity情報を言語表現へ統合してknowledge-driven NLP taskの精度を改善するpre-training/model quality研究で、推論runtime・cache・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+      ],
+      "title": "ERNIE: Enhanced Language Representation with Informative Entities"
+    },
+    "arXiv:1405.3866": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1405.3866",
+      "identity_tokens": [
+        "arXiv:1405.3866"
+      ],
+      "reason": "CNN convolution filterの低rank展開でCPU/GPU画像networkを高速化する研究。推論高速化自体は扱うが対象はCNN画像認識でありLLM/Transformer推論への最終適用・評価がない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Speeding up Convolutional Neural Networks with Low Rank Expansions"
+    },
+    "arXiv:1802.08760": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.08760",
+      "identity_tokens": [
+        "arXiv:1802.08760"
+      ],
+      "reason": "input-output Jacobian等のsensitivityとgeneralizationの相関を多数の画像分類networkで分析する学習理論・empirical study。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [],
+      "title": "Sensitivity and Generalization in Neural Networks: an Empirical Study"
+    },
+    "DOI:10.1287/moor.22.3.513": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1287/moor.22.3.513",
+      "identity_tokens": [
+        "DOI:10.1287/moor.22.3.513"
+      ],
+      "reason": "average completion timeを最小化する一般scheduling approximation algorithmの理論研究で、LLM inference servingを最終適用先としない。",
+      "first_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "linked_from": [],
+      "title": "Scheduling to Minimize Average Completion Time: Off-Line and On-Line Approximation Algorithms"
+    },
+    "arXiv:2202.07800": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.07800",
+      "identity_tokens": [
+        "arXiv:2202.07800"
+      ],
+      "reason": "ViT推論時にattentionの低いimage tokenを融合しDeiT-Sを50%高速化するが、最終適用先はImageNet等のvision TransformerでLLM推論ではない。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "Not All Patches are What You Need: Expediting Vision Transformers via Token Reorganizations"
+    },
+    "DOI:10.1145/2370816.2370865": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2370816.2370865",
+      "identity_tokens": [
+        "DOI:10.1145/2370816.2370865"
+      ],
+      "reason": "CPU-GPU heterogeneous computingを評価するarchitecture simulation frameworkで、LLM/Transformer inference専用のsimulation・serving研究ではない。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "Multi2Sim: A simulation framework for CPU-GPU computing"
+    },
+    "arXiv:1710.10723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1710.10723",
+      "identity_tokens": [
+        "arXiv:1710.10723"
+      ],
+      "reason": "paragraph-level QAをdocument-levelへ拡張するshared-normalization trainingとconfidence calibrationを提案しTriviaQA等の品質を改善するNLP task研究。推論system効率化ではない。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "Simple and Effective Multi-Paragraph Reading Comprehension"
+    },
+    "DOI:10.1145/3184558.3192301": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3184558.3192301",
+      "identity_tokens": [
+        "DOI:10.1145/3184558.3192301"
+      ],
+      "reason": "financial opinion mining/question answeringのchallenge・task設定を扱うapplication/benchmark研究で、LLM推論system最適化とは対象外。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "WWW'18 Open Challenge: Financial Opinion Mining and Question Answering"
+    },
+    "arXiv:1907.12461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1907.12461",
+      "identity_tokens": [
+        "arXiv:1907.12461"
+      ],
+      "reason": "pre-trained checkpointをsequence generation taskへ転移して品質を改善するfine-tuning/model adaptation研究で、推論runtime・memory・serving最適化を主目的としない。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks"
+    },
+    "arXiv:2004.11867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.11867",
+      "identity_tokens": [
+        "arXiv:2004.11867"
+      ],
+      "reason": "multilingual NMTのtraining/zero-shot transfer品質を改善するモデル・学習研究で、LLM推論runtime・serving効率化を対象としない。",
+      "first_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "linked_from": [],
+      "title": "Improving Massively Multilingual Neural Machine Translation and Zero-Shot Translation"
     }
   }
 }

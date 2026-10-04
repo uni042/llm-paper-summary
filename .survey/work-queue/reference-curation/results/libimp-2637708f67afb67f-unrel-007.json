@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.11446",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.11446",
+    "identity_tokens": [
+      "arXiv:2112.11446"
+    ],
+    "reason": "44Mから280B parameterのGopher系列を学習し152 taskでscale・dataset・bias/toxicityを分析する大規模言語モデルの学習・能力研究。推論効率化の最終方式を提案する論文ではない。",
+    "first_checked_at": "2026-10-04T21:37:52+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md"
+    ],
+    "title": "Scaling Language Models: Methods, Analysis & Insights from Training Gopher"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2637708f67af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

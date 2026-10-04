@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.243",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.243",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2021.emnlp-main.243",
+      "arXiv:2104.08691"
+    ],
+    "reason": "凍結した言語モデルに学習可能なsoft promptだけを追加し、下流タスク適応のパラメータ効率と品質を評価するprompt tuning研究。複数タスクで単一base modelを共有できserving負担軽減に言及するが、推論runtime・memory・schedulerそのものを最適化する研究ではない。",
+    "first_checked_at": "2026-10-04T12:52:29+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md"
+    ],
+    "title": "The Power of Scale for Parameter-Efficient Prompt Tuning"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2637708f67af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
