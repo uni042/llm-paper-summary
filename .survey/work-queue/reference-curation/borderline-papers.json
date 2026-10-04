@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T15:55:08+00:00",
-  "record_count": 423,
+  "updated_at": "2026-10-04T16:44:26+00:00",
+  "record_count": 425,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6118,6 +6118,36 @@
         "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
       ],
       "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers"
+    },
+    "arXiv:2108.12409": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2108.12409",
+      "identity_tokens": [
+        "arXiv:2108.12409"
+      ],
+      "reason": "注意スコアへ距離比例の線形biasを加えるALiBiにより、短い系列で学習した言語モデルをより長い入力へ外挿でき、1.3Bモデルで同等perplexityの長系列学習baselineより11%高速・11%省memoryと報告する。ただし主要な効率利得は学習系列短縮由来で、推論runtime/kernels/serving自体の最適化ではないためborderline。",
+      "first_checked_at": "2026-10-04T16:44:26+00:00",
+      "last_checked_at": "2026-10-04T16:44:26+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation"
+    },
+    "arXiv:2106.04554": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.04554",
+      "identity_tokens": [
+        "arXiv:2106.04554"
+      ],
+      "reason": "Transformer variantsをarchitecture modification・pre-training・applicationsで包括的に整理し、効率化variantも扱うが、LLM推論システム専用surveyではないためborderline。",
+      "first_checked_at": "2026-10-04T16:44:26+00:00",
+      "last_checked_at": "2026-10-04T16:44:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "title": "A Survey of Transformers"
     }
   }
 }
