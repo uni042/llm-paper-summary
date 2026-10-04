@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-1800-scheduled-chat-00/r01",
+  "reference_main_sha": "2417829370085b488cdd48067a2e7443c7e3a695",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1023/a:1010933404324",
+      "identity_tokens": [
+        "DOI:10.1023/a:1010933404324"
+      ],
+      "title": "Random Forests",
+      "reason": "分類・回帰用のランダムフォレスト（random forests）の一般化誤差、木の強さ・相関、特徴量のランダム選択を扱う機械学習アルゴリズム研究で、LLM推論・サービング・メモリ階層・推論カーネルを対象としない。",
+      "source_url": "https://doi.org/10.1023/A:1010933404324",
+      "body_check": "abstract_screen_only: 要旨はランダムな木予測器の集合、一般化誤差、特徴量選択、AdaBoostとの比較を主題としており、LLM/Transformer推論システムは対象外。",
+      "first_checked_at": "2026-10-04T17:58:00+09:00",
+      "last_checked_at": "2026-10-04T17:58:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-me.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1214/aoms/1177729694",
+      "identity_tokens": [
+        "DOI:10.1214/aoms/1177729694"
+      ],
+      "title": "On Information and Sufficiency",
+      "reason": "確率分布間の情報量・十分性を扱い、後にKullback–Leibler divergenceと呼ばれる量を導入した数理統計の基礎研究で、LLM推論システムの効率化を最終適用先としない。",
+      "source_url": "https://doi.org/10.1214/aoms/1177729694",
+      "body_check": "abstract_screen_only: 1951年の数理統計論文で、分布間の情報・十分統計が主題。現代LLMで損失等に利用される概念の起源ではあるが、推論ランタイム研究ではない。",
+      "first_checked_at": "2026-10-04T17:59:00+09:00",
+      "last_checked_at": "2026-10-04T17:59:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00638",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00638",
+        "arXiv:2307.03172"
+      ],
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "reason": "長い入力中の関連情報の位置を変えて多文書QAとkey-value retrievalの性能を分析し、中央付近で性能が落ちる現象と評価方法を示す能力・評価研究で、推論速度・メモリ・サービング効率を改善するシステム手法を提案しない。",
+      "source_url": "https://arxiv.org/abs/2307.03172",
+      "body_check": "abstract_screen_only: 長文脈モデルが入力中の情報をどの程度利用できるかを評価し、先頭・末尾より中央で性能が低下することを報告する。推論ランタイム最適化そのものは研究対象外。",
+      "first_checked_at": "2026-10-04T18:00:00+09:00",
+      "last_checked_at": "2026-10-04T18:00:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tevc.2010.2059031",
+      "identity_tokens": [
+        "DOI:10.1109/tevc.2010.2059031"
+      ],
+      "title": "Differential Evolution: A Survey of the State-of-the-Art",
+      "reason": "差分進化（Differential Evolution; DE）の基本概念、主要変種、多目的・制約付き・大規模・不確実最適化への応用を整理する進化計算サーベイで、LLM推論を対象としない。",
+      "source_url": "https://doi.org/10.1109/TEVC.2010.2059031",
+      "body_check": "abstract_screen_only: 確率的実数値最適化アルゴリズムDEの変種と応用・理論を整理するサーベイ。LLMの推論実行、KV、MoE、サービングは扱わない。",
+      "first_checked_at": "2026-10-04T18:01:00+09:00",
+      "last_checked_at": "2026-10-04T18:01:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-me.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.11641",
+      "identity_tokens": [
+        "arXiv:1911.11641"
+      ],
+      "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+      "reason": "物理常識推論タスクとPIQAベンチマークを導入し、人間と事前学習モデルの正解率差を分析する自然言語理解研究で、LLM推論システム効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1911.11641",
+      "body_check": "abstract_screen_only: Physical Interaction: Question Answeringを構築し、人間約95%に対し大規模事前学習モデル約77%という能力差を評価する。ランタイム・サービング最適化は対象外。",
+      "first_checked_at": "2026-10-04T18:02:00+09:00",
+      "last_checked_at": "2026-10-04T18:02:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v37i9.26317",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v37i9.26317"
+      ],
+      "title": "Are Transformers Effective for Time Series Forecasting?",
+      "reason": "長期時系列予測でTransformerの自己注意が時間順序情報を失う問題を分析し、単純な線形モデルとの予測精度比較を行う時系列研究で、LLM推論システムの効率化を対象としない。",
+      "source_url": "https://doi.org/10.1609/aaai.v37i9.26317",
+      "body_check": "abstract_screen_only: 長期時系列予測（LTSF）におけるTransformerの妥当性と時間情報損失が主題で、LLMの生成ランタイム、メモリ、サービングを扱わない。",
+      "first_checked_at": "2026-10-04T18:03:00+09:00",
+      "last_checked_at": "2026-10-04T18:03:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3714983.3714987",
+      "identity_tokens": [
+        "DOI:10.1145/3714983.3714987",
+        "arXiv:2306.00978"
+      ],
+      "title": "AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration",
+      "reason": "LLMの低ビット重み量子化と実推論高速化が最終目的。活性値分布から重要な重みチャネルを見つけ、混合精度を避けてチャネル単位スケーリングで量子化誤差を抑えるAWQと、4-bit重みを実行時に復号するTinyChatを共同設計し、デスクトップ・ノート・モバイルGPUでFP16 HuggingFace実装比平均3.2–3.3倍の高速化を報告するため、推論向け量子化・カーネルの収録対象。",
+      "source_url": "https://arxiv.org/abs/2306.00978",
+      "body_check": "full_text_checked: arXiv本文の§3 AWQ、§4 TinyChat、§5評価を確認。0.1–1%の重要チャネルを活性値で同定し、s=s_X^alphaの探索で全重みを低ビットのまま保護する。TinyChatは実行時復号、4-bit重みパッキング、カーネル融合でメモリ律速の生成を高速化。OPT-6.7B INT3-g128ではRTN PPL 23.54に対しAWQ 11.39、実システムは平均3.2–3.3倍高速化。",
+      "first_checked_at": "2026-10-04T18:04:00+09:00",
+      "last_checked_at": "2026-10-04T18:04:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
+        "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2741948.2741964",
+      "identity_tokens": [
+        "DOI:10.1145/2741948.2741964"
+      ],
+      "title": "Large-scale cluster management at Google with Borg",
+      "reason": "Googleの汎用クラスタ管理システムBorgについて、受付制御、タスク配置、過剰割当、マシン共有、障害回復を扱うデータセンタ基盤研究であり、LLM推論サービング固有の方式ではない。",
+      "source_url": "https://doi.org/10.1145/2741948.2741964",
+      "body_check": "abstract_screen_only: 数十万ジョブ・多数アプリケーションを数万台規模クラスタで管理する汎用クラスタマネージャの設計が主題。LLM/KV/MoE推論を対象としない。",
+      "first_checked_at": "2026-10-04T18:05:00+09:00",
+      "last_checked_at": "2026-10-04T18:05:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00290",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00290",
+        "arXiv:1805.12471"
+      ],
+      "title": "Neural Network Acceptability Judgments",
+      "reason": "英文の文法的容認可能性を判定するCoLAデータセットを導入し、RNN等の言語能力を評価する自然言語処理研究で、LLM推論効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1805.12471",
+      "body_check": "abstract_screen_only: 10,657英文のCoLAを構築し、文法容認性分類と文法現象ごとの誤りを分析する。推論サービング、量子化、メモリ最適化は対象外。",
+      "first_checked_at": "2026-10-04T18:06:00+09:00",
+      "last_checked_at": "2026-10-04T18:06:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3007787.3001177",
+      "identity_tokens": [
+        "DOI:10.1145/3007787.3001177"
+      ],
+      "title": "Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for Convolutional Neural Networks",
+      "reason": "CNN向けのrow-stationaryデータフローで重み・活性値・部分和のデータ移動エネルギーを削減する専用アクセラレータ研究で、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1145/3007787.3001177",
+      "body_check": "abstract_screen_only: AlexNet等のCNN畳み込み・全結合層でrow-stationaryデータフローのエネルギー効率を評価し、製造チップでも検証する。LLM推論システムは対象外。",
+      "first_checked_at": "2026-10-04T18:07:00+09:00",
+      "last_checked_at": "2026-10-04T18:07:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "worklist_rank": 13
+    }
+  ]
+}
