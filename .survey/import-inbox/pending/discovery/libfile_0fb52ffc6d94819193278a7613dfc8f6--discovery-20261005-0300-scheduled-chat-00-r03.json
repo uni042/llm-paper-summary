@@ -1,0 +1,160 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0300-scheduled-chat-00/r03",
+  "reference_main_sha": "d4ae4441511952b950d0ae7f0b3cbec947ed3d8c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26488",
+      "identity_tokens": [
+        "arXiv:2606.26488"
+      ],
+      "title": "What Survives When You Compress a Recursive Reasoner for the Edge?",
+      "reason": "再帰reasoning modelをedgeへ展開するためINT8/INT4、flash-streamed embedding等を評価し、4MB microcontrollerまで縮小する。推論deployment圧縮に直結するが対象modelが一般的LLMより小規模recursive reasoner寄りのためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.26488",
+      "body_check": "full_text_checked: arXiv書誌を明示する全文解説でINT4/INT8、flash streaming、FLOPs/memory結果を確認。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26571",
+      "identity_tokens": [
+        "arXiv:2607.26571"
+      ],
+      "title": "From Tokens to Watt-hours: Analytical Energy Estimation for LLM Inference on Modern GPUs",
+      "reason": "H100級GPUのLLM推論energyをprefill/decode、compute、parameter access、KV write、attention readへ分解して推定する分析model。推論system設計に有用だが高速化方式そのものではなく評価・modeling中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2607.26571",
+      "body_check": "full_text_checked: arXiv書誌を明示する全文解説でenergy model、prefill/decode分離、HBM/KV要素を確認。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10440",
+      "identity_tokens": [
+        "arXiv:2606.10440"
+      ],
+      "title": "ASTRA-sim 3.0: Next-Level Distributed Machine Learning Simulations via High-Fidelity GPU and Infrastructure Modeling",
+      "reason": "分散MLのGPU・networkをcache-line粒度で高忠実度simulationし、inferenceのlatency-sensitive collectiveも対象にする。推論simulation基盤として関連するがLLM専用ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.10440",
+      "body_check": "full_text_checked: arXiv書誌を示す詳細要旨でdistributed inference、GPU execution model、collective communication simulationを確認。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14530",
+      "identity_tokens": [
+        "arXiv:2607.14530"
+      ],
+      "title": "xHC: Expanded Hyper-Connections",
+      "reason": "xHC/xHC-Flashは18B/28B MoEのresidual-stream expansionを主にpre-training lossとtraining FLOPsで評価するmodel architecture/training研究。kernel/memory traffic最適化もあるが最終目的はLLM pre-training scalingで凍結対象。",
+      "source_url": "https://arxiv.org/abs/2607.14530",
+      "body_check": "abstract_screen_only: 一次arXiv書誌を示す要旨でpre-training loss、training FLOPs、residual-stream scalingが中心と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06812",
+      "identity_tokens": [
+        "arXiv:2608.06812"
+      ],
+      "title": "DGEMM with Ozaki Scheme I/II on FP4 Tensor Cores: A Base-13 E2M1 Limb Representation",
+      "reason": "FP4 Tensor CoreでFP64 DGEMMをOzaki schemeによりemulateする高精度scientific computing研究。GPU kernel技術だがLLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2608.06812",
+      "body_check": "abstract_screen_only: arXiv書誌を示す要旨でFP64 DGEMM/scientific computingが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27079",
+      "identity_tokens": [
+        "arXiv:2606.27079"
+      ],
+      "title": "ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models",
+      "reason": "VLA robot policyのphysical/instruction/perception safetyを66 scenario・5 embodimentで測るdiagnostic benchmark。推論runtime・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2606.27079",
+      "body_check": "abstract_screen_only: arXiv書誌を明示する要旨でVLA safety benchmarkが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12875",
+      "identity_tokens": [
+        "arXiv:2608.12875"
+      ],
+      "title": "The Embedder's Dilemma: LLMs Are Better, but at What Cost?",
+      "reason": "LLMとembedding modelを37 taskでquality・cost・throughput比較し、LLMが最大1431x高価、open LLMが同一GPUで2.5–736x遅い等を分析する。推論cost評価に有用だが新しい推論system方式ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.12875",
+      "body_check": "full_text_checked: arXiv書誌を明示する詳細本文でcost/throughput比較、reasoning-token budget ablationを確認。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13578",
+      "identity_tokens": [
+        "arXiv:2606.13578"
+      ],
+      "title": "LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories",
+      "reason": "科学laboratory向けVLA modelのgrounding/robotics capability研究で、LLM推論runtime・serving・cache/kernel最適化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2606.13578",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からscientific robotics/VLA groundingが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12747",
+      "identity_tokens": [
+        "arXiv:2607.12747"
+      ],
+      "title": "Tracing Agentic Failure from the Flow of Success",
+      "reason": "agentic systemの成功・失敗flowを分析するdiagnostic/evaluation研究で、LLM推論runtimeの高速化、省メモリ化、serving schedulingを提案しない。",
+      "source_url": "https://arxiv.org/abs/2607.12747",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からagent failure analysisが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07847",
+      "identity_tokens": [
+        "arXiv:2607.07847"
+      ],
+      "title": "When Does Continual Learning Require Learning",
+      "reason": "continual learningでいつparameter更新が必要かを扱う学習理論・適応研究で、LLM推論runtime/serving効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2607.07847",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からcontinual learningが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:35:00+09:00",
+      "last_checked_at": "2026-10-05T03:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 436
+    }
+  ]
+}
