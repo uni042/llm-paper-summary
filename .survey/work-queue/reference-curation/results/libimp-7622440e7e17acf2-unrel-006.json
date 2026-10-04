@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7622440e7e17acf2-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.02116",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.02116",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1911.02116",
+      "arXiv:1911.02116"
+    ],
+    "reason": "100言語・2TB超CommonCrawlでmasked language model XLM-Rを事前学習し、XNLI/MLQA/NER等のcross-lingual transfer性能を改善する多言語表現学習研究。推論runtimeやserving効率化は主題ではない。",
+    "first_checked_at": "2026-10-04T14:32:42+00:00",
+    "last_checked_at": "2026-10-04T14:32:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+    ],
+    "title": "Unsupervised Cross-lingual Representation Learning at Scale"
+  },
+  "processed_at": "2026-10-04T14:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7622440e7e17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

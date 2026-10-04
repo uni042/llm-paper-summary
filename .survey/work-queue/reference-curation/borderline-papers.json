@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T14:25:40+00:00",
-  "record_count": 421,
+  "updated_at": "2026-10-04T14:32:42+00:00",
+  "record_count": 422,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6089,6 +6089,20 @@
       "last_checked_at": "2026-10-04T13:00:43+00:00",
       "linked_from": [],
       "title": "A Survey on Deep Neural Network Pruning: Taxonomy, Comparison, Analysis, and Recommendations"
+    },
+    "arXiv:1910.01108": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1910.01108",
+      "identity_tokens": [
+        "arXiv:1910.01108"
+      ],
+      "reason": "knowledge distillationでBERTを40%小型化し、97%の言語理解性能を保持しつつCPU推論を60%高速化、iPhone 7 PlusではBERT-base比71%高速化するなど、推論圧縮・edge deploymentへの明確な最終適用を持つ。一方、対象は2019年のencoder-only BERTで現代の生成LLM servingそのものではないためborderlineとする。",
+      "first_checked_at": "2026-10-04T14:32:42+00:00",
+      "last_checked_at": "2026-10-04T14:32:42+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter"
     }
   }
 }

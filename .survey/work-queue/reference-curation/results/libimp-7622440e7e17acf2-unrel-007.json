@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7622440e7e17acf2-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1502.05477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1502.05477",
+    "identity_tokens": [
+      "arXiv:1502.05477"
+    ],
+    "reason": "policyの単調改善を近似的に保証するTrust Region Policy Optimizationを導入し、robot locomotionやAtariでpolicy学習性能を評価する強化学習アルゴリズム研究。LLM推論実行系の効率化を対象としない。",
+    "first_checked_at": "2026-10-04T14:28:32+00:00",
+    "last_checked_at": "2026-10-04T14:32:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+    ],
+    "title": "Trust Region Policy Optimization"
+  },
+  "processed_at": "2026-10-04T14:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7622440e7e17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

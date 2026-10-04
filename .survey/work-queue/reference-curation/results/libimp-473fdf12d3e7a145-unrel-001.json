@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-473fdf12d3e7a145-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3115/v1/d14-1179",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3115/v1/d14-1179",
+    "identity_tokens": [
+      "DOI:10.3115/v1/d14-1179",
+      "arXiv:1406.1078"
+    ],
+    "reason": "RNN Encoder–Decoderを統計的機械翻訳のphrase scoringへ導入して翻訳品質と表現学習を改善するモデル研究で、LLM推論ランタイム・サービング・メモリ最適化を対象としない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T14:32:41+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.00888-match-the-distribution-not-the-compute-post-training-multi-token-predict.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+    ],
+    "title": "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation"
+  },
+  "processed_at": "2026-10-04T14:32:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-473fdf12d3e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

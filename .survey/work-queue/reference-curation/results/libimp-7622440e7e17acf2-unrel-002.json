@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7622440e7e17acf2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1908.10084",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1908.10084",
+    "identity_tokens": [
+      "arXiv:1908.10084"
+    ],
+    "reason": "BERTをsiamese/triplet構造へ変えてsentence embeddingを事前計算可能にし、意味類似度検索・clusteringを高速化する表現学習／検索モデル研究。50M回のBERT比較を避けることで10,000文検索を約65時間から約5秒へ短縮するが、LLM生成推論runtimeやserving基盤の効率化が最終適用先ではない。",
+    "first_checked_at": "2026-10-04T14:32:42+00:00",
+    "last_checked_at": "2026-10-04T14:32:42+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+    ],
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+  },
+  "processed_at": "2026-10-04T14:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7622440e7e17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
