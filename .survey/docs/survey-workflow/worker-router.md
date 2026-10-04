@@ -102,7 +102,7 @@ run中に在庫が変化してもモードは固定する。
 
 ### 4.1 通常runの反復ラウンド（必須）
 
-通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは最終分類10件で1ラウンド完了とする。Discoveryでは、タイトル・abstract・書誌情報だけで**明らかに対象外**と確定できた候補は本文確認を省略して `unrelated` として完了件数へ数えてよい。`accept` / `borderline` および対象外か判断不能な候補は本文確認を必須とする。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。
+通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは最終分類10件で1ラウンド完了とする。Discoveryでは、タイトル・abstract・書誌情報だけで**明らかに対象外**と確定できた候補は本文確認を省略して `unrelated` として完了件数へ数えてよい。`accept` / `borderline` および対象外か判断不能な候補は本文確認を必須とする。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。 Researchモードで `borderline` / `unrelated` に終端した候補はLibraryへ耐久記録するが、完成Research 5件のノルマには数えず、同じworklistの次rankへ進む。
 
 1. 第1ラウンドが所定ノルマを達成したら、まずそのラウンドの完成成果をLibraryへ保存し、再取得して内容・件数・identity一意性等の所定確認を完了する。
 2. 保存・再取得確認まで成功した場合、**同じScheduled起動の中で次ラウンドを必ず開始する。** 「ノルマ達成済み」「残り時間が少ない」「追加ラウンドを完遂できる保証がない」ことだけを終了理由にしてはならない。
@@ -210,6 +210,18 @@ Researchは**1ラウンドにつき**新規完成Research Markdownを5件Library
 
 一次資料取得は特定のfront-endや固定順へ縛らない。arXiv HTML / PDF / e-print、OpenReview、会議・出版社、著者・研究機関・公式project site等から同一論文の一次資料へ到達できる経路を柔軟に使う。1経路のHTTP失敗、PDF text extraction失敗、HTML未生成だけで取得不能と判定せず、論文タイトル、arXiv ID、DOI、OpenReview ID、著者名等から別の一次資料経路を確認する。**固定された4経路を各1回だけ試して打ち切る方式は使わない。** 検索断片や第三者解説は本文の代用にせず、合理的に利用可能な一次資料経路を尽くしても必要な一次証拠を得られない場合だけ取得不能として扱う。
 
+Researchモードではpre-screen通過後に一次資料本文を確認した時点で、Research Markdown執筆前に関連性を再判定する。高優先度・Research job化済みであることは収録を保証しない。
+
+- `accept`: 通常のResearch Markdown作成へ進む。
+- `borderline`: 関連はあるが現行サーベイの収録対象として微妙。Research Markdownは作らない。
+- `unrelated`: 本文確認の結果、現行サーベイ対象外。Research Markdownは作らない。
+
+Research由来の `borderline` / `unrelated` は読んだだけで破棄せず、Libraryの `/LLM-paper-summary-library-first/discovery/` に**1-record Discovery互換JSON**として耐久保存する。ファイル名は `discovery-YYYYMMDD-HHMM-<worker_id>-research-relevance-rNN-<worklist_rank>.json` を推奨し、top-levelは `schema_version: 2`, `artifact_type: "discovery_run"`, `worker_id`, `run_key`, `reference_main_sha`, `record_count: 1`, `records[]` を持つ。recordには通常Discovery必須項目に加えて `origin: research_postread_relevance` を持たせ、`body_check` は `research_fulltext_relevance_review:` で始めて本文根拠を具体的に記録する。取得できる場合は `research_job_id` と `worklist_rank` も保持する。
+
+Researchモードのpre-screenだけで明白な対象外と確定した場合も黙ってskipせず、同じ1-record JSONを保存する。この場合は `classification: unrelated`, `origin: research_prescreen_relevance`, `body_check` に `abstract_screen_only` と本文未読を明記する。pre-screenだけで `borderline` は確定しない。
+
+これらのResearch由来relevance JSONは完成Research件数へ数えない。保存後にLibraryから再取得してJSON parse、identity、classification、`reason` / `body_check` を確認してから次rankへ進む。既存Survey GitHub Importは通常Discovery成果として転送し、GitHub import inbox processorが既存 `reference-curation/requests/` 経路で正規relevance ledgerへ反映する。新しいGitHub write経路・共有可変台帳は作らない。
+
 Research worker自身は厳密な機械監査をノルマにしない。ただし、極端に短い原稿、汎用テンプレート文、比較条件のない数値、主要機構の説明不足を完成扱いにしない。
 
 GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全性・日本語率の機械監査を行う。FAILした原稿はGitHub側blockedへ保全される。
@@ -221,6 +233,7 @@ GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全
 Library保存不能でも完成成果を破棄しない。
 
 - Research: 完成MarkdownをScheduled Chatへ完全添付
+- Research由来の `borderline` / `unrelated`: 1-record Discovery互換JSONをScheduled Chatへ完全添付
 - Discovery: 10件全件を含む完成JSONをScheduled Chatへ完全添付
 
 後続runでLibraryへ回収できたら正規pathへ保存し、再取得確認後に退避コピーを重複扱いにする。
