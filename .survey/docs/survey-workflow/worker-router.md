@@ -1,9 +1,9 @@
-# Worker router — Library-first workflow v16
+# Worker router — Library-first workflow v17
 
 この文書は、LLM論文サーベイのScheduled Chat / Work系処理が読む唯一の人間向け実行正本である。v13ではLibrary-first責務分離を維持したまま、Discovery / Research候補の重要度優先と全収録論文の前方引用カバレッジ巡回をGitHub側自動化へ追加する。
 
 1. Scheduled workerは探索・読解・分類を行い、完成成果をChatGPT Libraryへ保存する。
-2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。現在はScheduled Task枠上限のため、独立Import taskではなく `scheduled-chat-45` の 04:45 / 10:45 / 16:45 / 22:45 JST 起動冒頭に搬送フェーズとして統合する。
+2. Survey GitHub ImportはLibrary成果をGitHub受信箱へ**そのまま転送**する。現在はScheduled Task枠上限のため、独立Import taskではなく `scheduled-chat-45` の毎時 :45 起動冒頭に搬送フェーズとして統合する。
 3. GitHub側の受信箱プロセッサが、最新mainでidentity解決、重複排除、正規配置、precheck、relevance反映を行う。
 
 旧direct-GitHub worker運用は履歴資料であり、新規通常runへ復活させない。
@@ -25,12 +25,12 @@
 |---|---|---|---|
 | \`scheduled-chat-00\` / \`scheduled-chat-30\` | read-only | read/write | 探索・読解・分類・完成成果保存・自分のrun由来一時物掃除 |
 | \`scheduled-chat-45\` 通常フェーズ | read-only | read/write | :00と同じ探索・読解・分類・完成成果保存 |
-| \`scheduled-chat-45\` 04:45 / 10:45 / 16:45 / 22:45 Importフェーズ | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、handoff確認後にLibrary原本を整理 |
+| \`scheduled-chat-45\` 毎時 :45 Importフェーズ | create/read | read/delete | Library成果をGitHub受信箱へbyte-preserving転送し、handoff確認後にLibrary原本を整理 |
 | Survey GitHub Import（独立Scheduled Task） | disabled | なし | タスク枠上限回避のため通常運用では使わず、重複再有効化しない |
 | GitHub import inbox processor | Actions内read/write | なし | 最新mainでidentity解決、Research配置、Discovery precheck/relevance/submission、GitHub側掃除 |
 | 通常チャット | 原則read-only | read/write | 明示された監査・回収・保守 |
 
-通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result、handoff、health-probe、worker-control、制御ファイル更新を行わない。例外は `scheduled-chat-45` の4つのImport枠だけで、`github-import-procedure.md` が要求するpending create、handoff確認、バッチ末尾のscheduler kickに限ってGitHub writeを許可する。Importフェーズは論文内容や候補の意味判定を行わず、受信箱への転送だけを担当する。
+通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result、handoff、health-probe、worker-control、制御ファイル更新を行わない。例外は `scheduled-chat-45` の毎時Importフェーズだけで、`github-import-procedure.md` が要求するpending create、handoff確認、バッチ末尾のscheduler kickに限ってGitHub writeを許可する。Importフェーズは論文内容や候補の意味判定を行わず、受信箱への転送だけを担当する。
 
 ## 1. 固定identityと開始時読取
 
@@ -50,7 +50,7 @@
 - \`scheduled_slot=45\`
 - worklist: \`.survey/work-queue/worker-worklist-45.json\`
 - :00 と同じ通常Research / Discoveryフローを使う。08:30日次更新専用分岐は持たない
-- 04:45 / 10:45 / 16:45 / 22:45 JSTだけは、通常Research / Discoveryより先にSurvey GitHub Import搬送フェーズを実行する。搬送フェーズでは `github-import-procedure.md` に従う範囲だけGitHub create/readを許可し、完了後はread-onlyの通常フェーズへ戻る
+- 毎時 :45 起動では、通常Research / Discoveryより先にSurvey GitHub Import搬送フェーズを実行する。搬送フェーズでは `github-import-procedure.md` に従う範囲だけGitHub create/readを許可し、完了後はread-onlyの通常フェーズへ戻る
 
 3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
@@ -507,7 +507,7 @@ Survey GitHub Importはmaintenanceを `checked_at` の古い順に直列処理�
 
 Scheduled worker:
 
-- Library-first / 通常フェーズはGitHub read-only（:45の4つのImport枠だけ搬送用write例外）
+- Library-first / 通常フェーズはGitHub read-only（:45の毎時Importフェーズだけ搬送用write例外）
 - 確認main SHA
 - モードと在庫判定根拠
 - 完了ラウンド数と、Research完成件数またはDiscovery分類内訳
