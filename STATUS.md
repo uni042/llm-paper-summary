@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 14:23:45 JST**
+> 自動生成: **2026-10-04 14:25:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **585** |
 | 直近24hのResearch処理完了 | **68** |
 | 最終Research処理完了 | **10-04 12:12:00 JST** |
-| 最終Discovery探索完了 | **10-04 14:17:00 JST** |
+| 最終Discovery探索完了 | **10-04 14:25:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -67,18 +67,18 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **true** |
-| 最終maintenance完了 | **10-04 14:03:11 JST（20分前）** |
+| maintenance pending | **false** |
+| 最終maintenance完了 | **10-04 14:24:59 JST（2秒前）** |
 | 最終maintenance status | **issues_found** |
-| consistency | **issues_found** |
+| consistency | **passed** |
 | health | **issues_found** |
-| health errors / warnings | **1 / 0** |
+| health errors / warnings | **2 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **36** |
+| GC削除件数 | **3** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
-| quality regressions | **0** |
+| quality regressions | **1** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -89,18 +89,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **17** |
-| 直近6hのDiscovery run | **13** |
-| 直近6hのDiscovery本文確認・分類 | **74** |
+| 直近6hのDiscovery run | **14** |
+| 直近6hのDiscovery本文確認・分類 | **77** |
 | 最終Research完了 | **10-04 12:12:00 JST** |
-| 最終Discovery完了 | **10-04 14:17:00 JST** |
+| 最終Discovery完了 | **10-04 14:25:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-04 12:12:00 JST** / worker — / run 20261004-1200-scheduled-chat-00/r01 / 成果 **3件**
   - evidence: .survey/import-inbox/results/research/libfile_e2913fc171948191a519b5b9330b3bcb--2026-2608.15584-granikv.json
-- Discovery: **10-04 14:17:00 JST** / worker codex-local / run 20261004-1417-codex-local-r05
+- Discovery: **10-04 14:25:00 JST** / worker codex-local / run 20261004-1425-codex-local-r07
   - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/codex-local--20261004-1417-codex-local-r05.json
+  - evidence: .survey/import-inbox/waiting/discovery/codex-local--20261004-1425-codex-local-r07.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -237,8 +237,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **314** |
-| └ Research | **130** |
+| 成功result未照合のimmutable submission | **313** |
+| └ Research | **129** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
 | └ Other/Unknown | **39** |
