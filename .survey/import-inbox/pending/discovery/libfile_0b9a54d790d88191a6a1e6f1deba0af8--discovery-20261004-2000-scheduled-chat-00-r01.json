@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-2000-scheduled-chat-00/r01",
+  "reference_main_sha": "520910aab3ac036d24f4c5516eb80eb430258763",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d15-1166",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d15-1166"
+      ],
+      "title": "Effective Approaches to Attention-based Neural Machine Translation",
+      "reason": "ニューラル機械翻訳（NMT）の翻訳品質を改善するglobal/local attention構造を比較するモデル研究で、LLM推論ランタイムの速度・メモリ・サービング最適化を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/1508.04025",
+      "body_check": "abstract_screen_only: 要旨で英独WMT翻訳におけるglobal/local attentionとBLEU改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/089976698300017746",
+      "identity_tokens": [
+        "DOI:10.1162/089976698300017746"
+      ],
+      "title": "Natural Gradient Works Efficiently in Learning",
+      "reason": "情報幾何に基づく自然勾配（natural gradient）の学習効率・Fisher効率性を解析する最適化理論研究で、LLM推論システムの実行効率化を対象としない。",
+      "source_url": "https://doi.org/10.1162/089976698300017746",
+      "body_check": "abstract_screen_only: MIT Press要旨でperceptron、blind source separation、linear dynamical systemsに対する自然勾配学習の解析が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/75246.75248",
+      "identity_tokens": [
+        "DOI:10.1145/75246.75248"
+      ],
+      "title": "Analysis and simulation of a fair queueing algorithm",
+      "reason": "データグラムネットワークのgatewayで帯域公平性・遅延・輻輳制御を改善するfair queueing研究で、LLM推論サービング固有のschedulerではない。",
+      "source_url": "https://doi.org/10.1145/75246.75248",
+      "body_check": "abstract_screen_only: 要旨でpacket gateway queueingとcongestion control、FCFSとのsimulation比較が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/k16-1028",
+      "identity_tokens": [
+        "DOI:10.18653/v1/k16-1028"
+      ],
+      "title": "Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond",
+      "reason": "注意付きencoder-decoder RNNによる抽象型要約の品質改善と要約データセット構築を扱うNLPモデル研究で、推論基盤効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1602.06023",
+      "body_check": "abstract_screen_only: arXiv要旨でkeywords、sentence-to-word hierarchy、rare/unseen word生成を含む要約モデルと品質評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1074",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1074"
+      ],
+      "title": "FEVER: a Large-scale Dataset for Fact Extraction and VERification",
+      "reason": "Wikipedia由来185,445 claimの事実検証データセットとbaseline pipelineを構築する評価資源研究で、LLM推論runtime・memory・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1803.05355",
+      "body_check": "abstract_screen_only: arXiv要旨でSupported/Refuted/NotEnoughInfo分類、evidence annotation、claim verification benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.10360",
+      "identity_tokens": [
+        "arXiv:2103.10360"
+      ],
+      "title": "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
+      "reason": "自己回帰blank infillingと2次元位置符号化による汎用言語モデルの事前学習方式を提案し、NLU・条件付き/無条件生成品質を改善する学習・モデル研究で、推論実行効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2103.10360",
+      "body_check": "abstract_screen_only: arXiv要旨でBERT/T5/GPTに対するpretraining frameworkとdownstream task性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-short.1",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-short.1"
+      ],
+      "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+      "reason": "Transformerのbias項だけを更新するパラメータ効率のよい微調整（parameter-efficient fine-tuning）手法で、主目的は学習・タスク適応時の更新パラメータ削減であり推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2106.10199",
+      "body_check": "abstract_screen_only: 要旨・書誌からbiasのみを更新するfine-tuningとGLUE等の適応性能比較が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/564376.564421",
+      "identity_tokens": [
+        "DOI:10.1145/564376.564421"
+      ],
+      "title": "Methods and metrics for cold-start recommendations",
+      "reason": "content情報とcollaborative dataを統合したcold-start推薦方式・評価指標の研究で、LLMのモデルroutingや推論サービング効率化を対象としない。",
+      "source_url": "https://doi.org/10.1145/564376.564421",
+      "body_check": "abstract_screen_only: 要旨で未評価itemの推薦、naive Bayes比較、3種のtest methodology、CROC metricが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.04683",
+      "identity_tokens": [
+        "arXiv:1704.04683"
+      ],
+      "title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations",
+      "reason": "英語試験から約28,000 passage・約100,000 questionを集めた読解ベンチマーク研究で、LLM推論の速度・メモリ・サービング方式を改善しない。",
+      "source_url": "https://arxiv.org/abs/1704.04683",
+      "body_check": "abstract_screen_only: arXiv要旨でmachine reading comprehensionのdataset構築とmodel-human accuracy gapの評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2491245",
+      "identity_tokens": [
+        "DOI:10.1145/2491245"
+      ],
+      "title": "Spanner: Google's Globally-Distributed Database",
+      "reason": "Googleのglobally distributed databaseで外部一貫性transactionとTrueTime APIを実現する汎用分散データベース研究で、LLM推論サービング固有の方式ではない。",
+      "source_url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
+      "body_check": "abstract_screen_only: Google Research一次ページの要旨でmulti-version・synchronous replication・external consistency・TrueTimeが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-04T20:02:42+09:00",
+      "last_checked_at": "2026-10-04T20:02:42+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "worklist_rank": 18
+    }
+  ]
+}
