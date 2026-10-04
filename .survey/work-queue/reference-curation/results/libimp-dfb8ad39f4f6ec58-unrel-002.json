@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfb8ad39f4f6ec58-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2102.12122",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2102.12122",
+    "identity_tokens": [
+      "arXiv:2102.12122"
+    ],
+    "reason": "progressive shrinking pyramidで高解像度vision featureの計算量を抑え、object detection/segmentationの精度を改善するcomputer vision backbone研究で、LLM推論systemを対象としない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T21:42:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions"
+  },
+  "processed_at": "2026-10-04T21:42:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfb8ad39f4f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

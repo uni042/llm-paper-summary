@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfb8ad39f4f6ec58-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.01691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.01691",
+    "identity_tokens": [
+      "arXiv:2204.01691"
+    ],
+    "reason": "LLMの高水準task知識とrobot skillのvalue functionを組み合わせ、実環境で実行可能な行動を選ぶrobotics/agent grounding研究で、LLM servingや推論runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T21:42:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances"
+  },
+  "processed_at": "2026-10-04T21:42:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfb8ad39f4f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
