@@ -77,6 +77,14 @@ class RunLivenessPolicyTests(unittest.TestCase):
             workflow,
         )
 
+    def test_library_import_hands_new_papers_to_citation_backfill(self):
+        workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
+        self.assertIn("citation_backfill_due", workflow)
+        self.assertIn("citation-coverage-latest.json", workflow)
+        self.assertIn("citation_graph.load_records", workflow)
+        self.assertIn("gh workflow run citation-graph-backfill.yml", workflow)
+        self.assertIn("active_citation_runs", workflow)
+
     def test_repository_tests_skip_paper_only_main_pushes(self):
         text = (WORKFLOWS / "repository-tests.yml").read_text(encoding="utf-8")
         push_block, rest = text.split("  pull_request:", 1)
