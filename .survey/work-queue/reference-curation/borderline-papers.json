@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T21:54:26+00:00",
-  "record_count": 454,
+  "updated_at": "2026-10-04T22:06:26+00:00",
+  "record_count": 455,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6514,6 +6514,23 @@
       "last_checked_at": "2026-10-04T21:54:26+00:00",
       "linked_from": [],
       "title": "Revealing the Dark Secrets of BERT"
+    },
+    "DOI:10.18653/v1/d19-1410": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d19-1410",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1410",
+        "id:DOI:10.18653/v1/d19-1410",
+        "id:arXiv:1908.10084",
+        "url:https://arxiv.org/abs/1908.10084"
+      ],
+      "reason": "Full text confirms a direct inference-efficiency contribution: SBERT replaces repeated cross-encoder pairwise BERT inference with reusable sentence embeddings and cosine similarity, reducing the paper's 10,000-sentence clustering example from about 65 hours to 5 seconds. However, the method is for sentence similarity/search with BERT encoders, not LLM generation or a serving system, and its scope does not establish whether this task-level retrieval optimization counts as an LLM inference-efficiency technique. Retain as borderline for root scope review.",
+      "first_checked_at": "2026-10-04T22:06:26+00:00",
+      "last_checked_at": "2026-10-04T22:06:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
     }
   }
 }
