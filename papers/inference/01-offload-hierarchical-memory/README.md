@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（111本）
+## 自動生成の論文一覧（112本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -131,6 +131,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading](2026-2609.33385-oled-moe-accelerating-moe-based-dllm-inference-via-inter-iteration-local.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   dLLMの隣接デノイズ反復で専門家経路が再利用される性質を、確信度予測・層別保持・CPU/GPU協調へ利用するMoEオフロード。既存方式比TPOTを1.23〜7.93倍改善。
+
+- **2026-09 · [Mira: Memory-Efficient MoE Inference Using Adaptive Caching and Predictive Expert Staging](2026-2609.38090-mira-memory-efficient-moe-inference-using-adaptive-caching-and-predictiv.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単一GPUでVRAMに収まらない場合、専門家をCPUメモリへ置き、ルータが選んだ専門家だけPCIe経由でGPUへ移す。Miraはこの反応型オフロードを予測型へ変える。
 
 - **2026-09 · [LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism](2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

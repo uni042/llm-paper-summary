@@ -32,9 +32,14 @@
   "selection_reason": "単一GPU上のMoE推論で、2層先のexpert予測、HOT+STAGE二層GPU cache、expert専用INT8表現を協調させ、CPU→GPU expert転送を計算と重畳する直接的な推論メモリ/I/O最適化。",
   "semantic_scholar_id": "3512b2e67b47bb3f6a531ee79068c410b17ce05b",
   "source_url": "https://arxiv.org/abs/2609.38090",
-  "status": "ready",
+  "status": "superseded",
   "title": "Mira: Memory-Efficient MoE Inference Using Adaptive Caching and Predictive Expert Staging",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T03:17:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.38090-mira-memory-efficient-moe-inference-using-adaptive-caching-and-predictiv.md",
+  "represented_canonical_id": "arXiv:2609.38090",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
