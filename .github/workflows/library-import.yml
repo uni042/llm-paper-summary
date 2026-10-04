@@ -70,7 +70,24 @@ jobs:
               return 0
             fi
             git commit -m "$message"
-            git push origin HEAD:main
+
+            # The bounded computation can take long enough for unrelated
+            # workflows to advance main. First try to preserve the completed
+            # work by rebasing it onto the latest main; only ask the outer
+            # stage to recompute when the actual payload conflicts.
+            for publish_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                return 1
+              fi
+              if git push origin HEAD:main; then
+                return 0
+              fi
+              echo "Library publish race after rebase on attempt ${publish_attempt}; refetching."
+              sleep $((publish_attempt * 2))
+            done
+            return 1
           }
 
           # Stage 1: intake is bounded by actual work volume, not file count.
