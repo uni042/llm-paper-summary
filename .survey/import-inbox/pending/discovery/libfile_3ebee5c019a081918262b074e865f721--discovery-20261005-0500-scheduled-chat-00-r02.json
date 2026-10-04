@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0500-scheduled-chat-00/r02",
+  "reference_main_sha": "6f4c130aa29c3a04a33bd76fe0c1ddd664cc0ad4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1607.03250",
+      "identity_tokens": [
+        "arXiv:1607.03250"
+      ],
+      "title": "Network Trimming: A Data-Driven Neuron Pruning Approach towards Efficient Deep Architectures",
+      "reason": "dataset上でほぼ常時ゼロとなるneuronを反復的にprune/retrainして計算・メモリを削減するが、評価はLeNet/VGG-16でありLLM/Transformer推論への最終適用がない。",
+      "source_url": "https://arxiv.org/abs/1607.03250",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.06530",
+      "identity_tokens": [
+        "arXiv:1511.06530"
+      ],
+      "title": "Compression of Deep Convolutional Neural Networks for Fast and Low Power Mobile Applications",
+      "reason": "Tucker分解等でCNNを圧縮しsmartphone上のmodel size/runtime/energyを削減するが、AlexNet/VGG/GoogLeNet等の画像CNNが最終適用先でLLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/1511.06530",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14387",
+      "identity_tokens": [
+        "arXiv:2305.14387"
+      ],
+      "title": "AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback",
+      "reason": "LLMによる人間feedback模擬、automatic evaluation、PPO/DPO等の学習法を低costで研究するalignment/training framework。推論runtime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.14387",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.14275",
+      "identity_tokens": [
+        "arXiv:2211.14275"
+      ],
+      "title": "Solving math word problems with process- and outcome-based feedback",
+      "reason": "GSM8Kでprocess-based/outcome-based supervisionを比較しreasoning errorを改善する学習・監督研究で、推論system効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2211.14275",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.12503",
+      "identity_tokens": [
+        "arXiv:2301.12503"
+      ],
+      "title": "AudioLDM: Text-to-Audio Generation with Latent Diffusion Models",
+      "reason": "CLAP latent上のdiffusionでtext-to-audio生成品質と計算効率を改善するが、最終適用先は音声生成でLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/2301.12503",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.06713",
+      "identity_tokens": [
+        "arXiv:2003.06713"
+      ],
+      "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model",
+      "reason": "T5系seq2seq modelでrelevance labelを生成しdocument ranking品質を改善する情報検索研究。LLM serving/runtimeの速度・メモリ最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2003.06713",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.08877",
+      "identity_tokens": [
+        "arXiv:2108.08877"
+      ],
+      "title": "Sentence-T5: Scalable Sentence Encoders from Pre-trained Text-to-Text Models",
+      "reason": "T5からsentence embeddingを抽出する3方式とSentGLUEを提案し、STS/transfer品質とscale効果を評価する表現学習研究。推論基盤効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2108.08877",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1603.08983",
+      "identity_tokens": [
+        "arXiv:1603.08983"
+      ],
+      "title": "Adaptive Computation Time for Recurrent Neural Networks",
+      "reason": "入力ごとにRNN内部の計算step数を学習するAdaptive Computation Timeで可変計算を実現しcharacter-level language modelingも評価する。adaptive inferenceの先行研究として関連するが、現代LLM推論systemへの直接適用・serving評価がないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/1603.08983",
+      "body_check": "full_text_checked: 一次資料本文・公式論文ページで問題設定、方式、評価と最終適用先を確認。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n16-1098",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n16-1098"
+      ],
+      "title": "A Corpus and Cloze Evaluation for Deeper Understanding of Commonsense Stories",
+      "reason": "ROCStories 50kとStory Cloze Testを構築してcommonsense story understandingを評価するbenchmark研究で、推論runtime効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1604.01696",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04226",
+      "identity_tokens": [
+        "arXiv:2303.04226"
+      ],
+      "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+      "reason": "GANからChatGPTまでの生成AI/AIGC技術・応用を整理する広範surveyで、LLM推論systemの特定最適化方式を提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2303.04226",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T05:29:00+09:00",
+      "last_checked_at": "2026-10-05T05:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 36
+    }
+  ]
+}
