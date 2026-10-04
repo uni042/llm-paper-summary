@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-960e417b6f54853a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-960e417b6f54",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2608.26005"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cd0f634831c7d12e9f6ff680b3077d720d5f9111",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T18:56:14.652656+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2608.26005",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+      "source_url": "https://arxiv.org/abs/2608.26005",
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conversational systems, such as duplex speech language models (SLMs), still lack a streaming, accurate, and empathetic memory system as their soul. We introduce VoiceMem, a simple memory architecture with a parallel informational left brain, an emotional right brain, and streaming memory I/O mechanisms. We further build a complete pipeline for memory-aware SLM training, long-horizon evaluation, and decoupled deployment with interchangeable memory backends. Experiments and real-world deployment show three advantages: i) Accuracy: under top-5 retrieval, the left brain outperforms classical systems such as Mem0 at top-200 by nearly 30 points; ii) Emotional&Personal: the right brain, with short- and long-horizon affective attribution and dual-node persona modeling, achieves state-of-the-art performance across three persona benchmarks and improves the aggregate score by 4.29 points over the previous best system; and iii) Real-Time&Cheap: VoiceMem completes retrieval in 134 ms, well within standard VAD latency, adding no extra conversational delay while maintaining high accuracy and low cost. These results show that VoiceMem provides a practical memory foundation for real-time, personalized, and emotionally aware speech interaction.",
+      "identifiers": [
+        "SemanticScholar:061c7c7b2587b9b88f3aa1cfe097da78592eafbb"
+      ],
+      "semantic_scholar_id": "061c7c7b2587b9b88f3aa1cfe097da78592eafbb",
+      "canonical_id": "arXiv:2608.26005",
+      "arxiv_id": "2608.26005",
+      "authors": [
+        "Zhifei Xie",
+        "Jia-Qi Lang",
+        "Ze An",
+        "Yi-Fan Zhao",
+        "Dong-Chao Yang",
+        "Kaiyu Li",
+        "Zi-Yang Ma",
+        "Mingbao Lin",
+        "Chun-Yan Miao",
+        "Shuicheng Yan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.26005",
+      "identity_tokens": [
+        "id:SemanticScholar:061c7c7b2587b9b88f3aa1cfe097da78592eafbb",
+        "id:arXiv:2608.26005",
+        "title:voicemem streaming dualbrain memory for realtime interaction",
+        "url:https://arxiv.org/abs/2608.26005"
+      ],
+      "record": {
+        "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+        "source_url": "https://arxiv.org/abs/2608.26005",
+        "year": 2026,
+        "published": "2026-08-26",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Conversational systems, such as duplex speech language models (SLMs), still lack a streaming, accurate, and empathetic memory system as their soul. We introduce VoiceMem, a simple memory architecture with a parallel informational left brain, an emotional right brain, and streaming memory I/O mechanisms. We further build a complete pipeline for memory-aware SLM training, long-horizon evaluation, and decoupled deployment with interchangeable memory backends. Experiments and real-world deployment show three advantages: i) Accuracy: under top-5 retrieval, the left brain outperforms classical systems such as Mem0 at top-200 by nearly 30 points; ii) Emotional&Personal: the right brain, with short- and long-horizon affective attribution and dual-node persona modeling, achieves state-of-the-art performance across three persona benchmarks and improves the aggregate score by 4.29 points over the previous best system; and iii) Real-Time&Cheap: VoiceMem completes retrieval in 134 ms, well within standard VAD latency, adding no extra conversational delay while maintaining high accuracy and low cost. These results show that VoiceMem provides a practical memory foundation for real-time, personalized, and emotionally aware speech interaction.",
+        "identifiers": [
+          "SemanticScholar:061c7c7b2587b9b88f3aa1cfe097da78592eafbb"
+        ],
+        "semantic_scholar_id": "061c7c7b2587b9b88f3aa1cfe097da78592eafbb",
+        "canonical_id": "arXiv:2608.26005",
+        "arxiv_id": "2608.26005",
+        "authors": [
+          "Zhifei Xie",
+          "Jia-Qi Lang",
+          "Ze An",
+          "Yi-Fan Zhao",
+          "Dong-Chao Yang",
+          "Kaiyu Li",
+          "Zi-Yang Ma",
+          "Mingbao Lin",
+          "Chun-Yan Miao",
+          "Shuicheng Yan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:52d477d991452329b1f5eee6bdb85200a874d96f102624f15df0c72589b2d113",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
