@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（49本）
+## 自動生成の論文一覧（51本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -241,4 +241,14 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2019-06 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
   実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：48  
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
+
+- **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  FLOP（Factorized Low-rank Pruning）は、非構造疎性のように0位置を大量に持つ行列を作るのではなく、重み行列を低ランク因子へ分解し、不要なrank-1成分を学習で削る構造枝刈り法である。100Mパラメータ級word LMでは50%圧縮でPPL 24.5から25.3程度に留め、論文全体として学習・推論とも2倍超の高速化を報告する。
+
+### 9年前（2017-11〜2018-10）
+
+- **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
+  実装：✓ ・ リポジトリ内被引用：23  
+  通常の数値安定softmaxは、まず入力最大値を求め、次にexp(x-max)の和を求め、最後に各要素を正規化する。この安全な実装は同じベクトルを複数回メモリから読む。本論文は最大値と指数和を同じ走査で更新するオンライン正規化子（online normalizer）を導入し、古典的softmaxと数学的に同じ結果を保ちながらメモリアクセスを減らす。
 <!-- survey:auto:end -->

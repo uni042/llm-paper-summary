@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1551本**。
+収録論文: **1556本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1551本**。
+推論論文：**1556本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -46,7 +46,7 @@
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 170 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 32 |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 49 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 51 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 104 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 313 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 38 |
@@ -57,5 +57,5 @@
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 18 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 15 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 294 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 297 |
 <!-- survey:auto:end -->

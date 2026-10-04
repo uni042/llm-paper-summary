@@ -32,10 +32,15 @@
   "selection_reason": "LLM decodeのpartial-softmax同期、flat GEMM低利用率、静的dataflowを対象にGPU推論エンジンとして非同期softmax・double buffering・hardware-aware dataflowを統合し、NVIDIA/AMD上の推論高速化を評価している。推論カーネル／serving runtime系統の基礎比較として直接関連する。",
   "semantic_scholar_id": "4d76206515d6b33903937474273885476fc2771e",
   "source_url": "https://arxiv.org/abs/2311.01282",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-04T21:37:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md",
+  "represented_canonical_id": "arXiv:2311.01282",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

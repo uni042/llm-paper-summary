@@ -35,10 +35,15 @@
   "selection_reason": "Softmaxのメモリアクセスを削減しGPU上でSoftmax/TopKを高速化する基礎カーネル最適化で、推論カーネル系統に関連。",
   "semantic_scholar_id": "ec1f582446aa24f3f0920123ee6f05feea0b5e0a",
   "source_url": "https://arxiv.org/abs/1805.02867",
-  "status": "ready",
+  "status": "superseded",
   "title": "Online normalizer calculation for softmax",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2018
+  "year": 2018,
+  "superseded_at": "2026-10-04T21:37:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+  "represented_canonical_id": "arXiv:1805.02867",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

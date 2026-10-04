@@ -34,10 +34,15 @@
   "selection_reason": "各weight matrixをlow-rank factorizationでparameterizeしrank-1 componentを適応的に除去するstructured pruningで、言語モデルのsize/latencyを減らしtrainingとinference双方の実speedupを示すため推論圧縮の収録対象。",
   "semantic_scholar_id": "83b8108014e3db4f46354a28ae68193f143c4e7e",
   "source_url": "https://arxiv.org/abs/1910.04732",
-  "status": "ready",
+  "status": "superseded",
   "title": "Structured Pruning of Large Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-04T21:37:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+  "represented_canonical_id": "arXiv:1910.04732",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
