@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f08bda1d486257e0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1611.01704",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1611.01704",
+    "identity_tokens": [
+      "arXiv:1611.01704"
+    ],
+    "reason": "画像のrate–distortionをend-to-end学習する非線形画像圧縮方式で、LLMの重み・活性・KVキャッシュ量子化や推論ランタイムを対象としない。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:23:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
+    ],
+    "title": "End-to-end Optimized Image Compression"
+  },
+  "processed_at": "2026-10-04T14:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f08bda1d4862",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

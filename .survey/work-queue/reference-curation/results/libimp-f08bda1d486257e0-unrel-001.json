@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f08bda1d486257e0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1811.00937",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1811.00937",
+    "identity_tokens": [
+      "arXiv:1811.00937"
+    ],
+    "reason": "ConceptNetから構築した12,247問の常識質問応答データセットとBERT等の能力評価が主題で、推論速度・メモリ・サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:23:33+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge"
+  },
+  "processed_at": "2026-10-04T14:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f08bda1d4862",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

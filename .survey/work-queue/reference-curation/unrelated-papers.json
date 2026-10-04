@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T13:11:08+00:00",
-  "record_count": 1064,
+  "updated_at": "2026-10-04T14:23:33+00:00",
+  "record_count": 1077,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -15571,6 +15571,189 @@
       "last_checked_at": "2026-10-04T13:11:08+00:00",
       "linked_from": [],
       "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
+    },
+    "arXiv:1806.09055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1806.09055",
+      "identity_tokens": [
+        "arXiv:1806.09055"
+      ],
+      "reason": "離散architecture searchを連続緩和しgradient descentで探索する学習・AutoML研究。CIFAR-10/ImageNetのCNNとPTB/WikiText-2のRNN architecture探索速度・品質を評価し、LLM推論runtimeやservingを対象としない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md"
+      ],
+      "title": "DARTS: Differentiable Architecture Search"
+    },
+    "arXiv:1803.08494": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.08494",
+      "identity_tokens": [
+        "arXiv:1803.08494"
+      ],
+      "reason": "小batchで不安定なBatch Normalizationを、channel group内統計を使うGroup Normalizationへ置換してCNNの学習・転移精度を改善するcomputer vision研究。LLM推論runtime最適化を対象としない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Group Normalization"
+    },
+    "arXiv:1607.08022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1607.08022",
+      "identity_tokens": [
+        "arXiv:1607.08022"
+      ],
+      "reason": "fast image stylizationでBatch NormalizationをInstance Normalizationへ置換し生成画像品質を改善するcomputer vision研究。real-time image generationを扱うがLLM/Transformer推論systemとは対象が異なる。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "title": "Instance Normalization: The Missing Ingredient for Fast Stylization"
+    },
+    "arXiv:1708.02002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1708.02002",
+      "identity_tokens": [
+        "arXiv:1708.02002"
+      ],
+      "reason": "dense object detectorのforeground/background class imbalanceをFocal Lossで抑え、RetinaNetの検出精度を改善する学習損失・computer vision研究。one-stage detectorの速度にも触れるが、LLM推論効率化が最終適用先ではない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md"
+      ],
+      "title": "Focal Loss for Dense Object Detection"
+    },
+    "arXiv:1512.02595": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1512.02595",
+      "identity_tokens": [
+        "arXiv:1512.02595"
+      ],
+      "reason": "end-to-end音声認識を英語・中国語へ適用し、HPCで学習を7倍高速化、Batch Dispatchでonline speech servingを低遅延化する研究。system効率要素はあるが最終適用先はASRであり、LLM/Transformer推論systemではない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin"
+    },
+    "arXiv:1905.00537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.00537",
+      "identity_tokens": [
+        "arXiv:1905.00537"
+      ],
+      "reason": "GLUEより難しいlanguage understanding task群、toolkit、leaderboardからなるSuperGLUE benchmarkを構築する評価研究で、LLM推論runtime・serving・memory効率化を提案しない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems"
+    },
+    "arXiv:1601.06759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1601.06759",
+      "identity_tokens": [
+        "arXiv:1601.06759"
+      ],
+      "reason": "自然画像のpixel分布を2次元RNNで逐次モデル化し、ImageNet等で画像生成likelihoodとsample品質を改善するgenerative vision研究。LLM生成推論のruntime最適化ではない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Pixel Recurrent Neural Networks"
+    },
+    "arXiv:1811.00937": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.00937",
+      "identity_tokens": [
+        "arXiv:1811.00937"
+      ],
+      "reason": "ConceptNetから構築した12,247問の常識質問応答データセットとBERT等の能力評価が主題で、推論速度・メモリ・サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge"
+    },
+    "arXiv:1410.5401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1410.5401",
+      "identity_tokens": [
+        "arXiv:1410.5401"
+      ],
+      "reason": "neural networkへattentionで読み書きする外部memoryを結合し、copy/sort/associative recall等のalgorithm学習能力を示す differentiable memory architecture研究。LLM推論時のmemory hierarchyやKV cache最適化を対象としない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Neural Turing Machines"
+    },
+    "arXiv:1608.03665": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1608.03665",
+      "identity_tokens": [
+        "arXiv:1608.03665"
+      ],
+      "reason": "filters/channels/filter shapes/layer depthへstructured sparsity regularizationを加え、AlexNet/ResNet等のCNNをhardware-friendlyに圧縮・高速化する研究。CPU/GPUでconvolutionを5.1倍/3.1倍高速化するが、最終適用先は汎用DNN/CNNでLLM推論ではない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
+      ],
+      "title": "Learning Structured Sparsity in Deep Neural Networks"
+    },
+    "arXiv:1605.02688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1605.02688",
+      "identity_tokens": [
+        "arXiv:1605.02688"
+      ],
+      "reason": "多次元配列の数式を定義・最適化・CPU/GPU実行する汎用数値計算コンパイラTheanoの設計・機能・性能比較が主題で、LLM/Transformer推論に特化したランタイム研究ではない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Theano: A Python framework for fast computation of mathematical expressions"
+    },
+    "arXiv:1611.01704": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.01704",
+      "identity_tokens": [
+        "arXiv:1611.01704"
+      ],
+      "reason": "画像のrate–distortionをend-to-end学習する非線形画像圧縮方式で、LLMの重み・活性・KVキャッシュ量子化や推論ランタイムを対象としない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
+      ],
+      "title": "End-to-end Optimized Image Compression"
+    },
+    "arXiv:1803.05407": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.05407",
+      "identity_tokens": [
+        "arXiv:1803.05407"
+      ],
+      "reason": "確率的勾配降下法（stochastic gradient descent; SGD）の軌跡上の重みを平均するSWAでより広いoptimumと汎化性能を得る学習最適化研究で、LLM推論実行効率を扱わない。",
+      "first_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Averaging Weights Leads to Wider Optima and Better Generalization"
     }
   }
 }

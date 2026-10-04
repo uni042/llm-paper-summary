@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d65096591a5cb52d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1708.02002",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1708.02002",
+    "identity_tokens": [
+      "arXiv:1708.02002"
+    ],
+    "reason": "dense object detectorのforeground/background class imbalanceをFocal Lossで抑え、RetinaNetの検出精度を改善する学習損失・computer vision研究。one-stage detectorの速度にも触れるが、LLM推論効率化が最終適用先ではない。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:23:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md"
+    ],
+    "title": "Focal Loss for Dense Object Detection"
+  },
+  "processed_at": "2026-10-04T14:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d65096591a5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

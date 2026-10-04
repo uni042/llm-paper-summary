@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d65096591a5cb52d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1811.00937",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1811.00937",
+    "identity_tokens": [
+      "arXiv:1811.00937"
+    ],
+    "reason": "ConceptNetからcommonsense multiple-choice questionを生成して12,247問のCommonsenseQA datasetを構築し、BERT等の推論能力を評価するbenchmark研究。推論system効率化は対象外。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:23:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge"
+  },
+  "processed_at": "2026-10-04T14:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d65096591a5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
