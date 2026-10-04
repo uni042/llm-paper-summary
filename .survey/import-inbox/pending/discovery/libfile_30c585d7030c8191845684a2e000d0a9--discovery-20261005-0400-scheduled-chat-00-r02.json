@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0400-scheduled-chat-00/r02",
+  "reference_main_sha": "6f4c130aa29c3a04a33bd76fe0c1ddd664cc0ad4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00692",
+      "identity_tokens": [
+        "arXiv:2308.00692"
+      ],
+      "title": "LISA: Reasoning Segmentation via Large Language Model",
+      "reason": "複雑な自然言語queryからsegmentation maskを生成するreasoning segmentation taskとLISAモデルの能力向上が主題。LLM推論ランタイム、メモリ、サービング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2308.00692",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でreasoning segmentation、<SEG> token、embedding-as-maskと視覚task品質が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.09223",
+      "identity_tokens": [
+        "arXiv:1904.09223"
+      ],
+      "title": "ERNIE: Enhanced Representation through Knowledge Integration",
+      "reason": "entity-level/phrase-level maskingで知識を組み込んだ言語表現を学習し中国語NLP taskの品質を改善する事前学習研究で、推論system効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1904.09223",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でknowledge maskingによるrepresentation learningとNLP task精度が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.09671",
+      "identity_tokens": [
+        "arXiv:2101.09671"
+      ],
+      "title": "Pruning and Quantization for Deep Neural Network Acceleration: A Survey",
+      "reason": "computer vision中心の汎用DNNについてpruning/quantizationを整理するsurveyで、LLM固有の推論基盤・KVキャッシュ・サービングを対象としない。",
+      "source_url": "https://arxiv.org/abs/2101.09671",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でDNN/CVのnetwork compression surveyが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md"
+      ],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.191",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.191",
+        "arXiv:2112.08633"
+      ],
+      "title": "Learning To Retrieve Prompts for In-Context Learning",
+      "reason": "annotated dataとLMでin-context exampleを選ぶprompt retrieverを学習しfew-shot task品質を改善するprompt selection研究。LLM runtime/serving効率化が最終目的ではない。",
+      "source_url": "https://arxiv.org/abs/2112.08633",
+      "body_check": "abstract_screen_only: 一次書誌・要旨でprompt retrievalとin-context learning品質が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.09664",
+      "identity_tokens": [
+        "arXiv:2302.09664"
+      ],
+      "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation",
+      "reason": "複数生成を意味的同値classへまとめるsemantic entropyでLLMの回答不確実性を推定する信頼性・評価研究。追加samplingは行うが、推論runtimeの高速化・省メモリ化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2302.09664",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でsemantic entropyによるQA accuracy予測が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10403",
+      "identity_tokens": [
+        "arXiv:2212.10403"
+      ],
+      "title": "Towards Reasoning in Large Language Models: A Survey",
+      "reason": "LLM reasoning能力、elicitation手法、benchmarkを整理するsurveyで、推論systemのruntime・memory・scheduler・kernel最適化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2212.10403",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM reasoningの技法・評価・知見のsurveyが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.04006",
+      "identity_tokens": [
+        "arXiv:2011.04006"
+      ],
+      "title": "Long Range Arena: A Benchmark for Efficient Transformers",
+      "reason": "1K〜16K長の複数taskで10種のefficient Transformerを比較するbenchmark研究。効率性を測るが、新しいLLM推論runtime方式を提案する論文ではなく、評価基盤が最終成果。",
+      "source_url": "https://arxiv.org/abs/2011.04006",
+      "body_check": "abstract_screen_only: 一次書誌・要旨でlong-range Transformer benchmark suiteとモデル比較が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.02842-iceformer.md"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2304.07327",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.07327",
+        "arXiv:2304.07327"
+      ],
+      "title": "OpenAssistant Conversations - Democratizing Large Language Model Alignment",
+      "reason": "人間生成assistant conversation corpusとalignment data収集を公開するdataset/alignment研究で、LLM推論実行効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2304.07327",
+      "body_check": "abstract_screen_only: 一次書誌・要旨からopen assistant conversation datasetとalignmentが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.45",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.naacl-main.45",
+        "arXiv:2104.06378"
+      ],
+      "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering",
+      "reason": "LMによるKG node relevance scoringとGNNによる共同reasoningでQA精度を改善するモデル能力研究で、推論runtimeやサービング効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2104.06378",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLM+KGのQA reasoning品質が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.01488",
+      "identity_tokens": [
+        "arXiv:2112.01488"
+      ],
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+      "reason": "late-interaction情報検索器の残差圧縮でindex容量を6〜10倍削減するretrieval system研究。RAGの構成要素として有用だが、最終適用先はneural IRでLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/2112.01488",
+      "body_check": "abstract_screen_only: 一次書誌・要旨でneural information retrievalのquality/space footprint改善が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T04:28:00+09:00",
+      "last_checked_at": "2026-10-05T04:28:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "worklist_rank": 40
+    }
+  ]
+}
