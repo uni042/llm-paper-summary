@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 08:47:54 JST**
+> 自動生成: **2026-10-05 08:50:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **598** |
 | 未claim Research job | **598** |
-| 直近24hのResearch処理完了 | **64** |
+| 直近24hのResearch処理完了 | **63** |
 | 最終Research処理完了 | **10-05 05:02:00 JST** |
 | 最終Discovery探索完了 | **10-05 08:00:00 JST** |
 | 整合性異常 | **0** |
@@ -70,18 +70,18 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **true** |
-| 最終maintenance完了 | **10-05 06:50:14 JST（1時間57分前）** |
+| maintenance pending | **false** |
+| 最終maintenance完了 | **10-05 08:50:42 JST（3秒前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
-| health errors / warnings | **2 / 0** |
+| health errors / warnings | **1 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **5** |
+| GC削除件数 | **0** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
-| quality regressions | **2** |
+| quality regressions | **0** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
