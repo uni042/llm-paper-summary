@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-9f41f0d31ed7086d",
+  "type": "research",
+  "parent_job_id": "job-85fe6bb680f41547",
+  "priority": 115,
+  "canonical_id": "arXiv:2504.17674",
+  "arxiv_id": "2504.17674",
+  "doi": "10.48550/arXiv.2504.17674",
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd"
+  ],
+  "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
+  "source_url": "https://arxiv.org/abs/2504.17674",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-optimizations.md",
+  "lineage": null,
+  "selection_reason": "実LLM推論のenergy/latency/throughputを、vLLM/PyTorch、speculative decoding、continuous batching、CUDA Graph、tensor parallelism、GPU世代、入出力長・batch sizeを横断して測定する。推論最適化の適用でunoptimized baseline比最大73%のenergy削減を報告し、推論評価・serving最適化に直接該当する。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 0,
+    "prestigious_venue": 10,
+    "citations": 105,
+    "citation_count": 105,
+    "total": 115,
+    "is_fresh": false,
+    "freshness_age_days": 528,
+    "matched_prestigious_venue": "Association for Computational Linguistics"
+  },
+  "published": "2025-04-24",
+  "year": 2025,
+  "venue": "Annual Meeting of the Association for Computational Linguistics",
+  "citation_count": 105,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-04T02:20:09+00:00"
+}
