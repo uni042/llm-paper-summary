@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Accelerating Distributed MoE Training and Inference with Lina",
+      "source_url": "https://arxiv.org/abs/2210.17223",
+      "year": 2022,
+      "published": "2022-10-31",
+      "venue": "USENIX Annual Technical Conference",
+      "citation_count": 191,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling model parameters improves model quality at the price of high computation overhead. Sparsely activated models, usually in the form of Mixture of Experts (MoE) architecture, have sub-linear scaling of computation cost with model size, thus providing opportunities to train and serve a larger model at lower cost than their dense counterparts. However, distributed MoE training and inference is inefficient, mainly due to the interleaved all-to-all communication during model computation. This paper makes two main contributions. First, we systematically analyze all-to-all overhead in distributed MoE and present the main causes for it to be the bottleneck in training and inference, respectively. Second, we design and build Lina to address the all-to-all bottleneck head-on. Lina opportunistically prioritizes all-to-all over the concurrent allreduce whenever feasible using tensor partitioning, so all-to-all and training step time is improved. Lina further exploits the inherent pattern of expert selection to dynamically schedule resources during inference, so that the transfer size and bandwidth of all-to-all across devices are balanced amid the highly skewed expert popularity in practice. Experiments on an A100 GPU testbed show that Lina reduces the training step time by up to 1.73x and reduces the 95%ile inference time by an average of 1.63x over the state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:6d088e8d785a57b50c2b0e465e2460e09ced48d7"
+      ],
+      "semantic_scholar_id": "6d088e8d785a57b50c2b0e465e2460e09ced48d7",
+      "canonical_id": "arXiv:2210.17223",
+      "arxiv_id": "2210.17223",
+      "authors": [
+        "Jiamin Li",
+        "Yi-Min Jiang",
+        "Yi-Bo Zhu",
+        "Cong Wang",
+        "Hong-Yu Xu"
+      ],
+      "priority": 201,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 191,
+        "citation_count": 191,
+        "total": 201,
+        "is_fresh": false,
+        "freshness_age_days": 1434,
+        "matched_prestigious_venue": "USENIX Annual Technical Conference"
+      },
+      "reason": "Transformer系MoEの分散推論で、偏ったexpert popularityによりall-to-all転送量・帯域が不均衡になる問題を、前層のexpert選択から次層人気度を予測してexpertへのデバイス割当を動的変更するLinaで解く。A100 40GB・100Gbps InfiniBand、最大16 GPUでmedian/95%ile推論時間を1.45x/1.63x短縮しており、MoE推論サービングの通信・資源スケジューリングに直接該当する。",
+      "library_body_check": "body_checked: arXiv本文のIntroduction、Bottleneck Analysis、Design Overviewを確認。推論時のexpert popularityが4-expert/16-expertで最大4.02x/5.56x偏り、前層選択から次層人気度を推定して人気expertへ多くのdeviceを割り当てる二段階schedulingを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
+      "source_url": "https://doi.org/10.1109/HPCA53966.2022.00082",
+      "year": 2022,
+      "published": "2022-04-01",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 177,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models are state-of-the-art for many machine learning (ML) tasks. Executing Transformer usually requires a long execution time due to the large memory footprint and the low data reuse rate, stressing the memory system while under-utilizing the computing resources. Memory-based processing technologies, including processing in-memory (PIM) and near-memory computing (NMC), are promising to accelerate Transformer since they provide high memory bandwidth utilization and extensive computation parallelism. However, the previous memory-based ML accelerators mainly target at optimizing dataflow and hardware for compute-intensive ML models (e.g., CNNs), which do not fit the memory-intensive characteristics of Transformer. In this work, we propose TransPIM, a memory-based acceleration for Transformer using software and hardware co-design. In the software-level, TransPIM adopts a token-based dataflow to avoid the expensive inter-layer data movements introduced by previous layer-based dataflow. In the hardware-level, TransPIM introduces lightweight modifications in the conventional high bandwidth memory (HBM) architecture to support PIM-NMC hybrid processing and efficient data communication for accelerating Transformer-based models. Our experiments show that TransPIM is 3.7× to 9.1× faster than existing memory-based acceleration. As compared to conventional accelerators, TransPIM is 22.1× to 114.9× faster than GPUs and provides 2.0× more throughput than existing ASIC-based accelerators.",
+      "identifiers": [
+        "SemanticScholar:f5edad3a50ba8a6329d202f31677d988f1d0cf87"
+      ],
+      "semantic_scholar_id": "f5edad3a50ba8a6329d202f31677d988f1d0cf87",
+      "doi": "10.1109/HPCA53966.2022.00082",
+      "canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
+      "authors": [
+        "Minxuan Zhou",
+        "Weihong Xu",
+        "Jaeyoung Kang",
+        "Tajana S. Rosing"
+      ],
+      "priority": 187,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 177,
+        "citation_count": 177,
+        "total": 187,
+        "is_fresh": false,
+        "freshness_age_days": 1647,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "Transformerの大きなmemory footprintと低いdata reuseによるmemory bottleneckを対象に、token-based dataflowでinter-layer data movementを削減し、HBMへPIM-NMC hybrid processingを組み込む推論アクセラレータ。既存memory-based accelerator比3.7–9.1x、GPU比22.1–114.9xの高速化を報告し、推論向けPIM/near-memory accelerationに直接該当する。",
+      "library_body_check": "body_checked: IEEE一次資料の論文ページで問題設定、token-based dataflow、HBMのPIM-NMC hybrid processing、比較性能値を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4d2ca635054f",
+    "round": "libimp-4d2ca635054fafb6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4d2ca635054fafb6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4d2ca635054fafb6-pre01.json",
+    "receipt": "sha256:0f3bc36530ad927dfe63d39d4d1c09ad21d162c0f2841b54a5d45bae714fcd27"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4d2ca635054f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
