@@ -63,6 +63,13 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 - **Qwen 3.8のApple Silicon prompt processing高速化など**: Qwen 3.8のprompt processing改善、thinking modelのstructured outputのsingle-pass化、Gemma 4の画像ごとの解像度選択、llama.cpp / MLX / XGrammar更新を含む。[release](https://github.com/ollama/ollama/releases/tag/v0.34.4)
 
+### 2026-09-29 — v0.35.1（released）
+
+- **decision model / multimodal判定APIを拡張**: CloudflareのClef 27B / Clef Flash 9Bを`/v1/systemone`から扱えるようにし、画像を含むmultimodal stateに対してchoice / probability / score型の判定を返せるようになった。web searchは1応答あたり3回から10回へ拡張。
+- **Modelfileの`CAPABILITY`宣言**: model能力をmetadataとして明示でき、GGUF / safetensorsからの作成やmodel継承でも保持される。
+
+[release](https://github.com/ollama/ollama/releases/tag/v0.35.1)
+
 ### 2026-09-28 — v0.35.0（released）
 
 - **decision model API**: `/v1/systemone` でchoice / noul / score形式のdecision modelを扱えるようになり、classificationやmodel routing等をOllama API内で実行できる。Settingsのmodel discovery待ちによるblockやMLX model download stallの修正も含む。[release](https://github.com/ollama/ollama/releases/tag/v0.35.0)

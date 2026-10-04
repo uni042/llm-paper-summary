@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-02**
+- フレームワーク差分の最終確認: **2026-10-04**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -85,6 +85,16 @@
   `/v1/systemone` でdecision modelを正式に扱えるようになり、通常のtext生成ではなく `choice` / `noul` / `score` と確率・confidenceを返すAPIを追加した。ticket triage、model routing、classification等をOllamaのlocal API内で実行できる。個別Ollamaページには既に収録済みのため、今回は集約ページへ状態を同期する。
 
   一次資料: https://github.com/ollama/ollama/releases/tag/v0.35.0
+
+### 2026-09-30
+
+#### DeepSeek — Ascend 950向け推論基盤
+
+- **DeepGEMM-Ascend / DeepEP-Ascendを公開**
+
+  DeepSeekがAscend 950向けの推論・MoE実行基盤を公開。`DeepGEMM-Ascend` は既存DeepGEMMとAPI互換でBF16 / FP8 / FP4 GEMM、MQA logits、MegaMoEを扱い、Ascend固有layout・alignment・address計算を抽象化する。`DeepEP-Ascend` はexpert parallelismのtoken dispatch / combine通信をAscend 950へ移植し、NVIDIA版DeepEPと公開APIを揃える。LLM kernel / MoE通信基盤のhardware backend拡張として記録する。
+
+  一次資料: https://github.com/deepseek-ai/DeepGEMM-Ascend / https://github.com/deepseek-ai/DeepEP-Ascend
 
 ### 2026-09-23
 
