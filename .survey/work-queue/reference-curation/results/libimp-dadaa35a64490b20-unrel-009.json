@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dadaa35a64490b20-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1710.09282",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1710.09282",
+    "identity_tokens": [
+      "arXiv:1710.09282"
+    ],
+    "reason": "pruning/quantization、low-rank factorization、compact convolutional filter、knowledge distillationを整理する一般DNN圧縮サーベイ。主対象は当時の視覚DNN等で、LLM/Transformer推論を最終適用先としない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T17:56:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+      "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+    ],
+    "title": "A Survey of Model Compression and Acceleration for Deep Neural Networks"
+  },
+  "processed_at": "2026-10-04T17:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dadaa35a6449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

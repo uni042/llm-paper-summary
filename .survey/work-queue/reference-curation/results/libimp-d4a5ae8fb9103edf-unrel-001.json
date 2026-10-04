@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4a5ae8fb9103edf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.16634",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.16634",
+    "identity_tokens": [
+      "arXiv:2303.16634"
+    ],
+    "reason": "G-EvalはGPT-4と連鎖思考（Chain-of-Thought; CoT）を用いて自然言語生成（NLG）出力を人間評価へ整合させる評価手法で、SummEval等の評価相関が主目的。LLM推論ランタイムやサービング効率化を扱わない。",
+    "first_checked_at": "2026-10-04T17:56:13+00:00",
+    "last_checked_at": "2026-10-04T17:56:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment"
+  },
+  "processed_at": "2026-10-04T17:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4a5ae8fb910",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

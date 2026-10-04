@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dadaa35a64490b20-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.00247",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.00247",
+    "identity_tokens": [
+      "arXiv:2005.00247"
+    ],
+    "reason": "事前学習済みadapterを非破壊的に組み合わせて複数taskの知識をtransferするadapter composition研究。主目的はtask transferと性能で、LLM serving/runtime効率化ではない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T17:56:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+    ],
+    "title": "AdapterFusion: Non-Destructive Task Composition for Transfer Learning"
+  },
+  "processed_at": "2026-10-04T17:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dadaa35a6449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

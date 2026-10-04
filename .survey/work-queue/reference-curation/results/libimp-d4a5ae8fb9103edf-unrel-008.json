@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4a5ae8fb9103edf-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2106.05974",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2106.05974",
+    "identity_tokens": [
+      "arXiv:2106.05974"
+    ],
+    "reason": "Vision Transformerへ疎な専門家混合（Mixture of Experts; MoE）を導入し、画像認識で推論computeを最大約半減しつつ性能を維持するが、最終適用先はcomputer visionでありLLM推論ではない。",
+    "first_checked_at": "2026-10-04T17:56:13+00:00",
+    "last_checked_at": "2026-10-04T17:56:13+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md"
+    ],
+    "title": "Scaling Vision with Sparse Mixture of Experts"
+  },
+  "processed_at": "2026-10-04T17:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4a5ae8fb910",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

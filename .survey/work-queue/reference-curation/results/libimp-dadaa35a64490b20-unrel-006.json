@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dadaa35a64490b20-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.13375",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.13375",
+    "identity_tokens": [
+      "arXiv:2303.13375"
+    ],
+    "reason": "GPT-4をUSMLEとMultiMedQAで評価し、医療知識・推論・calibrationを分析する能力評価研究。推論速度、memory、kernel、servingの改善方式を扱わない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T17:56:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+    ],
+    "title": "Capabilities of GPT-4 on Medical Challenge Problems"
+  },
+  "processed_at": "2026-10-04T17:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dadaa35a6449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
