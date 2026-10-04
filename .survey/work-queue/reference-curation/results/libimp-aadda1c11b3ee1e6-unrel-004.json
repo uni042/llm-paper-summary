@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aadda1c11b3ee1e6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1017/s0140525x00003435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1017/s0140525x00003435",
+    "identity_tokens": [
+      "DOI:10.1017/s0140525x00003435"
+    ],
+    "reason": "人間の推論能力の個人差と合理性を扱う認知心理学研究で、計算機上のLLM推論効率とは無関係。",
+    "first_checked_at": "2026-10-04T02:27:13+00:00",
+    "last_checked_at": "2026-10-04T02:27:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md"
+    ],
+    "title": "Individual differences in reasoning: Implications for the rationality debate?"
+  },
+  "processed_at": "2026-10-04T02:27:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aadda1c11b3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

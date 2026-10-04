@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T02:16:20+00:00",
-  "record_count": 882,
+  "updated_at": "2026-10-04T02:27:13+00:00",
+  "record_count": 886,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -11515,9 +11515,9 @@
       "identity_tokens": [
         "DOI:10.1038/s41586-023-06924-6"
       ],
-      "reason": "FunSearchでLLM生成プログラムを進化的評価し数学・組合せ最適化の新解を探索する科学発見/アルゴリズム研究で、LLM推論サービング効率化が主目的ではない。",
+      "reason": "LLMを用いたFunSearchで数学・アルゴリズム問題の新解を探索する応用研究で、LLM推論基盤の高速化ではない。",
       "first_checked_at": "2026-10-03T17:49:34+00:00",
-      "last_checked_at": "2026-10-03T17:49:34+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md"
       ],
@@ -12079,9 +12079,9 @@
         "DOI:10.1109/itw.2015.7133169",
         "arXiv:1503.02406"
       ],
-      "reason": "深層ニューラルネットワークを情報ボトルネック原理と相互情報量で解析し、表現・一般化・ネットワーク構造を理論化する研究で、LLM推論効率化ではない。",
+      "reason": "深層学習を情報ボトルネック原理で理論解析する研究で、LLM推論runtime最適化を最終適用先としない。",
       "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md"
       ],
@@ -12093,9 +12093,9 @@
       "identity_tokens": [
         "DOI:10.1109/isscc.2014.6757323"
       ],
-      "reason": "電圧スケーリング終焉後の計算機全般の電力制約と専用計算エンジンの必要性を論じるISSCC基調論文で、LLM固有の推論システムや低ビット実行方式を提案・評価しない。",
+      "reason": "電圧スケーリング終焉後の計算機全般の電力制約と専用計算器の必要性を論じる基調的研究で、LLM推論専用ではない。",
       "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md"
       ],
@@ -12135,9 +12135,9 @@
       "identity_tokens": [
         "DOI:10.1007/s002360050048"
       ],
-      "reason": "高挿入量ファイル向けにメモリ/ディスク階層をrolling mergeするデータベース索引構造の研究で、LLM推論のKVキャッシュ・ベクトル格納等への直接適用研究ではない。",
+      "reason": "高更新率ファイル向けデータベース索引構造の研究で、LLM推論システムを最終対象としない。",
       "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
       ],
@@ -12150,10 +12150,11 @@
         "DOI:10.1109/iccv48922.2021.00986",
         "arXiv:2103.14030"
       ],
-      "reason": "階層型・shifted-window自己注意で画像分類・検出・セグメンテーションを改善する汎用コンピュータビジョンTransformerで、LLM推論システムを最終適用先としない。",
+      "reason": "画像分類・物体検出・セグメンテーション向け汎用Vision Transformerが最終適用先で、LLM推論基盤ではない。",
       "first_checked_at": "2026-10-03T17:52:21+00:00",
-      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
         "worker-worklist-30"
       ],
       "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
@@ -12164,10 +12165,11 @@
       "identity_tokens": [
         "DOI:10.1002/nav.3800020109"
       ],
-      "reason": "人と仕事の割当総得点を最大化する組合せ最適化アルゴリズムの古典で、LLM推論・サービングの方式研究ではない。",
+      "reason": "割当問題を解く組合せ最適化アルゴリズムの古典研究で、LLM推論システムを対象としない。",
       "first_checked_at": "2026-10-03T17:52:21+00:00",
-      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
       "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
         "worker-worklist-30"
       ],
       "title": "The Hungarian method for the assignment problem"
@@ -12980,6 +12982,63 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Sparsity-Aware and Re-configurable NPU Architecture for Samsung Flagship Mobile SoC"
+    },
+    "DOI:10.1109/jrproc.1952.273898": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jrproc.1952.273898",
+      "identity_tokens": [
+        "DOI:10.1109/jrproc.1952.273898"
+      ],
+      "reason": "Huffman符号として知られる最小冗長可変長符号の構成法を扱う情報理論研究で、LLM推論ではない。",
+      "first_checked_at": "2026-10-04T02:27:13+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md"
+      ],
+      "title": "A Method for the Construction of Minimum-Redundancy Codes"
+    },
+    "DOI:10.1017/s0140525x00003435": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/s0140525x00003435",
+      "identity_tokens": [
+        "DOI:10.1017/s0140525x00003435"
+      ],
+      "reason": "人間の推論能力の個人差と合理性を扱う認知心理学研究で、計算機上のLLM推論効率とは無関係。",
+      "first_checked_at": "2026-10-04T02:27:13+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md"
+      ],
+      "title": "Individual differences in reasoning: Implications for the rationality debate?"
+    },
+    "DOI:10.1038/s41586-020-03051-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-020-03051-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-020-03051-4",
+        "arXiv:1911.08265"
+      ],
+      "reason": "MuZeroによる強化学習・モデルベース計画の性能が主題で、LLM推論サービングの効率化ではない。",
+      "first_checked_at": "2026-10-04T02:27:13+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ],
+      "title": "Mastering Atari, Go, chess and shogi by planning with a learned model"
+    },
+    "DOI:10.1016/s0169-2070(00)00057-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/s0169-2070(00)00057-1",
+      "identity_tokens": [
+        "DOI:10.1016/s0169-2070(00)00057-1"
+      ],
+      "reason": "時系列予測手法を比較するM3競技の結果・含意が主題で、LLM推論基盤とは無関係。",
+      "first_checked_at": "2026-10-04T02:27:13+00:00",
+      "last_checked_at": "2026-10-04T02:27:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "title": "The M3-Competition: results, conclusions and implications"
     }
   }
 }
