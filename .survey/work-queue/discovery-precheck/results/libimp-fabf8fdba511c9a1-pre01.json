@@ -1,0 +1,139 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fabf8fdba511c9a1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fabf8fdba511",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.28029"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4468b7306d82ca0fca1e93cb240c4149e9326b3c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:24:36.284825+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.28029",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison",
+      "source_url": "https://arxiv.org/abs/2609.28029",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache of autoregressive transformers can be viewed as a fourth-order tensor spanning attention heads, tokens, features, and grouped layers. We measure the singular-value spectra of all four mode unfoldings on Mistral-7B-v0.3 and LLaMA-2-13B and compare four standard tensor decompositions: Tucker, CP, tensor train, and t-SVD, at matched storage. The spectra partition the four axes into two classes. The token and feature modes carry low-rank structure, particularly for keys. The head and layer modes are nearly full-rank and resist compression at any practical error level. Among the four decompositions, Tucker achieves the lowest reconstruction error at every compression ratio from $2\\times$ to $5\\times$, because it can leave the full-rank modes untouched. Comparisons with two-dimensional unfolding baselines show that the preferred representation differs between keys and values: 2D methods achieve lower key error, while four-way Tucker achieves lower value error at matched storage. A mode-pinning theorem certifies the full-rank preservation from the measured spectra alone. Two further spectral properties affect the compressible modes without touching the full-rank ones: values reach a higher error floor than keys at every ratio, and post-RoPE keys lose $41\\%$ - $64\\%$ of their pre-RoPE compressibility on both models.",
+      "identifiers": [
+        "SemanticScholar:9b5c75985b0b46e62b84fb2f157457f11673c5fb"
+      ],
+      "semantic_scholar_id": "9b5c75985b0b46e62b84fb2f157457f11673c5fb",
+      "canonical_id": "arXiv:2609.28029",
+      "arxiv_id": "2609.28029",
+      "authors": [
+        "Rahul G. Krishnan",
+        "Volker Schulz"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.28029",
+      "identity_tokens": [
+        "id:SemanticScholar:9b5c75985b0b46e62b84fb2f157457f11673c5fb",
+        "id:arXiv:2609.28029",
+        "title:tensor decomposition of transformer keyvalue caches spectral structure and format comparison",
+        "url:https://arxiv.org/abs/2609.28029"
+      ],
+      "record": {
+        "title": "Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison",
+        "source_url": "https://arxiv.org/abs/2609.28029",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache of autoregressive transformers can be viewed as a fourth-order tensor spanning attention heads, tokens, features, and grouped layers. We measure the singular-value spectra of all four mode unfoldings on Mistral-7B-v0.3 and LLaMA-2-13B and compare four standard tensor decompositions: Tucker, CP, tensor train, and t-SVD, at matched storage. The spectra partition the four axes into two classes. The token and feature modes carry low-rank structure, particularly for keys. The head and layer modes are nearly full-rank and resist compression at any practical error level. Among the four decompositions, Tucker achieves the lowest reconstruction error at every compression ratio from $2\\times$ to $5\\times$, because it can leave the full-rank modes untouched. Comparisons with two-dimensional unfolding baselines show that the preferred representation differs between keys and values: 2D methods achieve lower key error, while four-way Tucker achieves lower value error at matched storage. A mode-pinning theorem certifies the full-rank preservation from the measured spectra alone. Two further spectral properties affect the compressible modes without touching the full-rank ones: values reach a higher error floor than keys at every ratio, and post-RoPE keys lose $41\\%$ - $64\\%$ of their pre-RoPE compressibility on both models.",
+        "identifiers": [
+          "SemanticScholar:9b5c75985b0b46e62b84fb2f157457f11673c5fb"
+        ],
+        "semantic_scholar_id": "9b5c75985b0b46e62b84fb2f157457f11673c5fb",
+        "canonical_id": "arXiv:2609.28029",
+        "arxiv_id": "2609.28029",
+        "authors": [
+          "Rahul G. Krishnan",
+          "Volker Schulz"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d378610b920dc16d6f85f8c26c7836fce4441ea1f5a343cdf0e0b86e163e715d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

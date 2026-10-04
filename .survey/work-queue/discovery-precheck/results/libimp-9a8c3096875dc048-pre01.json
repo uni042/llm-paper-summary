@@ -1,0 +1,321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9a8c3096875dc048-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9a8c3096875d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2608.26523",
+    "arXiv:2608.29058",
+    "arXiv:2609.22098"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4468b7306d82ca0fca1e93cb240c4149e9326b3c",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:24:29.831285+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2608.26523",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.29058",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.22098",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.22098",
+      "year": 2026,
+      "published": "2026-08-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language-model inference by letting a cheap drafter propose tokens that the target model verifies in parallel. Recent block drafters make drafting nearly free: a single backbone pass emits an entire block of draft tokens. Draft trees promise a further gain -- several alternative continuations verified in one target forward -- but existing constructions rank candidates by per-position marginals that ignore which parent a candidate extends, so on semi-autoregressive drafters wider trees mostly add mis-ranked nodes; and a tree of fixed size ignores how much speculation each decoding round, and each serving load, can support. We introduce TreeSpark, which reads a parent-conditioned distribution from the drafter's existing Markov head at negligible cost, calibrates it into an edge-acceptance estimate, and lets path survival govern everything else: best-first expansion, per-round stopping, and a load-adaptive serving policy. Sampling siblings without replacement, with matching residuals in recursive rejection, keeps decoding lossless at any temperature. Adaptive trees improve on matched fixed budgets at every temperature; against a tuned chain on the same drafter, TreeSpark accepts 15-25% more draft tokens per round and decodes 8-14% faster in single-request wall-clock, and under rising load it gracefully shrinks the tree back to the chain. Code and artifacts: https://github.com/PopSoda2002/TreeSpark",
+      "identifiers": [
+        "SemanticScholar:f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6"
+      ],
+      "semantic_scholar_id": "f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6",
+      "canonical_id": "arXiv:2609.22098",
+      "arxiv_id": "2609.22098",
+      "authors": [
+        "Hua-Peng Zhou",
+        "Hua-Yu Wang",
+        "Xin-Yu Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.26523",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chunked prefill pipeline parallelism (CPP) is a key technique for LLM inference. However, equal-size chunks exhibit imbalanced latency, as later chunks attend longer prefix KV caches and incur higher attention costs, leading to pipeline bubbles. Existing approaches mitigate this imbalance through dynamic chunk resizing (Dynamic CPP, DCPP), but our measurements show that this trades scheduling overhead for load balancing, which becomes unfavorable on long sequences. In this study, we propose Virtual Pipeline Parallelism (VPP), which keeps chunk sizes fixed and optimizes the pipeline layout through virtual stages. A V-shaped virtual-stage traversal overlaps each chunk's expensive middle stages with the lighter head and tail stages of its neighbors, while asynchronous communication and pipelined packing further reduce communication stalls and cross-request drain bubbles. We implement VPP in vLLM-Ascend and evaluate it on three MoE-based LLMs with sequences up to 1M tokens on 16 Ascend 910C NPUs. VPP improves throughput by up to 13.1% over DCPP on long sequences and 6.7% on mixed workloads, while preserving performance on short sequences. On a 512K-token DeepSeek-V3.1 prefill workload, VPP reduces the pipeline bubble ratio from 6.4% to 0.1%, achieving a 98.0% reduction compared with DCPP.",
+      "identifiers": [
+        "SemanticScholar:9d7ad407246d10f1d9734966d55a8bd51fdcc720"
+      ],
+      "semantic_scholar_id": "9d7ad407246d10f1d9734966d55a8bd51fdcc720",
+      "canonical_id": "arXiv:2608.26523",
+      "arxiv_id": "2608.26523",
+      "authors": [
+        "Yan Shi",
+        "Xiao-Chao Wang",
+        "Jin-Chun Gao",
+        "Jin-Tao Luo",
+        "Xinyi Zhou",
+        "Feng Liu",
+        "Kui Luo",
+        "Xu-Shi Li",
+        "Xingong Guo",
+        "Liang-Jun Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RouteSparse: Input-Conditional Pattern Routing for Budgeted Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2608.29058",
+      "year": 2026,
+      "published": "2026-08-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention can reduce the quadratic cost of long-context prefilling without changing model weights. MInference assigns each attention head one pattern offline and estimates that pattern's sparse indices for every prompt. This design is efficient, but it assumes that a head's preferred pattern and sparsity budget remain suitable across inputs. We introduce RouteSparse, which routes each head and prompt segment among a small library of GPU-efficient sparse patterns. A low-cost probe estimates pattern utility and uncertainty; a latency-aware router then selects a pattern and budget, while uncertain cases fall back to a denser mask. We formulate routing as constrained risk minimization, derive an attention-output error certificate from omitted probability mass, and evaluate the method on long-context retrieval, question answering, summarization, and language modeling. On Llama 3.1-8B-Instruct with 128K-token prompts, RouteSparse achieves $6.5\\times$ dense prefill speed with a 0.2-point RULER drop relative to dense attention, compared with $7.3\\times$ speed and a 1.6-point drop for fixed per-head routing. Ablations confirm that input-conditional routing, hardware profiling, and selective dense fallback each contribute to the quality--latency tradeoff.",
+      "identifiers": [
+        "SemanticScholar:3a7e1c35265c6f6a99e82572a890a3d00bd97cbd"
+      ],
+      "semantic_scholar_id": "3a7e1c35265c6f6a99e82572a890a3d00bd97cbd",
+      "canonical_id": "arXiv:2608.29058",
+      "arxiv_id": "2608.29058",
+      "authors": [
+        "Chao Zhang",
+        "Yi Ji",
+        "Zi-Yan Zhang",
+        "Kai Song",
+        "Fei Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.22098",
+      "identity_tokens": [
+        "id:SemanticScholar:f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6",
+        "id:arXiv:2609.22098",
+        "title:treespark calibrated loadadaptive draft trees for semiautoregressive speculative decoding",
+        "url:https://arxiv.org/abs/2609.22098"
+      ],
+      "record": {
+        "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.22098",
+        "year": 2026,
+        "published": "2026-08-12",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates language-model inference by letting a cheap drafter propose tokens that the target model verifies in parallel. Recent block drafters make drafting nearly free: a single backbone pass emits an entire block of draft tokens. Draft trees promise a further gain -- several alternative continuations verified in one target forward -- but existing constructions rank candidates by per-position marginals that ignore which parent a candidate extends, so on semi-autoregressive drafters wider trees mostly add mis-ranked nodes; and a tree of fixed size ignores how much speculation each decoding round, and each serving load, can support. We introduce TreeSpark, which reads a parent-conditioned distribution from the drafter's existing Markov head at negligible cost, calibrates it into an edge-acceptance estimate, and lets path survival govern everything else: best-first expansion, per-round stopping, and a load-adaptive serving policy. Sampling siblings without replacement, with matching residuals in recursive rejection, keeps decoding lossless at any temperature. Adaptive trees improve on matched fixed budgets at every temperature; against a tuned chain on the same drafter, TreeSpark accepts 15-25% more draft tokens per round and decodes 8-14% faster in single-request wall-clock, and under rising load it gracefully shrinks the tree back to the chain. Code and artifacts: https://github.com/PopSoda2002/TreeSpark",
+        "identifiers": [
+          "SemanticScholar:f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6"
+        ],
+        "semantic_scholar_id": "f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6",
+        "canonical_id": "arXiv:2609.22098",
+        "arxiv_id": "2609.22098",
+        "authors": [
+          "Hua-Peng Zhou",
+          "Hua-Yu Wang",
+          "Xin-Yu Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26523",
+      "identity_tokens": [
+        "id:SemanticScholar:9d7ad407246d10f1d9734966d55a8bd51fdcc720",
+        "id:arXiv:2608.26523",
+        "title:vpp virtual pipeline parallelism for efficient chunked prefill in longcontext llm inference",
+        "url:https://arxiv.org/abs/2608.26523"
+      ],
+      "record": {
+        "title": "VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.26523",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chunked prefill pipeline parallelism (CPP) is a key technique for LLM inference. However, equal-size chunks exhibit imbalanced latency, as later chunks attend longer prefix KV caches and incur higher attention costs, leading to pipeline bubbles. Existing approaches mitigate this imbalance through dynamic chunk resizing (Dynamic CPP, DCPP), but our measurements show that this trades scheduling overhead for load balancing, which becomes unfavorable on long sequences. In this study, we propose Virtual Pipeline Parallelism (VPP), which keeps chunk sizes fixed and optimizes the pipeline layout through virtual stages. A V-shaped virtual-stage traversal overlaps each chunk's expensive middle stages with the lighter head and tail stages of its neighbors, while asynchronous communication and pipelined packing further reduce communication stalls and cross-request drain bubbles. We implement VPP in vLLM-Ascend and evaluate it on three MoE-based LLMs with sequences up to 1M tokens on 16 Ascend 910C NPUs. VPP improves throughput by up to 13.1% over DCPP on long sequences and 6.7% on mixed workloads, while preserving performance on short sequences. On a 512K-token DeepSeek-V3.1 prefill workload, VPP reduces the pipeline bubble ratio from 6.4% to 0.1%, achieving a 98.0% reduction compared with DCPP.",
+        "identifiers": [
+          "SemanticScholar:9d7ad407246d10f1d9734966d55a8bd51fdcc720"
+        ],
+        "semantic_scholar_id": "9d7ad407246d10f1d9734966d55a8bd51fdcc720",
+        "canonical_id": "arXiv:2608.26523",
+        "arxiv_id": "2608.26523",
+        "authors": [
+          "Yan Shi",
+          "Xiao-Chao Wang",
+          "Jin-Chun Gao",
+          "Jin-Tao Luo",
+          "Xinyi Zhou",
+          "Feng Liu",
+          "Kui Luo",
+          "Xu-Shi Li",
+          "Xingong Guo",
+          "Liang-Jun Feng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29058",
+      "identity_tokens": [
+        "id:SemanticScholar:3a7e1c35265c6f6a99e82572a890a3d00bd97cbd",
+        "id:arXiv:2608.29058",
+        "title:routesparse inputconditional pattern routing for budgeted longcontext prefilling",
+        "url:https://arxiv.org/abs/2608.29058"
+      ],
+      "record": {
+        "title": "RouteSparse: Input-Conditional Pattern Routing for Budgeted Long-Context Prefilling",
+        "source_url": "https://arxiv.org/abs/2608.29058",
+        "year": 2026,
+        "published": "2026-08-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dynamic sparse attention can reduce the quadratic cost of long-context prefilling without changing model weights. MInference assigns each attention head one pattern offline and estimates that pattern's sparse indices for every prompt. This design is efficient, but it assumes that a head's preferred pattern and sparsity budget remain suitable across inputs. We introduce RouteSparse, which routes each head and prompt segment among a small library of GPU-efficient sparse patterns. A low-cost probe estimates pattern utility and uncertainty; a latency-aware router then selects a pattern and budget, while uncertain cases fall back to a denser mask. We formulate routing as constrained risk minimization, derive an attention-output error certificate from omitted probability mass, and evaluate the method on long-context retrieval, question answering, summarization, and language modeling. On Llama 3.1-8B-Instruct with 128K-token prompts, RouteSparse achieves $6.5\\times$ dense prefill speed with a 0.2-point RULER drop relative to dense attention, compared with $7.3\\times$ speed and a 1.6-point drop for fixed per-head routing. Ablations confirm that input-conditional routing, hardware profiling, and selective dense fallback each contribute to the quality--latency tradeoff.",
+        "identifiers": [
+          "SemanticScholar:3a7e1c35265c6f6a99e82572a890a3d00bd97cbd"
+        ],
+        "semantic_scholar_id": "3a7e1c35265c6f6a99e82572a890a3d00bd97cbd",
+        "canonical_id": "arXiv:2608.29058",
+        "arxiv_id": "2608.29058",
+        "authors": [
+          "Chao Zhang",
+          "Yi Ji",
+          "Zi-Yan Zhang",
+          "Kai Song",
+          "Fei Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a4465e038084ab505f261caf4cf12bbd60bc1a1bb16f8e925f419018dbd521ce",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

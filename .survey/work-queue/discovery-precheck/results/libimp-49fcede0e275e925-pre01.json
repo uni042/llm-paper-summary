@@ -1,0 +1,329 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-49fcede0e275e925-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-49fcede0e275",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.26875",
+    "arXiv:2607.22634",
+    "arXiv:2608.28113"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4468b7306d82ca0fca1e93cb240c4149e9326b3c",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:24:31.940483+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.26875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.22634",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive (AR) LLMs, generating tokens in parallel. This makes them effective draft models for speculative decoding (SD), producing an entire block of draft tokens in a single forward pass. Yet existing diffusion-based drafting methods rely on linear drafting, even though dLLMs emit multiple candidate tokens across positions, inducing a large combinatorial space of decoding paths. Consequently, they limit acceptance length and decoding efficiency. To exploit this multi-candidate structure, we apply tree-based drafting to diffusion drafters, enabling exploration of diverse candidate paths. However, we find that naive tree drafting is suboptimal: diffusion marginals are prefix-blind, mismatching the prefix-based AR verification and yielding unreliable path ranking. We propose PRESTO, a principled framework that extends tree-based drafting to diffusion drafters while resolving the fundamental mismatch between diffusion draft confidence and prefix-based AR verification through PREfix-aligned Scoring and priority-based Tree search for diffusion speculative decOding. The key principles behind PRESTO are that (1) candidate ranking should align with the prefix-based nature of AR verification, and (2) tree construction should prioritize candidate paths with high verification potential to maximize acceptance length. Extensive experiments show that PRESTO achieves up to an average of $1.5\\times$ end-to-end throughput speedup on the state-of-the-art dedicated diffusion drafter SD and an average of $1.12\\times$ on self-speculative diffusion LLMs across diverse benchmarks.",
+      "identifiers": [
+        "SemanticScholar:5af66480e4e120e09722a448063d2723c90d677f"
+      ],
+      "semantic_scholar_id": "5af66480e4e120e09722a448063d2723c90d677f",
+      "canonical_id": "arXiv:2607.22634",
+      "arxiv_id": "2607.22634",
+      "doi": "10.48550/arXiv.2607.22634",
+      "authors": [
+        "Zheng Wang",
+        "Zhi-Fan Ye",
+        "Qiao-Yun Cheng",
+        "Yong-Gan Fu",
+        "Zi-Yan Wang",
+        "Feng-Yi Zhu",
+        "Haozhe Zhao",
+        "Jan Kautz",
+        "Pavlo Molchanov",
+        "Humphrey Shi",
+        "Min-Jia Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Information-Aware KV Cache Compression for Long Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.26875",
+      "year": 2026,
+      "published": "2026-06-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce \\textit{Forward Influence}, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose \\textbf{InfoKV}, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
+      "identifiers": [
+        "SemanticScholar:062725eb5341f1d592f6e321f816353d3facc2be"
+      ],
+      "semantic_scholar_id": "062725eb5341f1d592f6e321f816353d3facc2be",
+      "canonical_id": "arXiv:2606.26875",
+      "arxiv_id": "2606.26875",
+      "doi": "10.48550/arXiv.2606.26875",
+      "authors": [
+        "Jushi Kai",
+        "Zhuiri Xiao",
+        "Alexandra Birch",
+        "Zhou-Han Lin"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.28113",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The NVIDIA Blackwell architecture, with native support for the ultra-fine-grained NVFP4 format, opens new opportunities for accelerating large language model (LLM) inference. NVFP4's micro-block design, such as a group size of 16, offers strong representational flexibility for capturing local weight distributions and isolating outliers, but it also introduces a large and highly sensitive space of per-group scaling factors. Existing post-training quantization (PTQ) methods primarily focus on refining quantized weight values, leaving this scale-selection step underexplored. To address this gap, we propose \\textbf{H-Scale}, a lightweight post-processing method for NVFP4 per-group scale refinement. Instead of minimizing plain weight reconstruction error, H-Scale selects hardware-valid group scales using a diagonal second-order proxy derived from calibration activations, thereby targeting layer output perturbation more directly. It is designed as a drop-in replacement for RTN-style scale selection in diverse NVFP4 pipelines, requires only modest offline calibration, and introduces strictly zero overhead at inference time. Under a fixed evaluation protocol, experiments on mainstream LLMs show that H-Scale generally improves a broad range of NVFP4 baselines and brings several variants closer to the BF16 reference.",
+      "identifiers": [
+        "SemanticScholar:aaf4fa1b6f65ad48cb458188a3a6b416538711ae"
+      ],
+      "semantic_scholar_id": "aaf4fa1b6f65ad48cb458188a3a6b416538711ae",
+      "canonical_id": "arXiv:2608.28113",
+      "arxiv_id": "2608.28113",
+      "authors": [
+        "Hao Yu",
+        "Zheng Li",
+        "Dayiheng Liu",
+        "Jian-Wei Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.22634",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22634",
+        "id:SemanticScholar:5af66480e4e120e09722a448063d2723c90d677f",
+        "id:arXiv:2607.22634",
+        "title:presto prefixaligned tree drafting for diffusion speculative decoding",
+        "url:https://arxiv.org/abs/2607.22634"
+      ],
+      "record": {
+        "title": "PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2607.22634",
+        "year": 2026,
+        "published": "2026-06-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive (AR) LLMs, generating tokens in parallel. This makes them effective draft models for speculative decoding (SD), producing an entire block of draft tokens in a single forward pass. Yet existing diffusion-based drafting methods rely on linear drafting, even though dLLMs emit multiple candidate tokens across positions, inducing a large combinatorial space of decoding paths. Consequently, they limit acceptance length and decoding efficiency. To exploit this multi-candidate structure, we apply tree-based drafting to diffusion drafters, enabling exploration of diverse candidate paths. However, we find that naive tree drafting is suboptimal: diffusion marginals are prefix-blind, mismatching the prefix-based AR verification and yielding unreliable path ranking. We propose PRESTO, a principled framework that extends tree-based drafting to diffusion drafters while resolving the fundamental mismatch between diffusion draft confidence and prefix-based AR verification through PREfix-aligned Scoring and priority-based Tree search for diffusion speculative decOding. The key principles behind PRESTO are that (1) candidate ranking should align with the prefix-based nature of AR verification, and (2) tree construction should prioritize candidate paths with high verification potential to maximize acceptance length. Extensive experiments show that PRESTO achieves up to an average of $1.5\\times$ end-to-end throughput speedup on the state-of-the-art dedicated diffusion drafter SD and an average of $1.12\\times$ on self-speculative diffusion LLMs across diverse benchmarks.",
+        "identifiers": [
+          "SemanticScholar:5af66480e4e120e09722a448063d2723c90d677f"
+        ],
+        "semantic_scholar_id": "5af66480e4e120e09722a448063d2723c90d677f",
+        "canonical_id": "arXiv:2607.22634",
+        "arxiv_id": "2607.22634",
+        "doi": "10.48550/arXiv.2607.22634",
+        "authors": [
+          "Zheng Wang",
+          "Zhi-Fan Ye",
+          "Qiao-Yun Cheng",
+          "Yong-Gan Fu",
+          "Zi-Yan Wang",
+          "Feng-Yi Zhu",
+          "Haozhe Zhao",
+          "Jan Kautz",
+          "Pavlo Molchanov",
+          "Humphrey Shi",
+          "Min-Jia Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 106,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26875",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.26875",
+        "id:SemanticScholar:062725eb5341f1d592f6e321f816353d3facc2be",
+        "id:arXiv:2606.26875",
+        "title:informationaware kv cache compression for long reasoning",
+        "url:https://arxiv.org/abs/2606.26875"
+      ],
+      "record": {
+        "title": "Information-Aware KV Cache Compression for Long Reasoning",
+        "source_url": "https://arxiv.org/abs/2606.26875",
+        "year": 2026,
+        "published": "2026-06-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce \\textit{Forward Influence}, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose \\textbf{InfoKV}, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
+        "identifiers": [
+          "SemanticScholar:062725eb5341f1d592f6e321f816353d3facc2be"
+        ],
+        "semantic_scholar_id": "062725eb5341f1d592f6e321f816353d3facc2be",
+        "canonical_id": "arXiv:2606.26875",
+        "arxiv_id": "2606.26875",
+        "doi": "10.48550/arXiv.2606.26875",
+        "authors": [
+          "Jushi Kai",
+          "Zhuiri Xiao",
+          "Alexandra Birch",
+          "Zhou-Han Lin"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 101,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28113",
+      "identity_tokens": [
+        "id:SemanticScholar:aaf4fa1b6f65ad48cb458188a3a6b416538711ae",
+        "id:arXiv:2608.28113",
+        "title:hscale hessianguided scale refinement for nvfp4 subbyte llm inference",
+        "url:https://arxiv.org/abs/2608.28113"
+      ],
+      "record": {
+        "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.28113",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The NVIDIA Blackwell architecture, with native support for the ultra-fine-grained NVFP4 format, opens new opportunities for accelerating large language model (LLM) inference. NVFP4's micro-block design, such as a group size of 16, offers strong representational flexibility for capturing local weight distributions and isolating outliers, but it also introduces a large and highly sensitive space of per-group scaling factors. Existing post-training quantization (PTQ) methods primarily focus on refining quantized weight values, leaving this scale-selection step underexplored. To address this gap, we propose \\textbf{H-Scale}, a lightweight post-processing method for NVFP4 per-group scale refinement. Instead of minimizing plain weight reconstruction error, H-Scale selects hardware-valid group scales using a diagonal second-order proxy derived from calibration activations, thereby targeting layer output perturbation more directly. It is designed as a drop-in replacement for RTN-style scale selection in diverse NVFP4 pipelines, requires only modest offline calibration, and introduces strictly zero overhead at inference time. Under a fixed evaluation protocol, experiments on mainstream LLMs show that H-Scale generally improves a broad range of NVFP4 baselines and brings several variants closer to the BF16 reference.",
+        "identifiers": [
+          "SemanticScholar:aaf4fa1b6f65ad48cb458188a3a6b416538711ae"
+        ],
+        "semantic_scholar_id": "aaf4fa1b6f65ad48cb458188a3a6b416538711ae",
+        "canonical_id": "arXiv:2608.28113",
+        "arxiv_id": "2608.28113",
+        "authors": [
+          "Hao Yu",
+          "Zheng Li",
+          "Dayiheng Liu",
+          "Jian-Wei Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:275514844695afbf3372e3a8d20af3b018ceadb452a9eb0f5bb9f0becf382566",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
