@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2607.00760",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM services now sustain prompts with hundreds of thousands to millions of tokens, making the key-value (KV) cache a first-order serving cost. Because the cache grows linearly with context length, it can exhaust GPU memory, force smaller batches, and reduce serving throughput. Prior KV cache compression techniques typically target only the sequence dimension or only the channel dimension, which leaves limited headroom as context windows scale. Compressing both dimensions promises higher memory reduction, but applying the two forms of compression directly leads to significant accuracy loss. This paper introduces MosaicKV, a dynamic two-D (dimensional) KV cache compression system for extremely long-context serving. MosaicKV uses dynamic two-D compression to address the accuracy challenge, exploiting the non-uniform importance distribution of elements within the KV cache. Instead of applying one compression pattern globally, MosaicKV identifies important elements for each KV vector and selects compression strategies at the granularity of KV cache segments. To address the performance challenge, where fine-grained sparsity and compression management overhead can offset the gains from compression, MosaicKV introduces compressed KV cache management. This mechanism uses underutilized GPU and CPU resources to maintain compressed KV caches and accelerate attention computation. Evaluation on an H800 GPU with multiple LLMs shows that MosaicKV delivers up to 16x attention speedup, 4.8x lower decode latency, and 7.3x higher throughput than the uncompressed baseline. At the same time, it reduces memory usage by 3x and incurs only 1.76% average accuracy loss on LongBench and RULER.",
+      "identifiers": [
+        "SemanticScholar:ebab52e0cc0798f6e372a8fe5d844b191da54e79"
+      ],
+      "semantic_scholar_id": "ebab52e0cc0798f6e372a8fe5d844b191da54e79",
+      "canonical_id": "arXiv:2607.00760",
+      "arxiv_id": "2607.00760",
+      "doi": "10.48550/arXiv.2607.00760",
+      "authors": [
+        "Shen Qiang",
+        "Ruiwei Chen",
+        "Yin Wu",
+        "Jin-Yu Gu",
+        "Zhi-Chao Hua",
+        "Yu-Bin Xia",
+        "Bin-Yu Zang",
+        "Hai-Bo Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 95,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MosaicKV targets long-context LLM inference serving by compressing both the sequence and channel dimensions of the KV cache throughout decode. Its per-vector element selection and segment-specific compression strategies address the accuracy loss from uniform two-dimensional compression, while packed sparse attention and asynchronous CPU/GPU cache management translate compression into serving gains. This is directly in scope for LLM inference and KV-cache optimization.",
+      "library_body_check": "Read the primary arXiv v1 HTML body: §1–§3 for the KV-cache serving bottleneck, prior one-dimensional methods, and the design goals; §4.1–§4.3 for per-vector channel compression, query-driven sequence selection, and segment-adaptive strategies; §5.1–§5.5 for packed KV representation, PackedAttention, buffering, and incremental strategy generation; §6.1–§6.4, Table 1, Table 2, and Figure 10 for evaluation conditions and results; §7 for limitations. The prototype uses PyTorch/CUDA and is evaluated on one NVIDIA H800 (80 GB): LLaMA-3.1-8B performance, with accuracy also measured on Qwen3-4B and Ministral-3-8B, against uncompressed/FlashAttention or vLLM baselines and Quest, at BF16, 25% channel retention and 10% token selection by default. The paper reports 3x lower KV memory than full cache, up to 16x attention speedup, at 1M context 4.8x lower time-between-tokens and 7.3x throughput versus vLLM, and LongBench accuracy loss of 0.86% on average versus uncompressed. It states H800 memory prevents vLLM and Quest from fitting a 512K-token request at batch 1, while MosaicKV reaches about 1.44M; results beyond tested feasible contexts extrapolate latency/throughput from a subset of attention layers. Limitations stated by the authors: current focus is decode-stage acceleration (prefill acceleration with chunked prefill is future work), and PackedAttention currently uses CUDA cores, which could become limiting if HBM bandwidth ceases to be the bottleneck.",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-80fa4cf11cfa",
+    "round": "libimp-80fa4cf11cfad226-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-80fa4cf11cfad226-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-80fa4cf11cfad226-pre01.json",
+    "receipt": "sha256:ca9e8bdb49eaec69f8c12dc74472ccc16329feb7028d5bef9e65f487491a8157"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-80fa4cf11cfa",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads",
+      "source_url": "https://arxiv.org/abs/2610.00888",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) improves the throughput of autoregressive generation by enabling the language model to draft multiple next tokens per forward pass, while a verification step over draft tokens ensures that token distribution of the backbone is preserved. Every open MTP-family release (MiMo-7B, DeepSeek-V3, Qwen3) trains its heads jointly with the backbone over the full pretraining run of tens of trillions of tokens, thus setting the drafter quality at pretraining time. We ask whether a lightweight post-training pass on target-generated chain-of-thought is enough to reach the same expected throughput speedup on a frozen reasoning model, and study how a serving-time system built on such a checkpoint can be optimized. We present three findings. 1) On a frozen Qwen3-8B with $K{=}3$ chained MTP heads, we show that a post-training recipe with plain cross-entropy on $\\approx\\!2.5$B tokens reaches or exceeds the expected speedup of jointly trained MiMo-7B on math, coding and knowledge benchmarks. Our post-training recipe utilizes $10^3$-$10^4\\times$ less MTP-training tokens as compared with joint pre-training of MiMO-7B MTP baseline. 2) We propose a chain-aware relaxation of draft token verification rule that allows a bounded drift from backbone language model token distribution. We show that this relaxation lifts expected speedups by $+12$ to $+16\\%$ per benchmark while preserving task accuracy. 3) We propose an adaptive controller that dynamically chooses the number of MTP heads to be engaged at inference time and demonstrate recovery of upto $11$--$14\\%$ loss in speedup using fixed maximum MTP draft length.",
+      "identifiers": [
+        "SemanticScholar:2a572870af817f283bece43d35cf8fe21ed27701"
+      ],
+      "semantic_scholar_id": "2a572870af817f283bece43d35cf8fe21ed27701",
+      "canonical_id": "arXiv:2610.00888",
+      "arxiv_id": "2610.00888",
+      "authors": [
+        "Prachi Badarayani",
+        "Aidan Jay",
+        "Cheng-Hui Zhou",
+        "Dayquan Julienne",
+        "Yuan Gao",
+        "Tian-Wei Chen",
+        "George Zerveas",
+        "Ishmam Zabir",
+        "Xi-Ren Zhou",
+        "Chris Quirk",
+        "Xia Song"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "凍結LLMへ後学習した連鎖型multi-token prediction headで投機的デコード候補を作り、検証を通じた推論時の期待生成スループット向上を扱う。さらに検証長を実行時に選ぶ制御も評価しており、LLM推論高速化に直接該当する。近似検証は出力分布を緩和する別方式であり、精度を各ベンチマーク±3 percentage points以内に保つ条件付き評価として厳密検証と区別する。",
+      "library_body_check": "arXiv一次全文v1 (https://arxiv.org/html/2610.00888v1) の§1-5、Tables 1-3、Discussion and Conclusionを確認。§2では凍結Qwen3-8Bの隠れ状態に接続するK=3の連鎖型MTP headを、対象モデル自身が生成したchain-of-thought約2.5B tokensでcross-entropy後学習する。headは各約200M trainable parametersで、backboneは凍結。Table 1はsingle A100 80GB上のvLLM、batch 4で、exact rejection-sampling verificationを用い、4つのmathと5つのcoding/knowledge/open-ended benchmarkにおけるmean accepted length (MAL) をMiMo-7Bと比較する。提案headはGSM8K 3.05 vs 2.80、MATH500 3.00 vs 2.87、MBPP 2.84 vs 2.70などで、正確な検証によるタスク精度維持を報告する。これはMALという期待確定token数の代理指標で、Table 1自体は絶対tokens/s比較ではない。§3/Table 2のchain-aware approximate verificationは対象分布との厳密一致を緩和し、ベンチマークごとに精度がexact verificationから±3 pp以内の設定を選択してMAL平均を2.91から3.31へ約14%上げる。AIME25では精度76.7%から73.3%へ下がる設定も許容帯内の例であり、分布保存を主張できない。§4/Table 3のonline lower-confidence-bound controllerはK=1..6を選択し、10 workloadsで固定K=3比batch 4/16では0.94、batch 64/128では0.98/0.99のobserved throughputを報告する。固定K=6はbatch 64/128で0.86/0.89へ低下し、深いdraftの検証費用が受理増分を超える限界を示す。低batchではcontroller overheadが平均最大約6%の損失を伴い得る。single-GPU/vLLMの詳細評価と限定benchmarksから他hardware、workload、serving設定への一般化は未確立。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.00983",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) methods typically use sequential quantization that partitions a pre-trained LLM into a series of units (e.g., transformer blocks), with one unit quantized at each stage. State-of-the-art PTQ methods are predominantly learning-based, optimizing auxiliary quantization parameters (e.g., scaling factors, rotation matrices, clipping thresholds, and adapters) via gradient descent to minimize a reconstruction loss. A common practice is to use mean squared error (MSE) as the reconstruction loss function, yet its induced optimization behavior remains largely unexplored. In this work, we take a holistic view of sequential quantization and systematically investigate how optimization evolves from the first quantization stage to the last, aiming for a deep understanding of optimization in learning-based PTQ schemes. Through extensive empirical studies spanning representative learning-based PTQ methods, LLM families, model scales, architectures, quantization settings and various tasks, we consistently uncover Optimization Imbalance: reconstruction loss magnitudes vary dramatically across stages, accompanied by highly uneven gradient magnitudes and parameter updates under MSE. We term the cross-stage range of loss magnitudes the reconstruction loss scale, and reveal that MSE translates the unexpectedly large reconstruction loss scale into highly uneven gradient magnitudes, which in turn lead to uneven optimization strength across quantization stages. This finding suggests a general principle for improving learning-based PTQ: optimization strength across stages should be decoupled from the reconstruction loss scale. Theoretically, we show that root mean squared error (RMSE) variants defined at the sample, channel, token, and element levels naturally realize this principle through implicit gradient normalization, outperforming MSE significantly as a drop-in replacement.",
+      "identifiers": [
+        "SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59"
+      ],
+      "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+      "canonical_id": "arXiv:2610.00983",
+      "arxiv_id": "2610.00983",
+      "authors": [
+        "Chao Li",
+        "Shi-Geng Wang",
+        "An-Bang Yao"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "対象は学習ベースのLLM post-training quantizationであり、逐次量子化における再構成lossの桁差がMSE勾配と補助パラメータ更新の偏りを生むことを示し、4種のRMSE損失による置換を評価する。重み-onlyと重み・活性値量子化、複数LLMおよび量子化bit幅で品質を調べており、推論時LLM圧縮の方法・品質に直接関係する。",
+      "library_body_check": "arXiv一次資料の本文を確認。Sec. 2.2-2.3は逐次stage間で再構成lossが最大で1万倍超異なる場合があり、MSEの出力勾配がloss平方根に比例するため、初期stageを含むoptimization imbalanceにつながると分析。Sec. 3.1-3.2は勾配正規化でloss scaleとの結合を外すRMSEを提示し、sample/channel/token/element groupingの4 variantを定義（element variantはL1 lossに相当）。Sec. 4.1-4.3、Tables 1-5ではLLaMA2-7B、LLaMA3.1-8B、Qwen3.5 9B/27B/35B-A3Bを対象に、OmniQuant、DuQuant、FlatQuant、SliderQuantとW4A16/W3A16/W2A16/W2A16G128/W4A4を評価。例としてOmniQuant + Qwen3.5-27B + W2A16でMSE比perplexity 37.51→22.20、平均accuracy 60.45%→70.96%。Table 5のNVIDIA L40上の量子化工程測定ではRMSEのruntime差は-1.19%から+2.82%、peak GPU memory差は0%。Sec. 5-6は、よりaggressiveな量子化ほど改善が大きい傾向、feature groupingごとの性能差、研究対象4 variantを越えるgrouping探索余地を述べる。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "source_url": "https://arxiv.org/abs/2610.01108",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+      "identifiers": [
+        "SemanticScholar:90f533447ff0d2da22af3c25053eb0d95bf41d79"
+      ],
+      "semantic_scholar_id": "90f533447ff0d2da22af3c25053eb0d95bf41d79",
+      "canonical_id": "arXiv:2610.01108",
+      "arxiv_id": "2610.01108",
+      "authors": [
+        "Sumin Lee",
+        "Sukmin Cho",
+        "Suengjae Lim",
+        "Youngjin Kwon"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly in scope: the paper develops a training-free retrieval-based speculative decoding framework for LLM inference in coding-agent pipelines, addressing corpus coverage/matchability and draft-length control. It evaluates decoding throughput and accepted length against autoregressive decoding and speculative-decoding baselines.",
+      "library_body_check": "Checked the primary arXiv v1 HTML (submitted 2026-10-01), including Sections 1, 3.1-3.2, 4.1-4.4, Conclusion, and Appendix G. AgSpec layers unchanged retrieval engines with session, workspace, and global corpora; indexes workspace files both as stored and in agent emission forms; selects corpus by match length with a margin for global matches; profiles per-agent draft caps offline and adjusts per-agent draft scale from verification feedback online. In vLLM experiments over SAM-Decoding and SuffixDecoding, the setup uses SWE-bench Verified and TeamBench, three models, batch sizes 1 and 16; the paper reports 2.27-4.37x autoregressive throughput at batch 1 and 1.08-4.76x at batch 16, with average throughput 18.0% above the fastest prior method. It also reports LiveCodeBench and Terminal-Bench single-agent/non-repository results. Caveats: these are benchmark results with a constructed global corpus from disjoint task logs (70 SWE-bench and 213 TeamBench corpus-building tasks); the global corpus costs about 2.5-4.3 GB resident host memory and 9-15 seconds to load. The adaptive scale uses a fixed update step, fluctuates rather than converging under finite/nonstationary sessions, and ignores clipping/cap/truncation effects in its idealized analysis. No deployment-level result is claimed.",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7d9cbbdcd8fb",
+    "round": "libimp-7d9cbbdcd8fb6585-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7d9cbbdcd8fb6585-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7d9cbbdcd8fb6585-pre01.json",
+    "receipt": "sha256:a6311356928a54d5cfc7fe78435eeec192d62e2501bcc5cf644fdff0b5aef1de"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7d9cbbdcd8fb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
