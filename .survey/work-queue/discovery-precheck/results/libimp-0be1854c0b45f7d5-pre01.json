@@ -1,0 +1,309 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0be1854c0b45f7d5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0be1854c0b45",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.36590",
+    "arXiv:2610.00418",
+    "arXiv:2610.00432"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fb35cd7bb8e59bd9c45a199d59b2cc7ed48362e5",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T06:08:14.384845+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.36590",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00432",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SEED: Self-Speculative Decoding via Implicit Encoder-Decoder",
+      "source_url": "https://arxiv.org/abs/2609.36590",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-speculative decoding accelerates large language model (LLM) inference by drafting tokens from the target model itself, but faces a sharp tradeoff between the quality and cost of the draft. Early-exit methods produce drafts cheaply by terminating computation at intermediate layers, but forgo the deeper representations that later layers provide and thus suffer in draft quality. Multi-token prediction preserves draft quality by emitting from the model's final hidden states, but pays for a full forward pass to produce those states at every drafting step. We propose self-speculative encoder-decoder (SEED), a self-speculative method that obtains high-quality drafts cheaply by reusing the deep contextual representations already computed during verification. We reinterpret the standard decoder-only transformer as an implicit encoder-decoder: the first layers (encoder) build deep contextual representations, and the last few layers (decoder) emit tokens from them. Encoding and verification are merged into a single step: verification is performed by the full encoder-decoder, and the contextual representations of the verified prefix are cached for reuse during drafting. Drafting is therefore very fast: between verifications, the lightweight decoder drafts multiple tokens autoregressively, each conditioned on the cached representations and on preceding drafts. Experiments across multiple benchmarks show that SEED achieves up to 2.7$\\times$ average speedup on 4B-scale models, outperforming both early-exit and MTP-style self-speculative baselines and running 28% faster than the state-of-the-art EAGLE-3, while preserving or even improving the generation quality of standard autoregressive fine-tuning. Code is available at https://github.com/lhk2004/SEED.",
+      "identifiers": [
+        "SemanticScholar:5900fb325c42fd15406c310e80efefe6fc340223"
+      ],
+      "semantic_scholar_id": "5900fb325c42fd15406c310e80efefe6fc340223",
+      "canonical_id": "arXiv:2609.36590",
+      "arxiv_id": "2609.36590",
+      "authors": [
+        "Han-Kun Lin",
+        "Patrick Pynadath",
+        "Ruqi Zhang"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
+      "source_url": "https://arxiv.org/abs/2610.00418",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling Transformers to long contexts is constrained by the quadratic cost of self-attention and the linear growth of key-value cache memory transfer. Sparse attention mitigates this by retrieving only relevant tokens, but current approaches either require large-scale training or, within the training-free regime, rely on semantically coarse heuristics or expensive clustering that is difficult to update efficiently during decoding. We introduce CommunityKV, a framework that formulates sparse attention as a community detection problem. CommunityKV constructs a token graph from the $QK^T$ scores already computed during standard prefill, and partitions the graph into communities to enable retrieval of semantically coherent token groups. A local update rule assigns newly generated tokens to communities in constant time, enabling sparse retrieval throughout streaming decoding without global re-partitioning. We evaluate CommunityKV on Qwen3 and Llama-3.1 models across three long-context benchmarks. With one graph per query head, CommunityKV delivers up to $1.25\\times$ the end-to-end generation throughput of dense attention, while query-group graph aggregation yields up to $1.71\\times$ with comparable accuracy.",
+      "identifiers": [
+        "SemanticScholar:2e23c92d881a553587dd81b8480bc74e1687de11"
+      ],
+      "semantic_scholar_id": "2e23c92d881a553587dd81b8480bc74e1687de11",
+      "canonical_id": "arXiv:2610.00418",
+      "arxiv_id": "2610.00418",
+      "authors": [
+        "Joe McKenna",
+        "Anastasios Alexandridis",
+        "Nathan Susanj",
+        "Jing Liu"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.00432",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Trellis-coded quantization enables high-dimensional compression of large language model (LLM) weights at ultra-low bit widths without the exponentially large codebooks required by conventional vector quantization. Practical deployment, however, presents two challenges: reconstructing compressed weights at sufficient parallel throughput to avoid making dequantization an inference bottleneck, and maintaining quantization accuracy without costly incoherence transformations. We address these challenges with two complementary techniques. First, we introduce an ultra-low-complexity trellis dequantizer that uses a structured, hardware-efficient state-to-value mapping while preserving diverse reconstruction choices for trellis search. Second, we reformulate discrete trellis path optimization with a curvature-aware objective that reflects model sensitivity directly in the original coordinate space. Together, these techniques enable high-quality ultra-low-bit trellis quantization with inexpensive, highly parallel runtime reconstruction and without relying on Hadamard-based incoherence processing.",
+      "identifiers": [
+        "SemanticScholar:20b74fa006c7155f8b23f85542b26ec985b3b0c6"
+      ],
+      "semantic_scholar_id": "20b74fa006c7155f8b23f85542b26ec985b3b0c6",
+      "canonical_id": "arXiv:2610.00432",
+      "arxiv_id": "2610.00432",
+      "authors": [
+        "Xiao-Fan Que",
+        "Nir Elkayam",
+        "Spandan Pyakurel",
+        "Shuo-Kai Pan",
+        "Dibakar Gope"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.36590",
+      "identity_tokens": [
+        "id:SemanticScholar:5900fb325c42fd15406c310e80efefe6fc340223",
+        "id:arXiv:2609.36590",
+        "title:seed selfspeculative decoding via implicit encoderdecoder",
+        "url:https://arxiv.org/abs/2609.36590"
+      ],
+      "record": {
+        "title": "SEED: Self-Speculative Decoding via Implicit Encoder-Decoder",
+        "source_url": "https://arxiv.org/abs/2609.36590",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-speculative decoding accelerates large language model (LLM) inference by drafting tokens from the target model itself, but faces a sharp tradeoff between the quality and cost of the draft. Early-exit methods produce drafts cheaply by terminating computation at intermediate layers, but forgo the deeper representations that later layers provide and thus suffer in draft quality. Multi-token prediction preserves draft quality by emitting from the model's final hidden states, but pays for a full forward pass to produce those states at every drafting step. We propose self-speculative encoder-decoder (SEED), a self-speculative method that obtains high-quality drafts cheaply by reusing the deep contextual representations already computed during verification. We reinterpret the standard decoder-only transformer as an implicit encoder-decoder: the first layers (encoder) build deep contextual representations, and the last few layers (decoder) emit tokens from them. Encoding and verification are merged into a single step: verification is performed by the full encoder-decoder, and the contextual representations of the verified prefix are cached for reuse during drafting. Drafting is therefore very fast: between verifications, the lightweight decoder drafts multiple tokens autoregressively, each conditioned on the cached representations and on preceding drafts. Experiments across multiple benchmarks show that SEED achieves up to 2.7$\\times$ average speedup on 4B-scale models, outperforming both early-exit and MTP-style self-speculative baselines and running 28% faster than the state-of-the-art EAGLE-3, while preserving or even improving the generation quality of standard autoregressive fine-tuning. Code is available at https://github.com/lhk2004/SEED.",
+        "identifiers": [
+          "SemanticScholar:5900fb325c42fd15406c310e80efefe6fc340223"
+        ],
+        "semantic_scholar_id": "5900fb325c42fd15406c310e80efefe6fc340223",
+        "canonical_id": "arXiv:2609.36590",
+        "arxiv_id": "2609.36590",
+        "authors": [
+          "Han-Kun Lin",
+          "Patrick Pynadath",
+          "Ruqi Zhang"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00418",
+      "identity_tokens": [
+        "id:SemanticScholar:2e23c92d881a553587dd81b8480bc74e1687de11",
+        "id:arXiv:2610.00418",
+        "title:communitykv efficient longcontext decoding via graph partitioning",
+        "url:https://arxiv.org/abs/2610.00418"
+      ],
+      "record": {
+        "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
+        "source_url": "https://arxiv.org/abs/2610.00418",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling Transformers to long contexts is constrained by the quadratic cost of self-attention and the linear growth of key-value cache memory transfer. Sparse attention mitigates this by retrieving only relevant tokens, but current approaches either require large-scale training or, within the training-free regime, rely on semantically coarse heuristics or expensive clustering that is difficult to update efficiently during decoding. We introduce CommunityKV, a framework that formulates sparse attention as a community detection problem. CommunityKV constructs a token graph from the $QK^T$ scores already computed during standard prefill, and partitions the graph into communities to enable retrieval of semantically coherent token groups. A local update rule assigns newly generated tokens to communities in constant time, enabling sparse retrieval throughout streaming decoding without global re-partitioning. We evaluate CommunityKV on Qwen3 and Llama-3.1 models across three long-context benchmarks. With one graph per query head, CommunityKV delivers up to $1.25\\times$ the end-to-end generation throughput of dense attention, while query-group graph aggregation yields up to $1.71\\times$ with comparable accuracy.",
+        "identifiers": [
+          "SemanticScholar:2e23c92d881a553587dd81b8480bc74e1687de11"
+        ],
+        "semantic_scholar_id": "2e23c92d881a553587dd81b8480bc74e1687de11",
+        "canonical_id": "arXiv:2610.00418",
+        "arxiv_id": "2610.00418",
+        "authors": [
+          "Joe McKenna",
+          "Anastasios Alexandridis",
+          "Nathan Susanj",
+          "Jing Liu"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00432",
+      "identity_tokens": [
+        "id:SemanticScholar:20b74fa006c7155f8b23f85542b26ec985b3b0c6",
+        "id:arXiv:2610.00432",
+        "title:xortrellis ultralowcomplexity dequantization and curvatureaware hadamardfree llm quantization",
+        "url:https://arxiv.org/abs/2610.00432"
+      ],
+      "record": {
+        "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2610.00432",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Trellis-coded quantization enables high-dimensional compression of large language model (LLM) weights at ultra-low bit widths without the exponentially large codebooks required by conventional vector quantization. Practical deployment, however, presents two challenges: reconstructing compressed weights at sufficient parallel throughput to avoid making dequantization an inference bottleneck, and maintaining quantization accuracy without costly incoherence transformations. We address these challenges with two complementary techniques. First, we introduce an ultra-low-complexity trellis dequantizer that uses a structured, hardware-efficient state-to-value mapping while preserving diverse reconstruction choices for trellis search. Second, we reformulate discrete trellis path optimization with a curvature-aware objective that reflects model sensitivity directly in the original coordinate space. Together, these techniques enable high-quality ultra-low-bit trellis quantization with inexpensive, highly parallel runtime reconstruction and without relying on Hadamard-based incoherence processing.",
+        "identifiers": [
+          "SemanticScholar:20b74fa006c7155f8b23f85542b26ec985b3b0c6"
+        ],
+        "semantic_scholar_id": "20b74fa006c7155f8b23f85542b26ec985b3b0c6",
+        "canonical_id": "arXiv:2610.00432",
+        "arxiv_id": "2610.00432",
+        "authors": [
+          "Xiao-Fan Que",
+          "Nir Elkayam",
+          "Spandan Pyakurel",
+          "Shuo-Kai Pan",
+          "Dibakar Gope"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5f5945e4aa1c66e3648e6971ded29e255d64e77b5bd6058dba1da69a636b4330",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
