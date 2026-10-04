@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 07:16:28 JST**
+> 自動生成: **2026-10-05 07:25:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -30,20 +30,23 @@
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
-## 構造化references探索状況
+## 探索候補の処理状況
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **9800** |
-| 処理済み | **2888** |
-| 未処理 | **6912** |
-| 収録済みとして除外 | **1056** |
-| 無関係として除外 | **1432** |
-| 微妙として除外 | **400** |
+| 探索候補総数 | **26468** |
+| 処理済み | **3902** |
+| 未処理Discovery候補 | **22566** |
+| 収録済み | **1596** |
+| Research / Audit候補へ昇格済み | **519** |
+| 無関係として除外 | **1372** |
+| 微妙として除外 | **415** |
 
-- 消化率: **29.5%**
-- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
-- STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
+- 消化率: **14.7%**
+- 現在の生在庫: 後方references **6912件** / 前方引用 **18201件**。両者は重複を含むため単純加算しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **23260件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
+- STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
 ## 全収録論文の前方引用巡回
 
@@ -68,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 06:50:14 JST（26分前）** |
+| 最終maintenance完了 | **10-05 06:50:14 JST（34分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -276,7 +279,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。
 - **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
 - **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
-- **構造化references探索状況**: STATUS生成時に `reference_pool.build_reference_pool()` を実行し、paper実体と無関係/微妙台帳から現在値を直接再計算します。過去のprecheck snapshotは件数表示に使いません。
+- **探索候補の処理状況**: 前方引用・後方referencesを区別せず、paper実体、非終端Research/Audit job、relevance台帳、現在のDiscovery候補面をidentityで統合してゼロベース再計算します。
 - **日次メンテナンス**: `.survey/work-queue/maintenance-cycle.json` をmaintenance workflowの耐久正本として表示します。通常jobの件数からmaintenance状態を推定しません。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
 - **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
