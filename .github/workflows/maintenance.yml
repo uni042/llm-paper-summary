@@ -240,12 +240,14 @@ jobs:
           git config user.name 'survey-maintenance[bot]'
           git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
 
-          # STATUS.md is a derived, high-churn view updated by other writers.
-          # Keep it out of the broad maintenance commit so a harmless dashboard
-          # refresh cannot make the maintenance transaction fail during rebase.
+          # STATUS.md and next-jobs.json are derived, high-churn views
+          # updated by other writers. Keep them out of the broad maintenance
+          # commit, then regenerate each from the latest main so concurrent
+          # orchestrator/dashboard updates cannot cause stale overwrites or
+          # rebase conflicts.
           git add -A
-          git reset -- STATUS.md
-          git restore -- STATUS.md
+          git reset -- STATUS.md .survey/work-queue/next-jobs.json
+          git restore -- STATUS.md .survey/work-queue/next-jobs.json
           if ! git diff --cached --quiet; then
             git commit -m 'survey-maintenance: GC, reconcile, and health audit'
             maintenance_pushed=0
@@ -267,6 +269,46 @@ jobs:
               echo 'Failed to publish maintenance results after 5 retries.' >&2
               exit 1
             fi
+          fi
+
+          # Rebuild the queue snapshot from the latest canonical job files.
+          # On a push race, throw away the stale snapshot and regenerate it
+          # again from the new main instead of rebasing derived JSON.
+          queue_pushed=0
+          for queue_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          from maintenance_health import audit_queue
+          result = audit_queue(Path('.'), repair_snapshot=True)
+          errors = [x for x in result.get('findings', []) if x.get('severity') == 'error']
+          if errors:
+              raise SystemExit(f"queue snapshot repair is unsafe: {errors}")
+          print({
+              'snapshot_drift': result.get('snapshot_drift'),
+              'snapshot_repaired': result.get('snapshot_repaired'),
+              'job_count': result.get('job_count'),
+          })
+          PY
+            git add .survey/work-queue/next-jobs.json
+            if git diff --cached --quiet; then
+              queue_pushed=1
+              break
+            fi
+            git commit -m 'chore: refresh survey queue snapshot'
+            if git push origin HEAD:main; then
+              queue_pushed=1
+              break
+            fi
+            echo "Queue snapshot push race on attempt ${queue_attempt}; regenerating from latest main."
+            sleep $((queue_attempt * 2))
+          done
+          if [ "$queue_pushed" -ne 1 ]; then
+            echo 'Failed to publish refreshed next-jobs.json after 5 retries.' >&2
+            exit 1
           fi
 
           # Regenerate the derived dashboard from the latest main after the
