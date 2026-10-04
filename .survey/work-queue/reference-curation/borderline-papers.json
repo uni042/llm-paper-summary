@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T13:00:43+00:00",
-  "record_count": 425,
+  "updated_at": "2026-10-04T13:05:22+00:00",
+  "record_count": 424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5789,21 +5789,6 @@
         "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[5]"
       ],
       "title": "Blockwise Self-Attention for Long Document Understanding"
-    },
-    "arXiv:2201.11903": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2201.11903",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2201.11903",
-        "arXiv:2201.11903"
-      ],
-      "reason": "Chain-of-Thought prompting is performed at inference and improves reasoning accuracy by adding intermediate generated reasoning steps. The primary paper evaluates task accuracy, not inference serving, runtime efficiency, or memory/compression; longer reasoning can increase token generation. It is adjacent to inference-time methods but does not establish an inference-efficiency contribution, so retain as borderline rather than treating it as an in-scope systems paper.",
-      "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
-      "linked_from": [
-        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[8]"
-      ],
-      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
     },
     "arXiv:2412.14711": {
       "classification": "borderline",

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab32ed1121ffd991-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.04368",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.04368",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p17-1099",
+      "arXiv:1704.04368"
+    ],
+    "reason": "pointer-generatorとcoverage機構を学習して抽象型要約の事実再現・反復問題を改善するタスクモデル研究で、LLM推論システムの速度・メモリ・サービングを最終適用先としない。",
+    "first_checked_at": "2026-10-04T13:05:22+00:00",
+    "last_checked_at": "2026-10-04T13:05:22+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Get To The Point: Summarization with Pointer-Generator Networks"
+  },
+  "processed_at": "2026-10-04T13:05:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab32ed1121ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
