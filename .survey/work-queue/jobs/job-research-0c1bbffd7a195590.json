@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-0c1bbffd7a195590",
+  "type": "research",
+  "parent_job_id": "job-6114a3c9e2ed35cf",
+  "priority": 367,
+  "canonical_id": "arXiv:1910.04732",
+  "arxiv_id": "1910.04732",
+  "doi": "10.18653/v1/2020.emnlp-main.496",
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:83b8108014e3db4f46354a28ae68193f143c4e7e"
+  ],
+  "title": "Structured Pruning of Large Language Models",
+  "source_url": "https://arxiv.org/abs/1910.04732",
+  "paper_path": "papers/inference/99-other-inference-systems/2019-1910.04732-structured-pruning-of-large-language-models.md",
+  "lineage": null,
+  "selection_reason": "各weight matrixをlow-rank factorizationでparameterizeしrank-1 componentを適応的に除去するstructured pruningで、言語モデルのsize/latencyを減らしtrainingとinference双方の実speedupを示すため推論圧縮の収録対象。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 0,
+    "prestigious_venue": 10,
+    "citations": 357,
+    "citation_count": 357,
+    "total": 367,
+    "is_fresh": false,
+    "freshness_age_days": 2551,
+    "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+  },
+  "published": "2019-10-10",
+  "year": 2019,
+  "venue": "Conference on Empirical Methods in Natural Language Processing",
+  "citation_count": 357,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "83b8108014e3db4f46354a28ae68193f143c4e7e",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-04T13:01:11+00:00"
+}
