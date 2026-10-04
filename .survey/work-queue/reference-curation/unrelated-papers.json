@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T12:53:19+00:00",
-  "record_count": 1009,
+  "updated_at": "2026-10-04T12:54:17+00:00",
+  "record_count": 1021,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14619,10 +14619,12 @@
       "identity_tokens": [
         "DOI:10.1214/aoms/1177703732"
       ],
-      "reason": "Huber損失につながる位置母数のロバスト統計推定を扱う古典統計研究で、LLM推論システムを対象としない。",
+      "reason": "位置母数のロバスト推定とM推定の基礎を扱う数理統計研究で、LLM推論・サービング・メモリ・カーネル最適化を対象としない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2609.20734-on-demand-attention.md"
+      ],
       "title": "Robust Estimation of a Location Parameter"
     },
     "DOI:10.1561/1500000019": {
@@ -14665,12 +14667,15 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1911.11641",
       "identity_tokens": [
+        "DOI:10.1609/aaai.v34i05.6239",
         "arXiv:1911.11641"
       ],
-      "reason": "物理常識推論データセットと評価を提案する自然言語処理研究で、LLM推論ランタイムやサービング最適化を扱わない。",
+      "reason": "物理常識推論の質問応答ベンチマークPIQAを構築し、事前学習言語モデルの推論能力を評価するデータセット研究で、LLM推論基盤の効率化を提案しない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md"
+      ],
       "title": "PIQA: Reasoning about Physical Commonsense in Natural Language"
     },
     "DOI:10.1137/090752286": {
@@ -14679,10 +14684,12 @@
       "identity_tokens": [
         "DOI:10.1137/090752286"
       ],
-      "reason": "高次元テンソルをTensor Train形式へ分解する数値線形代数研究で、LLM推論への直接適用・システム評価を行わない。",
+      "reason": "高次元tensorを低rank unfoldingで表現するTensor-Train分解と線形代数演算を扱う数値線形代数研究で、LLM推論を最終適用先としない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
       "title": "Tensor-Train Decomposition"
     },
     "DOI:10.1162/neco.1994.6.2.181": {
@@ -14748,6 +14755,179 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md"
       ],
       "title": "Quantifying Attention Flow in Transformers"
+    },
+    "DOI:10.1145/258533.258660": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/258533.258660",
+      "identity_tokens": [
+        "DOI:10.1145/258533.258660"
+      ],
+      "reason": "Webのhot spot緩和を目的とするconsistent hashingと分散cache protocolの古典的研究で、LLM推論サービング固有の方式ではない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
+      ],
+      "title": "Consistent hashing and random trees: distributed caching protocols for relieving hot spots on the World Wide Web"
+    },
+    "DOI:10.1145/581571.581573": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/581571.581573",
+      "identity_tokens": [
+        "DOI:10.1145/581571.581573"
+      ],
+      "reason": "家庭・オフィスPCを用いて電波望遠鏡信号を解析するvolunteer/public-resource computingの設計・実装研究で、LLM推論サービングを対象としない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md"
+      ],
+      "title": "SETI@home: an experiment in public-resource computing"
+    },
+    "DOI:10.18653/v1/d19-1002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1002",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1002",
+        "arXiv:1908.04626"
+      ],
+      "reason": "attention weightをモデル予測の説明として解釈できるかを検証する説明可能AI・NLP研究で、attention計算の速度・メモリ・推論runtime最適化を提案しない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ],
+      "title": "Attention is not not Explanation"
+    },
+    "DOI:10.1145/2486001.2486012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2486001.2486012",
+      "identity_tokens": [
+        "DOI:10.1145/2486001.2486012",
+        "DOI:10.1145/2534169.2486012"
+      ],
+      "reason": "inter-datacenter WANのtraffic engineeringを中央制御し、data-plane更新を輻輳なく行うSWANのネットワーク研究で、LLM推論サービング固有の方式ではない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md"
+      ],
+      "title": "Achieving high utilization with software-driven WAN"
+    },
+    "DOI:10.1145/170035.170081": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/170035.170081",
+      "identity_tokens": [
+        "DOI:10.1145/170035.170081"
+      ],
+      "reason": "database disk bufferで過去K回の参照時刻からpage interarrivalを推定して置換するLRU-K研究で、LLM KV cacheや推論runtimeを直接対象としない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md"
+      ],
+      "title": "The LRU-K page replacement algorithm for database disk buffering"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.148": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.148",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.148",
+        "arXiv:2010.12421"
+      ],
+      "reason": "Twitter固有の7分類taskを統合したNLP評価benchmarkと事前学習戦略比較が主題で、LLM推論システム効率化を扱わない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification"
+    },
+    "DOI:10.18653/v1/d18-1045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1045",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1045"
+      ],
+      "reason": "単言語dataからsynthetic sourceを生成してニューラル機械翻訳の学習を改善するback-translation研究で、主目的は学習data augmentationであり推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+      ],
+      "title": "Understanding Back-Translation at Scale"
+    },
+    "arXiv:2411.15124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15124",
+      "identity_tokens": [
+        "arXiv:2411.15124"
+      ],
+      "reason": "Llama 3.1を基盤にSFT、DPO、検証可能報酬付き強化学習（RLVR）を組み合わせるLLM post-training recipeと評価が主題で、推論runtimeの速度・メモリ・serving最適化を提案しない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md"
+      ],
+      "title": "TÜLU 3: Pushing Frontiers in Open Language Model Post-Training"
+    },
+    "DOI:10.1080/00401706.1962.10490022": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/00401706.1962.10490022",
+      "identity_tokens": [
+        "DOI:10.1080/00401706.1962.10490022"
+      ],
+      "reason": "逐次的に補正平方和・積和を計算する数値統計手法を扱う1962年の短報で、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Note on a Method for Calculating Corrected Sums of Squares and Products"
+    },
+    "DOI:10.1162/tacl_a_00321": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00321",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00321",
+        "arXiv:1912.00582"
+      ],
+      "reason": "英語の形態・統語・意味現象を67個のminimal-pair datasetで評価する言語モデル能力benchmarkで、推論基盤効率化を扱わない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md"
+      ],
+      "title": "BLiMP: The Benchmark of Linguistic Minimal Pairs for English"
+    },
+    "arXiv:1808.05326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.05326",
+      "identity_tokens": [
+        "arXiv:1808.05326"
+      ],
+      "reason": "113k問のgrounded commonsense inference datasetとadversarial filteringによるdataset構築・能力評価が主題で、LLM推論runtime最適化を提案しない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference"
+    },
+    "DOI:10.1609/aaai.v33i01.33019127": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v33i01.33019127",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v33i01.33019127",
+        "arXiv:1906.02467"
+      ],
+      "reason": "5,800本のWeb動画と58,000 QA pairからなるVideoQA datasetの構築とvideo representation比較が主題で、VLM/LLM推論runtimeの効率化を対象としない。",
+      "first_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+      ],
+      "title": "ActivityNet-QA: A Dataset for Understanding Complex Web Videos via Question Answering"
     }
   }
 }
