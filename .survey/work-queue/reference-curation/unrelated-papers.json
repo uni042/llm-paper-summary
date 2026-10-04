@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T13:09:58+00:00",
-  "record_count": 1065,
+  "updated_at": "2026-10-04T13:11:08+00:00",
+  "record_count": 1064,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -6577,19 +6577,6 @@
       "linked_from": [],
       "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning"
     },
-    "arXiv:1606.05250": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1606.05250",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1606.05250",
-        "arXiv:1606.05250"
-      ],
-      "reason": "Wikipedia読解の質問応答データセット構築と能力評価が主目的で、推論システム効率化ではない。",
-      "first_checked_at": "2026-10-02T10:58:57+00:00",
-      "last_checked_at": "2026-10-02T10:58:57+00:00",
-      "linked_from": [],
-      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
-    },
     "DOI:10.1162/neco.1991.3.1.79": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
@@ -11850,20 +11837,6 @@
       ],
       "title": "A study of Persistent Threads style GPU programming for GPGPU workloads"
     },
-    "arXiv:2304.02643": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2304.02643",
-      "identity_tokens": [
-        "arXiv:2304.02643"
-      ],
-      "reason": "画像セグメンテーション用のプロンプト可能モデルSAMと11M画像・1Bマスク規模のデータエンジン/データセット構築が主題で、LLM推論システム効率化ではない。",
-      "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-03T17:51:24+00:00",
-      "linked_from": [
-        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
-      ],
-      "title": "Segment Anything"
-    },
     "DOI:10.1109/iccv51070.2023.00387": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/iccv51070.2023.00387",
@@ -14449,9 +14422,9 @@
         "DOI:10.18653/v1/2020.emnlp-main.550",
         "arXiv:2004.04906"
       ],
-      "reason": "オープンドメイン質問応答の候補文書検索を、質問・文書の二重エンコーダによる密ベクトル検索で改善する検索モデル研究。LLM推論の実行速度、サービング、KVキャッシュ、メモリ階層、推論カーネルの最適化を最終適用先としない。",
+      "reason": "open-domain QA向けdual-encoder dense passage retrievalの精度改善が主題で、LLM inference servingやmemory/compute最適化を扱わない。",
       "first_checked_at": "2026-09-27T04:28:31+09:00",
-      "last_checked_at": "2026-10-04T12:52:29+00:00",
+      "last_checked_at": "2026-10-04T13:11:08+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
@@ -14510,12 +14483,16 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
       "identity_tokens": [
-        "DOI:10.1109/iccv51070.2023.00371"
+        "DOI:10.1109/iccv51070.2023.00371",
+        "arXiv:2304.02643"
       ],
-      "reason": "画像分割の汎用基盤モデルとpromptable segmentationを提案するコンピュータビジョン研究で、LLM推論サービング・ランタイム最適化を最終適用先としない。",
-      "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
-      "linked_from": [],
+      "reason": "画像セグメンテーション用のpromptable modelとSA-1Bデータセットが主題で、LLM推論・サービング・KVキャッシュ・MoE推論最適化を扱わない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-04T13:11:08+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+      ],
       "title": "Segment Anything"
     },
     "DOI:10.1214/aoms/1177703732": {
@@ -15580,6 +15557,20 @@
         "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
       ],
       "title": "Neural Network Acceptability Judgments"
+    },
+    "DOI:10.18653/v1/d16-1264": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d16-1264",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d16-1264",
+        "DOI:10.48550/arxiv.1606.05250",
+        "arXiv:1606.05250"
+      ],
+      "reason": "Wikipedia記事に対する10万件超の読解QAデータセット構築・評価が主題で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-02T10:58:57+00:00",
+      "last_checked_at": "2026-10-04T13:11:08+00:00",
+      "linked_from": [],
+      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
     }
   }
 }
