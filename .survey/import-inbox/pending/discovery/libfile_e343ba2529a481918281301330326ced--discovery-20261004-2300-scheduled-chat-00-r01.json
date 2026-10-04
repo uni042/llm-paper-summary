@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "d255fbcc448a826961c1b1ac2412bad4bb0d4059",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.01703",
+      "identity_tokens": [
+        "arXiv:1912.01703",
+        "DOI:10.48550/arXiv.1912.01703"
+      ],
+      "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+      "reason": "PyTorch全体の命令型・Pythonic API、autograd、runtime、GPU対応を設計・評価する汎用機械学習フレームワーク論文で、LLM/Transformer推論のサービング、KVキャッシュ、推論カーネル、推論向け圧縮を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1912.01703",
+      "body_check": "abstract_screen_only: 一次要旨で使いやすさと速度を両立する汎用PyTorchライブラリの設計原理・runtime実装・一般benchmarkが主題と確認。LLM推論固有のsystem研究ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:08:00+09:00",
+      "last_checked_at": "2026-10-04T23:08:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.10084",
+      "identity_tokens": [
+        "arXiv:1908.10084"
+      ],
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "reason": "BERTをsiamese/triplet構造へ変えてsentence embeddingを事前計算可能にし、意味類似度検索・clusteringを高速化する表現学習／検索モデル研究。50M回のBERT比較を避けることで10,000文検索を約65時間から約5秒へ短縮するが、LLM生成推論runtimeやserving基盤の効率化が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/1908.10084",
+      "body_check": "abstract_screen_only: 一次要旨でsemantic textual similarity/search向けsentence embeddingとcosine similarityが主題で、STS/transfer taskを評価。高速化はembedding retrieval task固有でLLM推論systemではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:09:00+09:00",
+      "last_checked_at": "2026-10-04T23:09:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.13461",
+      "identity_tokens": [
+        "arXiv:1910.13461",
+        "DOI:10.48550/arXiv.1910.13461"
+      ],
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "reason": "text corruptionから原文を再構成するdenoising autoencoderとしてsequence-to-sequence Transformerを事前学習し、要約・QA・翻訳等の品質を改善する学習方式研究。推論速度・メモリ・サービング効率の改善を主目的としない。",
+      "source_url": "https://arxiv.org/abs/1910.13461",
+      "body_check": "abstract_screen_only: 一次要旨でsentence shufflingとtext infillingによるpretraining、GLUE/SQuAD/要約/翻訳の品質評価が主題と確認。推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:10:00+09:00",
+      "last_checked_at": "2026-10-04T23:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1603.04467",
+      "identity_tokens": [
+        "arXiv:1603.04467",
+        "DOI:10.48550/arXiv.1603.04467"
+      ],
+      "title": "TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems",
+      "reason": "mobileから大規模分散GPUまで同一計算graphを実行するTensorFlowの汎用interface・distributed runtimeを説明するsystem論文。training/inference双方を扱うが、LLM/Transformer推論固有のserving、KV、MoE、推論kernel最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1603.04467",
+      "body_check": "abstract_screen_only: 一次要旨で異種分散system上の汎用machine-learning algorithm実行interfaceとGoogleでの多分野production利用が主題と確認。LLM推論専用研究ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:11:00+09:00",
+      "last_checked_at": "2026-10-04T23:11:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1910.01108",
+      "identity_tokens": [
+        "arXiv:1910.01108"
+      ],
+      "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+      "reason": "knowledge distillationでBERTを40%小型化し、97%の言語理解性能を保持しつつCPU推論を60%高速化、iPhone 7 PlusではBERT-base比71%高速化するなど、推論圧縮・edge deploymentへの明確な最終適用を持つ。一方、対象は2019年のencoder-only BERTで現代の生成LLM servingそのものではないためborderlineとする。",
+      "source_url": "https://arxiv.org/abs/1910.01108",
+      "body_check": "full_text_checked: 一次PDFの§1–§4を確認。studentはBERTの層数を半減し、distillation/MLM/cosineのtriple lossでpretrain。STS-B CPU batch=1でBERT-base 668秒に対しDistilBERT 410秒、66M parameter、on-device QAでは71%高速・207MB。推論効率への実評価は明確だがLLM生成系ではない。",
+      "first_checked_at": "2026-10-04T23:12:00+09:00",
+      "last_checked_at": "2026-10-04T23:12:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.02116",
+      "identity_tokens": [
+        "arXiv:1911.02116",
+        "DOI:10.48550/arXiv.1911.02116"
+      ],
+      "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+      "reason": "100言語・2TB超CommonCrawlでmasked language model XLM-Rを事前学習し、XNLI/MLQA/NER等のcross-lingual transfer性能を改善する多言語表現学習研究。推論runtimeやserving効率化は主題ではない。",
+      "source_url": "https://arxiv.org/abs/1911.02116",
+      "body_check": "abstract_screen_only: 一次要旨でmultilingual pretrainingのscale、positive transfer/capacity dilution、cross-lingual benchmark精度が主題と確認。推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:13:00+09:00",
+      "last_checked_at": "2026-10-04T23:13:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1502.05477",
+      "identity_tokens": [
+        "arXiv:1502.05477"
+      ],
+      "title": "Trust Region Policy Optimization",
+      "reason": "policyの単調改善を近似的に保証するTrust Region Policy Optimizationを導入し、robot locomotionやAtariでpolicy学習性能を評価する強化学習アルゴリズム研究。LLM推論実行系の効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1502.05477",
+      "body_check": "abstract_screen_only: 一次要旨でnatural policy gradientに近いpolicy optimization手法とrobot/Atari学習が主題と確認。LLM inferenceは対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:14:00+09:00",
+      "last_checked_at": "2026-10-04T23:14:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1409.1259",
+      "identity_tokens": [
+        "arXiv:1409.1259",
+        "DOI:10.48550/arXiv.1409.1259"
+      ],
+      "title": "On the Properties of Neural Machine Translation: Encoder–Decoder Approaches",
+      "reason": "RNN Encoder–Decoder等のニューラル機械翻訳が文長・未知語数でどのように品質劣化するかを分析するモデル能力研究で、推論runtime・serving・memory効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1409.1259",
+      "body_check": "abstract_screen_only: 一次要旨で短文/長文、未知語数によるNMT性能変化とgated recursive convolutional networkの表現分析が主題と確認。本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:15:00+09:00",
+      "last_checked_at": "2026-10-04T23:15:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.11096",
+      "identity_tokens": [
+        "arXiv:1809.11096",
+        "DOI:10.48550/arXiv.1809.11096"
+      ],
+      "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+      "reason": "BigGANを大規模学習し、orthogonal regularizationとtruncation trickでImageNet画像生成のfidelity/diversityを改善するGAN学習・生成品質研究。LLM推論systemとは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/1809.11096",
+      "body_check": "abstract_screen_only: 一次要旨でlarge-scale GAN training、training instability、ImageNet 128x128でIS/FID改善が主題と確認。LLM/Transformer inferenceは対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:16:00+09:00",
+      "last_checked_at": "2026-10-04T23:16:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.01578",
+      "identity_tokens": [
+        "arXiv:1611.01578"
+      ],
+      "title": "Neural Architecture Search with Reinforcement Learning",
+      "reason": "RNN controllerを強化学習してCIFAR-10用CNNやPenn Treebank用RNN cellを自動設計するneural architecture search研究で、LLM推論runtimeやserving効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1611.01578",
+      "body_check": "abstract_screen_only: 一次要旨でvalidation accuracyを報酬にarchitecture descriptionを生成し、CIFAR-10/PTBのmodel search品質を評価することが主題と確認。本文深読解を省略。",
+      "first_checked_at": "2026-10-04T23:17:00+09:00",
+      "last_checked_at": "2026-10-04T23:17:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+      ],
+      "worklist_rank": 11
+    }
+  ]
+}
