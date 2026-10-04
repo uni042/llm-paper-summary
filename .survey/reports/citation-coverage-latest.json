@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-04T05:02:19+00:00",
+  "checked_at": "2026-10-04T05:07:55+00:00",
   "summary": {
     "total": 1549,
-    "complete": 1517,
-    "incomplete": 32
+    "complete": 1539,
+    "incomplete": 10
   },
   "families": {
     "inference": {
       "total": 1510,
-      "complete": 1478
+      "complete": 1500
     },
     "training": {
       "total": 25,
@@ -23,73 +23,8 @@
   },
   "incomplete": [
     {
-      "path": "papers/inference/01-offload-hierarchical-memory/2026-2609.38090-mira-memory-efficient-moe-inference-using-adaptive-caching-and-predictiv.md",
-      "canonical_id": "arXiv:2609.38090",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md",
-      "canonical_id": "arXiv:2403.09919",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
-      "canonical_id": "arXiv:2408.11850",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2502.17421-longspec-long-context-lossless-speculative-decoding-with-efficient-draft.md",
-      "canonical_id": "arXiv:2502.17421",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md",
-      "canonical_id": "arXiv:2402.02082",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
-      "canonical_id": "arXiv:2404.04793",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
-      "canonical_id": "arXiv:2412.19442",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-eviction-signal-in-a-ves.md",
-      "canonical_id": "arXiv:2609.03949",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md",
-      "canonical_id": "arXiv:2609.06940",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md",
-      "canonical_id": "arXiv:2609.22158",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
       "canonical_id": "DOI:10.1145/3793230.3837769",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
-      "canonical_id": "arXiv:2207.00112",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
-      "canonical_id": "arXiv:2402.10517",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md",
-      "canonical_id": "arXiv:2609.02652",
       "reason": "missing structured reference audit metadata"
     },
     {
@@ -98,53 +33,8 @@
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
-      "canonical_id": "arXiv:2312.15234",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
-      "canonical_id": "arXiv:2404.09526",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
-      "canonical_id": "arXiv:2404.14294",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
-      "canonical_id": "arXiv:2206.03382",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md",
       "canonical_id": "DOI:10.1145/3806645.3807596",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md",
-      "canonical_id": "arXiv:2502.15470",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
-      "canonical_id": "arXiv:2304.11062",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
-      "canonical_id": "arXiv:2311.08692",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
-      "canonical_id": "arXiv:2312.03134",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md",
-      "canonical_id": "arXiv:2404.03865",
       "reason": "missing structured reference audit metadata"
     },
     {

@@ -123,7 +123,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：12  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
@@ -169,11 +169,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   しかしサービングでは、アダプタ数が増えるほど「小さいから全部GPUへ置く」という前提が崩れ、異なるrank・異なる要求長のアダプタとKVキャッシュがGPUメモリを断片化する。スケジューラが実行する要求に必要なアダプタだけをGPUへ取り込み、LoRA重みとKVキャッシュをUnified Pagingで統合管理する。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
-  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：6  
   Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
@@ -199,11 +199,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
-  実装：[✓](https://github.com/AlibabaResearch/flash-llm) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/AlibabaResearch/flash-llm) ・ リポジトリ内被引用：15  
   非構造疎重みをHBMから圧縮状態で読み、オンチップで密タイルへ復元してテンソル Coreの余剰演算力を使うことで、LLM生成の重み帯域律速を削る。
 
 - **2022-11 · [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
@@ -217,18 +217,18 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：23  
   重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
-  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：8  
   モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：45  
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 <!-- survey:auto:end -->

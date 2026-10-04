@@ -53,7 +53,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
-  実装：[✓](https://github.com/darren-fzq1/EAQuant) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/darren-fzq1/EAQuant) ・ リポジトリ内被引用：5  
   密モデル向けの事後学習量子化（Post-学習 量子化; PTQ）をMoEへそのまま持ち込むと、専門家ごとに異なる活性外れ値、量子化後のルータTop-kの入れ替わり、ほとんど選ばれない専門家の校正データ不足が重なる。EAQuantはこれを一つの量子化誤差として扱わず、専門家認識平滑化、ルーティング整合、専門家単位の校正データ均衡の三機構に分解して補正する。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
@@ -89,10 +89,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness](2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：17  
   QMoEは、Switch Transformerの専門家重みをデータ依存に2ビット/三値圧縮し、圧縮表現を直接読むGPUカーネルで展開帯域を抑え、超大規模MoEの保存容量を減らす。
 <!-- survey:auto:end -->
