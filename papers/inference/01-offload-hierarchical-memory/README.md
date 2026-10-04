@@ -303,7 +303,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Klotskiは複数バッチで共通する専門家を先に計算し、その間にCPU RAMやSSDから次の専門家を読み込んで巨大MoEのI/O待ちを隠す。
 
 - **2025-04 · [HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference](2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/HybriMoE) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/PKU-SEC-Lab/HybriMoE) ・ リポジトリ内被引用：18  
   MoEの実負荷に応じCPU・GPU・PCIeを動的配分し、影響度駆動プリフェッチとスコア認識キャッシュを統合してkTransformers比プリフィル1.33倍、デコード1.70倍を達成する。
 
 - **2025-03 · [Fast On-device LLM Inference with NPUs](2024-2407.05858-fast-on-device-llm-inference-with-npus.md)**  
@@ -405,7 +405,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：80  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：81  
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
@@ -459,12 +459,12 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：311  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：316  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [MoESys: A Distributed and Efficient Mixture-of-Experts Training and Inference System for Internet Services](2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 <!-- survey:auto:end -->
