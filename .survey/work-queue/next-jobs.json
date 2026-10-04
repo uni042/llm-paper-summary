@@ -9,17 +9,17 @@
       "ready": 2
     },
     "research": {
-      "ready": 591,
-      "superseded": 270,
+      "ready": 589,
+      "superseded": 272,
       "deferred": 8,
       "completed": 22,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 593,
+    "ready_research_audit": 591,
     "actively_claimed": 0,
-    "claimable": 593
+    "claimable": 591
   },
   "next_jobs": [
     {
@@ -79,20 +79,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
-      "job_id": "job-research-61f2388d652e7436",
-      "type": "research",
-      "lane": null,
-      "priority": 2513,
-      "canonical_id": "arXiv:2009.14794",
-      "title": "Rethinking Attention with Performers",
-      "source_url": "https://arxiv.org/abs/2009.14794",
-      "paper_path": "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
-    },
-    {
       "job_id": "job-research-68536c168eab2a5c",
       "type": "research",
       "lane": null,
@@ -135,6 +121,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
+      "job_id": "job-research-0bd5e6709d6c4dd4",
+      "type": "research",
+      "lane": null,
+      "priority": 1563,
+      "canonical_id": "arXiv:2301.00774",
+      "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+      "source_url": "https://www.semanticscholar.org/paper/909ad57ce8caa6b390a65ae09db352d27d8f3996",
+      "paper_path": "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-04T21:38:21+00:00"
+  "generated_at": "2026-10-04T21:40:38+00:00"
 }
