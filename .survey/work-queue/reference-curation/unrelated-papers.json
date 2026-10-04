@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T14:30:19+00:00",
-  "record_count": 1108,
+  "updated_at": "2026-10-04T14:31:29+00:00",
+  "record_count": 1116,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14580,9 +14580,9 @@
       "identity_tokens": [
         "DOI:10.1145/581571.581573"
       ],
-      "reason": "家庭・オフィスPCを用いて電波望遠鏡信号を解析するvolunteer/public-resource computingの設計・実装研究で、LLM推論サービングを対象としない。",
+      "reason": "世界中の家庭・オフィスPCを用いて電波望遠鏡データを解析する公開資源計算（public-resource computing）の設計・実装研究で、LLM推論サービングやモデル実行最適化を対象としない。",
       "first_checked_at": "2026-10-04T12:54:17+00:00",
-      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T14:31:29+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md"
       ],
@@ -15628,9 +15628,9 @@
       "identity_tokens": [
         "arXiv:1605.02688"
       ],
-      "reason": "多次元配列の数式を定義・最適化・CPU/GPU実行する汎用数値計算コンパイラTheanoの設計・機能・性能比較が主題で、LLM/Transformer推論に特化したランタイム研究ではない。",
+      "reason": "多次元配列の数式を定義・最適化・CPU/GPU実行するTheano compiler/frameworkの機能・性能をTorch7/TensorFlow等と比較する汎用数値計算software研究で、LLM推論runtimeを最終適用先としない。",
       "first_checked_at": "2026-10-04T14:23:33+00:00",
-      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
@@ -16005,10 +16005,11 @@
         "DOI:10.52202/075280-2020",
         "arXiv:2306.05685"
       ],
-      "reason": "LLMを判定者としてチャットモデル品質を評価する方法、MT-Bench、Chatbot Arenaが主題で、モデル実行速度・メモリ・サービング基盤を改善するシステム研究ではない。",
+      "reason": "LLMをjudgeとして用いる評価方法、MT-Bench、Chatbot Arena、人間選好との一致率やjudge biasを研究するLLM評価研究。モデル実行速度・KVメモリ・推論サービング最適化は対象外。",
       "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-10-04T14:28:32+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
       "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md",
         "worker-worklist-30 reference-review candidate"
       ],
       "title": "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena"
@@ -16020,11 +16021,12 @@
         "DOI:10.18653/v1/p16-1162",
         "arXiv:1508.07909"
       ],
-      "reason": "BPE等のsubword単位で未知語・希少語を翻訳するNMTモデル品質改善が主題で、推論ランタイム効率化を最終適用先としない。",
+      "reason": "byte-pair encoding由来のsubword unitで未知語・希少語を扱うニューラル機械翻訳モデル研究。tokenizationは後続推論研究に引用されるが、LLM推論システム効率化自体が主題ではない。",
       "first_checked_at": "2026-09-27T07:00:57+09:00",
-      "last_checked_at": "2026-10-04T14:28:32+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
       "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
       ],
       "title": "Neural Machine Translation of Rare Words with Subword Units"
     },
@@ -16172,6 +16174,120 @@
       "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [],
       "title": "Hierarchical Neural Story Generation"
+    },
+    "arXiv:1608.06993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1608.06993",
+      "identity_tokens": [
+        "arXiv:1608.06993"
+      ],
+      "reason": "DenseNetとして全層間を密結合し、CIFAR/SVHN/ImageNet等の画像認識で勾配伝播・特徴再利用・パラメータ効率を改善する畳み込みニューラルネットワーク研究。LLM/Transformer推論基盤が最終適用先ではない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "title": "Densely Connected Convolutional Networks"
+    },
+    "arXiv:1704.04861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.04861",
+      "identity_tokens": [
+        "arXiv:1704.04861"
+      ],
+      "reason": "depthwise separable convolutionと幅・解像度係数でモバイル画像認識の遅延・精度を調整する軽量CNN研究。効率化は扱うが対象は画像認識で、LLM推論システムではない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md"
+      ],
+      "title": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+    },
+    "arXiv:2005.12872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.12872",
+      "identity_tokens": [
+        "arXiv:2005.12872"
+      ],
+      "reason": "DETRとして二部マッチング損失とTransformer encoder-decoderで物体検出を直接集合予測するコンピュータビジョン研究。LLM推論ランタイムやサービング効率化を扱わない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "End-to-End Object Detection with Transformers"
+    },
+    "arXiv:1607.06450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1607.06450",
+      "identity_tokens": [
+        "arXiv:1607.06450"
+      ],
+      "reason": "単一training case内の層の活動から平均・分散を計算するlayer normalizationを提案し、主に学習安定化・学習時間短縮を評価する正規化研究。推論システム効率化が最終目的ではない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Layer Normalization"
+    },
+    "arXiv:1904.09675": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.09675",
+      "identity_tokens": [
+        "arXiv:1904.09675"
+      ],
+      "reason": "事前学習BERTの文脈埋め込み類似度で生成テキスト品質を評価する自動評価指標研究。推論基盤の速度・メモリ効率化を提案しない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "BERTScore: Evaluating Text Generation with BERT"
+    },
+    "arXiv:1902.00751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.00751",
+      "identity_tokens": [
+        "arXiv:1902.00751"
+      ],
+      "reason": "BERTへtask-specific adapter moduleを挿入し、元モデルを固定したまま少数パラメータだけ学習する転移学習研究。主目的はtaskごとの学習・保存パラメータ効率で、LLM推論ランタイム最適化ではない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md"
+      ],
+      "title": "Parameter-Efficient Transfer Learning for NLP"
+    },
+    "arXiv:1911.02685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.02685",
+      "identity_tokens": [
+        "arXiv:1911.02685"
+      ],
+      "reason": "40超の転移学習方式をdata/model観点で整理し複数datasetで比較する転移学習サーベイ。LLM推論サービング、KV、カーネル、メモリ階層を最終適用先としない。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md"
+      ],
+      "title": "A Comprehensive Survey on Transfer Learning"
+    },
+    "arXiv:2002.08155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.08155",
+      "identity_tokens": [
+        "arXiv:2002.08155"
+      ],
+      "reason": "programming languageと自然言語のbimodal dataで事前学習し、code searchやdocumentation generationへ適用するモデル・表現学習研究。LLM推論実行の速度・メモリ・サービング最適化は対象外。",
+      "first_checked_at": "2026-10-04T14:31:28+00:00",
+      "last_checked_at": "2026-10-04T14:31:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md"
+      ],
+      "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1afb82c666d5905a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.12872",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.12872",
+    "identity_tokens": [
+      "arXiv:2005.12872"
+    ],
+    "reason": "DETRとして二部マッチング損失とTransformer encoder-decoderで物体検出を直接集合予測するコンピュータビジョン研究。LLM推論ランタイムやサービング効率化を扱わない。",
+    "first_checked_at": "2026-10-04T14:31:28+00:00",
+    "last_checked_at": "2026-10-04T14:31:28+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+    ],
+    "title": "End-to-End Object Detection with Transformers"
+  },
+  "processed_at": "2026-10-04T14:31:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1afb82c666d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
