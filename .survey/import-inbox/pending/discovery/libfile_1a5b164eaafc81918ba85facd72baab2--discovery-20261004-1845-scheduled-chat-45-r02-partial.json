@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-1845-scheduled-chat-45/r02",
+  "reference_main_sha": "e21897fad569d2c4b5b7d1abc38dd5e554dcdf1a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sfcs.1994.365680",
+      "identity_tokens": [
+        "DOI:10.1109/sfcs.1994.365680"
+      ],
+      "title": "Scheduling multithreaded computations by work stealing",
+      "reason": "一般的な多重スレッド計算のwork stealingスケジューリングを解析する古典並列計算研究で、LLM推論サービングを直接対象としない。",
+      "source_url": "https://doi.org/10.1109/SFCS.1994.365680",
+      "body_check": "abstract_screen_only: タイトル・書誌・要旨から一般並列計算のwork stealing理論が主題で、LLM/Transformer推論システムを対象としないことが明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T18:58:00+09:00",
+      "last_checked_at": "2026-10-04T18:58:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "worklist_rank": 11
+    }
+  ]
+}
