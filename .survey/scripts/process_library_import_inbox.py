@@ -36,6 +36,7 @@ if str(HERE) not in sys.path:
 
 import audit_metadata_coverage  # noqa: E402
 import audit_paper_quality  # noqa: E402
+import normalize_paper_japanese_terms  # noqa: E402
 import paper_quality_gate  # noqa: E402
 import paper_identity  # noqa: E402
 import paper_taxonomy  # noqa: E402
@@ -219,6 +220,38 @@ def normalize_research_audit_metadata(text: str, meta: dict[str, Any]) -> tuple[
         raise ValueError("Research Markdown frontmatter is not closed")
     frontmatter = parts[1].rstrip("\n") + "\n" + "\n".join(additions) + "\n"
     return "---" + frontmatter + "---" + parts[2], normalized
+
+
+def normalize_library_research_japanese(text: str) -> tuple[str, bool]:
+    """Conservatively repair bare generic English before the Japanese-ratio gate.
+
+    Library Research workers are not required to run the mechanical Japanese-ratio
+    counter.  The publication side owns this repair step, so reuse the same
+    conservative normalizer used by maintenance while preserving URLs, code, named
+    systems, and reference sections.
+    """
+    meta, front, body = normalize_paper_japanese_terms.split_frontmatter(text)
+    if not meta:
+        return text, False
+
+    body_new = normalize_paper_japanese_terms.normalize_body(body)
+    list_summary_new: str | None = None
+    current_summary = meta.get("list_summary")
+    if isinstance(current_summary, str) and current_summary.strip():
+        candidate_summary = normalize_paper_japanese_terms.replace_generic_terms(current_summary)
+        if candidate_summary != current_summary:
+            list_summary_new = candidate_summary
+
+    try:
+        normalized = normalize_paper_japanese_terms.render(
+            front,
+            body_new,
+            list_summary_new,
+        )
+    except ValueError:
+        # A non-scalar list_summary should not prevent body repair.
+        normalized = normalize_paper_japanese_terms.render(front, body_new)
+    return normalized, normalized != text
 
 
 def research_metadata_failures(source: Path, meta: dict[str, Any], repo_root: Path) -> list[str]:
@@ -562,6 +595,26 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                 repo_relative(source, repo_root),
                 raw,
             )
+            japanese_normalized = False
+            if audit.status == "FAIL" and any(
+                str(reason).startswith("日本語比率 ") for reason in audit.failures
+            ):
+                normalized_raw, changed = normalize_library_research_japanese(raw)
+                if changed:
+                    normalized_audit = paper_quality_gate.inspect_rendered_paper(
+                        repo_root,
+                        repo_relative(source, repo_root),
+                        normalized_raw,
+                    )
+                    if normalized_audit.japanese_ratio > audit.japanese_ratio:
+                        raw = normalized_raw
+                        audit = normalized_audit
+                        meta = parse_frontmatter(raw)
+                        japanese_normalized = True
+                        # Persist the GitHub-side mechanical repair so a remaining
+                        # block is recoverable from the repaired durable payload.
+                        source.write_text(raw, encoding="utf-8")
+
             if audit.status == "FAIL":
                 blocked_path = block_payload(source, BLOCKED_RESEARCH)
                 replace_json(
@@ -571,6 +624,12 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "artifact_type": "research",
                         "status": "blocked_quality",
                         "source_sha256": payload_hash,
+                        "normalized_source_sha256": (
+                            sha256_bytes(raw.encode("utf-8"))
+                            if japanese_normalized
+                            else None
+                        ),
+                        "japanese_normalized": japanese_normalized,
                         "blocked_path": repo_relative(blocked_path, repo_root),
                         "canonical_id": meta.get("canonical_id"),
                         "worker_completed_at": meta.get("worker_completed_at"),
@@ -635,6 +694,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                     "paper_path": target.relative_to(repo_root).as_posix(),
                     "lineage": lineage,
                     "audit_status": audit.status,
+                    "japanese_normalized": japanese_normalized,
                     "worker_completed_at": meta.get("worker_completed_at"),
                     "worker_run_key": meta.get("worker_run_key"),
                     "processed_at": now(),
