@@ -32,10 +32,15 @@
   "selection_reason": "隣接layer間のKV類似性を利用してdepth方向に共有表現へ統合し、training-freeにKV cache容量と生成throughputを改善する推論圧縮方式。",
   "semantic_scholar_id": "d372fb69c485472385f152bc832bf1d35e223324",
   "source_url": "https://arxiv.org/abs/2405.14366",
-  "status": "ready",
+  "status": "superseded",
   "title": "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T07:08:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+  "represented_canonical_id": "arXiv:2405.14366",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

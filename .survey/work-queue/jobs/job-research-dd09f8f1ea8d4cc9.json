@@ -34,10 +34,15 @@
   "selection_reason": "Qwen3.8-Flash-Nextの推論効率を直接設計対象とし、3 GDN + 1 global/QSA層のhybrid、固定サイズrecurrent state、micro-block圧縮QSA、host-memoryからprefetchするn-gram embeddingを統合する。1M contextでQSAはdense attention比kernel-level prefill 7.6x、decode 4.9xを報告しており、長文脈推論・KV削減・host-memory階層に直接該当する。",
   "semantic_scholar_id": "8f38affde080c4b41ef4540363e4eebfffa26253",
   "source_url": "https://arxiv.org/abs/2608.30320",
-  "status": "ready",
+  "status": "superseded",
   "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T07:08:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md",
+  "represented_canonical_id": "arXiv:2608.30320",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

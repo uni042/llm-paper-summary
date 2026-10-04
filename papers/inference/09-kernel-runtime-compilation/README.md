@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（48本）
+## 自動生成の論文一覧（49本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -223,6 +223,12 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
   実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：23  
   重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
+
+### 6年前（2020-11〜2021-10）
+
+- **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：3  
+  提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 ### 7年前（2019-11〜2020-10）
 

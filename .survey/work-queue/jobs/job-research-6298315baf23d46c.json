@@ -32,10 +32,15 @@
   "selection_reason": "DistServeの後方引用に現れるTransformer向けGPU serving基盤。可変長入力に対するメモリ割当、GPU reduction最適化、動的計画法によるbatch schedulerを実装・評価しており、現代LLM servingの前史として直接的なsystems系統接続がある。",
   "semantic_scholar_id": "0c775d7ed34fb4690b4291490778649ae75c48d2",
   "source_url": "https://arxiv.org/abs/2010.05680",
-  "status": "ready",
+  "status": "superseded",
   "title": "TurboTransformers: an efficient GPU serving system for transformer models",
   "type": "research",
   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-04T07:08:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+  "represented_canonical_id": "arXiv:2010.05680",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
