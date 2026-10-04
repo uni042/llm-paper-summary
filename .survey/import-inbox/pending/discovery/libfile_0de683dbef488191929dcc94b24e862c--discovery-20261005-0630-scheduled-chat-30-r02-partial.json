@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0630-scheduled-chat-30/r02",
+  "reference_main_sha": "d1d63ba6e4572bd0de15948bfb9c8c27e5c22a00",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jproc.2020.2976475",
+      "identity_tokens": [
+        "DOI:10.1109/jproc.2020.2976475"
+      ],
+      "title": "Model Compression and Hardware Acceleration for Neural Networks: A Comprehensive Survey",
+      "reason": "DNN全般のcompact model、tensor decomposition、quantization、sparsificationと専用hardware acceleratorを整理する包括サーベイ。推論効率化は扱うが対象は一般DNN/embedded deploymentで、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/JPROC.2020.2976475",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.6553",
+      "identity_tokens": [
+        "arXiv:1412.6553"
+      ],
+      "title": "Speeding-up Convolutional Neural Networks Using Fine-tuned CP-Decomposition",
+      "reason": "4次元convolution kernelを低rank CP分解して小kernelの4層へ置換し、fine-tuning後にCNNをCPU高速化する画像モデル圧縮研究。8.5倍等の推論高速化を示すがLLM/Transformerへの適用・評価がない。",
+      "source_url": "https://arxiv.org/abs/1412.6553",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.05442",
+      "identity_tokens": [
+        "arXiv:2302.05442"
+      ],
+      "title": "Scaling Vision Transformers to 22 Billion Parameters",
+      "reason": "22B parameterのVision Transformerを安定・効率的に学習するrecipeと画像/動画下流性能を評価するvision scaling研究。主眼はViT学習と視覚性能で、LLM推論system最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2302.05442",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.05999",
+      "identity_tokens": [
+        "arXiv:2204.05999"
+      ],
+      "title": "InCoder: A Generative Model for Code Infilling and Synthesis",
+      "reason": "bidirectional contextを利用してcode infillingとprogram synthesisを行う生成コードモデルを提案し、type inference、comment generation、variable renaming等で能力を評価するモデル研究。推論runtime/serving効率化は扱わない。",
+      "source_url": "https://arxiv.org/abs/2204.05999",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.05316",
+      "identity_tokens": [
+        "arXiv:1910.05316"
+      ],
+      "title": "Edge AI: On-Demand Accelerating Deep Neural Network Inference via Edge Computing",
+      "reason": "Edgentが一般DNNをdevice-edge間でpartitionし、early exit/right-sizingとnetwork状態適応で低遅延推論を実現するedge inference研究。推論systemとして関連はあるが対象は一般DNNで、LLM/Transformer推論への最終適用・評価がないため対象外。",
+      "source_url": "https://arxiv.org/abs/1910.05316",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.09574",
+      "identity_tokens": [
+        "arXiv:1902.09574"
+      ],
+      "title": "The State of Sparsity in Deep Neural Networks",
+      "reason": "ResNet-50/ImageNetとTransformer/WMT14で複数sparsification手法を大規模比較し、magnitude pruning等の学習・圧縮特性を評価する一般DNN sparsity benchmark研究。LLM推論runtimeや疎カーネル配備を最終適用先として評価しない。",
+      "source_url": "https://arxiv.org/abs/1902.09574",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象、手法、評価先を個別確認し、LLM推論システムを最終適用先としないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:44:00+09:00",
+      "last_checked_at": "2026-10-05T06:44:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "worklist_rank": 25
+    }
+  ]
+}
