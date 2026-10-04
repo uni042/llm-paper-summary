@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 23:20:00 JST**
+> 自動生成: **2026-10-04 23:23:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **595** |
 | 直近24hのResearch処理完了 | **87** |
 | 最終Research処理完了 | **10-04 18:07:00 JST** |
-| 最終Discovery探索完了 | **10-04 22:45:00 JST** |
+| 最終Discovery探索完了 | **10-04 23:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 23:19:42 JST（18秒前）** |
+| 最終maintenance完了 | **10-04 23:19:42 JST（3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **passed** |
@@ -89,18 +89,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **6** |
-| 直近6hのDiscovery run | **30** |
-| 直近6hのDiscovery本文確認・分類 | **191** |
+| 直近6hのDiscovery run | **34** |
+| 直近6hのDiscovery本文確認・分類 | **217** |
 | 最終Research完了 | **10-04 18:07:00 JST** |
-| 最終Discovery完了 | **10-04 22:45:00 JST** |
+| 最終Discovery完了 | **10-04 23:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-04 18:07:00 JST** / worker — / run 20261004-0800-codex-local-r23 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/20261004-batch-a2--69dc9a82075b27919927e6a4441bbb1084ba186054ae880b8fcf7ffb72404909--rank61-entropy-guided.json
-- Discovery: **10-04 22:45:00 JST** / worker scheduled-chat-45 / run 20261004-2245-scheduled-chat-45/r02
-  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_487b89cf105c8191b8b4335dd3e64f09--discovery-20261004-2245-scheduled-chat-45-r02-partial.json
+- Discovery: **10-04 23:00:00 JST** / worker scheduled-chat-00 / run 20261004-2300-scheduled-chat-00/r02
+  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_06feb00ede948191addb000e0a6723b8--discovery-20261004-2300-scheduled-chat-00-r02.json
 
 ## 件数サマリー（旧immutable transport診断）
 
