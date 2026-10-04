@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3490b529e98758d3-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1137/090752286",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1137/090752286",
+    "identity_tokens": [
+      "DOI:10.1137/090752286"
+    ],
+    "reason": "高次元tensorを低rankのTensor-Train形式へ分解し線形代数演算を効率化する数値線形代数研究で、LLM推論圧縮やruntimeを直接対象としない。",
+    "first_checked_at": "2026-10-04T12:53:19+00:00",
+    "last_checked_at": "2026-10-04T14:30:19+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+    ],
+    "title": "Tensor-Train Decomposition"
+  },
+  "processed_at": "2026-10-04T14:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3490b529e987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

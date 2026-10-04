@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3490b529e98758d3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
+    "identity_tokens": [
+      "DOI:10.1109/iccv51070.2023.00371",
+      "arXiv:2304.02643"
+    ],
+    "reason": "画像セグメンテーションの新task・モデルSAM・SA-1Bデータセットを提案しzero-shot視覚認識能力を評価するコンピュータビジョン研究で、LLM/VLM推論runtime効率化が主題ではない。",
+    "first_checked_at": "2026-10-03T17:51:24+00:00",
+    "last_checked_at": "2026-10-04T14:30:19+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+      "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+    ],
+    "title": "Segment Anything"
+  },
+  "processed_at": "2026-10-04T14:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3490b529e987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

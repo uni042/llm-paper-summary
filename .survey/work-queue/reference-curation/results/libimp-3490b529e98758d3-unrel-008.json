@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3490b529e98758d3-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.07814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.07814",
+    "identity_tokens": [
+      "DOI:10.1126/science.abq1158",
+      "arXiv:2203.07814"
+    ],
+    "reason": "競技プログラミング問題を解くコード生成モデルAlphaCodeの学習・大規模sampling・behavior filteringと問題解決能力が主題で、LLM推論基盤の効率化を目的としない。",
+    "first_checked_at": "2026-10-04T14:30:19+00:00",
+    "last_checked_at": "2026-10-04T14:30:19+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+    ],
+    "title": "Competition-level code generation with AlphaCode"
+  },
+  "processed_at": "2026-10-04T14:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3490b529e987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

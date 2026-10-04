@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T14:28:32+00:00",
-  "record_count": 1103,
+  "updated_at": "2026-10-04T14:30:19+00:00",
+  "record_count": 1108,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10528,22 +10528,6 @@
       ],
       "title": "Distributed computing in practice: the Condor experience"
     },
-    "arXiv:2311.16502": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2311.16502",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2311.16502",
-        "arXiv:2311.16502"
-      ],
-      "reason": "11.5K件の大学レベル多分野マルチモーダル問題でLMMの理解・推論能力を測るベンチマーク研究で、推論システム効率を測る基盤ではない。",
-      "first_checked_at": "2026-10-03T16:01:59+00:00",
-      "last_checked_at": "2026-10-03T16:32:28+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "worker-worklist-30"
-      ],
-      "title": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI"
-    },
     "DOI:10.1016/j.cognition.2007.05.006": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1016/j.cognition.2007.05.006",
@@ -12847,9 +12831,9 @@
       "identity_tokens": [
         "DOI:10.1145/3065386"
       ],
-      "reason": "�ꎟ������ImageNet�摜��1000�N���X���ޗpCNN�ƁA��Ƃ��Ċw�K�������E�ߊw�K�}���������BLLM���_�A�T�[�r���O�A���_�����k�̋Z�p�܂��͕]���ł͂Ȃ����ߑΏۊO�B",
+      "reason": "ImageNet画像分類用の深層畳み込みニューラルネットワーク（CNN）のモデル設計・学習と認識精度が主題で、LLM推論サービング、KVキャッシュ、推論カーネル最適化を対象としない。",
       "first_checked_at": "2026-10-04T05:19:24+00:00",
-      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
       ],
@@ -14411,9 +14395,9 @@
         "DOI:10.1109/iccv51070.2023.00371",
         "arXiv:2304.02643"
       ],
-      "reason": "画像セグメンテーション用のpromptable modelとSA-1Bデータセットが主題で、LLM推論・サービング・KVキャッシュ・MoE推論最適化を扱わない。",
+      "reason": "画像セグメンテーションの新task・モデルSAM・SA-1Bデータセットを提案しzero-shot視覚認識能力を評価するコンピュータビジョン研究で、LLM/VLM推論runtime効率化が主題ではない。",
       "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-04T13:11:08+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [
         "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
         "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
@@ -14499,9 +14483,9 @@
       "identity_tokens": [
         "DOI:10.1137/090752286"
       ],
-      "reason": "高次元tensorを低rank unfoldingで表現するTensor-Train分解と線形代数演算を扱う数値線形代数研究で、LLM推論を最終適用先としない。",
+      "reason": "高次元tensorを低rankのTensor-Train形式へ分解し線形代数演算を効率化する数値線形代数研究で、LLM推論圧縮やruntimeを直接対象としない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
       ],
@@ -14582,9 +14566,9 @@
       "identity_tokens": [
         "DOI:10.1145/258533.258660"
       ],
-      "reason": "Webのhot spot緩和を目的とするconsistent hashingと分散cache protocolの古典的研究で、LLM推論サービング固有の方式ではない。",
+      "reason": "World Wide Webの大規模分散cacheでhot spotを避けるconsistent hashing/random tree protocolの古典研究で、LLM推論サービング固有のcache・scheduler方式ではない。",
       "first_checked_at": "2026-10-04T12:54:17+00:00",
-      "last_checked_at": "2026-10-04T12:54:17+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
       ],
@@ -15359,9 +15343,9 @@
         "DOI:10.18653/v1/d19-1259",
         "arXiv:1909.06146"
       ],
-      "reason": "PubMed要旨を用いるyes/no/maybe型の生物医学質問応答データセットとBioBERT系モデルの精度評価が主題で、LLM推論runtime最適化を提案しない。",
+      "reason": "PubMed要旨から生物医学質問応答datasetを構築してQA能力を評価するbenchmark研究で、LLM推論実行系の効率化を扱わない。",
       "first_checked_at": "2026-10-04T13:07:30+00:00",
-      "last_checked_at": "2026-10-04T13:07:30+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
       ],
@@ -16062,10 +16046,12 @@
       "identity_tokens": [
         "DOI:10.1137/s1064827595287997"
       ],
-      "reason": "汎用不規則グラフをcoarsening・partition・uncoarsening/refinementするmultilevel partitioning法の研究で、LLM/MoE推論を直接対象としない。",
+      "reason": "不規則グラフをcoarsening・partition・uncoarsening/refinementする汎用multilevel graph partitioning法の研究で、LLM推論やMoE実行を直接対象としない。",
       "first_checked_at": "2026-10-04T14:28:32+00:00",
-      "last_checked_at": "2026-10-04T14:28:32+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
       "title": "A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs"
     },
     "arXiv:0811.3171": {
@@ -16097,6 +16083,95 @@
         "worker-worklist-30 discovery_review tail-to-head"
       ],
       "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation"
+    },
+    "DOI:10.1145/3586183.3606763": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3586183.3606763",
+      "identity_tokens": [
+        "DOI:10.1145/3586183.3606763",
+        "arXiv:2304.03442"
+      ],
+      "reason": "LLMに記憶・内省・計画を組み合わせて人間らしい社会行動を生成する対話エージェント/HCI研究で、agentic inferenceのサービング効率やruntime最適化を扱わない。",
+      "first_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior"
+    },
+    "DOI:10.1145/1465482.1465560": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1465482.1465560",
+      "identity_tokens": [
+        "DOI:10.1145/1465482.1465560"
+      ],
+      "reason": "並列化による高速化上限を論じるAmdahlの古典的計算機アーキテクチャ研究で、LLM推論方式・サービング・アクセラレータを対象としない。",
+      "first_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md"
+      ],
+      "title": "Validity of the single processor approach to achieving large scale computing capabilities"
+    },
+    "DOI:10.1109/cvpr52733.2024.00913": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52733.2024.00913",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52733.2024.00913",
+        "DOI:10.48550/arxiv.2311.16502",
+        "arXiv:2311.16502"
+      ],
+      "reason": "マルチモーダル基盤モデルの専門知識・推論能力を測る評価ベンチマークであり、VLM/LLM推論システムの速度・メモリ・サービング効率化を提案しない。",
+      "first_checked_at": "2026-10-03T16:01:59+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
+        "papers/inference/99-other-inference-systems/2025-2509.24381-rserve-overlapping-encoding-and-prefill-for-efficient-lmm-inference.md",
+        "worker-worklist-30"
+      ],
+      "title": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI"
+    },
+    "arXiv:2203.07814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "DOI:10.1126/science.abq1158",
+        "arXiv:2203.07814"
+      ],
+      "reason": "競技プログラミング問題を解くコード生成モデルAlphaCodeの学習・大規模sampling・behavior filteringと問題解決能力が主題で、LLM推論基盤の効率化を目的としない。",
+      "first_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+      ],
+      "title": "Competition-level code generation with AlphaCode"
+    },
+    "DOI:10.1109/tit.1960.1057548": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tit.1960.1057548",
+      "identity_tokens": [
+        "DOI:10.1109/tit.1960.1057548"
+      ],
+      "reason": "固定出力level数の信号量子化で期待distortionを最小化する古典的量子化理論で、LLM重み・活性・KV量子化や推論kernelを対象としない。",
+      "first_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "title": "Quantizing for minimum distortion"
+    },
+    "arXiv:1805.04833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1805.04833",
+      "identity_tokens": [
+        "arXiv:1805.04833"
+      ],
+      "reason": "story premiseからplotを生成し、それを条件にstoryを生成する階層型物語生成モデルの品質改善が主題で、LLM推論runtime効率化を提案しない。",
+      "first_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "linked_from": [],
+      "title": "Hierarchical Neural Story Generation"
     }
   }
 }
