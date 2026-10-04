@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 07:50:19 JST**
+> 自動生成: **2026-10-05 07:50:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -39,8 +39,8 @@
 | 未処理Discovery候補 | **22755** |
 | 収録済み | **1596** |
 | Research / Audit候補へ昇格済み | **519** |
-| 無関係として除外 | **1378** |
-| 微妙として除外 | **419** |
+| 無関係として除外 | **1382** |
+| 微妙として除外 | **415** |
 
 - 消化率: **14.7%**
 - 現在の生在庫: 後方references **6901件** / 前方引用 **16816件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
@@ -102,8 +102,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - Research: **10-05 05:02:00 JST** / worker — / run 20261005-0445-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_6635921f7d988191b28ac3a1cabc1b23--2305.11860-adaptive-consistency.json
 - Discovery: **10-05 07:30:00 JST** / worker scheduled-chat-30 / run 20261005-0730-scheduled-chat-30/r02
-  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_6f3b781f39048191b7d20ec2369c3013--discovery-20261005-0730-scheduled-chat-30-r02-partial.json
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_6f3b781f39048191b7d20ec2369c3013--discovery-20261005-0730-scheduled-chat-30-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
