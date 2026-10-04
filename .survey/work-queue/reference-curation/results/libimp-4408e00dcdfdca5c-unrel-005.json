@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4408e00dcdfdca5c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.01852",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.01852",
+    "identity_tokens": [
+      "arXiv:2007.01852"
+    ],
+    "reason": "多言語sentence embeddingをMLM/TLM/dual-encoder等で学習しcross-lingual retrieval性能を改善する表現学習研究で、LLM推論runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T19:49:58+00:00",
+    "linked_from": [],
+    "title": "Language-agnostic BERT Sentence Embedding"
+  },
+  "processed_at": "2026-10-04T19:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4408e00dcdfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

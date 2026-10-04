@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T19:48:52+00:00",
-  "record_count": 1254,
+  "updated_at": "2026-10-04T19:49:58+00:00",
+  "record_count": 1267,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -13805,20 +13805,6 @@
       "linked_from": [],
       "title": "The promises and perils of mining GitHub"
     },
-    "arXiv:2308.09687": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2308.09687",
-      "identity_tokens": [
-        "arXiv:2308.09687"
-      ],
-      "reason": "LLMの思考単位を任意グラフとして生成・集約・評価するプロンプティング／推論戦略研究で、品質とAPIコストは扱うが、モデル実行ランタイムの速度・KVメモリ・カーネル・サービング最適化を提案しない。",
-      "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T13:03:15+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
-      ],
-      "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
-    },
     "DOI:10.1287/opre.11.3.399": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1287/opre.11.3.399",
@@ -17658,9 +17644,9 @@
       "identity_tokens": [
         "arXiv:2307.06281"
       ],
-      "reason": "大規模視覚言語モデル（large vision-language model; VLM）の多面的能力を英中二言語の選択式問題とCircularEvalで評価するベンチマーク研究であり、LLM推論ランタイム、メモリ階層、カーネル、サービング効率化を提案しない。",
+      "reason": "大規模視覚言語モデル（VLM）の能力を英中二言語の選択式質問とCircularEvalで測る評価ベンチマーク研究。推論ランタイム、KVキャッシュ、カーネル、サービングの効率化方式を提案しない。",
       "first_checked_at": "2026-10-04T18:55:17+00:00",
-      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
@@ -18205,6 +18191,196 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
       ],
       "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction"
+    },
+    "arXiv:1908.09791": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.09791",
+      "identity_tokens": [
+        "arXiv:1908.09791"
+      ],
+      "reason": "多数のedge device/制約向けにCNN系sub-networkを一度の学習から選択するOFAとprogressive shrinkingが主題。推論効率は扱うがImageNet/CNN配備で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [],
+      "title": "Once-for-All: Train One Network and Specialize it for Efficient Deployment"
+    },
+    "DOI:10.1609/aaai.v38i16.29720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v38i16.29720",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v38i16.29720",
+        "arXiv:2308.09687"
+      ],
+      "reason": "LLMの思考単位をgraphとして構成しreasoning品質とAPI costを改善するprompting/reasoning frameworkで、基盤推論runtime・KV cache・kernel・serving最適化を提案しない。",
+      "first_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
+    },
+    "arXiv:2205.14217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.14217",
+      "identity_tokens": [
+        "arXiv:2205.14217"
+      ],
+      "reason": "continuous diffusionによる非自己回帰言語モデルで細粒度なcontrollable generationを改善する生成能力研究で、推論速度・メモリ・サービング効率化を主目的としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [],
+      "title": "Diffusion-LM Improves Controllable Text Generation"
+    },
+    "arXiv:2301.04104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.04104",
+      "identity_tokens": [
+        "arXiv:2301.04104"
+      ],
+      "reason": "多様な環境をworld modelで学習して制御する強化学習・agent能力研究で、LLM推論systemのruntime効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [],
+      "title": "Mastering Diverse Domains through World Models"
+    },
+    "arXiv:2007.01852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.01852",
+      "identity_tokens": [
+        "arXiv:2007.01852"
+      ],
+      "reason": "多言語sentence embeddingをMLM/TLM/dual-encoder等で学習しcross-lingual retrieval性能を改善する表現学習研究で、LLM推論runtime効率化を扱わない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [],
+      "title": "Language-agnostic BERT Sentence Embedding"
+    },
+    "arXiv:2401.09417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.09417",
+      "identity_tokens": [
+        "arXiv:2401.09417"
+      ],
+      "reason": "双方向状態空間モデル（bidirectional state space model）を画像バックボーンへ適用し、高解像度画像の特徴抽出で2.8倍高速・GPUメモリ86.8%削減を示すが、最終適用先は画像分類・検出・セグメンテーションでLLM推論ではない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model"
+    },
+    "arXiv:2306.02858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02858",
+      "identity_tokens": [
+        "arXiv:2306.02858"
+      ],
+      "reason": "凍結した視覚・音声encoderとLLMをVideo/Audio Q-formerで接続し動画理解能力を学習するマルチモーダルモデル研究で、推論実行効率の最適化を主目的としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding"
+    },
+    "arXiv:2311.17005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17005",
+      "identity_tokens": [
+        "arXiv:2311.17005"
+      ],
+      "reason": "20種の時間的動画理解taskからなるマルチモーダル動画評価ベンチマークとVideoChat2の能力評価が中心で、LLM推論基盤の効率化方式を提案しない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "title": "MVBench: A Comprehensive Multi-modal Video Understanding Benchmark"
+    },
+    "arXiv:2306.05424": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05424",
+      "identity_tokens": [
+        "arXiv:2306.05424"
+      ],
+      "reason": "動画instruction dataと時空間表現を用いてvideo conversation能力を改善し、新しい動画会話評価系を構築するモデル能力研究。推論速度・メモリ・サービング最適化が主題ではない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "title": "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models"
+    },
+    "arXiv:2110.04366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.04366",
+      "identity_tokens": [
+        "arXiv:2110.04366"
+      ],
+      "reason": "parameter-efficient transfer learning手法をhidden-state変更として統一し、少ない学習parameterで下流task適応を改善するfine-tuning研究。最終適用先は学習・転移であり推論system最適化ではない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "title": "Towards a Unified View of Parameter-Efficient Transfer Learning"
+    },
+    "arXiv:2204.07705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.07705",
+      "identity_tokens": [
+        "arXiv:2204.07705"
+      ],
+      "reason": "1,616 NLP taskのinstruction benchmarkとTk-Instructのcross-task generalizationを評価するinstruction-tuning研究で、推論ランタイム効率化を対象としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md"
+      ],
+      "title": "Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks"
+    },
+    "arXiv:2112.00114": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.00114",
+      "identity_tokens": [
+        "arXiv:2112.00114"
+      ],
+      "reason": "中間計算をscratchpadとして生成するようTransformerを学習し、多段計算・program executionの正解率を改善するreasoning/training研究。追加token生成を利用する能力向上が目的で、推論runtimeの高速化ではない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+      ],
+      "title": "Show Your Work: Scratchpads for Intermediate Computation with Language Models"
+    },
+    "arXiv:2212.09251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.09251",
+      "identity_tokens": [
+        "arXiv:2212.09251"
+      ],
+      "reason": "言語モデル自身で154の評価datasetを生成しsycophancy等のinverse scalingを発見する評価・安全性研究で、推論ランタイムやサービング効率化を提案しない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Discovering Language Model Behaviors with Model-Written Evaluations"
+    },
+    "DOI:10.18653/v1/2020.emnlp-main.154": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.154",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.154",
+        "arXiv:2010.00133"
+      ],
+      "reason": "1,508例・9種のbiasを含むmasked language modelの社会的bias評価benchmarkで、推論実行系の性能最適化を対象としない。",
+      "first_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ],
+      "title": "CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models"
     }
   }
 }

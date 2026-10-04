@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c35b757c410ec4b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.02858",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.02858",
+    "identity_tokens": [
+      "arXiv:2306.02858"
+    ],
+    "reason": "凍結した視覚・音声encoderとLLMをVideo/Audio Q-formerで接続し動画理解能力を学習するマルチモーダルモデル研究で、推論実行効率の最適化を主目的としない。",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T19:49:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding"
+  },
+  "processed_at": "2026-10-04T19:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c35b757c410",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

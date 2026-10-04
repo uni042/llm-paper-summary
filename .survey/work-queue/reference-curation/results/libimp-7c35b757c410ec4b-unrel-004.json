@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c35b757c410ec4b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.17005",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.17005",
+    "identity_tokens": [
+      "arXiv:2311.17005"
+    ],
+    "reason": "20種の時間的動画理解taskからなるマルチモーダル動画評価ベンチマークとVideoChat2の能力評価が中心で、LLM推論基盤の効率化方式を提案しない。",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T19:49:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+    ],
+    "title": "MVBench: A Comprehensive Multi-modal Video Understanding Benchmark"
+  },
+  "processed_at": "2026-10-04T19:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c35b757c410",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
