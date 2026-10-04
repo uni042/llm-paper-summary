@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-04T08:56:10+00:00`
+Generated: `2026-10-04T09:06:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,7 +220,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **18443** / このworker向け: **500**
+未判定総数: **18499** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
@@ -291,7 +291,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 | 65 | 335 | DOI:10.1145/3649449 | Pre-Trained Language Models for Text Generation: A Survey | 2022-01-14 | ACM Computing Surveys | 335 | 1 |  | [source](https://arxiv.org/abs/2201.05273) |
 | 66 | 332 | DOI:10.1145/3387514.3405882 | Understanding Operational 5G: A First Measurement Study on Its Coverage, Performance and Energy Consumption | 2020-07-30 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 332 | 1 |  | [source](https://doi.org/10.1145/3387514.3405882) |
 | 67 | 325 | DOI:10.1145/3085572 | CACTI 7 | 2017-06-28 | ACM Transactions on Architecture and Code Optimization (TACO) | 325 | 3 | DRAM-PIMによるLLMデコード高速化 / 長文脈注意のチャネル並列化・KV容量管理, offload-hierarchical-memory | [source](https://doi.org/10.1145/3085572) |
-| 68 | 321 | arXiv:2309.10668 | Language Modeling Is Compression | 2023-09-19 | International Conference on Learning Representations | 311 | 2 |  | [source](https://arxiv.org/abs/2309.10668) |
+| 68 | 321 | arXiv:2309.10668 | Language Modeling Is Compression | 2023-09-19 | International Conference on Learning Representations | 311 | 1 |  | [source](https://arxiv.org/abs/2309.10668) |
 | 69 | 315 | DOI:10.1109/parcomptech.2013.6621389 | User-priority guided Min-Min scheduling algorithm for load balancing in cloud computing | 2013-10-08 | 2013 National Conference on Parallel Computing Technologies (PARCOMPTECH) | 315 | 1 | inference-systems | [source](https://doi.org/10.1109/PARCOMPTECH.2013.6621389) |
 | 70 | 312 | arXiv:2308.15272 | AutoDroid: LLM-powered Task Automation in Android | 2023-08-29 | ACM/IEEE International Conference on Mobile Computing and Networking | 312 | 1 | on-device LLM / heterogeneous inference / NPU offloading | [source](https://arxiv.org/abs/2308.15272) |
 | 71 | 310 | DOI:10.1145/2425248.2425252 | Measuring energy consumption for short code paths using RAPL | 2012-12-04 | PERV | 310 | 1 | 05-speculative-decoding-moe | [source](https://doi.org/10.1145/2425248.2425252) |
@@ -306,7 +306,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 | 80 | 279 | arXiv:2502.04463 | Training Language Models to Reason Efficiently | 2025-02-06 | Neural Information Processing Systems | 269 | 1 |  | [source](https://arxiv.org/abs/2502.04463) |
 | 81 | 276 | DOI:10.1145/3651890.3672233 | RDMA over Ethernet for Distributed Training at Meta Scale | 2024-08-04 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 276 | 1 |  | [source](https://doi.org/10.1145/3651890.3672233) |
 | 82 | 273 | DOI:10.1109/mm.2020.2985963 | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | 2020-05-01 | IEEE Micro | 263 | 1 | GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計 | [source](https://doi.org/10.1109/MM.2020.2985963) |
-| 83 | 271 | arXiv:2402.05162 | Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications | 2024-02-07 | International Conference on Machine Learning | 261 | 2 |  | [source](https://arxiv.org/abs/2402.05162) |
+| 83 | 271 | arXiv:2402.05162 | Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications | 2024-02-07 | International Conference on Machine Learning | 261 | 1 |  | [source](https://arxiv.org/abs/2402.05162) |
 | 84 | 268 | DOI:10.1109/micro50266.2020.00068 | MatRaptor: A Sparse-Sparse Matrix Multiplication Accelerator Based on Row-Wise Product | 2020-10-01 | Micro | 258 | 1 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation | [source](https://doi.org/10.1109/MICRO50266.2020.00068) |
 | 85 | 265 | DOI:10.1109/tcad.2020.3043731 | DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training | 2020-03-13 | IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems | 265 | 1 | offload-hierarchical-memory | [source](https://arxiv.org/abs/2003.06471) |
 | 86 | 263 | DOI:10.1109/hpca.2016.7446095 | Low-Cost Inter-Linked Subarrays (LISA): Enabling fast inter-subarray data movement in DRAM | 2016-03-12 | International Symposium on High-Performance Computer Architecture | 253 | 1 | inference-systems | [source](https://doi.org/10.1109/HPCA.2016.7446095) |
@@ -396,13 +396,13 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 | 170 | 124 | arXiv:2506.00413 | Accelerating Diffusion LLMs via Adaptive Parallel Decoding | 2025-05-31 | Neural Information Processing Systems | 114 | 2 | Speculative Decoding | [source](https://arxiv.org/abs/2506.00413) |
 | 171 | 123 | arXiv:2402.09025 | SLEB: Streamlining LLMs through Redundancy Verification and Elimination of Transformer Blocks | 2024-02-14 | International Conference on Machine Learning | 113 | 3 | Conditional Computation, dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE | [source](https://arxiv.org/abs/2402.09025) |
 | 172 | 122 | DOI:10.1007/978-3-031-73004-7_2 | An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models | 2024-10-31 | Lecture notes in computer science | 122 | 1 | Sparse Attention / VLM Inference | [source](https://doi.org/10.1007/978-3-031-73004-7_2) |
-| 173 | 121 | DOI:10.1145/3498361.3538948 | Band: coordinated multi-DNN inference on heterogeneous mobile processors | 2022-06-27 | ACM SIGMOBILE International Conference on Mobile Systems, Applications, and Services | 121 | 1 | 08-edge-on-device-llm-systems | [source](https://doi.org/10.1145/3498361.3538948) |
+| 173 | 121 | DOI:10.1145/3498361.3538948 | Band: coordinated multi-DNN inference on heterogeneous mobile processors | 2022-06-27 | ACM SIGMOBILE International Conference on Mobile Systems, Applications, and Services | 121 | 2 | 08-edge-on-device-llm-systems, エッジの異種プロセッサ割当て、演算形状別のバックエンド選択、実行基盤切替費用の計測・モデル化 | [source](https://doi.org/10.1145/3498361.3538948) |
 | 174 | 121 | arXiv:2206.08514 | A Unified Evaluation of Textual Backdoor Learning: Frameworks and Benchmarks | 2022-06-17 | Neural Information Processing Systems | 111 | 1 | dense-to-MoE conversion / conditional FFN computation / expert routing | [source](https://arxiv.org/abs/2206.08514) |
 | 175 | 120 | DOI:10.1109/isca45697.2020.00086 | DRQ: Dynamic Region-based Quantization for Deep Neural Network Acceleration | 2020-05-01 | International Symposium on Computer Architecture | 110 | 1 | kv-cache-memory | [source](https://doi.org/10.1109/ISCA45697.2020.00086) |
 | 176 | 119 | DOI:10.1145/277851.277942 | Task assignment in a distributed system (extended abstract): improving performance by unbalancing load | 1997-10-31 | SIGMETRICS '98/PERFORMANCE '98 | 119 | 1 | many-adapter LLM serving / LoRA serving / inference scheduling | [source](https://doi.org/10.1145/277851.277942) |
 | 177 | 118 | DOI:10.1016/j.intell.2024.101832 | Defining intelligence: Bridging the gap between human and artificial perspectives | 2024-05-01 | Intelligence | 118 | 1 | llm-serving-systems | [source](https://doi.org/10.1016/j.intell.2024.101832) |
 | 178 | 117 | DOI:10.14778/3407790.3407807 | Towards scalable dataframe systems | 2020-01-03 | Proceedings of the VLDB Endowment | 117 | 1 | RAG runtime / distributed orchestration / agentic workflows | [source](https://arxiv.org/abs/2001.00888) |
-| 179 | 115 | arXiv:2505.07608 | MiMo: Unlocking the Reasoning Potential of Language Model - From Pretraining to Posttraining | 2025-05-12 | arXiv.org | 115 | 2 | kv-cache-optimization-compression, 投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習 | [source](https://arxiv.org/abs/2505.07608) |
+| 179 | 115 | arXiv:2505.07608 | MiMo: Unlocking the Reasoning Potential of Language Model - From Pretraining to Posttraining | 2025-05-12 | arXiv.org | 115 | 3 | kv-cache-optimization-compression, 投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習, 推論時高速化／投機的デコード／多トークン予測ヘッドの後学習・適応制御 | [source](https://arxiv.org/abs/2505.07608) |
 | 180 | 115 | arXiv:2609.07876 | LLM Layers Immediately Correct Each Other | 2026-09-07 | Neural Information Processing Systems | 5 | 1 | KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2609.07876) |
 | 181 | 114 | arXiv:2607.04884 | HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better | 2026-07-06 | arXiv.org | 14 | 4 | Speculative Decoding, survey-speculative-decoding | [source](https://arxiv.org/abs/2607.04884) |
 | 182 | 113 | arXiv:2501.13987 | OstQuant: Refining Large Language Model Quantization with Orthogonal and Scaling Transformations for Better Distribution Fitting | 2025-01-23 | International Conference on Learning Representations | 103 | 1 | inference-systems | [source](https://arxiv.org/abs/2501.13987) |

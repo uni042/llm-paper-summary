@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-04T08:56:10+00:00`
+Generated: `2026-10-04T09:06:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -219,7 +219,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **199**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **18443** / このworker向け: **500**
+未判定総数: **18499** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
@@ -301,7 +301,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **199**
 | 76 | 290 | arXiv:2404.18231 | From Persona to Personalization: A Survey on Role-Playing Language Agents | 2024-04-28 | Trans. Mach. Learn. Res. | 290 | 1 |  | [source](https://arxiv.org/abs/2404.18231) |
 | 77 | 285 | DOI:10.1145/3651890.3672265 | Alibaba HPN: A Data Center Network for Large Language Model Training | 2024-08-04 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 285 | 1 | moe-parallelism-communication | [source](https://doi.org/10.1145/3651890.3672265) |
 | 78 | 284 | DOI:10.1007/s10489-024-05747-w | A comprehensive review of model compression techniques in machine learning | 2024-09-02 | Applied intelligence (Boston) | 284 | 1 |  | [source](https://doi.org/10.1007/s10489-024-05747-w) |
-| 79 | 281 | arXiv:2203.08913 | Memorizing Transformers | 2022-03-16 | International Conference on Learning Representations | 271 | 6 | LLM inference surveys、roofline performance analysis, inference-systems, survey-long-context-serving, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2203.08913) |
+| 79 | 281 | arXiv:2203.08913 | Memorizing Transformers | 2022-03-16 | International Conference on Learning Representations | 271 | 7 | LLM inference surveys、roofline performance analysis, inference-systems, survey-long-context-serving, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2203.08913) |
 | 80 | 277 | DOI:10.1109/tit.2012.2186786 | Fixed-Length Lossy Compression in the Finite Blocklength Regime | 2011-02-18 | IEEE Transactions on Information Theory | 277 | 1 |  | [source](https://arxiv.org/abs/1102.3944) |
 | 81 | 274 | DOI:10.1145/3724420 | Empowering Edge Intelligence: A Comprehensive Survey on On-Device AI Models | 2025-03-08 | ACM Computing Surveys | 274 | 1 |  | [source](https://arxiv.org/abs/2503.06027) |
 | 82 | 271 | DOI:10.1145/3510611 | Serverless Computing: A Survey of Opportunities, Challenges, and Applications | 2019-11-04 | ACM Computing Surveys | 271 | 2 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/1911.01296) |
@@ -393,7 +393,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **199**
 | 168 | 125 | DOI:10.1145/2999572.2999580 | Xpander: Towards Optimal-Performance Datacenters | 2016-12-06 | Conference on Emerging Network Experiment and Technology | 125 | 1 | moe-parallelism-communication | [source](https://doi.org/10.1145/2999572.2999580) |
 | 169 | 124 | DOI:10.1145/3626788 | CarbonScaler: Leveraging Cloud Workload Elasticity for Optimizing Carbon-Efficiency | 2023-02-17 | Proceedings of the ACM on Measurement and Analysis of Computing Systems | 124 | 1 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2302.08681) |
 | 170 | 123 | DOI:10.1145/3445814.3446762 | Mind mappings: enabling efficient algorithm-accelerator mapping space search | 2021-03-02 | International Conference on Architectural Support for Programming Languages and Operating Systems | 123 | 2 |  | [source](https://arxiv.org/abs/2103.01489) |
-| 171 | 123 | DOI:10.1145/3600006.3613147 | FIFO queues are all you need for cache eviction | 2023-10-23 | Symposium on Operating Systems Principles | 113 | 1 | llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/3600006.3613147) |
+| 171 | 123 | DOI:10.1145/3600006.3613147 | FIFO queues are all you need for cache eviction | 2023-10-23 | Symposium on Operating Systems Principles | 113 | 2 | llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/3600006.3613147) |
 | 172 | 122 | DOI:10.1109/ipdpsw55747.2022.00171 | Designing Effective Sparse Expert Models | 2022-05-01 | IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum | 122 | 1 | inference-systems | [source](https://doi.org/10.1109/IPDPSW55747.2022.00171) |
 | 173 | 121 | DOI:10.1109/isca.2016.42 | Cambricon: An Instruction Set Architecture for Neural Networks | 2016-06-01 |  | 121 | 1 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation | [source](https://doi.org/10.1109/isca.2016.42) |
 | 174 | 120 | arXiv:2505.13389 | VSA: Faster Video Diffusion with Trainable Sparse Attention | 2025-05-19 | Neural Information Processing Systems | 110 | 1 | 11-llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2505.13389) |
@@ -455,7 +455,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **199**
 | 230 | 105 | arXiv:2607.14552 | Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models | 2026-07-16 | arXiv.org | 5 | 1 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2607.14552) |
 | 231 | 105 | arXiv:2606.26453 | Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization | 2026-06-24 | arXiv.org | 5 | 1 | other-inference-systems | [source](https://arxiv.org/abs/2606.26453) |
 | 232 | 105 | arXiv:2606.10671 | FadeMem: Distance-Aware Memory Consolidation for Autoregressive Video Diffusion | 2026-06-09 | arXiv.org | 5 | 1 | KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2606.10671) |
-| 233 | 104 | DOI:10.1145/3669940.3707267 | MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs | 2024-11-18 | International Conference on Architectural Support for Programming Languages and Operating Systems | 104 | 13 | KV Cache Optimization / Compression, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード, Offload / Hierarchical Memory, attention-FC disaggregation / DIMM-PIM / KV-cache capacity-bandwidth scaling / heterogeneous inference, hierarchical-memory-kv-offload-cpu-gpu-attention, moe-inference-expert-placement-caching, エージェント型LLMサービング／プリフィル・デコード分離／異種GPUスケジューリング | [source](https://arxiv.org/abs/2411.11217) |
+| 233 | 104 | DOI:10.1145/3669940.3707267 | MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs | 2024-11-18 | International Conference on Architectural Support for Programming Languages and Operating Systems | 104 | 14 | CPU-GPU異種環境でのMoE推論と専門家重みの退避, KV Cache Optimization / Compression, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード, Offload / Hierarchical Memory, attention-FC disaggregation / DIMM-PIM / KV-cache capacity-bandwidth scaling / heterogeneous inference, hierarchical-memory-kv-offload-cpu-gpu-attention, moe-inference-expert-placement-caching, エージェント型LLMサービング／プリフィル・デコード分離／異種GPUスケジューリング | [source](https://arxiv.org/abs/2411.11217) |
 | 234 | 104 | DOI:10.1007/s12599-022-00755-x | Opposing Effects of Response Time in Human-Chatbot Interaction | 2022-05-30 | Business & Information Systems Engineering | 104 | 1 |  | [source](https://doi.org/10.1007/s12599-022-00755-x) |
 | 235 | 104 | arXiv:2404.12715 | Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration | 2024-04-19 | Neural Information Processing Systems | 94 | 1 |  | [source](https://arxiv.org/abs/2404.12715) |
 | 236 | 104 | arXiv:2609.30216 | Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem | 2026-09-24 |  | 4 | 1 | inference-systems | [source](https://arxiv.org/abs/2609.30216) |

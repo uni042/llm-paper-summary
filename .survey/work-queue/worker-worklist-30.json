@@ -2,7 +2,7 @@
   "assignment_policy": "deterministic_disjoint_round_robin",
   "discovery_review": {
     "displayed": 500,
-    "pending_total": 18443,
+    "pending_total": 18499,
     "rows": [
       {
         "assigned_worker": "scheduled-chat-30",
@@ -2485,12 +2485,11 @@
         "canonical_id": "arXiv:2309.10668",
         "citation_count": 311,
         "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
-        "discovery_routes": [
-          "forward_citation_sweep"
+        "discovery_routes": null,
+        "identity_tokens": [
+          "arXiv:2309.10668"
         ],
-        "identity_tokens": null,
         "linked_from": [
-          "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
           "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
         ],
         "linked_from_lineages": [],
@@ -2508,8 +2507,8 @@
         },
         "published": "2023-09-19",
         "rank": 68,
-        "relation_count": 2,
-        "source_kind": "forward_citation_candidate",
+        "relation_count": 1,
+        "source_kind": "reference_review_candidate",
         "source_rank": 211,
         "source_url": "https://arxiv.org/abs/2309.10668",
         "title": "Language Modeling Is Compression",
@@ -3032,13 +3031,12 @@
         "canonical_id": "arXiv:2402.05162",
         "citation_count": 261,
         "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
-        "discovery_routes": [
-          "forward_citation_sweep"
+        "discovery_routes": null,
+        "identity_tokens": [
+          "arXiv:2402.05162"
         ],
-        "identity_tokens": null,
         "linked_from": [
-          "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
-          "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+          "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
         ],
         "linked_from_lineages": [],
         "priority": 271,
@@ -3055,8 +3053,8 @@
         },
         "published": "2024-02-07",
         "rank": 83,
-        "relation_count": 2,
-        "source_kind": "forward_citation_candidate",
+        "relation_count": 1,
+        "source_kind": "reference_review_candidate",
         "source_rank": 260,
         "source_url": "https://arxiv.org/abs/2402.05162",
         "title": "Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications",
@@ -6339,10 +6337,12 @@
           "DOI:10.1145/3498361.3538948"
         ],
         "linked_from": [
-          "papers/inference/08-edge-on-device-llm-systems/2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md"
+          "papers/inference/08-edge-on-device-llm-systems/2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md",
+          "papers/inference/08-edge-on-device-llm-systems/2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md"
         ],
         "linked_from_lineages": [
-          "08-edge-on-device-llm-systems"
+          "08-edge-on-device-llm-systems",
+          "エッジの異種プロセッサ割当て、演算形状別のバックエンド選択、実行基盤切替費用の計測・モデル化"
         ],
         "priority": 121,
         "priority_breakdown": {
@@ -6358,7 +6358,7 @@
         },
         "published": "2022-06-27",
         "rank": 173,
-        "relation_count": 1,
+        "relation_count": 2,
         "source_kind": "reference_review_candidate",
         "source_rank": 539,
         "source_url": "https://doi.org/10.1145/3498361.3538948",
@@ -6561,12 +6561,14 @@
           "arXiv:2505.07608"
         ],
         "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2610.00888-match-the-distribution-not-the-compute-post-training-multi-token-predict.md",
           "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
           "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
         ],
         "linked_from_lineages": [
           "kv-cache-optimization-compression",
-          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習",
+          "推論時高速化／投機的デコード／多トークン予測ヘッドの後学習・適応制御"
         ],
         "priority": 115,
         "priority_breakdown": {
@@ -6582,7 +6584,7 @@
         },
         "published": "2025-05-12",
         "rank": 179,
-        "relation_count": 2,
+        "relation_count": 3,
         "source_kind": "reference_review_candidate",
         "source_rank": 559,
         "source_url": "https://arxiv.org/abs/2505.07608",
@@ -18815,7 +18817,7 @@
       }
     ]
   },
-  "generated_at": "2026-10-04T08:56:10+00:00",
+  "generated_at": "2026-10-04T09:06:26+00:00",
   "purpose": "dedicated-scheduled-worker-selection-surface",
   "research_audit": {
     "claimable_total": 599,

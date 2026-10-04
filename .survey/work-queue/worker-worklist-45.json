@@ -2,7 +2,7 @@
   "assignment_policy": "deterministic_disjoint_round_robin",
   "discovery_review": {
     "displayed": 500,
-    "pending_total": 18443,
+    "pending_total": 18499,
     "rows": [
       {
         "assigned_worker": "scheduled-chat-45",
@@ -2901,6 +2901,7 @@
         "linked_from": [
           "papers/inference/10-kv-cache-offload-recomputation/2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md",
           "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+          "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
           "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
           "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
           "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
@@ -2926,7 +2927,7 @@
         },
         "published": "2022-03-16",
         "rank": 79,
-        "relation_count": 6,
+        "relation_count": 7,
         "source_kind": "reference_review_candidate",
         "source_rank": 247,
         "source_url": "https://arxiv.org/abs/2203.08913",
@@ -6376,6 +6377,7 @@
           "DOI:10.1145/3600006.3613147"
         ],
         "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
           "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13573-year-llm-serving-workload-evolution.md"
         ],
         "linked_from_lineages": [
@@ -6395,7 +6397,7 @@
         },
         "published": "2023-10-23",
         "rank": 171,
-        "relation_count": 1,
+        "relation_count": 2,
         "source_kind": "reference_review_candidate",
         "source_rank": 533,
         "source_url": "https://doi.org/10.1145/3600006.3613147",
@@ -8741,12 +8743,14 @@
           "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.08784-slos-serve-multi-slo-llm-serving.md",
           "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md",
           "papers/inference/15-inference-simulation-emulation/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md",
+          "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md",
           "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md",
           "papers/inference/99-other-inference-systems/2025-2511.00868-flexicache-leveraging-temporal-stability-of-attention-heads-for-efficient-kv-cache-management.md",
           "papers/inference/99-other-inference-systems/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
           "papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md"
         ],
         "linked_from_lineages": [
+          "CPU-GPU異種環境でのMoE推論と専門家重みの退避",
           "KV Cache Optimization / Compression",
           "LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing",
           "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
@@ -8771,7 +8775,7 @@
         },
         "published": "2024-11-18",
         "rank": 233,
-        "relation_count": 13,
+        "relation_count": 14,
         "source_kind": "reference_review_candidate",
         "source_rank": 732,
         "source_url": "https://arxiv.org/abs/2411.11217",
@@ -18865,7 +18869,7 @@
       }
     ]
   },
-  "generated_at": "2026-10-04T08:56:10+00:00",
+  "generated_at": "2026-10-04T09:06:26+00:00",
   "purpose": "dedicated-scheduled-worker-selection-surface",
   "research_audit": {
     "claimable_total": 599,
