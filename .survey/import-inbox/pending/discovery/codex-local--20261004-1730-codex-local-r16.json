@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1730-codex-local-r16",
+  "reference_main_sha": "b5b221b6df9e391bc93680adc8fed32dae1300e5",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39816",
+      "identity_tokens": [
+        "arXiv:2609.39816",
+        "arXiv:2609.39816v1"
+      ],
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "reason": "LLM推論のlinear layerにおける低精度・高速行列積の数値実装を扱い、丸めでtoken row間の混合が残るとprefix invarianceが崩れ、likelihood評価とpacked-request servingへ影響することを示す。推論カーネルの効率と正しさに直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.39816",
+      "body_check": "arXiv HTML v1の本文を確認（2026-10-04）。§1と§3ではQwen2.5-14B-Instruct/OpenBookQA 240問で、accuracyを回復した2つのFP8実装でもgreedy continuationへの置換時に回答が5.83%/10.00%変わり、bf16とrow-local FP8 controlは0%と報告する。§3.2、Appendix Cでは5モデルのwindow試験でrepaired実装のnext-token予測が7.8–15.2%変化し、768 packed-request対の分布もunrepaired/repaired #2では全対で変化する一方controlsは不変。§3.3ではQwen2.5-14B-Instructの512 sign variantsが同一の係数安定性指標でもWikiText-2 perplexity比1.367–1056.0に広がる。§4はbounded integer codes上で2-level Strassenを構成し、量子化条件を満たすとclassical int8演算とbitwise一致し、49 block multiplications対64を保つ証明と実験を示す。§4.4では4モデルでcode bound 31のNLL差は3モデルでdeployed FP8 kernelを上回り、overflow correctionを加えたbound 127では4モデルすべて同等以下。評価範囲はモデル/データセット別に記載される。§5ではNVIDIA H20上の4096x4096行列で現行Triton kernelがclassical int8より遅く、one-level Strassenは2.04–3.17倍、two-levelは27.9倍と報告し、性能化・補正kernel・他shape/GPUでの測定をfuture workとする。従って乗算数削減は示すが、推論レイテンシ改善は未実証。",
+      "first_checked_at": "2026-10-04T15:00:13+09:00",
+      "last_checked_at": "2026-10-04T15:00:13+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40146",
+      "identity_tokens": [
+        "arXiv:2609.40146",
+        "2609.40146",
+        "10.48550/arXiv.2609.40146"
+      ],
+      "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+      "reason": "LLM推論・配備時のモデル圧縮に直接関係する。SVD低ランク化したTransformer MLP投影を対象に、学習で調整するゲートと二段階再構成・蒸留で精度回復を試み、学習後はゲートを低ランク因子へ畳み込むため量子回路を実行せず古典ハードウェア上で推論できる。推論時の速度向上は測定されておらず、本分類はモデル容量・計算量を変える圧縮機構としての対象性に基づく。",
+      "source_url": "https://arxiv.org/abs/2609.40146",
+      "body_check": "arXiv v1本文（2026-09-30）§3.1–3.6, §4.1–4.3, §5.1–5.4, §6.4, §7を確認。QuLoCはQwen3.5-4Bの選択されたSwiGLU MLP（layers 8–23）についてgate/up/down射影をSVD初期化の低ランク因子へ置換し、入力非依存なフォトニック回路出力から得るゲインでrank channelを調整する。Stage Iで各層の機能再構成、Stage IIでQwen3.5-27B教師によるend-to-end知識蒸留を行い、学習後にゲインを因子へ吸収する。§3.6は1層あたりのdense MLP 3dm MAC/tokenに対してdeploy時は4r(d+m) MAC/tokenとし、主要線形演算量の理論上の削減率がparameter削減率に一致すると記す。Qwen3.5-4Bでは言語モデル部分のパラメータを20.05%削減した同一圧縮率比較で、WikiText-2/C4 perplexityは12.173/24.644、6タスク平均精度は54.03%; Swift-SVDの49.24%に対して4.79ポイント（相対9.73%）高い（Table 1）。評価はWikiText-2とC4の次token perplexity、およびARC-Easy, PIQA, OpenBookQA, WinoGrande, HellaSwag, MathQAのzero-shot精度。LLaMA-7Bではパラメータ保持率0.8/0.6を評価し、Swift-SVD*比の平均精度改善はそれぞれ約1ポイントで、保持率0.6ではperplexityが比較法より悪い場合もある（Table 4, §5.3）。§5.4では物理フォトニックデバイスからオフライン取得した応答プールを使う補助評価を報告し、Qwen3.5-4Bのlayers 8–23をrank 384/768で圧縮した比較で6タスク平均精度53.23%を得た（Optimized SVDは48.54%）。simulation比では平均精度が相対1.48%低下したとabstractが報告する。§6.4は未評価の推論latency/throughput、入力やhidden stateに応じて変化しないゲイン、限られたモデル・MLP層・圧縮設定、複数seedおよびhardware条件の不足を明示する。従って圧縮・精度効果の論文として対象だが、推論速度向上や広い汎用性の実証とは扱わない。",
+      "first_checked_at": "2026-10-04T15:00:30+09:00",
+      "last_checked_at": "2026-10-04T15:00:30+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00367",
+      "identity_tokens": [
+        "arXiv:2610.00367",
+        "doi:10.48550/arXiv.2610.00367"
+      ],
+      "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+      "reason": "対象。MoEモデルをデプロイする際に全expertの重みを保持するメモリ負荷を、各MoE層からexpert単位で構造的に削除して軽減する推論時圧縮手法を提案する。事前学習済みrouterを固定したままexpertごとの学習可能biasをC4上の言語モデル損失とrouting-diversity正則化で校正し、そのbias上位のexpertを保持する。削除expertの出力は、保持expertをproxyとしてtoken-conditionedな重み付きridge回帰でfitしたchannel-wise affine変換により補う。Qwen3-30B-A3B、DeepSeek-V2-Lite、Moonlight-16B-A3Bの3モデルを25%/50%のrouted-expert削減率で評価し、5 pruning baselineと比べ9 zero-shot benchmarkの平均値が各設定で最良と報告する。これは圧縮・予測品質評価であり、推論レイテンシやスループット向上を実測した結果ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00367",
+      "body_check": "arXiv HTML v1本文 (https://arxiv.org/html/2610.00367v1) を確認。§1-3では、router logitへexpert単位のlearnable biasを加えて校正コーパス上のLM lossとrouter-row cosine similarity由来のdiversity lossで最適化し、bias順に各層の保持expertを決める仕組みを確認した。§3.3ではfit/scoreに分けたC4 calibration dataから、pruned expertをretained proxyの出力からchannel-wise affine変換で近似し、weighted R² fidelityが閾値を超える場合のみ適用する手順を確認した。§4.1-4.2はQwen3-30B-A3B (48 MoE layers, 128 routed experts/layer, top-8)、DeepSeek-V2-LiteとMoonlight-16B-A3B (各26 layers, 64 routed experts/layer, top-6)を用い、C4 calibration (bias学習1000 iterations、proxy用各64 sequences×1024 tokensのfit/score split)およびlm-evaluation-harnessのBoolQ/RTE/HellaSwag/WinoGrande/PIQA/OpenBookQA/ARC-Easy/ARC-Challenge/MMLUのzero-shot評価を報告する。Tables 1-3ではMoRAの9-task平均が全モデル・両削減率で比較baseline中最高。§4.2 Table 4ではparameter数とstorageを報告し、25%削減時の元モデルからの平均score低下はQwen3 0.60、DeepSeek-V2-Lite 2.37、Moonlight 2.59ポイント、affine追加量は保持parameter数の0.08%未満、推論FLOPs追加量は元モデル比0.0005%以下と記載。§4.3 Table 5ではQwen3でLM lossとdiversity lossの併用およびexpert approximationの効果をablation。評価は3つのMoE構成と9つのzero-shot taskに限られ、50%削減では未圧縮モデルからの品質低下が大きい。本文はwall-clock latency、throughput、実測peak memoryの比較を示さず、コードは公開予定と記す。",
+      "first_checked_at": "2026-10-04T14:59:35+09:00",
+      "last_checked_at": "2026-10-04T14:59:35+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
+
