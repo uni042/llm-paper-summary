@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0600-scheduled-chat-00/r01",
+  "reference_main_sha": "b66d84db30fc8cca0a92dea6f591149259b741e8",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.09588",
+      "identity_tokens": [
+        "arXiv:1903.09588"
+      ],
+      "title": "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence",
+      "reason": "BERTをaspect-based sentiment analysisへ適用し、aspectから補助文を構成してsentence-pair classificationとしてfine-tuneするNLPタスク研究。SentiHood/SemEval-2014の精度向上が主目的で、LLM推論ランタイム・メモリ・サービング最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1903.09588",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02561",
+      "identity_tokens": [
+        "arXiv:2306.02561"
+      ],
+      "title": "LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion",
+      "reason": "複数LLMの候補出力をPairRankerで順位付けし、GenFuserで融合して生成品質を改善するアンサンブル研究。複数モデル実行の品質活用が主目的で、推論コスト・レイテンシ・サービング効率の削減方式ではない。",
+      "source_url": "https://arxiv.org/abs/2306.02561",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.11698",
+      "identity_tokens": [
+        "arXiv:2306.11698"
+      ],
+      "title": "DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models",
+      "reason": "GPT-4/GPT-3.5をtoxicity、bias、adversarial robustness、privacy、ethics、fairness等で包括評価するtrustworthiness benchmark研究。推論runtimeやservingの性能最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2306.11698",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2109.05093",
+      "identity_tokens": [
+        "arXiv:2109.05093"
+      ],
+      "title": "PICARD: Parsing Incrementally for Constrained Auto-Regressive Decoding from Language Models",
+      "reason": "自己回帰言語モデルの各復号stepでincremental parserにより不許可tokenを拒否し、SQL等の形式言語制約を保証する推論時decoding方式。推論経路へ直接介入するが、主目的・評価はtext-to-SQLの正しさで速度・メモリ効率化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2109.05093",
+      "body_check": "full_text_checked: 一次資料本文・公式論文ページで問題設定、方式、評価、最終適用先を確認。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.14403",
+      "identity_tokens": [
+        "arXiv:2403.14403"
+      ],
+      "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+      "reason": "query complexity classifierでno-retrieval、single-step、iterative retrievalを動的選択し、単純queryへの不要な計算overheadを避けるRAG実行制御。推論効率も明示的目標だが主評価はQA accuracyとの両立で、基盤serving/runtime最適化より上位のRAG policyであるためborderline。",
+      "source_url": "https://arxiv.org/abs/2403.14403",
+      "body_check": "full_text_checked: 一次資料本文・公式論文ページで問題設定、方式、評価、最終適用先を確認。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.03726",
+      "identity_tokens": [
+        "arXiv:2305.03726"
+      ],
+      "title": "Otter: A Multi-Modal Model With In-Context Instruction Tuning",
+      "reason": "MIMIC-ITでOpenFlamingo系マルチモーダルモデルをinstruction tuningし、in-context instruction following能力を改善する学習研究。実装のtraining resource削減やHuggingFace統合はあるが、LLM推論runtime最適化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2305.03726",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3578938",
+      "identity_tokens": [
+        "DOI:10.1145/3578938"
+      ],
+      "title": "Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better",
+      "reason": "modeling・infrastructure・hardwareを含むdeep learning効率化全般のsurveyで、training/deploymentの広い領域を整理する。LLM推論system固有の新方式を提案・評価する論文ではない。",
+      "source_url": "https://arxiv.org/abs/2106.08962",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.12180",
+      "identity_tokens": [
+        "arXiv:1912.12180"
+      ],
+      "title": "Axial Attention in Multidimensional Transformers",
+      "reason": "高次元tensor向けaxial attentionで画像・動画のautoregressive modelingを省メモリ・半並列化する研究だが、最終評価はImageNet画像生成とBAIR videoでありLLM推論systemを対象としない。",
+      "source_url": "https://arxiv.org/abs/1912.12180",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.08052",
+      "identity_tokens": [
+        "arXiv:1707.08052"
+      ],
+      "title": "Challenges in Data-to-Document Generation",
+      "reason": "data-to-document generation用の大規模corpus、extractive evaluation、neural generation baselineを提示するNLG dataset/evaluation研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1707.08052",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2306.11644",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.11644"
+      ],
+      "title": "Textbooks Are All You Need",
+      "reason": "高品質なsynthetic textbook/code dataで小型code language modelを学習し能力を高めるデータ・training研究。小型モデルの効率性は結果としてあるが、推論systemの速度・メモリ・serving最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2306.11644",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から最終適用先がサーベイ対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T06:12:00+09:00",
+      "last_checked_at": "2026-10-05T06:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 52
+    }
+  ]
+}
