@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1630-codex-local-r14",
+  "reference_main_sha": "8aa06282382aa6c050ad18fcc6bdcbd23337e321",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "DOI:10.1016/j.comnet.2026.112609"
+      ],
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+      "reason": "題名と出版社の一次資料ページのIntroductionは、LLMを複数のGPUサーバ上の推論チェーンへ分割配置し、KV-cacheを含む資源制約下で同時実行可能数と通信費を合わせて扱う研究と示しており、LLM inference serving / deployment の対象範囲に強く関係する。一方、本文の手法・評価節および論文自身の限界を確認できていないため、適合を確定せずborderlineとする。",
+      "source_url": "https://doi.org/10.1016/j.comnet.2026.112609",
+      "body_check": "DOIはScienceDirect出版社一次資料ページに解決し、タイトル、Computer Networks 288 (2026), article 112609、著者と一致することを確認。ScienceDirectの一次資料ページからIntroduction本文（問題設定と§1末尾の論文構成説明）を読んだ。Introductionでは、異種DCN上のLLMを順序付きサブモジュールのinference chain (InFC) に分割し、GPUサーバへ配置する問題を定義し、配置によるSCC/収益の増加と長い推論経路/通信費の増加のトレードオフを説明している。§3 system model、§4 MSDG algorithm、§5 evaluation、および§6 conclusion本文の取得を試みたが、出版社ページを開く操作はHTTP 403となり、検索結果で取得できるのはIntroduction等に限られた。したがってシミュレーション条件・比較数値・論文の限界は本文から確認できておらず、abstract/highlightsの主張は採否の根拠として使用しない。出版社ページ: https://www.sciencedirect.com/science/article/pii/S1389128626006213",
+      "first_checked_at": "2026-10-04T14:51:04+09:00",
+      "last_checked_at": "2026-10-04T14:51:46+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134297"
+      ],
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+      "reason": "Relevant to LLM inference: beyond parameter-efficient prompt tuning during adaptation, DDPT changes test-time execution by routing each query to a specialized soft prompt using similarity and using a soft-prompt verifier with majority voting to filter generated reasoning paths. The paper reports an average accuracy gain of 8.39% over 100-token prompt tuning at comparable parameter count and performance above LoRA with fewer parameters; it does not establish inference latency or throughput gains, so acceptance is for inference reasoning behavior rather than serving-speed improvement.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134297",
+      "body_check": "Primary ScienceDirect article text for Neurocomputing 698 (2026), article 134297, was checked beyond its abstract: Introduction describes soft-prompt underfitting and the cost/ineffectiveness of simply lengthening prompts; the method description specifies distillation from few-shot hard-prompt demonstrations into multiple shorter specialized soft prompts, similarity-based pre-inference routing, and post-inference soft-prompt verification with majority voting; Implementation details names LLaMA-2-13B, LLaMA-3-8B, Mistral-v0.2-7B, and Qwen-2.5-7B; reported result is +8.39% average accuracy versus a 100-token PT baseline at comparable trainable parameters and outperforming LoRA with fewer parameters. The paper's Dependency on data section states effectiveness may degrade when LLM-generated training data is poor, including low baseline accuracy or weak generalization in a 1-shot setting. ScienceDirect indexed the article body and these sections, while direct page open returned 403; no latency/throughput result was verified. The local repository clone is at 25364b003e69f031153a4f0b22c030c30034ea86 rather than the brief's pinned 8aa06282382aa6c050ad18fcc6bdcbd23337e321; therefore no canonical duplicate/nonexistence claim is made here and current-main precheck remains necessary.",
+      "first_checked_at": "2026-10-04T14:50:41+09:00",
+      "last_checked_at": "2026-10-04T14:50:41+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
+
