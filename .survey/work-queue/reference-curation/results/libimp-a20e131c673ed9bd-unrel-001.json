@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a20e131c673ed9bd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.07191",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.07191",
+    "identity_tokens": [
+      "arXiv:2103.07191"
+    ],
+    "reason": "初等math word problem solverのshortcut/heuristic依存を検証し、challenge dataset SVAMPを導入する能力評価・dataset研究で、LLM推論runtimeやserving効率化を対象としない。",
+    "first_checked_at": "2026-10-04T13:00:43+00:00",
+    "last_checked_at": "2026-10-04T13:00:43+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "title": "Are NLP Models really able to Solve Simple Math Word Problems?"
+  },
+  "processed_at": "2026-10-04T13:00:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a20e131c673e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

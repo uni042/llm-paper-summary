@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T12:58:18+00:00",
-  "record_count": 424,
+  "updated_at": "2026-10-04T13:00:43+00:00",
+  "record_count": 425,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6135,6 +6135,19 @@
         "worker-worklist-30 discovery_review tail-to-head"
       ],
       "title": "Sequence-Level Knowledge Distillation"
+    },
+    "arXiv:2308.06767": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.06767",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2024.3447085",
+        "arXiv:2308.06767"
+      ],
+      "reason": "DNN pruning全般の包括的surveyだが、LLM pruningとinference accelerationを明示的に扱い、推論圧縮サーベイの背景・分類には関連する。一方でLLM推論システム専用surveyではないためborderline。",
+      "first_checked_at": "2026-10-04T13:00:43+00:00",
+      "last_checked_at": "2026-10-04T13:00:43+00:00",
+      "linked_from": [],
+      "title": "A Survey on Deep Neural Network Pruning: Taxonomy, Comparison, Analysis, and Recommendations"
     }
   }
 }

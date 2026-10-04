@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cb8e62caed2f3f04-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.06767",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.06767",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2024.3447085",
+      "arXiv:2308.06767"
+    ],
+    "reason": "DNN pruning全般の包括的surveyだが、LLM pruningとinference accelerationを明示的に扱い、推論圧縮サーベイの背景・分類には関連する。一方でLLM推論システム専用surveyではないためborderline。",
+    "first_checked_at": "2026-10-04T13:00:43+00:00",
+    "last_checked_at": "2026-10-04T13:00:43+00:00",
+    "linked_from": [],
+    "title": "A Survey on Deep Neural Network Pruning: Taxonomy, Comparison, Analysis, and Recommendations"
+  },
+  "processed_at": "2026-10-04T13:00:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cb8e62caed2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
