@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2e834467f52e24d3-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
+  "reason": "画像セグメンテーション用のpromptable modelとSA-1Bデータセットが主題で、LLM推論・サービング・KVキャッシュ・MoE推論最適化を扱わない。",
+  "title": "Segment Anything",
+  "identity_tokens": [
+    "DOI:10.1109/iccv51070.2023.00371",
+    "arXiv:2304.02643"
+  ],
+  "linked_from": [
+    "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e834467f52e",
+  "source_precheck_request_id": null
+}
