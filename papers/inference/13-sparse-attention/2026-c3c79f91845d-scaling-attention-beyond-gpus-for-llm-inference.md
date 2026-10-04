@@ -1,22 +1,95 @@
 ---
-canonical_id: "DOI:10.1145/3806645.3807596"
-title: "Scaling Attention Beyond GPUs for LLM Inference"
-summary: "Beyondは、長文脈LLMのKVキャッシュがGPU HBMを超えるとPCIe再転送が律速になる問題に対し、最近のKVはGPUで密注意、重要な古いKVはCPU DRAM上でhead別疎注意として並列処理し、log-sum-expで結果を融合するCPU–GPU協調attention runtimeである。"
-list_summary: "GPU上のrecent KVとCPU上のsalient KVを並列注意機構し、PCIe転送を抑えて長文脈LLMをGPU容量外へ拡張する。"
-authors: ["Weishu Deng","Yujie Yang","Peiran Du","Lingfeng Xiang","Zhen Lin","Chen Zhong","Faraz Ahmed","Lianjie Cao","Puneet Sharma","Song Jiang","Hui Lu","Jia Rao"]
-published: "2026-07"
-publication: "35th ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC 2026)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://doi.org/10.1145/3806645.3807596"
-sources: ["https://doi.org/10.1145/3806645.3807596"]
-implementation: "commodity GPUとCPU DRAMを使うdrop-in runtimeとして、KV offloadとCPU–GPU hybrid attentionを実装し、複数モデル・長文脈workloadで評価。今回確認した一次・著者資料から公式コードURLは特定できなかった。"
+canonical_id: DOI:10.1145/3806645.3807596
+title: Scaling Attention Beyond GPUs for LLM Inference
+summary: Beyondは、長文脈LLMのKVキャッシュがGPU HBMを超えるとPCIe再転送が律速になる問題に対し、最近のKVはGPUで密注意、重要な古いKVはCPU DRAM上でhead別疎注意として並列処理し、log-sum-expで結果を融合するCPU–GPU協調attention runtimeである。
+list_summary: GPU上のrecent KVとCPU上のsalient KVを並列注意機構し、PCIe転送を抑えて長文脈LLMをGPU容量外へ拡張する。
+authors:
+- Weishu Deng
+- Yujie Yang
+- Peiran Du
+- Lingfeng Xiang
+- Zhen Lin
+- Chen Zhong
+- Faraz Ahmed
+- Lianjie Cao
+- Puneet Sharma
+- Song Jiang
+- Hui Lu
+- Jia Rao
+published: 2026-07
+publication: 35th ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC 2026)
+publication_type: conference
+publication_status: published
+source: https://doi.org/10.1145/3806645.3807596
+sources:
+- https://doi.org/10.1145/3806645.3807596
+implementation: commodity GPUとCPU DRAMを使うdrop-in runtimeとして、KV offloadとCPU–GPU hybrid attentionを実装し、複数モデル・長文脈workloadで評価。今回確認した一次・著者資料から公式コードURLは特定できなかった。
 code: null
-last_checked: "2026-10-04"
-worker_completed_at: "2026-10-04T07:10:00+09:00"
-worker_run_key: "20261004-0700-scheduled-chat-00/r01"
+last_checked: '2026-10-04'
+worker_completed_at: '2026-10-04T07:10:00+09:00'
+worker_run_key: 20261004-0700-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2204.06745
+  arxiv_id: '2204.06745'
+  doi: 10.18653/v1/2022.bigscience-1.9
+- canonical_id: arXiv:2406.16937
+  arxiv_id: '2406.16937'
+- canonical_id: arXiv:2205.14135
+  doi: 10.52202/068431-1189
+- canonical_id: DOI:10.52202/075280-3100
+  doi: 10.52202/075280-3100
+- canonical_id: arXiv:2001.04451
+  arxiv_id: '2001.04451'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2406.19707
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2502.02770
+  arxiv_id: '2502.02770'
+- canonical_id: arXiv:2502.13189
+  arxiv_id: '2502.13189'
+- canonical_id: arXiv:2409.04992
+  arxiv_id: '2409.04992'
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.748
+  doi: 10.18653/v1/2020.emnlp-main.748
+- canonical_id: arXiv:2308.12950
+  arxiv_id: '2308.12950'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2406.10774
+  arxiv_id: '2406.10774'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.52202/068431-1800
+  doi: 10.52202/068431-1800
+- canonical_id: arXiv:1910.03771
+  arxiv_id: '1910.03771'
+- canonical_id: DOI:10.1109/icde60146.2024.00378
+  doi: 10.1109/icde60146.2024.00378
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2503.16428
+  arxiv_id: '2503.16428'
+- canonical_id: DOI:10.1145/3549937
+  doi: 10.1145/3549937
+- canonical_id: arXiv:2502.11089
+  arxiv_id: '2502.11089'
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2306.14048
+  doi: 10.52202/075280-1506
+- canonical_id: arXiv:2504.05897
+  arxiv_id: '2504.05897'
+  doi: 10.1109/dac63849.2025.11133274
+references_checked_at: '2026-10-04'
+references_source: crossref-deposited-reference-metadata
+references_total: 33
 ---
 # Scaling Attention Beyond GPUs for LLM Inference
 

@@ -1,22 +1,87 @@
 ---
-canonical_id: "DOI:10.1145/3793230.3837769"
-title: "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems"
-summary: "KVLearnはprefill/decode分離環境のKV保持を、再利用確率だけでなく再計算・ネットワーク転送・保存費用を含むオンライン意思決定として扱う。Prefix Reuse Predictor、Cost-Aware Retention Score、Adaptive Threshold Controllerを組み合わせ、TTFTをNo-Cache比最大56%、LRU-Pool比最大38%、Mooncake型比最大33%削減し、KV転送量を最大53%削減する。"
-list_summary: "再利用予測と再計算・転送・保存費用を統合してKV保持を決め、分離サービングのTTFTとKV転送量を削減する。"
-authors: ["Dong Liu","Yanxuan Yu","Eric Jiang","Shu Wang","Ying Nian Wu"]
-published: "2026-09"
-publication: "Proceedings of the 19th ACM International Systems and Storage Conference (SYSTOR 2026)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://doi.org/10.1145/3793230.3837769"
-sources: ["https://doi.org/10.1145/3793230.3837769","https://github.com/FastLM/KVLearn"]
-implementation: "C++の公開実装をglobal KV pool coordinatorへ統合できる形で提供し、text/multimodal workload、A100校正値、200 Gbps級fabric設定を含む分離servingで評価。"
-code: "https://github.com/FastLM/KVLearn"
-last_checked: "2026-10-04"
-worker_completed_at: "2026-10-04T07:12:00+09:00"
-worker_run_key: "20261004-0700-scheduled-chat-00/r01"
+canonical_id: DOI:10.1145/3793230.3837769
+title: 'To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems'
+summary: KVLearnはprefill/decode分離環境のKV保持を、再利用確率だけでなく再計算・ネットワーク転送・保存費用を含むオンライン意思決定として扱う。Prefix Reuse Predictor、Cost-Aware Retention Score、Adaptive Threshold Controllerを組み合わせ、TTFTをNo-Cache比最大56%、LRU-Pool比最大38%、Mooncake型比最大33%削減し、KV転送量を最大53%削減する。
+list_summary: 再利用予測と再計算・転送・保存費用を統合してKV保持を決め、分離サービングのTTFTとKV転送量を削減する。
+authors:
+- Dong Liu
+- Yanxuan Yu
+- Eric Jiang
+- Shu Wang
+- Ying Nian Wu
+published: 2026-09
+publication: Proceedings of the 19th ACM International Systems and Storage Conference (SYSTOR 2026)
+publication_type: conference
+publication_status: published
+source: https://doi.org/10.1145/3793230.3837769
+sources:
+- https://doi.org/10.1145/3793230.3837769
+- https://github.com/FastLM/KVLearn
+implementation: C++の公開実装をglobal KV pool coordinatorへ統合できる形で提供し、text/multimodal workload、A100校正値、200 Gbps級fabric設定を含む分離servingで評価。
+code: https://github.com/FastLM/KVLearn
+last_checked: '2026-10-04'
+worker_completed_at: '2026-10-04T07:12:00+09:00'
+worker_run_key: 20261004-0700-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.12966
+  arxiv_id: '2308.12966'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: DOI:10.52202/068431-1189
+  doi: 10.52202/068431-1189
+- canonical_id: DOI:10.1145/3149371
+  doi: 10.1145/3149371
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2403.05527
+  arxiv_id: '2403.05527'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2312.07533
+  arxiv_id: '2312.07533'
+- canonical_id: arXiv:2509.12211
+  doi: 10.1145/3746027.3758181
+- canonical_id: arXiv:2512.11920
+  doi: 10.1145/3748173.3779188
+- canonical_id: arXiv:2508.06526
+  arxiv_id: '2508.06526'
+- canonical_id: arXiv:2602.13357
+  arxiv_id: '2602.13357'
+- canonical_id: DOI:10.1145/3801487.3801812
+  doi: 10.1145/3801487.3801812
+- canonical_id: arXiv:2604.22901
+  arxiv_id: '2604.22901'
+- canonical_id: arXiv:2505.20353
+  arxiv_id: '2505.20353'
+- canonical_id: DOI:10.52202/075280-1516
+  doi: 10.52202/075280-1516
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: arXiv:2606.19746
+  arxiv_id: '2606.19746'
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2407.00079
+  arxiv_id: '2407.00079'
+- canonical_id: DOI:10.5555/3277332.3277335
+  doi: 10.5555/3277332.3277335
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2405.16444
+  arxiv_id: '2405.16444'
+- canonical_id: arXiv:2512.18194
+  arxiv_id: '2512.18194'
+- canonical_id: DOI:10.1609/aaai.v33i01.33019127
+  doi: 10.1609/aaai.v33i01.33019127
+- canonical_id: arXiv:2306.14048
+  doi: 10.52202/075280-1506
+- canonical_id: DOI:10.52202/079017-2000
+  doi: 10.52202/079017-2000
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-04'
+references_source: crossref-deposited-reference-metadata
+references_total: 34
 ---
 # To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems
 

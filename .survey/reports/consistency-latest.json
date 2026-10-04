@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "post-maintenance-working-tree",
-  "checked_at": "2026-10-04T05:02:57.562395+00:00",
+  "source_commit": "citation-backfill-working-tree",
+  "checked_at": "2026-10-04T05:13:45.312065+00:00",
   "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 16504,
-  "checked_file_count": 16504,
+  "inventory_file_count": 16509,
+  "checked_file_count": 16509,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,12 +25,12 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 2783,
+  "external_url_count": 2904,
   "findings": [
     {
       "code": "invalid_json",
-      "path": ".survey/import-inbox/pending/discovery/codex-local--20261004-1332-codex-local-r01.json",
-      "detail": "Invalid \\escape: line 103 column 519 (char 8477)"
+      "path": ".survey/import-inbox/pending/discovery/codex-local--20261004-1401-codex-local-r03.json",
+      "detail": "Extra data: line 79 column 2 (char 6349)"
     }
   ]
 }

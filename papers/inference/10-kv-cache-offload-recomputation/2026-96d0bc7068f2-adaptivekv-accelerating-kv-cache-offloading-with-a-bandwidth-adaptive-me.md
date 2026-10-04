@@ -1,22 +1,115 @@
 ---
-canonical_id: "DOI:10.1145/3821219"
-title: "AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism"
-summary: "AdaptiveKVはGPU HBMからホストへKVキャッシュを退避する際、DDRとCXLメモリの実効帯域がGPU負荷・NUMA配置・退避規模で変動する問題を扱う。GPU memory conch model、実行時の最適配分率予測器、NUMA node間dynamic interleavingを組み合わせ、固定tieringより帯域を使い切る。既存方式比でLLM inference throughputを最大1.90倍へ改善し、CXL/DDR帯域比8%超が少なくとも5%高速化を得る境界と報告する。"
-list_summary: "DDR/CXLの実効帯域を実行時予測し、KVページの階層・NUMA配分を動的変更してオフロード帯域を最大化する。"
-authors: ["Yibo Tang","Lizhou Wu","Yang Ou","Sunfeng Gao","Yanjing Wang","Zicong Wang","Xingyun Qi","Jiaqing Xu","Fangxu Lv","Liquan Xiao","Mingche Lai"]
-published: "2026-07-10"
-publication: "ACM Transactions on Architecture and Code Optimization"
-publication_type: "journal"
-publication_status: "published"
-source: "https://doi.org/10.1145/3821219"
-sources: ["https://doi.org/10.1145/3821219"]
-implementation: "実CXL/DDR環境のGPU memory bandwidth profilingに基づくallocation predictorとNUMA page interleavingを実装し、さらに性能可変なFPGA CXL memory emulatorで適用境界を評価。一次資料から公式コードURLは確認できなかった。"
+canonical_id: DOI:10.1145/3821219
+title: 'AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism'
+summary: AdaptiveKVはGPU HBMからホストへKVキャッシュを退避する際、DDRとCXLメモリの実効帯域がGPU負荷・NUMA配置・退避規模で変動する問題を扱う。GPU memory conch model、実行時の最適配分率予測器、NUMA node間dynamic interleavingを組み合わせ、固定tieringより帯域を使い切る。既存方式比でLLM inference throughputを最大1.90倍へ改善し、CXL/DDR帯域比8%超が少なくとも5%高速化を得る境界と報告する。
+list_summary: DDR/CXLの実効帯域を実行時予測し、KVページの階層・NUMA配分を動的変更してオフロード帯域を最大化する。
+authors:
+- Yibo Tang
+- Lizhou Wu
+- Yang Ou
+- Sunfeng Gao
+- Yanjing Wang
+- Zicong Wang
+- Xingyun Qi
+- Jiaqing Xu
+- Fangxu Lv
+- Liquan Xiao
+- Mingche Lai
+published: '2026-07-10'
+publication: ACM Transactions on Architecture and Code Optimization
+publication_type: journal
+publication_status: published
+source: https://doi.org/10.1145/3821219
+sources:
+- https://doi.org/10.1145/3821219
+implementation: 実CXL/DDR環境のGPU memory bandwidth profilingに基づくallocation predictorとNUMA page interleavingを実装し、さらに性能可変なFPGA CXL memory emulatorで適用境界を評価。一次資料から公式コードURLは確認できなかった。
 code: null
-last_checked: "2026-10-04"
-worker_completed_at: "2026-10-04T08:43:00+09:00"
-worker_run_key: "20261004-0800-scheduled-chat-00/r01"
+last_checked: '2026-10-04'
+worker_completed_at: '2026-10-04T08:43:00+09:00'
+worker_run_key: 20261004-0800-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1023/a:1010933404324
+  doi: 10.1023/a:1010933404324
+- canonical_id: DOI:10.1109/tevc.2010.2059031
+  doi: 10.1109/tevc.2010.2059031
+- canonical_id: DOI:10.1109/micro61859.2024.00020
+  doi: 10.1109/micro61859.2024.00020
+- canonical_id: DOI:10.5555/3691992.3691999
+  doi: 10.5555/3691992.3691999
+- canonical_id: arXiv:2502.07578
+  doi: 10.1145/3676641.3716267
+- canonical_id: arXiv:2403.11421
+  arxiv_id: '2403.11421'
+- canonical_id: DOI:10.1109/isca45697.2020.00083
+  doi: 10.1109/isca45697.2020.00083
+- canonical_id: OpenReview:rqn2v1Ltgn0.
+  openreview_id: rqn2v1Ltgn0.
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: DOI:10.1145/3695053.3731092
+  doi: 10.1145/3695053.3731092
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/mm.2024.3358861
+  doi: 10.1109/mm.2024.3358861
+- canonical_id: arXiv:2406.19707
+- canonical_id: DOI:10.1109/isca59077.2024.00036
+  doi: 10.1109/isca59077.2024.00036
+- canonical_id: DOI:10.1145/3676641.3715987
+  doi: 10.1145/3676641.3715987
+- canonical_id: arXiv:2409.14317
+  arxiv_id: '2409.14317'
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: DOI:10.1145/3582016.3582063
+  doi: 10.1145/3582016.3582063
+- canonical_id: arXiv:2409.04992
+  arxiv_id: '2409.04992'
+- canonical_id: DOI:10.1109/hpca57654.2024.00078
+  doi: 10.1109/hpca57654.2024.00078
+- canonical_id: arXiv:2405.04437
+  doi: 10.1145/3669940.3707256
+- canonical_id: arXiv:2407.00079
+- canonical_id: DOI:10.1145/3458817.3476205
+  doi: 10.1145/3458817.3476205
+- canonical_id: arXiv:2303.06865
+- canonical_id: DOI:10.1145/3613424.3614256
+  doi: 10.1145/3613424.3614256
+- canonical_id: arXiv:2406.10774
+  arxiv_id: '2406.10774'
+- canonical_id: DOI:10.1145/3627703.3650061
+  doi: 10.1145/3627703.3650061
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2405.14209
+  arxiv_id: '2405.14209'
+- canonical_id: DOI:10.1145/3695794.3695809
+  doi: 10.1145/3695794.3695809
+- canonical_id: arXiv:2509.03377
+  arxiv_id: '2509.03377'
+- canonical_id: DOI:10.1109/sc41406.2024.00100
+  doi: 10.1109/sc41406.2024.00100
+- canonical_id: arXiv:2511.20172
+  arxiv_id: '2511.20172'
+- canonical_id: DOI:10.5555/3691992.3692026
+  doi: 10.5555/3691992.3692026
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.1109/micro61859.2024.00111
+  doi: 10.1109/micro61859.2024.00111
+references_checked_at: '2026-10-04'
+references_source: crossref-deposited-reference-metadata
+references_total: 61
 ---
 # AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism
 
