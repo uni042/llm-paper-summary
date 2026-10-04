@@ -1,0 +1,321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-20a711099f640c83-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-20a711099f64",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.39816",
+    "arXiv:2609.40146",
+    "arXiv:2610.00367"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d45d334278dc450eb3f7b1798c19a2d2cdcd0d11",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T06:04:42.239318+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.39816",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.40146",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "source_url": "https://arxiv.org/abs/2609.39816",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fast matrix multiplication saves multiplications through exact cancellation, but rounding sums that mix token rows can leave contributions from later tokens in earlier language model outputs. This threatens prefix invariance, which multiple-choice likelihood scoring relies on: a scored likelihood must depend only on its allowed prefix. On Qwen2.5-14B-Instruct, two fast FP8 realizations repaired to ordinary-looking accuracy still change the answers chosen by likelihood on 5.83% and 10.00% of 240 OpenBookQA items when only the text after the allowed prefix is replaced with the bf16 model's own greedy continuation. Both row-local controls, the bf16 model and a deployed FP8 matrix multiplication kernel, change none. Accuracy thus does not certify prefix invariance, and the stability criteria we analyze cannot tell realizations apart: across all 512 sign variants of two-level Strassen they stay constant while teacher-forced perplexities span a 772.4$\\times$ range on the same model. We therefore construct certified realizations of two-level Strassen on bounded integer codes that quantize token rows independently, then mix and cancel exactly before rescaling, using 49 block multiplications instead of 64. Our certificate guarantees bitwise equality to a prescribed row-local classical int8 operator at the same quantization specification, so every certified realization inherits its prefix invariance. Certification thus turns realization choice into a pure cost decision: which certified realization runs can no longer change a single scored likelihood.",
+      "identifiers": [
+        "SemanticScholar:ae151e56e17ee86f93f90b81c209cbe434254584"
+      ],
+      "semantic_scholar_id": "ae151e56e17ee86f93f90b81c209cbe434254584",
+      "canonical_id": "arXiv:2609.39816",
+      "arxiv_id": "2609.39816",
+      "authors": [
+        "Shu-Xiao Xie",
+        "Shu-Yang Xie",
+        "Yuan Cao",
+        "De-Zhi Ran",
+        "Wei Yang",
+        "Tao Xie"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+      "source_url": "https://arxiv.org/abs/2609.40146",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLMs grow in size, compression becomes increasingly important for efficient deployment. SVD-based low-rank compression reduces parameter counts but can degrade downstream performance. To improve performance after compression, we introduce QuLoC, a photonic quantum-assisted LLM compression algorithm that uses quantum circuit outputs to gate the retained low-rank components during training. Model performance is recovered through local functional reconstruction followed by end-to-end knowledge distillation. After training, the gating coefficients are absorbed into the low-rank factors, allowing the compressed model to run on classical hardware without executing quantum circuits during inference. Experiments on Qwen3.5-4B show that QuLoC achieves a 9.73\\% relative improvement in average accuracy over state-of-the-art baselines across multiple downstream tasks, demonstrating its effectiveness. We further evaluate QuLoC on LLaMA-7B at different parameter compression ratios. It consistently achieves higher average downstream accuracy than state-of-the-art baselines, supporting its applicability to a larger model across different compression settings. Notably, experiments using the photonic quantum hardware retain these benefits with a small accuracy loss relative to simulation, suggesting robustness to hardware noise. These results motivate further exploration of photonic quantum-assisted compression for larger models and more complex agentic tasks.",
+      "identifiers": [
+        "SemanticScholar:5216d877ceee536a115031c78b8e872e1efd3d4b"
+      ],
+      "semantic_scholar_id": "5216d877ceee536a115031c78b8e872e1efd3d4b",
+      "canonical_id": "arXiv:2609.40146",
+      "arxiv_id": "2609.40146",
+      "authors": [
+        "Xiao-Hui Ni",
+        "Yu-Hang Yao",
+        "Yu-Ze Zhu",
+        "Hang Song",
+        "Xiang Zhao",
+        "Lin Yang",
+        "Xian-Min Jin"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+      "source_url": "https://arxiv.org/abs/2610.00367",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models enable parameter scaling with limited per-token computation by activating only a small subset of experts for each token, but deploying them still requires loading the complete expert pool into memory. Structured expert pruning can effectively reduce the memory usage by removing experts. However, existing pruning methods either use expert ranking criteria that are not well aligned with model performance or rely on effective expert subset searching that is computationally expensive. Moreover, these methods typically overlook the routing-behavior redundancy among the retained experts. In this paper, we propose MoE Pruning via Router Bias Learning and Expert Approximation (MoRA), a framework for structured MoE expert pruning. We introduce a learnable router bias for each expert and optimize these biases by minimizing the language-modeling loss and a routing-diversity regularizer. The learned router biases sharpen the routing probability distributions to identify experts critical to model performance while encouraging the selection of experts with diverse routing preferences. In addition, we introduce an expert approximation mechanism as a post-pruning enhancement. It leverages the remaining experts to approximate the outputs of pruned experts by affine transformation, further improving the performance of the pruned model. We evaluate MoRA on Qwen3-30B-A3B, DeepSeek-V2-Lite, and Moonlight-16B-A3B, removing 25\\% and 50\\% of the routed experts in each MoE layer. Extensive experiments on nine zero-shot benchmarks show that MoRA outperforms state-of-the-art pruning algorithms. Our code will be released.",
+      "identifiers": [
+        "SemanticScholar:88134f018fc62391f1d99155790593619d7161c1"
+      ],
+      "semantic_scholar_id": "88134f018fc62391f1d99155790593619d7161c1",
+      "canonical_id": "arXiv:2610.00367",
+      "arxiv_id": "2610.00367",
+      "authors": [
+        "Yu-Shuai Sun",
+        "Zi-Kun Zhou",
+        "Lin Gao",
+        "Jun Yu",
+        "Wen-Jie Pei"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.39816",
+      "identity_tokens": [
+        "id:SemanticScholar:ae151e56e17ee86f93f90b81c209cbe434254584",
+        "id:arXiv:2609.39816",
+        "title:beyond accuracy prefixinvariant realizations of lowprecision fast matrix multiplication",
+        "url:https://arxiv.org/abs/2609.39816"
+      ],
+      "record": {
+        "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+        "source_url": "https://arxiv.org/abs/2609.39816",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fast matrix multiplication saves multiplications through exact cancellation, but rounding sums that mix token rows can leave contributions from later tokens in earlier language model outputs. This threatens prefix invariance, which multiple-choice likelihood scoring relies on: a scored likelihood must depend only on its allowed prefix. On Qwen2.5-14B-Instruct, two fast FP8 realizations repaired to ordinary-looking accuracy still change the answers chosen by likelihood on 5.83% and 10.00% of 240 OpenBookQA items when only the text after the allowed prefix is replaced with the bf16 model's own greedy continuation. Both row-local controls, the bf16 model and a deployed FP8 matrix multiplication kernel, change none. Accuracy thus does not certify prefix invariance, and the stability criteria we analyze cannot tell realizations apart: across all 512 sign variants of two-level Strassen they stay constant while teacher-forced perplexities span a 772.4$\\times$ range on the same model. We therefore construct certified realizations of two-level Strassen on bounded integer codes that quantize token rows independently, then mix and cancel exactly before rescaling, using 49 block multiplications instead of 64. Our certificate guarantees bitwise equality to a prescribed row-local classical int8 operator at the same quantization specification, so every certified realization inherits its prefix invariance. Certification thus turns realization choice into a pure cost decision: which certified realization runs can no longer change a single scored likelihood.",
+        "identifiers": [
+          "SemanticScholar:ae151e56e17ee86f93f90b81c209cbe434254584"
+        ],
+        "semantic_scholar_id": "ae151e56e17ee86f93f90b81c209cbe434254584",
+        "canonical_id": "arXiv:2609.39816",
+        "arxiv_id": "2609.39816",
+        "authors": [
+          "Shu-Xiao Xie",
+          "Shu-Yang Xie",
+          "Yuan Cao",
+          "De-Zhi Ran",
+          "Wei Yang",
+          "Tao Xie"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40146",
+      "identity_tokens": [
+        "id:SemanticScholar:5216d877ceee536a115031c78b8e872e1efd3d4b",
+        "id:arXiv:2609.40146",
+        "title:quloc photonic quantumassisted lowrank llm compression",
+        "url:https://arxiv.org/abs/2609.40146"
+      ],
+      "record": {
+        "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+        "source_url": "https://arxiv.org/abs/2609.40146",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLMs grow in size, compression becomes increasingly important for efficient deployment. SVD-based low-rank compression reduces parameter counts but can degrade downstream performance. To improve performance after compression, we introduce QuLoC, a photonic quantum-assisted LLM compression algorithm that uses quantum circuit outputs to gate the retained low-rank components during training. Model performance is recovered through local functional reconstruction followed by end-to-end knowledge distillation. After training, the gating coefficients are absorbed into the low-rank factors, allowing the compressed model to run on classical hardware without executing quantum circuits during inference. Experiments on Qwen3.5-4B show that QuLoC achieves a 9.73\\% relative improvement in average accuracy over state-of-the-art baselines across multiple downstream tasks, demonstrating its effectiveness. We further evaluate QuLoC on LLaMA-7B at different parameter compression ratios. It consistently achieves higher average downstream accuracy than state-of-the-art baselines, supporting its applicability to a larger model across different compression settings. Notably, experiments using the photonic quantum hardware retain these benefits with a small accuracy loss relative to simulation, suggesting robustness to hardware noise. These results motivate further exploration of photonic quantum-assisted compression for larger models and more complex agentic tasks.",
+        "identifiers": [
+          "SemanticScholar:5216d877ceee536a115031c78b8e872e1efd3d4b"
+        ],
+        "semantic_scholar_id": "5216d877ceee536a115031c78b8e872e1efd3d4b",
+        "canonical_id": "arXiv:2609.40146",
+        "arxiv_id": "2609.40146",
+        "authors": [
+          "Xiao-Hui Ni",
+          "Yu-Hang Yao",
+          "Yu-Ze Zhu",
+          "Hang Song",
+          "Xiang Zhao",
+          "Lin Yang",
+          "Xian-Min Jin"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00367",
+      "identity_tokens": [
+        "id:SemanticScholar:88134f018fc62391f1d99155790593619d7161c1",
+        "id:arXiv:2610.00367",
+        "title:mora moe pruning via router bias learning and expert approximation",
+        "url:https://arxiv.org/abs/2610.00367"
+      ],
+      "record": {
+        "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+        "source_url": "https://arxiv.org/abs/2610.00367",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models enable parameter scaling with limited per-token computation by activating only a small subset of experts for each token, but deploying them still requires loading the complete expert pool into memory. Structured expert pruning can effectively reduce the memory usage by removing experts. However, existing pruning methods either use expert ranking criteria that are not well aligned with model performance or rely on effective expert subset searching that is computationally expensive. Moreover, these methods typically overlook the routing-behavior redundancy among the retained experts. In this paper, we propose MoE Pruning via Router Bias Learning and Expert Approximation (MoRA), a framework for structured MoE expert pruning. We introduce a learnable router bias for each expert and optimize these biases by minimizing the language-modeling loss and a routing-diversity regularizer. The learned router biases sharpen the routing probability distributions to identify experts critical to model performance while encouraging the selection of experts with diverse routing preferences. In addition, we introduce an expert approximation mechanism as a post-pruning enhancement. It leverages the remaining experts to approximate the outputs of pruned experts by affine transformation, further improving the performance of the pruned model. We evaluate MoRA on Qwen3-30B-A3B, DeepSeek-V2-Lite, and Moonlight-16B-A3B, removing 25\\% and 50\\% of the routed experts in each MoE layer. Extensive experiments on nine zero-shot benchmarks show that MoRA outperforms state-of-the-art pruning algorithms. Our code will be released.",
+        "identifiers": [
+          "SemanticScholar:88134f018fc62391f1d99155790593619d7161c1"
+        ],
+        "semantic_scholar_id": "88134f018fc62391f1d99155790593619d7161c1",
+        "canonical_id": "arXiv:2610.00367",
+        "arxiv_id": "2610.00367",
+        "authors": [
+          "Yu-Shuai Sun",
+          "Zi-Kun Zhou",
+          "Lin Gao",
+          "Jun Yu",
+          "Wen-Jie Pei"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7e6d85b2a38c6ca77dcf2b59ec3ce62f3a123957f59df32e3802f79c2387598a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
