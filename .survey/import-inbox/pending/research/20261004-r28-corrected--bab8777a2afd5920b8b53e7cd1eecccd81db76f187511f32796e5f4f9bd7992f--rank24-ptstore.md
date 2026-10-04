@@ -1,0 +1,179 @@
+---
+canonical_id: arXiv:2607.22648
+arxiv_id: '2607.22648'
+doi: 10.48550/arXiv.2607.22648
+openreview_id: null
+arxiv_categories:
+  primary: cs.AI
+  cross_list:
+    - cs.DC
+title: 'PTStore (Prefix Tensor Store): Distributed Prefix Caching and Replication for High Throughput Inference Serving'
+summary: >-
+  PTStoreは、複数ノードにまたがるLLMの共有prefix KV cacheを、prefixの差分を構成するtensor単位で保存し、頻出prefixをノード内へ複製する分散ストアである。prefixの最長共通部分を見つけて差分を所有サーバーへ保存し、フラットなtensor IDメタデータでロード先をまとめて特定する。vLLM 0.6とMistral-7B-Instruct-v2をALCF Polaris上で評価し、WikiQAを使う8–32 GPUのweak-scaling実験とSQuADを使う1k–8k token系列長実験を報告する。著者は長文passage QAで既存baselineより5–6倍効率的と要約し、sequence-length実験では8k token時にvLLM prefix cacheよりほぼ2倍速く、EvoStoreより20%速いと述べる。短いprefixではPTStoreの遠隔I/Oが局所再計算を上回る場合があり、長文extractive QA以外への一般化は未検証である。
+list_summary: >-
+  共通の接頭辞から生じる注意機構のキー・値を差分保存し、頻出部分を複製して複数計算ノードで共有する推論用データストアを提案する。Polaris上で行ったMistral-7Bの抽出型質問応答評価では、長文条件で既存方式より5〜6倍効率的と著者は要約する。8千トークン時の応答時間は、既存の接頭辞保存方式より約半分、EvoStoreより20%短いと報告する。
+authors:
+  - Meghana Maghyastha
+  - Robert Underwood
+  - Randal Burns
+  - Bogdan Nicolae
+authors_affiliations: 'Meghana MaghyasthaとRandal BurnsはJohns Hopkins University、Robert UnderwoodとBogdan NicolaeはArgonne National Laboratory。'
+published: '2026-06-25'
+publication: 'Euro-Par 2026: 32nd International European Conference on Parallel and Distributed Computing'
+publication_type: 会議論文
+publication_status: 'arXivは2026-06-25公開のv1を示し、Journal referenceとしてEuro-Par 2026を掲載する。確認した一次資料はv1であり、これ以降の改訂版は確認していない。'
+lineage: 'vLLMのGPU内prefix cacheやLMCacheのノード内host-memory拡張を越えて、prefix KVを複数compute nodeのmemory tierに分散し、EvoStore型tensor storeに人気prefixの複製を組み合わせる。'
+topics:
+  - 分散LLM推論serving
+  - prefix KV cache
+  - tensor store
+  - RDMA
+  - cache replication and eviction
+importance: 'ノード間のKV cache共有に伴う複数ownerへの遠隔読み出しを、prefix metadataの一括照会、bulk RDMA、人気差分の局所複製で抑える設計を評価する。'
+hardware_evaluation: 'ALCF Polaris: 各nodeにAMD Zen 3 32-core CPU、512 GB DDR4、1.6 TB SSD 2台、A100 GPU 4基（合計160 GB HBM）。8、16、32 GPU構成で評価。'
+quality_effect: '出力品質の包括的な比較評価は報告対象ではない。ワークロードは答えの位置を返すextractive QAで、指標は平均TTFT。'
+bottlenecks:
+  - 'GPUローカルにprefixがない場合、他nodeからのtensor読み込みがRDMA latencyと通信量を増やす。'
+  - 'owner cacheとreplication cacheは同じhost memory/SSDを共有し、複製を増やすとcold tensorをremote/slow tierから読む確率が上がる。'
+  - '短いsequenceでは再計算が安価で、remote prefix再利用の利得を相殺し得る。'
+  - 'replication cache比率はserver host-memory budgetの50%に固定され、詳細な感度分析はfuture work。'
+  - '評価はextractive QAとMistral-7B-Instruct-v2、単一のHPC testbed中心であり、multi-turn/chat、code completion、より大きなmodel、LMCache/Mooncakeとの直接比較は今後の課題。'
+evidence_locations:
+  primary_source: https://arxiv.org/html/2607.22648
+  sections:
+    - '§1 Introduction: prefix KV再利用とsingle-node cacheの限界、貢献'
+    - '§2 Background: prefill/decodeとprefix共有'
+    - '§3 Related Work: vLLM、LMCache、EvoStore、Mooncake、SGLang等との位置づけ'
+    - '§4 PTStore: incremental prefix storage、flat tensor-ID metadata、複製、階層cache、eviction、RDMA'
+    - '§5 Implementation: C++/Thallium/Mochi、nanobind Python binding、vLLM 0.6統合'
+    - '§6 Experimental evaluation: setup、比較方式、WikiQA weak scalability、SQuAD sequence-length scalability'
+    - '§7 Conclusions: 結果、限界、今後のworkload・ablation・runtime評価'
+  tables: []
+  figures:
+    - 'Figure 1: LLM inferenceにおける共有KV cacheの概念図'
+    - 'Figure 2: node-local serverとGPU client、host memory/SSDからなる分散構成図'
+    - 'Figure 3: WikiQA weak-scalingのend-to-end TTFTとRDMA I/O/compute内訳（8–32 GPU）'
+    - 'Figure 4: SQuAD系列長別TTFTとRDMA I/O/compute内訳（1k、2k、4k、8k token）'
+  appendices: []
+  figure_value_note: '結果は図示のみで数値表はない。本文に明記された5–6倍、8k tokenでほぼ2倍、EvoStore比20%以外のplot値は図から推定していない。'
+references: []
+references_checked_at: '2026-10-04'
+references_source: arxiv-html-reference-section
+references_total: 27
+storage_targets:
+  - GPU KV cache
+  - node host memory
+  - node-local SSD
+  - parallel file system or cloud storage (configurable slow tier)
+hardware_details: 'Polaris各nodeは512 GB DDR4を4 NUMA domainから集約、32-core AMD Zen 3（64 threads）、1.6 TB SSD 2台、A100 GPU 4基。GPU当たり最大D2D 85 GB/s、pinned D2H/H2D 25 GB/s。Lustreの集約bandwidthは650 GB/sと記載。これらは評価環境の仕様であり、他環境の性能を示さない。'
+source: https://arxiv.org/abs/2607.22648
+sources:
+  - https://arxiv.org/abs/2607.22648
+  - https://arxiv.org/pdf/2607.22648
+  - https://arxiv.org/html/2607.22648
+code: null
+implementation: '著者はC++ client/server prototypeを実装し、Thallium/Mercury/ArgobotsとMochi RPC building blocksによるbulk RDMA、nodeごとの階層key-value store、Python nanobind bridgeを記載する。vLLM 0.6のprefix sharing処理をPTStore RPCへ差し替える。確認した一次資料から公開code repositoryは特定できず、build、実行、再現は未確認。'
+last_checked: '2026-10-04'
+last_audited: null
+audit_version: 0
+worker_completed_at: '2026-10-04T17:32:39+09:00'
+worker_run_key: 20261004-0800-codex-local-r28
+---
+
+# PTStore: 分散prefix キャッシュと複製によるLLM推論serving
+
+## 概要
+
+同じ長文やシステムpromptを含む問い合わせを複数GPU・計算ノードで処理すると、共通prefixに対して入力処理で計算した注意機構のkey/value（KV）を要求ごとに再生成する。vLLMのprefix キャッシュは主にGPU内の再利用を行い、LMCacheなどは同一ノードのホスト メモリまで対象を広げるが、複数ノードにまたがる共有容量の利用には制約がある。PTStoreはprefixのKV テンソルを差分単位で複数ノードに保存し、頻出部分を読み手側ノードに複製することで、分散メモリ上の再利用を狙う。
+
+評価はALCF Polaris上でvLLM 0.6とMistral-7B-Instruct-v2を使い、WikiQAのweak-scalingとSQuADの系列長別比較を行う。著者は長文文書 QAで、メモリを複数ノード/GPUに集約しない比較方式より5–6倍効率的と要旨で総括する。SQuAD実験では8k トークン時にvLLMのprefix キャッシュよりほぼ2倍速く、EvoStoreより20%速いと本文に記す。一方、1k トークンではvLLMのprefix キャッシュがPTStoreを上回る。短い入力prefixでは遠隔KVの転送費用を再計算で避ける方が安い場合がある。
+
+## 書誌情報
+
+- 著者: Meghana Maghyastha, Robert Underwood, Randal Burns, Bogdan Nicolae
+- 公開日: 2026-06-25（arXiv v1）
+- 掲載情報: Euro-Par 2026: 32nd International European 会議 on 並列 and 分散 Computing（arXivのJournal reference）
+- arXiv分類: cs.AI（primary）、cs.DC（cross-一覧）
+- DOI: [10.48550/arXiv.2607.22648](https://doi.org/10.48550/arXiv.2607.22648)
+- 論文の状態: arXivはv1を2026-06-25付で公開し、Euro-Par 2026をJournal referenceとして掲載する。今回確認した本文はv1。
+- 実装: 論文は研究prototypeを説明するが、確認した一次資料には公開コードリポジトリのURLがない。
+
+## 問題設定
+
+入力処理で得るKVは、異なる質問でも同じ文書prefixを読む場合に再利用できる。各GPUのキャッシュだけを使うと、別GPU・別ノードにある同じprefixを共有できず、同一部分を再計算する。ホスト メモリなどの階層を加えると容量は増える一方、遠隔データの読出し時間が増す。したがって、保存容量を複数ノードへ広げるだけでは十分ではなく、どのテンソルをどこへ置き、共有prefixをどのように読み出すかが問題となる。
+
+## 手法
+
+PTStoreはノードごとにサーバーを配し、同じノード上のGPU クライアントおよび遠隔クライアントからの読み書きを受け付ける。保存時には新しいKV列と既存objectの最長共通prefix（LCP）を探す。すでに保存済みの共通テンソルは重複して保存せず、LCP以後の差分テンソルだけを追加する。差分保存を実行したサーバーがそのテンソルのownerとなり、保存要求ごとにownerを分散する。
+
+LCP検索後の読み込みを軽くするため、各objectは自分を構成する一意な テンソル IDを平坦ななメタデータ 一覧として保持する。IDはテンソルのowner サーバーも示す。読込側は一覧を一度調べ、すでにノード-局所 複製 キャッシュにあるテンソルと、ownerから取得すべきテンソルを分類する。これにより、prefixの親子関係を分散 trieの段ごとにたどる代わりに、objectのメタデータから必要なテンソル群を直接解決する。
+
+LCP 照会は各サーバー内で並列にmatchし、サーバー間の二段階reduceで最長共通部分を決める。メタデータはテンソル IDを中心とした小さなpayloadであるため、多数サーバーへの照会を低通信量で実行することを狙う。新しい差分は、保存処理を受けたサーバーをownerとして格納し、owner選択を分散することでメタデータ処理とキャッシュ容量の偏りを避ける。
+
+読み出し時にprefix差分が複数ownerへ散らばっていても、PTStore クライアントは各テンソルのoffsetとサイズからRDMA 領域を構成し、複数領域を一括したbulk RDMA RPCで並行転送する。テンソルとRDMA 領域情報をともにキャッシュし、再度同じ領域を読むときのRDMA setup費用を抑える。遠隔ownerから得たテンソルはGPUへ送る前にホスト メモリを経由する。
+
+各サーバーはホスト メモリ、SSD、および任意の遅い保存 階層を管理する。所有する キャッシュは保存テンソルの永続性を担い、複製 キャッシュは遠隔読み出しを避けるために一時保持され、必要に応じて追い出せる。両者は同じ容量を競合するため、複製可能な容量に下限・上限を設け、複製テンソルを先に破棄してから所有する テンソルを遅い階層へ書き出しする。転送は非同期で行い、GPU計算と重ねる設計である。
+
+#### 保存から再利用まで
+
+1. 推論実行環境が新しいpromptのKV テンソル列を保存する。PTStoreは過去objectとのLCPを検索する。
+2. objectのメタデータ 一覧から、再利用する共通テンソルと新たに保存する差分を決める。
+3. 新規差分だけを保存要求処理サーバーへ保存し、そのサーバーをownerとして記録する。
+4. 新しいobjectは親prefixから共有テンソル IDを引き継ぎ、差分テンソルのIDを加える。
+5. 読込時には各IDのownerを引き、ノード-局所 複製 キャッシュにないテンソルをownerから並行して読む。
+6. 人気prefixを構成するテンソルを局所 複製 キャッシュへ残し、容量が必要になれば複製を優先して追い出す。
+
+#### キャッシュ配置と追い出し
+
+prefix先頭に近いテンソルは複数objectから参照されやすく、LRUだけではその構造的な再利用価値を表しにくいと著者らは述べる。可変サイズテンソルを扱うため、頻度とサイズの両方を考慮するGDSF系追い出しを用いる。複製キャッシュの配分を上げれば人気の高い prefixの局所 読み出しは速くなるが、owner テンソルをホスト メモリに置ける量が減り、低頻度 テンソルが遠隔または低速階層へ移る可能性がある。
+
+## 既存研究との差
+
+通常のvLLMはGPU内のblock キャッシュを主に使い、prefix-aware設定では同じGPU上の要求間でprefixを共有する。LMCacheなどはホスト メモリへの退避で同一ノードのGPU間へ共有範囲を広げる。PTStoreはこの範囲を複数ノードへ伸ばす一方、複数ownerからのRDMA読出しが発生する。
+
+EvoStoreは分散DRAMを使うテンソル 保存で、差分保存とRDMA転送を比較方式として提供する。PTStoreはノード-局所 複製を加えて人気prefixを近くへ置き、遠隔 I/Oを抑える。MooncakeやSGLangも関連研究として触れられているが、LMCache・Mooncakeとの直接比較は今後の課題であり、現行方式全般に対する優位を示すものではない。
+
+## 実装状況
+
+著者らはクライアント-サーバー型prototypeを実装し、C++ low-level APIでLCP 照会とテンソル 読み出し/書き込みを行う。RPCにはMochiのbuilding blockであるThallium（Mercury/Argobots上）を利用し、サーバーにはメモリまたはSSD・並列 file systemへテンソルを保存できるkey-値 保存を用いる。allocatorと保存を結び、RDMAの帯域・遅延を改善するため不要なregistration 追加費用を避ける。
+
+vLLMとの統合では、prefix sharingのホスト-メモリ accessをPTStore RPCへ置き換える。C++ クライアント APIをnanobindでPythonから利用できるようにする。論文の説明は実装prototypeの存在を示すが、公開コード URLは確認できない。コードの取得、build、実機実行、論文結果の再現は行っていない。
+
+## 評価
+
+### 条件と比較方式
+
+- **環境**: ALCF Polaris。各ノードは32-core AMD Zen 3 CPU（64 threads）、512 GB DDR4（4 NUMA domain）、1.6 TB SSD 2台、NVIDIA A100 GPU 4基（計160 GB HBM）。ノード間はdual Slingshot fabric。GPUごとの最大D2D帯域は85 GB/s、pinned D2H/H2Dは25 GB/s。Lustreは160 OST、40 メタデータ 対象、集約650 GB/s。
+- **モデル・実行環境**: Mistral-7B-Instruct-v2をGPUごとに複製し、vLLM 0.6で実行する。各workerは1,500 推論 照会を処理し、GPU メモリの少なくとも15%をKV用に残す。
+- **WikiQA**: 3,000問で、質問ごとに回答を含むWikipedia ページを文脈へ入れる。ページは約2,000–40,000 トークン。弱スケーリングでは8、16、32 GPUを使い、各GPUの照会数を固定する。
+- **SQuAD**: 約100,000問、文書は150–4,000 words。系列 長を1k、2k、4k、8k トークンに変える実験に使う。
+- **入力分布・指標**: 文書と質問を冪則 α=6で抽出し、少数の人気の高い prefixへreuseを集中させる。抽出型 QAを設定し、平均time-to-first-トークン（TTFT）を測定する。
+- **キャッシュ設定**: 複製 キャッシュはサーバーのホスト メモリ budgetの最大50%。著者らはこの比率の詳細感度 探索を今後の課題としている。
+- **比較対象**: vLLM vanilla（共有prefix検索なし）、vLLM prefix-aware（GPU内prefix reuse）、EvoStore backend for vLLM、PTStore backend for vLLM。vanillaは同一要求のpreemptionとswapを利用する。vLLMのKV block サイズは1,024 トークン。
+
+### 報告結果
+
+| 実験 | 著者が報告した結果 | 解釈と範囲 |
+|---|---|---|
+| WikiQA 弱 拡張性、8/16/32 GPU | 各GPUが1,500 照会、平均8,000 トークンの推論 要求を処理する。4方式の平均TTFTとRDMA I/O・GPU 計算の内訳を比較し、全方式が拡張すること、EvoStoreはRDMA I/Oが大きくvLLM prefixに近づくこと、PTStoreが明確に優位であることを文章で説明する。 | 図 3はグラフのみで具体値の表はない。本文の数値説明がないplot点は推定していない。 |
+| SQuAD 系列 長、1k/2k/4k/8k トークン | キャッシュ非対応のvLLM vanillaを除いて3方式を比較する。1kではvLLM prefix キャッシュが優位だが、2kからPTStoreが逆転し、8kではvLLM prefix キャッシュよりほぼ2倍速い。PTStoreはEvoStoreに対し1kで2倍超、8kで20%速い。 | 短い入力prefixでは再計算が安く、長いprefixでは遠隔 KV取得を減らす効果が強くなる。 |
+| 要旨の総括 | 長文文書 QA上で、メモリを複数ノード/GPUへ集約しない比較方式より5–6倍効率的と述べる。 | 要旨の総括値であり、個別方式・条件・処理量の算出方法は数表で示されていない。SQuADの比率と混同しない。 |
+
+図 4の系列別TTFTはplotに示されるが、本文に全点の数表はない。結論には最先端比でorder-of-magnitude規模の改善という記述もあるものの、対応する条件・比較方式が十分に分解されていないため、個別結果として扱わない。出力品質、電力、運用費用の評価は報告されていない。
+
+## 限界と運用上の条件
+
+- 評価は長文に対して回答位置を抽出するQAに集中し、自然な複数-turn conversation、コード completion、実サービストレースでのキャッシュ hit率・tail 遅延を検証していない。
+- 使用モデルはMistral-7B-Instruct-v2であり、より大きなモデルや複数モデルの共存時に同じキャッシュ比率・効果が得られるとは限らない。
+- 冪則 α=6は人気の高い prefixへ再利用を集中させる設定である。prefix再利用が少ない負荷や均一な分布での費用対効果は示されていない。
+- 複製 キャッシュはホスト メモリ budgetの50%に固定され、動的なメモリ balancingや比率の詳細比較を今後の課題としている。
+- LMCacheとMooncakeとの直接比較、およびより広い実トレースでの確認は未実施である。方式ごとの要素除去も今後の課題で、平坦な メタデータ・複製・キャッシュ 比率の寄与は分離されていない。
+- 本文に掲載されないグラフ数値を推定していない。別hardwareや別実行環境への性能外挿も行っていない。
+
+## 一次資料
+
+- [arXiv 要旨・書誌・version](https://arxiv.org/abs/2607.22648)
+- [arXiv PDF](https://arxiv.org/pdf/2607.22648)
+- [arXiv HTML全文](https://arxiv.org/html/2607.22648)
+
+確認範囲: arXiv v1の§1–§7、図 1–4のcaptionと本文の説明、27 参考文献、謝辞・競合利益記述を含むHTML全文。本文にappendixや結果表はない。図の数値点は本文で表として示されず、文章に明示された結果以外は推定していない。
