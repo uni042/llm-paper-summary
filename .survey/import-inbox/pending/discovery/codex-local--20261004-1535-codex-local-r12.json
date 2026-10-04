@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1535-codex-local-r12",
+  "reference_main_sha": "f28158349281a6ed7c59473e546f686f7d7b1745",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00888",
+      "identity_tokens": [
+        "arXiv:2610.00888"
+      ],
+      "title": "Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads",
+      "reason": "凍結LLMへ後学習した連鎖型multi-token prediction headで投機的デコード候補を作り、検証を通じた推論時の期待生成スループット向上を扱う。さらに検証長を実行時に選ぶ制御も評価しており、LLM推論高速化に直接該当する。近似検証は出力分布を緩和する別方式であり、精度を各ベンチマーク±3 percentage points以内に保つ条件付き評価として厳密検証と区別する。",
+      "source_url": "https://arxiv.org/abs/2610.00888",
+      "body_check": "arXiv一次全文v1 (https://arxiv.org/html/2610.00888v1) の§1-5、Tables 1-3、Discussion and Conclusionを確認。§2では凍結Qwen3-8Bの隠れ状態に接続するK=3の連鎖型MTP headを、対象モデル自身が生成したchain-of-thought約2.5B tokensでcross-entropy後学習する。headは各約200M trainable parametersで、backboneは凍結。Table 1はsingle A100 80GB上のvLLM、batch 4で、exact rejection-sampling verificationを用い、4つのmathと5つのcoding/knowledge/open-ended benchmarkにおけるmean accepted length (MAL) をMiMo-7Bと比較する。提案headはGSM8K 3.05 vs 2.80、MATH500 3.00 vs 2.87、MBPP 2.84 vs 2.70などで、正確な検証によるタスク精度維持を報告する。これはMALという期待確定token数の代理指標で、Table 1自体は絶対tokens/s比較ではない。§3/Table 2のchain-aware approximate verificationは対象分布との厳密一致を緩和し、ベンチマークごとに精度がexact verificationから±3 pp以内の設定を選択してMAL平均を2.91から3.31へ約14%上げる。AIME25では精度76.7%から73.3%へ下がる設定も許容帯内の例であり、分布保存を主張できない。§4/Table 3のonline lower-confidence-bound controllerはK=1..6を選択し、10 workloadsで固定K=3比batch 4/16では0.94、batch 64/128では0.98/0.99のobserved throughputを報告する。固定K=6はbatch 64/128で0.86/0.89へ低下し、深いdraftの検証費用が受理増分を超える限界を示す。低batchではcontroller overheadが平均最大約6%の損失を伴い得る。single-GPU/vLLMの詳細評価と限定benchmarksから他hardware、workload、serving設定への一般化は未確立。",
+      "first_checked_at": "2026-10-04T14:42:38+09:00",
+      "last_checked_at": "2026-10-04T14:42:38+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00983",
+      "identity_tokens": [
+        "arXiv:2610.00983",
+        "2610.00983"
+      ],
+      "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+      "reason": "対象は学習ベースのLLM post-training quantizationであり、逐次量子化における再構成lossの桁差がMSE勾配と補助パラメータ更新の偏りを生むことを示し、4種のRMSE損失による置換を評価する。重み-onlyと重み・活性値量子化、複数LLMおよび量子化bit幅で品質を調べており、推論時LLM圧縮の方法・品質に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2610.00983",
+      "body_check": "arXiv一次資料の本文を確認。Sec. 2.2-2.3は逐次stage間で再構成lossが最大で1万倍超異なる場合があり、MSEの出力勾配がloss平方根に比例するため、初期stageを含むoptimization imbalanceにつながると分析。Sec. 3.1-3.2は勾配正規化でloss scaleとの結合を外すRMSEを提示し、sample/channel/token/element groupingの4 variantを定義（element variantはL1 lossに相当）。Sec. 4.1-4.3、Tables 1-5ではLLaMA2-7B、LLaMA3.1-8B、Qwen3.5 9B/27B/35B-A3Bを対象に、OmniQuant、DuQuant、FlatQuant、SliderQuantとW4A16/W3A16/W2A16/W2A16G128/W4A4を評価。例としてOmniQuant + Qwen3.5-27B + W2A16でMSE比perplexity 37.51→22.20、平均accuracy 60.45%→70.96%。Table 5のNVIDIA L40上の量子化工程測定ではRMSEのruntime差は-1.19%から+2.82%、peak GPU memory差は0%。Sec. 5-6は、よりaggressiveな量子化ほど改善が大きい傾向、feature groupingごとの性能差、研究対象4 variantを越えるgrouping探索余地を述べる。",
+      "first_checked_at": "2026-10-04T14:42:38+09:00",
+      "last_checked_at": "2026-10-04T14:42:38+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01108",
+      "identity_tokens": [
+        "arXiv:2610.01108",
+        "10.48550/arXiv.2610.01108"
+      ],
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "reason": "Directly in scope: the paper develops a training-free retrieval-based speculative decoding framework for LLM inference in coding-agent pipelines, addressing corpus coverage/matchability and draft-length control. It evaluates decoding throughput and accepted length against autoregressive decoding and speculative-decoding baselines.",
+      "source_url": "https://arxiv.org/abs/2610.01108",
+      "body_check": "Checked the primary arXiv v1 HTML (submitted 2026-10-01), including Sections 1, 3.1-3.2, 4.1-4.4, Conclusion, and Appendix G. AgSpec layers unchanged retrieval engines with session, workspace, and global corpora; indexes workspace files both as stored and in agent emission forms; selects corpus by match length with a margin for global matches; profiles per-agent draft caps offline and adjusts per-agent draft scale from verification feedback online. In vLLM experiments over SAM-Decoding and SuffixDecoding, the setup uses SWE-bench Verified and TeamBench, three models, batch sizes 1 and 16; the paper reports 2.27-4.37x autoregressive throughput at batch 1 and 1.08-4.76x at batch 16, with average throughput 18.0% above the fastest prior method. It also reports LiveCodeBench and Terminal-Bench single-agent/non-repository results. Caveats: these are benchmark results with a constructed global corpus from disjoint task logs (70 SWE-bench and 213 TeamBench corpus-building tasks); the global corpus costs about 2.5-4.3 GB resident host memory and 9-15 seconds to load. The adaptive scale uses a fixed update step, fluctuates rather than converging under finite/nonstationary sessions, and ignores clipping/cap/truncation effects in its idealized analysis. No deployment-level result is claimed.",
+      "first_checked_at": "2026-10-04T14:41:54+09:00",
+      "last_checked_at": "2026-10-04T14:41:54+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
