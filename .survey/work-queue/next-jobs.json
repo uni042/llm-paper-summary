@@ -107,6 +107,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
+      "job_id": "job-research-27e464e4e5e00de1",
+      "type": "research",
+      "lane": null,
+      "priority": 597,
+      "canonical_id": "arXiv:2310.06839",
+      "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
+      "source_url": "https://arxiv.org/abs/2310.06839",
+      "paper_path": "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-via-prompt-compression.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
       "job_id": "job-research-da60fa0c40941d4d",
       "type": "research",
       "lane": null,
@@ -115,20 +129,6 @@
       "title": "Gated Linear Attention Transformers with Hardware-Efficient Training",
       "source_url": "https://arxiv.org/abs/2312.06635",
       "paper_path": "papers/inference/99-other-inference-systems/2023-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
-    },
-    {
-      "job_id": "job-research-9c1d212f1dc11ae6",
-      "type": "research",
-      "lane": null,
-      "priority": 461,
-      "canonical_id": "arXiv:2409.12514",
-      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
-      "source_url": "https://arxiv.org/abs/2409.12514",
-      "paper_path": "papers/inference/99-other-inference-systems/2024-2409.12514-tinyvla-toward-fast-data-efficient-vision-language-action-models-for-robotic-manipulation.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-04T09:11:53+00:00"
+  "generated_at": "2026-10-04T09:34:45+00:00"
 }
