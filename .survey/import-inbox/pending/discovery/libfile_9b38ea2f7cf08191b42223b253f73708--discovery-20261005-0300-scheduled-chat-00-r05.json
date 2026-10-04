@@ -1,0 +1,160 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0300-scheduled-chat-00/r05",
+  "reference_main_sha": "d4ae4441511952b950d0ae7f0b3cbec947ed3d8c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20034",
+      "identity_tokens": [
+        "arXiv:2609.20034"
+      ],
+      "title": "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
+      "reason": "real-time interactive world model/video generation foundationを扱う生成世界モデル研究で、LLM推論systemを最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2609.20034",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からinteractive world/video modelが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11060",
+      "identity_tokens": [
+        "arXiv:2609.11060"
+      ],
+      "title": "Grounding Agent Memory: Environment-Probing Curation for Enterprise Agents",
+      "reason": "enterprise LLM agentのmemory curation/retrievalをenvironment probingで改善するagent memory研究。推論時memory systemに関係するが、runtime latency/throughput最適化よりmemory quality中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.11060",
+      "body_check": "full_text_checked: worklist書誌・一次資料探索でagent memory curationとenvironment probingが中心と確認。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19116",
+      "identity_tokens": [
+        "arXiv:2608.19116"
+      ],
+      "title": "JANUS: A Multi-modal Foundation Neural Sampler for Disordered Materials",
+      "reason": "disordered materials向けmulti-modal neural sampler/foundation model研究で、LLM inference servingの対象外。",
+      "source_url": "https://arxiv.org/abs/2608.19116",
+      "body_check": "abstract_screen_only: worklist書誌からmaterials neural samplingが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13334",
+      "identity_tokens": [
+        "arXiv:2608.13334"
+      ],
+      "title": "RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory",
+      "reason": "LLM agentのlong-term memoryをassociative recollectionで改善するmemory/retrieval system。agent runtime memory管理に関係するが、主評価がmemory/retrieval quality中心とみられるためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.13334",
+      "body_check": "full_text_checked: worklist書誌・一次資料探索でassociative long-term agent memoryが主題と確認。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11772",
+      "identity_tokens": [
+        "arXiv:2608.11772"
+      ],
+      "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
+      "reason": "agent failureを診断し選択的self-correctionへ繋げるagent reasoning/recovery研究で、LLM推論runtime・cache・serving最適化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2608.11772",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からagent failure diagnosis/self-correctionが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12218",
+      "identity_tokens": [
+        "arXiv:2608.12218"
+      ],
+      "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
+      "reason": "long-context trainingがparametric knowledgeへ与える影響を分析するtraining/representation研究で、推論runtime効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2608.12218",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からlong-context training effectが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25553",
+      "identity_tokens": [
+        "arXiv:2608.25553"
+      ],
+      "title": "When Stale Constraints Go Unchecked: Budgeted Verification Failures in Inherited Agent Memory",
+      "reason": "agent memoryに継承された古いconstraintとbudgeted verification failureを分析する信頼性研究で、推論system性能最適化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2608.25553",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からagent memory correctness/safetyが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20958",
+      "identity_tokens": [
+        "arXiv:2608.20958"
+      ],
+      "title": "TLive-Omni: An Omni-Modal Understanding Model for E-Commerce Live Streaming",
+      "reason": "e-commerce live streaming向けomni-modal understanding modelの能力・学習研究で、LLM推論runtime/serving効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2608.20958",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からmultimodal understanding modelが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15045",
+      "identity_tokens": [
+        "arXiv:2608.15045"
+      ],
+      "title": "MOSS-VL Technical Report",
+      "reason": "vision-language modelのtechnical reportで、model capability/architectureが中心であり、worklist情報上LLM推論system最適化を主目的とする根拠がない。",
+      "source_url": "https://arxiv.org/abs/2608.15045",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からVLM technical reportが主題と確認し、推論system固有方式がないため除外。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07909",
+      "identity_tokens": [
+        "arXiv:2606.07909"
+      ],
+      "title": "MemToolAgent: Leveraging Memory for Tool Using Agents Based on Environment and User Feedback",
+      "reason": "tool-using LLM agentでenvironment/user feedbackをmemoryとして利用するagent memory framework。agent inference workflowには関連するが、推論runtime効率化より能力・memory quality中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.07909",
+      "body_check": "full_text_checked: worklist書誌・一次資料探索でtool-using agent memoryが主題と確認。",
+      "first_checked_at": "2026-10-05T03:55:00+09:00",
+      "last_checked_at": "2026-10-05T03:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 479
+    }
+  ]
+}
