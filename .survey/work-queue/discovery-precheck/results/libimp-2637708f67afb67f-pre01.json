@@ -1,0 +1,141 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2637708f67af",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1905.10650"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ef9851b725c1cbf2bbb01bf7e74e302b58db4a",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T21:31:53.969722+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1905.10650",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Are Sixteen Heads Really Better than One?",
+      "source_url": "https://arxiv.org/abs/1905.10650",
+      "year": 2019,
+      "published": "2019-05-01",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1513,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention is a powerful and ubiquitous mechanism for allowing neural models to focus on particular salient pieces of information by taking their weighted average when making predictions. In particular, multi-headed attention is a driving force behind many recent state-of-the-art NLP models such as Transformer-based MT models and BERT. These models apply multiple attention mechanisms in parallel, with each attention \"head\" potentially focusing on different parts of the input, which makes it possible to express sophisticated functions beyond the simple weighted average. In this paper we make the surprising observation that even if models have been trained using multiple heads, in practice, a large percentage of attention heads can be removed at test time without significantly impacting performance. In fact, some layers can even be reduced to a single head. We further examine greedy algorithms for pruning down models, and the potential speed, memory efficiency, and accuracy improvements obtainable therefrom. Finally, we analyze the results with respect to which parts of the model are more reliant on having multiple heads, and provide precursory evidence that training dynamics play a role in the gains provided by multi-head attention.",
+      "identifiers": [
+        "SemanticScholar:b03c7ff961822183bab66b2e594415e585d3fd09"
+      ],
+      "semantic_scholar_id": "b03c7ff961822183bab66b2e594415e585d3fd09",
+      "canonical_id": "arXiv:1905.10650",
+      "arxiv_id": "1905.10650",
+      "authors": [
+        "Paul Michel",
+        "Omer Levy",
+        "Graham Neubig"
+      ],
+      "priority": 1523,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1513,
+        "citation_count": 1513,
+        "total": 1523,
+        "is_fresh": false,
+        "freshness_age_days": 2713,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:1905.10650",
+      "identity_tokens": [
+        "id:SemanticScholar:b03c7ff961822183bab66b2e594415e585d3fd09",
+        "id:arXiv:1905.10650",
+        "title:are sixteen heads really better than one",
+        "url:https://arxiv.org/abs/1905.10650"
+      ],
+      "record": {
+        "title": "Are Sixteen Heads Really Better than One?",
+        "source_url": "https://arxiv.org/abs/1905.10650",
+        "year": 2019,
+        "published": "2019-05-01",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 1513,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention is a powerful and ubiquitous mechanism for allowing neural models to focus on particular salient pieces of information by taking their weighted average when making predictions. In particular, multi-headed attention is a driving force behind many recent state-of-the-art NLP models such as Transformer-based MT models and BERT. These models apply multiple attention mechanisms in parallel, with each attention \"head\" potentially focusing on different parts of the input, which makes it possible to express sophisticated functions beyond the simple weighted average. In this paper we make the surprising observation that even if models have been trained using multiple heads, in practice, a large percentage of attention heads can be removed at test time without significantly impacting performance. In fact, some layers can even be reduced to a single head. We further examine greedy algorithms for pruning down models, and the potential speed, memory efficiency, and accuracy improvements obtainable therefrom. Finally, we analyze the results with respect to which parts of the model are more reliant on having multiple heads, and provide precursory evidence that training dynamics play a role in the gains provided by multi-head attention.",
+        "identifiers": [
+          "SemanticScholar:b03c7ff961822183bab66b2e594415e585d3fd09"
+        ],
+        "semantic_scholar_id": "b03c7ff961822183bab66b2e594415e585d3fd09",
+        "canonical_id": "arXiv:1905.10650",
+        "arxiv_id": "1905.10650",
+        "authors": [
+          "Paul Michel",
+          "Omer Levy",
+          "Graham Neubig"
+        ],
+        "priority": 1523,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1513,
+          "citation_count": 1513,
+          "total": 1523,
+          "is_fresh": false,
+          "freshness_age_days": 2713,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9a2c9ab6d188805bfb51efda548d0b3110f5485088a5f5b6019004fc142f4dac",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
