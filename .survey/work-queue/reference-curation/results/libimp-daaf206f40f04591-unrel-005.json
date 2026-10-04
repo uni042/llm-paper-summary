@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-daaf206f40f04591-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.18059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.18059",
+    "identity_tokens": [
+      "arXiv:2401.18059"
+    ],
+    "reason": "�ꎟ������RAPTOR�𒷕���QA������recursive retrieval-augmented generation�Ƃ��Ē񎦂��A���_���ɗv��c���[���當�����������ĉ񓚐��x���グ��B�Ώۂ�retrieval/context selection�ł���LLM�{�̂̎��s�Eserving�E���_�����k�̍œK���ł͂Ȃ��B�v�Z�ʁEtoken cost�̕]����tree�\\�z�H���Ɋւ��邽�߁A�{���E���h�̑ΏۊO�Ɣ��f����B",
+    "first_checked_at": "2026-10-04T05:19:24+00:00",
+    "last_checked_at": "2026-10-04T05:19:24+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval"
+  },
+  "processed_at": "2026-10-04T05:19:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-daaf206f40f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

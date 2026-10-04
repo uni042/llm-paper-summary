@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T02:27:13+00:00",
-  "record_count": 886,
+  "updated_at": "2026-10-04T05:19:24+00:00",
+  "record_count": 892,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10848,20 +10848,6 @@
       ],
       "title": "HAQ: Hardware-Aware Automated Quantization With Mixed Precision"
     },
-    "arXiv:1512.03385": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1512.03385",
-      "identity_tokens": [
-        "arXiv:1512.03385"
-      ],
-      "reason": "画像認識向け残差学習により152層級CNNを学習しやすくする研究で、ImageNet/COCOの視覚認識精度が主目的。LLM推論・サービングではない。",
-      "first_checked_at": "2026-10-03T16:32:28+00:00",
-      "last_checked_at": "2026-10-03T16:32:28+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Deep Residual Learning for Image Recognition"
-    },
     "DOI:10.1109/cvpr.2015.7298594": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/cvpr.2015.7298594",
@@ -11855,22 +11841,6 @@
         "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
       ],
       "title": "Finding frequent items in data streams"
-    },
-    "arXiv:2306.13549": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2306.13549",
-      "identity_tokens": [
-        "arXiv:2306.13549"
-      ],
-      "reason": "マルチモーダル大規模言語モデルのアーキテクチャ・学習・データ・評価・幻覚等を広く整理する総合サーベイで、推論システム効率化を主対象としない。",
-      "first_checked_at": "2026-10-03T17:50:30+00:00",
-      "last_checked_at": "2026-10-03T17:50:30+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
-        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
-        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-      ],
-      "title": "A survey on multimodal large language models"
     },
     "DOI:10.1109/hpca.2018.00067": {
       "classification": "unrelated",
@@ -13039,6 +13009,142 @@
         "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
       ],
       "title": "The M3-Competition: results, conclusions and implications"
+    },
+    "DOI:10.1109/cvpr.2016.90": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2016.90",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2016.90",
+        "DOI:10.48550/arxiv.1512.03385",
+        "arXiv:1512.03385"
+      ],
+      "reason": "�ꎟ�����̗v�|�́A�c���֐����w�K����摜�F���p�l�b�g���[�N��񎦂��AImageNet�ECIFAR-10�ECOCO�Ŏ��o�F�����x��]�����Ă���BLLM���_�A�T�[�r���O�A���_�����k�����킸�A�w�K��p�������ΏۊO�Ȃ̂�unrelated�B",
+      "first_checked_at": "2026-10-03T16:32:28+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md"
+      ],
+      "title": "Deep Residual Learning for Image Recognition"
+    },
+    "DOI:10.1145/3394486.3406703": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3394486.3406703",
+      "identity_tokens": [
+        "DOI:10.1145/3394486.3406703"
+      ],
+      "reason": "���ҏ����@�ւ�Microsoft Research�ɂ��ꎟ�����́ADeepSpeed��ZeRO���K�͕��U���f����training��scale�Espeed�Ecost�Eusability�����P����Z�p�Ƃ��Đ������A100B�����f���P���������B���_�������ł͂Ȃ�training��p�̃V�X�e�������ł���A�������ꂽ�͈͂Ȃ̂�unrelated�B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2512.03608-kvnand-dram-free-in-flash-computing.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "DeepSpeed: System Optimizations Enable Training Deep Learning Models with Over 100 Billion Parameters"
+    },
+    "DOI:10.1109/sc41405.2020.00024": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sc41405.2020.00024",
+      "identity_tokens": [
+        "DOI:10.1109/sc41405.2020.00024",
+        "DOI:10.48550/arxiv.1910.02054",
+        "arXiv:1910.02054"
+      ],
+      "reason": "�ꎟ�����̗v�|�ƕ]���́AZeRO��data/model-parallel training�ɂ�����optimizer state���̃������璷�����팸���A400 GPU���100B�����f�����P������V�X�e���ł���Əq�ׂ�B�������̑Ώۂ�training�ł���ALLM���_�Eserving�E���_�����k�ɂ͊Y�����Ȃ�����unrelated�B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+        "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md"
+      ],
+      "title": "ZeRO: Memory optimizations Toward Training Trillion Parameter Models"
+    },
+    "DOI:10.1093/nsr/nwae403": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nsr/nwae403",
+      "identity_tokens": [
+        "DOI:10.1093/nsr/nwae403",
+        "arXiv:2306.13549"
+      ],
+      "reason": "�ꎟ�����̗v�|�Ɩ{���ł́AMLLM�̒�`�Earchitecture�Etraining strategy/data�Eevaluation�A�Ή�modalities��hallucination�΍�Ȃǂ̌��������𐮗�����T�[�x�C�ł���B���o�C�����_�␄�_�i�K�̋Z�@�ɂ��G��邪�A���_�����Eserving�E���k�̌����������Ƃ��Ē�āE�]�����Ă��Ȃ����߁A�{���E���h�̑ΏۊO�Ɣ��f����B",
+      "first_checked_at": "2026-10-03T17:50:30+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "A survey on multimodal large language models"
+    },
+    "arXiv:2401.18059": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.18059",
+      "identity_tokens": [
+        "arXiv:2401.18059"
+      ],
+      "reason": "�ꎟ������RAPTOR�𒷕���QA������recursive retrieval-augmented generation�Ƃ��Ē񎦂��A���_���ɗv��c���[���當�����������ĉ񓚐��x���グ��B�Ώۂ�retrieval/context selection�ł���LLM�{�̂̎��s�Eserving�E���_�����k�̍œK���ł͂Ȃ��B�v�Z�ʁEtoken cost�̕]����tree�\\�z�H���Ɋւ��邽�߁A�{���E���h�̑ΏۊO�Ɣ��f����B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval"
+    },
+    "DOI:10.1145/3065386": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3065386",
+      "identity_tokens": [
+        "DOI:10.1145/3065386"
+      ],
+      "reason": "�ꎟ������ImageNet�摜��1000�N���X���ޗpCNN�ƁA��Ƃ��Ċw�K�������E�ߊw�K�}���������BLLM���_�A�T�[�r���O�A���_�����k�̋Z�p�܂��͕]���ł͂Ȃ����ߑΏۊO�B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "ImageNet classification with deep convolutional neural networks"
+    },
+    "DOI:10.1145/2939672.2939785": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2939672.2939785",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2939785",
+        "arXiv:1603.02754"
+      ],
+      "reason": "XGBoost�͑a�f�[�^�����̖؃u�[�X�e�B���O�w�K�V�X�e���ł���ALLM�̐��_�E�z�M�␄�_�����k������Ȃ��B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md"
+      ],
+      "title": "XGBoost: A Scalable Tree Boosting System"
+    },
+    "DOI:10.1145/3442188.3445922": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3442188.3445922",
+      "identity_tokens": [
+        "DOI:10.1145/3442188.3445922"
+      ],
+      "reason": "��K�͌��ꃂ�f���ɔ������E�����E�f�[�^�R���̃��X�N�ƊJ����̐�����_����_���ŁALLM���_�E�z�M�̌�������@�␄�_�����k���āE�]�����Ă��Ȃ��B",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
     }
   }
 }

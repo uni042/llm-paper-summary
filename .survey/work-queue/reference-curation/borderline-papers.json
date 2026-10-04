@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-03T18:59:03+00:00",
-  "record_count": 419,
+  "updated_at": "2026-10-04T05:19:24+00:00",
+  "record_count": 421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6060,6 +6060,36 @@
       "last_checked_at": "2026-10-03T18:43:34+00:00",
       "linked_from": [],
       "title": "Turbocharging Vector Databases Using Modern SSDs"
+    },
+    "DOI:10.1145/3830418.3843855": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843855",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843855"
+      ],
+      "reason": "題名とSOSP 2026公式プログラムから、Amazon Bedrockの基盤モデル推論servingを世界規模で扱う研究であり、対象分野に関連する可能性は高いと判断した。一方、出版元の一次本文を取得できていないため、方式・評価・対象範囲を確認できず、acceptは保留する。",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Taming Inference Workloads at Global Scale: Foundation Model Serving in Amazon Bedrock"
+    },
+    "DOI:10.1145/3830418.3843911": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843911",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843911"
+      ],
+      "reason": "著者公開の公式成果物資料は、SANDHIが複数のfine-tuned LLM間で層ごとのattention/MLP projectionを選択的に統合し、推論時のtensor重複排除でモデル重みのGPUメモリを削減する手法を説明している。2〜12モデルのpoolで重みメモリを26.7〜48.2%削減し、全データセット精度の劣化を2%以内に抑え、独立配信比で最大2.93倍のthroughputと最大1052倍低いP95 TTFTを報告しており、LLM servingおよびモデル統合の候補として関連性が高い。一方、出版社の本文を取得できず、論文本文の手法詳細・評価条件・限界を照合できていないため、acceptとはせずborderlineとする。",
+      "first_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Sandhi: Fine-Grained Merging for Memory Efficient Multi-Model Serving"
     }
   }
 }
