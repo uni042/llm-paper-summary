@@ -45,51 +45,137 @@ def _candidate_count(submissions: list[dict[str, Any]]) -> int:
 
 
 def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
-    """Recompute structured-reference progress from current canonical inputs.
+    """Recompute unified Discovery-candidate progress from current durable state.
 
-    The latest Discovery precheck result is a historical snapshot. STATUS is a
-    current dashboard, so derive these counts from the paper records plus the
-    durable unrelated/borderline ledgers every time the dashboard is rendered.
+    The function name is retained for compatibility with older callers, but the
+    displayed metric is no longer limited to structured backward references.
+    It combines:
+    - collected papers (processed/accepted),
+    - nonterminal Research/Audit jobs (processed/accepted into Research),
+    - durable unrelated/borderline classifications, and
+    - the current deduplicated Discovery candidate surface built from both
+      structured backward references and forward-citation candidates.
+
+    Identity aliases are deduplicated with the same helper used by worker
+    worklists, so DOI/arXiv/title aliases are not intentionally double-counted.
     """
     try:
+        import build_worker_worklist
+        import citation_graph
         import reference_pool
-        pool = reference_pool.build_reference_pool(repo_root)
+
+        papers = citation_graph.load_records(repo_root)
+        paper_rows = [
+            {
+                "canonical_id": paper.canonical_id,
+                "identifiers": sorted(paper.identifiers),
+                "title": paper.meta.get("title"),
+                "source_url": paper.meta.get("source_url") or paper.meta.get("source"),
+            }
+            for paper in papers
+        ]
+
+        def ledger_rows(path: Path) -> list[dict[str, Any]]:
+            payload = evidence._load_json(path)
+            records = payload.get("records") if isinstance(payload, dict) else None
+            return [
+                dict(row, canonical_id=row.get("canonical_id") or key)
+                for key, row in (records.items() if isinstance(records, dict) else [])
+                if isinstance(row, dict)
+            ]
+
+        unrelated_rows = ledger_rows(
+            repo_root / reference_pool.DEFAULT_UNRELATED_LEDGER
+        )
+        borderline_rows = ledger_rows(
+            repo_root / reference_pool.DEFAULT_BORDERLINE_LEDGER
+        )
+
+        jobs = build_worker_worklist._jobs(repo_root)
+        terminal = {"completed", "rejected", "superseded", "blocked_permanent"}
+        research_rows = [
+            row
+            for row in jobs
+            if row.get("type") in {"research", "audit"}
+            and str(row.get("status") or "").strip().lower() not in terminal
+        ]
+
+        discovery_all, _ = build_worker_worklist._discovery_candidates(repo_root)
+        pending_rows = build_worker_worklist._exclude_reserved_identities(
+            discovery_all,
+            reserved_rows=research_rows,
+        )
+
+        seen: set[str] = set()
+
+        def count_new(rows: list[dict[str, Any]]) -> int:
+            count = 0
+            for row in rows:
+                tokens = build_worker_worklist._worklist_identity_tokens(row)
+                if not tokens:
+                    continue
+                duplicate = bool(seen.intersection(tokens))
+                seen.update(tokens)
+                if duplicate:
+                    continue
+                count += 1
+            return count
+
+        represented_count = count_new(paper_rows)
+        unrelated_count = count_new(unrelated_rows)
+        borderline_count = count_new(borderline_rows)
+        research_count = count_new(research_rows)
+        pending_count = count_new(pending_rows)
+
+        processed_count = (
+            represented_count
+            + unrelated_count
+            + borderline_count
+            + research_count
+        )
+        total_count = processed_count + pending_count
+        backward_pool = reference_pool.build_reference_pool(repo_root)
+        forward_state = evidence._load_json(
+            repo_root / ".survey/work-queue/forward-citation-sweep.json"
+        )
+        forward_candidates = (
+            forward_state.get("candidates")
+            if isinstance(forward_state, dict)
+            else None
+        )
+        forward_pending = (
+            len(forward_candidates)
+            if isinstance(forward_candidates, dict)
+            else 0
+        )
     except Exception as exc:
         return {
             "available": False,
-            "error": f"live reference-pool recomputation failed: {type(exc).__name__}: {exc}",
+            "error": f"live Discovery-candidate recomputation failed: {type(exc).__name__}: {exc}",
         }
 
-    required = (
-        "reference_total_count",
-        "reference_processed_count",
-        "reference_remaining_count",
-        "reference_represented_count",
-        "reference_unrelated_count",
-        "reference_borderline_count",
-    )
-    if any(key not in pool for key in required):
-        return {
-            "available": False,
-            "error": "live reference-pool recomputation returned incomplete counts",
-        }
     return {
         "available": True,
         "source": "live_recompute",
-        "total": int(pool["reference_total_count"]),
-        "processed": int(pool["reference_processed_count"]),
-        "remaining": int(pool["reference_remaining_count"]),
-        "represented": int(pool["reference_represented_count"]),
-        "unrelated": int(pool["reference_unrelated_count"]),
-        "borderline": int(pool["reference_borderline_count"]),
-        "paper_count": int(pool.get("paper_count") or 0),
+        "total": total_count,
+        "processed": processed_count,
+        "remaining": pending_count,
+        "represented": represented_count,
+        "research": research_count,
+        "unrelated": unrelated_count,
+        "borderline": borderline_count,
+        "backward_pending_raw": int(backward_pool.get("candidate_count") or 0),
+        "forward_pending_raw": forward_pending,
+        "combined_pending_before_research_exclusion": len(discovery_all),
+        "paper_count": len(papers),
     }
 
+
 def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]:
-    lines = ["## 構造化references探索状況", ""]
+    lines = ["## 探索候補の処理状況", ""]
     if progress.get("available") is not True:
         lines.extend([
-            "- 構造化references探索の進捗スナップショットはまだありません。",
+            "- Discovery探索候補の進捗を再計算できませんでした。",
             f"- 診断: {progress.get('error') or 'unknown error'}",
             "",
         ])
@@ -102,16 +188,22 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
     lines.extend([
         "| 指標 | 件数 |",
         "|---|---:|",
-        f"| 構造化references総候補 | **{total}** |",
+        f"| 探索候補総数 | **{total}** |",
         f"| 処理済み | **{processed}** |",
-        f"| 未処理 | **{remaining}** |",
-        f"| 収録済みとして除外 | **{progress['represented']}** |",
+        f"| 未処理Discovery候補 | **{remaining}** |",
+        f"| 収録済み | **{progress['represented']}** |",
+        f"| Research / Audit候補へ昇格済み | **{progress['research']}** |",
         f"| 無関係として除外 | **{progress['unrelated']}** |",
         f"| 微妙として除外 | **{progress['borderline']}** |",
         "",
         f"- 消化率: **{ratio:.1f}%**",
-        "- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。",
-        "- STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。",
+        f"- 現在の生在庫: 後方references **{progress['backward_pending_raw']}件** / "
+        f"前方引用 **{progress['forward_pending_raw']}件**。両者は重複を含むため単純加算しません。",
+        f"- 前方・後方を統合してidentity重複を除いた未処理面は **{progress['combined_pending_before_research_exclusion']}件**。"
+        f"そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。",
+        "- 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。"
+        "前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。",
+        "- STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。",
         "",
     ])
     return lines
@@ -1102,7 +1194,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
-        "- **構造化references探索状況**: STATUS生成時に `reference_pool.build_reference_pool()` を実行し、paper実体と無関係/微妙台帳から現在値を直接再計算します。過去のprecheck snapshotは件数表示に使いません。",
+        "- **探索候補の処理状況**: 前方引用・後方referencesを区別せず、paper実体、非終端Research/Audit job、relevance台帳、現在のDiscovery候補面をidentityで統合してゼロベース再計算します。",
         "- **日次メンテナンス**: `.survey/work-queue/maintenance-cycle.json` をmaintenance workflowの耐久正本として表示します。通常jobの件数からmaintenance状態を推定しません。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
         "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
