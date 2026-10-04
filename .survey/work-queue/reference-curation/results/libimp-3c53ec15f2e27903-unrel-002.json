@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c53ec15f2e27903-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.12280",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.12280",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.12280",
+      "arXiv:2606.12280"
+    ],
+    "reason": "The primary text studies post-training quantization of Ideogram 4.0, a text-to-image flow-matching diffusion transformer, for image-generation quality, fidelity, memory, and latency on RTX 3090 GPUs. This is diffusion image-generation model compression rather than LLM inference, serving, or inference-time compression, so it falls outside this survey's scope despite being linked from an LLM INT8 paper.",
+    "first_checked_at": "2026-10-04T05:49:13+00:00",
+    "last_checked_at": "2026-10-04T05:49:13+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Holding the FP8 Quality Ceiling at 8-Bit Weights and Activations: INT8 and GGUF Post-Training Quantization of Ideogram 4.0 for Consumer GPUs"
+  },
+  "processed_at": "2026-10-04T05:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c53ec15f2e2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

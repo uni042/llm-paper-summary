@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T05:28:32+00:00",
-  "record_count": 934,
+  "updated_at": "2026-10-04T05:49:13+00:00",
+  "record_count": 936,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -13727,6 +13727,35 @@
       "last_checked_at": "2026-10-04T05:28:32+00:00",
       "linked_from": [],
       "title": "Efficient Transformers: A Survey"
+    },
+    "arXiv:2606.12280": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12280",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.12280",
+        "arXiv:2606.12280"
+      ],
+      "reason": "The primary text studies post-training quantization of Ideogram 4.0, a text-to-image flow-matching diffusion transformer, for image-generation quality, fidelity, memory, and latency on RTX 3090 GPUs. This is diffusion image-generation model compression rather than LLM inference, serving, or inference-time compression, so it falls outside this survey's scope despite being linked from an LLM INT8 paper.",
+      "first_checked_at": "2026-10-04T05:49:13+00:00",
+      "last_checked_at": "2026-10-04T05:49:13+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Holding the FP8 Quality Ceiling at 8-Bit Weights and Activations: INT8 and GGUF Post-Training Quantization of Ideogram 4.0 for Consumer GPUs"
+    },
+    "arXiv:2606.31023": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31023",
+      "identity_tokens": [
+        "arXiv:2606.31023"
+      ],
+      "reason": "本文の中心課題は、有限期間のエネルギー管理・電力ユニットコミットメント制御で、未信頼のポリシーまたはLLMが提案する行動列を検証し、安全な区間だけを採用して、残りをLP/MILPベースの信頼済み制御オラクルへ委譲すること。計測する呼び出し削減と壁時計高速化は主に制御オラクルの再求解を省く効果であり、LLMのトークン生成・推論・serving自体を高速化する手法ではない。著者らも§4で speculative decoding との共通点を draft–verify–accept の形に限定し、検証対象はトークン分布ではなく状態遷移の安全性と制御コストだと区別している。したがって本リポジトリのLLM推論、serving、推論時圧縮・効率化の対象外。",
+      "first_checked_at": "2026-10-04T05:49:13+00:00",
+      "last_checked_at": "2026-10-04T05:49:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Certified Speculative Execution for Untrusted AI Agents"
     }
   }
 }
