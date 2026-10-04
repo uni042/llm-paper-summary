@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-1400-scheduled-chat-00/r02",
+  "reference_main_sha": "dd30f798724d41459e45031e8514980bd52d62e0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/lra.2025.3544909",
+      "identity_tokens": ["DOI:10.1109/lra.2025.3544909", "arXiv:2409.12514"],
+      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+      "reason": "視覚言語行動モデル（Vision-Language-Action model; VLA）の推論遅延を主要問題として明示し、7B超のVLMと自己回帰的action-token生成を、小型VLMとdiffusion policy headへ置換して実機推論を高速化する。VLA推論効率化の収録範囲に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2409.12514",
+      "body_check": "arXiv v5 HTML本文を確認。Introductionは既存VLAの高遅延要因をlarge VLMとautoregressive action token generationの2点に分解し、70M〜1.4B級VLMとdiffusion-based action headを提案する。Fig.1/本文は同一A6000上でTinyVLA-HがOpenVLAより20倍低いinference latencyとし、MethodではLoRAを推論前にre-parameterizeして標準LMへ統合する。推論速度が論文の中心設計・評価項目なのでaccept。",
+      "first_checked_at": "2026-10-04T14:08:00+09:00",
+      "last_checked_at": "2026-10-04T14:08:00+09:00",
+      "linked_from": ["papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"],
+      "worklist_rank": 53
+    }
+  ]
+}
