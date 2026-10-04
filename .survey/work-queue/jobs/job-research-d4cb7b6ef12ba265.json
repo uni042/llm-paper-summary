@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "arXiv:2401.00134",
+  "citation_count": 42,
+  "citation_count_checked_at": "2026-10-04T18:47:03+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-27T05:05:08+00:00",
   "doi": null,
@@ -17,23 +20,27 @@
   "job_id": "job-research-d4cb7b6ef12ba265",
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md",
-  "priority": 0,
+  "priority": 42,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 42,
+    "citations": 42,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 1009,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 42
   },
+  "published": "2023-12-30",
   "schema_version": 1,
   "selection_reason": "大規模LLM学習の障害復旧・チェックポイント・資源再構成を統合し、故障時の学習停止時間とコストを直接削減する。",
+  "semantic_scholar_id": "6cdf32647b158b6308aac7a650f756a27227f0f7",
   "source_url": "https://arxiv.org/abs/2401.00134",
   "status": "ready",
   "title": "Unicron: Economizing Self-Healing LLM Training at Scale",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2023
 }

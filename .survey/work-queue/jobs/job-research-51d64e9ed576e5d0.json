@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2401.04658",
   "canonical_id": "arXiv:2401.04658",
+  "citation_count": 64,
+  "citation_count_checked_at": "2026-10-04T18:47:03+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-28T01:40:54+00:00",
   "doi": "10.48550/arXiv.2401.04658",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengths-in-large-language-models.md",
   "parent_job_id": "job-aefb6ba4b9b094e2",
-  "priority": 0,
+  "priority": 64,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 64,
+    "citations": 64,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 999,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 64
   },
+  "published": "2024-01-09",
   "schema_version": 1,
   "selection_reason": "tilingとTriton kernelでlinear attentionを長系列向けに高速・省memory化する。",
+  "semantic_scholar_id": "7294c426b8a95975ca932eaf8f700acdd3d950b2",
   "source_url": "https://arxiv.org/abs/2401.04658",
   "status": "ready",
   "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2024
 }

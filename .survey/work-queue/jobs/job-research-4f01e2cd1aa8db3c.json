@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2312.12682",
   "canonical_id": "arXiv:2312.12682",
+  "citation_count": 10,
+  "citation_count_checked_at": "2026-10-04T18:47:03+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-03T06:07:33+00:00",
   "doi": "10.48550/arXiv.2312.12682",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md",
   "parent_job_id": "job-6b80e8008c3161d3",
-  "priority": 0,
+  "priority": 10,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 10,
+    "citations": 10,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 1019,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 10
   },
+  "published": "2023-12-20",
   "schema_version": 1,
   "selection_reason": "Phi-1.5等のLLMを用途文脈に合わせて枝刈りし、モデルサイズと計算資源を削減してdomain-specific deploymentを可能にする推論向け圧縮研究。",
+  "semantic_scholar_id": "81711474e3f37a72d90c42dd10f46e431330f890",
   "source_url": "https://arxiv.org/abs/2312.12682",
   "status": "ready",
   "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2023
 }
