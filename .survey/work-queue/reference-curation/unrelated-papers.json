@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T14:23:33+00:00",
-  "record_count": 1077,
+  "updated_at": "2026-10-04T14:25:40+00:00",
+  "record_count": 1088,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5511,19 +5511,6 @@
       "linked_from": [],
       "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System"
     },
-    "arXiv:2405.15793": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2405.15793",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2405.15793",
-        "arXiv:2405.15793"
-      ],
-      "reason": "ソフトウェア工学エージェント向けのエージェント・コンピュータ・インターフェース設計が主題で、LLM推論基盤の高速化ではない。",
-      "first_checked_at": "2026-10-02T06:58:21+00:00",
-      "last_checked_at": "2026-10-03T18:59:03+00:00",
-      "linked_from": [],
-      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
-    },
     "arXiv:2403.08295": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2403.08295",
@@ -9494,9 +9481,9 @@
         "DOI:10.48550/arxiv.1602.07360",
         "arXiv:1602.07360"
       ],
-      "reason": "CNNを小型化する画像認識モデル研究で、圧縮・配備効率には関係するがLLM/Transformer推論を対象としない。",
+      "reason": "AlexNet級画像分類精度を少ないparameterで達成する小型CNNアーキテクチャ研究で、LLM推論基盤ではない。",
       "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md"
       ],
@@ -11117,23 +11104,6 @@
         "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
       ],
       "title": "NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions"
-    },
-    "DOI:10.1109/isca.2016.30": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1109/isca.2016.30",
-      "identity_tokens": [
-        "DOI:10.1109/isca.2016.30",
-        "DOI:10.48550/arxiv.1602.01528",
-        "arXiv:1602.01528"
-      ],
-      "reason": "圧縮DNN向け専用推論アクセラレータとして重要だが、AlexNet/VGG等の一般DNNを対象としLLM/Transformer推論が最終適用先ではない。",
-      "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-04T10:14:14+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
-      ],
-      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network"
     },
     "DOI:10.1109/9.284868": {
       "classification": "unrelated",
@@ -15662,9 +15632,9 @@
       "identity_tokens": [
         "arXiv:1601.06759"
       ],
-      "reason": "自然画像のpixel分布を2次元RNNで逐次モデル化し、ImageNet等で画像生成likelihoodとsample品質を改善するgenerative vision研究。LLM生成推論のruntime最適化ではない。",
+      "reason": "画像のpixel分布を自己回帰RNNでモデル化する画像生成研究で、LLM推論システムを対象としない。",
       "first_checked_at": "2026-10-04T14:23:33+00:00",
-      "last_checked_at": "2026-10-04T14:23:33+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
@@ -15754,6 +15724,171 @@
         "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
       ],
       "title": "Averaging Weights Leads to Wider Optima and Better Generalization"
+    },
+    "arXiv:1611.06440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.06440",
+      "identity_tokens": [
+        "arXiv:1611.06440"
+      ],
+      "reason": "Taylor展開基準でCNN kernelをpruneし画像・gestureモデルの推論を軽量化する研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "Pruning Convolutional Neural Networks for Resource Efficient Inference"
+    },
+    "arXiv:1510.00149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1510.00149",
+      "identity_tokens": [
+        "arXiv:1510.00149"
+      ],
+      "reason": "pruning・trained quantization・Huffman codingでAlexNet/VGGを圧縮し推論speed/energyを改善する基礎的DNN圧縮研究だが、対象は画像CNNでありLLM推論圧縮を直接扱わない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding"
+    },
+    "arXiv:1602.01528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1602.01528",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.30",
+        "DOI:10.48550/arxiv.1602.01528",
+        "arXiv:1602.01528"
+      ],
+      "reason": "圧縮AlexNet/VGGのsparse matrix-vector multiplicationを専用hardwareで高速化するDNN accelerator研究で、LLM/Transformer推論を対象としない。",
+      "first_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ],
+      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network"
+    },
+    "DOI:10.1145/3582688": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3582688",
+      "identity_tokens": [
+        "DOI:10.1145/3582688",
+        "arXiv:2205.06743"
+      ],
+      "reason": "few-shot learningの手法・応用・課題を整理する一般サーベイで、LLM推論実行基盤の効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "A Comprehensive Survey of Few-shot Learning: Evolution, Applications, Challenges, and Opportunities"
+    },
+    "DOI:10.1109/tnnls.2012.2200299": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnnls.2012.2200299",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2012.2200299"
+      ],
+      "reason": "混合専門家モデルの歴史・統計的定式化・学習を振り返る基礎サーベイで、現代LLMのMoE推論通信・offload・serving最適化を直接対象としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "Twenty Years of Mixture of Experts"
+    },
+    "DOI:10.1145/2628071.2628092": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2628071.2628092",
+      "identity_tokens": [
+        "DOI:10.1145/2628071.2628092"
+      ],
+      "reason": "domain-specific program autotunerを構築する汎用frameworkで、複数探索手法をensembleしてconfigurationを探索する研究。LLM推論ランタイム固有の最適化ではない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "OpenTuner: An extensible framework for program autotuning"
+    },
+    "DOI:10.1145/511334.511340": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/511334.511340",
+      "identity_tokens": [
+        "DOI:10.1145/511334.511340"
+      ],
+      "reason": "一般buffer cacheのpage replacement policyを提案するストレージ/OS研究で、LLM KV cacheやmodel servingを直接対象としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "LIRS: an efficient low inter-reference recency set replacement policy to improve buffer cache performance"
+    },
+    "DOI:10.1145/1089733.1089735": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1089733.1089735",
+      "identity_tokens": [
+        "DOI:10.1145/1089733.1089735"
+      ],
+      "reason": "flash memory向けmapping・garbage collection等のアルゴリズム/データ構造を扱うストレージ研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "Algorithms and data structures for flash memories"
+    },
+    "DOI:10.1109/tc.2001.970573": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tc.2001.970573",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2001.970573"
+      ],
+      "reason": "LRUとLFUを連続的に統合する一般cache replacement policy研究で、LLM KV cacheや推論サービング固有の方式ではない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "LRFU: A Spectrum of Policies that Subsumes the Least Recently Used and Least Frequently Used Policies"
+    },
+    "arXiv:2005.08025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.08025",
+      "identity_tokens": [
+        "arXiv:2005.08025"
+      ],
+      "reason": "IDE内でTransformerによりコード補完・生成を行うモデル/開発支援研究で、LLM推論基盤の速度・memory・serving最適化を主題としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "IntelliCode compose: code generation using transformer"
+    },
+    "DOI:10.15607/rss.2023.xix.025": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15607/rss.2023.xix.025",
+      "identity_tokens": [
+        "DOI:10.15607/rss.2023.xix.025",
+        "arXiv:2212.06817"
+      ],
+      "reason": "大規模robot demonstrationから言語条件付き実robot制御の汎化を学習するRobotics Transformer研究で、低遅延実装はあるが最終目的はrobot policy能力・scalingでありLLM/VLM推論基盤最適化ではない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "RT-1: Robotics Transformer for Real-World Control at Scale"
+    },
+    "DOI:10.52202/079017-1601": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-1601",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.15793",
+        "DOI:10.52202/079017-1601",
+        "arXiv:2405.15793"
+      ],
+      "reason": "LM agent向けagent-computer interfaceを設計しsoftware engineering task成功率を改善するagent能力・interface研究で、agentic inferenceのサービング効率やruntime schedulingを改善する研究ではない。",
+      "first_checked_at": "2026-10-02T06:58:21+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    },
+    "arXiv:1109.3843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1109.3843",
+      "identity_tokens": [
+        "arXiv:1109.3843"
+      ],
+      "reason": "行列のstatistical leverage score/coherenceをrandom projectionで高速近似する数値線形代数・randomized algorithm研究で、LLM推論を直接対象としない。",
+      "first_checked_at": "2026-10-04T14:25:40+00:00",
+      "last_checked_at": "2026-10-04T14:25:40+00:00",
+      "linked_from": [],
+      "title": "Fast approximation of matrix coherence and statistical leverage"
     }
   }
 }

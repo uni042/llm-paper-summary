@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94060b687ba1a044-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/1089733.1089735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/1089733.1089735",
+    "identity_tokens": [
+      "DOI:10.1145/1089733.1089735"
+    ],
+    "reason": "flash memory向けmapping・garbage collection等のアルゴリズム/データ構造を扱うストレージ研究で、LLM推論を最終適用先としない。",
+    "first_checked_at": "2026-10-04T14:25:40+00:00",
+    "last_checked_at": "2026-10-04T14:25:40+00:00",
+    "linked_from": [],
+    "title": "Algorithms and data structures for flash memories"
+  },
+  "processed_at": "2026-10-04T14:25:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94060b687ba1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

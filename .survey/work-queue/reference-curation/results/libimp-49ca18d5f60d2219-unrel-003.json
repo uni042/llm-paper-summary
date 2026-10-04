@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-49ca18d5f60d2219-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1602.07360",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1602.07360",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1602.07360",
+      "arXiv:1602.07360"
+    ],
+    "reason": "AlexNet級画像分類精度を少ないparameterで達成する小型CNNアーキテクチャ研究で、LLM推論基盤ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-04T14:25:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md"
+    ],
+    "title": "SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size"
+  },
+  "processed_at": "2026-10-04T14:25:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-49ca18d5f60d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

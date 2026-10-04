@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94060b687ba1a044-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1109.3843",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1109.3843",
+    "identity_tokens": [
+      "arXiv:1109.3843"
+    ],
+    "reason": "行列のstatistical leverage score/coherenceをrandom projectionで高速近似する数値線形代数・randomized algorithm研究で、LLM推論を直接対象としない。",
+    "first_checked_at": "2026-10-04T14:25:40+00:00",
+    "last_checked_at": "2026-10-04T14:25:40+00:00",
+    "linked_from": [],
+    "title": "Fast approximation of matrix coherence and statistical leverage"
+  },
+  "processed_at": "2026-10-04T14:25:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94060b687ba1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
