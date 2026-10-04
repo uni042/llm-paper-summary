@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T06:03:54+00:00",
-  "record_count": 945,
+  "updated_at": "2026-10-04T06:13:04+00:00",
+  "record_count": 946,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -13888,6 +13888,20 @@
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
       "title": "Multi-LLM Collaborative Alignment via Stackelberg Games"
+    },
+    "arXiv:2609.36642": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36642",
+      "identity_tokens": [
+        "arXiv:2609.36642"
+      ],
+      "reason": "GRPO warm start後の方策学習と隠れ状態の自己蒸留を提案する、エージェント強化学習の訓練手法。推論・servingの効率化を扱わないため対象外。",
+      "first_checked_at": "2026-10-04T06:13:04+00:00",
+      "last_checked_at": "2026-10-04T06:13:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PR-OPD: Privileged Representation On-policy Self-Distillation for Agentic Reinforcement Learning"
     }
   }
 }
