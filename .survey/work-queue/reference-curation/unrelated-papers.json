@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T18:58:58+00:00",
-  "record_count": 1240,
+  "updated_at": "2026-10-04T19:48:52+00:00",
+  "record_count": 1254,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168,9 +168,9 @@
       "identity_tokens": [
         "arXiv:2210.03629"
       ],
-      "reason": "Agent reasoning/acting methodology rather than an inference/training systems contribution.",
+      "reason": "reasoning traceと外部actionを交互に生成してQA/interactive decision taskの成功率・信頼性を改善するagent prompting研究。agent execution loopを扱うがserving/runtime効率化を目的としない。",
       "first_checked_at": "2026-09-19T18:45:00+00:00",
-      "last_checked_at": "2026-09-19T18:45:00+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
       "linked_from": [],
       "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
     },
@@ -2463,9 +2463,9 @@
         "DOI:10.48550/arxiv.2305.10601",
         "arXiv:2305.10601"
       ],
-      "reason": "推論探索方略による問題解決能力向上が主題で、LLM実行システム効率化ではない。",
+      "reason": "複数thought pathを探索・自己評価・backtrackingするsearch-based inferenceでproblem-solving accuracyを改善する。inference frameworkではあるが、計算効率より探索による能力向上が目的でruntime optimization対象外。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
@@ -4704,22 +4704,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md"
       ],
       "title": "Non-Clairvoyant Precedence Constrained Scheduling"
-    },
-    "OpenReview:1PL1NIMMrw": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:1PL1NIMMrw",
-      "identity_tokens": [
-        "OpenReview:1PL1NIMMrw",
-        "arXiv:2203.11171"
-      ],
-      "reason": "推論時に複数の思考経路をサンプリングして多数決する推論アルゴリズムだが、主目的は推論品質向上であり、サービング・メモリ・カーネル・推論効率の改善ではない。",
-      "first_checked_at": "2026-09-30T08:00:57+00:00",
-      "last_checked_at": "2026-10-03T18:50:23+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
-      ],
-      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
     },
     "OpenReview:5NTt8GFjUHkr": {
       "classification": "unrelated",
@@ -16249,22 +16233,6 @@
       ],
       "title": "TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems"
     },
-    "DOI:10.52202/068431-1613": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.52202/068431-1613",
-      "identity_tokens": [
-        "DOI:10.52202/068431-1613",
-        "arXiv:2205.11916"
-      ],
-      "reason": "Zero-shot Chain-of-Thought promptingでLLMの推論精度を引き出す能力研究であり、推論時の計算量・メモリ・サービング基盤を効率化する研究ではない。",
-      "first_checked_at": "2026-10-04T13:05:22+00:00",
-      "last_checked_at": "2026-10-04T14:32:41+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
-        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
-      ],
-      "title": "Large Language Models are Zero-Shot Reasoners"
-    },
     "DOI:10.18653/v1/d18-1259": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/d18-1259",
@@ -18006,6 +17974,237 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "Towards Expert-Level Medical Question Answering with Large Language Models"
+    },
+    "arXiv:2305.10250": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10250",
+      "identity_tokens": [
+        "arXiv:2305.10250"
+      ],
+      "reason": "会話履歴を外部memoryへ保存・検索・更新し長期companion能力を改善するagent memory研究。推論時memory moduleには関連するが、主評価は記憶想起・人格理解・共感品質でruntime効率化が中心ではない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md"
+      ],
+      "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory"
+    },
+    "arXiv:1808.10792": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.10792",
+      "identity_tokens": [
+        "arXiv:1808.10792"
+      ],
+      "reason": "content selectorでsource tokenを選びabstractive summarizerのcopy attentionを制約して要約品質を改善するNLP task研究。LLM推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Bottom-Up Abstractive Summarization"
+    },
+    "arXiv:1906.05714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.05714",
+      "identity_tokens": [
+        "arXiv:1906.05714"
+      ],
+      "reason": "Transformer attentionを可視化・分析するinterpretability研究で、attention計算の高速化・省メモリ化やLLM servingを提案しない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "title": "A Multiscale Visualization of Attention in the Transformer Model"
+    },
+    "arXiv:2111.00364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.00364",
+      "identity_tokens": [
+        "arXiv:2111.00364"
+      ],
+      "reason": "AIのenergy/carbon/environmental impactを整理するsustainability研究で、LLM推論runtimeを直接高速化するsystem/algorithmを提案しない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md"
+      ],
+      "title": "Sustainable AI: Environmental Implications, Challenges and Opportunities"
+    },
+    "arXiv:2205.11916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.11916",
+      "identity_tokens": [
+        "DOI:10.52202/068431-1613",
+        "arXiv:2205.11916"
+      ],
+      "reason": "「Let's think step by step」によるZero-shot-CoTでreasoning accuracyを改善するprompting研究。追加reasoning tokenを生成する能力誘導であり推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T13:05:22+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "title": "Large Language Models are Zero-Shot Reasoners"
+    },
+    "arXiv:2203.11171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.11171",
+      "identity_tokens": [
+        "OpenReview:1PL1NIMMrw",
+        "arXiv:2203.11171"
+      ],
+      "reason": "複数reasoning pathをsamplingし多数決するself-consistency decodingでreasoning accuracyを改善する。推論時方式だが複数samplingで計算量を増やすquality手法で、runtime効率化が最終目的ではない。",
+      "first_checked_at": "2026-09-30T08:00:57+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+    },
+    "arXiv:2308.00692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00692",
+      "identity_tokens": [
+        "arXiv:2308.00692"
+      ],
+      "reason": "複雑な自然言語queryからsegmentation maskを生成するreasoning segmentation taskとLISAモデルの能力向上が主題。LLM推論ランタイム、メモリ、サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "LISA: Reasoning Segmentation via Large Language Model"
+    },
+    "arXiv:1904.09223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.09223",
+      "identity_tokens": [
+        "arXiv:1904.09223"
+      ],
+      "reason": "entity-level/phrase-level maskingで知識を組み込んだ言語表現を学習し中国語NLP taskの品質を改善する事前学習研究で、推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ],
+      "title": "ERNIE: Enhanced Representation through Knowledge Integration"
+    },
+    "arXiv:2101.09671": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.09671",
+      "identity_tokens": [
+        "arXiv:2101.09671"
+      ],
+      "reason": "computer vision中心の汎用DNNについてpruning/quantizationを整理するsurveyで、LLM固有の推論基盤・KVキャッシュ・サービングを対象としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md"
+      ],
+      "title": "Pruning and Quantization for Deep Neural Network Acceleration: A Survey"
+    },
+    "DOI:10.18653/v1/2022.naacl-main.191": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.191",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.191",
+        "arXiv:2112.08633"
+      ],
+      "reason": "annotated dataとLMでin-context exampleを選ぶprompt retrieverを学習しfew-shot task品質を改善するprompt selection研究。LLM runtime/serving効率化が最終目的ではない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md"
+      ],
+      "title": "Learning To Retrieve Prompts for In-Context Learning"
+    },
+    "arXiv:2302.09664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.09664",
+      "identity_tokens": [
+        "arXiv:2302.09664"
+      ],
+      "reason": "複数生成を意味的同値classへまとめるsemantic entropyでLLMの回答不確実性を推定する信頼性・評価研究。追加samplingは行うが、推論runtimeの高速化・省メモリ化を目的としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ],
+      "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation"
+    },
+    "arXiv:2212.10403": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10403",
+      "identity_tokens": [
+        "arXiv:2212.10403"
+      ],
+      "reason": "LLM reasoning能力、elicitation手法、benchmarkを整理するsurveyで、推論systemのruntime・memory・scheduler・kernel最適化を主題としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+      ],
+      "title": "Towards Reasoning in Large Language Models: A Survey"
+    },
+    "arXiv:2011.04006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.04006",
+      "identity_tokens": [
+        "arXiv:2011.04006"
+      ],
+      "reason": "1K〜16K長の複数taskで10種のefficient Transformerを比較するbenchmark研究。効率性を測るが、新しいLLM推論runtime方式を提案する論文ではなく、評価基盤が最終成果。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.02842-iceformer.md"
+      ],
+      "title": "Long Range Arena: A Benchmark for Efficient Transformers"
+    },
+    "DOI:10.48550/arxiv.2304.07327": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2304.07327",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.07327",
+        "arXiv:2304.07327"
+      ],
+      "reason": "人間生成assistant conversation corpusとalignment data収集を公開するdataset/alignment研究で、LLM推論実行効率化を対象としない。",
+      "first_checked_at": "2026-10-04T19:48:51+00:00",
+      "last_checked_at": "2026-10-04T19:48:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "OpenAssistant Conversations - Democratizing Large Language Model Alignment"
+    },
+    "DOI:10.18653/v1/2021.naacl-main.45": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.45",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.naacl-main.45",
+        "arXiv:2104.06378"
+      ],
+      "reason": "LMによるKG node relevance scoringとGNNによる共同reasoningでQA精度を改善するモデル能力研究で、推論runtimeやサービング効率化を提案しない。",
+      "first_checked_at": "2026-10-04T19:48:52+00:00",
+      "last_checked_at": "2026-10-04T19:48:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md"
+      ],
+      "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering"
+    },
+    "arXiv:2112.01488": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.01488",
+      "identity_tokens": [
+        "arXiv:2112.01488"
+      ],
+      "reason": "late-interaction情報検索器の残差圧縮でindex容量を6〜10倍削減するretrieval system研究。RAGの構成要素として有用だが、最終適用先はneural IRでLLM推論systemではない。",
+      "first_checked_at": "2026-10-04T19:48:52+00:00",
+      "last_checked_at": "2026-10-04T19:48:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction"
     }
   }
 }

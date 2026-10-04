@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbc5c2cd00bc46a2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.09664",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.09664",
+    "identity_tokens": [
+      "arXiv:2302.09664"
+    ],
+    "reason": "複数生成を意味的同値classへまとめるsemantic entropyでLLMの回答不確実性を推定する信頼性・評価研究。追加samplingは行うが、推論runtimeの高速化・省メモリ化を目的としない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+    ],
+    "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbc5c2cd00bc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

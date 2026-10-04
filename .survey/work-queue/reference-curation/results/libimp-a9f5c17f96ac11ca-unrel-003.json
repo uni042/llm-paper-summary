@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9f5c17f96ac11ca-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.05714",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.05714",
+    "identity_tokens": [
+      "arXiv:1906.05714"
+    ],
+    "reason": "Transformer attentionを可視化・分析するinterpretability研究で、attention計算の高速化・省メモリ化やLLM servingを提案しない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+    ],
+    "title": "A Multiscale Visualization of Attention in the Transformer Model"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9f5c17f96ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

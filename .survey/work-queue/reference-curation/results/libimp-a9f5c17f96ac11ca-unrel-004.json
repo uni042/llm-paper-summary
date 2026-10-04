@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9f5c17f96ac11ca-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.00364",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.00364",
+    "identity_tokens": [
+      "arXiv:2111.00364"
+    ],
+    "reason": "AIのenergy/carbon/environmental impactを整理するsustainability研究で、LLM推論runtimeを直接高速化するsystem/algorithmを提案しない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md"
+    ],
+    "title": "Sustainable AI: Environmental Implications, Challenges and Opportunities"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9f5c17f96ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

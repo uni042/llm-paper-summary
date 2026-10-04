@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbc5c2cd00bc46a2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1904.09223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1904.09223",
+    "identity_tokens": [
+      "arXiv:1904.09223"
+    ],
+    "reason": "entity-level/phrase-level maskingで知識を組み込んだ言語表現を学習し中国語NLP taskの品質を改善する事前学習研究で、推論system効率化を対象としない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+    ],
+    "title": "ERNIE: Enhanced Representation through Knowledge Integration"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbc5c2cd00bc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
