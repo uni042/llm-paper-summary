@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 03:50:13 JST**
+> 自動生成: **2026-10-05 03:55:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 00:05:47 JST（3時間44分前）** |
+| 最終maintenance完了 | **10-05 00:05:47 JST（3時間49分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -100,7 +100,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/20261004-batch-a2--69dc9a82075b27919927e6a4441bbb1084ba186054ae880b8fcf7ffb72404909--rank61-entropy-guided.json
 - Discovery: **10-05 03:30:00 JST** / worker scheduled-chat-30 / run 20261005-0330-scheduled-chat-30/r01
   - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_0e0ed942fcb8819193f458691aba0192--discovery-20261005-0330-scheduled-chat-30-r01.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_0e0ed942fcb8819193f458691aba0192--discovery-20261005-0330-scheduled-chat-30-r01.json
 
 ## 件数サマリー（旧immutable transport診断）
 

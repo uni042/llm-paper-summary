@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-71d7fcfe1f969810-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.26488",
+  "reason": "再帰reasoning modelをedgeへ展開するためINT8/INT4、flash-streamed embedding等を評価し、4MB microcontrollerまで縮小する。推論deployment圧縮に直結するが対象modelが一般的LLMより小規模recursive reasoner寄りのためborderline。",
+  "title": "What Survives When You Compress a Recursive Reasoner for the Edge?",
+  "identity_tokens": [
+    "arXiv:2606.26488"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71d7fcfe1f96",
+  "source_precheck_request_id": null
+}
