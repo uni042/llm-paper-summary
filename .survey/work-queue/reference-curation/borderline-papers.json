@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T21:51:06+00:00",
-  "record_count": 452,
+  "updated_at": "2026-10-04T21:54:26+00:00",
+  "record_count": 454,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6488,6 +6488,32 @@
         "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
       ],
       "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
+    },
+    "arXiv:2305.06983": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.06983",
+      "identity_tokens": [
+        "arXiv:2305.06983"
+      ],
+      "reason": "FLAREは生成中に次文を予測し、低confidence tokenがある場合だけ検索して再生成するinference-time active RAG。不要retrievalを避ける実行制御を含むが、主評価はknowledge-intensive generation品質でruntime/latency最適化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:54:26+00:00",
+      "last_checked_at": "2026-10-04T21:54:26+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "title": "Active Retrieval Augmented Generation"
+    },
+    "arXiv:1908.08593": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1908.08593",
+      "identity_tokens": [
+        "arXiv:1908.08593"
+      ],
+      "reason": "BERTのattention headを定量・定性分析し、head間の反復patternとoverparameterizationを示し、一部headを手動disableすると性能が改善することを報告する。推論時head削減への直接的含意はあるが、主目的はinterpretabilityで効率評価が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:54:26+00:00",
+      "last_checked_at": "2026-10-04T21:54:26+00:00",
+      "linked_from": [],
+      "title": "Revealing the Dark Secrets of BERT"
     }
   }
 }

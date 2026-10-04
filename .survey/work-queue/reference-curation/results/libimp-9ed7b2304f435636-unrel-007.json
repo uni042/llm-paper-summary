@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ed7b2304f435636-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.03404",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.03404",
+    "identity_tokens": [
+      "arXiv:2103.03404"
+    ],
+    "reason": "pure self-attention networkが深さとともにrank collapseする理論を解析し、skip connection/MLPの役割を説明するarchitecture theory研究。推論runtimeやmemoryの最適化方式を提案しない。",
+    "first_checked_at": "2026-10-04T21:54:26+00:00",
+    "last_checked_at": "2026-10-04T21:54:26+00:00",
+    "linked_from": [],
+    "title": "Attention is Not All You Need: Pure Attention Loses Rank Doubly Exponentially with Depth"
+  },
+  "processed_at": "2026-10-04T21:54:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ed7b2304f43",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
