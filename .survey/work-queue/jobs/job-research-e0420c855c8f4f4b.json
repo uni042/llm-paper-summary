@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-e0420c855c8f4f4b",
+  "type": "research",
+  "parent_job_id": "job-6f84cd4162e3a176",
+  "priority": 104,
+  "canonical_id": "arXiv:2607.09153",
+  "arxiv_id": "2607.09153",
+  "doi": "10.48550/arXiv.2607.09153",
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:431f81e9621ffaea17639ecc30a10311ebb53a2e"
+  ],
+  "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+  "source_url": "https://arxiv.org/abs/2607.09153",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2607.09153-kv-prm-efficient-process-reward-modeling-via-kv-cache-transfer-for-multi-agent-test-time-scaling.md",
+  "lineage": null,
+  "selection_reason": "生成済みKVキャッシュを直接PRMへ渡しtrajectory再encodeを避け、scoring costをO(L^2)からO(L)へ削減する。最大5000x FLOPs、37x latency、34x memory削減を報告し、agentic inferenceでのKV再利用を直接扱う。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 100,
+    "prestigious_venue": 0,
+    "citations": 4,
+    "citation_count": 4,
+    "total": 104,
+    "is_fresh": true,
+    "freshness_age_days": 86,
+    "matched_prestigious_venue": null
+  },
+  "published": "2026-07-10",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "citation_count": 4,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "431f81e9621ffaea17639ecc30a10311ebb53a2e",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-04T19:01:15+00:00"
+}

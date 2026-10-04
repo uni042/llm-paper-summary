@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-04T18:57:33+00:00",
-  "last_run_key": "library-import-960e417b6f54",
-  "last_round": "libimp-960e417b6f54853a-pre01",
+  "updated_at": "2026-10-04T19:01:37+00:00",
+  "last_run_key": "library-import-1347bc8503d8",
+  "last_round": "libimp-1347bc8503d88378-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,26 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-20T01:01:07+09:00",
-      "round": "specialist-elastic-kv-03",
-      "axis": "CUDA VMM elastic KV reserve reclamation and chunked-prefill interaction",
-      "query_summary": "Elastic KV Cache was identified as a recent systems result with a negative-result analysis; authoritative precheck found it already represented.",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.23658"
-      ],
-      "next_axis_hint": "NVMe-direct KV offload and NAND-centric inference",
-      "source_submission": "work-queue/submissions/20260920T0112JST-discovery-specialist-elastic-kv-03.json"
-    },
     {
       "run_key": "2026-09-20T01:01:07+09:00",
       "round": "specialist-nvme-flash-04",
@@ -11680,6 +11660,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-1347bc8503d88378-pre01",
+      "precheck_request_id": "libimp-1347bc8503d88378-pre01",
+      "run_key": "library-import-1347bc8503d8",
+      "round": "libimp-1347bc8503d88378-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-1347bc8503d88378-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-1347bc8503d88378-pre01-sub01.json",
+        "work-queue/submissions/libimp-1347bc8503d88378-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20051,16 +20067,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-960e417b6f54",
-      "rounds": 96,
-      "candidate_count": 332,
-      "duplicate_filtered_count": 100,
-      "novel_candidate_count": 232,
+      "last_run_key": "library-import-1347bc8503d8",
+      "rounds": 97,
+      "candidate_count": 338,
+      "duplicate_filtered_count": 105,
+      "novel_candidate_count": 233,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 229,
-      "accepted_count": 229,
-      "duplicate_ratio": 0.30120481927710846,
-      "final_duplicate_ratio": 0.01293103448275862,
+      "post_final_dedupe_count": 230,
+      "accepted_count": 230,
+      "duplicate_ratio": 0.3106508875739645,
+      "final_duplicate_ratio": 0.012875536480686695,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
