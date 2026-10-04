@@ -10567,6 +10567,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+      "status": "WARN",
+      "summary": "小型高速マルチモーダル 基盤モデルと拡散方策decoderを組み合わせ、巨大VLMの自己回帰action トークン生成を避けてVLA推論とrobot data効率を改善する。",
+      "char_count": 87,
+      "japanese_ratio": 0.7105263157894737,
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.1% < 警告基準 80.0%"
+      ]
+    },
+    {
       "path": "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
       "status": "PASS",
       "summary": "反復単位バッチングと複数並列方式をCPUで模擬し、LLMサービングの遅延・電力を実機展開前に探索する拡張可能な実行計画シミュレータ。",
@@ -11031,6 +11042,15 @@
       "summary": "重要なMoE専門家の重み残差だけをCPUで補い、低ビット重みの全体計算はGPUで並行する。層・プリフィル/デコード別に補正量を調整し、DeepSeek-R1-671BをA800×2でデコード 21.8、プリフィル 150.2 トークン/sと報告する。",
       "char_count": 125,
       "japanese_ratio": 0.9866666666666667,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "status": "PASS",
+      "summary": "トークン単位データフローとHBM内PIM・ニアメモリ処理を協調させ、Transformerの低再利用なメモリ 通信量を削減する専用アクセラレータ。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
