@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（14本）
+## 自動生成の論文一覧（15本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -67,4 +67,10 @@
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   MoEのスケーリング則へ推論費用を組み込み、専門家数を増やした「損失最適」構成より、小さなMoEを多くのデータで学習する構成が配信費用まで含めて有利になる領域を示す。
+
+### 4年前（2022-11〜2023-10）
+
+- **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は新しい高速化方式を提案するのではなく、LLaMA 7B/13B/65Bを実機で動かし、スループットとGPUエネルギーを同時に測ることで、推論構成の交換条件を明らかにする。V100 32GBでは最低8枚、A100 80GBでは最低4枚が必要で、V100では8/16/32分割まで拡張する。
 <!-- survey:auto:end -->
