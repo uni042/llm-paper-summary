@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-0300-scheduled-chat-00/r03",
+  "reference_main_sha": "f951e311293aa92ac7d07072a011de8540a413d5",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2014.6853196",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2014.6853196"
+      ],
+      "title": "Aladdin: A pre-RTL, power-performance accelerator simulator enabling large design space exploration of customized architectures",
+      "reason": "カスタムアクセラレータの性能・電力・面積をRTL前に推定してSoC設計空間探索を行う汎用accelerator simulatorで、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/isca.2014.6853196",
+      "body_check": "abstract_screen_only: 著者機関公開abstractで汎用SoC accelerator modeling frameworkと確認でき、対象外が明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T03:03:16+09:00",
+      "last_checked_at": "2026-10-04T03:03:16+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.30320",
+      "identity_tokens": [
+        "arXiv:2608.30320"
+      ],
+      "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+      "reason": "Qwen3.8-Flash-Nextの推論効率を直接設計対象とし、3 GDN + 1 global/QSA層のhybrid、固定サイズrecurrent state、micro-block圧縮QSA、host-memoryからprefetchするn-gram embeddingを統合する。1M contextでQSAはdense attention比kernel-level prefill 7.6x、decode 4.9xを報告しており、長文脈推論・KV削減・host-memory階層に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2608.30320",
+      "body_check": "body_checked: arXiv本文§1–2.1を確認。GDNがprefixをfixed-size recurrent stateへ圧縮、QSAがkey sequenceをfactor rで圧縮してindexer costをO(n^2/r)へ低減、1M contextのprefill/decode kernel speedup 7.6x/4.9x、n-gram tableのhost-memory prefetchを確認。",
+      "first_checked_at": "2026-10-04T03:03:16+09:00",
+      "last_checked_at": "2026-10-04T03:03:16+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca52012.2021.00011",
+      "identity_tokens": [
+        "DOI:10.1109/isca52012.2021.00011"
+      ],
+      "title": "Sparsity-Aware and Re-configurable NPU Architecture for Samsung Flagship Mobile SoC",
+      "reason": "Samsung mobile SoC向けの汎用sparsity-aware NPU architectureで、LLM/Transformer推論固有の方式・評価を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/isca52012.2021.00011",
+      "body_check": "abstract_screen_only: タイトル・書誌・適用先がmobile SoC NPUと明白なため本文読解を省略。",
+      "first_checked_at": "2026-10-04T03:03:16+09:00",
+      "last_checked_at": "2026-10-04T03:03:16+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.17674",
+      "identity_tokens": [
+        "arXiv:2504.17674"
+      ],
+      "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
+      "reason": "実LLM推論のenergy/latency/throughputを、vLLM/PyTorch、speculative decoding、continuous batching、CUDA Graph、tensor parallelism、GPU世代、入出力長・batch sizeを横断して測定する。推論最適化の適用でunoptimized baseline比最大73%のenergy削減を報告し、推論評価・serving最適化に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2504.17674",
+      "body_check": "body_checked: arXiv HTMLのMethodology/Resultsを確認。1B–32B、Llama-3.1-8B/Qwen-32B/OLMoE、A6000/A100 80GB/A6000 Ada、最大32K input、vLLM/PyTorchを評価。speculative decodingはbatch<=16でenergy削減、batch128では25.65%増、tensor parallel 2/4 GPUはlatency 40.16%/61.34%減だがenergy 29.3%/55.23%増を確認。",
+      "first_checked_at": "2026-10-04T03:03:16+09:00",
+      "last_checked_at": "2026-10-04T03:03:16+09:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "worklist_rank": 74
+    }
+  ]
+}
