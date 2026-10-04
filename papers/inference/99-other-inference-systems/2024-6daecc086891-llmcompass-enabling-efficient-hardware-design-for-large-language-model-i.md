@@ -17,6 +17,51 @@ worker_completed_at: "2026-10-04T04:04:00+09:00"
 worker_run_key: "20261004-0345-scheduled-chat-45/r01"
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2207.00032
+- canonical_id: DOI:10.1145/3007787.3001177
+  doi: 10.1145/3007787.3001177
+- canonical_id: arXiv:2204.02311
+  arxiv_id: '2204.02311'
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: DOI:10.1145/3445814.3446762
+  doi: 10.1145/3445814.3446762
+- canonical_id: arXiv:1606.08415
+  arxiv_id: '1606.08415'
+- canonical_id: DOI:10.1145/3360307
+  doi: 10.1145/3360307
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: arXiv:1805.02867
+  arxiv_id: '1805.02867'
+- canonical_id: DOI:10.1145/3605943
+  doi: 10.1145/3605943
+- canonical_id: arXiv:2205.09911
+  arxiv_id: '2205.09911'
+- canonical_id: DOI:10.1145/3579371.3589052
+  doi: 10.1145/3579371.3589052
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:1811.02883
+  arxiv_id: '1811.02883'
+- canonical_id: arXiv:2303.06865
+- canonical_id: DOI:10.1145/3307650.3322230
+  doi: 10.1145/3307650.3322230
+- canonical_id: DOI:10.1145/3466752.3480095
+  doi: 10.1145/3466752.3480095
+- canonical_id: DOI:10.1145/3582016.3582024
+  doi: 10.1145/3582016.3582024
+- canonical_id: arXiv:2012.09852
+- canonical_id: arXiv:2206.07682
+  arxiv_id: '2206.07682'
+- canonical_id: DOI:10.1145/3373376.3378514
+  doi: 10.1145/3373376.3378514
+references_checked_at: '2026-10-04'
+references_source: arxiv-html-reference-section
+references_total: 76
 ---
 # LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference
 
