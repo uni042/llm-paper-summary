@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04T05:24:21+00:00",
-  "status": "issues_found",
-  "error_count": 2,
+  "checked_at": "2026-10-04T09:10:10+00:00",
+  "status": "passed",
+  "error_count": 0,
   "warning_count": 0,
-  "paper_count": 1551,
-  "latest_paper_commit": "2026-10-04T05:19:19+00:00",
+  "paper_count": 1571,
+  "latest_paper_commit": "2026-10-04T09:07:35+00:00",
   "queue": {
-    "job_count": 1102,
+    "job_count": 1156,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 98,
+        "completed": 116,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "ready": 578,
-        "superseded": 385,
+        "ready": 599,
+        "superseded": 400,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -51,7 +51,6 @@
         "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
       ],
       "list_summary": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md",
         "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
         "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md"
       ],
@@ -59,55 +58,32 @@
     },
     "new_failures": {
       "paper": [],
-      "list_summary": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md"
-      ],
+      "list_summary": [],
       "overview": []
     },
     "resolved_failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md"
+      ],
       "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-04T05:24:03+00:00",
-      "total": 1551,
-      "incomplete": 2,
-      "findings": [
-        {
-          "severity": "error",
-          "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 2 incomplete paper(s)",
-          "incomplete": 2
-        }
-      ]
+      "checked_at": "2026-10-04T09:10:00+00:00",
+      "total": 1571,
+      "incomplete": 0,
+      "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-04T05:24:03+00:00",
-      "total": 1551,
+      "checked_at": "2026-10-04T09:10:00+00:00",
+      "total": 1571,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": [
-    {
-      "severity": "error",
-      "code": "quality_regression",
-      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
-      "scope": "list_summary",
-      "paths": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md"
-      ]
-    },
-    {
-      "severity": "error",
-      "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 2 incomplete paper(s)",
-      "incomplete": 2
-    }
-  ]
+  "findings": []
 }
