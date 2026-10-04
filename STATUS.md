@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 05:46:37 JST**
+> 自動生成: **2026-10-05 05:49:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **598** |
 | 未claim Research job | **598** |
-| 直近24hのResearch処理完了 | **73** |
+| 直近24hのResearch処理完了 | **71** |
 | 最終Research処理完了 | **10-05 04:46:00 JST** |
-| 最終Discovery探索完了 | **10-05 04:00:00 JST** |
+| 最終Discovery探索完了 | **10-05 05:30:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,15 +52,15 @@
 | 収録論文seed台帳 | **1585** |
 | provider巡回可能 | **1581** |
 | provider巡回不能 | **4** |
-| 1周以上完了 | **481** |
-| 巡回中 | **134** |
-| 未巡回 | **966** |
-| 今回run開始時due | **1129** |
-| 前方引用から保持中の未処理候補 | **16890** |
+| 1周以上完了 | **510** |
+| 巡回中 | **135** |
+| 未巡回 | **936** |
+| 今回run開始時due | **1100** |
+| 前方引用から保持中の未処理候補 | **17083** |
 | エラー状態保持seed | **18** |
 
-- 初回カバレッジ完了率: **30.4%**
-- state最終更新: **10-05 04:48:26 JST**
+- 初回カバレッジ完了率: **32.3%**
+- state最終更新: **10-05 05:46:05 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 00:05:47 JST（5時間40分前）** |
+| 最終maintenance完了 | **10-05 00:05:47 JST（5時間43分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -89,18 +89,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **3** |
-| 直近6hのDiscovery run | **23** |
-| 直近6hのDiscovery本文確認・分類 | **162** |
+| 直近6hのDiscovery run | **27** |
+| 直近6hのDiscovery本文確認・分類 | **195** |
 | 最終Research完了 | **10-05 04:46:00 JST** |
-| 最終Discovery完了 | **10-05 04:00:00 JST** |
+| 最終Discovery完了 | **10-05 05:30:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-05 04:46:00 JST** / worker — / run 20261005-0430-scheduled-chat-30/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_273d46fe38fc8191a205ad1599cf6cc1--2503.16428-xattention.json
-- Discovery: **10-05 04:00:00 JST** / worker scheduled-chat-00 / run 20261005-0400-scheduled-chat-00/r02
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **10件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_30c585d7030c8191845684a2e000d0a9--discovery-20261005-0400-scheduled-chat-00-r02.json
+- Discovery: **10-05 05:30:00 JST** / worker scheduled-chat-30 / run 20261005-0530-scheduled-chat-30/r02
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_7adfbbd65248819189b508261e1c8fdb--discovery-20261005-0530-scheduled-chat-30-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
