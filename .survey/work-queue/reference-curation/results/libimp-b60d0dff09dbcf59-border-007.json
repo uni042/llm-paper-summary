@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b60d0dff09dbcf59-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.01680",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.01680",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.01680",
+      "arXiv:2402.01680"
+    ],
+    "reason": "arXiv一次資料の書誌とabstractを確認。LLM-based multi-agent systemsとその課題を対象とするためLLM推論に接点はあるが、abstractが主に扱うのはagentの領域・環境・profile・communication・能力向上機構・benchmarkで、推論効率やservingを主題とするかは要旨だけでは判別できない。本文確認と対象範囲の判断をroot reviewへ保留する。",
+    "first_checked_at": "2026-10-04T21:51:06+00:00",
+    "last_checked_at": "2026-10-04T21:51:06+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2606.00866-mori.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
+  },
+  "processed_at": "2026-10-04T21:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b60d0dff09db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

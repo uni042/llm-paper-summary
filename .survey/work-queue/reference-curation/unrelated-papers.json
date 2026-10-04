@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T21:49:41+00:00",
-  "record_count": 1384,
+  "updated_at": "2026-10-04T21:51:06+00:00",
+  "record_count": 1385,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14884,20 +14884,6 @@
       ],
       "title": "Establishing and maintaining long-term human-computer relationships"
     },
-    "arXiv:2103.07191": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2103.07191",
-      "identity_tokens": [
-        "arXiv:2103.07191"
-      ],
-      "reason": "初等math word problem solverのshortcut/heuristic依存を検証し、challenge dataset SVAMPを導入する能力評価・dataset研究で、LLM推論runtimeやserving効率化を対象としない。",
-      "first_checked_at": "2026-10-04T13:00:43+00:00",
-      "last_checked_at": "2026-10-04T13:00:43+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
-      ],
-      "title": "Are NLP Models really able to Solve Simple Math Word Problems?"
-    },
     "DOI:10.18653/v1/2020.acl-main.372": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2020.acl-main.372",
@@ -18818,18 +18804,6 @@
       "linked_from": [],
       "title": "Retrieval Augmentation Reduces Hallucination in Conversation"
     },
-    "arXiv:2108.00573": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2108.00573",
-      "identity_tokens": [
-        "arXiv:2108.00573"
-      ],
-      "reason": "multi-hop QA benchmark/data constructionが主題で、LLM推論runtime・memory・serving最適化ではない。",
-      "first_checked_at": "2026-10-04T21:30:25+00:00",
-      "last_checked_at": "2026-10-04T21:30:25+00:00",
-      "linked_from": [],
-      "title": "MuSiQue: Multihop Questions via Single-hop Question Composition"
-    },
     "arXiv:2310.08864": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2310.08864",
@@ -18968,9 +18942,9 @@
       "identity_tokens": [
         "arXiv:2204.03458"
       ],
-      "reason": "時空間video diffusion modelと長時間・高解像度video生成用conditional samplingを提案する生成モデル研究で、LLM推論runtime/servingではない。",
+      "reason": "時空間的に整合した動画生成用diffusion modelと条件付きsamplingを提案する生成モデル研究で、LLM推論システムを最終適用先としない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
       ],
@@ -18982,9 +18956,9 @@
       "identity_tokens": [
         "arXiv:2101.11986"
       ],
-      "reason": "画像tokenを段階的に再構成するT2T moduleとdeep-narrow backboneでVision TransformerのImageNet精度・計算量を改善するcomputer vision研究。効率化は扱うが最終適用先が画像TransformerでLLM推論ではない。",
+      "reason": "ImageNet向けVision Transformerのtokenization・画像構造学習を改善するcomputer vision研究で、LLM推論runtime効率化ではない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
       ],
@@ -19013,9 +18987,9 @@
       "identity_tokens": [
         "arXiv:2205.10625"
       ],
-      "reason": "複雑問題を簡単なsubproblemへ分解して順番に解くprompting戦略によりLLMのreasoning accuracyを改善する能力誘導研究で、推論runtime・memory・serving効率化ではない。",
+      "reason": "複雑な問題を小問題へ分解して逐次解くprompting strategyによるreasoning accuracy改善が主題で、推論runtimeやサービング効率化を提案しない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
@@ -19553,9 +19527,9 @@
       "identity_tokens": [
         "arXiv:2105.01601"
       ],
-      "reason": "all-MLP architecture evaluated on image classification; final application is computer vision, not LLM inference.",
+      "reason": "画像分類向けにattentionやconvolutionを使わずMLPのみで構成するvision architecture研究で、LLM推論の実行効率化を対象としない。",
       "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
@@ -19595,9 +19569,9 @@
       "identity_tokens": [
         "arXiv:2109.00859"
       ],
-      "reason": "identifier-aware pretraining for code understanding/generation quality; not LLM serving/runtime optimization.",
+      "reason": "identifier-aware pretrainingによるcode understanding/generation品質改善が主題で、LLM推論基盤の速度・メモリ・サービング最適化を扱わない。",
       "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
       ],
@@ -19609,9 +19583,9 @@
       "identity_tokens": [
         "arXiv:1902.10186"
       ],
-      "reason": "tests whether attention weights are meaningful explanations; interpretability analysis, not inference efficiency.",
+      "reason": "attention weightが予測説明として妥当かをgradient-based feature importance等と比較検証する解釈可能性研究で、attention計算やLLM推論の効率化ではない。",
       "first_checked_at": "2026-10-04T21:43:58+00:00",
-      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md"
       ],
@@ -19773,9 +19747,9 @@
         "DOI:10.48550/arxiv.2212.04356",
         "arXiv:2212.04356"
       ],
-      "reason": "68万時間の多言語・マルチタスク音声弱教師データでWhisperを学習し、音声認識・翻訳のゼロショット性能と頑健性を評価する音声モデル研究。推論コード公開には言及するが、LLM推論ランタイム、メモリ、サービング最適化は提案しない。",
+      "reason": "68万時間の弱教師付き音声データで学習した音声認識モデルの頑健性・ゼロショット転移が主題で、LLM推論ランタイム、KVキャッシュ、サービング効率化を扱わない。",
       "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
@@ -19788,9 +19762,9 @@
       "identity_tokens": [
         "arXiv:2307.01952"
       ],
-      "reason": "3倍規模のUNet、第二テキストencoder、複数aspect ratio conditioning、refinerを用いて高解像度text-to-image生成品質を改善する画像拡散モデル研究で、LLM推論システムを対象としない。",
+      "reason": "高解像度text-to-image向けlatent diffusion modelのUNet拡大、conditioning、refinerによる画像品質改善が主題で、言語モデル推論システムの効率化ではない。",
       "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
@@ -19798,31 +19772,15 @@
       ],
       "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis"
     },
-    "arXiv:2311.05232": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2311.05232",
-      "identity_tokens": [
-        "arXiv:2311.05232"
-      ],
-      "reason": "LLMハルシネーションの分類、原因、検出ベンチマーク、緩和手法、検索拡張生成の限界を整理する信頼性サーベイ。推論ランタイム・サービング・KVキャッシュ等の効率化が最終適用先ではない。",
-      "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md",
-        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
-      ],
-      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions"
-    },
     "arXiv:2307.15043": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2307.15043",
       "identity_tokens": [
         "arXiv:2307.15043"
       ],
-      "reason": "勾配探索と貪欲探索で敵対的suffixを生成し、整合済みLLMの拒否を回避する転移可能なjailbreak攻撃研究。安全性・敵対的攻撃が主題で、推論実行効率化ではない。",
+      "reason": "aligned LLMに対する自動adversarial suffix生成とjailbreak転移性を扱う安全性研究で、推論ランタイム、メモリ、カーネル、サービング最適化を提案しない。",
       "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
       ],
@@ -19834,9 +19792,9 @@
       "identity_tokens": [
         "arXiv:2404.07972"
       ],
-      "reason": "Ubuntu/Windows/macOS上の実アプリを使う369タスクでマルチモーダルagentの操作能力を評価するbenchmark/environment研究。実行環境は提供するが、agentic LLM推論ランタイムやサービング効率化を提案するものではない。",
+      "reason": "一次資料の要旨は、複数OS上でcomputer-use agentを実行評価する環境と369課題のbenchmarkを提案し、LLM/VLM agentのタスク成功率を評価する。LLM/VLMは評価対象だが、論文の貢献はcomputer-task能力benchmarkであり、推論効率・serving・圧縮を扱わないため本scopeでは対象外。",
       "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md",
         "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
@@ -19844,25 +19802,6 @@
         "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
       ],
       "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"
-    },
-    "arXiv:2402.01680": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2402.01680",
-      "identity_tokens": [
-        "arXiv:2402.01680"
-      ],
-      "reason": "LLMマルチagentの適用領域、環境、agent profile、通信、能力向上機構、dataset/benchmarkを整理するサーベイ。agentic inferenceのシステム実行効率やサービング方式を主題としない。",
-      "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-04T21:49:40+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.00866-mori.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
-      ],
-      "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
     },
     "arXiv:2404.04475": {
       "classification": "unrelated",
@@ -19929,6 +19868,95 @@
       "last_checked_at": "2026-10-04T21:49:41+00:00",
       "linked_from": [],
       "title": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models"
+    },
+    "arXiv:2306.03310": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.03310",
+      "identity_tokens": [
+        "arXiv:2306.03310"
+      ],
+      "reason": "lifelong robot learningにおける知識転移を評価するbenchmark suiteが主題で、LLM推論システム最適化を対象としない。",
+      "first_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "linked_from": [],
+      "title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning"
+    },
+    "arXiv:2308.00352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00352",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.00352",
+        "arXiv:2308.00352"
+      ],
+      "reason": "The primary abstract describes an LLM-based multi-agent framework for collaborative problem solving and software-engineering benchmarks. Its claimed improvements concern workflow organization, coherence, and reducing agent errors; it does not study LLM inference efficiency, serving systems, or inference-time compression. It is outside this run's stated scope.",
+      "first_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00151-smoothagent-lookahead-context-engineering.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework"
+    },
+    "arXiv:2311.10122": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.10122",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.10122",
+        "arXiv:2311.10122"
+      ],
+      "reason": "The primary abstract presents a vision-language model that aligns image and video representations before projection into an LLM, and evaluates visual-language task performance. It does not propose or evaluate an LLM serving, inference-efficiency, or inference-time compression technique; the described contribution is model representation/alignment and task performance, outside this run's scope.",
+      "first_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2603.23914-attention-aware-inference-optimizations-large-vlm-memory-efficient-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "title": "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection"
+    },
+    "DOI:10.18653/v1/2021.naacl-main.168": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.168",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.naacl-main.168",
+        "arXiv:2103.07191"
+      ],
+      "reason": "一次資料の要旨は、小学校4年生以下の算数文章題を対象に、既存NLP solverの浅いヒューリスティックとSVAMP challenge datasetを分析する。貢献は問題解決能力の評価であり、LLM推論の効率化、serving、推論時圧縮を扱わないため対象外。",
+      "first_checked_at": "2026-10-04T13:00:43+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md"
+      ],
+      "title": "Are NLP Models really able to Solve Simple Math Word Problems?"
+    },
+    "DOI:10.1162/tacl_a_00475": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00475",
+      "identity_tokens": [
+        "ACL:2022.tacl-1.31",
+        "DOI:10.1162/tacl_a_00475",
+        "arXiv:2108.00573"
+      ],
+      "reason": "The primary abstract describes construction of MuSiQue, a multihop question-answering dataset intended to test connected reasoning and prevent benchmark shortcuts. Its contribution is dataset creation and evaluation of QA reasoning, not LLM inference/serving systems, inference-time compression, or efficiency. It is clearly outside this run's scope.",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md"
+      ],
+      "title": "♫ MuSiQue: Multihop Questions via Single-hop Question Composition"
     }
   }
 }
