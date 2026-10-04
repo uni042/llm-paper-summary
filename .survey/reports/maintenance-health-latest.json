@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04T21:49:16+00:00",
+  "checked_at": "2026-10-04T23:49:27+00:00",
   "status": "issues_found",
-  "error_count": 2,
+  "error_count": 1,
   "warning_count": 0,
   "paper_count": 1597,
-  "latest_paper_commit": "2026-10-04T21:42:08+00:00",
+  "latest_paper_commit": "2026-10-04T23:17:25+00:00",
   "queue": {
-    "job_count": 1024,
+    "job_count": 1037,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 121,
+        "completed": 126,
         "processing": 7,
         "ready": 1
       },
@@ -21,7 +21,7 @@
         "ready": 2
       },
       "research": {
-        "ready": 590,
+        "ready": 598,
         "superseded": 272,
         "deferred": 8,
         "completed": 22,
@@ -51,31 +51,29 @@
         "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
       ],
       "list_summary": [
-        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
         "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
-        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
-        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md"
       ],
       "overview": []
     },
     "new_failures": {
+      "paper": [],
+      "list_summary": [],
+      "overview": []
+    },
+    "resolved_failures": {
       "paper": [],
       "list_summary": [
         "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
         "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
       ],
       "overview": []
-    },
-    "resolved_failures": {
-      "paper": [],
-      "list_summary": [],
-      "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-04T21:48:55+00:00",
+      "checked_at": "2026-10-04T23:49:10+00:00",
       "total": 1597,
       "incomplete": 1,
       "findings": [
@@ -89,23 +87,13 @@
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-04T21:48:55+00:00",
+      "checked_at": "2026-10-04T23:49:11+00:00",
       "total": 1597,
       "incomplete": 0,
       "findings": []
     }
   },
   "findings": [
-    {
-      "severity": "error",
-      "code": "quality_regression",
-      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
-      "scope": "list_summary",
-      "paths": [
-        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
-        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
-      ]
-    },
     {
       "severity": "error",
       "code": "citation_coverage_incomplete",
