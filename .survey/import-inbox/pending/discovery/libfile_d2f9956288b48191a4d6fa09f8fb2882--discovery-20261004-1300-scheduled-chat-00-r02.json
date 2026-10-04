@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-1300-scheduled-chat-00/r02",
+  "reference_main_sha": "6b0f4512b856172839a9505a7a5e2809db6bdadc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2012.2185930",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2012.2185930"
+      ],
+      "title": "NVSim: A Circuit-Level Performance, Energy, and Area Model for Emerging Nonvolatile Memory",
+      "reason": "新興不揮発性メモリの回路レベル性能・エネルギー・面積モデルを提供する汎用メモリ設計研究で、LLM推論を対象としない。",
+      "source_url": "https://doi.org/10.1109/TCAD.2012.2185930",
+      "body_check": "abstract_screen_only: STT-RAM/ReRAM等のmemory technology modelingが主題で、LLM inference systemへの適用評価はない。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2512.03608-kvnand-dram-free-in-flash-computing.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr.2019.00881",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr.2019.00881"
+      ],
+      "title": "HAQ: Hardware-Aware Automated Quantization With Mixed Precision",
+      "reason": "強化学習でCNNの層別mixed-precision量子化をhardware latency/energy制約へ適応させる研究で、LLM推論が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/1811.08886",
+      "body_check": "abstract_screen_only: MobileNet/VGG等の画像認識CNNを対象にhardware-aware quantization policyを探索するCV研究。LLMは対象外。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3649506",
+      "identity_tokens": [
+        "DOI:10.1145/3649506"
+      ],
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "reason": "LLMの下流NLP利用、データ、能力、適用可否を広く整理する実践サーベイで、推論サービング効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2304.13712",
+      "body_check": "abstract_screen_only: downstream NLP tasksのuse/non-use caseとpractical guideが中心。efficiency/cost/latencyにも触れるが推論システム方式の提案・評価ではない。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.07807-cluster-driven-expert-pruning.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/321479.321481",
+      "identity_tokens": [
+        "DOI:10.1145/321479.321481"
+      ],
+      "title": "PATRICIA—Practical Algorithm To Retrieve Information Coded in Alphanumeric",
+      "reason": "文字列検索用PATRICIA trieの古典的情報検索アルゴリズムで、LLM推論・agentic servingとは無関係。",
+      "source_url": "https://doi.org/10.1145/321479.321481",
+      "body_check": "abstract_screen_only: alphanumeric information retrievalのcompact trie/radix searchが主題。LLM runtimeは対象外。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3523227.3546767",
+      "identity_tokens": [
+        "DOI:10.1145/3523227.3546767"
+      ],
+      "title": "Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt & Predict Paradigm (P5)",
+      "reason": "推薦タスクを自然言語処理として統一するP5モデルの事前学習・prompt設計・推薦品質が主題で、LLM推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2203.13366",
+      "body_check": "abstract_screen_only: recommendation tasksをtext-to-text paradigmへ統一してpretrain/prompt/predictする推薦モデル研究。serving/runtimeは対象外。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3626772.3657878",
+      "identity_tokens": [
+        "DOI:10.1145/3626772.3657878"
+      ],
+      "title": "C-Pack: Packed Resources For General Chinese Embeddings",
+      "reason": "中国語汎用埋め込みモデル・データ・評価資源を構築する表現学習研究で、LLM推論runtime最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2309.07597",
+      "body_check": "abstract_screen_only: Chinese embedding resources/model evaluationが主題で、推論メモリ・scheduler・kernelの最適化ではない。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2749469.2750386",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2750386"
+      ],
+      "title": "A scalable processing-in-memory accelerator for parallel graph processing",
+      "reason": "グラフ処理向けprocessing-in-memory acceleratorの研究で、PIMという基盤技術は関連するがLLM/Transformer推論を対象としない。",
+      "source_url": "https://doi.org/10.1145/2749469.2750386",
+      "body_check": "abstract_screen_only: parallel graph processingのmemory accessをPIMで高速化するarchitecture研究。LLM inferenceは最終適用先ではない。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2517349.2522738",
+      "identity_tokens": [
+        "DOI:10.1145/2517349.2522738"
+      ],
+      "title": "Naiad: a timely dataflow system",
+      "reason": "反復・ストリーミング計算向け分散dataflow systemの研究で、LLM推論workflowやKV共有を対象とするものではない。",
+      "source_url": "https://doi.org/10.1145/2517349.2522738",
+      "body_check": "abstract_screen_only: timely dataflowでiterative/streaming distributed computationを統一する汎用data processing system。LLM inferenceは対象外。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1460299.1460318",
+      "identity_tokens": [
+        "DOI:10.1145/1460299.1460318"
+      ],
+      "title": "Critical-path planning and scheduling",
+      "reason": "プロジェクトのcritical-path planning/schedulingを扱う古典的OR研究で、LLM推論スケジューリングとは無関係。",
+      "source_url": "https://doi.org/10.1145/1460299.1460318",
+      "body_check": "abstract_screen_only: project/network planningのcritical path schedulingが主題。LLM/compute serving workloadを扱わない。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2465351.2465355",
+      "identity_tokens": [
+        "DOI:10.1145/2465351.2465355"
+      ],
+      "title": "BlinkDB: queries with bounded errors and bounded response times on very large data",
+      "reason": "大規模データへの近似SQL queryで誤差または応答時間を制約するデータベースシステム研究で、LLM推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/1203.5485",
+      "body_check": "abstract_screen_only: sampling-based approximate query processingでbounded error/response timeを提供するDB研究。LLM inferenceは対象外。",
+      "first_checked_at": "2026-10-04T13:07:00+09:00",
+      "last_checked_at": "2026-10-04T13:07:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md"
+      ],
+      "worklist_rank": 31
+    }
+  ]
+}
