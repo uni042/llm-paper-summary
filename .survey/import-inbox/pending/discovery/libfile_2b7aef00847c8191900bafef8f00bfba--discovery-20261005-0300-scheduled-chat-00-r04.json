@@ -1,0 +1,160 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0300-scheduled-chat-00/r04",
+  "reference_main_sha": "d4ae4441511952b950d0ae7f0b3cbec947ed3d8c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27042",
+      "identity_tokens": [
+        "arXiv:2607.27042"
+      ],
+      "title": "GPTQ-2D: Cubic-Time Two-Sided Adaptive Rounding",
+      "reason": "GPTQのadaptive roundingをtwo-sided quadratic metricへ一般化しquarticからcubic timeへ高速化する量子化algorithm研究。LLM量子化の基礎に直結するが、論文自体の主眼は一般matrix rounding algorithmで実LLM推論benchmarkが中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2607.27042",
+      "body_check": "full_text_checked: arXiv一次書誌を複製表示する一次由来ページでtwo-sided GPTQ、Kronecker metric、cubic-time algorithmを確認。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14245",
+      "identity_tokens": [
+        "arXiv:2609.14245"
+      ],
+      "title": "The Attribution-Compression Frontier in Retrieval-Augmented Generation",
+      "reason": "RAG context compressionをreranking/extractive/abstractive/token pruning等で比較しcitation attributionを評価する。入力token削減は推論効率に関係するが主目的はattribution fidelity評価で、runtime性能最適化そのものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.14245",
+      "body_check": "full_text_checked: arXiv書誌を明示する詳細要旨でcompression methods/budgetsとattribution評価を確認。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26005",
+      "identity_tokens": [
+        "arXiv:2608.26005"
+      ],
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+      "reason": "duplex speech LM向けにinformational/emotional memoryをstreaming I/Oし、speech-tailとsilence中へretrievalをoverlapする実時間memory system。retrieval 134msで追加会話遅延なしを報告し、agentic/streaming inference runtimeに直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.26005",
+      "body_check": "full_text_checked: arXiv書誌を明示する全文解説でstreaming pipeline、decoupled deployment、134ms retrievalを確認。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01739",
+      "identity_tokens": [
+        "arXiv:2608.01739"
+      ],
+      "title": "CoEvo-Mem: Co-Evolving Retrieval Policy and Memory Bank for LLM Agents",
+      "reason": "長期LLM agentのretrieval policyとpersistent memory graphをclosed-loopで共進化させるmemory system。agent runtime memory管理に関係するが、主評価はtask/memory qualityでlatency/throughput最適化が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.01739",
+      "body_check": "full_text_checked: arXiv書誌を明示する詳細本文でresidual router、memory graph、alternating update、7 benchmark評価を確認。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.100966",
+      "identity_tokens": [
+        "DOI:10.1016/j.cosrev.2026.100966"
+      ],
+      "title": "How attention is applied to graph neural networks: A comprehensive survey",
+      "reason": "graph neural networkにおけるattention機構を整理するsurveyで、LLM/Transformer推論runtime、KV cache、serving最適化を対象としない。",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.100966",
+      "body_check": "abstract_screen_only: worklist書誌からGNN attention surveyが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18623/rvd.v23.8175",
+      "identity_tokens": [
+        "DOI:10.18623/rvd.v23.8175"
+      ],
+      "title": "ARTIFICIAL INTELLIGENCE IN RADIOLOGY: CURRENT APPLICATIONS AND FUTURE DIRECTIONS",
+      "reason": "放射線医学におけるAI応用のreviewで、LLM推論system効率化とは対象分野・目的が異なる。",
+      "source_url": "https://doi.org/10.18623/rvd.v23.8175",
+      "body_check": "abstract_screen_only: worklist書誌からradiology AI reviewが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acs.jcim.6c01425",
+      "identity_tokens": [
+        "DOI:10.1021/acs.jcim.6c01425"
+      ],
+      "title": "Chemically Interpretable Explanations for Molecular Property Prediction via Fragment-Level Shapley Values",
+      "reason": "分子物性予測をfragment-level Shapley valueで説明する化学機械学習研究で、LLM推論runtime/servingを対象としない。",
+      "source_url": "https://doi.org/10.1021/acs.jcim.6c01425",
+      "body_check": "abstract_screen_only: worklist書誌からmolecular property prediction/explainabilityが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01381",
+      "identity_tokens": [
+        "arXiv:2608.01381"
+      ],
+      "title": "DreamTrajectory: Trajectory-Guided Action Generation with World Model Alignment for Mobile Manipulation",
+      "reason": "mobile manipulation向けtrajectory-guided action generation/world-model alignmentのrobotics研究で、LLM推論system効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2608.01381",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からrobot manipulation/action generationが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10504",
+      "identity_tokens": [
+        "arXiv:2607.10504"
+      ],
+      "title": "SUREFlow: State-space Uncertainty-aware REsidual Flow Matching for Robust Robot Manipulation",
+      "reason": "robust robot manipulation向けflow matching/state-space uncertainty modeling研究で、LLM inference runtime/serving最適化とは対象外。",
+      "source_url": "https://arxiv.org/abs/2607.10504",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からrobot manipulationが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04655",
+      "identity_tokens": [
+        "arXiv:2607.04655"
+      ],
+      "title": "FormalRx: Rectify and eXamine Semantic Failures in Autoformalization",
+      "reason": "LLM autoformalizationのsemantic failure検出・修正を扱う品質/形式推論研究で、推論systemの速度・memory・serving効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2607.04655",
+      "body_check": "abstract_screen_only: worklist書誌・一次資料要旨からautoformalization correctnessが主題と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T03:46:00+09:00",
+      "last_checked_at": "2026-10-05T03:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 465
+    }
+  ]
+}
