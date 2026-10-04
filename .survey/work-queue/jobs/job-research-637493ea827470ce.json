@@ -32,10 +32,15 @@
   "selection_reason": "単一のn-bit量子化LLMから下位bit幅を切り出して複数精度を同一メモリに重ね、専用GPU kernelで低bit幅を実際の推論帯域削減へ結びつけるサービング方式なので対象。",
   "semantic_scholar_id": "b3c99575f91c551704d4a31d703d5ceb4b616dd1",
   "source_url": "https://arxiv.org/abs/2402.10517",
-  "status": "ready",
+  "status": "superseded",
   "title": "Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T03:15:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+  "represented_canonical_id": "arXiv:2402.10517",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

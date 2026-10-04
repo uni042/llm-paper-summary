@@ -32,10 +32,15 @@
   "selection_reason": "自己回帰復号時に入力適応でFFN blockを選択的にskipし、attention/KV cacheを壊さず計算を減らす推論時conditional-computation方式で対象範囲に直接該当する。",
   "semantic_scholar_id": "96c3a6156546d0447fa2b3327e55bc5973e01d57",
   "source_url": "https://arxiv.org/abs/2404.03865",
-  "status": "ready",
+  "status": "superseded",
   "title": "FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T03:15:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md",
+  "represented_canonical_id": "arXiv:2404.03865",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

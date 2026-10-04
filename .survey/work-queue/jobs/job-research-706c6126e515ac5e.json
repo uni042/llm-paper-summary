@@ -32,10 +32,15 @@
   "selection_reason": "token方向だけでなくlayer重要度も用いてKV cache budgetを非均等配分し、memoryとthroughputを直接改善するLLM推論方式。",
   "semantic_scholar_id": "d4d920dad3e7ab80363d31d554a366d0ac076371",
   "source_url": "https://arxiv.org/abs/2404.04793",
-  "status": "ready",
+  "status": "superseded",
   "title": "SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T03:15:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
+  "represented_canonical_id": "arXiv:2404.04793",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
