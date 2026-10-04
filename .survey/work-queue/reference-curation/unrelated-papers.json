@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:06:26+00:00",
-  "record_count": 1407,
+  "updated_at": "2026-10-04T22:16:24+00:00",
+  "record_count": 1412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -20260,6 +20260,98 @@
         "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
       ],
       "title": "Deep Contextualized Word Representations"
+    },
+    "DOI:10.1101/622803": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/622803",
+      "identity_tokens": [
+        "DOI:10.1101/622803",
+        "id:DOI:10.1101/622803",
+        "url:https://doi.org/10.1101/622803"
+      ],
+      "reason": "The primary abstract describes evolutionary-scale language modeling of protein sequences: training on 86 billion amino acids across 250 million protein sequences to learn biological representations and predict protein properties such as mutational effects and structure. Its subject is biological protein modeling, not natural-language LLM inference/serving or inference-time compression/efficiency. A model being called a language model is insufficient for the stated scope.",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences"
+    },
+    "arXiv:2409.12186": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12186",
+      "identity_tokens": [
+        "arXiv:2409.12186",
+        "id:arXiv:2409.12186",
+        "url:https://arxiv.org/abs/2409.12186"
+      ],
+      "reason": "The report presents six code-focused model sizes, their data construction and training/post-training procedures, and code/general-capability benchmark results. Full-text review found no in-scope inference/serving system or inference-time compression/efficiency technique: the model-size and 128K-context results characterize model capability, while the evaluations are task accuracy/capability benchmarks. The paper therefore does not contribute to the stated scope.",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+        "papers/inference/99-other-inference-systems/2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "title": "Qwen2.5-Coder Technical Report"
+    },
+    "arXiv:2306.13643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.13643",
+      "identity_tokens": [
+        "arXiv:2306.13643",
+        "id:arXiv:2306.13643",
+        "url:https://arxiv.org/abs/2306.13643"
+      ],
+      "reason": "The primary abstract describes a deep neural network that matches local visual features across image pairs, with adaptive computation and improved memory/computation efficiency for sparse visual matching and latency-sensitive 3D reconstruction. Its task and system are computer vision, not LLM inference/serving or inference-time LLM compression/efficiency. Speed or efficiency claims for a non-LLM vision matcher are outside the stated scope.",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "LightGlue: Local Feature Matching at Light Speed"
+    },
+    "arXiv:1906.00300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.00300",
+      "identity_tokens": [
+        "arXiv:1906.00300",
+        "id:arXiv:1906.00300",
+        "url:https://arxiv.org/abs/1906.00300"
+      ],
+      "reason": "arXiv一次資料の書誌とabstractを確認。提案対象は質問と回答文字列の組からretrieverとreaderを共同学習し、Wikipediaから根拠をlatent retrievalするopen-domain QA手法で、retrieverのpretrainingとQA評価を扱う。abstractはLLM、LLM serving、または推論時効率化を対象としておらず、対象範囲外。",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
+    },
+    "arXiv:1904.09925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.09925",
+      "identity_tokens": [
+        "arXiv:1904.09925",
+        "id:arXiv:1904.09925",
+        "url:https://arxiv.org/abs/1904.09925"
+      ],
+      "reason": "The primary abstract introduces a two-dimensional relative self-attention mechanism to augment convolutional networks for discriminative visual tasks, reporting image-classification and object-detection results while keeping parameter counts similar. It is an image-vision architecture contribution, not an LLM inference/serving system or an inference-time efficiency/compression method for LLMs. The mere use of self-attention is insufficient for scope inclusion.",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Attention Augmented Convolutional Networks"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9785a13f2a5da805-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.00300",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.00300",
+    "identity_tokens": [
+      "arXiv:1906.00300",
+      "id:arXiv:1906.00300",
+      "url:https://arxiv.org/abs/1906.00300"
+    ],
+    "reason": "arXiv一次資料の書誌とabstractを確認。提案対象は質問と回答文字列の組からretrieverとreaderを共同学習し、Wikipediaから根拠をlatent retrievalするopen-domain QA手法で、retrieverのpretrainingとQA評価を扱う。abstractはLLM、LLM serving、または推論時効率化を対象としておらず、対象範囲外。",
+    "first_checked_at": "2026-10-04T22:16:24+00:00",
+    "last_checked_at": "2026-10-04T22:16:24+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
+  },
+  "processed_at": "2026-10-04T22:16:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9785a13f2a5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
