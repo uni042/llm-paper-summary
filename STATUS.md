@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 14:03:13 JST**
+> 自動生成: **2026-10-04 14:05:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **580** |
 | 直近24hのResearch処理完了 | **65** |
 | 最終Research処理完了 | **10-04 11:29:45 JST** |
-| 最終Discovery探索完了 | **10-04 14:00:00 JST** |
+| 最終Discovery探索完了 | **10-04 14:01:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 14:03:11 JST（2秒前）** |
+| 最終maintenance完了 | **10-04 14:03:11 JST（1分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -88,19 +88,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **17** |
-| 直近6hのDiscovery run | **8** |
-| 直近6hのDiscovery本文確認・分類 | **53** |
+| 直近6hのResearch完了 | **16** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **67** |
 | 最終Research完了 | **10-04 11:29:45 JST** |
-| 最終Discovery完了 | **10-04 14:00:00 JST** |
+| 最終Discovery完了 | **10-04 14:01:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-04 11:29:45 JST** / worker — / run 20261004-1130-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_40b2341b2f9c8191ac65ba10bc87954c--2026-2606.26650-cat-q.json
-- Discovery: **10-04 14:00:00 JST** / worker scheduled-chat-00 / run 20261004-1400-scheduled-chat-00/r02
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_9b308277e05481918e1337abf6351923--discovery-20261004-1400-scheduled-chat-00-r02.json
+- Discovery: **10-04 14:01:00 JST** / worker codex-local / run 20261004-1401-codex-local-r03-corrected
+  - 本文確認・分類 **4件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/pending/discovery/codex-local--20261004-1401-codex-local-r03-corrected.json
 
 ## 件数サマリー（旧immutable transport診断）
 
