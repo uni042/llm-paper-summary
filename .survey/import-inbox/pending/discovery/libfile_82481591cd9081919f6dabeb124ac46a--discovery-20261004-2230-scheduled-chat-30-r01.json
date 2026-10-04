@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261004-2230-scheduled-chat-30/r01",
+  "reference_main_sha": "f8bcde8fc495bcd13c0713e1fa1d4ed9eda0269a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1409.3215",
+      "identity_tokens": [
+        "arXiv:1409.3215"
+      ],
+      "title": "Sequence to Sequence Learning with Neural Networks",
+      "reason": "入力系列を多層LSTMで固定長ベクトルへ符号化し、別LSTMで翻訳系列を生成するsequence-to-sequence学習モデルの提案・翻訳品質評価が主題で、LLM推論ランタイムやサービング効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1409.3215",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.05365",
+      "identity_tokens": [
+        "arXiv:1802.05365"
+      ],
+      "title": "Deep Contextualized Word Representations",
+      "reason": "深い双方向言語モデルの内部状態から文脈依存単語表現ELMoを作り、質問応答・含意・感情分析など6 NLPタスクの精度を改善する表現学習研究で、推論システム効率化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1802.05365",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1502.05477",
+      "identity_tokens": [
+        "arXiv:1502.05477"
+      ],
+      "title": "Trust Region Policy Optimization",
+      "reason": "方策の単調改善を狙うTrust Region Policy Optimization（TRPO）を導出し、ロボット運動とAtariで方策学習を評価する強化学習アルゴリズム研究で、LLM推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1502.05477",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1409.1259",
+      "identity_tokens": [
+        "arXiv:1409.1259"
+      ],
+      "title": "On the Properties of Neural Machine Translation: Encoder-Decoder Approaches",
+      "reason": "RNN Encoder–Decoder等のニューラル機械翻訳モデルが文長や未知語数でどう劣化するかを分析する翻訳モデル研究で、推論ランタイム・メモリ・サービング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1409.1259",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.11096",
+      "identity_tokens": [
+        "arXiv:1809.11096"
+      ],
+      "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+      "reason": "BigGANを大規模学習してImageNet画像生成の品質・多様性を改善し、直交正則化やtruncation trickを評価する画像生成・学習研究で、LLM推論基盤を対象としない。",
+      "source_url": "https://arxiv.org/abs/1809.11096",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.6550",
+      "identity_tokens": [
+        "arXiv:1412.6550"
+      ],
+      "title": "FitNets: Hints for Thin Deep Nets",
+      "reason": "教師ネットワークの中間表現をhintとして深く細いstudentを学習する知識蒸留研究。小さく高速なモデルを得る目的はあるが対象は一般DNNで、LLM/Transformer推論システムへの最終適用・評価はない。",
+      "source_url": "https://arxiv.org/abs/1412.6550",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1607.08022",
+      "identity_tokens": [
+        "arXiv:1607.08022"
+      ],
+      "title": "Instance Normalization: The Missing Ingredient for Fast Stylization",
+      "reason": "高速画像スタイル変換でbatch normalizationをinstance normalizationへ置換し生成画質を改善するコンピュータビジョン研究で、LLM推論やTransformer実行系を対象としない。",
+      "source_url": "https://arxiv.org/abs/1607.08022",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1708.02002",
+      "identity_tokens": [
+        "arXiv:1708.02002"
+      ],
+      "title": "Focal Loss for Dense Object Detection",
+      "reason": "one-stage物体検出におけるforeground/backgroundのclass imbalanceをfocal lossで抑え、RetinaNetの検出精度を改善する視覚認識研究で、LLM推論基盤の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1708.02002",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.06939",
+      "identity_tokens": [
+        "arXiv:1511.06939"
+      ],
+      "title": "Session-based Recommendations with Recurrent Neural Networks",
+      "reason": "匿名ユーザーの短いsessionから次itemを予測するRNNベース推薦モデルとranking lossを提案する推薦システム研究で、LLM/MoE推論効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1511.06939",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.00567",
+      "identity_tokens": [
+        "arXiv:1803.00567"
+      ],
+      "title": "Computational Optimal Transport",
+      "reason": "最適輸送の計算手法を体系化する数理最適化・機械学習モノグラフで、LLM推論、MoE実行、KVキャッシュ、推論サービングへの直接適用・評価を行わない。",
+      "source_url": "https://arxiv.org/abs/1803.00567",
+      "body_check": "abstract_screen_only: 一次資料のタイトル・要旨・書誌情報で上記の研究対象と評価内容を確認し、このサーベイの最終適用範囲外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-04T22:42:00+09:00",
+      "last_checked_at": "2026-10-04T22:42:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ],
+      "worklist_rank": 14
+    }
+  ]
+}
