@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3606557.3606559",
+  "citation_count": 6,
+  "citation_count_checked_at": "2026-10-04T01:59:11+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-24T22:22:13+00:00",
   "doi": "10.1145/3606557.3606559",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/0000-47de7e2f8a1f-make-it-real-an-end-to-end-implementation-of-a-physically-disaggregated-data-center.md",
   "parent_job_id": "job-d5e9ac0ee5c0eddc",
-  "priority": 0,
+  "priority": 6,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 6,
+    "citations": 6,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 1196,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 6
   },
+  "published": "2023-06-26",
   "schema_version": 1,
   "selection_reason": "Physical resource disaggregation is foundational context for disaggregated LLM serving architectures.",
+  "semantic_scholar_id": "fb43a0b07a2e749a889e0f3733e48f555a4f1857",
   "source_url": "https://doi.org/10.1145/3606557.3606559",
   "status": "ready",
   "title": "Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center",
   "type": "research",
-  "workflow_version": 10
+  "venue": "ACM SIGOPS Operating Systems Review",
+  "workflow_version": 10,
+  "year": 2023
 }

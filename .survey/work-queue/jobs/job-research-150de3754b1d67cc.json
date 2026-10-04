@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3552326.3587438",
+  "citation_count": 89,
+  "citation_count_checked_at": "2026-10-04T01:59:11+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-02T23:13:46+00:00",
   "doi": "10.1145/3552326.3587438",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md",
   "parent_job_id": "job-fedb8d26bb86e39c",
-  "priority": 0,
+  "priority": 89,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 89,
+    "citations": 89,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 1245,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 89
   },
+  "published": "2023-05-08",
   "schema_version": 1,
   "selection_reason": "小型モデルで容易な要求を処理し、必要な要求だけLLMへ再ルーティングする多段推論でLLM利用遅延を直接削減する。",
+  "semantic_scholar_id": "d50f023fe0921cabdd6d053c377cdd26c715994c",
   "source_url": "https://doi.org/10.1145/3552326.3587438",
   "status": "ready",
   "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
   "type": "research",
-  "workflow_version": 10
+  "venue": "European Conference on Computer Systems",
+  "workflow_version": 10,
+  "year": 2023
 }
