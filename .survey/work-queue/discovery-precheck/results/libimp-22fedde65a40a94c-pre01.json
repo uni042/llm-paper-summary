@@ -1,0 +1,239 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-22fedde65a40a94c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-22fedde65a40",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1901.10430",
+    "arXiv:1909.05840"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1848c9badd3d9e9772aa4dbf12ffb7cc281543eb",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T23:26:56.394192+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1901.10430",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:1909.05840",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
+      "source_url": "https://arxiv.org/abs/1909.05840",
+      "year": 2019,
+      "published": "2019-09-12",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 691,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer based architectures have become de-facto models used for a range of Natural Language Processing tasks. In particular, the BERT based models achieved significant accuracy gain for GLUE tasks, CoNLL-03 and SQuAD. However, BERT based models have a prohibitive memory footprint and latency. As a result, deploying BERT based models in resource constrained environments has become a challenging task. In this work, we perform an extensive analysis of fine-tuned BERT models using second order Hessian information, and we use our results to propose a novel method for quantizing BERT models to ultra low precision. In particular, we propose a new group-wise quantization scheme, and we use Hessian-based mix-precision method to compress the model further. We extensively test our proposed method on BERT downstream tasks of SST-2, MNLI, CoNLL-03, and SQuAD. We can achieve comparable performance to baseline with at most 2.3% performance degradation, even with ultra-low precision quantization down to 2 bits, corresponding up to 13× compression of the model parameters, and up to 4× compression of the embedding table as well as activations. Among all tasks, we observed the highest performance loss for BERT fine-tuned on SQuAD. By probing into the Hessian based analysis as well as visualization, we show that this is related to the fact that current training/fine-tuning strategy of BERT does not converge for SQuAD.",
+      "identifiers": [
+        "SemanticScholar:745e4b36a1759177871288cae51fbae0b873b5e5"
+      ],
+      "semantic_scholar_id": "745e4b36a1759177871288cae51fbae0b873b5e5",
+      "canonical_id": "arXiv:1909.05840",
+      "arxiv_id": "1909.05840",
+      "doi": "10.1609/AAAI.V34I05.6409",
+      "authors": [
+        "Sheng Shen",
+        "Zhen Dong",
+        "Jiayu Ye",
+        "Linjian Ma",
+        "Z. Yao",
+        "A. Gholami",
+        "Michael W. Mahoney",
+        "K. Keutzer"
+      ],
+      "priority": 691,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 691,
+        "citation_count": 691,
+        "total": 691,
+        "is_fresh": false,
+        "freshness_age_days": 2579,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
+      "source_url": "https://arxiv.org/abs/1901.10430",
+      "year": 2019,
+      "published": "2019-01-29",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 669,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention is a useful mechanism to build generative models for language and images. It determines the importance of context elements by comparing each element to the current time step. In this paper, we show that a very lightweight convolution can perform competitively to the best reported self-attention results. Next, we introduce dynamic convolutions which are simpler and more efficient than self-attention. We predict separate convolution kernels based solely on the current time-step in order to determine the importance of context elements. The number of operations required by this approach scales linearly in the input length, whereas self-attention is quadratic. Experiments on large-scale machine translation, language modeling and abstractive summarization show that dynamic convolutions improve over strong self-attention models. On the WMT'14 English-German test set dynamic convolutions achieve a new state of the art of 29.7 BLEU.",
+      "identifiers": [
+        "SemanticScholar:fea820b7d953d32069e189af2961c28fd213470b"
+      ],
+      "semantic_scholar_id": "fea820b7d953d32069e189af2961c28fd213470b",
+      "canonical_id": "arXiv:1901.10430",
+      "arxiv_id": "1901.10430",
+      "authors": [
+        "Felix Wu",
+        "Angela Fan",
+        "Alexei Baevski",
+        "Yann Dauphin",
+        "Michael Auli"
+      ],
+      "priority": 679,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 669,
+        "citation_count": 669,
+        "total": 679,
+        "is_fresh": false,
+        "freshness_age_days": 2805,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:1909.05840",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v34i05.6409",
+        "id:SemanticScholar:745e4b36a1759177871288cae51fbae0b873b5e5",
+        "id:arXiv:1909.05840",
+        "title:qbert hessian based ultra low precision quantization of bert",
+        "url:https://arxiv.org/abs/1909.05840"
+      ],
+      "record": {
+        "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
+        "source_url": "https://arxiv.org/abs/1909.05840",
+        "year": 2019,
+        "published": "2019-09-12",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 691,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer based architectures have become de-facto models used for a range of Natural Language Processing tasks. In particular, the BERT based models achieved significant accuracy gain for GLUE tasks, CoNLL-03 and SQuAD. However, BERT based models have a prohibitive memory footprint and latency. As a result, deploying BERT based models in resource constrained environments has become a challenging task. In this work, we perform an extensive analysis of fine-tuned BERT models using second order Hessian information, and we use our results to propose a novel method for quantizing BERT models to ultra low precision. In particular, we propose a new group-wise quantization scheme, and we use Hessian-based mix-precision method to compress the model further. We extensively test our proposed method on BERT downstream tasks of SST-2, MNLI, CoNLL-03, and SQuAD. We can achieve comparable performance to baseline with at most 2.3% performance degradation, even with ultra-low precision quantization down to 2 bits, corresponding up to 13× compression of the model parameters, and up to 4× compression of the embedding table as well as activations. Among all tasks, we observed the highest performance loss for BERT fine-tuned on SQuAD. By probing into the Hessian based analysis as well as visualization, we show that this is related to the fact that current training/fine-tuning strategy of BERT does not converge for SQuAD.",
+        "identifiers": [
+          "SemanticScholar:745e4b36a1759177871288cae51fbae0b873b5e5"
+        ],
+        "semantic_scholar_id": "745e4b36a1759177871288cae51fbae0b873b5e5",
+        "canonical_id": "arXiv:1909.05840",
+        "arxiv_id": "1909.05840",
+        "doi": "10.1609/AAAI.V34I05.6409",
+        "authors": [
+          "Sheng Shen",
+          "Zhen Dong",
+          "Jiayu Ye",
+          "Linjian Ma",
+          "Z. Yao",
+          "A. Gholami",
+          "Michael W. Mahoney",
+          "K. Keutzer"
+        ],
+        "priority": 691,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 691,
+          "citation_count": 691,
+          "total": 691,
+          "is_fresh": false,
+          "freshness_age_days": 2579,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1901.10430",
+      "identity_tokens": [
+        "id:SemanticScholar:fea820b7d953d32069e189af2961c28fd213470b",
+        "id:arXiv:1901.10430",
+        "title:pay less attention with lightweight and dynamic convolutions",
+        "url:https://arxiv.org/abs/1901.10430"
+      ],
+      "record": {
+        "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
+        "source_url": "https://arxiv.org/abs/1901.10430",
+        "year": 2019,
+        "published": "2019-01-29",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 669,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-attention is a useful mechanism to build generative models for language and images. It determines the importance of context elements by comparing each element to the current time step. In this paper, we show that a very lightweight convolution can perform competitively to the best reported self-attention results. Next, we introduce dynamic convolutions which are simpler and more efficient than self-attention. We predict separate convolution kernels based solely on the current time-step in order to determine the importance of context elements. The number of operations required by this approach scales linearly in the input length, whereas self-attention is quadratic. Experiments on large-scale machine translation, language modeling and abstractive summarization show that dynamic convolutions improve over strong self-attention models. On the WMT'14 English-German test set dynamic convolutions achieve a new state of the art of 29.7 BLEU.",
+        "identifiers": [
+          "SemanticScholar:fea820b7d953d32069e189af2961c28fd213470b"
+        ],
+        "semantic_scholar_id": "fea820b7d953d32069e189af2961c28fd213470b",
+        "canonical_id": "arXiv:1901.10430",
+        "arxiv_id": "1901.10430",
+        "authors": [
+          "Felix Wu",
+          "Angela Fan",
+          "Alexei Baevski",
+          "Yann Dauphin",
+          "Michael Auli"
+        ],
+        "priority": 679,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 669,
+          "citation_count": 669,
+          "total": 679,
+          "is_fresh": false,
+          "freshness_age_days": 2805,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:820d3a3bea2c571e7a2306a20731c27eabaef6f902482d89b1b9f89147c7fc63",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
