@@ -143,6 +143,26 @@ last_checked: '2026-10-03'
         self.assertEqual(unchanged_raw, normalized_raw)
         self.assertEqual(unchanged_meta, normalized_meta)
 
+    def test_library_research_japanese_normalizer_repairs_generic_terms(self) -> None:
+        raw = """---
+canonical_id: DOI:10.1000/example
+title: Example
+list_summary: "cache and memory model for serving"
+---
+# Example
+
+This cache stores model state in memory for serving.
+URL https://example.com/cache and `cache` code must remain unchanged.
+"""
+        normalized, changed = inbox.normalize_library_research_japanese(raw)
+        self.assertTrue(changed)
+        self.assertIn("キャッシュ", normalized)
+        self.assertIn("メモリ", normalized)
+        self.assertIn("モデル", normalized)
+        self.assertIn("推論提供", normalized)
+        self.assertIn("https://example.com/cache", normalized)
+        self.assertIn("`cache`", normalized)
+
     def test_repo_relative_accepts_relative_and_absolute_paths(self) -> None:
         repo_root = Path("/tmp/example-repo").resolve()
         rel = Path(".survey/import-inbox/pending/research/paper.md")
