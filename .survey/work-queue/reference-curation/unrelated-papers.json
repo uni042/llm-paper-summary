@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T18:57:07+00:00",
-  "record_count": 1231,
+  "updated_at": "2026-10-04T18:58:58+00:00",
+  "record_count": 1240,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -17431,9 +17431,9 @@
       "identity_tokens": [
         "arXiv:2305.14325"
       ],
-      "reason": "複数言語モデルagentに複数roundのdebateを行わせてfactualityとreasoning accuracyを改善する推論戦略研究。計算量を減らすruntime/serving方式ではなく、複数model callを用いた能力改善が主題。",
+      "reason": "複数LLM agentを複数round討論させてfactualityとreasoning accuracyを改善する推論戦略研究で、複数model callによって計算を増やす能力改善方式。ランタイム、KV cache、serving効率化を提案しない。",
       "first_checked_at": "2026-10-04T17:56:14+00:00",
-      "last_checked_at": "2026-10-04T17:56:14+00:00",
+      "last_checked_at": "2026-10-04T18:58:58+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
       ],
@@ -17885,6 +17885,127 @@
       "last_checked_at": "2026-10-04T18:57:07+00:00",
       "linked_from": [],
       "title": "FormalRx: Rectify and eXamine Semantic Failures in Autoformalization"
+    },
+    "arXiv:2608.26671": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26671",
+      "identity_tokens": [
+        "arXiv:2608.26671"
+      ],
+      "reason": "長時間video generationでcontent appearanceを保持する生成video研究。KV cache関連技術を引用していても最終適用先がvideo diffusion/generationでLLM推論systemではない。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "RECAP-Forcing: Retaining Content Appearances for Long Video Generation"
+    },
+    "arXiv:2607.21461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21461",
+      "identity_tokens": [
+        "arXiv:2607.21461"
+      ],
+      "reason": "deep-research agentのself-improvement/agent capabilityを扱う研究で、LLM推論runtime、KV cache、serving schedulerの性能最適化を主目的としない。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research"
+    },
+    "arXiv:2606.29279": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29279",
+      "identity_tokens": [
+        "arXiv:2606.29279"
+      ],
+      "reason": "agent/LLM memory consolidationが誤情報を確信へ変える現象を分析するmemory reliability研究で、推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "Manufactured Confidence: How Memory Consolidation Turns Hearsay into Confident Facts"
+    },
+    "arXiv:2608.11079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11079",
+      "identity_tokens": [
+        "arXiv:2608.11079"
+      ],
+      "reason": "agent skill文書をMinimum Description Lengthで圧縮し、再利用可能なprocedure/ruleへ整理するagent knowledge compression研究。KVキャッシュやmodel weight、runtime memoryの圧縮ではなくLLM推論system効率化の対象外。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure"
+    },
+    "arXiv:2606.14516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14516",
+      "identity_tokens": [
+        "arXiv:2606.14516"
+      ],
+      "reason": "AI評価結果を統一schemaとcommunity repositoryへ整理するevaluation infrastructure研究で、LLM推論runtime・serving・KV cache・kernel効率化を提案しない。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "Every Eval Ever: A Unifying Schema and Community Repository for AI Evaluation Results"
+    },
+    "DOI:10.1177/1094342005051521": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/1094342005051521",
+      "identity_tokens": [
+        "DOI:10.1177/1094342005051521"
+      ],
+      "reason": "MPI実装MPICHのcollective communicationをmessage sizeやprocess数に応じて最適化する高性能計算（high-performance computing; HPC）研究。後続の分散LLMシステムに基礎技術として引用されるが、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T18:58:58+00:00",
+      "last_checked_at": "2026-10-04T18:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
+      ],
+      "title": "Optimization of Collective Communication Operations in MPICH"
+    },
+    "arXiv:2001.09977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2001.09977",
+      "identity_tokens": [
+        "arXiv:2001.09977"
+      ],
+      "reason": "2.6B parameterのMeenaを公開会話データで学習し、Sensibleness and Specificity Average（SSA）で人間らしい対話品質を評価する会話モデル研究。推論サービング、スケジューリング、メモリ、カーネル最適化を提案しない。",
+      "first_checked_at": "2026-10-04T18:58:58+00:00",
+      "last_checked_at": "2026-10-04T18:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.23384-synergysched-predictive-two-layer-scheduling.md",
+        "papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md"
+      ],
+      "title": "Towards a Human-like Open-Domain Chatbot"
+    },
+    "arXiv:2306.15195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.15195",
+      "identity_tokens": [
+        "arXiv:2306.15195"
+      ],
+      "reason": "視覚encoder・alignment layer・LLMで座標を自然言語入出力として扱い、referential dialogue、REC、PointQA、VQA等の能力を実現するマルチモーダル大規模言語モデル研究。推論実行効率化は主題外。",
+      "first_checked_at": "2026-10-04T18:58:58+00:00",
+      "last_checked_at": "2026-10-04T18:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Shikra: Unleashing Multimodal LLM's Referential Dialogue Magic"
+    },
+    "arXiv:2305.19860": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.19860",
+      "identity_tokens": [
+        "arXiv:2305.19860"
+      ],
+      "reason": "医療質問応答で大規模言語モデルをinstruction prompt tuningし、MultiMedQA等の医学的知識・推論・人間評価を改善する能力・alignment研究。推論システム効率化は扱わない。",
+      "first_checked_at": "2026-10-04T18:58:58+00:00",
+      "last_checked_at": "2026-10-04T18:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Towards Expert-Level Medical Question Answering with Large Language Models"
     }
   }
 }

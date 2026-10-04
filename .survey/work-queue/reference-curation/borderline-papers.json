@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T18:57:07+00:00",
-  "record_count": 432,
+  "updated_at": "2026-10-04T18:58:57+00:00",
+  "record_count": 433,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6232,6 +6232,18 @@
       "last_checked_at": "2026-10-04T18:57:07+00:00",
       "linked_from": [],
       "title": "CoEvo-Mem: Co-Evolving Retrieval Policy and Memory Bank for LLM Agents"
+    },
+    "arXiv:2608.22602": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22602",
+      "identity_tokens": [
+        "arXiv:2608.22602"
+      ],
+      "reason": "Ampere/Hopper/Blackwellを対象とするcycle-level GPU simulatorとarchitecture studyで、LLM/FlashAttention workloadも評価するが主対象はGPU simulation/architecture全般。LLM推論への直接性はあるものの専用推論system論文ではないためborderline。",
+      "first_checked_at": "2026-10-04T18:58:57+00:00",
+      "last_checked_at": "2026-10-04T18:58:57+00:00",
+      "linked_from": [],
+      "title": "Architecting the Next Generation of Asynchronous, Distributed GPUs for the AI Era"
     }
   }
 }
