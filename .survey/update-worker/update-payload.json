@@ -1,30 +1,35 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261003T1013-sglang0521",
+  "attempt_id": "library-import-maint-20261004T1110-ollama0351-ascend950",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "c1aa3c361e346456fb42c08f5a399d95bf2023c5",
+      "path": "framework-updates/README.md",
+      "expected_blob_sha": "55126a112f1c4ab290648c455f0aaeadfd8e3aea",
       "edits": [
         {
+          "op": "replace_once",
+          "old": "- フレームワーク差分の最終確認: **2026-10-02**",
+          "new": "- フレームワーク差分の最終確認: **2026-10-04**"
+        },
+        {
           "op": "insert_before_once",
-          "anchor": "## 2026-09-20",
-          "text": "## 2026-10-02 — v0.5.21（released）\n\n- **prefill / decodeを再起動なしで動的切替**: PD instanceがruntimeでprefill roleとdecode roleを切り替え可能になった。固定P/D fleetより負荷変動へ追従しやすい。\n- **prefix cacheのRust coreをdefault化**: prefix reuseの中心経路をRust実装へ移行。\n- **DeepSeek-V4.1 long-prompt TTFTを22%改善**: 長promptのfirst-token経路を最適化。\n- **Kimi K3 PD prefill throughput +20.6%**: PD servingでprefill側の処理効率を改善。\n- **GLM-5.3-Flash / AMD MI355X**: FP8 / MXFP4 MoEとMTP投機的デコード（speculative decoding）を追加。\n- **CUDA Graph capture memory削減**: DeepSeek-V4のC4 Indexerでbreakable CUDA Graph時のcapture memoryを58%削減し18 GB。\n- **NVFP4 KV attention**: SM100のNVFP4 GenMHA + speculative decodingで1M contextのdecode-attention kernelを1.355倍高速化。\n- **PD / DCP転送改善**: DeepSeek-V4-Pro、1P1D、MI355X、concurrency 256でmean TTFTを19.4→15.1秒。Kimi Linear、8×B200、concurrency 8のcached-prefix条件ではDCP転送経路を約10.9倍高速化。\n- **投機的デコード拡張**: LFM2-VLのDSparkでbatch 1時1.66〜2.56倍。Kimi K3のDFlash、pipeline parallelism + EAGLE/MTP互換等も追加。\n- **MoE / DeepEP v2拡張**: BF16とbatch-invariant inference、MXFP8、deferred route weighting等を追加。\n\n[release v0.5.21](https://github.com/sgl-project/sglang/releases/tag/v0.5.21)\n\n"
+          "anchor": "### 2026-09-23",
+          "text": "### 2026-09-30\n\n#### DeepSeek — Ascend 950向け推論基盤\n\n- **DeepGEMM-Ascend / DeepEP-Ascendを公開**\n\n  DeepSeekがAscend 950向けの推論・MoE実行基盤を公開。`DeepGEMM-Ascend` は既存DeepGEMMとAPI互換でBF16 / FP8 / FP4 GEMM、MQA logits、MegaMoEを扱い、Ascend固有layout・alignment・address計算を抽象化する。`DeepEP-Ascend` はexpert parallelismのtoken dispatch / combine通信をAscend 950へ移植し、NVIDIA版DeepEPと公開APIを揃える。LLM kernel / MoE通信基盤のhardware backend拡張として記録する。\n\n  一次資料: https://github.com/deepseek-ai/DeepGEMM-Ascend / https://github.com/deepseek-ai/DeepEP-Ascend\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "4fd22105ac1971042308b8c41307d69b3ad89fa1",
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "c37552a42e6d9a66f200d2b0e16ab07b9e5517dd",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-20",
-          "text": "### 2026-10-02\n\n#### SGLang v0.5.21\n\n- **PD role switching / Rust prefix cache / long-context・speculative・MoE経路を大幅更新 — released 2026-10-02**\n\n  prefill / decode instanceを再起動なしで動的切替できるようにし、prefix cacheのRust coreを既定化。DeepSeek-V4.1 long-prompt first-tokenを22%短縮、Kimi K3のPD prefill throughputを20.6%改善。SM100ではNVFP4 KV GenMHA + speculative decodingにより1M contextのdecode-attention kernelを1.355倍高速化。DeepSeek-V4-ProのPD bootstrapではMI355X・1P1D・concurrency 256でmean TTFT 19.4→15.1秒。詳細はSGLang個別ページ。\n\n  一次資料: https://github.com/sgl-project/sglang/releases/tag/v0.5.21\n\n"
+          "anchor": "### 2026-09-28 — v0.35.0（released）",
+          "text": "### 2026-09-29 — v0.35.1（released）\n\n- **decision model / multimodal判定APIを拡張**: CloudflareのClef 27B / Clef Flash 9Bを`/v1/systemone`から扱えるようにし、画像を含むmultimodal stateに対してchoice / probability / score型の判定を返せるようになった。web searchは1応答あたり3回から10回へ拡張。\n- **Modelfileの`CAPABILITY`宣言**: model能力をmetadataとして明示でき、GGUF / safetensorsからの作成やmodel継承でも保持される。\n\n[release](https://github.com/ollama/ollama/releases/tag/v0.35.1)\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-03 08:30 maintenance: SGLang v0.5.21のPD role switching、Rust prefix cache、long-context/speculative/MoE経路の主要更新を個別・集約ページへ反映。"
+  "summary": "2026-10-04 08:30 maintenance: DeepSeekのAscend 950向けDeepGEMM/DeepEP backend公開とOllama v0.35.1のdecision-model/multimodal/CAPABILITY更新を反映。"
 }
