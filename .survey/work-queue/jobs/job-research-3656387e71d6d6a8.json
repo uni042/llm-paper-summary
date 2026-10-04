@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2510.15312",
   "canonical_id": "arXiv:2510.15312",
+  "citation_count": 3,
+  "citation_count_checked_at": "2026-10-04T01:59:21+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-28T01:40:20+00:00",
   "doi": "10.48550/arXiv.2510.15312",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2025-2510.15312-accelerating-mobile-language-model-via-speculative-decoding-and-npu-coordinated-execution.md",
   "parent_job_id": "job-829610239dc4762a",
-  "priority": 0,
+  "priority": 3,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 3,
+    "citations": 3,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 352,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 3
   },
+  "published": "2025-10-17",
   "schema_version": 1,
   "selection_reason": "chunked prefillとNPU向けspeculative decodingでmobile RAGを高速・省電力化する。",
+  "semantic_scholar_id": "86ccb4c0789ca15c5eba7d294ea971c930cf344f",
   "source_url": "https://arxiv.org/abs/2510.15312",
   "status": "ready",
   "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2025
 }

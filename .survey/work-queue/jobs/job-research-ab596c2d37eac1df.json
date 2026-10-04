@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "arXiv:2510.13602",
+  "citation_count": 4,
+  "citation_count_checked_at": "2026-10-04T01:59:21+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-27T05:02:06+00:00",
   "doi": null,
@@ -17,23 +20,27 @@
   "job_id": "job-research-ab596c2d37eac1df",
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md",
-  "priority": 0,
+  "priority": 4,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 4,
+    "citations": 4,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 354,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 4
   },
+  "published": "2025-10-15",
   "schema_version": 1,
   "selection_reason": "疎注意とKVオフロードを統合し、長文脈LLMのGPUメモリ・注意計算・転送を共同最適化する。",
+  "semantic_scholar_id": "1bd11d93912fb449d83ba5e53751486b5c387734",
   "source_url": "https://arxiv.org/abs/2510.13602",
   "status": "ready",
   "title": "NOSA: Native and Offloadable Sparse Attention",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2025
 }

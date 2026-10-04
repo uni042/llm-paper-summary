@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2403.12844",
   "canonical_id": "arXiv:2403.12844",
+  "citation_count": 71,
+  "citation_count_checked_at": "2026-10-04T01:59:21+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-03T13:23:59+00:00",
   "doi": "10.1145/3636534.3690668",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2403.12844-melting-point-mobile-evaluation-of-language-transformers.md",
   "parent_job_id": "job-896fc03f503de7ab",
-  "priority": 0,
+  "priority": 71,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 71,
+    "citations": 71,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 929,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 71
   },
+  "published": "2024-03-19",
   "schema_version": 1,
   "selection_reason": "Android/iOS/Jetson上のLLM推論をframework横断で自動benchmarkし、throughput・memory・energy・thermal・量子化を実測するon-device inference基盤/評価研究で対象範囲。",
+  "semantic_scholar_id": "8c997fbe1606f544fe5a26c1177f640880b597bf",
   "source_url": "https://arxiv.org/abs/2403.12844",
   "status": "ready",
   "title": "MELTing Point: Mobile Evaluation of Language Transformers",
   "type": "research",
-  "workflow_version": 10
+  "venue": "ACM/IEEE International Conference on Mobile Computing and Networking",
+  "workflow_version": 10,
+  "year": 2024
 }

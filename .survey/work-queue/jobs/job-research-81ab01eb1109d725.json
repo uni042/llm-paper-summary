@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "arXiv:2511.00606",
+  "citation_count": 25,
+  "citation_count_checked_at": "2026-10-04T01:59:21+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-27T05:03:56+00:00",
   "doi": null,
@@ -15,23 +18,27 @@
   "job_id": "job-research-81ab01eb1109d725",
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2025-2511.00606-specdiff-2-scaling-diffusion-drafter-alignment-for-faster-speculative-decoding.md",
-  "priority": 0,
+  "priority": 25,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 25,
+    "citations": 25,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 337,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 25
   },
+  "published": "2025-11-01",
   "schema_version": 1,
   "selection_reason": "離散拡散drafterをAR verifierへ整合させ、精度を維持した投機的復号で最大級のtokens/s改善を狙う直接的推論高速化。",
+  "semantic_scholar_id": "6466fe8d693ffc157ed9ebc5edb2c45d83bc749b",
   "source_url": "https://arxiv.org/abs/2511.00606",
   "status": "ready",
   "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2025
 }
