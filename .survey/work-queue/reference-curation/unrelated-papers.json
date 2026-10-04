@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T17:56:14+00:00",
-  "record_count": 1205,
+  "updated_at": "2026-10-04T17:57:47+00:00",
+  "record_count": 1210,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -17540,6 +17540,77 @@
         "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
       ],
       "title": "A General Language Assistant as a Laboratory for Alignment"
+    },
+    "arXiv:1412.6115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.6115",
+      "identity_tokens": [
+        "arXiv:1412.6115"
+      ],
+      "reason": "CNNの全結合層パラメータをk-means/product quantization等で16–24倍圧縮しImageNet精度低下を約1%に抑える画像CNN圧縮研究。推論向け圧縮ではあるがLLM/Transformerへの最終適用・評価がないため対象外。",
+      "first_checked_at": "2026-10-04T17:57:46+00:00",
+      "last_checked_at": "2026-10-04T17:57:46+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "title": "Compressing Deep Convolutional Networks using Vector Quantization"
+    },
+    "arXiv:1906.10771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.10771",
+      "identity_tokens": [
+        "arXiv:1906.10771"
+      ],
+      "reason": "Taylor展開でneuron/filterのloss寄与を推定して構造的pruningし、ResNet-101で40% FLOPs削減・30% parameter削減を評価する一般CNN pruning研究。LLM/Transformer推論への直接適用・評価がないため対象外。",
+      "first_checked_at": "2026-10-04T17:57:46+00:00",
+      "last_checked_at": "2026-10-04T17:57:46+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ],
+      "title": "Importance Estimation for Neural Network Pruning"
+    },
+    "arXiv:2205.06175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.06175",
+      "identity_tokens": [
+        "arXiv:2205.06175"
+      ],
+      "reason": "Gatoという単一multi-modal/multi-task policyをAtari、画像caption、chat、robot arm等へ適用し能力を示すgeneralist agent研究。推論runtime、KV cache、serving、kernel最適化を提案しない。",
+      "first_checked_at": "2026-10-04T17:57:47+00:00",
+      "last_checked_at": "2026-10-04T17:57:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "A Generalist Agent"
+    },
+    "arXiv:1805.06085": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1805.06085",
+      "identity_tokens": [
+        "arXiv:1805.06085"
+      ],
+      "reason": "学習可能なactivation clipping parameterで一般ニューラルネットのweight/activationを4-bit化しhardware inference利得も分析するが、対象はAlexNet/ResNet等の画像DNNでLLM/Transformerへの最終適用がないため対象外。",
+      "first_checked_at": "2026-10-04T17:57:47+00:00",
+      "last_checked_at": "2026-10-04T17:57:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "PACT: Parameterized Clipping Activation for Quantized Neural Networks"
+    },
+    "arXiv:1911.03894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.03894",
+      "identity_tokens": [
+        "arXiv:1911.03894"
+      ],
+      "reason": "フランス語RoBERTa系モデルCamemBERTを事前学習し、POS tagging、dependency parsing、NER、NLI等で言語能力を評価するpretraining/model研究。推論システム効率化は対象外。",
+      "first_checked_at": "2026-10-04T17:57:47+00:00",
+      "last_checked_at": "2026-10-04T17:57:47+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "CamemBERT: a Tasty French Language Model"
     }
   }
 }

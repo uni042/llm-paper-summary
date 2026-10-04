@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34f709da8a708e31-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.06175",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.06175",
+    "identity_tokens": [
+      "arXiv:2205.06175"
+    ],
+    "reason": "Gatoという単一multi-modal/multi-task policyをAtari、画像caption、chat、robot arm等へ適用し能力を示すgeneralist agent研究。推論runtime、KV cache、serving、kernel最適化を提案しない。",
+    "first_checked_at": "2026-10-04T17:57:47+00:00",
+    "last_checked_at": "2026-10-04T17:57:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+    ],
+    "title": "A Generalist Agent"
+  },
+  "processed_at": "2026-10-04T17:57:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34f709da8a70",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34f709da8a708e31-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.10771",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.10771",
+    "identity_tokens": [
+      "arXiv:1906.10771"
+    ],
+    "reason": "Taylor展開でneuron/filterのloss寄与を推定して構造的pruningし、ResNet-101で40% FLOPs削減・30% parameter削減を評価する一般CNN pruning研究。LLM/Transformer推論への直接適用・評価がないため対象外。",
+    "first_checked_at": "2026-10-04T17:57:46+00:00",
+    "last_checked_at": "2026-10-04T17:57:46+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+    ],
+    "title": "Importance Estimation for Neural Network Pruning"
+  },
+  "processed_at": "2026-10-04T17:57:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34f709da8a70",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
