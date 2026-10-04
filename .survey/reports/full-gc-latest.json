@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-10-04T13:02:54.323951+00:00",
+  "checked_at": "2026-10-04T13:05:32.265743+00:00",
   "mode": "apply",
   "job_retention_days": 7,
   "transport_retention_days": 1,
@@ -9,6 +9,10 @@
   "deleted_count": 0,
   "deleted": [],
   "skipped": [
+    {
+      "path": ".survey/work-queue/submissions/libimp-ab32ed1121ffd991-pre01-sub01.json",
+      "reason": "submission_not_settled"
+    },
     {
       "path": ".survey/work-queue/submissions/research/attempt-0686f88e90fa51aa74f2c5d1.json",
       "reason": "immutable_job_not_terminal"
