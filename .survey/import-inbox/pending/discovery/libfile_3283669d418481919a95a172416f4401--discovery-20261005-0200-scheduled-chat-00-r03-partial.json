@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0200-scheduled-chat-00/r03",
+  "reference_main_sha": "191cbd5471623ce6bdd4f198b00c0850b020db41",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.00091",
+      "identity_tokens": [
+        "arXiv:1906.00091"
+      ],
+      "title": "Deep Learning Recommendation Model for Personalization and Recommendation Systems",
+      "reason": "DLRMはcategorical feature向けembedding tableのmodel parallelismとfully-connected layerのdata parallelismを含む推薦model/benchmarkで、推薦推論のmemory・performanceも扱うが最終適用先はpersonalization/recommendationでありLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/1906.00091",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でDLRMの推薦model設計、embedding tableのmodel parallelism、Big Basin上のperformance characterizationが主題と確認。LLM/Transformer推論への最終適用がないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T02:22:00+09:00",
+      "last_checked_at": "2026-10-05T02:22:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "worklist_rank": 37
+    }
+  ]
+}
