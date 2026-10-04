@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7fd79a02ded850e5-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/509907.509965",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/509907.509965",
+    "identity_tokens": [
+      "DOI:10.1145/509907.509965"
+    ],
+    "reason": "局所性鋭敏ハッシュ（locality-sensitive hashing; LSH）を用いた類似度推定・近似最近傍探索の理論研究で、後続LLM疎注意に利用されても元論文はLLM推論を対象としない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T12:58:18+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+    ],
+    "title": "Similarity estimation techniques from rounding algorithms"
+  },
+  "processed_at": "2026-10-04T12:58:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fd79a02ded8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

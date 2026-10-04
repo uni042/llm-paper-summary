@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T05:54:09+00:00",
+  "updated_at": "2026-10-04T12:58:18+00:00",
   "record_count": 424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -2722,21 +2722,6 @@
         "worker-worklist-30 discovery_review tail-to-head"
       ],
       "title": "From Sparse to Soft Mixtures of Experts"
-    },
-    "arXiv:1606.07947": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1606.07947",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1606.07947",
-        "arXiv:1606.07947"
-      ],
-      "reason": "系列レベル蒸留で小型モデル化に寄与するが、現行LLM実行システムではなく学習アルゴリズムが主。",
-      "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-10-03T18:29:50+00:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review tail-to-head"
-      ],
-      "title": "Sequence-Level Knowledge Distillation"
     },
     "arXiv:2004.12993": {
       "classification": "borderline",
@@ -6133,6 +6118,23 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "Profit-aware deployment of large language model-enabled inference chains in data centers"
+    },
+    "DOI:10.18653/v1/d16-1139": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d16-1139",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d16-1139",
+        "DOI:10.48550/arxiv.1606.07947",
+        "arXiv:1606.07947"
+      ],
+      "reason": "sequence-level knowledge distillationでNMT studentを小型化し、teacherのbeam searchに対してgreedy decodingで10×高速、weight pruning併用で13×少ないparameterを報告するため推論圧縮との技術的関連は強い。一方、対象は2016年のLSTM-based neural machine translationであり、LLM/Transformer推論systemそのものではないためborderlineとする。",
+      "first_checked_at": "2026-09-27T13:32:58+09:00",
+      "last_checked_at": "2026-10-04T12:58:18+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md",
+        "worker-worklist-30 discovery_review tail-to-head"
+      ],
+      "title": "Sequence-Level Knowledge Distillation"
     }
   }
 }

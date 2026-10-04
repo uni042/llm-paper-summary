@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e0b39d17fb8ec59-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.25080/majora-92bf1922-011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.25080/majora-92bf1922-011",
+    "identity_tokens": [
+      "DOI:10.25080/majora-92bf1922-011"
+    ],
+    "reason": "Python向け統計・計量経済分析library statsmodelsの設計、機能、利用例を紹介するsoftware paperで、LLM推論systemや推論kernelを対象としない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T12:58:18+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2609.15504-orthrus-numerical-precision-losslessness.md"
+    ],
+    "title": "Statsmodels: Econometric and Statistical Modeling with Python"
+  },
+  "processed_at": "2026-10-04T12:58:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e0b39d17fb8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
