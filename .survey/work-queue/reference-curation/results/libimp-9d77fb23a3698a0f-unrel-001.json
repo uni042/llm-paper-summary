@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d77fb23a3698a0f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1162/tacl_a_00051",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1162/tacl_a_00051",
+    "identity_tokens": [
+      "DOI:10.1162/tacl_a_00051",
+      "arXiv:1607.04606"
+    ],
+    "reason": "skip-gramの各単語を文字n-gramのbagとして表し、未知語・希少語を含む単語表現の品質を改善する表現学習研究。9言語のword similarity/analogyで評価しており、LLM推論ランタイム、サービング、KVキャッシュ、推論カーネル最適化を最終適用先としない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+    ],
+    "title": "Enriching Word Vectors with Subword Information"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d77fb23a369",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

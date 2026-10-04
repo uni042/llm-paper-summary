@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d77fb23a3698a0f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.05426",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.05426",
+    "identity_tokens": [
+      "arXiv:1704.05426"
+    ],
+    "reason": "自然言語推論（natural language inference; NLI）の大規模MultiNLI corpusを構築し、文ジャンル横断の推論能力を評価するdataset/benchmark研究で、LLM推論runtime最適化を提案しない。",
+    "first_checked_at": "2026-10-04T13:07:30+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+      "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md"
+    ],
+    "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d77fb23a369",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

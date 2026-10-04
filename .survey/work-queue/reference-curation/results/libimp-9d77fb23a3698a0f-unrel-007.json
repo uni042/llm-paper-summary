@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d77fb23a3698a0f-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/75246.75248",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/75246.75248",
+    "identity_tokens": [
+      "DOI:10.1145/75246.75248"
+    ],
+    "reason": "packet-switched networkで公平な帯域配分とdelay特性を実現するfair queueingを解析・simulationするネットワークスケジューリング研究で、LLM serving固有のrequest scheduling研究ではない。",
+    "first_checked_at": "2026-10-04T12:52:28+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+    ],
+    "title": "Analysis and Simulation of a Fair Queueing Algorithm"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d77fb23a369",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

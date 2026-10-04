@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5a8beabbb50e767-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2011.01060",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2011.01060",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.coling-main.580",
+      "arXiv:2011.01060"
+    ],
+    "reason": "構造化・非構造化データから2WikiMultiHopQAを構築し、reasoning path付きevidenceでマルチホップ推論能力を評価するデータセット研究で、推論runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T13:07:30+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+    ],
+    "title": "Constructing A Multi-hop QA Dataset for Comprehensive Evaluation of Reasoning Steps"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5a8beabbb50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
