@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261004-2200-scheduled-chat-00/r01",
+  "reference_main_sha": "e8c6e77343d963209d8fe4dbbeec1ecf00a46a3b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00051",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00051",
+        "arXiv:1607.04606"
+      ],
+      "title": "Enriching Word Vectors with Subword Information",
+      "reason": "skip-gramの各単語を文字n-gramのbagとして表し、未知語・希少語を含む単語表現の品質を改善する表現学習研究。9言語のword similarity/analogyで評価しており、LLM推論ランタイム、サービング、KVキャッシュ、推論カーネル最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1607.04606",
+      "body_check": "abstract_screen_only: 一次公開要旨でcharacter n-gramを用いたword representation学習と9言語でのsimilarity/analogy評価が主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:08:00+09:00",
+      "last_checked_at": "2026-10-04T22:08:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d15-1166",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d15-1166",
+        "arXiv:1508.04025"
+      ],
+      "title": "Effective Approaches to Attention-based Neural Machine Translation",
+      "reason": "注意機構付きニューラル機械翻訳のglobal/local attention方式を比較し、翻訳品質を改善するモデル研究。推論実行系の速度・メモリ・サービング効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/1508.04025",
+      "body_check": "abstract_screen_only: 要旨・書誌からattention-based NMTのalignment方式と翻訳性能改善が主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:09:00+09:00",
+      "last_checked_at": "2026-10-04T22:09:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1561/1500000019",
+      "identity_tokens": [
+        "DOI:10.1561/1500000019"
+      ],
+      "title": "The Probabilistic Relevance Framework: BM25 and Beyond",
+      "reason": "文書検索の確率的関連性枠組み（Probabilistic Relevance Framework; PRF）とBM25/BM25F、relevance feedback等を体系化する情報検索研究で、LLM推論システムの実行効率化を対象としない。",
+      "source_url": "https://doi.org/10.1561/1500000019",
+      "body_check": "abstract_screen_only: 出版社要旨でPRF、binary independence model、BM25/BM25F、非テキスト特徴、parameter最適化を扱う情報検索monographと確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:10:00+09:00",
+      "last_checked_at": "2026-10-04T22:10:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.05426",
+      "identity_tokens": [
+        "arXiv:1704.05426"
+      ],
+      "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+      "reason": "自然言語推論（natural language inference; NLI）の大規模MultiNLI corpusを構築し、文ジャンル横断の推論能力を評価するdataset/benchmark研究で、LLM推論runtime最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1704.05426",
+      "body_check": "abstract_screen_only: 要旨・書誌から複数genreのsentence-pair inference corpusとモデル評価が主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:11:00+09:00",
+      "last_checked_at": "2026-10-04T22:11:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/52324.52356",
+      "identity_tokens": [
+        "DOI:10.1145/52324.52356"
+      ],
+      "title": "Congestion Avoidance and Control",
+      "reason": "packet networkの輻輳崩壊を防ぐTCP congestion avoidance/controlアルゴリズムを扱うネットワーク研究で、LLM推論サービング固有のschedulerや通信最適化ではない。",
+      "source_url": "https://doi.org/10.1145/52324.52356",
+      "body_check": "abstract_screen_only: 書誌・公開要旨からpacket-switched networkのcongestion avoidance/controlが主題で、LLM/Transformer推論は対象外と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-04T22:12:00+09:00",
+      "last_checked_at": "2026-10-04T22:12:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/089976698300017746",
+      "identity_tokens": [
+        "DOI:10.1162/089976698300017746"
+      ],
+      "title": "Natural Gradient Works Efficiently in Learning",
+      "reason": "情報幾何に基づく自然勾配（natural gradient）をperceptron、blind source separation、linear dynamical systemの学習へ適用し、Fisher効率性やlearning-rate更新を解析する学習アルゴリズム研究。推論効率化は対象外。",
+      "source_url": "https://doi.org/10.1162/089976698300017746",
+      "body_check": "abstract_screen_only: MIT Press要旨でnatural gradient online learningのdynamics、Fisher efficiency、backpropagation plateau緩和、learning-rate更新が主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:13:00+09:00",
+      "last_checked_at": "2026-10-04T22:13:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/75246.75248",
+      "identity_tokens": [
+        "DOI:10.1145/75246.75248"
+      ],
+      "title": "Analysis and Simulation of a Fair Queueing Algorithm",
+      "reason": "packet-switched networkで公平な帯域配分とdelay特性を実現するfair queueingを解析・simulationするネットワークスケジューリング研究で、LLM serving固有のrequest scheduling研究ではない。",
+      "source_url": "https://doi.org/10.1145/75246.75248",
+      "body_check": "abstract_screen_only: 書誌・要旨からnetwork packet fair queueingの解析とsimulationが主題で、LLM推論を対象としないため本文深読解省略。",
+      "first_checked_at": "2026-10-04T22:14:00+09:00",
+      "last_checked_at": "2026-10-04T22:14:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/k16-1028",
+      "identity_tokens": [
+        "DOI:10.18653/v1/k16-1028",
+        "arXiv:1602.06023"
+      ],
+      "title": "Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond",
+      "reason": "注意付きencoder-decoder RNNで抽象型要約を行い、keyword、sentence-word hierarchy、rare/unseen word処理を追加して要約品質を改善するモデル研究。LLM推論runtime最適化は主題ではない。",
+      "source_url": "https://arxiv.org/abs/1602.06023",
+      "body_check": "abstract_screen_only: 一次公開要旨でabstractive summarization、attention RNN、rare word処理、新datasetと品質benchmarkが主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:15:00+09:00",
+      "last_checked_at": "2026-10-04T22:15:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1074",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1074",
+        "arXiv:1803.05355"
+      ],
+      "title": "FEVER: a Large-scale Dataset for Fact Extraction and VERification",
+      "reason": "Wikipedia由来の185,445 claimsをSupported/Refuted/NotEnoughInfoへ分類し、根拠sentenceも付与するfact verification dataset研究で、LLM推論システム効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1803.05355",
+      "body_check": "abstract_screen_only: FEVER一次dataset説明で185,445 claims、3分類、support/refute用evidence sentenceを構築するbenchmarkが主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:16:00+09:00",
+      "last_checked_at": "2026-10-04T22:16:00+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.08887",
+      "identity_tokens": [
+        "arXiv:1809.08887",
+        "DOI:10.18653/v1/D18-1425"
+      ],
+      "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task",
+      "reason": "10,181 questions、5,693 unique SQL queries、200 databasesからなるcross-domain text-to-SQL datasetを構築し、未知database schemaへのsemantic parsing汎化を評価するbenchmark研究で、LLM推論runtime・serving効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/1809.08887",
+      "body_check": "abstract_screen_only: ACL一次要旨でcross-domain semantic parsing/text-to-SQL datasetとdatabase splitでのgeneralization評価が主題と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-04T22:17:00+09:00",
+      "last_checked_at": "2026-10-04T22:17:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
+      ],
+      "worklist_rank": 19
+    }
+  ]
+}
