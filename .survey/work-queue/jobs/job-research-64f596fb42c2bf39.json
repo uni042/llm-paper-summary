@@ -34,10 +34,15 @@
   "selection_reason": "JetSpecは凍結target modelのhidden stateから、因果attention制約を保ちながら全depthのdraft分布を1回のhead forwardで並列生成するspeculative decoding手法である。候補木をtarget modelが並列検証してdecode latencyを短縮し、オフライン評価とvLLM serving評価を示すため対象に含める。",
   "semantic_scholar_id": "46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50",
   "source_url": "https://arxiv.org/abs/2606.18394",
-  "status": "ready",
+  "status": "superseded",
   "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T07:31:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2606.18394-jetspec-breaking-the-scaling-ceiling-of-speculative-decoding-with-parall.md",
+  "represented_canonical_id": "arXiv:2606.18394",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
