@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8503d74423244c1b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2002.07376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2002.07376",
+    "identity_tokens": [
+      "arXiv:2002.07376"
+    ],
+    "reason": "初期化時にGradient Signal PreservationでVGG/ResNetをpruneして学習・test resourceを削減するが、評価はCIFAR/ImageNetのCNNでLLM推論への最終適用がない。",
+    "first_checked_at": "2026-10-04T21:40:32+00:00",
+    "last_checked_at": "2026-10-04T21:40:32+00:00",
+    "linked_from": [],
+    "title": "Picking Winning Tickets Before Training by Preserving Gradient Flow"
+  },
+  "processed_at": "2026-10-04T21:40:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8503d7442324",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

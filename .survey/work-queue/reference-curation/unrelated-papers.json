@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T21:37:53+00:00",
-  "record_count": 1327,
+  "updated_at": "2026-10-04T21:40:33+00:00",
+  "record_count": 1342,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35,9 +35,9 @@
       "identity_tokens": [
         "arXiv:2107.03374"
       ],
-      "reason": "Code-model capability/evaluation paper rather than a systems contribution in the repository scope.",
+      "reason": "CodexのPython code generation能力をHumanEvalで評価し、repeated samplingや限界を分析するmodel capability/benchmark研究。推論runtime・memory・serving効率化を扱わない。",
       "first_checked_at": "2026-09-19T18:08:00+00:00",
-      "last_checked_at": "2026-09-19T18:08:00+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
       "linked_from": [],
       "title": "Evaluating Large Language Models Trained on Code"
     },
@@ -422,9 +422,9 @@
       "identity_tokens": [
         "arXiv:2303.12712"
       ],
-      "reason": "Capability/evaluation study rather than an inference or training systems contribution.",
+      "reason": "GPT-4の数学・coding・vision・medicine等の広範な能力と限界を探索するcapability研究で、推論system最適化を提案しない。",
       "first_checked_at": "2026-09-20T03:59:00+00:00",
-      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
       "linked_from": [
         "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
         "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md",
@@ -3414,9 +3414,9 @@
       "identity_tokens": [
         "arXiv:2203.02155"
       ],
-      "reason": "人間フィードバックによる指示追従学習（RLHF）が主題で、推論システム効率化ではない。",
+      "reason": "supervised fine-tuningとRLHFでinstruction followingを改善するalignment training研究で、推論system効率化を主目的としない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -19170,6 +19170,186 @@
       "last_checked_at": "2026-10-04T21:37:53+00:00",
       "linked_from": [],
       "title": "Improving Massively Multilingual Neural Machine Translation and Zero-Shot Translation"
+    },
+    "arXiv:2311.07919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.07919",
+      "identity_tokens": [
+        "arXiv:2311.07919"
+      ],
+      "reason": "30超のaudio task・多様な音声種を統一pre-trainingしQwen-Audio/Qwen-Audio-Chatの理解能力を高めるマルチモーダル学習研究。推論runtime/serving効率化を主目的としない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
+    },
+    "arXiv:2302.06590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.06590",
+      "identity_tokens": [
+        "arXiv:2302.06590"
+      ],
+      "reason": "GitHub Copilot利用者がJavaScript課題を55.8%速く完了したcontrolled experimentで、人間のdeveloper productivityを測る実証研究。モデル推論systemの効率化ではない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot"
+    },
+    "arXiv:2002.07376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.07376",
+      "identity_tokens": [
+        "arXiv:2002.07376"
+      ],
+      "reason": "初期化時にGradient Signal PreservationでVGG/ResNetをpruneして学習・test resourceを削減するが、評価はCIFAR/ImageNetのCNNでLLM推論への最終適用がない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "Picking Winning Tickets Before Training by Preserving Gradient Flow"
+    },
+    "DOI:10.1007/978-3-030-01261-8_25": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-030-01261-8_25",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-01261-8_25"
+      ],
+      "reason": "入力ごとにCNN residual blockをgateして30–90%計算を削減するdynamic routing研究だが、最終適用先は画像CNNでLLM/Transformer推論を評価しない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "SkipNet: Learning Dynamic Routing in Convolutional Networks"
+    },
+    "arXiv:2310.12931": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12931",
+      "identity_tokens": [
+        "arXiv:2310.12931"
+      ],
+      "reason": "GPT-4等でreward codeを進化的に生成しrobot RL skill学習を改善するreward-design/robotics研究。LLM推論runtimeの効率化を対象としない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "Eureka: Human-Level Reward Design via Coding Large Language Models"
+    },
+    "arXiv:2007.07779": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.07779",
+      "identity_tokens": [
+        "arXiv:2007.07779"
+      ],
+      "reason": "小型adapterを動的に差し込みBERT/RoBERTa/XLM-R等をtask/languageへparameter-efficientに適応・共有するframework。主目的はfine-tuning/モデル共有で、推論serving最適化ではない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "AdapterHub: A Framework for Adapting Transformers"
+    },
+    "DOI:10.1007/978-3-030-01237-3_23": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-030-01237-3_23",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-01237-3_23"
+      ],
+      "reason": "weight/activation quantizerを学習して低bit DNNを作るが、評価はAlexNet/VGG/GoogLeNet/ResNet/DenseNetのCIFAR/ImageNetで、LLM推論への最終適用がない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "LQ-Nets: Learned Quantization for Highly Accurate and Compact Deep Neural Networks"
+    },
+    "DOI:10.18653/v1/p19-1102": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1102",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1102"
+      ],
+      "reason": "multi-document summarization datasetと要約modelを構築するNLP task研究で、LLM推論runtime・memory・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "Multi-News: A Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model"
+    },
+    "arXiv:2305.11747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11747",
+      "identity_tokens": [
+        "arXiv:2305.11747"
+      ],
+      "reason": "LLM hallucinationの生成・検出を評価する大規模benchmarkで、ChatGPTのhallucination率やrecognition能力を分析する。推論runtime・memory・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models"
+    },
+    "arXiv:2304.05302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.05302",
+      "identity_tokens": [
+        "arXiv:2304.05302"
+      ],
+      "reason": "PPOを使わずresponse ranking lossでhuman preferenceへalignするtraining方式。model数・hyperparameterを減らす学習効率が主目的で、推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "linked_from": [],
+      "title": "RRHF: Rank Responses to Align Language Models with Human Feedback without tears"
+    },
+    "arXiv:2005.14165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.14165",
+      "identity_tokens": [
+        "arXiv:2005.14165"
+      ],
+      "reason": "大規模autoregressive language modelのfew-shot/in-context能力とscale効果を評価するmodel scaling/capability研究で、推論runtime・serving最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "linked_from": [],
+      "title": "Language Models are Few-Shot Learners"
+    },
+    "DOI:10.1109/hpca47549.2020.00015": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca47549.2020.00015",
+      "identity_tokens": [
+        "DOI:10.1109/hpca47549.2020.00015"
+      ],
+      "reason": "sparse/irregular GEMM用acceleratorを提案するhardware研究だが、論文の最終適用はDNN trainingでありLLM推論system対象外。",
+      "first_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "linked_from": [],
+      "title": "SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training"
+    },
+    "DOI:10.1145/3706598.3713600": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3706598.3713600",
+      "identity_tokens": [
+        "DOI:10.1145/3706598.3713600"
+      ],
+      "reason": "multimodal agentがsmartphone GUIを観察・操作する能力を学ぶagent/application研究で、LLM推論runtime・memory・serving効率化を対象としない。",
+      "first_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "linked_from": [],
+      "title": "AppAgent: Multimodal Agents as Smartphone Users"
+    },
+    "arXiv:1903.10318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.10318",
+      "identity_tokens": [
+        "arXiv:1903.10318"
+      ],
+      "reason": "BERTをextractive summarizationへfine-tuneするNLP task/training研究で、推論systemの速度・メモリ・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "linked_from": [],
+      "title": "Fine-tune BERT for Extractive Summarization"
+    },
+    "arXiv:2303.14524": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.14524",
+      "identity_tokens": [
+        "arXiv:2303.14524"
+      ],
+      "reason": "LLMをrecommender systemへ組み込み対話性・説明性を改善するapplication研究で、LLM推論system効率化を最終目的としない。",
+      "first_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "linked_from": [],
+      "title": "Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System"
     }
   }
 }
