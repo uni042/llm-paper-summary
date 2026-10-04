@@ -198,7 +198,7 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         "",
         f"- 消化率: **{ratio:.1f}%**",
         f"- 現在の生在庫: 後方references **{progress['backward_pending_raw']}件** / "
-        f"前方引用 **{progress['forward_pending_raw']}件**。両者は重複を含むため単純加算しません。",
+        f"前方引用 **{progress['forward_pending_raw']}件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。",
         f"- 前方・後方を統合してidentity重複を除いた未処理面は **{progress['combined_pending_before_research_exclusion']}件**。"
         f"そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。",
         "- 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。"
