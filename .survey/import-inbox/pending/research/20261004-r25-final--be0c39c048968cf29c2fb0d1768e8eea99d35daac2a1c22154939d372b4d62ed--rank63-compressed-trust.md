@@ -1,0 +1,126 @@
+---
+canonical_id: arXiv:2403.15447
+arxiv_id: '2403.15447'
+title: 'Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression'
+summary: >-
+  本研究は、推論を軽くするためのLLM圧縮が通常の言語能力だけでなく信頼性へ与える影響を、3種の13Bモデル、3種の半構造化枝刈り、GPTQ/AWQの3・4・8-bit量子化、およびDecodingTrustの8軸で測る。量子化は同等圧縮率で枝刈りより元モデルの信頼性を保ちやすく、Llama 2 13B Chatでは4-bitが効率・MMLU・多くの信頼性指標を両立する一方、3-bitでは特にGPTQの有害性・OOD頑健性が大きく崩れる。3-bit GPTQは毒性が約50ポイント低下し、4-bit GPTQではEthicsが54.1から76.3ポイントへ上昇した。MMLUのみでは見えない劣化、拒否率、校正データによるばらつきを明らかにし、圧縮後にも多軸評価を行う必要性を示す。
+list_summary: 3種の13B LLMをGPTQ/AWQ量子化または2:4枝刈りし、MMLUとDecodingTrust 8軸を評価。4-bit量子化は複数軸を保つ一方、3-bit GPTQはMMLUの比較的小さな低下の裏で毒性・OOD頑健性を大きく損ねた。
+authors:
+  - Junyuan Hong
+  - Jinhao Duan
+  - Chenhui Zhang
+  - Zhangheng Li
+  - Chulin Xie
+  - Kelsey Lieberman
+  - James Diffenderfer
+  - Brian Bartoldson
+  - Ajay Jaiswal
+  - Kaidi Xu
+  - Bhavya Kailkhura
+  - Dan Hendrycks
+  - Dawn Song
+  - Zhangyang Wang
+  - Bo Li
+published: '2024-03-18'
+publication: International Conference on Machine Learning (ICML), PMLR 235:18611–18633
+publication_type: 会議論文
+publication_status: Published
+source: https://arxiv.org/abs/2403.15447
+sources:
+  - https://arxiv.org/abs/2403.15447
+  - https://arxiv.org/html/2403.15447v3
+  - https://arxiv.org/pdf/2403.15447
+  - https://proceedings.mlr.press/v235/hong24a.html
+arxiv_categories:
+  primary: cs.CL
+  cross_list:
+    - cs.AI
+implementation: 公開実装 comp-trust を案内。Wanda系のMagnitude/SparseGPT/Wanda枝刈り、AutoGPTQとAWQを用いた量子化、およびDecodingTrustの改変版で評価。論文はコード・試験済みモデル・改変ベンチマークを公開すると記載。ここではコード実行や再現実験は行っていない。
+code: https://github.com/decoding-comp-trust/comp-trust
+implementation_status: released-and-evaluated
+last_checked: '2026-10-04'
+worker_completed_at: '2026-10-04T17:19:24+09:00'
+worker_run_key: 20261004-0800-codex-local-r25
+---
+
+# Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression
+
+## 概要
+
+LLM圧縮の評価は、通常の質問応答や知識課題の性能を維持できるかに偏りがちである。しかし圧縮後もMMLUのような指標が保たれていても、敵対的入力への頑健性、公平性、プライバシー、毒性などが同時に維持されるとは限らない。本研究はこの「効率と信頼性の同時評価」の不足に対し、異なる会話調整を持つ3種の13Bモデルを5方式で圧縮し、MMLUとDecodingTrustの8信頼性軸を横断して比較する。評価の中心的な結果は、同程度に圧縮する場合は量子化が枝刈りより元モデルの信頼性を再現しやすいこと、4-bit量子化では一部軸が改善し得ること、3-bitでは通常性能に現れにくい深刻な回帰が生じることである。
+
+評価では、3-bit GPTQで毒性が約50ポイント低下する一方、4-bit GPTQでLlama 2 13B ChatのEthicsが54.1から76.3ポイントへ上昇する例を確認した。
+
+## 書誌情報
+
+- 著者: Junyuan Hong, Jinhao Duan, Chenhui Zhang, Zhangheng Li, Chulin Xie, Kelsey Lieberman, James Diffenderfer, Brian Bartoldson, Ajay Jaiswal, Kaidi Xu, Bhavya Kailkhura, Dan Hendrycks, Dawn Song, Zhangyang Wang, Bo Li
+- 初版投稿日: 2024-03-18。確認対象は2024-06-04のv3。
+- 掲載: ICML 2024, Proceedings of Machine Learning Research, volume 235, pp. 18611–18633。
+- arXiv分野: cs.CL（primary）、cs.AI（cross-list）。DOI: [10.48550/arXiv.2403.15447](https://doi.org/10.48550/arXiv.2403.15447)。
+- 実装: [comp-trust](https://github.com/decoding-comp-trust/comp-trust) を公開。論文は圧縮モデルと、拒否率による分散を抑える改変DecodingTrustベンチマークも公開すると述べる。
+- 一次資料: [arXiv abstract](https://arxiv.org/abs/2403.15447), [v3 HTML](https://arxiv.org/html/2403.15447v3), [PDF](https://arxiv.org/pdf/2403.15447), [PMLR掲載ページ](https://proceedings.mlr.press/v235/hong24a.html), [公式コード](https://github.com/decoding-comp-trust/comp-trust)。
+
+## 問題設定
+
+大規模モデルは性能に優れる一方、消費者向け端末ではメモリと計算量が制約になる。小型モデルを別途事前学習する経路に対し、既存の大きなモデルを重み量子化や枝刈りで圧縮する方法は追加学習なしに展開しやすい。しかし、圧縮で通常タスクの精度が保たれても安全性・頑健性・公平性などの変化は把握しにくい。先行研究の圧縮比較も、評価が限られたベンチマークや少数の信頼性観点に分散していた。
+
+本研究は、(1) 性能と複数の信頼性指標を合わせて見たとき推奨できる圧縮法はどれか、(2) 信頼性を保てる圧縮率はどこか、(3) さらに強い3-bit圧縮で何が壊れるかを問う。したがって対象は圧縮アルゴリズム自体の新規提案ではなく、圧縮後モデルの包括的な実証評価と、評価結果に基づく選択指針である。通常の言語性能と信頼性は異なる目的の指標として並列に測り、単一の良好な精度値を安全性の代用にしない。
+
+## 手法
+
+### モデルと圧縮方式
+
+主評価はLlama 2 13B base、Llama 2 13B Chat、Vicuna 13B Chat。いずれもdenseでは13Bパラメータで、baseモデルと会話調整済みモデルを含める。比較対象はMagnitude方式、SparseGPT、Wandaによる2:4（約50%）半構造化枝刈り、およびGPTQとAWQによる3/4/8-bit重み量子化。校正を使う場合はC4から128例を使い、SparseGPT、3/4-bit GPTQ/AWQの校正集合依存性を見るため複数のランダムseedで反復する。評価には公開圧縮実装（Wanda、AutoGPTQ、AWQ）を用いる。
+
+baseのLlama 2は事前学習モデル、Llama 2 Chatは会話向け調整、Vicuna Chatは別系統の会話調整済みモデルであり、元モデルの調整方法が異なる。denseの段階で信頼性の強弱に差があるため、圧縮結果は同じモデルの圧縮前checkpointと照らし合わせて解釈する。
+
+### 圧縮の適用
+
+枝刈りは連続する4重みごとに2個を残すN:M（2:4）配置に限定し、非構造化方式よりハードウェア上で実効的な高速化が期待できる形式を選ぶ。Magnitude方式は重み値だけで重要度を決め、SparseGPTは重みを校正し、Wandaは重みと入力活性値に基づき除去対象を決める。比較の焦点を圧縮法の再学習能力ではなく、既存モデルへ適用したときの差に置く。
+
+量子化側ではGPTQが層ごとの近似二次情報を使って重みを低bitへ変換し、AWQは入力活性値を参照して重要な重みを保護する。両方式は重み更新と校正を伴い、3/4/8-bitを比較する。
+
+SparseGPTや量子化で校正データがある構成はC4の128例を利用し、特に強圧縮の揺れを複数seedで測る。これは一つのseedから得たスコアを再現性の範囲全体と見なさないためである。
+
+## 評価
+
+### 指標
+
+通常性能はMMLU 57課題の平均正解率。信頼性はDecodingTrustの8軸、すなわちAdvGLUE++敵対的頑健性、OOD頑健性、敵対的demonstrationへの頑健性、machine ethics、公平性、プライバシー、stereotype、毒性で測る。軸によって正解率、誤検出率、漏えい率等の指標と拒否率の意味が異なるため、単一の「安全スコア」と同一視しない。スコアは原論文の0–100正規化点に従う。
+
+高い拒否率が倫理・公平性の計測を偏らせるため、著者らはDecodingTrustを一部変更し、拒否も評価へ含める。公平性では認識失敗や拒否を「公平な失敗」として全予測を計算対象とし、倫理では拒否を不道徳行為の認識成功として数える。この設計は拒否率の異なるモデル間を比較するための工夫だが、指標の解釈は元のDecodingTrustと完全には一致しない。
+
+### 主な定量結果
+
+- 13Bから7B相当への比較では、8-bit量子化は複数の信頼性軸とMMLUでdense 13Bに近い。一方、50%枝刈りはモデルや軸により劣化が不均一で、同じ圧縮率でも量子化の方が信頼性を保ちやすい。
+- Llama 2 13B Chatの4-bitは、著者らの「5点以内の低下」を基準とすると全信頼性軸を保つ設定として報告される。GPTQのEthicsはdenseの54.1点から76.3点へ、AWQでは62.8点へ改善した。公平性のfew-shot 16-shotでは、GPTQ量子化によりEOD（equalized odds difference）が0-shotを含むdense比較から0.2超低下する例がある。ただしEthics/Fairnessの改善は全下位課題で一様ではなく、dense側が弱い設定や拒否率の影響を含む。
+- 3-bitでは、AWQのMMLU低下はdense比で約3点にとどまる一方、信頼性ではAdvDemoとFairnessなどに大きな低下やseed間分散が残る。GPTQではOOD頑健性が約30点、毒性が約50点低下する例を報告し、MMLUだけではこのリスクを判別できない。
+- 追加のMT-Bench（80件の複数ターン質問、GPT-4採点）でのLlama 2 13B Chatは、GPTQ 3/4/8/16-bitが2.89/6.55/6.85/7.00点、AWQが6.42/6.73/6.99/7.00点。3-bit GPTQで指示追従も大きく落ちるという説明を補強する。
+- 追加表では、Llama 2 7B元モデルの4-bit GPTQはdense 7Bに比べMMLUが47.2から45.6（−1.6点）でも、OODは66.8から61.1、Ethicsは56.8から43.9、公平性は88.3から79.7へ低下する。モデル容量の小さい側では、通常性能と信頼性の差が特に重要となる。
+
+## 主張する機構と結果の読み方
+
+4/8-bit量子化は元モデルの信頼性を概ね引き継ぐため、出発点となるdenseモデルの性質が圧縮後にも残る。4-bitのFairnessやEthicsでの改善は、量子化が望ましい振る舞いを常に新たに学習したという意味ではなく、特定の指標・プロンプト条件での観測である。拒否の扱いを変更した指標と併せ、部分課題と拒否率を確認する必要がある。
+
+3-bit GPTQでは有害性への拒否が減り、OOD課題では指示された形式に沿わず空出力や不正なラベルを返すなど、指示追従の崩れが顕在化した。論文はこれを観測に基づく説明として提示し、AWQの活性値考慮型方式は同じ失敗が少ない可能性を示す。校正データの乱数seedによる分散も圧縮率が高いほど大きくなり得る。したがって平均スコアだけでなくseed別の信頼性評価を行うことを勧める。
+
+## 既存研究との差
+
+関連する量子化・枝刈り研究が主として圧縮後の通常タスク精度や効率を比較するのに対し、この研究はDecodingTrustの8軸を加えて「性能維持が信頼性維持を意味するとは限らない」ことを比較する。先行研究で扱われていたMMLUや少数のタスクを広げ、複数モデル・圧縮率・信頼性観点を同じ評価枠で見られるようにした。
+
+サーベイリポジトリでは、圧縮手法や推論効率を扱う論文群を補完し、モデル選択時の信頼性評価軸を提供する。提案圧縮アルゴリズムや本リポジトリの実装変更は含まない。研究ではLLM推論の圧縮後チェックポイントと改変ベンチマークを配布しており、コード実行・再現性は本調査では検証していない。
+
+## 限界
+
+- 主評価は3つの13Bモデル、特定の5圧縮方式とMMLU/DecodingTrustに限られる。付録はLlama 2 7B/70Bの追加比較等を含むが、幅広い現行モデル、実サービス利用、長文生成、複数の利用者集団まで一般化できるとは示していない。
+- 3-bitや4-bitの結果は少数の校正seedであり、著者ら自身がFairness/Ethics/AdvDemo等で大きな分散を観察する。ひとつの圧縮設定を一つの数値で代表させると変動を隠す。
+- 公平性と倫理の拒否応答を含めるために評価定義を変更している。公平性では拒否を公平な失敗と数え、倫理では拒否を正答として扱うため、拒否方針が異なるモデル同士の比較には解釈上の注意が必要。
+- MMLU・DecodingTrustのスコアは実運用上のリスクを完全に表すものではなく、性能の因果説明や他ベンチマークへの一般化も保証しない。著者らの推奨は特定条件における評価結果からの指針である。
+
+## 一次資料
+
+- [arXiv abstract / 書誌・版履歴](https://arxiv.org/abs/2403.15447)
+- [arXiv v3 HTML（本文・Appendix A–C）](https://arxiv.org/html/2403.15447v3)
+- [arXiv PDF](https://arxiv.org/pdf/2403.15447)
+- [PMLR proceedings page](https://proceedings.mlr.press/v235/hong24a.html)
+- [著者の公式コード](https://github.com/decoding-comp-trust/comp-trust)
