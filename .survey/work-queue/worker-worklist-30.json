@@ -2,7 +2,7 @@
   "assignment_policy": "deterministic_disjoint_round_robin",
   "discovery_review": {
     "displayed": 500,
-    "pending_total": 14289,
+    "pending_total": 14307,
     "rows": [
       {
         "assigned_worker": "scheduled-chat-30",
@@ -2735,6 +2735,7 @@
           "DOI:10.1145/1022594.1022596"
         ],
         "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
           "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
         ],
         "linked_from_lineages": [
@@ -2754,7 +2755,7 @@
         },
         "published": "2004-10-01",
         "rank": 75,
-        "relation_count": 1,
+        "relation_count": 2,
         "source_kind": "reference_review_candidate",
         "source_rank": 229,
         "source_url": "https://doi.org/10.1145/1022594.1022596",
@@ -6433,13 +6434,12 @@
         "canonical_id": "arXiv:2607.25357",
         "citation_count": 7,
         "citation_count_checked_at": "2026-10-03T23:10:55+00:00",
-        "discovery_routes": [
-          "forward_citation_sweep"
+        "discovery_routes": null,
+        "identity_tokens": [
+          "arXiv:2607.25357"
         ],
-        "identity_tokens": null,
         "linked_from": [
-          "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
-          "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+          "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md"
         ],
         "linked_from_lineages": [],
         "priority": 107,
@@ -6456,8 +6456,8 @@
         },
         "published": "2026-07-28",
         "rank": 174,
-        "relation_count": 2,
-        "source_kind": "forward_citation_candidate",
+        "relation_count": 1,
+        "source_kind": "reference_review_candidate",
         "source_rank": 550,
         "source_url": "https://arxiv.org/abs/2607.25357",
         "title": "Raven: High-Recall Sequence Modeling with Sparse Memory Routing",
@@ -18834,7 +18834,7 @@
       }
     ]
   },
-  "generated_at": "2026-10-04T02:31:03+00:00",
+  "generated_at": "2026-10-04T02:47:14+00:00",
   "purpose": "dedicated-scheduled-worker-selection-surface",
   "research_audit": {
     "claimable_total": 465,

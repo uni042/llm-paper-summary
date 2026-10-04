@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-04T02:31:03+00:00`
+Generated: `2026-10-04T02:47:14+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -175,7 +175,7 @@ ready総数: **611** / 未claim総数: **465** / このworker向け: **155**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **14289** / このworker向け: **500**
+未判定総数: **14307** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
@@ -253,7 +253,7 @@ ready総数: **611** / 未claim総数: **465** / このworker向け: **155**
 | 72 | 293 | DOI:10.1145/3123939.3123982 | Bit-Pragmatic Deep Neural Network Computing | 2016-10-20 | Micro | 283 | 1 | low-bit VLM inference / microscaling / hardware-software co-design | [source](https://arxiv.org/abs/1610.06920) |
 | 73 | 292 | DOI:10.1145/3307650.3322237 | FloatPIM: In-Memory Acceleration of Deep Neural Network Training with High Precision | 2019-06-01 | International Symposium on Computer Architecture | 282 | 1 | inference-systems | [source](https://doi.org/10.1145/3307650.3322237) |
 | 74 | 285 | DOI:10.1145/3466752.3480125 | Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture | 2021-10-17 | Micro | 275 | 4 | inference-systems, long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1145/3466752.3480125) |
-| 75 | 280 | DOI:10.1145/1022594.1022596 | Latency lags bandwith | 2004-10-01 | CACM | 280 | 1 | survey-speculative-decoding | [source](https://doi.org/10.1145/1022594.1022596) |
+| 75 | 280 | DOI:10.1145/1022594.1022596 | Latency lags bandwith | 2004-10-01 | CACM | 280 | 2 | survey-speculative-decoding | [source](https://doi.org/10.1145/1022594.1022596) |
 | 76 | 274 | DOI:10.1109/jssc.2018.2865489 | UNPU: An Energy-Efficient Deep Neural Network Accelerator With Fully Variable Weight Bit Precision | 2019-01-01 | IEEE Journal of Solid-State Circuits | 274 | 1 | hardware-accelerators | [source](https://doi.org/10.1109/JSSC.2018.2865489) |
 | 77 | 271 | arXiv:2402.05162 | Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications | 2024-02-07 | International Conference on Machine Learning | 261 | 1 |  | [source](https://arxiv.org/abs/2402.05162) |
 | 78 | 268 | DOI:10.1109/micro50266.2020.00068 | MatRaptor: A Sparse-Sparse Matrix Multiplication Accelerator Based on Row-Wise Product | 2020-10-01 | Micro | 258 | 1 | Multi-core NPU Architecture / LLM Serving Scheduling and Disaggregation | [source](https://doi.org/10.1109/MICRO50266.2020.00068) |
@@ -352,7 +352,7 @@ ready総数: **611** / 未claim総数: **465** / このworker向け: **155**
 | 171 | 108 | arXiv:2608.08239 | The Replay Gap: Static Evaluation of Model Switching in LLM Agents Scores the Wrong World | 2026-08-08 |  | 8 | 1 |  | [source](https://arxiv.org/abs/2608.08239) |
 | 172 | 107 | DOI:10.1145/3498361.3538928 | Melon: breaking the memory wall for resource-efficient on-device machine learning | 2022-06-27 | ACM SIGMOBILE International Conference on Mobile Systems, Applications, and Services | 107 | 1 | Edge／on-device MoE | [source](https://doi.org/10.1145/3498361.3538928) |
 | 173 | 107 | arXiv:2410.08245 | Flex-MoE: Modeling Arbitrary Modality Combination via the Flexible Mixture-of-Experts | 2024-10-10 | Neural Information Processing Systems | 97 | 2 | Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization, 分散MoE学習 / ZeRO / CPUオフロード / 多次元並列 | [source](https://arxiv.org/abs/2410.08245) |
-| 174 | 107 | arXiv:2607.25357 | Raven: High-Recall Sequence Modeling with Sparse Memory Routing | 2026-07-28 | arXiv.org | 7 | 2 |  | [source](https://arxiv.org/abs/2607.25357) |
+| 174 | 107 | arXiv:2607.25357 | Raven: High-Recall Sequence Modeling with Sparse Memory Routing | 2026-07-28 | arXiv.org | 7 | 1 |  | [source](https://arxiv.org/abs/2607.25357) |
 | 175 | 107 | arXiv:2607.06000 | Context-to-Execution Integrity for LLM Agents | 2026-07-07 | arXiv.org | 7 | 1 | Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2607.06000) |
 | 176 | 107 | arXiv:2607.16241 | KernelBench-Verified: Do LLM-Generated Kernels Actually Beat PyTorch? | 2026-06-26 | arXiv.org | 7 | 1 | LLM serving autotuning / measurement methodology / benchmark auditing | [source](https://arxiv.org/abs/2607.16241) |
 | 177 | 107 | arXiv:2606.09916 | IntentKV: Cross-Turn Intent-Aware KV Cache Pruning for Agent Inference | 2026-06-06 | arXiv.org | 7 | 1 | kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2606.09916) |
