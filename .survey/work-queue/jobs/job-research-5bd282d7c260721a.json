@@ -44,11 +44,16 @@
   "selection_reason": "Beyond is a drop-in hybrid CPU-GPU attention runtime for oversized KV caches, combining selective KV retention, CPU-resident sparse attention, and minimal PCIe movement; this is a direct fit for offload and hierarchical-memory inference.",
   "semantic_scholar_id": "04f3ee7dd762dff9b6aad25bfb930e1984f74a09",
   "source_url": "https://www.semanticscholar.org/paper/04f3ee7dd762dff9b6aad25bfb930e1984f74a09",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-preload-a3030e74bc5e746f460874ab.json",
   "title": "Scaling Attention Beyond GPUs for LLM Inference",
   "type": "research",
   "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T02:59:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md",
+  "represented_canonical_id": "DOI:10.1145/3806645.3807596",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（42本）
+## 自動生成の論文一覧（43本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -83,6 +83,10 @@
 - **2026-08 · [Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference](2026-2609.13205-self-indexing-attention-for-compression-compatible-sparse-long-context-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   変換領域keyの符号1-bitをプリフィル・デコード共通の自己索引として使い、追加indexerなしで疎注意検索と低ビットKV圧縮を同居させる。
+
+- **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単純なCPUオフロードは、注意機構のたびに必要KVをPCIe経由でGPUへ戻すため、GPU演算器よりCPU–GPUリンクが律速になる。
 
 - **2026-07 · [RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention](2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

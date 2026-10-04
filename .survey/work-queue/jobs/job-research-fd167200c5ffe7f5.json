@@ -34,10 +34,15 @@
   "selection_reason": "複数LLMを全実行してreward rankingする高コストensembleを、軽量routerで問い合わせごとに1モデルだけ選ぶselect-then-generateへ変え、推論計算量を直接削減するmodel routing方式。",
   "semantic_scholar_id": "215de09ac6e5de81187c85065b5ace8bc01f2862",
   "source_url": "https://arxiv.org/abs/2311.08692",
-  "status": "ready",
+  "status": "superseded",
   "title": "Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models",
   "type": "research",
   "venue": "North American Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-04T02:59:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+  "represented_canonical_id": "arXiv:2311.08692",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

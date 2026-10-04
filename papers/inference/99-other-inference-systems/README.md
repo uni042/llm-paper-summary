@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（270本）
+## 自動生成の論文一覧（272本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -279,6 +279,10 @@
 - **2026-09 · [ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics](2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コサイン類似度だけでは見落とすKV表現の大きさをユークリッド距離で補い、注意ヘッドごとの冗長度に応じて多様性と重要度を混合し、狭いKV予算で保持トークンを改善する方式。
+
+- **2026-09 · [EAT: Expert Account Tracker for Efficient MoE Inference](2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混合専門家（Mixture-of-Experts; MoE）は全専門家を毎トークン実行しないが、一般的なTop-K ルーティングでは入力の難しさに関係なく同じK個を起動する。Top-P型の動的ルーティングは現在トークンのgating スコアだけで個数を変えるため、過去に一貫して有用だった専門家と一時的に高スコアになった専門家を区別しにくい。
 
 - **2026-09 · [Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models](2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -979,6 +983,10 @@
 - **2024-01 · [Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models](2024-2401.08294-inferflow-an-efficient-and-highly-configurable-inference-engine-for-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   量子化では4ビットから3ビットへ下げると容量は減るが品質劣化が大きくなる場合がある。4台のNVIDIA Tesla V100による評価では、複合分割が24 トークン/sを報告し、テンソル分割12 トークン/s、層分割8 トークン/sとの異なる交換条件を改善する。
+
+- **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  複数の既製大規模言語モデル（LLM）は、同じ平均性能でも数学、コード、対話など得意領域が異なる。報酬モデル順位付け（Reward モデル Ranking; RMR）はこの補完性を利用できるが、問い合わせごとに全候補LLMへ生成させ、その出力を報酬モデルで採点するため、候補数に比例して推論計算が増える。
 
 - **2024-09 · [DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training](2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
