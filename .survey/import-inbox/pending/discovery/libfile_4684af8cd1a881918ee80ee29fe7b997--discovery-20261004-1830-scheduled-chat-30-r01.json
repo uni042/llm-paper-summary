@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261004-1830-scheduled-chat-30/r01",
+  "reference_main_sha": "2417829370085b488cdd48067a2e7443c7e3a695",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1148/radiology.143.1.7063747",
+      "identity_tokens": [
+        "DOI:10.1148/radiology.143.1.7063747"
+      ],
+      "title": "The meaning and use of the area under a receiver operating characteristic (ROC) curve.",
+      "reason": "診断精度評価における受信者動作特性曲線下面積（area under the ROC curve; AUC）の統計的解釈・標準誤差・標本数を扱う医用統計研究で、LLM推論システムの速度・メモリ・サービング効率を対象としない。",
+      "source_url": "https://doi.org/10.1148/radiology.143.1.7063747",
+      "body_check": "abstract_screen_only: 出版社一次ページの要旨で、AUCを疾患群が非疾患群より高く順位付けされる確率として解釈し、Wilcoxon統計量との関係、標準誤差と標本数推定を扱うことを確認。LLM/Transformer推論は対象外。",
+      "first_checked_at": "2026-10-04T18:34:00+09:00",
+      "last_checked_at": "2026-10-04T18:34:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00051",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00051",
+        "arXiv:1607.04606"
+      ],
+      "title": "Enriching Word Vectors with Subword Information",
+      "reason": "単語を文字n-gramの和で表現して形態情報と未知語表現を改善する単語埋め込み学習研究で、LLM推論ランタイムやサービング最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1607.04606",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でskip-gramを文字n-gram表現へ拡張し、9言語のword similarity/analogyで評価することを確認。推論メモリ、KV、カーネル、スケジューリングは対象外。",
+      "first_checked_at": "2026-10-04T18:35:00+09:00",
+      "last_checked_at": "2026-10-04T18:35:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1561/1500000019",
+      "identity_tokens": [
+        "DOI:10.1561/1500000019"
+      ],
+      "title": "The Probabilistic Relevance Framework: BM25 and Beyond",
+      "reason": "文書検索の確率的関連性枠組み（Probabilistic Relevance Framework; PRF）とBM25/BM25Fの理論・ランキングモデルを整理する情報検索研究で、LLM推論実行の効率化を扱わない。",
+      "source_url": "https://doi.org/10.1561/1500000019",
+      "body_check": "abstract_screen_only: 出版社一次要旨でbinary independence、relevance feedback、BM25/BM25F、非テキスト特徴やparameter最適化を扱う情報検索モノグラフであることを確認。LLM推論システムは対象外。",
+      "first_checked_at": "2026-10-04T18:36:00+09:00",
+      "last_checked_at": "2026-10-04T18:36:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/52324.52356",
+      "identity_tokens": [
+        "DOI:10.1145/52324.52356"
+      ],
+      "title": "Congestion avoidance and control",
+      "reason": "TCP/IPネットワークの輻輳崩壊を防ぐための輻輳回避・制御アルゴリズムを扱う古典的ネットワーク研究で、LLM推論サービング固有のスケジューリング方式ではない。",
+      "source_url": "https://doi.org/10.1145/52324.52356",
+      "body_check": "abstract_screen_only: 書誌・要旨情報からpacket networkのcongestion avoidance/controlが主題であり、LLM、Transformer、KVキャッシュ、モデルサービングを対象としないことを確認。",
+      "first_checked_at": "2026-10-04T18:37:00+09:00",
+      "last_checked_at": "2026-10-04T18:37:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/75246.75248",
+      "identity_tokens": [
+        "DOI:10.1145/75246.75248"
+      ],
+      "title": "Analysis and simulation of a fair queueing algorithm",
+      "reason": "パケット交換ネットワークの公平待ち行列（fair queueing）アルゴリズムの解析・シミュレーションを扱うネットワーク研究で、LLM推論サービングを直接対象としない。",
+      "source_url": "https://doi.org/10.1145/75246.75248",
+      "body_check": "abstract_screen_only: 書誌・要旨情報からpacket schedulingにおけるfair queueingの解析が主題で、LLM request batching、KV管理、推論runtimeの評価ではないことを確認。",
+      "first_checked_at": "2026-10-04T18:38:00+09:00",
+      "last_checked_at": "2026-10-04T18:38:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/509907.509965",
+      "identity_tokens": [
+        "DOI:10.1145/509907.509965"
+      ],
+      "title": "Similarity estimation techniques from rounding algorithms",
+      "reason": "局所性鋭敏ハッシュ（locality-sensitive hashing; LSH）を用いた類似度推定・近似最近傍探索の理論研究で、後続LLM疎注意に利用されても元論文はLLM推論を対象としない。",
+      "source_url": "https://doi.org/10.1145/509907.509965",
+      "body_check": "abstract_screen_only: 一次論文情報でLSHを類似度推定、近似最近傍探索、clusteringへ用いる構成を提案するアルゴリズム研究であることを確認。LLM inferenceは対象外。",
+      "first_checked_at": "2026-10-04T18:39:00+09:00",
+      "last_checked_at": "2026-10-04T18:39:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sfcs.1994.365680",
+      "identity_tokens": [
+        "DOI:10.1109/sfcs.1994.365680"
+      ],
+      "title": "Scheduling multithreaded computations by work stealing",
+      "reason": "依存関係を持つ並列マルチスレッド計算の仕事窃取（work stealing）スケジューリングに理論的時間・空間・通信量境界を与える一般並列計算研究で、LLM推論を対象としない。",
+      "source_url": "https://doi.org/10.1109/SFCS.1994.365680",
+      "body_check": "abstract_screen_only: 一次書誌要旨でfully strict multithreaded computationをP processorへwork stealingで割り当てる理論解析が主題。LLM/Transformer serving固有研究ではない。",
+      "first_checked_at": "2026-10-04T18:40:00+09:00",
+      "last_checked_at": "2026-10-04T18:40:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/42411.42415",
+      "identity_tokens": [
+        "DOI:10.1145/42411.42415"
+      ],
+      "title": "Reevaluating Amdahl's law",
+      "reason": "固定問題サイズを前提とするAmdahl則に対し、計算資源増加時に問題サイズを拡大する尺度付き高速化（scaled speedup）を論じる一般並列計算研究で、LLM推論システムを直接対象としない。",
+      "source_url": "https://doi.org/10.1145/42411.42415",
+      "body_check": "abstract_screen_only: 書誌・本文要約情報から固定時間・問題規模拡大時の並列speedupを扱う1988年の一般HPC研究で、LLM推論方式ではないことを確認。",
+      "first_checked_at": "2026-10-04T18:41:00+09:00",
+      "last_checked_at": "2026-10-04T18:41:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.22880-loraserve-heterogeneous-adapter-serving.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2491245",
+      "identity_tokens": [
+        "DOI:10.1145/2491245"
+      ],
+      "title": "Spanner: Google's Globally-Distributed Database",
+      "reason": "Googleの地理分散データベースSpannerで外部整合性トランザクション、同期複製、TrueTimeを実現するデータベースシステム研究で、LLM推論サービングを対象としない。",
+      "source_url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
+      "body_check": "abstract_screen_only: Google Research一次ページでglobally-distributed multi-version database、external consistency、TrueTime、read-only transaction等が主題と確認。LLM model serving固有の研究ではない。",
+      "first_checked_at": "2026-10-04T18:42:00+09:00",
+      "last_checked_at": "2026-10-04T18:42:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3605943",
+      "identity_tokens": [
+        "DOI:10.1145/3605943",
+        "arXiv:2111.01243"
+      ],
+      "title": "Recent Advances in Natural Language Processing via Large Pre-Trained Language Models: A Survey",
+      "reason": "大規模事前学習言語モデルをNLPタスクへ適用するfine-tuning、prompting、text generation、データ拡張を整理するモデル利用サーベイで、推論速度・メモリ階層・サービング効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2111.01243",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でpre-training/fine-tuning、prompting、text generation、training augmentationを整理するNLPサーベイと確認。推論runtime最適化は主対象外。",
+      "first_checked_at": "2026-10-04T18:43:00+09:00",
+      "last_checked_at": "2026-10-04T18:43:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "worklist_rank": 13
+    }
+  ]
+}
