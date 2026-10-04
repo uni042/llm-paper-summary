@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2603.02599",
+  "citation_count": 1,
+  "citation_count_checked_at": "2026-10-04T06:03:55+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T10:07:24+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-36d91dd4e28f7f52",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2603.02599-sun-shared-use-of-next-token-prediction-for-efficient-multi-llm-disaggregated-serving.md",
   "parent_job_id": "job-87b9d6c6b65bc79d",
-  "priority": 0,
+  "priority": 1,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 1,
+    "citations": 1,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 215,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 1
   },
+  "published": "2026-03-03",
   "schema_version": 1,
   "selection_reason": "Distinct multi-model serving design enabling shared decode execution via common frozen decode modules and model-agnostic routing; reports throughput-per-GPU gains and supports quantized shared decoding.",
+  "semantic_scholar_id": "3d388db0b33fb6a242d41ae4b0f9b4dbe06ca052",
   "source_url": "https://arxiv.org/abs/2603.02599",
   "status": "ready",
   "title": "SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2026
 }
