@@ -32,10 +32,15 @@
   "selection_reason": "重み・活性・KV cacheを4bit化する際のoutlierを学習回転で抑え、低bit LLM推論のメモリ・遅延・電力削減へ直接つなげる量子化方式。",
   "semantic_scholar_id": "a7ed153f848cd8a299c866f50d74b55f16d606ce",
   "source_url": "https://arxiv.org/abs/2405.16406",
-  "status": "ready",
+  "status": "superseded",
   "title": "SpinQuant: LLM quantization with learned rotations",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T07:05:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+  "represented_canonical_id": "arXiv:2405.16406",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
