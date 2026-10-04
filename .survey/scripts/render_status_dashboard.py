@@ -503,7 +503,7 @@ def _library_first_status(repo_root: Path, now=None) -> str:
         f"| 最終Discovery完了 | **{_core.evidence._fmt_time(last_discovery)}** |",
         f"| Research 7日平均 | **{research_daily_avg:.1f}件/日** |",
         f"| Discovery 7日平均 | **{discovery_daily_avg:.1f}件/日** |",
-        f"| references推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
+        f"| 探索候補推定残日数 | **{f'{ref_days_remaining:.1f}日' if ref_days_remaining is not None else '算出不可'}** |",
         "",
         f"収録候補論文数は `.survey/work-queue/jobs/*.json` の非終端Research jobを対象に、`canonical_id` で一意化できる論文だけを数えます。`canonical_id` なしの非終端Research jobは **{candidate_backlog['missing_canonical']}件**で、この数には推定加算しません。", "",
         "日次進捗はImport日時ではなく元worker実行日時を優先します。旧Research成果にworker時刻がない場合だけImport処理日時へフォールバックします。", "",
@@ -521,7 +521,7 @@ def _library_first_status(repo_root: Path, now=None) -> str:
               "- Discoveryはimmutable runの `run_key` と `record_count` を使用し、同一run_keyを一度だけ数えます。",
               "- Researchはimport resultの `worker_completed_at` を使用します。旧成果だけ `processed_at` を代用します。",
               "- Library未転送分は次回Survey GitHub Import後に反映されます。",
-              "- references推定残日数は未処理references ÷ Discovery 7日平均です。", "",
+              "- 探索候補推定残日数は、前方引用・後方referencesを統合した未処理Discovery候補 ÷ Discovery 7日平均です。", "",
               "---", "", "表示生成: `.survey/scripts/render_status_dashboard.py`", ""]
     return "\n".join(lines)
 
