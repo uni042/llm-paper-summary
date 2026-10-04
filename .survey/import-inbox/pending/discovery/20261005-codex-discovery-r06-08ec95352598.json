@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261005-codex-discovery-r06",
+  "reference_main_sha": "c96ecff9a22b5c0170d5ffcbe71a6dec4a7b8262",
+  "record_count": 2,
+  "records": [
+    {
+      "rank": 8,
+      "canonical_id": "DOI:10.1101/622803",
+      "identity_tokens": [
+        "id:DOI:10.1101/622803",
+        "url:https://doi.org/10.1101/622803"
+      ],
+      "title": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences",
+      "classification": "unrelated",
+      "reason": "The primary abstract describes evolutionary-scale language modeling of protein sequences: training on 86 billion amino acids across 250 million protein sequences to learn biological representations and predict protein properties such as mutational effects and structure. Its subject is biological protein modeling, not natural-language LLM inference/serving or inference-time compression/efficiency. A model being called a language model is insufficient for the stated scope.",
+      "source_url": "https://doi.org/10.1101/622803",
+      "body_check": "The primary bioRxiv v3 record and abstract were checked. The abstract explicitly identifies the input as amino-acid/protein sequences and the outputs/evaluations as biological representations, mutational-effect prediction, secondary-structure prediction, and contact prediction. That makes this clearly outside LLM inference/serving and inference-time efficiency scope; abstract-only exclusion is sufficient, so full text was not reviewed.",
+      "source_evidence": [
+        "https://www.biorxiv.org/content/10.1101/622803v3",
+        "https://doi.org/10.1101/622803"
+      ],
+      "first_checked_at": "2026-10-05T07:08:09+09:00",
+      "last_checked_at": "2026-10-05T07:08:09+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "rank": 15,
+      "canonical_id": "arXiv:2409.12186",
+      "identity_tokens": [
+        "id:arXiv:2409.12186",
+        "url:https://arxiv.org/abs/2409.12186"
+      ],
+      "title": "Qwen2.5-Coder Technical Report",
+      "classification": "unrelated",
+      "reason": "The report presents six code-focused model sizes, their data construction and training/post-training procedures, and code/general-capability benchmark results. Full-text review found no in-scope inference/serving system or inference-time compression/efficiency technique: the model-size and 128K-context results characterize model capability, while the evaluations are task accuracy/capability benchmarks. The paper therefore does not contribute to the stated scope.",
+      "source_url": "https://arxiv.org/abs/2409.12186",
+      "body_check": "Primary arXiv HTML full text reviewed for model architecture and training methods (sections 2–4), base/instruct and long-context evaluations (sections 6–7, including the Needle in the Code task), and discussion/conclusion (sections 8–9). No dedicated limitations section is present; the conclusion identifies future work on model/data scaling and reasoning capability. The long-context passage describes repository-level code pretraining and up to 128K input support, not serving efficiency. The paper evaluates code, math, and general-language task performance. Searches within the full text for 'inference', 'throughput', and 'latency' returned no matches; the lone 'serving' use describes long-context as a core skill for code agents. No in-scope inference/serving optimization is presented.",
+      "source_evidence": [
+        "https://arxiv.org/abs/2409.12186",
+        "https://arxiv.org/html/2409.12186"
+      ],
+      "first_checked_at": "2026-10-05T07:08:09+09:00",
+      "last_checked_at": "2026-10-05T07:08:09+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+        "papers/inference/99-other-inference-systems/2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ]
+    }
+  ]
+}
