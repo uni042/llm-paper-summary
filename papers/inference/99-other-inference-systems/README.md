@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（282本）
+## 自動生成の論文一覧（285本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -331,6 +331,10 @@
 - **2026-09 · [ASPIRE: Asynchronous Batched Self-Speculative Decoding for Long-Context LLM Inference](2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/Amir-zsh/ASPIRE) ・ リポジトリ内被引用：0  
   下書き・検証混在順伝播、要求別オンライン制御、下書き内の鍵値文脈更新により長文脈自己投機復号を最大4.58倍高速化する。
+
+- **2026-09 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  L0-MoEは密 LLMをそのまま小型化するのではなく、feed-順伝播 ネットワークを専門家混合（Mixture-of-Experts; MoE）へ再構成し、L0正則化で不要な専門家 活性値を明示的に0へ寄せる。通常MoEが大容量化を目的に全専門家 プールを増やすのに対し、本研究の目的は密 モデルの推論計算を減らすことである。
 
 - **2026-08 · [TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics](2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -852,6 +856,10 @@
   実装：✓ ・ リポジトリ内被引用：42  
   H100でFlashAttention-2がピーク性能の約35%しか使えない問題に対し、TMAロードとテンソル Core計算のワープ特化、GEMMとsoftmaxの非同期パイプライン、FP8向けブロック量子化と非コヒーレント変換を導入する。
 
+- **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：24  
+  RAGCacheはretrieved knowledgeの中間状態をキャッシュし、再出現したchunkのプリフィルを省くシステムである。
+
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
   複数の将来トークンを同時予測する補助ヘッドを学習し、推論時にそのヘッドを自己投機的復号へ再利用して別ドラフトモデルなしで生成を高速化する。
@@ -1143,6 +1151,12 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+### 7年前（2019-11〜2020-10）
+
+- **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：28  
+  標準Transformerのself-注意機構は系列長Lに対してL×Lのスコア matrixを作るため、計算量・メモリがO(L²)で増える。
 
 ### 8年前（2018-11〜2019-10）
 
