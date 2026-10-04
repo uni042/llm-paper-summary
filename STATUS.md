@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 06:37:36 JST**
+> 自動生成: **2026-10-05 06:38:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **590** |
-| 未claim Research job | **590** |
+| 収録候補論文数 | **591** |
+| 未claim Research job | **591** |
 | 直近24hのResearch処理完了 | **76** |
 | 最終Research処理完了 | **10-05 05:02:00 JST** |
 | 最終Discovery探索完了 | **10-05 06:00:00 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **590** |
+| canonical_id確認済みの一意な候補論文 | **591** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **590** |
+| 非終端Research job合計 | **591** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9747** |
-| 処理済み | **2781** |
-| 未処理 | **6966** |
+| 処理済み | **2800** |
+| 未処理 | **6947** |
 | 収録済みとして除外 | **1055** |
-| 無関係として除外 | **1338** |
-| 微妙として除外 | **388** |
+| 無関係として除外 | **1355** |
+| 微妙として除外 | **390** |
 
-- 消化率: **28.5%**
+- 消化率: **28.7%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-05 06:27:14 JST（10分前）** |
+| 最終maintenance完了 | **10-05 06:27:14 JST（11分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -98,9 +98,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-05 05:02:00 JST** / worker — / run 20261005-0445-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_6635921f7d988191b28ac3a1cabc1b23--2305.11860-adaptive-consistency.json
-- Discovery: **10-05 06:00:00 JST** / worker scheduled-chat-00 / run 20261005-0600-scheduled-chat-00/r05
+- Discovery: **10-05 06:00:00 JST** / worker scheduled-chat-00 / run 20261005-0600-scheduled-chat-00/r04
   - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_5c88333492e88191863880546888b24a--discovery-20261005-0600-scheduled-chat-00-r05.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_5d908452a2688191aa3410e4f2997de6--discovery-20261005-0600-scheduled-chat-00-r04.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **590** |
+| ready | **591** |
 
 ### 候補の重複・識別情報欠損
 
