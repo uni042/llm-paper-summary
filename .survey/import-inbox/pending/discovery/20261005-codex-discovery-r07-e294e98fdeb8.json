@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261005-codex-discovery-r07",
+  "reference_main_sha": "ac52acb1fdfa8db854af845e3003c96224482bb5",
+  "record_count": 3,
+  "records": [
+    {
+      "rank": 25,
+      "canonical_id": "arXiv:2306.13643",
+      "identity_tokens": [
+        "id:arXiv:2306.13643",
+        "url:https://arxiv.org/abs/2306.13643"
+      ],
+      "title": "LightGlue: Local Feature Matching at Light Speed",
+      "classification": "unrelated",
+      "reason": "The primary abstract describes a deep neural network that matches local visual features across image pairs, with adaptive computation and improved memory/computation efficiency for sparse visual matching and latency-sensitive 3D reconstruction. Its task and system are computer vision, not LLM inference/serving or inference-time LLM compression/efficiency. Speed or efficiency claims for a non-LLM vision matcher are outside the stated scope.",
+      "source_url": "https://arxiv.org/abs/2306.13643",
+      "body_check": "The primary arXiv record and abstract were checked. They identify LightGlue as an image local-feature matcher, discuss efficiency in memory/computation and adaptive inference on easy image pairs, and name 3D reconstruction as an application. These are explicitly vision-model contributions rather than LLM inference or serving. Abstract-level exclusion is sufficient because the task domain is clear; full text was not reviewed.",
+      "source_evidence": [
+        "https://arxiv.org/abs/2306.13643"
+      ],
+      "first_checked_at": "2026-10-05T07:13:08+09:00",
+      "last_checked_at": "2026-10-05T07:13:08+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.00300",
+      "identity_tokens": [
+        "id:arXiv:1906.00300",
+        "url:https://arxiv.org/abs/1906.00300"
+      ],
+      "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering",
+      "reason": "arXiv一次資料の書誌とabstractを確認。提案対象は質問と回答文字列の組からretrieverとreaderを共同学習し、Wikipediaから根拠をlatent retrievalするopen-domain QA手法で、retrieverのpretrainingとQA評価を扱う。abstractはLLM、LLM serving、または推論時効率化を対象としておらず、対象範囲外。",
+      "source_url": "https://arxiv.org/abs/1906.00300",
+      "body_check": "確認範囲はarXiv一次資料の書誌メタデータおよびabstract。abstractはgold evidenceや既存IRを前提とせずreader/retrieverをjoint-learnし、Inverse Cloze Taskでretrieverをpretrainする方法、および5つのopen QA datasetでの評価を説明する。主題はQA retrievalと学習であり、LLM推論・serving・推論時効率化ではないためabstractで対象外と分類。",
+      "first_checked_at": "2026-10-04T21:36:04Z",
+      "last_checked_at": "2026-10-04T21:36:04Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "rank": 27
+    },
+    {
+      "rank": 28,
+      "canonical_id": "arXiv:1904.09925",
+      "identity_tokens": [
+        "id:arXiv:1904.09925",
+        "url:https://arxiv.org/abs/1904.09925"
+      ],
+      "title": "Attention Augmented Convolutional Networks",
+      "classification": "unrelated",
+      "reason": "The primary abstract introduces a two-dimensional relative self-attention mechanism to augment convolutional networks for discriminative visual tasks, reporting image-classification and object-detection results while keeping parameter counts similar. It is an image-vision architecture contribution, not an LLM inference/serving system or an inference-time efficiency/compression method for LLMs. The mere use of self-attention is insufficient for scope inclusion.",
+      "source_url": "https://arxiv.org/abs/1904.09925",
+      "body_check": "The primary arXiv record and abstract were checked. They describe combining convolutional feature maps with two-dimensional self-attention for image classification and COCO object detection, with similar parameter counts and accuracy/mAP improvements. These task-performance results concern vision models and do not describe LLM inference, serving, or inference-time LLM efficiency. Abstract-level exclusion is sufficient because the scope mismatch is explicit; full text was not reviewed.",
+      "source_evidence": [
+        "https://arxiv.org/abs/1904.09925"
+      ],
+      "first_checked_at": "2026-10-05T07:13:08+09:00",
+      "last_checked_at": "2026-10-05T07:13:08+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
