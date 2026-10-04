@@ -644,7 +644,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：200  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：201  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
@@ -658,6 +658,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：103  
+  実装：✓ ・ リポジトリ内被引用：105  
   複数クエリ注意（Multi-Query 注意機構; MQA）は、通常の複数ヘッド注意（Multi-Head 注意機構; MHA）が各ヘッドごとに持つキー（Key; K）とバリュー（Value; V）を1組だけに共有し、クエリ（Query; Q）は複数ヘッドのまま残す。
 <!-- survey:auto:end -->
