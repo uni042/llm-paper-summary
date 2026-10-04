@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-04T09:06:26+00:00`
+Generated: `2026-10-04T09:10:28+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,7 +220,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **18499** / このworker向け: **500**
+未判定総数: **18504** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
@@ -371,7 +371,7 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 | 145 | 151 | DOI:10.1145/2503210.2503286 | Enabling highly-scalable remote memory access programming with MPI-3 one sided | 2013-11-17 | 2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC) | 141 | 1 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2001.07747) |
 | 146 | 150 | DOI:10.1145/3503222.3507738 | DOTA: detect and omit weak attentions for scalable transformer acceleration | 2022-02-28 | International Conference on Architectural Support for Programming Languages and Operating Systems | 150 | 4 | inference-systems, long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks, low-bit VLM inference / microscaling / hardware-software co-design | [source](https://doi.org/10.1145/3503222.3507738) |
 | 147 | 149 | DOI:10.1007/b98835 | Principal Component Analysis | 2002-10-01 |  | 149 | 1 |  | [source](https://doi.org/10.1007/b98835) |
-| 148 | 147 | DOI:10.1145/3611643.3617850 | LLM-Based Code Generation Method for Golang Compiler Testing | 2023-11-30 | ESEC/SIGSOFT FSE | 147 | 1 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停 | [source](https://doi.org/10.1145/3611643.3617850) |
+| 148 | 147 | DOI:10.1145/3611643.3617850 | LLM-Based Code Generation Method for Golang Compiler Testing | 2023-11-30 | ESEC/SIGSOFT FSE | 147 | 2 | CPU/GPU階層メモリ・モデル重みオフロード・SLO指向サービング・PCIe帯域調停 | [source](https://doi.org/10.1145/3611643.3617850) |
 | 149 | 146 | DOI:10.1016/j.patter.2024.101118 | A survey of multilingual large language models | 2025-01-01 | Patterns | 146 | 1 | MoE inference / expert pruning / language-specific expert specialization | [source](https://doi.org/10.1016/j.patter.2024.101118) |
 | 150 | 145 | DOI:10.1145/3307650.3322230 | MGPUSim: Enabling Multi-GPU Performance Modeling and Optimization | 2019-06-01 | International Symposium on Computer Architecture | 135 | 3 | GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計 | [source](https://doi.org/10.1145/3307650.3322230) |
 | 151 | 143 | DOI:10.1109/medai59581.2023.00044 | A Review on Code Generation with LLMs: Application and Evaluation | 2023-11-18 | 2023 IEEE International Conference on Medical Artificial Intelligence (MedAI) | 143 | 1 | GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン | [source](https://doi.org/10.1109/MedAI59581.2023.00044) |

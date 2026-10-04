@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-04T09:06:26+00:00`
+Generated: `2026-10-04T09:10:28+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,14 +220,14 @@ ready総数: **601** / 未claim総数: **599** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **18499** / このworker向け: **500**
+未判定総数: **18504** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
 | 1 | 22481 | DOI:10.1148/radiology.143.1.7063747 | The meaning and use of the area under a receiver operating characteristic (ROC) curve. | 1982-04-01 | Radiology | 22481 | 1 | speculative-decoding | [source](https://doi.org/10.1148/RADIOLOGY.143.1.7063747) |
 | 2 | 11033 | DOI:10.1162/tacl_a_00051 | Enriching Word Vectors with Subword Information | 2016-07-15 | Transactions of the Association for Computational Linguistics | 11023 | 1 |  | [source](https://arxiv.org/abs/1607.04606) |
 | 3 | 6400 | DOI:10.1561/1500000019 | The Probabilistic Relevance Framework: BM25 and Beyond | 2009-04-01 | Foundations and Trends in Information Retrieval | 6400 | 1 | 07-kv-cache-optimization-compression | [source](https://doi.org/10.1561/1500000019) |
-| 4 | 5305 | DOI:10.1145/1465482.1465560 | Validity of the single processor approach to achieving large scale computing capabilities | 1967-04-18 | AFIPS '67 (Spring) | 5305 | 1 | MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM | [source](https://doi.org/10.1145/1465482.1465560) |
+| 4 | 5305 | DOI:10.1145/1465482.1465560 | Validity of the single processor approach to achieving large scale computing capabilities | 1967-04-18 | AFIPS '67 (Spring) | 5305 | 2 | MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM | [source](https://doi.org/10.1145/1465482.1465560) |
 | 5 | 4647 | DOI:10.1145/52324.52356 | Congestion avoidance and control | 1988 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 4647 | 1 | llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/52324.52356) |
 | 6 | 3329 | DOI:10.1145/75246.75248 | Analysis and simulation of a fair queueing algorithm | 1989-08-01 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 3329 | 1 | inference-systems | [source](https://doi.org/10.1145/75246.75248) |
 | 7 | 2844 | DOI:10.1145/509907.509965 | Similarity estimation techniques from rounding algorithms | 2002-05-19 | Symposium on the Theory of Computing | 2844 | 1 | kv-cache-optimization-compression | [source](https://doi.org/10.1145/509907.509965) |
