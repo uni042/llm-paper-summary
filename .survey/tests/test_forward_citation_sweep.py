@@ -266,14 +266,14 @@ references:
                         "schema_version": 1,
                         "seeds": {},
                         "candidates": {
-                            "arXiv:2609.99999": {
-                                "canonical_id": "arXiv:2609.99999",
-                                "arxiv_id": "2609.99999",
+                            "DOI:10.48550/arxiv.2609.99999": {
+                                "canonical_id": "DOI:10.48550/arxiv.2609.99999",
+                                "doi": "10.48550/arxiv.2609.99999",
                                 "title": "Shared Candidate",
                             }
                         },
                         "candidate_aliases": {
-                            "arXiv:2609.99999": "arXiv:2609.99999"
+                            "DOI:10.48550/arxiv.2609.99999": "DOI:10.48550/arxiv.2609.99999"
                         },
                     }
                 ),
@@ -284,8 +284,8 @@ references:
                 return lambda cursor: {
                     "records": [
                         {
-                            "canonical_id": "arXiv:2609.99999",
-                            "arxiv_id": "2609.99999",
+                            "canonical_id": "DOI:10.48550/arxiv.2609.99999",
+                            "doi": "10.48550/arxiv.2609.99999",
                             "title": "Shared Candidate",
                         }
                     ],
