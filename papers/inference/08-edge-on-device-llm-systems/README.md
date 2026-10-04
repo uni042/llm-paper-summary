@@ -141,6 +141,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [Language model compression with weighted low-rank factorization](2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   本論文はこの目的関数の不一致をBERTで実証し、タスク損失に対するパラメータ重要度を経験的Fisher情報で与えるFisher-Weighted SVD（FWSVD）を提案する。
 <!-- survey:auto:end -->
