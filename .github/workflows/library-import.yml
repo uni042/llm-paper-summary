@@ -265,6 +265,54 @@ jobs:
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
           fi
 
+          # GITHUB_TOKEN pushes do not chain-trigger downstream workflows.
+          # Compare the durable citation audit with the current paper inventory and
+          # explicitly hand off to citation backfill whenever newly imported papers
+          # have made the audit stale or incomplete.
+          sync_main
+          citation_backfill_due="$(python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          import citation_graph
+
+          root = Path('.').resolve()
+          paper_count = len(citation_graph.load_records(root))
+          report_path = root / '.survey/reports/citation-coverage-latest.json'
+          try:
+              report = json.loads(report_path.read_text(encoding='utf-8'))
+          except (FileNotFoundError, json.JSONDecodeError):
+              print('true')
+              raise SystemExit(0)
+
+          summary = report.get('summary') or {}
+          audited_total = int(summary.get('total') or 0)
+          incomplete = int(summary.get('incomplete') or 0)
+          print('true' if audited_total != paper_count or incomplete > 0 else 'false')
+          PY
+          )"
+
+          if [ "$citation_backfill_due" = 'true' ]; then
+            active_citation_runs="$(gh run list \
+              --repo "${GITHUB_REPOSITORY}" \
+              --workflow citation-graph-backfill.yml \
+              --limit 20 \
+              --json status \
+              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${active_citation_runs:-0}" -eq 0 ]; then
+              echo 'Citation audit is stale or incomplete after Library import; dispatching citation backfill.'
+              gh workflow run citation-graph-backfill.yml \
+                --repo "${GITHUB_REPOSITORY}" \
+                --ref main
+            else
+              echo "Citation audit needs refresh, but citation backfill is already active (${active_citation_runs} run(s))."
+            fi
+          else
+            echo 'Citation audit already covers the current paper inventory.'
+          fi
+
           # Continue draining without relying on GitHub scheduled-event delivery.
           # Each run remains bounded and queues at most one successor.
           sync_main
