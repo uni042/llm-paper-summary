@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-04T12:25:34.639730+00:00",
-  "status": "passed",
+  "source_commit": "post-maintenance-working-tree",
+  "checked_at": "2026-10-04T12:55:23.404097+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 16973,
-  "checked_file_count": 16973,
+  "inventory_file_count": 16986,
+  "checked_file_count": 16986,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,5 +26,36 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 2991,
-  "findings": []
+  "findings": [
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_0b9a54d790d88191a6a1e6f1deba0af8--retry-20261004T2142JST--discovery-20261004-2000-scheduled-chat-00-r01.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_4e7d95736294819189db8ff4a1d10cf8--retry-20261004T2142JST--discovery-20261004-2100-scheduled-chat-00-r02-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_a07293b99fb08191b3dbdf14141b7da3--retry-20261004T2142JST--discovery-20261004-2045-scheduled-chat-45-r01-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_a5996ef9596481919107bd19a9d0ccd9--retry-20261004T2142JST--discovery-20261004-2130-scheduled-chat-30-r01.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_ad042b7137808191ac2b98ba19f835e8--retry-20261004T2142JST--discovery-20261004-1930-scheduled-chat-30-r02-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/pending/discovery/libfile_d6f5f32e901c81918c4d238d0730aba7--retry-20261004T2142JST--discovery-20261004-1945-scheduled-chat-45-r01-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ]
 }

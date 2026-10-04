@@ -3587,6 +3587,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+      "status": "PASS",
+      "summary": "最近トークンとGumbel正則化付きスコアで選んだ重要トークンだけをKVキャッシュへ残し、再学習なしで長文脈生成のKV容量・帯域負荷を削減する。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
       "status": "PASS",
       "summary": "各注意ヘッドがKVを追加・結合するかを入力依存で学習するDMCをLlama 2へ後付けし、4倍KV圧縮まで品質をほぼ維持しつつ実機生成スループットを数倍に高める。",
@@ -10666,6 +10675,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/15-inference-simulation-emulation/2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md",
+      "status": "PASS",
+      "summary": "時間単位の電力量コミットメント残量を区間目標へ変換し、SLO予測を通過したレプリカ数・GPUクロック構成を過不足コストで選ぶ二段制御により、LLMサービングの電力契約偏差を抑える。",
+      "char_count": 90,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
       "status": "PASS",
       "summary": "Transformerに繰り返し現れる少数の大振幅特徴を16-bitで分離し、残り99.9%以上をベクトル単位INT8で計算することで、175B級モデルの品質を保ったまま重み容量をほぼ半減する。BLOOM-176Bは8枚のA100から3枚でも近い生成遅延で動く一方、量子化・復元費用により小さい行列は遅くなる。",
@@ -11327,6 +11345,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "status": "PASS",
+      "summary": "LSH 注意機構で長系列の注意機構候補を絞り、可逆残差層で中間活性値保存を省いてTransformerの系列長・深さ方向メモリを削減する。",
+      "char_count": 69,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md",
       "status": "PASS",
       "summary": "プリフィルの動的エキスパート配置とデコードのトークン-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。",
@@ -11657,6 +11684,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "status": "PASS",
+      "summary": "入力依存ゲート付き線形注意とI/O-awareなchunk並列化を組み合わせ、線形時間推論と長系列での高いGPU効率を両立する。",
+      "char_count": 64,
+      "japanese_ratio": 0.9,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
       "status": "PASS",
       "summary": "各層のKV活性をビーコントークンへ漸進圧縮し、128K文脈で非圧縮比2倍の推論高速化とKVキャッシュ8分の1を両立する。",
@@ -11664,6 +11700,17 @@
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+      "status": "WARN",
+      "summary": "複数codebookの和で重み群を表し、活性値-awareな符号選択とブロック内共同調整で2–3bit LLMの品質と実推論速度を両立する。",
+      "char_count": 70,
+      "japanese_ratio": 0.7719298245614035,
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.2% < 警告基準 80.0%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md",
@@ -11864,6 +11911,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+      "status": "FAIL",
+      "summary": "RAG knowledgeの中間状態をGPU/ホストのknowledge treeへ多階層キャッシュし、検索と推論を重畳してTTFTを削減する。",
+      "char_count": 72,
+      "japanese_ratio": 0.6140350877192983,
+      "failures": [
+        "日本語比率 61.4% < 70.0%"
+      ],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
       "status": "PASS",
       "summary": "確率的な応答品質差と目標品質から要求を大小LLMへ振り分け、一要求一モデルの推論費を下げる。小型・大型モデルの品質差が大きい場合は品質低下を伴う。",
@@ -11927,10 +11985,28 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md",
+      "status": "PASS",
+      "summary": "KV keyを積量子化コードへ変換し、デコード 問い合わせごとの最大内積探索で重要トークンだけを取得して、長文脈注意のKV容量・転送・計算を削減する。",
+      "char_count": 75,
+      "japanese_ratio": 0.9545454545454546,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
       "status": "PASS",
       "summary": "GPUから通信とオプティマイザ状態をSmartNIC・SmartSwitch・単一パラメータサーバへ分離し、100B級モデル分割データ並列の干渉と容量制約を同時に減らす。",
       "char_count": 85,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
+      "status": "PASS",
+      "summary": "問い合わせ分布を反映した注意向け近似最近傍索引でCPU上の鍵値から動的重要トークンだけを取得し、GPU常駐部分と並列注意して長文脈推論を高速・省メモリ化する。",
+      "char_count": 79,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -13613,6 +13689,15 @@
       "status": "PASS",
       "summary": "固定サイズ容器と長さ制約付きドリフトを組み合わせ、エントロピー符号化KVキャッシュを注意カーネル内で直接並列復号できる形にした低ビット量子化方式。",
       "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
+      "status": "PASS",
+      "summary": "密 LLMをL0正則化付き疎MoEへ変換し、活性専門家数を直接抑えて最大2.5倍の推論高速化を狙う。",
+      "char_count": 50,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
