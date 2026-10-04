@@ -32,6 +32,8 @@ code: null
 last_checked: '2026-10-04'
 worker_completed_at: '2026-10-04T17:10:00+09:00'
 worker_run_key: 20261004-1830-codex-local-r21
+last_audited: null
+audit_version: 0
 ---
 
 # Towards Efficient Serving of Network-intensive LLM Inferences

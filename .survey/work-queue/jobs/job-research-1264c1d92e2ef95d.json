@@ -31,10 +31,15 @@
   "selection_reason": "LRUに代えてrecency/frequency間へKV cache容量を動的配分し、vLLM比でhit rate最大10.8%、TTFT最大12.6%改善するためcache policy比較に直接有用。",
   "semantic_scholar_id": "4634757f8c6adc509d5f919486320b78e8847787",
   "source_url": "https://www.semanticscholar.org/paper/4634757f8c6adc509d5f919486320b78e8847787",
-  "status": "ready",
+  "status": "superseded",
   "title": "Recency/Frequency Adaptive KV Caching for Large Language Model Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T08:33:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.21238-recency-frequency-adaptive-kv-caching-for-large-language-model-serving.md",
+  "represented_canonical_id": "arXiv:2606.21238",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
