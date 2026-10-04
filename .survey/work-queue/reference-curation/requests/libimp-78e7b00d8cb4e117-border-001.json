@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78e7b00d8cb4e117-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2409.12122",
+  "reason": "The report does include a language-model inference-stage technique: a reward model reranks best-of-N sampled answers to improve mathematical answer accuracy. Full-text review shows this is accuracy-oriented inference-time compute scaling, not a serving system, compression method, or demonstrated inference-efficiency technique; evaluations report answer scores for RM@8/64/256 rather than latency, throughput, or resource savings. It is adjacent to the LLM inference scope but its contribution does not establish the requested efficiency focus, so it is retained as borderline.",
+  "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement",
+  "identity_tokens": [
+    "id:arXiv:2409.12122",
+    "url:https://arxiv.org/abs/2409.12122"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e7b00d8cb4",
+  "source_precheck_request_id": null
+}
