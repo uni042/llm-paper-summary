@@ -34,10 +34,15 @@
   "selection_reason": "Transformerの大きなmemory footprintと低いdata reuseによるmemory bottleneckを対象に、token-based dataflowでinter-layer data movementを削減し、HBMへPIM-NMC hybrid processingを組み込む推論アクセラレータ。既存memory-based accelerator比3.7–9.1x、GPU比22.1–114.9xの高速化を報告し、推論向けPIM/near-memory accelerationに直接該当する。",
   "semantic_scholar_id": "f5edad3a50ba8a6329d202f31677d988f1d0cf87",
   "source_url": "https://doi.org/10.1109/HPCA53966.2022.00082",
-  "status": "ready",
+  "status": "superseded",
   "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
   "type": "research",
   "venue": "International Symposium on High-Performance Computer Architecture",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-04T14:37:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+  "represented_canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

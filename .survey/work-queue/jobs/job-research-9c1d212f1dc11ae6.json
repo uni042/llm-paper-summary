@@ -34,10 +34,15 @@
   "selection_reason": "視覚言語行動モデル（Vision-Language-Action model; VLA）の推論遅延を主要問題として明示し、7B超のVLMと自己回帰的action-token生成を、小型VLMとdiffusion policy headへ置換して実機推論を高速化する。VLA推論効率化の収録範囲に直接該当する。",
   "semantic_scholar_id": "dc62bc6536e9e3ad80242f10f44c046e4c7bd3d1",
   "source_url": "https://arxiv.org/abs/2409.12514",
-  "status": "ready",
+  "status": "superseded",
   "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
   "type": "research",
   "venue": "IEEE Robotics and Automation Letters",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T14:37:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+  "represented_canonical_id": "arXiv:2409.12514",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
