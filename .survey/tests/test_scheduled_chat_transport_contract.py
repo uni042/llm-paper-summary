@@ -13,9 +13,9 @@ class ScheduledChatTransportContractTests(unittest.TestCase):
         self.assertIn("scheduled-chat-30", text)
         self.assertIn("scheduled-chat-45", text)
         self.assertIn("read-only | read/write", text)
-        self.assertIn("04:45 / 10:45 / 16:45 / 22:45 Importフェーズ", text)
+        self.assertIn("毎時 :45 Importフェーズ", text)
         self.assertIn("通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result", text)
-        self.assertIn("例外は `scheduled-chat-45` の4つのImport枠だけ", text)
+        self.assertIn("例外は `scheduled-chat-45` の毎時Importフェーズだけ", text)
         self.assertIn("Library保存不能でも完成成果を破棄しない", text)
         self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
 
