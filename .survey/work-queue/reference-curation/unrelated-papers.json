@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-03T22:19:08+00:00",
-  "record_count": 871,
+  "updated_at": "2026-10-04T02:16:20+00:00",
+  "record_count": 882,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10988,9 +10988,9 @@
         "DOI:10.1109/comst.2023.3239220",
         "arXiv:2202.01032"
       ],
-      "reason": "Open RANのアーキテクチャ、インターフェース、アルゴリズム、セキュリティを整理する通信システムサーベイで、LLM推論基盤ではない。",
+      "reason": "O-RANのアーキテクチャ・インターフェース・RIC・セキュリティを整理する通信ネットワークのチュートリアル/サーベイで、LLM推論基盤ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
         "worker-worklist-30"
@@ -11686,10 +11686,11 @@
       "identity_tokens": [
         "DOI:10.1007/978-90-481-9431-5"
       ],
-      "reason": "NANDフラッシュメモリのデバイス・回路・信頼性を扱う専門書で、LLM推論向けフラッシュ階層化の一次研究ではない。",
+      "reason": "NANDフラッシュメモリのデバイス・回路・信頼性を扱う専門書であり、LLM/Transformer推論システムを最終適用先としない。",
       "first_checked_at": "2026-10-03T17:50:29+00:00",
-      "last_checked_at": "2026-10-03T17:50:29+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30"
       ],
       "title": "Inside NAND Flash Memories"
@@ -11700,10 +11701,11 @@
       "identity_tokens": [
         "arXiv:2109.05472"
       ],
-      "reason": "深層学習推論全般の計算量・エネルギー消費トレンドを分析する研究で、LLM固有の推論方式・実行系を提案しない。",
+      "reason": "コンピュータビジョンと自然言語処理を横断して深層学習推論の計算量・エネルギー消費の歴史的傾向を分析する研究で、LLM固有の推論方式・ランタイム最適化を提案しない。",
       "first_checked_at": "2026-10-03T17:50:29+00:00",
-      "last_checked_at": "2026-10-03T17:50:29+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30"
       ],
       "title": "Compute and Energy Consumption Trends in Deep Learning Inference"
@@ -11773,10 +11775,11 @@
         "DOI:10.1109/iscas51556.2021.9401196",
         "arXiv:2102.10195"
       ],
-      "reason": "半導体技術スケーリングを推定する設計ツール研究で、LLM推論カーネル/サービングを直接対象としない。",
+      "reason": "半導体technology scalingに伴う回路面積・電力・性能の推定ツールであり、LLM推論やTransformerシステムを最終適用先としない。",
       "first_checked_at": "2026-10-03T17:50:29+00:00",
-      "last_checked_at": "2026-10-03T17:50:29+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
       "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30"
       ],
       "title": "DeepScaleTool: A Tool for the Accurate Estimation of Technology Scaling in the Deep-Submicron Era"
@@ -12820,6 +12823,163 @@
         "worker-worklist-30"
       ],
       "title": "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+    },
+    "arXiv:2401.01967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.01967",
+      "identity_tokens": [
+        "arXiv:2401.01967"
+      ],
+      "reason": "DPOでGPT2-mediumの毒性表現・アラインメント機構を解析する安全性/学習アルゴリズム研究で、推論サービングや推論システム効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Mechanistic Understanding of Alignment Algorithms: A Case Study on DPO and Toxicity"
+    },
+    "DOI:10.1109/lca.2023.3333759": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lca.2023.3333759",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2023.3333759"
+      ],
+      "reason": "DRAM規格・メモリコントローラ・メモリシステム研究向けの汎用DRAMシミュレータ基盤で、LLM推論を最終適用先とする方式ではない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Ramulator 2.0: A Modern, Modular, and Extensible DRAM Simulator"
+    },
+    "DOI:10.1109/ispass57527.2023.00035": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass57527.2023.00035",
+      "identity_tokens": [
+        "DOI:10.1109/ispass57527.2023.00035"
+      ],
+      "reason": "大規模モデルの分散学習を対象に、並列化戦略・多次元異種ネットワーク・disaggregated memoryをモデル化するシミュレータで、論文自身の最終適用先はtraining platformの設計空間探索である。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale"
+    },
+    "DOI:10.1007/978-3-319-76526-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-76526-6",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-76526-6"
+      ],
+      "reason": "浮動小数点算術の理論・規格・アルゴリズムを扱う一般的な専門書で、LLM推論システムを最終適用先としない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Handbook of Floating-Point Arithmetic (2nd Ed.)"
+    },
+    "DOI:10.1007/978-981-16-7487-7_7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-981-16-7487-7_7",
+      "identity_tokens": [
+        "DOI:10.1007/978-981-16-7487-7_7"
+      ],
+      "reason": "Processing-in-Memoryの一般的な技術解説であり、LLM/Transformer推論を最終適用先とした新規方式・評価ではない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "A Modern Primer on Processing in Memory"
+    },
+    "arXiv:2302.09210": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.09210",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.09210",
+        "arXiv:2302.09210"
+      ],
+      "reason": "GPTモデルの機械翻訳品質・prompting・domain shift・文書翻訳を評価する能力研究で、推論効率化ではない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "How Good Are GPT Models at Machine Translation? A Comprehensive Evaluation"
+    },
+    "DOI:10.1109/26.46532": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/26.46532",
+      "identity_tokens": [
+        "DOI:10.1109/26.46532"
+      ],
+      "reason": "無記憶/Gauss-Markov信号源のtrellis coded quantizationを扱う古典的信号圧縮研究で、LLM量子化・推論ではない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "title": "Trellis coded quantization of memoryless and Gauss-Markov sources"
+    },
+    "DOI:10.1016/j.inffus.2025.103599": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103599",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103599",
+        "arXiv:2505.10468"
+      ],
+      "reason": "AI AgentsとAgentic AIの概念分類・応用・課題を整理するサーベイで、エージェントLLMの推論サービング効率化に特化しない。",
+      "first_checked_at": "2026-10-04T02:16:19+00:00",
+      "last_checked_at": "2026-10-04T02:16:19+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges"
+    },
+    "arXiv:2203.14343": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.14343",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2203.14343",
+        "arXiv:2203.14343"
+      ],
+      "reason": "長距離系列モデルDSSを提案するモデルアーキテクチャ研究で効率性はあるが、LLM推論runtimeを最終適用先とせず主要評価もLRA/音声分類のモデル性能。",
+      "first_checked_at": "2026-10-04T02:16:20+00:00",
+      "last_checked_at": "2026-10-04T02:16:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Diagonal State Spaces are as Effective as Structured State Spaces"
+    },
+    "DOI:10.1109/isca.2014.6853196": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2014.6853196",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2014.6853196"
+      ],
+      "reason": "カスタムアクセラレータの性能・電力・面積をRTL前に推定してSoC設計空間探索を行う汎用accelerator simulatorで、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T02:16:20+00:00",
+      "last_checked_at": "2026-10-04T02:16:20+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Aladdin: A pre-RTL, power-performance accelerator simulator enabling large design space exploration of customized architectures"
+    },
+    "DOI:10.1109/isca52012.2021.00011": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca52012.2021.00011",
+      "identity_tokens": [
+        "DOI:10.1109/isca52012.2021.00011"
+      ],
+      "reason": "Samsung mobile SoC向けの汎用sparsity-aware NPU architectureで、LLM/Transformer推論固有の方式・評価を最終適用先としない。",
+      "first_checked_at": "2026-10-04T02:16:20+00:00",
+      "last_checked_at": "2026-10-04T02:16:20+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Sparsity-Aware and Re-configurable NPU Architecture for Samsung Flagship Mobile SoC"
     }
   }
 }
