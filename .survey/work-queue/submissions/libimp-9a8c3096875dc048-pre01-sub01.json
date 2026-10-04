@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.22098",
+      "year": 2026,
+      "published": "2026-08-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language-model inference by letting a cheap drafter propose tokens that the target model verifies in parallel. Recent block drafters make drafting nearly free: a single backbone pass emits an entire block of draft tokens. Draft trees promise a further gain -- several alternative continuations verified in one target forward -- but existing constructions rank candidates by per-position marginals that ignore which parent a candidate extends, so on semi-autoregressive drafters wider trees mostly add mis-ranked nodes; and a tree of fixed size ignores how much speculation each decoding round, and each serving load, can support. We introduce TreeSpark, which reads a parent-conditioned distribution from the drafter's existing Markov head at negligible cost, calibrates it into an edge-acceptance estimate, and lets path survival govern everything else: best-first expansion, per-round stopping, and a load-adaptive serving policy. Sampling siblings without replacement, with matching residuals in recursive rejection, keeps decoding lossless at any temperature. Adaptive trees improve on matched fixed budgets at every temperature; against a tuned chain on the same drafter, TreeSpark accepts 15-25% more draft tokens per round and decodes 8-14% faster in single-request wall-clock, and under rising load it gracefully shrinks the tree back to the chain. Code and artifacts: https://github.com/PopSoda2002/TreeSpark",
+      "identifiers": [
+        "SemanticScholar:f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6"
+      ],
+      "semantic_scholar_id": "f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6",
+      "canonical_id": "arXiv:2609.22098",
+      "arxiv_id": "2609.22098",
+      "authors": [
+        "Hua-Peng Zhou",
+        "Hua-Yu Wang",
+        "Xin-Yu Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TreeSparkは、半自己回帰draftモデルDSparkの親条件付きMarkov分布を使ってspeculative decodingのdraft treeを展開し、受理確率を校正した経路生存確率で各roundの木サイズを適応制御する。targetモデルの検証計算を抑えながら受理draft token数と単一要求の復号速度を評価しており、LLM推論時の効率化に該当する。評価上の改善は記載のQwen3モデル、負荷、Python研究用harnessの範囲であり、本番continuous-batching全体への一般化は未確認である。",
+      "library_body_check": "arXiv v1一次本文 (https://arxiv.org/html/2609.22098) の§1–§5、§6のlimitations、結論、およびAppendix A–Cを確認。§3.1–3.2では、DSparkの単一backbone passの位置別logitに親tokenごとのrank-r Markov補正を加え、校正済みedge受理確率のpath積でbest-firstに木を構築する機構を確認。§3.3は非ゼロ温度で兄弟候補をwithout replacementで標本化し、recursive rejection samplingによりtarget分布を保つ手続きを説明。§3.4–3.5では、祖先が受理されたedgeを対象に2係数Platt校正を行い、期待受理token寄与に応じて各roundの追加検証を止める。§4はbatch sizeと温度ごとに測定した価格thresholdを使い、負荷増加時にtreeをchain、さらにspeculationなしへ縮める設計を示す。§5.2 Table 2はQwen3-4B/8B/14Bでgreedy decoding 150 promptsを評価し、同じ検証budgetのDDTree比でTreeSparkが受理token/target forwardを9–16%増、N=56でDSpark chain比31–33%増と報告。§5.4 Table 4の最終recompute実装ではQwen3-4BのDSpark chain比でaccepted lengthがT=0で25%、sampled decodingで15%増え、AR speedupはT=0で3.75x対3.30x、T=0.5で3.38x対3.14x、T=1で3.38x対3.06x（相対8–14%増）。§4 Table 1はA100 engineの同一GPU交互A/B測定でbatch size 16のsampling時にbranching treeがchainより遅い条件を示し、その場合はchainへfallbackする。§6によれば単一要求wall-clockはmatched target-only decoderとのPython研究harness測定で、本番continuous-batching serving実装でのgoodputとtail latencyは未測定。公開実験はblock depth 7で、Markov headは直前tokenのみを条件とし、Gemma4-12B評価およびEAGLE-3との同一環境比較もない。したがってacceptはLLM speculative decoding効率化への該当性を示し、未評価の本番serving性能は含意しない。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.26523",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chunked prefill pipeline parallelism (CPP) is a key technique for LLM inference. However, equal-size chunks exhibit imbalanced latency, as later chunks attend longer prefix KV caches and incur higher attention costs, leading to pipeline bubbles. Existing approaches mitigate this imbalance through dynamic chunk resizing (Dynamic CPP, DCPP), but our measurements show that this trades scheduling overhead for load balancing, which becomes unfavorable on long sequences. In this study, we propose Virtual Pipeline Parallelism (VPP), which keeps chunk sizes fixed and optimizes the pipeline layout through virtual stages. A V-shaped virtual-stage traversal overlaps each chunk's expensive middle stages with the lighter head and tail stages of its neighbors, while asynchronous communication and pipelined packing further reduce communication stalls and cross-request drain bubbles. We implement VPP in vLLM-Ascend and evaluate it on three MoE-based LLMs with sequences up to 1M tokens on 16 Ascend 910C NPUs. VPP improves throughput by up to 13.1% over DCPP on long sequences and 6.7% on mixed workloads, while preserving performance on short sequences. On a 512K-token DeepSeek-V3.1 prefill workload, VPP reduces the pipeline bubble ratio from 6.4% to 0.1%, achieving a 98.0% reduction compared with DCPP.",
+      "identifiers": [
+        "SemanticScholar:9d7ad407246d10f1d9734966d55a8bd51fdcc720"
+      ],
+      "semantic_scholar_id": "9d7ad407246d10f1d9734966d55a8bd51fdcc720",
+      "canonical_id": "arXiv:2608.26523",
+      "arxiv_id": "2608.26523",
+      "authors": [
+        "Yan Shi",
+        "Xiao-Chao Wang",
+        "Jin-Chun Gao",
+        "Jin-Tao Luo",
+        "Xinyi Zhou",
+        "Feng Liu",
+        "Kui Luo",
+        "Xu-Shi Li",
+        "Xingong Guo",
+        "Liang-Jun Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈LLMのchunked prefill pipeline parallelismにおける推論時の負荷不均衡とpipeline bubbleを、固定chunkの仮想stage配置で減らす手法であり、LLM servingの推論効率化を直接扱う。本文ではDCPP比のthroughput改善を長系列・混合workloadで示す一方、通信露出増加やsparse attentionでの効果低下も評価しているため対象に含める。",
+      "library_body_check": "arXiv v1本文HTMLのIntroduction、§2.4、§4、§5.1–5.4、§6.1–6.4、§7およびTable 1–2を確認。固定長chunkごとに因果attentionのprefix KVが伸びて処理時間がほぼ線形増加し、後続chunkが遅れてpipeline bubbleが生じる問題に対し、4 virtual stagesを2 pipeline rankへV字状にfold-back配置する。重い中間stageのchunk処理中に隣接chunkの軽い先頭・末尾stageを実行し、VPP-Asyncはstage実行順を入れ替えて通信と計算を重ね、pipelined packingは前要求のdrain中へ次要求の先頭chunkを詰める。実装はPyTorch/HCCL上のvLLM-Ascend拡張で、Python schedulerと既存attention/MoE kernelを使用。Huawei Atlas 900 A3、Ascend 910C 16基でQwen3-Coder-30B-A3B、DeepSeek-V3.1-Terminus、GLM-5.2を評価し、TP8+CPP2、TP8+DCPP2、TP8+VPP2を比較。AISBenchの短系列、64K–1M長系列、500件の混合系列workloadを使い、chunk 8K/16K/24K/32Kを各条件4回測定し、throughputとTTFTを報告（全要求の生成出力は1 token）。§4/Table 1では512K DeepSeek workloadでDCPPはchunk invocationがCPPの22から97へ増え、bubbleを47.0%減らす一方、計算と通信のfragmentation overheadでTTFTが4.65%悪化。§6.2ではVPPがDCPP比で長系列DeepSeek 64K–512Kに2.6–13.1%、混合workloadで最大6.7% throughput向上。§6.3/Table 2の512K DeepSeekではbubble ratioが6.35%から0.14%へ98.04%低下するが、露出通信は7.95秒増え、attention kernel時間も2.17%増加。§6.3と§7によれば、DSA sparse attentionのGLM-5.2ではchunk latencyの線形増加という前提が弱まり、長系列でbubbleが再発して利得が縮小する。結果はAscend上のprefill中心評価であり、一般的GPUやdecode性能への外挿は確認していない。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RouteSparse: Input-Conditional Pattern Routing for Budgeted Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2608.29058",
+      "year": 2026,
+      "published": "2026-08-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention can reduce the quadratic cost of long-context prefilling without changing model weights. MInference assigns each attention head one pattern offline and estimates that pattern's sparse indices for every prompt. This design is efficient, but it assumes that a head's preferred pattern and sparsity budget remain suitable across inputs. We introduce RouteSparse, which routes each head and prompt segment among a small library of GPU-efficient sparse patterns. A low-cost probe estimates pattern utility and uncertainty; a latency-aware router then selects a pattern and budget, while uncertain cases fall back to a denser mask. We formulate routing as constrained risk minimization, derive an attention-output error certificate from omitted probability mass, and evaluate the method on long-context retrieval, question answering, summarization, and language modeling. On Llama 3.1-8B-Instruct with 128K-token prompts, RouteSparse achieves $6.5\\times$ dense prefill speed with a 0.2-point RULER drop relative to dense attention, compared with $7.3\\times$ speed and a 1.6-point drop for fixed per-head routing. Ablations confirm that input-conditional routing, hardware profiling, and selective dense fallback each contribute to the quality--latency tradeoff.",
+      "identifiers": [
+        "SemanticScholar:3a7e1c35265c6f6a99e82572a890a3d00bd97cbd"
+      ],
+      "semantic_scholar_id": "3a7e1c35265c6f6a99e82572a890a3d00bd97cbd",
+      "canonical_id": "arXiv:2608.29058",
+      "arxiv_id": "2608.29058",
+      "authors": [
+        "Chao Zhang",
+        "Yi Ji",
+        "Zi-Yan Zhang",
+        "Kai Song",
+        "Fei Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RouteSparseは凍結済みLLMの長文prefillで実行するattention query-key対を構造化疎attentionにより減らし、入力ごとのpattern・budget選択と不確実時のdense fallbackで品質と遅延を調整する推論時効率化であり、対象範囲に該当する。評価はLlama 3.1-8B-Instruct、128K context、単一A100 80GB上のprefillを含み、学習時手法ではない。評価された速度・品質・shift耐性の根拠が本文にあるためacceptとする。",
+      "library_body_check": "arXiv v1 HTML本文を確認（https://arxiv.org/html/2608.29058）。§1–§2では長文prefillの二次attention費用と、MInferenceの固定per-head patternが入力により不適合となり得る問題を説明。§3.1–§3.5ではA-shape、vertical-slash、block-sparse、denseのpattern/budget候補を対象hardwareでprofileし、recent・uniform・boundary-adjacent queryを使う共有低解像度attention probeからpatternのcoverageと不確実性を推定、omitted probability massに基づく出力誤差評価およびheld-out dense calibrationの片側残差quantileで補正し、layer latency制約下でriskを貪欲最小化する。信頼度が閾値未満ならbudget拡張後にdenseへfallbackし、選択pattern/budgetごとにheadをgroup化して実行する。§4.1–§4.3ではLlama 3.1-8B-Instruct BF16、128K context、単一A100 80GBを主設定とし、RULER、InfiniteBench、PG-19 PPL等の品質指標、resident token IDsからfirst-token logitsまでのend-to-end prefill latency、peak memory、index-building/routing/kernel timeを対象にする。§5.1/Table 2は128KでDense FlashAttention-2が43.6s・RULER 84.7、固定MInferenceが6.0s・7.3x・83.1、RouteSparseが6.7s・6.5x・84.5と報告し、固定方式より0.7s遅い代わりに1.4 RULER点を回復する。§5.2ではdomainとlengthの複合shift時、dense比のquality lossが固定routingの6.4点に対しRouteSparse+fallbackで2.0点と報告。§5.3/Table 3ではno-fallbackが5.9s/83.9/6.8% fallbackなしなのに対しfullが6.7s/84.5/worst-decile loss -0.9/6.8% fallbackで、品質改善には遅延費用がある。Limitationsはsampled probeが希少だが重要な相互作用を見逃す可能性、経験的quantile校正が任意の分布shift下の保証ではないこと、attention単位の誤差評価が最終生成品質を強く拘束しないこと、hardware・実装依存、pattern混在によるbatch効率低下、校正dense auditの費用を明記。単一model size・GPU世代の評価であり、報告範囲は主に長文prefill attentionの品質・遅延である。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9a8c3096875d",
+    "round": "libimp-9a8c3096875dc048-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9a8c3096875dc048-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9a8c3096875dc048-pre01.json",
+    "receipt": "sha256:a4465e038084ab505f261caf4cf12bbd60bc1a1bb16f8e925f419018dbd521ce"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9a8c3096875d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

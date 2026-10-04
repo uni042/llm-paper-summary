@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison",
+      "source_url": "https://arxiv.org/abs/2609.28029",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache of autoregressive transformers can be viewed as a fourth-order tensor spanning attention heads, tokens, features, and grouped layers. We measure the singular-value spectra of all four mode unfoldings on Mistral-7B-v0.3 and LLaMA-2-13B and compare four standard tensor decompositions: Tucker, CP, tensor train, and t-SVD, at matched storage. The spectra partition the four axes into two classes. The token and feature modes carry low-rank structure, particularly for keys. The head and layer modes are nearly full-rank and resist compression at any practical error level. Among the four decompositions, Tucker achieves the lowest reconstruction error at every compression ratio from $2\\times$ to $5\\times$, because it can leave the full-rank modes untouched. Comparisons with two-dimensional unfolding baselines show that the preferred representation differs between keys and values: 2D methods achieve lower key error, while four-way Tucker achieves lower value error at matched storage. A mode-pinning theorem certifies the full-rank preservation from the measured spectra alone. Two further spectral properties affect the compressible modes without touching the full-rank ones: values reach a higher error floor than keys at every ratio, and post-RoPE keys lose $41\\%$ - $64\\%$ of their pre-RoPE compressibility on both models.",
+      "identifiers": [
+        "SemanticScholar:9b5c75985b0b46e62b84fb2f157457f11673c5fb"
+      ],
+      "semantic_scholar_id": "9b5c75985b0b46e62b84fb2f157457f11673c5fb",
+      "canonical_id": "arXiv:2609.28029",
+      "arxiv_id": "2609.28029",
+      "authors": [
+        "Rahul G. Krishnan",
+        "Volker Schulz"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰LLMの推論メモリを制約するKV cacheを対象に、キー・値tensorをテンソル分解で圧縮した時のスペクトル特性と保存量あたりの再構成誤差を分析している。Tucker等の分解形式を比較し、キーと値に独立rank予算を割り当てる根拠やRoPE前後の圧縮性差を示すため、推論時KV cache圧縮に直接関連する。実際のdecode latencyや生成品質を測るend-to-end serving論文ではなく、2モデル・固定系列長でのcache reconstruction比較が中心である点を適用範囲として残す。",
+      "library_body_check": "arXiv一次本文v1（https://arxiv.org/html/2609.28029v1）を確認。§1–2では各層のKVをhead/token/featureと4層groupのtensorとして扱い、保存parameter数をそろえて比較する設定を確認。§2.3ではMistral-7B-v0.3とLLaMA-2-13BからT=1024のcacheを抽出し、WikiText-2 validationの非重複promptを3回使用、A100 40GB上でfp16分解をfitしたと記載。§3およびTable 1ではhead/layer軸はほぼfull-rankだがtoken/feature軸は圧縮可能で、値はキーより誤差床が高いと示す。§4 Tables 2–3では2x–5x保存率でTuckerが全比較形式中の最低再構成誤差を報告（Mistral 2xのK/V誤差0.087/0.279、LLaMA 0.089/0.232）。§5は2D unfoldingとのK/V別比較とmode-rank ablation、Theorem 5.1のrank-preservation条件と数値検証を記述。§6–7ではvalue誤差がkeyの中央値約2.4倍、post-RoPE keyがpre-RoPEより41–64%高誤差となる結果を確認。§8は系列長1024固定、2モデルのみ、LLaMAでCPが装置メモリ上fit不能、生成中も同じtoken-mode構造が続くか未検証と明記。生成品質・decode latency・online runtimeは本稿の評価対象ではないため、圧縮format/再構成精度の探索候補として採択する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fabf8fdba511",
+    "round": "libimp-fabf8fdba511c9a1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fabf8fdba511c9a1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fabf8fdba511c9a1-pre01.json",
+    "receipt": "sha256:d378610b920dc16d6f85f8c26c7836fce4441ea1f5a343cdf0e0b86e163e715d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fabf8fdba511",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

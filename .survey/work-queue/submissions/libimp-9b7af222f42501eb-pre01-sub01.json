@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+      "source_url": "https://arxiv.org/abs/2409.12514",
+      "year": 2024,
+      "published": "2024-09-19",
+      "venue": "IEEE Robotics and Automation Letters",
+      "citation_count": 461,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have shown remarkable potential in visuomotor control and instruction comprehension through end-to-end learning processes. However, current VLA models face significant challenges: they are slow during inference and require extensive pre-training on large amounts of robotic data, making real-world deployment difficult. In this letter, we introduce a new family of compact vision-language-action models, called TinyVLA, which offers two key advantages over existing VLA models: (1) faster inference speeds, and (2) improved data efficiency, eliminating the need for pre-training stage. Our framework incorporates two essential components to build TinyVLA: (1) initializing the policy backbone with robust, high-speed multimodal models, and (2) integrating a diffusion policy decoder during fine-tuning to enable precise robot actions. We conducted extensive evaluations of TinyVLA in both simulation and on real robots, demonstrating that our approach significantly outperforms the state-of-the-art VLA model, OpenVLA, in terms of speed and data efficiency, while delivering comparable or superior performance. Additionally, TinyVLA exhibits strong generalization capabilities across various dimensions, including language instructions, novel objects, unseen positions, changes in object appearance, background variations, and environmental shifts, often matching or exceeding the performance of OpenVLA. We believe that TinyVLA offers an interesting perspective on utilizing pre-trained multimodal models for policy learning.",
+      "identifiers": [
+        "SemanticScholar:dc62bc6536e9e3ad80242f10f44c046e4c7bd3d1"
+      ],
+      "semantic_scholar_id": "dc62bc6536e9e3ad80242f10f44c046e4c7bd3d1",
+      "canonical_id": "arXiv:2409.12514",
+      "arxiv_id": "2409.12514",
+      "doi": "10.1109/LRA.2025.3544909",
+      "authors": [
+        "Jun-Jie Wen",
+        "Yi-Chen Zhu",
+        "Jin-Ming Li",
+        "Minjie Zhu",
+        "Zhibin Tang",
+        "Kun Wu",
+        "Zhiyuan Xu",
+        "Ning Liu",
+        "Ran Cheng",
+        "Chaomin Shen",
+        "Ya-Xin Peng",
+        "Fei-Fei Feng",
+        "Jian Tang"
+      ],
+      "priority": 461,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 461,
+        "citation_count": 461,
+        "total": 461,
+        "is_fresh": false,
+        "freshness_age_days": 745,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚言語行動モデル（Vision-Language-Action model; VLA）の推論遅延を主要問題として明示し、7B超のVLMと自己回帰的action-token生成を、小型VLMとdiffusion policy headへ置換して実機推論を高速化する。VLA推論効率化の収録範囲に直接該当する。",
+      "library_body_check": "arXiv v5 HTML本文を確認。Introductionは既存VLAの高遅延要因をlarge VLMとautoregressive action token generationの2点に分解し、70M〜1.4B級VLMとdiffusion-based action headを提案する。Fig.1/本文は同一A6000上でTinyVLA-HがOpenVLAより20倍低いinference latencyとし、MethodではLoRAを推論前にre-parameterizeして標準LMへ統合する。推論速度が論文の中心設計・評価項目なのでaccept。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9b7af222f425",
+    "round": "libimp-9b7af222f42501eb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9b7af222f42501eb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9b7af222f42501eb-pre01.json",
+    "receipt": "sha256:d4af4a9869598366c78eb3661682affb797c02d2acd1ed1ad542f3a9e33d5838"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9b7af222f425",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
