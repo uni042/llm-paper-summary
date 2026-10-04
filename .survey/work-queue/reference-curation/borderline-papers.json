@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T18:55:17+00:00",
-  "record_count": 429,
+  "updated_at": "2026-10-04T18:57:07+00:00",
+  "record_count": 432,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6196,6 +6196,42 @@
       "last_checked_at": "2026-10-04T18:55:17+00:00",
       "linked_from": [],
       "title": "The Embedder's Dilemma: LLMs Are Better, but at What Cost?"
+    },
+    "arXiv:2607.27042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27042",
+      "identity_tokens": [
+        "arXiv:2607.27042"
+      ],
+      "reason": "GPTQのadaptive roundingをtwo-sided quadratic metricへ一般化しquarticからcubic timeへ高速化する量子化algorithm研究。LLM量子化の基礎に直結するが、論文自体の主眼は一般matrix rounding algorithmで実LLM推論benchmarkが中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T18:57:07+00:00",
+      "last_checked_at": "2026-10-04T18:57:07+00:00",
+      "linked_from": [],
+      "title": "GPTQ-2D: Cubic-Time Two-Sided Adaptive Rounding"
+    },
+    "arXiv:2609.14245": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14245",
+      "identity_tokens": [
+        "arXiv:2609.14245"
+      ],
+      "reason": "RAG context compressionをreranking/extractive/abstractive/token pruning等で比較しcitation attributionを評価する。入力token削減は推論効率に関係するが主目的はattribution fidelity評価で、runtime性能最適化そのものではないためborderline。",
+      "first_checked_at": "2026-10-04T18:57:07+00:00",
+      "last_checked_at": "2026-10-04T18:57:07+00:00",
+      "linked_from": [],
+      "title": "The Attribution-Compression Frontier in Retrieval-Augmented Generation"
+    },
+    "arXiv:2608.01739": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01739",
+      "identity_tokens": [
+        "arXiv:2608.01739"
+      ],
+      "reason": "長期LLM agentのretrieval policyとpersistent memory graphをclosed-loopで共進化させるmemory system。agent runtime memory管理に関係するが、主評価はtask/memory qualityでlatency/throughput最適化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T18:57:07+00:00",
+      "last_checked_at": "2026-10-04T18:57:07+00:00",
+      "linked_from": [],
+      "title": "CoEvo-Mem: Co-Evolving Retrieval Policy and Memory Bank for LLM Agents"
     }
   }
 }

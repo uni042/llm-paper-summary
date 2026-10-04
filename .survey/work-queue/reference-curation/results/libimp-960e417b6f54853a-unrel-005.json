@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-960e417b6f54853a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18623/rvd.v23.8175",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18623/rvd.v23.8175",
+    "identity_tokens": [
+      "DOI:10.18623/rvd.v23.8175"
+    ],
+    "reason": "放射線医学におけるAI応用のreviewで、LLM推論system効率化とは対象分野・目的が異なる。",
+    "first_checked_at": "2026-10-04T18:57:07+00:00",
+    "last_checked_at": "2026-10-04T18:57:07+00:00",
+    "linked_from": [],
+    "title": "ARTIFICIAL INTELLIGENCE IN RADIOLOGY: CURRENT APPLICATIONS AND FUTURE DIRECTIONS"
+  },
+  "processed_at": "2026-10-04T18:57:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-960e417b6f54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

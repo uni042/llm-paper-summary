@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-960e417b6f54853a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.27042",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.27042",
+    "identity_tokens": [
+      "arXiv:2607.27042"
+    ],
+    "reason": "GPTQのadaptive roundingをtwo-sided quadratic metricへ一般化しquarticからcubic timeへ高速化する量子化algorithm研究。LLM量子化の基礎に直結するが、論文自体の主眼は一般matrix rounding algorithmで実LLM推論benchmarkが中心ではないためborderline。",
+    "first_checked_at": "2026-10-04T18:57:07+00:00",
+    "last_checked_at": "2026-10-04T18:57:07+00:00",
+    "linked_from": [],
+    "title": "GPTQ-2D: Cubic-Time Two-Sided Adaptive Rounding"
+  },
+  "processed_at": "2026-10-04T18:57:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-960e417b6f54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
