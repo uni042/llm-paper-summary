@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b83cc6d9f1979746-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.39076",
+  "reason": "対象外。論文の主貢献はEXP3による適応的なinstruction選択と、複数LLMのduel・peer judgmentを通じたDPO/GRPO協調学習であり、推論時のserving、推論効率化、推論時圧縮を提案するものではない。3つのmodel poolと12 benchmarkで学習後の能力向上を評価するが、効率比較も学習計算量が対象。FrugalGPTとの接点はmulti-LLM collaborationの関連研究としての引用に留まる。",
+  "title": "Multi-LLM Collaborative Alignment via Stackelberg Games",
+  "identity_tokens": [
+    "arXiv:2609.39076"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b83cc6d9f197",
+  "source_precheck_request_id": null
+}
