@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（36本）
+## 自動生成の論文一覧（37本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -182,4 +182,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   この論文は、混合専門家（Mixture of エキスパート; MoE）が「1トークン当たり少数専門家しか使わないのに、なぜ推論で効率が悪いのか」を言語モデル（Language Modeling; LM）と機械翻訳（Machine Translation; MT）で分解し、動的ゲーティング、専門家バッファ（専門家 Buffering）…
+
+### 5年前（2021-11〜2022-10）
+
+- **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：6  
+  しかし実際の専門家負荷はゲートの選択、top-k、capacity factor、入力分布によって変動し、論文では同一学習中でも必要専門家 capacityが最大4.38倍変化する。Tutelの中心であるFlexは、MoEパラメータと入力の配置を複数の並列方式で共有できる形へ統一し、テンソル移動なしで並列方式を切り替える。
 <!-- survey:auto:end -->
