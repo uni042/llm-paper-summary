@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7bb53bfb1ca53f9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/1322432.1322433",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/1322432.1322433",
+    "identity_tokens": [
+      "DOI:10.1145/1322432.1322433"
+    ],
+    "reason": "グラフデータベースモデルのサーベイで、LLM推論や分散RL実行を直接対象としない。",
+    "first_checked_at": "2026-10-04T05:28:32+00:00",
+    "last_checked_at": "2026-10-04T05:28:32+00:00",
+    "linked_from": [],
+    "title": "Survey of graph database models"
+  },
+  "processed_at": "2026-10-04T05:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7bb53bfb1ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
