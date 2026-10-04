@@ -1,29 +1,36 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:2603.13605",
+  "citation_count": 1,
+  "citation_count_checked_at": "2026-10-04T11:52:38+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T10:06:28+00:00",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "job_id": "job-research-a0019729a1aa7605",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md",
   "parent_job_id": "job-fedfeb6fc48d7e58",
-  "priority": 0,
+  "priority": 1,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 1,
+    "citations": 1,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 205,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 1
   },
+  "published": "2026-03-13",
   "schema_version": 1,
   "selection_reason": "Agent-serving layer with stage mapping, workflow orchestration, and workflow-boundary KV-state management across heterogeneous models/backends; evaluated for latency/cost and TTFT improvements.",
+  "semantic_scholar_id": "1ec2e677f37b2087e1ec4e80576e2ef7a4803f79",
   "source_url": "https://arxiv.org/abs/2603.13605",
   "status": "ready",
   "title": "Orla: A Library for Serving LLM-Based Multi-Agent Systems",
   "type": "research",
-  "workflow_version": 10
+  "venue": "CAIS",
+  "workflow_version": 10,
+  "year": 2026
 }

@@ -1,6 +1,9 @@
 {
   "artifact_transport": "structured_record_v10",
   "canonical_id": "arXiv:1701.06538",
+  "citation_count": 5780,
+  "citation_count_checked_at": "2026-10-04T12:52:38+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-19T18:10:15+00:00",
   "identifiers": [
@@ -12,23 +15,27 @@
   "openreview_id": "B1ckMDqlg",
   "paper_path": "papers/inference/05-moe/2017-1701.06538-sparsely-gated-moe.md",
   "parent_job_id": "job-57fc64f1296249ae",
-  "priority": 0,
+  "priority": 5790,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 5780,
+    "citations": 5780,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 3541,
     "is_fresh": false,
-    "matched_prestigious_venue": null,
+    "matched_prestigious_venue": "International Conference on Learning Representations",
     "policy": "candidate-priority-v1",
-    "prestigious_venue": 0,
-    "total": 0
+    "prestigious_venue": 10,
+    "total": 5790
   },
+  "published": "2017-01-23",
   "schema_version": 1,
   "selection_reason": "Seminal sparse-MoE foundation repeatedly cited across the repository; worthwhile older omission because it defines the conditional-computation lineage underlying modern MoE systems.",
+  "semantic_scholar_id": "510e26733aaff585d65701b9f1be7ca9d5afc586",
   "source_url": "https://arxiv.org/abs/1701.06538",
   "status": "ready",
   "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
   "type": "research",
-  "workflow_version": 10
+  "venue": "International Conference on Learning Representations",
+  "workflow_version": 10,
+  "year": 2017
 }
