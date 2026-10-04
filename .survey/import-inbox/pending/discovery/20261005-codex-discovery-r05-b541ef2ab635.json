@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261005-codex-discovery-r05",
+  "reference_main_sha": "f707415ff40891087f0d47e1432252de12be19b6",
+  "record_count": 3,
+  "records": [
+    {
+      "rank": 4,
+      "canonical_id": "DOI:10.3115/v1/p14-5010",
+      "identity_tokens": [
+        "id:DOI:10.3115/v1/p14-5010",
+        "url:https://doi.org/10.3115/v1/P14-5010"
+      ],
+      "title": "The Stanford CoreNLP Natural Language Processing Toolkit",
+      "classification": "unrelated",
+      "reason": "The primary paper describes an extensible pipeline for core natural-language analysis, including tokenization, tagging, parsing, and coreference. It is a general NLP toolkit paper and presents no LLM inference/serving system or inference-time compression/efficiency contribution. A toolkit or neural NLP component alone is outside the stated scope.",
+      "source_url": "https://doi.org/10.3115/v1/P14-5010",
+      "body_check": "Primary ACL Anthology metadata and PDF abstract checked. The abstract characterizes CoreNLP as an extensible pipeline for core natural-language analysis; the introduction enumerates standard analysis components. The paper is about toolkit design and use, not LLM inference or efficiency. Abstract-level evidence is sufficient for this clear exclusion; full text was not reviewed.",
+      "source_evidence": [
+        "https://aclanthology.org/P14-5010/",
+        "https://aclanthology.org/P14-5010.pdf"
+      ],
+      "first_checked_at": "2026-10-05T07:01:58+09:00",
+      "last_checked_at": "2026-10-05T07:01:58+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "rank": 6,
+      "canonical_id": "DOI:10.3115/981623.981633",
+      "identity_tokens": [
+        "id:DOI:10.3115/981623.981633",
+        "url:https://doi.org/10.3115/981623.981633"
+      ],
+      "title": "Word Association Norms, Mutual Information, and Lexicography",
+      "classification": "unrelated",
+      "reason": "The primary abstract proposes mutual-information-based estimates of word association norms from corpora, with applications in lexicography and other language-processing tasks. Although one listed application is constraining language models for speech recognition/OCR, the contribution is a corpus-derived lexical statistic, not an LLM inference/serving technique or an inference-efficiency method. Mentioning a language-model application does not make it in scope.",
+      "source_url": "https://doi.org/10.3115/981623.981633",
+      "body_check": "Primary ACL Anthology record and PDF abstract checked. The DOI in the brief resolves via the Anthology record to P89-1010, with matching title and authors; the supplied 981623.981633-style Anthology URL was not the current canonical path. The abstract defines an information-theoretic measure to estimate word-association norms from text corpora and lists applications including language-model constraints for speech recognition/OCR, parsing, retrieval, and lexicography. No LLM inference, serving, or efficiency contribution is claimed. Abstract-only evidence is sufficient for this clear exclusion; full text was not reviewed.",
+      "source_evidence": [
+        "https://aclanthology.org/P89-1010/",
+        "https://aclanthology.org/P89-1010.pdf",
+        "https://doi.org/10.3115/981623.981633"
+      ],
+      "first_checked_at": "2026-10-05T07:01:58+09:00",
+      "last_checked_at": "2026-10-05T07:01:58+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "rank": 7,
+      "canonical_id": "DOI:10.18653/v1/n16-1174",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/n16-1174",
+        "url:https://doi.org/10.18653/v1/N16-1174"
+      ],
+      "title": "Hierarchical Attention Networks for Document Classification",
+      "classification": "unrelated",
+      "reason": "The primary abstract describes a hierarchical neural architecture with word- and sentence-level attention for document classification, evaluated on six text-classification tasks. It reports task-performance improvements, not an LLM inference/serving system or inference-time efficiency/compression contribution. A general neural NLP architecture alone is outside the stated scope.",
+      "source_url": "https://doi.org/10.18653/v1/N16-1174",
+      "body_check": "Primary ACL Anthology metadata and PDF abstract checked. The abstract and introduction identify the contribution as a document-classification model with hierarchical structure and two attention levels, evaluated on six text-classification tasks. No inference/serving optimization is claimed. Abstract-only evidence is sufficient for this clear exclusion; full text was not reviewed.",
+      "source_evidence": [
+        "https://aclanthology.org/N16-1174/",
+        "https://aclanthology.org/N16-1174.pdf"
+      ],
+      "first_checked_at": "2026-10-05T07:01:58+09:00",
+      "last_checked_at": "2026-10-05T07:01:58+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
