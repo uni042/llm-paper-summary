@@ -1,0 +1,609 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1347bc8503d88378-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1347bc8503d8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.11552",
+    "arXiv:2606.15652",
+    "arXiv:2607.09153",
+    "arXiv:2607.16326",
+    "arXiv:2607.23765",
+    "arXiv:2608.09444",
+    "arXiv:2609.07966"
+  ],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e48029682c9c1e5a9d248c1c084f9f8264aea5a4",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T18:59:52.766626+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.11552",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.15652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.09153",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.16326",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23765",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.09444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.07966",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.07966"
+    }
+  ],
+  "results": [
+    {
+      "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2607.09153",
+      "year": 2026,
+      "published": "2026-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Process Reward Models (PRMs) have been proven to be highly effective in guiding test-time scaling (TTS) methods, which significantly boost the capabilities of LLM-based multi-agent systems. However, existing PRMs are text-based: they re-encode the entire trajectory text from scratch. In long multi-agent rollouts, the scoring cost, growing quadratically with respect to sequence length L, creates a severe computational bottleneck, severely limiting PRMs'application in long-context scenarios. To resolve this, we introduce KV-PRM, a highly efficient process reward model that eliminates the heavy text re-encoding by directly reading the KV cache produced naturally during the LLM's generation phase. By processing a single\"verify token\"against the pre-existing KV cache, KV-PRM reduces the scoring cost from O(L^2) to O(L). We formally prove that the KV cache contains strictly greater information capacity than text, and is more efficient for downstream reward modeling. Empirically, across the MATH, GSM8K, and AIME benchmarks, KV-PRM matches or strictly outperforms text-PRMs under various TTS methods such as Beam Search, MCTS, and Weighted Voting, with up to a 5,000x reduction in scoring FLOPs, a 37x reduction in latency, and a 34x reduction in per-sequence memory footprint compared to text-based PRMs.",
+      "identifiers": [
+        "SemanticScholar:431f81e9621ffaea17639ecc30a10311ebb53a2e"
+      ],
+      "semantic_scholar_id": "431f81e9621ffaea17639ecc30a10311ebb53a2e",
+      "canonical_id": "arXiv:2607.09153",
+      "arxiv_id": "2607.09153",
+      "doi": "10.48550/arXiv.2607.09153",
+      "authors": [
+        "Peng Kuang",
+        "Hai-Bo Jin",
+        "Xiao Han",
+        "Yanlin Wang",
+        "Xiao-Peng Yuan",
+        "Ye Yu",
+        "Kaidi Xu",
+        "Hao-Han Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "freshness_age_days": 86,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching",
+      "source_url": "https://arxiv.org/abs/2608.09444",
+      "year": 2026,
+      "published": "2026-08-10",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A main promise of looped language models is depth-adaptive inference. By looping a block of shared layers a variable number of times, the model can use less compute for\"easy\"tokens and more for\"hard\"ones. However, tokens with different numbers of loops cannot share a uniform forward pass and therefore cannot be handled by standard batching systems such as vLLM. The practical value of depth-adaptive inference thus hinges on whether batching can be made efficient. We introduce the first efficient method for depth-adaptive looped LMs via continuous depth batching (CDB), which forms new batches between loop steps. Our method dynamically schedules looped and non-looped parts of the architecture, manages looped KV-caching, and predicts which tokens will exit the loop in advance so it can prepare batches asynchronously. Experiments on Ouro 1.4B and Huginn 3.5B show that fully looped architectures are best suited to depth-adaptive inference, as large non-looped layers outside the recurrent core (e.g., token embedding, LM head, and unshared transformer blocks) slow down and complicate scheduling. Overall, CDB realizes up to 99% of the estimated maximum speedup available, leaving further gains primarily dependent on model architecture and exit behavior.",
+      "identifiers": [
+        "SemanticScholar:d2583ba90f41cf3b8efc8ab7008eb81fba3639b9"
+      ],
+      "semantic_scholar_id": "d2583ba90f41cf3b8efc8ab7008eb81fba3639b9",
+      "canonical_id": "arXiv:2608.09444",
+      "arxiv_id": "2608.09444",
+      "authors": [
+        "Kristian Schwethelm",
+        "D. Rueckert",
+        "G. Kaissis"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Teaching Diffusion to Speculate Left-to-Right",
+      "source_url": "https://arxiv.org/abs/2606.11552",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve remarkable performance across a wide range of tasks, but their autoregressive decoding process incurs substantial inference costs due to inherently sequential token generation. Speculative decoding addresses this bottleneck by employing a lightweight draft model to propose multiple future tokens that are subsequently verified in parallel by a larger target model. Recent work has demonstrated that diffusion language models are well suited for this setting, as they can generate entire blocks of draft tokens in parallel and thereby alleviate the sequential constraints of autoregressive drafting. A subtlety of this regime is that block-diffusion drafters generate tokens bidirectionally within a block, whereas verification is performed by an autoregressive target model that evaluates tokens in a strictly left-to-right manner, leaving a gap between the symmetric training-time objective and the asymmetric verification-time reward. In this work, we offer an empirical analysis of three training-time interventions that narrow this gap: token positional weighting, a first-error focal loss that targets the position that breaks the accepted prefix within each block, and a chain loss term that substitutes a differentiable surrogate for the expected accepted length. The three interventions act along orthogonal axes (position, block-conditional first error, joint prefix) and compose additively; they are likewise orthogonal to test-time alignment mechanisms such as multi-draft self-selection, with which they can in principle be combined. Across four target models and six reasoning, code, and dialogue benchmarks, the three interventions raise accepted draft length by 21-76% per benchmark over a position-uniform baseline, without adding additional forward passes and without changing the inference pipeline or the rejection-sampling exactness contract.",
+      "identifiers": [
+        "SemanticScholar:faef08f2405ca81f6be29fd345ceffff145a5cc2"
+      ],
+      "semantic_scholar_id": "faef08f2405ca81f6be29fd345ceffff145a5cc2",
+      "canonical_id": "arXiv:2606.11552",
+      "arxiv_id": "2606.11552",
+      "doi": "10.48550/arXiv.2606.11552",
+      "authors": [
+        "L. Whalen",
+        "Yuki Ito",
+        "Ryo Sakamoto"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MosaicQuant: Inlier-Outlier Disaggregation for Unified 4-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2606.15652",
+      "year": 2026,
+      "published": "2026-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "4-bit quantization significantly reduces the memory footprint and accelerates the inference of large language models (LLMs). However, its limited bit-width representation struggles to faithfully capture both dense common values (\\emph{inliers}) and rare large-magnitude values (\\emph{outliers}), causing substantial accuracy degradation. Existing mixed-precision methods mitigate this by retaining outliers in high precision, but at the cost of breaking the uniformity of low-bit execution, introducing precision conversion and extra data movement that undermine practical speedup. We propose \\textbf{MosaicQuant}, a unified 4-bit LLM quantization paradigm built on a novel principle of \\emph{inlier--outlier disaggregation}. Rather than elevating outlier precision, MosaicQuant quantizes the full weight matrix into a dense 4-bit base component, where inliers are captured faithfully while outlier are inevitably quantized. A sparse 4-bit residual component is then introduced to compensate for these quantization errors, selectively targeting the most error-critical weight blocks where output distortion is shown to be concentrated. However, a unified representation alone is insufficient, as na\\\"ively executing the sparse residual as a separate kernel still breaks the unified low-bit inference pipeline. To bridge this gap, we introduce \\textbf{ZipperEngine}, which fuses sparse block computation into the dense 4-bit GEMM kernel via an overlapped pipeline, unifying not only the representation but also the execution into a single coherent low-bit inference pipeline. Extensive experiments on LLaMA3 and Qwen3 demonstrate that MosaicQuant preserves near-FP16 accuracy while achieving up to $1.24\\times$ speedup over the W16A16 baseline.",
+      "identifiers": [
+        "SemanticScholar:eefc0bade8ebf89c718fb7114a77a92909e79b5d"
+      ],
+      "semantic_scholar_id": "eefc0bade8ebf89c718fb7114a77a92909e79b5d",
+      "canonical_id": "arXiv:2606.15652",
+      "arxiv_id": "2606.15652",
+      "doi": "10.48550/arXiv.2606.15652",
+      "authors": [
+        "Yang Hu",
+        "Hao-Dong Wang",
+        "Zi-Cong Hong",
+        "Qian-Li Liu",
+        "Quan-Xin Shou",
+        "Jiangnnan Lin",
+        "Song Guo",
+        "Xiao-Wei Shen",
+        "Xiangjun Huang",
+        "Dian Wang",
+        "Jian Yang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CRISP: Pre-LLM Yet Text-Driven Visual Token Pruning for Efficient LVLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.16326",
+      "year": 2026,
+      "published": "2026-07-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) typically require processing hundreds to thousands of visual tokens, leading to substantial inference overhead. Existing visual token pruning methods either operate before the LLM using text-agnostic heuristics or prune inside the LLM at the cost of efficiency and noisy cross-modal attention. To address these limitations, we propose CRISP, a pre-LLM yet text-driven visual token pruning framework that preserves both instruction-relevant evidence and essential scene context. CRISP works in a two-stage pipeline: Stage 1 first identifies text-aligned visual tokens, and Stage 2 enhances contextual completeness through semantic diversity. Extensive experiments on LLaVA-1.5 and LLaVA-NeXT demonstrate that CRISP achieves superior performance retention under aggressive pruning ratios, maintaining up to 99.5% accuracy while reducing inference cost and latency by more than 2 times. CRISP serves as a practical solution for efficient LVLM inference, especially in resource-constrained scenarios.",
+      "identifiers": [
+        "SemanticScholar:400c7e5ba126c06b0a2eebf64e09ab0f20418341"
+      ],
+      "semantic_scholar_id": "400c7e5ba126c06b0a2eebf64e09ab0f20418341",
+      "canonical_id": "arXiv:2607.16326",
+      "arxiv_id": "2607.16326",
+      "doi": "10.48550/arXiv.2607.16326",
+      "authors": [
+        "Xu Li",
+        "Yi Zheng",
+        "Meng-Yang Zhao",
+        "Yuxuan Liang",
+        "Zhe Liu",
+        "Rui Zhu",
+        "Xiao-Lei Chen",
+        "Wei Zhou",
+        "Bao-Quan Zhao",
+        "Jun-Cen Guo"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 81,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+      "source_url": "https://arxiv.org/abs/2607.23765",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve impressive performance across multiple domains, but using the most capable model for every query is prohibitive at scale. LLM routing exploits diversity in model capability and cost by assigning each query to a suitable model to balance utility and budget. Current methods have two limitations: (i) they either use heuristics that do not always enforce the budget constraint or impose a fixed per-query budget that cannot adapt across the workload and leads to suboptimal performance; (ii) they require supervised learning on a dense dataset with statistics for every query-model pair, which is expensive to collect. To address these challenges, we formulate LLM routing as a constrained contextual multi-armed bandit problem and introduce WISERouter (WR for short), a framework that supports offline learning from historical interactions as well as online learning with exploration. We further prove that WR-Online achieves a sublinear regret bound of $O(\\sqrt{T})$ over a time horizon $T$. Empirical results on RouterBench and SWE-Bench demonstrate that (i) WR-Offline surpasses existing baselines in performance under a fixed budget and adheres more closely to budget constraints, and (ii) WR-Online achieves comparable performance to the baselines, while using substantially less exploration data.",
+      "identifiers": [
+        "SemanticScholar:c64ba56614d1843f83a89a485fd98c58e204b74b"
+      ],
+      "semantic_scholar_id": "c64ba56614d1843f83a89a485fd98c58e204b74b",
+      "canonical_id": "arXiv:2607.23765",
+      "arxiv_id": "2607.23765",
+      "doi": "10.48550/arXiv.2607.23765",
+      "authors": [
+        "Yi-Fei Li",
+        "Zi-Hui Gao",
+        "L. Lakshmanan"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 70,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.09153",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.09153",
+        "id:SemanticScholar:431f81e9621ffaea17639ecc30a10311ebb53a2e",
+        "id:arXiv:2607.09153",
+        "title:kvprm efficient process reward modeling via kvcache transfer for multiagent testtime scaling",
+        "url:https://arxiv.org/abs/2607.09153"
+      ],
+      "record": {
+        "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+        "source_url": "https://arxiv.org/abs/2607.09153",
+        "year": 2026,
+        "published": "2026-07-10",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Process Reward Models (PRMs) have been proven to be highly effective in guiding test-time scaling (TTS) methods, which significantly boost the capabilities of LLM-based multi-agent systems. However, existing PRMs are text-based: they re-encode the entire trajectory text from scratch. In long multi-agent rollouts, the scoring cost, growing quadratically with respect to sequence length L, creates a severe computational bottleneck, severely limiting PRMs'application in long-context scenarios. To resolve this, we introduce KV-PRM, a highly efficient process reward model that eliminates the heavy text re-encoding by directly reading the KV cache produced naturally during the LLM's generation phase. By processing a single\"verify token\"against the pre-existing KV cache, KV-PRM reduces the scoring cost from O(L^2) to O(L). We formally prove that the KV cache contains strictly greater information capacity than text, and is more efficient for downstream reward modeling. Empirically, across the MATH, GSM8K, and AIME benchmarks, KV-PRM matches or strictly outperforms text-PRMs under various TTS methods such as Beam Search, MCTS, and Weighted Voting, with up to a 5,000x reduction in scoring FLOPs, a 37x reduction in latency, and a 34x reduction in per-sequence memory footprint compared to text-based PRMs.",
+        "identifiers": [
+          "SemanticScholar:431f81e9621ffaea17639ecc30a10311ebb53a2e"
+        ],
+        "semantic_scholar_id": "431f81e9621ffaea17639ecc30a10311ebb53a2e",
+        "canonical_id": "arXiv:2607.09153",
+        "arxiv_id": "2607.09153",
+        "doi": "10.48550/arXiv.2607.09153",
+        "authors": [
+          "Peng Kuang",
+          "Hai-Bo Jin",
+          "Xiao Han",
+          "Yanlin Wang",
+          "Xiao-Peng Yuan",
+          "Ye Yu",
+          "Kaidi Xu",
+          "Hao-Han Wang"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "freshness_age_days": 86,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09444",
+      "identity_tokens": [
+        "id:SemanticScholar:d2583ba90f41cf3b8efc8ab7008eb81fba3639b9",
+        "id:arXiv:2608.09444",
+        "title:depthadaptive inference of looped language models via continuous depth batching",
+        "url:https://arxiv.org/abs/2608.09444"
+      ],
+      "record": {
+        "title": "Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching",
+        "source_url": "https://arxiv.org/abs/2608.09444",
+        "year": 2026,
+        "published": "2026-08-10",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A main promise of looped language models is depth-adaptive inference. By looping a block of shared layers a variable number of times, the model can use less compute for\"easy\"tokens and more for\"hard\"ones. However, tokens with different numbers of loops cannot share a uniform forward pass and therefore cannot be handled by standard batching systems such as vLLM. The practical value of depth-adaptive inference thus hinges on whether batching can be made efficient. We introduce the first efficient method for depth-adaptive looped LMs via continuous depth batching (CDB), which forms new batches between loop steps. Our method dynamically schedules looped and non-looped parts of the architecture, manages looped KV-caching, and predicts which tokens will exit the loop in advance so it can prepare batches asynchronously. Experiments on Ouro 1.4B and Huginn 3.5B show that fully looped architectures are best suited to depth-adaptive inference, as large non-looped layers outside the recurrent core (e.g., token embedding, LM head, and unshared transformer blocks) slow down and complicate scheduling. Overall, CDB realizes up to 99% of the estimated maximum speedup available, leaving further gains primarily dependent on model architecture and exit behavior.",
+        "identifiers": [
+          "SemanticScholar:d2583ba90f41cf3b8efc8ab7008eb81fba3639b9"
+        ],
+        "semantic_scholar_id": "d2583ba90f41cf3b8efc8ab7008eb81fba3639b9",
+        "canonical_id": "arXiv:2608.09444",
+        "arxiv_id": "2608.09444",
+        "authors": [
+          "Kristian Schwethelm",
+          "D. Rueckert",
+          "G. Kaissis"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11552",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.11552",
+        "id:SemanticScholar:faef08f2405ca81f6be29fd345ceffff145a5cc2",
+        "id:arXiv:2606.11552",
+        "title:teaching diffusion to speculate lefttoright",
+        "url:https://arxiv.org/abs/2606.11552"
+      ],
+      "record": {
+        "title": "Teaching Diffusion to Speculate Left-to-Right",
+        "source_url": "https://arxiv.org/abs/2606.11552",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve remarkable performance across a wide range of tasks, but their autoregressive decoding process incurs substantial inference costs due to inherently sequential token generation. Speculative decoding addresses this bottleneck by employing a lightweight draft model to propose multiple future tokens that are subsequently verified in parallel by a larger target model. Recent work has demonstrated that diffusion language models are well suited for this setting, as they can generate entire blocks of draft tokens in parallel and thereby alleviate the sequential constraints of autoregressive drafting. A subtlety of this regime is that block-diffusion drafters generate tokens bidirectionally within a block, whereas verification is performed by an autoregressive target model that evaluates tokens in a strictly left-to-right manner, leaving a gap between the symmetric training-time objective and the asymmetric verification-time reward. In this work, we offer an empirical analysis of three training-time interventions that narrow this gap: token positional weighting, a first-error focal loss that targets the position that breaks the accepted prefix within each block, and a chain loss term that substitutes a differentiable surrogate for the expected accepted length. The three interventions act along orthogonal axes (position, block-conditional first error, joint prefix) and compose additively; they are likewise orthogonal to test-time alignment mechanisms such as multi-draft self-selection, with which they can in principle be combined. Across four target models and six reasoning, code, and dialogue benchmarks, the three interventions raise accepted draft length by 21-76% per benchmark over a position-uniform baseline, without adding additional forward passes and without changing the inference pipeline or the rejection-sampling exactness contract.",
+        "identifiers": [
+          "SemanticScholar:faef08f2405ca81f6be29fd345ceffff145a5cc2"
+        ],
+        "semantic_scholar_id": "faef08f2405ca81f6be29fd345ceffff145a5cc2",
+        "canonical_id": "arXiv:2606.11552",
+        "arxiv_id": "2606.11552",
+        "doi": "10.48550/arXiv.2606.11552",
+        "authors": [
+          "L. Whalen",
+          "Yuki Ito",
+          "Ryo Sakamoto"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "freshness_age_days": 116,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.15652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.15652",
+        "id:SemanticScholar:eefc0bade8ebf89c718fb7114a77a92909e79b5d",
+        "id:arXiv:2606.15652",
+        "title:mosaicquant inlieroutlier disaggregation for unified 4bit llm quantization",
+        "url:https://arxiv.org/abs/2606.15652"
+      ],
+      "record": {
+        "title": "MosaicQuant: Inlier-Outlier Disaggregation for Unified 4-Bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2606.15652",
+        "year": 2026,
+        "published": "2026-06-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "4-bit quantization significantly reduces the memory footprint and accelerates the inference of large language models (LLMs). However, its limited bit-width representation struggles to faithfully capture both dense common values (\\emph{inliers}) and rare large-magnitude values (\\emph{outliers}), causing substantial accuracy degradation. Existing mixed-precision methods mitigate this by retaining outliers in high precision, but at the cost of breaking the uniformity of low-bit execution, introducing precision conversion and extra data movement that undermine practical speedup. We propose \\textbf{MosaicQuant}, a unified 4-bit LLM quantization paradigm built on a novel principle of \\emph{inlier--outlier disaggregation}. Rather than elevating outlier precision, MosaicQuant quantizes the full weight matrix into a dense 4-bit base component, where inliers are captured faithfully while outlier are inevitably quantized. A sparse 4-bit residual component is then introduced to compensate for these quantization errors, selectively targeting the most error-critical weight blocks where output distortion is shown to be concentrated. However, a unified representation alone is insufficient, as na\\\"ively executing the sparse residual as a separate kernel still breaks the unified low-bit inference pipeline. To bridge this gap, we introduce \\textbf{ZipperEngine}, which fuses sparse block computation into the dense 4-bit GEMM kernel via an overlapped pipeline, unifying not only the representation but also the execution into a single coherent low-bit inference pipeline. Extensive experiments on LLaMA3 and Qwen3 demonstrate that MosaicQuant preserves near-FP16 accuracy while achieving up to $1.24\\times$ speedup over the W16A16 baseline.",
+        "identifiers": [
+          "SemanticScholar:eefc0bade8ebf89c718fb7114a77a92909e79b5d"
+        ],
+        "semantic_scholar_id": "eefc0bade8ebf89c718fb7114a77a92909e79b5d",
+        "canonical_id": "arXiv:2606.15652",
+        "arxiv_id": "2606.15652",
+        "doi": "10.48550/arXiv.2606.15652",
+        "authors": [
+          "Yang Hu",
+          "Hao-Dong Wang",
+          "Zi-Cong Hong",
+          "Qian-Li Liu",
+          "Quan-Xin Shou",
+          "Jiangnnan Lin",
+          "Song Guo",
+          "Xiao-Wei Shen",
+          "Xiangjun Huang",
+          "Dian Wang",
+          "Jian Yang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16326",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.16326",
+        "id:SemanticScholar:400c7e5ba126c06b0a2eebf64e09ab0f20418341",
+        "id:arXiv:2607.16326",
+        "title:crisp prellm yet textdriven visual token pruning for efficient lvlm inference",
+        "url:https://arxiv.org/abs/2607.16326"
+      ],
+      "record": {
+        "title": "CRISP: Pre-LLM Yet Text-Driven Visual Token Pruning for Efficient LVLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.16326",
+        "year": 2026,
+        "published": "2026-07-15",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) typically require processing hundreds to thousands of visual tokens, leading to substantial inference overhead. Existing visual token pruning methods either operate before the LLM using text-agnostic heuristics or prune inside the LLM at the cost of efficiency and noisy cross-modal attention. To address these limitations, we propose CRISP, a pre-LLM yet text-driven visual token pruning framework that preserves both instruction-relevant evidence and essential scene context. CRISP works in a two-stage pipeline: Stage 1 first identifies text-aligned visual tokens, and Stage 2 enhances contextual completeness through semantic diversity. Extensive experiments on LLaVA-1.5 and LLaVA-NeXT demonstrate that CRISP achieves superior performance retention under aggressive pruning ratios, maintaining up to 99.5% accuracy while reducing inference cost and latency by more than 2 times. CRISP serves as a practical solution for efficient LVLM inference, especially in resource-constrained scenarios.",
+        "identifiers": [
+          "SemanticScholar:400c7e5ba126c06b0a2eebf64e09ab0f20418341"
+        ],
+        "semantic_scholar_id": "400c7e5ba126c06b0a2eebf64e09ab0f20418341",
+        "canonical_id": "arXiv:2607.16326",
+        "arxiv_id": "2607.16326",
+        "doi": "10.48550/arXiv.2607.16326",
+        "authors": [
+          "Xu Li",
+          "Yi Zheng",
+          "Meng-Yang Zhao",
+          "Yuxuan Liang",
+          "Zhe Liu",
+          "Rui Zhu",
+          "Xiao-Lei Chen",
+          "Wei Zhou",
+          "Bao-Quan Zhao",
+          "Jun-Cen Guo"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "freshness_age_days": 81,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23765",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.23765",
+        "id:SemanticScholar:c64ba56614d1843f83a89a485fd98c58e204b74b",
+        "id:arXiv:2607.23765",
+        "title:wiserouter llm routing with workload budget constraint",
+        "url:https://arxiv.org/abs/2607.23765"
+      ],
+      "record": {
+        "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+        "source_url": "https://arxiv.org/abs/2607.23765",
+        "year": 2026,
+        "published": "2026-07-26",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve impressive performance across multiple domains, but using the most capable model for every query is prohibitive at scale. LLM routing exploits diversity in model capability and cost by assigning each query to a suitable model to balance utility and budget. Current methods have two limitations: (i) they either use heuristics that do not always enforce the budget constraint or impose a fixed per-query budget that cannot adapt across the workload and leads to suboptimal performance; (ii) they require supervised learning on a dense dataset with statistics for every query-model pair, which is expensive to collect. To address these challenges, we formulate LLM routing as a constrained contextual multi-armed bandit problem and introduce WISERouter (WR for short), a framework that supports offline learning from historical interactions as well as online learning with exploration. We further prove that WR-Online achieves a sublinear regret bound of $O(\\sqrt{T})$ over a time horizon $T$. Empirical results on RouterBench and SWE-Bench demonstrate that (i) WR-Offline surpasses existing baselines in performance under a fixed budget and adheres more closely to budget constraints, and (ii) WR-Online achieves comparable performance to the baselines, while using substantially less exploration data.",
+        "identifiers": [
+          "SemanticScholar:c64ba56614d1843f83a89a485fd98c58e204b74b"
+        ],
+        "semantic_scholar_id": "c64ba56614d1843f83a89a485fd98c58e204b74b",
+        "canonical_id": "arXiv:2607.23765",
+        "arxiv_id": "2607.23765",
+        "doi": "10.48550/arXiv.2607.23765",
+        "authors": [
+          "Yi-Fei Li",
+          "Zi-Hui Gao",
+          "L. Lakshmanan"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "freshness_age_days": 70,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7ce83cafc67ab3de1ec4212d7693d1228b6a4c32e4e4b076d04c825fe8cd7a51",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
