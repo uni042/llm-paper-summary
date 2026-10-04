@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:47:25+00:00",
-  "record_count": 1419,
+  "updated_at": "2026-10-04T22:50:52+00:00",
+  "record_count": 1423,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -2026,9 +2026,9 @@
         "DOI:10.48550/arxiv.2212.08073",
         "arXiv:2212.08073"
       ],
-      "reason": "一次資料PDF本文を確認したが、主貢献はデータセット、能力、整合、モデル品質等で現行LLMシステム最適化への直接寄与がない。",
+      "reason": "原則リストに基づく自己批評・改訂の教師あり学習とAI feedbackによる強化学習でharmless assistantを訓練するアラインメント研究。推論システム効率化ではない。",
       "first_checked_at": "2026-09-27T07:31:21+09:00",
-      "last_checked_at": "2026-09-30T09:50:06+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 311"
       ],
@@ -3414,9 +3414,9 @@
       "identity_tokens": [
         "arXiv:2203.02155"
       ],
-      "reason": "supervised fine-tuningとRLHFでinstruction followingを改善するalignment training研究で、推論system効率化を主目的としない。",
+      "reason": "人手デモと出力順位を用いた教師あり微調整・RLHFでGPT-3をInstructGPTへ整合する学習研究。人間選好、truthfulness、toxicityを評価し、推論実行効率の最適化は扱わない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5163,9 +5163,9 @@
       "identity_tokens": [
         "arXiv:1706.03762"
       ],
-      "reason": "1. **Attention Is All You Need** — `arXiv:1706.03762` ([paper](https://arxiv.org/abs/1706.03762)). Foundational Transformer architecture; no target LLM systems optimization evaluation.",
+      "reason": "再帰・畳み込みを排して自己注意中心のTransformerアーキテクチャを提案し、機械翻訳品質と学習並列性・学習時間を評価する基盤モデル構造研究。現代LLM推論の基礎だが、推論ランタイムやサービング効率化を最終適用先としない。",
       "first_checked_at": "2026-09-30T09:49:12+00:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -19253,9 +19253,9 @@
       "identity_tokens": [
         "arXiv:2005.14165"
       ],
-      "reason": "大規模autoregressive language modelのfew-shot/in-context能力とscale効果を評価するmodel scaling/capability研究で、推論runtime・serving最適化方式を提案しない。",
+      "reason": "175B GPT-3を構築し、勾配更新なしのzero/one/few-shot promptingで多数NLPタスクの能力とスケーリングを評価するモデル能力研究。推論効率化・ランタイム最適化を提案しない。",
       "first_checked_at": "2026-10-04T21:40:33+00:00",
-      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [],
       "title": "Language Models are Few-Shot Learners"
     },
@@ -19416,9 +19416,9 @@
       "identity_tokens": [
         "arXiv:2107.00652"
       ],
-      "reason": "cross-shaped window self-attentionでvision backboneの計算量を抑えつつImageNet/COCO/ADE20K性能を改善するcomputer vision研究で、LLM推論systemを対象としない。",
+      "reason": "cross-shaped window self-attentionと局所位置符号化でVision Transformerの画像分類・物体検出・segmentation性能を改善するvision backbone研究。計算量削減は画像向けでLLM推論systemを最終適用先としない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
@@ -20385,9 +20385,9 @@
         "id:DOI:10.3115/1075812.1075835",
         "url:https://doi.org/10.3115/1075812.1075835"
       ],
-      "reason": "The primary ACL proceedings record and paper abstract describe a syntactic/predicate-argument annotation scheme for the Penn Treebank corpus, including coindexed null elements and semantic-role tags to support parsing evaluation and training. This is a corpus and annotation contribution, not an LLM inference/serving system or an inference-time compression/efficiency technique. Abstract-level exclusion is sufficient for this clear scope mismatch.",
+      "reason": "Penn Treebankのpredicate-argument structure向けsyntactic annotation schemeを定義・実装するcorpus annotation研究。LLM推論system効率化とは対象外。",
       "first_checked_at": "2026-10-04T22:27:12+00:00",
-      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
         "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
@@ -20475,6 +20475,54 @@
         "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
       ],
       "title": "K-BERT: Enabling Language Representation with Knowledge Graph"
+    },
+    "arXiv:2001.08361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2001.08361",
+      "identity_tokens": [
+        "arXiv:2001.08361"
+      ],
+      "reason": "モデルサイズ・データ量・学習computeとcross-entropy lossのpower-lawを測り、固定compute予算での最適な学習配分を論じるtraining scaling研究。推論サービング・実行最適化を対象としない。",
+      "first_checked_at": "2026-10-04T22:50:52+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
+      "linked_from": [],
+      "title": "Scaling Laws for Neural Language Models"
+    },
+    "arXiv:2003.03033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.03033",
+      "identity_tokens": [
+        "arXiv:2003.03033"
+      ],
+      "reason": "81本のpruning研究をmeta-analysisしShrinkBenchで一般neural network pruningを標準評価するsurvey/benchmark研究。LLM推論runtimeやLLM配備を最終適用先としない。",
+      "first_checked_at": "2026-10-04T22:50:52+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
+      "linked_from": [],
+      "title": "What is the State of Neural Network Pruning?"
+    },
+    "arXiv:2402.01680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01680",
+      "identity_tokens": [
+        "arXiv:2402.01680"
+      ],
+      "reason": "LLM multi-agent systemの環境、agent profile、communication、能力成長、dataset/benchmarkを整理するsurvey。agent能力・協調が主題で、agentic inference serving/runtime効率化を扱わない。",
+      "first_checked_at": "2026-10-04T22:50:52+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
+      "linked_from": [],
+      "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
+    },
+    "arXiv:2010.11125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11125",
+      "identity_tokens": [
+        "arXiv:2010.11125"
+      ],
+      "reason": "100言語間を直接翻訳するM2M-100のdata mining、dense/sparse capacity scaling、翻訳品質を扱うtraining/model研究。推論runtime・memory・serving最適化を主目的としない。",
+      "first_checked_at": "2026-10-04T22:50:52+00:00",
+      "last_checked_at": "2026-10-04T22:50:52+00:00",
+      "linked_from": [],
+      "title": "Beyond English-Centric Multilingual Machine Translation"
     }
   }
 }

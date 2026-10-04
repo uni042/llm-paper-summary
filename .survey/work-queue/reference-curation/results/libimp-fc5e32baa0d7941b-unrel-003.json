@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc5e32baa0d7941b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.01680",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.01680",
+    "identity_tokens": [
+      "arXiv:2402.01680"
+    ],
+    "reason": "LLM multi-agent systemの環境、agent profile、communication、能力成長、dataset/benchmarkを整理するsurvey。agent能力・協調が主題で、agentic inference serving/runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T22:50:52+00:00",
+    "last_checked_at": "2026-10-04T22:50:52+00:00",
+    "linked_from": [],
+    "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
+  },
+  "processed_at": "2026-10-04T22:50:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc5e32baa0d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

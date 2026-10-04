@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T22:47:25+00:00",
-  "record_count": 459,
+  "updated_at": "2026-10-04T22:50:52+00:00",
+  "record_count": 455,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -124,18 +124,6 @@
       "last_checked_at": "2026-09-19T18:18:00+00:00",
       "linked_from": [],
       "title": "Mistral 7B"
-    },
-    "arXiv:2001.08361": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2001.08361",
-      "identity_tokens": [
-        "arXiv:2001.08361"
-      ],
-      "reason": "Important training-efficiency background, but empirical scaling-law analysis rather than a training systems implementation.",
-      "first_checked_at": "2026-09-19T18:18:00+00:00",
-      "last_checked_at": "2026-09-19T18:18:00+00:00",
-      "linked_from": [],
-      "title": "Scaling Laws for Neural Language Models"
     },
     "arXiv:2508.10925": {
       "classification": "borderline",
@@ -6455,40 +6443,6 @@
       ],
       "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions"
     },
-    "arXiv:2003.03033": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2003.03033",
-      "identity_tokens": [
-        "arXiv:2003.03033"
-      ],
-      "reason": "本文はpruningを推論時のネットワーク規模・計算量削減として明示し、サイズ/速度と精度のtradeoffを扱うため、inference-time compressionとしては範囲に直接関係する。一方、81論文のsurveyとShrinkBenchの評価は主にCNN/ResNet/VGG、ImageNet/CIFAR等を対象とし、LLMやLLM servingへの適用・測定を示さない。LLM推論に限定するscopeへ含めるかは根拠だけで確定できないためborderlineとしてroot判断に保留する。",
-      "first_checked_at": "2026-10-04T21:51:06+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
-      "linked_from": [
-        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
-      ],
-      "title": "What is the State of Neural Network Pruning?"
-    },
-    "arXiv:2402.01680": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2402.01680",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2402.01680",
-        "arXiv:2402.01680"
-      ],
-      "reason": "arXiv一次資料の書誌とabstractを確認。LLM-based multi-agent systemsとその課題を対象とするためLLM推論に接点はあるが、abstractが主に扱うのはagentの領域・環境・profile・communication・能力向上機構・benchmarkで、推論効率やservingを主題とするかは要旨だけでは判別できない。本文確認と対象範囲の判断をroot reviewへ保留する。",
-      "first_checked_at": "2026-10-04T21:51:06+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.00866-mori.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
-      ],
-      "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
-    },
     "arXiv:2305.06983": {
       "classification": "borderline",
       "canonical_id": "arXiv:2305.06983",
@@ -6547,22 +6501,6 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
       ],
       "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement"
-    },
-    "arXiv:2010.11125": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2010.11125",
-      "identity_tokens": [
-        "arXiv:2010.11125",
-        "id:arXiv:2010.11125",
-        "url:https://arxiv.org/abs/2010.11125"
-      ],
-      "reason": "The paper is a many-to-many neural machine-translation system, not an LLM serving or inference-systems paper. Its full text does describe language-specific sparse parameter layers and says they scale model capacity without significantly changing inference time, so there is a weak technical adjacency to sparse inference architectures. The contribution is capacity scaling and translation quality across languages, not LLM inference-time compression or a measured efficiency improvement; it is therefore borderline rather than accepted.",
-      "first_checked_at": "2026-10-04T22:27:12+00:00",
-      "last_checked_at": "2026-10-04T22:27:12+00:00",
-      "linked_from": [
-        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
-      ],
-      "title": "Beyond English-Centric Multilingual Machine Translation"
     },
     "arXiv:2004.02984": {
       "classification": "borderline",
