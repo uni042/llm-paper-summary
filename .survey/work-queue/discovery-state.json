@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-04T05:26:43+00:00",
-  "last_run_key": "library-import-fabf8fdba511",
-  "last_round": "libimp-fabf8fdba511c9a1-pre01",
+  "updated_at": "2026-10-04T05:30:51+00:00",
+  "last_run_key": "library-import-e464c05b0875",
+  "last_round": "libimp-e464c05b08758cd5-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T23:00:00+09:00",
-      "round": "specialist-serving-runtime-5",
-      "axis": "speculative serving・elastic attention/KV scaling・diffusion LLM continuous batching",
-      "query_summary": "GPU/runtimeとcontinuous batching、speculative serving integrationを探索し、実装またはsystem-level evaluationの強い候補を選択。canonical IDを最新default branchへ再照合した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "agentic servingのconversation scheduling・prefix/KV lifetime・tool-call idle interval管理へ移る",
-      "source_submission": "work-queue/submissions/20260919T2324JST-discovery-specialist-serving-runtime-5.json"
-    },
     {
       "run_key": "2026-09-19T23:00:00+09:00",
       "round": "specialist-agent-state-6",
@@ -11473,6 +11455,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-e464c05b08758cd5-pre01",
+      "precheck_request_id": "libimp-e464c05b08758cd5-pre01",
+      "run_key": "library-import-e464c05b0875",
+      "round": "libimp-e464c05b08758cd5-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-e464c05b08758cd5-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-e464c05b08758cd5-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19844,16 +19860,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-fabf8fdba511",
-      "rounds": 82,
-      "candidate_count": 304,
+      "last_run_key": "library-import-e464c05b0875",
+      "rounds": 83,
+      "candidate_count": 307,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 204,
+      "novel_candidate_count": 207,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 201,
-      "accepted_count": 201,
-      "duplicate_ratio": 0.32894736842105265,
-      "final_duplicate_ratio": 0.014705882352941176,
+      "post_final_dedupe_count": 204,
+      "accepted_count": 204,
+      "duplicate_ratio": 0.3257328990228013,
+      "final_duplicate_ratio": 0.014492753623188406,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
