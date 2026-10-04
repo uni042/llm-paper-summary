@@ -32,10 +32,15 @@
   "selection_reason": "注意重みを集中して受けるkey tokenだけをKV cacheへ残し、長文脈生成のKV容量とmemory bandwidthを直接削減するLLM推論最適化方式。",
   "semantic_scholar_id": "4c69d79c0ee7ac964284a75135b317d1ce7fb2d6",
   "source_url": "https://arxiv.org/abs/2403.09054",
-  "status": "ready",
+  "status": "superseded",
   "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
   "type": "research",
   "venue": "Conference on Machine Learning and Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T10:43:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+  "represented_canonical_id": "arXiv:2403.09054",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
