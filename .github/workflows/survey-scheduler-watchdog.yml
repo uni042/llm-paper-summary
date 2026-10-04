@@ -1,0 +1,91 @@
+name: Survey scheduler watchdog
+
+on:
+  # These cron entries are bootstrap/recovery only. Normal cadence is maintained
+  # by the self-chained workflow_dispatch handoff below, so GitHub schedule drops
+  # no longer define the scheduler clock.
+  schedule:
+    - cron: '13,43 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/survey-scheduler-watchdog.yml'
+      - '.github/workflows/survey-orchestrator.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: survey-scheduler-watchdog-main
+  cancel-in-progress: false
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Drive ten-minute scheduler ticks
+        shell: bash
+        run: |
+          set -u
+
+          dispatch_orchestrator_if_idle() {
+            local active
+            active="$(gh run list \
+              --repo "${GITHUB_REPOSITORY}" \
+              --workflow survey-orchestrator.yml \
+              --limit 20 \
+              --json status \
+              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length' \
+              2>/dev/null || true)"
+            if ! [[ "${active:-}" =~ ^[0-9]+$ ]]; then
+              active=0
+            fi
+            if [ "${active}" -gt 0 ]; then
+              echo "survey-orchestrator.yml: already active (${active}); skip duplicate dispatch."
+              return 0
+            fi
+
+            for attempt in 1 2 3; do
+              if gh api \
+                --method POST \
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/survey-orchestrator.yml/dispatches" \
+                -f ref=main; then
+                echo 'Survey orchestrator dispatched.'
+                return 0
+              fi
+              echo "Orchestrator dispatch attempt ${attempt} failed; retrying." >&2
+              sleep $((attempt * 5))
+            done
+            echo 'Could not dispatch survey orchestrator on this tick; the watchdog will retry on the next tick.' >&2
+            return 0
+          }
+
+          for tick in 1 2 3 4 5 6; do
+            echo "Watchdog tick ${tick}/6 at $(date -u +%FT%TZ)"
+            dispatch_orchestrator_if_idle
+            sleep 600
+          done
+
+      - name: Hand off watchdog lease
+        if: ${{ always() && !cancelled() }}
+        shell: bash
+        run: |
+          set -u
+          for attempt in 1 2 3; do
+            if gh api \
+              --method POST \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/survey-scheduler-watchdog.yml/dispatches" \
+              -f ref=main; then
+              echo 'Successor watchdog dispatched.'
+              exit 0
+            fi
+            echo "Watchdog handoff attempt ${attempt} failed; retrying." >&2
+            sleep $((attempt * 5))
+          done
+          echo 'Watchdog handoff failed; bootstrap cron or a workflow-file push will restart the chain.' >&2
+          exit 1
