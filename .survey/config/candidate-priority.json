@@ -54,10 +54,10 @@
     "fresh_ttl_hours": 48,
     "default_ttl_hours": 168,
     "max_lookup_batch": 100,
-    "max_lookup_papers_per_run": 100,
+    "max_lookup_papers_per_run": 200,
     "request_spacing_seconds": 2,
     "failure_ttl_hours": 168,
-    "rate_limit_retries_per_request": 0,
+    "rate_limit_retries_per_request": 2,
     "provider_timeout_seconds": 10
   },
   "fallback_priority": 0
