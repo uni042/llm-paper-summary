@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-04T13:05:49+00:00",
-  "last_run_key": "library-import-ab32ed1121ff",
-  "last_round": "libimp-ab32ed1121ffd991-pre01",
+  "updated_at": "2026-10-04T14:28:59+00:00",
+  "last_run_key": "library-import-df09b1d3b795",
+  "last_round": "libimp-df09b1d3b79527ac-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,28 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-20T01:01:07+09:00",
-      "round": "specialist-recent-memory-serving-01",
-      "axis": "recent heterogeneous KV memory pooling and robust KV reservation",
-      "query_summary": "SwiftCache, CrossPool, and robust KV reservation were found via recent primary arXiv search; mandatory authoritative precheck removed all three as already represented in canonical retrieval identities.",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2606.24506",
-        "arXiv:2607.16892"
-      ],
-      "next_axis_hint": "Switch to operator-level energy-aware serving and CUDA-VMM elastic KV reclamation, then NVMe-direct/flash-centric inference.",
-      "source_submission": "work-queue/submissions/20260920T0110JST-discovery-specialist-recent-memory-serving-01.json"
-    },
     {
       "run_key": "2026-09-20T01:01:07+09:00",
       "round": "specialist-energy-disagg-02",
@@ -11654,6 +11632,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-df09b1d3b79527ac-pre01",
+      "precheck_request_id": "libimp-df09b1d3b79527ac-pre01",
+      "run_key": "library-import-df09b1d3b795",
+      "round": "libimp-df09b1d3b79527ac-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-df09b1d3b79527ac-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-df09b1d3b79527ac-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20025,16 +20037,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-ab32ed1121ff",
-      "rounds": 94,
-      "candidate_count": 330,
+      "last_run_key": "library-import-df09b1d3b795",
+      "rounds": 95,
+      "candidate_count": 331,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 230,
+      "novel_candidate_count": 231,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 227,
-      "accepted_count": 227,
-      "duplicate_ratio": 0.30303030303030304,
-      "final_duplicate_ratio": 0.013043478260869565,
+      "post_final_dedupe_count": 228,
+      "accepted_count": 228,
+      "duplicate_ratio": 0.3021148036253776,
+      "final_duplicate_ratio": 0.012987012987012988,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
