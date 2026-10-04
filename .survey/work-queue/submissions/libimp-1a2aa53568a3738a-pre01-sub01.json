@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reducing Transformer Depth on Demand with Structured Dropout",
+      "source_url": "https://arxiv.org/abs/1909.11556",
+      "year": 2019,
+      "published": "2019-09-25",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 756,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Overparameterized transformer networks have obtained state of the art results in various natural language processing tasks, such as machine translation, language modeling, and question answering. These models contain hundreds of millions of parameters, necessitating a large amount of computation and making them prone to overfitting. In this work, we explore LayerDrop, a form of structured dropout, which has a regularization effect during training and allows for efficient pruning at inference time. In particular, we show that it is possible to select sub-networks of any depth from one large network without having to finetune them and with limited impact on performance. We demonstrate the effectiveness of our approach by improving the state of the art on machine translation, language modeling, summarization, question answering, and language understanding benchmarks. Moreover, we show that our approach leads to small BERT-like models of higher quality compared to training from scratch or using distillation.",
+      "identifiers": [
+        "SemanticScholar:f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1"
+      ],
+      "semantic_scholar_id": "f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1",
+      "canonical_id": "arXiv:1909.11556",
+      "arxiv_id": "1909.11556",
+      "authors": [
+        "Angela Fan",
+        "Edouard Grave",
+        "Armand Joulin"
+      ],
+      "priority": 766,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 756,
+        "citation_count": 756,
+        "total": 766,
+        "is_fresh": false,
+        "freshness_age_days": 2566,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "LayerDropでtraining時にlayer単位のstructured dropoutを行い、推論時には追加fine-tuningなしで任意深度のsub-networkへpruneできる。Transformer/BERT系のinference-time depth pruningと計算削減を最終適用に含むため収録対象。",
+      "library_body_check": "full_text_checked: 一次arXiv由来の本文情報でLayerDropのstructured dropout、inference-time pruning、50%/75% depth削減時の品質比較、BERT/LM/MT/要約task評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1a2aa53568a3",
+    "round": "libimp-1a2aa53568a3738a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1a2aa53568a3738a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1a2aa53568a3738a-pre01.json",
+    "receipt": "sha256:c08354c14ead13972fbc08c6a60c331fd34a7b4cb34ff15b29e8b15df50b01cc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1a2aa53568a3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
