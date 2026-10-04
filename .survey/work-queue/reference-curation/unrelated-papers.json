@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T05:52:54+00:00",
-  "record_count": 944,
+  "updated_at": "2026-10-04T06:03:54+00:00",
+  "record_count": 945,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -13874,6 +13874,20 @@
         "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md"
       ],
       "title": "CodeGeeX: A Pre-Trained Model for Code Generation with Multilingual Benchmarking on HumanEval-X"
+    },
+    "arXiv:2609.39076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39076",
+      "identity_tokens": [
+        "arXiv:2609.39076"
+      ],
+      "reason": "対象外。論文の主貢献はEXP3による適応的なinstruction選択と、複数LLMのduel・peer judgmentを通じたDPO/GRPO協調学習であり、推論時のserving、推論効率化、推論時圧縮を提案するものではない。3つのmodel poolと12 benchmarkで学習後の能力向上を評価するが、効率比較も学習計算量が対象。FrugalGPTとの接点はmulti-LLM collaborationの関連研究としての引用に留まる。",
+      "first_checked_at": "2026-10-04T06:03:54+00:00",
+      "last_checked_at": "2026-10-04T06:03:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Multi-LLM Collaborative Alignment via Stackelberg Games"
     }
   }
 }
