@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T16:44:27+00:00",
-  "record_count": 1169,
+  "updated_at": "2026-10-04T17:54:51+00:00",
+  "record_count": 1185,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -17026,6 +17026,230 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md"
       ],
       "title": "Quantifying Attention Flow in Transformers"
+    },
+    "arXiv:1906.00091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.00091",
+      "identity_tokens": [
+        "arXiv:1906.00091"
+      ],
+      "reason": "DLRMはcategorical feature向けembedding tableのmodel parallelismとfully-connected layerのdata parallelismを含む推薦model/benchmarkで、推薦推論のmemory・performanceも扱うが最終適用先はpersonalization/recommendationでありLLM推論systemではない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Deep Learning Recommendation Model for Personalization and Recommendation Systems"
+    },
+    "DOI:10.3390/machines11070677": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/machines11070677",
+      "identity_tokens": [
+        "DOI:10.3390/machines11070677"
+      ],
+      "reason": "YOLO系列のobject detection発展とdigital manufacturing/industrial defect detectionへの応用を整理するcomputer vision surveyで、LLM推論systemを対象としない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+      ],
+      "title": "YOLO-v1 to YOLO-v8, the Rise of YOLO and Its Complementary Nature toward Digital Manufacturing and Industrial Defect Detection"
+    },
+    "arXiv:2009.07118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.07118",
+      "identity_tokens": [
+        "arXiv:2009.07118"
+      ],
+      "reason": "小型言語モデルのfew-shot性能をprompt設計等で改善・評価する能力研究で、推論runtime、memory、serving効率化を提案しない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners"
+    },
+    "arXiv:2106.07139": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.07139",
+      "identity_tokens": [
+        "arXiv:2106.07139"
+      ],
+      "reason": "事前学習モデルの歴史、技術、課題、将来方向を整理するsurveyで、LLM推論runtime/servingの特定最適化方式を提案・評価する論文ではない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Pre-Trained Models: Past, Present and Future"
+    },
+    "arXiv:2007.12626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.12626",
+      "identity_tokens": [
+        "arXiv:2007.12626"
+      ],
+      "reason": "要約評価metricを人間評価との整合性等で比較するSummEval benchmark/evaluation研究で、LLM推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md"
+      ],
+      "title": "SummEval: Re-evaluating Summarization Evaluation"
+    },
+    "arXiv:2108.03298": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.03298",
+      "identity_tokens": [
+        "arXiv:2108.03298"
+      ],
+      "reason": "robot manipulationで6種のoffline learning algorithmをsim/real task上で比較し、demonstration品質や学習設計の影響を分析するrobotics/training研究。LLM推論対象外。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md"
+      ],
+      "title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation"
+    },
+    "arXiv:1705.04146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.04146",
+      "identity_tokens": [
+        "arXiv:1705.04146"
+      ],
+      "reason": "自然言語と数式のrationale生成を介してalgebraic word problemのprogram inductionを学習する推論能力研究で、推論systemの速度・メモリ・serving最適化ではない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
+      ],
+      "title": "Program Induction by Rationale Generation: Learning to Solve and Explain Algebraic Word Problems"
+    },
+    "arXiv:2303.16199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.16199",
+      "identity_tokens": [
+        "arXiv:2303.16199"
+      ],
+      "reason": "凍結LLaMA 7Bへ1.2M learnable parameterを追加しzero-init attentionでinstruction fine-tuningを軽量化する学習手法。効率性はfine-tuning時間・学習parameterが中心で、推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention"
+    },
+    "arXiv:1910.09700": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.09700",
+      "identity_tokens": [
+        "arXiv:1910.09700"
+      ],
+      "reason": "機械学習の計算・energy/carbon costを定量化し報告方法を議論する環境影響研究で、LLM推論runtimeを高速化するsystem/algorithmを提案しない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md"
+      ],
+      "title": "Quantifying the Carbon Emissions of Machine Learning"
+    },
+    "arXiv:2305.06355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06355",
+      "identity_tokens": [
+        "arXiv:2305.06355"
+      ],
+      "reason": "動画理解を対話形式で扱うvideo-language model/frameworkの能力・学習研究で、LLM推論runtime、cache、scheduler、kernelの効率化を主目的としない。",
+      "first_checked_at": "2026-10-04T17:54:50+00:00",
+      "last_checked_at": "2026-10-04T17:54:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "VideoChat: chat-centric video understanding"
+    },
+    "DOI:10.18653/v1/n18-2097": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-2097",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-2097"
+      ],
+      "reason": "長文のdiscourse structureをattentionへ組み込みabstractive summarization品質を改善するNLP model研究で、LLM推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents"
+    },
+    "arXiv:1906.05909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.05909",
+      "identity_tokens": [
+        "arXiv:1906.05909"
+      ],
+      "reason": "vision self-attention replacing convolutions, evaluated on ImageNet/COCO; non-LLM computer vision.",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Stand-Alone Self-Attention in Vision Models"
+    },
+    "arXiv:1712.01312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.01312",
+      "identity_tokens": [
+        "arXiv:1712.01312"
+      ],
+      "reason": "L0 regularization for learning sparse neural networks is a training/sparsity method, not an LLM inference runtime system.",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Learning Sparse Neural Networks through L0 Regularization"
+    },
+    "arXiv:2105.09938": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.09938",
+      "identity_tokens": [
+        "arXiv:2105.09938"
+      ],
+      "reason": "APPS is a code-generation benchmark/dataset for evaluating model capability, not inference-system optimization.",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "Measuring Coding Challenge Competence With APPS"
+    },
+    "arXiv:2202.04200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.04200",
+      "identity_tokens": [
+        "arXiv:2202.04200"
+      ],
+      "reason": "parallel/iterative image-token generation accelerates image synthesis, but the final application is image generation rather than LLM inference.",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ],
+      "title": "MaskGIT: Masked Generative Image Transformer"
+    },
+    "arXiv:1904.00962": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.00962",
+      "identity_tokens": [
+        "arXiv:1904.00962"
+      ],
+      "reason": "LAMB large-batch optimization accelerates BERT/ResNet training; final application is training, which is out of scope.",
+      "first_checked_at": "2026-10-04T17:54:51+00:00",
+      "last_checked_at": "2026-10-04T17:54:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ],
+      "title": "Large Batch Optimization for Deep Learning: Training BERT in 76 minutes"
     }
   }
 }

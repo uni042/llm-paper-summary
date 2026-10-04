@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f815812ab803766-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/machines11070677",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/machines11070677",
+    "identity_tokens": [
+      "DOI:10.3390/machines11070677"
+    ],
+    "reason": "YOLO系列のobject detection発展とdigital manufacturing/industrial defect detectionへの応用を整理するcomputer vision surveyで、LLM推論systemを対象としない。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-04T17:54:50+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+    ],
+    "title": "YOLO-v1 to YOLO-v8, the Rise of YOLO and Its Complementary Nature toward Digital Manufacturing and Industrial Defect Detection"
+  },
+  "processed_at": "2026-10-04T17:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f815812ab80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

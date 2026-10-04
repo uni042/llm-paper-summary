@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f815812ab803766-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2106.07139",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2106.07139",
+    "identity_tokens": [
+      "arXiv:2106.07139"
+    ],
+    "reason": "事前学習モデルの歴史、技術、課題、将来方向を整理するsurveyで、LLM推論runtime/servingの特定最適化方式を提案・評価する論文ではない。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-04T17:54:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+    ],
+    "title": "Pre-Trained Models: Past, Present and Future"
+  },
+  "processed_at": "2026-10-04T17:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f815812ab80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
