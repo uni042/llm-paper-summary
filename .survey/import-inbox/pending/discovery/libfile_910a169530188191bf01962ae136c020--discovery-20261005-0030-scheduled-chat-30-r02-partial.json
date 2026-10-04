@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0030-scheduled-chat-30/r02",
+  "reference_main_sha": "e47049e03ee32ef019c9015696f7f1bc5bc9d873",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1710.01878",
+      "identity_tokens": [
+        "arXiv:1710.01878"
+      ],
+      "title": "To prune, or not to prune: exploring the efficacy of pruning for model compression",
+      "reason": "energy-efficient inferenceを目的に一般DNNのgradual pruningを研究するが、評価対象はCNN、stacked LSTM、seq2seq LSTMで、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1710.01878",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で一般DNNのlarge-sparse対small-dense比較と最大10xの非ゼロparameter削減が主題と確認。LLM推論への適用・評価なし。",
+      "first_checked_at": "2026-10-05T00:39:00+09:00",
+      "last_checked_at": "2026-10-05T00:39:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p18-1007",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p18-1007",
+        "arXiv:1804.10959"
+      ],
+      "title": "Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates",
+      "reason": "複数subword分割を確率的にsamplingしてニューラル機械翻訳のrobustnessを改善するtraining regularization/tokenization研究で、LLM推論ランタイムやサービング効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1804.10959",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtraining時のsubword regularizationとunigram language model segmentation、翻訳品質改善が主題と確認。",
+      "first_checked_at": "2026-10-05T00:39:00+09:00",
+      "last_checked_at": "2026-10-05T00:39:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.17239",
+      "identity_tokens": [
+        "arXiv:2103.17239"
+      ],
+      "title": "Going deeper with Image Transformers",
+      "reason": "画像分類用Transformerのarchitecture/optimizationを改良してImageNet精度を高めるコンピュータビジョン研究で、LLM推論システムの速度・メモリ・サービング最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2103.17239",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdeep image Transformerの学習最適化とImageNet top-1 86.5%等が主題と確認。LLM inference systemsは対象外。",
+      "first_checked_at": "2026-10-05T00:39:00+09:00",
+      "last_checked_at": "2026-10-05T00:39:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 23
+    }
+  ]
+}
