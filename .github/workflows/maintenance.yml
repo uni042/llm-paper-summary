@@ -48,11 +48,13 @@ jobs:
           from pathlib import Path
           state = json.loads(Path('.survey/work-queue/maintenance-cycle.json').read_text())
           pending = bool(state.get('maintenance_pending'))
+          request_token = str(state.get('maintenance_request_token') or '')
           event_name = os.environ.get('GITHUB_EVENT_NAME', '')
           run = pending or event_name in {'schedule', 'workflow_dispatch'}
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
               f.write(f'pending={str(pending).lower()}\n')
               f.write(f'run={str(run).lower()}\n')
+              f.write(f'request_token={request_token}\n')
           PY
 
       - name: Install survey dependencies
@@ -246,8 +248,8 @@ jobs:
           # orchestrator/dashboard updates cannot cause stale overwrites or
           # rebase conflicts.
           git add -A
-          git reset -- STATUS.md .survey/work-queue/next-jobs.json
-          git restore -- STATUS.md .survey/work-queue/next-jobs.json
+          git reset -- STATUS.md .survey/work-queue/next-jobs.json .survey/work-queue/maintenance-cycle.json
+          git restore -- STATUS.md .survey/work-queue/next-jobs.json .survey/work-queue/maintenance-cycle.json
           if ! git diff --cached --quiet; then
             git commit -m 'survey-maintenance: GC, reconcile, and health audit'
             maintenance_pushed=0
@@ -269,6 +271,94 @@ jobs:
               echo 'Failed to publish maintenance results after 5 retries.' >&2
               exit 1
             fi
+          fi
+
+          # Finalize maintenance-cycle.json against the latest main. Only clear
+          # the pending request if it is still the same request this run observed;
+          # a newer request must survive for the next maintenance run.
+          state_pushed=0
+          for state_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            OBSERVED_MAINTENANCE_TOKEN='${{ steps.pending.outputs.request_token }}' python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          from pathlib import Path
+
+          state_path = Path('.survey/work-queue/maintenance-cycle.json')
+          state = json.loads(state_path.read_text())
+          gc = json.loads(Path('.survey/reports/full-gc-latest.json').read_text())
+          health = json.loads(Path('.survey/reports/maintenance-health-latest.json').read_text())
+          consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
+          metadata = json.loads(Path('.survey/reports/metadata-coverage-latest.json').read_text())
+          metadata_incomplete = int((metadata.get('summary') or {}).get('incomplete') or 0)
+
+          observed = os.environ.get('OBSERVED_MAINTENANCE_TOKEN', '')
+          current = str(state.get('maintenance_request_token') or '')
+          same_request = current == observed
+
+          state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+          state['last_gc_deleted'] = gc.get('deleted_count', 0)
+          state['last_gc_checked_at'] = gc.get('checked_at')
+          state['last_health_status'] = health.get('status')
+          state['last_health_checked_at'] = health.get('checked_at')
+          state['last_health_errors'] = health.get('error_count', 0)
+          state['last_health_warnings'] = health.get('warning_count', 0)
+          state['last_queue_snapshot_repaired'] = bool(health.get('queue', {}).get('snapshot_repaired'))
+          state['last_index_repairs'] = health.get('derived_indexes', {}).get('repair_count', 0)
+          state['last_quality_regressions'] = sum(
+              len(v) for v in health.get('quality', {}).get('new_failures', {}).values()
+              if isinstance(v, list)
+          )
+          state['last_metadata_status'] = 'passed' if metadata_incomplete == 0 else 'issues_found'
+          state['last_metadata_checked_at'] = metadata.get('checked_at')
+          state['last_metadata_incomplete'] = metadata_incomplete
+          state['last_consistency_status'] = consistency.get('status')
+          state['last_consistency_checked_at'] = consistency.get('checked_at')
+          state['last_maintenance_status'] = (
+              'passed'
+              if (
+                  consistency.get('status') == 'passed'
+                  and health.get('status') == 'passed'
+                  and metadata_incomplete == 0
+              )
+              else 'issues_found'
+          )
+          state['last_maintenance_status_source'] = 'maintenance_workflow'
+
+          if same_request:
+              state['maintenance_pending'] = False
+              state.pop('maintenance_request_token', None)
+              state.pop('maintenance_request_reason', None)
+          else:
+              # A new request arrived while this run was executing. Preserve it.
+              state['maintenance_pending'] = bool(state.get('maintenance_pending', True))
+
+          state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
+          print({
+              'observed_request_token': observed,
+              'current_request_token': current,
+              'same_request': same_request,
+              'maintenance_pending': state.get('maintenance_pending'),
+          })
+          PY
+            git add .survey/work-queue/maintenance-cycle.json
+            if git diff --cached --quiet; then
+              state_pushed=1
+              break
+            fi
+            git commit -m 'survey-maintenance: finalize maintenance state'
+            if git push origin HEAD:main; then
+              state_pushed=1
+              break
+            fi
+            echo "Maintenance state push race on attempt ${state_attempt}; recomputing from latest main."
+            sleep $((state_attempt * 2))
+          done
+          if [ "$state_pushed" -ne 1 ]; then
+            echo 'Failed to publish maintenance-cycle.json after 5 retries.' >&2
+            exit 1
           fi
 
           # Rebuild the queue snapshot from the latest canonical job files.
