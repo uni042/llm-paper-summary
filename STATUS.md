@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 17:52:10 JST**
+> 自動生成: **2026-10-04 17:54:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **601** |
-| 未claim Research job | **601** |
-| 直近24hのResearch処理完了 | **87** |
+| 収録候補論文数 | **599** |
+| 未claim Research job | **599** |
+| 直近24hのResearch処理完了 | **88** |
 | 最終Research処理完了 | **10-04 17:32:39 JST** |
 | 最終Discovery探索完了 | **10-04 17:30:00 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **601** |
+| canonical_id確認済みの一意な候補論文 | **599** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **601** |
+| 非終端Research job合計 | **599** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,9 +35,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9584** |
-| 処理済み | **2383** |
-| 未処理 | **7201** |
-| 収録済みとして除外 | **1028** |
+| 処理済み | **2384** |
+| 未処理 | **7200** |
+| 収録済みとして除外 | **1029** |
 | 無関係として除外 | **966** |
 | 微妙として除外 | **389** |
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 14:24:59 JST（3時間27分前）** |
+| 最終maintenance完了 | **10-04 14:24:59 JST（3時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **22** |
+| 直近6hのResearch完了 | **23** |
 | 直近6hのDiscovery run | **27** |
 | 直近6hのDiscovery本文確認・分類 | **133** |
 | 最終Research完了 | **10-04 17:32:39 JST** |
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **601** |
+| ready | **599** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1569** |
+| inference/training/survey配下の論文Markdown実体 | **1571** |
 
 ### immutable submissionの未照合
 
