@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T07:01:04+00:00",
-  "record_count": 961,
+  "updated_at": "2026-10-04T09:52:02+00:00",
+  "record_count": 965,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14082,6 +14082,62 @@
       "last_checked_at": "2026-10-04T07:01:04+00:00",
       "linked_from": [],
       "title": "The promises and perils of mining GitHub"
+    },
+    "arXiv:2308.09687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.09687",
+      "identity_tokens": [
+        "arXiv:2308.09687"
+      ],
+      "reason": "LLMの思考単位を任意グラフとして生成・集約・評価するプロンプティング／推論戦略研究で、品質とAPIコストは扱うが、モデル実行ランタイムの速度・KVメモリ・カーネル・サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
+    },
+    "DOI:10.1287/opre.11.3.399": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1287/opre.11.3.399",
+      "identity_tokens": [
+        "DOI:10.1287/opre.11.3.399"
+      ],
+      "reason": "制約付き任意目的関数の資源配分へ一般化Lagrange乗数法を適用する1963年の数理最適化研究で、LLM KV量子化や推論資源配分への直接適用・評価を行わない。",
+      "first_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
+      ],
+      "title": "Generalized Lagrange Multiplier Method for Solving Problems of Optimum Allocation of Resources"
+    },
+    "DOI:10.1145/359094.359101": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/359094.359101",
+      "identity_tokens": [
+        "DOI:10.1145/359094.359101"
+      ],
+      "reason": "グラフ頂点彩色のアルゴリズム研究で、MoE pruning等の後続研究に引用されてもLLM推論・モデル実行を直接対象としない。",
+      "first_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md"
+      ],
+      "title": "New methods to color the vertices of a graph"
+    },
+    "DOI:10.1145/152610.152611": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/152610.152611",
+      "identity_tokens": [
+        "DOI:10.1145/152610.152611"
+      ],
+      "reason": "大規模データベースのquery evaluationとjoin等の実行・最適化技法を体系化するデータベース研究で、LLM agent workflowや推論サービングを直接対象としない。",
+      "first_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "Query evaluation techniques for large databases"
     }
   }
 }
