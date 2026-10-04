@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0730-scheduled-chat-30/r01",
+  "reference_main_sha": "d1d63ba6e4572bd0de15948bfb9c8c27e5c22a00",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2015.11",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2015.11",
+        "arXiv:1506.06724"
+      ],
+      "title": "Aligning Books and Movies: Towards Story-Like Visual Explanations by Watching Movies and Reading Books",
+      "reason": "書籍文と映画クリップを文・動画埋め込みと文脈対応CNNで対応付け、視覚内容へ物語的説明を付与する画像・動画理解研究。LLM推論、サービング、メモリ、推論カーネルの効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1506.06724",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11206",
+      "identity_tokens": [
+        "arXiv:2305.11206"
+      ],
+      "title": "LIMA: Less Is More for Alignment",
+      "reason": "65B LLaMAを1000件の厳選応答だけで教師あり微調整し、アラインメントに必要なデータ量と品質を検証する学習研究。最終適用先はinstruction tuningであり推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.11206",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04761",
+      "identity_tokens": [
+        "arXiv:2302.04761"
+      ],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "reason": "言語モデルがAPI呼出しの位置・引数・結果利用を自己教師ありで学習するtool-use学習手法。推論時に外部APIを使うが、ランタイム、サービング、KVキャッシュ、推論計算効率の最適化は主題ではない。",
+      "source_url": "https://arxiv.org/abs/2302.04761",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10560",
+      "identity_tokens": [
+        "arXiv:2212.10560"
+      ],
+      "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+      "reason": "モデル自身でinstruction/input/outputを生成・フィルタし、その合成データでGPT-3を微調整するinstruction-tuningデータ生成・学習手法。推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2212.10560",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14314",
+      "identity_tokens": [
+        "arXiv:2305.14314"
+      ],
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "reason": "4-bit NF4、double quantization、paged optimizerを用いて65Bモデルを48GB GPU 1枚で微調整可能にする学習メモリ削減手法。量子化を用いるが目的・評価はfine-tuningで、推論向け量子化・配備最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.14314",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18290",
+      "identity_tokens": [
+        "arXiv:2305.18290"
+      ],
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "reason": "RLHFの報酬モデルと強化学習を単純な分類損失へ置き換えて選好アラインメントを行う学習アルゴリズム。計算軽量性はfine-tuning手順についてであり、推論実行効率を対象としない。",
+      "source_url": "https://arxiv.org/abs/2305.18290",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.16634",
+      "identity_tokens": [
+        "arXiv:2303.16634"
+      ],
+      "title": "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment",
+      "reason": "GPT-4と思考連鎖・form-fillingを使い要約・対話生成品質を人間評価へ近づけるNLG評価フレームワーク。推論性能評価やサービング効率ではなく出力品質評価が対象。",
+      "source_url": "https://arxiv.org/abs/2303.16634",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05685",
+      "identity_tokens": [
+        "arXiv:2306.05685"
+      ],
+      "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+      "reason": "強力なLLMをjudgeとして使う際のposition/verbosity/self-enhancement biasを分析し、MT-BenchとChatbot Arenaでモデル品質評価を行うbenchmark研究。推論システム効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2306.05685",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.18223",
+      "identity_tokens": [
+        "arXiv:2303.18223"
+      ],
+      "title": "A Survey of Large Language Models",
+      "reason": "LLMのpre-training、adaptation tuning、utilization、能力評価を広範に整理する総合サーベイ。推論システム効率に特化した新規方式・評価を提案する論文ではない。",
+      "source_url": "https://arxiv.org/abs/2303.18223",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.11903",
+      "identity_tokens": [
+        "arXiv:2201.11903"
+      ],
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "reason": "few-shot例に中間推論過程を含めて算術・常識・記号推論能力を改善するprompting研究。生成トークン増による推論コストを削減する方式ではなく、能力向上が目的。",
+      "source_url": "https://arxiv.org/abs/2201.11903",
+      "body_check": "abstract_screen_only: 一次arXiv/出版社の要旨と書誌情報で研究対象・手法・評価先を1候補ずつ確認し、LLM推論システムを最終適用先としないことが論文固有に明白なため本文未読。",
+      "first_checked_at": "2026-10-05T07:36:00+09:00",
+      "last_checked_at": "2026-10-05T07:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 10
+    }
+  ]
+}
