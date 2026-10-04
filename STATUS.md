@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 16:01:10 JST**
+> 自動生成: **2026-10-04 16:02:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **618** |
-| 未claim Research job | **618** |
-| 直近24hのResearch処理完了 | **69** |
+| 収録候補論文数 | **617** |
+| 未claim Research job | **617** |
+| 直近24hのResearch処理完了 | **70** |
 | 最終Research処理完了 | **10-04 15:55:00 JST** |
 | 最終Discovery探索完了 | **10-04 16:00:00 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **618** |
+| canonical_id確認済みの一意な候補論文 | **617** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **618** |
+| 非終端Research job合計 | **617** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,12 +34,12 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **9561** |
+| 構造化references総候補 | **9568** |
 | 処理済み | **2374** |
-| 未処理 | **7187** |
-| 収録済みとして除外 | **1018** |
+| 未処理 | **7194** |
+| 収録済みとして除外 | **1019** |
 | 無関係として除外 | **966** |
-| 微妙として除外 | **390** |
+| 微妙として除外 | **389** |
 
 - 消化率: **24.8%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 14:24:59 JST（1時間36分前）** |
+| 最終maintenance完了 | **10-04 14:24:59 JST（1時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **10** |
+| 直近6hのResearch完了 | **11** |
 | 直近6hのDiscovery run | **24** |
 | 直近6hのDiscovery本文確認・分類 | **125** |
 | 最終Research完了 | **10-04 15:55:00 JST** |
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **618** |
+| ready | **617** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1552** |
+| inference/training/survey配下の論文Markdown実体 | **1553** |
 
 ### immutable submissionの未照合
 
