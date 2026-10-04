@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+      "source_url": "https://arxiv.org/abs/2607.23765",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve impressive performance across multiple domains, but using the most capable model for every query is prohibitive at scale. LLM routing exploits diversity in model capability and cost by assigning each query to a suitable model to balance utility and budget. Current methods have two limitations: (i) they either use heuristics that do not always enforce the budget constraint or impose a fixed per-query budget that cannot adapt across the workload and leads to suboptimal performance; (ii) they require supervised learning on a dense dataset with statistics for every query-model pair, which is expensive to collect. To address these challenges, we formulate LLM routing as a constrained contextual multi-armed bandit problem and introduce WISERouter (WR for short), a framework that supports offline learning from historical interactions as well as online learning with exploration. We further prove that WR-Online achieves a sublinear regret bound of $O(\\sqrt{T})$ over a time horizon $T$. Empirical results on RouterBench and SWE-Bench demonstrate that (i) WR-Offline surpasses existing baselines in performance under a fixed budget and adheres more closely to budget constraints, and (ii) WR-Online achieves comparable performance to the baselines, while using substantially less exploration data.",
+      "identifiers": [
+        "SemanticScholar:c64ba56614d1843f83a89a485fd98c58e204b74b"
+      ],
+      "semantic_scholar_id": "c64ba56614d1843f83a89a485fd98c58e204b74b",
+      "canonical_id": "arXiv:2607.23765",
+      "arxiv_id": "2607.23765",
+      "doi": "10.48550/arXiv.2607.23765",
+      "authors": [
+        "Yi-Fei Li",
+        "Zi-Hui Gao",
+        "L. Lakshmanan"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 70,
+        "matched_prestigious_venue": null
+      },
+      "reason": "workload全体のbudget制約下でqueryごとにLLMを割り当てるroutingを制約付きcontextual multi-armed banditとして定式化し、offline/online routingを評価する。LLM servingのcost-aware model routingに直接該当。",
+      "library_body_check": "full_text_checked: 一次arXivへの到達を試行し、arXiv書誌を指す検索結果で問題設定、手法、RouterBench/SWE-Bench評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1347bc8503d8",
+    "round": "libimp-1347bc8503d88378-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1347bc8503d88378-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1347bc8503d88378-pre01.json",
+    "receipt": "sha256:7ce83cafc67ab3de1ec4212d7693d1228b6a4c32e4e4b076d04c825fe8cd7a51"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1347bc8503d8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
