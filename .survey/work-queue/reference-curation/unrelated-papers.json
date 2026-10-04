@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T14:32:42+00:00",
-  "record_count": 1125,
+  "updated_at": "2026-10-04T15:53:59+00:00",
+  "record_count": 1145,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -16419,6 +16419,267 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
       ],
       "title": "Neural Architecture Search with Reinforcement Learning"
+    },
+    "arXiv:1703.01365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1703.01365",
+      "identity_tokens": [
+        "arXiv:1703.01365"
+      ],
+      "reason": "Integrated Gradientsによる深層ネットワークの特徴帰属・解釈可能性が主題で、LLM推論実行系の高速化・省メモリ化ではない。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "Axiomatic Attribution for Deep Networks"
+    },
+    "arXiv:2005.08100": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.08100",
+      "identity_tokens": [
+        "arXiv:2005.08100"
+      ],
+      "reason": "音声認識向けConformerアーキテクチャの認識精度・parameter efficiencyが主題で、LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "Conformer: Convolution-augmented Transformer for Speech Recognition"
+    },
+    "arXiv:2004.10964": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.10964",
+      "identity_tokens": [
+        "arXiv:2004.10964"
+      ],
+      "reason": "domain/task adaptive pretrainingによる下流精度改善が主題で、最終適用先が学習工程であり凍結範囲。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks"
+    },
+    "arXiv:1810.03292": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.03292",
+      "identity_tokens": [
+        "arXiv:1810.03292"
+      ],
+      "reason": "saliency/explanation手法のrandomization testによる妥当性評価が主題で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "Sanity Checks for Saliency Maps"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.372": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.372",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.372"
+      ],
+      "reason": "Transformer蒸留で小型BERTを学習する二段階knowledge distillationが主題。推論高速化結果はあるが現行範囲では学習主体の圧縮法として既にunrelated判定済み。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "TinyBERT: Distilling BERT for Natural Language Understanding"
+    },
+    "arXiv:1606.06160": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.06160",
+      "identity_tokens": [
+        "arXiv:1606.06160"
+      ],
+      "reason": "CNNのweights/activations/gradientsを低bit化する学習法で、画像CNNかつ低bit gradient trainingが中心。LLM推論量子化ではない。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "DoReFa-Net: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients"
+    },
+    "DOI:10.18653/v1/w19-4828": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w19-4828",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w19-4828"
+      ],
+      "reason": "BERT attention headが捉える言語現象の分析・解釈が主題で、KV cacheやattention kernel等の推論効率化ではない。",
+      "first_checked_at": "2026-10-04T15:53:58+00:00",
+      "last_checked_at": "2026-10-04T15:53:58+00:00",
+      "linked_from": [],
+      "title": "What Does BERT Look at? An Analysis of BERT’s Attention"
+    },
+    "arXiv:1410.0759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1410.0759",
+      "identity_tokens": [
+        "arXiv:1410.0759"
+      ],
+      "reason": "汎用DNN向けGPU primitive libraryの設計・性能が主題で、LLM/Transformer推論を最終適用先とする研究ではない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [],
+      "title": "cuDNN: Efficient Primitives for Deep Learning"
+    },
+    "arXiv:1505.00387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1505.00387",
+      "identity_tokens": [
+        "arXiv:1505.00387"
+      ],
+      "reason": "非常に深いネットワークを学習可能にするgated shortcut architectureが主題で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [],
+      "title": "Highway Networks"
+    },
+    "arXiv:1911.08731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.08731",
+      "identity_tokens": [
+        "arXiv:1911.08731"
+      ],
+      "reason": "group distribution shift下のworst-case generalizationとregularizationを扱う学習・頑健性研究で、LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [],
+      "title": "Distributionally Robust Neural Networks for Group Shifts: On the Importance of Regularization for Worst-Case Generalization"
+    },
+    "arXiv:2105.05233": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.05233",
+      "identity_tokens": [
+        "arXiv:2105.05233"
+      ],
+      "reason": "ImageNet画像合成の拡散モデルとclassifier guidanceによるFID改善が主題で、LLM推論ランタイム、サービング、KVキャッシュ、推論向け圧縮を最終適用先としない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Diffusion Models Beat GANs on Image Synthesis"
+    },
+    "arXiv:1906.08237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.08237",
+      "identity_tokens": [
+        "arXiv:1906.08237"
+      ],
+      "reason": "順列言語モデリングによる自己回帰事前学習とNLPタスク精度改善が主題で、推論実行系の速度・メモリ・サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding"
+    },
+    "arXiv:2107.03006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.03006",
+      "identity_tokens": [
+        "arXiv:2107.03006"
+      ],
+      "reason": "離散状態空間向け拡散生成モデルD3PMの定式化・学習・画像/文字生成品質が主題で、LLM推論システムの実行効率化を最終目的としない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md"
+      ],
+      "title": "Structured Denoising Diffusion Models in Discrete State-Spaces"
+    },
+    "arXiv:2104.08663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.08663",
+      "identity_tokens": [
+        "arXiv:2104.08663"
+      ],
+      "reason": "18データセットで情報検索モデルのゼロショット汎化を比較する評価ベンチマーク研究で、LLM推論ランタイムやサービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md"
+      ],
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models"
+    },
+    "arXiv:1802.05751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.05751",
+      "identity_tokens": [
+        "arXiv:1802.05751"
+      ],
+      "reason": "局所自己注意を用いた自己回帰画像生成・超解像モデルの品質改善が主題で、LLM/Transformer推論基盤の高速化や省メモリ化を最終適用先としない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Image Transformer"
+    },
+    "arXiv:2104.13478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.13478",
+      "identity_tokens": [
+        "arXiv:2104.13478"
+      ],
+      "reason": "CNN/RNN/GNN/Transformerを幾何学的原理で統一的に整理する機械学習モノグラフで、LLM推論実行の速度・メモリ階層・サービング効率化を提案しない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md"
+      ],
+      "title": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges"
+    },
+    "arXiv:1312.6211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1312.6211",
+      "identity_tokens": [
+        "arXiv:1312.6211"
+      ],
+      "reason": "逐次学習における破滅的忘却をtraining algorithm・activation function別に分析する学習研究で、推論実行効率を扱わない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md"
+      ],
+      "title": "An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks"
+    },
+    "arXiv:1709.00103": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.00103",
+      "identity_tokens": [
+        "arXiv:1709.00103"
+      ],
+      "reason": "自然言語質問からSQLを生成するsemantic parsingモデルとWikiSQLデータセット、強化学習による実行精度改善が主題で、LLM推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.15919-hfx-joint-design-of-algorithms-and-systems-for-multi-slo-serving-and-fas.md"
+      ],
+      "title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning"
+    },
+    "arXiv:1709.01686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.01686",
+      "identity_tokens": [
+        "arXiv:1709.01686"
+      ],
+      "reason": "早期退出でLeNet/AlexNet/ResNet等の一般画像DNN推論を高速化する研究。推論効率化自体は扱うが、最終適用先がLLM/TransformerではなくMNIST/CIFAR10の画像分類なので対象外。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "title": "BranchyNet: Fast inference via early exiting from deep neural networks"
+    },
+    "arXiv:1810.02340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.02340",
+      "identity_tokens": [
+        "arXiv:1810.02340"
+      ],
+      "reason": "学習開始前にconnection sensitivityで一般ニューラルネットを一度だけ刈り込み、MNIST/CIFAR/Tiny-ImageNetで疎ネットワークを学習する研究。LLM推論圧縮への直接適用・評価はない。",
+      "first_checked_at": "2026-10-04T15:53:59+00:00",
+      "last_checked_at": "2026-10-04T15:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "title": "SNIP: Single-shot Network Pruning based on Connection Sensitivity"
     }
   }
 }

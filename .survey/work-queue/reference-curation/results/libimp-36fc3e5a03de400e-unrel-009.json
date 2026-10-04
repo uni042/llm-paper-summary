@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36fc3e5a03de400e-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1505.00387",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1505.00387",
+    "identity_tokens": [
+      "arXiv:1505.00387"
+    ],
+    "reason": "非常に深いネットワークを学習可能にするgated shortcut architectureが主題で、LLM推論効率化ではない。",
+    "first_checked_at": "2026-10-04T15:53:59+00:00",
+    "last_checked_at": "2026-10-04T15:53:59+00:00",
+    "linked_from": [],
+    "title": "Highway Networks"
+  },
+  "processed_at": "2026-10-04T15:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36fc3e5a03de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
