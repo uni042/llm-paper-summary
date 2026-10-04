@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T12:52:29+00:00",
-  "record_count": 997,
+  "updated_at": "2026-10-04T12:53:19+00:00",
+  "record_count": 1009,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -14600,6 +14600,154 @@
         "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
       ],
       "title": "COMET: A Neural Framework for MT Evaluation"
+    },
+    "DOI:10.1109/iccv51070.2023.00371": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.00371"
+      ],
+      "reason": "画像分割の汎用基盤モデルとpromptable segmentationを提案するコンピュータビジョン研究で、LLM推論サービング・ランタイム最適化を最終適用先としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Segment Anything"
+    },
+    "DOI:10.1214/aoms/1177703732": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1214/aoms/1177703732",
+      "identity_tokens": [
+        "DOI:10.1214/aoms/1177703732"
+      ],
+      "reason": "Huber損失につながる位置母数のロバスト統計推定を扱う古典統計研究で、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Robust Estimation of a Location Parameter"
+    },
+    "DOI:10.1561/1500000019": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1561/1500000019",
+      "identity_tokens": [
+        "DOI:10.1561/1500000019"
+      ],
+      "reason": "BM25を含む確率的情報検索モデルの理論・発展を扱う情報検索研究で、LLM推論実行基盤の高速化・省メモリ化を提案しない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "The Probabilistic Relevance Framework: BM25 and Beyond"
+    },
+    "DOI:10.1162/tacl_a_00638": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00638",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00638"
+      ],
+      "reason": "長文脈中の情報位置によるLLM回答品質の変化を分析するモデル挙動研究で、注意カーネル・KV管理・サービング等の推論システム方式を提案しない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Lost in the Middle: How Language Models Use Long Contexts"
+    },
+    "DOI:10.1109/tevc.2010.2059031": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tevc.2010.2059031",
+      "identity_tokens": [
+        "DOI:10.1109/tevc.2010.2059031"
+      ],
+      "reason": "差分進化法の研究動向を体系化する進化計算サーベイで、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Differential Evolution: A Survey of the State-of-the-Art"
+    },
+    "arXiv:1911.11641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.11641",
+      "identity_tokens": [
+        "arXiv:1911.11641"
+      ],
+      "reason": "物理常識推論データセットと評価を提案する自然言語処理研究で、LLM推論ランタイムやサービング最適化を扱わない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "PIQA: Reasoning about Physical Commonsense in Natural Language"
+    },
+    "DOI:10.1137/090752286": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/090752286",
+      "identity_tokens": [
+        "DOI:10.1137/090752286"
+      ],
+      "reason": "高次元テンソルをTensor Train形式へ分解する数値線形代数研究で、LLM推論への直接適用・システム評価を行わない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Tensor-Train Decomposition"
+    },
+    "DOI:10.1162/neco.1994.6.2.181": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1994.6.2.181",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1994.6.2.181"
+      ],
+      "reason": "階層型混合専門家モデルとEM学習を提案する基礎機械学習研究で、現代LLMのMoE推論実行・通信・offload最適化を対象としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Hierarchical Mixtures of Experts and the EM Algorithm"
+    },
+    "arXiv:1909.10351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.10351",
+      "identity_tokens": [
+        "arXiv:1909.10351"
+      ],
+      "reason": "BERTの知識蒸留による小型化とNLU性能を扱うモデル圧縮・学習研究で、LLM推論システムの実行方式を主題としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "TinyBERT: Distilling BERT for Natural Language Understanding"
+    },
+    "DOI:10.18653/v1/2021.eacl-main.74": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.eacl-main.74",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.eacl-main.74"
+      ],
+      "reason": "検索器と生成モデルを組み合わせるオープンドメイン質問応答手法の品質改善研究で、RAGサービングやLLM推論ランタイム最適化を提案しない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [],
+      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
+    },
+    "DOI:10.1109/sfcs.1994.365680": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sfcs.1994.365680",
+      "identity_tokens": [
+        "DOI:10.1109/sfcs.1994.365680"
+      ],
+      "reason": "一般的な多重スレッド計算のwork stealingスケジューリングを解析する古典並列計算研究で、LLM推論サービングを直接対象としない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "title": "Scheduling multithreaded computations by work stealing"
+    },
+    "arXiv:2005.00928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.00928",
+      "identity_tokens": [
+        "arXiv:2005.00928"
+      ],
+      "reason": "Transformerの層を跨ぐattention情報流をattention rolloutとattention flowで事後解析し、入力重要度との相関を改善する解釈性研究で、attention計算の高速化・圧縮・サービングを提案しない。",
+      "first_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md"
+      ],
+      "title": "Quantifying Attention Flow in Transformers"
     }
   }
 }
