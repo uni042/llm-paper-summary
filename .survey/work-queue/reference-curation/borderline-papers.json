@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T21:43:57+00:00",
-  "record_count": 441,
+  "updated_at": "2026-10-04T21:46:21+00:00",
+  "record_count": 447,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6340,6 +6340,78 @@
       "last_checked_at": "2026-10-04T21:43:57+00:00",
       "linked_from": [],
       "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity"
+    },
+    "arXiv:2609.11060": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11060",
+      "identity_tokens": [
+        "arXiv:2609.11060"
+      ],
+      "reason": "enterprise LLM agentのmemory curation/retrievalをenvironment probingで改善するagent memory研究。推論時memory systemに関係するが、runtime latency/throughput最適化よりmemory quality中心のためborderline。",
+      "first_checked_at": "2026-10-04T21:46:20+00:00",
+      "last_checked_at": "2026-10-04T21:46:20+00:00",
+      "linked_from": [],
+      "title": "Grounding Agent Memory: Environment-Probing Curation for Enterprise Agents"
+    },
+    "arXiv:2608.13334": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13334",
+      "identity_tokens": [
+        "arXiv:2608.13334"
+      ],
+      "reason": "LLM agentのlong-term memoryをassociative recollectionで改善するmemory/retrieval system。agent runtime memory管理に関係するが、主評価がmemory/retrieval quality中心とみられるためborderline。",
+      "first_checked_at": "2026-10-04T21:46:20+00:00",
+      "last_checked_at": "2026-10-04T21:46:20+00:00",
+      "linked_from": [],
+      "title": "RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory"
+    },
+    "arXiv:2606.07909": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07909",
+      "identity_tokens": [
+        "arXiv:2606.07909"
+      ],
+      "reason": "tool-using LLM agentでenvironment/user feedbackをmemoryとして利用するagent memory framework。agent inference workflowには関連するが、推論runtime効率化より能力・memory quality中心のためborderline。",
+      "first_checked_at": "2026-10-04T21:46:20+00:00",
+      "last_checked_at": "2026-10-04T21:46:20+00:00",
+      "linked_from": [],
+      "title": "MemToolAgent: Leveraging Memory for Tool Using Agents Based on Environment and User Feedback"
+    },
+    "arXiv:2606.10694": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10694",
+      "identity_tokens": [
+        "arXiv:2606.10694"
+      ],
+      "reason": "LLMの長期会話memoryをtemporal/confidence-aware property graphとして外部保存し、hybrid beam searchでretrievalする。長文context制約へのsystem的memory管理だが、主評価はmemory qualityで推論runtime効率化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:46:21+00:00",
+      "last_checked_at": "2026-10-04T21:46:21+00:00",
+      "linked_from": [],
+      "title": "REAL: A Reasoning-Enhanced Graph Framework for Long-Term Memory Management of LLMs"
+    },
+    "arXiv:2608.09168": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09168",
+      "identity_tokens": [
+        "arXiv:2608.09168"
+      ],
+      "reason": "skill-based LLM agentで実行utilityに基づきskill executionを動的gateし、不要な実行を抑えるagent runtime研究。推論時実行制御に関係するが、基盤LLMのserving/kernel/cache最適化との境界があるためborderline。",
+      "first_checked_at": "2026-10-04T21:46:21+00:00",
+      "last_checked_at": "2026-10-04T21:46:21+00:00",
+      "linked_from": [],
+      "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents"
+    },
+    "arXiv:2608.08265": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08265",
+      "identity_tokens": [
+        "arXiv:2608.08265"
+      ],
+      "reason": "複数LLMのrouting/selectionを診断する研究で、quality-aware model selectionとserving cost配分に関連するが、主目的がrouting policyの診断・評価であるためborderline。",
+      "first_checked_at": "2026-10-04T21:46:21+00:00",
+      "last_checked_at": "2026-10-04T21:46:21+00:00",
+      "linked_from": [],
+      "title": "Opportunity Is Not Realizability: Selection-Valid Diagnostics for Multi-LLM Routing"
     }
   }
 }
