@@ -4525,6 +4525,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md",
+      "status": "FAIL",
+      "summary": "共有接頭辞は連続大粒度、個別suffixはトークン粒度で保持し、multi-agent KV pagingの相反する要求を非対称ストレージで両立する。",
+      "char_count": 75,
+      "japanese_ratio": 0.6716417910447762,
+      "failures": [
+        "日本語比率 67.2% < 70.0%"
+      ],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md",
       "status": "PASS",
       "summary": "ECASQは値ごとに適応する不偏確率量子化で、誤差と後段のエントロピー符号化後の平均ビット量を共同最適化する。実モデルのKVテンソルでも比較し、近似法は厳密法に近い誤差を保ちながら解法処理を高速化する。",
@@ -9371,6 +9382,15 @@
       "status": "PASS",
       "summary": "MoEの動的負荷に合わせて並列化・パイプライン・All-to-Allを実行時適応し、大規模GPU群でMoE層と推論を高速化する分散実行基盤。",
       "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+      "status": "PASS",
+      "summary": "MoEの専門家人気偏りを利用して推論時のGPU資源と全対全通信通信を動的再配分し、尾部遅延を削減する分散実行系。",
+      "char_count": 56,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
