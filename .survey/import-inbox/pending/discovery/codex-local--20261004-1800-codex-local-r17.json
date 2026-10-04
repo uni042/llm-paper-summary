@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1800-codex-local-r17",
+  "reference_main_sha": "66ddd06160ade42fd0984ab796379936f93893b9",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00418",
+      "identity_tokens": [
+        "arXiv:2610.00418",
+        "arXiv:2610.00418v1"
+      ],
+      "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
+      "reason": "CommunityKV is a training-free sparse-attention method for long-context LLM inference: it builds and partitions an attention-derived token graph during prefill, then retrieves semantic communities and incrementally assigns generated tokens during decoding. This directly targets KV-cache transfer and decoding cost, so it belongs in inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2610.00418",
+      "body_check": "Read the arXiv v1 full HTML (2026-10-04), especially §§1, 3.1–3.4, 4.1–4.4, 5, Appendices B and C. The method derives top-k direct-attention and co-attention edges from prefill QK scores, runs Leiden partitioning, scores community centroids to retrieve tokens plus sink tokens, and updates each new token locally; claimed per-step costs are O(sqrt(n)d) retrieval and O(d) update. Evaluation uses Qwen3-4B/8B/14B and Llama-3.1-8B-Instruct, LongBench v2, BABILong, and RULER. For Qwen3-14B on LongBench v2, 4096-token CommunityKV reaches 32.0% vs dense 32.0%; on 64k-context BABILong with a 4096-token budget, averages are 45.4% vs dense 48.6% (Qwen3-8B) and 42.2% vs 42.4% (Llama-3.1-8B). End-to-end throughput measures 32,768 generated tokens at batch 1 on H200 and reports per-head 1.08–1.25x speedup with 17–29% peak-memory overhead; query-group aggregation reports 1.39–1.71x and 0.5–8.5% overhead. Appendix C separately reports H100 131k-context kernel timings. Limits: evaluation is bounded to these model families/tasks/hardware; reported end-to-end generation is single-request, and the prefill adds about 7–8% latency. Full KV cache is retained and graph/centroid storage is additive. Authors identify partition drift over very long generation and missed true top-k keys outside retrieved communities; periodic repartitioning mitigates drift but adds latency. These details support accept as an LLM inference/serving efficiency paper.",
+      "first_checked_at": "2026-10-04T15:05:05+09:00",
+      "last_checked_at": "2026-10-04T15:05:05+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00432",
+      "identity_tokens": [
+        "arXiv:2610.00432",
+        "arXiv:2610.00432v1",
+        "doi:10.48550/arXiv.2610.00432"
+      ],
+      "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
+      "reason": "LLM重みを約2.25 effective bits/weightのtrellis-coded FP4へ圧縮するweight-only PTQであり、Viterbi復号器の推論時dequantizationコストとHadamard回転なしの量子化精度を扱う。Section 1・3–5で、推論効率化およびweight compressionとして対象範囲に合致することを確認した。",
+      "source_url": "https://arxiv.org/abs/2610.00432",
+      "body_check": "一次資料 arXiv HTML v1 全文（https://arxiv.org/html/2610.00432v1）を確認。§1, §3: 16-bit trellis stateから4つの局所FP4 paletteを選ぶstate-to-value mappingを、historyの4 masked parity/XORと小規模lookupに構成し、実装見積りはlookup前14 XOR2 gates。§4: LDLQのHessian factorization由来の対角DでViterbi branch distortionを重み付けし、feature blocksをcurvature energy順に処理する方法を提案; これはoffline quantizationのみで、保存表現とonline decoderを変えない。§5, Tables 1–3: 約2.25 effective bits/weight（32 weightsごとにE5M3 scale）、384 RedPajama calibration sequences、seed 0、finetuningなしでWikiText-2/C4 perplexityと5 downstream taskのzero-shot accuracyを評価。Llama-3.1-8BではWT2 PPLが回転なし8.69からD-weighted+energy orderingで8.00、RHT付きQTIP-3INSTは8.48。Llama-3.1-70B-Instructでは回転なし6.11からD-weighted 5.62、平均zero-shot accuracy 77.37%から78.43%。§5.4は512 weights/cycle合成dequantizerの面積をN3P standard cellsで1,917 μm²とし、QTIP復号コスト比較はgate-equivalent概算。評価範囲は量子化品質指標と合成回路で、実機のend-to-end serving latency/throughputや電力は示していない; model family/configごとにenergy orderingの効果も一様ではない。Appendix Eは対角anisotropyだけでは全行列のRHT優位性を説明しないと明記。本文は査読出版情報や公開コードを確認できず、arXiv v1を一次根拠とした。",
+      "first_checked_at": "2026-10-04T15:05:28+09:00",
+      "last_checked_at": "2026-10-04T15:05:28+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "identity_precheck": "Not revalidated against pinned main: local repository HEAD is 25364b003e69f031153a4f0b22c030c30034ea86, while this task pins 66ddd06160ade42fd0984ab796379936f93893b9. GitHub writes were not performed. Main-side duplicate/canonical-path precheck remains for the processor."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36590",
+      "identity_tokens": [
+        "arXiv:2609.36590",
+        "arxiv:2609.36590",
+        "10.48550/arXiv.2609.36590"
+      ],
+      "title": "SEED: Self-Speculative Decoding via Implicit Encoder-Decoder",
+      "reason": "対象。論文はLLM推論時の自己投機的デコードを高速化する手法を提案・評価している。検証時に得た深い文脈KV表現を再利用し、モデル最終層の軽量decoderでdraftを生成するため、推論servingのデコード速度・品質に直接関わる。",
+      "source_url": "https://arxiv.org/abs/2609.36590",
+      "body_check": "一次資料arXiv v1の本文を確認（§1, §4.1–4.3, §5.1–5.4, Appendix A, C.1–C.3）。通常のdecoder-only modelを先頭層encoderと末尾層decoderに概念分割し、完全なモデルによるverificationが同時に生成するdeep decoder KVを次ラウンドdraftで再利用する。draft中は最後の2層decoderのみがraw token embeddingとcached deep KVに条件付けて自己回帰生成し、full modelが複数draftを一括検証する。学習は通常のnext-token CEにspeculative drafting lossを加え、block-causal attentionでdraft時の入力条件を模擬する。動的confidence-based draftingとtree verificationも使用。評価はtask-specific fine-tuned Qwen3-1.7B-Base/4B-Base、GSM8K/KodCode/ScienceQA/CNN-DailyMail上のgreedy decoding。単一48GB NVIDIA A6000で推論し、task品質は前三者0-shot pass@1、要約はROUGE、速度はtokens/sで比較。Table 1では平均速度向上が1.7Bで2.6x、4Bで2.7x。比較対象にはAR、LayerSkip、SWIFT、DEL、Apple MTP、EAGLE-3（4BではPARD等）を含み、精度/ROUGEもAR比維持または改善と報告。限界（Appendix A）：計算制約で1.7B/4Bのみであり8B/14B/32B未検証。主にtask-specific SFTでの検証で、汎用instruction tuningやpretrainingでの挙動は未確認。top-2層の固定partitionは全規模・task・hardwareで最適とは限らず、KV layout、tree-attention kernel、batching、GPU bandwidth等の実装条件が実運用速度を左右する。",
+      "first_checked_at": "2026-10-04T15:04:55+09:00",
+      "last_checked_at": "2026-10-04T15:04:55+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    }
+  ]
+}
+
