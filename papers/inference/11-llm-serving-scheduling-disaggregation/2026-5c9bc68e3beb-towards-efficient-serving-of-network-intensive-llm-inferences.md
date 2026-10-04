@@ -1,39 +1,83 @@
 ---
 canonical_id: DOI:10.1145/3820441.3820479
 doi: 10.1145/3820441.3820479
-title: 'Towards Efficient Serving of Network-intensive LLM Inferences'
-summary: >-
-  分散KVキャッシュの読込み中に計算スケジューラが要求を止め、通信費用を無視して処理順を決める既存LLMエンジンの問題に対し、SanicはvLLM上で各キャッシュ移送段階に独立dispatcher/executorを置き、ネットワーク転送・PCIe転送・プリフィル計算をデータ依存関係に沿って非同期に重ねる。さらに、オフライン測定からリモートKV読込み時間とクエリ計算時間を別々に推定し、平均TTFT向けSJFとTTFT期限向けLSTFで要求を並べ替える。vLLM 0.9.1とLMCache 0.3.1を基礎に3.3K行を実装し、単一GPUノードと別のリモートCPUメモリノードを結ぶ400 Gbps RDMA環境で長文脈データセットを評価した。ICLを1.2 QPSで処理する条件では平均TTFTをvLLM-LMCache比で81.3%超短縮し、同QPSのTTFT SLO達成率は61.67%高かったと報告する。これは選定モデル・データ・単一サーバ構成でのシステム測定であり、著者らは相関したエージェント要求の協調と本番Mooncakeへの適用を将来課題に挙げる。
-list_summary: >-
-  分散KV読込みを独立段階としてvLLMのプリフィル計算と非同期に重ね、読込み遅延も考慮したSJF/LSTFで要求を順序付けるSanicを実装。単一GPUノード・400 Gbps RDMA構成の長文脈評価で、ICL 1.2 QPS時にvLLM-LMCache比で平均TTFTを81.3%超短縮し、TTFT SLO達成率を61.67%改善したと報告する。
+title: Towards Efficient Serving of Network-intensive LLM Inferences
+summary: 分散KVキャッシュの読込み中に計算スケジューラが要求を止め、通信費用を無視して処理順を決める既存LLMエンジンの問題に対し、SanicはvLLM上で各キャッシュ移送段階に独立dispatcher/executorを置き、ネットワーク転送・PCIe転送・プリフィル計算をデータ依存関係に沿って非同期に重ねる。さらに、オフライン測定からリモートKV読込み時間とクエリ計算時間を別々に推定し、平均TTFT向けSJFとTTFT期限向けLSTFで要求を並べ替える。vLLM 0.9.1とLMCache 0.3.1を基礎に3.3K行を実装し、単一GPUノードと別のリモートCPUメモリノードを結ぶ400 Gbps RDMA環境で長文脈データセットを評価した。ICLを1.2 QPSで処理する条件では平均TTFTをvLLM-LMCache比で81.3%超短縮し、同QPSのTTFT SLO達成率は61.67%高かったと報告する。これは選定モデル・データ・単一サーバ構成でのシステム測定であり、著者らは相関したエージェント要求の協調と本番Mooncakeへの適用を将来課題に挙げる。
+list_summary: 分散KV読込みを独立段階としてvLLMのプリフィル計算と非同期に重ね、読込み遅延も考慮したSJF/LSTFで要求を順序付けるSanicを実装。単一GPUノード・400 Gbps RDMA構成の長文脈評価で、ICL 1.2 QPS時にvLLM-LMCache比で平均TTFTを81.3%超短縮し、TTFT SLO達成率を61.67%改善したと報告する。
 authors:
-  - Weiye Wang
-  - Chen Chen
-  - Junxue Zhang
-  - Zhusheng Wang
-  - Hui Yuan
-  - Zi-Ting Guan
-  - Xiaolong Zheng
-  - Qizhen Weng
-  - Yin Chen
-  - Minyi Guo
-published: '2026-08'
-publication: 'The 10th Asia-Pacific Workshop on Networking (APNet ’26), Singapore, August 6–7, 2026'
+- Weiye Wang
+- Chen Chen
+- Junxue Zhang
+- Zhusheng Wang
+- Hui Yuan
+- Zi-Ting Guan
+- Xiaolong Zheng
+- Qizhen Weng
+- Yin Chen
+- Minyi Guo
+published: 2026-08
+publication: The 10th Asia-Pacific Workshop on Networking (APNet ’26), Singapore, August 6–7, 2026
 publication_type: ワークショップ論文
 publication_status: APNet ’26 proceedingsに掲載。著者配布PDFにACM DOIと2026年8月のISBN情報を記載。
 source: https://doi.org/10.1145/3820441.3820479
 sources:
-  - https://doi.org/10.1145/3820441.3820479
-  - https://snowzjx.me/assets/sanic-apnet26.pdf
-  - https://conferences.sigcomm.org/events/apnet2026/accept.php
-implementation: >-
-  SanicをvLLM 0.9.1、LMCache 0.3.1上へ約3.3K行で実装。L3のMooncake StoreからL2のローカルCPU DRAMを経てL1のGPU HBMへKVを移し、L3→L2およびL2→L1読込み用dispatcher/executor、vLLMの計算スケジューラ、ZeroMQによるプロセス間通知を使用する。公式コードURLは一次資料で確認できない。
+- https://doi.org/10.1145/3820441.3820479
+- https://snowzjx.me/assets/sanic-apnet26.pdf
+- https://conferences.sigcomm.org/events/apnet2026/accept.php
+implementation: SanicをvLLM 0.9.1、LMCache 0.3.1上へ約3.3K行で実装。L3のMooncake StoreからL2のローカルCPU DRAMを経てL1のGPU HBMへKVを移し、L3→L2およびL2→L1読込み用dispatcher/executor、vLLMの計算スケジューラ、ZeroMQによるプロセス間通知を使用する。公式コードURLは一次資料で確認できない。
 code: null
 last_checked: '2026-10-04'
 worker_completed_at: '2026-10-04T17:10:00+09:00'
 worker_run_key: 20261004-1830-codex-local-r21
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2502.15734
+  doi: 10.48550/arxiv.2502.15734
+- canonical_id: arXiv:2406.11612
+  arxiv_id: '2406.11612'
+  doi: 10.48550/arxiv.2406.11612
+- canonical_id: DOI:10.1287/opre.33.5.1035
+  doi: 10.1287/opre.33.5.1035
+- canonical_id: DOI:10.1145/3731569.3764834
+  doi: 10.1145/3731569.3764834
+- canonical_id: DOI:10.1007/s11023-020-09548-1
+  doi: 10.1007/s11023-020-09548-1
+- canonical_id: DOI:10.1145/3575693.3575721
+  doi: 10.1145/3575693.3575721
+- canonical_id: DOI:10.1145/3611643.3617850
+  doi: 10.1145/3611643.3617850
+- canonical_id: arXiv:2407.02490
+  doi: 10.52202/079017-1663
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.18653/v1/2024.acl-long.859
+  doi: 10.18653/v1/2024.acl-long.859
+- canonical_id: DOI:10.1145/3604237.3626869
+  doi: 10.1145/3604237.3626869
+- canonical_id: arXiv:2405.19888
+- canonical_id: DOI:10.1145/321738.321743
+  doi: 10.1145/321738.321743
+- canonical_id: arXiv:2404.16283
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: DOI:10.2139/ssrn.5179390
+  doi: 10.2139/ssrn.5179390
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2503.24047
+  arxiv_id: '2503.24047'
+- canonical_id: DOI:10.1109/5.476077
+  doi: 10.1109/5.476077
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.52202/079017-2000
+  doi: 10.52202/079017-2000
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.18653/v1/2025.acl-long.1245
+  doi: 10.18653/v1/2025.acl-long.1245
+references_checked_at: '2026-10-04'
+references_source: crossref-deposited-reference-metadata
+references_total: 31
 ---
 
 # Towards Efficient Serving of Network-intensive LLM Inferences

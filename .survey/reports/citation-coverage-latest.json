@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-04T09:04:19+00:00",
+  "checked_at": "2026-10-04T09:06:11+00:00",
   "summary": {
     "total": 1571,
-    "complete": 1569,
-    "incomplete": 2
+    "complete": 1571,
+    "incomplete": 0
   },
   "families": {
     "inference": {
       "total": 1532,
-      "complete": 1530
+      "complete": 1532
     },
     "training": {
       "total": 25,
@@ -21,16 +21,5 @@
       "complete": 14
     }
   },
-  "incomplete": [
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md",
-      "canonical_id": "arXiv:2608.15584",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md",
-      "canonical_id": "DOI:10.1145/3820441.3820479",
-      "reason": "missing structured reference audit metadata"
-    }
-  ]
+  "incomplete": []
 }
