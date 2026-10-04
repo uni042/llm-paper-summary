@@ -34,10 +34,15 @@
   "selection_reason": "Transformerのattention headを確率的gateとL0 penaltyの微分可能緩和でpruningし、推論時に多数headを除去できるモデル圧縮研究。WMT英露で48 encoder head中38を削除してBLEU低下0.15に抑えるため、attention計算削減へ直接つながる推論圧縮として収録対象。",
   "semantic_scholar_id": "07a64686ce8e43ac475a8d820a8a9f1d87989583",
   "source_url": "https://arxiv.org/abs/1905.09418",
-  "status": "ready",
+  "status": "superseded",
   "title": "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-04T21:30:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+  "represented_canonical_id": "arXiv:1905.09418",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

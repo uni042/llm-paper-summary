@@ -34,10 +34,15 @@
   "selection_reason": "入力ごとに必要な層数を変えるadaptive inferenceで冗長計算を省き、速度と精度を調整可能にする推論効率化研究。BERT世代だが推論時early exitを直接扱い1〜12倍のspeedupを報告するため収録対象。",
   "semantic_scholar_id": "5d34881ff68bd203ff790187e7e5c9e034389cfa",
   "source_url": "https://arxiv.org/abs/2004.02178",
-  "status": "ready",
+  "status": "superseded",
   "title": "FastBERT: a Self-distilling BERT with Adaptive Inference Time",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-04T21:30:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+  "represented_canonical_id": "arXiv:2004.02178",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

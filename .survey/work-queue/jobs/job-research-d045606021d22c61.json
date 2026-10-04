@@ -32,10 +32,15 @@
   "selection_reason": "encoder-decoder Transformerのcross-attentionをCPU/GPU上のk近傍探索索引へ退避し、各headが全keyではなくtop-kだけを読むことで長文脈のメモリ・attention計算を抑える推論方式で対象範囲。",
   "semantic_scholar_id": "dbc368bc8b49347dd27679894524fa62f88492c9",
   "source_url": "https://arxiv.org/abs/2305.01625",
-  "status": "ready",
+  "status": "superseded",
   "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-04T21:30:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+  "represented_canonical_id": "arXiv:2305.01625",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
