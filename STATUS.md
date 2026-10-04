@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 23:13:33 JST**
+> 自動生成: **2026-10-04 23:20:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **595** |
 | 未claim Research job | **595** |
-| 直近24hのResearch処理完了 | **88** |
+| 直近24hのResearch処理完了 | **87** |
 | 最終Research処理完了 | **10-04 18:07:00 JST** |
-| 最終Discovery探索完了 | **10-04 22:00:00 JST** |
+| 最終Discovery探索完了 | **10-04 22:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -68,15 +68,15 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 22:07:32 JST（1時間6分前）** |
+| 最終maintenance完了 | **10-04 23:19:42 JST（18秒前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **passed** |
 | health errors / warnings | **0 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **0** |
-| queue snapshot repaired | **false** |
+| GC削除件数 | **14** |
+| queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
 
@@ -88,19 +88,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **9** |
-| 直近6hのDiscovery run | **24** |
-| 直近6hのDiscovery本文確認・分類 | **145** |
+| 直近6hのResearch完了 | **6** |
+| 直近6hのDiscovery run | **30** |
+| 直近6hのDiscovery本文確認・分類 | **191** |
 | 最終Research完了 | **10-04 18:07:00 JST** |
-| 最終Discovery完了 | **10-04 22:00:00 JST** |
+| 最終Discovery完了 | **10-04 22:45:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-04 18:07:00 JST** / worker — / run 20261004-0800-codex-local-r23 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/20261004-batch-a2--69dc9a82075b27919927e6a4441bbb1084ba186054ae880b8fcf7ffb72404909--rank61-entropy-guided.json
-- Discovery: **10-04 22:00:00 JST** / worker scheduled-chat-00 / run 20261004-2200-scheduled-chat-00/r01
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **10件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_0c25b3187ff88191aa7573aea1fb0232--discovery-20261004-2200-scheduled-chat-00-r01.json
+- Discovery: **10-04 22:45:00 JST** / worker scheduled-chat-45 / run 20261004-2245-scheduled-chat-45/r02
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/pending/discovery/libfile_487b89cf105c8191b8b4335dd3e64f09--discovery-20261004-2245-scheduled-chat-45-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -237,11 +237,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **317** |
+| 成功result未照合のimmutable submission | **310** |
 | └ Research | **129** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **43** |
+| └ Other/Unknown | **36** |
 
 ### 厳格検証が未成立のcompleted job
 
