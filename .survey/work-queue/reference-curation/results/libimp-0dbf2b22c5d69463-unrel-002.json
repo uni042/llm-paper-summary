@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbf2b22c5d69463-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.11206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.11206",
+    "identity_tokens": [
+      "arXiv:2305.11206"
+    ],
+    "reason": "65B LLaMAを1000件の厳選応答だけで教師あり微調整し、アラインメントに必要なデータ量と品質を検証する学習研究。最終適用先はinstruction tuningであり推論システム効率化ではない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T23:24:23+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+    ],
+    "title": "LIMA: Less Is More for Alignment"
+  },
+  "processed_at": "2026-10-04T23:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbf2b22c5d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

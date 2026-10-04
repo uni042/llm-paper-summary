@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:53:07+00:00",
-  "record_count": 1425,
+  "updated_at": "2026-10-04T23:24:23+00:00",
+  "record_count": 1429,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -872,9 +872,9 @@
         "DOI:10.48550/arxiv.2305.14314",
         "arXiv:2305.14314"
       ],
-      "reason": "4bit量子化モデルへLoRAを学習する省メモリfine-tuning方式で、最終適用先が学習工程そのものの高速化・省メモリ化である凍結対象。",
+      "reason": "4-bit NF4、double quantization、paged optimizerを用いて65Bモデルを48GB GPU 1枚で微調整可能にする学習メモリ削減手法。量子化を用いるが目的・評価はfine-tuningで、推論向け量子化・配備最適化ではない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
@@ -1109,21 +1109,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "WaveNet: A Generative Model for Raw Audio"
-    },
-    "arXiv:1506.06724": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1506.06724",
-      "identity_tokens": [
-        "arXiv:1506.06724"
-      ],
-      "reason": "書籍と映画の対応付けが主題でLLMシステム最適化を扱わない。",
-      "first_checked_at": "2026-09-27T05:31:34+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "worker-worklist-30 discovery_review rank 468"
-      ],
-      "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books"
     },
     "arXiv:1409.1556": {
       "classification": "unrelated",
@@ -3024,9 +3009,9 @@
         "DOI:10.48550/arxiv.2305.18290",
         "arXiv:2305.18290"
       ],
-      "reason": "本文ではDPOをRLHFの代替となる選好学習アルゴリズムとして導出・評価しており、主目的は学習・アラインメント手順の簡素化で、推論ランタイム効率化ではない。",
+      "reason": "RLHFの報酬モデルと強化学習を単純な分類損失へ置き換えて選好アラインメントを行う学習アルゴリズム。計算軽量性はfine-tuning手順についてであり、推論実行効率を対象としない。",
       "first_checked_at": "2026-09-27T11:00:23+09:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5359,23 +5344,6 @@
         "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
       ],
       "title": "Hardware Compute Partitioning on NVIDIA GPUs"
-    },
-    "OpenReview:Yacmpz84TH": {
-      "classification": "unrelated",
-      "canonical_id": "OpenReview:Yacmpz84TH",
-      "identity_tokens": [
-        "OpenReview:Yacmpz84TH",
-        "arXiv:2302.04761"
-      ],
-      "reason": "API呼び出しを自己教師ありで学習するモデル能力・学習方式が主題で、LLM推論の速度・メモリ・サービング効率化ではない。",
-      "first_checked_at": "2026-09-30T21:20:43+00:00",
-      "last_checked_at": "2026-10-03T18:50:23+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
-      ],
-      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
     },
     "OpenReview:8tKjqqMM5z": {
       "classification": "unrelated",
@@ -10406,23 +10374,6 @@
       ],
       "title": "FCM: The fuzzy c-means clustering algorithm"
     },
-    "DOI:10.1007/s11704-026-60308-3": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1007/s11704-026-60308-3",
-      "identity_tokens": [
-        "DOI:10.1007/s11704-026-60308-3",
-        "DOI:10.48550/arxiv.2303.18223",
-        "arXiv:2303.18223"
-      ],
-      "reason": "LLM全般の事前学習・適応・利用・能力評価を整理する総合サーベイで、推論システム効率化を主対象とする論文ではない。",
-      "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-03T16:01:59+00:00",
-      "linked_from": [
-        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
-        "worker-worklist-30"
-      ],
-      "title": "A Survey of Large Language Models"
-    },
     "DOI:10.1038/s41586-019-1724-z": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1038/s41586-019-1724-z",
@@ -15057,21 +15008,6 @@
       ],
       "title": "GloVe: Global Vectors for Word Representation"
     },
-    "DOI:10.52202/068431-1800": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.52202/068431-1800",
-      "identity_tokens": [
-        "DOI:10.52202/068431-1800",
-        "arXiv:2201.11903"
-      ],
-      "reason": "few-shotの思考連鎖プロンプトで算術・常識・記号推論の精度を高める推論能力・プロンプティング研究で、モデル実行速度やKVメモリ、サービング効率を改善するシステム研究ではない。",
-      "first_checked_at": "2026-10-04T13:05:22+00:00",
-      "last_checked_at": "2026-10-04T13:05:22+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md"
-      ],
-      "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models"
-    },
     "DOI:10.52202/068431-1723": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.52202/068431-1723",
@@ -15824,22 +15760,6 @@
       "last_checked_at": "2026-10-04T14:28:32+00:00",
       "linked_from": [],
       "title": "Bleu: a Method for Automatic Evaluation of Machine Translation"
-    },
-    "DOI:10.52202/075280-2020": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.52202/075280-2020",
-      "identity_tokens": [
-        "DOI:10.52202/075280-2020",
-        "arXiv:2306.05685"
-      ],
-      "reason": "LLMをjudgeとして用いる評価方法、MT-Bench、Chatbot Arena、人間選好との一致率やjudge biasを研究するLLM評価研究。モデル実行速度・KVメモリ・推論サービング最適化は対象外。",
-      "first_checked_at": "2026-09-26T17:49:24+00:00",
-      "last_checked_at": "2026-10-04T14:31:28+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md",
-        "worker-worklist-30 reference-review candidate"
-      ],
-      "title": "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena"
     },
     "DOI:10.18653/v1/p16-1162": {
       "classification": "unrelated",
@@ -17140,9 +17060,9 @@
       "identity_tokens": [
         "arXiv:2303.16634"
       ],
-      "reason": "G-EvalはGPT-4と連鎖思考（Chain-of-Thought; CoT）を用いて自然言語生成（NLG）出力を人間評価へ整合させる評価手法で、SummEval等の評価相関が主目的。LLM推論ランタイムやサービング効率化を扱わない。",
+      "reason": "GPT-4と思考連鎖・form-fillingを使い要約・対話生成品質を人間評価へ近づけるNLG評価フレームワーク。推論性能評価やサービング効率ではなく出力品質評価が対象。",
       "first_checked_at": "2026-10-04T17:56:13+00:00",
-      "last_checked_at": "2026-10-04T17:56:13+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
       ],
@@ -17299,9 +17219,9 @@
       "identity_tokens": [
         "arXiv:2212.10560"
       ],
-      "reason": "モデル自身がinstruction/input/outputを生成・filterし、その合成データで元モデルをfine-tuneするinstruction tuning研究。Super-NaturalInstructions等の能力改善が主目的で、推論実行効率化ではない。",
+      "reason": "モデル自身でinstruction/input/outputを生成・フィルタし、その合成データでGPT-3を微調整するinstruction-tuningデータ生成・学習手法。推論システム効率化ではない。",
       "first_checked_at": "2026-10-04T17:56:14+00:00",
-      "last_checked_at": "2026-10-04T17:56:14+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
@@ -17342,9 +17262,9 @@
       "identity_tokens": [
         "arXiv:2305.11206"
       ],
-      "reason": "65B LLaMAを1,000件の厳選prompt/responseだけで教師ありfine-tuningし、少量alignment dataで高品質応答を得られるかを検証するalignment研究。推論runtimeやmemory/serving効率化は提案しない。",
+      "reason": "65B LLaMAを1000件の厳選応答だけで教師あり微調整し、アラインメントに必要なデータ量と品質を検証する学習研究。最終適用先はinstruction tuningであり推論システム効率化ではない。",
       "first_checked_at": "2026-10-04T17:56:14+00:00",
-      "last_checked_at": "2026-10-04T17:56:14+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md",
         "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
@@ -20406,9 +20326,9 @@
         "id:arXiv:1412.6553",
         "url:https://arxiv.org/abs/1412.6553"
       ],
-      "reason": "The primary abstract/full HTML studies CP-decomposition of convolution kernels to accelerate two vision CNNs, including AlexNet and a character-classification CNN. Its evaluations report CNN accuracy/speed trade-offs, not LLM inference, serving, or LLM-oriented compression; this is a clear scope mismatch.",
+      "reason": "4次元convolution kernelを低rank CP分解して小kernelの4層へ置換し、fine-tuning後にCNNをCPU高速化する画像モデル圧縮研究。8.5倍等の推論高速化を示すがLLM/Transformerへの適用・評価がない。",
       "first_checked_at": "2026-10-04T22:47:25+00:00",
-      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
       ],
@@ -20422,9 +20342,9 @@
         "id:arXiv:2302.05442",
         "url:https://arxiv.org/abs/2302.05442"
       ],
-      "reason": "The primary abstract and reviewed sections focus on scaling and training a vision encoder, not LLM inference/serving or inference-time compression/efficiency. Its hardware and parallelization work supports large-scale training of ViT-22B; evaluation is on vision transfer tasks, so this is outside the stated scope.",
+      "reason": "22B parameterのVision Transformerを安定・効率的に学習するrecipeと画像/動画下流性能を評価するvision scaling研究。主眼はViT学習と視覚性能で、LLM推論system最適化ではない。",
       "first_checked_at": "2026-10-04T22:47:25+00:00",
-      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
         "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
@@ -20554,6 +20474,149 @@
         "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
       ],
       "title": "Active Retrieval Augmented Generation"
+    },
+    "DOI:10.1109/iccv.2015.11": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2015.11",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2015.11",
+        "arXiv:1506.06724"
+      ],
+      "reason": "書籍文と映画クリップを文・動画埋め込みと文脈対応CNNで対応付け、視覚内容へ物語的説明を付与する画像・動画理解研究。LLM推論、サービング、メモリ、推論カーネルの効率化を扱わない。",
+      "first_checked_at": "2026-09-27T05:31:34+09:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "worker-worklist-30 discovery_review rank 468"
+      ],
+      "title": "Aligning Books and Movies: Towards Story-Like Visual Explanations by Watching Movies and Reading Books"
+    },
+    "arXiv:2302.04761": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04761",
+      "identity_tokens": [
+        "OpenReview:Yacmpz84TH",
+        "arXiv:2302.04761"
+      ],
+      "reason": "言語モデルがAPI呼出しの位置・引数・結果利用を自己教師ありで学習するtool-use学習手法。推論時に外部APIを使うが、ランタイム、サービング、KVキャッシュ、推論計算効率の最適化は主題ではない。",
+      "first_checked_at": "2026-09-30T21:20:43+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
+      ],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    },
+    "arXiv:2306.05685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05685",
+      "identity_tokens": [
+        "DOI:10.52202/075280-2020",
+        "arXiv:2306.05685"
+      ],
+      "reason": "強力なLLMをjudgeとして使う際のposition/verbosity/self-enhancement biasを分析し、MT-BenchとChatbot Arenaでモデル品質評価を行うbenchmark研究。推論システム効率化を扱わない。",
+      "first_checked_at": "2026-09-26T17:49:24+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md",
+        "worker-worklist-30 reference-review candidate"
+      ],
+      "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"
+    },
+    "arXiv:2303.18223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.18223",
+      "identity_tokens": [
+        "DOI:10.1007/s11704-026-60308-3",
+        "DOI:10.48550/arxiv.2303.18223",
+        "arXiv:2303.18223"
+      ],
+      "reason": "LLMのpre-training、adaptation tuning、utilization、能力評価を広範に整理する総合サーベイ。推論システム効率に特化した新規方式・評価を提案する論文ではない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "worker-worklist-30"
+      ],
+      "title": "A Survey of Large Language Models"
+    },
+    "arXiv:2201.11903": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.11903",
+      "identity_tokens": [
+        "DOI:10.52202/068431-1800",
+        "arXiv:2201.11903"
+      ],
+      "reason": "few-shot例に中間推論過程を含めて算術・常識・記号推論能力を改善するprompting研究。生成トークン増による推論コストを削減する方式ではなく、能力向上が目的。",
+      "first_checked_at": "2026-10-04T13:05:22+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md"
+      ],
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+    },
+    "DOI:10.1109/jproc.2020.2976475": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jproc.2020.2976475",
+      "identity_tokens": [
+        "DOI:10.1109/jproc.2020.2976475"
+      ],
+      "reason": "DNN全般のcompact model、tensor decomposition、quantization、sparsificationと専用hardware acceleratorを整理する包括サーベイ。推論効率化は扱うが対象は一般DNN/embedded deploymentで、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T23:24:23+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md"
+      ],
+      "title": "Model Compression and Hardware Acceleration for Neural Networks: A Comprehensive Survey"
+    },
+    "arXiv:2204.05999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.05999",
+      "identity_tokens": [
+        "arXiv:2204.05999"
+      ],
+      "reason": "bidirectional contextを利用してcode infillingとprogram synthesisを行う生成コードモデルを提案し、type inference、comment generation、variable renaming等で能力を評価するモデル研究。推論runtime/serving効率化は扱わない。",
+      "first_checked_at": "2026-10-04T23:24:23+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+      ],
+      "title": "InCoder: A Generative Model for Code Infilling and Synthesis"
+    },
+    "arXiv:1910.05316": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.05316",
+      "identity_tokens": [
+        "arXiv:1910.05316"
+      ],
+      "reason": "Edgentが一般DNNをdevice-edge間でpartitionし、early exit/right-sizingとnetwork状態適応で低遅延推論を実現するedge inference研究。推論systemとして関連はあるが対象は一般DNNで、LLM/Transformer推論への最終適用・評価がないため対象外。",
+      "first_checked_at": "2026-10-04T23:24:23+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+      ],
+      "title": "Edge AI: On-Demand Accelerating Deep Neural Network Inference via Edge Computing"
+    },
+    "arXiv:1902.09574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.09574",
+      "identity_tokens": [
+        "arXiv:1902.09574"
+      ],
+      "reason": "ResNet-50/ImageNetとTransformer/WMT14で複数sparsification手法を大規模比較し、magnitude pruning等の学習・圧縮特性を評価する一般DNN sparsity benchmark研究。LLM推論runtimeや疎カーネル配備を最終適用先として評価しない。",
+      "first_checked_at": "2026-10-04T23:24:23+00:00",
+      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "The State of Sparsity in Deep Neural Networks"
     }
   }
 }

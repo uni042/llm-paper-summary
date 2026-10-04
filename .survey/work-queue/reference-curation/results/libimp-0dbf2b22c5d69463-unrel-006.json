@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbf2b22c5d69463-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.18290",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.18290",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.18290",
+      "arXiv:2305.18290"
+    ],
+    "reason": "RLHFの報酬モデルと強化学習を単純な分類損失へ置き換えて選好アラインメントを行う学習アルゴリズム。計算軽量性はfine-tuning手順についてであり、推論実行効率を対象としない。",
+    "first_checked_at": "2026-09-27T11:00:23+09:00",
+    "last_checked_at": "2026-10-04T23:24:23+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+  },
+  "processed_at": "2026-10-04T23:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbf2b22c5d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
