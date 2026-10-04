@@ -1,0 +1,87 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0800-scheduled-chat-00/r03",
+  "reference_main_sha": "8e5f81d3584459396677f8abc1a9f3c2d8faca84",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.254",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.254",
+        "arXiv:2105.07624"
+      ],
+      "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance",
+      "reason": "金融reportのtable/textを組み合わせたQA datasetとTAGOP reasoning modelを提案し、数値推論F1を評価するbenchmark/model能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2105.07624",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でfinancial hybrid QA benchmarkとreasoning品質が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:38:00+09:00",
+      "last_checked_at": "2026-10-05T08:38:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3368089.3417058",
+      "identity_tokens": [
+        "DOI:10.1145/3368089.3417058",
+        "arXiv:2005.08025"
+      ],
+      "title": "IntelliCode Compose: Code Generation Using Transformer",
+      "reason": "GPT-Cをcloud code completionとして実配備し、beam searchを候補batch化してL×k回のmodel callをL回へ削減、過去stepのattention key/valueをcacheしてさらに約10%高速化する。L=25,k=15ではsequential 7500 msからparallel 3000 ms、KV cache併用2700 msへ短縮し、client-side trie cacheで100 ms未満の体感要件も狙うため、Transformer推論runtime/serving最適化として対象内。",
+      "source_url": "https://arxiv.org/abs/2005.08025",
+      "body_check": "full_text_checked: 一次arXiv HTML本文のSequence Decoding/Client-Side Post-Processing/Deploymentを確認。batched beam search、attention K/V cache、10%追加speedup、Table 5の250/220 ms・1700/1000/820 ms・7500/3000/2700 ms、client-side trie cachingを確認。",
+      "first_checked_at": "2026-10-05T08:38:00+09:00",
+      "last_checked_at": "2026-10-05T08:38:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.04281",
+      "identity_tokens": [
+        "arXiv:1809.04281"
+      ],
+      "title": "Music Transformer: Generating Music with Long-Term Structure",
+      "reason": "relative attentionを用いて長期構造を持つ音楽を生成するsequence modeling研究で、最終適用先はmusic generation。Transformer推論systemのruntime/serving最適化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/1809.04281",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmusic generationとlong-term musical structureが主題と確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:38:00+09:00",
+      "last_checked_at": "2026-10-05T08:38:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/slt.2012.6424228",
+      "identity_tokens": [
+        "DOI:10.1109/slt.2012.6424228"
+      ],
+      "title": "Context Dependent Recurrent Neural Network Language Model",
+      "reason": "preceding textからLDA topic vectorを作りRNNLMへcontextとして与え、Penn Treebank perplexityとWSJ speech recognitionのWERを改善する2012年のlanguage modeling能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/context-dependent-recurrent-neural-network-language-model/",
+      "body_check": "abstract_screen_only: Microsoft Research一次著者ページのabstractでtopic-conditioned RNNLMのperplexity/WER改善が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:38:00+09:00",
+      "last_checked_at": "2026-10-05T08:38:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1023",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1023"
+      ],
+      "title": "Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences",
+      "reason": "複数文の情報統合を必要とする6,500超questionのMultiRC reading-comprehension challenge datasetを構築しbaseline/human F1を評価するbenchmark研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://aclanthology.org/N18-1023/",
+      "body_check": "abstract_screen_only: ACL Anthology一次ページのabstractでmulti-sentence reading comprehension dataset構築とF1評価が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:38:00+09:00",
+      "last_checked_at": "2026-10-05T08:38:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 33
+    }
+  ]
+}
