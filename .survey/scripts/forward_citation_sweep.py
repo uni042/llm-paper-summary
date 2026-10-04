@@ -224,6 +224,45 @@ def _drop_represented_candidates(state: dict[str, Any], represented: set[str]) -
     return _drop_candidates_matching_tokens(state, represented)
 
 
+def _candidate_match_tokens(record: dict[str, Any]) -> set[str]:
+    """Exact cross-source aliases used to keep forward/backward pools disjoint."""
+    probe = dict(record)
+    aliases: list[str] = []
+    existing = probe.get("identifiers")
+    if isinstance(existing, list):
+        aliases.extend(str(value) for value in existing if value)
+    elif existing:
+        aliases.append(str(existing))
+    extra = probe.get("identity_tokens")
+    if isinstance(extra, list):
+        aliases.extend(str(value) for value in extra if value)
+    elif extra:
+        aliases.append(str(extra))
+    if aliases:
+        probe["identifiers"] = list(dict.fromkeys(aliases))
+
+    tokens = set(paper_identity.stable_identity_tokens(probe))
+    title_hash = paper_identity.normalized_title_hash(probe.get("title"))
+    if title_hash:
+        tokens.add("title-hash:" + title_hash)
+    return tokens
+
+
+def _drop_backward_reference_candidates(state: dict[str, Any], blocked: set[str]) -> int:
+    candidates = state.get("candidates") if isinstance(state.get("candidates"), dict) else {}
+    remove = [
+        key for key, row in candidates.items()
+        if isinstance(row, dict) and _candidate_match_tokens(row) & blocked
+    ]
+    for key in remove:
+        candidates.pop(key, None)
+    if remove:
+        live_keys = set(candidates)
+        aliases = state.get("candidate_aliases") if isinstance(state.get("candidate_aliases"), dict) else {}
+        state["candidate_aliases"] = {alias: key for alias, key in aliases.items() if key in live_keys}
+    return len(remove)
+
+
 def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) -> dict[str, Any]:
     root = Path(root).resolve()
     config = _read(root / CONFIG_PATH, {})
@@ -252,11 +291,11 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         if isinstance(backward_pool, dict)
         else None
     )
-    backward_identities: set[str] = set()
+    backward_tokens: set[str] = set()
     if isinstance(backward_candidates, list):
         for candidate in backward_candidates:
             if isinstance(candidate, dict):
-                backward_identities.update(paper_identity.record_identifiers(candidate))
+                backward_tokens.update(_candidate_match_tokens(candidate))
 
     state = _read(root / STATE_PATH, {})
     if not isinstance(state, dict) or state.get("schema_version") != 1:
@@ -347,7 +386,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
                     candidate_ids = paper_identity.record_identifiers(candidate)
                     if candidate_ids & represented:
                         continue
-                    if candidate_ids & backward_identities:
+                    if _candidate_match_tokens(candidate) & backward_tokens:
                         continue
                     if _merge_candidate(state, candidate, source=paper, observed_at=now_text):
                         new_observations += 1
@@ -388,8 +427,8 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
             sleep_fn(spacing)
 
     represented_removed = _drop_represented_candidates(state, represented)
-    backward_reference_removed = _drop_candidates_matching_tokens(
-        state, backward_identities
+    backward_reference_removed = _drop_backward_reference_candidates(
+        state, backward_tokens
     )
 
     # Candidates already durably classified as unrelated/borderline no longer
