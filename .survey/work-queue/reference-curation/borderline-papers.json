@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T14:32:42+00:00",
-  "record_count": 422,
+  "updated_at": "2026-10-04T15:55:08+00:00",
+  "record_count": 423,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6103,6 +6103,21 @@
         "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
       ],
       "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter"
+    },
+    "arXiv:2002.10957": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.10957",
+      "identity_tokens": [
+        "arXiv:2002.10957"
+      ],
+      "reason": "大規模Transformerのonline servingにおけるlatency/capacity制約を明示し、teacher最終層のattention distributionとvalue-relationをstudentへ蒸留して50%のTransformer parameter/computationで99%以上のSQuAD/GLUE精度を保持する圧縮法。推論資源削減への適用は明確だが、主機構はBERT系の学習時knowledge distillationで現代の生成LLM推論systemそのものではないためborderline。",
+      "first_checked_at": "2026-10-04T15:55:08+00:00",
+      "last_checked_at": "2026-10-04T15:55:08+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers"
     }
   }
 }
