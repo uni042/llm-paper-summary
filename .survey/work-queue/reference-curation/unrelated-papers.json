@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T05:49:13+00:00",
-  "record_count": 936,
+  "updated_at": "2026-10-04T05:52:54+00:00",
+  "record_count": 944,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -13366,11 +13366,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3037697.3037702",
       "identity_tokens": [
-        "DOI:10.1145/3037697.3037702"
+        "DOI:10.1145/3037697.3037702",
+        "DOI:10.1145/3093337.3037702"
       ],
-      "reason": "3D memoryを用いた汎用ニューラルネットワーク推論アクセラレータとdataflow/partitioningが主題で、LLMまたはTransformer推論を対象にしない。",
+      "reason": "3D memoryを用いる汎用ニューラルネットワークアクセラレータとdataflow schedulingを提案する研究で、LLM/Transformer推論を最終適用先としない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
       ],
@@ -13382,9 +13383,9 @@
       "identity_tokens": [
         "arXiv:2403.03507"
       ],
-      "reason": "LLMの事前学習・fine-tuning時のoptimizer stateとgradient memoryを低ランク射影で削減する学習方式で、最終適用先が学習工程そのもののため凍結範囲。",
+      "reason": "LLMの勾配を低rank部分空間へ射影してoptimizer stateと学習memoryを削減する学習専用方式であり、最終適用先が推論ではない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
         "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
@@ -13415,9 +13416,9 @@
       "identity_tokens": [
         "DOI:10.1145/3352460.3358302"
       ],
-      "reason": "36-chiplet MCMによる汎用DNN推論アクセラレータが主題で、ResNet-50等の画像DNNを評価し、LLM/Transformer推論を対象にしない。",
+      "reason": "36-chiplet MCMによる汎用DNN推論アクセラレータを設計・試作しResNet-50等を対象に評価する研究で、LLM/Transformer推論が最終適用先ではない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
         "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
@@ -13429,11 +13430,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/micro.2016.7783721",
       "identity_tokens": [
-        "DOI:10.1109/micro.2016.7783721"
+        "DOI:10.1109/micro.2016.7783721",
+        "arXiv:1602.08124"
       ],
-      "reason": "GPU/CPU memoryを併用して大規模DNNを学習するactivation virtualizationが主題で、推論ではなくtraining memory管理を対象とする。",
+      "reason": "GPU/CPU memoryを仮想化してAlexNet/VGG等のDNNを単一GPUで学習可能にするtraining memory managerで、推論offload方式ではない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
       ],
@@ -13446,9 +13448,9 @@
         "DOI:10.1145/3290605.3300705",
         "arXiv:1901.06525"
       ],
-      "reason": "人間が会話に求める社会的・機能的特性を半構造化インタビューで調べるHCI研究で、LLM推論システムの効率化とは無関係。",
+      "reason": "人間が会話に求める社会的・機能的価値をインタビューから分析し会話エージェント設計課題を論じるHCI研究で、LLM推論runtimeとは無関係。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md"
       ],
@@ -13460,9 +13462,9 @@
       "identity_tokens": [
         "DOI:10.1109/tcad.2018.2789723"
       ],
-      "reason": "synaptic memory array型neuromorphic architectureのarea/latency/energy/leakageを評価する回路モデルで、LLM推論方式ではない。",
+      "reason": "synaptic memory arrayを用いるneuro-inspired architectureの面積・遅延・energy等を推定するcircuit-level modelで、LLM推論を最終適用先としない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md"
       ],
@@ -13474,9 +13476,9 @@
       "identity_tokens": [
         "DOI:10.1109/69.273032"
       ],
-      "reason": "データベースquery executionの拡張性・parallelismを扱う汎用DBシステム研究で、LLM推論・サービングを対象にしない。",
+      "reason": "database query evaluationでoperator setからparallelism機構を分離した拡張可能な研究用query engineを提案する古典的DB systems研究で、LLM agent推論runtimeを対象としない。",
       "first_checked_at": "2026-10-04T05:27:33+00:00",
-      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
       ],
@@ -13756,6 +13758,122 @@
         "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
       ],
       "title": "Certified Speculative Execution for Untrusted AI Agents"
+    },
+    "DOI:10.1145/3214306": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3214306",
+      "identity_tokens": [
+        "DOI:10.1145/3214306",
+        "arXiv:1708.04649"
+      ],
+      "reason": "censoringを伴うtime-to-eventデータに対する統計・機械学習手法を体系化するsurvival analysisサーベイで、LLM/VLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+      ],
+      "title": "Machine Learning for Survival Analysis"
+    },
+    "DOI:10.1145/2366231.2337202": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2366231.2337202",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2012.6237032",
+        "DOI:10.1145/2366231.2337202"
+      ],
+      "reason": "DRAM bank内部のsubarray独立性を利用して同一bankへのmemory requestを重畳する汎用DRAM architecture研究で、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "A case for exploiting subarray-level parallelism (SALP) in DRAM"
+    },
+    "DOI:10.1109/tpds.2007.70606": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpds.2007.70606",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2007.70606"
+      ],
+      "reason": "HPC parallel job schedulerのbackfillingでuser runtime estimateを履歴ベース予測へ置換する研究で、LLM推論サービング固有のschedulerではない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ],
+      "title": "Backfilling Using System-Generated Predictions Rather than User Runtime Estimates"
+    },
+    "DOI:10.1145/2150976.2150982": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2150976.2150982",
+      "identity_tokens": [
+        "DOI:10.1145/2150976.2150982"
+      ],
+      "reason": "CloudSuiteを用いてscale-out workloadと当時のserver microarchitectureの不整合を分析する汎用データセンタ・アーキテクチャ研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "title": "Clearing the clouds: a study of emerging scale-out workloads on modern hardware"
+    },
+    "DOI:10.1145/1284320.1284321": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1284320.1284321",
+      "identity_tokens": [
+        "DOI:10.1145/1284320.1284321"
+      ],
+      "reason": "検索広告をqueryごとに広告主へ割り当てて収益を最大化するonline bipartite matching一般化の理論研究で、LLM推論schedulerを対象としない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md"
+      ],
+      "title": "AdWords and generalized on-line matching"
+    },
+    "DOI:10.1109/tcom.1960.1097606": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcom.1960.1097606",
+      "identity_tokens": [
+        "DOI:10.1109/tcom.1960.1097606"
+      ],
+      "reason": "scatter propagationやmulti-hop通信で生じるlog-normal確率分布の和を近似する通信理論研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md"
+      ],
+      "title": "The Sum of Log-Normal Probability Distributions in Scatter Transmission Systems"
+    },
+    "DOI:10.1137/s0097539795288490": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/s0097539795288490",
+      "identity_tokens": [
+        "DOI:10.1137/s0097539795288490"
+      ],
+      "reason": "balls-into-binsで二つの候補から負荷の小さい箱を選ぶと最大負荷が指数的に改善することを示す確率的負荷分散理論で、LLM推論システム自体を対象としない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md"
+      ],
+      "title": "Balanced Allocations"
+    },
+    "arXiv:2303.17568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.17568",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599790",
+        "arXiv:2303.17568"
+      ],
+      "reason": "13B code generation modelの事前学習と多言語コード生成・翻訳能力、HumanEval-X benchmarkが主題で、LLM推論runtime効率化を提案しない。",
+      "first_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md"
+      ],
+      "title": "CodeGeeX: A Pre-Trained Model for Code Generation with Multilingual Benchmarking on HumanEval-X"
     }
   }
 }
