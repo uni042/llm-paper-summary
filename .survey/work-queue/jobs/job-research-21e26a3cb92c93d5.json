@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2412.21187",
   "canonical_id": "arXiv:2412.21187",
+  "citation_count": 2,
+  "citation_count_checked_at": "2026-10-04T22:46:40+00:00",
+  "citation_count_source": "openalex",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-02T08:20:15+00:00",
   "doi": "10.48550/arXiv.2412.21187",
@@ -12,23 +15,26 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2412.21187-do-not-think-that-much-for-2-3-on-the-overthinking-of-o1-like-llms.md",
   "parent_job_id": "job-27c7ff275c51dd4b",
-  "priority": 0,
+  "priority": 2,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 2,
+    "citations": 2,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 643,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 2
   },
+  "published": "2024-12-30",
   "schema_version": 1,
   "selection_reason": "reasoning時の冗長tokenを削減して推論計算を減らす手法で、MATH500ではtoken出力48.6%削減を報告する。",
   "source_url": "https://arxiv.org/abs/2412.21187",
   "status": "ready",
   "title": "Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv (Cornell University)",
+  "workflow_version": 10,
+  "year": 2024
 }
