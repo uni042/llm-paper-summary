@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-dae4856cb34f3771",
+  "type": "research",
+  "parent_job_id": "job-0218b60c3efe6c12",
+  "priority": 101,
+  "canonical_id": "arXiv:2608.28113",
+  "arxiv_id": "2608.28113",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:aaf4fa1b6f65ad48cb458188a3a6b416538711ae"
+  ],
+  "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
+  "source_url": "https://arxiv.org/abs/2608.28113",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md",
+  "lineage": null,
+  "selection_reason": "H-Scaleは、NVFP4重みのみのpost-training quantizationで、activation calibrationから得た対角Hessian proxyを用いて各16要素groupのE4M3 scaleを選び直す軽量な後処理である。FP4値格子や量子化済み重み形式を変えず、BF16重みの推論コスト・メモリを抑えうる量子化モデルの品質を改善する目的で、LLM推論用の重み圧縮・効率化に直接該当する。一次本文の評価は複数モデル・NVFP4 baselineで平均ベンチマーク値の改善を報告するが、全個別指標が改善するわけではなく、実測の推論latencyやthroughput向上を示すものではない。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 100,
+    "prestigious_venue": 0,
+    "citations": 1,
+    "citation_count": 1,
+    "total": 101,
+    "is_fresh": true,
+    "freshness_age_days": 37,
+    "matched_prestigious_venue": null
+  },
+  "published": "2026-08-28",
+  "year": 2026,
+  "venue": null,
+  "citation_count": 1,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "aaf4fa1b6f65ad48cb458188a3a6b416538711ae",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-04T05:25:45+00:00"
+}

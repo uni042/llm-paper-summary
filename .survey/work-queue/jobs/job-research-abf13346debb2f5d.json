@@ -1,0 +1,43 @@
+{
+  "job_id": "job-research-abf13346debb2f5d",
+  "type": "research",
+  "parent_job_id": "job-9577b402658e1b4b",
+  "priority": 102,
+  "canonical_id": "arXiv:2608.19147",
+  "arxiv_id": "2608.19147",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [
+    "SemanticScholar:dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a"
+  ],
+  "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+  "source_url": "https://arxiv.org/abs/2608.19147",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-pc-fleets.md",
+  "lineage": null,
+  "selection_reason": "Intel AI PC群で単体機のメモリに収まらないLLMを推論するため、層単位に分割したOpenVINO shardを複数ノードで実行し、推論時投機的デコードと複数利用者のmicro-batchingを組み合わせる研究である。Llama 3.1 8Bの同一ハードウェア比較で単体baselineを上回る複数利用者throughputを示し、70Bの4ノード推論も評価しているため、LLM serving・推論効率化に該当する。評価は主にIntel統合GPUとOpenVINOに限られ、他社GPU環境との比較は行っていない。",
+  "priority_breakdown": {
+    "policy": "candidate-priority-v1",
+    "freshness": 100,
+    "prestigious_venue": 0,
+    "citations": 2,
+    "citation_count": 2,
+    "total": 102,
+    "is_fresh": true,
+    "freshness_age_days": 46,
+    "matched_prestigious_venue": null
+  },
+  "published": "2026-08-19",
+  "year": 2026,
+  "venue": null,
+  "citation_count": 2,
+  "citation_count_source": "semantic_scholar",
+  "citation_count_checked_at": null,
+  "semantic_scholar_id": "dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-10-04T05:25:59+00:00"
+}
