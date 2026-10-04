@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:27:12+00:00",
-  "record_count": 1415,
+  "updated_at": "2026-10-04T22:47:25+00:00",
+  "record_count": 1419,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -20410,6 +20410,71 @@
         "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
       ],
       "title": "Progress measures for grokking via mechanistic interpretability"
+    },
+    "arXiv:1412.6553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.6553",
+      "identity_tokens": [
+        "arXiv:1412.6553",
+        "id:arXiv:1412.6553",
+        "url:https://arxiv.org/abs/1412.6553"
+      ],
+      "reason": "The primary abstract/full HTML studies CP-decomposition of convolution kernels to accelerate two vision CNNs, including AlexNet and a character-classification CNN. Its evaluations report CNN accuracy/speed trade-offs, not LLM inference, serving, or LLM-oriented compression; this is a clear scope mismatch.",
+      "first_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Speeding-up Convolutional Neural Networks Using Fine-tuned CP-Decomposition"
+    },
+    "arXiv:2302.05442": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.05442",
+      "identity_tokens": [
+        "arXiv:2302.05442",
+        "id:arXiv:2302.05442",
+        "url:https://arxiv.org/abs/2302.05442"
+      ],
+      "reason": "The primary abstract and reviewed sections focus on scaling and training a vision encoder, not LLM inference/serving or inference-time compression/efficiency. Its hardware and parallelization work supports large-scale training of ViT-22B; evaluation is on vision transfer tasks, so this is outside the stated scope.",
+      "first_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "title": "Scaling Vision Transformers to 22 Billion Parameters"
+    },
+    "arXiv:2309.01029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.01029",
+      "identity_tokens": [
+        "arXiv:2309.01029",
+        "id:arXiv:2309.01029",
+        "url:https://arxiv.org/abs/2309.01029"
+      ],
+      "reason": "The primary abstract surveys local and global explainability methods for LLMs, organized by fine-tuning and prompting paradigms, and discusses explanation metrics and challenges. It is interpretability research, not an LLM inference/serving system or an inference-time compression/efficiency technique.",
+      "first_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+      ],
+      "title": "Explainability for Large Language Models: A Survey"
+    },
+    "arXiv:1909.07606": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.07606",
+      "identity_tokens": [
+        "arXiv:1909.07606",
+        "id:arXiv:1909.07606",
+        "url:https://arxiv.org/abs/1909.07606"
+      ],
+      "reason": "The primary abstract proposes injecting knowledge-graph triples into BERT inputs using soft positions and a visible matrix to improve domain-specific language representation, reporting results on NLP tasks. It does not study generative LLM inference/serving or an inference-time efficiency technique; the stated contribution is knowledge-enhanced representation quality.",
+      "first_checked_at": "2026-10-04T22:47:25+00:00",
+      "last_checked_at": "2026-10-04T22:47:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "K-BERT: Enabling Language Representation with Knowledge Graph"
     }
   }
 }

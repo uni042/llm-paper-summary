@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aa553ac4b2281e9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.05442",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.05442",
+    "identity_tokens": [
+      "arXiv:2302.05442",
+      "id:arXiv:2302.05442",
+      "url:https://arxiv.org/abs/2302.05442"
+    ],
+    "reason": "The primary abstract and reviewed sections focus on scaling and training a vision encoder, not LLM inference/serving or inference-time compression/efficiency. Its hardware and parallelization work supports large-scale training of ViT-22B; evaluation is on vision transfer tasks, so this is outside the stated scope.",
+    "first_checked_at": "2026-10-04T22:47:25+00:00",
+    "last_checked_at": "2026-10-04T22:47:25+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+      "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+    ],
+    "title": "Scaling Vision Transformers to 22 Billion Parameters"
+  },
+  "processed_at": "2026-10-04T22:47:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aa553ac4b22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
