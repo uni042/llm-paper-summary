@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T05:23:39+00:00",
-  "record_count": 900,
+  "updated_at": "2026-10-04T05:27:33+00:00",
+  "record_count": 916,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -12011,22 +12011,6 @@
       ],
       "title": "Scalable Diffusion Models with Transformers"
     },
-    "arXiv:2310.03744": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2310.03744",
-      "identity_tokens": [
-        "arXiv:2310.03744"
-      ],
-      "reason": "LLaVAの視覚言語コネクタ、学習データ、画像解像度を改善してマルチモーダルモデル品質を高める学習・モデル研究で、推論システム高速化が主目的ではない。",
-      "first_checked_at": "2026-10-03T17:51:24+00:00",
-      "last_checked_at": "2026-10-03T17:51:24+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
-        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
-      ],
-      "title": "Improved Baselines with Visual Instruction Tuning"
-    },
     "DOI:10.1109/ijcnn.1993.716791": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/ijcnn.1993.716791",
@@ -12432,19 +12416,6 @@
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
       ],
       "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
-    },
-    "arXiv:2104.09864": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2104.09864",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2104.09864",
-        "arXiv:2104.09864"
-      ],
-      "reason": "回転位置埋め込み（RoPE）によるモデル表現・位置符号化が主題で、推論システム最適化が最終適用先ではない。",
-      "first_checked_at": "2026-10-03T18:59:03+00:00",
-      "last_checked_at": "2026-10-03T18:59:03+00:00",
-      "linked_from": [],
-      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
     },
     "DOI:10.1002/j.1538-7305.1948.tb01338.x": {
       "classification": "unrelated",
@@ -13018,9 +12989,9 @@
         "DOI:10.48550/arxiv.1512.03385",
         "arXiv:1512.03385"
       ],
-      "reason": "�ꎟ�����̗v�|�́A�c���֐����w�K����摜�F���p�l�b�g���[�N��񎦂��AImageNet�ECIFAR-10�ECOCO�Ŏ��o�F�����x��]�����Ă���BLLM���_�A�T�[�r���O�A���_�����k�����킸�A�w�K��p�������ΏۊO�Ȃ̂�unrelated�B",
+      "reason": "ImageNet/COCO向け深層残差ネットワークの学習容易化と画像認識精度が主題で、LLM推論・サービング効率化を扱わない。",
       "first_checked_at": "2026-10-03T16:32:28+00:00",
-      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md"
@@ -13033,9 +13004,9 @@
       "identity_tokens": [
         "DOI:10.1145/3394486.3406703"
       ],
-      "reason": "���ҏ����@�ւ�Microsoft Research�ɂ��ꎟ�����́ADeepSpeed��ZeRO���K�͕��U���f����training��scale�Espeed�Ecost�Eusability�����P����Z�p�Ƃ��Đ������A100B�����f���P���������B���_�������ł͂Ȃ�training��p�̃V�X�e�������ł���A�������ꂽ�͈͂Ȃ̂�unrelated�B",
+      "reason": "ZeRO等による100B超モデルの分散学習規模・速度・メモリ効率を主題とするDeepSpeed学習システム研究で、現行サーベイの凍結対象である学習最適化に該当する。",
       "first_checked_at": "2026-10-04T05:19:24+00:00",
-      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
@@ -13241,6 +13212,275 @@
       "last_checked_at": "2026-10-04T05:23:39+00:00",
       "linked_from": [],
       "title": "The tail at scale"
+    },
+    "DOI:10.1109/tit.1982.1056489": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tit.1982.1056489",
+      "identity_tokens": [
+        "DOI:10.1109/tit.1982.1056489"
+      ],
+      "reason": "PCM信号の有限レベル量子化で平均量子化雑音を最小化する古典的信号処理理論で、LLM重み・活性量子化や推論実装を対象としない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
+      ],
+      "title": "Least squares quantization in PCM"
+    },
+    "DOI:10.1016/j.neucom.2023.127063": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2023.127063",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2023.127063",
+        "DOI:10.48550/arxiv.2104.09864",
+        "arXiv:2104.09864"
+      ],
+      "reason": "回転位置埋め込み（RoPE）というTransformerアーキテクチャ要素を提案し長文分類性能を評価するモデル研究で、推論システムの速度・メモリ・サービング最適化が主目的ではない。",
+      "first_checked_at": "2026-10-03T18:59:03+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.08382-star-kv-adaptive-low-rank-cache-compression.md"
+      ],
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+    },
+    "DOI:10.1109/cvpr52733.2024.02484": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52733.2024.02484",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52733.2024.02484",
+        "arXiv:2310.03744"
+      ],
+      "reason": "LLaVAの視覚指示調整・学習データ・vision-language connectorを改善するマルチモーダルモデル学習研究で、VLM/LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-03T17:51:24+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Improved Baselines with Visual Instruction Tuning"
+    },
+    "DOI:10.1145/2024716.2024718": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2024716.2024718",
+      "identity_tokens": [
+        "DOI:10.1145/2024716.2024718"
+      ],
+      "reason": "CPU・メモリ階層等を研究する汎用計算機アーキテクチャシミュレータgem5の設計・統合が主題で、LLM推論方式そのものではない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md"
+      ],
+      "title": "The gem5 simulator"
+    },
+    "DOI:10.1145/214762.214771": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/214762.214771",
+      "identity_tokens": [
+        "DOI:10.1145/214762.214771"
+      ],
+      "reason": "算術符号化による汎用可逆データ圧縮の古典研究で、LLMのKVキャッシュや推論データ転送を対象とする方式ではない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
+      "title": "Arithmetic coding for data compression"
+    },
+    "DOI:10.1109/tpami.2018.2889473": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2018.2889473",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2018.2889473",
+        "arXiv:1603.09320"
+      ],
+      "reason": "HNSWによる汎用近似最近傍探索データ構造の研究で、RAG等で利用可能な基盤技術ではあるがLLM推論システムの最適化を主題としない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ],
+      "title": "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs"
+    },
+    "DOI:10.1137/0117039": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/0117039",
+      "identity_tokens": [
+        "DOI:10.1137/0117039"
+      ],
+      "reason": "1969年のmultiprocessing scheduling anomalyに関する理論解析で、LLM推論スケジューリングや現代アクセラレータを対象としない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md"
+      ],
+      "title": "Bounds on Multiprocessing Timing Anomalies"
+    },
+    "DOI:10.1145/1851182.1851192": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1851182.1851192",
+      "identity_tokens": [
+        "DOI:10.1145/1851182.1851192"
+      ],
+      "reason": "ECNを用いてデータセンタTCPのswitch queue・incast・short-flow latencyを改善するネットワークtransport研究で、LLM推論サービング固有の方式ではない。",
+      "first_checked_at": "2026-10-04T05:27:32+00:00",
+      "last_checked_at": "2026-10-04T05:27:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03910-netkv-network-aware-decode-selection.md"
+      ],
+      "title": "Data center TCP (DCTCP)"
+    },
+    "DOI:10.1109/tkde.2024.3392335": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2024.3392335",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2024.3392335",
+        "arXiv:2307.02046"
+      ],
+      "reason": "LLMを推薦システムへ利用する研究を整理するサーベイで、推論サービング、メモリ管理、カーネル、圧縮の方式提案・評価が主題ではない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md"
+      ],
+      "title": "Recommender Systems in the Era of Large Language Models (LLMs)"
+    },
+    "DOI:10.1145/2740070.2626299": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2740070.2626299",
+      "identity_tokens": [
+        "DOI:10.1145/2740070.2626299"
+      ],
+      "reason": "RDMAネットワーク上の汎用key-valueサービスHERDの低遅延・高throughput設計が主題で、LLM推論またはモデル状態/KV cacheの最適化を扱わない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.01310-tarragon-resilient-moe-inference.md"
+      ],
+      "title": "Using RDMA efficiently for key-value services"
+    },
+    "DOI:10.1145/3037697.3037702": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3037697.3037702",
+      "identity_tokens": [
+        "DOI:10.1145/3037697.3037702"
+      ],
+      "reason": "3D memoryを用いた汎用ニューラルネットワーク推論アクセラレータとdataflow/partitioningが主題で、LLMまたはTransformer推論を対象にしない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "TETRIS: Scalable and Efficient Neural Network Acceleration with 3D Memory"
+    },
+    "arXiv:2403.03507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03507",
+      "identity_tokens": [
+        "arXiv:2403.03507"
+      ],
+      "reason": "LLMの事前学習・fine-tuning時のoptimizer stateとgradient memoryを低ランク射影で削減する学習方式で、最終適用先が学習工程そのもののため凍結範囲。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+      ],
+      "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection"
+    },
+    "DOI:10.1145/3630106.3658542": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3630106.3658542",
+      "identity_tokens": [
+        "DOI:10.1145/3630106.3658542",
+        "arXiv:2311.16863"
+      ],
+      "reason": "各種MLモデルを1000回推論した際のenergy/carbonを測定・比較する環境影響評価であり、LLM推論を高速化・省メモリ化する新規システム機構を提案しない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md"
+      ],
+      "title": "Power Hungry Processing: Watts Driving the Cost of AI Deployment?"
+    },
+    "DOI:10.1145/3352460.3358302": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3352460.3358302",
+      "identity_tokens": [
+        "DOI:10.1145/3352460.3358302"
+      ],
+      "reason": "36-chiplet MCMによる汎用DNN推論アクセラレータが主題で、ResNet-50等の画像DNNを評価し、LLM/Transformer推論を対象にしない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md"
+      ],
+      "title": "Simba: Scaling Deep-Learning Inference with Multi-Chip-Module-Based Architecture"
+    },
+    "DOI:10.1109/micro.2016.7783721": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2016.7783721",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783721"
+      ],
+      "reason": "GPU/CPU memoryを併用して大規模DNNを学習するactivation virtualizationが主題で、推論ではなくtraining memory管理を対象とする。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "title": "vDNN: Virtualized deep neural networks for scalable, memory-efficient neural network design"
+    },
+    "DOI:10.1145/3290605.3300705": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3290605.3300705",
+      "identity_tokens": [
+        "DOI:10.1145/3290605.3300705",
+        "arXiv:1901.06525"
+      ],
+      "reason": "人間が会話に求める社会的・機能的特性を半構造化インタビューで調べるHCI研究で、LLM推論システムの効率化とは無関係。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md"
+      ],
+      "title": "What Makes a Good Conversation?: Challenges in Designing Truly Conversational Agents"
+    },
+    "DOI:10.1109/tcad.2018.2789723": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2018.2789723",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2018.2789723"
+      ],
+      "reason": "synaptic memory array型neuromorphic architectureのarea/latency/energy/leakageを評価する回路モデルで、LLM推論方式ではない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md"
+      ],
+      "title": "NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning"
+    },
+    "DOI:10.1109/69.273032": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/69.273032",
+      "identity_tokens": [
+        "DOI:10.1109/69.273032"
+      ],
+      "reason": "データベースquery executionの拡張性・parallelismを扱う汎用DBシステム研究で、LLM推論・サービングを対象にしない。",
+      "first_checked_at": "2026-10-04T05:27:33+00:00",
+      "last_checked_at": "2026-10-04T05:27:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "Volcano - An Extensible and Parallel Query Evaluation System"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5257ec1f8d712c4e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tpami.2018.2889473",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tpami.2018.2889473",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2018.2889473",
+      "arXiv:1603.09320"
+    ],
+    "reason": "HNSWによる汎用近似最近傍探索データ構造の研究で、RAG等で利用可能な基盤技術ではあるがLLM推論システムの最適化を主題としない。",
+    "first_checked_at": "2026-10-04T05:27:32+00:00",
+    "last_checked_at": "2026-10-04T05:27:32+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+    ],
+    "title": "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs"
+  },
+  "processed_at": "2026-10-04T05:27:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5257ec1f8d71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

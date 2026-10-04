@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4fcb86673c74ef5-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3290605.3300705",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3290605.3300705",
+    "identity_tokens": [
+      "DOI:10.1145/3290605.3300705",
+      "arXiv:1901.06525"
+    ],
+    "reason": "人間が会話に求める社会的・機能的特性を半構造化インタビューで調べるHCI研究で、LLM推論システムの効率化とは無関係。",
+    "first_checked_at": "2026-10-04T05:27:33+00:00",
+    "last_checked_at": "2026-10-04T05:27:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md"
+    ],
+    "title": "What Makes a Good Conversation?: Challenges in Designing Truly Conversational Agents"
+  },
+  "processed_at": "2026-10-04T05:27:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4fcb86673c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
