@@ -11912,13 +11912,11 @@
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
-      "status": "FAIL",
-      "summary": "RAG knowledgeの中間状態をGPU/ホストのknowledge treeへ多階層キャッシュし、検索と推論を重畳してTTFTを削減する。",
-      "char_count": 72,
-      "japanese_ratio": 0.6140350877192983,
-      "failures": [
-        "日本語比率 61.4% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "検索知識の中間状態をGPUとホストメモリ上の木構造へ階層的にキャッシュし、検索処理と推論を重ね合わせて初回トークン待ち時間を短縮する。",
+      "char_count": 67,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {

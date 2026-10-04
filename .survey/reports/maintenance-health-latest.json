@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04T12:54:57+00:00",
-  "status": "issues_found",
-  "error_count": 1,
+  "checked_at": "2026-10-04T13:04:25+00:00",
+  "status": "passed",
+  "error_count": 0,
   "warning_count": 0,
   "paper_count": 1580,
-  "latest_paper_commit": "2026-10-04T12:21:28+00:00",
+  "latest_paper_commit": "2026-10-04T12:57:26+00:00",
   "queue": {
-    "job_count": 1155,
+    "job_count": 1158,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 116,
+        "completed": 117,
         "processing": 7,
         "ready": 1
       },
@@ -21,7 +21,7 @@
         "ready": 2
       },
       "research": {
-        "ready": 592,
+        "ready": 594,
         "superseded": 406,
         "deferred": 8,
         "completed": 22,
@@ -52,49 +52,38 @@
       ],
       "list_summary": [
         "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
-        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
-        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md"
       ],
       "overview": []
     },
     "new_failures": {
       "paper": [],
-      "list_summary": [
-        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
-      ],
+      "list_summary": [],
       "overview": []
     },
     "resolved_failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
       "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-04T12:54:39+00:00",
+      "checked_at": "2026-10-04T13:04:16+00:00",
       "total": 1580,
       "incomplete": 0,
       "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-04T12:54:39+00:00",
+      "checked_at": "2026-10-04T13:04:16+00:00",
       "total": 1580,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": [
-    {
-      "severity": "error",
-      "code": "quality_regression",
-      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
-      "scope": "list_summary",
-      "paths": [
-        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
-      ]
-    }
-  ]
+  "findings": []
 }
