@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-04T05:53:20+00:00",
-  "last_run_key": "library-import-9aaec86b5f86",
-  "last_round": "libimp-9aaec86b5f861d00-pre01",
+  "updated_at": "2026-10-04T05:55:50+00:00",
+  "last_run_key": "library-import-3d9b19850307",
+  "last_round": "libimp-3d9b198503073a6e-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-19T23:00:00+09:00",
-      "round": "specialist-memory-scheduling-11",
-      "axis": "elastic GPU memory・PIM hierarchy・prediction-guided dispatch",
-      "query_summary": "GPU virtual memory/request migration周辺の既存取りこぼしを探索し、memory abstraction・hierarchical processing・multi-instance dispatchの独立3系統を抽出。canonical IDを最新default branchへ再照合した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "外部検索呼び出し枠が回復した次回はforward citationと未走査OS/storage/HPC軸を継続する",
-      "source_submission": "work-queue/submissions/20260919T2356JST-discovery-specialist-memory-scheduling-11.json"
-    },
     {
       "run_key": "2026-09-20T00:00:00+09:00",
       "round": "specialist-recent-memory-systems-1",
@@ -11569,6 +11551,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-3d9b198503073a6e-pre01",
+      "precheck_request_id": "libimp-3d9b198503073a6e-pre01",
+      "run_key": "library-import-3d9b19850307",
+      "round": "libimp-3d9b198503073a6e-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-3d9b198503073a6e-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-3d9b198503073a6e-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -19940,16 +19956,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-9aaec86b5f86",
-      "rounds": 88,
-      "candidate_count": 318,
+      "last_run_key": "library-import-3d9b19850307",
+      "rounds": 89,
+      "candidate_count": 319,
       "duplicate_filtered_count": 100,
-      "novel_candidate_count": 218,
+      "novel_candidate_count": 219,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 215,
-      "accepted_count": 215,
-      "duplicate_ratio": 0.31446540880503143,
-      "final_duplicate_ratio": 0.013761467889908258,
+      "post_final_dedupe_count": 216,
+      "accepted_count": 216,
+      "duplicate_ratio": 0.31347962382445144,
+      "final_duplicate_ratio": 0.0136986301369863,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
