@@ -1055,7 +1055,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：184  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：185  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1091,7 +1091,7 @@
   ブロック単位でLWCとLETだけを学習して外れ値と量子化範囲を調整し、LLaMA系をW2A16〜W4A4まで低ビット化して推論メモリと計算を削減する。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   Retentive Network（RetNet）は、注意と再帰の関係から導いた保持機構（retention）を中心に、同じモデルを三つの計算形式で実行する。
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
@@ -1103,43 +1103,43 @@
   短い系列で学習したLLMが学習長を越えると崩れる原因を理論・実験で分解し、局所注意と距離制約を組み合わせる学習不要方式で2K/4K学習モデルを最大200Mトークンへ拡張する。元モデル比でデコード2.7倍高速、メモリ7.5倍削減を報告する。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：21  
   位置補間（Position Interpolation; PI）は位置番号を訓練範囲へ圧縮してこの問題を緩和するが、すべてのRoPE周波数を同じ比率で縮めるため、短距離の局所位置関係まで必要以上に変形する。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   Gistingは、毎要求で長い指示文を再エンコードする代わりに、その指示を少数の「gistトークン」へ圧縮し、後続入力がその圧縮表現だけを参照するよう学習する。モデルごとの新しいアダプタを保存するのではなく、タスク指示を通常のキー・値キャッシュ（Key-Value Cache; KVキャッシュ）として再利用可能な短い状態へ変換する。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   距離に応じて注意を指数的に間引く拡張注意で計算量を線形化し、系列分割時の通信量も抑えて10億トークン規模まで拡張する。
+
+- **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  複数LLM APIを価格・精度に応じて段階呼出しする学習済みカスケードで、最良単体モデル相当の性能を最大98%低い推論費で実現する。
 
 - **2023-10 · [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   本論文は、LLMで主流になったSiLU/GELU系活性化をReLUへ戻すことで、品質を大きく落とさず推論時の構造的な活性疎性を得られるかを検証する。ReLUは負の入力を厳密に0へするため、0になったFFNニューロンに対応する重みを実行・転送しない余地が生じる。
 
-- **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  複数LLM APIを価格・精度に応じて段階呼出しする学習済みカスケードで、最良単体モデル相当の性能を最大98%低い推論費で実現する。
-
 - **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   ZeroQuant-V2は、LLMの学習後量子化（post-学習 量子化; PTQ）を「どの方式が勝つか」だけでなく、重みと活性値のどちらが難しいか、モデル規模で感度がどう変わるかまで整理した上で、低ランク補償（Low-Rank Compensation; LoRC）を提案する。
 
+- **2023-10 · [Compressing Context to Enhance Inference Efficiency of Large Language Models](2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  一方、自然言語には予測しやすい定型句や重複説明が多く、強いLLMにとって全トークンが同じ情報価値を持つわけではない。50%の文脈コスト削減で推論メモリ36%、推論時間32%を削減し、BERTScoreの低下を0.023、faithfulness低下を0.038に抑えた。
+
 - **2023-07 · [Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding](2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   自己回帰greedy復号ではトークン t+1 の入力がトークン t の最終logitで決まるため、次stepの前向き計算を前step完了前に開始できない。最終層が正しいトークンを確定した時点で、そのトークンに対応する先行枝だけを残す。候補に正解がなければ通常計算へ戻るため、近似トークンを採用せず元のgreedy デコードと同一出力を保つ。
-
-- **2023-10 · [Compressing Context to Enhance Inference Efficiency of Large Language Models](2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  一方、自然言語には予測しやすい定型句や重複説明が多く、強いLLMにとって全トークンが同じ情報価値を持つわけではない。50%の文脈コスト削減で推論メモリ36%、推論時間32%を削減し、BERTScoreの低下を0.023、faithfulness低下を0.038に抑えた。
 
 - **2023-10 · [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md)**  
   実装：[✓](https://aka.ms/LongLLMLingua) ・ リポジトリ内被引用：8  
   質問に応じた段階的プロンプト圧縮と重要情報の再配置で、約10kトークン入力を2〜6倍圧縮しエンドツーエンド遅延を1.4〜2.6倍高速化する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：8  
   In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
@@ -1158,13 +1158,13 @@
   実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：4  
   正規表現のFSM状態ごとに「次に許されるLLM語彙」を事前索引化し、毎トークンの全語彙走査を平均O(1)参照へ置き換え、さらにLALR(1)構文解析へ拡張して構造化出力を高速化する。
 
+- **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
+  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：3  
+  交差注意の全encoderキーをk近傍探索索引へ退避し、各decoderヘッドが上位kだけ取得することで既存encoder-decoderモデルを500kトークン入力まで拡張する。
+
 - **2023-09 · [Pruning Large Language Models via Accuracy Predictor](2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   枝刈り構成と精度の対応を非ニューラル予測器で学び、探索空間を段階的に絞って手設計より良いLLM圧縮構成を自動選択する。
-
-- **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
-  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：2  
-  交差注意の全encoderキーをk近傍探索索引へ退避し、各decoderヘッドが上位kだけ取得することで既存encoder-decoderモデルを500kトークン入力まで拡張する。
 
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1181,11 +1181,11 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：239  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：240  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：72  
+  実装：✓ ・ リポジトリ内被引用：73  
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -1207,7 +1207,7 @@
   正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
-  実装：[✓](https://github.com/autoliuweijie/FastBERT) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/autoliuweijie/FastBERT) ・ リポジトリ内被引用：7  
   FastBERTは、すべての入力へBERTの全12層を通す固定計算をやめ、入力ごとの難しさに応じて途中層から結果を返す適応推論方式である。12個の英語・中国語分類データセットで、閾値に応じてBERT比およそ1〜12倍のFLOPs交換範囲を示す。
 
 ### 8年前（2018-11〜2019-10）
@@ -1217,6 +1217,6 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   Transformerの多頭自己注意は同じ層に複数の注意ヘッドを置くが、全ヘッドが同じ程度に必要とは限らない。本論文はニューラル機械翻訳を対象に、各ヘッドが最終予測へどれだけ寄与するか、どのような言語的役割を持つか、そしてヘッド単位で削除しても品質を維持できるかを一つの実験系で調べる。
 <!-- survey:auto:end -->
