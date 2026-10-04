@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T22:06:26+00:00",
-  "record_count": 455,
+  "updated_at": "2026-10-04T22:27:12+00:00",
+  "record_count": 458,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6531,6 +6531,58 @@
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
       "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+    },
+    "arXiv:2409.12122": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.12122",
+      "identity_tokens": [
+        "arXiv:2409.12122",
+        "id:arXiv:2409.12122",
+        "url:https://arxiv.org/abs/2409.12122"
+      ],
+      "reason": "The report does include a language-model inference-stage technique: a reward model reranks best-of-N sampled answers to improve mathematical answer accuracy. Full-text review shows this is accuracy-oriented inference-time compute scaling, not a serving system, compression method, or demonstrated inference-efficiency technique; evaluations report answer scores for RM@8/64/256 rather than latency, throughput, or resource savings. It is adjacent to the LLM inference scope but its contribution does not establish the requested efficiency focus, so it is retained as borderline.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement"
+    },
+    "arXiv:2010.11125": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.11125",
+      "identity_tokens": [
+        "arXiv:2010.11125",
+        "id:arXiv:2010.11125",
+        "url:https://arxiv.org/abs/2010.11125"
+      ],
+      "reason": "The paper is a many-to-many neural machine-translation system, not an LLM serving or inference-systems paper. Its full text does describe language-specific sparse parameter layers and says they scale model capacity without significantly changing inference time, so there is a weak technical adjacency to sparse inference architectures. The contribution is capacity scaling and translation quality across languages, not LLM inference-time compression or a measured efficiency improvement; it is therefore borderline rather than accepted.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "Beyond English-Centric Multilingual Machine Translation"
+    },
+    "arXiv:2004.02984": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2004.02984",
+      "identity_tokens": [
+        "arXiv:2004.02984",
+        "id:arXiv:2004.02984",
+        "url:https://arxiv.org/abs/2004.02984"
+      ],
+      "reason": "MobileBERT is a directly relevant model-compression and inference-acceleration contribution for pretrained language models on mobile hardware, with measured Pixel 4 latency and size/speed gains. The full text identifies the model as bidirectional BERT used as a task encoder for fine-tuned NLP tasks, rather than an autoregressive generative LLM or its serving stack. It therefore sits at the boundary of the stated LLM inference scope and is retained as borderline.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices"
     }
   }
 }

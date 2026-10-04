@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:16:24+00:00",
-  "record_count": 1412,
+  "updated_at": "2026-10-04T22:27:12+00:00",
+  "record_count": 1415,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -20352,6 +20352,64 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "Attention Augmented Convolutional Networks"
+    },
+    "DOI:10.1162/tacl_a_00023": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00023",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00023",
+        "id:DOI:10.1162/tacl_a_00023",
+        "id:arXiv:1712.07040",
+        "url:https://arxiv.org/abs/1712.07040"
+      ],
+      "reason": "The primary abstract presents a dataset and reading-comprehension tasks over books and movie scripts to evaluate deep narrative understanding, and reports that standard reading-comprehension models struggle. This is a benchmark/task contribution, not an LLM inference or serving system, compression method, or inference-efficiency technique. Abstract-level evidence is sufficient for this clear scope exclusion.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "The NarrativeQA Reading Comprehension Challenge"
+    },
+    "DOI:10.3115/1075812.1075835": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3115/1075812.1075835",
+      "identity_tokens": [
+        "DOI:10.3115/1075812.1075835",
+        "id:DOI:10.3115/1075812.1075835",
+        "url:https://doi.org/10.3115/1075812.1075835"
+      ],
+      "reason": "The primary ACL proceedings record and paper abstract describe a syntactic/predicate-argument annotation scheme for the Penn Treebank corpus, including coindexed null elements and semantic-role tags to support parsing evaluation and training. This is a corpus and annotation contribution, not an LLM inference/serving system or an inference-time compression/efficiency technique. Abstract-level exclusion is sufficient for this clear scope mismatch.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+      ],
+      "title": "The Penn Treebank: Annotating Predicate Argument Structure"
+    },
+    "arXiv:2301.05217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.05217",
+      "identity_tokens": [
+        "arXiv:2301.05217",
+        "id:arXiv:2301.05217",
+        "url:https://arxiv.org/abs/2301.05217"
+      ],
+      "reason": "The primary abstract studies grokking in small transformers trained on modular-addition tasks, reverse-engineers their Fourier-based algorithm, and defines measures of training progress through memorization, circuit formation, and cleanup. This is mechanistic interpretability and training-dynamics research, not an LLM inference/serving system or an inference-time compression/efficiency technique. Abstract-level exclusion is sufficient for this clear scope mismatch.",
+      "first_checked_at": "2026-10-04T22:27:12+00:00",
+      "last_checked_at": "2026-10-04T22:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+      ],
+      "title": "Progress measures for grokking via mechanistic interpretability"
     }
   }
 }
