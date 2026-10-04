@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1815-codex-local-r18",
+  "reference_main_sha": "babbc874bd60a4372faf261900ba36f795f918d3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36642",
+      "identity_tokens": [
+        "arXiv:2609.36642"
+      ],
+      "title": "PR-OPD: Privileged Representation On-policy Self-Distillation for Agentic Reinforcement Learning",
+      "reason": "GRPO warm start後の方策学習と隠れ状態の自己蒸留を提案する、エージェント強化学習の訓練手法。推論・servingの効率化を扱わないため対象外。",
+      "source_url": "https://arxiv.org/abs/2609.36642",
+      "body_check": "abstract_screen_only: arXiv要旨は、軌跡ごとの hindsight skill を用いて学習時に各層の隠れ状態を整合させ、報酬目的と併用すると説明。効果はALFWorld/WebShopの学習済み方策の成功率・正確性向上であり、推論オーバーヘッドなしとも明記。明確な訓練専用手法のため本文未確認。",
+      "first_checked_at": "2026-10-04T15:10:29+09:00",
+      "last_checked_at": "2026-10-04T15:10:29+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
+
