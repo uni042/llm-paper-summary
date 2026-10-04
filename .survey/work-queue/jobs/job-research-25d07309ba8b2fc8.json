@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2404.03605",
   "canonical_id": "arXiv:2404.03605",
+  "citation_count": 26,
+  "citation_count_checked_at": "2026-10-04T19:45:23+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-03T13:23:39+00:00",
   "doi": "10.48550/arXiv.2404.03605",
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantization-with-activation-regularization.md",
   "parent_job_id": "job-608dad9c12e5affe",
-  "priority": 0,
+  "priority": 26,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 26,
+    "citations": 26,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 913,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 26
   },
+  "published": "2024-04-04",
   "schema_version": 1,
   "selection_reason": "4bit weight/activation量子化を可能にしてGPU推論の低bit実行へ繋げる圧縮研究。QATを用いるが最終適用先はW4A4推論であるため対象。",
+  "semantic_scholar_id": "5ea9ce852b5b870f50ea5b6d371ded9426ea2d74",
   "source_url": "https://arxiv.org/abs/2404.03605",
   "status": "ready",
   "title": "Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2024
 }
