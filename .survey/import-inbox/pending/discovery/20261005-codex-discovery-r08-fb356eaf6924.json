@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261005-codex-discovery-r08",
+  "reference_main_sha": "ce904ffd50822120b0b96fc82ec34a76d1157cc3",
+  "record_count": 3,
+  "records": [
+    {
+      "rank": 29,
+      "canonical_id": "arXiv:2409.12122",
+      "identity_tokens": [
+        "id:arXiv:2409.12122",
+        "url:https://arxiv.org/abs/2409.12122"
+      ],
+      "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement",
+      "classification": "borderline",
+      "reason": "The report does include a language-model inference-stage technique: a reward model reranks best-of-N sampled answers to improve mathematical answer accuracy. Full-text review shows this is accuracy-oriented inference-time compute scaling, not a serving system, compression method, or demonstrated inference-efficiency technique; evaluations report answer scores for RM@8/64/256 rather than latency, throughput, or resource savings. It is adjacent to the LLM inference scope but its contribution does not establish the requested efficiency focus, so it is retained as borderline.",
+      "source_url": "https://arxiv.org/abs/2409.12122",
+      "body_check": "Primary arXiv HTML full text reviewed: methods in sections 2–3, including reward-model training, RL and inference best-of-N sampling; evaluation in section 5 (math benchmarks and RM@N accuracy, including sample counts 8, 64, and 256); conclusion in section 6. The report has no dedicated limitations section. Its evaluation is mathematical capability/accuracy, and full-text checks found no latency or serving-cost evaluation; the disclosed inference method uses multiple sampled outputs and RM selection, thus does not claim reduced inference compute. Classification is borderline because the method is for LLM inference but outside the stated efficiency contribution.",
+      "source_evidence": [
+        "https://arxiv.org/abs/2409.12122",
+        "https://arxiv.org/html/2409.12122"
+      ],
+      "first_checked_at": "2026-10-05T07:17:46+09:00",
+      "last_checked_at": "2026-10-05T07:17:46+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ]
+    },
+    {
+      "rank": 30,
+      "canonical_id": "arXiv:2010.11125",
+      "identity_tokens": [
+        "id:arXiv:2010.11125",
+        "url:https://arxiv.org/abs/2010.11125"
+      ],
+      "title": "Beyond English-Centric Multilingual Machine Translation",
+      "classification": "borderline",
+      "reason": "The paper is a many-to-many neural machine-translation system, not an LLM serving or inference-systems paper. Its full text does describe language-specific sparse parameter layers and says they scale model capacity without significantly changing inference time, so there is a weak technical adjacency to sparse inference architectures. The contribution is capacity scaling and translation quality across languages, not LLM inference-time compression or a measured efficiency improvement; it is therefore borderline rather than accepted.",
+      "source_url": "https://arxiv.org/abs/2010.11125",
+      "body_check": "Primary arXiv HTML full text reviewed: Transformer translation setup and generation in section 2; dense and language-specific sparse scaling methods in section 5; BLEU and human translation-quality evaluation plus discussion in section 6; conclusion and Appendix C's multi-source self-ensemble at inference time. The sparse-layer method allocates language-specific parameters to scale MT capacity and claims inference time is not significantly affected; Appendix C adds extra translation passes for an accuracy gain, rather than reducing inference cost. The evaluation measures translation quality, not LLM serving throughput or latency. The discussion identifies data quality/domain mismatch and weak low-resource language performance as limitations. These methods apply to multilingual MT and do not demonstrate an in-scope LLM inference/efficiency contribution.",
+      "source_evidence": [
+        "https://arxiv.org/abs/2010.11125",
+        "https://arxiv.org/html/2010.11125"
+      ],
+      "first_checked_at": "2026-10-05T07:17:46+09:00",
+      "last_checked_at": "2026-10-05T07:17:46+09:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    },
+    {
+      "rank": 31,
+      "canonical_id": "DOI:10.1162/tacl_a_00023",
+      "identity_tokens": [
+        "id:DOI:10.1162/tacl_a_00023",
+        "id:arXiv:1712.07040",
+        "url:https://arxiv.org/abs/1712.07040"
+      ],
+      "title": "The NarrativeQA Reading Comprehension Challenge",
+      "classification": "unrelated",
+      "reason": "The primary abstract presents a dataset and reading-comprehension tasks over books and movie scripts to evaluate deep narrative understanding, and reports that standard reading-comprehension models struggle. This is a benchmark/task contribution, not an LLM inference or serving system, compression method, or inference-efficiency technique. Abstract-level evidence is sufficient for this clear scope exclusion.",
+      "source_url": "https://arxiv.org/abs/1712.07040",
+      "body_check": "The primary arXiv record and abstract were checked. They explicitly describe a reading-comprehension dataset and challenge requiring full-document narrative understanding, with analysis of dataset difficulty for standard RC models. No LLM serving, inference optimization, or efficiency contribution is indicated; this is clearly outside scope, so full text was not reviewed.",
+      "source_evidence": [
+        "https://arxiv.org/abs/1712.07040",
+        "https://doi.org/10.1162/tacl_a_00023"
+      ],
+      "first_checked_at": "2026-10-05T07:17:46+09:00",
+      "last_checked_at": "2026-10-05T07:17:46+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    }
+  ]
+}
