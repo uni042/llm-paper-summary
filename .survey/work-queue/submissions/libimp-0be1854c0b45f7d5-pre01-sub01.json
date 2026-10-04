@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SEED: Self-Speculative Decoding via Implicit Encoder-Decoder",
+      "source_url": "https://arxiv.org/abs/2609.36590",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-speculative decoding accelerates large language model (LLM) inference by drafting tokens from the target model itself, but faces a sharp tradeoff between the quality and cost of the draft. Early-exit methods produce drafts cheaply by terminating computation at intermediate layers, but forgo the deeper representations that later layers provide and thus suffer in draft quality. Multi-token prediction preserves draft quality by emitting from the model's final hidden states, but pays for a full forward pass to produce those states at every drafting step. We propose self-speculative encoder-decoder (SEED), a self-speculative method that obtains high-quality drafts cheaply by reusing the deep contextual representations already computed during verification. We reinterpret the standard decoder-only transformer as an implicit encoder-decoder: the first layers (encoder) build deep contextual representations, and the last few layers (decoder) emit tokens from them. Encoding and verification are merged into a single step: verification is performed by the full encoder-decoder, and the contextual representations of the verified prefix are cached for reuse during drafting. Drafting is therefore very fast: between verifications, the lightweight decoder drafts multiple tokens autoregressively, each conditioned on the cached representations and on preceding drafts. Experiments across multiple benchmarks show that SEED achieves up to 2.7$\\times$ average speedup on 4B-scale models, outperforming both early-exit and MTP-style self-speculative baselines and running 28% faster than the state-of-the-art EAGLE-3, while preserving or even improving the generation quality of standard autoregressive fine-tuning. Code is available at https://github.com/lhk2004/SEED.",
+      "identifiers": [
+        "SemanticScholar:5900fb325c42fd15406c310e80efefe6fc340223"
+      ],
+      "semantic_scholar_id": "5900fb325c42fd15406c310e80efefe6fc340223",
+      "canonical_id": "arXiv:2609.36590",
+      "arxiv_id": "2609.36590",
+      "authors": [
+        "Han-Kun Lin",
+        "Patrick Pynadath",
+        "Ruqi Zhang"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      },
+      "reason": "対象。論文はLLM推論時の自己投機的デコードを高速化する手法を提案・評価している。検証時に得た深い文脈KV表現を再利用し、モデル最終層の軽量decoderでdraftを生成するため、推論servingのデコード速度・品質に直接関わる。",
+      "library_body_check": "一次資料arXiv v1の本文を確認（§1, §4.1–4.3, §5.1–5.4, Appendix A, C.1–C.3）。通常のdecoder-only modelを先頭層encoderと末尾層decoderに概念分割し、完全なモデルによるverificationが同時に生成するdeep decoder KVを次ラウンドdraftで再利用する。draft中は最後の2層decoderのみがraw token embeddingとcached deep KVに条件付けて自己回帰生成し、full modelが複数draftを一括検証する。学習は通常のnext-token CEにspeculative drafting lossを加え、block-causal attentionでdraft時の入力条件を模擬する。動的confidence-based draftingとtree verificationも使用。評価はtask-specific fine-tuned Qwen3-1.7B-Base/4B-Base、GSM8K/KodCode/ScienceQA/CNN-DailyMail上のgreedy decoding。単一48GB NVIDIA A6000で推論し、task品質は前三者0-shot pass@1、要約はROUGE、速度はtokens/sで比較。Table 1では平均速度向上が1.7Bで2.6x、4Bで2.7x。比較対象にはAR、LayerSkip、SWIFT、DEL、Apple MTP、EAGLE-3（4BではPARD等）を含み、精度/ROUGEもAR比維持または改善と報告。限界（Appendix A）：計算制約で1.7B/4Bのみであり8B/14B/32B未検証。主にtask-specific SFTでの検証で、汎用instruction tuningやpretrainingでの挙動は未確認。top-2層の固定partitionは全規模・task・hardwareで最適とは限らず、KV layout、tree-attention kernel、batching、GPU bandwidth等の実装条件が実運用速度を左右する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
+      "source_url": "https://arxiv.org/abs/2610.00418",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling Transformers to long contexts is constrained by the quadratic cost of self-attention and the linear growth of key-value cache memory transfer. Sparse attention mitigates this by retrieving only relevant tokens, but current approaches either require large-scale training or, within the training-free regime, rely on semantically coarse heuristics or expensive clustering that is difficult to update efficiently during decoding. We introduce CommunityKV, a framework that formulates sparse attention as a community detection problem. CommunityKV constructs a token graph from the $QK^T$ scores already computed during standard prefill, and partitions the graph into communities to enable retrieval of semantically coherent token groups. A local update rule assigns newly generated tokens to communities in constant time, enabling sparse retrieval throughout streaming decoding without global re-partitioning. We evaluate CommunityKV on Qwen3 and Llama-3.1 models across three long-context benchmarks. With one graph per query head, CommunityKV delivers up to $1.25\\times$ the end-to-end generation throughput of dense attention, while query-group graph aggregation yields up to $1.71\\times$ with comparable accuracy.",
+      "identifiers": [
+        "SemanticScholar:2e23c92d881a553587dd81b8480bc74e1687de11"
+      ],
+      "semantic_scholar_id": "2e23c92d881a553587dd81b8480bc74e1687de11",
+      "canonical_id": "arXiv:2610.00418",
+      "arxiv_id": "2610.00418",
+      "authors": [
+        "Joe McKenna",
+        "Anastasios Alexandridis",
+        "Nathan Susanj",
+        "Jing Liu"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CommunityKV is a training-free sparse-attention method for long-context LLM inference: it builds and partitions an attention-derived token graph during prefill, then retrieves semantic communities and incrementally assigns generated tokens during decoding. This directly targets KV-cache transfer and decoding cost, so it belongs in inference efficiency.",
+      "library_body_check": "Read the arXiv v1 full HTML (2026-10-04), especially §§1, 3.1–3.4, 4.1–4.4, 5, Appendices B and C. The method derives top-k direct-attention and co-attention edges from prefill QK scores, runs Leiden partitioning, scores community centroids to retrieve tokens plus sink tokens, and updates each new token locally; claimed per-step costs are O(sqrt(n)d) retrieval and O(d) update. Evaluation uses Qwen3-4B/8B/14B and Llama-3.1-8B-Instruct, LongBench v2, BABILong, and RULER. For Qwen3-14B on LongBench v2, 4096-token CommunityKV reaches 32.0% vs dense 32.0%; on 64k-context BABILong with a 4096-token budget, averages are 45.4% vs dense 48.6% (Qwen3-8B) and 42.2% vs 42.4% (Llama-3.1-8B). End-to-end throughput measures 32,768 generated tokens at batch 1 on H200 and reports per-head 1.08–1.25x speedup with 17–29% peak-memory overhead; query-group aggregation reports 1.39–1.71x and 0.5–8.5% overhead. Appendix C separately reports H100 131k-context kernel timings. Limits: evaluation is bounded to these model families/tasks/hardware; reported end-to-end generation is single-request, and the prefill adds about 7–8% latency. Full KV cache is retained and graph/centroid storage is additive. Authors identify partition drift over very long generation and missed true top-k keys outside retrieved communities; periodic repartitioning mitigates drift but adds latency. These details support accept as an LLM inference/serving efficiency paper.",
+      "library_source_run_file": null
+    },
+    {
+      "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.00432",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Trellis-coded quantization enables high-dimensional compression of large language model (LLM) weights at ultra-low bit widths without the exponentially large codebooks required by conventional vector quantization. Practical deployment, however, presents two challenges: reconstructing compressed weights at sufficient parallel throughput to avoid making dequantization an inference bottleneck, and maintaining quantization accuracy without costly incoherence transformations. We address these challenges with two complementary techniques. First, we introduce an ultra-low-complexity trellis dequantizer that uses a structured, hardware-efficient state-to-value mapping while preserving diverse reconstruction choices for trellis search. Second, we reformulate discrete trellis path optimization with a curvature-aware objective that reflects model sensitivity directly in the original coordinate space. Together, these techniques enable high-quality ultra-low-bit trellis quantization with inexpensive, highly parallel runtime reconstruction and without relying on Hadamard-based incoherence processing.",
+      "identifiers": [
+        "SemanticScholar:20b74fa006c7155f8b23f85542b26ec985b3b0c6"
+      ],
+      "semantic_scholar_id": "20b74fa006c7155f8b23f85542b26ec985b3b0c6",
+      "canonical_id": "arXiv:2610.00432",
+      "arxiv_id": "2610.00432",
+      "authors": [
+        "Xiao-Fan Que",
+        "Nir Elkayam",
+        "Spandan Pyakurel",
+        "Shuo-Kai Pan",
+        "Dibakar Gope"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM重みを約2.25 effective bits/weightのtrellis-coded FP4へ圧縮するweight-only PTQであり、Viterbi復号器の推論時dequantizationコストとHadamard回転なしの量子化精度を扱う。Section 1・3–5で、推論効率化およびweight compressionとして対象範囲に合致することを確認した。",
+      "library_body_check": "一次資料 arXiv HTML v1 全文（https://arxiv.org/html/2610.00432v1）を確認。§1, §3: 16-bit trellis stateから4つの局所FP4 paletteを選ぶstate-to-value mappingを、historyの4 masked parity/XORと小規模lookupに構成し、実装見積りはlookup前14 XOR2 gates。§4: LDLQのHessian factorization由来の対角DでViterbi branch distortionを重み付けし、feature blocksをcurvature energy順に処理する方法を提案; これはoffline quantizationのみで、保存表現とonline decoderを変えない。§5, Tables 1–3: 約2.25 effective bits/weight（32 weightsごとにE5M3 scale）、384 RedPajama calibration sequences、seed 0、finetuningなしでWikiText-2/C4 perplexityと5 downstream taskのzero-shot accuracyを評価。Llama-3.1-8BではWT2 PPLが回転なし8.69からD-weighted+energy orderingで8.00、RHT付きQTIP-3INSTは8.48。Llama-3.1-70B-Instructでは回転なし6.11からD-weighted 5.62、平均zero-shot accuracy 77.37%から78.43%。§5.4は512 weights/cycle合成dequantizerの面積をN3P standard cellsで1,917 μm²とし、QTIP復号コスト比較はgate-equivalent概算。評価範囲は量子化品質指標と合成回路で、実機のend-to-end serving latency/throughputや電力は示していない; model family/configごとにenergy orderingの効果も一様ではない。Appendix Eは対角anisotropyだけでは全行列のRHT優位性を説明しないと明記。本文は査読出版情報や公開コードを確認できず、arXiv v1を一次根拠とした。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0be1854c0b45",
+    "round": "libimp-0be1854c0b45f7d5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0be1854c0b45f7d5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0be1854c0b45f7d5-pre01.json",
+    "receipt": "sha256:5f5945e4aa1c66e3648e6971ded29e255d64e77b5bd6058dba1da69a636b4330"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0be1854c0b45",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
