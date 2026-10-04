@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "audit_kind": "publication_integrity",
-  "generated_at": "2026-10-04T21:26:16+00:00",
+  "generated_at": "2026-10-04T21:48:10+00:00",
   "criteria": {
     "utf8": true,
     "parseable_frontmatter": true,
@@ -3224,6 +3224,22 @@
       "japanese_ratio": 0.9250050130338882,
       "japanese_chars": 4613,
       "latin_chars": 374,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md",
+      "status": "PASS",
+      "file_bytes": 7479,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 1.0,
+      "japanese_chars": 878,
+      "latin_chars": 0,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -9510,6 +9526,40 @@
       "japanese_ratio": 0.9839063643013899,
       "japanese_chars": 2690,
       "latin_chars": 44,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "status": "WARN",
+      "file_bytes": 5841,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7088150289017341,
+      "japanese_chars": 981,
+      "latin_chars": 403,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "status": "PASS",
+      "file_bytes": 9216,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8319823139277819,
+      "japanese_chars": 1129,
+      "latin_chars": 228,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -20385,6 +20435,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "status": "PASS",
+      "file_bytes": 8582,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8646262507357269,
+      "japanese_chars": 1469,
+      "latin_chars": 230,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
       "status": "WARN",
       "file_bytes": 7947,
@@ -20403,6 +20469,40 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "status": "WARN",
+      "file_bytes": 8105,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7643641058747579,
+      "japanese_chars": 1184,
+      "latin_chars": 365,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.4% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "status": "PASS",
+      "file_bytes": 8079,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9273927392739274,
+      "japanese_chars": 1124,
+      "latin_chars": 88,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md",
       "status": "WARN",
       "file_bytes": 19566,
@@ -20419,6 +20519,22 @@
       "warnings": [
         "日本語比率 77.5% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+      "status": "PASS",
+      "file_bytes": 5798,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9650485436893204,
+      "japanese_chars": 994,
+      "latin_chars": 36,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
@@ -20555,6 +20671,22 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "status": "PASS",
+      "file_bytes": 8293,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8131868131868132,
+      "japanese_chars": 814,
+      "latin_chars": 187,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
       "status": "PASS",
       "file_bytes": 6160,
@@ -20587,6 +20719,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+      "status": "PASS",
+      "file_bytes": 7605,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.932404181184669,
+      "japanese_chars": 1338,
+      "latin_chars": 97,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
       "status": "PASS",
       "file_bytes": 11049,
@@ -20614,6 +20762,22 @@
       "japanese_ratio": 0.9950794852384557,
       "japanese_chars": 2629,
       "latin_chars": 13,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "status": "PASS",
+      "file_bytes": 8810,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9059888579387186,
+      "japanese_chars": 1301,
+      "latin_chars": 135,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -20885,6 +21049,22 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+      "status": "PASS",
+      "file_bytes": 7687,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9892933618843683,
+      "japanese_chars": 924,
+      "latin_chars": 10,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
       "status": "PASS",
       "file_bytes": 31889,
@@ -20896,6 +21076,22 @@
       "japanese_ratio": 1.0,
       "japanese_chars": 8110,
       "latin_chars": 0,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md",
+      "status": "PASS",
+      "file_bytes": 5534,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9630044843049327,
+      "japanese_chars": 859,
+      "latin_chars": 33,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []

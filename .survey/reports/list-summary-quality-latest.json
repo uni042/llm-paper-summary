@@ -1795,6 +1795,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md",
+      "status": "PASS",
+      "summary": "ルーティング頻度・ゲート重み・活性強度を統一式で整理し、汎用MoE圧縮向けMAN/MSANが16ベンチマークで既存基準より最大8.8ポイント改善する。",
+      "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md",
       "status": "PASS",
       "summary": "ゲート分布のエントロピーを不確実性指標として各トークンの専門家数を予測し、固定Top-kに近い品質を保ちながら専門家活性化と実測推論時間を削減する動的MoEルーティング。",
@@ -5290,6 +5299,26 @@
       "summary": "連続画像の安定背景を再利用可能なKV接頭辞へ分離し、動的前景だけを再計算した後に注意相互作用と位置整合性を復元することで、端末上VLM推論を平均精度低下1%未満で1.4〜3.8倍高速化する。",
       "char_count": 95,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "status": "FAIL",
+      "summary": "running max更新時に指数和を再スケールしてsafe softmaxの最初の2走査を統合し、V100でsoftmax最大1.3倍、softmax+TopK融合最大5倍を実現する。",
+      "char_count": 93,
+      "japanese_ratio": 0.527027027027027,
+      "failures": [
+        "日本語比率 52.7% < 70.0%"
+      ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "status": "PASS",
+      "summary": "重み行列をrank-1成分へ因子分解して学習可能L0ゲートで削り、密行列積のままモデル容量を縮小するFLOPにより、専用疎カーネルなしで2倍超の推論高速化を狙う。",
+      "char_count": 81,
+      "japanese_ratio": 0.9420289855072463,
       "failures": [],
       "warnings": []
     },
@@ -11383,10 +11412,37 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "status": "PASS",
+      "summary": "注意ヘッドへ学習可能ゲートを置くL0枝刈りで、WMT英露のencoder head 48個中38個を削ってBLEU低下0.15に抑え、重要ヘッドの専門化も分析する。",
+      "char_count": 82,
+      "japanese_ratio": 0.8166666666666667,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
       "status": "PASS",
       "summary": "LSH 注意機構で長系列の注意機構候補を絞り、可逆残差層で中間活性値保存を省いてTransformerの系列長・深さ方向メモリを削減する。",
       "char_count": 69,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "status": "PASS",
+      "summary": "各BERT層の自己蒸留分類器と予測エントロピーによる早期終了で、入力ごとに実行層数を変え、精度と計算量の交換条件を1〜12倍範囲で調整する。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "status": "PASS",
+      "summary": "正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。",
+      "char_count": 76,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -11397,6 +11453,15 @@
       "summary": "プリフィルの動的エキスパート配置とデコードのトークン-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。",
       "char_count": 83,
       "japanese_ratio": 0.9310344827586207,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+      "status": "PASS",
+      "summary": "注意行列を保存せず安定な逐次ソフトマックス集約とチャンク化で厳密な自己注意を計算し、16,384トークン推論時の注意メモリを59倍削減する。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -11473,6 +11538,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "status": "FAIL",
+      "summary": "交差注意の全encoderキーをk近傍探索索引へ退避し、各decoderヘッドが上位kだけ取得することで既存encoder-decoderモデルを500kトークン入力まで拡張する。",
+      "char_count": 90,
+      "japanese_ratio": 0.6385542168674698,
+      "failures": [
+        "日本語比率 63.9% < 70.0%"
+      ],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
       "status": "PASS",
       "summary": "複数LLM APIを価格・精度に応じて段階呼出しする学習済みカスケードで、最良単体モデル相当の性能を最大98%低い推論費で実現する。",
@@ -11493,6 +11569,15 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+      "status": "PASS",
+      "summary": "自己整合性の投票分布を逐次監視して十分な合意に達した問題だけ早期停止し、17推論・コード課題で精度をほぼ維持しながら生成サンプル数を最大7.9倍削減する。",
+      "char_count": 77,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
       "status": "PASS",
       "summary": "同じ重み付き鍵値演算を訓練時は並列、生成時は再帰的に計算し、最大14BでTransformer級性能と固定状態の推論を両立する。",
@@ -11506,6 +11591,15 @@
       "status": "PASS",
       "summary": "既存の多頭注意チェックポイントを元事前学習計算量の5%で追加学習し、クエリ頭を複数群でKV頭へ共有するグループ化クエリ注意を導入して、多頭注意に近い品質と複数クエリ注意に近い推論速度を両立する。",
       "char_count": 97,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "status": "PASS",
+      "summary": "重み絶対値×入力活性ノルムを出力行ごとに順位付けするWandaにより、重み更新なしの一回枝刈りでLLaMA系を50%疎化し、SparseGPT級の品質を狙う。",
+      "char_count": 79,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -11659,10 +11753,28 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+      "status": "PASS",
+      "summary": "質問に応じた段階的プロンプト圧縮と重要情報の再配置で、約10kトークン入力を2〜6倍圧縮しエンドツーエンド遅延を1.4〜2.6倍高速化する。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
       "status": "PASS",
       "summary": "ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。",
       "char_count": 57,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md",
+      "status": "PASS",
+      "summary": "統一最大値による非同期ソフトマックス、細長いGEMMの二重バッファ、ハードウェア適応データフローでLLM推論を最適化し、既存推論エンジン比平均1.37倍を報告する。",
+      "char_count": 82,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
