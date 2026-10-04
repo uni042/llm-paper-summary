@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **1490本**。
+収録論文: **1493本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**1490本**。
+推論論文：**1493本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -42,11 +42,11 @@
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 107 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 17 |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 105 |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 106 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 160 |
-| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 30 |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 45 |
+| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 31 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 46 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 103 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 310 |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 36 |

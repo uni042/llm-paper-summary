@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（45本）
+## 自動生成の論文一覧（46本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -47,6 +47,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   異種長要求を負荷均衡した群へ詰め、共有接頭辞を考慮した連続KV配置と一体化することで、注意計算の無駄と入出力断片化を同時に削減する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-09 · [Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights](2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  2-bit級のLLM重み量子化では、ディスク上のbit数だけ小さくても、GPUが各重みを復号するための符号表や補助ストリームが大きければ、実際のデコードは速くならない。一方、融合カーネルによりFP16より小さい転送量を活かし、4B、8B、14Bモデルでエンドツーエンド 1.11倍、1.29倍、1.41倍を報告する。
 
 - **2026-09 · [AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels](2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
