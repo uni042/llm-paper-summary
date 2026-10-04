@@ -1,0 +1,297 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ff81f02c7446ce54-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ff81f02c7446",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.17674",
+    "arXiv:2608.30320"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2263efad0746d5d843f5d59e395311c2c66686e7",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T02:16:57.622027+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.17674",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.30320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+      "source_url": "https://arxiv.org/abs/2608.30320",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We describe the architecture and ablations of Qwen3.8-Flash-Next, a sparse mixture-of-experts model with 125B parameters, 6B activated per token, and additional 51B parameters of n-gram embedding tables held off the accelerator. On fourteen pre-training benchmarks the model leads the 397B-A17B predecessor on eight and trails it on the rest by at most 2.6 points, at 1/3 the activated parameters, 1/3 the training tokens, and roughly 1/9 the training FLOPs. Token mixing uses a layer-wise hybrid of Gated DeltaNet (GDN) and global attention, with one full-attention layer in every four; at continued-pretraining time those full-attention layers are replaced by Qwen Sparse Attention (QSA), which scores context at micro-block granularity with a compressed lightweight indexer. The residual stream is widened to four branches and read through an elementwise gate, a design we call the Gated Residual (GR). Capacity is added outside the backbone by a single n-gram embedding layer whose tables are prefetched from host memory. We evaluate every candidate change along three axes: loss together with downstream benchmarks; the cost of the change in training, prefill and decode; and its effect on the optimal hyperparameters and training stability. Loss and downstream accuracy do not always move together: enlarging the n-gram vocabulary lowers loss monotonically while downstream accuracy saturates. The architecture and the Muon optimizer together shift the optimal learning rate and batch size upwards, render batch-size warmup unnecessary, and substantially improve stability under stress tests. Loss, benchmarks, efficiency and stability form one design problem. Solved jointly, they yield a recipe that is simultaneously more efficient, more capable and more stable.",
+      "identifiers": [
+        "SemanticScholar:8f38affde080c4b41ef4540363e4eebfffa26253"
+      ],
+      "semantic_scholar_id": "8f38affde080c4b41ef4540363e4eebfffa26253",
+      "canonical_id": "arXiv:2608.30320",
+      "arxiv_id": "2608.30320",
+      "authors": [
+        "Zi-Han Qiu",
+        "Ze-Kun Wang",
+        "Xiao Li",
+        "Yan-Peng Li",
+        "Yang Xu",
+        "Yi-Xuan Wang",
+        "Hua-Qing Zhang",
+        "Rui Men",
+        "Bowei Mao",
+        "Chengruidong Zhang",
+        "Fan Zhou",
+        "Hao Luo",
+        "Haoran Huang",
+        "Hao-Ran Lian",
+        "Hao-Yan Huang",
+        "Hongqing Chen",
+        "Jian-Wei Zhang",
+        "Jing Xu",
+        "Junjie Wang",
+        "Langshi Chen",
+        "Liangyu Wang",
+        "Lintong Jiang",
+        "Man Yuan",
+        "Minmin Sun",
+        "Peng Jin",
+        "Si-Qi Zhang",
+        "Si-Yu Wang",
+        "Xing-Zhang Ren",
+        "Yakai Wang",
+        "Yi Zhang",
+        "Yiman Dong",
+        "Yizhong Cao",
+        "Yu-Bo Ma",
+        "Yun-Fei Mao",
+        "Bo Zheng",
+        "Dayiheng Liu"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 120,
+        "is_fresh": true,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
+      "source_url": "https://arxiv.org/abs/2504.17674",
+      "year": 2025,
+      "published": "2025-04-24",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 105,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) scale in size and adoption, their computational and environmental costs continue to rise. Prior benchmarking efforts have primarily focused on latency reduction in idealized settings, often overlooking the diverse real-world inference workloads that shape energy use. In this work, we systematically analyze the energy implications of common inference efficiency optimizations across diverse Natural Language Processing (NLP) and generative Artificial Intelligence (AI) workloads, including conversational AI and code generation. We introduce a modeling approach that approximates real-world LLM workflows through a binning strategy for input-output token distributions and batch size variations. Our empirical analysis spans software frameworks, decoding strategies, GPU architectures, online and offline serving settings, and model parallelism configurations. We show that the effectiveness of inference optimizations is highly sensitive to workload geometry, software stack, and hardware accelerators, demonstrating that naive energy estimates based on FLOPs or theoretical GPU utilization significantly underestimate real-world energy consumption. Our findings reveal that the proper application of relevant inference efficiency optimizations can reduce total energy use by up to 73% from unoptimized baselines. These insights provide a foundation for sustainable LLM deployment and inform energy-efficient design strategies for future AI infrastructure.",
+      "identifiers": [
+        "SemanticScholar:fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd"
+      ],
+      "semantic_scholar_id": "fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd",
+      "canonical_id": "arXiv:2504.17674",
+      "arxiv_id": "2504.17674",
+      "doi": "10.48550/arXiv.2504.17674",
+      "authors": [
+        "Jared Fernandez",
+        "Clara Na",
+        "Vashisth Tiwari",
+        "Yonatan Bisk",
+        "Sasha Luccioni",
+        "Emma Strubell"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 105,
+        "citation_count": 105,
+        "total": 115,
+        "is_fresh": false,
+        "freshness_age_days": 528,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.30320",
+      "identity_tokens": [
+        "id:SemanticScholar:8f38affde080c4b41ef4540363e4eebfffa26253",
+        "id:arXiv:2608.30320",
+        "title:on the design of qwen38next architecture evaluation efficiency and training stability",
+        "url:https://arxiv.org/abs/2608.30320"
+      ],
+      "record": {
+        "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+        "source_url": "https://arxiv.org/abs/2608.30320",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": null,
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We describe the architecture and ablations of Qwen3.8-Flash-Next, a sparse mixture-of-experts model with 125B parameters, 6B activated per token, and additional 51B parameters of n-gram embedding tables held off the accelerator. On fourteen pre-training benchmarks the model leads the 397B-A17B predecessor on eight and trails it on the rest by at most 2.6 points, at 1/3 the activated parameters, 1/3 the training tokens, and roughly 1/9 the training FLOPs. Token mixing uses a layer-wise hybrid of Gated DeltaNet (GDN) and global attention, with one full-attention layer in every four; at continued-pretraining time those full-attention layers are replaced by Qwen Sparse Attention (QSA), which scores context at micro-block granularity with a compressed lightweight indexer. The residual stream is widened to four branches and read through an elementwise gate, a design we call the Gated Residual (GR). Capacity is added outside the backbone by a single n-gram embedding layer whose tables are prefetched from host memory. We evaluate every candidate change along three axes: loss together with downstream benchmarks; the cost of the change in training, prefill and decode; and its effect on the optimal hyperparameters and training stability. Loss and downstream accuracy do not always move together: enlarging the n-gram vocabulary lowers loss monotonically while downstream accuracy saturates. The architecture and the Muon optimizer together shift the optimal learning rate and batch size upwards, render batch-size warmup unnecessary, and substantially improve stability under stress tests. Loss, benchmarks, efficiency and stability form one design problem. Solved jointly, they yield a recipe that is simultaneously more efficient, more capable and more stable.",
+        "identifiers": [
+          "SemanticScholar:8f38affde080c4b41ef4540363e4eebfffa26253"
+        ],
+        "semantic_scholar_id": "8f38affde080c4b41ef4540363e4eebfffa26253",
+        "canonical_id": "arXiv:2608.30320",
+        "arxiv_id": "2608.30320",
+        "authors": [
+          "Zi-Han Qiu",
+          "Ze-Kun Wang",
+          "Xiao Li",
+          "Yan-Peng Li",
+          "Yang Xu",
+          "Yi-Xuan Wang",
+          "Hua-Qing Zhang",
+          "Rui Men",
+          "Bowei Mao",
+          "Chengruidong Zhang",
+          "Fan Zhou",
+          "Hao Luo",
+          "Haoran Huang",
+          "Hao-Ran Lian",
+          "Hao-Yan Huang",
+          "Hongqing Chen",
+          "Jian-Wei Zhang",
+          "Jing Xu",
+          "Junjie Wang",
+          "Langshi Chen",
+          "Liangyu Wang",
+          "Lintong Jiang",
+          "Man Yuan",
+          "Minmin Sun",
+          "Peng Jin",
+          "Si-Qi Zhang",
+          "Si-Yu Wang",
+          "Xing-Zhang Ren",
+          "Yakai Wang",
+          "Yi Zhang",
+          "Yiman Dong",
+          "Yizhong Cao",
+          "Yu-Bo Ma",
+          "Yun-Fei Mao",
+          "Bo Zheng",
+          "Dayiheng Liu"
+        ],
+        "priority": 120,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 120,
+          "is_fresh": true,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.17674",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.17674",
+        "id:SemanticScholar:fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd",
+        "id:arXiv:2504.17674",
+        "title:energy considerations of large language model inference and efficiency optimizations",
+        "url:https://arxiv.org/abs/2504.17674"
+      ],
+      "record": {
+        "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
+        "source_url": "https://arxiv.org/abs/2504.17674",
+        "year": 2025,
+        "published": "2025-04-24",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 105,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) scale in size and adoption, their computational and environmental costs continue to rise. Prior benchmarking efforts have primarily focused on latency reduction in idealized settings, often overlooking the diverse real-world inference workloads that shape energy use. In this work, we systematically analyze the energy implications of common inference efficiency optimizations across diverse Natural Language Processing (NLP) and generative Artificial Intelligence (AI) workloads, including conversational AI and code generation. We introduce a modeling approach that approximates real-world LLM workflows through a binning strategy for input-output token distributions and batch size variations. Our empirical analysis spans software frameworks, decoding strategies, GPU architectures, online and offline serving settings, and model parallelism configurations. We show that the effectiveness of inference optimizations is highly sensitive to workload geometry, software stack, and hardware accelerators, demonstrating that naive energy estimates based on FLOPs or theoretical GPU utilization significantly underestimate real-world energy consumption. Our findings reveal that the proper application of relevant inference efficiency optimizations can reduce total energy use by up to 73% from unoptimized baselines. These insights provide a foundation for sustainable LLM deployment and inform energy-efficient design strategies for future AI infrastructure.",
+        "identifiers": [
+          "SemanticScholar:fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd"
+        ],
+        "semantic_scholar_id": "fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd",
+        "canonical_id": "arXiv:2504.17674",
+        "arxiv_id": "2504.17674",
+        "doi": "10.48550/arXiv.2504.17674",
+        "authors": [
+          "Jared Fernandez",
+          "Clara Na",
+          "Vashisth Tiwari",
+          "Yonatan Bisk",
+          "Sasha Luccioni",
+          "Emma Strubell"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 105,
+          "citation_count": 105,
+          "total": 115,
+          "is_fresh": false,
+          "freshness_age_days": 528,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c6687925bf00b44ce37a373e58fae0d909460c0bf60f8d947392a972e82651d8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
