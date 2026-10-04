@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 06:43:41 JST**
+> 自動生成: **2026-10-05 06:44:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9800** |
-| 処理済み | **2824** |
-| 未処理 | **6976** |
+| 処理済み | **2841** |
+| 未処理 | **6959** |
 | 収録済みとして除外 | **1056** |
-| 無関係として除外 | **1378** |
-| 微妙として除外 | **390** |
+| 無関係として除外 | **1393** |
+| 微妙として除外 | **392** |
 
-- 消化率: **28.8%**
+- 消化率: **29.0%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -98,9 +98,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-05 05:02:00 JST** / worker — / run 20261005-0445-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_6635921f7d988191b28ac3a1cabc1b23--2305.11860-adaptive-consistency.json
-- Discovery: **10-05 06:00:00 JST** / worker scheduled-chat-00 / run 20261005-0600-scheduled-chat-00/r01
+- Discovery: **10-05 06:00:00 JST** / worker scheduled-chat-00 / run 20261005-0600-scheduled-chat-00/r03
   - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_81f0ae4c18b48191b810ac70646bf310--discovery-20261005-0600-scheduled-chat-00-r01.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_a9f6ae6cefcc8191963baf65d4c146b1--discovery-20261005-0600-scheduled-chat-00-r03.json
 
 ## 件数サマリー（旧immutable transport診断）
 
