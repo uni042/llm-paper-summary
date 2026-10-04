@@ -31,10 +31,15 @@
   "selection_reason": "CPUメモリ上のKVをattention-awareベクトル検索で選択し、長文脈推論のGPUメモリと計算を削減する。既存KV offload/retrieval系統に直接接続する。",
   "semantic_scholar_id": "61166a7545c7cadb1ec79c4744c348bac7644d41",
   "source_url": "https://arxiv.org/abs/2409.10516",
-  "status": "ready",
+  "status": "superseded",
   "title": "RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-04T11:53:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
+  "represented_canonical_id": "arXiv:2409.10516",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

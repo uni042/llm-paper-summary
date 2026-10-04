@@ -1,14 +1,16 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "6f8b73c076db5d459c306c107773c7a9bad9062c101cd40a222978b17537caf7",
-  "canonical_id": "arXiv:2401.06118",
-  "paper_path": "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": "9ffbf2ebe1be554afc4305c2879be85bcce51fc079248ac6ebeeeb467ee6abd2",
   "japanese_normalized": true,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8f8d8ce3db148191822546e448b91109--2024-2401.06118-aqlm.md",
+  "canonical_id": "arXiv:2401.06118",
   "worker_completed_at": "2026-10-04T17:23:00+09:00",
   "worker_run_key": "20261004-1700-scheduled-chat-00/r01",
-  "processed_at": "2026-10-04T10:42:40+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md と 6 段落 / 1257文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-04T11:52:28+00:00"
 }

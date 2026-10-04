@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 20:48:41 JST**
+> 自動生成: **2026-10-04 20:53:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **593** |
-| 未claim Research job | **593** |
-| 直近24hのResearch処理完了 | **102** |
+| 収録候補論文数 | **592** |
+| 未claim Research job | **592** |
+| 直近24hのResearch処理完了 | **103** |
 | 最終Research処理完了 | **10-04 18:07:00 JST** |
 | 最終Discovery探索完了 | **10-04 19:30:00 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **593** |
+| canonical_id確認済みの一意な候補論文 | **592** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **593** |
+| 非終端Research job合計 | **592** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,9 +35,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9656** |
-| 処理済み | **2415** |
-| 未処理 | **7241** |
-| 収録済みとして除外 | **1036** |
+| 処理済み | **2417** |
+| 未処理 | **7239** |
+| 収録済みとして除外 | **1038** |
 | 無関係として除外 | **991** |
 | 微妙として除外 | **388** |
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 18:10:34 JST（2時間38分前）** |
+| 最終maintenance完了 | **10-04 18:10:34 JST（2時間42分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -88,9 +88,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **28** |
-| 直近6hのDiscovery run | **12** |
-| 直近6hのDiscovery本文確認・分類 | **36** |
+| 直近6hのResearch完了 | **29** |
+| 直近6hのDiscovery run | **11** |
+| 直近6hのDiscovery本文確認・分類 | **33** |
 | 最終Research完了 | **10-04 18:07:00 JST** |
 | 最終Discovery完了 | **10-04 19:30:00 JST** |
 
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **593** |
+| ready | **592** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1578** |
+| inference/training/survey配下の論文Markdown実体 | **1580** |
 
 ### immutable submissionの未照合
 
