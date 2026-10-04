@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0030-scheduled-chat-30/r01",
+  "reference_main_sha": "e47049e03ee32ef019c9015696f7f1bc5bc9d873",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.05233",
+      "identity_tokens": [
+        "arXiv:2105.05233"
+      ],
+      "title": "Diffusion Models Beat GANs on Image Synthesis",
+      "reason": "ImageNet画像合成の拡散モデルとclassifier guidanceによるFID改善が主題で、LLM推論ランタイム、サービング、KVキャッシュ、推論向け圧縮を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2105.05233",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で無条件・条件付き画像合成、classifier guidance、ImageNet FIDが主題と確認。LLM推論システム効率化は対象外。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.08237",
+      "identity_tokens": [
+        "arXiv:1906.08237"
+      ],
+      "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding",
+      "reason": "順列言語モデリングによる自己回帰事前学習とNLPタスク精度改善が主題で、推論実行系の速度・メモリ・サービング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1906.08237",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgeneralized autoregressive pretrainingと20 NLP taskでのBERT超越が主題と確認。推論基盤効率化は対象外。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.03006",
+      "identity_tokens": [
+        "arXiv:2107.03006"
+      ],
+      "title": "Structured Denoising Diffusion Models in Discrete State-Spaces",
+      "reason": "離散状態空間向け拡散生成モデルD3PMの定式化・学習・画像/文字生成品質が主題で、LLM推論システムの実行効率化を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2107.03006",
+      "body_check": "abstract_screen_only: 一次資料の要旨でstructured categorical corruption、variational boundとauxiliary loss、CIFAR-10/文字生成評価が主題と確認。LLM serving/runtime研究ではない。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.08663",
+      "identity_tokens": [
+        "arXiv:2104.08663"
+      ],
+      "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "reason": "18データセットで情報検索モデルのゼロショット汎化を比較する評価ベンチマーク研究で、LLM推論ランタイムやサービング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2104.08663",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でlexical/sparse/dense/late-interaction/re-rankingの10 retrieval systemを18 datasetで評価するbenchmarkが主題と確認。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.05751",
+      "identity_tokens": [
+        "arXiv:1802.05751"
+      ],
+      "title": "Image Transformer",
+      "reason": "局所自己注意を用いた自己回帰画像生成・超解像モデルの品質改善が主題で、LLM/Transformer推論基盤の高速化や省メモリ化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1802.05751",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でlocal self-attentionを画像生成へ適用しImageNet likelihoodとsuper-resolutionを評価する研究と確認。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.13478",
+      "identity_tokens": [
+        "arXiv:2104.13478"
+      ],
+      "title": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
+      "reason": "CNN/RNN/GNN/Transformerを幾何学的原理で統一的に整理する機械学習モノグラフで、LLM推論実行の速度・メモリ階層・サービング効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2104.13478",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgeometric priorsとneural architectureの統一的枠組みが主題と確認。LLM inference systemsは対象外。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1312.6211",
+      "identity_tokens": [
+        "arXiv:1312.6211"
+      ],
+      "title": "An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks",
+      "reason": "逐次学習における破滅的忘却をtraining algorithm・activation function別に分析する学習研究で、推論実行効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/1312.6211",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で旧task/new task間のcatastrophic forgettingとdropout等の学習挙動比較が主題と確認。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.00103",
+      "identity_tokens": [
+        "arXiv:1709.00103"
+      ],
+      "title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning",
+      "reason": "自然言語質問からSQLを生成するsemantic parsingモデルとWikiSQLデータセット、強化学習による実行精度改善が主題で、LLM推論基盤効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1709.00103",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でNL-to-SQL、WikiSQL、policy-based reinforcement learningによるexecution accuracy改善が主題と確認。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.15919-hfx-joint-design-of-algorithms-and-systems-for-multi-slo-serving-and-fas.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.01686",
+      "identity_tokens": [
+        "arXiv:1709.01686"
+      ],
+      "title": "BranchyNet: Fast inference via early exiting from deep neural networks",
+      "reason": "早期退出でLeNet/AlexNet/ResNet等の一般画像DNN推論を高速化する研究。推論効率化自体は扱うが、最終適用先がLLM/TransformerではなくMNIST/CIFAR10の画像分類なので対象外。",
+      "source_url": "https://arxiv.org/abs/1709.01686",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でside branch classifierによるearly exitとLeNet/AlexNet/ResNet、MNIST/CIFAR10評価が主題と確認。LLM推論への適用なし。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.02340",
+      "identity_tokens": [
+        "arXiv:1810.02340"
+      ],
+      "title": "SNIP: Single-shot Network Pruning based on Connection Sensitivity",
+      "reason": "学習開始前にconnection sensitivityで一般ニューラルネットを一度だけ刈り込み、MNIST/CIFAR/Tiny-ImageNetで疎ネットワークを学習する研究。LLM推論圧縮への直接適用・評価はない。",
+      "source_url": "https://arxiv.org/abs/1810.02340",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でinitialization時のsingle-shot pruningとCNN/residual/recurrent networkの画像分類評価が主題と確認。LLM inferenceは対象外。",
+      "first_checked_at": "2026-10-05T00:35:00+09:00",
+      "last_checked_at": "2026-10-05T00:35:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "worklist_rank": 20
+    }
+  ]
+}
