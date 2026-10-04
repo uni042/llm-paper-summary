@@ -532,7 +532,7 @@ GitHub Actionの最終状態は \`.survey/import-inbox/results/\` とblocked pay
 
 通常のLibrary-first運用で自動起動する中核は `survey-orchestrator.yml`、`library-import.yml`、`discovery-precheck.yml`、`maintenance.yml`、`update-helper.yml`、`forward-citation-sweep.yml`、`candidate-priority-refresh.yml`、および状態・整合性維持用の現行ワークフローに限定する。旧direct-GitHub worker向けの claim/run-state/preload/submission/recovery/ack/helper レーンは履歴・明示回復用としてファイルを残しても、自動push/scheduleからは起動しない。
 
-`survey-orchestrator.yml` は Library import、前方引用巡回、候補重要度更新だけを dispatch する。Library import自身がbounded intake、reference relevance、queue submission処理を行い、必要時だけ `discovery-precheck.yml` を明示dispatchするため、旧補助レーンを10分ごとに一括dispatchしない。
+`survey-orchestrator.yml` は Library import、前方引用巡回、候補重要度更新だけを dispatch する。Library import自身がbounded intake、reference relevance、queue submission処理を行い、必要時だけ `discovery-precheck.yml` を明示dispatchするため、旧補助レーンを10分ごとに一括dispatchしない。Library import が新規paperをGitHubへ反映した場合は、`GITHUB_TOKEN` pushでは別workflowが自動連鎖しないため、paper実体数と `citation-coverage-latest.json` の監査件数を比較し、差分または未完了があれば `citation-graph-backfill.yml` を明示dispatchする。
 
 ## 16. 退役資料
 
