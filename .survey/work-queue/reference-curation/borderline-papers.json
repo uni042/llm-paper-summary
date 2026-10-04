@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T05:49:13+00:00",
-  "record_count": 423,
+  "updated_at": "2026-10-04T05:54:09+00:00",
+  "record_count": 424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6119,6 +6119,20 @@
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
       "title": "SLO-Aware Disaggregated LLM Serving Over Heterogeneous Edge-Cloud Clusters"
+    },
+    "DOI:10.1016/j.comnet.2026.112609": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "DOI:10.1016/j.comnet.2026.112609"
+      ],
+      "reason": "題名と出版社の一次資料ページのIntroductionは、LLMを複数のGPUサーバ上の推論チェーンへ分割配置し、KV-cacheを含む資源制約下で同時実行可能数と通信費を合わせて扱う研究と示しており、LLM inference serving / deployment の対象範囲に強く関係する。一方、本文の手法・評価節および論文自身の限界を確認できていないため、適合を確定せずborderlineとする。",
+      "first_checked_at": "2026-10-04T05:54:09+00:00",
+      "last_checked_at": "2026-10-04T05:54:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers"
     }
   }
 }
