@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18ffc9031000ecb1-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.08864",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.08864",
+    "identity_tokens": [
+      "arXiv:2310.08864"
+    ],
+    "reason": "複数研究機関のrobot trajectory datasetを統合し、RT-X系のvision-language-action policyを共同学習してrobotics transferを評価するembodied learning研究。LLM推論システム効率化が最終適用先ではない。",
+    "first_checked_at": "2026-10-04T21:30:25+00:00",
+    "last_checked_at": "2026-10-04T21:49:40+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+  },
+  "processed_at": "2026-10-04T21:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18ffc9031000",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T21:46:21+00:00",
-  "record_count": 1374,
+  "updated_at": "2026-10-04T21:49:41+00:00",
+  "record_count": 1384,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35,9 +35,9 @@
       "identity_tokens": [
         "arXiv:2107.03374"
       ],
-      "reason": "CodexのPython code generation能力をHumanEvalで評価し、repeated samplingや限界を分析するmodel capability/benchmark研究。推論runtime・memory・serving効率化を扱わない。",
+      "reason": "Codex等のcode generation能力をHumanEvalで評価しfunctional correctnessを分析するmodel capability/benchmark研究。推論runtime・memory・serving効率化を扱わない。",
       "first_checked_at": "2026-09-19T18:08:00+00:00",
-      "last_checked_at": "2026-10-04T21:40:33+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
       "linked_from": [],
       "title": "Evaluating Large Language Models Trained on Code"
     },
@@ -422,9 +422,9 @@
       "identity_tokens": [
         "arXiv:2303.12712"
       ],
-      "reason": "GPT-4の数学・coding・vision・medicine等の広範な能力と限界を探索するcapability研究で、推論system最適化を提案しない。",
+      "reason": "GPT-4の能力・限界を多様なtaskで探索するcapability/evaluation研究で、LLM推論system最適化を提案しない。",
       "first_checked_at": "2026-09-20T03:59:00+00:00",
-      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
       "linked_from": [
         "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
         "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md",
@@ -18836,10 +18836,12 @@
       "identity_tokens": [
         "arXiv:2310.08864"
       ],
-      "reason": "多数robotのデータ統合とRT-X policyによるrobot learning/generalizationが主題で、LLM推論system効率化を対象としない。",
+      "reason": "複数研究機関のrobot trajectory datasetを統合し、RT-X系のvision-language-action policyを共同学習してrobotics transferを評価するembodied learning研究。LLM推論システム効率化が最終適用先ではない。",
       "first_checked_at": "2026-10-04T21:30:25+00:00",
-      "last_checked_at": "2026-10-04T21:30:25+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
       "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
     },
     "arXiv:1712.07040": {
@@ -19259,27 +19261,15 @@
       "linked_from": [],
       "title": "Multi-News: A Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model"
     },
-    "arXiv:2305.11747": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2305.11747",
-      "identity_tokens": [
-        "arXiv:2305.11747"
-      ],
-      "reason": "LLM hallucinationの生成・検出を評価する大規模benchmarkで、ChatGPTのhallucination率やrecognition能力を分析する。推論runtime・memory・serving最適化を扱わない。",
-      "first_checked_at": "2026-10-04T21:40:32+00:00",
-      "last_checked_at": "2026-10-04T21:40:32+00:00",
-      "linked_from": [],
-      "title": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models"
-    },
     "arXiv:2304.05302": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2304.05302",
       "identity_tokens": [
         "arXiv:2304.05302"
       ],
-      "reason": "PPOを使わずresponse ranking lossでhuman preferenceへalignするtraining方式。model数・hyperparameterを減らす学習効率が主目的で、推論runtime効率化ではない。",
+      "reason": "複数responseをrewardでrankしlanguage model scoreを整列させるalignment training手法で、PPOを使わず学習を単純化することが主目的。推論runtime効率化ではない。",
       "first_checked_at": "2026-10-04T21:40:32+00:00",
-      "last_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
       "linked_from": [],
       "title": "RRHF: Rank Responses to Align Language Models with Human Feedback without tears"
     },
@@ -19438,9 +19428,9 @@
       "identity_tokens": [
         "arXiv:2203.05482"
       ],
-      "reason": "複数fine-tuned modelの重み平均で単一modelの精度・robustnessを改善し、ensembleと異なり追加推論costを生じさせない手法だが、主目的はfine-tuning結果のmodel selection/accuracy改善であり推論runtime自体の高速化・省メモリ化ではない。",
+      "reason": "複数のfine-tunedモデル重みを平均して単一モデルへ統合し、ensembleの追加推論コストなしに画像分類等の精度を改善するモデル選択・重み平均研究。推論コスト非増加は性質として述べるが、LLM推論基盤の高速化・省メモリ化を提案しない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
       ],
@@ -19647,11 +19637,12 @@
       "identity_tokens": [
         "arXiv:1404.5997"
       ],
-      "reason": "parallelizes CNN training across multiple GPUs; final application is distributed training of CNNs, a frozen/out-of-scope training topic.",
+      "reason": "複数GPUへCNN学習を並列化するtraining system研究で、最終適用先がニューラルネットワーク学習そのもの。LLM/Transformer推論への適用・評価はない。",
       "first_checked_at": "2026-10-04T21:43:58+00:00",
-      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
       "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
       ],
       "title": "One weird trick for parallelizing convolutional neural networks"
     },
@@ -19774,6 +19765,170 @@
       "last_checked_at": "2026-10-04T21:46:21+00:00",
       "linked_from": [],
       "title": "Apparent Psychological Profiles of Large Language Models are Largely a Measurement Artifact"
+    },
+    "DOI:10.48550/arxiv.2212.04356": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2212.04356",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2212.04356",
+        "arXiv:2212.04356"
+      ],
+      "reason": "68万時間の多言語・マルチタスク音声弱教師データでWhisperを学習し、音声認識・翻訳のゼロショット性能と頑健性を評価する音声モデル研究。推論コード公開には言及するが、LLM推論ランタイム、メモリ、サービング最適化は提案しない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ],
+      "title": "Robust Speech Recognition via Large-Scale Weak Supervision"
+    },
+    "arXiv:2307.01952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.01952",
+      "identity_tokens": [
+        "arXiv:2307.01952"
+      ],
+      "reason": "3倍規模のUNet、第二テキストencoder、複数aspect ratio conditioning、refinerを用いて高解像度text-to-image生成品質を改善する画像拡散モデル研究で、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ],
+      "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis"
+    },
+    "arXiv:2311.05232": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.05232",
+      "identity_tokens": [
+        "arXiv:2311.05232"
+      ],
+      "reason": "LLMハルシネーションの分類、原因、検出ベンチマーク、緩和手法、検索拡張生成の限界を整理する信頼性サーベイ。推論ランタイム・サービング・KVキャッシュ等の効率化が最終適用先ではない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions"
+    },
+    "arXiv:2307.15043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15043",
+      "identity_tokens": [
+        "arXiv:2307.15043"
+      ],
+      "reason": "勾配探索と貪欲探索で敵対的suffixを生成し、整合済みLLMの拒否を回避する転移可能なjailbreak攻撃研究。安全性・敵対的攻撃が主題で、推論実行効率化ではない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
+      ],
+      "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+    },
+    "arXiv:2404.07972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.07972",
+      "identity_tokens": [
+        "arXiv:2404.07972"
+      ],
+      "reason": "Ubuntu/Windows/macOS上の実アプリを使う369タスクでマルチモーダルagentの操作能力を評価するbenchmark/environment研究。実行環境は提供するが、agentic LLM推論ランタイムやサービング効率化を提案するものではない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"
+    },
+    "arXiv:2402.01680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01680",
+      "identity_tokens": [
+        "arXiv:2402.01680"
+      ],
+      "reason": "LLMマルチagentの適用領域、環境、agent profile、通信、能力向上機構、dataset/benchmarkを整理するサーベイ。agentic inferenceのシステム実行効率やサービング方式を主題としない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.00866-mori.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges"
+    },
+    "arXiv:2404.04475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04475",
+      "identity_tokens": [
+        "arXiv:2404.04475"
+      ],
+      "reason": "LLM自動評価器の長さバイアスを一般化線形モデルで補正し、LMSYS Chatbot Arenaとの順位相関を改善する評価方法研究。推論ランタイム、サービング、メモリ効率化は扱わない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+      ],
+      "title": "Length-Controlled AlpacaEval: A Simple Way to Debias Automatic Evaluators"
+    },
+    "arXiv:1606.02858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.02858",
+      "identity_tokens": [
+        "arXiv:1606.02858"
+      ],
+      "reason": "CNN/Daily Mail reading comprehension taskを分析し、単純systemで既存SOTAを7–10%上回ることを示すNLP benchmark分析研究。LLM推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [],
+      "title": "A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task"
+    },
+    "DOI:10.1145/1815961.1815998": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1815961.1815998",
+      "identity_tokens": [
+        "DOI:10.1145/1815961.1815998"
+      ],
+      "reason": "GPUのpower/performanceを統合的にmodelingする一般GPU architecture研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T21:49:41+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
+      "linked_from": [],
+      "title": "An integrated GPU power and performance model"
+    },
+    "arXiv:2008.00401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.00401",
+      "identity_tokens": [
+        "arXiv:2008.00401"
+      ],
+      "reason": "mBARTを50言語へ拡張しmultilingual finetuningで翻訳品質を改善するpretraining/fine-tuning研究。推論runtime・memory・serving最適化を提案しない。",
+      "first_checked_at": "2026-10-04T21:49:41+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
+      "linked_from": [],
+      "title": "Multilingual Translation with Extensible Multilingual Pretraining and Finetuning"
+    },
+    "DOI:10.48550/arxiv.2305.11747": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2305.11747",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.11747",
+        "arXiv:2305.11747"
+      ],
+      "reason": "LLM hallucinationを生成・検出する大規模benchmark/evaluation研究で、推論systemの速度・メモリ・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:40:32+00:00",
+      "last_checked_at": "2026-10-04T21:49:41+00:00",
+      "linked_from": [],
+      "title": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models"
     }
   }
 }

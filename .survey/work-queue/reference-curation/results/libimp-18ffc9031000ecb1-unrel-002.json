@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18ffc9031000ecb1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.01952",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.01952",
+    "identity_tokens": [
+      "arXiv:2307.01952"
+    ],
+    "reason": "3倍規模のUNet、第二テキストencoder、複数aspect ratio conditioning、refinerを用いて高解像度text-to-image生成品質を改善する画像拡散モデル研究で、LLM推論システムを対象としない。",
+    "first_checked_at": "2026-10-04T21:49:40+00:00",
+    "last_checked_at": "2026-10-04T21:49:40+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+      "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+    ],
+    "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis"
+  },
+  "processed_at": "2026-10-04T21:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18ffc9031000",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

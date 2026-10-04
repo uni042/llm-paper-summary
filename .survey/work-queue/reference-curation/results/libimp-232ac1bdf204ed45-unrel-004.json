@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-232ac1bdf204ed45-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2008.00401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2008.00401",
+    "identity_tokens": [
+      "arXiv:2008.00401"
+    ],
+    "reason": "mBARTを50言語へ拡張しmultilingual finetuningで翻訳品質を改善するpretraining/fine-tuning研究。推論runtime・memory・serving最適化を提案しない。",
+    "first_checked_at": "2026-10-04T21:49:41+00:00",
+    "last_checked_at": "2026-10-04T21:49:41+00:00",
+    "linked_from": [],
+    "title": "Multilingual Translation with Extensible Multilingual Pretraining and Finetuning"
+  },
+  "processed_at": "2026-10-04T21:49:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-232ac1bdf204",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

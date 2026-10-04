@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T21:46:21+00:00",
-  "record_count": 447,
+  "updated_at": "2026-10-04T21:49:40+00:00",
+  "record_count": 449,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6412,6 +6412,30 @@
       "last_checked_at": "2026-10-04T21:46:21+00:00",
       "linked_from": [],
       "title": "Opportunity Is Not Realizability: Selection-Valid Diagnostics for Multi-LLM Routing"
+    },
+    "arXiv:2305.15294": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.15294",
+      "identity_tokens": [
+        "arXiv:2305.15294"
+      ],
+      "reason": "Iter-RetGenはLLM出力を次回retrieval queryのcontextとして反復し、retrievalとgenerationを相互改善する推論時RAG方式。retrieval/generation overhead低減にも言及するが主目的はQA・fact verification等の品質向上で、serving/runtime効率化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [],
+      "title": "Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy"
+    },
+    "arXiv:2102.11174": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2102.11174",
+      "identity_tokens": [
+        "arXiv:2102.11174"
+      ],
+      "reason": "linearized self-attentionをfast weight programmerとして再解釈し、有限memory容量の問題にdelta-rule更新と新kernelを導入する。linear attentionの計算効率に関係するが、主貢献は理論・architectureで実LLM serving/runtime評価が中心ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:49:40+00:00",
+      "last_checked_at": "2026-10-04T21:49:40+00:00",
+      "linked_from": [],
+      "title": "Linear Transformers Are Secretly Fast Weight Programmers"
     }
   }
 }
