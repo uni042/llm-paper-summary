@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T20:53:45+00:00",
-  "record_count": 1294,
+  "updated_at": "2026-10-04T21:30:25+00:00",
+  "record_count": 1312,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -2946,20 +2946,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents"
-    },
-    "arXiv:1707.06209": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1707.06209",
-      "identity_tokens": [
-        "arXiv:1707.06209"
-      ],
-      "reason": "SciQデータセット構築手法が主題で、推論システムとは無関係。",
-      "first_checked_at": "2026-09-27T09:01:29+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Crowdsourcing Multiple Choice Science Questions"
     },
     "arXiv:2402.05120": {
       "classification": "unrelated",
@@ -18747,6 +18733,238 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
       ],
       "title": "A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers"
+    },
+    "arXiv:1607.03250": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1607.03250",
+      "identity_tokens": [
+        "arXiv:1607.03250"
+      ],
+      "reason": "dataset上でほぼ常時ゼロとなるneuronを反復的にprune/retrainして計算・メモリを削減するが、評価はLeNet/VGG-16でありLLM/Transformer推論への最終適用がない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Network Trimming: A Data-Driven Neuron Pruning Approach towards Efficient Deep Architectures"
+    },
+    "arXiv:1511.06530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.06530",
+      "identity_tokens": [
+        "arXiv:1511.06530"
+      ],
+      "reason": "Tucker分解等でCNNを圧縮しsmartphone上のmodel size/runtime/energyを削減するが、AlexNet/VGG/GoogLeNet等の画像CNNが最終適用先でLLM推論対象外。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Compression of Deep Convolutional Neural Networks for Fast and Low Power Mobile Applications"
+    },
+    "arXiv:2305.14387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14387",
+      "identity_tokens": [
+        "arXiv:2305.14387"
+      ],
+      "reason": "LLMによる人間feedback模擬、automatic evaluation、PPO/DPO等の学習法を低costで研究するalignment/training framework。推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback"
+    },
+    "arXiv:2211.14275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.14275",
+      "identity_tokens": [
+        "arXiv:2211.14275"
+      ],
+      "reason": "GSM8Kでprocess-based/outcome-based supervisionを比較しreasoning errorを改善する学習・監督研究で、推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Solving math word problems with process- and outcome-based feedback"
+    },
+    "arXiv:2301.12503": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.12503",
+      "identity_tokens": [
+        "arXiv:2301.12503"
+      ],
+      "reason": "CLAP latent上のdiffusionでtext-to-audio生成品質と計算効率を改善するが、最終適用先は音声生成でLLM推論systemではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "AudioLDM: Text-to-Audio Generation with Latent Diffusion Models"
+    },
+    "arXiv:2003.06713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.06713",
+      "identity_tokens": [
+        "arXiv:2003.06713"
+      ],
+      "reason": "T5系seq2seq modelでrelevance labelを生成しdocument ranking品質を改善する情報検索研究。LLM serving/runtimeの速度・メモリ最適化を提案しない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model"
+    },
+    "arXiv:2108.08877": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.08877",
+      "identity_tokens": [
+        "arXiv:2108.08877"
+      ],
+      "reason": "T5からsentence embeddingを抽出する3方式とSentGLUEを提案し、STS/transfer品質とscale効果を評価する表現学習研究。推論基盤効率化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Sentence-T5: Scalable Sentence Encoders from Pre-trained Text-to-Text Models"
+    },
+    "DOI:10.18653/v1/n16-1098": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n16-1098",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n16-1098"
+      ],
+      "reason": "ROCStories 50kとStory Cloze Testを構築してcommonsense story understandingを評価するbenchmark研究で、推論runtime効率化を扱わない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "A Corpus and Cloze Evaluation for Deeper Understanding of Commonsense Stories"
+    },
+    "arXiv:2303.04226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04226",
+      "identity_tokens": [
+        "arXiv:2303.04226"
+      ],
+      "reason": "GANからChatGPTまでの生成AI/AIGC技術・応用を整理する広範surveyで、LLM推論systemの特定最適化方式を提案・評価しない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT"
+    },
+    "arXiv:2104.07567": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.07567",
+      "identity_tokens": [
+        "arXiv:2104.07567"
+      ],
+      "reason": "neural retrievalを対話モデルへ組み込み知識性とhallucination低減を改善する対話品質研究で、RAG推論runtime・serving効率化を提案しない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Retrieval Augmentation Reduces Hallucination in Conversation"
+    },
+    "arXiv:2108.00573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.00573",
+      "identity_tokens": [
+        "arXiv:2108.00573"
+      ],
+      "reason": "multi-hop QA benchmark/data constructionが主題で、LLM推論runtime・memory・serving最適化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "MuSiQue: Multihop Questions via Single-hop Question Composition"
+    },
+    "arXiv:2310.08864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08864",
+      "identity_tokens": [
+        "arXiv:2310.08864"
+      ],
+      "reason": "多数robotのデータ統合とRT-X policyによるrobot learning/generalizationが主題で、LLM推論system効率化を対象としない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+    },
+    "arXiv:1712.07040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.07040",
+      "identity_tokens": [
+        "arXiv:1712.07040"
+      ],
+      "reason": "物語理解を評価するreading comprehension dataset/benchmarkが主題で、推論システム効率化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "The NarrativeQA Reading Comprehension Challenge"
+    },
+    "arXiv:2402.09353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.09353",
+      "identity_tokens": [
+        "arXiv:2402.09353"
+      ],
+      "reason": "LoRAをweight magnitude/direction分解で改善するparameter-efficient fine-tuning研究。追加推論overheadを避けるが主貢献は学習能力・安定性であり推論最適化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "DoRA: Weight-Decomposed Low-Rank Adaptation"
+    },
+    "arXiv:2309.10305": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10305",
+      "identity_tokens": [
+        "arXiv:2309.10305"
+      ],
+      "reason": "7B/13B open LLMの事前学習・能力・安全性評価を報告するmodel release/technical reportで、推論runtime最適化方式を主貢献としない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Baichuan 2: Open Large-scale Language Models"
+    },
+    "arXiv:2308.07201": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.07201",
+      "identity_tokens": [
+        "arXiv:2308.07201"
+      ],
+      "reason": "複数LLM agentのdebateで生成品質評価を改善するLLM evaluator研究で、multi-agent推論のruntime/serving効率化ではない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate"
+    },
+    "DOI:10.2307/2346488": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2307/2346488",
+      "identity_tokens": [
+        "DOI:10.2307/2346488"
+      ],
+      "reason": "PCAで冗長変数を事前除去する統計的variable-selection研究で、LLM/Transformer推論を対象としない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Discarding Variables in a Principal Component Analysis. I: Artificial Data"
+    },
+    "DOI:10.18653/v1/w17-4413": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w17-4413",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w17-4413",
+        "arXiv:1707.06209"
+      ],
+      "reason": "SciQ 13.7K問をcrowdsourcingで構築するdataset作成研究で、LLM推論システム効率化ではない。",
+      "first_checked_at": "2026-09-27T09:01:29+09:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Crowdsourcing Multiple Choice Science Questions"
+    },
+    "DOI:10.1109/cvpr52688.2022.01165": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52688.2022.01165",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52688.2022.01165",
+        "arXiv:2203.08679"
+      ],
+      "reason": "TCKD/NCKDへlogit distillationを分解して画像分類・物体検出の蒸留学習を改善する研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Decoupled Knowledge Distillation"
     }
   }
 }

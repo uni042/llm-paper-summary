@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27d5b8491a1ea83b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.12503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.12503",
+    "identity_tokens": [
+      "arXiv:2301.12503"
+    ],
+    "reason": "CLAP latent上のdiffusionでtext-to-audio生成品質と計算効率を改善するが、最終適用先は音声生成でLLM推論systemではない。",
+    "first_checked_at": "2026-10-04T21:30:25+00:00",
+    "last_checked_at": "2026-10-04T21:30:25+00:00",
+    "linked_from": [],
+    "title": "AudioLDM: Text-to-Audio Generation with Latent Diffusion Models"
+  },
+  "processed_at": "2026-10-04T21:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27d5b8491a1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

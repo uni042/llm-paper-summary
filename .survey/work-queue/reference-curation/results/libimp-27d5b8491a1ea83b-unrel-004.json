@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27d5b8491a1ea83b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.14275",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.14275",
+    "identity_tokens": [
+      "arXiv:2211.14275"
+    ],
+    "reason": "GSM8Kでprocess-based/outcome-based supervisionを比較しreasoning errorを改善する学習・監督研究で、推論system効率化を対象としない。",
+    "first_checked_at": "2026-10-04T21:30:25+00:00",
+    "last_checked_at": "2026-10-04T21:30:25+00:00",
+    "linked_from": [],
+    "title": "Solving math word problems with process- and outcome-based feedback"
+  },
+  "processed_at": "2026-10-04T21:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27d5b8491a1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

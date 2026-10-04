@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T20:49:55+00:00",
-  "record_count": 436,
+  "updated_at": "2026-10-04T21:30:25+00:00",
+  "record_count": 437,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6280,6 +6280,18 @@
       "last_checked_at": "2026-10-04T20:49:55+00:00",
       "linked_from": [],
       "title": "Patient Knowledge Distillation for BERT Model Compression"
+    },
+    "arXiv:1603.08983": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1603.08983",
+      "identity_tokens": [
+        "arXiv:1603.08983"
+      ],
+      "reason": "入力ごとにRNN内部の計算step数を学習するAdaptive Computation Timeで可変計算を実現しcharacter-level language modelingも評価する。adaptive inferenceの先行研究として関連するが、現代LLM推論systemへの直接適用・serving評価がないため境界扱い。",
+      "first_checked_at": "2026-10-04T21:30:25+00:00",
+      "last_checked_at": "2026-10-04T21:30:25+00:00",
+      "linked_from": [],
+      "title": "Adaptive Computation Time for Recurrent Neural Networks"
     }
   }
 }
