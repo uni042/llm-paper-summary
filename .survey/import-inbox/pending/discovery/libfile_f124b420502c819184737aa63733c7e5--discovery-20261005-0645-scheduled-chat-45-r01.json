@@ -1,0 +1,183 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-0645-scheduled-chat-45/r01",
+  "reference_main_sha": "f34fc81fd99b26842a2cde7600f811f5f20e2af2",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.12122",
+      "identity_tokens": [
+        "arXiv:2102.12122"
+      ],
+      "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions",
+      "reason": "Pyramid Vision Transformerで物体検出・semantic/instance segmentation等のdense vision predictionを改善するcomputer vision研究。計算量削減も画像feature map向けで、LLM推論systemを最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2102.12122",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でPVT、COCO物体検出・segmentationが主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T06:52:00+09:00",
+      "last_checked_at": "2026-10-05T06:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.05262",
+      "identity_tokens": [
+        "arXiv:2202.05262"
+      ],
+      "title": "Locating and Editing Factual Associations in GPT",
+      "reason": "GPT内の事実知識の局在を因果介入で特定しROMEで編集するmodel editing研究。推論速度・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2202.05262",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でfactual association localizationとRank-One Model Editingが主題と確認。",
+      "first_checked_at": "2026-10-05T06:53:00+09:00",
+      "last_checked_at": "2026-10-05T06:53:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00352",
+      "identity_tokens": [
+        "arXiv:2308.00352"
+      ],
+      "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+      "reason": "標準作業手順(SOP)をprompt列へ符号化し、役割分担したLLM agent群でsoftware engineering品質を改善するmulti-agent framework研究。推論runtimeやserving効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2308.00352",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でSOP、assembly-line agent collaboration、software engineering benchmarkが主題と確認。",
+      "first_checked_at": "2026-10-05T06:54:00+09:00",
+      "last_checked_at": "2026-10-05T06:54:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.07129",
+      "identity_tokens": [
+        "arXiv:1905.07129"
+      ],
+      "title": "ERNIE: Enhanced Language Representation with Informative Entities",
+      "reason": "knowledge graph entityを組み込む事前学習で言語表現・knowledge-driven task精度を改善するモデル学習研究で、LLM推論system最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1905.07129",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でKG-enhanced language representation trainingと下流NLP性能が主題と確認。",
+      "first_checked_at": "2026-10-05T06:55:00+09:00",
+      "last_checked_at": "2026-10-05T06:55:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.168",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.naacl-main.168",
+        "arXiv:2103.07191"
+      ],
+      "title": "Are NLP Models really able to Solve Simple Math Word Problems?",
+      "reason": "math word problem solverのshortcut/heuristic依存を分析しSVAMP challenge datasetを導入する能力評価研究で、推論system効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2103.07191",
+      "body_check": "abstract_screen_only: 一次研究ページ要旨でMWP robustness評価とSVAMP datasetが主題と確認。",
+      "first_checked_at": "2026-10-05T06:56:00+09:00",
+      "last_checked_at": "2026-10-05T06:56:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.00300",
+      "identity_tokens": [
+        "arXiv:1906.00300",
+        "DOI:10.18653/v1/P19-1612"
+      ],
+      "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering",
+      "reason": "retrieverとreaderを弱教師付きで共同学習するopen-domain QA研究で、RAG/LLM推論servingのruntime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1906.00300",
+      "body_check": "abstract_screen_only: ACL一次要旨でlatent evidence retrievalとQA exact-match改善が主題と確認。",
+      "first_checked_at": "2026-10-05T06:57:00+09:00",
+      "last_checked_at": "2026-10-05T06:57:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.08050",
+      "identity_tokens": [
+        "arXiv:2105.08050"
+      ],
+      "title": "Pay Attention to MLPs",
+      "reason": "gMLP/Spatial Gating UnitがvisionとBERT-style language modelingでTransformerに匹敵することを示すarchitecture研究。推論runtime・kernel・servingの効率化を直接評価しない。",
+      "source_url": "https://arxiv.org/abs/2105.08050",
+      "body_check": "abstract_screen_only: 一次論文要旨でMLP architectureとvision/language accuracy/scalingが主題と確認。",
+      "first_checked_at": "2026-10-05T06:58:00+09:00",
+      "last_checked_at": "2026-10-05T06:58:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.272",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.272",
+        "arXiv:2112.01488"
+      ],
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+      "reason": "検索器のlate-interaction表現をresidual compressionし索引spaceを6–10倍削減するinformation retrieval研究。RAG推論基盤そのもののserving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2112.01488",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でneural retrieval qualityとindex space footprintが主題と確認。",
+      "first_checked_at": "2026-10-05T06:59:00+09:00",
+      "last_checked_at": "2026-10-05T06:59:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.06476",
+      "identity_tokens": [
+        "arXiv:2302.06476"
+      ],
+      "title": "Is ChatGPT a General-Purpose Natural Language Processing Task Solver?",
+      "reason": "ChatGPTのzero-shot能力を20 NLP dataset・7 task categoryで評価する能力ベンチマーク研究で、推論runtime効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2302.06476",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でzero-shot NLP task performanceとlimitations分析が主題と確認。",
+      "first_checked_at": "2026-10-05T07:00:00+09:00",
+      "last_checked_at": "2026-10-05T07:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06983",
+      "identity_tokens": [
+        "arXiv:2305.06983"
+      ],
+      "title": "Active Retrieval Augmented Generation",
+      "reason": "生成途中の低信頼tokenを契機に将来文をqueryとしてretrievalを起動するFLAREで知識集約型生成品質を改善するRAG algorithm研究。runtime/serving効率化を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2305.06983",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でactive retrieval strategyと4 knowledge-intensive generation taskの品質評価が主題と確認。",
+      "first_checked_at": "2026-10-05T07:01:00+09:00",
+      "last_checked_at": "2026-10-05T07:01:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "worklist_rank": 22
+    }
+  ]
+}
