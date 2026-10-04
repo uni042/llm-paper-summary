@@ -31,10 +31,15 @@
   "selection_reason": "EntropyInfer adaptively allocates attention compute per head/segment and compresses decode KV state, with reported long-context end-to-end speedups; it directly updates sparse-attention and KV-compression system lineages.",
   "semantic_scholar_id": "d767eb9c530830c18679f57ac9ea2aecc824b3d7",
   "source_url": "https://www.semanticscholar.org/paper/d767eb9c530830c18679f57ac9ea2aecc824b3d7",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Rigid to Dynamic: Entropy-Guided Adaptive Inference for Long-Context LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T08:35:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2606.09508-from-rigid-to-dynamic-entropy-guided-adaptive-inference-for-long-context.md",
+  "represented_canonical_id": "arXiv:2606.09508",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

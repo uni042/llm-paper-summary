@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 17:34:01 JST**
+> 自動生成: **2026-10-04 17:35:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **604** |
-| 未claim Research job | **604** |
+| 収録候補論文数 | **603** |
+| 未claim Research job | **603** |
 | 直近24hのResearch処理完了 | **85** |
 | 最終Research処理完了 | **10-04 17:14:14 JST** |
 | 最終Discovery探索完了 | **10-04 17:30:00 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **604** |
+| canonical_id確認済みの一意な候補論文 | **603** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **604** |
+| 非終端Research job合計 | **603** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,14 +34,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **9583** |
-| 処理済み | **2381** |
+| 構造化references総候補 | **9584** |
+| 処理済み | **2382** |
 | 未処理 | **7202** |
-| 収録済みとして除外 | **1026** |
+| 収録済みとして除外 | **1027** |
 | 無関係として除外 | **966** |
 | 微妙として除外 | **389** |
 
-- 消化率: **24.8%**
+- 消化率: **24.9%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 14:24:59 JST（3時間9分前）** |
+| 最終maintenance完了 | **10-04 14:24:59 JST（3時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **604** |
+| ready | **603** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1566** |
+| inference/training/survey配下の論文Markdown実体 | **1567** |
 
 ### immutable submissionの未照合
 
