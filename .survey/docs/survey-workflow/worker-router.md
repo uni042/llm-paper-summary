@@ -322,7 +322,7 @@ Survey GitHub Importは1回の転送バッチを終えたら、`.survey/schedule
 
 正本仕様は \`.survey/import-inbox/README.md\`。実行workflowは \`.github/workflows/library-import.yml\` の1本だけとする。
 
-受信箱processor自身はcronを持たない。`.github/workflows/survey-orchestrator.yml` は `07,17,27,37,47,57` 分に10分周期で受信箱を確認し、pending/waitingがある場合だけ `library-import.yml` を `workflow_dispatch` する。空受信箱では通常runを省略し、約6 tickに1回だけ再試行可能な残存状態を拾う回復passを実行する。`.survey/scheduler/library-import-kick.json` のpushも同じ入口へ入るため、scheduled eventの遅延・drop時にも次のLibrary handoffで即時回復できる。processorは毎回最新mainから再計算する。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを \`retained/discovery-source/\` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
+受信箱processor自身はcronを持たない。GitHubのscheduled eventはbest-effortで遅延・dropし得るため、cronを正本の時計として扱わない。`.github/workflows/survey-scheduler-watchdog.yml` が通常は自己連鎖する `workflow_dispatch` により約10分ごとのtickを維持し、各tickで `survey-orchestrator.yml` を起動する。watchdog自身の `13,43 * * * *` cronとworkflow-file pushは自己連鎖が切れた場合のbootstrap/recovery専用である。`survey-orchestrator.yml` 側の `07,17,27,37,47,57` cronも二次fallbackとして残すが、通常運用はこれに依存しない。中央orchestratorはpending/waitingがある場合だけ `library-import.yml` を `workflow_dispatch` し、前方引用巡回と候補優先度更新はdurable stateの鮮度で起動し、日次maintenanceも09:00 JST以降に当日完了がなければ回復dispatchする。空受信箱では通常runを省略し、約6 tickに1回だけ再試行可能な残存状態を拾う回復passを実行する。`.survey/scheduler/library-import-kick.json` のpushも同じ入口へ入るため、Library handoff直後は時計tickを待たず即時回復できる。processorは毎回最新mainから再計算する。アップロード1ファイルごとにActions runを増やさない。1 runの上限はResearch 5件、Discovery 20 records。Discovery JSONが20 recordsを超える場合は、GitHub側で原本bytesを `retained/discovery-source/` に保持したまま、20 records以下の決定論的chunkへ分割して処理する。Discoveryの負荷上限をファイル数で定義しない。
 
 ### Research
 
@@ -394,7 +394,7 @@ Researchの既定操作は **insert-if-absent**。既収録本文の更新は通
 
 ## 13. 08:30 日次更新 — LLM / LLMフレームワーク
 
-リポジトリのGC・品質監査・整合性確認を行うrepository maintenanceはScheduled Chatに依存させない。`.github/workflows/maintenance.yml` がGitHub Actionsのscheduleにより毎日08:30 JST（23:30 UTC）に自動実行する。08:30の`scheduled-chat-30`はrepository maintenanceの起動責任を持たず、以下のLLM / LLMフレームワーク日次更新だけを担当する。
+リポジトリのGC・品質監査・整合性確認を行うrepository maintenanceはScheduled Chatに依存させない。`.github/workflows/maintenance.yml` は毎日08:30 JST（23:30 UTC）のscheduleを通常入口として持つが、scheduled eventの遅延・dropに備え、中央orchestratorが09:00 JST以降に当日の完了記録がなければ `workflow_dispatch` で回復起動する。08:30の`scheduled-chat-30`はrepository maintenanceの起動責任を持たず、以下のLLM / LLMフレームワーク日次更新だけを担当する。
 
 08:30 JSTの\`scheduled-chat-30\`は通常Research / Discoveryへ置換せず、**LLMとLLM推論フレームワークの最新情報を調査し、GitHubへ反映できる完成差分をLibraryへ作る日次更新run**とする。候補在庫や通常モード判定でResearch / Discoveryへ置換しない。
 
