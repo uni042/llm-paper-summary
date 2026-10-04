@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 05:53:29 JST**
+> 自動生成: **2026-10-05 05:53:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,13 +35,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9713** |
-| 処理済み | **2737** |
-| 未処理 | **6976** |
+| 処理済み | **2752** |
+| 未処理 | **6961** |
 | 収録済みとして除外 | **1042** |
-| 無関係として除外 | **1304** |
+| 無関係として除外 | **1319** |
 | 微妙として除外 | **391** |
 
-- 消化率: **28.2%**
+- 消化率: **28.3%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 00:05:47 JST（5時間47分前）** |
+| 最終maintenance完了 | **10-05 00:05:47 JST（5時間48分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -99,8 +99,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - Research: **10-05 04:46:00 JST** / worker — / run 20261005-0430-scheduled-chat-30/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_273d46fe38fc8191a205ad1599cf6cc1--2503.16428-xattention.json
 - Discovery: **10-05 05:30:00 JST** / worker scheduled-chat-30 / run 20261005-0530-scheduled-chat-30/r02
-  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_7adfbbd65248819189b508261e1c8fdb--discovery-20261005-0530-scheduled-chat-30-r02-partial.json
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_7adfbbd65248819189b508261e1c8fdb--discovery-20261005-0530-scheduled-chat-30-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
