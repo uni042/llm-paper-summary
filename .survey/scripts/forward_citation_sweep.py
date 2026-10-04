@@ -205,11 +205,11 @@ def _merge_candidate(
     return True
 
 
-def _drop_represented_candidates(state: dict[str, Any], represented: set[str]) -> int:
+def _drop_candidates_matching_tokens(state: dict[str, Any], blocked: set[str]) -> int:
     candidates = state.get("candidates") if isinstance(state.get("candidates"), dict) else {}
     remove = [
         key for key, row in candidates.items()
-        if isinstance(row, dict) and paper_identity.record_identifiers(row) & represented
+        if isinstance(row, dict) and paper_identity.record_identifiers(row) & blocked
     ]
     for key in remove:
         candidates.pop(key, None)
@@ -218,6 +218,10 @@ def _drop_represented_candidates(state: dict[str, Any], represented: set[str]) -
         aliases = state.get("candidate_aliases") if isinstance(state.get("candidate_aliases"), dict) else {}
         state["candidate_aliases"] = {alias: key for alias, key in aliases.items() if key in live_keys}
     return len(remove)
+
+
+def _drop_represented_candidates(state: dict[str, Any], represented: set[str]) -> int:
+    return _drop_candidates_matching_tokens(state, represented)
 
 
 def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) -> dict[str, Any]:
@@ -237,6 +241,23 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
 
     papers = citation_graph.load_records(root)
     represented = {ident for paper in papers for ident in paper.identifiers}
+
+    # Forward citations are a complementary source, not a second copy of the
+    # structured backward-reference queue. If a paper is already present in the
+    # live backward pool, keep it only there and never retain a duplicate in the
+    # forward-citation state.
+    backward_pool = reference_pool.build_reference_pool(root)
+    backward_candidates = (
+        backward_pool.get("candidates")
+        if isinstance(backward_pool, dict)
+        else None
+    )
+    backward_identities: set[str] = set()
+    if isinstance(backward_candidates, list):
+        for candidate in backward_candidates:
+            if isinstance(candidate, dict):
+                backward_identities.update(paper_identity.record_identifiers(candidate))
+
     state = _read(root / STATE_PATH, {})
     if not isinstance(state, dict) or state.get("schema_version") != 1:
         state = {"schema_version": 1, "seeds": {}, "candidates": {}, "candidate_aliases": {}}
@@ -323,7 +344,10 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
                 for candidate in records if isinstance(records, list) else []:
                     if not isinstance(candidate, dict):
                         continue
-                    if paper_identity.record_identifiers(candidate) & represented:
+                    candidate_ids = paper_identity.record_identifiers(candidate)
+                    if candidate_ids & represented:
+                        continue
+                    if candidate_ids & backward_identities:
                         continue
                     if _merge_candidate(state, candidate, source=paper, observed_at=now_text):
                         new_observations += 1
@@ -364,6 +388,9 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
             sleep_fn(spacing)
 
     represented_removed = _drop_represented_candidates(state, represented)
+    backward_reference_removed = _drop_candidates_matching_tokens(
+        state, backward_identities
+    )
 
     # Candidates already durably classified as unrelated/borderline no longer
     # need to stay in the sweep candidate surface. Their exclusion evidence
@@ -417,6 +444,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
         "rate_limit_retries_per_request": rate_limit_retries,
         "provider_error_budget_exhausted": provider_error_budget_exhausted,
         "represented_candidates_removed": represented_removed,
+        "backward_reference_candidates_removed": backward_reference_removed,
         "classified_candidates_removed": len(rejected_keys),
         "candidate_count": state["candidate_count"],
         "state_changed": changed,
