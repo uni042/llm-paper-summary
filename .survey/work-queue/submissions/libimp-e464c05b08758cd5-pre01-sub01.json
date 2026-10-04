@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CURE: Local Uncertainty Repair for Block-Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.00531",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding mitigates the latency of sequential generation in autoregressive Large Language Models (LLMs) by interleaving draft generation with target verification. However, existing parallel drafting backends often suffer from rapid accuracy degradation over long horizons, leading to high rejection rates during verification and suboptimal wall-clock speedups. We observe that drafting errors are not uniformly distributed but typically stem from localized high-uncertainty tokens that destabilize downstream generation trajectories. Motivated by this token error pattern, we propose CURE, a budget-aware dynamic repair tree designed to repair errors at uncertainty focal points without incurring prohibitive tree-verification overheads. Specifically, our method uses predictive confidence margins to dynamically locate candidate error tokens within a block-parallel draft, expands bounded repair paths only at these fragile nodes, and employs a novel repair resynchronization mechanism to realign draft states post-verification. Evaluations on code-generation benchmarks (HumanEval, MBPP, and LiveCodeBench-lite) and mathematical reasoning benchmark (GSM8K) demonstrate that CURE increases the average accepted length by 4.2-7.5% over parallel baselines without repair, translating to an end-to-end speedup of $2.66-3.49\\times$ over target-only decoding. Furthermore, we provide a plug-and-play repair module compatible with standard parallel drafting frameworks. We also characterize the trade-off between draft compute and verification efficiency.",
+      "identifiers": [
+        "SemanticScholar:53c9c0974ac55525e885c05c26677b5a10024542"
+      ],
+      "semantic_scholar_id": "53c9c0974ac55525e885c05c26677b5a10024542",
+      "canonical_id": "arXiv:2608.00531",
+      "arxiv_id": "2608.00531",
+      "authors": [
+        "Ao-Fan Liu",
+        "Jing Meng",
+        "Fang-Xin Liu",
+        "Yongbiao Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 64,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CUREはblock-parallel draftの低信頼位置だけに代替tokenのrepair枝を追加し、target modelが木全体を一括検証した後、repair枝が勝てばdraft KV cacheを再同期する推論時のspeculative-decoding手法である。本文のQwen3-8B評価ではsingle-path parallel draftに対しaccepted lengthがコード課題で4.2–7.5%増え、target-only autoregressive decoding比で2.66–3.49倍の速度を報告しており、LLM推論効率化に該当する。ただしCUREのTPOTはparallel draft比で1.40–1.61倍高く、追加検証計算が並列draft自体を速くするわけではない。単一GPU・greedy・限定ベンチマークでの報告として扱う。",
+      "library_body_check": "arXiv v1一次本文 (https://arxiv.org/html/2608.00531) の§1 Introduction、§3 Methodology（§3.1–3.5）、§4 Experiments（§4.1–4.4、Tables 1–5）、§5 Discussion & Conclusionを確認。§3.1–3.3はblock-parallel draftのtop-1/top-2 log-probability marginで不確実位置を検出し、verification budget内で代替候補を限定展開してsparse treeを構成する。target modelはTree Attentionで既定経路とrepair経路を一回で検証し、repair経路が勝った場合は選択tokenをdraft KV cacheへreplayして次blockの状態を同期する。§3.5は基礎となるspecialized block-parallel draft checkpointの準備に学習を要する一方、CURE自体は追加parameterや再学習なしで推論時に適用すると明記。§4.1–4.2の評価はQwen3-8B targetとQwen3-8Bベースblock-parallel draft (K=16)、single GPU、bfloat16、FlashAttention-2、greedy decoding。HumanEval 164件、MBPP 128件、LiveCodeBench-lite public test 128件とGSM8K 128件を評価。Table 1および§4.3で、コード課題のaccepted tokens/stepはsingle-path parallel比4.2–7.5%増、target-only AR比2.66–3.49倍、autoregressive Qwen3-4B draftのNaive SD比4.38–5.43倍の速度と報告。一方、同じTable 1と§4.5ではCUREのTPOTはparallel draft比1.40–1.61倍で、tree検証の追加費用を示す。Table 3のpass@1は評価した3コード課題でtarget ARと同数だが、単一runの結果であり、挙動の同等性を提供テスト外へ一般化しない。§4.4の64例ablationはcache resynchronizationを外すとaccepted lengthと速度が大きく低下することを示す。§4.5は簡単な分布でtree検証の遅延がaccepted-length増を上回り得ること、GSM8K結果だけではprotocol-level generalityを示さないことを述べる。Table 2の他方式との数値はhardware、generation limit、実装が異なる既報値の文脈比較であり、統制されたhead-to-head比較ではない。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Archer: Adaptive Reuse of Cached Hidden States for Efficient Rollback in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.08086",
+      "year": 2026,
+      "published": "2026-08-08",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) iteratively refine a sequence, allowing earlier predictions to be revised as context evolves. This rollback capability distinguishes them from irreversible autoregressive generation, but makes inference costly. Every denoising update alters the global context, forcing both prompt and response states to be recomputed even though only response tokens are revisable. Key-value (KV) caching could reduce this cost, yet conventional caching assumes immutable historical states and is therefore difficult to reconcile with rollback. In this paper, we introduce Adaptive Reuse of Cached Hidden States for Efficient Rollback (Archer), a training-free KV caching method for rollback-capable DLMs. Archer asymmetrically keeps the mutable response synchronized with the current hypothesis while reusing prompt K/V within a bounded state neighborhood. Although prompt representations also change under bidirectional attention, their token identities remain fixed; bounded reuse therefore amortizes repeated prompt computation without caching mutable response states. It also delays feedback from tentative tokens, reducing premature reinforcement of transient high-confidence errors and giving rollback more opportunity to correct them. Our analysis characterizes prompt reuse as a reversibility-aligned cache boundary, bounds its state-dependent approximation error, and gives a decoder-margin condition for preserving full-refresh decisions. Existing DLM acceleration often trades quality for speed. Archer shifts this frontier, attaining the best mean performance of 33.63% together with a 2.57x mean speedup on the main suite. Across evaluated settings, it improves Pass@1 by up to 3.05 points and reaches up to 2.95x speedup. Controlled analyses connect the quality gain to delayed prompt feedback and validate state-aware refresh. Our code is available at https://github.com/Hxnng/Archer.",
+      "identifiers": [
+        "SemanticScholar:d7b9339916043bbcc437ac5268f43518decc78af"
+      ],
+      "semantic_scholar_id": "d7b9339916043bbcc437ac5268f43518decc78af",
+      "canonical_id": "arXiv:2608.08086",
+      "arxiv_id": "2608.08086",
+      "authors": [
+        "Xuning He",
+        "Zinan Sheng",
+        "Yong-Ding Tao",
+        "Huanyu Liu",
+        "Ge Li",
+        "Xue Jiang",
+        "Yihong Dong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      },
+      "reason": "rollback可能なdiffusion language modelの応答生成で、変更されないprompt側K/Vの再利用と状態距離に基づくrefreshにより反復forward計算を削減するtraining-freeの推論手法であり、LLM inference efficiencyに直接該当する。本文は複数DLM・codeおよび非codeタスクで品質とlatencyを測り、過度なcache stalenessによる精度低下も示しているためacceptとする。",
+      "library_body_check": "arXiv v2本文HTMLの§1–2、§4.1–4.2、§5.1–5.3、§6.1–6.4のTable 1–4、§7–8、Appendix A.4–A.7、B.1/Table 5、C.1–C.3/Tables 6–7、D/Table 7、E.1–E.2/Tables 8–9、F、G.1–G.4を確認。Archerはrollback decoderのacceptance/replacement/re-masking則は変えず、再計算対象のresponse状態と、anchored responseから生成したprompt K/Vを分離する。応答がcache anchorからHamming距離K以上動いたらfull refreshし、それ未満ではprompt K/Vを再利用してresponse全体を現在状態で計算する。これによりprompt query/projection/FFN計算を減らすが、response状態は各updateで再計算され、遅延prompt feedbackによりtentative tokenの誤り強化を抑える効果も狙う。理論は応答距離に対するlogit誤差上界とdecoder margin下でのdecision preservationを示すが、Lipschitz等の定数は大規模pretrained modelで一般に未知であり数値保証ではない。Main evaluationはLLaDA-8B-Instruct revision 6059b30、MBPP/HumanEvalとextended testsおよびLiveCodeBench release_v1、batch=1・generation/block length=256・temperature=0で、LLaDA-Confidence等と比較し、Table 1のoverall performance 33.63%、mean speedup 2.57x、最大2.95xを報告。Saber比較ではMBPP/LiveCodeBench/HumanEval latencyが8.45/17.75/12.13秒から6.20/9.81/8.07秒に改善する一方、HumanEval Base Pass@1は44.51%から43.29%へ低下しETは改善。Table 2はDream-v0-Instruct-7BとDiffuCoder-7B-cpGRPOを含む6 model-task条件で1.36–1.78x speedup、5条件でPass@1改善を報告。Matched-state MBPP intervention (Table 3)ではcached feedbackがPass@1をBase/ETとも1.17 point向上させ、両branchともselected tokenの99.53%をrevisionする。Appendix DではMATH-500、FinQA、PubMedQAのLLaDA-8B評価もあるが、MATH-500の代表点はaccuracyが0.60 point低下。Refresh-radius sweep (Table 5)では速度上昇に伴い大きなKで品質が下がり、過剰stalenessは精度を害する。Appendix Fにもcached側が誤ったTask 760の反例が記載される。scope上の制限はprompt cacheのみでresponse computeは残ること、設定依存のKとtask-specific評価、理論定数の実測不能であり、評価環境のGPU機種はG.4に明記されていない。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+      "source_url": "https://doi.org/10.1145/3789240.3829159",
+      "year": 2026,
+      "published": "2026-08-11",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput. We present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path — which inherently avoids network congestion and avoids interference with latency-critical model execution communications — with a global scheduler that dynamically balances load across prefill and decode engines. Our evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87x on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96x without violating SLO.",
+      "identifiers": [
+        "SemanticScholar:fd83b6daf9fd534328820dc99a9a6f9ee5b956b8"
+      ],
+      "semantic_scholar_id": "fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
+      "doi": "10.1145/3789240.3829159",
+      "canonical_id": "DOI:10.1145/3789240.3829159",
+      "authors": [
+        "Yong-Tong Wu",
+        "Shao-Yuan Chen",
+        "Rilin Huang",
+        "Yi-Xuan Tan",
+        "Yinmin Zhong",
+        "Ming-Xing Zhang",
+        "Xin Jin",
+        "Pan-Pan Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DualPathはPD分離LLM推論でprefill側へ集中していたKV-Cacheストレージ読み込みを、decode側storage NICからprefill側へRDMA転送する経路にも振り分け、CNIC traffic isolationと要求スケジューリングで負荷を均す。KV-Cache I/Oを直接最適化するシステム研究であり、KV-cache optimization/compressionの関連範囲に該当する。",
+      "library_body_check": "一次本文としてarXiv:2602.21548v2 HTMLの§3（I/O偏在と動機）、§4.1-4.3（dual-path転送、条件付きボトルネック分析、実装課題）、§5（CNIC traffic isolation/copy）、§6（adaptive scheduling）、§7.2-7.6とTables 2-3/Figures 7-14（評価）および§8.1-8.2（今後の課題・working-set限界）を確認。評価は自社inference framework、Hopperクラスタとproduction RL trace由来の500軌跡データセットで、offline最大1.87x、online平均1.96xのthroughput改善を報告。著者らは現実的なtool-call/inter-arrival待ち時間を評価に含めず、working setが大きくなる点を認める。公式SIGCOMM'26 programの会議版題名・abstract・数値も照合したが、全文入手できたarXiv本文は別題名で著者リストも会議版と異なるため、arXiv IDを別名identity tokenとしては付与せず、版対応はこの公開abstractの一致に基づく留保付き。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e464c05b0875",
+    "round": "libimp-e464c05b08758cd5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e464c05b08758cd5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e464c05b08758cd5-pre01.json",
+    "receipt": "sha256:a4f755560a690482b9693606ac04b97cbf8c4371a913308649a0616c04f98f08"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e464c05b0875",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
