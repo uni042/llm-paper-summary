@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dffd77e67fd5df7b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/n18-1023",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/n18-1023",
+    "identity_tokens": [
+      "DOI:10.18653/v1/n18-1023"
+    ],
+    "reason": "複数文の情報統合を必要とする6,500超questionのMultiRC reading-comprehension challenge datasetを構築しbaseline/human F1を評価するbenchmark研究。推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-04T23:27:41+00:00",
+    "last_checked_at": "2026-10-04T23:27:41+00:00",
+    "linked_from": [],
+    "title": "Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences"
+  },
+  "processed_at": "2026-10-04T23:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dffd77e67fd5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

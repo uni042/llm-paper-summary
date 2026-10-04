@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22fedde65a40a94c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/2018436.2018443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/2018436.2018443",
+    "identity_tokens": [
+      "DOI:10.1145/2018436.2018443",
+      "DOI:10.1145/2043164.2018443"
+    ],
+    "reason": "D3はdatacenter network flowのdeadlineに応じて帯域を明示rate-controlし、19-node testbedで短flow latencyやdeadline loadを改善するnetwork transport研究。LLM request scheduling/servingを最終適用先としない。",
+    "first_checked_at": "2026-10-04T23:27:41+00:00",
+    "last_checked_at": "2026-10-04T23:27:41+00:00",
+    "linked_from": [],
+    "title": "Better never than late: meeting deadlines in datacenter networks"
+  },
+  "processed_at": "2026-10-04T23:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22fedde65a40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

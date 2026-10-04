@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T23:24:23+00:00",
-  "record_count": 453,
+  "updated_at": "2026-10-04T23:27:41+00:00",
+  "record_count": 454,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6507,6 +6507,20 @@
         "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
       ],
       "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices"
+    },
+    "arXiv:2404.13501": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.13501",
+      "identity_tokens": [
+        "arXiv:2404.13501"
+      ],
+      "reason": "LLM agent memoryのsource/form/read-write-managementと評価を体系化し、長いinteraction historyによる推論計算costやretrieval/cachingにも触れる。agentic inference runtime専用surveyではないが、agent memory serving設計の背景として直接関連するためborderline。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "A Survey on the Memory Mechanism of Large Language Model based Agents"
     }
   }
 }

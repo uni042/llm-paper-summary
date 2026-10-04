@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T23:24:23+00:00",
-  "record_count": 1429,
+  "updated_at": "2026-10-04T23:27:41+00:00",
+  "record_count": 1443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -19884,9 +19884,9 @@
       "identity_tokens": [
         "arXiv:1902.03383"
       ],
-      "reason": "serverless computing全般の抽象化、autoscaling、storage、cold start等を論じるsystems perspectiveで、LLM推論を最終適用先としない。",
+      "reason": "serverless cloud computingの歴史・動機・限界・研究課題を整理するsystems perspectiveで、LLM推論servingを最終適用先としない。",
       "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-04T21:54:26+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md"
       ],
@@ -19906,20 +19906,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md"
       ],
       "title": "ELI5: Long Form Question Answering"
-    },
-    "arXiv:2404.13501": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2404.13501",
-      "identity_tokens": [
-        "arXiv:2404.13501"
-      ],
-      "reason": "LLM agentのmemory source/form/operationと応用を整理するsurvey。長contextの計算costにも触れるが、個別の推論system最適化方式を提案・評価する論文ではない。",
-      "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-04T21:54:26+00:00",
-      "linked_from": [
-        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
-      ],
-      "title": "A Survey on the Memory Mechanism of Large Language Model-based Agents"
     },
     "arXiv:1812.01243": {
       "classification": "unrelated",
@@ -20617,6 +20603,195 @@
         "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
       ],
       "title": "The State of Sparsity in Deep Neural Networks"
+    },
+    "arXiv:1801.01078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1801.01078",
+      "identity_tokens": [
+        "arXiv:1801.01078"
+      ],
+      "reason": "RNNの基礎、長期依存学習、各種発展を整理する一般surveyで、LLM推論system固有の新規runtime・serving・memory最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T23:27:40+00:00",
+      "last_checked_at": "2026-10-04T23:27:40+00:00",
+      "linked_from": [],
+      "title": "Recent Advances in Recurrent Neural Networks"
+    },
+    "arXiv:2305.11175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11175",
+      "identity_tokens": [
+        "arXiv:2305.11175"
+      ],
+      "reason": "LLMをopen-ended decoderとしてobject detection等のvision-centric taskを言語instructionで統一するcomputer vision能力研究。COCOで60%超mAP等の視覚task品質が主評価で、推論runtime/serving効率化ではない。",
+      "first_checked_at": "2026-10-04T23:27:40+00:00",
+      "last_checked_at": "2026-10-04T23:27:40+00:00",
+      "linked_from": [],
+      "title": "VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks"
+    },
+    "DOI:10.3390/fi15060192": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fi15060192",
+      "identity_tokens": [
+        "DOI:10.3390/fi15060192"
+      ],
+      "reason": "ChatGPTの歴史、training、応用、利点・課題と47件の関連研究を整理するpreliminary review。LLM推論system固有の速度・memory・serving最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T23:27:40+00:00",
+      "last_checked_at": "2026-10-04T23:27:40+00:00",
+      "linked_from": [],
+      "title": "ChatGPT and Open-AI Models: A Preliminary Review"
+    },
+    "DOI:10.1145/2018436.2018443": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2018436.2018443",
+      "identity_tokens": [
+        "DOI:10.1145/2018436.2018443",
+        "DOI:10.1145/2043164.2018443"
+      ],
+      "reason": "D3はdatacenter network flowのdeadlineに応じて帯域を明示rate-controlし、19-node testbedで短flow latencyやdeadline loadを改善するnetwork transport研究。LLM request scheduling/servingを最終適用先としない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Better never than late: meeting deadlines in datacenter networks"
+    },
+    "DOI:10.18653/v1/d19-1131": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1131",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1131",
+        "arXiv:1909.02027"
+      ],
+      "reason": "task-oriented dialogue system向けintent classification/out-of-scope prediction datasetを構築するbenchmark研究で、LLM推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction"
+    },
+    "DOI:10.1038/s41586-025-08744-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-025-08744-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-08744-2"
+      ],
+      "reason": "DreamerV3はworld model・actor・criticを用いて150超のreinforcement learning/control taskを単一設定で解く学習algorithm。Atari、robotics、Minecraft等のcontrol能力とdata efficiencyが主題で、LLM推論systemではない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Mastering diverse control tasks through world models"
+    },
+    "arXiv:1906.04721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04721",
+      "identity_tokens": [
+        "arXiv:1906.04721"
+      ],
+      "reason": "weight range equalizationとbias correctionでdata-free 8-bit quantizationを行い、MobileNet等の画像分類・segmentation・detectionで精度を維持するCV量子化研究。効率推論は扱うが最終適用先がcomputer visionでLLM/Transformer推論評価がない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Data-Free Quantization Through Weight Equalization and Bias Correction"
+    },
+    "arXiv:2308.01390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.01390",
+      "identity_tokens": [
+        "arXiv:2308.01390"
+      ],
+      "reason": "3B–9Bのautoregressive vision-language modelをopen-sourceで再現し、training data/hyperparameterと7 vision-language datasetの能力を評価するtechnical report。推論runtime/serving効率化を主目的としない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models"
+    },
+    "DOI:10.3115/v1/w14-3302": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3115/v1/w14-3302",
+      "identity_tokens": [
+        "DOI:10.3115/v1/w14-3302"
+      ],
+      "reason": "WMT 2014の共有タスク・機械翻訳評価結果をまとめるfindings論文で、LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md"
+      ],
+      "title": "Findings of the 2014 Workshop on Statistical Machine Translation"
+    },
+    "DOI:10.18653/v1/w16-2301": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w16-2301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w16-2301"
+      ],
+      "reason": "WMT 2016のmachine translation共有タスク・評価をまとめるfindings論文で、LLM推論system効率化ではない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md"
+      ],
+      "title": "Findings of the 2016 Conference on Machine Translation"
+    },
+    "DOI:10.1145/248156.248171": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/248156.248171",
+      "identity_tokens": [
+        "DOI:10.1145/248156.248171"
+      ],
+      "reason": "packet switching network向けfair queueing algorithmの研究で、LLM request scheduling/servingを直接対象としない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "title": "Start-time fair queueing: a scheduling algorithm for integrated services packet switching networks"
+    },
+    "DOI:10.18653/v1/2021.acl-long.254": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.254",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.254",
+        "arXiv:2105.07624"
+      ],
+      "reason": "金融reportのtable/textを組み合わせたQA datasetとTAGOP reasoning modelを提案し、数値推論F1を評価するbenchmark/model能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance"
+    },
+    "arXiv:1809.04281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.04281",
+      "identity_tokens": [
+        "arXiv:1809.04281"
+      ],
+      "reason": "relative attentionを用いて長期構造を持つ音楽を生成するsequence modeling研究で、最終適用先はmusic generation。Transformer推論systemのruntime/serving最適化を主目的としない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Music Transformer: Generating Music with Long-Term Structure"
+    },
+    "DOI:10.1109/slt.2012.6424228": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/slt.2012.6424228",
+      "identity_tokens": [
+        "DOI:10.1109/slt.2012.6424228"
+      ],
+      "reason": "preceding textからLDA topic vectorを作りRNNLMへcontextとして与え、Penn Treebank perplexityとWSJ speech recognitionのWERを改善する2012年のlanguage modeling能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Context Dependent Recurrent Neural Network Language Model"
+    },
+    "DOI:10.18653/v1/n18-1023": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1023",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1023"
+      ],
+      "reason": "複数文の情報統合を必要とする6,500超questionのMultiRC reading-comprehension challenge datasetを構築しbaseline/human F1を評価するbenchmark研究。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T23:27:41+00:00",
+      "last_checked_at": "2026-10-04T23:27:41+00:00",
+      "linked_from": [],
+      "title": "Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences"
     }
   }
 }
