@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 17:41:55 JST**
+> 自動生成: **2026-10-04 17:51:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **603** |
-| 未claim Research job | **603** |
-| 直近24hのResearch処理完了 | **85** |
-| 最終Research処理完了 | **10-04 17:14:14 JST** |
+| 収録候補論文数 | **601** |
+| 未claim Research job | **601** |
+| 直近24hのResearch処理完了 | **87** |
+| 最終Research処理完了 | **10-04 17:32:39 JST** |
 | 最終Discovery探索完了 | **10-04 17:30:00 JST** |
 | 整合性異常 | **0** |
 
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **603** |
+| canonical_id確認済みの一意な候補論文 | **601** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **603** |
+| 非終端Research job合計 | **601** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,9 +35,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9584** |
-| 処理済み | **2382** |
-| 未処理 | **7202** |
-| 収録済みとして除外 | **1027** |
+| 処理済み | **2383** |
+| 未処理 | **7201** |
+| 収録済みとして除外 | **1028** |
 | 無関係として除外 | **966** |
 | 微妙として除外 | **389** |
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 14:24:59 JST（3時間16分前）** |
+| 最終maintenance完了 | **10-04 14:24:59 JST（3時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -88,16 +88,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **20** |
+| 直近6hのResearch完了 | **22** |
 | 直近6hのDiscovery run | **27** |
 | 直近6hのDiscovery本文確認・分類 | **133** |
-| 最終Research完了 | **10-04 17:14:14 JST** |
+| 最終Research完了 | **10-04 17:32:39 JST** |
 | 最終Discovery完了 | **10-04 17:30:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-04 17:14:14 JST** / worker — / run 20261004-0800-codex-local-r22 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/20261004-batch-a--3db924b8a868917db2b6a424d3817d7bc04bc2c2d93cf8b92827f77a15e08728--rank57-transition-aware.json
+- Research: **10-04 17:32:39 JST** / worker — / run 20261004-0800-codex-local-r28 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/20261004-r28-corrected--bab8777a2afd5920b8b53e7cd1eecccd81db76f187511f32796e5f4f9bd7992f--rank24-ptstore.json
 - Discovery: **10-04 17:30:00 JST** / worker codex-local / run 20261004-1730-codex-local-r16
   - 本文確認・分類 **3件** / accept **3件** / unrelated+borderline **0件**
   - evidence: .survey/import-inbox/results/discovery/codex-local--20261004-1730-codex-local-r16.json
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **603** |
+| ready | **601** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1567** |
+| inference/training/survey配下の論文Markdown実体 | **1569** |
 
 ### immutable submissionの未照合
 

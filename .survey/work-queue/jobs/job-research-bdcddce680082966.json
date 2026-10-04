@@ -31,10 +31,15 @@
   "selection_reason": "複数ノード/GPUへKV prefixを分散・複製してキャッシュ容量と再利用を拡張し5〜6倍効率化を報告するため、分散KVキャッシュと階層メモリ系統に強く関連する。",
   "semantic_scholar_id": "2415617033236b3be928543b49f8ed25b437acf6",
   "source_url": "https://www.semanticscholar.org/paper/2415617033236b3be928543b49f8ed25b437acf6",
-  "status": "ready",
+  "status": "superseded",
   "title": "PTStore (Prefix Tensor Store): Distributed Prefix Caching and Replication for High Throughput Inference Serving",
   "type": "research",
   "venue": "European Conference on Parallel Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T08:51:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.22648-ptstore-prefix-tensor-store-distributed-prefix-caching-and-replication-f.md",
+  "represented_canonical_id": "arXiv:2607.22648",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
