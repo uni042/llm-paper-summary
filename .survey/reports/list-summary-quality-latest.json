@@ -3776,6 +3776,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+      "status": "PASS",
+      "summary": "検索ヘッドは全KVを保持し非検索ヘッドだけ遠方KVを削るヘッド別圧縮と補償トークンにより、長文脈LLMのKVキャッシュを70%以上削減する。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
       "status": "PASS",
       "summary": "KVキャッシュ最適化を事前学習・配備・学習後の3段階に整理し、削除・統合・量子化・外部化を容量、帯域、品質の交換条件として比較するサーベイ。",
@@ -10039,6 +10048,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "status": "PASS",
+      "summary": "反対角線標本の和で注意ブロック重要度を予測し、重要ブロックだけを残すことで256k級長文脈の注意計算を最大13.5倍高速化する。",
+      "char_count": 64,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
       "status": "PASS",
       "summary": "動画特有のGrid注意とモダリティ境界を置換で連続ブロック化し、長文脈VLMのプリフィルを学習なしでブロック疎化する。",
@@ -11564,6 +11582,15 @@
       "status": "PASS",
       "summary": "先に回答骨格を生成し、各項目を並列に展開して逐次デコードのクリティカルパスを短縮する。12モデル中8モデルで2倍超、最大2.39倍だが、数学・コード等はルータで通常生成へ戻す。",
       "char_count": 88,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "status": "PASS",
+      "summary": "ブロック単位でLWCとLETだけを学習して外れ値と量子化範囲を調整し、LLaMA系をW2A16〜W4A4まで低ビット化して推論メモリと計算を削減する。",
+      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
