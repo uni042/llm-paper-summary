@@ -2,44 +2,10 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261004-1830-scheduled-chat-30/r02",
+  "run_key": "20261004-1830-scheduled-chat-30/r02::provider-gap",
   "reference_main_sha": "2417829370085b488cdd48067a2e7443c7e3a695",
-  "record_count": 8,
+  "record_count": 4,
   "records": [
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2308.09687",
-      "identity_tokens": [
-        "arXiv:2308.09687"
-      ],
-      "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
-      "reason": "LLMの思考単位を任意グラフとして生成・集約・評価するプロンプティング／推論戦略研究で、品質とAPIコストは扱うが、モデル実行ランタイムの速度・KVメモリ・カーネル・サービング最適化を提案しない。",
-      "source_url": "https://arxiv.org/abs/2308.09687",
-      "body_check": "abstract_screen_only: 一次arXiv要旨でChain-of-Thought/Tree-of-Thoughtsを拡張するGraph of Thoughts prompting frameworkが主題で、sorting品質62%改善・cost 31%以上削減を報告するが、LLM inference system最適化ではない。",
-      "first_checked_at": "2026-10-04T18:45:00+09:00",
-      "last_checked_at": "2026-10-04T18:45:00+09:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
-      ],
-      "worklist_rank": 14
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1287/opre.11.3.399",
-      "identity_tokens": [
-        "DOI:10.1287/opre.11.3.399"
-      ],
-      "title": "Generalized Lagrange Multiplier Method for Solving Problems of Optimum Allocation of Resources",
-      "reason": "制約付き任意目的関数の資源配分へ一般化Lagrange乗数法を適用する1963年の数理最適化研究で、LLM KV量子化や推論資源配分への直接適用・評価を行わない。",
-      "source_url": "https://doi.org/10.1287/opre.11.3.399",
-      "body_check": "abstract_screen_only: INFORMS一次要旨で有限個の制約下の一般資源配分問題にLagrange multiplierを適用する理論手法と確認。LLM/Transformer推論は対象外。",
-      "first_checked_at": "2026-10-04T18:46:00+09:00",
-      "last_checked_at": "2026-10-04T18:46:00+09:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
-      ],
-      "worklist_rank": 16
-    },
     {
       "classification": "accept",
       "canonical_id": "arXiv:2510.14392",
@@ -107,40 +73,14 @@
         "papers/inference/09-kernel-runtime-compilation/"
       ],
       "worklist_rank": 82
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/359094.359101",
-      "identity_tokens": [
-        "DOI:10.1145/359094.359101"
-      ],
-      "title": "New methods to color the vertices of a graph",
-      "reason": "グラフ頂点彩色のアルゴリズム研究で、MoE pruning等の後続研究に引用されてもLLM推論・モデル実行を直接対象としない。",
-      "source_url": "https://doi.org/10.1145/359094.359101",
-      "body_check": "abstract_screen_only: 書誌・要旨情報からgraph vertex coloringの方法が主題であり、Transformer/LLM inference systemを対象としないことを確認。",
-      "first_checked_at": "2026-10-04T18:51:00+09:00",
-      "last_checked_at": "2026-10-04T18:51:00+09:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md"
-      ],
-      "worklist_rank": 10
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/152610.152611",
-      "identity_tokens": [
-        "DOI:10.1145/152610.152611"
-      ],
-      "title": "Query evaluation techniques for large databases",
-      "reason": "大規模データベースのquery evaluationとjoin等の実行・最適化技法を体系化するデータベース研究で、LLM agent workflowや推論サービングを直接対象としない。",
-      "source_url": "https://doi.org/10.1145/152610.152611",
-      "body_check": "abstract_screen_only: 大規模database query processing/evaluation techniqueのサーベイが主題で、LLM推論runtimeへの直接適用・評価はない。",
-      "first_checked_at": "2026-10-04T18:52:00+09:00",
-      "last_checked_at": "2026-10-04T18:52:00+09:00",
-      "linked_from": [
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
-      ],
-      "worklist_rank": 15
     }
+  ],
+  "parent_run_key": "20261004-1830-scheduled-chat-30/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_9e9a695dd5ec81919bc8e38b9ed10051--discovery-20261004-1830-scheduled-chat-30-r02.json",
+  "provider_gap_ids": [
+    "arXiv:2509.01229",
+    "arXiv:2510.14392",
+    "arXiv:2602.01469",
+    "arXiv:2603.13606"
   ]
 }

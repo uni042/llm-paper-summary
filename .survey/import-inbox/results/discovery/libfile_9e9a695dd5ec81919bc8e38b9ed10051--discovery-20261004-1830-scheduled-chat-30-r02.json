@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "artifact_type": "discovery",
-  "status": "imported",
-  "source_sha256": "e3f6fcc26c89d63d3b04945e6b49bb32ad0581ab279f3557ff8f0d1b74a8f102",
+  "status": "imported_with_provider_gaps",
+  "source_sha256": "38a59ce7be1ce4d0dae7a7de53e342f8b26cc3f8980c92428b34a5e71268a69f",
   "retained_payload": null,
-  "processed_at": "2026-10-04T09:53:24+00:00",
+  "processed_at": "2026-10-04T13:05:07+00:00",
   "record_count": 8,
   "run_key": "20261004-1830-scheduled-chat-30/r02",
   "parent_run_key": null,
@@ -13,12 +13,17 @@
   "worker_id": "scheduled-chat-30",
   "accept_count": 4,
   "relevance_count": 4,
-  "provider_gap_count": 0,
-  "provider_gap_ids": [],
-  "provider_gap_payload": null,
+  "provider_gap_count": 4,
+  "provider_gap_ids": [
+    "arXiv:2509.01229",
+    "arXiv:2510.14392",
+    "arXiv:2602.01469",
+    "arXiv:2603.13606"
+  ],
+  "provider_gap_payload": ".survey/import-inbox/blocked/discovery-provider/libfile_9e9a695dd5ec81919bc8e38b9ed10051--discovery-20261004-1830-scheduled-chat-30-r02--provider-gap.json",
   "counts": {
     "allowed": 0,
-    "filtered": 4,
+    "filtered": 0,
     "submitted": 0
   }
 }
