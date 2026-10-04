@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-221ac46f4049984f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/access.2025.3532853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/access.2025.3532853",
+    "identity_tokens": [
+      "DOI:10.1109/access.2025.3532853"
+    ],
+    "reason": "エージェントAIの概念・方法・応用・倫理を広く整理する一般サーベイで、LLMエージェント推論サービングの効率化に特化しない。",
+    "first_checked_at": "2026-10-03T17:47:42+00:00",
+    "last_checked_at": "2026-10-04T10:14:14+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+      "worker-worklist-30"
+    ],
+    "title": "Agentic AI: Autonomous Intelligence for Complex Goals—A Comprehensive Survey"
+  },
+  "processed_at": "2026-10-04T10:14:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-221ac46f4049",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

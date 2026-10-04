@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T09:52:02+00:00",
-  "record_count": 965,
+  "updated_at": "2026-10-04T10:14:14+00:00",
+  "record_count": 968,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -10942,9 +10942,9 @@
       "identity_tokens": [
         "DOI:10.1109/access.2025.3532853"
       ],
-      "reason": "自律エージェントAIの概念・方法・応用・倫理課題を広く整理する総合サーベイで、LLMエージェント推論サービングの一次システム研究ではない。",
+      "reason": "エージェントAIの概念・方法・応用・倫理を広く整理する一般サーベイで、LLMエージェント推論サービングの効率化に特化しない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:52:21+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
         "worker-worklist-30"
@@ -10958,9 +10958,9 @@
         "DOI:10.1109/iccv.2019.00038",
         "arXiv:1905.03696"
       ],
-      "reason": "ヘッセ行列に基づき層ごとの量子化感度を推定して混合精度DNN量子化を行う研究だが、対象は一般CNN/DNNでありLLM推論を最終適用先としない。",
+      "reason": "推論配備を動機とする量子化だが、ResNet/Inception/SqueezeNext等のCNNを対象とする汎用DNN量子化で、LLM推論が最終適用先ではない。",
       "first_checked_at": "2026-10-03T17:47:42+00:00",
-      "last_checked_at": "2026-10-03T17:47:42+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md",
         "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
@@ -11271,9 +11271,9 @@
         "DOI:10.48550/arxiv.1602.01528",
         "arXiv:1602.01528"
       ],
-      "reason": "AlexNet/VGG等の圧縮済み全結合DNNをSRAM上で疎行列ベクトル積として実行する専用アクセラレータで、LLM/Transformer推論を対象とする研究ではない。",
+      "reason": "圧縮DNN向け専用推論アクセラレータとして重要だが、AlexNet/VGG等の一般DNNを対象としLLM/Transformer推論が最終適用先ではない。",
       "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
@@ -11315,9 +11315,9 @@
         "DOI:10.1109/isca45697.2020.00045",
         "arXiv:1911.02549"
       ],
-      "reason": "画像分類・物体検出・翻訳等を含む機械学習推論ハードウェア/ソフトウェアの汎用ベンチマーク標準化が主題で、LLM推論システム固有の新方式を提案する研究ではない。",
+      "reason": "機械学習推論システム一般の標準ベンチマーク手法であり関連基盤技術だが、LLM専用推論方式・最適化を提案する論文ではない。",
       "first_checked_at": "2026-10-03T17:48:37+00:00",
-      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
@@ -11330,9 +11330,9 @@
       "identity_tokens": [
         "DOI:10.1038/s41467-024-45563-x"
       ],
-      "reason": "GPT-3/Llama-2を微調整して材料科学文献からエンティティ・関係をJSON等へ抽出する応用研究で、LLM推論の実行効率・メモリ・サービング最適化は主題ではない。",
+      "reason": "GPT-3/Llama-2を材料科学テキストの構造化情報抽出へ微調整する応用研究で、LLM推論基盤の効率化ではない。",
       "first_checked_at": "2026-10-03T17:48:37+00:00",
-      "last_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md",
         "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
@@ -12521,10 +12521,11 @@
       "identity_tokens": [
         "DOI:10.1109/34.120331"
       ],
-      "reason": "画像復元で不連続性を回復する制約付き正則化・視覚処理研究で、LLM推論効率化ではない。",
+      "reason": "画像復元における不連続性保存を扱う古典的コンピュータビジョン研究で、LLM推論基盤とは無関係。",
       "first_checked_at": "2026-10-03T22:18:11+00:00",
-      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md",
         "worker-worklist-30"
       ],
       "title": "Constrained Restoration and the Recovery of Discontinuities"
@@ -12533,12 +12534,14 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1038/s41746-021-00455-y",
       "identity_tokens": [
-        "DOI:10.1038/s41746-021-00455-y"
+        "DOI:10.1038/s41746-021-00455-y",
+        "arXiv:2005.12833"
       ],
-      "reason": "構造化電子健康記録をBERTで事前学習し疾患予測を改善する医療応用研究で、LLM推論システム最適化ではない。",
+      "reason": "電子健康記録の疾患予測向け事前学習表現モデルで、LLM推論システム効率化ではない。",
       "first_checked_at": "2026-10-03T22:18:11+00:00",
-      "last_checked_at": "2026-10-03T22:18:11+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
         "worker-worklist-30"
       ],
       "title": "Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction"
@@ -13867,9 +13870,9 @@
         "DOI:10.1145/3580305.3599790",
         "arXiv:2303.17568"
       ],
-      "reason": "13B code generation modelの事前学習と多言語コード生成・翻訳能力、HumanEval-X benchmarkが主題で、LLM推論runtime効率化を提案しない。",
+      "reason": "多言語コード生成モデルCodeGeeXの事前学習とHumanEval-Xによる生成品質評価が主題で、LLM推論サービング・メモリ・カーネル最適化を扱わない。",
       "first_checked_at": "2026-10-04T05:52:54+00:00",
-      "last_checked_at": "2026-10-04T05:52:54+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md"
       ],
@@ -14138,6 +14141,48 @@
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
       ],
       "title": "Query evaluation techniques for large databases"
+    },
+    "DOI:10.1109/12.53599": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/12.53599",
+      "identity_tokens": [
+        "DOI:10.1109/12.53599"
+      ],
+      "reason": "並列計算機のk-ary n-cube相互接続網の性能解析で、LLM推論ワークロードを対象としない。",
+      "first_checked_at": "2026-10-04T10:14:14+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "title": "Performance Analysis of k-Ary n-Cube Interconnection Networks"
+    },
+    "DOI:10.1007/bf01584082": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf01584082",
+      "identity_tokens": [
+        "DOI:10.1007/bf01584082"
+      ],
+      "reason": "マトロイドと貪欲法の最適性を扱う組合せ最適化理論で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T10:14:14+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "title": "Matroids and the greedy algorithm"
+    },
+    "DOI:10.1109/23.589532": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/23.589532",
+      "identity_tokens": [
+        "DOI:10.1109/23.589532"
+      ],
+      "reason": "ニューラルネット学習用入力正規化の重要性を扱う産業応用研究で、LLM推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-04T10:14:14+00:00",
+      "last_checked_at": "2026-10-04T10:14:14+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md"
+      ],
+      "title": "Importance of input data normalization for the application of neural networks to complex industrial problems"
     }
   }
 }
