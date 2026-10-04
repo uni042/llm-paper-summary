@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T20:49:55+00:00",
-  "record_count": 1279,
+  "updated_at": "2026-10-04T20:53:45+00:00",
+  "record_count": 1294,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18525,6 +18525,228 @@
       "last_checked_at": "2026-10-04T20:49:55+00:00",
       "linked_from": [],
       "title": "The Flan Collection: Designing Data and Methods for Effective Instruction Tuning"
+    },
+    "DOI:10.1109/micro.2016.7783720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2016.7783720",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783720"
+      ],
+      "reason": "DnnWeaverでCaffeの高水準DNN記述からFPGA向けacceleratorを自動生成し、8 DNN・3 FPGAで性能/効率を評価する一般DNN accelerator研究。LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
+      ],
+      "title": "From high-level deep neural models to FPGAs"
+    },
+    "arXiv:2310.14189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14189",
+      "identity_tokens": [
+        "arXiv:2310.14189"
+      ],
+      "reason": "consistency modelをdiffusion distillationなしで直接学習するtraining手法を改善し、CIFAR-10/ImageNet画像生成のFIDを評価する研究。高速な1-step samplingは性質だが最終適用先は画像生成でLLM推論system対象外。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "Improved Techniques for Training Consistency Models"
+    },
+    "DOI:10.1016/j.vlsi.2017.02.002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.vlsi.2017.02.002",
+      "identity_tokens": [
+        "DOI:10.1016/j.vlsi.2017.02.002"
+      ],
+      "reason": "180nm〜7nm CMOSのdelay・energy・powerを予測するpolynomial scaling equationを構築する回路技術モデリング研究で、LLM推論system固有の方式・評価ではない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md"
+      ],
+      "title": "Scaling equations for the accurate prediction of CMOS device performance from 180 nm to 7 nm"
+    },
+    "arXiv:1811.01088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.01088",
+      "identity_tokens": [
+        "arXiv:1811.01088"
+      ],
+      "reason": "BERT等をGLUE前にdata-rich supervised taskで追加学習して精度と安定性を改善するsupplementary training研究。推論runtime・memory・serving効率化は扱わない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Sentence Encoders on STILTs: Supplementary Training on Intermediate Labeled-data Tasks"
+    },
+    "DOI:10.18653/v1/d19-1454": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1454",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1454"
+      ],
+      "reason": "38,000問のsocial commonsense reasoning benchmarkを構築し、BERT等のQA性能とtransfer learningを評価するdataset/能力研究。推論system効率化を提案しない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Social IQa: Commonsense Reasoning about Social Interactions"
+    },
+    "arXiv:2204.06125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.06125",
+      "identity_tokens": [
+        "arXiv:2204.06125"
+      ],
+      "reason": "CLIP画像埋め込みを介した二段階のtext-to-image生成を提案し、diffusion decoderとpriorで画像品質・多様性を改善する画像生成研究。diffusion priorの計算効率にも触れるが、最終適用先は画像生成でLLM推論systemではない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
+      ],
+      "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents"
+    },
+    "arXiv:2307.03109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03109",
+      "identity_tokens": [
+        "arXiv:2307.03109"
+      ],
+      "reason": "LLMを何・どこで・どう評価するか、各種benchmark、成功/失敗例を整理する評価surveyで、推論runtime・memory・servingの最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "A Survey on Evaluation of Large Language Models"
+    },
+    "arXiv:2312.14238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.14238",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.14238",
+        "arXiv:2312.14238"
+      ],
+      "reason": "6B規模vision foundation modelをweb-scale image-text dataでLLMへalignし、32の視覚・視覚言語benchmarkで能力を評価するVLM研究。推論効率化は主目的ではない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.24381-rserve-overlapping-encoding-and-prefill-for-efficient-lmm-inference.md"
+      ],
+      "title": "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks"
+    },
+    "arXiv:2308.12966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12966",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2308.12966",
+        "arXiv:2308.12966"
+      ],
+      "reason": "Qwen-7B、vision encoder、位置認識adapterを組み合わせ、画像理解・localization・text reading等のVLM能力を構築・評価するモデル研究。推論runtimeやserving効率化を主貢献としない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2603.23914-attention-aware-inference-optimizations-large-vlm-memory-efficient-decoding.md"
+      ],
+      "title": "Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond"
+    },
+    "arXiv:2309.08600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.08600",
+      "identity_tokens": [
+        "arXiv:2309.08600"
+      ],
+      "reason": "sparse autoencoderで言語モデル内部活性から解釈可能でmonosemanticなfeatureを抽出し、因果的解釈可能性を分析する研究。推論効率化を対象としない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md"
+      ],
+      "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models"
+    },
+    "arXiv:2310.01405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.01405",
+      "identity_tokens": [
+        "arXiv:2310.01405"
+      ],
+      "reason": "population-level representationを読み取り・操作してtruthfulness、harmlessness、power-seeking等を分析・制御するAI透明性/安全性研究で、推論system性能の最適化ではない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2511.11733-speculative-decoding-in-decentralized-llm-inference-turning-communicatio.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Representation Engineering: A Top-Down Approach to AI Transparency"
+    },
+    "arXiv:2306.04751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.04751",
+      "identity_tokens": [
+        "arXiv:2306.04751"
+      ],
+      "reason": "6.7B〜65Bのopen modelを12種のinstruction datasetでfine-tuneし、知識・推論・多言語・coding等を体系評価するinstruction tuning研究。推論runtime/serving最適化は扱わない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources"
+    },
+    "arXiv:2402.02716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.02716",
+      "identity_tokens": [
+        "arXiv:2402.02716"
+      ],
+      "reason": "LLM agent planningをtask decomposition、plan selection、external module、reflection、memoryに分類して整理するsurveyで、推論systemの速度・memory・serving最適化方式を提案・評価しない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Understanding the planning of LLM agents: A survey"
+    },
+    "DOI:10.1145/3604237.3626869": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3604237.3626869",
+      "identity_tokens": [
+        "DOI:10.1145/3604237.3626869"
+      ],
+      "reason": "金融でのLLM利用をzero/few-shot、fine-tuning、custom training等に整理し、導入判断frameworkを示すfinance application survey。推論system最適化は主題外。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md"
+      ],
+      "title": "Large Language Models in Finance: A Survey"
+    },
+    "arXiv:2106.15772": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.15772",
+      "identity_tokens": [
+        "arXiv:2106.15772"
+      ],
+      "reason": "2,305問のASDiv corpusと語彙多様性指標を提案し、math word problem solverの能力評価を改善するdataset/benchmark研究。推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ],
+      "title": "A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers"
     }
   }
 }
