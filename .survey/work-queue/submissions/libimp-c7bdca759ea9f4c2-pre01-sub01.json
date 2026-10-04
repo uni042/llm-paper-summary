@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
+      "source_url": "https://arxiv.org/abs/2607.01775",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion models have steadily improved in quality relative to autoregressive (AR) models. However, these models are normally constrained to fixed-length generation and do not support key-value (KV) caching. Block diffusion partially bridges diffusion and AR by generating token blocks left-to-right, but its fixed-size sequential blocks limit decoding flexibility and parallelism. Here, we present a new class of language models, set diffusion, comprised of (i) a likelihood parameterization that factorizes over flexible-position, flexible-length token sets and (ii) a set-causal diffusion architecture that supports KV cache updates after every inference step. By factorizing over token sets instead of fixed-size blocks, tokens can be decoded in arbitrarily-ordered sets, including sliding-window sets, enabling faster inference and support for any-order decoding. Set diffusion achieves better speed-quality tradeoffs on mathematical reasoning, summarization, and unconditional generation compared to prior diffusion language models while offering stronger infilling performance than block diffusion. We provide the code, along with the model weights and blog post on the project page: https://m-arriola.com/setdlms/",
+      "identifiers": [
+        "SemanticScholar:53fa41b47480e7a56cbf9d15bb1087b0ebeb136d"
+      ],
+      "semantic_scholar_id": "53fa41b47480e7a56cbf9d15bb1087b0ebeb136d",
+      "canonical_id": "arXiv:2607.01775",
+      "arxiv_id": "2607.01775",
+      "doi": "10.48550/arXiv.2607.01775",
+      "authors": [
+        "Marianne Arriola",
+        "V. Kuleshov"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      },
+      "reason": "柔軟なtoken-set factorizationとset-causal architectureにより任意順序decodingと推論stepごとのKV cache更新を両立し、block diffusionよりspeed-quality tradeoffを改善する言語モデル推論研究。",
+      "library_body_check": "full_text_checked: 一次arXivへの到達を試行し、arXiv ID・原論文abstractを保持するpaper pageでKV caching、arbitrary-order decoding、speed-quality評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata",
+      "source_url": "https://arxiv.org/abs/2607.07026",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Constrained decoding is essential for serving LLMs, ensuring that generated outputs follow specific structures such as JSON schema-formatted function calls. Existing systems are designed for autoregressive models and assume left-to-right generation, masking out invalid next tokens at each step. Diffusion language models, however, break this assumption: they sample multiple positions simultaneously from a fully-factorized mean-field distribution at each denoising step. In this paper, we present an exact and tractable algorithm for sampling from the constrained mean-field posterior under any constraint expressible as a finite automaton. Viewing finite automata as graphical models, we obtain tractable representations of the constrained distribution that enable efficient inference. The approach guarantees constraint satisfaction by construction, supports both greedy and sampling-based decoding, and is compatible with parallel and block-wise decoding under arbitrary remasking schedules. Applying depth-reduction techniques from arithmetic circuit theory, we further reduce sampling depth from linear to logarithmic in the sequence length. Empirical evaluations on Dream-7B and LLaDA-8B show substantial accuracy gains across various tasks including function calling (xLAM, BFCL), planning (Sudoku, Countdown), text-to-SQL (Spider), and math reasoning (GSM-Symbolic), with little inference overhead relative to unconstrained decoding. For example, on BFCL-Live, our approach improves Dream-7B's greedy decoding accuracy from 63.9% to 71.5%, and stochastic sampling accuracy from 22.3% to 69.0%, where the unconstrained baseline collapses, with under 5% wall-clock overhead.",
+      "identifiers": [
+        "SemanticScholar:bbe806821339d0a1bd592b5cf1fcde0f4fa859bd"
+      ],
+      "semantic_scholar_id": "bbe806821339d0a1bd592b5cf1fcde0f4fa859bd",
+      "canonical_id": "arXiv:2607.07026",
+      "arxiv_id": "2607.07026",
+      "doi": "10.48550/arXiv.2607.07026",
+      "authors": [
+        "Mei-Hua Dang",
+        "S. Ermon"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデル向け制約付き復号を有限オートマトン上の厳密推論として実装し、sampling depthを系列長に対して線形から対数へ削減する。Dream-7B/LLaDA-8Bで5%未満のwall-clock overheadで制約を保証する推論手法。",
+      "library_body_check": "full_text_checked: arXiv一次資料HTMLでfinite automata、depth reduction、Dream-7B/LLaDA-8B評価とoverheadを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.02108",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to the auto-regressive paradigm. With bidirectional attention and any-order generation, DLMs naturally fit infilling tasks, which require generating a middle span conditioned on both the prefix and the suffix. However, infilling is sensitive to the length of the span, while DLMs require the length to be fixed before generation. Although prior studies extend DLMs to dynamic lengths, they still suffer from two limitations. (i) Sensitivity to initial length. These methods require a preset length to initialize the search and are highly sensitive to this initial length, often yielding suboptimal results. (ii) Inference inefficiency. They either insert length-changing operations during generation or repeatedly search for an appropriate length using multi-step denoising confidence, both of which introduce substantial extra forward passes and computational cost. Therefore, we propose PILL (Probing-based InfiLling with preset-Length-free decoding), an efficient infilling method for DLMs that requires no preset initial length and adds far fewer extra forward passes than baselines, substantially reducing inference time. Experiments show that, across five DLMs spanning different families, architectures, and training recipes on eight infilling benchmarks, PILL improves over the strongest baseline by +4.8 average pass rate on code and +6.0 BLEU-2 on text, while running 1.82x faster than that baseline. The code is available at https://github.com/Hsu1023/PILL.",
+      "identifiers": [
+        "SemanticScholar:9bb47057463cfd1b6b0eed12b9d8804322315445"
+      ],
+      "semantic_scholar_id": "9bb47057463cfd1b6b0eed12b9d8804322315445",
+      "canonical_id": "arXiv:2609.02108",
+      "arxiv_id": "2609.02108",
+      "authors": [
+        "Hao-Bo Xu",
+        "Si-Rui Chen",
+        "Yuanchen Bei",
+        "Ling-Jie Chen",
+        "Yu-Chen Yan",
+        "Dongqi Fu",
+        "Jing-Rui He",
+        "Hang-Hang Tong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PILLは拡散言語モデルの可変長infillingで反復的な長さ探索や生成中の長さ変更を避け、追加forward passを減らす。5モデル・8 benchmarkで強いbaselineより1.82x高速化し品質も改善するため、推論効率化として対象内。",
+      "library_body_check": "full_text_checked: arXiv一次書誌を指す全文要約で問題設定、PILL、5 DLM/8 benchmark、1.82x speedupを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c7bdca759ea9",
+    "round": "libimp-c7bdca759ea9f4c2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c7bdca759ea9f4c2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c7bdca759ea9f4c2-pre01.json",
+    "receipt": "sha256:769532c2c3e9eaead0173cbfacb1ff3cb4e634bfc9646380cabd183de0278087"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c7bdca759ea9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
