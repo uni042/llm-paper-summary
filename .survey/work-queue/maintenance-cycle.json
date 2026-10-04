@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "maintenance_pending": false,
+  "maintenance_pending": true,
   "last_maintenance_completed_at": "2026-10-04T14:19:42.874889+00:00",
   "last_maintenance_status": "issues_found",
   "last_gc_deleted": 14,
@@ -21,5 +21,7 @@
   "last_metadata_checked_at": "2026-10-04T14:18:38+00:00",
   "last_metadata_incomplete": 0,
   "schedule_owner": "github_actions_schedule",
-  "schedule": "daily_0830_jst"
+  "schedule": "daily_0830_jst",
+  "maintenance_request_token": "library-import-cleanup-20261004T1426Z",
+  "maintenance_request_reason": "recheck after removing six invalid stale discovery retry payloads"
 }
