@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-03T16:46:46+00:00",
+  "checked_at": "2026-10-04T02:36:00+00:00",
   "summary": {
-    "total": 1513,
+    "total": 1517,
     "complete": 1513,
-    "incomplete": 0
+    "incomplete": 4
   },
   "families": {
     "inference": {
-      "total": 1474,
+      "total": 1478,
       "complete": 1474
     },
     "training": {
@@ -21,5 +21,26 @@
       "complete": 14
     }
   },
-  "incomplete": []
+  "incomplete": [
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+      "canonical_id": "arXiv:2410.06916",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+      "canonical_id": "arXiv:2310.03003",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+      "canonical_id": "arXiv:2402.05109",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md",
+      "canonical_id": "arXiv:2608.12435",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
 }

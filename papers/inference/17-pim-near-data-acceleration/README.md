@@ -81,7 +81,7 @@
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-tier化、話題別のhot 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
+  Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
 
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

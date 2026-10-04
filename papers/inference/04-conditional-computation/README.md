@@ -28,7 +28,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  ReLU化FFNのzero行を入力・重みの符号bit XORだけで学習なし予測し、行単位GEMV skipへつなぐSparseInfer。
+  ReLU化FFNのzero行を入力・重みの符号bit XORだけで学習なし予測し、行単位GEMV スキップへつなぐSparseInfer。
 
 - **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
   実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：2  

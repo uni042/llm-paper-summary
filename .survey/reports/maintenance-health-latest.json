@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-03T16:16:16+00:00",
-  "status": "passed",
-  "error_count": 0,
+  "checked_at": "2026-10-04T02:36:20+00:00",
+  "status": "issues_found",
+  "error_count": 1,
   "warning_count": 0,
-  "paper_count": 1507,
-  "latest_paper_commit": "2026-10-03T16:13:55+00:00",
+  "paper_count": 1517,
+  "latest_paper_commit": "2026-10-04T02:27:10+00:00",
   "queue": {
-    "job_count": 1077,
-    "snapshot_drift": false,
-    "snapshot_repaired": false,
+    "job_count": 1110,
+    "snapshot_drift": true,
+    "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 85,
+        "completed": 98,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "ready": 593,
-        "superseded": 358,
+        "ready": 609,
+        "superseded": 362,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -30,8 +30,12 @@
     }
   },
   "derived_indexes": {
-    "repaired_files": [],
-    "repair_count": 0
+    "repaired_files": [
+      "papers/inference/04-conditional-computation/README.md",
+      "papers/inference/08-edge-on-device-llm-systems/README.md",
+      "papers/inference/17-pim-near-data-acceleration/README.md"
+    ],
+    "repair_count": 3
   },
   "quality": {
     "baseline_initialized": false,
@@ -39,10 +43,7 @@
       "paper": [
         "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
         "papers/inference/04-conditional-computation/2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md",
-        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
-        "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
         "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md",
         "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
         "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
@@ -65,7 +66,11 @@
       "overview": []
     },
     "resolved_failures": {
-      "paper": [],
+      "paper": [
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md"
+      ],
       "list_summary": [],
       "overview": []
     }
@@ -73,18 +78,32 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-03T16:16:03+00:00",
-      "total": 1507,
-      "incomplete": 0,
-      "findings": []
+      "checked_at": "2026-10-04T02:36:00+00:00",
+      "total": 1517,
+      "incomplete": 4,
+      "findings": [
+        {
+          "severity": "error",
+          "code": "citation_coverage_incomplete",
+          "detail": "citation coverage has 4 incomplete paper(s)",
+          "incomplete": 4
+        }
+      ]
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-03T16:16:03+00:00",
-      "total": 1507,
+      "checked_at": "2026-10-04T02:36:01+00:00",
+      "total": 1517,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": []
+  "findings": [
+    {
+      "severity": "error",
+      "code": "citation_coverage_incomplete",
+      "detail": "citation coverage has 4 incomplete paper(s)",
+      "incomplete": 4
+    }
+  ]
 }

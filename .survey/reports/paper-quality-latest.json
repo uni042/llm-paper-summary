@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "audit_kind": "publication_integrity",
-  "generated_at": "2026-10-03T16:15:34+00:00",
+  "generated_at": "2026-10-04T02:35:20+00:00",
   "criteria": {
     "utf8": true,
     "parseable_frontmatter": true,
@@ -1543,18 +1543,18 @@
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
       "status": "FAIL",
-      "file_bytes": 21986,
+      "file_bytes": 22096,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6502696519039058,
-      "japanese_chars": 3979,
-      "latin_chars": 2140,
+      "japanese_ratio": 0.6765632774921214,
+      "japanese_chars": 4079,
+      "latin_chars": 1950,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 65.0% < 70%"
+        "日本語比率 67.7% < 70%"
       ],
       "warnings": []
     },
@@ -3959,18 +3959,18 @@
     {
       "path": "papers/inference/04-conditional-computation/2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md",
       "status": "FAIL",
-      "file_bytes": 15394,
+      "file_bytes": 15512,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.5823719427780342,
-      "japanese_chars": 2524,
-      "latin_chars": 1810,
+      "japanese_ratio": 0.6288022813688213,
+      "japanese_chars": 2646,
+      "latin_chars": 1562,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 58.2% < 70%"
+        "日本語比率 62.9% < 70%"
       ],
       "warnings": []
     },
@@ -4088,6 +4088,22 @@
       "japanese_ratio": 0.9517311956336346,
       "japanese_chars": 5580,
       "latin_chars": 283,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "status": "PASS",
+      "file_bytes": 10473,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9762886597938144,
+      "japanese_chars": 1894,
+      "latin_chars": 46,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -4240,21 +4256,21 @@
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
-      "status": "FAIL",
-      "file_bytes": 14554,
+      "status": "WARN",
+      "file_bytes": 14563,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6916708479678876,
-      "japanese_chars": 2757,
-      "latin_chars": 1229,
+      "japanese_ratio": 0.7001514386673398,
+      "japanese_chars": 2774,
+      "latin_chars": 1188,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 69.2% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.0% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
@@ -4337,6 +4353,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md",
+      "status": "PASS",
+      "file_bytes": 8807,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9472105578884223,
+      "japanese_chars": 1579,
+      "latin_chars": 88,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
       "status": "PASS",
       "file_bytes": 12702,
@@ -4348,6 +4380,22 @@
       "japanese_ratio": 0.957983193277311,
       "japanese_chars": 2622,
       "latin_chars": 115,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+      "status": "PASS",
+      "file_bytes": 9368,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9585677749360614,
+      "japanese_chars": 1874,
+      "latin_chars": 81,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -4515,6 +4563,22 @@
       "warnings": [
         "日本語比率 73.0% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+      "status": "PASS",
+      "file_bytes": 8321,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9683188553909045,
+      "japanese_chars": 1895,
+      "latin_chars": 62,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
@@ -4696,21 +4760,21 @@
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
-      "status": "FAIL",
-      "file_bytes": 15865,
+      "status": "WARN",
+      "file_bytes": 15832,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6782585611892753,
-      "japanese_chars": 2555,
-      "latin_chars": 1212,
+      "japanese_ratio": 0.712171052631579,
+      "japanese_chars": 2598,
+      "latin_chars": 1050,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 67.8% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.2% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md",
@@ -4747,18 +4811,18 @@
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
       "status": "FAIL",
-      "file_bytes": 17904,
+      "file_bytes": 17923,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6630924297662449,
-      "japanese_chars": 3092,
-      "latin_chars": 1571,
+      "japanese_ratio": 0.6744487678339819,
+      "japanese_chars": 3120,
+      "latin_chars": 1506,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 66.3% < 70%"
+        "日本語比率 67.4% < 70%"
       ],
       "warnings": []
     },
@@ -5264,6 +5328,22 @@
       "japanese_ratio": 0.8032497350759449,
       "japanese_chars": 2274,
       "latin_chars": 557,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.01106-component-aware-self-speculative-decoding-in-hybrid-language-models.md",
+      "status": "PASS",
+      "file_bytes": 10268,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8493705035971223,
+      "japanese_chars": 1889,
+      "latin_chars": 335,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -7812,21 +7892,21 @@
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md",
-      "status": "FAIL",
-      "file_bytes": 18269,
+      "status": "WARN",
+      "file_bytes": 18466,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6362489486963835,
-      "japanese_chars": 3026,
-      "latin_chars": 1730,
+      "japanese_ratio": 0.70115695263043,
+      "japanese_chars": 3212,
+      "latin_chars": 1369,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 63.6% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.1% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
@@ -8641,18 +8721,18 @@
     {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
       "status": "FAIL",
-      "file_bytes": 15259,
+      "file_bytes": 15296,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.559328968903437,
-      "japanese_chars": 2734,
-      "latin_chars": 2154,
+      "japanese_ratio": 0.594902043395829,
+      "japanese_chars": 2824,
+      "latin_chars": 1923,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 55.9% < 70%"
+        "日本語比率 59.5% < 70%"
       ],
       "warnings": []
     },
@@ -13381,18 +13461,18 @@
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
       "status": "FAIL",
-      "file_bytes": 20771,
+      "file_bytes": 20820,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6350148367952523,
-      "japanese_chars": 3424,
-      "latin_chars": 1968,
+      "japanese_ratio": 0.6538967136150234,
+      "japanese_chars": 3482,
+      "latin_chars": 1843,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 63.5% < 70%"
+        "日本語比率 65.4% < 70%"
       ],
       "warnings": []
     },
@@ -17119,18 +17199,18 @@
     {
       "path": "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
       "status": "FAIL",
-      "file_bytes": 16368,
+      "file_bytes": 16358,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6106746765249538,
-      "japanese_chars": 2643,
-      "latin_chars": 1685,
+      "japanese_ratio": 0.6536151813595964,
+      "japanese_chars": 2721,
+      "latin_chars": 1442,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 61.1% < 70%"
+        "日本語比率 65.4% < 70%"
       ],
       "warnings": []
     },
@@ -18183,20 +18263,36 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
-      "status": "FAIL",
-      "file_bytes": 20542,
+      "path": "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+      "status": "PASS",
+      "file_bytes": 9348,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6801147227533461,
-      "japanese_chars": 3557,
-      "latin_chars": 1673,
+      "japanese_ratio": 0.9544444444444444,
+      "japanese_chars": 1718,
+      "latin_chars": 82,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+      "status": "FAIL",
+      "file_bytes": 20558,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.6925897336935546,
+      "japanese_chars": 3589,
+      "latin_chars": 1593,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 68.0% < 70%"
+        "日本語比率 69.3% < 70%"
       ],
       "warnings": []
     },
@@ -18789,18 +18885,18 @@
     {
       "path": "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
       "status": "FAIL",
-      "file_bytes": 14228,
+      "file_bytes": 14224,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6015139226818059,
-      "japanese_chars": 2225,
-      "latin_chars": 1474,
+      "japanese_ratio": 0.6124009833378858,
+      "japanese_chars": 2242,
+      "latin_chars": 1419,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 60.2% < 70%"
+        "日本語比率 61.2% < 70%"
       ],
       "warnings": []
     },
@@ -19083,18 +19179,18 @@
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md",
       "status": "FAIL",
-      "file_bytes": 20340,
+      "file_bytes": 20533,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.602167804094741,
-      "japanese_chars": 3000,
-      "latin_chars": 1982,
+      "japanese_ratio": 0.649743062692703,
+      "japanese_chars": 3161,
+      "latin_chars": 1704,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 60.2% < 70%"
+        "日本語比率 65.0% < 70%"
       ],
       "warnings": []
     },
@@ -19288,6 +19384,22 @@
       "japanese_ratio": 0.8183856502242153,
       "japanese_chars": 2920,
       "latin_chars": 648,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+      "status": "PASS",
+      "file_bytes": 7285,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8983277591973244,
+      "japanese_chars": 1343,
+      "latin_chars": 152,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -19587,18 +19699,18 @@
     {
       "path": "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
       "status": "FAIL",
-      "file_bytes": 18111,
+      "file_bytes": 18108,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.5126793788087282,
-      "japanese_chars": 2608,
-      "latin_chars": 2479,
+      "japanese_ratio": 0.5328920978740473,
+      "japanese_chars": 2657,
+      "latin_chars": 2329,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 51.3% < 70%"
+        "日本語比率 53.3% < 70%"
       ],
       "warnings": []
     },
@@ -20175,6 +20287,40 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
+      "status": "PASS",
+      "file_bytes": 9527,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8896303901437371,
+      "japanese_chars": 1733,
+      "latin_chars": 215,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+      "status": "WARN",
+      "file_bytes": 5297,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7429034874290349,
+      "japanese_chars": 916,
+      "latin_chars": 317,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
@@ -21331,18 +21477,18 @@
     {
       "path": "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md",
       "status": "FAIL",
-      "file_bytes": 15948,
+      "file_bytes": 15981,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.6052463211772233,
-      "japanese_chars": 2838,
-      "latin_chars": 1851,
+      "japanese_ratio": 0.6331734960767219,
+      "japanese_chars": 2905,
+      "latin_chars": 1683,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 60.5% < 70%"
+        "日本語比率 63.3% < 70%"
       ],
       "warnings": []
     },
@@ -22139,18 +22285,18 @@
     {
       "path": "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md",
       "status": "FAIL",
-      "file_bytes": 20654,
+      "file_bytes": 20890,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "not-evaluated",
-      "japanese_ratio": 0.5988175675675675,
-      "japanese_chars": 3545,
-      "latin_chars": 2375,
+      "japanese_ratio": 0.6445481251080006,
+      "japanese_chars": 3730,
+      "latin_chars": 2057,
       "bare_english_terms": [],
       "failures": [
-        "日本語比率 59.9% < 70%"
+        "日本語比率 64.5% < 70%"
       ],
       "warnings": []
     },
@@ -22461,6 +22607,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md",
+      "status": "WARN",
+      "file_bytes": 5767,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7272727272727273,
+      "japanese_chars": 944,
+      "latin_chars": 354,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.7% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",

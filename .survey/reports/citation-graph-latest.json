@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T16:46:36+00:00",
-  "paper_count": 1513,
-  "edge_count": 15646,
+  "generated_at": "2026-10-04T02:35:51+00:00",
+  "paper_count": 1517,
+  "edge_count": 15670,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 17,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 299,
@@ -283,6 +283,7 @@
     "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md": 47,
     "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md": 10,
     "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md": 9,
+    "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md": 8,
     "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md": 5,
     "papers/inference/05-speculative-decoding-moe/2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md": 4,
     "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md": 4,
@@ -1199,6 +1200,7 @@
     "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md": 0,
     "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md": 0,
     "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md": 0,
+    "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md": 1,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md": 28,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md": 5,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md": 11,
@@ -1254,6 +1256,7 @@
     "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md": 1,
     "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md": 13,
     "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md": 2,
+    "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md": 15,
     "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md": 2,
     "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md": 12,
     "papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md": 5,
@@ -1394,6 +1397,7 @@
     "papers/inference/99-other-inference-systems/2026-2608.05303-edgexpert-moe-speculative-decoding.md": 0,
     "papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md": 0,
     "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md": 0,
     "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md": 0,
     "papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md": 0,
     "papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md": 0,
@@ -4246,6 +4250,7 @@
     ],
     "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md": [
       "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
       "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md"
     ],
     "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md": [
@@ -4479,6 +4484,7 @@
       "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
       "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
       "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
@@ -4505,6 +4511,7 @@
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
       "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md": [
@@ -4589,6 +4596,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
       "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
@@ -4613,6 +4621,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
     ],
+    "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md": [],
     "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
@@ -4755,6 +4764,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md": [
@@ -4806,6 +4816,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
       "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
@@ -4816,6 +4827,7 @@
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
@@ -4974,6 +4986,7 @@
       "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
       "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
       "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2025-2510.01336-hispec-hierarchical-speculative-decoding-for-llms.md": [
@@ -4985,6 +4998,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
       "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
     ],
@@ -5004,6 +5018,7 @@
       "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
       "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
       "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
@@ -5089,7 +5104,8 @@
     "papers/inference/05-speculative-decoding-moe/2025-speculative-diffusion-decoding.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
-      "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+      "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
@@ -5110,6 +5126,7 @@
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
       "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2026-2601.11580-speculative-decoding-performance-or-illusion.md": [
@@ -5315,6 +5332,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
       "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/05-speculative-decoding-moe/2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md",
       "papers/inference/05-speculative-decoding-moe/2025-2510.01336-hispec-hierarchical-speculative-decoding-for-llms.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
@@ -5349,6 +5367,7 @@
       "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
@@ -5410,6 +5429,7 @@
       "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
       "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
@@ -5425,6 +5445,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
       "papers/inference/05-speculative-decoding-moe/2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md",
       "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/05-speculative-decoding-moe/2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md",
       "papers/inference/05-speculative-decoding-moe/2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md",
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
@@ -5474,6 +5495,7 @@
       "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2025-speculative-diffusion-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md": [
@@ -5691,6 +5713,7 @@
       "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2604.12989-accelerating-speculative-decoding-with-block-diffusion-draft-trees.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
       "papers/inference/99-other-inference-systems/2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md"
     ],
@@ -5728,10 +5751,12 @@
       "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
       "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
       "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
       "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
       "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
       "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md"
@@ -7322,6 +7347,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
       "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
       "papers/inference/05-speculative-decoding-moe/2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md",
       "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md",
@@ -16832,6 +16858,7 @@
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
     ],
+    "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md": [],
     "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md": [
       "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
       "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
@@ -17306,6 +17333,7 @@
       "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
     ],
+    "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md": [],
     "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md": [
       "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
@@ -18864,6 +18892,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md": [],
     "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md": [
       "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
@@ -19005,6 +19034,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md": [
@@ -19168,6 +19198,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
       "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md": [
@@ -19353,6 +19384,7 @@
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
       "papers/inference/05-speculative-decoding-moe/2026-2605.29343-draft-opd.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
       "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
       "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
     ],
