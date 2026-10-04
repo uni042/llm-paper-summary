@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 03:55:23 JST**
+> 自動生成: **2026-10-05 03:56:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,15 +52,15 @@
 | 収録論文seed台帳 | **1582** |
 | provider巡回可能 | **1578** |
 | provider巡回不能 | **4** |
-| 1周以上完了 | **424** |
-| 巡回中 | **131** |
-| 未巡回 | **1023** |
-| 今回run開始時due | **1183** |
-| 前方引用から保持中の未処理候補 | **16339** |
+| 1周以上完了 | **452** |
+| 巡回中 | **133** |
+| 未巡回 | **993** |
+| 今回run開始時due | **1154** |
+| 前方引用から保持中の未処理候補 | **16770** |
 | エラー状態保持seed | **18** |
 
-- 初回カバレッジ完了率: **26.9%**
-- state最終更新: **10-05 02:54:47 JST**
+- 初回カバレッジ完了率: **28.6%**
+- state最終更新: **10-05 03:55:11 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 00:05:47 JST（3時間49分前）** |
+| 最終maintenance完了 | **10-05 00:05:47 JST（3時間51分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -98,9 +98,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-04 18:07:00 JST** / worker — / run 20261004-0800-codex-local-r23 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/20261004-batch-a2--69dc9a82075b27919927e6a4441bbb1084ba186054ae880b8fcf7ffb72404909--rank61-entropy-guided.json
-- Discovery: **10-05 03:30:00 JST** / worker scheduled-chat-30 / run 20261005-0330-scheduled-chat-30/r01
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_0e0ed942fcb8819193f458691aba0192--discovery-20261005-0330-scheduled-chat-30-r01.json
+- Discovery: **10-05 03:30:00 JST** / worker scheduled-chat-30 / run 20261005-0330-scheduled-chat-30/r02
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_c379f301154481919aeedb0f9602f2ad--discovery-20261005-0330-scheduled-chat-30-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -237,11 +237,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **310** |
+| 成功result未照合のimmutable submission | **311** |
 | └ Research | **129** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **36** |
+| └ Other/Unknown | **37** |
 
 ### 厳格検証が未成立のcompleted job
 
