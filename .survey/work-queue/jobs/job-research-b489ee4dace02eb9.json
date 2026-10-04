@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2607.23815",
   "canonical_id": "arXiv:2607.23815",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-25T04:07:06+00:00",
   "doi": null,
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-2607.23815-kalypso-relational-llm-serving.md",
   "parent_job_id": "job-d41fc08d0f8803e0",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 70,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-07-26",
   "schema_version": 1,
   "selection_reason": "Recent LLM serving architecture that exposes relational query-plan structure to the serving layer, a distinct systems mechanism for cross-request optimization.",
+  "semantic_scholar_id": "432b20f8b78c38d6c8ae693e68c5a7186d711a9f",
   "source_url": "https://arxiv.org/abs/2607.23815",
   "status": "ready",
   "title": "Kalypso: Relational LLM Serving",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2026
 }

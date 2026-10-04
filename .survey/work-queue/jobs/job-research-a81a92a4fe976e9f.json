@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2403.20306",
   "canonical_id": "arXiv:2403.20306",
+  "citation_count": 105,
+  "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-23T22:55:44+00:00",
   "doi": null,
@@ -11,23 +14,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-inference.md",
   "parent_job_id": "job-d00d00fc8980c400",
-  "priority": 0,
+  "priority": 105,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 105,
+    "citations": 105,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 919,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 105
   },
+  "published": "2024-03-29",
   "schema_version": 1,
   "selection_reason": "structured referencesでenergy-aware serving・DVFS・adaptive serving系6件から参照される未収録候補。SLO下でlatency/throughput/energyのtrade-offと複数の制御knobを体系的にcharacterizeし、電力考慮推論系統の基礎比較点になる。",
+  "semantic_scholar_id": "72c906a9841b8d44c2962c4890d5845a394856bb",
   "source_url": "https://arxiv.org/abs/2403.20306",
   "status": "ready",
   "title": "Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2024
 }

@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2404.00242",
   "canonical_id": "arXiv:2404.00242",
+  "citation_count": 5,
+  "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-10-02T11:10:38+00:00",
   "doi": null,
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2024-2404.00242-deft-decoding-with-flash-tree-attention-for-efficient-tree-structured-llm-inference.md",
   "parent_job_id": "job-a769188637a790d2",
-  "priority": 0,
+  "priority": 5,
   "priority_breakdown": {
-    "citation_count": 0,
-    "citations": 0,
+    "citation_count": 5,
+    "citations": 5,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 918,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 5
   },
+  "published": "2024-03-30",
   "schema_version": 1,
   "selection_reason": "共有prefixを持つtree構造LLM推論でKV IO再利用とload balanceを改善するFlash Tree-Attention。",
+  "semantic_scholar_id": "a385e59e4b0c5da48e67615bd7d1cd7d47a28b4e",
   "source_url": "https://arxiv.org/abs/2404.00242",
   "status": "ready",
   "title": "DeFT: Decoding with Flash Tree-attention for Efficient Tree-structured LLM Inference",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv.org",
+  "workflow_version": 10,
+  "year": 2024
 }

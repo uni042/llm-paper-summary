@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2608.23807",
   "canonical_id": "arXiv:2608.23807",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-25T19:45:12+00:00",
   "doi": null,
@@ -12,23 +15,26 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.23807-serving-masked-diffusion-llms-characterization-and-design-principles-from-real-hardware.md",
   "parent_job_id": "job-d662bd433d0b13a5",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 41,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-08-24",
   "schema_version": 1,
   "selection_reason": "実機計測に基づく拡散LLMサービングの特性評価と設計原則を扱うため、推論システム調査に適合。",
+  "semantic_scholar_id": "f0bb217fd15d0f60ce0ef49781f7187f046aed08",
   "source_url": "https://arxiv.org/abs/2608.23807",
   "status": "ready",
   "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "year": 2026
 }

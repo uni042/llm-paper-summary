@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.1145/3806645.3807814",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-04T05:00:01+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-25T04:07:06+00:00",
   "doi": null,
@@ -12,23 +15,27 @@
   "openreview_id": null,
   "paper_path": "papers/inference/99-other-inference-systems/0000-899bf6a23e05-omnia-efficient-rag-serving-through-speculative-scheduling.md",
   "parent_job_id": "job-d41fc08d0f8803e0",
-  "priority": 0,
+  "priority": 100,
   "priority_breakdown": {
     "citation_count": 0,
     "citations": 0,
-    "freshness": 0,
-    "freshness_age_days": null,
-    "is_fresh": false,
+    "freshness": 100,
+    "freshness_age_days": 83,
+    "is_fresh": true,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
-    "total": 0
+    "total": 100
   },
+  "published": "2026-07-13",
   "schema_version": 1,
   "selection_reason": "Recent system-level RAG serving work with speculative scheduling across retrieval, reranking, and generation; directly relevant to end-to-end LLM serving pipelines.",
+  "semantic_scholar_id": "16a96d99c0d1b26bb54bc1fbcb217581b3e644c0",
   "source_url": "https://doi.org/10.1145/3806645.3807814",
   "status": "ready",
   "title": "Omnia: Efficient RAG Serving through Speculative Scheduling",
   "type": "research",
-  "workflow_version": 10
+  "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+  "workflow_version": 10,
+  "year": 2026
 }
