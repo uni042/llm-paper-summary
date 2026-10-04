@@ -31,10 +31,15 @@
   "selection_reason": "Post-training LLM quantization directly targets inference memory and compute cost; it is strongly connected to the repository's low-bit inference, KV-cache quantization, and runtime quantization lineages, and the available primary metadata identifies an ICLR 2024 version.",
   "semantic_scholar_id": "eb2c2330177f765038a2b17e2ee3498965865797",
   "source_url": "https://arxiv.org/abs/2308.13137",
-  "status": "ready",
+  "status": "superseded",
   "title": "OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-04T19:47:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+  "represented_canonical_id": "arXiv:2308.13137",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
