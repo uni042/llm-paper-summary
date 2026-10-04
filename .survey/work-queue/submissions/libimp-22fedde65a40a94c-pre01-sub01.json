@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
+      "source_url": "https://arxiv.org/abs/1909.05840",
+      "year": 2019,
+      "published": "2019-09-12",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 691,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer based architectures have become de-facto models used for a range of Natural Language Processing tasks. In particular, the BERT based models achieved significant accuracy gain for GLUE tasks, CoNLL-03 and SQuAD. However, BERT based models have a prohibitive memory footprint and latency. As a result, deploying BERT based models in resource constrained environments has become a challenging task. In this work, we perform an extensive analysis of fine-tuned BERT models using second order Hessian information, and we use our results to propose a novel method for quantizing BERT models to ultra low precision. In particular, we propose a new group-wise quantization scheme, and we use Hessian-based mix-precision method to compress the model further. We extensively test our proposed method on BERT downstream tasks of SST-2, MNLI, CoNLL-03, and SQuAD. We can achieve comparable performance to baseline with at most 2.3% performance degradation, even with ultra-low precision quantization down to 2 bits, corresponding up to 13× compression of the model parameters, and up to 4× compression of the embedding table as well as activations. Among all tasks, we observed the highest performance loss for BERT fine-tuned on SQuAD. By probing into the Hessian based analysis as well as visualization, we show that this is related to the fact that current training/fine-tuning strategy of BERT does not converge for SQuAD.",
+      "identifiers": [
+        "SemanticScholar:745e4b36a1759177871288cae51fbae0b873b5e5"
+      ],
+      "semantic_scholar_id": "745e4b36a1759177871288cae51fbae0b873b5e5",
+      "canonical_id": "arXiv:1909.05840",
+      "arxiv_id": "1909.05840",
+      "doi": "10.1609/AAAI.V34I05.6409",
+      "authors": [
+        "Sheng Shen",
+        "Zhen Dong",
+        "Jiayu Ye",
+        "Linjian Ma",
+        "Z. Yao",
+        "A. Gholami",
+        "Michael W. Mahoney",
+        "K. Keutzer"
+      ],
+      "priority": 691,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 691,
+        "citation_count": 691,
+        "total": 691,
+        "is_fresh": false,
+        "freshness_age_days": 2579,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Q-BERTはlayerごとのHessian感度で2/3/4-bit mixed precisionを割り当て、attention dense matrixをgroup-wise quantizationするBERT推論向け量子化方式。edge inferenceのlatency・memory footprintを問題設定とし、最大13倍のweight圧縮、embedding/activation最大4倍圧縮を2.3%以内の品質低下で実現するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTML本文のIntroduction/Method/Experimentを確認。edge inferenceのmemory/latency問題、Hessian-based mixed precision、group-wise attention quantization、SST-2/MNLI/CoNLL-03/SQuADで最大13x weight・4x embedding/activation圧縮を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
+      "source_url": "https://arxiv.org/abs/1901.10430",
+      "year": 2019,
+      "published": "2019-01-29",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 669,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention is a useful mechanism to build generative models for language and images. It determines the importance of context elements by comparing each element to the current time step. In this paper, we show that a very lightweight convolution can perform competitively to the best reported self-attention results. Next, we introduce dynamic convolutions which are simpler and more efficient than self-attention. We predict separate convolution kernels based solely on the current time-step in order to determine the importance of context elements. The number of operations required by this approach scales linearly in the input length, whereas self-attention is quadratic. Experiments on large-scale machine translation, language modeling and abstractive summarization show that dynamic convolutions improve over strong self-attention models. On the WMT'14 English-German test set dynamic convolutions achieve a new state of the art of 29.7 BLEU.",
+      "identifiers": [
+        "SemanticScholar:fea820b7d953d32069e189af2961c28fd213470b"
+      ],
+      "semantic_scholar_id": "fea820b7d953d32069e189af2961c28fd213470b",
+      "canonical_id": "arXiv:1901.10430",
+      "arxiv_id": "1901.10430",
+      "authors": [
+        "Felix Wu",
+        "Angela Fan",
+        "Alexei Baevski",
+        "Yann Dauphin",
+        "Michael Auli"
+      ],
+      "priority": 679,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 669,
+        "citation_count": 669,
+        "total": 679,
+        "is_fresh": false,
+        "freshness_age_days": 2805,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "self-attentionをlightweight/dynamic convolutionへ置換し、context長に対する演算量を二次から線形へ落とす生成language architecture。機械翻訳・language modeling・abstractive summarizationでstrong self-attention modelを上回り、より単純で効率的なsequence inferenceを狙うため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTML本文でdynamic convolution kernelの生成、linear input-length complexity、self-attentionとの計算比較、WMT14/language modeling/summarization評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-22fedde65a40",
+    "round": "libimp-22fedde65a40a94c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-22fedde65a40a94c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-22fedde65a40a94c-pre01.json",
+    "receipt": "sha256:820d3a3bea2c571e7a2306a20731c27eabaef6f902482d89b1b9f89147c7fc63"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-22fedde65a40",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

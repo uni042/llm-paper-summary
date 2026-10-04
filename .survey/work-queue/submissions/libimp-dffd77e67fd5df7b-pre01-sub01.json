@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "IntelliCode compose: code generation using transformer",
+      "source_url": "https://arxiv.org/abs/2005.08025",
+      "year": 2020,
+      "published": "2020-05-16",
+      "venue": "ESEC/SIGSOFT FSE",
+      "citation_count": 643,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In software development through integrated development environments (IDEs), code completion is one of the most widely used features. Nevertheless, majority of integrated development environments only support completion of methods and APIs, or arguments. In this paper, we introduce IntelliCode Compose – a general-purpose multilingual code completion tool which is capable of predicting sequences of code tokens of arbitrary types, generating up to entire lines of syntactically correct code. It leverages state-of-the-art generative transformer model trained on 1.2 billion lines of source code in Python, C#, JavaScript and TypeScript programming languages. IntelliCode Compose is deployed as a cloud-based web service. It makes use of client-side tree-based caching, efficient parallel implementation of the beam search decoder, and compute graph optimizations to meet edit-time completion suggestion requirements in the Visual Studio Code IDE and Azure Notebook. Our best model yields an average edit similarity of 86.7% and a perplexity of 1.82 for Python programming language.",
+      "identifiers": [
+        "SemanticScholar:a4c6cb385a90441061218f50abe2871d5e384a2e"
+      ],
+      "semantic_scholar_id": "a4c6cb385a90441061218f50abe2871d5e384a2e",
+      "canonical_id": "arXiv:2005.08025",
+      "arxiv_id": "2005.08025",
+      "doi": "10.1145/3368089.3417058",
+      "authors": [
+        "Alexey Svyatkovskiy",
+        "Shao-Kun Deng",
+        "Sheng-Yu Fu",
+        "Neel Sundaresan"
+      ],
+      "priority": 643,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 643,
+        "citation_count": 643,
+        "total": 643,
+        "is_fresh": false,
+        "freshness_age_days": 2332,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPT-Cをcloud code completionとして実配備し、beam searchを候補batch化してL×k回のmodel callをL回へ削減、過去stepのattention key/valueをcacheしてさらに約10%高速化する。L=25,k=15ではsequential 7500 msからparallel 3000 ms、KV cache併用2700 msへ短縮し、client-side trie cacheで100 ms未満の体感要件も狙うため、Transformer推論runtime/serving最適化として対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTML本文のSequence Decoding/Client-Side Post-Processing/Deploymentを確認。batched beam search、attention K/V cache、10%追加speedup、Table 5の250/220 ms・1700/1000/820 ms・7500/3000/2700 ms、client-side trie cachingを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dffd77e67fd5",
+    "round": "libimp-dffd77e67fd5df7b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dffd77e67fd5df7b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dffd77e67fd5df7b-pre01.json",
+    "receipt": "sha256:e4711b9dd016635c591a02c40a6b5a520d9d651fe937906ce37bb4d26f515e63"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dffd77e67fd5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
